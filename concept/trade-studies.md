@@ -1,5 +1,7 @@
 # Architecture trade studies — open
 
+**ID:** SUS-TRADE-001 · **Revision:** 0.3-draft · **Status:** Draft, not reviewed
+
 ## TS-001 Actuation
 Alternatives: centralized hydraulic; distributed electrohydraulic; electromechanical. Compare power density, controllability, leakage/fire risk, stored energy, maintainability, mass, noise, heat, fault response, supply chain, simulation fidelity and cost. **No winner selected.**
 

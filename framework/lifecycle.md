@@ -1,5 +1,7 @@
 # Integrated lifecycle and gates — SUS-M1/SUS-A1
 
+**ID:** SUS-FW-003 · **Revision:** 0.3-draft · **Status:** Draft, not reviewed
+
 | Gate | Phase | Exit evidence |
 |---|---|---|
 | G0 | Concept | Mech/UAV CONOPS, system boundary, initial hazard list, feasibility assumptions |

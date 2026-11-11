@@ -1,0 +1,77 @@
+# Controlled-document register. Each document carries its own revision; validate.py (check P8)
+# fails if a document's header line disagrees with this register, so revisions cannot drift.
+file: documents
+owner: configuration-lead
+revision: "0.1"
+provenance: {author: "Claude (AI-drafted)", independence: I0, date: "2026-11-11", reviewed: false}
+items:
+  - id: SUS-CONOPS-001
+    kind: document
+    title: "Concept of Operations"
+    path: concept/CONOPS.md
+    revision: "0.4-draft"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+  - id: SUS-ARCH-001
+    kind: document
+    title: "Preliminary architecture"
+    path: concept/architecture.md
+    revision: "0.3-draft"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+  - id: SUS-TRADE-001
+    kind: document
+    title: "Architecture trade studies"
+    path: concept/trade-studies.md
+    revision: "0.3-draft"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+  - id: SUS-FW-001
+    kind: document
+    title: "Integrated standards and lifecycle framework"
+    path: framework/README.md
+    revision: "0.3-draft"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+  - id: SUS-FW-002
+    kind: document
+    title: "Standards applicability"
+    path: framework/standards-applicability.md
+    revision: "0.3-draft"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+  - id: SUS-FW-003
+    kind: document
+    title: "Integrated lifecycle and gates"
+    path: framework/lifecycle.md
+    revision: "0.3-draft"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+  - id: SUS-FW-004
+    kind: document
+    title: "Process contracts"
+    path: framework/process-contracts.md
+    revision: "0.3-draft"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+  - id: SUS-FW-005
+    kind: document
+    title: "PDaC traceability model"
+    path: framework/traceability.md
+    revision: "0.3-draft"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+  - id: SUS-FW-006
+    kind: document
+    title: "Execution roadmap"
+    path: framework/execution-plan.md
+    revision: "0.3-draft"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+  - id: SUS-PHL-001
+    kind: document
+    title: "Preliminary Hazard List"
+    path: safety/preliminary-hazard-list.md
+    revision: "0.1-draft"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]

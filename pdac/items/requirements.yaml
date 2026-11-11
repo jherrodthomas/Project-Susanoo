@@ -1,0 +1,265 @@
+# System requirement candidates. These records are the source of truth: the requirement list in
+# concept/architecture.md and the trace table in concept/CONOPS.md §9 are generated from them
+# (tools/pdac/generate.py). SYS-001...SYS-006 keep the v0.3 wording of SUS-ARCH-001; SYS-007...SYS-018
+# close the gaps found in the 2026-11-11 audit (SCN-102, SCN-103, SCN-104 and SCN-108 had no requirement).
+# Every threshold is TBD until hazard analysis and trade studies set it. Nothing here is baselined.
+file: requirements
+owner: systems-lead
+revision: "0.1"
+provenance: {author: "Claude (AI-drafted)", independence: I0, date: "2026-11-11", reviewed: false}
+items:
+  - id: SYS-001
+    kind: requirement
+    title: "Pilot-readiness actuation interlock"
+    text: "System shall inhibit leg actuation until pilot station readiness conditions are satisfied."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-001]
+    mitigates: [HAZ-002]
+    allocated_to: [SUS-M1-SAF, SUS-M1-PIL]
+    verification: {methods: [simulation, test], cases: []}
+    tbd: ["readiness conditions (restraint, seat, controls neutral, supports, exclusion zone)"]
+
+  - id: SYS-002
+    kind: requirement
+    title: "Operator-requested protective stop"
+    text: "System shall provide an operator-requested protective stop with defined behavior for each operating mode."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-101, SCN-104]
+    mitigates: [HAZ-001, HAZ-009, HAZ-021]
+    allocated_to: [SUS-M1-SAF, SUS-M1-PIL]
+    verification: {methods: [analysis, simulation, test], cases: []}
+    tbd: ["stop behavior per mode (controlled stop to supported posture, not instant zero torque)", "stop time and distance"]
+
+  - id: SYS-003
+    kind: requirement
+    title: "Docked rotor inhibit"
+    text: "UAV shall be prevented from rotor startup while mechanically retained, except under an approved maintenance procedure."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-A1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-107]
+    mitigates: [HAZ-011]
+    allocated_to: [SUS-A1, SUS-M1-DCK]
+    verification: {methods: [analysis, test], cases: []}
+
+  - id: SYS-004
+    kind: requirement
+    title: "Essential-feedback loss detection"
+    text: "System shall detect loss of essential feedback and transition to a documented degraded state."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-002, SCN-101]
+    mitigates: [HAZ-001, HAZ-006]
+    allocated_to: [SUS-M1-SAF, SUS-M1-WLK]
+    verification: {methods: [simulation, test], cases: []}
+    tbd: ["list of essential feedback signals", "detection time", "degraded state per mode"]
+
+  - id: SYS-005
+    kind: requirement
+    title: "Positive docking retention state"
+    text: "Docking interface shall report positively confirmed retained/unretained state."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-A1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-005, SCN-106]
+    mitigates: [HAZ-011, HAZ-013]
+    allocated_to: [SUS-M1-DCK]
+    verification: {methods: [analysis, test], cases: []}
+    design_dependency: [TS-004]
+
+  - id: SYS-006
+    kind: requirement
+    title: "Launch and recovery envelope inhibit"
+    text: "UAV launch and recovery shall be inhibited outside a verified operational envelope."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-A1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-004, SCN-005, SCN-106]
+    mitigates: [HAZ-012, HAZ-016]
+    allocated_to: [SUS-M1-DCK, SUS-A1, SUS-M1-SAF]
+    verification: {methods: [simulation, test], cases: []}
+    design_dependency: [TS-004]
+    tbd: ["envelope: walker motion state, wind, clearance, dock-ready conditions"]
+
+  - id: SYS-007
+    kind: requirement
+    title: "Stored-energy isolation and verification"
+    text: "System shall provide means to isolate, relieve and verify the absence of stored hydraulic, mechanical and electrical energy before maintenance and before egress from a supported posture."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-102, SCN-006]
+    mitigates: [HAZ-003, HAZ-004]
+    allocated_to: [SUS-M1-PWR, SUS-GSE]
+    verification: {methods: [inspection, test], cases: []}
+    design_dependency: [TS-001]
+
+  - id: SYS-008
+    kind: requirement
+    title: "No uncontrolled descent on loss of actuation energy"
+    text: "On loss of actuation power or pressure, the walker shall hold or reach a supported posture without uncontrolled descent or motion."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-102, SCN-103]
+    mitigates: [HAZ-005, HAZ-021]
+    allocated_to: [SUS-M1-WLK, SUS-M1-PWR, SUS-M1-SAF]
+    verification: {methods: [analysis, simulation, test], cases: []}
+    design_dependency: [TS-001, TS-003]
+    tbd: ["maximum descent rate", "load-holding means (valves, brakes, mechanical locks)"]
+
+  - id: SYS-009
+    kind: requirement
+    title: "Stability-margin monitoring and motion limiting"
+    text: "System shall estimate stability margin and limit commanded motion and payload so that the margin stays above a defined threshold within the operating envelope."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-002, SCN-003, SCN-103]
+    mitigates: [HAZ-006, HAZ-010]
+    allocated_to: [SUS-M1-WLK, SUS-M1-SAF]
+    verification: {methods: [analysis, simulation], cases: []}
+    design_dependency: [TS-003]
+    tbd: ["stability metric and threshold", "slope, speed, payload and CG envelope"]
+
+  - id: SYS-010
+    kind: requirement
+    title: "Occupant protection in fall and overturn"
+    text: "The pilot station shall protect the restrained pilot against fall and overturn loads within a defined envelope."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-103]
+    mitigates: [HAZ-006]
+    allocated_to: [SUS-M1-PIL]
+    verification: {methods: [analysis, test], cases: []}
+    design_dependency: [TS-002, TS-003]
+    tbd: ["protective-structure load cases", "restraint type"]
+
+  - id: SYS-011
+    kind: requirement
+    title: "Pilot-responsiveness monitoring"
+    text: "System shall detect absence of valid pilot input or responsiveness for longer than a defined time and transition to a supported safe state."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-104]
+    mitigates: [HAZ-007]
+    allocated_to: [SUS-M1-SAF, SUS-M1-PIL]
+    verification: {methods: [simulation, test], cases: []}
+    tbd: ["responsiveness detection method", "time limit", "observer remote stop interaction"]
+
+  - id: SYS-012
+    kind: requirement
+    title: "Emergency egress and extraction"
+    text: "The pilot shall be able to egress, and external personnel to extract the pilot, from any posture including after a fall, within a defined time and without relying on platform power."
+    req_type: human-factors
+    status: candidate
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-104, SCN-108, SCN-006]
+    mitigates: [HAZ-008, HAZ-017]
+    allocated_to: [SUS-M1-PIL]
+    verification: {methods: [analysis, demonstration], cases: []}
+    design_dependency: [TS-002]
+    tbd: ["egress and extraction times", "postures considered"]
+
+  - id: SYS-013
+    kind: requirement
+    title: "Manipulation limits and exclusion-zone interlock"
+    text: "System shall limit manipulator force, speed and payload to defined values and inhibit manipulation while the exclusion zone is not confirmed clear."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-003]
+    mitigates: [HAZ-009, HAZ-010]
+    allocated_to: [SUS-M1-MAN, SUS-M1-SAF]
+    verification: {methods: [simulation, test], cases: []}
+    tbd: ["force, speed and payload limits", "exclusion-zone confirmation means"]
+
+  - id: SYS-014
+    kind: requirement
+    title: "UAV lost-link contingency"
+    text: "On loss of command link for longer than a defined time, the UAV shall execute a predefined contingency (hold, return or land) that remains inside the approved operating area."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-A1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-105]
+    mitigates: [HAZ-014]
+    allocated_to: [SUS-A1]
+    verification: {methods: [simulation, test], cases: []}
+    tbd: ["link-loss time", "contingency selection logic", "operating-area containment"]
+
+  - id: SYS-015
+    kind: requirement
+    title: "UAV display integrity"
+    text: "The pilot display shall annunciate stale, frozen or invalid UAV imagery and telemetry within a defined time."
+    req_type: human-factors
+    status: candidate
+    applicability: [SUS-A1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-105]
+    mitigates: [HAZ-015]
+    allocated_to: [SUS-M1-PIL, SUS-A1]
+    verification: {methods: [simulation, test], cases: []}
+    tbd: ["staleness detection time", "annunciation design"]
+
+  - id: SYS-016
+    kind: requirement
+    title: "Pilot task separation between walking and UAV operation"
+    text: "Walker locomotion shall be inhibited or limited while the pilot is actively tasking the UAV, and UAV tasks shall not require pilot attention while the walker is in motion."
+    req_type: human-factors
+    status: candidate
+    applicability: [SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-004, SCN-105]
+    mitigates: [HAZ-016]
+    allocated_to: [SUS-M1-PIL, SUS-M1-SAF]
+    verification: {methods: [analysis, simulation], cases: []}
+    tbd: ["permitted walker motion during UAV tasking"]
+
+  - id: SYS-017
+    kind: requirement
+    title: "Thermal and electrical fault protection near the pilot"
+    text: "System shall detect battery thermal, overcurrent and insulation faults, isolate the affected source and alert the pilot within a defined time; energy sources shall be separated or shielded from the pilot station."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-108]
+    mitigates: [HAZ-017, HAZ-018, HAZ-019]
+    allocated_to: [SUS-M1-PWR, SUS-M1-PIL]
+    verification: {methods: [analysis, test], cases: []}
+    tbd: ["detection and alert times", "separation and shielding concept"]
+
+  - id: SYS-018
+    kind: requirement
+    title: "Pressurized-fluid containment"
+    text: "Pressurized lines and components within reach of the pilot or crew shall be shielded or routed to prevent fluid injection and spray onto hot or electrical surfaces."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-ARCH-001
+    sources: [SCN-102, SCN-108]
+    mitigates: [HAZ-003, HAZ-020]
+    allocated_to: [SUS-M1-PWR, SUS-M1-WLK, SUS-M1-PIL]
+    verification: {methods: [inspection, analysis], cases: []}
+    design_dependency: [TS-001]

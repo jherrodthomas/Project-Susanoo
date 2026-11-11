@@ -1,9 +1,15 @@
-schema: pdac/v0.1-draft
-kind: Product
+# Project Susanoo product manifest (PDaC identity: Product -> Variant -> Configuration -> Release).
+# Checked by tools/pdac/validate.py against pdac/schema/pdac.schema.json. See pdac/README.md.
+schema: pdac/v0.1
+kind: product
 id: urn:pdac:susanoo:product:001
 name: Project Susanoo
 purpose: human-piloted-mechanized-platform-with-unarmed-observation-uav
 status: concept
+program_status: "Concept. Simulation-first; no hardware built, no certification, qualification, airworthiness approval or formal risk acceptance claimed."
+licenses:
+  code_and_records: Apache-2.0
+  documentation: CC-BY-4.0
 variants:
   - id: SUS-M1
     name: Human-piloted mechanized walker

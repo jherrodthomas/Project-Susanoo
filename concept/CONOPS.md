@@ -1,6 +1,8 @@
 # SUS-M1 / SUS-A1 Concept of Operations (CONOPS)
 
-**ID:** SUS-CONOPS-001 · **Revision:** 0.3-draft · **Status:** Unapproved concept
+**ID:** SUS-CONOPS-001 · **Revision:** 0.4-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.4:* §9 is generated from the PDaC records and now covers every scenario (SCN-102, SCN-103, SCN-104 and SCN-108 had no requirement in 0.3); §12 points to the Preliminary Hazard List.
 
 ## 1. Mission and scope
 A human-piloted, unarmed mechanized walker (SUS-M1) and dockable observation UAV (SUS-A1) support bounded material handling, logistics, inspection and field support. SUS-I1 is the integrated product. The project is simulation-first and demonstrates Product Development as Code (PDaC). It is not a combat system, flight-qualified aircraft or authorized human-occupied prototype.
@@ -49,16 +51,27 @@ Each scenario must derive hazards, controls, verification and mode-specific cont
 ## 8. Human factors and safety
 Assess ingress/egress, restraints, visibility, alarms, workload, manual authority, observer intervention, safe posture, crush zones, rotor clearance, hot surfaces, energy isolation and maintenance support. Establish actual limits only after analysis and verification.
 
-## 9. Candidate requirements
-| Source | Candidate |
-|---|---|
-| SCN-001 | SYS-001 pilot-readiness actuation interlock |
-| SCN-002/101 | SYS-004 feedback fault detection and degraded behavior |
-| SCN-003 | Payload and stability limits (TBD) |
-| SCN-004/105 | UAV lost-link behavior and display integrity (TBD) |
-| SCN-005/106 | SYS-005 docking retention; SYS-006 envelope inhibit |
-| SCN-107 | SYS-003 docked rotor inhibit |
-| SCN-108 | Isolation and emergency egress (TBD) |
+## 9. Scenario trace: hazards and candidate requirements
+Generated from [`pdac/items/`](../pdac/items/) by `tools/pdac/generate.py`; edit the records, not this table. Hazards are described in the [Preliminary Hazard List](../safety/preliminary-hazard-list.md) and requirement text in the [architecture](architecture.md#initial-system-requirements-candidates-not-yet-baselined). Every scenario must derive at least one hazard (check P9).
+
+<!-- BEGIN GENERATED: conops-trace (tools/pdac/generate.py) -->
+| Scenario | Type | Hazards | Candidate requirements |
+|---|---|---|---|
+| SCN-001 Ingress and startup | nominal | HAZ-002 | SYS-001 |
+| SCN-002 Travel | nominal | HAZ-001, HAZ-006, HAZ-009 | SYS-002, SYS-004, SYS-009, SYS-010, SYS-013 |
+| SCN-003 Payload handling | nominal | HAZ-009, HAZ-010 | SYS-002, SYS-009, SYS-013 |
+| SCN-004 UAV observation | nominal | HAZ-012, HAZ-016 | SYS-006, SYS-016 |
+| SCN-005 UAV recovery | nominal | HAZ-012, HAZ-013 | SYS-005, SYS-006 |
+| SCN-006 Shutdown | nominal | HAZ-004 | SYS-007, SYS-012 |
+| SCN-101 Joint control disagreement or runaway movement | off-nominal | HAZ-001, HAZ-021 | SYS-002, SYS-004, SYS-008 |
+| SCN-102 Hydraulic pressure loss, leak or stored pressure | off-nominal | HAZ-003, HAZ-004, HAZ-005, HAZ-020 | SYS-007, SYS-008, SYS-018 |
+| SCN-103 Loss of balance, fall or overturn | off-nominal | HAZ-005, HAZ-006, HAZ-021 | SYS-002, SYS-004, SYS-008, SYS-009, SYS-010 |
+| SCN-104 Pilot incapacitation or blocked egress | off-nominal | HAZ-007, HAZ-008 | SYS-002, SYS-011, SYS-012 |
+| SCN-105 UAV lost link, misleading imagery or pilot distraction | off-nominal | HAZ-014, HAZ-015, HAZ-016 | SYS-006, SYS-014, SYS-015, SYS-016 |
+| SCN-106 UAV approaches moving or unready dock | off-nominal | HAZ-012, HAZ-013 | SYS-005, SYS-006 |
+| SCN-107 Unexpected rotor startup while retained | off-nominal | HAZ-011 | SYS-003, SYS-005 |
+| SCN-108 Thermal or electrical event near pilot | off-nominal | HAZ-008, HAZ-017, HAZ-018, HAZ-019, HAZ-020 | SYS-012, SYS-017, SYS-018 |
+<!-- END GENERATED: conops-trace -->
 
 ## 10. Design alternatives and open decisions
 Hydraulic, electrohydraulic or electromechanical actuation; seated or standing pilot; biped, quadruped or hybrid locomotion; rear/shoulder/separate UAV dock. Selection requires trade studies and safety review. No concept rendering establishes feasibility.
@@ -67,4 +80,4 @@ Hydraulic, electrohydraulic or electromechanical actuation; seated or standing p
 Demonstrate simulated locomotion, manipulation, UAV observation/recovery, fault response, traceable requirements/hazards/tests and a controlled PDaC release. Quantitative acceptance criteria remain TBD. MIL-STD-882E is the integrated safety method; machinery/human factors techniques support walker analysis; ARP4754B/ARP4761A are voluntarily applied to UAV development and safety assessment. None implies certification.
 
 ## 12. Baseline approval
-**Draft only.** Systems, safety, human factors and UAV reviewers must disposition open issues before approval. Changes trigger impact review across requirements, hazards, interfaces, tests and release configuration.
+**Draft only.** Systems, safety, human factors and UAV reviewers must disposition open issues, including the proposed hazard ratings in the [Preliminary Hazard List](../safety/preliminary-hazard-list.md), before approval. Changes trigger impact review across requirements, hazards, interfaces, tests and release configuration.

@@ -1,6 +1,12 @@
 # Project Susanoo — Engineering & Assurance Handbook
 
-**Status: Draft v0.3.** Process guidance for the unarmed SUS-M1 piloted walker and SUS-A1 observation UAV. This handbook is not a certification or an approved government safety program.
+Process guidance for the unarmed SUS-M1 piloted walker and SUS-A1 observation UAV. This handbook is not a certification or an approved government safety program.
+
+<!-- BEGIN GENERATED: status (tools/pdac/generate.py) -->
+**Status:** Concept. Simulation-first; no hardware built, no certification, qualification, airworthiness approval or formal risk acceptance claimed.
+
+**PDaC records** (`7dc85f7f276b`): 14 scenarios · [21 hazards](../../safety/preliminary-hazard-list.md) (initial risk, proposed: 8 high, 10 serious, 3 medium) · 18 requirements (18 candidate) · 4 open trade studies · 0 recorded approvals · release `SUS-I1-R0.2` planned. No risk has been accepted.
+<!-- END GENERATED: status -->
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)
@@ -19,6 +25,6 @@
 4. Link work products to PDaC objects and run available validation.
 5. Record review decisions, discrepancies and open actions before advancing.
 
-The Wiki explains **how**; the main repository stores **what was done**, including evidence and baselines. The [authoritative concept](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md) is version-controlled in the main repository.
+The Wiki explains **how**; the main repository stores **what was done**, including evidence and baselines. The [authoritative concept](../../concept/CONOPS.md), the [Preliminary Hazard List](../../safety/preliminary-hazard-list.md) and the [PDaC records](../../pdac/README.md) are version-controlled in the main repository.
 
-**Publishing note:** These Markdown files are maintained as reviewable source in `docs/wiki/`. GitHub's separate Wiki repository requires an explicit publication step; merge to main alone does not publish the Wiki.
+**Publishing note:** These pages are written and reviewed in `docs/wiki/` of the main repository. The wiki is a generated mirror, rebuilt on every merge to `main`; edits made directly in the wiki are overwritten.

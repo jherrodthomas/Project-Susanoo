@@ -19,9 +19,33 @@ PDaC is **Product Development as Code**, not a synonym for digital thread: typed
 - [Process contracts](framework/process-contracts.md)
 - [PDaC traceability](framework/traceability.md)
 - [Execution plan](framework/execution-plan.md)
-- [Product manifest](pdac/product.yaml)
+- [Preliminary Hazard List](safety/preliminary-hazard-list.md)
+- [PDaC records and checks](pdac/README.md)
 
 ## Assurance approach
 MIL-STD-882E is the integrated system safety method. ISO 12100, ISO 13849 and IEC 61508 methods are evaluated for machinery and control-system risks; MIL-STD-1472 informs operator human factors. SAE ARP4754B and ARP4761A are voluntarily adopted for the UAV development and aircraft safety assessment; DO-178C/DO-254 require separate applicability decisions.
 
-**Status: concept v0.2.** No built prototype, certification, qualification, airworthiness approval or formal government risk acceptance is claimed.
+## Status
+<!-- BEGIN GENERATED: status (tools/pdac/generate.py) -->
+**Status:** Concept. Simulation-first; no hardware built, no certification, qualification, airworthiness approval or formal risk acceptance claimed.
+
+**PDaC records** (`7dc85f7f276b`): 14 scenarios · [21 hazards](safety/preliminary-hazard-list.md) (initial risk, proposed: 8 high, 10 serious, 3 medium) · 18 requirements (18 candidate) · 4 open trade studies · 0 recorded approvals · release `SUS-I1-R0.2` planned. No risk has been accepted.
+<!-- END GENERATED: status -->
+
+## Checking the records
+The PDaC records live in [`pdac/`](pdac/README.md). Python 3.12+ and the pinned packages in [`tools/requirements.txt`](tools/requirements.txt) are all that is needed:
+
+```bash
+python3 -m pip install -r tools/requirements.txt
+python3 tools/pdac/validate.py          # checks P1-P9
+python3 tools/pdac/generate.py --check  # generated tables and pages are current
+python3 tools/check_links.py            # relative links resolve
+```
+
+CI runs the same commands on every pull request. A passing check means the records are consistent; it never means anything has been reviewed, accepted or approved.
+
+## License
+- Code, schemas and machine-readable records (`tools/`, `pdac/`, `.github/`): [Apache License 2.0](LICENSE).
+- Documentation (Markdown pages, including `docs/wiki/`, and figures): [Creative Commons Attribution 4.0 International](LICENSE-docs).
+
+See [NOTICE](NOTICE). Standards are cited by number and clause only; no standards text is reproduced.

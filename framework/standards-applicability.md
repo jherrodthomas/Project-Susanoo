@@ -1,4 +1,6 @@
-# Standards applicability — SUS-M1/SUS-A1 v0.2
+# Standards applicability — SUS-M1/SUS-A1
+
+**ID:** SUS-FW-002 · **Revision:** 0.3-draft · **Status:** Draft, not reviewed
 
 **Status labels:** Core-method = voluntarily adopted project method; Tailored = selected techniques; Conditional = trigger-dependent; Reference = guidance. None implies certification or contractual applicability.
 

@@ -14,4 +14,6 @@
 
 **Entry:** CONOPS, operating modes, architecture and assumptions. **Outputs:** SSPP, PHL/PHA/SSHA/SHA/O&SHA, hazard log, safety requirements, evidence and risk disposition. **Exit:** analysis review completed and open risk explicit; completion is not certification.
 
+**Current records:** the [Preliminary Hazard List](../../safety/preliminary-hazard-list.md), generated from [`pdac/items/hazards.yaml`](../../pdac/items/hazards.yaml). Ratings there are proposals until the safety lead reviews them.
+
 Example hazard families: uncontrolled joint movement, fall/overturn, pressure injection, hot surfaces, pilot entrapment, UAV rotor strike, docking release failure, loss of power and misleading flight imagery.

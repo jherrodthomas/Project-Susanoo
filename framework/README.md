@@ -1,4 +1,6 @@
-# Susanoo Integrated Standards & Lifecycle Framework v0.2
+# Susanoo Integrated Standards & Lifecycle Framework
+
+**ID:** SUS-FW-001 · **Revision:** 0.3-draft · **Status:** Draft, not reviewed
 
 **Scope:** SUS-M1 human-piloted mechanized walker and SUS-A1 unarmed observation UAV.
 

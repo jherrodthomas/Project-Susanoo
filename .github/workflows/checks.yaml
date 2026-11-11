@@ -1,0 +1,39 @@
+# SPDX-License-Identifier: Apache-2.0
+# Record, view, link and tool checks on every pull request and push to main.
+# A green run means the records are consistent. It never reviews, accepts or approves anything.
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pdac:
+    name: PDaC records, generated views and links
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - name: Install the pinned checker packages
+      run: python3 -m pip install --quiet --user --break-system-packages -r tools/requirements.txt
+    - name: Tool unit tests
+      run: python3 -m unittest discover -s tools -p 'test_*.py' -v
+    - name: Records (checks P1-P9)
+      run: python3 tools/pdac/validate.py
+    - name: Generated views are current
+      run: python3 tools/pdac/generate.py --check
+    - name: Relative links resolve
+      run: python3 tools/check_links.py
+    - name: Wiki pages build (includes, page links, repository links)
+      run: python3 tools/wiki/build_wiki.py --out build/wiki --repo "${{ github.repository }}" --branch main

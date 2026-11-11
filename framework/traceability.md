@@ -1,5 +1,7 @@
 # PDaC as Product Development as Code
 
+**ID:** SUS-FW-005 · **Revision:** 0.3-draft · **Status:** Draft, not reviewed
+
 PDaC is a machine-readable product lifecycle model with typed objects, schemas, executable validation, versioned configurations, workflows and releases. **A digital thread is an emergent capability, not the definition.**
 
 ## Canonical identity
@@ -31,3 +33,16 @@ Required common fields: id, type, revision, status, owner, source, timestamps, c
 7. Risk scales for MIL-STD-882E and ARP4761A are separate schema namespaces.
 
 CI checks syntax, links and completeness; human reviewers decide technical adequacy and risk acceptance.
+
+## Implementation status
+Implemented in [`pdac/`](../pdac/README.md) and [`tools/pdac/`](../tools/pdac/): object types Product, Variant, Configuration, Release, Document, Actor, Mode, Scenario, Component, Interface, TradeStudy, Requirement, Hazard, and (schema only) FailureCondition and Approval.
+
+| Rule | Check | State |
+|---|---|---|
+| 1 IDs unique, references resolvable | P2, P3 | Implemented |
+| 2 Released requirements need a verification disposition | P6 | Implemented for `baselined` requirements (method and approval) |
+| 3 Open high-risk findings not silently omitted from release | — | Planned, with Finding records |
+| 4 Approvals name an authority, real or simulated | P1 (schema), P6 | Implemented |
+| 5 Safety-control change flags linked analyses and verification | — | Planned, with ChangeRequest records |
+| 6 Evidence references carry provenance, version, hash | — | Planned, with Evidence records |
+| 7 MIL-STD-882E and ARP4761A scales in separate namespaces | P1 (schema), P5 | Implemented |

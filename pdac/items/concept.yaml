@@ -1,0 +1,79 @@
+# Concept objects copied from concept/CONOPS.md (SUS-CONOPS-001): actors (§3), operating modes (§5)
+# and scenarios (§6-§7). CONOPS stays the reviewed prose; validate.py (check P8) fails if a scenario or
+# mode ID appears in one and not the other.
+file: concept
+owner: systems-lead
+revision: "0.1"
+provenance: {author: "Claude (AI-drafted)", independence: I0, date: "2026-11-11", reviewed: false}
+items:
+  # --- Actors (CONOPS §3) ---------------------------------------------------------------------
+  - {id: ACT-PILOT, kind: actor, title: "Pilot", status: draft, applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Commands the walker and the UAV; performs emergency intervention."}
+  - {id: ACT-OBSERVER, kind: actor, title: "Safety observer", status: draft, applicability: [SUS-M1, SUS-A1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Maintains the exclusion zone and can intervene independently of the pilot."}
+  - {id: ACT-SUPERVISOR, kind: actor, title: "Mission supervisor", status: draft, applicability: [SUS-I1], source: SUS-CONOPS-001,
+     description: "Sets and enforces operational limits."}
+  - {id: ACT-MAINTAINER, kind: actor, title: "Maintainer", status: draft, applicability: [SUS-M1, SUS-A1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Isolates energy and services the platform."}
+  - {id: ACT-BYSTANDER, kind: actor, title: "Bystander", status: draft, applicability: [SUS-M1, SUS-A1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Any person in or near the operating area who is not part of the crew."}
+
+  # --- Operating modes (CONOPS §5) ------------------------------------------------------------
+  - {id: MOD-01, kind: mode, title: "OFF/SECURED", status: draft, applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Energy isolated, supported.", transition_concern: "Residual pressure and restraint"}
+  - {id: MOD-02, kind: mode, title: "STARTUP", status: draft, applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Pilot readiness and self-test.", transition_concern: "Inhibit unexpected actuation"}
+  - {id: MOD-03, kind: mode, title: "STANDBY", status: draft, applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Stable pose, motion inhibited.", transition_concern: "Retention and posture"}
+  - {id: MOD-04, kind: mode, title: "PILOTED WALK", status: draft, applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Bounded operator locomotion.", transition_concern: "Stability and feedback loss"}
+  - {id: MOD-05, kind: mode, title: "MANIPULATION", status: draft, applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Controlled payload handling.", transition_concern: "Crushing and overload"}
+  - {id: MOD-06, kind: mode, title: "UAV PREPARE", status: draft, applicability: [SUS-A1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Dock, clearance and preflight.", transition_concern: "Rotor inhibit and release"}
+  - {id: MOD-07, kind: mode, title: "UAV FLIGHT", status: draft, applicability: [SUS-A1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Observation and return.", transition_concern: "Lost link and pilot attention"}
+  - {id: MOD-08, kind: mode, title: "UAV RECOVERY", status: draft, applicability: [SUS-A1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Approach, capture, retention.", transition_concern: "Collision and capture failure"}
+  - {id: MOD-09, kind: mode, title: "DEGRADED/EMERGENCY", status: draft, applicability: [SUS-M1, SUS-A1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Mode-specific fault response.", transition_concern: "Avoid collapse or entrapment"}
+  - {id: MOD-10, kind: mode, title: "MAINTENANCE", status: draft, applicability: [SUS-M1, SUS-A1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Supported, isolated service.", transition_concern: "Stored energy and egress"}
+
+  # --- Nominal scenarios (CONOPS §6) ----------------------------------------------------------
+  - {id: SCN-001, kind: scenario, title: "Ingress and startup", scenario_type: nominal, status: draft,
+     applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-01, MOD-02, MOD-03],
+     description: "Crew confirms supports, exclusion zone and pilot readiness; failed checks inhibit motion."}
+  - {id: SCN-002, kind: scenario, title: "Travel", scenario_type: nominal, status: draft,
+     applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-04],
+     description: "Pilot commands walking inside a defined stability envelope; feedback and state supervision monitor hazards."}
+  - {id: SCN-003, kind: scenario, title: "Payload handling", scenario_type: nominal, status: draft,
+     applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-05],
+     description: "Pilot manipulates a bounded nonhazardous payload, with load and exclusion-zone checks."}
+  - {id: SCN-004, kind: scenario, title: "UAV observation", scenario_type: nominal, status: draft,
+     applicability: [SUS-A1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-06, MOD-07],
+     description: "Pilot requests UAV launch from a permitted stationary state; aircraft collects imagery and returns."}
+  - {id: SCN-005, kind: scenario, title: "UAV recovery", scenario_type: nominal, status: draft,
+     applicability: [SUS-A1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-08],
+     description: "UAV approaches only with dock ready; capture and positive retention precede charging or rotor-inhibit state change."}
+  - {id: SCN-006, kind: scenario, title: "Shutdown", scenario_type: nominal, status: draft,
+     applicability: [SUS-M1, SUS-A1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-03, MOD-01],
+     description: "UAV accounted for; walker reaches a supported posture, isolates energy and allows pilot egress."}
+
+  # --- Off-nominal scenarios (CONOPS §7) ------------------------------------------------------
+  - {id: SCN-101, kind: scenario, title: "Joint control disagreement or runaway movement", scenario_type: off-nominal, status: draft,
+     applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-04, MOD-05, MOD-09]}
+  - {id: SCN-102, kind: scenario, title: "Hydraulic pressure loss, leak or stored pressure", scenario_type: off-nominal, status: draft,
+     applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-04, MOD-05, MOD-09, MOD-10]}
+  - {id: SCN-103, kind: scenario, title: "Loss of balance, fall or overturn", scenario_type: off-nominal, status: draft,
+     applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-04, MOD-05, MOD-09]}
+  - {id: SCN-104, kind: scenario, title: "Pilot incapacitation or blocked egress", scenario_type: off-nominal, status: draft,
+     applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-04, MOD-05, MOD-07, MOD-09]}
+  - {id: SCN-105, kind: scenario, title: "UAV lost link, misleading imagery or pilot distraction", scenario_type: off-nominal, status: draft,
+     applicability: [SUS-A1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-07]}
+  - {id: SCN-106, kind: scenario, title: "UAV approaches moving or unready dock", scenario_type: off-nominal, status: draft,
+     applicability: [SUS-A1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-08]}
+  - {id: SCN-107, kind: scenario, title: "Unexpected rotor startup while retained", scenario_type: off-nominal, status: draft,
+     applicability: [SUS-A1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-06, MOD-08, MOD-10]}
+  - {id: SCN-108, kind: scenario, title: "Thermal or electrical event near pilot", scenario_type: off-nominal, status: draft,
+     applicability: [SUS-M1, SUS-A1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-02, MOD-04, MOD-05, MOD-09, MOD-10]}

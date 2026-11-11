@@ -2,7 +2,7 @@
 
 **Purpose:** Define the mission, operational environment, stakeholders, system boundaries, scenarios, modes and constraints before deriving requirements.
 
-**Authoritative artifact:** [concept/CONOPS.md](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md)
+**Authoritative artifact:** [concept/CONOPS.md](../../concept/CONOPS.md). Scenario and mode IDs are mirrored as records in [`pdac/items/concept.yaml`](../../pdac/items/concept.yaml); the validator fails if the two disagree
 
 ## Procedure
 1. Identify intended users, operational objectives, exclusions and operating environment.

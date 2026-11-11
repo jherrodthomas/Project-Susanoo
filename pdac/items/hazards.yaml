@@ -1,0 +1,356 @@
+# Preliminary Hazard List (PHL), MIL-STD-882E method. Source of truth for safety/preliminary-hazard-list.md,
+# which tools/pdac/generate.py writes from this file.
+#
+# Ratings are INITIAL risk (before the candidate mitigations take effect), rated by an AI assistant from
+# the concept description alone. They are proposals for the safety lead to review, not assessed values,
+# and no risk has been accepted. MIL-STD-882E severity/probability/risk level live only on hazards;
+# ARP4761A failure-condition classes live only on failure-condition records (check P5).
+file: hazards
+owner: safety-lead
+revision: "0.1"
+provenance: {author: "Claude (AI-drafted)", independence: I0, date: "2026-11-11", reviewed: false}
+items:
+  - id: HAZ-001
+    kind: hazard
+    title: "Uncommanded or runaway joint motion"
+    mishap: "A leg or arm strikes or crushes the pilot, the observer or a bystander."
+    causes: ["control or software fault", "loss or corruption of joint feedback", "valve or drive failure", "command corruption"]
+    energy_sources: [kinetic, hydraulic-pressure, electrical]
+    exposed: [ACT-PILOT, ACT-OBSERVER, ACT-BYSTANDER]
+    scenarios: [SCN-101, SCN-002]
+    modes: [MOD-04, MOD-05]
+    components: [SUS-M1-WLK, SUS-M1-MAN, SUS-M1-SAF]
+    risk: {initial: {severity: catastrophic, probability: occasional, level: high}, rating_status: proposed}
+    mitigated_by: [SYS-002, SYS-004]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-002
+    kind: hazard
+    title: "Unexpected actuation during ingress, startup or standby"
+    mishap: "The walker moves while the pilot is entering or a crew member is next to it."
+    causes: ["interlock bypassed or failed", "self-test passes falsely", "inadvertent control input"]
+    energy_sources: [kinetic, hydraulic-pressure, electrical]
+    exposed: [ACT-PILOT, ACT-MAINTAINER, ACT-OBSERVER]
+    scenarios: [SCN-001]
+    modes: [MOD-02, MOD-03]
+    components: [SUS-M1-SAF, SUS-M1-PIL]
+    risk: {initial: {severity: catastrophic, probability: occasional, level: high}, rating_status: proposed}
+    mitigated_by: [SYS-001]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-003
+    kind: hazard
+    title: "High-pressure fluid injection or spray"
+    mishap: "Fluid jet penetrates skin or eyes of the pilot or crew."
+    causes: ["hose or fitting failure", "pinhole leak", "loosening a pressurized fitting during service"]
+    energy_sources: [hydraulic-pressure]
+    exposed: [ACT-PILOT, ACT-MAINTAINER, ACT-OBSERVER]
+    scenarios: [SCN-102]
+    modes: [MOD-04, MOD-05, MOD-10]
+    components: [SUS-M1-PWR, SUS-M1-WLK]
+    risk: {initial: {severity: critical, probability: occasional, level: serious}, rating_status: proposed}
+    mitigated_by: [SYS-007, SYS-018]
+    design_dependency: [TS-001]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-004
+    kind: hazard
+    title: "Release of stored energy during maintenance or egress"
+    mishap: "A limb drops or moves, or a component releases pressure or charge, while a person is in contact."
+    causes: ["residual accumulator pressure", "unsupported limb", "charged capacitors", "missed isolation step"]
+    energy_sources: [hydraulic-pressure, gravitational, stored-mechanical, electrical]
+    exposed: [ACT-MAINTAINER, ACT-PILOT]
+    scenarios: [SCN-102, SCN-006]
+    modes: [MOD-01, MOD-10]
+    components: [SUS-M1-PWR, SUS-M1-WLK, SUS-GSE]
+    risk: {initial: {severity: catastrophic, probability: occasional, level: high}, rating_status: proposed}
+    mitigated_by: [SYS-007]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-005
+    kind: hazard
+    title: "Uncontrolled descent or collapse on loss of actuation energy"
+    mishap: "The walker collapses with the pilot aboard or onto nearby personnel."
+    causes: ["pump or power loss", "major leak", "valve failure", "battery depletion"]
+    energy_sources: [gravitational]
+    exposed: [ACT-PILOT, ACT-OBSERVER, ACT-BYSTANDER]
+    scenarios: [SCN-102, SCN-103]
+    modes: [MOD-03, MOD-04, MOD-05, MOD-09]
+    components: [SUS-M1-WLK, SUS-M1-PWR]
+    risk: {initial: {severity: catastrophic, probability: occasional, level: high}, rating_status: proposed}
+    mitigated_by: [SYS-008]
+    design_dependency: [TS-001]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-006
+    kind: hazard
+    title: "Loss of balance, fall or overturn with the pilot aboard"
+    mishap: "The walker falls or rolls over; the pilot is injured by impact, or the walker lands on personnel."
+    causes: ["terrain or slope beyond envelope", "payload shifts the center of gravity", "state-estimation or control error", "feedback loss", "actuator saturation"]
+    energy_sources: [gravitational, kinetic]
+    exposed: [ACT-PILOT, ACT-OBSERVER, ACT-BYSTANDER]
+    scenarios: [SCN-103, SCN-002]
+    modes: [MOD-04, MOD-05]
+    components: [SUS-M1-WLK, SUS-M1-SAF, SUS-M1-PIL]
+    risk: {initial: {severity: catastrophic, probability: probable, level: high}, rating_status: proposed}
+    mitigated_by: [SYS-004, SYS-009, SYS-010]
+    design_dependency: [TS-002, TS-003]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-007
+    kind: hazard
+    title: "Pilot incapacitation without transition to a safe state"
+    mishap: "The walker keeps moving or holds an unsafe posture after the pilot stops controlling it."
+    causes: ["medical event", "injury from impact", "heat or fumes"]
+    energy_sources: [kinetic, gravitational]
+    exposed: [ACT-PILOT, ACT-OBSERVER, ACT-BYSTANDER]
+    scenarios: [SCN-104]
+    modes: [MOD-04, MOD-05, MOD-07]
+    components: [SUS-M1-SAF, SUS-M1-PIL]
+    risk: {initial: {severity: catastrophic, probability: remote, level: serious}, rating_status: proposed}
+    mitigated_by: [SYS-011]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-008
+    kind: hazard
+    title: "Blocked or delayed emergency egress or extraction"
+    mishap: "The pilot cannot leave, or cannot be removed, during fire, injury or after a fall."
+    causes: ["fallen posture blocks the exit", "jammed hatch or restraint", "exit depends on platform power", "fire near the exit"]
+    energy_sources: [gravitational, thermal]
+    exposed: [ACT-PILOT]
+    scenarios: [SCN-104, SCN-108]
+    modes: [MOD-04, MOD-05, MOD-09, MOD-10]
+    components: [SUS-M1-PIL]
+    risk: {initial: {severity: catastrophic, probability: remote, level: serious}, rating_status: proposed}
+    mitigated_by: [SYS-012]
+    design_dependency: [TS-002]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-009
+    kind: hazard
+    title: "Crushing or striking of personnel in the walking or manipulation envelope"
+    mishap: "A person inside the envelope is stepped on, struck or pinned."
+    causes: ["exclusion-zone breach", "restricted pilot visibility", "unexpected motion"]
+    energy_sources: [kinetic, gravitational]
+    exposed: [ACT-OBSERVER, ACT-BYSTANDER, ACT-MAINTAINER]
+    scenarios: [SCN-002, SCN-003]
+    modes: [MOD-04, MOD-05]
+    components: [SUS-M1-WLK, SUS-M1-MAN]
+    risk: {initial: {severity: catastrophic, probability: occasional, level: high}, rating_status: proposed}
+    mitigated_by: [SYS-002, SYS-013]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-010
+    kind: hazard
+    title: "Payload drop, overload or loss of grip"
+    mishap: "A payload falls on personnel or destabilizes the walker."
+    causes: ["overload", "grip failure", "payload center-of-gravity shift"]
+    energy_sources: [gravitational]
+    exposed: [ACT-OBSERVER, ACT-BYSTANDER, ACT-PILOT]
+    scenarios: [SCN-003]
+    modes: [MOD-05]
+    components: [SUS-M1-MAN]
+    risk: {initial: {severity: critical, probability: occasional, level: serious}, rating_status: proposed}
+    mitigated_by: [SYS-009, SYS-013]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-011
+    kind: hazard
+    title: "Unexpected rotor start while the UAV is retained or handled"
+    mishap: "Rotor blades strike the pilot or a maintainer."
+    causes: ["rotor inhibit fails", "inadvertent arm command", "maintenance test", "wrong retention-state indication"]
+    energy_sources: [rotor-kinetic]
+    exposed: [ACT-PILOT, ACT-MAINTAINER]
+    scenarios: [SCN-107]
+    modes: [MOD-06, MOD-08, MOD-10]
+    components: [SUS-A1, SUS-M1-DCK]
+    risk: {initial: {severity: critical, probability: occasional, level: serious}, rating_status: proposed}
+    mitigated_by: [SYS-003, SYS-005]
+    status: open
+    applicability: [SUS-A1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-012
+    kind: hazard
+    title: "UAV collision with the walker, pilot or personnel during launch or recovery"
+    mishap: "The UAV or its rotors strike a person or the pilot station."
+    causes: ["approach to a moving or unready dock", "gust", "guidance error", "operation outside the envelope"]
+    energy_sources: [rotor-kinetic, kinetic]
+    exposed: [ACT-PILOT, ACT-OBSERVER, ACT-BYSTANDER]
+    scenarios: [SCN-004, SCN-005, SCN-106]
+    modes: [MOD-06, MOD-08]
+    components: [SUS-A1, SUS-M1-DCK]
+    risk: {initial: {severity: critical, probability: occasional, level: serious}, rating_status: proposed}
+    mitigated_by: [SYS-006]
+    design_dependency: [TS-004]
+    status: open
+    applicability: [SUS-A1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-013
+    kind: hazard
+    title: "Docking retention failure or unintended release"
+    mishap: "The UAV falls from the dock or is released while the walker moves."
+    causes: ["latch failure", "false retained indication", "walker motion loads exceed retention"]
+    energy_sources: [gravitational, kinetic]
+    exposed: [ACT-PILOT, ACT-OBSERVER, ACT-BYSTANDER]
+    scenarios: [SCN-005, SCN-106]
+    modes: [MOD-03, MOD-04, MOD-05, MOD-08]
+    components: [SUS-M1-DCK]
+    risk: {initial: {severity: critical, probability: remote, level: medium}, rating_status: proposed}
+    mitigated_by: [SYS-005]
+    design_dependency: [TS-004]
+    status: open
+    applicability: [SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-014
+    kind: hazard
+    title: "UAV lost link or fly-away leaving the operating area"
+    mishap: "The UAV strikes people or property outside the controlled area."
+    causes: ["radio link loss", "interference", "navigation fault", "contingency logic error"]
+    energy_sources: [kinetic, rotor-kinetic]
+    exposed: [ACT-BYSTANDER]
+    scenarios: [SCN-105]
+    modes: [MOD-07]
+    components: [SUS-A1]
+    risk: {initial: {severity: critical, probability: occasional, level: serious}, rating_status: proposed}
+    mitigated_by: [SYS-014]
+    note: "The aircraft-level failure conditions behind this hazard are classified separately in the SUS-A1 FHA (ARP4761A), not here."
+    status: open
+    applicability: [SUS-A1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-015
+    kind: hazard
+    title: "Misleading UAV imagery or telemetry leading to pilot error"
+    mishap: "The pilot acts on stale or wrong information and moves the walker into a person or hazard."
+    causes: ["frozen or stale video", "latency", "wrong overlay or position"]
+    energy_sources: [kinetic]
+    exposed: [ACT-PILOT, ACT-OBSERVER, ACT-BYSTANDER]
+    scenarios: [SCN-105]
+    modes: [MOD-07]
+    components: [SUS-A1, SUS-M1-PIL]
+    risk: {initial: {severity: critical, probability: remote, level: medium}, rating_status: proposed}
+    mitigated_by: [SYS-015]
+    status: open
+    applicability: [SUS-A1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-016
+    kind: hazard
+    title: "Pilot distraction or overload while the walker moves during UAV operations"
+    mishap: "The walker strikes a person or loses balance while the pilot attends to the UAV."
+    causes: ["dual tasking", "alert overload", "attention on video feed"]
+    energy_sources: [kinetic, gravitational]
+    exposed: [ACT-PILOT, ACT-OBSERVER, ACT-BYSTANDER]
+    scenarios: [SCN-004, SCN-105]
+    modes: [MOD-04, MOD-07]
+    components: [SUS-M1-PIL]
+    risk: {initial: {severity: catastrophic, probability: occasional, level: high}, rating_status: proposed}
+    mitigated_by: [SYS-006, SYS-016]
+    status: open
+    applicability: [SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-017
+    kind: hazard
+    title: "Battery thermal runaway, fire or toxic gas near the pilot"
+    mishap: "The pilot is burned or overcome by smoke or gas."
+    causes: ["cell defect", "overcharge", "mechanical damage from a fall", "external heat"]
+    energy_sources: [chemical, thermal]
+    exposed: [ACT-PILOT, ACT-MAINTAINER]
+    scenarios: [SCN-108]
+    modes: [MOD-02, MOD-04, MOD-05, MOD-09, MOD-10]
+    components: [SUS-M1-PWR, SUS-A1]
+    risk: {initial: {severity: catastrophic, probability: remote, level: serious}, rating_status: proposed}
+    mitigated_by: [SYS-012, SYS-017]
+    status: open
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-018
+    kind: hazard
+    title: "Electric shock from high-voltage power distribution"
+    mishap: "The pilot or a maintainer contacts an energized conductor."
+    causes: ["insulation damage", "service on an energized circuit", "chassis fault"]
+    energy_sources: [electrical]
+    exposed: [ACT-MAINTAINER, ACT-PILOT]
+    scenarios: [SCN-108]
+    modes: [MOD-04, MOD-10]
+    components: [SUS-M1-PWR]
+    risk: {initial: {severity: catastrophic, probability: remote, level: serious}, rating_status: proposed}
+    mitigated_by: [SYS-017]
+    design_dependency: [TS-001]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-019
+    kind: hazard
+    title: "Contact burns from hot surfaces"
+    mishap: "The pilot or a maintainer touches a hot pump, motor, manifold or battery case."
+    causes: ["unguarded hot component", "service before cool-down"]
+    energy_sources: [thermal]
+    exposed: [ACT-PILOT, ACT-MAINTAINER]
+    scenarios: [SCN-108]
+    modes: [MOD-04, MOD-05, MOD-10]
+    components: [SUS-M1-PWR, SUS-M1-WLK]
+    risk: {initial: {severity: marginal, probability: occasional, level: medium}, rating_status: proposed}
+    mitigated_by: [SYS-017]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-020
+    kind: hazard
+    title: "Hydraulic fluid fire"
+    mishap: "Sprayed or leaked fluid ignites near the pilot station."
+    causes: ["spray onto hot surfaces", "electrical arcing near a leak"]
+    energy_sources: [chemical, thermal, hydraulic-pressure]
+    exposed: [ACT-PILOT, ACT-MAINTAINER]
+    scenarios: [SCN-102, SCN-108]
+    modes: [MOD-04, MOD-05, MOD-10]
+    components: [SUS-M1-PWR, SUS-M1-WLK]
+    risk: {initial: {severity: catastrophic, probability: remote, level: serious}, rating_status: proposed}
+    mitigated_by: [SYS-018]
+    design_dependency: [TS-001]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+
+  - id: HAZ-021
+    kind: hazard
+    title: "Protective or emergency stop causes collapse or uncontrolled posture change"
+    mishap: "Stopping by removing all actuator torque drops a statically unstable walker with the pilot aboard."
+    causes: ["stop implemented as immediate removal of actuator power", "stop behavior not defined per mode"]
+    energy_sources: [gravitational]
+    exposed: [ACT-PILOT, ACT-OBSERVER, ACT-BYSTANDER]
+    scenarios: [SCN-101, SCN-103]
+    modes: [MOD-04, MOD-05, MOD-09]
+    components: [SUS-M1-SAF, SUS-M1-WLK]
+    risk: {initial: {severity: catastrophic, probability: occasional, level: high}, rating_status: proposed}
+    mitigated_by: [SYS-002, SYS-008]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001

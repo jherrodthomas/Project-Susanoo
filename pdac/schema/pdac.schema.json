@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:pdac:susanoo:schema:v0.1",
+  "title": "Project Susanoo PDaC records v0.1",
+  "description": "Schemas for pdac/product.yaml and every file in pdac/items/ and pdac/documents.yaml. tools/pdac/validate.py checks each file against $defs/itemFile and each item against the $defs entry named by its kind. Cross-record rules (references, bidirectional links, risk scales, acceptance) are in validate.py, not here.",
+  "$defs": {
+    "variantId": {"type": "string", "enum": ["SUS-M1", "SUS-A1", "SUS-I1"]},
+    "nonEmptyText": {"type": "string", "minLength": 1},
+    "idList": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "textList": {"type": "array", "items": {"$ref": "#/$defs/nonEmptyText"}},
+
+    "provenance": {
+      "type": "object",
+      "required": ["author", "independence", "date", "reviewed"],
+      "additionalProperties": false,
+      "properties": {
+        "author": {"$ref": "#/$defs/nonEmptyText"},
+        "independence": {"enum": ["I0", "I1", "I2", "I3"], "description": "I0 = author-side, including all AI drafting; I1-I3 = increasing reviewer independence (defined in CLAUDE.md until a safety plan defines it)."},
+        "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+        "reviewed": {"type": "boolean"}
+      }
+    },
+
+    "product": {
+      "type": "object",
+      "required": ["schema", "kind", "id", "name", "purpose", "status", "program_status", "licenses", "variants", "configuration", "release"],
+      "additionalProperties": false,
+      "properties": {
+        "schema": {"const": "pdac/v0.1"},
+        "kind": {"const": "product"},
+        "id": {"type": "string", "pattern": "^urn:pdac:susanoo:product:\\d{3}$"},
+        "name": {"$ref": "#/$defs/nonEmptyText"},
+        "purpose": {"$ref": "#/$defs/nonEmptyText"},
+        "status": {"enum": ["concept", "development", "released", "retired"]},
+        "program_status": {"$ref": "#/$defs/nonEmptyText"},
+        "licenses": {
+          "type": "object", "additionalProperties": false, "required": ["code_and_records", "documentation"],
+          "properties": {"code_and_records": {"type": "string"}, "documentation": {"type": "string"}}
+        },
+        "variants": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["id", "name", "status"],
+            "properties": {"id": {"$ref": "#/$defs/variantId"}, "name": {"type": "string"}, "status": {"enum": ["concept", "development", "released", "retired"]}}
+          }
+        },
+        "configuration": {
+          "type": "object", "additionalProperties": false, "required": ["id", "status"],
+          "properties": {"id": {"type": "string", "pattern": "^SUS-[AIM]\\d-C\\d{3}$"}, "status": {"enum": ["planned", "baselined", "superseded"]}}
+        },
+        "release": {
+          "type": "object", "additionalProperties": false, "required": ["id", "status", "profile", "approvals"],
+          "properties": {
+            "id": {"type": "string", "pattern": "^SUS-[AIM]\\d-R\\d+\\.\\d+$"},
+            "status": {"enum": ["planned", "candidate", "released", "withdrawn"]},
+            "profile": {"type": "string"},
+            "approvals": {"$ref": "#/$defs/idList"}
+          }
+        }
+      }
+    },
+
+    "itemFile": {
+      "type": "object",
+      "required": ["file", "owner", "revision", "provenance", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "file": {"type": "string", "pattern": "^[a-z][a-z-]*$"},
+        "owner": {"type": "string", "pattern": "^[a-z][a-z-]*$"},
+        "revision": {"type": "string"},
+        "provenance": {"$ref": "#/$defs/provenance"},
+        "items": {"type": "array", "items": {"type": "object", "required": ["id", "kind"]}}
+      }
+    },
+
+    "common": {
+      "type": "object",
+      "required": ["id", "kind", "title", "status", "applicability"],
+      "properties": {
+        "id": {"type": "string"},
+        "kind": {"type": "string"},
+        "title": {"$ref": "#/$defs/nonEmptyText"},
+        "status": {"type": "string"},
+        "applicability": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/variantId"}, "uniqueItems": true},
+        "source": {"type": "string", "description": "ID of the controlled document this record is copied from or derived in."},
+        "description": {"$ref": "#/$defs/nonEmptyText"},
+        "note": {"$ref": "#/$defs/nonEmptyText"}
+      }
+    },
+
+    "document": {
+      "$ref": "#/$defs/common", "unevaluatedProperties": false,
+      "required": ["path", "revision"],
+      "properties": {
+        "id": {"pattern": "^SUS-[A-Z]+-\\d{3}$"},
+        "kind": {"const": "document"},
+        "status": {"enum": ["draft", "in-review", "approved", "superseded"]},
+        "path": {"type": "string"},
+        "revision": {"type": "string", "pattern": "^\\d+\\.\\d+(-draft)?$"}
+      }
+    },
+    "actor": {
+      "$ref": "#/$defs/common", "unevaluatedProperties": false,
+      "properties": {"id": {"pattern": "^ACT-[A-Z]+$"}, "kind": {"const": "actor"}, "status": {"enum": ["draft", "baselined"]}}
+    },
+    "mode": {
+      "$ref": "#/$defs/common", "unevaluatedProperties": false,
+      "properties": {
+        "id": {"pattern": "^MOD-\\d{2}$"}, "kind": {"const": "mode"}, "status": {"enum": ["draft", "baselined"]},
+        "transition_concern": {"$ref": "#/$defs/nonEmptyText"}
+      }
+    },
+    "scenario": {
+      "$ref": "#/$defs/common", "unevaluatedProperties": false,
+      "required": ["scenario_type", "modes"],
+      "properties": {
+        "id": {"pattern": "^SCN-\\d{3}$"}, "kind": {"const": "scenario"}, "status": {"enum": ["draft", "baselined"]},
+        "scenario_type": {"enum": ["nominal", "off-nominal"]},
+        "modes": {"$ref": "#/$defs/idList", "minItems": 1}
+      }
+    },
+    "component": {
+      "$ref": "#/$defs/common", "unevaluatedProperties": false,
+      "properties": {"id": {"pattern": "^SUS-(M1-[A-Z]{3}|A1|GSE)$"}, "kind": {"const": "component"}, "status": {"enum": ["draft", "baselined"]}}
+    },
+    "interface": {
+      "$ref": "#/$defs/common", "unevaluatedProperties": false,
+      "required": ["endpoints", "exchange", "hazard_concern"],
+      "properties": {
+        "id": {"pattern": "^IF-\\d{2}$"}, "kind": {"const": "interface"}, "status": {"enum": ["draft", "agreed"]},
+        "endpoints": {"$ref": "#/$defs/idList", "minItems": 1},
+        "exchange": {"$ref": "#/$defs/nonEmptyText"},
+        "hazard_concern": {"$ref": "#/$defs/nonEmptyText"}
+      }
+    },
+    "trade-study": {
+      "$ref": "#/$defs/common", "unevaluatedProperties": false,
+      "required": ["alternatives"],
+      "properties": {
+        "id": {"pattern": "^TS-\\d{3}$"}, "kind": {"const": "trade-study"}, "status": {"enum": ["open", "decided", "reopened"]},
+        "alternatives": {"$ref": "#/$defs/textList", "minItems": 2},
+        "selected": {"type": "string"},
+        "decision_ref": {"type": "string"}
+      }
+    },
+    "requirement": {
+      "$ref": "#/$defs/common", "unevaluatedProperties": false,
+      "required": ["text", "req_type", "sources", "allocated_to", "verification"],
+      "properties": {
+        "id": {"pattern": "^SYS-\\d{3}$"}, "kind": {"const": "requirement"},
+        "status": {"enum": ["candidate", "proposed", "baselined", "deleted"]},
+        "text": {"$ref": "#/$defs/nonEmptyText"},
+        "req_type": {"enum": ["functional", "safety", "performance", "interface", "human-factors"]},
+        "sources": {"$ref": "#/$defs/idList", "minItems": 1},
+        "mitigates": {"$ref": "#/$defs/idList"},
+        "allocated_to": {"$ref": "#/$defs/idList", "minItems": 1},
+        "verification": {
+          "type": "object", "additionalProperties": false, "required": ["methods", "cases"],
+          "properties": {
+            "methods": {"type": "array", "uniqueItems": true, "items": {"enum": ["analysis", "inspection", "demonstration", "test", "simulation"]}},
+            "cases": {"$ref": "#/$defs/idList"}
+          }
+        },
+        "design_dependency": {"$ref": "#/$defs/idList"},
+        "tbd": {"$ref": "#/$defs/textList"},
+        "approval_ref": {"type": "string"}
+      }
+    },
+
+    "mil882eRating": {
+      "description": "MIL-STD-882E risk assessment. Only hazards carry this (check P5).",
+      "type": "object", "additionalProperties": false, "required": ["severity", "probability", "level"],
+      "properties": {
+        "severity": {"enum": ["catastrophic", "critical", "marginal", "negligible"]},
+        "probability": {"enum": ["frequent", "probable", "occasional", "remote", "improbable", "eliminated"]},
+        "level": {"enum": ["high", "serious", "medium", "low", "eliminated"]}
+      }
+    },
+    "hazard": {
+      "$ref": "#/$defs/common", "unevaluatedProperties": false,
+      "required": ["mishap", "causes", "energy_sources", "exposed", "scenarios", "modes", "components", "risk", "mitigated_by", "source"],
+      "properties": {
+        "id": {"pattern": "^HAZ-\\d{3}$"}, "kind": {"const": "hazard"},
+        "status": {"enum": ["open", "monitor", "closed"]},
+        "mishap": {"$ref": "#/$defs/nonEmptyText"},
+        "causes": {"$ref": "#/$defs/textList", "minItems": 1},
+        "energy_sources": {"type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"enum": ["kinetic", "gravitational", "hydraulic-pressure", "stored-mechanical", "electrical", "thermal", "chemical", "rotor-kinetic", "radiation"]}},
+        "exposed": {"$ref": "#/$defs/idList", "minItems": 1},
+        "scenarios": {"$ref": "#/$defs/idList", "minItems": 1},
+        "modes": {"$ref": "#/$defs/idList", "minItems": 1},
+        "components": {"$ref": "#/$defs/idList", "minItems": 1},
+        "risk": {
+          "type": "object", "additionalProperties": false, "required": ["initial", "rating_status"],
+          "properties": {
+            "initial": {"$ref": "#/$defs/mil882eRating"},
+            "target": {"$ref": "#/$defs/mil882eRating"},
+            "residual": {"$ref": "#/$defs/mil882eRating"},
+            "rating_status": {"enum": ["proposed", "reviewed"]}
+          }
+        },
+        "mitigated_by": {"$ref": "#/$defs/idList"},
+        "design_dependency": {"$ref": "#/$defs/idList"},
+        "related_failure_conditions": {"$ref": "#/$defs/idList"},
+        "acceptance_ref": {"type": "string"}
+      }
+    },
+
+    "failure-condition": {
+      "description": "ARP4761A aircraft failure condition (SUS-A1 FHA). Classification only; never a MIL-STD-882E rating (check P5).",
+      "$ref": "#/$defs/common", "unevaluatedProperties": false,
+      "required": ["function", "phase", "effect", "classification", "source"],
+      "properties": {
+        "id": {"pattern": "^FC-\\d{3}$"}, "kind": {"const": "failure-condition"},
+        "status": {"enum": ["proposed", "reviewed"]},
+        "function": {"$ref": "#/$defs/nonEmptyText"},
+        "phase": {"$ref": "#/$defs/nonEmptyText"},
+        "effect": {"$ref": "#/$defs/nonEmptyText"},
+        "classification": {"enum": ["catastrophic", "hazardous", "major", "minor", "no-safety-effect"]},
+        "related_hazards": {"$ref": "#/$defs/idList"}
+      }
+    },
+
+    "approval": {
+      "description": "A recorded human decision. AI assistants never write one with authority_type real (CLAUDE.md).",
+      "$ref": "#/$defs/common", "unevaluatedProperties": false,
+      "required": ["authority", "authority_type", "decision", "date", "objects"],
+      "properties": {
+        "id": {"pattern": "^APR-\\d{3}$"}, "kind": {"const": "approval"},
+        "status": {"enum": ["recorded", "revoked"]},
+        "authority": {"$ref": "#/$defs/nonEmptyText"},
+        "authority_type": {"enum": ["real", "simulated"]},
+        "decision": {"enum": ["baseline", "accept-risk", "reject", "release"]},
+        "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+        "objects": {"$ref": "#/$defs/idList", "minItems": 1},
+        "rationale": {"$ref": "#/$defs/nonEmptyText"}
+      }
+    }
+  }
+}

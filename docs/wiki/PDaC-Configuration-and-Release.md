@@ -14,4 +14,6 @@ Product → Variant → Configuration → Release. SUS-M1 walker, SUS-A1 UAV and
 6. Generate an immutable release manifest with versions, unresolved findings and explicit approvals.
 7. Reopen impacted analyses and tests after relevant changes.
 
-**Important:** CI cannot certify safety or accept residual risk. The current `pdac/product.yaml` is a **draft manifest**, not a validated executable PDaC implementation.
+**Implementation:** records, schema and checks P1–P9 are described in [`pdac/README.md`](../../pdac/README.md); CI runs them on every pull request.
+
+**Important:** CI cannot certify safety or accept residual risk. A passing check means the records are consistent, not that anything is reviewed or approved.

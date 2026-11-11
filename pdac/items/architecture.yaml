@@ -1,0 +1,49 @@
+# Architecture objects copied from concept/architecture.md (SUS-ARCH-001) and concept/trade-studies.md
+# (SUS-TRADE-001): components, interfaces and the open trade studies that hazards and requirements depend on.
+file: architecture
+owner: systems-lead
+revision: "0.1"
+provenance: {author: "Claude (AI-drafted)", independence: I0, date: "2026-11-11", reviewed: false}
+items:
+  # --- Components (SUS-ARCH-001 "System decomposition") ---------------------------------------
+  - {id: SUS-M1-WLK, kind: component, title: "Walker chassis, legs, feet, stability sensing and actuation", status: draft,
+     applicability: [SUS-M1, SUS-I1], source: SUS-ARCH-001}
+  - {id: SUS-M1-MAN, kind: component, title: "Manipulation arms, end effectors, payload sensors", status: draft,
+     applicability: [SUS-M1, SUS-I1], source: SUS-ARCH-001}
+  - {id: SUS-M1-PIL, kind: component, title: "Pilot station: restraints, displays, controls, ingress/egress", status: draft,
+     applicability: [SUS-M1, SUS-I1], source: SUS-ARCH-001}
+  - {id: SUS-M1-PWR, kind: component, title: "Power generation/storage, distribution, isolation, thermal control", status: draft,
+     applicability: [SUS-M1, SUS-I1], source: SUS-ARCH-001}
+  - {id: SUS-M1-SAF, kind: component, title: "Independent safety monitoring, protective stop and fault handling", status: draft,
+     applicability: [SUS-M1, SUS-I1], source: SUS-ARCH-001}
+  - {id: SUS-M1-DCK, kind: component, title: "UAV dock: mechanical retention, power/data interface, release and capture", status: draft,
+     applicability: [SUS-M1, SUS-A1, SUS-I1], source: SUS-ARCH-001}
+  - {id: SUS-A1, kind: component, title: "Observation UAV: airframe, flight control, sensors, communications", status: draft,
+     applicability: [SUS-A1, SUS-I1], source: SUS-ARCH-001}
+  - {id: SUS-GSE, kind: component, title: "Ground support: maintenance supports, charging and test equipment", status: draft,
+     applicability: [SUS-M1, SUS-A1, SUS-I1], source: SUS-ARCH-001}
+
+  # --- Interfaces (SUS-ARCH-001 "Interfaces requiring explicit control") ----------------------
+  - {id: IF-01, kind: interface, title: "Pilot <-> controls", status: draft, applicability: [SUS-M1, SUS-I1], source: SUS-ARCH-001,
+     endpoints: [ACT-PILOT, SUS-M1-PIL], exchange: "Intent, status, alerts", hazard_concern: "Unintended movement, cognitive overload"}
+  - {id: IF-02, kind: interface, title: "Controller <-> actuators", status: draft, applicability: [SUS-M1, SUS-I1], source: SUS-ARCH-001,
+     endpoints: [SUS-M1-SAF, SUS-M1-WLK, SUS-M1-MAN], exchange: "Motion command, feedback, power", hazard_concern: "Runaway motion, trapped energy",
+     note: "The architecture has no explicit motion-control component yet; endpoints are provisional (finding F-ARCH-01)."}
+  - {id: IF-03, kind: interface, title: "Walker <-> ground", status: draft, applicability: [SUS-M1, SUS-I1], source: SUS-ARCH-001,
+     endpoints: [SUS-M1-WLK], exchange: "Contact loads, terrain sensing", hazard_concern: "Instability and fall"}
+  - {id: IF-04, kind: interface, title: "Walker <-> UAV", status: draft, applicability: [SUS-I1], source: SUS-ARCH-001,
+     endpoints: [SUS-M1-DCK, SUS-A1], exchange: "Release, docking, charge, telemetry", hazard_concern: "Rotor strike, failed retention"}
+  - {id: IF-05, kind: interface, title: "UAV <-> pilot", status: draft, applicability: [SUS-I1], source: SUS-ARCH-001,
+     endpoints: [SUS-A1, SUS-M1-PIL, ACT-PILOT], exchange: "Video, state, alerts", hazard_concern: "Misleading or distracting information"}
+  - {id: IF-06, kind: interface, title: "Maintenance <-> walker", status: draft, applicability: [SUS-M1, SUS-I1], source: SUS-ARCH-001,
+     endpoints: [ACT-MAINTAINER, SUS-GSE, SUS-M1-WLK], exchange: "Support, isolation, service", hazard_concern: "Crush/entrapment and residual pressure"}
+
+  # --- Trade studies (SUS-TRADE-001) ----------------------------------------------------------
+  - {id: TS-001, kind: trade-study, title: "Actuation", status: open, applicability: [SUS-M1, SUS-I1], source: SUS-TRADE-001,
+     alternatives: ["centralized hydraulic", "distributed electrohydraulic", "electromechanical"]}
+  - {id: TS-002, kind: trade-study, title: "Pilot architecture", status: open, applicability: [SUS-M1, SUS-I1], source: SUS-TRADE-001,
+     alternatives: ["seated protected cockpit", "standing open-frame pilot", "remote operator"]}
+  - {id: TS-003, kind: trade-study, title: "Locomotion", status: open, applicability: [SUS-M1, SUS-I1], source: SUS-TRADE-001,
+     alternatives: ["bipedal", "quadrupedal", "hybrid leg-wheel"]}
+  - {id: TS-004, kind: trade-study, title: "UAV docking", status: open, applicability: [SUS-I1], source: SUS-TRADE-001,
+     alternatives: ["rear backpack dock", "shoulder-mounted dock", "separate portable station"]}
