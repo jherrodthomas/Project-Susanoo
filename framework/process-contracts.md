@@ -1,18 +1,16 @@
-# Process contracts
+# Process contracts — v0.2
 
-Every process defines **trigger, inputs, method, outputs, reviewer, exit criteria and change response**.
+Every process has a trigger, inputs, method, outputs, reviewer, exit criteria and change response.
 
-| Process | Trigger | Inputs | Outputs | Exit criteria |
-|---|---|---|---|---|
-| Applicability and tailoring | Concept or contract change | Mission, environment, authority | Applicability register | Rationale and reviewer recorded |
-| Requirements engineering | CONOPS/change | Stakeholder needs, constraints | Versioned requirements, allocations | Testability and trace links reviewed |
-| Integrated hazard analysis | Concept/design/incident | Architecture, operating modes | PHL/PHA/SSHA/SHA/O&SHA, controls | Risks and actions dispositioned |
-| UAV safety assessment | Function/architecture change | Aircraft functions, failure conditions | FHA/PSSA/SSA, FTA/FMEA/CCA | Safety objectives traced to evidence |
-| Cybersecurity | Threat or interface change | Assets, interfaces, scenarios | Threat model, requirements, findings | Risks reviewed |
-| Verification | New or changed baseline | Requirements, procedures, test assets | Results, logs, discrepancies | Pass/fail and deviations recorded |
-| Configuration control | Proposed change | Change request, affected graph | Approved baseline and audit record | Authorized decision and integrity checks |
-| Release assurance | Release request | Baselines, evidence, unresolved findings | Manifest, safety case, release decision | Approvals and limitations explicit |
+| Process | Inputs | Outputs |
+|---|---|---|
+| CONOPS and human factors | Pilot mission, operating environment | Use cases, operating modes, pilot interface/egress requirements |
+| Applicability and tailoring | System boundary, authority | Standards register and rationale |
+| Requirements and MBSE | CONOPS, hazards, interfaces | Versioned requirements, allocations and SysML model |
+| Walker safety | Mechanical/power/control design | MIL-STD-882E analyses, machinery risk assessment, control safety requirements |
+| UAV safety assessment | UAV functions, architecture | FHA, PSSA, SSA, FMEA/FTA/CCA |
+| Interface safety | Dock, UAV approach, operator displays | Interface hazards, interlocks and verification |
+| Verification | Controlled requirements and design | Simulation, bench tests, results and discrepancies |
+| Configuration and release | Change request, evidence graph | Reviewed baseline, risk disposition and release manifest |
 
-Roles: program lead owns scope; systems lead owns requirements/architecture; safety lead owns hazard process; air assurance lead owns aircraft analyses; verification lead owns test evidence; configuration lead owns releases. These are functional roles, not claims of independent assessors or government acceptance authorities.
-
-No automated tool may accept residual safety risk or substitute for authorized review.
+Functional ownership: program, systems, walker/mechanical, UAV/air, safety, human factors, verification, configuration. No simulated role implies independent assessment or government acceptance.
