@@ -64,7 +64,9 @@ Built: `sim/` with a sourced parameter spec, a fault catalogue traced to hazard 
 
 Original plan: Build the walker plant, `faults.yaml` and `report --check` with synthetic-labelled results. Then one search family (pressure loss mid-stride on a slope), with edge cases mapped to hazards and unmatched cases turned into findings. Then 2D scenes for the Catastrophic and Critical hazards, and the evidence-gate section stating that there is no credit without an approved fidelity case.
 
-### Step 4: UAV and fidelity (PX4 SITL built)
+### Step 4: UAV and fidelity (PX4 SITL and MuJoCo level 2 built)
+Level 2: `sim/mujoco` (MuJoCo 3.3.5, decision DQ-007). A planar two-legged walker generated from the specs, with virtual-model control that reuses level 1's cases and outcome definitions, and `crosscheck.py` comparing both levels on 21 cases (17 agree). The disagreements (15 degree slope, undervoltage without brakes, EC-05, EC-08) are explained in the report and fed back into HAZ-WLK-002 as an open action.
+
 Built: `sim/uav` (pinned PX4 v1.16.2 SITL, SIH quadrotor, headless; harness acting as ground station; six failsafe scenarios scored on ground truth; outcome-to-hazard rules), top-down animated scenes and the `UAV-Simulation` wiki page from the committed results, 9 tests, a light PR check and a weekly/on-demand `PX4 SITL failsafe scenarios` workflow. Findings FND-UAV-01..03 and decision DQ-008 (link-loss contingency). Not built: the integration manager prototype in the loop, the dock approach and abort scenario, and MuJoCo legged dynamics (DQ-007).
 
 Original plan: PX4 SITL failsafe checks (lost link, geofence, battery, dock approach, abort). MuJoCo legged dynamics as fidelity level 2, cross-checked against the plant.

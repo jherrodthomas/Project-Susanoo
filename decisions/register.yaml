@@ -136,8 +136,10 @@ decisions:
     blocks: [port plan step 4]
     gate: G3
     decider: claude
-    status: queued
+    status: applied
     asked: null
+    answer: {choice: mujoco, by: lead, at: 2026-11-11, via: chat, note: "start the MuJoCo legged dynamics sim"}
+    applied_in: [sim/mujoco/model.py, sim/mujoco/l2.py, sim/results/l2-crosscheck.md]
     sources: [framework/liondriver-port-plan.md]
 
   - id: DQ-008

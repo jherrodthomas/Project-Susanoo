@@ -1,0 +1,18 @@
+# SUS-M1 level-2 (MuJoCo) model parameters, in addition to sim/spec/walker.yaml. Same rules: every value has a unit,
+# range, status and source, and sim/plant/spec.py refuses anything else. Concept assumptions, not design values.
+schema: susanoo/sim-spec/v0.1
+id: SPEC-WLK-L2-001
+revision: 0.1-draft
+params:
+  torso_mass_kg:      {value: 2400, unit: kg,  range: [1000, 5000], status: assumed, source: "Cockpit, pelvis, power and manipulators lumped above the hips (80% of mass_kg)"}
+  leg_mass_kg:        {value: 300,  unit: kg,  range: [100, 1000],  status: assumed, source: "Each leg (thigh + shank + foot), split 50/40/10"}
+  hip_height_m:       {value: 2.9,  unit: m,   range: [1.5, 4.0],   status: derived, source: "Puts the whole-body CoM at com_height_m with the masses above"}
+  thigh_length_m:     {value: 1.45, unit: m,   range: [0.8, 2.5],   status: assumed, source: "Hip to knee"}
+  shank_length_m:     {value: 1.45, unit: m,   range: [0.8, 2.5],   status: assumed, source: "Knee to ankle"}
+  ankle_height_m:     {value: 0.15, unit: m,   range: [0.05, 0.4],  status: assumed, source: "Ankle joint above the sole"}
+  torso_com_above_hip_m: {value: 0.5, unit: m, range: [0.0, 1.5],   status: assumed, source: "Cockpit mass centre above the hip joint"}
+  knee_torque_max_nm: {value: 60000, unit: N m, range: [10000, 200000], status: assumed, source: "Knee actuator peak torque at full supply (about twice the nominal static load)"}
+  hip_torque_max_nm:  {value: 40000, unit: N m, range: [10000, 200000], status: assumed, source: "Hip actuator peak torque at full supply"}
+  ankle_torque_max_nm: {value: 20000, unit: N m, range: [5000, 100000], status: assumed, source: "Ankle actuator peak torque at full supply (above m g x foot half-length, so contact geometry, not the actuator, limits the centre of pressure)"}
+  timestep_s:         {value: 0.002, unit: s,  range: [0.0005, 0.005], status: assumed, source: "MuJoCo integration step (implicitfast)"}
+  ground_friction:    {value: 1.0,  unit: "-", range: [0.3, 2.0],   status: assumed, source: "Foot-ground friction coefficient on firm ground"}
