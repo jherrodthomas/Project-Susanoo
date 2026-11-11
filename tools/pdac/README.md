@@ -17,6 +17,8 @@ pip install -r tools/pdac/requirements.txt
 python -m tools.pdac.validate            # exit 1 on errors; --strict also fails on warnings
 python -m tools.pdac.report              # regenerate docs/wiki/*.md pages and safety/generated/hts.csv
 python -m unittest discover -s tools/pdac/tests -t .
+python -m tools.figures.fig_item            # regenerate the context and boundary figures; --check in CI
+python -m unittest discover -s tools/figures/tests -t .
 ```
 
 CI (`.github/workflows/pdac-validate.yml`) runs all three on every pull request. `report --check` fails if generated pages were not regenerated after a record change.
@@ -39,6 +41,12 @@ CI (`.github/workflows/pdac-validate.yml`) runs all three on every pull request.
 | R10 | Approved changes require reassessment of affected hazards; increased risk re-accepted | 4.3.8, Task 304 |
 | R11 | Every task has a tailoring decision; selected tasks due by the current gate have records; no records for unselected tasks | 5.2, App. A |
 | R12 | Simulated acceptances only under the demonstrator release profile | Project rule |
+| R13 | Acceptance only through a review record with a named human reviewer in the right role; an AI review is I0 and never accepts (see `reviews/README.md`) | 4.3.7; project rule |
+| A01 | Item definition valid: schema, unique IDs, parents, candidate elements name a decision that exists | 4.3.2 |
+| A02 | Interface endpoints are elements or externals; hazard links resolve | 4.3.2 |
+| A03 | Hazard and event subsystems, requirement allocations and hazard interface IDs name real elements and interfaces | 4.3.2, Task 106.2c |
+| A04 | Every element and external element has an interface; every function has real performers | 4.3.2 |
+| D01 | Decision register lifecycle: recommendation first, answers match options, a lead decision is never answered by Claude, applied decisions say where, about ten open | Project rule |
 
 ## Limits
 

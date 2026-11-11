@@ -19,6 +19,7 @@
     "owner": {"type": "string"},
     "reviewer": {"type": ["string", "null"]},
     "decision": {"enum": ["pending", "accepted", "returned"]},
+    "review_id": {"type": "string", "description": "REV record that approved this work product (rule R13)"},
     "assumptions": {"type": "array", "items": {"type": "string"}},
     "open_actions": {"type": "array", "items": {"type": "string"}}
   }

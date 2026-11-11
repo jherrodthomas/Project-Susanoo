@@ -90,6 +90,7 @@
           "properties": {"role": {"type": "string"}, "date": {"type": "string", "format": "date"}, "record": {"type": "string"}}},
         "date": {"type": "string", "format": "date"},
         "record": {"type": "string", "description": "Location of the signed acceptance document"},
+        "review_id": {"type": "string", "description": "REV record in which the authority accepted this risk (rule R13)"},
         "simulated": {"type": "boolean"}
       }
     }},

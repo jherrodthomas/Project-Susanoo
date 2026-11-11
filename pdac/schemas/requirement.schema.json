@@ -25,6 +25,7 @@
         "evidence_ids": {"type": "array", "items": {"type": "string"}},
         "disposition": {"enum": ["open", "verified", "failed", "waived"]}
       }},
-    "tbd": {"type": "array", "items": {"type": "string"}}
+    "tbd": {"type": "array", "items": {"type": "string"}},
+    "review_id": {"type": "string", "description": "REV record that baselined this requirement (rule R13)"}
   }
 }

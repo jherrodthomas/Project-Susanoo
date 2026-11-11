@@ -1,0 +1,124 @@
+# SUS-I1 item definition: functions, elements inside the boundary, external elements and interfaces.
+# Source of truth for the context and boundary figures (tools/figures/fig_item.py) and the generated
+# wiki page SUS-I1-Item-Definition. Validated by tools/pdac (rules A01-A04).
+# Merges the wiki interface register IF-001..008 (docs/wiki/SUS-M1-Architecture-and-Boundaries.md, before
+# this record) and the PX4 contract IF-PX4-001..009 (integrations/px4/interface-contract.md).
+schema: susanoo/item-definition/v0.1
+id: SUS-I1
+title: SUS-I1 integrated mechanized walker and observation UAV
+revision: 0.1-draft
+status: draft
+configuration: SUS-I1-C001
+scope: >-
+  Human-piloted unarmed walker (SUS-M1), dockable unarmed observation UAV (SUS-A1), their integration
+  manager and docking interface, and ground support equipment. Simulation-first concept; no hardware selected.
+
+functions:
+  - {id: F-01, name: "Piloted locomotion", performed_by: [SUS-M1-CTL, SUS-M1-WLK, SUS-M1-PIL], modes: [MOD-04], scenarios: [SCN-002]}
+  - {id: F-02, name: "Payload manipulation", performed_by: [SUS-M1-MAN, SUS-M1-CTL], modes: [MOD-05], scenarios: [SCN-003]}
+  - {id: F-03, name: "Pilot readiness, ingress and egress", performed_by: [SUS-M1-PIL, SUS-M1-SAF], modes: [MOD-02, MOD-03], scenarios: [SCN-001, SCN-006]}
+  - {id: F-04, name: "Protective stop and fault response", performed_by: [SUS-M1-SAF, SUS-M1-CTL], modes: [MOD-09], scenarios: [SCN-101, SCN-103]}
+  - {id: F-05, name: "Power generation, storage, distribution and isolation", performed_by: [SUS-M1-PWR, SUS-M1-SAF], modes: [MOD-01, MOD-02], scenarios: [SCN-102, SCN-108]}
+  - {id: F-06, name: "Aerial observation", performed_by: [SUS-A1-FC, SUS-A1-NAV, SUS-A1-PROP], modes: [MOD-07], scenarios: [SCN-004, SCN-105]}
+  - {id: F-07, name: "UAV launch, recovery and retention", performed_by: [SUS-M1-DCK, SUS-I1-INT, SUS-A1-FC], modes: [MOD-06, MOD-08], scenarios: [SCN-004, SCN-005, SCN-106, SCN-107]}
+  - {id: F-08, name: "UAV charging", performed_by: [SUS-M1-DCK, SUS-A1-PWR], modes: [MOD-03, MOD-06], scenarios: [SCN-005]}
+  - {id: F-09, name: "Maintenance support and energy isolation", performed_by: [SUS-GSE, SUS-M1-PWR], modes: [MOD-10], scenarios: [SCN-102, SCN-006]}
+
+# kind: system | mechanical | electrical | computing | human-interface | mixed
+# safety_role: protective (implements a protective function) | none
+# status: candidate = depends on an open decision (decision field)
+elements:
+  - {id: SUS-M1, parent: SUS-I1, name: "Piloted walker", kind: system, safety_role: none, status: concept}
+  - {id: SUS-M1-PIL, parent: SUS-M1, name: "Pilot station, restraints, displays and controls", kind: human-interface, safety_role: none, status: concept}
+  - {id: SUS-M1-CTL, parent: SUS-M1, name: "Mission, motion and balance control", kind: computing, safety_role: none, status: concept,
+     source: "docs/wiki/SUS-M1-Architecture-and-Boundaries.md (control boundary diagram)"}
+  - {id: SUS-M1-WLK, parent: SUS-M1, name: "Chassis, legs, joint actuators and stability sensing", kind: mechanical, safety_role: none, status: concept}
+  - {id: SUS-M1-MAN, parent: SUS-M1, name: "Manipulation arms and end effectors", kind: mechanical, safety_role: none, status: concept}
+  - {id: SUS-M1-SAF, parent: SUS-M1, name: "Independent safety monitor, protective stop and isolation", kind: computing, safety_role: protective, status: concept}
+  - {id: SUS-M1-DCK, parent: SUS-M1, name: "UAV dock, retention, charging and release", kind: mixed, safety_role: protective, status: concept}
+  - {id: SUS-M1-PWR, parent: SUS-M1, name: "Power generation, storage, distribution and thermal control", kind: electrical, safety_role: none, status: concept}
+  - {id: SUS-M1-PWR-GEN, parent: SUS-M1-PWR, name: "Engine-generator and governor", kind: mechanical, safety_role: none, status: candidate, decision: DQ-006}
+  - {id: SUS-M1-PWR-BAT, parent: SUS-M1-PWR, name: "Battery pack, BMS and contactors", kind: electrical, safety_role: none, status: candidate, decision: DQ-006}
+  - {id: SUS-M1-PWR-DIST, parent: SUS-M1-PWR, name: "Protected power distribution", kind: electrical, safety_role: none, status: candidate, decision: DQ-006}
+  - {id: SUS-A1, parent: SUS-I1, name: "Dockable observation UAV", kind: system, safety_role: none, status: concept}
+  - {id: SUS-A1-FC, parent: SUS-A1, name: "PX4-based flight controller", kind: computing, safety_role: none, status: concept}
+  - {id: SUS-A1-NAV, parent: SUS-A1, name: "Navigation sensors, camera and telemetry", kind: electrical, safety_role: none, status: concept}
+  - {id: SUS-A1-PWR, parent: SUS-A1, name: "UAV battery and power management", kind: electrical, safety_role: none, status: concept}
+  - {id: SUS-A1-PROP, parent: SUS-A1, name: "Motors, ESCs and propellers", kind: mechanical, safety_role: none, status: concept}
+  - {id: SUS-I1-INT, parent: SUS-I1, name: "Integration manager and PX4 command adapter", kind: computing, safety_role: none, status: concept,
+     source: integrations/px4/interface-contract.md}
+  - {id: SUS-GSE, parent: SUS-I1, name: "Ground support, maintenance supports, charging and test equipment", kind: mixed, safety_role: none, status: concept}
+
+externals:
+  - {id: EXT-PILOT, name: "Pilot", assumption: "Trained, restrained pilot; may become incapacitated (SCN-104)"}
+  - {id: EXT-OBSERVER, name: "Safety observer", assumption: "Holds an independent stop and enforces the exclusion zone"}
+  - {id: EXT-CREW, name: "Ground crew and maintainers", assumption: "Follow isolation procedures; may not"}
+  - {id: EXT-BYSTANDER, name: "Bystanders", assumption: "Kept outside the exclusion zone by procedure only"}
+  - {id: EXT-TERRAIN, name: "Terrain and obstacles", assumption: "Slope, payload and ground limits TBD (CONOPS 4)"}
+  - {id: EXT-AIRSPACE, name: "Airspace, people and property under the UAV", assumption: "Operations inside a defined, unpopulated volume"}
+  - {id: EXT-GNSS-RF, name: "GNSS and RF environment", assumption: "Signals may be degraded, lost or spoofed"}
+  - {id: EXT-WEATHER, name: "Weather", assumption: "Wind and precipitation limits TBD"}
+
+# direction: uni (from -> to) | bi
+# kind: data | energy | mechanical | human | environment (one or more)
+interfaces:
+  - {id: IF-001, name: "Pilot controls and displays", from: EXT-PILOT, to: SUS-M1-PIL, direction: bi, kind: [human, data],
+     exchange: "commands, state, warnings", hazard_ids: [HAZ-PIL-001], source: wiki IF-001}
+  - {id: IF-002, name: "Engine-generator to distribution", from: SUS-M1-PWR-GEN, to: SUS-M1-PWR-DIST, direction: uni, kind: [energy],
+     exchange: "electric power, voltage, thermal state", hazard_ids: [], source: wiki IF-002, status: candidate, decision: DQ-006}
+  - {id: IF-003, name: "Battery to distribution", from: SUS-M1-PWR-BAT, to: SUS-M1-PWR-DIST, direction: bi, kind: [energy, data],
+     exchange: "bidirectional power, BMS state", hazard_ids: [], source: wiki IF-003, status: candidate, decision: DQ-006}
+  - {id: IF-004, name: "Control to joint actuators", from: SUS-M1-CTL, to: SUS-M1-WLK, direction: bi, kind: [data, energy],
+     exchange: "torque or pressure commands, joint feedback", hazard_ids: [HAZ-WLK-001, HAZ-WLK-002], source: wiki IF-004}
+  - {id: IF-005, name: "Safety monitor to power", from: SUS-M1-SAF, to: SUS-M1-PWR, direction: uni, kind: [data, energy],
+     exchange: "inhibit, isolation", hazard_ids: [HAZ-SAF-001], source: wiki IF-005}
+  - {id: IF-006, name: "Walker dock to UAV", from: SUS-M1-DCK, to: SUS-A1, direction: bi, kind: [mechanical, energy, data],
+     exchange: "retention, charging, data, release", hazard_ids: [HAZ-DCK-001, HAZ-DCK-002], source: wiki IF-006}
+  - {id: IF-007, name: "UAV in airspace", from: SUS-A1, to: EXT-AIRSPACE, direction: bi, kind: [environment],
+     exchange: "flight, exposure of people and property", hazard_ids: [HAZ-INT-001], source: wiki IF-007}
+  - {id: IF-008, name: "Maintainer to energy sources", from: EXT-CREW, to: SUS-M1-PWR, direction: bi, kind: [human, energy],
+     exchange: "lockout, isolation, inspection, service", hazard_ids: [HAZ-PWR-001], source: wiki IF-008}
+  - {id: IF-PX4-001, name: "Flight state, position and status", from: SUS-A1-FC, to: SUS-I1-INT, direction: uni, kind: [data],
+     exchange: "flight state, position, status; freshness and source validity", hazard_ids: [HAZ-INT-001], source: integrations/px4/interface-contract.md}
+  - {id: IF-PX4-002, name: "UAV health and arming state", from: SUS-A1-FC, to: SUS-I1-INT, direction: uni, kind: [data],
+     exchange: "health, arming state; disagreement handling", hazard_ids: [HAZ-DCK-001], source: integrations/px4/interface-contract.md}
+  - {id: IF-PX4-003, name: "Dock occupied and retained", from: SUS-M1-DCK, to: SUS-I1-INT, direction: uni, kind: [data],
+     exchange: "occupied/retained state with independent plausibility", hazard_ids: [HAZ-DCK-002], source: integrations/px4/interface-contract.md}
+  - {id: IF-PX4-004, name: "Walker posture and stationary state", from: SUS-M1-CTL, to: SUS-I1-INT, direction: uni, kind: [data],
+     exchange: "posture, stationary flag for the launch/recovery envelope", hazard_ids: [HAZ-INT-001], source: integrations/px4/interface-contract.md}
+  - {id: IF-PX4-005, name: "Launch permit and revoke", from: SUS-I1-INT, to: SUS-A1-FC, direction: uni, kind: [data],
+     exchange: "explicit, fail-closed launch authorization", hazard_ids: [HAZ-INT-001], source: integrations/px4/interface-contract.md}
+  - {id: IF-PX4-006, name: "Recovery and abort intent", from: SUS-I1-INT, to: SUS-A1-FC, direction: uni, kind: [data],
+     exchange: "recovery request, abort; contingency on lost link", hazard_ids: [HAZ-INT-001], source: integrations/px4/interface-contract.md}
+  - {id: IF-PX4-007, name: "UAV video and mission cues", from: SUS-A1-NAV, to: SUS-M1-PIL, direction: uni, kind: [data],
+     exchange: "video, mission cues; latency, distraction", hazard_ids: [], source: integrations/px4/interface-contract.md}
+  - {id: IF-PX4-008, name: "Fault and contingency notification", from: SUS-I1-INT, to: SUS-A1-FC, direction: bi, kind: [data],
+     exchange: "time-stamped, prioritised fault notifications", hazard_ids: [HAZ-INT-001], source: integrations/px4/interface-contract.md}
+  - {id: IF-PX4-009, name: "Power and charging handshake", from: SUS-M1-DCK, to: SUS-A1-PWR, direction: bi, kind: [energy, data],
+     exchange: "charging handshake, rotor inhibit, energy isolation", hazard_ids: [HAZ-DCK-001], source: integrations/px4/interface-contract.md}
+  - {id: IF-010, name: "Walker on terrain", from: SUS-M1-WLK, to: EXT-TERRAIN, direction: bi, kind: [mechanical, environment],
+     exchange: "contact loads, terrain sensing", hazard_ids: [HAZ-WLK-002], source: concept/architecture.md}
+  - {id: IF-011, name: "Observer stop", from: EXT-OBSERVER, to: SUS-M1-SAF, direction: uni, kind: [human, data],
+     exchange: "independent stop request", hazard_ids: [HAZ-SAF-001], source: "safety/hazards/HAZ-SAF-001.yaml M3"}
+  - {id: IF-012, name: "Walker motion near people", from: SUS-M1-WLK, to: EXT-BYSTANDER, direction: uni, kind: [mechanical, environment],
+     exchange: "moving structure, exclusion zone", hazard_ids: [HAZ-WLK-002, HAZ-SAF-001], source: concept/CONOPS.md}
+  - {id: IF-013, name: "Navigation and telemetry link", from: SUS-A1-NAV, to: EXT-GNSS-RF, direction: bi, kind: [data, environment],
+     exchange: "GNSS, telemetry, RF link", hazard_ids: [HAZ-INT-001], source: concept/CONOPS.md}
+  - {id: IF-014, name: "Weather on the UAV", from: EXT-WEATHER, to: SUS-A1, direction: uni, kind: [environment],
+     exchange: "wind, precipitation, temperature", hazard_ids: [HAZ-INT-001], source: concept/CONOPS.md}
+  - {id: IF-015, name: "Pilot stop request", from: EXT-PILOT, to: SUS-M1-SAF, direction: uni, kind: [human, data],
+     exchange: "protective stop request", hazard_ids: [HAZ-SAF-001], source: "docs/wiki/SUS-M1-Architecture-and-Boundaries.md (control boundary diagram)"}
+  - {id: IF-016, name: "Torque inhibit and brakes", from: SUS-M1-SAF, to: SUS-M1-WLK, direction: uni, kind: [data, energy],
+     exchange: "torque inhibit, brakes, load holding", hazard_ids: [HAZ-SAF-001, HAZ-WLK-001], source: "docs/wiki/SUS-M1-Architecture-and-Boundaries.md (control boundary diagram)"}
+  - {id: IF-017, name: "Pilot motion request", from: SUS-M1-PIL, to: SUS-M1-CTL, direction: uni, kind: [data],
+     exchange: "requested motion, mode", hazard_ids: [HAZ-PIL-001], source: "docs/wiki/SUS-M1-Architecture-and-Boundaries.md (control boundary diagram)"}
+  - {id: IF-018, name: "Arm commands", from: SUS-M1-CTL, to: SUS-M1-MAN, direction: bi, kind: [data, energy],
+     exchange: "arm commands, load feedback", hazard_ids: [], source: concept/architecture.md}
+  - {id: IF-019, name: "Ground support to walker", from: SUS-GSE, to: SUS-M1, direction: bi, kind: [mechanical, energy],
+     exchange: "maintenance supports, external charging, test connections", hazard_ids: [HAZ-PWR-001], source: concept/architecture.md}
+  - {id: IF-020, name: "Launch and recovery authorization", from: SUS-M1-PIL, to: SUS-I1-INT, direction: bi, kind: [human, data],
+     exchange: "operator launch/recovery request and authorization, status", hazard_ids: [HAZ-INT-001], source: "docs/wiki/SUS-M1-Architecture-and-Boundaries.md (docking diagram)"}
+  - {id: IF-021, name: "Motor commands", from: SUS-A1-FC, to: SUS-A1-PROP, direction: uni, kind: [data, energy],
+     exchange: "motor commands", hazard_ids: [HAZ-DCK-001], source: "docs/wiki/SUS-M1-Architecture-and-Boundaries.md (docking diagram)"}
+  - {id: IF-022, name: "Safety sensing", from: SUS-M1-WLK, to: SUS-M1-SAF, direction: uni, kind: [data],
+     exchange: "posture, joint and pressure sensing for the monitor", hazard_ids: [HAZ-WLK-001], source: "docs/wiki/SUS-M1-Architecture-and-Boundaries.md (control boundary diagram)"}

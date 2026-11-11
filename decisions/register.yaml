@@ -1,0 +1,141 @@
+# Decision register: every question for the project lead (the safety authority).
+# Rules: CLAUDE.md "Decisions". Lifecycle: queued -> open -> answered -> applied (or withdrawn).
+# decider: lead = only the lead can decide (risk acceptance, scope, money/hardware, authorities, gate go/no-go);
+#          claude = reversible technical choice; Claude decides, applies and records it, never asks.
+# Keep about ten open. The recommended option is listed first. Checked by tools/pdac rule D01;
+# the inbox page docs/wiki/Decision-Inbox.md is generated from this file.
+schema: susanoo/decision-register/v0.1
+decisions:
+  - id: DQ-001
+    question: Which edition of MIL-STD-882E is the project baseline?
+    context: >-
+      The repository cited "MIL-STD-882E with Change 1" in 25 files, but the controlled copy held is the
+      **11 May 2012 base edition**. Tables, task text and DIDs must come from one edition.
+    options:
+      - {key: base, title: 2012 base edition, detail: "Use the copy we hold; correct the citations. Change 1 can be adopted later as a change request."}
+      - {key: change1, title: Change 1, detail: "Obtain the Change 1 controlled copy first; model work waits until then."}
+    recommendation: base
+    reversibility: revisit
+    blocks: [standards/mil-std-882e/model.yaml]
+    gate: G0
+    decider: lead
+    status: applied
+    asked: 2026-11-11
+    answer: {choice: base, by: lead, at: 2026-11-11, via: chat, note: "use the 2012 base edition, go ahead and build it"}
+    applied_in: [standards/mil-std-882e/model.yaml, framework/882e-conformance-review.md]
+    sources: [framework/882e-conformance-review.md]
+
+  - id: DQ-002
+    question: What monetary thresholds should the tailored severity categories use?
+    context: >-
+      Table I uses $10M / $1M / $100K. For a simulation-and-bench demonstrator that would put **every equipment
+      loss in Negligible**. The proposal keeps the injury and environmental criteria and scales money by 1/100.
+      4.3.3d requires tailored definitions to be derived from Table I and formally approved.
+    options:
+      - {key: scale-100, title: "Scale by 1/100 ($100K / $10K / $1K)", detail: "Equipment damage registers at a sensible level. Injury criteria unchanged."}
+      - {key: table-i, title: Keep Table I values, detail: "No tailoring to justify; equipment losses all rate Negligible."}
+      - {key: no-money, title: Drop the monetary criterion, detail: "Rate on injury and environment only; loses the equipment-damage dimension."}
+    recommendation: scale-100
+    reversibility: revisit
+    blocks: [SUS-RISKDEF-001 approval, every hazard risk assessment]
+    gate: G0
+    decider: lead
+    status: open
+    asked: 2026-11-11
+    sources: [standards/tailoring/mil-std-882e.yaml, "MIL-STD-882E Table I, 4.3.3d"]
+
+  - id: DQ-003
+    question: What exposure basis should the probability levels use?
+    context: >-
+      4.3.3e requires numerical probability definitions to be documented. The proposal applies the Table A-II
+      bands per item over a planned demonstrator life of **500 walker hours, 2,000 docking cycles and 200 UAV
+      flight hours**, with one walker and two UAVs. These numbers are placeholders until the test programme exists.
+    options:
+      - {key: proposed, title: Use the proposed item life, detail: "Lets PHA (Task 202) start now; revisit at G2."}
+      - {key: per-hour, title: Per operating hour, detail: "Simpler to compare across subsystems; less intuitive for docking-cycle hazards."}
+      - {key: wait, title: Wait for the test programme, detail: "Probabilities stay qualitative until G2."}
+    recommendation: proposed
+    reversibility: easy
+    blocks: [SUS-RISKDEF-001 approval]
+    gate: G0
+    decider: lead
+    status: open
+    asked: 2026-11-11
+    sources: [standards/tailoring/mil-std-882e.yaml, "MIL-STD-882E 4.3.3e, Appendix A Table A-II"]
+
+  - id: DQ-004
+    question: Who holds each risk-acceptance role, and is the proposed authority mapping right?
+    context: >-
+      The proposal: High by a Program Executive, Serious by the Program Lead, Medium by the Chief Engineer, Low by
+      the Safety Lead; a Test Operations representative concurs on High and Serious (4.3.7). All roles are
+      **simulated**. Rule R13 now requires a named human in the right role on a review record before any risk
+      is accepted, so no acceptance can happen until these roles are filled.
+    options:
+      - {key: lead-all, title: "You hold PE, PL and CE; name a separate user representative", detail: "Quickest; the review records show one person in several roles."}
+      - {key: named, title: Name a different person for each role, detail: "More independence; needs volunteers."}
+      - {key: remap, title: Change the mapping, detail: "For example, the Safety Lead accepts Medium as well as Low."}
+    recommendation: lead-all
+    reversibility: revisit
+    blocks: [any risk acceptance, EVT-BENCH-001]
+    gate: G4
+    decider: lead
+    status: open
+    asked: 2026-11-11
+    sources: [standards/tailoring/mil-std-882e.yaml, "MIL-STD-882E 4.3.7"]
+
+  - id: DQ-005
+    question: Should a passing PDaC validation be required before merging to main?
+    context: >-
+      The workflow "PDaC / MIL-STD-882E validation" runs on every pull request, but **nothing stops a merge when it
+      fails**. Making it a required check is a repository setting only you can change.
+    options:
+      - {key: required, title: Make it a required status check, detail: "Records on main always validate. A broken rule blocks merging until fixed."}
+      - {key: advisory, title: Keep it advisory, detail: "Faster merges; drift can reach main."}
+    recommendation: required
+    reversibility: easy
+    blocks: []
+    gate: G0
+    decider: lead
+    status: open
+    asked: 2026-11-11
+    sources: [.github/workflows/pdac-validate.yml]
+
+  - id: DQ-006
+    question: What power and actuation architecture is the baseline for analysis?
+    context: >-
+      The records disagree. README.md and the seeded hazards assume **hydraulic actuation**. The wiki architecture
+      page assumes a **series-hybrid engine-generator with battery and electric or electrohydraulic joints**. Trade
+      study TS-001 covers actuation but not the power source. The power sub-elements and IF-002/IF-003 are marked
+      candidate until this is decided. The choice changes hazards (stored hydraulic energy vs fuel, battery
+      thermal runaway) and the simulation plant.
+    options:
+      - {key: open-both, title: Analyse both until TS-001 closes, detail: "Keep hydraulic and hybrid-electric as named alternatives; hazards tagged per alternative. More analysis now, no rework later."}
+      - {key: hydraulic, title: Centralised hydraulic, detail: "Matches the README and current hazards; the sim plant models a hydraulic power unit."}
+      - {key: hybrid, title: Series-hybrid electric or electrohydraulic, detail: "Matches the wiki architecture page; adds fuel and battery hazards, removes most stored-pressure hazards."}
+    recommendation: open-both
+    reversibility: hard
+    blocks: [SUS-M1-PWR sub-elements, IF-002, IF-003, sim plant model]
+    gate: G2
+    decider: lead
+    status: open
+    asked: 2026-11-11
+    sources: [README.md, docs/wiki/SUS-M1-Architecture-and-Boundaries.md, concept/trade-studies.md, framework/liondriver-port-plan.md]
+
+  - id: DQ-007
+    question: Which engine should the higher-fidelity legged-dynamics simulation use?
+    context: >-
+      Step 4 of the LionDriver port plan needs a multibody engine. **MuJoCo** installs with pip and runs on CI CPUs;
+      Project Chrono needs an 80-minute source build (LionDriver caches it); Drake is heavier. Reversible: the plant
+      sits behind an interface file.
+    options:
+      - {key: mujoco, title: MuJoCo, detail: "Apache-2.0, pip install, fast on CPU."}
+      - {key: chrono, title: Project Chrono, detail: "Better granular terrain; long build."}
+      - {key: drake, title: Drake, detail: "Strong analysis tooling; heavy dependency."}
+    recommendation: mujoco
+    reversibility: easy
+    blocks: [port plan step 4]
+    gate: G3
+    decider: claude
+    status: queued
+    asked: null
+    sources: [framework/liondriver-port-plan.md]

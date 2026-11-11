@@ -15,6 +15,8 @@ def fresh():
     repo.tailoring = copy.deepcopy(BASE.tailoring)
     repo.product = copy.deepcopy(BASE.product)
     repo.paths = dict(BASE.paths)
+    repo.item = copy.deepcopy(BASE.item)
+    repo.decisions = copy.deepcopy(BASE.decisions)
     return repo
 
 
@@ -151,6 +153,101 @@ class Rules(unittest.TestCase):
         r.objects["hazard"]["HAZ-PWR-001"]["acceptances"] = [accept("ACC-1", "Medium", "ROLE-CE")]
         r.product["release"]["profile"] = "field-release"
         self.assertTrue(errors(r, "R12"))
+
+
+def review(rid, scope, reviewers, outcome="accepted"):
+    return {"schema": "susanoo/review/v0.1", "id": rid, "title": "t", "date": "2026-11-11", "type": "risk-acceptance",
+            "scope": scope, "baseline": "abc123", "reviewers": reviewers, "outcome": outcome}
+
+
+def human(role, person="A. Person"):
+    return {"role": role, "person": person, "human": True, "independence": "I1"}
+
+
+class Architecture(unittest.TestCase):
+    def test_a02_unknown_endpoint(self):
+        r = fresh()
+        r.item["interfaces"][0]["to"] = "SUS-M1-NOPE"
+        self.assertTrue(errors(r, "A02"))
+
+    def test_a03_hazard_subsystem_must_be_element(self):
+        r = fresh()
+        r.objects["hazard"]["HAZ-PIL-001"]["subsystems"].append("SUS-M1-NOPE")
+        self.assertTrue(any("SUS-M1-NOPE" in f.message for f in errors(r, "A03")))
+
+    def test_a04_element_without_interface(self):
+        r = fresh()
+        r.item["elements"].append({"id": "SUS-M1-LGT", "parent": "SUS-M1", "name": "Lights", "kind": "electrical",
+                                   "safety_role": "none", "status": "concept"})
+        self.assertTrue(any(f.obj == "SUS-M1-LGT" for f in errors(r, "A04")))
+
+    def test_a01_candidate_needs_known_decision(self):
+        r = fresh()
+        r.item["elements"][8]["decision"] = "DQ-999"
+        self.assertTrue(any("DQ-999" in f.message for f in errors(r, "A01")))
+
+
+class HumanReviewAccepts(unittest.TestCase):
+    def setup_acceptance(self, reviewers, role="ROLE-CE"):
+        r = fresh()
+        a = accept("ACC-1", "Medium", role, concur=False)
+        a["review_id"] = "REV-2026-001"
+        r.objects["hazard"]["HAZ-PWR-001"]["acceptances"] = [a]
+        r.objects["review"]["REV-2026-001"] = review("REV-2026-001", ["HAZ-PWR-001"], reviewers)
+        r.paths[("review", "REV-2026-001")] = "reviews/REV-2026-001.yaml"
+        return r
+
+    def test_acceptance_without_review_fails(self):
+        r = fresh()
+        r.objects["hazard"]["HAZ-PWR-001"]["acceptances"] = [accept("ACC-1", "Medium", "ROLE-CE", concur=False)]
+        self.assertTrue(any("no review_id" in f.message for f in errors(r, "R13")))
+
+    def test_acceptance_with_human_review_in_role_passes(self):
+        self.assertFalse(errors(self.setup_acceptance([human("ROLE-CE")]), "R13"))
+
+    def test_review_by_wrong_role_fails(self):
+        self.assertTrue(errors(self.setup_acceptance([human("ROLE-SL")]), "R13"))
+
+    def test_ai_review_never_accepts(self):
+        ai = {"role": "ROLE-CE", "person": None, "human": False, "independence": "I0"}
+        msgs = [f.message for f in errors(self.setup_acceptance([ai]), "R13")]
+        self.assertTrue(any("never accept" in m for m in msgs))
+
+    def test_approved_task_record_needs_review(self):
+        r = fresh()
+        r.objects["task"][102]["status"] = "approved"
+        self.assertTrue(any(f.obj == "T102" for f in errors(r, "R13")))
+
+
+class Decisions(unittest.TestCase):
+    def dq(self, r, did):
+        return next(d for d in r.decisions["decisions"] if d["id"] == did)
+
+    def test_committed_register_clean(self):
+        self.assertFalse(errors(fresh(), "D01"))
+
+    def test_recommendation_first(self):
+        r = fresh()
+        self.dq(r, "DQ-002")["recommendation"] = "table-i"
+        self.assertTrue(any("listed first" in f.message for f in errors(r, "D01")))
+
+    def test_applied_needs_applied_in(self):
+        r = fresh()
+        self.dq(r, "DQ-001")["applied_in"] = []
+        self.assertTrue(errors(r, "D01"))
+
+    def test_claude_decision_never_open(self):
+        r = fresh()
+        d = self.dq(r, "DQ-007")
+        d["status"], d["asked"] = "open", "2026-11-11"
+        self.assertTrue(any("never open" in f.message for f in errors(r, "D01")))
+
+    def test_lead_decision_not_answered_by_claude(self):
+        r = fresh()
+        d = self.dq(r, "DQ-002")
+        d["status"] = "answered"
+        d["answer"] = {"choice": "scale-100", "by": "claude", "at": "2026-11-11", "via": "chat"}
+        self.assertTrue(any("cannot be answered by claude" in f.message for f in errors(r, "D01")))
 
 
 if __name__ == "__main__":
