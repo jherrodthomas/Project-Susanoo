@@ -9,7 +9,7 @@ The question this review answers: can the v0.2 framework *produce and check* the
 
 **1.1 Section 4 is the mandatory core; the tasks are optional.** Para 4.1 and 5.2 say that when no tasks are specified, only Sections 3 and 4 apply, and that each task must be called out separately. Appendix A describes the tasks as optional. The current framework is built around the tasks: 25 wiki procedure pages and a task applicability table. The **eight-element process (4.3.1–4.3.8)** and the **software assessment (4.4)** have no structure of their own. The framework should be rebuilt on the eight elements and 4.4. The tasks then become a tailoring layer on top of that core.
 
-**1.2 Edition mismatch.** The repository cites "MIL-STD-882E with Change 1" in 26 places, including every task page. The copy we hold is the 2012 base edition. Before any formal mapping, decide which edition is the baseline and obtain that controlled copy. The standard model should record the edition and date so the choice is explicit (6.2a asks acquisition documents to state title, number and date).
+**1.2 Edition mismatch.** The repository cites "MIL-STD-882E with Change 1" in 25 files, including every task page. The copy we hold is the 2012 base edition. Before any formal mapping, decide which edition is the baseline and obtain that controlled copy. The standard model should record the edition and date so the choice is explicit (6.2a asks acquisition documents to state title, number and date).
 
 ## 2. Gap analysis, clause by clause
 
