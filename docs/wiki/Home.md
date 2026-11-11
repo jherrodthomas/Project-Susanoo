@@ -11,6 +11,8 @@
 - [UAV assurance procedure](UAV-Assurance-Procedure)
 - [PDaC configuration and release](PDaC-Configuration-and-Release)
 - [Process document template](Process-Template)
+- [PX4 integration and assurance](PX4-Integration-and-Assurance)
+
 
 ## How to use
 1. Select the process required by the current lifecycle gate.
