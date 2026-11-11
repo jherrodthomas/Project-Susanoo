@@ -16,6 +16,8 @@ import hashlib
 import json
 import re
 import sys
+
+import yaml
 from collections import Counter
 from pathlib import Path
 
@@ -204,17 +206,23 @@ def cad_concepts(model: pdaclib.Model) -> str:
             out += ["", f"Drawing sheet: [SUS-CAD-001-{cl['id']}](drawings/{cl['id']}.svg) (A3, 1:50, dimensioned side, plan and front views)."]
         for posture, pm in sorted(met[cl["id"]].get("postures", {}).items()):
             sm = met[cl["id"]]
-            out += ["", f"**{posture.capitalize()} posture.**", "", f"| | Standing | {posture.capitalize()} |", "|---|---|---|"]
+            poses = yaml.safe_load((model.root / cl["params"]).read_text(encoding="utf-8")).get("postures") or {}
+            label_ = poses.get(posture, {}).get("label", posture)
+            out += ["", f"**{posture.capitalize()} posture** ({label_}).", "", f"| | Standing | {posture.capitalize()} |", "|---|---|---|"]
             for label, key, fmt in (("Cockpit floor (egress drop)", "cockpit_floor_m", "{:.2f} m"), ("Hip height", "hip_height_m", "{:.2f} m"),
                                     ("Overall height", "height_m", "{:.2f} m"), ("CG height", None, "{:.2f} m"),
                                     ("Static margin", "static_margin_m", "{:.2f} m"), ("Static tip angle", "static_tip_angle_deg", "{:.1f}°"),
                                     ("Claws above ground", "arm_ground_clearance_m", "{:.2f} m"),
                                     ("Front-opening sill (actual climb height)", "egress_sill_m", "{:.2f} m"),
-                                    ("Ladder treads", "steps", "{}"), ("Largest step rise", "max_step_rise_m", "{:.2f} m")):
-                if key and key not in sm:
+                                    ("Ladder treads", "steps", "{}"), ("Largest step rise", "max_step_rise_m", "{:.2f} m"),
+                                    ("Emergency hatch sill", "emergency_sill_m", "{:.2f} m"),
+                                    ("Emergency hatch clear opening", "emergency_clear_m", "{0[0]:.2f} × {0[1]:.2f} m"),
+                                    ("Escape ladder clearance to the walker", "escape_clearance_m", "{:.2f} m")):
+                if key and key not in sm and key not in pm:
                     continue
-                a_, b_ = (sm["cg_m"][2], pm["cg_m"][2]) if key is None else (sm[key], pm[key])
-                out.append(f"| {label} | {fmt.format(a_)} | {fmt.format(b_)} |")
+                a_, b_ = (sm["cg_m"][2], pm["cg_m"][2]) if key is None else (sm.get(key), pm.get(key))
+                show = lambda v: "—" if v is None else fmt.format(v)  # noqa: E731
+                out.append(f"| {label} | {show(a_)} | {show(b_)} |")
             rp = f"renders/{cl['id']}-{posture}"
             out += ["", "| | |", "|---|---|", f"| ![{cl['id']} {posture}, front view]({rp}-hero.png) | ![{cl['id']} {posture}, side elevation]({rp}-side.png) |"]
             if (model.root / f"cad/drawings/{cl['id']}-{posture}.svg").is_file():

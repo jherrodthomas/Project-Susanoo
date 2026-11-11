@@ -192,7 +192,7 @@
    "cg_m": [
     -0.177,
     -0.001,
-    2.754
+    2.752
    ],
    "support_polygon_m": [
     [
@@ -236,6 +236,11 @@
    "egress_sill_m": 3.03,
    "max_step_rise_m": 3.03,
    "steps": 0,
+   "emergency_sill_m": 3.21,
+   "emergency_clear_m": [
+    0.62,
+    0.72
+   ],
    "postures": {
     "kneel": {
      "envelope_m": [
@@ -251,7 +256,7 @@
      "cg_m": [
       -0.205,
       -0.001,
-      1.512
+      1.51
      ],
      "support_polygon_m": [
       [
@@ -294,7 +299,77 @@
      "arm_ground_clearance_m": 1.14,
      "egress_sill_m": 1.64,
      "max_step_rise_m": 0.33,
-     "steps": 4
+     "steps": 4,
+     "emergency_sill_m": 1.82,
+     "emergency_clear_m": [
+      0.62,
+      0.72
+     ]
+    },
+    "emergency": {
+     "envelope_m": [
+      3.29,
+      2.43,
+      4.4
+     ],
+     "height_m": 4.4,
+     "hip_height_m": 2.34,
+     "cockpit_floor_m": 2.41,
+     "pilot_eye_m": 3.62,
+     "placeholder_mass_kg": 4720,
+     "cg_m": [
+      -0.177,
+      -0.007,
+      2.753
+     ],
+     "support_polygon_m": [
+      [
+       -0.299,
+       -0.63
+      ],
+      [
+       -0.07,
+       -0.75
+      ],
+      [
+       0.204,
+       -0.76
+      ],
+      [
+       0.604,
+       -0.76
+      ],
+      [
+       0.604,
+       0.76
+      ],
+      [
+       0.204,
+       0.76
+      ],
+      [
+       -0.07,
+       0.75
+      ],
+      [
+       -0.299,
+       0.63
+      ]
+     ],
+     "static_margin_m": 0.122,
+     "static_tip_angle_deg": 2.5,
+     "uav_dock": "onboard",
+     "rotor_to_pilot_m": 0.86,
+     "arm_ground_clearance_m": 0.93,
+     "egress_sill_m": 3.03,
+     "max_step_rise_m": 3.03,
+     "steps": 0,
+     "emergency_sill_m": 3.21,
+     "emergency_clear_m": [
+      0.62,
+      0.72
+     ],
+     "escape_clearance_m": 0.25
     }
    }
   }

@@ -1,6 +1,8 @@
 # Concept layouts (FreeCAD) — review and alignment
 
-**ID:** SUS-CAD-001 · **Revision:** 0.5-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CAD-001 · **Revision:** 0.6-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.6:* CL-05 emergency exit: side-window hatches with internal release handles, a fold-out davit and rope ladder, shown deployed in a new emergency posture; new metrics: hatch sill, clear opening, escape-ladder clearance.
 
 *Changes in 0.5:* CL-05 access aids: fold-down ladder (stowed standing, deployed kneeling) and grab handles at the front opening; new metrics: front-opening sill height, ladder treads and largest step rise.
 
@@ -117,7 +119,7 @@ Drawing sheet: [SUS-CAD-001-CL-04](drawings/CL-04.svg) (A3, 1:50, dimensioned si
 
 ### CL-05 · Reverse-jointed pod biped, claw arms, rear dock
 
-Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 bipedal; TS-004 rear backpack dock. Informs: HAZ-006, HAZ-008, HAZ-009, HAZ-021, HAZ-022, SYS-008, SYS-009, SYS-010, SYS-012, SYS-013, SYS-019. Parameters: [`params/CL-05.yaml`](params/CL-05.yaml).
+Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 bipedal; TS-004 rear backpack dock. Informs: HAZ-006, HAZ-008, HAZ-009, HAZ-017, HAZ-021, HAZ-022, HAZ-023, SYS-008, SYS-009, SYS-010, SYS-012, SYS-013, SYS-019. Parameters: [`params/CL-05.yaml`](params/CL-05.yaml).
 
 - Proportions from the project lead's AI-generated Industrial Utility Walker (one three-quarter view so far): tall pod with front and side windows, reverse-jointed legs, long arms ending in curved claws. The geometry is original, authored in build123d; the generated mesh is not used.
 - Reverse-jointed knees sit behind the hips: the walker is the tallest of the five and has the smallest static margin and tip angle, and a backward fall puts the knees first. Fall direction, kneel-for-egress and SYS-009 stability limits need their own analysis for this leg geometry.
@@ -125,10 +127,35 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 - The long claws hang low beside the legs, inside the walking envelope: a strike and pinch zone for anyone near the walker (HAZ-009) unless manipulation is inhibited and the arms are stowed while walking (SYS-013).
 - Kneel posture for egress (SYS-019): with the feet planted and the knees folded back, the hip drops from 2.34 m to 0.95 m and the cockpit floor from 2.41 m to about 1.0 m, a two-step climb instead of a ladder. The CG drops by more than a metre, so the tip angle improves, but the folded knees move mass rearward and the static margin shrinks: the kneel needs its own stability check. Lowering and rising create a crush zone under the pod and knees (HAZ-022). Kneeling is also a candidate controlled safe posture on loss of actuation energy (SYS-008, HAZ-021).
 - Access aids: the pilot leaves over the front-opening sill, which sits 0.62 m above the cockpit floor, so the real climb is from the sill (about 1.64 m when kneeling, 3.03 m standing), not from the floor. A fold-down ladder hinged under the sill deploys in the kneel with four treads at an even 0.33 m rise (placeholder limit 0.40 m), and grab handles beside and above the opening give three points of contact. Standing, the ladder is stowed folded on the hull: egress without kneeling is not possible, so a failure that prevents kneeling also blocks normal egress (HAZ-008). The ladder must be interlocked against deployment while walking, and ISO 2867 (access systems for earth-moving machinery) is a candidate reference for access dimensions; its applicability is not yet decided.
+- Emergency exit (SYS-012): both side windows are push-out hatches (clear opening 0.62 x 0.72 m) with red release handles inside, so the pilot can leave standing, without power and without kneeling, and has a second way out if the front opening is blocked (HAZ-008) or there is a fire in the pod (HAZ-017). A fold-out davit carries a rope ladder 0.60 m out from the hull; deployed, it clears the walker by 0.25 m. The hatch sill is 3.2 m up when standing: the descent is a fall-from-height hazard (HAZ-023), and the shoulder plate below the hatch lies in the exit path, so it needs a non-slip top and a handhold, or the hatch or davit must move. Whether the clear opening is large enough for a pilot in protective equipment is TBD.
 
 Drawing sheet: [SUS-CAD-001-CL-05](drawings/CL-05.svg) (A3, 1:50, dimensioned side, plan and front views).
 
-**Kneel posture.**
+**Emergency posture** (emergency exit).
+
+| | Standing | Emergency |
+|---|---|---|
+| Cockpit floor (egress drop) | 2.41 m | 2.41 m |
+| Hip height | 2.34 m | 2.34 m |
+| Overall height | 4.40 m | 4.40 m |
+| CG height | 2.75 m | 2.75 m |
+| Static margin | 0.12 m | 0.12 m |
+| Static tip angle | 2.5° | 2.5° |
+| Claws above ground | 0.93 m | 0.93 m |
+| Front-opening sill (actual climb height) | 3.03 m | 3.03 m |
+| Ladder treads | 0 | 0 |
+| Largest step rise | 3.03 m | 3.03 m |
+| Emergency hatch sill | 3.21 m | 3.21 m |
+| Emergency hatch clear opening | 0.62 × 0.72 m | 0.62 × 0.72 m |
+| Escape ladder clearance to the walker | — | 0.25 m |
+
+| | |
+|---|---|
+| ![CL-05 emergency, front view](renders/CL-05-emergency-hero.png) | ![CL-05 emergency, side elevation](renders/CL-05-emergency-side.png) |
+
+Drawing sheet: [SUS-CAD-001-CL-05-emergency](drawings/CL-05-emergency.svg).
+
+**Kneel posture** (kneeling for egress).
 
 | | Standing | Kneel |
 |---|---|---|
@@ -142,6 +169,8 @@ Drawing sheet: [SUS-CAD-001-CL-05](drawings/CL-05.svg) (A3, 1:50, dimensioned si
 | Front-opening sill (actual climb height) | 3.03 m | 1.64 m |
 | Ladder treads | 0 | 4 |
 | Largest step rise | 3.03 m | 0.33 m |
+| Emergency hatch sill | 3.21 m | 1.82 m |
+| Emergency hatch clear opening | 0.62 × 0.72 m | 0.62 × 0.72 m |
 
 | | |
 |---|---|

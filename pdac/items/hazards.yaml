@@ -371,3 +371,20 @@ items:
     status: open
     applicability: [SUS-M1, SUS-I1]
     source: SUS-CAD-001
+
+  - id: HAZ-023
+    kind: hazard
+    title: "Fall from height during emergency egress through a side hatch"
+    mishap: "The pilot falls about 3 m while leaving a standing walker by the side hatch and escape ladder, possibly injured or under smoke."
+    causes: ["hatch sill about 3.2 m above the ground when standing", "stepping across the shoulder plate to reach the ladder", "rope ladder swing", "injured or impaired pilot"]
+    energy_sources: [gravitational]
+    exposed: [ACT-PILOT]
+    scenarios: [SCN-104, SCN-108]
+    modes: [MOD-09]
+    components: [SUS-M1-PIL]
+    risk: {initial: {severity: critical, probability: remote, level: medium}, rating_status: proposed}
+    mitigated_by: [SYS-012]
+    note: "Identified from the CL-05 emergency-exit posture (SUS-CAD-001), 2026-11-11."
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CAD-001

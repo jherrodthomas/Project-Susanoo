@@ -1,6 +1,6 @@
 # Preliminary Hazard List (PHL) — SUS-M1 / SUS-A1
 
-**ID:** SUS-PHL-001 · **Revision:** 0.2-draft · **Status:** Draft, not reviewed
+**ID:** SUS-PHL-001 · **Revision:** 0.3-draft · **Status:** Draft, not reviewed
 
 <!-- GENERATED PAGE: written by tools/pdac/generate.py from pdac/items/hazards.yaml. Edit the records, then regenerate. -->
 
@@ -17,7 +17,7 @@ These are MIL-STD-882E ratings only. Aircraft failure conditions of the SUS-A1 U
 
 ## 2. Summary
 
-22 hazards: **9 high**, **10 serious**, **3 medium**.
+23 hazards: **9 high**, **10 serious**, **4 medium**.
 
 *Hazard count per cell of the MIL-STD-882E risk assessment matrix (initial risk). Each cell shows the risk level the matrix assigns.*
 
@@ -26,7 +26,7 @@ These are MIL-STD-882E ratings only. Aircraft failure conditions of the SUS-A1 U
 | Frequent | High | High | Serious | Medium |
 | Probable | High · **1** | High | Serious | Medium |
 | Occasional | High · **8** | Serious · **5** | Medium · **1** | Low |
-| Remote | Serious · **5** | Medium · **2** | Medium | Low |
+| Remote | Serious · **5** | Medium · **3** | Medium | Low |
 | Improbable | Medium | Medium | Medium | Low |
 
 ## 3. Hazard list
@@ -55,6 +55,7 @@ These are MIL-STD-882E ratings only. Aircraft failure conditions of the SUS-A1 U
 | HAZ-020 | Hydraulic fluid fire | Sprayed or leaked fluid ignites near the pilot station. | chemical, thermal, hydraulic-pressure | pilot, maintainer | SCN-102, SCN-108 | **Serious** (catastrophic, remote) | SYS-018 | TS-001 |
 | HAZ-021 | Protective or emergency stop causes collapse or uncontrolled posture change | Stopping by removing all actuator torque drops a statically unstable walker with the pilot aboard. | gravitational | pilot, safety observer, bystander | SCN-101, SCN-103 | **High** (catastrophic, occasional) | SYS-002, SYS-008 | — |
 | HAZ-022 | Crushing under the pod or legs while lowering to or rising from the kneel posture | A crew member or bystander beside or under the walker is pinned by the descending pod or folding legs. | gravitational, kinetic, hydraulic-pressure | safety observer, maintainer, bystander | SCN-001, SCN-006 | **High** (catastrophic, occasional) | SYS-019 | — |
+| HAZ-023 | Fall from height during emergency egress through a side hatch | The pilot falls about 3 m while leaving a standing walker by the side hatch and escape ladder, possibly injured or under smoke. | gravitational | pilot | SCN-104, SCN-108 | **Medium** (critical, remote) | SYS-012 | — |
 
 ## 4. Hazards that depend on open trade studies
 

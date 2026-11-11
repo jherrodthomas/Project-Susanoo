@@ -46,9 +46,10 @@ CLASSES = {
         "armor":     ("#8d97a5", 1.0, "SUS-M1-PIL"),
     "hose":      ("#2e343d", 1.0, "SUS-M1-PWR"),
     "access":    ("#e0b100", 1.0, "SUS-M1-PIL"),
+    "escape":    ("#d9480f", 1.0, "SUS-M1-PIL"),
     "reference": ("#a3acb9", 1.0, None),
 }
-DENSITY_CLASS = {"arm": "structure", "seat": "structure", "rotor": "uav", "hose": "structure", "access": "structure"}
+DENSITY_CLASS = {"arm": "structure", "seat": "structure", "rotor": "uav", "hose": "structure", "access": "structure", "escape": "structure"}
 
 
 def V(x, y, z):
@@ -499,7 +500,18 @@ def metrics(m: Model, info: dict, common: dict) -> dict:
         "arm_ground_clearance_m": round(Part.makeCompound([pt["shape"] for pt in m.parts if pt["cls"] == "arm"]).BoundBox.ZMin / MM, 2),
         **({"egress_sill_m": round(info["egress"]["sill"], 2), "max_step_rise_m": round(info["egress"]["max_rise"], 2),
             "steps": len(info["egress"]["treads"])} if info.get("egress") else {}),
+        **(emergency_metrics(m, info["egress"]["emergency"]) if (info.get("egress") or {}).get("emergency") else {}),
     }
+
+
+def emergency_metrics(m: Model, em: dict) -> dict:
+    """Emergency hatch sill and clear opening; when the escape ladder is deployed, its clearance to the walker."""
+    out = {"emergency_sill_m": round(em["sill"], 2), "emergency_clear_m": [round(v, 2) for v in em["clear"]]}
+    ladder = [pt["shape"] for pt in m.parts if pt["cls"] == "escape"]
+    if ladder:
+        rest = [pt["shape"] for pt in m.parts if pt["group"] == "walker" and pt["cls"] not in ("escape", "access")]
+        out["escape_clearance_m"] = round(Part.makeCompound(ladder).distToShape(Part.makeCompound(rest))[0] / MM, 2)
+    return out
 
 
 # --- Export ---------------------------------------------------------------------------------------
@@ -565,7 +577,7 @@ def main() -> int:
         for posture, pose in (p.get("postures") or {}).items():
             pm, pinfo = build_layout(p, common, posture)
             pmet = metrics(pm, pinfo, common)
-            export(pm, f"{p['id']}-{posture}", args.out / f"{p['id']}-{posture}", pmet, pinfo, f"{p['title']} — {posture}")
+            export(pm, f"{p['id']}-{posture}", args.out / f"{p['id']}-{posture}", pmet, pinfo, f"{p['title']} — {pose.get('label', posture)}")
             summary[p["id"]].setdefault("postures", {})[posture] = pmet
             print(f"{p['id']} {posture}: cockpit floor {pmet['cockpit_floor_m']} m, CG z {pmet['cg_m'][2]} m, "
                   f"static margin {pmet['static_margin_m']} m, arm clearance {pmet['arm_ground_clearance_m']} m")

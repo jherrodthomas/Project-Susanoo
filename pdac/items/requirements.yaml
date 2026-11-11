@@ -174,11 +174,11 @@ items:
     applicability: [SUS-M1, SUS-I1]
     source: SUS-ARCH-001
     sources: [SCN-104, SCN-108, SCN-006]
-    mitigates: [HAZ-008, HAZ-017]
+    mitigates: [HAZ-008, HAZ-017, HAZ-023]
     allocated_to: [SUS-M1-PIL]
     verification: {methods: [analysis, demonstration], cases: []}
     design_dependency: [TS-002]
-    tbd: ["egress and extraction times", "postures considered"]
+    tbd: ["egress and extraction times", "postures considered", "emergency hatch clear opening (concept: 0.62 x 0.72 m)", "descent aid and fall protection from about 3.2 m", "release force and operation from inside and outside"]
 
   - id: SYS-013
     kind: requirement

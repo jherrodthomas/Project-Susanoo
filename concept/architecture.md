@@ -1,6 +1,6 @@
 # Preliminary architecture — SUS-M1 + SUS-A1
 
-**ID:** SUS-ARCH-001 · **Revision:** 0.5-draft · **Status:** Draft, not reviewed
+**ID:** SUS-ARCH-001 · **Revision:** 0.6-draft · **Status:** Draft, not reviewed
 
 ## System decomposition
 - **SUS-M1-WLK:** walker chassis, legs, feet, stability sensing and actuation
@@ -44,7 +44,7 @@ Generated from [`pdac/items/requirements.yaml`](../pdac/items/requirements.yaml)
 | SYS-009 | System shall estimate stability margin and limit commanded motion and payload so that the margin stays above a defined threshold within the operating envelope. *TBD: stability metric and threshold; slope, speed, payload and CG envelope.* *Depends on TS-003.* | safety | HAZ-006, HAZ-010 | SUS-M1-WLK, SUS-M1-SAF | analysis, simulation | candidate |
 | SYS-010 | The pilot station shall protect the restrained pilot against fall and overturn loads within a defined envelope. *TBD: protective-structure load cases; restraint type.* *Depends on TS-002, TS-003.* | safety | HAZ-006 | SUS-M1-PIL | analysis, test | candidate |
 | SYS-011 | System shall detect absence of valid pilot input or responsiveness for longer than a defined time and transition to a supported safe state. *TBD: responsiveness detection method; time limit; observer remote stop interaction.* | safety | HAZ-007 | SUS-M1-SAF, SUS-M1-PIL | simulation, test | candidate |
-| SYS-012 | The pilot shall be able to egress, and external personnel to extract the pilot, from any posture including after a fall, within a defined time and without relying on platform power. *TBD: egress and extraction times; postures considered.* *Depends on TS-002.* | human-factors | HAZ-008, HAZ-017 | SUS-M1-PIL | analysis, demonstration | candidate |
+| SYS-012 | The pilot shall be able to egress, and external personnel to extract the pilot, from any posture including after a fall, within a defined time and without relying on platform power. *TBD: egress and extraction times; postures considered; emergency hatch clear opening (concept: 0.62 x 0.72 m); descent aid and fall protection from about 3.2 m; release force and operation from inside and outside.* *Depends on TS-002.* | human-factors | HAZ-008, HAZ-017, HAZ-023 | SUS-M1-PIL | analysis, demonstration | candidate |
 | SYS-013 | System shall limit manipulator force, speed and payload to defined values and inhibit manipulation while the exclusion zone is not confirmed clear. *TBD: force, speed and payload limits; exclusion-zone confirmation means.* | safety | HAZ-009, HAZ-010 | SUS-M1-MAN, SUS-M1-SAF | simulation, test | candidate |
 | SYS-014 | On loss of command link for longer than a defined time, the UAV shall execute a predefined contingency (hold, return or land) that remains inside the approved operating area. *TBD: link-loss time; contingency selection logic; operating-area containment.* | safety | HAZ-014 | SUS-A1 | simulation, test | candidate |
 | SYS-015 | The pilot display shall annunciate stale, frozen or invalid UAV imagery and telemetry within a defined time. *TBD: staleness detection time; annunciation design.* | human-factors | HAZ-015 | SUS-M1-PIL, SUS-A1 | simulation, test | candidate |

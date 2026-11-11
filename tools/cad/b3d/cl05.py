@@ -23,7 +23,7 @@ from build123d import (Box, Circle, Compound, Plane, Pos, Rectangle, Rot, Solid,
                        Spline, Vector, export_step, extrude, fillet, loft, make_face, Polyline, sweep, FilletPolyline)
 
 ROOT = Path(__file__).resolve().parents[3]
-CLASSES = ["structure", "actuator", "armor", "arm", "cage", "seat", "occupant", "power", "safety", "dock", "uav", "access",
+CLASSES = ["structure", "actuator", "armor", "arm", "cage", "seat", "occupant", "power", "safety", "dock", "uav", "access", "escape",
            "rotor", "hose"]
 
 
@@ -120,7 +120,7 @@ def build(p: dict, common: dict, posture: str = "standing"):
     pose = (p.get("postures") or {}).get(posture) if posture != "standing" else None
     if posture != "standing" and pose is None:
         raise ValueError(f"unknown posture {posture!r}")
-    if pose:  # lower the hip with the feet planted; the knee folds further back
+    if pose and "hip_height" in pose:  # lower the hip with the feet planted; the knee folds further back
         hip_z = pose["hip_height"]
         kf, knee_z = fold_knee((0.0, hip_z), (ax, L["ankle_height"]), L["thigh"], L["shank"])
     fl, fw, ft = L["foot"]
@@ -189,6 +189,37 @@ def build(p: dict, common: dict, posture: str = "standing"):
     put("armor", frame)
     for side in (1, -1):  # side window frames
         put("armor", Pos(wx, side * (wy / 2 + 0.015), floor + 0.80 + swz / 2) * (Box(swx + 0.10, 0.03, swz + 0.10) - Box(swx, 0.05, swz)))
+    # Emergency exit: each side window is a push-out hatch with red internal release handles. A fold-out arm
+    # (davit) carries a rope ladder out past the shoulder plates and arms, so the pilot can leave standing,
+    # without power and without kneeling. Deployed on one side in postures that say so (escape: deployed).
+    EX = p.get("emergency_exit") or {}
+    emergency = None
+    if EX:
+        sill = floor + 0.80
+        open_side = {"right": -1, "left": 1}[EX.get("side", "right")]
+        deployed = bool(pose and pose.get("escape") == "deployed")
+        for side in (1, -1):
+            ys = side * wy / 2
+            hx = wx + swx / 2 - 0.05
+            put("safety", cyl((hx, side * (wy / 2 - w), sill + swz * 0.55), (hx, side * (wy / 2 - w - 0.08), sill + swz * 0.55), 0.016),
+                Pos(hx, side * (wy / 2 - w - 0.09), sill + swz * 0.55) * Box(0.035, 0.03, 0.15))
+            if deployed and side == open_side:
+                put("access", Pos(wx - swx / 2 - 0.03, ys + side * (swx / 2 + 0.03), sill + swz / 2) * Box(0.035, swx, swz))
+                reach = EX["davit_reach"]
+                root, tip = (wx, ys, sill + 0.12), (wx, ys + side * reach, sill + 0.12)
+                put("access", cyl(root, tip, 0.032), cyl((wx, ys, sill - 0.30), (wx, ys + side * reach * 0.85, sill + 0.10), 0.022),
+                    Pos(wx, ys + side * 0.03, sill - 0.10) * Box(0.12, 0.06, 0.50))
+                half = EX["ladder_width"] / 2
+                put("access", cyl((wx - half - 0.04, tip[1], tip[2]), (wx + half + 0.04, tip[1], tip[2]), 0.025))
+                bottom = EX["bottom_clearance"]
+                for dxr in (-half, half):
+                    put("escape", cyl((wx + dxr, tip[1], tip[2]), (wx + dxr, tip[1], bottom), 0.012))
+                for k in range(int((tip[2] - bottom) / EX["rung_spacing"]) + 1):
+                    zr = bottom + k * EX["rung_spacing"]
+                    put("escape", cyl((wx - half, tip[1], zr), (wx + half, tip[1], zr), 0.018))
+            else:  # escape ladder and folded davit stowed in a pouch under the hatch
+                put("access", Pos(wx, ys + side * 0.05, sill - 0.22) * soft(Box(0.34, 0.09, 0.24), 0.02))
+        emergency = {"sill": sill, "clear": [swx, swz], "side": EX.get("side", "right"), "deployed": deployed}
     for bx, bz in ((ow / 2 + 0.05, zb - 0.03), (-ow / 2 - 0.05, zb - 0.03), (ow / 2 - c + 0.04, zb + oh + 0.07), (-ow / 2 + c - 0.04, zb + oh + 0.07)):
         put("structure", cyl((x1 + 0.04, bx, bz), (x1 + 0.07, bx, bz), 0.022))  # bolt heads on the frame
     put("seat", Pos(cx, 0, floor - 0.02) * Box(dx - 2 * w, wy - 2 * w, 0.04))
@@ -311,7 +342,7 @@ def build(p: dict, common: dict, posture: str = "standing"):
         put("uav", cyl((base[0] - 0.14, base[1] + ddy, base[2] + 0.01), (base[0] + 0.14, base[1] + ddy, base[2] + 0.01), 0.01))
 
     climb = [0.0, *treads, zb]
-    egress = {"sill": zb, "treads": treads, "max_rise": max(b - a for a, b in zip(climb, climb[1:]))}
+    egress = {"sill": zb, "treads": treads, "max_rise": max(b - a for a, b in zip(climb, climb[1:])), "emergency": emergency}
     info = {"hip_z": hip_z, "floor": floor, "eye": list(eye), "feet": [list(f) for f in feet], "dock": "onboard", "egress": egress,
             "posture": posture, "knee": [kf, knee_z]}
     return parts, info
