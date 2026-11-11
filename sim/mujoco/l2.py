@@ -3,7 +3,7 @@
 What is physics here and an assumption in level 1:
   - the centre of pressure is limited by the foot's contact with the ground, not by an assumed +/- L * c;
   - leg support, balance and torso pitch come from joint torques limited by actuator capacity;
-  - load holding locks the joints mechanically (stiff joint springs at the current angle);
+  - load holding locks the joints mechanically (a solver-enforced joint constraint at the current angle);
   - the protective stop really steps the swing foot back to the ground before crouching.
 What is unchanged from level 1 (so outcomes are comparable): the case dictionary, the faults and capacity curve,
 alarm, pilot reaction, monitor and lock logic, and the outcome definitions (tip beyond tip_offset from the support
@@ -41,6 +41,7 @@ class L2:
         self.jid = {n: mujoco.mj_name2id(m, mujoco.mjtObj.mjOBJ_JOINT, n) for n in JOINTS + ["root_x", "root_z", "root_pitch"]}
         self.dof = {n: m.jnt_dofadr[j] for n, j in self.jid.items()}
         self.qadr = {n: m.jnt_qposadr[j] for n, j in self.jid.items()}
+        self.eq = {n: mujoco.mj_name2id(m, mujoco.mjtObj.mjOBJ_EQUALITY, f"lock_{n}") for n in JOINTS}
         self.torso = mujoco.mj_name2id(m, mujoco.mjtObj.mjOBJ_BODY, "torso")
         self.sole = {s: mujoco.mj_name2id(m, mujoco.mjtObj.mjOBJ_SITE, f"sole_{s}") for s in ("s", "w")}
         self.foot_body = {s: mujoco.mj_name2id(m, mujoco.mjtObj.mjOBJ_BODY, f"foot_{s}") for s in ("s", "w")}
@@ -96,12 +97,17 @@ class L2:
         return jr_foot
 
     def lock(self):
-        """Load holding: stiff springs at the current joint angles (hydraulic lock or brakes)."""
+        """Load holding: hold each leg joint at its current angle (hydraulic lock or brakes).
+
+        A joint-equality constraint enforced by the solver. Stiff joint springs were used first, but they are
+        integrated explicitly and put the light feet at the stability limit (omega*dt ~ 1.9), which pumped energy
+        into the "locked" walker and made the outcome depend on rounding.
+        """
         for n in JOINTS:
-            j = self.jid[n]
-            self.m.qpos_spring[self.qadr[n]] = self.d.qpos[self.qadr[n]]
-            self.m.jnt_stiffness[j] = 5e7
-            self.m.dof_damping[self.dof[n]] = 5e5
+            e = self.eq[n]
+            self.m.eq_data[e, :] = 0.0
+            self.m.eq_data[e, 0] = self.d.qpos[self.qadr[n]]
+            self.d.eq_active[e] = 1
 
     def swing_target(self, foot_x):
         """Joint angles that put the swing sole flat on the ground at foot_x (2-link IK in the leg plane)."""

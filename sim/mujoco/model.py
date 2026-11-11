@@ -2,7 +2,8 @@
 
 The model is generated, never hand-edited: sim/spec/walker.yaml + sim/spec/walker_l2.yaml -> MJCF string.
 Planar: the torso has slide-x, slide-z and pitch joints; each leg has hip, knee and ankle hinges about y and a box
-foot in contact with the ground. Positive joint angles rotate a leg's tip backwards (-x), so a positive knee angle is
+foot in contact with the ground. Each leg joint has an inactive joint-equality
+constraint; load holding activates it at the current angle, so the solver holds the joint (a mechanical lock). Positive joint angles rotate a leg's tip backwards (-x), so a positive knee angle is
 flexion. The slope is applied by tilting gravity, so +x is downhill, as in the level-1 plant.
 """
 from __future__ import annotations
@@ -65,6 +66,9 @@ def mjcf(p: dict, slope_deg: float) -> str:
             contype="0" conaffinity="0"/>{leg('s', 0.35)}{leg('w', -0.35)}
     </body>
   </worldbody>
+  <equality>
+{chr(10).join(f'    <joint name="lock_{j}" joint1="{j}" active="false" solref="0.005 1"/>' for j in JOINTS)}
+  </equality>
   <actuator>
 {chr(10).join(f'    <motor name="{j}" joint="{j}" gear="1"/>' for j in JOINTS)}
   </actuator>

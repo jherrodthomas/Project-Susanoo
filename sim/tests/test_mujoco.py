@@ -35,6 +35,21 @@ class Model(unittest.TestCase):
         self.assertEqual(a["outcome"], "safe")
         self.assertEqual(json.dumps(a["trace"], default=float), json.dumps(b["trace"], default=float))
 
+    def test_locked_walker_holds_still_and_ignores_rounding(self):
+        """Load holding is a solver constraint: once locked the walker stays put, so the outcome cannot hang on
+        rounding (explicit lock springs at omega*dt ~ 1.9 made it rock and tip depending on the CPU)."""
+        case = {"fault": "FLT-02", "monitor": True}
+        ends = []
+        for eps in (0.0, 1e-7, -1e-7):
+            sim = l2.L2(case)
+            sim.d.qvel[sim.dof["root_x"]] += eps
+            r = sim.run()
+            self.assertEqual(r["outcome"], "safe")
+            after = [row[1] for row in r["trace"] if row[6]]
+            self.assertLess(max(after) - min(after), 0.02)
+            ends.append(after[-1])
+        self.assertLess(max(ends) - min(ends), 1e-3)
+
     def test_faulty_stop_drops_and_correct_stop_holds(self):
         self.assertEqual(l2.simulate({"fault": "FLT-03"})["outcome"], "hard-drop")
         self.assertEqual(l2.simulate({"stop_request_s": 1.0})["outcome"], "safe")

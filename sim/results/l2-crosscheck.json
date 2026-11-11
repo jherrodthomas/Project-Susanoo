@@ -12,7 +12,7 @@
    "title": "No fault (capability by slope)"
   },
   "SF-01": {
-   "agree": 6,
+   "agree": 5,
    "cases": 8,
    "title": "Failure search SF-01: Hydraulic supply loss in mid-stride on a slope (edge cases)"
   }
@@ -481,7 +481,7 @@
    "note": null
   },
   {
-   "agree": true,
+   "agree": false,
    "case": {
     "fault": "FLT-01",
     "fault_onset_s": 1.0,
@@ -504,10 +504,10 @@
    "l2": {
     "impact_speed": 0.0,
     "lock_t": 1.23,
-    "mishap_t": 5.048,
-    "outcome": "tip"
+    "mishap_t": null,
+    "outcome": "safe"
    },
-   "note": null
+   "note": "Level 1 tips at 1.2 s as its capacity-scaled centre-of-pressure limit (A3) shrinks below the capture point; level 2 locks at 1.23 s with the CoM over the stance foot and holds. Same mechanism as EC-08. Before load holding was modelled as a joint constraint, explicit lock springs made the locked walker rock and tip at about 5 s, depending on rounding; that tip was a numerical artefact."
   },
   {
    "agree": false,
