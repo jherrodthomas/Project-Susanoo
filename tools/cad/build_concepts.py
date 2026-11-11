@@ -1,0 +1,391 @@
+# SPDX-License-Identifier: Apache-2.0
+"""Build the Susanoo concept layouts in FreeCAD from cad/params/*.yaml.
+
+    tools/cad/make.sh                       # build, render and regenerate the review page
+    $FREECAD_PYTHON tools/cad/build_concepts.py [--out build/cad] [CL-01 ...]
+
+Runs under the Python of a FreeCAD 1.1 install (tools/cad/environment.yml). For each concept it writes,
+under --out/<ID>/: <ID>.FCStd, <ID>.step, one STL per part class and manifest.json (for the renderer),
+and it writes cad/metrics.json, the committed summary that the review page is generated from.
+
+These are concept layouts for review and alignment: primitive solids placed by placeholder parameters.
+They are not designs, and every metric is a property of the placeholder geometry.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import math
+import os
+import sys
+from pathlib import Path
+
+sys.path.append(os.environ.get("FREECAD_LIB", str(Path(sys.executable).resolve().parents[1] / "lib")))
+import FreeCAD  # noqa: E402
+import MeshPart  # noqa: E402
+import Part  # noqa: E402
+import yaml  # noqa: E402
+
+ROOT = Path(__file__).resolve().parents[2]
+PARAMS = ROOT / "cad/params"
+MM = 1000.0
+
+# Part class -> render colour, opacity and the architecture component it belongs to.
+CLASSES = {
+    "structure": ("#5b6676", 1.0, "SUS-M1-WLK"),
+    "actuator":  ("#c9a33a", 1.0, "SUS-M1-WLK"),
+    "arm":       ("#7b8797", 1.0, "SUS-M1-MAN"),
+    "cage":      ("#e2701f", 1.0, "SUS-M1-PIL"),
+    "seat":      ("#2b313b", 1.0, "SUS-M1-PIL"),
+    "occupant":  ("#3a78d6", 1.0, "SUS-M1-PIL"),
+    "power":     ("#2f8a5b", 1.0, "SUS-M1-PWR"),
+    "safety":    ("#d42a2a", 1.0, "SUS-M1-SAF"),
+    "dock":      ("#7d55c7", 1.0, "SUS-M1-DCK"),
+    "uav":       ("#1597c9", 1.0, "SUS-A1"),
+    "rotor":     ("#1597c9", 0.35, "SUS-A1"),
+        "reference": ("#a3acb9", 1.0, None),
+}
+DENSITY_CLASS = {"arm": "structure", "seat": "structure", "rotor": "uav"}
+
+
+def V(x, y, z):
+    return FreeCAD.Vector(x * MM, y * MM, z * MM)
+
+
+class Model:
+    """Parts in metres; each part has a class (colour, density) and a group (walker, uav, offboard, reference)."""
+
+    def __init__(self):
+        self.parts: list[dict] = []
+        self.feet: list[tuple[float, float]] = []  # ground contact points for the support polygon
+        self.group = "walker"
+
+    def add(self, name, cls, shape):
+        self.parts.append({"name": name, "cls": cls, "shape": shape, "group": self.group})
+
+    def box(self, name, cls, lo, size):
+        self.add(name, cls, Part.makeBox(size[0] * MM, size[1] * MM, size[2] * MM, V(*lo)))
+
+    def cbox(self, name, cls, center, size):
+        self.box(name, cls, [c - s / 2 for c, s in zip(center, size)], size)
+
+    def cyl(self, name, cls, p1, p2, r):
+        a, b = V(*p1), V(*p2)
+        d = b.sub(a)
+        self.add(name, cls, Part.makeCylinder(r * MM, d.Length, a, d))
+
+    def sph(self, name, cls, c, r):
+        self.add(name, cls, Part.makeSphere(r * MM, V(*c)))
+
+
+def lerp(a, b, t):
+    return [x + (y - x) * t for x, y in zip(a, b)]
+
+
+def add(a, b):
+    return [x + y for x, y in zip(a, b)]
+
+
+# --- Shared assemblies ----------------------------------------------------------------------------
+
+def hydraulic(m, name, p1, p2, r=0.06):
+    """Barrel and rod between two points: the visual cue for the TS-001 hydraulic hypothesis."""
+    mid = lerp(p1, p2, 0.6)
+    m.cyl(f"{name}-barrel", "actuator", p1, mid, r)
+    m.cyl(f"{name}-rod", "actuator", mid, p2, r * 0.45)
+
+
+def cage(m, x0, y0, z0, dx, dy, dz, r):
+    """Protective open-frame cockpit cage: the 12 box edges, side braces and a floor plate."""
+    xs, ys, zs = (x0, x0 + dx), (y0, y0 + dy), (z0, z0 + dz)
+    n = 0
+    for y in ys:
+        for z in zs:
+            m.cyl(f"cage-x{n}", "cage", [xs[0], y, z], [xs[1], y, z], r); n += 1
+    for x in xs:
+        for z in zs:
+            m.cyl(f"cage-y{n}", "cage", [x, ys[0], z], [x, ys[1], z], r); n += 1
+    for x in xs:
+        for y in ys:
+            m.cyl(f"cage-z{n}", "cage", [x, y, zs[0]], [x, y, zs[1]], r); n += 1
+    for y in ys:  # diagonal side braces below the window line
+        m.cyl(f"cage-brace{n}", "cage", [xs[0], y, zs[0]], [xs[1], y, zs[0] + dz * 0.45], r * 0.8); n += 1
+    m.box("cockpit-floor", "cage", [x0, y0, z0 - 0.04], [dx, dy, 0.04])
+
+
+def pilot(m, floor, x_back, facing=1.0):
+    """Seated pilot mannequin (about 1.75 m standing), seat and console. Returns the eye point."""
+    h = [x_back + 0.30 * facing, 0.0, floor + 0.47]  # H-point
+    m.cbox("seat-pan", "seat", [h[0] + 0.05, 0, floor + 0.38], [0.50, 0.50, 0.08])
+    m.cbox("seat-back", "seat", [h[0] - 0.22, 0, floor + 0.75], [0.08, 0.50, 0.70])
+    m.cyl("seat-post", "seat", [h[0], 0, floor], [h[0], 0, floor + 0.34], 0.05)
+    neck = [h[0] - 0.06, 0, h[2] + 0.58]
+    m.sph("pilot-pelvis", "occupant", h, 0.15)
+    m.cyl("pilot-torso", "occupant", h, neck, 0.16)
+    head = [neck[0] + 0.02, 0, neck[2] + 0.16]
+    m.sph("pilot-head", "occupant", head, 0.11)
+    for s in (1, -1):
+        knee = [h[0] + 0.45, s * 0.11, h[2] + 0.02]
+        m.cyl(f"pilot-thigh{s}", "occupant", [h[0], s * 0.11, h[2]], knee, 0.075)
+        m.cyl(f"pilot-shin{s}", "occupant", knee, [knee[0] + 0.05, s * 0.11, floor + 0.06], 0.055)
+        sh = [neck[0], s * 0.20, neck[2] - 0.05]
+        hand = [h[0] + 0.48, s * 0.20, h[2] + 0.20]
+        m.cyl(f"pilot-arm{s}", "occupant", sh, hand, 0.045)
+    m.cbox("console", "seat", [h[0] + 0.62, 0, h[2] + 0.12], [0.16, 0.70, 0.22])
+    return [head[0] + 0.07, 0.0, head[2]]
+
+
+def manipulator(m, side, shoulder, upper, fore, r, root=None):
+    s = side
+    if root:
+        m.cyl(f"arm-root{s}", "structure", root, shoulder, r * 1.1)
+    m.sph(f"arm-shoulder{s}", "actuator", shoulder, r * 1.7)
+    elbow = add(shoulder, [upper * math.cos(math.radians(40)), 0, -upper * math.sin(math.radians(40))])
+    wrist = add(elbow, [fore * math.cos(math.radians(8)), 0, fore * math.sin(math.radians(8))])
+    m.cyl(f"arm-upper{s}", "arm", shoulder, elbow, r)
+    hydraulic(m, f"arm-cyl-a{s}", add(shoulder, [0.05, 0, 0.18]), add(lerp(shoulder, elbow, 0.75), [0, 0, 0.12]), 0.045)
+    m.sph(f"arm-elbow{s}", "actuator", elbow, r * 1.35)
+    m.cyl(f"arm-fore{s}", "arm", elbow, wrist, r * 0.85)
+    m.sph(f"arm-wrist{s}", "actuator", wrist, r * 1.1)
+    for k, dy in enumerate((0.07, -0.07)):
+        m.cbox(f"arm-finger{s}{k}", "arm", add(wrist, [0.20, dy, 0]), [0.32, 0.04, 0.09])
+
+
+def uav(m, common, base, tag="uav"):
+    """SUS-A1 quadrotor standing on its skids at base (x, y, z of the skid bottom). Returns rotor parts' names."""
+    c = common["uav"]
+    bx, by, bz = c["body"]
+    z = base[2] + c["skid_height"]
+    m.cbox(f"{tag}-body", "uav", [base[0], base[1], z + bz / 2], c["body"])
+    m.sph(f"{tag}-camera", "uav", [base[0] + bx / 2, base[1], z + 0.02], 0.045)
+    for k, (dx, dy) in enumerate(((1, 1), (1, -1), (-1, 1), (-1, -1))):
+        reach = c["arm_reach"] / math.sqrt(2)
+        hub = [base[0] + dx * reach, base[1] + dy * reach, z + bz * 0.7]
+        m.cyl(f"{tag}-arm{k}", "uav", [base[0], base[1], z + bz * 0.7], hub, 0.014)
+        m.cyl(f"{tag}-motor{k}", "uav", hub, add(hub, [0, 0, 0.05]), 0.028)
+        m.cyl(f"{tag}-rotor{k}", "rotor", add(hub, [0, 0, 0.055]), add(hub, [0, 0, 0.065]), c["rotor_radius"])
+    for dy in (bx * 0.35, -bx * 0.35):
+        m.cyl(f"{tag}-skid{dy:+.2f}", "uav", [base[0] - 0.14, base[1] + dy, base[2] + 0.01], [base[0] + 0.14, base[1] + dy, base[2] + 0.01], 0.01)
+        for dx in (-0.08, 0.08):
+            m.cyl(f"{tag}-strut{dx:+.2f}{dy:+.2f}", "uav", [base[0] + dx, base[1] + dy, base[2]], [base[0] + dx * 0.6, base[1] + dy * 0.6, z], 0.008)
+
+
+def reference_human(m, at, height):
+    """Standing 1.75 m figure for scale."""
+    k = height / 1.75
+    g, m.group = m.group, "reference"
+    x, y = at
+    for s in (1, -1):
+        m.cyl(f"ref-leg{s}", "reference", [x, y + s * 0.1 * k, 0], [x, y + s * 0.1 * k, 0.86 * k], 0.07 * k)
+        m.cyl(f"ref-arm{s}", "reference", [x, y + s * 0.24 * k, 1.42 * k], [x, y + s * 0.27 * k, 0.80 * k], 0.045 * k)
+    m.cyl("ref-torso", "reference", [x, y, 0.84 * k], [x, y, 1.48 * k], 0.17 * k)
+    m.sph("ref-head", "reference", [x, y, 1.63 * k], 0.11 * k)
+    m.group = g
+
+
+def safety_items(m, beacon_at, estops):
+    m.cyl("saf-beacon-base", "safety", beacon_at, add(beacon_at, [0, 0, 0.05]), 0.09)
+    m.cyl("saf-beacon", "safety", add(beacon_at, [0, 0, 0.05]), add(beacon_at, [0, 0, 0.17]), 0.06)
+    for k, (p, n) in enumerate(estops):
+        m.cyl(f"saf-estop{k}", "safety", p, add(p, [x * 0.06 for x in n]), 0.045)
+
+
+# --- Concept builders -----------------------------------------------------------------------------
+
+def build_biped(p, common):
+    m = Model()
+    L = p["leg"]
+    kf = L["knee_forward"]
+    knee_z = L["ankle_height"] + math.sqrt(L["shank"] ** 2 - kf ** 2)
+    hip_z = knee_z + math.sqrt(L["thigh"] ** 2 - kf ** 2)
+    fl, fw, ft = L["foot"]
+    for s in (1, -1):
+        y = s * L["hip_half_width"]
+        hip, knee, ankle = [0, y, hip_z], [kf, y, knee_z], [0, y, L["ankle_height"]]
+        m.cyl(f"thigh{s}", "structure", hip, knee, L["radius"])
+        m.cyl(f"shank{s}", "structure", knee, ankle, L["radius"] * 0.9)
+        for nm, pt, r in (("hip", hip, L["joint_radius"]), ("knee", knee, L["joint_radius"] * 0.85), ("ankle", ankle, L["joint_radius"] * 0.7)):
+            m.sph(f"{nm}{s}", "actuator", pt, r)
+        hydraulic(m, f"thigh-cyl{s}", [-0.30, y + s * 0.20, hip_z + 0.30], add(lerp(hip, knee, 0.65), [-0.14, s * 0.20, 0]))
+        hydraulic(m, f"shank-cyl{s}", add(lerp(hip, knee, 0.55), [0.17, 0, 0]), add(lerp(knee, ankle, 0.6), [0.16, 0, 0]))
+        x0 = -0.32 * fl
+        m.box(f"foot{s}", "structure", [x0, y - fw / 2, 0], [fl, fw, ft])
+        m.cyl(f"ankle-link{s}", "structure", ankle, [0, y, ft], L["radius"] * 0.8)
+        m.feet += [(x0, y - fw / 2), (x0 + fl, y - fw / 2), (x0, y + fw / 2), (x0 + fl, y + fw / 2)]
+    T = p["torso"]
+    cd, cw, ch = T["core"]
+    tz0 = hip_z - T["bottom_offset"]
+    cx1 = 0.25
+    cx0 = cx1 - cd
+    m.box("torso-core", "structure", [cx0, -cw / 2, tz0], [cd, cw, ch])
+    m.cyl("hip-housing", "structure", [0, -L["hip_half_width"] - 0.15, hip_z], [0, L["hip_half_width"] + 0.15, hip_z], 0.24)
+    C = p["cockpit"]
+    fx, fy, fz = C["frame"]
+    floor = tz0 + C["floor_offset"]
+    cage(m, cx1, -fy / 2, floor, fx, fy, fz, C["tube_radius"])
+    eye = pilot(m, floor, cx1 + 0.02)
+    A = p["arm"]
+    for s in (1, -1):
+        sh = [0.05, s * A["shoulder_y"], tz0 + ch - A["shoulder_drop"]]
+        manipulator(m, s, sh, A["upper"], A["fore"], A["radius"], root=[0.05, s * cw / 2, sh[2]])
+    P = p["power"]["pack"]
+    m.box("power-pack", "power", [cx0 - P[0], -P[1] / 2, tz0 + 0.15], P)
+    m.cbox("saf-controller", "safety", [cx0 + 0.35, cw / 2 + 0.08, tz0 + 0.55], [0.30, 0.16, 0.28])
+    safety_items(m, [cx0 + 0.25, 0, tz0 + ch], [([cx1 + fx - 0.2, fy / 2 + 0.04, floor + 0.9], [0, 1, 0]),
+                                               ([cx0 - P[0], 0.3, tz0 + 0.6], [-1, 0, 0])])
+    walker_dock(m, common, p["dock"], top=tz0 + ch, rear_x=cx0)
+    return m, {"hip_z": hip_z, "floor": floor, "eye": eye, "dock": "offboard" if p["dock"]["type"] == "ground-station" else "onboard"}
+
+
+def walker_dock(m, common, D, top, rear_x):
+    """TS-004 alternatives. On-board docks are a platform on struts above the hull top, placed by `center`
+    (x from the rear edge of the core, y, height above the top); the ground station stands beside the walker."""
+    if D["type"] in ("rear-backpack", "shoulder"):
+        px, py, pz = D["platform"]
+        c = [rear_x + D["center"][0], D["center"][1], top + D["center"][2]]
+        m.cbox("dock-platform", "dock", add(c, [0, 0, pz / 2]), [px, py, pz])
+        s = min(px, py) / 2 - 0.08
+        for k, (dx, dy) in enumerate(((s, s), (s, -s), (-s, s), (-s, -s))):
+            m.cyl(f"dock-strut{k}", "dock", [c[0] + dx, c[1] + dy, top], [c[0] + dx, c[1] + dy, c[2]], 0.03)
+        for k, dy in enumerate((0.16, -0.16)):
+            m.cbox(f"dock-latch{k}", "dock", [c[0], c[1] + dy, c[2] + pz + 0.03], [0.10, 0.05, 0.06])
+        m.group = "uav"
+        uav(m, common, [c[0], c[1], c[2] + pz])
+    elif D["type"] == "ground-station":
+        sx_, sy_, sz_ = D["station"]
+        x, y = D["position"]
+        m.group = "offboard"
+        m.cbox("station-box", "dock", [x, y, sz_ / 2], [sx_, sy_, sz_])
+        for k, dy in enumerate((0.16, -0.16)):
+            m.cbox(f"station-latch{k}", "dock", [x, y + dy, sz_ + 0.03], [0.10, 0.05, 0.06])
+        m.cyl("station-handle", "dock", [x - sx_ / 2 - 0.05, y - 0.3, sz_ * 0.7], [x - sx_ / 2 - 0.05, y + 0.3, sz_ * 0.7], 0.025)
+        uav(m, common, [x, y, sz_])
+    else:
+        raise ValueError(f"unknown dock type {D['type']!r}")
+    m.group = "walker"
+
+
+# --- Metrics --------------------------------------------------------------------------------------
+
+def hull(points):
+    pts = sorted(set((round(x, 6), round(y, 6)) for x, y in points))
+    if len(pts) < 3:
+        return pts
+
+    def cross(o, a, b):
+        return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])
+    lower, upper = [], []
+    for p in pts:
+        while len(lower) >= 2 and cross(lower[-2], lower[-1], p) <= 0:
+            lower.pop()
+        lower.append(p)
+    for p in reversed(pts):
+        while len(upper) >= 2 and cross(upper[-2], upper[-1], p) <= 0:
+            upper.pop()
+        upper.append(p)
+    return lower[:-1] + upper[:-1]
+
+
+def margin(poly, pt):
+    """Signed distance from pt to the edges of a counter-clockwise convex polygon (positive inside)."""
+    best = float("inf")
+    for (x1, y1), (x2, y2) in zip(poly, poly[1:] + poly[:1]):
+        ex, ey = x2 - x1, y2 - y1
+        d = ((pt[0] - x1) * ey - (pt[1] - y1) * ex) / math.hypot(ex, ey)
+        best = min(best, -d)
+    return best
+
+
+def metrics(m: Model, info: dict, common: dict) -> dict:
+    dens = common["effective_density"]
+    on = [pt for pt in m.parts if pt["group"] == "walker" or (pt["group"] == "uav")]
+    mass = 0.0
+    mom = FreeCAD.Vector(0, 0, 0)
+    for pt in on:
+        rho = dens[DENSITY_CLASS.get(pt["cls"], pt["cls"])]
+        kg = pt["shape"].Volume / MM ** 3 * rho
+        mass += kg
+        mom = mom.add(pt["shape"].CenterOfMass.multiply(kg))
+    cg = mom.multiply(1.0 / mass).multiply(1.0 / MM)
+    bb = Part.makeCompound([pt["shape"] for pt in on]).BoundBox
+    poly = hull(m.feet)
+    marg = margin(poly, (cg.x, cg.y))
+    occupant = Part.makeCompound([pt["shape"] for pt in m.parts if pt["cls"] == "occupant"])
+    rotors = Part.makeCompound([pt["shape"] for pt in m.parts if pt["cls"] == "rotor"])
+    dist, pairs, _ = occupant.distToShape(rotors)
+    clearance = dist / MM
+    info["rotor_pilot_points"] = [[round(c / MM, 3) for c in pairs[0][0]], [round(c / MM, 3) for c in pairs[0][1]]]
+    return {
+        "envelope_m": [round(bb.XLength / MM, 2), round(bb.YLength / MM, 2), round(bb.ZLength / MM, 2)],
+        "height_m": round(bb.ZMax / MM, 2),
+        "hip_height_m": round(info["hip_z"], 2),
+        "cockpit_floor_m": round(info["floor"], 2),
+        "pilot_eye_m": round(info["eye"][2], 2),
+        "placeholder_mass_kg": int(round(mass, -1)),
+        "cg_m": [round(cg.x, 3), round(cg.y, 3), round(cg.z, 3)],
+        "support_polygon_m": [[round(x, 3), round(y, 3)] for x, y in poly],
+        "static_margin_m": round(marg, 3),
+        "static_tip_angle_deg": round(math.degrees(math.atan2(marg, cg.z)), 1),
+        "uav_dock": info["dock"],
+        "rotor_to_pilot_m": round(clearance, 2),
+    }
+
+
+# --- Export ---------------------------------------------------------------------------------------
+
+def export(m: Model, cid: str, out: Path, met: dict, info: dict, title: str) -> None:
+    out.mkdir(parents=True, exist_ok=True)
+    doc = FreeCAD.newDocument(cid.replace("-", "_"))
+    for pt in m.parts:
+        if pt["group"] == "reference":
+            continue
+        obj = doc.addObject("Part::Feature", pt["name"].replace("-", "_").replace("+", "p").replace(".", "_"))
+        obj.Shape = pt["shape"]
+        obj.Label = f"{pt['cls']}:{pt['name']}"
+    doc.recompute()
+    doc.saveAs(str(out / f"{cid}.FCStd"))
+    FreeCAD.closeDocument(doc.Name)
+    Part.makeCompound([pt["shape"] for pt in m.parts if pt["group"] != "reference"]).exportStep(str(out / f"{cid}.step"))
+    meshes = []
+    for cls in sorted({pt["cls"] for pt in m.parts}):
+        shape = Part.makeCompound([pt["shape"] for pt in m.parts if pt["cls"] == cls])
+        mesh = MeshPart.meshFromShape(Shape=shape, LinearDeflection=4.0, AngularDeflection=0.25)
+        mesh.write(str(out / f"{cls}.stl"))
+        color, opacity, comp = CLASSES[cls]
+        meshes.append({"file": f"{cls}.stl", "cls": cls, "color": color, "opacity": opacity, "component": comp})
+    (out / "manifest.json").write_text(json.dumps({"id": cid, "title": title, "meshes": meshes, "metrics": met,
+                                                   "rotor_pilot_points": info["rotor_pilot_points"],
+                                                   "eye": [round(c, 3) for c in info["eye"]]}, indent=1))
+
+
+BUILDERS = {"biped": build_biped}  # TS-003 decided: bipedal (project lead, 2026-11-11)
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--out", type=Path, default=ROOT / "build/cad")
+    ap.add_argument("ids", nargs="*")
+    args = ap.parse_args()
+    common = yaml.safe_load((PARAMS / "common.yaml").read_text())
+    summary = {}
+    for path in sorted(PARAMS.glob("CL-*.yaml")):
+        p = yaml.safe_load(path.read_text())
+        if args.ids and p["id"] not in args.ids:
+            continue
+        m, info = BUILDERS[p["locomotion"]](p, common)
+        bb = Part.makeCompound([pt["shape"] for pt in m.parts if pt["group"] != "reference"]).BoundBox
+        reference_human(m, (bb.XMin / MM - 0.55, bb.YMin / MM - 0.9), common["reference_human"]["height"])
+        met = metrics(m, info, common)
+        export(m, p["id"], args.out / p["id"], met, info, p["title"])
+        summary[p["id"]] = {"title": p["title"], "locomotion": p["locomotion"], "dock": p["dock"]["type"], **met}
+        print(f"{p['id']}: {len(m.parts)} parts, height {met['height_m']} m, CG z {met['cg_m'][2]} m, "
+              f"static margin {met['static_margin_m']} m, rotor-to-pilot {met['rotor_to_pilot_m']} m")
+    if not args.ids:
+        (ROOT / "cad/metrics.json").write_text(json.dumps(
+            {"generator": "tools/cad/build_concepts.py", "freecad": ".".join(FreeCAD.Version()[:3]),
+             "note": "Properties of placeholder concept geometry, not of a design.", "concepts": summary}, indent=1) + "\n")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

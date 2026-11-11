@@ -1,0 +1,133 @@
+{
+ "generator": "tools/cad/build_concepts.py",
+ "freecad": "1.1.3",
+ "note": "Properties of placeholder concept geometry, not of a design.",
+ "concepts": {
+  "CL-01": {
+   "title": "Biped, seated protected cockpit, rear backpack dock",
+   "locomotion": "biped",
+   "dock": "rear-backpack",
+   "envelope_m": [
+    3.38,
+    2.38,
+    4.08
+   ],
+   "height_m": 4.08,
+   "hip_height_m": 2.48,
+   "cockpit_floor_m": 2.33,
+   "pilot_eye_m": 3.54,
+   "placeholder_mass_kg": 5010,
+   "cg_m": [
+    -0.194,
+    0.002,
+    2.634
+   ],
+   "support_polygon_m": [
+    [
+     -0.336,
+     -0.895
+    ],
+    [
+     0.714,
+     -0.895
+    ],
+    [
+     0.714,
+     0.895
+    ],
+    [
+     -0.336,
+     0.895
+    ]
+   ],
+   "static_margin_m": 0.142,
+   "static_tip_angle_deg": 3.1,
+   "uav_dock": "onboard",
+   "rotor_to_pilot_m": 0.79
+  },
+  "CL-02": {
+   "title": "Biped, seated protected cockpit, shoulder-mounted dock",
+   "locomotion": "biped",
+   "dock": "shoulder",
+   "envelope_m": [
+    3.38,
+    2.38,
+    4.2
+   ],
+   "height_m": 4.2,
+   "hip_height_m": 2.48,
+   "cockpit_floor_m": 2.33,
+   "pilot_eye_m": 3.54,
+   "placeholder_mass_kg": 5000,
+   "cg_m": [
+    -0.191,
+    -0.001,
+    2.634
+   ],
+   "support_polygon_m": [
+    [
+     -0.336,
+     -0.895
+    ],
+    [
+     0.714,
+     -0.895
+    ],
+    [
+     0.714,
+     0.895
+    ],
+    [
+     -0.336,
+     0.895
+    ]
+   ],
+   "static_margin_m": 0.145,
+   "static_tip_angle_deg": 3.2,
+   "uav_dock": "onboard",
+   "rotor_to_pilot_m": 0.63
+  },
+  "CL-03": {
+   "title": "Biped, seated protected cockpit, separate portable station",
+   "locomotion": "biped",
+   "dock": "ground-station",
+   "envelope_m": [
+    3.38,
+    2.38,
+    3.85
+   ],
+   "height_m": 3.85,
+   "hip_height_m": 2.48,
+   "cockpit_floor_m": 2.33,
+   "pilot_eye_m": 3.54,
+   "placeholder_mass_kg": 4970,
+   "cg_m": [
+    -0.192,
+    0.002,
+    2.626
+   ],
+   "support_polygon_m": [
+    [
+     -0.336,
+     -0.895
+    ],
+    [
+     0.714,
+     -0.895
+    ],
+    [
+     0.714,
+     0.895
+    ],
+    [
+     -0.336,
+     0.895
+    ]
+   ],
+   "static_margin_m": 0.144,
+   "static_tip_angle_deg": 3.1,
+   "uav_dock": "offboard",
+   "rotor_to_pilot_m": 3.14
+  }
+ }
+}

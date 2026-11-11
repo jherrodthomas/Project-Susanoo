@@ -87,6 +87,11 @@ class BrokenRecords(unittest.TestCase):
         item(m, "SYS-001")["allocated_to"] = ["ACT-PILOT"]
         self.assertFires("P3", m, pdaclib.check_references)
 
+    def test_p3_layout_option_must_be_an_alternative(self):
+        m = fresh()
+        item(m, "CL-01")["options"]["TS-003"] = "wheeled"
+        self.assertFires("P3", m, pdaclib.check_references)
+
     def test_p4_one_sided_mitigation(self):
         m = fresh()
         item(m, "HAZ-019")["mitigated_by"].append("SYS-001")
@@ -152,8 +157,10 @@ class Documents(unittest.TestCase):
 
     def setUp(self):
         self.tmp = Path(tempfile.mkdtemp())
-        for rel in ("pdac", "concept", "framework", "safety", "docs", "README.md", "CLAUDE.md"):
+        for rel in ("pdac", "concept", "framework", "safety", "docs", "README.md", "CLAUDE.md",
+                    "cad/params", "cad/metrics.json", "cad/README.md"):
             src = pdaclib.ROOT / rel
+            (self.tmp / rel).parent.mkdir(parents=True, exist_ok=True)
             (shutil.copytree if src.is_dir() else shutil.copy)(src, self.tmp / rel)
 
     def tearDown(self):
@@ -164,12 +171,21 @@ class Documents(unittest.TestCase):
 
     def test_revision_mismatch(self):
         path = self.tmp / "concept/CONOPS.md"
-        path.write_text(path.read_text().replace("**Revision:** 0.4-draft", "**Revision:** 0.5-draft"))
+        rev = item(pdaclib.load(self.tmp), "SUS-CONOPS-001")["revision"]
+        path.write_text(path.read_text().replace(f"**Revision:** {rev}", "**Revision:** 9.9-draft"))
         self.assertIn("P8", checks_of(pdaclib.check_documents(pdaclib.load(self.tmp))))
 
     def test_stale_id_in_markdown(self):
         path = self.tmp / "framework/lifecycle.md"
         path.write_text(path.read_text() + "\nSee SYS-999.\n")
+        self.assertIn("P8", checks_of(pdaclib.check_documents(pdaclib.load(self.tmp))))
+
+    def test_layout_without_metrics(self):
+        (self.tmp / "cad/metrics.json").write_text('{"concepts": {}}')
+        self.assertIn("P8", checks_of(pdaclib.check_documents(pdaclib.load(self.tmp))))
+
+    def test_layout_without_params(self):
+        (self.tmp / "cad/params/CL-02.yaml").unlink()
         self.assertIn("P8", checks_of(pdaclib.check_documents(pdaclib.load(self.tmp))))
 
     def test_scenario_missing_from_conops(self):

@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
 import re
 import sys
 from collections import Counter
@@ -171,11 +172,47 @@ Deciding a trade study re-rates these hazards and reopens these requirements.
 """
 
 
+def cad_concepts(model: pdaclib.Model) -> str:
+    path = model.root / "cad/metrics.json"
+    data = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {"concepts": {}}
+    layouts = model.of_kind("concept-layout")
+    met = {cl["id"]: data["concepts"].get(cl["id"], {}) for cl in layouts}
+    rows = [
+        ("Locomotion (TS-003)", lambda cl, m: cl["options"].get("TS-003", "—")),
+        ("UAV dock (TS-004)", lambda cl, m: cl["options"].get("TS-004", "—")),
+        ("Envelope L × W × H", lambda cl, m: " × ".join(f"{v:.1f}" for v in m["envelope_m"]) + " m"),
+        ("Overall height", lambda cl, m: f"{m['height_m']:.2f} m"),
+        ("Pilot eye height", lambda cl, m: f"{m['pilot_eye_m']:.2f} m"),
+        ("Cockpit floor (egress drop)", lambda cl, m: f"{m['cockpit_floor_m']:.2f} m"),
+        ("CG height", lambda cl, m: f"{m['cg_m'][2]:.2f} m"),
+        ("Static margin", lambda cl, m: f"{m['static_margin_m']:.2f} m" + (" ⚠" if m["static_margin_m"] < 0.3 else "")),
+        ("Static tip angle", lambda cl, m: f"{m['static_tip_angle_deg']:.1f}°"),
+        ("Rotor ↔ pilot (docked)", lambda cl, m: f"{m['rotor_to_pilot_m']:.2f} m" + (" ⚠" if m["rotor_to_pilot_m"] < 1.0 else "")),
+        ("Placeholder mass", lambda cl, m: f"~{m['placeholder_mass_kg'] / 1000:.1f} t"),
+    ]
+    out = [f"*Metrics from [`metrics.json`](metrics.json) (FreeCAD {data.get('freecad', '?')}); ⚠ marks the provisional review flags of §1.*", "",
+           "| | " + " | ".join(cl["id"] for cl in layouts) + " |", "|---|" + "---|" * len(layouts)]
+    for name, fn in rows:
+        cells = [fn(cl, met[cl["id"]]) if met[cl["id"]] else "not built" for cl in layouts]
+        out.append(f"| {name} | " + " | ".join(cells) + " |")
+    for cl in layouts:
+        out += ["", f"### {cl['id']} · {cl['title']}", "",
+                "Options: " + "; ".join(f"{k} {v}" for k, v in cl["options"].items()) + ". "
+                f"Informs: {_ids(cl.get('informs'))}. Parameters: [`{cl['params'].removeprefix('cad/')}`]({cl['params'].removeprefix('cad/')}).", ""]
+        out += [f"- {f}" for f in cl.get("findings", [])]
+        r_ = f"renders/{cl['id']}"
+        out += ["", "| | |", "|---|---|",
+                f"| ![{cl['id']} three-quarter view]({r_}-iso.png) | ![{cl['id']} side elevation]({r_}-side.png) |",
+                f"| ![{cl['id']} plan view with support polygon and centre of gravity]({r_}-top.png) | ![{cl['id']} UAV dock and rotor clearance to the pilot]({r_}-dock.png) |"]
+    return "\n".join(out)
+
+
 BLOCKS = {
     "README.md": {"status": lambda m: status_block(m, "")},
     "docs/wiki/Home.md": {"status": lambda m: status_block(m, "../../")},
     "concept/CONOPS.md": {"conops-trace": conops_trace},
     "concept/architecture.md": {"requirements": requirements_list},
+    "cad/README.md": {"cad-concepts": cad_concepts},
 }
 PAGES = {"safety/preliminary-hazard-list.md": phl_page}
 

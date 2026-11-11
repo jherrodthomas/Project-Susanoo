@@ -62,12 +62,13 @@ REFS: dict[str, dict[str, tuple[str, ...]]] = {
     "failure-condition": {"related_hazards": ("hazard",)},
     "trade-study": {"decision_ref": ("approval",)},
     "approval": {"objects": ("*",)},
+    "concept-layout": {"informs": ("hazard", "requirement")},
 }
 # Every kind except document may name the controlled document it comes from.
 SOURCE_KINDS = ("document",)
 
 # IDs that may appear in Markdown and must then exist as records (check P8).
-MARKDOWN_ID = re.compile(r"\b(?:SCN-\d{3}|MOD-\d{2}|SYS-\d{3}|HAZ-\d{3}|TS-\d{3}|IF-\d{2}|FC-\d{3}|APR-\d{3})\b")
+MARKDOWN_ID = re.compile(r"\b(?:SCN-\d{3}|MOD-\d{2}|SYS-\d{3}|HAZ-\d{3}|TS-\d{3}|IF-\d{2}|FC-\d{3}|APR-\d{3}|CL-\d{2})\b")
 
 
 @dataclass
@@ -191,6 +192,13 @@ def check_references(model: Model) -> list[Finding]:
                     out.append(Finding("P3", where, f"{fld} -> {ref}: no such record"))
                 elif "*" not in kinds and target.get("kind") not in kinds:
                     out.append(Finding("P3", where, f"{fld} -> {ref}: is a {target.get('kind')}, expected {' or '.join(kinds)}"))
+    for layout in model.of_kind("concept-layout"):
+        for ts_id, option in (layout.get("options") or {}).items():
+            ts = ids.get(ts_id)
+            if ts is None or ts.get("kind") != "trade-study":
+                out.append(Finding("P3", layout["id"], f"options -> {ts_id}: no such trade study"))
+            elif option not in ts.get("alternatives", []):
+                out.append(Finding("P3", layout["id"], f"options -> {ts_id}: {option!r} is not one of its alternatives"))
     return out
 
 
@@ -322,6 +330,19 @@ def check_documents(model: Model) -> list[Finding]:
         for mid in sorted(set(MARKDOWN_ID.findall(text))):
             if mid not in ids:
                 out.append(Finding("P8", path.relative_to(root).as_posix(), f"mentions {mid}, which has no record"))
+    metrics_path = root / "cad/metrics.json"
+    metrics = json.loads(metrics_path.read_text(encoding="utf-8")).get("concepts", {}) if metrics_path.is_file() else {}
+    for layout in model.of_kind("concept-layout"):
+        params = root / layout.get("params", "")
+        if not params.is_file():
+            out.append(Finding("P8", layout["id"], f"params file {layout.get('params')} does not exist"))
+        elif f"id: {layout['id']}" not in params.read_text(encoding="utf-8"):
+            out.append(Finding("P8", layout["id"], f"{layout['params']} does not declare id: {layout['id']}"))
+        entry = metrics.get(layout["id"])
+        if entry is None:
+            out.append(Finding("P8", layout["id"], "no entry in cad/metrics.json: run tools/cad/make.sh"))
+        elif entry.get("title") != layout.get("title"):
+            out.append(Finding("P8", layout["id"], "title differs from cad/metrics.json: rebuild the layouts"))
     conops_doc = ids.get("SUS-CONOPS-001")
     if conops_doc and (root / conops_doc["path"]).is_file():
         conops = (root / conops_doc["path"]).read_text(encoding="utf-8")

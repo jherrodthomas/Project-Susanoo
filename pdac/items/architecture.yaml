@@ -43,7 +43,8 @@ items:
      alternatives: ["centralized hydraulic", "distributed electrohydraulic", "electromechanical"]}
   - {id: TS-002, kind: trade-study, title: "Pilot architecture", status: open, applicability: [SUS-M1, SUS-I1], source: SUS-TRADE-001,
      alternatives: ["seated protected cockpit", "standing open-frame pilot", "remote operator"]}
-  - {id: TS-003, kind: trade-study, title: "Locomotion", status: open, applicability: [SUS-M1, SUS-I1], source: SUS-TRADE-001,
-     alternatives: ["bipedal", "quadrupedal", "hybrid leg-wheel"]}
+  - {id: TS-003, kind: trade-study, title: "Locomotion", status: decided, applicability: [SUS-M1, SUS-I1], source: SUS-TRADE-001,
+     alternatives: ["bipedal", "quadrupedal", "hybrid leg-wheel"], selected: "bipedal",
+     note: "Decided by the project lead in the 2026-11-11 working session (product direction). No approval record yet; the lead adds one (APR-) to formalise it."}
   - {id: TS-004, kind: trade-study, title: "UAV docking", status: open, applicability: [SUS-I1], source: SUS-TRADE-001,
      alternatives: ["rear backpack dock", "shoulder-mounted dock", "separate portable station"]}

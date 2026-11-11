@@ -18,5 +18,6 @@
 |---|---|
 | 1 Concept baseline | CONOPS 0.4-draft, architecture and trade studies drafted; trade studies open; nothing reviewed |
 | 2 System safety planning | Preliminary Hazard List drafted as records ([SUS-PHL-001](../safety/preliminary-hazard-list.md)); System Safety Program Plan not started |
+| 5 Simulation and models | Three FreeCAD concept layouts of the biped with review renders and geometry metrics ([SUS-CAD-001](../cad/README.md)); TS-003 decided: bipedal |
 | 3 Requirements | 18 system requirement candidates as records, traced to scenarios and hazards |
 | 7 PDaC executable lifecycle | Schema, validator (checks P1–P9), generated views and CI in place ([pdac/README.md](../pdac/README.md)); change impact and evidence manifest planned |

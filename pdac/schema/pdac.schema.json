@@ -221,6 +221,21 @@
       }
     },
 
+    "concept-layout": {
+      "description": "A parametric FreeCAD concept layout (cad/params) for review and alignment. Its metrics are properties of placeholder geometry.",
+      "$ref": "#/$defs/common", "unevaluatedProperties": false,
+      "required": ["params", "options", "informs", "source"],
+      "properties": {
+        "id": {"pattern": "^CL-\\d{2}$"}, "kind": {"const": "concept-layout"},
+        "status": {"enum": ["draft", "reviewed", "withdrawn"]},
+        "params": {"type": "string", "pattern": "^cad/params/CL-\\d{2}\\.yaml$"},
+        "options": {"type": "object", "description": "Trade study ID -> the alternative this layout represents.",
+          "propertyNames": {"pattern": "^TS-\\d{3}$"}, "additionalProperties": {"type": "string"}},
+        "informs": {"$ref": "#/$defs/idList"},
+        "findings": {"$ref": "#/$defs/textList"}
+      }
+    },
+
     "approval": {
       "description": "A recorded human decision. AI assistants never write one with authority_type real (CLAUDE.md).",
       "$ref": "#/$defs/common", "unevaluatedProperties": false,

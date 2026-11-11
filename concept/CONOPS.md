@@ -1,7 +1,8 @@
 # SUS-M1 / SUS-A1 Concept of Operations (CONOPS)
 
-**ID:** SUS-CONOPS-001 · **Revision:** 0.4-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CONOPS-001 · **Revision:** 0.5-draft · **Status:** Draft, not reviewed
 
+*Changes in 0.5:* locomotion is bipedal (TS-003 decided by the project lead); §10 updated.
 *Changes in 0.4:* §9 is generated from the PDaC records and now covers every scenario (SCN-102, SCN-103, SCN-104 and SCN-108 had no requirement in 0.3); §12 points to the Preliminary Hazard List.
 
 ## 1. Mission and scope
@@ -74,7 +75,7 @@ Generated from [`pdac/items/`](../pdac/items/) by `tools/pdac/generate.py`; edit
 <!-- END GENERATED: conops-trace -->
 
 ## 10. Design alternatives and open decisions
-Hydraulic, electrohydraulic or electromechanical actuation; seated or standing pilot; biped, quadruped or hybrid locomotion; rear/shoulder/separate UAV dock. Selection requires trade studies and safety review. No concept rendering establishes feasibility.
+Hydraulic, electrohydraulic or electromechanical actuation; seated or standing pilot; rear/shoulder/separate UAV dock. Selection requires trade studies and safety review. **Locomotion is bipedal** (TS-003, decided by the project lead 2026-11-11); quadruped and leg-wheel alternatives are no longer pursued. Concept layouts of the open alternatives are in [SUS-CAD-001](../cad/README.md). No concept rendering establishes feasibility.
 
 ## 11. Success criteria and assurance
 Demonstrate simulated locomotion, manipulation, UAV observation/recovery, fault response, traceable requirements/hazards/tests and a controlled PDaC release. Quantitative acceptance criteria remain TBD. MIL-STD-882E is the integrated safety method; machinery/human factors techniques support walker analysis; ARP4754B/ARP4761A are voluntarily applied to UAV development and safety assessment. None implies certification.

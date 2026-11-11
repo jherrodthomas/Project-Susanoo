@@ -1,0 +1,49 @@
+# Concept layouts: parametric FreeCAD mockups for review and alignment (SUS-CAD-001, cad/README.md).
+# Locomotion is bipedal (TS-003 decided); the layouts differ in where the UAV docks (TS-004, open).
+# Geometry comes from `params`; metrics are written by tools/cad/build_concepts.py to cad/metrics.json and
+# shown on the review page. A layout is not a design and selects nothing. Findings are observations on
+# placeholder geometry.
+file: concept-layouts
+owner: systems-lead
+revision: "0.1"
+provenance: {author: "Claude (AI-drafted)", independence: I0, date: "2026-11-11", reviewed: false}
+items:
+  - id: CL-01
+    kind: concept-layout
+    title: "Biped, seated protected cockpit, rear backpack dock"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+    source: SUS-CAD-001
+    params: cad/params/CL-01.yaml
+    options: {TS-001: "centralized hydraulic", TS-002: "seated protected cockpit", TS-003: "bipedal", TS-004: "rear backpack dock"}
+    informs: [HAZ-005, HAZ-006, HAZ-008, HAZ-011, HAZ-021, SYS-003, SYS-008, SYS-009, SYS-010, SYS-012]
+    findings:
+      - "Common to every biped layout: the static margin is small and the CG is high above two feet, so standing still depends on active balance. Loss of actuation energy or a zero-torque stop means a fall unless SYS-008 holds posture (HAZ-005, HAZ-021)."
+      - "Common to every biped layout: the cockpit floor is above the head of a standing person, so egress and extraction (SYS-012) need a ladder, a lowered posture or a kneel mode."
+      - "The rear dock sits above the cockpit roof line, so the docked rotors still come within the provisional 1 m flag of the pilot's head."
+
+  - id: CL-02
+    kind: concept-layout
+    title: "Biped, seated protected cockpit, shoulder-mounted dock"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+    source: SUS-CAD-001
+    params: cad/params/CL-02.yaml
+    options: {TS-001: "centralized hydraulic", TS-002: "seated protected cockpit", TS-003: "bipedal", TS-004: "shoulder-mounted dock"}
+    informs: [HAZ-006, HAZ-011, HAZ-012, SYS-003, SYS-006]
+    findings:
+      - "The shoulder dock puts the docked rotors beside the cage at pilot head height, the closest of the three layouts: HAZ-011 and HAZ-012 dominate, and SYS-003 rotor inhibit plus a rotor guard would be needed if this option is kept."
+      - "The UAV is light against the walker: the dock position changes the CG by millimetres, so TS-004 is decided by rotor clearance, access and approach geometry, not by stability."
+
+  - id: CL-03
+    kind: concept-layout
+    title: "Biped, seated protected cockpit, separate portable station"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+    source: SUS-CAD-001
+    params: cad/params/CL-03.yaml
+    options: {TS-001: "centralized hydraulic", TS-002: "seated protected cockpit", TS-003: "bipedal", TS-004: "separate portable station"}
+    informs: [HAZ-011, HAZ-013, HAZ-016, SYS-005, SYS-006, SYS-016]
+    findings:
+      - "The off-board station keeps rotors metres from the pilot and removes dock-retention loads while walking (HAZ-013), at the cost of launching and recovering only where the station is."
+      - "Nothing is mounted on top of the walker, so this is the lowest of the three bipeds and its hull top stays free for sensors or a beacon."

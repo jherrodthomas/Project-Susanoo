@@ -20,6 +20,7 @@ PDaC is **Product Development as Code**, not a synonym for digital thread: typed
 - [PDaC traceability](framework/traceability.md)
 - [Execution plan](framework/execution-plan.md)
 - [Preliminary Hazard List](safety/preliminary-hazard-list.md)
+- [Concept layouts (FreeCAD mockups)](cad/README.md)
 - [PDaC records and checks](pdac/README.md)
 
 ## Assurance approach
@@ -29,7 +30,7 @@ MIL-STD-882E is the integrated system safety method. ISO 12100, ISO 13849 and IE
 <!-- BEGIN GENERATED: status (tools/pdac/generate.py) -->
 **Status:** Concept. Simulation-first; no hardware built, no certification, qualification, airworthiness approval or formal risk acceptance claimed.
 
-**PDaC records** (`7dc85f7f276b`): 14 scenarios · [21 hazards](safety/preliminary-hazard-list.md) (initial risk, proposed: 8 high, 10 serious, 3 medium) · 18 requirements (18 candidate) · 4 open trade studies · 0 recorded approvals · release `SUS-I1-R0.2` planned. No risk has been accepted.
+**PDaC records** (`d604c9063040`): 14 scenarios · [21 hazards](safety/preliminary-hazard-list.md) (initial risk, proposed: 8 high, 10 serious, 3 medium) · 18 requirements (18 candidate) · 3 open trade studies · 0 recorded approvals · release `SUS-I1-R0.2` planned. No risk has been accepted.
 <!-- END GENERATED: status -->
 
 ## Checking the records
@@ -45,7 +46,8 @@ python3 tools/check_links.py            # relative links resolve
 CI runs the same commands on every pull request. A passing check means the records are consistent; it never means anything has been reviewed, accepted or approved.
 
 ## License
-- Code, schemas and machine-readable records (`tools/`, `pdac/`, `.github/`): [Apache License 2.0](LICENSE).
+- Code, schemas and machine-readable records (`tools/`, `pdac/`, `.github/`, `cad/params/`): [Apache License 2.0](LICENSE).
+- Hardware design files: none yet; a licence (CERN-OHL-P proposed) is decided before the first design-level CAD.
 - Documentation (Markdown pages, including `docs/wiki/`, and figures): [Creative Commons Attribution 4.0 International](LICENSE-docs).
 
 See [NOTICE](NOTICE). Standards are cited by number and clause only; no standards text is reproduced.

@@ -63,7 +63,7 @@ Deciding a trade study re-rates these hazards and reopens these requirements.
 |---|---|---|---|
 | TS-001 Actuation | open | HAZ-003, HAZ-005, HAZ-018, HAZ-020 | SYS-007, SYS-008, SYS-018 |
 | TS-002 Pilot architecture | open | HAZ-006, HAZ-008 | SYS-010, SYS-012 |
-| TS-003 Locomotion | open | HAZ-006 | SYS-008, SYS-009, SYS-010 |
+| TS-003 Locomotion | decided | HAZ-006 | SYS-008, SYS-009, SYS-010 |
 | TS-004 UAV docking | open | HAZ-012, HAZ-013 | SYS-005, SYS-006 |
 
 ## 5. Open items
