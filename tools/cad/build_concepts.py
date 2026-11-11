@@ -483,6 +483,8 @@ def metrics(m: Model, info: dict, common: dict) -> dict:
     rotors = Part.makeCompound([pt["shape"] for pt in m.parts if pt["cls"] == "rotor"])
     dist, pairs, _ = occupant.distToShape(rotors)
     clearance = dist / MM
+    structure = Part.makeCompound([pt["shape"] for pt in m.parts if pt["group"] == "walker" and pt["cls"] not in ("dock",)])
+    rotor_structure = rotors.distToShape(structure)[0] / MM if info["dock"] == "onboard" else None
     info["rotor_pilot_points"] = [[round(c / MM, 3) for c in pairs[0][0]], [round(c / MM, 3) for c in pairs[0][1]]]
     return {
         "envelope_m": [round(bb.XLength / MM, 2), round(bb.YLength / MM, 2), round(bb.ZLength / MM, 2)],
@@ -497,6 +499,7 @@ def metrics(m: Model, info: dict, common: dict) -> dict:
         "static_tip_angle_deg": round(math.degrees(math.atan2(marg, cg.z)), 1),
         "uav_dock": info["dock"],
         "rotor_to_pilot_m": round(clearance, 2),
+        "rotor_to_structure_m": None if rotor_structure is None else round(rotor_structure, 2),
         "arm_ground_clearance_m": round(Part.makeCompound([pt["shape"] for pt in m.parts if pt["cls"] == "arm"]).BoundBox.ZMin / MM, 2),
         **({"egress_sill_m": round(info["egress"]["sill"], 2), "max_step_rise_m": round(info["egress"]["max_rise"], 2),
             "steps": len(info["egress"]["treads"])} if info.get("egress") else {}),

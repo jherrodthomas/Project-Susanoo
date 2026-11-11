@@ -1,6 +1,8 @@
 # Concept layouts (FreeCAD) — review and alignment
 
-**ID:** SUS-CAD-001 · **Revision:** 0.8-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CAD-001 · **Revision:** 0.9-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.9:* CL-05 UAV dock raised 0.45 m: docked rotors 1.09 m from the pilot's head, over the 1 m review flag.
 
 *Changes in 0.8:* CL-05 heel spurs lengthened (0.68 m behind the ankle, 0.30 m wide): static margin 0.38 m standing and 0.35 m kneeling, above the 0.30 m review flag in every posture.
 
@@ -44,14 +46,15 @@ Metric definitions: *static margin* is the shortest horizontal distance from the
 |---|---|---|---|---|---|
 | Locomotion (TS-003) | bipedal | bipedal | bipedal | bipedal | bipedal |
 | UAV dock (TS-004) | rear backpack dock | shoulder-mounted dock | separate portable station | rear backpack dock | rear backpack dock |
-| Envelope L × W × H | 3.4 × 2.4 × 4.1 m | 3.4 × 2.4 × 4.2 m | 3.4 × 2.4 × 3.9 m | 3.4 × 2.5 × 3.9 m | 3.3 × 2.3 × 4.4 m |
-| Overall height | 4.08 m | 4.20 m | 3.85 m | 3.94 m | 4.40 m |
+| Envelope L × W × H | 3.4 × 2.4 × 4.1 m | 3.4 × 2.4 × 4.2 m | 3.4 × 2.4 × 3.9 m | 3.4 × 2.5 × 3.9 m | 3.3 × 2.3 × 4.5 m |
+| Overall height | 4.08 m | 4.20 m | 3.85 m | 3.94 m | 4.48 m |
 | Pilot eye height | 3.54 m | 3.54 m | 3.54 m | 3.15 m | 3.62 m |
 | Cockpit floor (egress drop) | 2.33 m | 2.33 m | 2.33 m | 1.94 m | 2.41 m |
 | CG height | 2.63 m | 2.63 m | 2.63 m | 2.24 m | 2.72 m |
 | Static margin | 0.14 m ⚠ | 0.14 m ⚠ | 0.14 m ⚠ | 0.23 m ⚠ | 0.38 m |
 | Static tip angle | 3.1° | 3.2° | 3.1° | 5.7° | 7.9° |
-| Rotor ↔ pilot (docked) | 0.79 m ⚠ | 0.63 m ⚠ | 3.14 m | 0.92 m ⚠ | 0.86 m ⚠ |
+| Rotor ↔ pilot (docked) | 0.79 m ⚠ | 0.63 m ⚠ | 3.14 m | 0.92 m ⚠ | 1.09 m |
+| Rotor ↔ own structure (docked) | 0.22 m | 0.41 m | off-board | 0.26 m | 0.29 m |
 | Placeholder mass | ~5.0 t | ~5.0 t | ~5.0 t | ~6.3 t | ~4.6 t |
 
 ### CL-01 · Biped, seated protected cockpit, rear backpack dock
@@ -123,7 +126,7 @@ Drawing sheet: [SUS-CAD-001-CL-04](drawings/CL-04.svg) (A3, 1:50, dimensioned si
 
 ### CL-05 · Reverse-jointed pod biped, claw arms, rear dock
 
-Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 bipedal; TS-004 rear backpack dock. Informs: HAZ-006, HAZ-008, HAZ-009, HAZ-017, HAZ-021, HAZ-022, HAZ-023, SYS-008, SYS-009, SYS-010, SYS-012, SYS-013, SYS-019. Parameters: [`params/CL-05.yaml`](params/CL-05.yaml).
+Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 bipedal; TS-004 rear backpack dock. Informs: HAZ-006, HAZ-008, HAZ-009, HAZ-011, HAZ-012, HAZ-013, HAZ-017, HAZ-021, HAZ-022, HAZ-023, SYS-003, SYS-006, SYS-008, SYS-009, SYS-010, SYS-012, SYS-013, SYS-019. Parameters: [`params/CL-05.yaml`](params/CL-05.yaml).
 
 - Proportions from the project lead's AI-generated Industrial Utility Walker (one three-quarter view so far): tall pod with front and side windows, reverse-jointed legs, long arms ending in curved claws. The geometry is original, authored in build123d; the generated mesh is not used.
 - Reverse-jointed knees sit behind the hips: the walker is the tallest of the five, its centre of gravity sits behind the hips, and a backward fall puts the knees first. Fall direction, kneel-for-egress and SYS-009 stability limits need their own analysis for this leg geometry.
@@ -133,6 +136,7 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 - Access aids: the pilot leaves over the front-opening sill, which sits 0.62 m above the cockpit floor, so the real climb is from the sill (about 1.64 m when kneeling, 3.03 m standing), not from the floor. A fold-down ladder hinged under the sill deploys in the kneel with four treads at an even 0.33 m rise (placeholder limit 0.40 m), and grab handles beside and above the opening give three points of contact. Standing, the ladder is stowed folded on the hull: egress without kneeling is not possible, so a failure that prevents kneeling also blocks normal egress (HAZ-008). The ladder must be interlocked against deployment while walking, and ISO 2867 (access systems for earth-moving machinery) is a candidate reference for access dimensions; its applicability is not yet decided.
 - Emergency exit (SYS-012): both side windows are push-out hatches (clear opening 0.62 x 0.72 m) with red release handles inside, so the pilot can leave standing, without power and without kneeling, and has a second way out if the front opening is blocked (HAZ-008) or there is a fire in the pod (HAZ-017). A fold-out davit carries a rope ladder 0.60 m out from the hull; deployed, it clears the walker by 0.25 m. The hatch sill is 3.2 m up when standing: the descent is a fall-from-height hazard (HAZ-023). The shoulder plate under each hatch is now the exit step: a tread flush with the hatch sill, 0.42 m deep, with non-slip strips, a toe lip, an armour skirt over the shoulder joint and grab rails either side of the hatch; the pilot steps out onto it and across a 0.18 m gap to the escape ladder. The treads add mass behind the hips: static margin fell from 0.12 to 0.10 m standing and from 0.09 to 0.07 m kneeling, which the longer heel spurs (next finding) then recovered. Whether the clear opening is large enough for a pilot in protective equipment is TBD.
 - Heel spurs: the rear edge of the support polygon limited stability (CG 0.20 m behind the hips standing, 0.23 m kneeling, with the heels ending 0.30 m behind them). Spurs reaching 0.68 m behind the ankle (was 0.40 m) and 0.30 m wide move the rear edge to 0.58 m behind the hips: static margin 0.38 m standing (tip angle 7.9 deg) and 0.35 m kneeling (13.2 deg), above the 0.30 m review flag in every posture and now the largest of the five layouts. Static margin is a standstill measure only: walking needs the dynamic stability analysis of SYS-009, and long heels add a trip and toe-strike risk on rough ground and a crush zone behind each foot for anyone standing close (HAZ-009).
+- Rotor clearance: with the dock on short struts above the power pack the docked rotors came within 0.86 m of the pilot's head, under the 1 m flag (HAZ-011, SYS-003). Raising the platform 0.45 m on taller struts gives 1.09 m for 8 cm of extra overall height (4.48 m) and no measurable change in static margin; 0.30 m would give only 0.99 m. The measure is straight-line distance: the hull wall and roll bar already stand between rotor and pilot in the seat, so the clearance matters most while the pilot is outside the pod (ingress, egress, maintenance) and the rotor inhibit (SYS-003) remains the primary control. Taller struts are a longer lever for dock loads while walking (HAZ-013). Raising the dock also brings the rotors to 0.29 m from the roll bar, the nearest part of the walker's own structure: launch and recovery must clear it (HAZ-012, SYS-006), now tracked as the rotor-to-structure metric for every layout.
 
 Drawing sheet: [SUS-CAD-001-CL-05](drawings/CL-05.svg) (A3, 1:50, dimensioned side, plan and front views).
 
@@ -142,8 +146,8 @@ Drawing sheet: [SUS-CAD-001-CL-05](drawings/CL-05.svg) (A3, 1:50, dimensioned si
 |---|---|---|
 | Cockpit floor (egress drop) | 2.41 m | 2.41 m |
 | Hip height | 2.34 m | 2.34 m |
-| Overall height | 4.40 m | 4.40 m |
-| CG height | 2.72 m | 2.72 m |
+| Overall height | 4.48 m | 4.48 m |
+| CG height | 2.72 m | 2.73 m |
 | Static margin | 0.38 m | 0.38 m |
 | Static tip angle | 7.9° | 7.9° |
 | Claws above ground | 0.93 m | 0.93 m |
@@ -168,10 +172,10 @@ Drawing sheet: [SUS-CAD-001-CL-05-emergency](drawings/CL-05-emergency.svg).
 |---|---|---|
 | Cockpit floor (egress drop) | 2.41 m | 1.02 m |
 | Hip height | 2.34 m | 0.95 m |
-| Overall height | 4.40 m | 3.02 m |
+| Overall height | 4.48 m | 3.10 m |
 | CG height | 2.72 m | 1.49 m |
 | Static margin | 0.38 m | 0.35 m |
-| Static tip angle | 7.9° | 13.2° |
+| Static tip angle | 7.9° | 13.1° |
 | Claws above ground | 0.93 m | 1.14 m |
 | Front-opening sill (actual climb height) | 3.03 m | 1.64 m |
 | Ladder treads | 0 | 4 |

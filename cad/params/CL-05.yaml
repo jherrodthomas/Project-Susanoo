@@ -53,7 +53,7 @@ rollbar:
 dock:
   type: rear-backpack
   platform: [0.75, 0.75, 0.06]
-  center: [-0.05, 0.0, 0.08]
+  center: [-0.05, 0.0, 0.45]      # raised on struts (was 0.08): docked rotors 1.09 m from the pilot's head, over the 1 m flag
 detail:                          # build123d-only detail (no effect on the primitive layouts)
   chin_chamfer: 0.28             # sloped lower front of the pod
   groove_heights: [0.55, 1.30]   # panel grooves around the hull, above its bottom

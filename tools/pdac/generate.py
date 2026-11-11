@@ -190,6 +190,7 @@ def cad_concepts(model: pdaclib.Model) -> str:
         ("Static margin", lambda cl, m: f"{m['static_margin_m']:.2f} m" + (" ⚠" if m["static_margin_m"] < 0.3 else "")),
         ("Static tip angle", lambda cl, m: f"{m['static_tip_angle_deg']:.1f}°"),
         ("Rotor ↔ pilot (docked)", lambda cl, m: f"{m['rotor_to_pilot_m']:.2f} m" + (" ⚠" if m["rotor_to_pilot_m"] < 1.0 else "")),
+        ("Rotor ↔ own structure (docked)", lambda cl, m: "off-board" if m.get("rotor_to_structure_m") is None else f"{m['rotor_to_structure_m']:.2f} m"),
         ("Placeholder mass", lambda cl, m: f"~{m['placeholder_mass_kg'] / 1000:.1f} t"),
     ]
     out = [f"*Metrics from [`metrics.json`](metrics.json) (FreeCAD {data.get('freecad', '?')}); ⚠ marks the provisional review flags of §1.*", "",
