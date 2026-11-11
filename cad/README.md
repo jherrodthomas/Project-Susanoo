@@ -1,6 +1,8 @@
 # Concept layouts (FreeCAD) — review and alignment
 
-**ID:** SUS-CAD-001 · **Revision:** 0.6-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CAD-001 · **Revision:** 0.7-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.7:* CL-05 shoulder plates reshaped into exit steps for the side hatches (tread flush with the sill, non-slip strips, toe lip, grab rails); new metrics: shoulder-step height and step-to-ladder gap.
 
 *Changes in 0.6:* CL-05 emergency exit: side-window hatches with internal release handles, a fold-out davit and rope ladder, shown deployed in a new emergency posture; new metrics: hatch sill, clear opening, escape-ladder clearance.
 
@@ -40,15 +42,15 @@ Metric definitions: *static margin* is the shortest horizontal distance from the
 |---|---|---|---|---|---|
 | Locomotion (TS-003) | bipedal | bipedal | bipedal | bipedal | bipedal |
 | UAV dock (TS-004) | rear backpack dock | shoulder-mounted dock | separate portable station | rear backpack dock | rear backpack dock |
-| Envelope L × W × H | 3.4 × 2.4 × 4.1 m | 3.4 × 2.4 × 4.2 m | 3.4 × 2.4 × 3.9 m | 3.4 × 2.5 × 3.9 m | 3.3 × 2.1 × 4.4 m |
+| Envelope L × W × H | 3.4 × 2.4 × 4.1 m | 3.4 × 2.4 × 4.2 m | 3.4 × 2.4 × 3.9 m | 3.4 × 2.5 × 3.9 m | 3.3 × 2.3 × 4.4 m |
 | Overall height | 4.08 m | 4.20 m | 3.85 m | 3.94 m | 4.40 m |
 | Pilot eye height | 3.54 m | 3.54 m | 3.54 m | 3.15 m | 3.62 m |
 | Cockpit floor (egress drop) | 2.33 m | 2.33 m | 2.33 m | 1.94 m | 2.41 m |
-| CG height | 2.63 m | 2.63 m | 2.63 m | 2.24 m | 2.75 m |
-| Static margin | 0.14 m ⚠ | 0.14 m ⚠ | 0.14 m ⚠ | 0.23 m ⚠ | 0.12 m ⚠ |
-| Static tip angle | 3.1° | 3.2° | 3.1° | 5.7° | 2.5° |
+| CG height | 2.63 m | 2.63 m | 2.63 m | 2.24 m | 2.74 m |
+| Static margin | 0.14 m ⚠ | 0.14 m ⚠ | 0.14 m ⚠ | 0.23 m ⚠ | 0.10 m ⚠ |
+| Static tip angle | 3.1° | 3.2° | 3.1° | 5.7° | 2.1° |
 | Rotor ↔ pilot (docked) | 0.79 m ⚠ | 0.63 m ⚠ | 3.14 m | 0.92 m ⚠ | 0.86 m ⚠ |
-| Placeholder mass | ~5.0 t | ~5.0 t | ~5.0 t | ~6.3 t | ~4.7 t |
+| Placeholder mass | ~5.0 t | ~5.0 t | ~5.0 t | ~6.3 t | ~4.6 t |
 
 ### CL-01 · Biped, seated protected cockpit, rear backpack dock
 
@@ -127,7 +129,7 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 - The long claws hang low beside the legs, inside the walking envelope: a strike and pinch zone for anyone near the walker (HAZ-009) unless manipulation is inhibited and the arms are stowed while walking (SYS-013).
 - Kneel posture for egress (SYS-019): with the feet planted and the knees folded back, the hip drops from 2.34 m to 0.95 m and the cockpit floor from 2.41 m to about 1.0 m, a two-step climb instead of a ladder. The CG drops by more than a metre, so the tip angle improves, but the folded knees move mass rearward and the static margin shrinks: the kneel needs its own stability check. Lowering and rising create a crush zone under the pod and knees (HAZ-022). Kneeling is also a candidate controlled safe posture on loss of actuation energy (SYS-008, HAZ-021).
 - Access aids: the pilot leaves over the front-opening sill, which sits 0.62 m above the cockpit floor, so the real climb is from the sill (about 1.64 m when kneeling, 3.03 m standing), not from the floor. A fold-down ladder hinged under the sill deploys in the kneel with four treads at an even 0.33 m rise (placeholder limit 0.40 m), and grab handles beside and above the opening give three points of contact. Standing, the ladder is stowed folded on the hull: egress without kneeling is not possible, so a failure that prevents kneeling also blocks normal egress (HAZ-008). The ladder must be interlocked against deployment while walking, and ISO 2867 (access systems for earth-moving machinery) is a candidate reference for access dimensions; its applicability is not yet decided.
-- Emergency exit (SYS-012): both side windows are push-out hatches (clear opening 0.62 x 0.72 m) with red release handles inside, so the pilot can leave standing, without power and without kneeling, and has a second way out if the front opening is blocked (HAZ-008) or there is a fire in the pod (HAZ-017). A fold-out davit carries a rope ladder 0.60 m out from the hull; deployed, it clears the walker by 0.25 m. The hatch sill is 3.2 m up when standing: the descent is a fall-from-height hazard (HAZ-023), and the shoulder plate below the hatch lies in the exit path, so it needs a non-slip top and a handhold, or the hatch or davit must move. Whether the clear opening is large enough for a pilot in protective equipment is TBD.
+- Emergency exit (SYS-012): both side windows are push-out hatches (clear opening 0.62 x 0.72 m) with red release handles inside, so the pilot can leave standing, without power and without kneeling, and has a second way out if the front opening is blocked (HAZ-008) or there is a fire in the pod (HAZ-017). A fold-out davit carries a rope ladder 0.60 m out from the hull; deployed, it clears the walker by 0.25 m. The hatch sill is 3.2 m up when standing: the descent is a fall-from-height hazard (HAZ-023). The shoulder plate under each hatch is now the exit step: a tread flush with the hatch sill, 0.42 m deep, with non-slip strips, a toe lip, an armour skirt over the shoulder joint and grab rails either side of the hatch; the pilot steps out onto it and across a 0.18 m gap to the escape ladder. The treads add mass behind the hips: static margin falls from 0.12 to 0.10 m standing and from 0.09 to 0.07 m kneeling, so the step design trades directly against the biped's already small margin. Whether the clear opening is large enough for a pilot in protective equipment is TBD.
 
 Drawing sheet: [SUS-CAD-001-CL-05](drawings/CL-05.svg) (A3, 1:50, dimensioned side, plan and front views).
 
@@ -138,16 +140,18 @@ Drawing sheet: [SUS-CAD-001-CL-05](drawings/CL-05.svg) (A3, 1:50, dimensioned si
 | Cockpit floor (egress drop) | 2.41 m | 2.41 m |
 | Hip height | 2.34 m | 2.34 m |
 | Overall height | 4.40 m | 4.40 m |
-| CG height | 2.75 m | 2.75 m |
-| Static margin | 0.12 m | 0.12 m |
-| Static tip angle | 2.5° | 2.5° |
+| CG height | 2.74 m | 2.74 m |
+| Static margin | 0.10 m | 0.10 m |
+| Static tip angle | 2.1° | 2.1° |
 | Claws above ground | 0.93 m | 0.93 m |
 | Front-opening sill (actual climb height) | 3.03 m | 3.03 m |
 | Ladder treads | 0 | 0 |
 | Largest step rise | 3.03 m | 3.03 m |
 | Emergency hatch sill | 3.21 m | 3.21 m |
 | Emergency hatch clear opening | 0.62 × 0.72 m | 0.62 × 0.72 m |
-| Escape ladder clearance to the walker | — | 0.25 m |
+| Escape ladder clearance to the walker | — | 0.16 m |
+| Shoulder step height (flush with the hatch sill) | 3.21 m | 3.21 m |
+| Gap from shoulder step to escape ladder | 0.18 m | 0.18 m |
 
 | | |
 |---|---|
@@ -162,15 +166,17 @@ Drawing sheet: [SUS-CAD-001-CL-05-emergency](drawings/CL-05-emergency.svg).
 | Cockpit floor (egress drop) | 2.41 m | 1.02 m |
 | Hip height | 2.34 m | 0.95 m |
 | Overall height | 4.40 m | 3.02 m |
-| CG height | 2.75 m | 1.51 m |
-| Static margin | 0.12 m | 0.09 m |
-| Static tip angle | 2.5° | 3.6° |
+| CG height | 2.74 m | 1.50 m |
+| Static margin | 0.10 m | 0.07 m |
+| Static tip angle | 2.1° | 2.6° |
 | Claws above ground | 0.93 m | 1.14 m |
 | Front-opening sill (actual climb height) | 3.03 m | 1.64 m |
 | Ladder treads | 0 | 4 |
 | Largest step rise | 3.03 m | 0.33 m |
 | Emergency hatch sill | 3.21 m | 1.82 m |
 | Emergency hatch clear opening | 0.62 × 0.72 m | 0.62 × 0.72 m |
+| Shoulder step height (flush with the hatch sill) | 3.21 m | 1.82 m |
+| Gap from shoulder step to escape ladder | 0.18 m | 0.18 m |
 
 | | |
 |---|---|

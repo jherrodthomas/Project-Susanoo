@@ -219,7 +219,8 @@ def build(p: dict, common: dict, posture: str = "standing"):
                     put("escape", cyl((wx - half, tip[1], zr), (wx + half, tip[1], zr), 0.018))
             else:  # escape ladder and folded davit stowed in a pouch under the hatch
                 put("access", Pos(wx, ys + side * 0.05, sill - 0.22) * soft(Box(0.34, 0.09, 0.24), 0.02))
-        emergency = {"sill": sill, "clear": [swx, swz], "side": EX.get("side", "right"), "deployed": deployed}
+        emergency = {"sill": sill, "clear": [swx, swz], "side": EX.get("side", "right"), "deployed": deployed,
+                     "ladder_y": wy / 2 + EX["davit_reach"]}
     for bx, bz in ((ow / 2 + 0.05, zb - 0.03), (-ow / 2 - 0.05, zb - 0.03), (ow / 2 - c + 0.04, zb + oh + 0.07), (-ow / 2 + c - 0.04, zb + oh + 0.07)):
         put("structure", cyl((x1 + 0.04, bx, bz), (x1 + 0.07, bx, bz), 0.022))  # bolt heads on the frame
     put("seat", Pos(cx, 0, floor - 0.02) * Box(dx - 2 * w, wy - 2 * w, 0.04))
@@ -276,8 +277,27 @@ def build(p: dict, common: dict, posture: str = "standing"):
     fa = math.radians(pose.get("fore_angle_deg", A.get("fore_angle_deg", 12)) if pose else A.get("fore_angle_deg", 12))
     for s in (1, -1):
         yc = s * (wy / 2 + sy / 2 - 0.08)
-        put("armor", soft(Pos(x1 - sx / 2 - 0.05, yc, z1 - S["drop"] - sz / 2) * Box(sx, sy, sz), 0.09))
         sh = (x1 - sx / 2 - 0.05, s * (wy / 2 + 0.18), z1 - S["drop"] - sz - 0.05)
+        ST = S.get("step")
+        if ST:  # the shoulder plate becomes a step: a tread flush with the hatch sill, over the shoulder joint
+            sill_z = floor + 0.80 + ST.get("offset", 0.0)
+            xf = x1 - 0.05
+            xr = wx - P["side_window"][0] / 2 - ST.get("rear_overhang", 0.05)
+            yo = wy / 2 + ST["width"]
+            th = ST["thickness"]
+            put("armor", soft(Pos((xf + xr) / 2, s * (wy / 2 + ST["width"] / 2), sill_z - th / 2) * Box(xf - xr, ST["width"], th), 0.02))
+            put("armor", Pos((xf + xr) / 2, s * (yo - 0.015), sill_z + 0.025) * Box(xf - xr, 0.03, 0.05))  # toe lip
+            put("armor", soft(Pos(x1 - sx / 2 - 0.05, s * (yo - 0.02), sill_z - th - ST["skirt"] / 2) * Box(sx, 0.04, ST["skirt"]), 0.015))
+            n = int((xf - xr - 0.06) / 0.08)
+            for k in range(n):  # non-slip strips across the tread
+                put("access", Pos(xr + 0.05 + k * 0.08, s * (wy / 2 + ST["width"] / 2 - 0.02), sill_z + 0.006) * Box(0.025, ST["width"] - 0.10, 0.012))
+            for gx in (xr - 0.07, wx + P["side_window"][0] / 2 + 0.08):  # grab rails either side of the hatch
+                put("access", cyl((gx, s * (wy / 2 + 0.09), sill_z + 0.12), (gx, s * (wy / 2 + 0.09), sill_z + 0.95), 0.02),
+                    *[cyl((gx, s * (wy / 2 - 0.01), zz), (gx, s * (wy / 2 + 0.09), zz), 0.018) for zz in (sill_z + 0.16, sill_z + 0.91)])
+            if emergency is not None:
+                emergency["ledge"] = {"height": sill_z, "outer_y": yo, "length": xf - xr}
+        else:
+            put("armor", soft(Pos(x1 - sx / 2 - 0.05, yc, z1 - S["drop"] - sz / 2) * Box(sx, sy, sz), 0.09))
         el = add(sh, (A["upper"] * math.cos(ang), 0, -A["upper"] * math.sin(ang)))
         wr = add(el, (A["fore"] * math.cos(fa), 0, A["fore"] * math.sin(fa)))
         put("actuator", ycyl(sh, 0.17, 0.30), ycyl(el, 0.13, 0.26), ycyl(wr, 0.10, 0.22))

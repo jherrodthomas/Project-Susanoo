@@ -507,6 +507,9 @@ def metrics(m: Model, info: dict, common: dict) -> dict:
 def emergency_metrics(m: Model, em: dict) -> dict:
     """Emergency hatch sill and clear opening; when the escape ladder is deployed, its clearance to the walker."""
     out = {"emergency_sill_m": round(em["sill"], 2), "emergency_clear_m": [round(v, 2) for v in em["clear"]]}
+    if em.get("ledge"):
+        out["hatch_step_m"] = round(em["ledge"]["height"], 2)
+        out["step_to_ladder_gap_m"] = round(em["ladder_y"] - em["ledge"]["outer_y"], 2)
     ladder = [pt["shape"] for pt in m.parts if pt["cls"] == "escape"]
     if ladder:
         rest = [pt["shape"] for pt in m.parts if pt["group"] == "walker" and pt["cls"] not in ("escape", "access")]

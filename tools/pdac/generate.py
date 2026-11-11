@@ -217,7 +217,9 @@ def cad_concepts(model: pdaclib.Model) -> str:
                                     ("Ladder treads", "steps", "{}"), ("Largest step rise", "max_step_rise_m", "{:.2f} m"),
                                     ("Emergency hatch sill", "emergency_sill_m", "{:.2f} m"),
                                     ("Emergency hatch clear opening", "emergency_clear_m", "{0[0]:.2f} × {0[1]:.2f} m"),
-                                    ("Escape ladder clearance to the walker", "escape_clearance_m", "{:.2f} m")):
+                                    ("Escape ladder clearance to the walker", "escape_clearance_m", "{:.2f} m"),
+                                    ("Shoulder step height (flush with the hatch sill)", "hatch_step_m", "{:.2f} m"),
+                                    ("Gap from shoulder step to escape ladder", "step_to_ladder_gap_m", "{:.2f} m")):
                 if key and key not in sm and key not in pm:
                     continue
                 a_, b_ = (sm["cg_m"][2], pm["cg_m"][2]) if key is None else (sm.get(key), pm.get(key))

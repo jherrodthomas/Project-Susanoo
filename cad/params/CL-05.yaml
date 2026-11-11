@@ -31,6 +31,12 @@ pod:
 shoulder:
   plate: [0.55, 0.40, 0.45]
   drop: 0.70                     # low shoulders: arms hang from the lower front of the pod
+  step:                          # the shoulder plate as a step for the side-hatch exit (SYS-012, HAZ-023)
+    width: 0.42                  # tread depth outward from the hull
+    thickness: 0.07
+    offset: 0.0                  # tread top relative to the hatch sill (flush)
+    rear_overhang: 0.05          # tread runs this far behind the hatch's rear edge
+    skirt: 0.25                  # armour skirt below the tread's outer edge, over the shoulder joint
 arm:
   upper: 0.95
   fore: 0.85
