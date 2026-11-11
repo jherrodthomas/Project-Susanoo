@@ -33,8 +33,10 @@ jobs:
         cache-environment: true
     - name: Build geometry and metrics
       run: python tools/cad/build_concepts.py
-    - name: Committed metrics are current
-      run: git diff --exit-code cad/metrics.json || (echo "::error::cad/metrics.json is stale: run tools/cad/make.sh and commit" && exit 1)
+    - name: Drawing sheets
+      run: python tools/cad/drawings.py
+    - name: Committed metrics and drawing sheets are current
+      run: git diff --exit-code cad/metrics.json cad/drawings/*.svg || (echo "::error::cad/metrics.json or a drawing is stale: run tools/cad/make.sh and commit" && exit 1)
     - uses: actions/upload-artifact@v4
       with:
         name: susanoo-concept-layouts
@@ -42,3 +44,4 @@ jobs:
           build/cad/*/*.step
           build/cad/*/*.FCStd
           build/cad/*/*.stl
+          cad/drawings/concept-layouts.pdf

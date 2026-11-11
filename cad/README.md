@@ -1,6 +1,8 @@
 # Concept layouts (FreeCAD) — review and alignment
 
-**ID:** SUS-CAD-001 · **Revision:** 0.1-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CAD-001 · **Revision:** 0.2-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.2:* layouts CL-04 (armoured pod) and CL-05 (reverse-jointed pod) added; an eye-level view per layout; dimensioned A3 drawing sheets (§3, [`drawings/`](drawings/)).
 
 > **Concept mockups, not designs.** Every layout below is built from primitive solids placed by placeholder parameters. Dimensions, masses and every metric are properties of that placeholder geometry. They exist so the team can look at the same picture, compare the trade-study alternatives side by side, and see early where an option makes a hazard worse. They select nothing: the trade studies (TS-001 to TS-004) are decided by the lead.
 
@@ -48,6 +50,8 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 - Common to every biped layout: the cockpit floor is above the head of a standing person, so egress and extraction (SYS-012) need a ladder, a lowered posture or a kneel mode.
 - The rear dock sits above the cockpit roof line, so the docked rotors still come within the provisional 1 m flag of the pilot's head.
 
+Drawing sheet: [SUS-CAD-001-CL-01](drawings/CL-01.svg) (A3, 1:50, dimensioned side, plan and front views).
+
 ![CL-01 front view from eye height](renders/CL-01-hero.png)
 
 | | |
@@ -62,6 +66,8 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 - The shoulder dock puts the docked rotors beside the cage at pilot head height, the closest of the three layouts: HAZ-011 and HAZ-012 dominate, and SYS-003 rotor inhibit plus a rotor guard would be needed if this option is kept.
 - The UAV is light against the walker: the dock position changes the CG by millimetres, so TS-004 is decided by rotor clearance, access and approach geometry, not by stability.
 
+Drawing sheet: [SUS-CAD-001-CL-02](drawings/CL-02.svg) (A3, 1:50, dimensioned side, plan and front views).
+
 ![CL-02 front view from eye height](renders/CL-02-hero.png)
 
 | | |
@@ -75,6 +81,8 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 
 - The off-board station keeps rotors metres from the pilot and removes dock-retention loads while walking (HAZ-013), at the cost of launching and recovering only where the station is.
 - Nothing is mounted on top of the walker, so this is the lowest of the three bipeds and its hull top stays free for sensors or a beacon.
+
+Drawing sheet: [SUS-CAD-001-CL-03](drawings/CL-03.svg) (A3, 1:50, dimensioned side, plan and front views).
 
 ![CL-03 front view from eye height](renders/CL-03-hero.png)
 
@@ -92,6 +100,8 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 - The enclosed pod protects the pilot better in a fall or overturn (SYS-010) than an open cage, but the single front opening is the only way out: a forward fall blocks egress and extraction (HAZ-008, SYS-012), and a fire inside the pod (HAZ-017) has one exit. A second exit or a release panel is needed.
 - The armour around the opening narrows the pilot's view down and to the sides, toward the feet and manipulators (HAZ-009).
 
+Drawing sheet: [SUS-CAD-001-CL-04](drawings/CL-04.svg) (A3, 1:50, dimensioned side, plan and front views).
+
 ![CL-04 front view from eye height](renders/CL-04-hero.png)
 
 | | |
@@ -108,6 +118,8 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 - The side windows give the pilot a view to the sides and are a candidate for the second exit CL-04 lacks, if they are sized and openable for egress (SYS-012); at concept size they are close to a minimum emergency opening.
 - The long claws hang low beside the legs, inside the walking envelope: a strike and pinch zone for anyone near the walker (HAZ-009) unless manipulation is inhibited and the arms are stowed while walking (SYS-013).
 
+Drawing sheet: [SUS-CAD-001-CL-05](drawings/CL-05.svg) (A3, 1:50, dimensioned side, plan and front views).
+
 ![CL-05 front view from eye height](renders/CL-05-hero.png)
 
 | | |
@@ -122,10 +134,11 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 |---|---|---|
 | Parameters | [`params/CL-nn.yaml`](params/), [`params/common.yaml`](params/common.yaml) | One file per layout; placeholders, metres |
 | Geometry and metrics | [`tools/cad/build_concepts.py`](../tools/cad/build_concepts.py) under FreeCAD 1.1 | `build/cad/CL-nn/`: `.FCStd`, `.step`, STL per part class; [`metrics.json`](metrics.json) (committed) |
+| Drawing sheets | [`tools/cad/drawings.py`](../tools/cad/drawings.py) (FreeCAD TechDraw hidden-line projection) | [`drawings/CL-nn.svg`](drawings/) and [`drawings/concept-layouts.pdf`](drawings/concept-layouts.pdf) (committed): A3, 1:50, third-angle side, plan and front views with dimensions, CG and support polygon |
 | Review images | [`tools/cad/render.cjs`](../tools/cad/render.cjs) and [`viewer.html`](../tools/cad/viewer.html) (three.js in headless Chromium) | [`renders/`](renders/) (committed) |
 | This page | `tools/pdac/generate.py` | Section 2, from the layout records and `metrics.json` |
 
-Run everything with `tools/cad/make.sh` (it needs a FreeCAD 1.1 environment, see [`tools/cad/environment.yml`](../tools/cad/environment.yml), and Node with Playwright). CI ([`.github/workflows/cad.yaml`](../.github/workflows/cad.yaml)) rebuilds the geometry on every change to `cad/` or `tools/cad/`, fails if `metrics.json` is out of date, and attaches the STEP, FCStd and STL files to the run. CAD files are not committed; they are reproducible from the parameters.
+Run everything with `tools/cad/make.sh` (it needs a FreeCAD 1.1 environment, see [`tools/cad/environment.yml`](../tools/cad/environment.yml), and Node with Playwright). CI ([`.github/workflows/cad.yaml`](../.github/workflows/cad.yaml)) rebuilds the geometry on every change to `cad/` or `tools/cad/`, fails if `metrics.json` or a drawing sheet is out of date, and attaches the STEP, FCStd and STL files and the drawing PDF to the run. CAD files are not committed; they are reproducible from the parameters.
 
 The layout records are in [`pdac/items/concept-layouts.yaml`](../pdac/items/concept-layouts.yaml); the validator checks that each layout names real trade-study alternatives, that its parameter file exists and that `metrics.json` is current for it.
 

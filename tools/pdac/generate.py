@@ -200,6 +200,8 @@ def cad_concepts(model: pdaclib.Model) -> str:
                 "Options: " + "; ".join(f"{k} {v}" for k, v in cl["options"].items()) + ". "
                 f"Informs: {_ids(cl.get('informs'))}. Parameters: [`{cl['params'].removeprefix('cad/')}`]({cl['params'].removeprefix('cad/')}).", ""]
         out += [f"- {f}" for f in cl.get("findings", [])]
+        if (model.root / f"cad/drawings/{cl['id']}.svg").is_file():
+            out += ["", f"Drawing sheet: [SUS-CAD-001-{cl['id']}](drawings/{cl['id']}.svg) (A3, 1:50, dimensioned side, plan and front views)."]
         r_ = f"renders/{cl['id']}"
         if (model.root / f"cad/{r_}-hero.png").is_file():
             out += ["", f"![{cl['id']} front view from eye height]({r_}-hero.png)"]

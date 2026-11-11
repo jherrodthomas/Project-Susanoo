@@ -10,5 +10,9 @@ if [[ "${1:-}" != "--no-render" ]]; then
   [[ -d tools/cad/node_modules/three ]] || (cd tools/cad && npm ci --no-audit --no-fund)
   node tools/cad/render.cjs
 fi
+"$PY" tools/cad/drawings.py
+if [[ "${1:-}" != "--no-render" ]]; then
+  node tools/cad/sheet_png.cjs cad/drawings/CL-*.svg --pdf
+fi
 python3 tools/pdac/generate.py
 python3 tools/pdac/validate.py

@@ -507,6 +507,16 @@ def export(m: Model, cid: str, out: Path, met: dict, info: dict, title: str) -> 
 BUILDERS = {"open-frame": build_biped, "armored-pod": build_pod}  # all bipedal: TS-003 decided (project lead, 2026-11-11)
 
 
+def build_layout(p: dict, common: dict) -> tuple[Model, dict]:
+    """Build one layout from its parameters, with the 1.75 m reference person placed beside it."""
+    if p["locomotion"] != "biped":
+        raise ValueError(f"{p['id']}: TS-003 is decided as bipedal; locomotion {p['locomotion']!r} is not built")
+    m, info = BUILDERS[p.get("style", "open-frame")](p, common)
+    bb = Part.makeCompound([pt["shape"] for pt in m.parts if pt["group"] != "reference"]).BoundBox
+    reference_human(m, (bb.XMin / MM - 0.55, bb.YMin / MM - 0.9), common["reference_human"]["height"])
+    return m, info
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", type=Path, default=ROOT / "build/cad")
@@ -518,11 +528,7 @@ def main() -> int:
         p = yaml.safe_load(path.read_text())
         if args.ids and p["id"] not in args.ids:
             continue
-        if p["locomotion"] != "biped":
-            raise ValueError(f"{p['id']}: TS-003 is decided as bipedal; locomotion {p['locomotion']!r} is not built")
-        m, info = BUILDERS[p.get("style", "open-frame")](p, common)
-        bb = Part.makeCompound([pt["shape"] for pt in m.parts if pt["group"] != "reference"]).BoundBox
-        reference_human(m, (bb.XMin / MM - 0.55, bb.YMin / MM - 0.9), common["reference_human"]["height"])
+        m, info = build_layout(p, common)
         met = metrics(m, info, common)
         export(m, p["id"], args.out / p["id"], met, info, p["title"])
         summary[p["id"]] = {"title": p["title"], "locomotion": p["locomotion"], "dock": p["dock"]["type"], **met}
