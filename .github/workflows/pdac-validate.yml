@@ -63,3 +63,24 @@ jobs:
           key: sysml-pilot-0.62.0
       - name: SysML v2 conformance (OMG pilot implementation 0.62.0)
         run: tools/sysml/pilot/validate.sh
+
+  sim:
+    name: simulation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r tools/pdac/requirements.txt
+      - name: Plant results current (fault catalogue)
+        run: python -m sim.plant.report --check
+      - name: Failure search results current (seeded)
+        run: python -m sim.search.search --check
+      - name: Scenes and Simulation page current
+        run: python -m sim.figures.scenes --check
+      - name: Simulation tests
+        run: python -m unittest discover -s sim/tests -t .

@@ -1,0 +1,31 @@
+# Failure-search families (layer 4). A family is data: the fault, the parameter space, the search budget,
+# the hazard-mapping rules and the assumption probes re-run on every worst case. Method after LionDriver's
+# search.py: seeded Monte Carlo to map where failures happen, then cross-entropy falsification towards the
+# lowest robustness. Results: sim/results/search-<id>.md|json and sim/results/edge-cases.md.
+schema: susanoo/sim-families/v0.1
+families:
+  - id: SF-01
+    title: Hydraulic supply loss in mid-stride on a slope
+    fault: FLT-01
+    base: {variant: hydraulic, fault_onset_s: 1.0, monitor: true}
+    space:
+      slope_deg: {uniform: [0, 15]}
+      tau_leak_s: {loguniform: [0.05, 5.0]}
+      pilot_reaction_s: {uniform: [0.5, 3.0]}
+      stride_offset_m: {uniform: [0.0, 0.3]}
+      load_holding: {choice: [works, fails]}
+    round: {slope_deg: 0.5, tau_leak_s: 0.01, pilot_reaction_s: 0.1, stride_offset_m: 0.01}
+    monte_carlo: {n: 400, seed: 11}
+    falsification: {rounds: 6, n: 80, elite: 0.2, seed: 12}
+    edge_cases: 8
+    # First matching rule wins. new: an outcome no hazard record covers becomes a finding.
+    hazard_rules:
+      - {when: {nofault_outcome: tip}, new: "Walker tips with no fault: case lies outside the nominal gait capability (terrain limit for CONOPS section 4)"}
+      - {when: {outcome: tip}, hazard: HAZ-WLK-002}
+      - {when: {outcome: hard-drop, stop_active: true}, hazard: HAZ-SAF-001}
+      - {when: {outcome: hard-drop}, new: "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact"}
+    probes:
+      - {name: pilot reacts in 0.5 s, set: {pilot_reaction_s: 0.5}}
+      - {name: load holding works, set: {load_holding: works}}
+      - {name: flat ground, set: {slope_deg: 0.0}}
+      - {name: slow leak (tau 3 s), set: {tau_leak_s: 3.0}}
