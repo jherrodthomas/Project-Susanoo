@@ -6,7 +6,7 @@ Susanoo is a simulation-first demonstrator: a human-piloted walker (SUS-M1) and 
 
 - The records are the YAML under `standards/`, `architecture/`, `safety/`, `requirements/`, `verification/`, `changes/`, `reviews/` and `decisions/`, plus the simulation inputs `sim/spec/`, `sim/faults.yaml` and `sim/search/families.yaml`.
 - The hand-written SysML files in `models/sysml/model/` are checked against those records. Files starting `// GENERATED` are not hand-written.
-- Built from the records: pages under `docs/wiki/` marked `GENERATED`, `docs/wiki/images/sus-i1-*.svg` and `sysml-*.svg`, `safety/generated/`, `sim/results/` (the PX4 SITL JSON under `sim/results/uav/` is written by `sim/uav/harness.py`), `docs/wiki/images/sim-*.svg`, and the generated `.sysml` files. **Never edit a generated file**; edit the record and regenerate.
+- Built from the records: pages under `docs/wiki/` marked `GENERATED`, `docs/wiki/images/sus-i1-*.svg` and `sysml-*.svg`, `safety/generated/`, `sim/results/` (the PX4 SITL JSON under `sim/results/uav/` is written by `sim/uav/harness.py`), `docs/wiki/images/sim-*.svg`, `sim/scenes3d/out/`, `docs/3d/`, `docs/wiki/images/3d-*.png`, and the generated `.sysml` files. **Never edit a generated file**; edit the record and regenerate.
 - Before handing over any change, run:
 
   ```bash
@@ -22,6 +22,7 @@ Susanoo is a simulation-first demonstrator: a human-piloted walker (SUS-M1) and 
   tools/sysml/pilot/validate.sh        # SysML v2 conformance; needs JDK 21 and zstandard
   python -m sim.plant.report && python -m sim.search.search && python -m sim.figures.scenes
   python -m sim.figures.uav_scenes     # from committed PX4 SITL results; re-running SITL: sim/README.md
+  python -m sim.scenes3d.export_scene && python -m sim.scenes3d.build_pages   # 3D; stills: sim/README.md
   python -m unittest discover -s sim/tests -t .
   ```
 

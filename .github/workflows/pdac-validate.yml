@@ -86,3 +86,29 @@ jobs:
         run: python -m sim.figures.uav_scenes --check
       - name: Simulation tests
         run: python -m unittest discover -s sim/tests -t .
+
+  scenes3d:
+    name: 3d scenes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: |
+          pip install -r tools/pdac/requirements.txt
+          npm install --no-save playwright@1.63.0
+          npx playwright install --with-deps chromium
+          npm pack three@0.170.0 --silent && tar xzf three-0.170.0.tgz
+      - name: Scene analysis exports current (the look never changes them)
+        run: python -m sim.scenes3d.export_scene --check
+      - name: Scene pages and 3D-Scenes page current
+        run: python -m sim.scenes3d.build_pages --check
+      - name: Pages load in Chromium with the pinned three.js, show the stamp and the right outcome
+        run: node sim/scenes3d/render.mjs package --check-only

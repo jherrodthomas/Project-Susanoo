@@ -1,0 +1,5 @@
+# Look-only environments for the 3D scenes. Never read by export_scene.py.
+environments:
+  hillside: {ground: "#7d8c5a", ground2: "#6f7e4f", sky: "#cfe2f3", grid: "#5f6d44", extent_m: 40}
+  yard:     {ground: "#9aa1a8", ground2: "#8b9299", sky: "#dfe8f1", grid: "#7b838b", extent_m: 30}
+  field:    {ground: "#8a9b62", ground2: "#7a8b55", sky: "#cde0f2", grid: "#6a7a48", extent_m: 160}

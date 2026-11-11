@@ -1,6 +1,6 @@
 # Porting LionDriver's modeling, diagram and simulation approach to Susanoo
 
-**Status:** Plan, 2026-11. Steps 1, 2 (core), 3 and 4 (PX4 SITL) built (see below); legged-dynamics fidelity and step 5 not started. Source reviewed: [jherrodthomas/LionDriver](https://github.com/jherrodthomas/LionDriver) at `93bafc3` (`assurance/`, `.claude/skills/`, `.github/workflows/`).
+**Status:** Plan, 2026-11. Steps 1, 2 (core), 3, 4 (PX4 SITL) and 5 (three.js) built (see below); legged-dynamics fidelity not started. Source reviewed: [jherrodthomas/LionDriver](https://github.com/jherrodthomas/LionDriver) at `93bafc3` (`assurance/`, `.claude/skills/`, `.github/workflows/`).
 
 LionDriver is an ISO 26262 / ISO 21448 assurance effort on an openpilot fork. Susanoo uses MIL-STD-882E (11 May 2012) on a piloted walker and a PX4 UAV. The standards and the physics differ. The **method** ports almost unchanged.
 
@@ -69,8 +69,10 @@ Built: `sim/uav` (pinned PX4 v1.16.2 SITL, SIH quadrotor, headless; harness acti
 
 Original plan: PX4 SITL failsafe checks (lost link, geofence, battery, dock approach, abort). MuJoCo legged dynamics as fidelity level 2, cross-checked against the plant.
 
-### Step 5: 3D
-`scenes.yaml` with one scene per hazard, plus the test that changing the look never changes the analysis. Blender stills and clips, or `machine`-kit pages, fed only from the results.
+### Step 5: 3D (built)
+Built with three.js instead of Blender, which is not available here. `sim/scenes3d`: `scenes.yaml` (6 scenes and 2 look variants, with hazards that have no scene listed with a reason), an analysis exporter that never reads the look, single-file pages (`docs/3d`) replaying plant, search and SITL data on parametric models, stills for the wiki, a Chromium page check, 9 tests and a CI job `3d scenes`. Not built: photoreal rendering, video clips, a dock and rotor model for HAZ-DCK-001.
+
+Original plan: `scenes.yaml` with one scene per hazard, plus the test that changing the look never changes the analysis. Blender stills and clips, or `machine`-kit pages, fed only from the results.
 
 ## 4. Findings so far
 - **The power and actuation baseline is inconsistent.** `README.md` and the seeded hazards assume hydraulic actuation. The wiki architecture page assumes a series-hybrid engine-generator with batteries and electric or electrohydraulic joints. Trade study TS-001 covers actuation but not the power source. This is decision DQ-006.

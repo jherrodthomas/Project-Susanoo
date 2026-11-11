@@ -1,0 +1,6 @@
+# Look-only conditions (lighting, fog). A condition never changes the dynamics: the plant and SITL runs are what they are.
+conditions:
+  clear:    {sun: 1.0, ambient: 0.65, fog_m: null, sky_tint: null}
+  overcast: {sun: 0.45, ambient: 0.8, fog_m: null, sky_tint: "#c4ccd4"}
+  dusk:     {sun: 0.35, ambient: 0.45, fog_m: null, sky_tint: "#4a5578"}
+  fog:      {sun: 0.4, ambient: 0.85, fog_m: 70, sky_tint: "#d7dde2"}
