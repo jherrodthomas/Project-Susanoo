@@ -60,8 +60,7 @@ package LifecycleRisk {
         action reanalyse { doc /* Reopen affected analyses */ }
         action reverify { doc /* Re-verify affected controls */ }
         action redecide { doc /* Re-request acceptance if risk changed */ }
-        first start;
-        then receive;
+        first start then receive;
         first receive then impact;
         first impact then reanalyse;
         first reanalyse then reverify;

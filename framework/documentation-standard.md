@@ -85,6 +85,9 @@ horizontal scrolling.
 4. Element IDs (`SUS-M1-SAF`, `SYS-002`, `MOD-04`) are SysML short names, so models, YAML records and figures
    share one identifier.
 5. MIL-STD-882E risk and ARP4761A failure-condition classification stay in separate packages.
+6. Every documentation `.sysml` file must pass the OMG pilot implementation (0.62.0, pinned by
+   `tools/sysml/pilot`) with no errors or warnings: `tools/validate_doc_sysml.sh`, run in CI. Names must not be
+   SysML keywords (`requirement`, `verify`, `decide` …); the catalog validator rejects them before generation.
 
 ## Producing and checking figures
 

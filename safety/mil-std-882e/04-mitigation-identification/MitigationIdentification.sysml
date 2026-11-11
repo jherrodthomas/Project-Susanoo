@@ -12,8 +12,7 @@ package MitigationIdentification {
         action engineeredFeatures { doc /* Incorporate engineered safety features */ }
         action warningDevices { doc /* Incorporate detection and warning devices */ }
         action procedures { doc /* Signage, procedures, training and PPE */ }
-        first start;
-        then eliminate;
+        first start then eliminate;
         first eliminate then reduceByDesign;
         first reduceByDesign then engineeredFeatures;
         first engineeredFeatures then warningDevices;

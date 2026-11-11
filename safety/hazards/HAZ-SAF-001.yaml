@@ -1,0 +1,106 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-SAF-001
+title: Protective stop does not reach a safe state
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-SAF
+- SUS-M1-WLK
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: On a protective-stop request the walker continues moving, collapses, or drops a payload instead
+  of reaching the mode's defined safe state.
+modes:
+- MOD-04
+- MOD-05
+- MOD-09
+causal_factors:
+- id: CF1
+  type: software
+  description: Stop supervisor commands an unsafe trajectory or zero torque in a loaded pose
+  ssf_ids:
+  - SSF-002
+- id: CF2
+  type: hardware
+  description: Loss of hydraulic or electrical power during the stop
+- id: CF3
+  type: interface
+  description: Stop request not received over the pilot or observer link
+effects:
+- Uncontrolled motion or collapse of walker or payload
+mishap: Fall, crush or impact injury to pilot or bystanders
+initial_risk:
+  severity: 1
+  probability: C
+  rac: 1C
+  risk_level: High
+  rationale: Preliminary qualitative judgement at concept stage (no design); no stop architecture exists; collapse
+    with pilot aboard can be fatal.
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design); mode-specific stop with mechanical
+    load holding and independent stop path.
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Load-holding valves / brakes hold posture on loss of power
+  precedence: b
+  state: identified
+  verification:
+    method:
+    - test
+    - analysis
+    evidence_ids: []
+- id: M2
+  description: Mode-specific protective stop behaviour that never commands instant zero torque in a loaded pose
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-002
+  ssf_ids:
+  - SSF-002
+  verification:
+    method:
+    - test
+    - analysis
+    evidence_ids: []
+- id: M3
+  description: Independent hardwired observer stop path
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-002
+  verification:
+    method:
+    - test
+    evidence_ids: []
+requirement_ids:
+- SYS-002
+owner:
+  role: ROLE-SWL
+  person: null
+  org: System safety
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 201
+  scenario_ids:
+  - SCN-101
+  - SCN-103
+  documents:
+  - concept/CONOPS.md
+  - concept/architecture.md
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; no hardware design selected
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2

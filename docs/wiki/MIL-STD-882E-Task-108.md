@@ -1,6 +1,6 @@
 # Task 108 — Hazardous Materials Management Plan
 
-**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** Candidate; confirm against program task selection
+**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** see generated [task applicability and tailoring](MIL-STD-882E-Applicability)
 
 ## Purpose
 Apply hazardous materials management plan to the SUS-M1 piloted walker, SUS-A1 observation UAV and integrated docking/ground-support interfaces as relevant.
@@ -13,11 +13,9 @@ Material inventory, SDS, batteries, fuels, hydraulic fluids.
 
 ## Execution steps
 1. Confirm task objective, affected lifecycle phase and system boundary.
-2. Identify substances and exposure pathways
-3. assess storage, leaks, fire, maintenance and disposal
-3. coordinate environmental/health controls.
-4. Record assumptions, unresolved issues, decisions and responsible owners.
-5. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
+2. Identify substances and exposure pathways; assess storage, leaks, fire, maintenance and disposal; coordinate environmental/health controls.
+3. Record assumptions, unresolved issues, decisions and responsible owners.
+4. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
 
 ## Outputs
 Hazardous material inventory, handling and disposal controls.
@@ -34,4 +32,4 @@ Reviewer confirms correct configuration, traceable inputs, reproducible method, 
 ## Change triggers
 Reopen on relevant CONOPS, configuration, interface, software, parameter, operation, evidence or incident changes. Record affected links and review disposition.
 
-**Reference:** MIL-STD-882E with Change 1, Task 108; verify wording, contract applicability and DID requirements against the controlled standard before formal use.
+**Reference:** MIL-STD-882E (11 May 2012, base edition), Task 108; verify wording, contract applicability and DID requirements against the controlled standard before formal use.

@@ -61,8 +61,7 @@ package SafetyVerification {
         action execute { doc /* Execute analysis, test or demonstration */ }
         action recordEvidence { doc /* Record evidence with provenance and hash */ }
         action assessEffectiveness { doc /* Assess mitigation effectiveness */ }
-        first start;
-        then planVerification;
+        first start then planVerification;
         first planVerification then confirmTestSafety;
         first confirmTestSafety then execute;
         first execute then recordEvidence;

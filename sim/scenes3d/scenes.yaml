@@ -1,0 +1,45 @@
+# 3D hazard scenes (step 5). One scene per hazard or finding that has a motion source. The `motion` block is the
+# analysis: export_scene.py reads only it (plus the hazard, title and records it names). Everything under `look`
+# and every variant's `look` is picture-only and must never change the exported analysis (test_scenes3d.py).
+schema_version: 1
+three: {version: "0.170.0", sha256: "08fd7545d13d2c7fb65ab691530a802dafefd638596501854f267d0fb13c39e7"}
+scenes:
+  - id: S3-01
+    hazards: [HAZ-WLK-002]
+    title: Slow supply leak on a slope; balance lost before the hold engages
+    motion: {source: edge, family: SF-01, edge_case: EC-08}
+    look: {environment: hillside, condition: clear, camera: side}
+    variants:
+      - {id: S3-01-dusk, look: {condition: dusk}}
+  - id: S3-02
+    hazards: [HAZ-SAF-001]
+    title: Protective stop removes leg force instead of crouching
+    motion: {source: plant, performed: {fault: FLT-03}, intended: {stop_request_s: 1.0}}
+    look: {environment: yard, condition: clear, camera: three-quarter}
+  - id: S3-03
+    hazards: [HAZ-WLK-001]
+    title: Frozen posture feedback with no staleness monitor
+    motion: {source: plant, performed: {fault: FLT-02, monitor: false}, intended: {fault: FLT-02, monitor: true}}
+    look: {environment: yard, condition: overcast, camera: three-quarter}
+  - id: S3-04
+    hazards: [HAZ-PIL-002]
+    title: Burst supply loss with failed load holding; the cockpit drops
+    motion: {source: edge, family: SF-01, edge_case: EC-01, intended_over: {load_holding: works}}
+    look: {environment: hillside, condition: clear, camera: side}
+  - id: S3-05
+    hazards: [HAZ-INT-001]
+    title: Link loss with return-to-launch; the UAV descends into the pilot keep-out
+    motion: {source: sitl, scenario: SU-01}
+    look: {environment: field, condition: clear, camera: overview}
+    variants:
+      - {id: S3-05-fog, look: {condition: fog}}
+  - id: S3-06
+    hazards: [HAZ-INT-001, HAZ-DCK-002]
+    title: Link loss after the walker moved; the UAV lands at the stale home
+    motion: {source: sitl, scenario: SU-02}
+    look: {environment: field, condition: clear, camera: overview}
+# Hazards with no scene yet, and why (test_scenes3d.py requires every hazard to be here or in a scene).
+not_modelled:
+  - {hazard: HAZ-PIL-001, reason: "Ingress and egress motion is not in the plant (no pilot or structure contact model)"}
+  - {hazard: HAZ-PWR-001, reason: "Stored-energy release during maintenance is not modelled"}
+  - {hazard: HAZ-DCK-001, reason: "Rotor start on the dock needs a dock and rotor model; SITL starts on the ground"}

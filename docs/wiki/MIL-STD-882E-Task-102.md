@@ -1,6 +1,6 @@
 # Task 102 — System Safety Program Plan (SSPP)
 
-**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** Candidate; confirm against program task selection
+**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** see generated [task applicability and tailoring](MIL-STD-882E-Applicability)
 
 ## Purpose
 Apply system safety program plan (sspp) to the SUS-M1 piloted walker, SUS-A1 observation UAV and integrated docking/ground-support interfaces as relevant.
@@ -13,12 +13,9 @@ Program charter, CONOPS, applicable standards, contract assumptions.
 
 ## Execution steps
 1. Confirm task objective, affected lifecycle phase and system boundary.
-2. Document organization and authority
-3. tailor tasks
-3. define hazard tracking, analyses, verification, reporting and change control
-3. review and baseline SSPP.
-4. Record assumptions, unresolved issues, decisions and responsible owners.
-5. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
+2. Document organization and authority; tailor tasks; define hazard tracking, analyses, verification, reporting and change control; review and baseline SSPP.
+3. Record assumptions, unresolved issues, decisions and responsible owners.
+4. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
 
 ## Outputs
 SSPP with roles, milestones, analyses, interfaces, risk policy and approval routing.
@@ -35,4 +32,4 @@ Reviewer confirms correct configuration, traceable inputs, reproducible method, 
 ## Change triggers
 Reopen on relevant CONOPS, configuration, interface, software, parameter, operation, evidence or incident changes. Record affected links and review disposition.
 
-**Reference:** MIL-STD-882E with Change 1, Task 102; verify wording, contract applicability and DID requirements against the controlled standard before formal use.
+**Reference:** MIL-STD-882E (11 May 2012, base edition), Task 102; verify wording, contract applicability and DID requirements against the controlled standard before formal use.

@@ -86,7 +86,7 @@ package TemplateSchemas {
 |---|---|---|
 | [`hazard-record.yaml`](hazard-record.yaml) | Hazard record template | present |
 | [`task-record.yaml`](task-record.yaml) | Task record template | present |
-| [`pha-table.csv`](pha-table.csv) | PHA worksheet columns | present |
+| `pha-table.csv` | PHA worksheet columns | planned |
 | [`sspp-outline.md`](sspp-outline.md) | SSPP outline | present |
 | [`figures/`](figures/) | Generated SVG figures (do not edit) | generated |
 | [`TemplateSchemas.sysml`](TemplateSchemas.sysml) | Generated SysML v2 view | generated |

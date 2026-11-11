@@ -32,7 +32,7 @@ ENFORCED = {
     "safety/mil-std-882e": {
         "extra": {"Position in the MIL-STD-882E flow": True},
         # Data folders that hold records, not documentation.
-        "skip_dirs": {"sysml", "hazards", "reports", "reviews", "test-safety-releases", "figures"},
+        "skip_dirs": {"sysml", "hazards", "reports", "reviews", "test-safety-releases", "figures", "tasks"},
         "generator": ["tools/gen_safety_docs.py", "--check"],
     },
     # Hand-authored READMEs; figures come from <folder>/figures.yaml.

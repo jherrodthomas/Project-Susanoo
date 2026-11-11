@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susanoo/ssf/v0.1",
+  "title": "Safety-significant software function (MIL-STD-882E 4.4, Appendix B)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "title", "description", "software_items", "scc", "scc_rationale", "lor", "owner"],
+  "properties": {
+    "schema": {"const": "susanoo/ssf/v0.1"},
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "description": {"type": "string"},
+    "software_items": {"type": "array", "items": {"type": "string"}, "minItems": 1,
+                       "description": "Implementing CSCI / module (B.2.2.1 traceability)"},
+    "scc": {"enum": [1, 2, 3, 4, 5]},
+    "scc_rationale": {"type": "string", "minLength": 10},
+    "swci": {"enum": [1, 2, 3, 4, 5], "description": "Optional; if present must equal the Table V result"},
+    "lor": {
+      "type": "object", "additionalProperties": false,
+      "patternProperties": {
+        "^(requirements_analysis|architecture_analysis|design_analysis|code_analysis|safety_specific_testing)$": {
+          "type": "object", "additionalProperties": false, "required": ["status"],
+          "properties": {
+            "status": {"enum": ["not-started", "in-work", "complete"]},
+            "evidence_ids": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    },
+    "lor_decision": {
+      "type": ["object", "null"], "additionalProperties": false,
+      "required": ["decision", "role", "date", "record"],
+      "description": "Table VI PM decision when required LOR tasks are incomplete",
+      "properties": {
+        "decision": {"enum": ["implement-lor", "accept-table-vi-risk"]},
+        "role": {"type": "string"}, "date": {"type": "string", "format": "date"}, "record": {"type": "string"}
+      }
+    },
+    "requirement_ids": {"type": "array", "items": {"type": "string"}},
+    "owner": {"type": "string"},
+    "notes": {"type": "string"}
+  }
+}

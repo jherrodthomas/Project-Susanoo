@@ -1,0 +1,31 @@
+schema: susanoo/ssf/v0.1
+id: SSF-003
+title: Docked rotor inhibit
+description: PX4 arming check combined with dock retained state to inhibit rotor start while retained.
+software_items:
+- PX4 arming checks (pinned release TBD)
+- SUS-M1-DCK/dock-interlock (TBD CSCI)
+scc: 2
+scc_rationale: 'Provisional: software inhibits arming; a hardware rotor-power interlock is planned as an independent
+  mechanism but not yet designed.'
+swci: 2
+lor:
+  requirements_analysis:
+    status: not-started
+    evidence_ids: []
+  architecture_analysis:
+    status: not-started
+    evidence_ids: []
+  design_analysis:
+    status: not-started
+    evidence_ids: []
+  code_analysis:
+    status: not-started
+    evidence_ids: []
+  safety_specific_testing:
+    status: not-started
+    evidence_ids: []
+lor_decision: null
+requirement_ids:
+- SYS-003
+owner: ROLE-UAV

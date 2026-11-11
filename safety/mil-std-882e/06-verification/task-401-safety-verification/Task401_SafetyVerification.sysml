@@ -11,12 +11,18 @@ package Task401_SafetyVerification {
     requirement sys_002 : Task203_SRHA::ProtectiveStop;
     requirement sys_003 : Task203_SRHA::RetainedRotorInhibit;
     verification def <'VER-001'> Ver001 {
-        objective { verify sys_001; }
+        objective {
+            verify sys_001;
+        }
     }
     verification def <'VER-002'> Ver002 {
-        objective { verify sys_002; }
+        objective {
+            verify sys_002;
+        }
     }
     verification def <'VER-003'> Ver003 {
-        objective { verify sys_003; }
+        objective {
+            verify sys_003;
+        }
     }
 }

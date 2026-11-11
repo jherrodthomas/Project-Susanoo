@@ -10,13 +10,12 @@ package Task304_ChangeReview {
         action intake { doc /* Log change or event */ }
         action screen { doc /* Screen for safety impact */ }
         action analyse { doc /* Analyse affected hazards and controls */ }
-        action decide { doc /* Record disposition and actions */ }
-        first start;
-        then intake;
+        action recordDisposition { doc /* Record disposition and actions */ }
+        first start then intake;
         first intake then screen;
         first screen then analyse;
-        first analyse then decide;
-        first decide then done;
-        // iteration: decide -> screen when new information (informal; merge node omitted)
+        first analyse then recordDisposition;
+        first recordDisposition then done;
+        // iteration: recordDisposition -> screen when new information (informal; merge node omitted)
     }
 }

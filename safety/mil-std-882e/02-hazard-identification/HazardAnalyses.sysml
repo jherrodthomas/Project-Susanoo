@@ -14,8 +14,7 @@ package HazardAnalyses {
         action ssha { doc /* Task 204 SSHA */ }
         action sha { doc /* Task 205 SHA */ }
         action osha { doc /* Task 206 O&SHA */ }
-        first start;
-        then phl;
+        first start then phl;
         first phl then pha;
         first pha then fha;
         first fha then srha;

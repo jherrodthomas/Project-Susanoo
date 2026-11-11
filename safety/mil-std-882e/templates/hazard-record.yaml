@@ -1,18 +1,44 @@
-schema: susanoo/safety-hazard/v0.1-draft
-id: HAZ-TBD
-status: draft
-configuration_id: SUS-I1-C001
-source_scenario_ids: []
-subsystem_ids: []
-hazardous_condition: TBD
-causes: []
-consequences: []
-initial_risk: {severity: TBD, probability: TBD, level: TBD, rationale: TBD}
-mitigations: []
-safety_requirement_ids: []
-verification_evidence_ids: []
-residual_risk: {severity: TBD, probability: TBD, level: TBD, rationale: TBD}
-risk_acceptance: {status: not_requested, authority: null, decision_record: null}
-owner: TBD
+# Template for safety/hazards/HAZ-<SUB>-NNN.yaml (schema pdac/schemas/hazard.schema.json).
+# Comments map fields to MIL-STD-882E (11 May 2012) Task 106.2 data elements a-s.
+# Copy, fill in, then run: python -m tools.pdac.validate
+schema: susanoo/hazard/v0.2
+id: HAZ-WLK-000
+title: Short hazard name
+status: open                      # (n) open | in-mitigation | verified | accepted | closed | monitor
+system: SUS-I1                    # (b)
+subsystems: [SUS-M1-WLK]          # (c)
+applicability:                    # (d) version-specific hardware/software
+  configurations: [SUS-I1-C001]
+  hardware: []
+  software: []
+hazardous_condition: Condition that could lead to a mishap   # (a)
+modes: [MOD-04]                   # (f) CONOPS modes
+causal_factors:                   # (g) type: hardware | software | human | environment | interface
+  - {id: CF1, type: software, description: What goes wrong, ssf_ids: [SSF-000]}
+effects: [Immediate effect]       # (h)
+mishap: Resulting mishap          # (i)
+initial_risk:                     # (j) RAC = severity + probability; level from Table III
+  {severity: 1, probability: C, rac: 1C, risk_level: High, rationale: Why, definitions: SUS-RISKDEF-001}
+target_risk:                      # (k) projected risk after mitigations (3.2.48)
+  {severity: 1, probability: E, rac: 1E, risk_level: Medium, rationale: Why, definitions: SUS-RISKDEF-001}
+event_risks: []                   # (l) one entry per test/demo event: add event_id and configuration
+mitigations:                      # (m) precedence a-e per 4.3.4; (o) verification method
+  - id: M1
+    description: Engineered interlock
+    precedence: c
+    state: identified             # identified | selected | implemented | rejected
+    requirement_ids: []
+    ssf_ids: []
+    implemented_in: []
+    verification: {method: [test], evidence_ids: []}
+precedence_rationale: null        # required when best selected precedence is d or e
+requirement_ids: []               # (e)
+owner: {role: ROLE-SL, person: null, org: System safety}   # (p)
 reviewer: null
-change_request_ids: []
+acceptances: []                   # (q) see rule R05; authority by risk level from tailoring
+reassessments: []                 # 4.3.8 / Task 304, one per affecting change request
+source: {task: 201, scenario_ids: [], interface_ids: [], documents: []}
+hazmat: not-applicable            # (s) or {materials: [...]}
+assumptions: []
+open_actions: []
+# (r) hazard management log = git history of this file.

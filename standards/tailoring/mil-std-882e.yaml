@@ -1,0 +1,110 @@
+# Project tailoring of MIL-STD-882E (11 May 2012 base edition) for SUS-I1.
+# Every decision here is a PROPOSAL until approved. All authorities are simulated:
+# no DoD program, DoDI 5000.02 authority or user command exists for this project.
+schema: susanoo/tailoring/v1
+standard: MIL-STD-882E
+edition: {date: 2012-05-11, change: base}
+system: SUS-I1
+status: proposed
+current_gate: G0
+approval: {status: not-requested, authority: null, simulated: true, record: null}
+
+# Project gates (framework/lifecycle.md) mapped to Table A-I acquisition phases.
+gates:
+  G0: {phase: MSA, title: Concept}
+  G1: {phase: MSA, title: Requirements}
+  G2: {phase: TD,  title: Preliminary architecture}
+  G3: {phase: EMD, title: Detailed design}
+  G4: {phase: EMD, title: Bench and simulation readiness}
+  G5: {phase: EMD, title: Verification and assessment}
+  G6: {phase: PD,  title: Release}
+  G7: {phase: OS,  title: Change and sustainment}
+
+# 4.3.3d: tailored definitions must be derived from Tables I-III and formally approved.
+risk_definitions:
+  id: SUS-RISKDEF-001
+  revision: 0.1-draft
+  status: proposed
+  matrix: table-iii-unchanged
+  severity:
+    derivation: >-
+      Table I injury and environmental criteria unchanged. Monetary thresholds scaled by 1/100
+      because Table I values ($100K/$1M/$10M) exceed the total value of a simulation-and-bench
+      demonstrator and would place all equipment loss in Negligible.
+    monetary_min_usd: {1: 100000, 2: 10000, 3: 1000, 4: 0}
+  probability:
+    derivation: Table II qualitative definitions with Appendix A Table A-II quantitative bands.
+    # 4.3.3e: numerical definitions and the exposure basis must be documented.
+    basis: per item over the planned demonstrator life
+    item_life:
+      walker_operating_hours: 500
+      docking_cycles: 2000
+      uav_flight_hours: 200
+    fleet: {walker: 1, uav: 2}
+    bands: {A: ">= 1e-1", B: "< 1e-1 and >= 1e-2", C: "< 1e-2 and >= 1e-3", D: "< 1e-3 and >= 1e-6", E: "< 1e-6", F: "eliminated"}
+  approval: {status: not-requested, authority_role: ROLE-PE, simulated: true, record: null}
+
+# 4.3.7 / DoDI 5000.02 analogue. Who may accept which risk level (simulated roles).
+roles:
+  ROLE-PE:  {title: Program Executive (simulated), org: Susanoo program, simulated: true}
+  ROLE-PL:  {title: Program Lead (simulated), org: Susanoo program, simulated: true}
+  ROLE-CE:  {title: Chief Engineer (simulated), org: Systems engineering, simulated: true}
+  ROLE-SL:  {title: Safety Lead (simulated), org: System safety, simulated: true}
+  ROLE-UR:  {title: Test Operations User Representative (simulated), org: Test operations, simulated: true}
+  ROLE-SWL: {title: Software Safety Lead (simulated), org: System safety, simulated: true}
+  ROLE-UAV: {title: UAV Lead (simulated), org: Air vehicle, simulated: true}
+  ROLE-WLK: {title: Walker Lead (simulated), org: Walker / mechanical, simulated: true}
+acceptance_authority:
+  High: ROLE-PE
+  Serious: ROLE-PL
+  Medium: ROLE-CE
+  Low: ROLE-SL
+authority_rank: [ROLE-PE, ROLE-PL, ROLE-CE, ROLE-SL]   # highest first
+user_representative: ROLE-UR
+user_concurrence_required_for: [High, Serious]          # 4.3.7
+
+# Hazard ID convention: HAZ-<subsystem>-NNN.
+id_patterns:
+  hazard: "^HAZ-(WLK|MAN|PIL|PWR|SAF|DCK|A1|GSE|INT)-[0-9]{3}$"
+  ssf: "^SSF-[0-9]{3}$"
+  requirement: "^SYS-[0-9]{3}$"
+  event: "^EVT-[A-Z]+-[0-9]{3}$"
+  change: "^CR-[0-9]{3}$"
+  verification: "^VER-[0-9]{3}$"
+  review: "^REV-[0-9]{4}-[0-9]{3}$"
+
+# 5.2 task selection. disposition: selected | conditional | not-selected | not-applicable.
+tasks:
+  101: {disposition: selected, gate: G0, owner: ROLE-SL, rationale: "Section 4 effort integrated with SE"}
+  102: {disposition: selected, gate: G0, owner: ROLE-SL, did: DI-SAFT-81626, artifact: safety/mil-std-882e/templates/sspp-outline.md, rationale: "SSPP chosen as the single safety plan"}
+  103: {disposition: not-selected, owner: ROLE-SL, rationale: "HMP is an alternative to the SSPP (Task 102) with overlapping content; one plan avoids divergence"}
+  104: {disposition: conditional, owner: ROLE-SL, trigger: "A government or independent authority review is scheduled", rationale: "No government reviews exist for this project"}
+  105: {disposition: selected, gate: G0, owner: ROLE-SL, rationale: "Safety participates in project working groups (simulated IPT)"}
+  106: {disposition: selected, gate: G0, owner: ROLE-SL, artifact: safety/hazards/, rationale: "HTS implemented as PDaC hazard records validated in CI"}
+  107: {disposition: selected, gate: G1, owner: ROLE-SL, did: DI-SAFT-80105, artifact: docs/wiki/Hazard-Tracking-Log.md, rationale: "Generated HTS log serves as the progress report"}
+  108: {disposition: selected, gate: G2, owner: ROLE-WLK, rationale: "Hydraulic fluid and lithium batteries are candidate hazardous materials"}
+  201: {disposition: selected, gate: G0, owner: ROLE-SL, did: DI-SAFT-80101, artifact: safety/hazards/, rationale: "Initial hazard list from CONOPS scenarios and interfaces"}
+  202: {disposition: selected, gate: G2, owner: ROLE-SL, did: DI-SAFT-80101, rationale: "Initial risk and mitigations for preliminary architecture"}
+  203: {disposition: selected, gate: G1, owner: ROLE-CE, did: DI-SAFT-80101, artifact: requirements/, rationale: "Derive and trace safety requirements"}
+  204: {disposition: selected, gate: G3, owner: ROLE-SL, did: DI-SAFT-80101, rationale: "Walker, power, dock and UAV subsystems"}
+  205: {disposition: selected, gate: G3, owner: ROLE-SL, did: DI-SAFT-80101, rationale: "Walker/UAV/dock integration hazards"}
+  206: {disposition: selected, gate: G3, owner: ROLE-SL, did: DI-SAFT-80101, rationale: "Ingress, maintenance, docking and test operations"}
+  207: {disposition: selected, gate: G3, owner: ROLE-SL, did: DI-SAFT-80106, rationale: "Noise, vibration, hydraulic fluid exposure, thermal"}
+  208: {disposition: selected, gate: G2, owner: ROLE-SWL, did: DI-SAFT-80101, artifact: safety/software/, rationale: "Identifies SSFs needed for Section 4.4"}
+  209: {disposition: conditional, owner: ROLE-SL, trigger: "External systems (airspace, ground control) baselined", rationale: "No external system-of-systems defined"}
+  210: {disposition: selected, gate: G3, owner: ROLE-SL, did: DI-SAFT-80101, rationale: "Fluids, batteries and noise in outdoor test"}
+  301: {disposition: selected, gate: G5, owner: ROLE-SL, did: DI-SAFT-80102, rationale: "SAR before human-occupied test and at release"}
+  302: {disposition: not-selected, owner: ROLE-SL, rationale: "HMAR overlaps the SAR (Task 301); one assessment report"}
+  303: {disposition: selected, gate: G4, owner: ROLE-SL, artifact: safety/events/, rationale: "Event risk and acceptance for bench and test events"}
+  304: {disposition: selected, gate: G1, owner: ROLE-SL, did: DI-SAFT-80103, artifact: changes/, rationale: "Change requests reopen linked hazards (rule R10)"}
+  401: {disposition: selected, gate: G4, owner: ROLE-SL, artifact: verification/, rationale: "Verify safety requirements and mitigations"}
+  402: {disposition: not-applicable, owner: ROLE-SL, rationale: "No explosives or energetics in the concept"}
+  403: {disposition: not-applicable, owner: ROLE-SL, rationale: "No explosive ordnance in the concept"}
+
+# Manual conformance status for review-checked obligations (automated ones are computed).
+# status: not-started | in-work | evidenced | reviewed
+obligations:
+  E1.a: {status: in-work, artifacts: [framework/README.md, safety/mil-std-882e/templates/sspp-outline.md]}
+  E1.b: {status: in-work, artifacts: [requirements/]}
+  E2.a: {status: in-work, artifacts: [safety/hazards/, concept/CONOPS.md]}
+  E5.a: {status: not-started, artifacts: []}

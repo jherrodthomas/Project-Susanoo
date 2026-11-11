@@ -11,6 +11,10 @@
 
 ## Purpose
 
+Baseline: **MIL-STD-882E, 11 May 2012 (base edition)**, modeled as data in
+[`standards/mil-std-882e/model.yaml`](../../standards/mil-std-882e/model.yaml) and tailored in
+[`standards/tailoring/mil-std-882e.yaml`](../../standards/tailoring/mil-std-882e.yaml).
+
 Controlled work-product tree for the SUS-I1 system safety program, organised by the
 eight MIL-STD-882E process elements (folders `01`–`08`) with the 25 tasks nested under the
 element they primarily serve. `00-system-definition` holds the analysis baseline and canonical
@@ -70,8 +74,7 @@ package SafetyProgramFlow {
         action verifyRiskReduction { doc /* 6 Verify risk reduction - Task 401 evidence */ }
         action acceptRisk { doc /* 7 Accept risk - authorized human decision */ }
         action manageLifecycleRisk { doc /* 8 Manage life-cycle risk - changes, mishaps */ }
-        first start;
-        then documentApproach;
+        first start then documentApproach;
         first documentApproach then identifyHazards;
         first identifyHazards then assessRisk;
         first assessRisk then identifyMitigations;
@@ -120,8 +123,28 @@ package SafetyProgramFlow {
 | [`software-safety/`](software-safety/README.md) | Software Contribution to System Risk (Section 4.4) | folder |
 | [`templates/`](templates/README.md) | Work-Product Templates | folder |
 | [`catalog.yaml`](catalog.yaml) | Source of truth for this tree; regenerate READMEs after editing | present |
+| [`tasks/`](tasks/) | Task work-product records (T101.yaml ...) | present |
 | [`figures/`](figures/) | Generated SVG figures (do not edit) | generated |
 | [`SafetyProgramFlow.sysml`](SafetyProgramFlow.sysml) | Generated SysML v2 view | generated |
+
+## Records and where they live
+
+| What | Where |
+|---|---|
+| Hazard Tracking System (Task 106), one record per hazard | [`safety/hazards/`](../hazards/) |
+| Safety-significant software functions (4.4) | [`safety/software/`](../software/) |
+| Test and demonstration events (event risk, Task 303) | [`safety/events/`](../events/) |
+| Task work-product records | [`tasks/`](tasks/) |
+| Templates | [`templates/`](templates/) |
+| Generated HTS export | [`safety/generated/hts.csv`](../generated/hts.csv) |
+| Procedures | [Wiki task handbook](../../docs/wiki/MIL-STD-882E-Handbook.md) |
+
+Run `python -m tools.pdac.validate` and `python -m tools.pdac.report` (see
+[`tools/pdac/README.md`](../../tools/pdac/README.md)).
+
+**Status:** Preliminary hazard list (Task 201) in work. Severities and probabilities are preliminary
+qualitative judgements on a concept with no selected hardware. No verified mitigation, risk acceptance,
+approval or certification is claimed. All authorities are simulated.
 
 ## Folder map
 

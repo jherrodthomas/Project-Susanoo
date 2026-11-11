@@ -11,8 +11,7 @@ package Task104_Reviews {
         action preparePackage { doc /* Prepare configuration-specific evidence package */ }
         action conductReview { doc /* Conduct review or audit */ }
         action trackActions { doc /* Track findings to closure */ }
-        first start;
-        then confirmApplicability;
+        first start then confirmApplicability;
         first confirmApplicability then preparePackage;
         first preparePackage then conductReview;
         first conductReview then trackActions;

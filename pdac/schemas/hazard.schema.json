@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susanoo/hazard/v0.2",
+  "title": "Hazard record (MIL-STD-882E Task 106 HTS entry)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "title", "status", "system", "subsystems", "applicability", "hazardous_condition",
+               "modes", "causal_factors", "effects", "mishap", "initial_risk", "target_risk", "mitigations",
+               "requirement_ids", "owner", "source", "hazmat"],
+  "properties": {
+    "schema": {"const": "susanoo/hazard/v0.2"},
+    "id": {"type": "string"},
+    "title": {"type": "string", "minLength": 5},
+    "status": {"enum": ["open", "in-mitigation", "verified", "accepted", "closed", "monitor"],
+               "description": "open: identified; in-mitigation: mitigations selected; verified: all selected mitigations verified; accepted: risk accepted for current use; closed: accepted, no further action except life-cycle monitoring; monitor: reopened for review"},
+    "system": {"type": "string"},
+    "subsystems": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "applicability": {
+      "type": "object", "additionalProperties": false, "required": ["configurations"],
+      "properties": {
+        "configurations": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "hardware": {"type": "array", "items": {"type": "string"}},
+        "software": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "hazardous_condition": {"type": "string", "minLength": 10},
+    "modes": {"type": "array", "items": {"type": "string", "pattern": "^MOD-[0-9]{2}$"}, "minItems": 1},
+    "causal_factors": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["id", "type", "description"],
+        "properties": {
+          "id": {"type": "string"},
+          "type": {"enum": ["hardware", "software", "human", "environment", "interface"]},
+          "description": {"type": "string"},
+          "ssf_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "effects": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "mishap": {"type": "string", "minLength": 5},
+    "initial_risk": {"$ref": "#/$defs/risk"},
+    "target_risk": {"$ref": "#/$defs/risk"},
+    "event_risks": {"type": "array", "items": {
+      "allOf": [{"$ref": "#/$defs/risk"}],
+      "required": ["event_id", "configuration"],
+      "properties": {"event_id": {"type": "string"}, "configuration": {"type": "string"}}
+    }},
+    "mitigations": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["id", "description", "precedence", "state", "verification"],
+        "properties": {
+          "id": {"type": "string"},
+          "description": {"type": "string"},
+          "precedence": {"enum": ["a", "b", "c", "d", "e"]},
+          "state": {"enum": ["identified", "selected", "implemented", "rejected"]},
+          "expected_reduction": {"type": "string"},
+          "requirement_ids": {"type": "array", "items": {"type": "string"}},
+          "ssf_ids": {"type": "array", "items": {"type": "string"}},
+          "implemented_in": {"type": "array", "items": {"type": "string"}, "description": "Version-specific hardware design or software release"},
+          "rejection_rationale": {"type": "string"},
+          "verification": {
+            "type": "object", "additionalProperties": false, "required": ["method"],
+            "properties": {
+              "method": {"type": "array", "items": {"enum": ["analysis", "test", "demonstration", "inspection"]}, "minItems": 1},
+              "evidence_ids": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        }
+      }
+    },
+    "precedence_rationale": {"type": "string", "description": "Why higher-precedence mitigations are not feasible (4.3.4)"},
+    "requirement_ids": {"type": "array", "items": {"type": "string"}},
+    "owner": {
+      "type": "object", "additionalProperties": false, "required": ["role", "org"],
+      "properties": {"role": {"type": "string"}, "person": {"type": ["string", "null"]}, "org": {"type": "string"}}
+    },
+    "reviewer": {"type": ["string", "null"]},
+    "acceptances": {"type": "array", "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "risk_level", "basis", "authority_role", "date", "record", "simulated"],
+      "properties": {
+        "id": {"type": "string"},
+        "risk_level": {"enum": ["High", "Serious", "Medium", "Low"]},
+        "basis": {"type": "string", "description": "target, or the event_id whose event risk is accepted"},
+        "authority_role": {"type": "string"},
+        "user_concurrence": {"type": ["object", "null"], "additionalProperties": false,
+          "required": ["role", "date", "record"],
+          "properties": {"role": {"type": "string"}, "date": {"type": "string", "format": "date"}, "record": {"type": "string"}}},
+        "date": {"type": "string", "format": "date"},
+        "record": {"type": "string", "description": "Location of the signed acceptance document"},
+        "review_id": {"type": "string", "description": "REV record in which the authority accepted this risk (rule R13)"},
+        "simulated": {"type": "boolean"}
+      }
+    }},
+    "reassessments": {"type": "array", "items": {
+      "type": "object", "additionalProperties": false, "required": ["change_request", "date", "outcome"],
+      "properties": {
+        "change_request": {"type": "string"},
+        "date": {"type": "string", "format": "date"},
+        "outcome": {"enum": ["no-change", "risk-reduced", "risk-increased", "new-mitigation"]},
+        "notes": {"type": "string"}
+      }
+    }},
+    "source": {
+      "type": "object", "additionalProperties": false, "required": ["task"],
+      "properties": {
+        "task": {"type": "integer"},
+        "scenario_ids": {"type": "array", "items": {"type": "string"}},
+        "interface_ids": {"type": "array", "items": {"type": "string"}},
+        "documents": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "hazmat": {"oneOf": [{"const": "not-applicable"}, {"type": "object"}]},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "open_actions": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "risk": {
+      "type": "object",
+      "required": ["severity", "probability", "rac", "risk_level", "rationale"],
+      "properties": {
+        "severity": {"enum": [1, 2, 3, 4]},
+        "probability": {"enum": ["A", "B", "C", "D", "E", "F"]},
+        "rac": {"type": "string", "pattern": "^[1-4][A-F]$"},
+        "risk_level": {"enum": ["High", "Serious", "Medium", "Low", "Eliminated"]},
+        "rationale": {"type": "string", "minLength": 10},
+        "definitions": {"type": "string", "description": "Tailored risk definitions ID used (4.3.3e)"},
+        "event_id": {"type": "string"},
+        "configuration": {"type": "string"}
+      }
+    }
+  }
+}

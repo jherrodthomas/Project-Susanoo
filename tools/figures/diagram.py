@@ -24,8 +24,8 @@ import json
 import subprocess
 from pathlib import Path
 
-import figkit as fk
-from figkit import INK, MUTED, FAINT, LINE, HAIR, CHIP, GREY_BG, TONES
+import layoutkit as fk
+from layoutkit import INK, MUTED, FAINT, LINE, HAIR, CHIP, GREY_BG, TONES
 
 HERE = Path(__file__).resolve().parent
 M = 40

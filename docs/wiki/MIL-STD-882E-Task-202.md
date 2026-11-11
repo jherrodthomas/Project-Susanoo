@@ -1,6 +1,6 @@
 # Task 202 — Preliminary Hazard Analysis (PHA)
 
-**Series:** Analysis · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** Candidate; confirm against program task selection
+**Series:** Analysis · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** see generated [task applicability and tailoring](MIL-STD-882E-Applicability)
 
 ## Purpose
 Apply preliminary hazard analysis (pha) to the SUS-M1 piloted walker, SUS-A1 observation UAV and integrated docking/ground-support interfaces as relevant.
@@ -13,12 +13,9 @@ PHL, CONOPS, risk matrix, preliminary architecture.
 
 ## Execution steps
 1. Confirm task objective, affected lifecycle phase and system boundary.
-2. Analyze credible hazard scenarios
-3. assess initial severity/probability
-3. identify mitigation options and requirements
-3. record uncertainties and owners.
-4. Record assumptions, unresolved issues, decisions and responsible owners.
-5. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
+2. Analyze credible hazard scenarios; assess initial severity/probability; identify mitigation options and requirements; record uncertainties and owners.
+3. Record assumptions, unresolved issues, decisions and responsible owners.
+4. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
 
 ## Outputs
 PHA with causes, effects, initial risk and candidate controls.
@@ -35,4 +32,4 @@ Reviewer confirms correct configuration, traceable inputs, reproducible method, 
 ## Change triggers
 Reopen on relevant CONOPS, configuration, interface, software, parameter, operation, evidence or incident changes. Record affected links and review disposition.
 
-**Reference:** MIL-STD-882E with Change 1, Task 202; verify wording, contract applicability and DID requirements against the controlled standard before formal use.
+**Reference:** MIL-STD-882E (11 May 2012, base edition), Task 202; verify wording, contract applicability and DID requirements against the controlled standard before formal use.

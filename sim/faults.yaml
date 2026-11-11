@@ -1,0 +1,28 @@
+# Fault catalogue for the walker plant. Each fault traces to MIL-STD-882E hazard records and the causal factor it
+# realises (HAZ-id:CFn). Checked by sim/tests and sim/build.py: every hazard and causal factor must exist.
+schema: susanoo/sim-faults/v0.1
+faults:
+  - id: FLT-01
+    name: Hydraulic supply pressure loss
+    variant: hydraulic
+    causes: ["HAZ-SAF-001:CF2", "HAZ-WLK-002:CF4", "HAZ-PIL-002:CF1"]
+    injection: supply fraction decays exponentially to zero from onset with time constant tau_leak_s
+    params: {tau_leak_s: 0.3}
+  - id: FLT-02
+    name: Posture feedback frozen (stale)
+    variant: any
+    causes: ["HAZ-WLK-001:CF1", "HAZ-WLK-001:CF3"]
+    injection: controller reads the CoM state frozen at onset
+    params: {}
+  - id: FLT-03
+    name: Protective stop commands zero torque
+    variant: any
+    causes: ["HAZ-SAF-001:CF1"]
+    injection: a protective stop requested at onset removes leg force and ankle torque instead of the mode-specific stop
+    params: {}
+  - id: FLT-04
+    name: Electric bus undervoltage
+    variant: electric
+    causes: ["HAZ-SAF-001:CF2", "HAZ-WLK-002:CF4", "HAZ-PIL-002:CF1"]
+    injection: torque capacity decays to electric_sag_floor from onset with time constant tau_leak_s
+    params: {tau_leak_s: 0.3}

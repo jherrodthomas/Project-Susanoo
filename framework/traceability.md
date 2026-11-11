@@ -22,6 +22,8 @@ Required common fields: id, type, revision, status, owner, source, timestamps, c
 - compliance claim **supported_by** evidence
 
 ## Validation rules
+Implemented in [`tools/pdac`](../tools/pdac/README.md): rules 1 (L00), 2 (R04), 4 (R05/R12), 5 (R10) and 7 (separate `rac_matrix` / `sscm` model, ARP4761A not yet modeled) run in CI; rules 3 and 6 are partly covered (R06 exposure gate, verification evidence schema with optional SHA-256). MIL-STD-882E-specific rules R01-R12 are listed in the tool README.
+
 1. All IDs unique and all references resolvable.
 2. Released requirements require a verification disposition.
 3. Open high-risk findings cannot be silently omitted from release.

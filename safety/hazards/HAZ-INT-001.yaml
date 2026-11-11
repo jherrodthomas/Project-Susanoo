@@ -1,0 +1,171 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-INT-001
+title: UAV launch or recovery outside the safe envelope
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-DCK
+- SUS-A1
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: Launch or recovery proceeds while the walker is moving, mis-postured or the dock is not ready,
+  or the approach is not aborted on loss of link.
+modes:
+- MOD-06
+- MOD-07
+- MOD-08
+causal_factors:
+- id: CF1
+  type: software
+  description: Integration manager grants a launch/recovery permit on stale or inconsistent state
+  ssf_ids:
+  - SSF-006
+- id: CF2
+  type: interface
+  description: Lost integration link during approach (IF-PX4-006)
+- id: CF3
+  type: environment
+  description: Gusts near the walker structure during recovery
+- id: CF4
+  type: software
+  description: A PX4 failsafe (return-to-launch on link loss or low battery) flies a recovery to the dock with no
+    integration manager permit; in SITL it descended 1.9 m from the pilot station (simulation SU-01; synthetic)
+  ssf_ids:
+  - SSF-008
+- id: CF5
+  type: interface
+  description: PX4 home stays at the take-off point after the walker moves, so a return lands where the dock used to
+    be, possibly among the ground crew (simulation SU-02; synthetic)
+- id: CF6
+  type: software
+  description: The integration manager trusts PX4's reported position (IF-PX4-001) without validity checks; under GPS
+    loss the estimate was 170 m wrong (simulation SU-06; synthetic)
+  ssf_ids:
+  - SSF-006
+effects:
+- UAV collides with walker, pilot station or crew
+mishap: Rotor or airframe strike injuring pilot or crew
+initial_risk:
+  severity: 2
+  probability: C
+  rac: 2C
+  risk_level: Serious
+  rationale: Preliminary qualitative judgement at concept stage (no design); recovery near an occupied station is
+    a frequent, demanding operation.
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 2
+  probability: E
+  rac: 2E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design); envelope inhibit, independent permit
+    and verified abort behaviour.
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Locate the dock away from the pilot station so approach paths never cross it
+  precedence: a
+  state: identified
+  expected_reduction: Removes pilot-strike path; crew strike remains
+  verification:
+    method:
+    - analysis
+    - inspection
+    evidence_ids: []
+- id: M2
+  description: Envelope inhibit on posture, motion and dock-ready state
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-006
+  ssf_ids:
+  - SSF-006
+  verification:
+    method:
+    - test
+    - analysis
+    evidence_ids: []
+- id: M3
+  description: Independent hardware launch permit between integration manager and aircraft
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-006
+  verification:
+    method:
+    - test
+    evidence_ids: []
+- id: M4
+  description: Verified PX4 lost-link abort behaviour for recovery (SITL)
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-006
+  verification:
+    method:
+    - test
+    evidence_ids: []
+- id: M5
+  description: Link-loss and battery failsafes land in place or fly to a rally point outside the pilot keep-out; the
+    aircraft never returns to the dock without a permit (decision DQ-008)
+  precedence: c
+  state: identified
+  ssf_ids:
+  - SSF-008
+  verification:
+    method:
+    - test
+    evidence_ids: []
+- id: M6
+  description: The integration manager keeps PX4 home and rally points at the current dock position as the walker moves
+  precedence: c
+  state: identified
+  verification:
+    method:
+    - test
+    evidence_ids: []
+- id: M7
+  description: Validity checks on IF-PX4-001 (estimator status, position accuracy, freshness) before any permit is granted
+  precedence: c
+  state: identified
+  ssf_ids:
+  - SSF-006
+  verification:
+    method:
+    - test
+    - analysis
+    evidence_ids: []
+requirement_ids:
+- SYS-006
+owner:
+  role: ROLE-UAV
+  person: null
+  org: Air vehicle
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 201
+  scenario_ids:
+  - SCN-004
+  - SCN-005
+  - SCN-105
+  - SCN-106
+  interface_ids:
+  - IF-PX4-001
+  - IF-PX4-004
+  - IF-PX4-005
+  - IF-PX4-006
+  documents:
+  - integrations/px4/interface-contract.md
+  - sim/results/uav/summary.md
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; no hardware design selected
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- Derive safety requirements for M5 to M7 once DQ-008 is decided (Task 203)

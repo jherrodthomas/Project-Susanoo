@@ -66,8 +66,7 @@ package Task208_FHA {
         action planMotion { doc /* Plan motion and balance */ }
         action actuateJoints { doc /* Actuate joints */ }
         action monitorSafety { doc /* Monitor and enforce protective stop */ }
-        first start;
-        then senseIntent;
+        first start then senseIntent;
         first senseIntent then estimateState;
         first estimateState then planMotion;
         first planMotion then actuateJoints;

@@ -1,6 +1,6 @@
 # Task 209 — System-of-Systems Hazard Analysis (SoSHA)
 
-**Series:** Analysis · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** Candidate; confirm against program task selection
+**Series:** Analysis · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** see generated [task applicability and tailoring](MIL-STD-882E-Applicability)
 
 ## Purpose
 Apply system-of-systems hazard analysis (sosha) to the SUS-M1 piloted walker, SUS-A1 observation UAV and integrated docking/ground-support interfaces as relevant.
@@ -13,10 +13,9 @@ External systems, operational interfaces and authorities.
 
 ## Execution steps
 1. Confirm task objective, affected lifecycle phase and system boundary.
-2. Assess ground station, other aircraft, facilities, communications and shared operations
-3. identify authority gaps and coordinated controls.
-4. Record assumptions, unresolved issues, decisions and responsible owners.
-5. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
+2. Assess ground station, other aircraft, facilities, communications and shared operations; identify authority gaps and coordinated controls.
+3. Record assumptions, unresolved issues, decisions and responsible owners.
+4. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
 
 ## Outputs
 Cross-system hazard scenarios and responsibility boundaries.
@@ -33,4 +32,4 @@ Reviewer confirms correct configuration, traceable inputs, reproducible method, 
 ## Change triggers
 Reopen on relevant CONOPS, configuration, interface, software, parameter, operation, evidence or incident changes. Record affected links and review disposition.
 
-**Reference:** MIL-STD-882E with Change 1, Task 209; verify wording, contract applicability and DID requirements against the controlled standard before formal use.
+**Reference:** MIL-STD-882E (11 May 2012, base edition), Task 209; verify wording, contract applicability and DID requirements against the controlled standard before formal use.

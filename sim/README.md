@@ -1,0 +1,54 @@
+# Simulation track
+
+Simulation for SUS-I1, following LionDriver's architecture (`assurance/sim`). Each piece of code sits next to the results it writes, and every output is checked in CI with `--check`: the committed file must equal a fresh run. Everything here uses only the Python standard library plus PyYAML. It is deterministic and seeded, and the whole track runs in a few seconds.
+
+## Evidence gate
+
+**Simulation results here carry no evidence credit.** Every result is labelled `data_kind: synthetic` and *no evidence credit*. A result can count toward verification only after two things happen:
+1. a fidelity case is approved for its scenario family, by a review record under rule R13;
+2. the safety lead takes it into the owning analysis.
+
+Until then, results rank risks, find edge cases and guide tests. They never close a hazard, verify a mitigation or support a risk acceptance. The AI may not mark simulation results as verification evidence (`CLAUDE.md`).
+
+## Layers
+
+| Layer | Where | Status | What it does |
+|---|---|---|---|
+| Spec | `spec/walker.yaml` | built | Plant parameters. Each one has a unit, an allowed range, a status (assumed, derived or published) and a source. `plant/spec.py` refuses a value that is unsourced or out of range. |
+| Faults | `faults.yaml` | built | FLT-01 hydraulic supply loss, FLT-02 frozen posture feedback, FLT-03 protective stop with zero torque, FLT-04 electric undervoltage. Each traces to hazard causal factors (`HAZ-x:CFn`), checked to exist. |
+| 1 · Plant | `plant/walker.py` | built | Reduced-order sagittal walker with stated assumptions A1–A7: a linear inverted pendulum, a force-controlled leg, an actuator capacity fraction, load holding, a protective stop and a pilot reaction model. The hydraulic and electric variants stay open until decision DQ-006. |
+| 1 · Report | `plant/report.py` | built | Runs every fault on 0° and 8° slopes, with and without its mitigations, plus the no-fault capability by slope. Writes `results/plant-results.md` and `.json`. |
+| 4 · Search | `search/families.yaml`, `search/search.py` | built (1 family) | Seeded Monte Carlo, then cross-entropy falsification. Each worst case is re-run three ways: with rounded parameters, with no fault, and under assumption probes. It is then mapped to a hazard, or raised as a finding. Writes `results/search-SF-01.*` and `results/edge-cases.md`. |
+| Scenes | `figures/scenes.py` | built | Animated 2D side views from plant runs: intended run as dashed green, performed run as solid red. The static pose is the end state. Writes `docs/wiki/images/sim-sc-*.svg` and the wiki page `docs/wiki/Simulation.md`. |
+| 2 · Scenarios | — | planned | Terrain and mission scenarios as data (slope, step, soft ground, wind, dock approach, link loss). |
+| UAV | `uav/` | built | PX4 v1.16.2 SITL with the SIH quadrotor, run headless. `uav/harness.py` acts as the ground station and runs six failsafe scenarios: link loss with return-to-launch, link loss with return after the walker has moved, link loss with land-in-place, battery failure, a command past the geofence, and GPS loss. It writes `results/uav/SU-*.json` from ground truth. `figures/uav_scenes.py` turns those into top-down scenes, `results/uav/summary.md` and `docs/wiki/UAV-Simulation.md`. Outcomes are mapped to hazards by rules in `uav/scenarios.yaml`. |
+| Fidelity | — | planned (step 4) | Multibody legged dynamics (MuJoCo proposed, decision DQ-007), cross-checked against the plant. |
+| 3D | `scenes3d/` | built | `scenes.yaml` defines one scene per hazard or finding that has a motion source: a plant run, a search edge case or a SITL result. `export_scene.py` reads only each scene's `motion` block and writes `scenes3d/out/<id>.json`. `build_pages.py` writes single-file three.js pages (`docs/3d/<id>.html`) that replay that data on parametric walker and UAV models, plus `docs/wiki/3D-Scenes.md`. `render.mjs` renders stills and checks every page in Chromium. **The look never changes the analysis:** environment, condition, camera and variants are look-only, and `tests/test_scenes3d.py` proves the exporter never reads them. |
+
+## Commands
+
+```bash
+python -m sim.plant.report          # fault catalogue runs
+python -m sim.search.search         # failure search (SF-01)
+python -m sim.figures.scenes        # 2D scenes and docs/wiki/Simulation.md
+python -m sim.figures.uav_scenes    # UAV scenes, summary and page, built from the committed SITL results
+python -m sim.scenes3d.export_scene # 3D scene analysis (reads only the motion blocks)
+python -m sim.scenes3d.build_pages  # docs/3d/*.html and docs/wiki/3D-Scenes.md
+npm pack three@0.170.0 && tar xzf three-0.170.0.tgz && node sim/scenes3d/render.mjs package   # stills + page checks
+
+# PX4 SITL (heavy; also run weekly and on demand by .github/workflows/px4-sitl.yml)
+pip install -r sim/uav/requirements.txt -r sim/uav/requirements-px4-build.txt
+sim/uav/fetch_px4.sh ~/px4          # clones v1.16.2 with submodules and builds px4_sitl_default (needs cmake, ninja, bc)
+python -m sim.uav.harness --px4 ~/px4            # re-run and rewrite sim/results/uav/*.json
+python -m sim.uav.harness --px4 ~/px4 --compare  # re-run and compare outcome classes only
+python -m unittest discover -s sim/tests -t .
+```
+
+The four generator commands accept `--check`, which fails if their committed outputs are stale. Run them in the order above, because the scenes read the search results. SITL runs are not bit-reproducible, so the PX4 results are committed, and `--compare` checks outcome classes rather than exact numbers.
+
+## Honesty rules for scenes and results
+
+- Contact, rotation after tipping and terrain compliance are not modelled. A run stops at the first mishap, and its scene freezes there.
+- Every scene is drawn from plant runs. Nothing is hand-animated. Each scene names its hazard or finding, its case, and the synthetic label.
+- A finding is a draft for the safety lead. A new hazard or causal factor enters `safety/hazards/` only through review.
+- Parameter values are concept assumptions, not design values. Changing one changes the results, and the `--check` steps make that visible in review.

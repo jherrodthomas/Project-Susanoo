@@ -72,7 +72,7 @@ package SusanooSafety {
         attribute id : String;
         attribute description : String;
         attribute precedence : MitigationPrecedence;
-        ref item requirement : SafetyRequirement[0..*];
+        ref item requirements : SafetyRequirement[0..*];
     }
     item def VerificationEvidence {
         attribute id : String;

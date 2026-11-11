@@ -1,0 +1,112 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-DCK-001
+title: Rotor start while UAV is retained or a person is at the dock
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-DCK
+- SUS-A1
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: UAV motors spin up while the aircraft is mechanically retained or while a maintainer or pilot
+  is within rotor reach.
+modes:
+- MOD-06
+- MOD-10
+causal_factors:
+- id: CF1
+  type: software
+  description: Arming check or dock interlock permits arming while retained
+  ssf_ids:
+  - SSF-003
+- id: CF2
+  type: human
+  description: Maintainer arms the aircraft on the dock outside procedure
+- id: CF3
+  type: interface
+  description: Charging handshake energises propulsion (IF-PX4-009)
+effects:
+- Rotor contact with hands, face or eyes; retained airframe breaks free
+mishap: Laceration or eye injury to maintainer or pilot; damage to dock
+initial_risk:
+  severity: 2
+  probability: C
+  rac: 2C
+  risk_level: Serious
+  rationale: Preliminary qualitative judgement at concept stage (no design); rotor strike can cause permanent partial
+    disability; dock operations are frequent.
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 2
+  probability: E
+  rac: 2E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design); hardware rotor-power interlock independent
+    of PX4 arming.
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Hardware interlock removes propulsion power while the retention latch is closed
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-003
+  verification:
+    method:
+    - test
+    - inspection
+    evidence_ids: []
+- id: M2
+  description: PX4 arming check requires dock-released state
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-003
+  ssf_ids:
+  - SSF-003
+  verification:
+    method:
+    - test
+    evidence_ids: []
+- id: M3
+  description: Rotor guards on the dock enclosure
+  precedence: c
+  state: identified
+  verification:
+    method:
+    - inspection
+    evidence_ids: []
+- id: M4
+  description: Maintenance procedure with propeller removal for powered checks
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-003
+owner:
+  role: ROLE-UAV
+  person: null
+  org: Air vehicle
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 201
+  scenario_ids:
+  - SCN-107
+  interface_ids:
+  - IF-PX4-009
+  documents:
+  - integrations/px4/interface-contract.md
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; no hardware design selected
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2

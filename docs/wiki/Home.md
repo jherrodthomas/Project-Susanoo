@@ -29,4 +29,6 @@ The Wiki explains **how**; the main repository stores **what was done**, includi
 
 - [MIL-STD-882E Visual Process Maps](MIL-STD-882E-Process-Maps)
 
+**Generated from repository records (do not edit in the Wiki):** [Hazard Tracking Log](Hazard-Tracking-Log) · [MIL-STD-882E Conformance](MIL-STD-882E-Conformance) · [Task Applicability](MIL-STD-882E-Applicability) · [Gate Readiness](Gate-Readiness) · [SUS-I1 Item Definition](SUS-I1-Item-Definition) · [SysML v2 Model](SysML-Model) · [Simulation](Simulation) · [UAV Simulation](UAV-Simulation) · [3D Scenes](3D-Scenes) · [Decision Inbox](Decision-Inbox)
+
 - [SUS-M1 Architecture & Boundaries](SUS-M1-Architecture-and-Boundaries)

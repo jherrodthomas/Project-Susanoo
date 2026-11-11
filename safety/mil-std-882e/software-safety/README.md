@@ -15,7 +15,8 @@
 ## Purpose
 
 Software control category, software safety criticality and level-of-rigor assignments for
-walker motion control, protective stop, pilot HMI, dock interlocks and PX4. MIL-STD-882E
+walker motion control, protective stop, pilot HMI, dock interlocks and PX4. The safety-significant
+software function records live in [`safety/software/`](../../software/) (SSF-001 ...). MIL-STD-882E
 criticality is kept distinct from any DO-178C assurance level.
 
 ## Position in the MIL-STD-882E flow

@@ -72,16 +72,12 @@ package Task102_SSPP {
     }
     requirement sspp_004 : DefineSoftwareApproach;
     verification def <'SSPP-REVIEW'> SsppReview {
-        objective { verify sspp_001; }
-    }
-    verification def <'SSPP-REVIEW'> SsppReview {
-        objective { verify sspp_002; }
-    }
-    verification def <'SSPP-REVIEW'> SsppReview {
-        objective { verify sspp_003; }
-    }
-    verification def <'SSPP-REVIEW'> SsppReview {
-        objective { verify sspp_004; }
+        objective {
+            verify sspp_001;
+            verify sspp_002;
+            verify sspp_003;
+            verify sspp_004;
+        }
     }
 }
 ```

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susanoo/review/v0.1",
+  "title": "Review record (the only way anything is accepted)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "title", "date", "type", "scope", "baseline", "reviewers", "outcome"],
+  "properties": {
+    "schema": {"const": "susanoo/review/v0.1"},
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "date": {"type": "string", "format": "date"},
+    "type": {"enum": ["technical-review", "risk-acceptance", "approval", "independent-assessment"]},
+    "scope": {"type": "array", "minItems": 1, "items": {"type": "string"},
+              "description": "IDs reviewed: HAZ-, SYS-, T<task>, SUS-RISKDEF-, tailoring, SUS-I1 (item definition)"},
+    "baseline": {"type": "string", "description": "Git commit the review was performed against"},
+    "reviewers": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "additionalProperties": false, "required": ["role", "person", "human", "independence"],
+      "properties": {
+        "role": {"type": "string"},
+        "person": {"type": ["string", "null"]},
+        "human": {"type": "boolean", "description": "false for an AI review; an AI review is I0 and never accepts"},
+        "independence": {"enum": ["I0", "I1", "I2", "I3"]}
+      }}},
+    "outcome": {"enum": ["in-progress", "accepted", "accepted-with-actions", "returned"]},
+    "findings": {"type": "array", "items": {"type": "string"}},
+    "record": {"type": "string", "description": "Location of the signed or minuted record, if separate"}
+  }
+}

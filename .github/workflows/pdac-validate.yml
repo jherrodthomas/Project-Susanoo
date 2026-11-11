@@ -1,0 +1,114 @@
+name: PDaC / MIL-STD-882E validation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install validator dependencies
+        run: pip install -r tools/pdac/requirements.txt
+      - name: Validate records against MIL-STD-882E model and tailoring
+        run: python -m tools.pdac.validate
+      - name: Check generated HTS, conformance, gate, item and decision pages are current
+        run: python -m tools.pdac.report --check
+      - name: Check item-definition figures match their record and layout
+        run: python -m tools.figures.fig_item --check
+      - name: Rule tests
+        run: python -m unittest discover -s tools/pdac/tests -t .
+      - name: Figure tests
+        run: python -m unittest discover -s tools/figures/tests -t .
+
+  sysml:
+    name: sysml model
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Install dependencies
+        run: pip install -r tools/pdac/requirements.txt -r tools/sysml/pilot/requirements.txt
+      - name: Generated model files match the requirement records
+        run: python -m tools.sysml.gen_requirements --check
+      - name: Model matches the item definition and records (M1 M2 M4 M9 R1 R2 R3)
+        run: python -m tools.sysml.check
+      - name: Views and SysML page are current
+        run: python -m tools.sysml.views --check
+      - name: SysML tests
+        run: python -m unittest discover -s tools/sysml/tests -t .
+      - name: Cache the OMG pilot implementation
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/susanoo-sysml-pilot
+          key: sysml-pilot-0.62.0
+      - name: SysML v2 conformance (OMG pilot implementation 0.62.0)
+        run: tools/sysml/pilot/validate.sh
+
+  sim:
+    name: simulation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r tools/pdac/requirements.txt
+      - name: Plant results current (fault catalogue)
+        run: python -m sim.plant.report --check
+      - name: Failure search results current (seeded)
+        run: python -m sim.search.search --check
+      - name: Scenes and Simulation page current
+        run: python -m sim.figures.scenes --check
+      - name: UAV scenes, summary and page current (from committed PX4 SITL results)
+        run: python -m sim.figures.uav_scenes --check
+      - name: Simulation tests
+        run: python -m unittest discover -s sim/tests -t .
+
+  scenes3d:
+    name: 3d scenes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: |
+          pip install -r tools/pdac/requirements.txt
+          npm install --no-save playwright@1.63.0
+          npx playwright install --with-deps chromium
+          npm pack three@0.170.0 --silent && tar xzf three-0.170.0.tgz
+      - name: Scene analysis exports current (the look never changes them)
+        run: python -m sim.scenes3d.export_scene --check
+      - name: Scene pages and 3D-Scenes page current
+        run: python -m sim.scenes3d.build_pages --check
+      - name: Pages load in Chromium with the pinned three.js, show the stamp and the right outcome
+        run: node sim/scenes3d/render.mjs package --check-only

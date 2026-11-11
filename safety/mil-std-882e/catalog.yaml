@@ -82,6 +82,10 @@ folders:
     role: Safety lead
     procedure: docs/wiki/MIL-STD-882E-Handbook.md
     purpose: |
+      Baseline: **MIL-STD-882E, 11 May 2012 (base edition)**, modeled as data in
+      [`standards/mil-std-882e/model.yaml`](../../standards/mil-std-882e/model.yaml) and tailored in
+      [`standards/tailoring/mil-std-882e.yaml`](../../standards/tailoring/mil-std-882e.yaml).
+
       Controlled work-product tree for the SUS-I1 system safety program, organised by the
       eight MIL-STD-882E process elements (folders `01`–`08`) with the 25 tasks nested under the
       element they primarily serve. `00-system-definition` holds the analysis baseline and canonical
@@ -130,7 +134,27 @@ folders:
       - {ext: Risk acceptance authority, item: Residual risk decision requests}
     contents:
       - {name: catalog.yaml, desc: Source of truth for this tree; regenerate READMEs after editing}
+      - {name: tasks/, desc: Task work-product records (T101.yaml ...), validated by tools/pdac}
     notes_md: |
+      ## Records and where they live
+
+      | What | Where |
+      |---|---|
+      | Hazard Tracking System (Task 106), one record per hazard | [`safety/hazards/`](../hazards/) |
+      | Safety-significant software functions (4.4) | [`safety/software/`](../software/) |
+      | Test and demonstration events (event risk, Task 303) | [`safety/events/`](../events/) |
+      | Task work-product records | [`tasks/`](tasks/) |
+      | Templates | [`templates/`](templates/) |
+      | Generated HTS export | [`safety/generated/hts.csv`](../generated/hts.csv) |
+      | Procedures | [Wiki task handbook](../../docs/wiki/MIL-STD-882E-Handbook.md) |
+
+      Run `python -m tools.pdac.validate` and `python -m tools.pdac.report` (see
+      [`tools/pdac/README.md`](../../tools/pdac/README.md)).
+
+      **Status:** Preliminary hazard list (Task 201) in work. Severities and probabilities are preliminary
+      qualitative judgements on a concept with no selected hardware. No verified mitigation, risk acceptance,
+      approval or certification is claimed. All authorities are simulated.
+
       ## Folder map
 
       | Folder | 882E element | Tasks |
@@ -284,7 +308,7 @@ folders:
             - {name: identify, label: Identify hazards per selected tasks}
             - {name: assess, label: Assess initial risk, safety: true}
             - {name: mitigate, label: Allocate mitigations and requirements}
-            - {name: verify, label: Verify mitigation effectiveness}
+            - {name: verifyEffectiveness, label: Verify mitigation effectiveness}
             - {name: report, label: Report status and request decisions}
           loops: [[report, identify, design or CONOPS change]]
     inputs:
@@ -652,7 +676,7 @@ folders:
             - name: PHARow
               stereotype: item
               attributes: ["hazardId : String", "scenario : String", "cause : String", "effect : String", "initialRisk : RiskAssessment", "candidateControl : String"]
-              parts: [{name: requirement, type: SafetyRequirement, mult: "0..*"}]
+              parts: [{name: requirements, type: SafetyRequirement, mult: "0..*"}]
     inputs:
       - {ref: T201, item: PHL}
       - {ref: E3, item: Risk matrix}
@@ -1178,7 +1202,7 @@ folders:
             - name: MitigationImplementation
               stereotype: item
               attributes: ["mitigationId : String", "allocatedTo : String", "designRef : String", "status : String"]
-              parts: [{name: mitigation, type: Mitigation}, {name: requirement, type: SafetyRequirement, mult: "1..*"}]
+              parts: [{name: mitigation, type: Mitigation}, {name: requirements, type: SafetyRequirement, mult: "1..*"}]
     inputs:
       - {ref: E4, item: Selected mitigations}
     outputs:
@@ -1721,8 +1745,8 @@ folders:
             - {name: intake, label: Log change or event}
             - {name: screen, label: Screen for safety impact}
             - {name: analyse, label: Analyse affected hazards and controls, safety: true}
-            - {name: decide, label: Record disposition and actions}
-          loops: [[decide, screen, new information]]
+            - {name: recordDisposition, label: Record disposition and actions}
+          loops: [[recordDisposition, screen, new information]]
     inputs:
       - {ref: T303, item: Test anomalies}
       - {ref: T104, item: Audit findings}
@@ -1743,8 +1767,10 @@ folders:
     applicability: Selected
     role: Safety lead
     purpose: |
-      Closed-loop hazard log used by every element. One YAML record per hazard using
-      `templates/hazard-record.yaml`; CI resolves every ID link (traceability rule 1).
+      Closed-loop hazard log used by every element. The records live in
+      [`safety/hazards/`](../../hazards/) (one YAML per hazard, `templates/hazard-record.yaml`) and are validated by
+      `tools/pdac`; the generated export is [`safety/generated/hts.csv`](../../generated/hts.csv). This folder
+      describes the system; it holds no records of its own.
     scope: [SUS-I1]
     boundary:
       name: Hazard log
@@ -1789,8 +1815,7 @@ folders:
     outputs:
       - {ref: T107, item: Status snapshot}
       - {ref: T301, item: Hazard log}
-    contents:
-      - {name: hazards/, desc: HAZ-<nnn>.yaml records}
+    contents: []
 
   - id: SWS
     parent: ROOT
@@ -1803,7 +1828,8 @@ folders:
     procedure: docs/wiki/MIL-STD-882E-Software-Safety.md
     purpose: |
       Software control category, software safety criticality and level-of-rigor assignments for
-      walker motion control, protective stop, pilot HMI, dock interlocks and PX4. MIL-STD-882E
+      walker motion control, protective stop, pilot HMI, dock interlocks and PX4. The safety-significant
+      software function records live in [`safety/software/`](../../software/) (SSF-001 ...). MIL-STD-882E
       criticality is kept distinct from any DO-178C assurance level.
     scope: [SUS-M1-CTL, SUS-M1-SAF, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FCS]
     boundary:

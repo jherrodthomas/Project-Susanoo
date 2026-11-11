@@ -1,0 +1,64 @@
+# Box positions [x, y, width, height] for the generated item-definition figures (tools/figures/fig_item.py).
+# Every element, external and the SUS-I1 boundary must have a box; an ID not in the record fails the build.
+# Children must sit inside their parent; externals outside the boundary. A connector that crosses a box it does
+# not belong to fails the build: add a route keyed "A|B" (the two endpoint IDs, sorted) with waypoints (via)
+# through the gaps between boxes, and optionally a fixed label point.
+boundary:
+  width: 1500
+  height: 975
+  boxes:
+    SUS-I1: [230, 125, 1040, 785]
+    SUS-I1-INT: [760, 150, 300, 70]
+    SUS-M1: [255, 260, 640, 450]
+    SUS-M1-PIL: [280, 305, 170, 70]
+    SUS-M1-CTL: [490, 305, 170, 70]
+    SUS-M1-DCK: [700, 305, 170, 70]
+    SUS-M1-SAF: [280, 430, 170, 70]
+    SUS-M1-WLK: [490, 430, 170, 70]
+    SUS-M1-MAN: [700, 430, 170, 70]
+    SUS-M1-PWR: [280, 555, 590, 130]
+    SUS-M1-PWR-GEN: [300, 595, 170, 70]
+    SUS-M1-PWR-DIST: [490, 595, 170, 70]
+    SUS-M1-PWR-BAT: [680, 595, 170, 70]
+    SUS-A1: [960, 260, 280, 440]
+    SUS-A1-FC: [985, 310, 230, 64]
+    SUS-A1-NAV: [985, 400, 230, 64]
+    SUS-A1-PWR: [985, 490, 230, 64]
+    SUS-A1-PROP: [985, 580, 230, 64]
+    SUS-GSE: [255, 790, 300, 80]
+    EXT-PILOT: [30, 300, 170, 64]
+    EXT-OBSERVER: [30, 420, 170, 64]
+    EXT-BYSTANDER: [30, 540, 170, 64]
+    EXT-TERRAIN: [30, 660, 170, 64]
+    EXT-CREW: [30, 790, 170, 64]
+    EXT-AIRSPACE: [1300, 300, 170, 64]
+    EXT-GNSS-RF: [1300, 430, 170, 64]
+    EXT-WEATHER: [1300, 560, 170, 64]
+  routes:
+    "EXT-BYSTANDER|SUS-M1-WLK": {via: [[218, 572], [218, 518], [560, 518]], label: [300, 518]}
+    "EXT-TERRAIN|SUS-M1-WLK": {via: [[243, 692], [243, 536], [600, 536]], label: [520, 536]}
+    "SUS-M1-PWR|SUS-M1-SAF": {via: [], label: [395, 507]}
+    "SUS-A1-FC|SUS-I1-INT": {via: [], label: [1160, 190]}
+    "SUS-A1-FC|SUS-A1-PROP": {via: [[1228, 342], [1228, 612]]}
+    "SUS-A1-NAV|SUS-M1-PIL": {via: [[915, 402], [365, 402]], label: [790, 402]}
+    "SUS-A1-PWR|SUS-M1-DCK": {via: [[945, 522], [945, 340]], label: [925, 470]}
+
+context:
+  width: 1200
+  height: 680
+  boxes:
+    SUS-I1: [260, 125, 680, 500]
+    SUS-M1: [300, 165, 260, 200]
+    SUS-A1: [640, 165, 260, 200]
+    SUS-GSE: [300, 470, 260, 100]
+    SUS-I1-INT: [640, 470, 260, 100]
+    EXT-PILOT: [30, 140, 190, 60]
+    EXT-OBSERVER: [30, 235, 190, 60]
+    EXT-BYSTANDER: [30, 330, 190, 60]
+    EXT-TERRAIN: [30, 425, 190, 60]
+    EXT-CREW: [30, 540, 190, 60]
+    EXT-AIRSPACE: [980, 160, 190, 60]
+    EXT-GNSS-RF: [980, 260, 190, 60]
+    EXT-WEATHER: [980, 360, 190, 60]
+  routes:
+    "EXT-CREW|SUS-M1": {via: [[250, 520]]}

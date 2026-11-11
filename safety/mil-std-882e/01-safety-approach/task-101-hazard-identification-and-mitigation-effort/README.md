@@ -61,15 +61,14 @@ package Task101_HazardEffort {
         action identify { doc /* Identify hazards per selected tasks */ }
         action assess { doc /* Assess initial risk */ }
         action mitigate { doc /* Allocate mitigations and requirements */ }
-        action verify { doc /* Verify mitigation effectiveness */ }
+        action verifyEffectiveness { doc /* Verify mitigation effectiveness */ }
         action report { doc /* Report status and request decisions */ }
-        first start;
-        then defineScope;
+        first start then defineScope;
         first defineScope then identify;
         first identify then assess;
         first assess then mitigate;
-        first mitigate then verify;
-        first verify then report;
+        first mitigate then verifyEffectiveness;
+        first verifyEffectiveness then report;
         first report then done;
         // iteration: report -> identify when design or CONOPS change (informal; merge node omitted)
     }

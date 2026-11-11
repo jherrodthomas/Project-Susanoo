@@ -1,0 +1,26 @@
+schema: susanoo/requirement/v0.1
+id: SYS-001
+title: Pilot-readiness actuation interlock
+statement: The system shall inhibit leg actuation until pilot station readiness conditions (restraint fastened,
+  hatch secured, controls neutral, exclusion zone confirmed) are satisfied.
+status: candidate
+source:
+  documents:
+  - concept/CONOPS.md
+  - concept/architecture.md
+  scenario_ids:
+  - SCN-001
+  hazard_ids:
+  - HAZ-PIL-001
+allocated_to:
+- SUS-M1-SAF
+- SUS-M1-PIL
+safety_significant: true
+verification:
+  method:
+  - test
+  - demonstration
+  evidence_ids: []
+  disposition: open
+tbd:
+- Numeric thresholds and timing pending hazard analysis and trade studies

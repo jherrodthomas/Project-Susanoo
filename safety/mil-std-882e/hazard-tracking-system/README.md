@@ -14,8 +14,10 @@
 
 ## Purpose
 
-Closed-loop hazard log used by every element. One YAML record per hazard using
-`templates/hazard-record.yaml`; CI resolves every ID link (traceability rule 1).
+Closed-loop hazard log used by every element. The records live in
+[`safety/hazards/`](../../hazards/) (one YAML per hazard, `templates/hazard-record.yaml`) and are validated by
+`tools/pdac`; the generated export is [`safety/generated/hts.csv`](../../generated/hts.csv). This folder
+describes the system; it holds no records of its own.
 
 ## Position in the MIL-STD-882E flow
 
@@ -105,7 +107,6 @@ package HazardTrackingSystem {
 
 | Item | Description | State |
 |---|---|---|
-| `hazards/` | HAZ-<nnn>.yaml records | planned |
 | [`figures/`](figures/) | Generated SVG figures (do not edit) | generated |
 | [`HazardTrackingSystem.sysml`](HazardTrackingSystem.sysml) | Generated SysML v2 view | generated |
 

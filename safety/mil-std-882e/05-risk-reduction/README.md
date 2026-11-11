@@ -60,7 +60,7 @@ package RiskReduction {
         attribute designRef : String;
         attribute status : String;
         ref item mitigation : Mitigation[1];
-        ref item requirement : SafetyRequirement[1..*];
+        ref item requirements : SafetyRequirement[1..*];
     }
 }
 ```

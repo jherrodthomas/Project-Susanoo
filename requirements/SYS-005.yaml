@@ -1,0 +1,26 @@
+schema: susanoo/requirement/v0.1
+id: SYS-005
+title: Positive docking retention state
+statement: The docking interface shall report a positively confirmed retained/unretained state derived from independent
+  sensing.
+status: candidate
+source:
+  documents:
+  - concept/CONOPS.md
+  - concept/architecture.md
+  scenario_ids:
+  - SCN-005
+  - SCN-106
+  hazard_ids:
+  - HAZ-DCK-002
+allocated_to:
+- SUS-M1-DCK
+safety_significant: true
+verification:
+  method:
+  - test
+  - inspection
+  evidence_ids: []
+  disposition: open
+tbd:
+- Numeric thresholds and timing pending hazard analysis and trade studies

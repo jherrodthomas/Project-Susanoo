@@ -16,8 +16,7 @@ package SafetyProgramFlow {
         action verifyRiskReduction { doc /* 6 Verify risk reduction - Task 401 evidence */ }
         action acceptRisk { doc /* 7 Accept risk - authorized human decision */ }
         action manageLifecycleRisk { doc /* 8 Manage life-cycle risk - changes, mishaps */ }
-        first start;
-        then documentApproach;
+        first start then documentApproach;
         first documentApproach then identifyHazards;
         first identifyHazards then assessRisk;
         first assessRisk then identifyMitigations;

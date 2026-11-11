@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools" / "figures"))
 import diagram  # noqa: E402
 import sysml_parse  # noqa: E402
-from figkit import MUTED, TONES  # noqa: E402
+from layoutkit import MUTED, TONES  # noqa: E402
 
 CATALOG = ROOT / "safety" / "mil-std-882e" / "catalog.yaml"
 END_MARKER = "<!-- END GENERATED: content below this line is human-authored and preserved -->"
@@ -291,13 +291,16 @@ def view_req(ctx: Ctx, v: dict, pkg: str) -> tuple[dict, str]:
         edges.append({"src": "el_" + mid(el), "dst": mid(rid), "label": "«satisfy»", "dash": True})
         path = ctx.nodes.get(el, {}).get("usage", el)
         s.append(f"    satisfy {mid(rid).lower()} by {path};")
+    verifies: dict[str, list[str]] = {}
     for el, rid in v.get("verified_by", []):
         if el not in seen:
             seen.add(el)
             nodes.append({"id": "el_" + mid(el), "code": el, "title": "Verification case", "tone": "ok"})
         edges.append({"src": "el_" + mid(el), "dst": mid(rid), "label": "«verify»", "dash": True, "tone": "ok"})
-        s += [f"    verification def <'{el}'> {sysml_name(el)} {{", f"        objective {{ verify {mid(rid).lower()}; }}",
-              "    }"]
+        verifies.setdefault(el, []).append(rid)
+    for el, rids in verifies.items():
+        s += [f"    verification def <'{el}'> {sysml_name(el)} {{", "        objective {",
+              *[f"            verify {mid(r).lower()};" for r in rids], "        }", "    }"]
     for a, b in v.get("derives", []):
         edges.append({"src": mid(b), "dst": mid(a), "label": "«deriveReqt»", "dash": True, "tone": "interface"})
         s.append(f"    #derivation connection {{ end #original ::> {mid(a).lower()}; end #derive ::> {mid(b).lower()}; }}")
@@ -325,11 +328,10 @@ def view_act(v: dict) -> tuple[dict, str]:
                       "tone": "safety" if st.get("safety") else "system"})
         s.append(f"        action {st['name']} {{ {doc(st['label'])} }}")
     nodes.append({"id": "done", "shape": "final"})
-    s.append("        first start;")
     prev = "start"
     for st in v["steps"]:
         edges.append({"src": prev, "dst": st["name"]})
-        s.append(f"        first {prev} then {st['name']};" if prev != "start" else f"        then {st['name']};")
+        s.append(f"        first {prev} then {st['name']};")
         prev = st["name"]
     edges.append({"src": prev, "dst": "done"})
     s.append(f"        first {prev} then done;")
@@ -567,6 +569,32 @@ def render(ctx: Ctx, f: dict, figs: dict[str, list[dict]], sysml_text: str | Non
 
 
 # ------------------------------------------------------------- validation
+# SysML v2 reserved words that catalog names must not use (checked by the OMG pilot in practice).
+SYSML_KEYWORDS = {
+    "about", "abstract", "accept", "action", "actor", "after", "alias", "all", "allocate", "allocation", "analysis",
+    "and", "as", "assert", "assign", "assume", "at", "attribute", "bind", "binding", "by", "calc", "case", "comment",
+    "concern", "connect", "connection", "constant", "constraint", "crosses", "decide", "def", "default", "defined",
+    "dependency", "derived", "do", "doc", "else", "end", "entry", "enum", "event", "exhibit", "exit", "expose",
+    "false", "filter", "first", "flow", "for", "fork", "frame", "from", "hastype", "if", "implies", "import", "in",
+    "include", "individual", "inout", "interface", "istype", "item", "join", "language", "library", "locale",
+    "loop", "merge", "message", "meta", "metadata", "nonunique", "not", "null", "objective", "occurrence", "of",
+    "or", "ordered", "out", "package", "parallel", "part", "perform", "port", "private", "protected", "public",
+    "redefines", "ref", "references", "render", "rendering", "rep", "require", "requirement", "return", "satisfy",
+    "send", "snapshot", "specializes", "stakeholder", "standard", "state", "subject", "subsets", "succession",
+    "terminate", "then", "timeslice", "to", "transition", "true", "until", "use", "variant", "variation",
+    "verification", "verify", "via", "view", "viewpoint", "when", "while", "xor"}
+
+
+def sysml_names(v: dict) -> list[str]:
+    names = [st["name"] for st in v.get("steps", [])] + [st["name"] for st in v.get("states", [])]
+    names += [p["name"] for p in v.get("parts", [])]
+    for b in v.get("blocks", []):
+        names.append(b["name"])
+        names += [p["name"] for p in b.get("parts", [])]
+        names += [a.split(":")[0].strip() for a in b.get("attributes", [])]
+    return names
+
+
 def validate(cat: dict) -> list[str]:
     """Structural checks on the catalog (PDaC rule 1: IDs unique, references resolve)."""
     errs: list[str] = []
@@ -613,6 +641,9 @@ def validate(cat: dict) -> list[str]:
             if set(t) - {"id", "name"}:
                 errs.append(f"{fid}: malformed task {t}")
         for v in (f.get("model") or {}).get("views", []):
+            for name in sysml_names(v):
+                if name in SYSML_KEYWORDS:
+                    errs.append(f"{fid}: '{name}' is a SysML v2 keyword; rename it")
             for st in v.get("steps", []):
                 if set(st) - {"name", "label", "safety"}:
                     errs.append(f"{fid}: malformed step {st}")

@@ -46,7 +46,7 @@ jobs:
           # Copy source pages into the wiki root. Do not delete pages maintained separately.
           find docs/wiki -maxdepth 1 -type f -name '*.md' -exec cp '{}' wiki-publish/ \;
           mkdir -p wiki-publish/images
-          cp docs/wiki/images/*.svg wiki-publish/images/
+          cp docs/wiki/images/*.svg docs/wiki/images/*.png wiki-publish/images/
           cd wiki-publish
           git add -- '*.md' images/
           if git diff --cached --quiet; then

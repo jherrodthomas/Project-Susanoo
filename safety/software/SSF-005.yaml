@@ -1,0 +1,29 @@
+schema: susanoo/ssf/v0.1
+id: SSF-005
+title: Dock retention state fusion
+description: Fuses latch and proximity sensors into the retained/unretained state used for release and launch.
+software_items:
+- SUS-M1-DCK/retention-state (TBD CSCI)
+scc: 2
+scc_rationale: State gates release and launch commands; mechanical latch provides independent retention while closed.
+swci: 2
+lor:
+  requirements_analysis:
+    status: not-started
+    evidence_ids: []
+  architecture_analysis:
+    status: not-started
+    evidence_ids: []
+  design_analysis:
+    status: not-started
+    evidence_ids: []
+  code_analysis:
+    status: not-started
+    evidence_ids: []
+  safety_specific_testing:
+    status: not-started
+    evidence_ids: []
+lor_decision: null
+requirement_ids:
+- SYS-005
+owner: ROLE-UAV

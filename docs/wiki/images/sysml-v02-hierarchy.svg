@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="844" viewBox="0 0 1240 844" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>V-02 SUS-I1 element hierarchy</title>
+<desc>Element hierarchy: SUS-I1 (system : IntegratedSystem) in context; SUS-M1 (walker : Walker) in SUS-I1; SUS-M1-PIL (pilotStation : PilotStation) in SUS-M1; SUS-M1-CTL (motionControl : MotionControl) in SUS-M1; SUS-M1-WLK (legs : LegsAndChassis) in SUS-M1; SUS-M1-MAN (manipulators : Manipulators) in SUS-M1; SUS-M1-SAF (safetyMonitor : SafetyMonitor) in SUS-M1; SUS-M1-DCK (dock : UavDock) in SUS-M1; SUS-M1-PWR (power : PowerSystem) in SUS-M1; SUS-M1-PWR-GEN (engineGenerator : EngineGenerator) in SUS-M1-PWR; SUS-M1-PWR-BAT (battery : BatteryPack) in SUS-M1-PWR; SUS-M1-PWR-DIST (distribution : PowerDistribution) in SUS-M1-PWR; SUS-A1 (uav : ObservationUav) in SUS-I1; SUS-A1-FC (flightController : FlightController) in SUS-A1; SUS-A1-NAV (navigation : NavigationAndTelemetry) in SUS-A1; SUS-A1-PWR (uavPower : UavPower) in SUS-A1; SUS-A1-PROP (propulsion : Propulsion) in SUS-A1; SUS-I1-INT (integrationManager : IntegrationManager) in SUS-I1; SUS-GSE (groundSupport : GroundSupport) in SUS-I1.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker></defs>
+<rect x="0" y="0" width="1240" height="844" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">V-02 · SUS-I1 element hierarchy</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Every part inside the SUS-I1 boundary, as composed in the model</text>
+<text x="1200" y="44" font-size="11" fill="#475569" text-anchor="end">V-02 · SusanooArchitecture (SysML v2)</text>
+<line x1="40" y1="82" x2="1200" y2="82" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="116" font-size="10.5" fill="#475569" font-weight="700">Element</text>
+<text x="640" y="116" font-size="10.5" fill="#475569" font-weight="700">Kind</text>
+<text x="760" y="116" font-size="10.5" fill="#475569" font-weight="700">Role</text>
+<text x="870" y="116" font-size="10.5" fill="#475569" font-weight="700">Status</text>
+<text x="990" y="116" font-size="10.5" fill="#475569" font-weight="700">Performs</text>
+<rect x="40" y="128" width="560" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="48" y="145" font-size="10" fill="#4F46E5" font-weight="700">SUS-I1</text>
+<text x="103.4" y="145" font-size="10" fill="#0F172A">system : IntegratedSystem — SUS-I1 integrated mechanized walker and observation UAV</text>
+<text x="640" y="145" font-size="10" fill="#0F172A">system</text>
+<text x="760" y="145" font-size="10" fill="#0F172A">—</text>
+<text x="870" y="145" font-size="10" fill="#0F172A">—</text>
+<text x="990" y="145" font-size="10" fill="#0F172A">—</text>
+<rect x="66" y="162" width="534" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="74" y="179" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1</text>
+<text x="129.4" y="179" font-size="10" fill="#0F172A">walker : Walker — Piloted walker</text>
+<path d="M50,154 V175.0 H66" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="179" font-size="10" fill="#0F172A">system</text>
+<text x="760" y="179" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="179" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="179" font-size="10" fill="#0F172A">—</text>
+<rect x="92" y="196" width="508" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="100" y="213" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-PIL</text>
+<text x="181.5" y="213" font-size="10" fill="#0F172A">pilotStation : PilotStation — Pilot station, restraints, displays and controls</text>
+<path d="M76,188 V209.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="213" font-size="10" fill="#0F172A">humanInterface</text>
+<text x="760" y="213" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="213" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="213" font-size="10" fill="#0F172A">F-01, F-03</text>
+<rect x="92" y="230" width="508" height="26" rx="6" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.1"/>
+<text x="100" y="247" font-size="10" fill="#0F766E" font-weight="700">SUS-M1-CTL</text>
+<text x="181.5" y="247" font-size="10" fill="#0F172A">motionControl : MotionControl — Mission, motion and balance control</text>
+<path d="M76,188 V243.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="247" font-size="10" fill="#0F172A">computing</text>
+<text x="760" y="247" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="247" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="247" font-size="10" fill="#0F172A">F-01, F-02, F-04</text>
+<rect x="92" y="264" width="508" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="100" y="281" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-WLK</text>
+<text x="181.5" y="281" font-size="10" fill="#0F172A">legs : LegsAndChassis — Chassis, legs, joint actuators and stability sensing</text>
+<path d="M76,188 V277.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="281" font-size="10" fill="#0F172A">mechanical</text>
+<text x="760" y="281" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="281" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="281" font-size="10" fill="#0F172A">F-01</text>
+<rect x="92" y="298" width="508" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="100" y="315" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-MAN</text>
+<text x="181.5" y="315" font-size="10" fill="#0F172A">manipulators : Manipulators — Manipulation arms and end effectors</text>
+<path d="M76,188 V311.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="315" font-size="10" fill="#0F172A">mechanical</text>
+<text x="760" y="315" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="315" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="315" font-size="10" fill="#0F172A">F-02</text>
+<rect x="92" y="332" width="508" height="26" rx="6" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.1"/>
+<text x="100" y="349" font-size="10" fill="#C2410C" font-weight="700">SUS-M1-SAF</text>
+<text x="181.5" y="349" font-size="10" fill="#0F172A">safetyMonitor : SafetyMonitor — Independent safety monitor, protective stop and …</text>
+<path d="M76,188 V345.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="349" font-size="10" fill="#0F172A">computing</text>
+<text x="760" y="349" font-size="10" fill="#C2410C">protective</text>
+<text x="870" y="349" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="349" font-size="10" fill="#0F172A">F-03, F-04, F-05</text>
+<rect x="92" y="366" width="508" height="26" rx="6" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.1"/>
+<text x="100" y="383" font-size="10" fill="#C2410C" font-weight="700">SUS-M1-DCK</text>
+<text x="181.5" y="383" font-size="10" fill="#0F172A">dock : UavDock — UAV dock, retention, charging and release</text>
+<path d="M76,188 V379.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="383" font-size="10" fill="#0F172A">mixed</text>
+<text x="760" y="383" font-size="10" fill="#C2410C">protective</text>
+<text x="870" y="383" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="383" font-size="10" fill="#0F172A">F-07, F-08</text>
+<rect x="92" y="400" width="508" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="100" y="417" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-PWR</text>
+<text x="181.5" y="417" font-size="10" fill="#0F172A">power : PowerSystem — Power generation, storage, distribution and thermal control</text>
+<path d="M76,188 V413.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="417" font-size="10" fill="#0F172A">electrical</text>
+<text x="760" y="417" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="417" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="417" font-size="10" fill="#0F172A">F-05, F-09</text>
+<rect x="118" y="434" width="482" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1" stroke-dasharray="4 3"/>
+<text x="126" y="451" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-PWR-GEN</text>
+<text x="233.6" y="451" font-size="10" fill="#0F172A">engineGenerator : EngineGenerator — Engine-generator and governor</text>
+<path d="M102,426 V447.0 H118" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="451" font-size="10" fill="#0F172A">mechanical</text>
+<text x="760" y="451" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="451" font-size="10" fill="#0F172A">candidate (DQ-006)</text>
+<text x="990" y="451" font-size="10" fill="#0F172A">—</text>
+<rect x="118" y="468" width="482" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1" stroke-dasharray="4 3"/>
+<text x="126" y="485" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-PWR-BAT</text>
+<text x="233.6" y="485" font-size="10" fill="#0F172A">battery : BatteryPack — Battery pack, BMS and contactors</text>
+<path d="M102,426 V481.0 H118" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="485" font-size="10" fill="#0F172A">electrical</text>
+<text x="760" y="485" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="485" font-size="10" fill="#0F172A">candidate (DQ-006)</text>
+<text x="990" y="485" font-size="10" fill="#0F172A">—</text>
+<rect x="118" y="502" width="482" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1" stroke-dasharray="4 3"/>
+<text x="126" y="519" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-PWR-DIST</text>
+<text x="241" y="519" font-size="10" fill="#0F172A">distribution : PowerDistribution — Protected power distribution</text>
+<path d="M102,426 V515.0 H118" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="519" font-size="10" fill="#0F172A">electrical</text>
+<text x="760" y="519" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="519" font-size="10" fill="#0F172A">candidate (DQ-006)</text>
+<text x="990" y="519" font-size="10" fill="#0F172A">—</text>
+<rect x="66" y="536" width="534" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="74" y="553" font-size="10" fill="#4F46E5" font-weight="700">SUS-A1</text>
+<text x="129.4" y="553" font-size="10" fill="#0F172A">uav : ObservationUav — Dockable observation UAV</text>
+<path d="M50,154 V549.0 H66" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="553" font-size="10" fill="#0F172A">system</text>
+<text x="760" y="553" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="553" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="553" font-size="10" fill="#0F172A">—</text>
+<rect x="92" y="570" width="508" height="26" rx="6" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.1"/>
+<text x="100" y="587" font-size="10" fill="#0F766E" font-weight="700">SUS-A1-FC</text>
+<text x="174.1" y="587" font-size="10" fill="#0F172A">flightController : FlightController — PX4-based flight controller</text>
+<path d="M76,562 V583.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="587" font-size="10" fill="#0F172A">computing</text>
+<text x="760" y="587" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="587" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="587" font-size="10" fill="#0F172A">F-06, F-07</text>
+<rect x="92" y="604" width="508" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="100" y="621" font-size="10" fill="#4F46E5" font-weight="700">SUS-A1-NAV</text>
+<text x="181.5" y="621" font-size="10" fill="#0F172A">navigation : NavigationAndTelemetry — Navigation sensors, camera and telemetry</text>
+<path d="M76,562 V617.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="621" font-size="10" fill="#0F172A">electrical</text>
+<text x="760" y="621" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="621" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="621" font-size="10" fill="#0F172A">F-06</text>
+<rect x="92" y="638" width="508" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="100" y="655" font-size="10" fill="#4F46E5" font-weight="700">SUS-A1-PWR</text>
+<text x="181.5" y="655" font-size="10" fill="#0F172A">uavPower : UavPower — UAV battery and power management</text>
+<path d="M76,562 V651.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="655" font-size="10" fill="#0F172A">electrical</text>
+<text x="760" y="655" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="655" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="655" font-size="10" fill="#0F172A">F-08</text>
+<rect x="92" y="672" width="508" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="100" y="689" font-size="10" fill="#4F46E5" font-weight="700">SUS-A1-PROP</text>
+<text x="188.9" y="689" font-size="10" fill="#0F172A">propulsion : Propulsion — Motors, ESCs and propellers</text>
+<path d="M76,562 V685.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="689" font-size="10" fill="#0F172A">mechanical</text>
+<text x="760" y="689" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="689" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="689" font-size="10" fill="#0F172A">F-06</text>
+<rect x="66" y="706" width="534" height="26" rx="6" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.1"/>
+<text x="74" y="723" font-size="10" fill="#0F766E" font-weight="700">SUS-I1-INT</text>
+<text x="155.5" y="723" font-size="10" fill="#0F172A">integrationManager : IntegrationManager — Integration manager and PX4 command adapter</text>
+<path d="M50,154 V719.0 H66" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="723" font-size="10" fill="#0F172A">computing</text>
+<text x="760" y="723" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="723" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="723" font-size="10" fill="#0F172A">F-07</text>
+<rect x="66" y="740" width="534" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="74" y="757" font-size="10" fill="#4F46E5" font-weight="700">SUS-GSE</text>
+<text x="138.3" y="757" font-size="10" fill="#0F172A">groundSupport : GroundSupport — Ground support, maintenance supports, charging and test …</text>
+<path d="M50,154 V753.0 H66" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="757" font-size="10" fill="#0F172A">mixed</text>
+<text x="760" y="757" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="757" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="757" font-size="10" fill="#0F172A">F-09</text>
+<line x1="40" y1="810" x2="1200" y2="810" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="828" font-size="10.5" fill="#475569">Generated by tools/sysml/views.py from models/sysml/model (5 files) · digest b8b621873a63 · concept, not reviewed</text>
+</svg>
