@@ -1,6 +1,6 @@
 # Porting LionDriver's modeling, diagram and simulation approach to Susanoo
 
-**Status:** Plan, 2026-11. Step 1 in work. Source reviewed: [jherrodthomas/LionDriver](https://github.com/jherrodthomas/LionDriver) at `93bafc3` (`assurance/`, `.claude/skills/`, `.github/workflows/`).
+**Status:** Plan, 2026-11. Step 1 built (see below); steps 2-5 not started. Source reviewed: [jherrodthomas/LionDriver](https://github.com/jherrodthomas/LionDriver) at `93bafc3` (`assurance/`, `.claude/skills/`, `.github/workflows/`).
 
 LionDriver is an ISO 26262 / ISO 21448 assurance effort on an openpilot fork. Susanoo uses MIL-STD-882E (11 May 2012) on a piloted walker and a PX4 UAV. The standards and the physics differ. The **method** ports almost unchanged.
 
@@ -39,7 +39,9 @@ Susanoo already follows the first two conventions: `tools/pdac` validates the re
 
 ## 3. Steps
 
-### Step 1: Foundation (in work)
+### Step 1: Foundation (built)
+Built: `tools/figures/figkit.py`; `architecture/item-definition.yaml` (9 functions, 18 elements, 8 external elements, 30 interfaces) with `architecture/layout.yaml`; `tools/figures/fig_item.py`, which generates `docs/wiki/images/sus-i1-context.svg` and `sus-i1-boundary.svg` and fails on layout errors, including connectors crossing unrelated boxes; rules A01–A04, R13 and D01; `reviews/`; `decisions/register.yaml` (7 entries); `CLAUDE.md`; generated pages `SUS-I1-Item-Definition` and `Decision-Inbox`. The four architecture draw.io files are deleted.
+
 1. **Figure kit** `tools/figures/figkit.py`, stdlib only, with tests.
 2. **Item definition records** in `architecture/item-definition.yaml`: functions, elements inside the boundary, external elements, and interfaces. This merges the wiki IF-001..008 register and the PX4 IF-PX4-001..009 contract.
 3. **Validator rules** to keep the records consistent:

@@ -18,5 +18,7 @@
 - [MIL-STD-882E Conformance](MIL-STD-882E-Conformance)
 - [Hazard Tracking Log](Hazard-Tracking-Log)
 - [Gate Readiness](Gate-Readiness)
+- [SUS-I1 Item Definition](SUS-I1-Item-Definition)
+- [Decision Inbox](Decision-Inbox)
 
 - [SUS-M1 Architecture & Boundaries](SUS-M1-Architecture-and-Boundaries)

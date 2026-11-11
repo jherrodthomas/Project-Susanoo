@@ -110,3 +110,9 @@ Event RACs (l) and acceptances (q) are expected to be empty until test events ar
 | R10 | Changes reopen affected hazards; increased risk re-accepted | 4.3.8, Task 304 | 0 | 0 |
 | R11 | Task tailoring consistent with Table A-I and task records | 5.2, Appendix A | 0 | 0 |
 | R12 | Simulated approvals confined to the demonstrator release profile | Project rule | 0 | 0 |
+| R13 | Acceptance only through a recorded human review; AI review is I0 and never accepts | 4.3.7; project rule | 0 | 0 |
+| A01 | Item definition valid: unique IDs, parents, decisions resolve | 4.3.2; PDaC | 0 | 0 |
+| A02 | Interface endpoints and hazard links resolve | 4.3.2 | 0 | 0 |
+| A03 | Hazards, events and requirements name real elements and interfaces | 4.3.2, Task 106.2c | 0 | 0 |
+| A04 | Every element and external has an interface; functions have performers | 4.3.2 | 0 | 0 |
+| D01 | Decision register lifecycle | Project rule | 0 | 0 |

@@ -27,6 +27,12 @@ RULES = {
     "R10": ("Changes reopen affected hazards; increased risk re-accepted", "4.3.8, Task 304"),
     "R11": ("Task tailoring consistent with Table A-I and task records", "5.2, Appendix A"),
     "R12": ("Simulated approvals confined to the demonstrator release profile", "Project rule"),
+    "R13": ("Acceptance only through a recorded human review; AI review is I0 and never accepts", "4.3.7; project rule"),
+    "A01": ("Item definition valid: unique IDs, parents, decisions resolve", "4.3.2; PDaC"),
+    "A02": ("Interface endpoints and hazard links resolve", "4.3.2"),
+    "A03": ("Hazards, events and requirements name real elements and interfaces", "4.3.2, Task 106.2c"),
+    "A04": ("Every element and external has an interface; functions have performers", "4.3.2"),
+    "D01": ("Decision register lifecycle", "Project rule"),
 }
 
 LEVEL_RANK = {"Eliminated": 0, "Low": 1, "Medium": 2, "Serious": 3, "High": 4}
@@ -139,7 +145,7 @@ def check_schema(repo: Repo):
         yield Finding("S00", "error", path, msg)
     patterns = repo.tailoring.get("id_patterns", {})
     pattern_for = {"hazard": "hazard", "ssf": "ssf", "requirement": "requirement",
-                   "event": "event", "change": "change", "verification": "verification"}
+                   "event": "event", "change": "change", "verification": "verification", "review": "review"}
     for kind, recs in repo.objects.items():
         validator = Draft202012Validator(repo.schemas[kind], format_checker=FormatChecker())
         for oid, rec in recs.items():
@@ -469,6 +475,8 @@ def run_all(repo: Repo) -> list[Finding]:
     checks = [check_schema, check_links, check_rac, check_eliminated, check_precedence, check_verification,
               lambda r: check_acceptance(r, analysis), check_exposure, lambda r: check_software(r, analysis),
               check_definitions, check_hts, check_changes, check_tailoring, check_simulated]
+    from .rules_ext import EXT_CHECKS  # local import: rules_ext imports Finding from this module
+    checks += EXT_CHECKS
     findings = []
     for check in checks:
         findings.extend(check(repo))

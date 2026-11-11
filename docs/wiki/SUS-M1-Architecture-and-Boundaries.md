@@ -11,31 +11,13 @@
 
 ## SUS-I1 system context and boundaries
 
-```mermaid
-flowchart LR
-  N0["SUS-I1 integrated system"]:::system
-  N1["SUS-M1 piloted walker"]:::system
-  N2["SUS-A1 dockable observation UAV"]:::system
-  N3["Pilot / operator"]:::external
-  N4["Ground crew / maintainers"]:::external
-  N5["Terrain / obstacles / bystanders"]:::external
-  N6["External GNSS / RF environment"]:::external
-  N7["Docking / power / data interface"]:::interface
-  N0 -->|"contains"| N1
-  N0 -->|"contains"| N2
-  N3 -->|"commands / feedback"| N1
-  N4 -->|"maintenance / lockout"| N1
-  N5 -->|"contact / hazards"| N1
-  N6 -->|"navigation / link"| N2
-  N1 -->|"mechanical / electrical"| N7
-  N7 -->|"dock / undock"| N2
-  classDef system fill:#dceaf7,stroke:#55758f,color:#17324d
-  classDef safety fill:#fff0d9,stroke:#b28a3d,color:#513c16
-  classDef external fill:#e8f1e9,stroke:#63886a,color:#23412c
-  classDef interface fill:#eae7f5,stroke:#8370a3,color:#30254a
-```
+Generated from the item-definition record [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); full tables on [SUS-I1 Item Definition](SUS-I1-Item-Definition).
 
-[Editable Draw.io source](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/architecture/system-context.drawio)
+![SUS-I1 system context](images/sus-i1-context.svg)
+
+![SUS-I1 boundary and interfaces](images/sus-i1-boundary.svg)
+
+> The three detailed diagrams below are interim Mermaid views. They are not checked against the records and will be replaced by generated SysML views (port plan step 2). The power architecture they show is an open decision (DQ-006: hydraulic vs series-hybrid; see the [Decision Inbox](Decision-Inbox)).
 
 ## SUS-M1 series-hybrid power architecture
 
@@ -67,7 +49,6 @@ flowchart LR
   classDef interface fill:#eae7f5,stroke:#8370a3,color:#30254a
 ```
 
-[Editable Draw.io source](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/architecture/powertrain-block.drawio)
 
 ## Walker control and protective-function boundary
 
@@ -99,7 +80,6 @@ flowchart LR
   classDef interface fill:#eae7f5,stroke:#8370a3,color:#30254a
 ```
 
-[Editable Draw.io source](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/architecture/control-safety-boundary.drawio)
 
 ## SUS-A1 UAV and docking interface boundary
 
@@ -132,20 +112,10 @@ flowchart LR
   classDef interface fill:#eae7f5,stroke:#8370a3,color:#30254a
 ```
 
-[Editable Draw.io source](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/architecture/uav-docking-boundary.drawio)
 
-## Boundary/interface register (initial)
+## Boundary/interface register
 
-| ID | Boundary | Exchange | Key hazard / open question |
-|---|---|---|---|
-| IF-001 | Pilot ↔ walker control | commands, state, warnings | inadvertent motion, loss of feedback |
-| IF-002 | Engine/generator ↔ DC bus | energy, voltage, thermal state | overvoltage, fire, unintended energization |
-| IF-003 | Battery ↔ DC bus | bidirectional power, BMS state | thermal runaway, contactor failure |
-| IF-004 | Control ↔ actuator | torque/pressure commands, feedback | runaway joint, loss of support |
-| IF-005 | Safety monitor ↔ power/drives | inhibit, brake, isolation | common-cause failure, unsafe stop |
-| IF-006 | Walker ↔ UAV dock | retention, charging, data, release | premature launch, falling object, exposed propellers |
-| IF-007 | UAV ↔ external environment | RF, navigation, flight | lost link, flyaway, collision |
-| IF-008 | Maintainer ↔ energy sources | lockout, inspection, service | stored energy, hot surfaces, pressure |
+The register now lives in the item-definition record, which merges the earlier IF-001..008 rows with the PX4 contract IF-PX4-001..009 and adds IF-010..022. See [SUS-I1 Item Definition](SUS-I1-Item-Definition#interfaces).
 
 ## Required next engineering artifacts
 

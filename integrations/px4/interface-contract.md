@@ -2,6 +2,8 @@
 
 **Status:** draft, not implemented. Interface direction, authority and fail behavior must be reviewed before implementation.
 
+The IF-PX4 interfaces are also recorded, with endpoints and hazard links, in [`architecture/item-definition.yaml`](../../architecture/item-definition.yaml). Keep the two in step until this table is generated from the record.
+
 | ID | Interface | Producer → Consumer | Control/safety concern |
 |---|---|---|---|
 | IF-PX4-001 | Flight state, position, status | PX4 → SUS-I1 | Freshness and source validity |
