@@ -53,3 +53,8 @@ detail:                          # build123d-only detail (no effect on the primi
   groove_heights: [0.55, 1.30]   # panel grooves around the hull, above its bottom
   fins: 7                        # cooling fins on the back of the power pack
   claw_length: 0.45              # claw drop below the hand (m)
+postures:                        # extra poses of this layout, built and analysed alongside the standing pose
+  kneel:                         # lowered for ingress and egress (SYS-012); feet stay planted, knees fold back
+    hip_height: 0.95             # target hip height when kneeling
+    arm_drop_deg: 20             # arms stowed: upper arm closer to horizontal
+    fore_angle_deg: 55           # forearm folded up, claws tucked clear of the ground

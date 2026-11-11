@@ -1,6 +1,6 @@
 # Preliminary Hazard List (PHL) — SUS-M1 / SUS-A1
 
-**ID:** SUS-PHL-001 · **Revision:** 0.1-draft · **Status:** Draft, not reviewed
+**ID:** SUS-PHL-001 · **Revision:** 0.2-draft · **Status:** Draft, not reviewed
 
 <!-- GENERATED PAGE: written by tools/pdac/generate.py from pdac/items/hazards.yaml. Edit the records, then regenerate. -->
 
@@ -17,7 +17,7 @@ These are MIL-STD-882E ratings only. Aircraft failure conditions of the SUS-A1 U
 
 ## 2. Summary
 
-21 hazards: **8 high**, **10 serious**, **3 medium**.
+22 hazards: **9 high**, **10 serious**, **3 medium**.
 
 *Hazard count per cell of the MIL-STD-882E risk assessment matrix (initial risk). Each cell shows the risk level the matrix assigns.*
 
@@ -25,7 +25,7 @@ These are MIL-STD-882E ratings only. Aircraft failure conditions of the SUS-A1 U
 |---|---|---|---|---|
 | Frequent | High | High | Serious | Medium |
 | Probable | High · **1** | High | Serious | Medium |
-| Occasional | High · **7** | Serious · **5** | Medium · **1** | Low |
+| Occasional | High · **8** | Serious · **5** | Medium · **1** | Low |
 | Remote | Serious · **5** | Medium · **2** | Medium | Low |
 | Improbable | Medium | Medium | Medium | Low |
 
@@ -40,7 +40,7 @@ These are MIL-STD-882E ratings only. Aircraft failure conditions of the SUS-A1 U
 | HAZ-005 | Uncontrolled descent or collapse on loss of actuation energy | The walker collapses with the pilot aboard or onto nearby personnel. | gravitational | pilot, safety observer, bystander | SCN-102, SCN-103 | **High** (catastrophic, occasional) | SYS-008 | TS-001 |
 | HAZ-006 | Loss of balance, fall or overturn with the pilot aboard | The walker falls or rolls over; the pilot is injured by impact, or the walker lands on personnel. | gravitational, kinetic | pilot, safety observer, bystander | SCN-103, SCN-002 | **High** (catastrophic, probable) | SYS-004, SYS-009, SYS-010 | TS-002, TS-003 |
 | HAZ-007 | Pilot incapacitation without transition to a safe state | The walker keeps moving or holds an unsafe posture after the pilot stops controlling it. | kinetic, gravitational | pilot, safety observer, bystander | SCN-104 | **Serious** (catastrophic, remote) | SYS-011 | — |
-| HAZ-008 | Blocked or delayed emergency egress or extraction | The pilot cannot leave, or cannot be removed, during fire, injury or after a fall. | gravitational, thermal | pilot | SCN-104, SCN-108 | **Serious** (catastrophic, remote) | SYS-012 | TS-002 |
+| HAZ-008 | Blocked or delayed emergency egress or extraction | The pilot cannot leave, or cannot be removed, during fire, injury or after a fall. | gravitational, thermal | pilot | SCN-104, SCN-108 | **Serious** (catastrophic, remote) | SYS-012, SYS-019 | TS-002 |
 | HAZ-009 | Crushing or striking of personnel in the walking or manipulation envelope | A person inside the envelope is stepped on, struck or pinned. | kinetic, gravitational | safety observer, bystander, maintainer | SCN-002, SCN-003 | **High** (catastrophic, occasional) | SYS-002, SYS-013 | — |
 | HAZ-010 | Payload drop, overload or loss of grip | A payload falls on personnel or destabilizes the walker. | gravitational | safety observer, bystander, pilot | SCN-003 | **Serious** (critical, occasional) | SYS-009, SYS-013 | — |
 | HAZ-011 | Unexpected rotor start while the UAV is retained or handled | Rotor blades strike the pilot or a maintainer. | rotor-kinetic | pilot, maintainer | SCN-107 | **Serious** (critical, occasional) | SYS-003, SYS-005 | — |
@@ -54,6 +54,7 @@ These are MIL-STD-882E ratings only. Aircraft failure conditions of the SUS-A1 U
 | HAZ-019 | Contact burns from hot surfaces | The pilot or a maintainer touches a hot pump, motor, manifold or battery case. | thermal | pilot, maintainer | SCN-108 | **Medium** (marginal, occasional) | SYS-017 | — |
 | HAZ-020 | Hydraulic fluid fire | Sprayed or leaked fluid ignites near the pilot station. | chemical, thermal, hydraulic-pressure | pilot, maintainer | SCN-102, SCN-108 | **Serious** (catastrophic, remote) | SYS-018 | TS-001 |
 | HAZ-021 | Protective or emergency stop causes collapse or uncontrolled posture change | Stopping by removing all actuator torque drops a statically unstable walker with the pilot aboard. | gravitational | pilot, safety observer, bystander | SCN-101, SCN-103 | **High** (catastrophic, occasional) | SYS-002, SYS-008 | — |
+| HAZ-022 | Crushing under the pod or legs while lowering to or rising from the kneel posture | A crew member or bystander beside or under the walker is pinned by the descending pod or folding legs. | gravitational, kinetic, hydraulic-pressure | safety observer, maintainer, bystander | SCN-001, SCN-006 | **High** (catastrophic, occasional) | SYS-019 | — |
 
 ## 4. Hazards that depend on open trade studies
 

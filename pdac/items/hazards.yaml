@@ -136,7 +136,7 @@ items:
     modes: [MOD-04, MOD-05, MOD-09, MOD-10]
     components: [SUS-M1-PIL]
     risk: {initial: {severity: catastrophic, probability: remote, level: serious}, rating_status: proposed}
-    mitigated_by: [SYS-012]
+    mitigated_by: [SYS-012, SYS-019]
     design_dependency: [TS-002]
     status: open
     applicability: [SUS-M1, SUS-I1]
@@ -354,3 +354,20 @@ items:
     status: open
     applicability: [SUS-M1, SUS-I1]
     source: SUS-CONOPS-001
+
+  - id: HAZ-022
+    kind: hazard
+    title: "Crushing under the pod or legs while lowering to or rising from the kneel posture"
+    mishap: "A crew member or bystander beside or under the walker is pinned by the descending pod or folding legs."
+    causes: ["person inside the folding zone", "kneel commanded without a clear-zone check", "uncontrolled descent during lowering"]
+    energy_sources: [gravitational, kinetic, hydraulic-pressure]
+    exposed: [ACT-OBSERVER, ACT-MAINTAINER, ACT-BYSTANDER]
+    scenarios: [SCN-001, SCN-006]
+    modes: [MOD-02, MOD-03, MOD-10]
+    components: [SUS-M1-WLK, SUS-M1-SAF]
+    risk: {initial: {severity: catastrophic, probability: occasional, level: high}, rating_status: proposed}
+    mitigated_by: [SYS-019]
+    note: "Identified from the CL-05 kneel posture (SUS-CAD-001), 2026-11-11."
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CAD-001

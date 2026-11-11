@@ -43,7 +43,8 @@
    "static_margin_m": 0.142,
    "static_tip_angle_deg": 3.1,
    "uav_dock": "onboard",
-   "rotor_to_pilot_m": 0.79
+   "rotor_to_pilot_m": 0.79,
+   "arm_ground_clearance_m": 2.66
   },
   "CL-02": {
    "title": "Biped, seated protected cockpit, shoulder-mounted dock",
@@ -85,7 +86,8 @@
    "static_margin_m": 0.145,
    "static_tip_angle_deg": 3.2,
    "uav_dock": "onboard",
-   "rotor_to_pilot_m": 0.63
+   "rotor_to_pilot_m": 0.63,
+   "arm_ground_clearance_m": 2.66
   },
   "CL-03": {
    "title": "Biped, seated protected cockpit, separate portable station",
@@ -127,7 +129,8 @@
    "static_margin_m": 0.144,
    "static_tip_angle_deg": 3.1,
    "uav_dock": "offboard",
-   "rotor_to_pilot_m": 3.14
+   "rotor_to_pilot_m": 3.14,
+   "arm_ground_clearance_m": 2.66
   },
   "CL-04": {
    "title": "Biped armoured pod, seated cockpit, rear dock",
@@ -169,7 +172,8 @@
    "static_margin_m": 0.225,
    "static_tip_angle_deg": 5.7,
    "uav_dock": "onboard",
-   "rotor_to_pilot_m": 0.92
+   "rotor_to_pilot_m": 0.92,
+   "arm_ground_clearance_m": 1.93
   },
   "CL-05": {
    "title": "Reverse-jointed pod biped, claw arms, rear dock",
@@ -227,7 +231,66 @@
    "static_margin_m": 0.116,
    "static_tip_angle_deg": 2.4,
    "uav_dock": "onboard",
-   "rotor_to_pilot_m": 0.86
+   "rotor_to_pilot_m": 0.86,
+   "arm_ground_clearance_m": 0.93,
+   "postures": {
+    "kneel": {
+     "envelope_m": [
+      3.57,
+      2.11,
+      3.02
+     ],
+     "height_m": 3.02,
+     "hip_height_m": 0.95,
+     "cockpit_floor_m": 1.02,
+     "pilot_eye_m": 2.23,
+     "placeholder_mass_kg": 4650,
+     "cg_m": [
+      -0.211,
+      -0.001,
+      1.514
+     ],
+     "support_polygon_m": [
+      [
+       -0.299,
+       -0.63
+      ],
+      [
+       -0.07,
+       -0.75
+      ],
+      [
+       0.204,
+       -0.76
+      ],
+      [
+       0.604,
+       -0.76
+      ],
+      [
+       0.604,
+       0.76
+      ],
+      [
+       0.204,
+       0.76
+      ],
+      [
+       -0.07,
+       0.75
+      ],
+      [
+       -0.299,
+       0.63
+      ]
+     ],
+     "static_margin_m": 0.088,
+     "static_tip_angle_deg": 3.3,
+     "uav_dock": "onboard",
+     "rotor_to_pilot_m": 0.86,
+     "arm_ground_clearance_m": 1.14
+    }
+   }
   }
  }
 }

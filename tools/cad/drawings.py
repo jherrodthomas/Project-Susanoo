@@ -153,8 +153,11 @@ STYLE = """
 """
 
 
-def draw(p: dict, common: dict, met: dict, doc_rev: str) -> str:
-    m, info = bc.build_layout(p, common)
+def draw(p: dict, common: dict, met: dict, doc_rev: str, posture: str = "standing") -> str:
+    m, info = bc.build_layout(p, common, posture)
+    source = f"cad/params/{p['id']}.yaml"
+    if posture != "standing":
+        p = {**p, "id": f"{p['id']}-{posture}", "title": f"{p['title']} — {posture.upper()} for egress"}
     walker = Part.makeCompound([pt["shape"] for pt in m.parts if pt["group"] in ("walker",)])
     uav = [pt["shape"] for pt in m.parts if pt["group"] in ("uav", "offboard")]
     uav = Part.makeCompound(uav) if uav else None
@@ -260,7 +263,7 @@ def draw(p: dict, common: dict, met: dict, doc_rev: str) -> str:
     s.text(tbx + 3, tby + 4.5, "PROJECT SUSANOO · SUS-M1 / SUS-A1 / SUS-I1", "tb")
     s.text(tbx + 3, tby + 9.2, f"{p['id']} · {p['title']}", "tbv")
     cells = [("DRAWING", f"SUS-CAD-001-{p['id']}"), ("SCALE / SHEET", f"1:{SCALE} · A3"), ("UNITS", "mm"), ("REVISION", doc_rev),
-             ("STATUS", "CONCEPT, NOT REVIEWED"), ("DRAWN", "Claude (AI-drafted), I0"), ("SOURCE", f"cad/params/{p['id']}.yaml"),
+             ("STATUS", "CONCEPT, NOT REVIEWED"), ("DRAWN", "Claude (AI-drafted), I0"), ("SOURCE", source),
              ("LICENCE", "CC BY 4.0")]
     for i, (lab, val) in enumerate(cells):
         cx = [tbx + 3, tbx + 63, tbx + 103, tbx + 143][i % 4]
@@ -294,6 +297,10 @@ def main() -> int:
             continue
         svg = draw(p, common, metrics[p["id"]], rev)
         (OUT / f"{p['id']}.svg").write_text(svg)
+        for posture in (p.get("postures") or {}):
+            psvg = draw(p, common, metrics[p["id"]]["postures"][posture], rev, posture)
+            (OUT / f"{p['id']}-{posture}.svg").write_text(psvg)
+            print(f"wrote cad/drawings/{p['id']}-{posture}.svg")
         print(f"wrote cad/drawings/{p['id']}.svg ({len(svg) // 1024} KiB)")
     return 0
 

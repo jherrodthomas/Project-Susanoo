@@ -263,3 +263,17 @@ items:
     allocated_to: [SUS-M1-PWR, SUS-M1-WLK, SUS-M1-PIL]
     verification: {methods: [inspection, analysis], cases: []}
     design_dependency: [TS-001]
+
+  - id: SYS-019
+    kind: requirement
+    title: "Controlled lowered posture for ingress and egress"
+    text: "The walker shall provide a controlled lowered posture for ingress and egress, with the cockpit floor at or below a defined height, entered and left only while the area under and around the pod and legs is confirmed clear."
+    req_type: safety
+    status: candidate
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CAD-001
+    sources: [SCN-001, SCN-006, SCN-104]
+    mitigates: [HAZ-008, HAZ-022]
+    allocated_to: [SUS-M1-WLK, SUS-M1-PIL, SUS-M1-SAF]
+    verification: {methods: [analysis, simulation, demonstration], cases: []}
+    tbd: ["maximum cockpit floor height when lowered", "clear-zone confirmation means", "lowering and rising speed"]

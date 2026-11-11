@@ -1,6 +1,6 @@
 # Preliminary architecture — SUS-M1 + SUS-A1
 
-**ID:** SUS-ARCH-001 · **Revision:** 0.3-draft · **Status:** Draft, not reviewed
+**ID:** SUS-ARCH-001 · **Revision:** 0.4-draft · **Status:** Draft, not reviewed
 
 ## System decomposition
 - **SUS-M1-WLK:** walker chassis, legs, feet, stability sensing and actuation
@@ -28,7 +28,7 @@ The interfaces are recorded as IF-01 to IF-06 in [`pdac/items/architecture.yaml`
 Independent emergency-stop path where feasible; mechanical load support for loss of power; pressure relief and isolation; positive docking retention; rotor inhibit when secured; explicit UAV approach abort; safety state and authority allocation per operating mode.
 
 ## Initial system requirements candidates (not yet baselined)
-Generated from [`pdac/items/requirements.yaml`](../pdac/items/requirements.yaml) by `tools/pdac/generate.py`; the records are the source of truth. SYS-001 to SYS-006 keep their original wording; SYS-007 to SYS-018 were added to cover scenarios that had no requirement.
+Generated from [`pdac/items/requirements.yaml`](../pdac/items/requirements.yaml) by `tools/pdac/generate.py`; the records are the source of truth. SYS-001 to SYS-006 keep their original wording; SYS-007 to SYS-018 were added to cover scenarios that had no requirement; SYS-019 (kneel posture for ingress and egress) comes from the CL-05 reference layout.
 
 <!-- BEGIN GENERATED: requirements (tools/pdac/generate.py) -->
 | ID | Requirement | Type | Mitigates | Allocated to | Verification (planned) | Status |
@@ -51,6 +51,7 @@ Generated from [`pdac/items/requirements.yaml`](../pdac/items/requirements.yaml)
 | SYS-016 | Walker locomotion shall be inhibited or limited while the pilot is actively tasking the UAV, and UAV tasks shall not require pilot attention while the walker is in motion. *TBD: permitted walker motion during UAV tasking.* | human-factors | HAZ-016 | SUS-M1-PIL, SUS-M1-SAF | analysis, simulation | candidate |
 | SYS-017 | System shall detect battery thermal, overcurrent and insulation faults, isolate the affected source and alert the pilot within a defined time; energy sources shall be separated or shielded from the pilot station. *TBD: detection and alert times; separation and shielding concept.* | safety | HAZ-017, HAZ-018, HAZ-019 | SUS-M1-PWR, SUS-M1-PIL | analysis, test | candidate |
 | SYS-018 | Pressurized lines and components within reach of the pilot or crew shall be shielded or routed to prevent fluid injection and spray onto hot or electrical surfaces. *Depends on TS-001.* | safety | HAZ-003, HAZ-020 | SUS-M1-PWR, SUS-M1-WLK, SUS-M1-PIL | inspection, analysis | candidate |
+| SYS-019 | The walker shall provide a controlled lowered posture for ingress and egress, with the cockpit floor at or below a defined height, entered and left only while the area under and around the pod and legs is confirmed clear. *TBD: maximum cockpit floor height when lowered; clear-zone confirmation means; lowering and rising speed.* | safety | HAZ-008, HAZ-022 | SUS-M1-WLK, SUS-M1-PIL, SUS-M1-SAF | analysis, simulation, demonstration | candidate |
 <!-- END GENERATED: requirements -->
 
 All thresholds, safe-state choices and performance claims remain TBD pending hazard analysis and trade studies.

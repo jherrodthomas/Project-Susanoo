@@ -202,6 +202,19 @@ def cad_concepts(model: pdaclib.Model) -> str:
         out += [f"- {f}" for f in cl.get("findings", [])]
         if (model.root / f"cad/drawings/{cl['id']}.svg").is_file():
             out += ["", f"Drawing sheet: [SUS-CAD-001-{cl['id']}](drawings/{cl['id']}.svg) (A3, 1:50, dimensioned side, plan and front views)."]
+        for posture, pm in sorted(met[cl["id"]].get("postures", {}).items()):
+            sm = met[cl["id"]]
+            out += ["", f"**{posture.capitalize()} posture.**", "", f"| | Standing | {posture.capitalize()} |", "|---|---|---|"]
+            for label, key, fmt in (("Cockpit floor (egress drop)", "cockpit_floor_m", "{:.2f} m"), ("Hip height", "hip_height_m", "{:.2f} m"),
+                                    ("Overall height", "height_m", "{:.2f} m"), ("CG height", None, "{:.2f} m"),
+                                    ("Static margin", "static_margin_m", "{:.2f} m"), ("Static tip angle", "static_tip_angle_deg", "{:.1f}°"),
+                                    ("Claws above ground", "arm_ground_clearance_m", "{:.2f} m")):
+                a_, b_ = (sm["cg_m"][2], pm["cg_m"][2]) if key is None else (sm[key], pm[key])
+                out.append(f"| {label} | {fmt.format(a_)} | {fmt.format(b_)} |")
+            rp = f"renders/{cl['id']}-{posture}"
+            out += ["", "| | |", "|---|---|", f"| ![{cl['id']} {posture}, front view]({rp}-hero.png) | ![{cl['id']} {posture}, side elevation]({rp}-side.png) |"]
+            if (model.root / f"cad/drawings/{cl['id']}-{posture}.svg").is_file():
+                out += ["", f"Drawing sheet: [SUS-CAD-001-{cl['id']}-{posture}](drawings/{cl['id']}-{posture}.svg)."]
         r_ = f"renders/{cl['id']}"
         if (model.root / f"cad/{r_}-hero.png").is_file():
             out += ["", f"![{cl['id']} front view from eye height]({r_}-hero.png)"]

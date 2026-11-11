@@ -74,9 +74,10 @@ items:
     source: SUS-CAD-001
     params: cad/params/CL-05.yaml
     options: {TS-001: "centralized hydraulic", TS-002: "seated protected cockpit", TS-003: "bipedal", TS-004: "rear backpack dock"}
-    informs: [HAZ-006, HAZ-008, HAZ-009, HAZ-021, SYS-009, SYS-010, SYS-012, SYS-013]
+    informs: [HAZ-006, HAZ-008, HAZ-009, HAZ-021, HAZ-022, SYS-008, SYS-009, SYS-010, SYS-012, SYS-013, SYS-019]
     findings:
       - "Proportions from the project lead's AI-generated Industrial Utility Walker (one three-quarter view so far): tall pod with front and side windows, reverse-jointed legs, long arms ending in curved claws. The geometry is original, authored in build123d; the generated mesh is not used."
       - "Reverse-jointed knees sit behind the hips: the walker is the tallest of the five and has the smallest static margin and tip angle, and a backward fall puts the knees first. Fall direction, kneel-for-egress and SYS-009 stability limits need their own analysis for this leg geometry."
       - "The side windows give the pilot a view to the sides and are a candidate for the second exit CL-04 lacks, if they are sized and openable for egress (SYS-012); at concept size they are close to a minimum emergency opening."
       - "The long claws hang low beside the legs, inside the walking envelope: a strike and pinch zone for anyone near the walker (HAZ-009) unless manipulation is inhibited and the arms are stowed while walking (SYS-013)."
+      - "Kneel posture for egress (SYS-019): with the feet planted and the knees folded back, the hip drops from 2.34 m to 0.95 m and the cockpit floor from 2.41 m to about 1.0 m, a two-step climb instead of a ladder. The CG drops by more than a metre, so the tip angle improves, but the folded knees move mass rearward and the static margin shrinks: the kneel needs its own stability check. Lowering and rising create a crush zone under the pod and knees (HAZ-022). Kneeling is also a candidate controlled safe posture on loss of actuation energy (SYS-008, HAZ-021)."

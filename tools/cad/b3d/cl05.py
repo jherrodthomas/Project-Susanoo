@@ -92,7 +92,22 @@ def lerp(a, b, t):
 
 # --- Model ----------------------------------------------------------------------------------------
 
-def build(p: dict, common: dict):
+def fold_knee(hip, ankle, thigh, shank):
+    """Knee position (x, z) for a reverse-jointed leg: the intersection of the thigh circle about the hip and the
+    shank circle about the ankle that lies behind the hip-ankle line."""
+    (hx, hz), (ax_, az) = hip, ankle
+    dx, dz = ax_ - hx, az - hz
+    d = math.hypot(dx, dz)
+    if not abs(thigh - shank) <= d <= thigh + shank:
+        raise ValueError(f"hip-ankle distance {d:.3f} m cannot be reached with thigh {thigh} m and shank {shank} m")
+    a = (thigh ** 2 - shank ** 2 + d ** 2) / (2 * d)
+    h = math.sqrt(max(thigh ** 2 - a ** 2, 0.0))
+    mx, mz = hx + a * dx / d, hz + a * dz / d
+    sols = [(mx + h * dz / d, mz - h * dx / d), (mx - h * dz / d, mz + h * dx / d)]
+    return min(sols, key=lambda k: k[0])  # behind: the smaller x
+
+
+def build(p: dict, common: dict, posture: str = "standing"):
     parts: dict[str, list] = {c: [] for c in CLASSES}
     put = lambda cls, *shapes: parts[cls].extend(shapes)  # noqa: E731
     D = p.get("detail", {})
@@ -102,6 +117,12 @@ def build(p: dict, common: dict):
     kf, ax = L["knee_forward"], L.get("ankle_forward", 0.0)
     knee_z = L["ankle_height"] + math.sqrt(L["shank"] ** 2 - (ax - kf) ** 2)
     hip_z = knee_z + math.sqrt(L["thigh"] ** 2 - kf ** 2)
+    pose = (p.get("postures") or {}).get(posture) if posture != "standing" else None
+    if posture != "standing" and pose is None:
+        raise ValueError(f"unknown posture {posture!r}")
+    if pose:  # lower the hip with the feet planted; the knee folds further back
+        hip_z = pose["hip_height"]
+        kf, knee_z = fold_knee((0.0, hip_z), (ax, L["ankle_height"]), L["thigh"], L["shank"])
     fl, fw, ft = L["foot"]
     feet = []
     for s in (1, -1):
@@ -190,7 +211,8 @@ def build(p: dict, common: dict):
     # Arms: low shoulders, long hanging forearms, three curved claws per hand
     S, A = p["shoulder"], p["arm"]
     sx, sy, sz = S["plate"]
-    ang, fa = math.radians(A["drop_angle_deg"]), math.radians(A.get("fore_angle_deg", 12))
+    ang = math.radians(pose.get("arm_drop_deg", A["drop_angle_deg"]) if pose else A["drop_angle_deg"])
+    fa = math.radians(pose.get("fore_angle_deg", A.get("fore_angle_deg", 12)) if pose else A.get("fore_angle_deg", 12))
     for s in (1, -1):
         yc = s * (wy / 2 + sy / 2 - 0.08)
         put("armor", soft(Pos(x1 - sx / 2 - 0.05, yc, z1 - S["drop"] - sz / 2) * Box(sx, sy, sz), 0.09))
@@ -258,23 +280,27 @@ def build(p: dict, common: dict):
     for ddy in (bx * 0.35, -bx * 0.35):
         put("uav", cyl((base[0] - 0.14, base[1] + ddy, base[2] + 0.01), (base[0] + 0.14, base[1] + ddy, base[2] + 0.01), 0.01))
 
-    info = {"hip_z": hip_z, "floor": floor, "eye": list(eye), "feet": [list(f) for f in feet], "dock": "onboard"}
+    info = {"hip_z": hip_z, "floor": floor, "eye": list(eye), "feet": [list(f) for f in feet], "dock": "onboard",
+            "posture": posture, "knee": [kf, knee_z]}
     return parts, info
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", type=Path, default=ROOT / "build/cad-src/CL-05")
+    ap.add_argument("--out", type=Path, default=ROOT / "build/cad-src")
     args = ap.parse_args()
     p = yaml.safe_load((ROOT / "cad/params/CL-05.yaml").read_text())
     common = yaml.safe_load((ROOT / "cad/params/common.yaml").read_text())
-    parts, info = build(p, common)
-    args.out.mkdir(parents=True, exist_ok=True)
-    for cls, shapes in parts.items():
-        if shapes:
-            export_step(Compound(shapes).scale(1000), str(args.out / f"{cls}.step"))
-    (args.out / "info.json").write_text(json.dumps(info, indent=1))
-    print(f"CL-05 (build123d): {sum(len(s) for s in parts.values())} solids in {sum(1 for s in parts.values() if s)} classes -> {args.out}")
+    for posture in ["standing", *(p.get("postures") or {})]:
+        parts, info = build(p, common, posture)
+        out = args.out / (p["id"] if posture == "standing" else f"{p['id']}-{posture}")
+        out.mkdir(parents=True, exist_ok=True)
+        for cls, shapes in parts.items():
+            if shapes:
+                export_step(Compound(shapes).scale(1000), str(out / f"{cls}.step"))
+        (out / "info.json").write_text(json.dumps(info, indent=1))
+        print(f"{p['id']} {posture} (build123d): {sum(len(s) for s in parts.values())} solids, hip {info['hip_z']:.2f} m, "
+              f"knee {info['knee'][1]:.2f} m -> {out}")
     return 0
 
 

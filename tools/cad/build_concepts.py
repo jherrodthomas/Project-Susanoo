@@ -410,10 +410,10 @@ def build_pod(p, common):
     return m, {"hip_z": hip_z, "floor": floor, "eye": eye, "dock": "offboard" if p["dock"]["type"] == "ground-station" else "onboard"}
 
 
-def build_from_b3d(p, common):
+def build_from_b3d(p, common, posture="standing"):
     """Layouts authored in build123d (tools/cad/b3d/): import the per-class STEP files and info.json written by
     the layout's script into build/cad-src/<ID>/, so metrics, renders and drawings use the same code paths."""
-    src = ROOT / "build/cad-src" / p["id"]
+    src = ROOT / "build/cad-src" / (p["id"] if posture == "standing" else f"{p['id']}-{posture}")
     info_path = src / "info.json"
     if not info_path.is_file():
         raise FileNotFoundError(f"{p['id']}: {info_path} is missing; run tools/cad/b3d/{p['id'].lower().replace('-', '')}.py first")
@@ -495,6 +495,7 @@ def metrics(m: Model, info: dict, common: dict) -> dict:
         "static_tip_angle_deg": round(math.degrees(math.atan2(marg, cg.z)), 1),
         "uav_dock": info["dock"],
         "rotor_to_pilot_m": round(clearance, 2),
+        "arm_ground_clearance_m": round(Part.makeCompound([pt["shape"] for pt in m.parts if pt["cls"] == "arm"]).BoundBox.ZMin / MM, 2),
     }
 
 
@@ -528,11 +529,16 @@ def export(m: Model, cid: str, out: Path, met: dict, info: dict, title: str) -> 
 BUILDERS = {"open-frame": build_biped, "armored-pod": build_pod, "build123d": build_from_b3d}  # all bipedal: TS-003 decided (project lead, 2026-11-11)
 
 
-def build_layout(p: dict, common: dict) -> tuple[Model, dict]:
-    """Build one layout from its parameters, with the 1.75 m reference person placed beside it."""
+def build_layout(p: dict, common: dict, posture: str = "standing") -> tuple[Model, dict]:
+    """Build one layout (in one of its postures) with the 1.75 m reference person placed beside it."""
     if p["locomotion"] != "biped":
         raise ValueError(f"{p['id']}: TS-003 is decided as bipedal; locomotion {p['locomotion']!r} is not built")
-    m, info = BUILDERS[p.get("style", "open-frame")](p, common)
+    if posture != "standing":
+        if p.get("style") != "build123d":
+            raise ValueError(f"{p['id']}: postures are only built for build123d layouts")
+        m, info = build_from_b3d(p, common, posture)
+    else:
+        m, info = BUILDERS[p.get("style", "open-frame")](p, common)
     bb = Part.makeCompound([pt["shape"] for pt in m.parts if pt["group"] != "reference"]).BoundBox
     reference_human(m, (bb.XMin / MM - 0.55, bb.YMin / MM - 0.9), common["reference_human"]["height"])
     return m, info
@@ -553,6 +559,13 @@ def main() -> int:
         met = metrics(m, info, common)
         export(m, p["id"], args.out / p["id"], met, info, p["title"])
         summary[p["id"]] = {"title": p["title"], "locomotion": p["locomotion"], "dock": p["dock"]["type"], **met}
+        for posture, pose in (p.get("postures") or {}).items():
+            pm, pinfo = build_layout(p, common, posture)
+            pmet = metrics(pm, pinfo, common)
+            export(pm, f"{p['id']}-{posture}", args.out / f"{p['id']}-{posture}", pmet, pinfo, f"{p['title']} — {posture}")
+            summary[p["id"]].setdefault("postures", {})[posture] = pmet
+            print(f"{p['id']} {posture}: cockpit floor {pmet['cockpit_floor_m']} m, CG z {pmet['cg_m'][2]} m, "
+                  f"static margin {pmet['static_margin_m']} m, arm clearance {pmet['arm_ground_clearance_m']} m")
         print(f"{p['id']}: {len(m.parts)} parts, height {met['height_m']} m, CG z {met['cg_m'][2]} m, "
               f"static margin {met['static_margin_m']} m, rotor-to-pilot {met['rotor_to_pilot_m']} m")
     if not args.ids:
