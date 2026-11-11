@@ -1,6 +1,6 @@
 # Porting LionDriver's modeling, diagram and simulation approach to Susanoo
 
-**Status:** Plan, 2026-11. Step 1 built (see below); steps 2-5 not started. Source reviewed: [jherrodthomas/LionDriver](https://github.com/jherrodthomas/LionDriver) at `93bafc3` (`assurance/`, `.claude/skills/`, `.github/workflows/`).
+**Status:** Plan, 2026-11. Steps 1 and 2 (core) built (see below); steps 3-5 not started. Source reviewed: [jherrodthomas/LionDriver](https://github.com/jherrodthomas/LionDriver) at `93bafc3` (`assurance/`, `.claude/skills/`, `.github/workflows/`).
 
 LionDriver is an ISO 26262 / ISO 21448 assurance effort on an openpilot fork. Susanoo uses MIL-STD-882E (11 May 2012) on a piloted walker and a PX4 UAV. The standards and the physics differ. The **method** ports almost unchanged.
 
@@ -54,8 +54,10 @@ Built: `tools/figures/figkit.py`; `architecture/item-definition.yaml` (9 functio
 6. **Decision register** `decisions/register.yaml`: checker plus a generated inbox page.
 7. **`CLAUDE.md`:** decision rules, and a table of what the AI may and may not do.
 
-### Step 2: SysML core
-Port `sysml_lite.py` and the library in 882E terms. Hand-write `Architecture.sysml`. Generate `Requirements.sysml` and `Satisfaction.sysml` from `requirements/` and `safety/hazards/`. Port model checks M1 (elements), M4 (interfaces), M7 (risk level on every element), M9 (functions), and R1–R3. Views: V-01 context, V-02 hierarchy, V-03 IBD, V-08 N2, then the CONOPS mode state machine (MOD-01..10) and the VCRM. Add a CI job that runs OMG pilot validation. The SysML context view then replaces the step 1 context figure.
+### Step 2: SysML core (core built)
+Built: `models/sysml/model` (library, functions, architecture hand-written; requirements and satisfaction generated), stdlib reader `tools/sysml/model.py`, checker `tools/sysml/check.py` (M1, M2, M4, M9, R1–R3), views V-02 hierarchy, V-07 satisfaction and V-08 N2 with the `SysML-Model` wiki page, 14 tests, and a CI job `sysml model` that runs OMG pilot 0.62.0 validation (0 errors, 0 warnings). Remaining: CONOPS mode state machine, VCRM, explorer page, and replacing the step 1 context figure with a model view.
+
+Original plan: Port `sysml_lite.py` and the library in 882E terms. Hand-write `Architecture.sysml`. Generate `Requirements.sysml` and `Satisfaction.sysml` from `requirements/` and `safety/hazards/`. Port model checks M1 (elements), M4 (interfaces), M7 (risk level on every element), M9 (functions), and R1–R3. Views: V-01 context, V-02 hierarchy, V-03 IBD, V-08 N2, then the CONOPS mode state machine (MOD-01..10) and the VCRM. Add a CI job that runs OMG pilot validation. The SysML context view then replaces the step 1 context figure.
 
 ### Step 3: 2D simulation
 Build the walker plant, `faults.yaml` and `report --check` with synthetic-labelled results. Then one search family (pressure loss mid-stride on a slope), with edge cases mapped to hazards and unmatched cases turned into findings. Then 2D scenes for the Catastrophic and Critical hazards, and the evidence-gate section stating that there is no credit without an approved fidelity case.

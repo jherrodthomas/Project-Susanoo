@@ -4,7 +4,9 @@ Susanoo is a simulation-first demonstrator: a human-piloted walker (SUS-M1) and 
 
 ## Records are the source of truth
 
-- The records are the YAML under `standards/`, `architecture/`, `safety/`, `requirements/`, `verification/`, `changes/`, `reviews/` and `decisions/`. Pages under `docs/wiki/` marked `GENERATED`, `docs/wiki/images/sus-i1-*.svg` and `safety/generated/` are built from them. **Never edit a generated file**; edit the record and regenerate.
+- The records are the YAML under `standards/`, `architecture/`, `safety/`, `requirements/`, `verification/`, `changes/`, `reviews/` and `decisions/`.
+- The hand-written SysML files in `models/sysml/model/` are checked against those records. Files starting `// GENERATED` are not hand-written.
+- Built from the records: pages under `docs/wiki/` marked `GENERATED`, `docs/wiki/images/sus-i1-*.svg` and `sysml-*.svg`, `safety/generated/`, and the generated `.sysml` files. **Never edit a generated file**; edit the record and regenerate.
 - Before handing over any change, run:
 
   ```bash
@@ -13,6 +15,11 @@ Susanoo is a simulation-first demonstrator: a human-piloted walker (SUS-M1) and 
   python -m tools.pdac.report
   python -m unittest discover -s tools/pdac/tests -t .
   python -m unittest discover -s tools/figures/tests -t .
+  python -m tools.sysml.gen_requirements
+  python -m tools.sysml.check
+  python -m tools.sysml.views
+  python -m unittest discover -s tools/sysml/tests -t .
+  tools/sysml/pilot/validate.sh        # SysML v2 conformance; needs JDK 21 and zstandard
   ```
 
   CI runs the same commands with `--check` and fails on errors or stale output.
