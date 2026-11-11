@@ -92,6 +92,11 @@ class BrokenRecords(unittest.TestCase):
         item(m, "CL-01")["options"]["TS-003"] = "wheeled"
         self.assertFires("P3", m, pdaclib.check_references)
 
+    def test_p3_only_one_reference_layout(self):
+        m = fresh()
+        item(m, "CL-01")["role"] = "reference"
+        self.assertFires("P3", m, pdaclib.check_references)
+
     def test_p4_one_sided_mitigation(self):
         m = fresh()
         item(m, "HAZ-019")["mitigated_by"].append("SYS-001")

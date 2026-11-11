@@ -6,7 +6,7 @@
 id: CL-05
 title: "Reverse-jointed pod biped, claw arms, rear dock"
 locomotion: biped
-style: armored-pod
+style: build123d                 # solids authored in tools/cad/b3d/cl05.py (reference layout)
 leg:
   hip_half_width: 0.55
   thigh: 1.00
@@ -48,3 +48,8 @@ dock:
   type: rear-backpack
   platform: [0.75, 0.75, 0.06]
   center: [-0.05, 0.0, 0.08]
+detail:                          # build123d-only detail (no effect on the primitive layouts)
+  chin_chamfer: 0.28             # sloped lower front of the pod
+  groove_heights: [0.55, 1.30]   # panel grooves around the hull, above its bottom
+  fins: 7                        # cooling fins on the back of the power pack
+  claw_length: 0.45              # claw drop below the hand (m)

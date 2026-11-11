@@ -31,6 +31,10 @@ jobs:
       with:
         environment-file: tools/cad/environment.yml
         cache-environment: true
+    - name: Author the build123d layouts (separate environment)
+      run: |
+        micromamba create -y -n b3d -f tools/cad/b3d/environment.yml
+        for script in tools/cad/b3d/cl*.py; do micromamba run -n b3d python "$script"; done
     - name: Build geometry and metrics
       run: python tools/cad/build_concepts.py
     - name: Drawing sheets

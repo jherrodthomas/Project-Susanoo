@@ -30,7 +30,7 @@ MIL-STD-882E is the integrated system safety method. ISO 12100, ISO 13849 and IE
 <!-- BEGIN GENERATED: status (tools/pdac/generate.py) -->
 **Status:** Concept. Simulation-first; no hardware built, no certification, qualification, airworthiness approval or formal risk acceptance claimed.
 
-**PDaC records** (`e63d28839994`): 14 scenarios · [21 hazards](safety/preliminary-hazard-list.md) (initial risk, proposed: 8 high, 10 serious, 3 medium) · 18 requirements (18 candidate) · 3 open trade studies · 0 recorded approvals · release `SUS-I1-R0.2` planned. No risk has been accepted.
+**PDaC records** (`17e65b70127d`): 14 scenarios · [21 hazards](safety/preliminary-hazard-list.md) (initial risk, proposed: 8 high, 10 serious, 3 medium) · 18 requirements (18 candidate) · 3 open trade studies · 0 recorded approvals · release `SUS-I1-R0.2` planned. No risk has been accepted.
 <!-- END GENERATED: status -->
 
 ## Checking the records

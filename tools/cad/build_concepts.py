@@ -410,6 +410,27 @@ def build_pod(p, common):
     return m, {"hip_z": hip_z, "floor": floor, "eye": eye, "dock": "offboard" if p["dock"]["type"] == "ground-station" else "onboard"}
 
 
+def build_from_b3d(p, common):
+    """Layouts authored in build123d (tools/cad/b3d/): import the per-class STEP files and info.json written by
+    the layout's script into build/cad-src/<ID>/, so metrics, renders and drawings use the same code paths."""
+    src = ROOT / "build/cad-src" / p["id"]
+    info_path = src / "info.json"
+    if not info_path.is_file():
+        raise FileNotFoundError(f"{p['id']}: {info_path} is missing; run tools/cad/b3d/{p['id'].lower().replace('-', '')}.py first")
+    info = json.loads(info_path.read_text())
+    m = Model()
+    for step in sorted(src.glob("*.step")):
+        cls = step.stem
+        if cls not in CLASSES:
+            raise ValueError(f"{p['id']}: unknown part class {cls!r} in {step.name}")
+        m.group = "uav" if cls in ("uav", "rotor") else "walker"
+        for k, solid in enumerate(Part.read(str(step)).Solids):
+            m.add(f"{cls}-{k:03d}", cls, solid)
+    m.group = "walker"
+    m.feet = [tuple(f) for f in info["feet"]]
+    return m, {"hip_z": info["hip_z"], "floor": info["floor"], "eye": info["eye"], "dock": info["dock"]}
+
+
 # --- Metrics --------------------------------------------------------------------------------------
 
 def hull(points):
@@ -504,7 +525,7 @@ def export(m: Model, cid: str, out: Path, met: dict, info: dict, title: str) -> 
                                                    "eye": [round(c, 3) for c in info["eye"]]}, indent=1))
 
 
-BUILDERS = {"open-frame": build_biped, "armored-pod": build_pod}  # all bipedal: TS-003 decided (project lead, 2026-11-11)
+BUILDERS = {"open-frame": build_biped, "armored-pod": build_pod, "build123d": build_from_b3d}  # all bipedal: TS-003 decided (project lead, 2026-11-11)
 
 
 def build_layout(p: dict, common: dict) -> tuple[Model, dict]:

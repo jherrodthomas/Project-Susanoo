@@ -1,6 +1,8 @@
 # Concept layouts (FreeCAD) — review and alignment
 
-**ID:** SUS-CAD-001 · **Revision:** 0.2-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CAD-001 · **Revision:** 0.3-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.3:* CL-05 is the reference layout (chosen by the project lead) and its solids are now authored in build123d code-CAD: tapered lofted limbs, swept claws, hoses and roll bar, a pod shell with a chamfered chin, window frames and panel grooves; ground contacts come from the real foot solids.
 
 *Changes in 0.2:* layouts CL-04 (armoured pod) and CL-05 (reverse-jointed pod) added; an eye-level view per layout; dimensioned A3 drawing sheets (§3, [`drawings/`](drawings/)).
 
@@ -32,15 +34,15 @@ Metric definitions: *static margin* is the shortest horizontal distance from the
 |---|---|---|---|---|---|
 | Locomotion (TS-003) | bipedal | bipedal | bipedal | bipedal | bipedal |
 | UAV dock (TS-004) | rear backpack dock | shoulder-mounted dock | separate portable station | rear backpack dock | rear backpack dock |
-| Envelope L × W × H | 3.4 × 2.4 × 4.1 m | 3.4 × 2.4 × 4.2 m | 3.4 × 2.4 × 3.9 m | 3.4 × 2.5 × 3.9 m | 3.4 × 2.2 × 4.4 m |
+| Envelope L × W × H | 3.4 × 2.4 × 4.1 m | 3.4 × 2.4 × 4.2 m | 3.4 × 2.4 × 3.9 m | 3.4 × 2.5 × 3.9 m | 3.3 × 2.1 × 4.4 m |
 | Overall height | 4.08 m | 4.20 m | 3.85 m | 3.94 m | 4.40 m |
 | Pilot eye height | 3.54 m | 3.54 m | 3.54 m | 3.15 m | 3.62 m |
 | Cockpit floor (egress drop) | 2.33 m | 2.33 m | 2.33 m | 1.94 m | 2.41 m |
-| CG height | 2.63 m | 2.63 m | 2.63 m | 2.24 m | 2.61 m |
-| Static margin | 0.14 m ⚠ | 0.14 m ⚠ | 0.14 m ⚠ | 0.23 m ⚠ | 0.13 m ⚠ |
-| Static tip angle | 3.1° | 3.2° | 3.1° | 5.7° | 2.8° |
+| CG height | 2.63 m | 2.63 m | 2.63 m | 2.24 m | 2.75 m |
+| Static margin | 0.14 m ⚠ | 0.14 m ⚠ | 0.14 m ⚠ | 0.23 m ⚠ | 0.12 m ⚠ |
+| Static tip angle | 3.1° | 3.2° | 3.1° | 5.7° | 2.4° |
 | Rotor ↔ pilot (docked) | 0.79 m ⚠ | 0.63 m ⚠ | 3.14 m | 0.92 m ⚠ | 0.86 m ⚠ |
-| Placeholder mass | ~5.0 t | ~5.0 t | ~5.0 t | ~6.3 t | ~5.1 t |
+| Placeholder mass | ~5.0 t | ~5.0 t | ~5.0 t | ~6.3 t | ~4.7 t |
 
 ### CL-01 · Biped, seated protected cockpit, rear backpack dock
 
@@ -113,7 +115,7 @@ Drawing sheet: [SUS-CAD-001-CL-04](drawings/CL-04.svg) (A3, 1:50, dimensioned si
 
 Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 bipedal; TS-004 rear backpack dock. Informs: HAZ-006, HAZ-008, HAZ-009, HAZ-021, SYS-009, SYS-010, SYS-012, SYS-013. Parameters: [`params/CL-05.yaml`](params/CL-05.yaml).
 
-- Proportions from the project lead's AI-generated Industrial Utility Walker (one three-quarter view so far): tall pod with front and side windows, reverse-jointed legs, long arms ending in curved claws. The geometry is original; the generated mesh is not used.
+- Proportions from the project lead's AI-generated Industrial Utility Walker (one three-quarter view so far): tall pod with front and side windows, reverse-jointed legs, long arms ending in curved claws. The geometry is original, authored in build123d; the generated mesh is not used.
 - Reverse-jointed knees sit behind the hips: the walker is the tallest of the five and has the smallest static margin and tip angle, and a backward fall puts the knees first. Fall direction, kneel-for-egress and SYS-009 stability limits need their own analysis for this leg geometry.
 - The side windows give the pilot a view to the sides and are a candidate for the second exit CL-04 lacks, if they are sized and openable for egress (SYS-012); at concept size they are close to a minimum emergency opening.
 - The long claws hang low beside the legs, inside the walking envelope: a strike and pinch zone for anyone near the walker (HAZ-009) unless manipulation is inhibited and the arms are stowed while walking (SYS-013).
@@ -133,6 +135,7 @@ Drawing sheet: [SUS-CAD-001-CL-05](drawings/CL-05.svg) (A3, 1:50, dimensioned si
 | Step | Tool | Output |
 |---|---|---|
 | Parameters | [`params/CL-nn.yaml`](params/), [`params/common.yaml`](params/common.yaml) | One file per layout; placeholders, metres |
+| Reference layout geometry (CL-05) | [`tools/cad/b3d/cl05.py`](../tools/cad/b3d/cl05.py) in build123d 0.9 ([`environment.yml`](../tools/cad/b3d/environment.yml)) | `build/cad-src/CL-05/`: one STEP file per part class and `info.json`, imported by the step below |
 | Geometry and metrics | [`tools/cad/build_concepts.py`](../tools/cad/build_concepts.py) under FreeCAD 1.1 | `build/cad/CL-nn/`: `.FCStd`, `.step`, STL per part class; [`metrics.json`](metrics.json) (committed) |
 | Drawing sheets | [`tools/cad/drawings.py`](../tools/cad/drawings.py) (FreeCAD TechDraw hidden-line projection) | [`drawings/CL-nn.svg`](drawings/) and [`drawings/concept-layouts.pdf`](drawings/concept-layouts.pdf) (committed): A3, 1:50, third-angle side, plan and front views with dimensions, CG and support polygon |
 | Review images | [`tools/cad/render.cjs`](../tools/cad/render.cjs) and [`viewer.html`](../tools/cad/viewer.html) (three.js in headless Chromium) | [`renders/`](renders/) (committed) |

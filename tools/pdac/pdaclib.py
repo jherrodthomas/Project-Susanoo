@@ -192,6 +192,9 @@ def check_references(model: Model) -> list[Finding]:
                     out.append(Finding("P3", where, f"{fld} -> {ref}: no such record"))
                 elif "*" not in kinds and target.get("kind") not in kinds:
                     out.append(Finding("P3", where, f"{fld} -> {ref}: is a {target.get('kind')}, expected {' or '.join(kinds)}"))
+    refs = [lay["id"] for lay in model.of_kind("concept-layout") if lay.get("role") == "reference"]
+    if len(refs) > 1:
+        out.append(Finding("P3", ", ".join(refs), "more than one concept layout has role: reference"))
     for layout in model.of_kind("concept-layout"):
         for ts_id, option in (layout.get("options") or {}).items():
             ts = ids.get(ts_id)

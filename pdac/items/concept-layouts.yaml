@@ -67,13 +67,16 @@ items:
     kind: concept-layout
     title: "Reverse-jointed pod biped, claw arms, rear dock"
     status: draft
+    role: reference
+    geometry: build123d
+    note: "Chosen by the project lead on 2026-11-11 as the reference layout to develop further; its solids are authored in build123d (tools/cad/b3d/). Choosing a reference selects no trade-study alternative and approves nothing."
     applicability: [SUS-M1, SUS-A1, SUS-I1]
     source: SUS-CAD-001
     params: cad/params/CL-05.yaml
     options: {TS-001: "centralized hydraulic", TS-002: "seated protected cockpit", TS-003: "bipedal", TS-004: "rear backpack dock"}
     informs: [HAZ-006, HAZ-008, HAZ-009, HAZ-021, SYS-009, SYS-010, SYS-012, SYS-013]
     findings:
-      - "Proportions from the project lead's AI-generated Industrial Utility Walker (one three-quarter view so far): tall pod with front and side windows, reverse-jointed legs, long arms ending in curved claws. The geometry is original; the generated mesh is not used."
+      - "Proportions from the project lead's AI-generated Industrial Utility Walker (one three-quarter view so far): tall pod with front and side windows, reverse-jointed legs, long arms ending in curved claws. The geometry is original, authored in build123d; the generated mesh is not used."
       - "Reverse-jointed knees sit behind the hips: the walker is the tallest of the five and has the smallest static margin and tip angle, and a backward fall puts the knees first. Fall direction, kneel-for-egress and SYS-009 stability limits need their own analysis for this leg geometry."
       - "The side windows give the pilot a view to the sides and are a candidate for the second exit CL-04 lacks, if they are sized and openable for egress (SYS-012); at concept size they are close to a minimum emergency opening."
       - "The long claws hang low beside the legs, inside the walking envelope: a strike and pinch zone for anyone near the walker (HAZ-009) unless manipulation is inhibited and the arms are stowed while walking (SYS-013)."

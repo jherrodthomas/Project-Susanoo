@@ -232,7 +232,9 @@
         "options": {"type": "object", "description": "Trade study ID -> the alternative this layout represents.",
           "propertyNames": {"pattern": "^TS-\\d{3}$"}, "additionalProperties": {"type": "string"}},
         "informs": {"$ref": "#/$defs/idList"},
-        "findings": {"$ref": "#/$defs/textList"}
+        "findings": {"$ref": "#/$defs/textList"},
+        "role": {"enum": ["candidate", "reference"], "description": "reference: the layout the lead chose to develop further. At most one (check P3)."},
+        "geometry": {"enum": ["freecad-primitives", "build123d"], "description": "Where the layout's solids are authored."}
       }
     },
 
