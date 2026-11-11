@@ -1,0 +1,21 @@
+schema: pdac/v0.1-draft
+kind: Product
+id: urn:pdac:susanoo:product:001
+name: Project Susanoo
+purpose: unarmed-integrated-ugv-uav-logistics-and-observation
+status: concept
+variants:
+  - id: SUS-G1
+    name: Ground logistics UGV
+  - id: SUS-A1
+    name: Aerial observation UAV
+  - id: SUS-I1
+    name: Integrated UGV-UAV-GCS system
+configuration:
+  id: SUS-I1-C001
+  status: planned
+release:
+  id: SUS-I1-R0.1
+  status: planned
+  profile: simulation-and-assurance-demonstrator
+  approvals: []
