@@ -2,20 +2,23 @@ schema: pdac/v0.1-draft
 kind: Product
 id: urn:pdac:susanoo:product:001
 name: Project Susanoo
-purpose: unarmed-integrated-ugv-uav-logistics-and-observation
+purpose: human-piloted-mechanized-platform-with-unarmed-observation-uav
 status: concept
 variants:
-  - id: SUS-G1
-    name: Ground logistics UGV
+  - id: SUS-M1
+    name: Human-piloted mechanized walker
+    status: concept
   - id: SUS-A1
-    name: Aerial observation UAV
+    name: Dockable observation UAV
+    status: concept
   - id: SUS-I1
-    name: Integrated UGV-UAV-GCS system
+    name: Integrated mech-and-uav demonstrator
+    status: concept
 configuration:
   id: SUS-I1-C001
   status: planned
 release:
-  id: SUS-I1-R0.1
+  id: SUS-I1-R0.2
   status: planned
   profile: simulation-and-assurance-demonstrator
   approvals: []
