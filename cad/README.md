@@ -1,6 +1,8 @@
 # Concept layouts (FreeCAD) — review and alignment
 
-**ID:** SUS-CAD-001 · **Revision:** 0.10-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CAD-001 · **Revision:** 0.11-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.11:* AI concept art generated from the CL-05 renders, filed separately and labelled (§2a, [`concept-art/`](concept-art/README.md)).
 
 *Changes in 0.10:* photoreal Blender renders of the CL-05 reference layout (§2a).
 
@@ -47,6 +49,8 @@ Rendered with Blender 5.3 (Cycles) by [`tools/cad/blender_render.py`](../tools/c
 |---|---|
 | ![CL-05 standing, front three-quarter view from eye height, with a 1.75 m person for scale](renders/blender/CL-05-hero.jpg) | ![CL-05 from the rear: power pack, raised UAV dock and roll bar](renders/blender/CL-05-rear.jpg) |
 | ![CL-05 kneeling for egress with the fold-down ladder deployed and the claws stowed](renders/blender/CL-05-kneel.jpg) | ![CL-05 emergency exit: side hatch open, shoulder step and rope ladder deployed](renders/blender/CL-05-emergency.jpg) |
+
+**AI concept art** made from these renders (Higgsfield, image-to-image) is kept apart in [`concept-art/`](concept-art/README.md), each image labelled with its source render and where it departs from the CAD. It is for communication, never for dimensions.
 
 ## 2. Layouts
 
