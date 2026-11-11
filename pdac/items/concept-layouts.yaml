@@ -62,3 +62,18 @@ items:
       - "Lowest CG and lowest cockpit floor of the four layouts, and the best static margin of the bipeds, though still under the 0.3 m review flag: the shorter, more bent legs pull the mass down."
       - "The enclosed pod protects the pilot better in a fall or overturn (SYS-010) than an open cage, but the single front opening is the only way out: a forward fall blocks egress and extraction (HAZ-008, SYS-012), and a fire inside the pod (HAZ-017) has one exit. A second exit or a release panel is needed."
       - "The armour around the opening narrows the pilot's view down and to the sides, toward the feet and manipulators (HAZ-009)."
+
+  - id: CL-05
+    kind: concept-layout
+    title: "Reverse-jointed pod biped, claw arms, rear dock"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+    source: SUS-CAD-001
+    params: cad/params/CL-05.yaml
+    options: {TS-001: "centralized hydraulic", TS-002: "seated protected cockpit", TS-003: "bipedal", TS-004: "rear backpack dock"}
+    informs: [HAZ-006, HAZ-008, HAZ-009, HAZ-021, SYS-009, SYS-010, SYS-012, SYS-013]
+    findings:
+      - "Proportions from the project lead's AI-generated Industrial Utility Walker (one three-quarter view so far): tall pod with front and side windows, reverse-jointed legs, long arms ending in curved claws. The geometry is original; the generated mesh is not used."
+      - "Reverse-jointed knees sit behind the hips: the walker is the tallest of the five and has the smallest static margin and tip angle, and a backward fall puts the knees first. Fall direction, kneel-for-egress and SYS-009 stability limits need their own analysis for this leg geometry."
+      - "The side windows give the pilot a view to the sides and are a candidate for the second exit CL-04 lacks, if they are sized and openable for egress (SYS-012); at concept size they are close to a minimum emergency opening."
+      - "The long claws hang low beside the legs, inside the walking envelope: a strike and pinch zone for anyone near the walker (HAZ-009) unless manipulation is inhibited and the arms are stowed while walking (SYS-013)."

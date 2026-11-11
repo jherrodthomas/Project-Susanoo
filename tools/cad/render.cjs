@@ -9,7 +9,8 @@ const { chromium } = require('playwright');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const OUT = path.join(ROOT, 'cad', 'renders');
-const IDS = fs.readdirSync(path.join(ROOT, 'build', 'cad')).filter(d => /^CL-\d{2}$/.test(d)).sort();
+const ONLY = process.argv.slice(2);
+const IDS = fs.readdirSync(path.join(ROOT, 'build', 'cad')).filter(d => /^CL-\d{2}$/.test(d) && (!ONLY.length || ONLY.includes(d))).sort();
 const VIEWS = ['hero', 'iso', 'side', 'top', 'dock'];
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.json': 'application/json', '.stl': 'model/stl' };
 
@@ -27,7 +28,7 @@ const server = http.createServer((req, res) => {
   const page = await browser.newPage({ viewport: { width: 1500, height: 960 }, deviceScaleFactor: 1.5 });
   page.on('pageerror', e => { console.error('page error:', e.message); process.exitCode = 1; });
   fs.mkdirSync(OUT, { recursive: true });
-  const jobs = [...IDS.flatMap(id => VIEWS.map(v => [id, v])), [IDS.join(','), 'lineup']];
+  const jobs = [...IDS.flatMap(id => VIEWS.map(v => [id, v])), ...(ONLY.length ? [] : [[IDS.join(','), 'lineup']])];
   for (const [ids, view] of jobs) {
     await page.goto(`http://127.0.0.1:${port}/tools/cad/viewer.html?ids=${ids}&view=${view}`);
     await page.waitForFunction(() => window.__ready === true, null, { timeout: 120000 });

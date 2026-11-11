@@ -1,0 +1,50 @@
+# CL-05 Reverse-jointed pod biped: tall faceted pod with the pilot visible through front and side windows,
+# reverse-jointed (digitigrade) legs, long arms with curved claws hanging close to the ground.
+# Proportions taken from the project lead's AI-generated "Industrial Utility Walker" (CGTrader AI / Meshy,
+# 2026-11-11, one three-quarter view so far). The geometry is original and parametric; the generated mesh
+# is not used. Concept layout for review and alignment only. Every dimension is a placeholder (metres).
+id: CL-05
+title: "Reverse-jointed pod biped, claw arms, rear dock"
+locomotion: biped
+style: armored-pod
+leg:
+  hip_half_width: 0.55
+  thigh: 1.00
+  shank: 1.05
+  knee_forward: -0.45            # knee behind the hip: reverse-jointed
+  ankle_forward: 0.10            # ankle slightly ahead of the hip
+  ankle_height: 0.55             # raised ankle on a long link to the foot
+  radius: 0.13
+  joint_radius: 0.19
+  foot: [0.95, 0.50, 0.16]
+  armour: [0.36, 0.30]
+pod:
+  size: [1.40, 1.45, 1.85]       # taller, narrower pod than CL-04
+  bottom_offset: 0.05            # the pod sits on top of the hips
+  x_front: 0.75
+  wall: 0.07
+  edge_radius: 0.10
+  opening: [0.80, 0.70, 0.12]    # smaller front window
+  side_window: [0.55, 0.65]      # x length, height; through both sides
+  floor_offset: 0.12
+  seat_back_from_front: 0.96
+shoulder:
+  plate: [0.55, 0.40, 0.45]
+  drop: 0.70                     # low shoulders: arms hang from the lower front of the pod
+arm:
+  upper: 0.95
+  fore: 0.85
+  radius: 0.10
+  drop_angle_deg: 35
+  fore_angle_deg: -68            # forearm hangs steeply toward the ground
+  claw: true
+power:
+  pack: [0.50, 1.15, 1.10]
+  vents: 3
+rollbar:
+  rise: 0.22
+  tube_radius: 0.045
+dock:
+  type: rear-backpack
+  platform: [0.75, 0.75, 0.06]
+  center: [-0.05, 0.0, 0.08]

@@ -4,11 +4,11 @@
 
 > **Concept mockups, not designs.** Every layout below is built from primitive solids placed by placeholder parameters. Dimensions, masses and every metric are properties of that placeholder geometry. They exist so the team can look at the same picture, compare the trade-study alternatives side by side, and see early where an option makes a hazard worse. They select nothing: the trade studies (TS-001 to TS-004) are decided by the lead.
 
-![Concept line-up: open-frame bipeds with the UAV docked on the back (CL-01), on the shoulder (CL-02) and on a separate ground station (CL-03), and the armoured pod (CL-04), each with a 1.75 m person for scale](renders/lineup.png)
+![Concept line-up: open-frame bipeds with the UAV docked on the back (CL-01), on the shoulder (CL-02) and on a separate ground station (CL-03), the armoured pod (CL-04) and the reverse-jointed pod (CL-05), each with a 1.75 m person for scale](renders/lineup.png)
 
 ## 1. What the layouts compare
 
-Each layout (`CL-nn`) is one combination of trade-study alternatives. Locomotion is **bipedal** (TS-003, decided by the project lead). CL-01 to CL-03 share the same open-frame biped, the actuation hypothesis (centralized hydraulic, drawn as yellow cylinders) and the seated protected cockpit, so they differ only in where the UAV docks (TS-004). CL-04 is an armoured-pod restyle in the form language of the lead's reference image: an enclosed hull with the pilot at an arched front opening, shoulder plates, roll bar and plated legs. Standing and remote-pilot alternatives (TS-002) and electric actuation (TS-001) are not modelled yet.
+Each layout (`CL-nn`) is one combination of trade-study alternatives. Locomotion is **bipedal** (TS-003, decided by the project lead). CL-01 to CL-03 share the same open-frame biped, the actuation hypothesis (centralized hydraulic, drawn as yellow cylinders) and the seated protected cockpit, so they differ only in where the UAV docks (TS-004). CL-04 is an armoured-pod restyle in the form language of the lead's reference image: an enclosed hull with the pilot at an arched front opening, shoulder plates, roll bar and plated legs. CL-05 takes its proportions from the lead's AI-generated Industrial Utility Walker: a tall pod with front and side windows, reverse-jointed legs and long claw arms. Neither reuses the source mesh or image; both are original parametric geometry. Standing and remote-pilot alternatives (TS-002) and electric actuation (TS-001) are not modelled yet.
 
 What to look for in the review:
 
@@ -26,19 +26,19 @@ Metric definitions: *static margin* is the shortest horizontal distance from the
 <!-- BEGIN GENERATED: cad-concepts (tools/pdac/generate.py) -->
 *Metrics from [`metrics.json`](metrics.json) (FreeCAD 1.1.3); ⚠ marks the provisional review flags of §1.*
 
-| | CL-01 | CL-02 | CL-03 | CL-04 |
-|---|---|---|---|---|
-| Locomotion (TS-003) | bipedal | bipedal | bipedal | bipedal |
-| UAV dock (TS-004) | rear backpack dock | shoulder-mounted dock | separate portable station | rear backpack dock |
-| Envelope L × W × H | 3.4 × 2.4 × 4.1 m | 3.4 × 2.4 × 4.2 m | 3.4 × 2.4 × 3.9 m | 3.4 × 2.5 × 3.9 m |
-| Overall height | 4.08 m | 4.20 m | 3.85 m | 3.94 m |
-| Pilot eye height | 3.54 m | 3.54 m | 3.54 m | 3.15 m |
-| Cockpit floor (egress drop) | 2.33 m | 2.33 m | 2.33 m | 1.94 m |
-| CG height | 2.63 m | 2.63 m | 2.63 m | 2.24 m |
-| Static margin | 0.14 m ⚠ | 0.14 m ⚠ | 0.14 m ⚠ | 0.23 m ⚠ |
-| Static tip angle | 3.1° | 3.2° | 3.1° | 5.7° |
-| Rotor ↔ pilot (docked) | 0.79 m ⚠ | 0.63 m ⚠ | 3.14 m | 0.92 m ⚠ |
-| Placeholder mass | ~5.0 t | ~5.0 t | ~5.0 t | ~6.3 t |
+| | CL-01 | CL-02 | CL-03 | CL-04 | CL-05 |
+|---|---|---|---|---|---|
+| Locomotion (TS-003) | bipedal | bipedal | bipedal | bipedal | bipedal |
+| UAV dock (TS-004) | rear backpack dock | shoulder-mounted dock | separate portable station | rear backpack dock | rear backpack dock |
+| Envelope L × W × H | 3.4 × 2.4 × 4.1 m | 3.4 × 2.4 × 4.2 m | 3.4 × 2.4 × 3.9 m | 3.4 × 2.5 × 3.9 m | 3.4 × 2.2 × 4.4 m |
+| Overall height | 4.08 m | 4.20 m | 3.85 m | 3.94 m | 4.40 m |
+| Pilot eye height | 3.54 m | 3.54 m | 3.54 m | 3.15 m | 3.62 m |
+| Cockpit floor (egress drop) | 2.33 m | 2.33 m | 2.33 m | 1.94 m | 2.41 m |
+| CG height | 2.63 m | 2.63 m | 2.63 m | 2.24 m | 2.61 m |
+| Static margin | 0.14 m ⚠ | 0.14 m ⚠ | 0.14 m ⚠ | 0.23 m ⚠ | 0.13 m ⚠ |
+| Static tip angle | 3.1° | 3.2° | 3.1° | 5.7° | 2.8° |
+| Rotor ↔ pilot (docked) | 0.79 m ⚠ | 0.63 m ⚠ | 3.14 m | 0.92 m ⚠ | 0.86 m ⚠ |
+| Placeholder mass | ~5.0 t | ~5.0 t | ~5.0 t | ~6.3 t | ~5.1 t |
 
 ### CL-01 · Biped, seated protected cockpit, rear backpack dock
 
@@ -98,6 +98,22 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 |---|---|
 | ![CL-04 three-quarter view](renders/CL-04-iso.png) | ![CL-04 side elevation](renders/CL-04-side.png) |
 | ![CL-04 plan view with support polygon and centre of gravity](renders/CL-04-top.png) | ![CL-04 UAV dock and rotor clearance to the pilot](renders/CL-04-dock.png) |
+
+### CL-05 · Reverse-jointed pod biped, claw arms, rear dock
+
+Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 bipedal; TS-004 rear backpack dock. Informs: HAZ-006, HAZ-008, HAZ-009, HAZ-021, SYS-009, SYS-010, SYS-012, SYS-013. Parameters: [`params/CL-05.yaml`](params/CL-05.yaml).
+
+- Proportions from the project lead's AI-generated Industrial Utility Walker (one three-quarter view so far): tall pod with front and side windows, reverse-jointed legs, long arms ending in curved claws. The geometry is original; the generated mesh is not used.
+- Reverse-jointed knees sit behind the hips: the walker is the tallest of the five and has the smallest static margin and tip angle, and a backward fall puts the knees first. Fall direction, kneel-for-egress and SYS-009 stability limits need their own analysis for this leg geometry.
+- The side windows give the pilot a view to the sides and are a candidate for the second exit CL-04 lacks, if they are sized and openable for egress (SYS-012); at concept size they are close to a minimum emergency opening.
+- The long claws hang low beside the legs, inside the walking envelope: a strike and pinch zone for anyone near the walker (HAZ-009) unless manipulation is inhibited and the arms are stowed while walking (SYS-013).
+
+![CL-05 front view from eye height](renders/CL-05-hero.png)
+
+| | |
+|---|---|
+| ![CL-05 three-quarter view](renders/CL-05-iso.png) | ![CL-05 side elevation](renders/CL-05-side.png) |
+| ![CL-05 plan view with support polygon and centre of gravity](renders/CL-05-top.png) | ![CL-05 UAV dock and rotor clearance to the pilot](renders/CL-05-dock.png) |
 <!-- END GENERATED: cad-concepts -->
 
 ## 3. How the layouts are made

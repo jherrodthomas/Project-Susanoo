@@ -282,17 +282,19 @@ def walker_dock(m, common, D, top, rear_x):
 
 
 def build_pod(p, common):
-    """Armoured-pod biped (CL-04): enclosed hull, arched front opening, shoulder plates, roll bar."""
+    """Armoured-pod biped (CL-04, CL-05): enclosed hull, faceted front opening, shoulder plates, roll bar.
+    Options: reverse-jointed legs (knee_forward < 0 with ankle_forward), claw hands, side windows."""
     m = Model()
     L = p["leg"]
-    kf = L["knee_forward"]
-    knee_z = L["ankle_height"] + math.sqrt(L["shank"] ** 2 - kf ** 2)
+    kf = L["knee_forward"]          # negative: the knee sits behind the hip (reverse-jointed, digitigrade)
+    ax = L.get("ankle_forward", 0.0)  # ankle ahead of the hip, raised on a long ankle link
+    knee_z = L["ankle_height"] + math.sqrt(L["shank"] ** 2 - (ax - kf) ** 2)
     hip_z = knee_z + math.sqrt(L["thigh"] ** 2 - kf ** 2)
     fl, fw, ft = L["foot"]
     aw, ad = L["armour"]
     for s in (1, -1):
         y = s * L["hip_half_width"]
-        hip, knee, ankle = [0, y, hip_z], [kf, y, knee_z], [0, y, L["ankle_height"]]
+        hip, knee, ankle = [0, y, hip_z], [kf, y, knee_z], [ax, y, L["ankle_height"]]
         m.cyl(f"thigh{s}", "structure", hip, knee, L["radius"])
         m.cyl(f"shank{s}", "structure", knee, ankle, L["radius"] * 0.9)
         m.sph(f"hip{s}", "actuator", hip, L["joint_radius"])
@@ -301,14 +303,15 @@ def build_pod(p, common):
         # Armour plates on the outside of thigh and shin, a knee cap in front
         m.obox(f"thigh-plate{s}", "armor", lerp(hip, knee, 0.12), lerp(hip, knee, 0.88), aw, ad * 0.55, (0.10, s * 0.06, 0), 0.03)
         m.obox(f"shin-plate{s}", "armor", lerp(knee, ankle, 0.10), lerp(knee, ankle, 0.85), aw, ad * 0.6, (0.14, 0, 0), 0.03)
-        m.rbox(f"knee-cap{s}", "armor", [kf + 0.12, y - 0.19, knee_z - 0.18], [0.16, 0.38, 0.36], 0.05)
+        cap_x = kf + 0.12 if kf >= 0 else kf - 0.28  # cap on the outside of the bend
+        m.rbox(f"knee-cap{s}", "armor", [cap_x, y - 0.19, knee_z - 0.18], [0.16, 0.38, 0.36], 0.05)
         hydraulic(m, f"thigh-cyl{s}", [-0.28, y + s * 0.22, hip_z + 0.22], add(lerp(hip, knee, 0.65), [-0.16, s * 0.22, 0]))
         hydraulic(m, f"shank-cyl{s}", add(lerp(hip, knee, 0.5), [-0.20, s * 0.20, 0]), add(lerp(knee, ankle, 0.6), [-0.18, s * 0.20, 0]))
-        x0 = -0.35 * fl
+        x0 = ax - 0.35 * fl
         m.rbox(f"foot{s}", "structure", [x0, y - fw / 2, 0], [fl, fw, ft], 0.05)
         m.rbox(f"toe-plate{s}", "armor", [x0 + fl * 0.55, y - fw / 2 - 0.02, ft - 0.02], [fl * 0.45, fw + 0.04, 0.10], 0.03)
         m.rbox(f"heel-guard{s}", "armor", [x0 - 0.02, y - fw / 2 + 0.05, ft - 0.02], [0.25, fw - 0.10, 0.22], 0.04)
-        m.cyl(f"ankle-link{s}", "structure", ankle, [0, y, ft], L["radius"] * 0.85)
+        m.cyl(f"ankle-link{s}", "structure", ankle, [ax, y, ft], L["radius"] * 0.85)
         m.feet += [(x0, y - fw / 2), (x0 + fl, y - fw / 2), (x0, y + fw / 2), (x0 + fl, y + fw / 2)]
         # Hydraulic hose loop from the hull to the knee
         h0 = [-0.25, y + s * 0.30, hip_z - 0.05]
@@ -336,7 +339,12 @@ def build_pod(p, common):
     pts = [(-ow / 2, zb), (ow / 2, zb), (ow / 2, zb + oh - c), (ow / 2 - c, zb + oh), (-ow / 2 + c, zb + oh), (-ow / 2, zb + oh - c)]
     wire = Part.makePolygon([V(x1 - 0.5, y_, z_) for y_, z_ in pts] + [V(x1 - 0.5, pts[0][0], pts[0][1])])
     window = Part.Face(wire).extrude(V(1.0, 0, 0))
-    m.add("pod-hull", "armor", outer.cut(inner).cut(window))
+    hull = outer.cut(inner).cut(window)
+    if P.get("side_window"):  # a window through both sides, centred on the pilot's head
+        swx, swz = P["side_window"]
+        cx = x1 - P["seat_back_from_front"] + 0.25
+        hull = hull.cut(Part.makeBox(swx * MM, (wy + 0.4) * MM, swz * MM, V(cx - swx / 2, -wy / 2 - 0.2, floor + 0.80)))
+    m.add("pod-hull", "armor", hull)
     m.box("cockpit-floor", "seat", [x0 + w, -wy / 2 + w, floor - 0.04], [dx - 2 * w, wy - 2 * w, 0.04])
     eye = pilot(m, floor, x1 - P["seat_back_from_front"])
     # Chest plate below the opening, standing proud of the hull like the reference's front plate
@@ -354,7 +362,8 @@ def build_pod(p, common):
         sh = [x1 - sx / 2 - 0.05, s * (wy / 2 + 0.18), z1 - S["drop"] - sz - 0.05]
         m.sph(f"arm-shoulder{s}", "actuator", sh, A["radius"] * 1.8)
         elbow = add(sh, [A["upper"] * math.cos(ang), 0, -A["upper"] * math.sin(ang)])
-        wrist = add(elbow, [A["fore"] * math.cos(math.radians(12)), 0, A["fore"] * math.sin(math.radians(12))])
+        fa = math.radians(A.get("fore_angle_deg", 12))  # forearm angle above horizontal (negative: hanging)
+        wrist = add(elbow, [A["fore"] * math.cos(fa), 0, A["fore"] * math.sin(fa)])
         m.cyl(f"arm-upper{s}", "arm", sh, elbow, A["radius"])
         m.obox(f"arm-upper-plate{s}", "armor", lerp(sh, elbow, 0.15), lerp(sh, elbow, 0.85), 0.30, 0.20, (0, s * 0.07, 0), 0.03)
         m.sph(f"arm-elbow{s}", "actuator", elbow, A["radius"] * 1.35)
@@ -362,7 +371,15 @@ def build_pod(p, common):
         m.obox(f"arm-fore-plate{s}", "armor", lerp(elbow, wrist, 0.15), lerp(elbow, wrist, 0.80), 0.28, 0.26, (0, 0, 0.03), 0.03)
         m.rbox(f"hand{s}", "arm", [wrist[0] - 0.05, wrist[1] - 0.12, wrist[2] - 0.11], [0.22, 0.24, 0.22], 0.03)
         for k, dy in enumerate((-0.08, 0.0, 0.08)):
-            m.obox(f"finger{s}{k}", "arm", [wrist[0] + 0.15, wrist[1] + dy, wrist[2]], [wrist[0] + 0.36, wrist[1] + dy, wrist[2] - 0.10], 0.05, 0.06)
+            if A.get("claw"):  # long curved claw: four segments bending down and back
+                pts = [add(wrist, [0.10, dy, -0.04])]
+                for step in ([0.16, 0, -0.22], [0.06, 0, -0.30], [-0.06, 0, -0.26], [-0.14, 0, -0.12]):
+                    pts.append(add(pts[-1], step))
+                for j, (a, b) in enumerate(zip(pts, pts[1:])):
+                    m.cyl(f"claw{s}{k}{j}", "arm", a, b, 0.04 - j * 0.006)
+                    m.sph(f"claw-joint{s}{k}{j}", "arm", b, 0.04 - j * 0.006)
+            else:
+                m.obox(f"finger{s}{k}", "arm", [wrist[0] + 0.15, wrist[1] + dy, wrist[2]], [wrist[0] + 0.36, wrist[1] + dy, wrist[2] - 0.10], 0.05, 0.06)
         m.obox(f"thumb{s}", "arm", [wrist[0] + 0.08, wrist[1] - s * 0.13, wrist[2] - 0.05], [wrist[0] + 0.24, wrist[1] - s * 0.16, wrist[2] - 0.14], 0.05, 0.05)
 
     W = p["power"]

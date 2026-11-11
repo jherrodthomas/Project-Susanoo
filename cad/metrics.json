@@ -170,6 +170,48 @@
    "static_tip_angle_deg": 5.7,
    "uav_dock": "onboard",
    "rotor_to_pilot_m": 0.92
+  },
+  "CL-05": {
+   "title": "Reverse-jointed pod biped, claw arms, rear dock",
+   "locomotion": "biped",
+   "dock": "rear-backpack",
+   "envelope_m": [
+    3.39,
+    2.25,
+    4.4
+   ],
+   "height_m": 4.4,
+   "hip_height_m": 2.34,
+   "cockpit_floor_m": 2.41,
+   "pilot_eye_m": 3.62,
+   "placeholder_mass_kg": 5090,
+   "cg_m": [
+    -0.105,
+    -0.001,
+    2.607
+   ],
+   "support_polygon_m": [
+    [
+     -0.233,
+     -0.8
+    ],
+    [
+     0.718,
+     -0.8
+    ],
+    [
+     0.718,
+     0.8
+    ],
+    [
+     -0.233,
+     0.8
+    ]
+   ],
+   "static_margin_m": 0.128,
+   "static_tip_angle_deg": 2.8,
+   "uav_dock": "onboard",
+   "rotor_to_pilot_m": 0.86
   }
  }
 }
