@@ -201,6 +201,8 @@ def cad_concepts(model: pdaclib.Model) -> str:
                 f"Informs: {_ids(cl.get('informs'))}. Parameters: [`{cl['params'].removeprefix('cad/')}`]({cl['params'].removeprefix('cad/')}).", ""]
         out += [f"- {f}" for f in cl.get("findings", [])]
         r_ = f"renders/{cl['id']}"
+        if (model.root / f"cad/{r_}-hero.png").is_file():
+            out += ["", f"![{cl['id']} front view from eye height]({r_}-hero.png)"]
         out += ["", "| | |", "|---|---|",
                 f"| ![{cl['id']} three-quarter view]({r_}-iso.png) | ![{cl['id']} side elevation]({r_}-side.png) |",
                 f"| ![{cl['id']} plan view with support polygon and centre of gravity]({r_}-top.png) | ![{cl['id']} UAV dock and rotor clearance to the pilot]({r_}-dock.png) |"]

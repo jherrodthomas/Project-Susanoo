@@ -47,3 +47,18 @@ items:
     findings:
       - "The off-board station keeps rotors metres from the pilot and removes dock-retention loads while walking (HAZ-013), at the cost of launching and recovering only where the station is."
       - "Nothing is mounted on top of the walker, so this is the lowest of the three bipeds and its hull top stays free for sensors or a beacon."
+
+  - id: CL-04
+    kind: concept-layout
+    title: "Biped armoured pod, seated cockpit, rear dock"
+    status: draft
+    applicability: [SUS-M1, SUS-A1, SUS-I1]
+    source: SUS-CAD-001
+    params: cad/params/CL-04.yaml
+    options: {TS-001: "centralized hydraulic", TS-002: "seated protected cockpit", TS-003: "bipedal", TS-004: "rear backpack dock"}
+    informs: [HAZ-006, HAZ-008, HAZ-009, HAZ-011, HAZ-017, SYS-010, SYS-012, SYS-017]
+    findings:
+      - "Form language from the project lead's reference image: an enclosed armoured pod with the pilot visible at an arched front opening, heavy shoulder plates, roll bar and hunched, plated legs. The geometry is original and parametric."
+      - "Lowest CG and lowest cockpit floor of the four layouts, and the best static margin of the bipeds, though still under the 0.3 m review flag: the shorter, more bent legs pull the mass down."
+      - "The enclosed pod protects the pilot better in a fall or overturn (SYS-010) than an open cage, but the single front opening is the only way out: a forward fall blocks egress and extraction (HAZ-008, SYS-012), and a fire inside the pod (HAZ-017) has one exit. A second exit or a release panel is needed."
+      - "The armour around the opening narrows the pilot's view down and to the sides, toward the feet and manipulators (HAZ-009)."

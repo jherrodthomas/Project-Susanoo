@@ -10,7 +10,7 @@ const { chromium } = require('playwright');
 const ROOT = path.resolve(__dirname, '..', '..');
 const OUT = path.join(ROOT, 'cad', 'renders');
 const IDS = fs.readdirSync(path.join(ROOT, 'build', 'cad')).filter(d => /^CL-\d{2}$/.test(d)).sort();
-const VIEWS = ['iso', 'side', 'top', 'dock'];
+const VIEWS = ['hero', 'iso', 'side', 'top', 'dock'];
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.json': 'application/json', '.stl': 'model/stl' };
 
 const server = http.createServer((req, res) => {

@@ -43,9 +43,11 @@ CLASSES = {
     "dock":      ("#7d55c7", 1.0, "SUS-M1-DCK"),
     "uav":       ("#1597c9", 1.0, "SUS-A1"),
     "rotor":     ("#1597c9", 0.35, "SUS-A1"),
-        "reference": ("#a3acb9", 1.0, None),
+        "armor":     ("#8d97a5", 1.0, "SUS-M1-PIL"),
+    "hose":      ("#2e343d", 1.0, "SUS-M1-PWR"),
+    "reference": ("#a3acb9", 1.0, None),
 }
-DENSITY_CLASS = {"arm": "structure", "seat": "structure", "rotor": "uav"}
+DENSITY_CLASS = {"arm": "structure", "seat": "structure", "rotor": "uav", "hose": "structure"}
 
 
 def V(x, y, z):
@@ -76,6 +78,20 @@ class Model:
 
     def sph(self, name, cls, c, r):
         self.add(name, cls, Part.makeSphere(r * MM, V(*c)))
+
+    def obox(self, name, cls, p1, p2, w, d, shift=(0, 0, 0), fillet=0.0):
+        """Box of width w (y) and depth d (x) running along the segment p1 -> p2, moved by shift."""
+        a, b = V(*add(p1, shift)), V(*add(p2, shift))
+        axis = b.sub(a)
+        shape = Part.makeBox(d * MM, w * MM, axis.Length, V(-d / 2, -w / 2, 0))
+        if fillet:
+            shape = shape.makeFillet(fillet * MM, shape.Edges)
+        shape.Placement = FreeCAD.Placement(a, FreeCAD.Rotation(FreeCAD.Vector(0, 0, 1), axis))
+        self.add(name, cls, shape)
+
+    def rbox(self, name, cls, lo, size, fillet):
+        shape = Part.makeBox(*(s * MM for s in size), V(*lo))
+        self.add(name, cls, shape.makeFillet(fillet * MM, shape.Edges))
 
 
 def lerp(a, b, t):
@@ -265,6 +281,118 @@ def walker_dock(m, common, D, top, rear_x):
     m.group = "walker"
 
 
+def build_pod(p, common):
+    """Armoured-pod biped (CL-04): enclosed hull, arched front opening, shoulder plates, roll bar."""
+    m = Model()
+    L = p["leg"]
+    kf = L["knee_forward"]
+    knee_z = L["ankle_height"] + math.sqrt(L["shank"] ** 2 - kf ** 2)
+    hip_z = knee_z + math.sqrt(L["thigh"] ** 2 - kf ** 2)
+    fl, fw, ft = L["foot"]
+    aw, ad = L["armour"]
+    for s in (1, -1):
+        y = s * L["hip_half_width"]
+        hip, knee, ankle = [0, y, hip_z], [kf, y, knee_z], [0, y, L["ankle_height"]]
+        m.cyl(f"thigh{s}", "structure", hip, knee, L["radius"])
+        m.cyl(f"shank{s}", "structure", knee, ankle, L["radius"] * 0.9)
+        m.sph(f"hip{s}", "actuator", hip, L["joint_radius"])
+        m.sph(f"knee{s}", "actuator", knee, L["joint_radius"] * 0.9)
+        m.sph(f"ankle{s}", "actuator", ankle, L["joint_radius"] * 0.75)
+        # Armour plates on the outside of thigh and shin, a knee cap in front
+        m.obox(f"thigh-plate{s}", "armor", lerp(hip, knee, 0.12), lerp(hip, knee, 0.88), aw, ad * 0.55, (0.10, s * 0.06, 0), 0.03)
+        m.obox(f"shin-plate{s}", "armor", lerp(knee, ankle, 0.10), lerp(knee, ankle, 0.85), aw, ad * 0.6, (0.14, 0, 0), 0.03)
+        m.rbox(f"knee-cap{s}", "armor", [kf + 0.12, y - 0.19, knee_z - 0.18], [0.16, 0.38, 0.36], 0.05)
+        hydraulic(m, f"thigh-cyl{s}", [-0.28, y + s * 0.22, hip_z + 0.22], add(lerp(hip, knee, 0.65), [-0.16, s * 0.22, 0]))
+        hydraulic(m, f"shank-cyl{s}", add(lerp(hip, knee, 0.5), [-0.20, s * 0.20, 0]), add(lerp(knee, ankle, 0.6), [-0.18, s * 0.20, 0]))
+        x0 = -0.35 * fl
+        m.rbox(f"foot{s}", "structure", [x0, y - fw / 2, 0], [fl, fw, ft], 0.05)
+        m.rbox(f"toe-plate{s}", "armor", [x0 + fl * 0.55, y - fw / 2 - 0.02, ft - 0.02], [fl * 0.45, fw + 0.04, 0.10], 0.03)
+        m.rbox(f"heel-guard{s}", "armor", [x0 - 0.02, y - fw / 2 + 0.05, ft - 0.02], [0.25, fw - 0.10, 0.22], 0.04)
+        m.cyl(f"ankle-link{s}", "structure", ankle, [0, y, ft], L["radius"] * 0.85)
+        m.feet += [(x0, y - fw / 2), (x0 + fl, y - fw / 2), (x0, y + fw / 2), (x0 + fl, y + fw / 2)]
+        # Hydraulic hose loop from the hull to the knee
+        h0 = [-0.25, y + s * 0.30, hip_z - 0.05]
+        h1 = [-0.42, y + s * 0.34, hip_z - 0.45]
+        h2 = [-0.30, y + s * 0.32, knee_z + 0.10]
+        h3 = [-0.12, y + s * 0.26, knee_z - 0.05]
+        for k, (a, b) in enumerate(((h0, h1), (h1, h2), (h2, h3))):
+            m.cyl(f"hose{s}{k}", "hose", a, b, 0.035)
+            m.sph(f"hose-bend{s}{k}", "hose", b, 0.035)
+
+    P = p["pod"]
+    dx, wy, hz = P["size"]
+    x1 = P["x_front"]
+    x0 = x1 - dx
+    z0 = hip_z - P["bottom_offset"]
+    z1 = z0 + hz
+    outer = Part.makeBox(dx * MM, wy * MM, hz * MM, V(x0, -wy / 2, z0))
+    outer = outer.makeFillet(P["edge_radius"] * MM, outer.Edges)
+    w = P["wall"]
+    inner = Part.makeBox((dx - 2 * w) * MM, (wy - 2 * w) * MM, (hz - 2 * w) * MM, V(x0 + w, -wy / 2 + w, z0 + w))
+    floor = z0 + P["floor_offset"]
+    ow, oh, osill = P["opening"]
+    zb = floor + 0.5 + osill
+    c = 0.18  # chamfered corners give the arched, faceted opening
+    pts = [(-ow / 2, zb), (ow / 2, zb), (ow / 2, zb + oh - c), (ow / 2 - c, zb + oh), (-ow / 2 + c, zb + oh), (-ow / 2, zb + oh - c)]
+    wire = Part.makePolygon([V(x1 - 0.5, y_, z_) for y_, z_ in pts] + [V(x1 - 0.5, pts[0][0], pts[0][1])])
+    window = Part.Face(wire).extrude(V(1.0, 0, 0))
+    m.add("pod-hull", "armor", outer.cut(inner).cut(window))
+    m.box("cockpit-floor", "seat", [x0 + w, -wy / 2 + w, floor - 0.04], [dx - 2 * w, wy - 2 * w, 0.04])
+    eye = pilot(m, floor, x1 - P["seat_back_from_front"])
+    # Chest plate below the opening, standing proud of the hull like the reference's front plate
+    m.rbox("chest-plate", "armor", [x1 - 0.04, -0.42, zb - 0.55], [0.16, 0.84, 0.50], 0.04)
+    m.sph("chest-boss", "actuator", [x1 + 0.13, 0, zb - 0.30], 0.08)
+    m.cyl("hip-housing", "structure", [0, -L["hip_half_width"] - 0.12, hip_z], [0, L["hip_half_width"] + 0.12, hip_z], 0.25)
+
+    S = p["shoulder"]
+    sx, sy, sz = S["plate"]
+    A = p["arm"]
+    ang = math.radians(A["drop_angle_deg"])
+    for s in (1, -1):
+        yc = s * (wy / 2 + sy / 2 - 0.08)
+        m.rbox(f"shoulder-plate{s}", "armor", [x1 - sx - 0.05, yc - sy / 2, z1 - S["drop"] - sz], [sx, sy, sz], 0.10)
+        sh = [x1 - sx / 2 - 0.05, s * (wy / 2 + 0.18), z1 - S["drop"] - sz - 0.05]
+        m.sph(f"arm-shoulder{s}", "actuator", sh, A["radius"] * 1.8)
+        elbow = add(sh, [A["upper"] * math.cos(ang), 0, -A["upper"] * math.sin(ang)])
+        wrist = add(elbow, [A["fore"] * math.cos(math.radians(12)), 0, A["fore"] * math.sin(math.radians(12))])
+        m.cyl(f"arm-upper{s}", "arm", sh, elbow, A["radius"])
+        m.obox(f"arm-upper-plate{s}", "armor", lerp(sh, elbow, 0.15), lerp(sh, elbow, 0.85), 0.30, 0.20, (0, s * 0.07, 0), 0.03)
+        m.sph(f"arm-elbow{s}", "actuator", elbow, A["radius"] * 1.35)
+        m.cyl(f"arm-fore{s}", "arm", elbow, wrist, A["radius"] * 0.9)
+        m.obox(f"arm-fore-plate{s}", "armor", lerp(elbow, wrist, 0.15), lerp(elbow, wrist, 0.80), 0.28, 0.26, (0, 0, 0.03), 0.03)
+        m.rbox(f"hand{s}", "arm", [wrist[0] - 0.05, wrist[1] - 0.12, wrist[2] - 0.11], [0.22, 0.24, 0.22], 0.03)
+        for k, dy in enumerate((-0.08, 0.0, 0.08)):
+            m.obox(f"finger{s}{k}", "arm", [wrist[0] + 0.15, wrist[1] + dy, wrist[2]], [wrist[0] + 0.36, wrist[1] + dy, wrist[2] - 0.10], 0.05, 0.06)
+        m.obox(f"thumb{s}", "arm", [wrist[0] + 0.08, wrist[1] - s * 0.13, wrist[2] - 0.05], [wrist[0] + 0.24, wrist[1] - s * 0.16, wrist[2] - 0.14], 0.05, 0.05)
+
+    W = p["power"]
+    px, py, pz = W["pack"]
+    pk0 = x0 - px + 0.06
+    m.rbox("power-pack", "power", [pk0, -py / 2, z0 + 0.35], [px, py, pz], 0.08)
+    for k in range(W["vents"]):
+        yv = (k - (W["vents"] - 1) / 2) * 0.17
+        m.cyl(f"vent{k}", "power", [pk0 + px * 0.55, yv, z0 + 0.35 + pz], [pk0 + px * 0.55, yv, z0 + 0.35 + pz + 0.10], 0.065)
+
+    R = p["rollbar"]
+    rt = R["tube_radius"]
+    top = z1 + R["rise"]
+    for s in (1, -1):
+        yb = s * (wy / 2 - 0.22)
+        m.cyl(f"rollbar-post{s}", "cage", [x0 + 0.20, yb, z1 - 0.05], [x0 + 0.20, yb, top], rt)
+        m.cyl(f"rollbar-fwd{s}", "cage", [x0 + 0.20, yb, top], [x0 + 0.85, yb, top - 0.10], rt)
+        m.cyl(f"rollbar-drop{s}", "cage", [x0 + 0.85, yb, top - 0.10], [x0 + 0.95, yb, z1 - 0.02], rt)
+        m.sph(f"rollbar-bend{s}", "cage", [x0 + 0.20, yb, top], rt)
+        m.sph(f"rollbar-bend2{s}", "cage", [x0 + 0.85, yb, top - 0.10], rt)
+    m.cyl("rollbar-cross", "cage", [x0 + 0.20, -(wy / 2 - 0.22), top], [x0 + 0.20, wy / 2 - 0.22, top], rt)
+    m.cyl("rollbar-cross2", "cage", [x0 + 0.85, -(wy / 2 - 0.22), top - 0.10], [x0 + 0.85, wy / 2 - 0.22, top - 0.10], rt)
+
+    safety_items(m, [x0 + 0.55, 0, z1 - 0.01], [([x1 - 0.35, wy / 2 + 0.01, z0 + 0.55], [0, 1, 0]),
+                                               ([pk0, 0.35, z0 + 0.7], [-1, 0, 0])])
+    m.cbox("saf-controller", "safety", [x0 + 0.40, -wy / 2 - 0.07, z0 + 0.45], [0.30, 0.14, 0.26])
+    walker_dock(m, common, p["dock"], top=z0 + 0.35 + pz, rear_x=pk0)
+    return m, {"hip_z": hip_z, "floor": floor, "eye": eye, "dock": "offboard" if p["dock"]["type"] == "ground-station" else "onboard"}
+
+
 # --- Metrics --------------------------------------------------------------------------------------
 
 def hull(points):
@@ -303,9 +431,10 @@ def metrics(m: Model, info: dict, common: dict) -> dict:
     mom = FreeCAD.Vector(0, 0, 0)
     for pt in on:
         rho = dens[DENSITY_CLASS.get(pt["cls"], pt["cls"])]
-        kg = pt["shape"].Volume / MM ** 3 * rho
-        mass += kg
-        mom = mom.add(pt["shape"].CenterOfMass.multiply(kg))
+        for solid in pt["shape"].Solids:  # cut shapes come back as compounds
+            kg = solid.Volume / MM ** 3 * rho
+            mass += kg
+            mom = mom.add(solid.CenterOfMass.multiply(kg))
     cg = mom.multiply(1.0 / mass).multiply(1.0 / MM)
     bb = Part.makeCompound([pt["shape"] for pt in on]).BoundBox
     poly = hull(m.feet)
@@ -358,7 +487,7 @@ def export(m: Model, cid: str, out: Path, met: dict, info: dict, title: str) -> 
                                                    "eye": [round(c, 3) for c in info["eye"]]}, indent=1))
 
 
-BUILDERS = {"biped": build_biped}  # TS-003 decided: bipedal (project lead, 2026-11-11)
+BUILDERS = {"open-frame": build_biped, "armored-pod": build_pod}  # all bipedal: TS-003 decided (project lead, 2026-11-11)
 
 
 def main() -> int:
@@ -372,7 +501,9 @@ def main() -> int:
         p = yaml.safe_load(path.read_text())
         if args.ids and p["id"] not in args.ids:
             continue
-        m, info = BUILDERS[p["locomotion"]](p, common)
+        if p["locomotion"] != "biped":
+            raise ValueError(f"{p['id']}: TS-003 is decided as bipedal; locomotion {p['locomotion']!r} is not built")
+        m, info = BUILDERS[p.get("style", "open-frame")](p, common)
         bb = Part.makeCompound([pt["shape"] for pt in m.parts if pt["group"] != "reference"]).BoundBox
         reference_human(m, (bb.XMin / MM - 0.55, bb.YMin / MM - 0.9), common["reference_human"]["height"])
         met = metrics(m, info, common)

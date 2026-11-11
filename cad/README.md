@@ -4,11 +4,11 @@
 
 > **Concept mockups, not designs.** Every layout below is built from primitive solids placed by placeholder parameters. Dimensions, masses and every metric are properties of that placeholder geometry. They exist so the team can look at the same picture, compare the trade-study alternatives side by side, and see early where an option makes a hazard worse. They select nothing: the trade studies (TS-001 to TS-004) are decided by the lead.
 
-![Concept line-up: three bipeds with the UAV docked on the back (CL-01), on the shoulder (CL-02) and on a separate ground station (CL-03), each with a 1.75 m person for scale](renders/lineup.png)
+![Concept line-up: open-frame bipeds with the UAV docked on the back (CL-01), on the shoulder (CL-02) and on a separate ground station (CL-03), and the armoured pod (CL-04), each with a 1.75 m person for scale](renders/lineup.png)
 
 ## 1. What the layouts compare
 
-Each layout (`CL-nn`) is one combination of trade-study alternatives. Locomotion is **bipedal** (TS-003, decided by the project lead). All three layouts share the same biped, the actuation hypothesis (centralized hydraulic, drawn as yellow cylinders) and the seated protected cockpit, so they differ only in where the UAV docks (TS-004). Standing and remote-pilot alternatives (TS-002) and electric actuation (TS-001) are not modelled yet.
+Each layout (`CL-nn`) is one combination of trade-study alternatives. Locomotion is **bipedal** (TS-003, decided by the project lead). CL-01 to CL-03 share the same open-frame biped, the actuation hypothesis (centralized hydraulic, drawn as yellow cylinders) and the seated protected cockpit, so they differ only in where the UAV docks (TS-004). CL-04 is an armoured-pod restyle in the form language of the lead's reference image: an enclosed hull with the pilot at an arched front opening, shoulder plates, roll bar and plated legs. Standing and remote-pilot alternatives (TS-002) and electric actuation (TS-001) are not modelled yet.
 
 What to look for in the review:
 
@@ -26,19 +26,19 @@ Metric definitions: *static margin* is the shortest horizontal distance from the
 <!-- BEGIN GENERATED: cad-concepts (tools/pdac/generate.py) -->
 *Metrics from [`metrics.json`](metrics.json) (FreeCAD 1.1.3); ⚠ marks the provisional review flags of §1.*
 
-| | CL-01 | CL-02 | CL-03 |
-|---|---|---|---|
-| Locomotion (TS-003) | bipedal | bipedal | bipedal |
-| UAV dock (TS-004) | rear backpack dock | shoulder-mounted dock | separate portable station |
-| Envelope L × W × H | 3.4 × 2.4 × 4.1 m | 3.4 × 2.4 × 4.2 m | 3.4 × 2.4 × 3.9 m |
-| Overall height | 4.08 m | 4.20 m | 3.85 m |
-| Pilot eye height | 3.54 m | 3.54 m | 3.54 m |
-| Cockpit floor (egress drop) | 2.33 m | 2.33 m | 2.33 m |
-| CG height | 2.63 m | 2.63 m | 2.63 m |
-| Static margin | 0.14 m ⚠ | 0.14 m ⚠ | 0.14 m ⚠ |
-| Static tip angle | 3.1° | 3.2° | 3.1° |
-| Rotor ↔ pilot (docked) | 0.79 m ⚠ | 0.63 m ⚠ | 3.14 m |
-| Placeholder mass | ~5.0 t | ~5.0 t | ~5.0 t |
+| | CL-01 | CL-02 | CL-03 | CL-04 |
+|---|---|---|---|---|
+| Locomotion (TS-003) | bipedal | bipedal | bipedal | bipedal |
+| UAV dock (TS-004) | rear backpack dock | shoulder-mounted dock | separate portable station | rear backpack dock |
+| Envelope L × W × H | 3.4 × 2.4 × 4.1 m | 3.4 × 2.4 × 4.2 m | 3.4 × 2.4 × 3.9 m | 3.4 × 2.5 × 3.9 m |
+| Overall height | 4.08 m | 4.20 m | 3.85 m | 3.94 m |
+| Pilot eye height | 3.54 m | 3.54 m | 3.54 m | 3.15 m |
+| Cockpit floor (egress drop) | 2.33 m | 2.33 m | 2.33 m | 1.94 m |
+| CG height | 2.63 m | 2.63 m | 2.63 m | 2.24 m |
+| Static margin | 0.14 m ⚠ | 0.14 m ⚠ | 0.14 m ⚠ | 0.23 m ⚠ |
+| Static tip angle | 3.1° | 3.2° | 3.1° | 5.7° |
+| Rotor ↔ pilot (docked) | 0.79 m ⚠ | 0.63 m ⚠ | 3.14 m | 0.92 m ⚠ |
+| Placeholder mass | ~5.0 t | ~5.0 t | ~5.0 t | ~6.3 t |
 
 ### CL-01 · Biped, seated protected cockpit, rear backpack dock
 
@@ -47,6 +47,8 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 - Common to every biped layout: the static margin is small and the CG is high above two feet, so standing still depends on active balance. Loss of actuation energy or a zero-torque stop means a fall unless SYS-008 holds posture (HAZ-005, HAZ-021).
 - Common to every biped layout: the cockpit floor is above the head of a standing person, so egress and extraction (SYS-012) need a ladder, a lowered posture or a kneel mode.
 - The rear dock sits above the cockpit roof line, so the docked rotors still come within the provisional 1 m flag of the pilot's head.
+
+![CL-01 front view from eye height](renders/CL-01-hero.png)
 
 | | |
 |---|---|
@@ -60,6 +62,8 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 - The shoulder dock puts the docked rotors beside the cage at pilot head height, the closest of the three layouts: HAZ-011 and HAZ-012 dominate, and SYS-003 rotor inhibit plus a rotor guard would be needed if this option is kept.
 - The UAV is light against the walker: the dock position changes the CG by millimetres, so TS-004 is decided by rotor clearance, access and approach geometry, not by stability.
 
+![CL-02 front view from eye height](renders/CL-02-hero.png)
+
 | | |
 |---|---|
 | ![CL-02 three-quarter view](renders/CL-02-iso.png) | ![CL-02 side elevation](renders/CL-02-side.png) |
@@ -72,10 +76,28 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 - The off-board station keeps rotors metres from the pilot and removes dock-retention loads while walking (HAZ-013), at the cost of launching and recovering only where the station is.
 - Nothing is mounted on top of the walker, so this is the lowest of the three bipeds and its hull top stays free for sensors or a beacon.
 
+![CL-03 front view from eye height](renders/CL-03-hero.png)
+
 | | |
 |---|---|
 | ![CL-03 three-quarter view](renders/CL-03-iso.png) | ![CL-03 side elevation](renders/CL-03-side.png) |
 | ![CL-03 plan view with support polygon and centre of gravity](renders/CL-03-top.png) | ![CL-03 UAV dock and rotor clearance to the pilot](renders/CL-03-dock.png) |
+
+### CL-04 · Biped armoured pod, seated cockpit, rear dock
+
+Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 bipedal; TS-004 rear backpack dock. Informs: HAZ-006, HAZ-008, HAZ-009, HAZ-011, HAZ-017, SYS-010, SYS-012, SYS-017. Parameters: [`params/CL-04.yaml`](params/CL-04.yaml).
+
+- Form language from the project lead's reference image: an enclosed armoured pod with the pilot visible at an arched front opening, heavy shoulder plates, roll bar and hunched, plated legs. The geometry is original and parametric.
+- Lowest CG and lowest cockpit floor of the four layouts, and the best static margin of the bipeds, though still under the 0.3 m review flag: the shorter, more bent legs pull the mass down.
+- The enclosed pod protects the pilot better in a fall or overturn (SYS-010) than an open cage, but the single front opening is the only way out: a forward fall blocks egress and extraction (HAZ-008, SYS-012), and a fire inside the pod (HAZ-017) has one exit. A second exit or a release panel is needed.
+- The armour around the opening narrows the pilot's view down and to the sides, toward the feet and manipulators (HAZ-009).
+
+![CL-04 front view from eye height](renders/CL-04-hero.png)
+
+| | |
+|---|---|
+| ![CL-04 three-quarter view](renders/CL-04-iso.png) | ![CL-04 side elevation](renders/CL-04-side.png) |
+| ![CL-04 plan view with support polygon and centre of gravity](renders/CL-04-top.png) | ![CL-04 UAV dock and rotor clearance to the pilot](renders/CL-04-dock.png) |
 <!-- END GENERATED: cad-concepts -->
 
 ## 3. How the layouts are made

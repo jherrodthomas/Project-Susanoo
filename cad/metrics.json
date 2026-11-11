@@ -128,6 +128,48 @@
    "static_tip_angle_deg": 3.1,
    "uav_dock": "offboard",
    "rotor_to_pilot_m": 3.14
+  },
+  "CL-04": {
+   "title": "Biped armoured pod, seated cockpit, rear dock",
+   "locomotion": "biped",
+   "dock": "rear-backpack",
+   "envelope_m": [
+    3.43,
+    2.49,
+    3.94
+   ],
+   "height_m": 3.94,
+   "hip_height_m": 2.02,
+   "cockpit_floor_m": 1.94,
+   "pilot_eye_m": 3.15,
+   "placeholder_mass_kg": 6270,
+   "cg_m": [
+    -0.178,
+    -0.001,
+    2.236
+   ],
+   "support_polygon_m": [
+    [
+     -0.403,
+     -0.88
+    ],
+    [
+     0.748,
+     -0.88
+    ],
+    [
+     0.748,
+     0.88
+    ],
+    [
+     -0.403,
+     0.88
+    ]
+   ],
+   "static_margin_m": 0.225,
+   "static_tip_angle_deg": 5.7,
+   "uav_dock": "onboard",
+   "rotor_to_pilot_m": 0.92
   }
  }
 }

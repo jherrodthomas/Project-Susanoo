@@ -5,6 +5,7 @@ effective_density:      # kg/m^3 applied to the solid volume of each part class
   structure: 900        # open frame and hollow members modelled as solids
   actuator: 2600
   cage: 1200
+  armor: 1400          # armoured pod and plates (modelled as solid plates)
   occupant: 1000        # pilot mannequin, about 90 kg
   power: 2200
   safety: 800

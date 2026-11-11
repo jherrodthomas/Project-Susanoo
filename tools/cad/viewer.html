@@ -101,7 +101,7 @@ const loader = new STLLoader();
 const fmt = (v, d = 2) => Number(v).toFixed(d);
 const legendSeen = new Map();
 const COMPONENT_NAMES = { 'SUS-M1-WLK': 'Walker structure & legs', 'SUS-M1-MAN': 'Manipulators', 'SUS-M1-PIL': 'Pilot station', 'SUS-M1-PWR': 'Power pack', 'SUS-M1-SAF': 'Safety monitor & e-stops', 'SUS-M1-DCK': 'UAV dock', 'SUS-A1': 'SUS-A1 UAV' };
-const CLASS_NAMES = { actuator: 'Actuators / joints', occupant: 'Pilot (seated)', cage: 'Protective cage', reference: '1.75 m person (scale)' };
+const CLASS_NAMES = { actuator: 'Actuators / joints', occupant: 'Pilot (seated)', cage: 'Protective cage', reference: '1.75 m person (scale)', armor: 'Armoured pod & plates', hose: 'Hydraulic hoses' };
 
 async function loadConcept(id, offsetY) {
   const man = await (await fetch(`../../build/cad/${id}/manifest.json`)).json();
@@ -138,7 +138,7 @@ const size = box.getSize(new THREE.Vector3());
 
 const man = mans[0];
 const M = man.metrics;
-if (view !== 'lineup' && view !== 'dock') {
+if (view !== 'lineup' && view !== 'dock' && view !== 'hero') {
   // Centre of gravity marker and its projection on the ground
   const [cx, cy, cz] = M.cg_m;
   const cgMat1 = new THREE.MeshBasicMaterial({ color: '#111827', transparent: true }), cgMat2 = new THREE.MeshBasicMaterial({ color: '#facc15', transparent: true });
@@ -162,9 +162,15 @@ if (view !== 'lineup' && view !== 'dock') {
 
 let camera;
 const target = center.clone();
-if (view === 'iso' || view === 'lineup' || view === 'dock') {
+if (view === 'iso' || view === 'dock' || view === 'hero') {
   camera = new THREE.PerspectiveCamera(view === 'dock' ? 30 : 32, W / H, 0.1, 200);
-  if (view === 'dock') {
+  if (view === 'hero') {
+    // Low front three-quarter view from a standing person's eye height, looking into the cockpit
+    const r = Math.max(size.x, size.y, size.z) * 2.75;
+    camera.fov = 30;
+    camera.position.set(center.x + r * 0.92, center.y - r * 0.40, 1.7);
+    target.set(center.x, center.y + size.y * 0.12, size.z * 0.46);
+  } else if (view === 'dock') {
     const [a, b] = man.rotor_pilot_points;
     target.set((a[0] + b[0]) / 2, (a[1] + b[1]) / 2, (a[2] + b[2]) / 2);
     const d = man.metrics.uav_dock === 'offboard' ? 9.5 : 5.2;
@@ -174,6 +180,13 @@ if (view === 'iso' || view === 'lineup' || view === 'dock') {
     camera.position.set(center.x + r * 0.78, center.y - r * 0.72, center.z + r * 0.40);
     target.z = size.z * (view === 'lineup' ? 0.40 : 0.50);
   }
+} else if (view === 'lineup') {
+  // Orthographic three-quarter view: every concept at exactly the same scale
+  const aspect = W / H;
+  const span = Math.max(size.y * 0.40, size.z * 0.80);
+  camera = new THREE.OrthographicCamera(-span * aspect, span * aspect, span, -span, 0.1, 400);
+  target.set(center.x, center.y, size.z * 0.38);
+  camera.position.set(target.x + 60, target.y - 45, target.z + 32);
 } else {
   // Half-height chosen so the ground sits just above the metrics strip and the top clears the header.
   const span = view === 'side' ? Math.max(size.z / 1.45, size.x / 2.6) : Math.max(size.x, size.y) * 0.62;
@@ -183,6 +196,7 @@ if (view === 'iso' || view === 'lineup' || view === 'dock') {
   if (view === 'top') { camera.up.set(1, 0, 0); target.x = center.x + span * 0.08; camera.position.set(target.x, center.y, 40); camera.zoom = 0.92; }
   camera.updateProjectionMatrix();
 }
+camera.updateProjectionMatrix();
 camera.lookAt(target);
 
 // Annotations per view
@@ -212,10 +226,10 @@ if (view === 'lineup') {
 }
 
 // Header, metrics strip, legend and footer
-const VIEW_NAMES = { iso: 'Three-quarter view', side: 'Side elevation (orthographic)', top: 'Plan view: support polygon and centre of gravity', dock: 'UAV dock: rotor clearance to the pilot', lineup: 'Concept line-up at the same scale' };
+const VIEW_NAMES = { hero: 'Front view from eye height (1.7 m)', iso: 'Three-quarter view', side: 'Side elevation (orthographic)', top: 'Plan view: support polygon and centre of gravity', dock: 'UAV dock: rotor clearance to the pilot', lineup: 'Concept line-up at the same scale' };
 const hdr = document.createElement('div');
 hdr.className = 'hdr';
-const title = view === 'lineup' ? 'Concept layouts CL-01 · CL-02 · CL-03' : `${man.id} · ${man.title}`;
+const title = view === 'lineup' ? `Concept layouts ${ids.join(' · ')}` : `${man.id} · ${man.title}`;
 hdr.innerHTML = `<h1>${title}<span class="badge">CONCEPT MOCKUP</span></h1><div class="sub">${VIEW_NAMES[view]} — placeholder geometry for review and alignment, not a design</div>`;
 frame.appendChild(hdr);
 const lg = document.createElement('div');
