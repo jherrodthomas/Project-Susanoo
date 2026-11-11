@@ -29,6 +29,11 @@ causal_factors:
 - id: CF3
   type: human
   description: Pilot commands manoeuvre or payload beyond limits
+- id: CF4
+  type: hardware
+  description: Loss of actuator supply (hydraulic pressure or bus voltage) shrinks the balance capacity before load
+    holding engages; a slow leak on a slope tips the walker, and a hold that engages with the CoM outside the foot
+    tips it too (simulation SF-01 EC-08, EC-04, EC-06; synthetic)
 effects:
 - Overturn or fall of the platform
 mishap: Pilot fatal or disabling injury in fall; crush of bystanders
@@ -92,6 +97,16 @@ mitigations:
     method:
     - test
     evidence_ids: []
+- id: M5
+  description: Start the protective crouch and engage load holding on falling balance margin (capture point against the
+    support still available), not only on a supply-pressure threshold, and only in a statically stable posture
+  precedence: c
+  state: identified
+  verification:
+    method:
+    - test
+    - analysis
+    evidence_ids: []
 requirement_ids:
 - SYS-008
 owner:
@@ -109,8 +124,12 @@ source:
   - SCN-103
   documents:
   - concept/CONOPS.md
+  - sim/results/search-SF-01.md
 hazmat: not-applicable
 assumptions:
 - Concept configuration SUS-I1-C001; no hardware design selected
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
+- 'Set the CONOPS section 4 slope limit with margin: under SPEC-WLK-001 assumptions the no-fault gait tips between 12
+  and 15 degrees (failure search SF-01, edge cases EC-05 and EC-07)'
+- Derive a safety requirement for margin-based load holding (M5) (Task 203)

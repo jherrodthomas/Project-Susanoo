@@ -15,8 +15,8 @@ PX4 v1.16.2, SIH quadrotor, headless, speed factor 4. Positions are simulator gr
 
 ## Findings for review
 
-- **FND-UAV-01** (SU-01; HAZ-INT-001): PX4 return-to-launch brings the aircraft to the dock, inside the pilot keep-out, with no integration manager recovery permit (IF-PX4-005/006 are bypassed)
-- **FND-UAV-02** (SU-02; HAZ-INT-001): PX4 home is the take-off point; after the walker moves, a return lands where the dock used to be, possibly among the ground crew
-- **FND-UAV-03** (SU-06; HAZ-INT-001): PX4's reported position (IF-PX4-001) was wrong by more than 10 m; the integration manager must not trust it without validity checks (max_estimate_error_m = 170.02)
+- **FND-UAV-01** (SU-01; HAZ-INT-001): PX4 return-to-launch brings the aircraft to the dock, inside the pilot keep-out, with no integration manager recovery permit (IF-PX4-005/006 are bypassed). Recorded as HAZ-INT-001 CF4, mitigation M5, SSF-008
+- **FND-UAV-02** (SU-02; HAZ-INT-001): PX4 home is the take-off point; after the walker moves, a return lands where the dock used to be, possibly among the ground crew. Recorded as HAZ-INT-001 CF5, mitigation M6
+- **FND-UAV-03** (SU-06; HAZ-INT-001): PX4's reported position (IF-PX4-001) was wrong by more than 10 m; the integration manager must not trust it without validity checks. Recorded as HAZ-INT-001 CF6, mitigation M7 (max_estimate_error_m = 170.02)
 
 Findings are drafts for the safety lead (CLAUDE.md). Scenario notes: SU-06: SIH has no GPS failure injection (PX4 v1.16.2 supports it only in the Gazebo/jMAVSim bridge); GPS fusion is disabled in flight instead, which is the loss as the estimator sees it.

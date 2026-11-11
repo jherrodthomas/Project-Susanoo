@@ -22,7 +22,7 @@ scenes:
     motion: {source: plant, performed: {fault: FLT-02, monitor: false}, intended: {fault: FLT-02, monitor: true}}
     look: {environment: yard, condition: overcast, camera: three-quarter}
   - id: S3-04
-    hazards: [FND-SF-01-01]
+    hazards: [HAZ-PIL-002]
     title: Burst supply loss with failed load holding; the cockpit drops
     motion: {source: edge, family: SF-01, edge_case: EC-01, intended_over: {load_holding: works}}
     look: {environment: hillside, condition: clear, camera: side}

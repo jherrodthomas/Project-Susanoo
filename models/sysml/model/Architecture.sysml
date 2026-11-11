@@ -160,11 +160,11 @@ package SusanooArchitecture {
         }
         connection <'IF-004'> controlToJointActuators : Exchange connect system.walker.motionControl to system.walker.legs {
             doc /* Control to joint actuators */
-            @InterfaceSpec { direction = Direction::bi; kinds = ("data", "energy"); exchange = "torque or pressure commands, joint feedback"; hazards = ("HAZ-WLK-001", "HAZ-WLK-002"); }
+            @InterfaceSpec { direction = Direction::bi; kinds = ("data", "energy"); exchange = "torque or pressure commands, joint feedback"; hazards = ("HAZ-WLK-001", "HAZ-WLK-002", "HAZ-PIL-002"); }
         }
         connection <'IF-005'> safetyMonitorToPower : Exchange connect system.walker.safetyMonitor to system.walker.power {
             doc /* Safety monitor to power */
-            @InterfaceSpec { direction = Direction::uni; kinds = ("data", "energy"); exchange = "inhibit, isolation"; hazards = ("HAZ-SAF-001"); }
+            @InterfaceSpec { direction = Direction::uni; kinds = ("data", "energy"); exchange = "inhibit, isolation"; hazards = ("HAZ-SAF-001", "HAZ-PIL-002"); }
         }
         connection <'IF-006'> walkerDockToUav : Exchange connect system.walker.dock to system.uav {
             doc /* Walker dock to UAV */

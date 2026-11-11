@@ -32,7 +32,7 @@ HAZ-WLK-001 · walker · source fault FLT-02 · outcome **tip** · yard, overcas
 
 ### S3-04 · Burst supply loss with failed load holding; the cockpit drops
 
-FND-SF-01-01 · walker · source SF-01 EC-01 · outcome **hard-drop** · hillside, clear
+HAZ-PIL-002 · walker · source SF-01 EC-01 · outcome **hard-drop** · hillside, clear
 
 ![S3-04](images/3d-s3-04.png)
 

@@ -50,7 +50,7 @@ Status key: *no errors* = automated rule found no errors in current records (thi
 ## E7 — Accept risk and document (4.3.7)
 | ID | Clause | Obligation (condensed) | Check | Status | Artifacts |
 |---|---|---|---|---|---|
-| E7.a | 4.3.7 | Accept risk by the appropriate authority before exposing people, equipment or environment to known hazards | R06: Risk accepted before people, equipment or environment are exposed | no errors, 5 warning(s) |  |
+| E7.a | 4.3.7 | Accept risk by the appropriate authority before exposing people, equipment or environment to known hazards | R06: Risk accepted before people, equipment or environment are exposed | no errors, 6 warning(s) |  |
 | E7.b | 4.3.7 | User representative formally concurs before all Serious and High acceptance decisions | R05: Acceptance by the appropriate authority with user concurrence for Serious/High | no errors |  |
 | E7.c | 4.3.7 | Document each risk acceptance decision in the HTS | R05: Acceptance by the appropriate authority with user concurrence for Serious/High | no errors |  |
 
@@ -71,25 +71,25 @@ Status key: *no errors* = automated rule found no errors in current records (thi
 ## Task 106.2 HTS data elements
 | Element | Data element | Record field | Populated |
 |---|---|---|---|
-| 106.2a | Hazard | `hazardous_condition` | 8/8 |
-| 106.2b | System | `system` | 8/8 |
-| 106.2c | Subsystem (if applicable) | `subsystems` | 8/8 |
-| 106.2d | Applicability (version specific hardware/software) | `applicability` | 8/8 |
-| 106.2e | Requirements references | `requirement_ids` | 8/8 |
-| 106.2f | System mode | `modes` | 8/8 |
-| 106.2g | Causal factor (hardware, software, human, environment) | `causal_factors` | 8/8 |
-| 106.2h | Effects | `effects` | 8/8 |
-| 106.2i | Mishap | `mishap` | 8/8 |
-| 106.2j | Initial RAC | `initial_risk` | 8/8 |
-| 106.2k | Target RAC | `target_risk` | 8/8 |
-| 106.2l | Event RAC(s) | `event_risks` | 0/8 |
-| 106.2m | Mitigation measures (identified and selected, version traced) | `mitigations` | 8/8 |
-| 106.2n | Hazard status | `status` | 8/8 |
-| 106.2o | Verification and validation method | `mitigations[].verification.method` | 8/8 |
-| 106.2p | Action person(s) and organizational element | `owner` | 8/8 |
-| 106.2q | Record of risk acceptance(s) | `acceptances` | 0/8 |
+| 106.2a | Hazard | `hazardous_condition` | 9/9 |
+| 106.2b | System | `system` | 9/9 |
+| 106.2c | Subsystem (if applicable) | `subsystems` | 9/9 |
+| 106.2d | Applicability (version specific hardware/software) | `applicability` | 9/9 |
+| 106.2e | Requirements references | `requirement_ids` | 9/9 |
+| 106.2f | System mode | `modes` | 9/9 |
+| 106.2g | Causal factor (hardware, software, human, environment) | `causal_factors` | 9/9 |
+| 106.2h | Effects | `effects` | 9/9 |
+| 106.2i | Mishap | `mishap` | 9/9 |
+| 106.2j | Initial RAC | `initial_risk` | 9/9 |
+| 106.2k | Target RAC | `target_risk` | 9/9 |
+| 106.2l | Event RAC(s) | `event_risks` | 0/9 |
+| 106.2m | Mitigation measures (identified and selected, version traced) | `mitigations` | 9/9 |
+| 106.2n | Hazard status | `status` | 9/9 |
+| 106.2o | Verification and validation method | `mitigations[].verification.method` | 9/9 |
+| 106.2p | Action person(s) and organizational element | `owner` | 9/9 |
+| 106.2q | Record of risk acceptance(s) | `acceptances` | 0/9 |
 | 106.2r | Hazard management log | `git history of safety/hazards/ (records change only via reviewed PRs)` | git history |
-| 106.2s | HAZMAT data elements | `hazmat` | 8/8 |
+| 106.2s | HAZMAT data elements | `hazmat` | 9/9 |
 
 Event RACs (l) and acceptances (q) are expected to be empty until test events are planned and risk is accepted.
 
@@ -103,7 +103,7 @@ Event RACs (l) and acceptances (q) are expected to be empty until test events ar
 | R03 | Design order of precedence applied | 4.3.4 | 0 | 0 |
 | R04 | Selected mitigations verified before hazard is verified/accepted/closed | 4.3.6 | 0 | 0 |
 | R05 | Acceptance by the appropriate authority with user concurrence for Serious/High | 4.3.1c, 4.3.7 | 0 | 0 |
-| R06 | Risk accepted before people, equipment or environment are exposed | 4.3.7, Task 303 | 0 | 5 |
+| R06 | Risk accepted before people, equipment or environment are exposed | 4.3.7, Task 303 | 0 | 6 |
 | R07 | Software contribution: SCC, SwCI, LOR and Table VI | 4.4 | 0 | 0 |
 | R08 | Risk definitions documented and approved | 4.3.3d, 4.3.3e | 0 | 1 |
 | R09 | HTS minimum data elements present | 4.3.1d, Task 106.2 | 0 | 0 |

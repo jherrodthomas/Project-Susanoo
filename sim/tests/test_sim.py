@@ -85,11 +85,21 @@ class Search(unittest.TestCase):
         self.assertEqual(m["hazard"], "HAZ-WLK-002")
 
     def test_cause_gap_is_reported(self):
+        # with a fault catalogue that does not trace FLT-01 to HAZ-WLK-002, a tip mapped to HAZ-WLK-002 is a cause gap
+        real = search.fault_causes
+        search.fault_causes = lambda: {"FLT-01": ["HAZ-SAF-001:CF2"]}
+        try:
+            res = search.run_family(self.FAM, P)
+        finally:
+            search.fault_causes = real
+        gaps = [e for e in res["edge_cases"] if e["cause_gap"]]
+        self.assertTrue(gaps)
+        self.assertTrue(all(e["hazard"] not in ("HAZ-SAF-001",) for e in gaps))
+
+    def test_committed_catalogue_has_no_cause_gap(self):
         import json
         res = json.loads((ROOT / "sim/results/search-SF-01.json").read_text())
-        gaps = [e for e in res["edge_cases"] if e["cause_gap"]]
-        self.assertTrue(gaps, "expected at least one mapped hazard without a causal factor for FLT-01")
-        self.assertTrue(all("HAZ-SAF-001" not in e["cause_gap"].split(" lists")[0] for e in gaps))
+        self.assertEqual([e["id"] for e in res["edge_cases"] if e["cause_gap"]], [])
 
     def test_rounding(self):
         self.assertEqual(search.rounded({"a": 1.234}, {"a": 0.5}), {"a": 1.0})

@@ -38,7 +38,7 @@ Case: `variant=hydraulic, fault=FLT-02, slope_deg=0.0, tau_leak_s=0.3, pilot_rea
 
 ### SC-04 · Burst supply loss with failed load holding: cockpit drops
 
-FND-SF-01-01 · edge case EC-01 (search SF-01) · performed **hard-drop** at 1.575 s, intended safe.
+HAZ-PIL-002 · edge case EC-01 (search SF-01) · performed **hard-drop** at 1.575 s, intended safe.
 
 ![SC-04 Burst supply loss with failed load holding: cockpit drops](images/sim-sc-04.svg)
 

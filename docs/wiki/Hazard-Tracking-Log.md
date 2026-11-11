@@ -10,19 +10,19 @@
 | Risk level | Initial | Target |
 |---|---|---|
 | High | 4 | 0 |
-| Serious | 3 | 0 |
-| Medium | 1 | 8 |
+| Serious | 4 | 0 |
+| Medium | 1 | 9 |
 | Low | 0 | 0 |
 | Eliminated | 0 | 0 |
 
-Status: open 8 · total 8
+Status: open 9 · total 9
 
 ## Initial risk on the Table III matrix
 | Probability \ Severity | Catastrophic (1) | Critical (2) | Marginal (3) | Negligible (4) |
 |---|---|---|---|---|
 | Frequent (A) |  |  |  |  |
 | Probable (B) |  |  |  |  |
-| Occasional (C) | **High**: HAZ-PIL-001, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002 | **Serious**: HAZ-DCK-001, HAZ-INT-001 |  |  |
+| Occasional (C) | **High**: HAZ-PIL-001, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002 | **Serious**: HAZ-DCK-001, HAZ-INT-001, HAZ-PIL-002 |  |  |
 | Remote (D) | **Serious**: HAZ-PWR-001 | **Medium**: HAZ-DCK-002 |  |  |
 | Improbable (E) |  |  |  |  |
 | Eliminated (F) |  |  |  |  |
@@ -34,7 +34,7 @@ Status: open 8 · total 8
 | Probable (B) |  |  |  |  |
 | Occasional (C) |  |  |  |  |
 | Remote (D) |  |  |  |  |
-| Improbable (E) | **Medium**: HAZ-PIL-001, HAZ-PWR-001, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002 | **Medium**: HAZ-DCK-001, HAZ-DCK-002, HAZ-INT-001 |  |  |
+| Improbable (E) | **Medium**: HAZ-PIL-001, HAZ-PWR-001, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002 | **Medium**: HAZ-DCK-001, HAZ-DCK-002, HAZ-INT-001, HAZ-PIL-002 |  |  |
 | Eliminated (F) |  |  |  |  |
 
 ## Hazards
@@ -42,8 +42,9 @@ Status: open 8 · total 8
 |---|---|---|---|---|---|---|---|---|---|---|
 | HAZ-DCK-001 | Rotor start while UAV is retained or a person is at the dock | MOD-06, MOD-10 | 2C Serious | 2E Medium | — | (c identified) | SSF-003 | Serious | open | ROLE-UAV |
 | HAZ-DCK-002 | False retained state releases UAV under motion | MOD-03, MOD-04, MOD-06, MOD-08 | 2D Medium | 2E Medium | — | (b identified) | SSF-005 | Serious | open | ROLE-UAV |
-| HAZ-INT-001 | UAV launch or recovery outside the safe envelope | MOD-06, MOD-07, MOD-08 | 2C Serious | 2E Medium | — | (a identified) | SSF-006 | High | open | ROLE-UAV |
+| HAZ-INT-001 | UAV launch or recovery outside the safe envelope | MOD-06, MOD-07, MOD-08 | 2C Serious | 2E Medium | — | (a identified) | SSF-006, SSF-008 | High | open | ROLE-UAV |
 | HAZ-PIL-001 | Unintended leg motion during pilot ingress or egress | MOD-02, MOD-03, MOD-10 | 1C High | 1E Medium | — | (b identified) | SSF-001 | High | open | ROLE-WLK |
+| HAZ-PIL-002 | Uncontrolled vertical drop of the cockpit on loss of leg support | MOD-04, MOD-05, MOD-09 | 2C Serious | 2E Medium | — | (a identified) | — | — | open | ROLE-WLK |
 | HAZ-PWR-001 | Residual hydraulic pressure during maintenance | MOD-01, MOD-10 | 1D Serious | 1E Medium | — | (a identified) | — | — | open | ROLE-WLK |
 | HAZ-SAF-001 | Protective stop does not reach a safe state | MOD-04, MOD-05, MOD-09 | 1C High | 1E Medium | — | (b identified) | SSF-002 | High | open | ROLE-SWL |
 | HAZ-WLK-001 | Stale or lost feedback causes runaway motion | MOD-04, MOD-05 | 1C High | 1E Medium | — | (b identified) | SSF-004, SSF-007 | High | open | ROLE-WLK |
@@ -61,11 +62,12 @@ Status: open 8 · total 8
 | SSF-005 | Dock retention state fusion | 2 | 2 | 2 | requirements_analysis, architecture_analysis, design_analysis, safety_specific_testing | 4 | Serious | HAZ-DCK-002 |
 | SSF-006 | Launch/recovery permit | 1 | 2 | 1 | requirements_analysis, architecture_analysis, design_analysis, code_analysis, safety_specific_testing | 5 | High | HAZ-INT-001 |
 | SSF-007 | Balance and locomotion control | 1 | 1 | 1 | requirements_analysis, architecture_analysis, design_analysis, code_analysis, safety_specific_testing | 5 | High | HAZ-WLK-001, HAZ-WLK-002 |
+| SSF-008 | PX4 failsafe contingency | 1 | 2 | 1 | requirements_analysis, architecture_analysis, design_analysis, code_analysis, safety_specific_testing | 5 | High | HAZ-INT-001 |
 
 ## Test events and exposure (4.3.7, Task 303)
 | Event | Title | Status | Exposure | Applicable hazards | Event risk accepted |
 |---|---|---|---|---|---|
-| EVT-BENCH-001 | Supported single-leg hydraulic actuator bench rig | planned | people, equipment | 5 | 0/5 |
-| EVT-SIM-001 | Digital simulation and PX4 SITL campaign | planned | none | 7 | n/a |
+| EVT-BENCH-001 | Supported single-leg hydraulic actuator bench rig | planned | people, equipment | 6 | 0/6 |
+| EVT-SIM-001 | Digital simulation and PX4 SITL campaign | planned | none | 8 | n/a |
 
 Hazard management log (106.2r): the git history of `safety/hazards/`.

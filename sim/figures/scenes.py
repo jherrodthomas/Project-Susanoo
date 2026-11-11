@@ -32,7 +32,7 @@ SCENES = [
      "source": "fault FLT-03", "performed": {"fault": "FLT-03"}, "intended": {"stop_request_s": 1.0}},
     {"id": "SC-03", "hazard": "HAZ-WLK-001", "title": "Frozen posture feedback with no staleness monitor",
      "source": "fault FLT-02", "performed": {"fault": "FLT-02", "monitor": False}, "intended": {"fault": "FLT-02", "monitor": True}},
-    {"id": "SC-04", "hazard": "FND-SF-01-01", "title": "Burst supply loss with failed load holding: cockpit drops",
+    {"id": "SC-04", "hazard": "HAZ-PIL-002", "title": "Burst supply loss with failed load holding: cockpit drops",
      "source": "edge case EC-01 (search SF-01)", "edge": ("SF-01", "EC-01"), "intended_over": {"load_holding": "works"}},
 ]
 

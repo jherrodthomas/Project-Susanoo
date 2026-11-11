@@ -1,0 +1,33 @@
+schema: susanoo/ssf/v0.1
+id: SSF-008
+title: PX4 failsafe contingency
+description: PX4 commander failsafe logic that takes the aircraft out of the mission on link loss, low battery or
+  navigation loss (return-to-launch, land, hold), configured by parameters such as NAV_DLL_ACT and COM_LOW_BAT_ACT.
+software_items:
+- PX4-Autopilot v1.16.2 commander failsafe (pinned in sim/uav/harness.py)
+- SUS-A1 PX4 parameter set (TBD; candidate configurations in sim/uav/scenarios.yaml)
+scc: 1
+scc_rationale: 'Provisional: in a failsafe PX4 flies the aircraft autonomously with no integration manager in the loop
+  and no time for another entity to intervene before it reaches the dock (simulation SU-01). If recovery always needs
+  a permit, this moves to SCC 2.'
+swci: 1
+lor:
+  requirements_analysis:
+    status: not-started
+    evidence_ids: []
+  architecture_analysis:
+    status: not-started
+    evidence_ids: []
+  design_analysis:
+    status: not-started
+    evidence_ids: []
+  code_analysis:
+    status: not-started
+    evidence_ids: []
+  safety_specific_testing:
+    status: not-started
+    evidence_ids: []
+lor_decision: null
+requirement_ids: []
+owner: ROLE-UAV
+notes: Drafted from PX4 SITL scenario SU-01 (synthetic, no evidence credit).

@@ -23,7 +23,7 @@ families:
       - {when: {nofault_outcome: tip}, new: "Walker tips with no fault: case lies outside the nominal gait capability (terrain limit for CONOPS section 4)"}
       - {when: {outcome: tip}, hazard: HAZ-WLK-002}
       - {when: {outcome: hard-drop, stop_active: true}, hazard: HAZ-SAF-001}
-      - {when: {outcome: hard-drop}, new: "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact"}
+      - {when: {outcome: hard-drop}, hazard: HAZ-PIL-002}
     probes:
       - {name: pilot reacts in 0.5 s, set: {pilot_reaction_s: 0.5}}
       - {name: load holding works, set: {load_holding: works}}

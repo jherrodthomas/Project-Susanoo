@@ -49,12 +49,12 @@ scenarios:
 
 # Outcome classes (sim/uav/harness.py score()) mapped to hazards; first match wins. finding: a draft for review.
 outcome_rules:
-  - {outcome: keepout-breach, hazard: HAZ-INT-001, finding: "PX4 return-to-launch brings the aircraft to the dock, inside the pilot keep-out, with no integration manager recovery permit (IF-PX4-005/006 are bypassed)"}
-  - {outcome: landed-at-stale-home, hazard: HAZ-INT-001, finding: "PX4 home is the take-off point; after the walker moves, a return lands where the dock used to be, possibly among the ground crew"}
+  - {outcome: keepout-breach, hazard: HAZ-INT-001, finding: "PX4 return-to-launch brings the aircraft to the dock, inside the pilot keep-out, with no integration manager recovery permit (IF-PX4-005/006 are bypassed). Recorded as HAZ-INT-001 CF4, mitigation M5, SSF-008"}
+  - {outcome: landed-at-stale-home, hazard: HAZ-INT-001, finding: "PX4 home is the take-off point; after the walker moves, a return lands where the dock used to be, possibly among the ground crew. Recorded as HAZ-INT-001 CF5, mitigation M6"}
   - {outcome: geofence-overshoot, hazard: HAZ-INT-001, finding: "Aircraft left the operating volume"}
   - {outcome: landed-clear, hazard: null, finding: null}
   - {outcome: contained, hazard: null, finding: null}
   - {outcome: airborne-at-horizon, hazard: null, finding: "No failsafe outcome within the horizon"}
 # Findings that come from a metric rather than the outcome class.
 metric_rules:
-  - {metric: max_estimate_error_m, above: 10.0, hazard: HAZ-INT-001, finding: "PX4's reported position (IF-PX4-001) was wrong by more than 10 m; the integration manager must not trust it without validity checks"}
+  - {metric: max_estimate_error_m, above: 10.0, hazard: HAZ-INT-001, finding: "PX4's reported position (IF-PX4-001) was wrong by more than 10 m; the integration manager must not trust it without validity checks. Recorded as HAZ-INT-001 CF6, mitigation M7"}

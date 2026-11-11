@@ -1,0 +1,26 @@
+schema: susanoo/requirement/v0.1
+id: SYS-009
+title: Fail-safe load holding
+statement: The walker shall hold its posture without supply or command on loss of actuator supply, with load holding
+  engaging in less than the free-fall time from the highest operating posture.
+status: candidate
+source:
+  documents:
+  - sim/results/search-SF-01.md
+  scenario_ids:
+  - SCN-102
+  - SCN-103
+  hazard_ids:
+  - HAZ-PIL-002
+allocated_to:
+- SUS-M1-WLK
+- SUS-M1-PWR
+safety_significant: true
+verification:
+  method:
+  - test
+  - analysis
+  evidence_ids: []
+  disposition: open
+tbd:
+- Engagement time and holding load pending the actuation trade (TS-001, DQ-006)

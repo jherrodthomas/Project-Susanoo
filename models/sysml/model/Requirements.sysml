@@ -44,4 +44,9 @@ package SusanooRequirements {
         @Source { record = "requirements/SYS-008.yaml"; }
         @HazardRef { ids = ("HAZ-WLK-002"); }
     }
+    requirement <'SYS-009'> failSafeLoadHolding : SystemRequirement {
+        doc /* The walker shall hold its posture without supply or command on loss of actuator supply, with load holding engaging in less than the free-fall time from the highest operating posture. */
+        @Source { record = "requirements/SYS-009.yaml"; }
+        @HazardRef { ids = ("HAZ-PIL-002"); }
+    }
 }
