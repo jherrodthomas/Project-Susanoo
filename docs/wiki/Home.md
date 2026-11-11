@@ -28,3 +28,5 @@ The Wiki explains **how**; the main repository stores **what was done**, includi
 - [MIL-STD-882E Task Handbook](MIL-STD-882E-Handbook)
 
 - [MIL-STD-882E Visual Process Maps](MIL-STD-882E-Process-Maps)
+
+- [SUS-M1 Architecture & Boundaries](SUS-M1-Architecture-and-Boundaries)
