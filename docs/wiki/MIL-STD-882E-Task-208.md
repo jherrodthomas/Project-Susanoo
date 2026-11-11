@@ -1,0 +1,36 @@
+# Task 208 — Functional Hazard Analysis (FHA)
+
+**Series:** Analysis · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** Candidate; confirm against program task selection
+
+## Purpose
+Apply functional hazard analysis (fha) to the SUS-M1 piloted walker, SUS-A1 observation UAV and integrated docking/ground-support interfaces as relevant.
+
+## Trigger and entry
+G1/G2. Confirm system/configuration baseline, task applicability, roles and available inputs before starting.
+
+## Inputs
+Functional architecture, modes and operational effects.
+
+## Execution steps
+1. Confirm task objective, affected lifecycle phase and system boundary.
+2. Analyze loss, erroneous, inadvertent, delayed and misleading functions
+3. distinguish MIL-STD-882E system FHA from ARP4761A aircraft FHA classification.
+4. Record assumptions, unresolved issues, decisions and responsible owners.
+5. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
+
+## Outputs
+Functional failure conditions and safety requirements.
+
+## Accountable roles
+Systems, UAV and safety leads. Assign named reviewers and approval authority in project records.
+
+## Review and acceptance
+Reviewer confirms correct configuration, traceable inputs, reproducible method, documented assumptions, identified findings, and links to verification or risk disposition. Only authorized humans accept residual risk. A completed worksheet is not a certification or risk acceptance.
+
+## PDaC record fields
+`task_id`, `artifact_id`, `revision`, `status`, `configuration_id`, `source_ids`, `hazard_ids`, `requirement_ids`, `evidence_ids`, `owner`, `reviewer`, `decision`, `change_request`.
+
+## Change triggers
+Reopen on relevant CONOPS, configuration, interface, software, parameter, operation, evidence or incident changes. Record affected links and review disposition.
+
+**Reference:** MIL-STD-882E with Change 1, Task 208; verify wording, contract applicability and DID requirements against the controlled standard before formal use.

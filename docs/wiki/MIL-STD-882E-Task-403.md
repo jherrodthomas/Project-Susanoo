@@ -1,0 +1,28 @@
+# Task 403 — Explosive Ordnance Disposal Data
+
+**Status:** Draft Susanoo process procedure · **Applicability:** Not applicable for current unarmed concept
+
+## Purpose
+Apply Explosive Ordnance Disposal Data to the SUS-M1 piloted walker, SUS-A1 UAV and integrated interfaces where relevant.
+
+## Entry criteria and inputs
+Ordnance design and disposal authority requirements. Confirm system baseline, responsible authority, applicable scope and assumptions.
+
+## Execution
+1. Identify relevant functions, interfaces, operating modes and lifecycle phases.
+2. Review source information, failure modes, human interactions and credible hazards.
+3. Apply the task-specific assessment, evaluation or verification method to the selected configuration.
+4. Document assumptions, findings, risk implications, mitigations and unresolved issues.
+5. Link findings to the hazard register, requirements, verification evidence and change records.
+6. Obtain documented review and determine whether the task's exit criteria are met.
+
+## Outputs
+EOD information only if ordnance is in scope. Use unique IDs, configuration, revision, owner, reviewer and evidence references.
+
+## Exit criteria
+Reproducible rationale, traceable results, explicit open actions and recorded review decision. A completed task is not a certification or automatic risk acceptance. For tasks 402–403, record not-applicable rationale unless scope changes to include ordnance/energetic materials.
+
+## Change response
+Reopen after relevant system, configuration, mission, interface, test or safety authority changes.
+
+**Reference:** MIL-STD-882E with Change 1, Task 403. Confirm exact contractual requirements and data item descriptions before formal use.

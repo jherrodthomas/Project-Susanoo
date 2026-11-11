@@ -10,3 +10,5 @@
 - [PDaC & Release](PDaC-Configuration-and-Release)
 - [Process Template](Process-Template)
 - [PX4 Integration](PX4-Integration-and-Assurance)
+
+- [MIL-STD-882E Task Handbook](MIL-STD-882E-Handbook)

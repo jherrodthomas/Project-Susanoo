@@ -24,3 +24,5 @@
 The Wiki explains **how**; the main repository stores **what was done**, including evidence and baselines. The [authoritative concept](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md) is version-controlled in the main repository.
 
 **Publishing note:** These Markdown files are maintained as reviewable source in `docs/wiki/`. GitHub's separate Wiki repository requires an explicit publication step; merge to main alone does not publish the Wiki.
+
+- [MIL-STD-882E Task Handbook](MIL-STD-882E-Handbook)
