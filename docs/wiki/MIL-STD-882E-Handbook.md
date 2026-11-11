@@ -45,3 +45,5 @@
 CONOPS → PHL → PHA → requirements/FHA → SSHA/SHA/O&SHA → mitigation → verification → risk disposition → lifecycle monitoring. Tasks are iterative, not a mandatory waterfall.
 
 Actual work products and templates: [safety/mil-std-882e](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/mil-std-882e).
+
+- [MIL-STD-882E Visual Process Maps](MIL-STD-882E-Process-Maps)

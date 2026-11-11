@@ -26,3 +26,5 @@ The Wiki explains **how**; the main repository stores **what was done**, includi
 **Publishing note:** These Markdown files are maintained as reviewable source in `docs/wiki/`. GitHub's separate Wiki repository requires an explicit publication step; merge to main alone does not publish the Wiki.
 
 - [MIL-STD-882E Task Handbook](MIL-STD-882E-Handbook)
+
+- [MIL-STD-882E Visual Process Maps](MIL-STD-882E-Process-Maps)
