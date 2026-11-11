@@ -35,6 +35,9 @@ ENFORCED = {
         "skip_dirs": {"sysml", "hazards", "reports", "reviews", "test-safety-releases"},
         "generator": ["tools/gen_safety_docs.py", "--check"],
     },
+    # Hand-authored roots: base sections only, no generator.
+    "concept": {"skip_dirs": set()},
+    "integrations/px4": {"skip_dirs": set()},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

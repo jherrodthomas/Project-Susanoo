@@ -1,7 +1,7 @@
 # Documentation Standard — Folder READMEs, Diagrams and SysML Models
 
 **Status:** Draft v0.1 · **Applies to:** every folder README in an enforced documentation root
-(currently `safety/mil-std-882e/`) and, as guidance, every new engineering folder in this repository.
+(currently `safety/mil-std-882e/`, `concept/` and `integrations/px4/`) and, as guidance, every new engineering folder in this repository.
 
 A folder README is the entry point to a controlled work product. A reader must be able to see,
 without opening anything else, **what part of the system it covers, where its boundary is, how it
@@ -85,5 +85,7 @@ flowchart LR
    and fails if a folder lacks a README, a required section or diagram is missing, a SysML link is
    broken, or generated files are stale.
 
-To bring another documentation root under enforcement (e.g. `concept/`, `integrations/px4/`), add it to
+`concept/` and `integrations/px4/` are hand-authored (no generator): their READMEs carry the same
+required sections and link their own `.sysml` model (`ConceptOperations.sysml`, `PX4Integration.sysml`),
+and the same CI check enforces them. To bring another documentation root under enforcement, add it to
 `ENFORCED` in `tools/check_readme_diagrams.py` and provide the required sections.
