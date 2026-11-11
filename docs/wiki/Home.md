@@ -29,4 +29,6 @@ The Wiki explains **how**; the main repository stores **what was done**, includi
 
 - [MIL-STD-882E Visual Process Maps](MIL-STD-882E-Process-Maps)
 
+**Generated from repository records (do not edit in the Wiki):** [Hazard Tracking Log](Hazard-Tracking-Log) · [MIL-STD-882E Conformance](MIL-STD-882E-Conformance) · [Task Applicability](MIL-STD-882E-Applicability) · [Gate Readiness](Gate-Readiness)
+
 - [SUS-M1 Architecture & Boundaries](SUS-M1-Architecture-and-Boundaries)

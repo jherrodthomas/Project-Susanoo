@@ -1,0 +1,30 @@
+schema: susanoo/ssf/v0.1
+id: SSF-004
+title: Feedback staleness monitor
+description: Detects lost or stale actuator/posture feedback and commands the degraded state.
+software_items:
+- SUS-M1-SAF/feedback-monitor (TBD CSCI)
+scc: 2
+scc_rationale: Detection time allows the protective stop path to act; the monitor itself has control authority over
+  the degraded transition.
+swci: 1
+lor:
+  requirements_analysis:
+    status: not-started
+    evidence_ids: []
+  architecture_analysis:
+    status: not-started
+    evidence_ids: []
+  design_analysis:
+    status: not-started
+    evidence_ids: []
+  code_analysis:
+    status: not-started
+    evidence_ids: []
+  safety_specific_testing:
+    status: not-started
+    evidence_ids: []
+lor_decision: null
+requirement_ids:
+- SYS-004
+owner: ROLE-SWL

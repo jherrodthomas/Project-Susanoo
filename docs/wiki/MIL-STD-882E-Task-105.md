@@ -1,6 +1,6 @@
 # Task 105 — Integrated Product Team / Working Group Support
 
-**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** Candidate; confirm against program task selection
+**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** see generated [task applicability and tailoring](MIL-STD-882E-Applicability)
 
 ## Purpose
 Apply integrated product team / working group support to the SUS-M1 piloted walker, SUS-A1 observation UAV and integrated docking/ground-support interfaces as relevant.
@@ -13,11 +13,9 @@ Architecture, hazards, interfaces, open decisions.
 
 ## Execution steps
 1. Confirm task objective, affected lifecycle phase and system boundary.
-2. Convene systems, pilot/HF, controls, mechanical, UAV and test leads
-3. evaluate design impacts
-3. document rationale, action owners and follow-up.
-4. Record assumptions, unresolved issues, decisions and responsible owners.
-5. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
+2. Convene systems, pilot/HF, controls, mechanical, UAV and test leads; evaluate design impacts; document rationale, action owners and follow-up.
+3. Record assumptions, unresolved issues, decisions and responsible owners.
+4. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
 
 ## Outputs
 Cross-functional safety decisions and action log.
@@ -34,4 +32,4 @@ Reviewer confirms correct configuration, traceable inputs, reproducible method, 
 ## Change triggers
 Reopen on relevant CONOPS, configuration, interface, software, parameter, operation, evidence or incident changes. Record affected links and review disposition.
 
-**Reference:** MIL-STD-882E with Change 1, Task 105; verify wording, contract applicability and DID requirements against the controlled standard before formal use.
+**Reference:** MIL-STD-882E (11 May 2012, base edition), Task 105; verify wording, contract applicability and DID requirements against the controlled standard before formal use.

@@ -1,0 +1,107 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-PWR-001
+title: Residual hydraulic pressure during maintenance
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-PWR
+- SUS-GSE
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: Stored hydraulic pressure remains in actuators or accumulators when a maintainer opens a line
+  or works in a crush zone.
+modes:
+- MOD-01
+- MOD-10
+causal_factors:
+- id: CF1
+  type: hardware
+  description: Accumulator or trapped volume not vented by isolation
+- id: CF2
+  type: human
+  description: Maintainer skips isolation or verification step
+effects:
+- Sudden limb movement; high-pressure fluid release
+mishap: Crush or fluid-injection injury to maintainer
+initial_risk:
+  severity: 1
+  probability: D
+  rac: 1D
+  risk_level: Serious
+  rationale: Preliminary qualitative judgement at concept stage (no design); hydraulic injection and crush injuries
+    can be fatal; maintenance is periodic.
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design); lockable isolation with gauge-verified
+    zero energy and mechanical supports.
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Evaluate electromechanical actuation (trade study) to eliminate stored hydraulic energy
+  precedence: a
+  state: identified
+  verification:
+    method:
+    - analysis
+    evidence_ids: []
+- id: M2
+  description: Lockable isolation and automatic accumulator bleed with pressure gauges at each zone
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-007
+  verification:
+    method:
+    - inspection
+    - demonstration
+    evidence_ids: []
+- id: M3
+  description: Mechanical supports required before maintenance access
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-007
+  verification:
+    method:
+    - inspection
+    evidence_ids: []
+- id: M4
+  description: Lockout/tagout and zero-energy verification procedure; PPE
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-007
+owner:
+  role: ROLE-WLK
+  person: null
+  org: Walker / mechanical
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 201
+  scenario_ids:
+  - SCN-102
+  documents:
+  - concept/CONOPS.md
+  - concept/trade-studies.md
+hazmat:
+  materials:
+  - hydraulic fluid (type TBD)
+  note: Track under Task 108 HMMP
+assumptions:
+- Concept configuration SUS-I1-C001; no hardware design selected
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2

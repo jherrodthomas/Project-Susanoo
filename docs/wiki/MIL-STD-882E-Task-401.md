@@ -1,6 +1,6 @@
 # Task 401 — Safety Verification
 
-**Status:** Draft Susanoo process procedure · **Applicability:** Proposed, subject to tailoring
+**Status:** Draft Susanoo process procedure · **Applicability:** see generated [task applicability and tailoring](MIL-STD-882E-Applicability)
 
 ## Purpose
 Apply Safety Verification to the SUS-M1 piloted walker, SUS-A1 UAV and integrated interfaces where relevant.
@@ -25,4 +25,4 @@ Reproducible rationale, traceable results, explicit open actions and recorded re
 ## Change response
 Reopen after relevant system, configuration, mission, interface, test or safety authority changes.
 
-**Reference:** MIL-STD-882E with Change 1, Task 401. Confirm exact contractual requirements and data item descriptions before formal use.
+**Reference:** MIL-STD-882E (11 May 2012, base edition), Task 401. Confirm exact contractual requirements and data item descriptions before formal use.

@@ -1,6 +1,6 @@
 # Task 203 — System Requirements Hazard Analysis (SRHA)
 
-**Series:** Analysis · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** Candidate; confirm against program task selection
+**Series:** Analysis · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** see generated [task applicability and tailoring](MIL-STD-882E-Applicability)
 
 ## Purpose
 Apply system requirements hazard analysis (srha) to the SUS-M1 piloted walker, SUS-A1 observation UAV and integrated docking/ground-support interfaces as relevant.
@@ -13,12 +13,9 @@ Stakeholder/system requirements, CONOPS, PHA.
 
 ## Execution steps
 1. Confirm task objective, affected lifecycle phase and system boundary.
-2. Inspect missing, ambiguous, conflicting or unsafe requirements
-3. examine mode transitions and interfaces
-3. derive/repair safety requirements
-3. link verification.
-4. Record assumptions, unresolved issues, decisions and responsible owners.
-5. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
+2. Inspect missing, ambiguous, conflicting or unsafe requirements; examine mode transitions and interfaces; derive/repair safety requirements; link verification.
+3. Record assumptions, unresolved issues, decisions and responsible owners.
+4. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
 
 ## Outputs
 Requirements-related hazards and corrective requirements.
@@ -35,4 +32,4 @@ Reviewer confirms correct configuration, traceable inputs, reproducible method, 
 ## Change triggers
 Reopen on relevant CONOPS, configuration, interface, software, parameter, operation, evidence or incident changes. Record affected links and review disposition.
 
-**Reference:** MIL-STD-882E with Change 1, Task 203; verify wording, contract applicability and DID requirements against the controlled standard before formal use.
+**Reference:** MIL-STD-882E (11 May 2012, base edition), Task 203; verify wording, contract applicability and DID requirements against the controlled standard before formal use.

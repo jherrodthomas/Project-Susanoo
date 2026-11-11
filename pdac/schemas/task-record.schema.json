@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susanoo/safety-task/v0.2",
+  "title": "MIL-STD-882E task work-product record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "task_id", "artifact_id", "revision", "status", "configuration_id", "owner"],
+  "properties": {
+    "schema": {"const": "susanoo/safety-task/v0.2"},
+    "task_id": {"type": "integer"},
+    "artifact_id": {"type": "string"},
+    "revision": {"type": "string"},
+    "status": {"enum": ["not-started", "in-work", "in-review", "approved"]},
+    "configuration_id": {"type": "string"},
+    "artifacts": {"type": "array", "items": {"type": "string"}},
+    "hazard_ids": {"type": "array", "items": {"type": "string"}},
+    "requirement_ids": {"type": "array", "items": {"type": "string"}},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}},
+    "owner": {"type": "string"},
+    "reviewer": {"type": ["string", "null"]},
+    "decision": {"enum": ["pending", "accepted", "returned"]},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "open_actions": {"type": "array", "items": {"type": "string"}}
+  }
+}

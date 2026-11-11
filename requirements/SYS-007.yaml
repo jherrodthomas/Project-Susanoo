@@ -1,0 +1,28 @@
+schema: susanoo/requirement/v0.1
+id: SYS-007
+title: Stored hydraulic energy isolation
+statement: The walker shall provide lockable isolation and verifiable dissipation of stored hydraulic pressure before
+  maintenance access.
+status: candidate
+source:
+  documents:
+  - concept/CONOPS.md
+  - concept/architecture.md
+  - framework/882e-conformance-review.md
+  scenario_ids:
+  - SCN-102
+  - SCN-006
+  hazard_ids:
+  - HAZ-PWR-001
+allocated_to:
+- SUS-M1-PWR
+- SUS-GSE
+safety_significant: true
+verification:
+  method:
+  - inspection
+  - demonstration
+  evidence_ids: []
+  disposition: open
+tbd:
+- Numeric thresholds and timing pending hazard analysis and trade studies

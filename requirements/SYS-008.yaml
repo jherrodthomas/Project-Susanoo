@@ -1,0 +1,29 @@
+schema: susanoo/requirement/v0.1
+id: SYS-008
+title: Stability envelope protection
+statement: The walker shall limit commanded motion and payload to a verified static and dynamic stability envelope
+  and provide pilot protection in a fall or overturn.
+status: candidate
+source:
+  documents:
+  - concept/CONOPS.md
+  - concept/architecture.md
+  - framework/882e-conformance-review.md
+  scenario_ids:
+  - SCN-002
+  - SCN-003
+  - SCN-103
+  hazard_ids:
+  - HAZ-WLK-002
+allocated_to:
+- SUS-M1-WLK
+- SUS-M1-PIL
+safety_significant: true
+verification:
+  method:
+  - analysis
+  - test
+  evidence_ids: []
+  disposition: open
+tbd:
+- Numeric thresholds and timing pending hazard analysis and trade studies

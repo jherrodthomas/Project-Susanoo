@@ -1,0 +1,25 @@
+schema: susanoo/requirement/v0.1
+id: SYS-002
+title: Operator protective stop
+statement: The system shall provide an operator-requested protective stop with a defined, analyzed safe behavior
+  for each operating mode that does not depend on instant zero torque.
+status: candidate
+source:
+  documents:
+  - concept/CONOPS.md
+  - concept/architecture.md
+  scenario_ids:
+  - SCN-101
+  hazard_ids:
+  - HAZ-SAF-001
+allocated_to:
+- SUS-M1-SAF
+safety_significant: true
+verification:
+  method:
+  - test
+  - analysis
+  evidence_ids: []
+  disposition: open
+tbd:
+- Numeric thresholds and timing pending hazard analysis and trade studies

@@ -1,0 +1,30 @@
+schema: susanoo/ssf/v0.1
+id: SSF-001
+title: Motion-enable interlock logic
+description: Evaluates pilot-station readiness conditions and enables leg actuation.
+software_items:
+- SUS-M1-SAF/motion-enable (TBD CSCI)
+scc: 2
+scc_rationale: 'Provisional: software gates actuator enable; an independent observer emergency stop can intervene
+  but no hardware enable chain is yet defined. Becomes SCC 3 if an independent hardware readiness chain is added.'
+swci: 1
+lor:
+  requirements_analysis:
+    status: not-started
+    evidence_ids: []
+  architecture_analysis:
+    status: not-started
+    evidence_ids: []
+  design_analysis:
+    status: not-started
+    evidence_ids: []
+  code_analysis:
+    status: not-started
+    evidence_ids: []
+  safety_specific_testing:
+    status: not-started
+    evidence_ids: []
+lor_decision: null
+requirement_ids:
+- SYS-001
+owner: ROLE-SWL

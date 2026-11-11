@@ -1,0 +1,26 @@
+schema: susanoo/safety-task/v0.2
+task_id: 201
+artifact_id: ART-PHL-001
+revision: 0.1-draft
+status: in-work
+configuration_id: SUS-I1-C001
+artifacts:
+- safety/hazards/
+- docs/wiki/Hazard-Tracking-Log.md
+hazard_ids:
+- HAZ-DCK-001
+- HAZ-DCK-002
+- HAZ-INT-001
+- HAZ-PIL-001
+- HAZ-PWR-001
+- HAZ-SAF-001
+- HAZ-WLK-001
+- HAZ-WLK-002
+requirement_ids: []
+evidence_ids: []
+owner: ROLE-SL
+reviewer: null
+decision: pending
+assumptions: []
+open_actions:
+- Independent review of hazard completeness against CONOPS scenarios SCN-101..108 (SCN-104, SCN-108 not yet covered)

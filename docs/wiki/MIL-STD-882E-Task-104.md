@@ -1,6 +1,6 @@
 # Task 104 — Support Government Reviews and Audits
 
-**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** Candidate; confirm against program task selection
+**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** see generated [task applicability and tailoring](MIL-STD-882E-Applicability)
 
 ## Purpose
 Apply support government reviews and audits to the SUS-M1 piloted walker, SUS-A1 observation UAV and integrated docking/ground-support interfaces as relevant.
@@ -13,13 +13,9 @@ Review agenda, baseline, safety analyses, action register.
 
 ## Execution steps
 1. Confirm task objective, affected lifecycle phase and system boundary.
-2. Prepare objective evidence
-3. present unresolved risks
-3. record reviewer decisions
-3. track and resolve findings
-3. do not claim government review unless conducted.
-4. Record assumptions, unresolved issues, decisions and responsible owners.
-5. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
+2. Prepare objective evidence; present unresolved risks; record reviewer decisions; track and resolve findings; do not claim government review unless conducted.
+3. Record assumptions, unresolved issues, decisions and responsible owners.
+4. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
 
 ## Outputs
 Review package, minutes, findings and action closure evidence.
@@ -36,4 +32,4 @@ Reviewer confirms correct configuration, traceable inputs, reproducible method, 
 ## Change triggers
 Reopen on relevant CONOPS, configuration, interface, software, parameter, operation, evidence or incident changes. Record affected links and review disposition.
 
-**Reference:** MIL-STD-882E with Change 1, Task 104; verify wording, contract applicability and DID requirements against the controlled standard before formal use.
+**Reference:** MIL-STD-882E (11 May 2012, base edition), Task 104; verify wording, contract applicability and DID requirements against the controlled standard before formal use.

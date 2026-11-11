@@ -1,6 +1,6 @@
 # Task 201 — Preliminary Hazard List (PHL)
 
-**Series:** Analysis · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** Candidate; confirm against program task selection
+**Series:** Analysis · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** see generated [task applicability and tailoring](MIL-STD-882E-Applicability)
 
 ## Purpose
 Apply preliminary hazard list (phl) to the SUS-M1 piloted walker, SUS-A1 observation UAV and integrated docking/ground-support interfaces as relevant.
@@ -13,12 +13,9 @@ CONOPS, operational modes, initial architecture.
 
 ## Execution steps
 1. Confirm task objective, affected lifecycle phase and system boundary.
-2. Brainstorm energy sources, failures, human interactions, terrain, docking, UAV and maintenance
-3. assign IDs
-3. note assumptions
-3. transfer into hazard tracker.
-4. Record assumptions, unresolved issues, decisions and responsible owners.
-5. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
+2. Brainstorm energy sources, failures, human interactions, terrain, docking, UAV and maintenance; assign IDs; note assumptions; transfer into hazard tracker.
+3. Record assumptions, unresolved issues, decisions and responsible owners.
+4. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
 
 ## Outputs
 PHL records with source and affected configuration.
@@ -35,4 +32,4 @@ Reviewer confirms correct configuration, traceable inputs, reproducible method, 
 ## Change triggers
 Reopen on relevant CONOPS, configuration, interface, software, parameter, operation, evidence or incident changes. Record affected links and review disposition.
 
-**Reference:** MIL-STD-882E with Change 1, Task 201; verify wording, contract applicability and DID requirements against the controlled standard before formal use.
+**Reference:** MIL-STD-882E (11 May 2012, base edition), Task 201; verify wording, contract applicability and DID requirements against the controlled standard before formal use.

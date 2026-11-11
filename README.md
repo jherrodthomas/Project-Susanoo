@@ -21,6 +21,7 @@ PDaC is **Product Development as Code**, not a synonym for digital thread: typed
 - [Execution plan](framework/execution-plan.md)
 - [MIL-STD-882E conformance review and build plan](framework/882e-conformance-review.md)
 - [Product manifest](pdac/product.yaml)
+- [Hazard tracking log (generated)](docs/wiki/Hazard-Tracking-Log.md) · [PDaC validator](tools/pdac/README.md)
 
 ## Assurance approach
 MIL-STD-882E is the integrated system safety method. ISO 12100, ISO 13849 and IEC 61508 methods are evaluated for machinery and control-system risks; MIL-STD-1472 informs operator human factors. SAE ARP4754B and ARP4761A are voluntarily adopted for the UAV development and aircraft safety assessment; DO-178C/DO-254 require separate applicability decisions.

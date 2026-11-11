@@ -1,0 +1,45 @@
+# PDaC validator and reports (MIL-STD-882E)
+
+Checks project safety records against **MIL-STD-882E, 11 May 2012 (base edition)** and the project tailoring, then generates the hazard tracking log, conformance matrix, applicability table and gate readiness pages.
+
+```
+standards/mil-std-882e/model.yaml      the standard as data (Section 4 elements, Tables I-VI, A-I, Task 106.2, DIDs)
+standards/tailoring/mil-std-882e.yaml  project decisions (gates, risk definitions, authorities, task selection)
+pdac/schemas/*.schema.json             record schemas
+safety/hazards/  safety/software/  safety/events/  safety/mil-std-882e/tasks/
+requirements/  verification/  changes/ records
+```
+
+## Run
+
+```bash
+pip install -r tools/pdac/requirements.txt
+python -m tools.pdac.validate            # exit 1 on errors; --strict also fails on warnings
+python -m tools.pdac.report              # regenerate docs/wiki/*.md pages and safety/generated/hts.csv
+python -m unittest discover -s tools/pdac/tests -t .
+```
+
+CI (`.github/workflows/pdac-validate.yml`) runs all three on every pull request. `report --check` fails if generated pages were not regenerated after a record change.
+
+## Rules
+
+| Rule | Check | Clause |
+|---|---|---|
+| S00 | Schema, ID convention, file named after ID | PDaC |
+| L00 | Every reference resolves | PDaC rule 1 |
+| R01 | RAC and risk level match Table III; target risk not above initial | 4.3.3, Table III |
+| R02 | Probability F only with a selected eliminate-by-design (precedence a) mitigation | 4.3.3b, 4.3.4a |
+| R03 | Order of precedence: Catastrophic/Critical hazards may not rely only on signage, procedures, training or PPE; d/e-only needs rationale | 4.3.4 |
+| R04 | Hazard cannot be verified/accepted/closed until every selected mitigation is implemented with passed evidence | 4.3.6 |
+| R05 | Acceptance by the authority for that risk level, user-representative concurrence for Serious/High, accepted level covers target, event and Table VI software risk | 4.3.1c, 4.3.7 |
+| R06 | Events exposing people, equipment or environment need assessed and accepted event risk for every applicable hazard (warning while planned, error once authorized) | 4.3.7, Task 303 |
+| R07 | SSFs linked to hazards; SwCI matches Table V; incomplete LOR needs a documented PM decision before the hazard progresses | 4.4 |
+| R08 | Tailored risk definitions documented, derived from Table I, cited by every assessment; warning until approved | 4.3.3d-e |
+| R09 | Task 106.2 data elements populated | 4.3.1d, Task 106 |
+| R10 | Approved changes require reassessment of affected hazards; increased risk re-accepted | 4.3.8, Task 304 |
+| R11 | Every task has a tailoring decision; selected tasks due by the current gate have records; no records for unselected tasks | 5.2, App. A |
+| R12 | Simulated acceptances only under the demonstrator release profile | Project rule |
+
+## Limits
+
+The validator checks data, links and logic. It does not judge whether a hazard list is complete, a severity is right or a mitigation is adequate, and it never accepts risk. Those remain human decisions, recorded in the data with a named (currently simulated) authority.

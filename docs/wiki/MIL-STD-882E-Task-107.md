@@ -1,6 +1,6 @@
 # Task 107 — Hazard Management Progress Report
 
-**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** Candidate; confirm against program task selection
+**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** see generated [task applicability and tailoring](MIL-STD-882E-Applicability)
 
 ## Purpose
 Apply hazard management progress report to the SUS-M1 piloted walker, SUS-A1 observation UAV and integrated docking/ground-support interfaces as relevant.
@@ -13,10 +13,9 @@ Hazard register, schedule, verification and open actions.
 
 ## Execution steps
 1. Confirm task objective, affected lifecycle phase and system boundary.
-2. Report new/open/closed hazards, high-risk items, overdue mitigations, evidence gaps and decisions
-3. distinguish analysis complete from risk accepted.
-4. Record assumptions, unresolved issues, decisions and responsible owners.
-5. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
+2. Report new/open/closed hazards, high-risk items, overdue mitigations, evidence gaps and decisions; distinguish analysis complete from risk accepted.
+3. Record assumptions, unresolved issues, decisions and responsible owners.
+4. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
 
 ## Outputs
 Periodic hazard metrics, risk trends, blockers and escalations.
@@ -33,4 +32,4 @@ Reviewer confirms correct configuration, traceable inputs, reproducible method, 
 ## Change triggers
 Reopen on relevant CONOPS, configuration, interface, software, parameter, operation, evidence or incident changes. Record affected links and review disposition.
 
-**Reference:** MIL-STD-882E with Change 1, Task 107; verify wording, contract applicability and DID requirements against the controlled standard before formal use.
+**Reference:** MIL-STD-882E (11 May 2012, base edition), Task 107; verify wording, contract applicability and DID requirements against the controlled standard before formal use.

@@ -1,0 +1,227 @@
+# MIL-STD-882E as data.
+# Source: MIL-STD-882E, "Department of Defense Standard Practice: System Safety",
+# 11 May 2012 (base edition, supersedes MIL-STD-882D). Change 1 is NOT modeled.
+# Tables are encoded as structured data; criteria text is condensed. Verify against the
+# controlled copy before formal use. Project choices belong in standards/tailoring/, not here.
+schema: susanoo/standard-model/v1
+standard:
+  id: MIL-STD-882E
+  title: System Safety
+  date: 2012-05-11
+  change: base
+  supersedes: MIL-STD-882D (2000-02-10)
+  mandatory_sections: ["3", "4"]   # 4.1 / 5.2: tasks apply only when individually specified
+  risk_acceptance_reference: DoDI 5000.02
+
+# Section 4.3: eight elements. Each obligation is a checkable statement.
+# check: rule:<id> = automated by tools/pdac; review = human judgement on cited artifacts.
+elements:
+  - id: E1
+    clause: "4.3.1"
+    title: Document the system safety approach
+    obligations:
+      - {id: E1.a, clause: "4.3.1a", text: "Describe the risk management effort and its integration into SE, IPPD and program management", check: review}
+      - {id: E1.b, clause: "4.3.1b", text: "Identify prescribed and derived requirements; include them in specifications and flow them down", check: review}
+      - {id: E1.c, clause: "4.3.1c", text: "Define how risks are formally accepted by the appropriate authority with user representative concurrence", check: "rule:R05"}
+      - {id: E1.d, clause: "4.3.1d", text: "Document hazards in a closed-loop HTS with the minimum data elements", check: "rule:R09"}
+  - id: E2
+    clause: "4.3.2"
+    title: Identify and document hazards
+    obligations:
+      - {id: E2.a, clause: "4.3.2", text: "Identify hazards systematically across hardware, software, interfaces (including human), use and environment over the whole life cycle; record in the HTS", check: review}
+  - id: E3
+    clause: "4.3.3"
+    title: Assess and document risk
+    obligations:
+      - {id: E3.a, clause: "4.3.3", text: "Assess severity and probability for each hazard across all system modes using Tables I and II", check: "rule:R01"}
+      - {id: E3.b, clause: "4.3.3b", text: "Probability F only where the hazard is no longer present; never through doctrine, training, warning, caution or PPE", check: "rule:R02"}
+      - {id: E3.c, clause: "4.3.3c", text: "Express risk as a RAC and risk level per Table III", check: "rule:R01"}
+      - {id: E3.d, clause: "4.3.3d", text: "Use Tables I-III unless a tailored alternative, derived from them, is formally approved", check: "rule:R08"}
+      - {id: E3.e, clause: "4.3.3e", text: "Document all numerical probability definitions; record assessed risk in the HTS", check: "rule:R08"}
+  - id: E4
+    clause: "4.3.4"
+    title: Identify and document risk mitigation measures
+    obligations:
+      - {id: E4.a, clause: "4.3.4", text: "Identify mitigations and estimate expected risk reduction in the HTS, applying the design order of precedence", check: "rule:R03"}
+      - {id: E4.b, clause: "4.3.4e", text: "Avoid signage, procedures, training and PPE as the only mitigation for Catastrophic or Critical hazards", check: "rule:R03"}
+  - id: E5
+    clause: "4.3.5"
+    title: Reduce risk
+    obligations:
+      - {id: E5.a, clause: "4.3.5", text: "Select and implement mitigations; present hazards, risk and mitigation status at technical reviews", check: review}
+  - id: E6
+    clause: "4.3.6"
+    title: Verify, validate and document risk reduction
+    obligations:
+      - {id: E6.a, clause: "4.3.6", text: "Verify implementation and validate effectiveness of every selected mitigation by analysis, test, demonstration or inspection; document in the HTS", check: "rule:R04"}
+  - id: E7
+    clause: "4.3.7"
+    title: Accept risk and document
+    obligations:
+      - {id: E7.a, clause: "4.3.7", text: "Accept risk by the appropriate authority before exposing people, equipment or environment to known hazards", check: "rule:R06"}
+      - {id: E7.b, clause: "4.3.7", text: "User representative formally concurs before all Serious and High acceptance decisions", check: "rule:R05"}
+      - {id: E7.c, clause: "4.3.7", text: "Document each risk acceptance decision in the HTS", check: "rule:R05"}
+  - id: E8
+    clause: "4.3.8"
+    title: Manage life-cycle risk
+    obligations:
+      - {id: E8.a, clause: "4.3.8", text: "Maintain the HTS through configuration control; reassess hazards on changes to interfaces, users, hardware, software, mission or health data", check: "rule:R10"}
+      - {id: E8.b, clause: "4.3.8", text: "Formally re-accept new hazards or risks found to be higher than previously assessed", check: "rule:R10"}
+  - id: SW
+    clause: "4.4"
+    title: Software contribution to system risk
+    obligations:
+      - {id: SW.a, clause: "4.4.1", text: "Assign a software control category (Table IV) to each safety-significant software function", check: "rule:R07"}
+      - {id: SW.b, clause: "4.4.2", text: "Derive SwCI from the SSCM (Table V); perform the LOR tasks for that SwCI", check: "rule:R07"}
+      - {id: SW.c, clause: "4.4.3b", text: "Where LOR tasks are unspecified or incomplete, document the software contribution at the Table VI risk level for PM decision", check: "rule:R07"}
+      - {id: SW.d, clause: "4.4.3c", text: "Document all software contributions to system risk in the HTS", check: "rule:R07"}
+
+# Table I. Severity categories (base edition dollar thresholds).
+severity:
+  - category: 1
+    name: Catastrophic
+    criteria: {injury: "death or permanent total disability", environment: "irreversible significant impact", monetary_min_usd: 10000000}
+  - category: 2
+    name: Critical
+    criteria: {injury: "permanent partial disability, or injury/occupational illness possibly hospitalizing at least three personnel", environment: "reversible significant impact", monetary_min_usd: 1000000}
+  - category: 3
+    name: Marginal
+    criteria: {injury: "injury or occupational illness resulting in one or more lost work days", environment: "reversible moderate impact", monetary_min_usd: 100000}
+  - category: 4
+    name: Negligible
+    criteria: {injury: "injury or occupational illness not resulting in a lost work day", environment: "minimal impact", monetary_min_usd: 0}
+
+# Table II. Probability levels; quantitative bands are the Appendix A Table A-II example.
+probability:
+  - {level: A, name: Frequent,   item: "likely to occur often in the life of an item",        fleet: "continuously experienced",                       a2_min: 1.0e-1}
+  - {level: B, name: Probable,   item: "will occur several times in the life of an item",     fleet: "will occur frequently",                          a2_min: 1.0e-2}
+  - {level: C, name: Occasional, item: "likely to occur sometime in the life of an item",     fleet: "will occur several times",                       a2_min: 1.0e-3}
+  - {level: D, name: Remote,     item: "unlikely, but possible to occur in the life of an item", fleet: "unlikely, but can reasonably be expected",    a2_min: 1.0e-6}
+  - {level: E, name: Improbable, item: "so unlikely, occurrence may not be experienced",      fleet: "unlikely to occur, but possible",               a2_min: 0}
+  - {level: F, name: Eliminated, item: "incapable of occurrence; hazard identified and later eliminated", fleet: "incapable of occurrence",       a2_min: null}
+
+# Table III. Risk assessment matrix: rac_matrix[probability][severity] -> risk level.
+risk_levels: [High, Serious, Medium, Low, Eliminated]
+rac_matrix:
+  A: {1: High,    2: High,    3: Serious, 4: Medium}
+  B: {1: High,    2: High,    3: Serious, 4: Medium}
+  C: {1: High,    2: Serious, 3: Medium,  4: Low}
+  D: {1: Serious, 2: Medium,  3: Medium,  4: Low}
+  E: {1: Medium,  2: Medium,  3: Medium,  4: Low}
+  F: {1: Eliminated, 2: Eliminated, 3: Eliminated, 4: Eliminated}
+
+# 4.3.4 System safety design order of precedence (decreasing effectiveness).
+mitigation_precedence:
+  - {code: a, name: Eliminate hazard through design selection}
+  - {code: b, name: Reduce risk through design alteration}
+  - {code: c, name: Incorporate engineered features or devices}
+  - {code: d, name: Provide warning devices}
+  - {code: e, name: Incorporate signage, procedures, training and PPE}
+
+# 4.3.6 verification methods.
+verification_methods: [analysis, test, demonstration, inspection]
+
+# 3.2.31 / 3.2.34: classification by severity.
+safety_classification:
+  safety-critical: [1, 2]
+  safety-related: [3, 4]
+
+# Table IV. Software control categories.
+software_control_categories:
+  - {scc: 1, name: Autonomous, abbr: AT, summary: "Autonomous control authority over safety-significant hardware with no predetermined safe detection and intervention"}
+  - {scc: 2, name: Semi-Autonomous, abbr: SAT, summary: "Control authority with time for independent safety mechanisms to intervene; or safety-significant display needing immediate operator action"}
+  - {scc: 3, name: Redundant Fault Tolerant, abbr: RFT, summary: "Commands requiring a control entity to complete, with redundant independent fault-tolerant mechanisms per hazardous condition"}
+  - {scc: 4, name: Influential, abbr: null, summary: "Safety-related information for operator decisions, no operator action required to avoid a mishap"}
+  - {scc: 5, name: No Safety Impact, abbr: NSI, summary: "No command/control authority over and no safety-significant or time-sensitive data"}
+
+# Table V. Software safety criticality matrix: sscm[scc][severity] -> SwCI. NOT a risk assessment (4.4.2).
+sscm:
+  1: {1: 1, 2: 1, 3: 3, 4: 4}
+  2: {1: 1, 2: 2, 3: 3, 4: 4}
+  3: {1: 2, 2: 3, 3: 4, 4: 4}
+  4: {1: 3, 2: 4, 3: 4, 4: 4}
+  5: {1: 5, 2: 5, 3: 5, 4: 5}
+
+# Table V (lower). LOR tasks required per SwCI.
+lor_activities: [requirements_analysis, architecture_analysis, design_analysis, code_analysis, safety_specific_testing]
+lor_tasks:
+  1: [requirements_analysis, architecture_analysis, design_analysis, code_analysis, safety_specific_testing]
+  2: [requirements_analysis, architecture_analysis, design_analysis, safety_specific_testing]
+  3: [requirements_analysis, architecture_analysis, safety_specific_testing]
+  4: [safety_specific_testing]
+  5: []
+
+# Table VI. Risk level documented when LOR tasks are unspecified or incomplete.
+incomplete_lor_risk: {1: High, 2: Serious, 3: Medium, 4: Low, 5: null}
+
+# Task 106.2 minimum HTS data elements -> hazard record schema paths.
+hts_elements:
+  - {id: a, element: Hazard, path: hazardous_condition}
+  - {id: b, element: System, path: system}
+  - {id: c, element: Subsystem (if applicable), path: subsystems}
+  - {id: d, element: "Applicability (version specific hardware/software)", path: applicability}
+  - {id: e, element: Requirements references, path: requirement_ids}
+  - {id: f, element: System mode, path: modes}
+  - {id: g, element: "Causal factor (hardware, software, human, environment)", path: causal_factors}
+  - {id: h, element: Effects, path: effects}
+  - {id: i, element: Mishap, path: mishap}
+  - {id: j, element: Initial RAC, path: initial_risk}
+  - {id: k, element: Target RAC, path: target_risk}
+  - {id: l, element: Event RAC(s), path: event_risks}
+  - {id: m, element: "Mitigation measures (identified and selected, version traced)", path: mitigations}
+  - {id: n, element: Hazard status, path: status}
+  - {id: o, element: Verification and validation method, path: "mitigations[].verification.method"}
+  - {id: p, element: Action person(s) and organizational element, path: owner}
+  - {id: q, element: Record of risk acceptance(s), path: acceptances}
+  - {id: r, element: Hazard management log, path: "git history of safety/hazards/ (records change only via reviewed PRs)"}
+  - {id: s, element: HAZMAT data elements, path: hazmat}
+
+# Section 5 / Appendix A Table A-I. Applicability: G generally, S selectively,
+# GC generally applicable to design change, NA not applicable.
+phases: [MSA, TD, EMD, PD, OS]
+tasks:
+  - {id: 101, type: MGT, title: Hazard Identification and Mitigation Effort Using the System Safety Methodology, a1: {MSA: G, TD: G, EMD: G, PD: G, OS: G}}
+  - {id: 102, type: MGT, title: System Safety Program Plan, a1: {MSA: G, TD: G, EMD: G, PD: G, OS: G}}
+  - {id: 103, type: MGT, title: Hazard Management Plan, a1: {MSA: G, TD: G, EMD: G, PD: G, OS: G}}
+  - {id: 104, type: MGT, title: Support of Government Reviews/Audits, a1: {MSA: G, TD: G, EMD: G, PD: G, OS: G}}
+  - {id: 105, type: MGT, title: Integrated Product Team/Working Group Support, a1: {MSA: G, TD: G, EMD: G, PD: G, OS: G}}
+  - {id: 106, type: MGT, title: Hazard Tracking System, a1: {MSA: S, TD: G, EMD: G, PD: G, OS: G}}
+  - {id: 107, type: MGT, title: Hazard Management Progress Report, a1: {MSA: G, TD: G, EMD: G, PD: G, OS: G}}
+  - {id: 108, type: MGT, title: Hazardous Materials Management Plan, a1: {MSA: S, TD: G, EMD: G, PD: G, OS: G}}
+  - {id: 201, type: ENG, title: Preliminary Hazard List, a1: {MSA: G, TD: S, EMD: S, PD: GC, OS: GC}}
+  - {id: 202, type: ENG, title: Preliminary Hazard Analysis, a1: {MSA: S, TD: G, EMD: S, PD: GC, OS: GC}}
+  - {id: 203, type: ENG, title: System Requirements Hazard Analysis, a1: {MSA: G, TD: G, EMD: G, PD: GC, OS: GC}}
+  - {id: 204, type: ENG, title: Subsystem Hazard Analysis, a1: {MSA: NA, TD: G, EMD: G, PD: GC, OS: GC}}
+  - {id: 205, type: ENG, title: System Hazard Analysis, a1: {MSA: NA, TD: G, EMD: G, PD: GC, OS: GC}}
+  - {id: 206, type: ENG, title: Operating and Support Hazard Analysis, a1: {MSA: S, TD: G, EMD: G, PD: G, OS: S}}
+  - {id: 207, type: ENG, title: Health Hazard Analysis, a1: {MSA: S, TD: G, EMD: G, PD: GC, OS: GC}}
+  - {id: 208, type: ENG, title: Functional Hazard Analysis, a1: {MSA: S, TD: G, EMD: G, PD: GC, OS: GC}}
+  - {id: 209, type: ENG, title: System-of-Systems Hazard Analysis, a1: {MSA: NA, TD: G, EMD: G, PD: GC, OS: GC}}
+  - {id: 210, type: ENG, title: Environmental Hazard Analysis, a1: {MSA: S, TD: G, EMD: G, PD: G, OS: GC}}
+  - {id: 301, type: ENG, title: Safety Assessment Report, a1: {MSA: S, TD: G, EMD: G, PD: G, OS: S}}
+  - {id: 302, type: ENG, title: Hazard Management Assessment Report, a1: {MSA: S, TD: G, EMD: G, PD: G, OS: S}}
+  - {id: 303, type: ENG, title: Test and Evaluation Participation, a1: {MSA: G, TD: G, EMD: G, PD: G, OS: S}}
+  - {id: 304, type: ENG, title: "Review of ECPs, Change Notices, Deficiency Reports, Mishaps, and Requests for Deviation/Waiver", a1: {MSA: NA, TD: S, EMD: G, PD: G, OS: G}}
+  - {id: 401, type: ENG, title: Safety Verification, a1: {MSA: NA, TD: S, EMD: G, PD: G, OS: S}}
+  - {id: 402, type: ENG, title: Explosives Hazard Classification Data, a1: {MSA: NA, TD: S, EMD: G, PD: G, OS: GC}}
+  - {id: 403, type: ENG, title: Explosive Ordnance Disposal Data, a1: {MSA: NA, TD: S, EMD: G, PD: G, OS: S}}
+
+# 6.3 Associated DIDs (the tasks themselves do not name DIDs; mapping is a tailoring decision).
+dids:
+  - {id: DI-ADMIN-81250, title: Conference Minutes}
+  - {id: DI-MISC-80043, title: Ammunition Data Card}
+  - {id: DI-MISC-80370, title: Safety Engineering Analysis Report}
+  - {id: DI-ILSS-81495, title: Failure Mode Effects and Criticality Analysis Report}
+  - {id: DI-SAFT-80101, title: System Safety Hazard Analysis Report}
+  - {id: DI-SAFT-80102, title: Safety Assessment Report (SAR)}
+  - {id: DI-SAFT-80103, title: Engineering Change Proposal System Safety Report}
+  - {id: DI-SAFT-80104, title: Waiver or Deviation System Safety Report (WDSSR)}
+  - {id: DI-SAFT-80105, title: System Safety Program Progress Report}
+  - {id: DI-SAFT-80106, title: Health Hazard Assessment Report}
+  - {id: DI-SAFT-80184, title: Radiation Hazard Control Procedures}
+  - {id: DI-SAFT-80931, title: Explosive Ordnance Disposal Data}
+  - {id: DI-SAFT-81065, title: Safety Studies Report}
+  - {id: DI-SAFT-81066, title: Safety Studies Plan}
+  - {id: DI-SAFT-81299, title: Explosive Hazard Classification Data}
+  - {id: DI-SAFT-81300, title: Mishap Risk Assessment Report}
+  - {id: DI-SAFT-81626, title: System Safety Program Plan}

@@ -20,4 +20,7 @@
 - Draft analyses, simulated tests and illustrative approvals must be explicitly identified.
 - Copyrighted standards text must not be copied into this repository.
 
+## Standard as code
+MIL-STD-882E (11 May 2012, base edition) is encoded as data ([model](../standards/mil-std-882e/model.yaml)), tailored per project ([tailoring](../standards/tailoring/mil-std-882e.yaml)) and enforced on the safety records by [`tools/pdac`](../tools/pdac/README.md) in CI. Generated views: [hazard tracking log](../docs/wiki/Hazard-Tracking-Log.md), [conformance matrix](../docs/wiki/MIL-STD-882E-Conformance.md), [task applicability](../docs/wiki/MIL-STD-882E-Applicability.md), [gate readiness](../docs/wiki/Gate-Readiness.md). Review and build rationale: [882E conformance review](882e-conformance-review.md).
+
 See [applicability](standards-applicability.md), [lifecycle](lifecycle.md), [process contracts](process-contracts.md), [traceability](traceability.md) and [execution plan](execution-plan.md).

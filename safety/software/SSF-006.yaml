@@ -1,0 +1,31 @@
+schema: susanoo/ssf/v0.1
+id: SSF-006
+title: Launch/recovery permit
+description: Integration manager grants or revokes UAV launch and recovery via the PX4 command adapter.
+software_items:
+- SUS-I1/integration-manager (TBD CSCI)
+- SUS-I1/px4-command-adapter (TBD CSCI)
+scc: 1
+scc_rationale: 'Provisional: no independent interlock between the permit and the aircraft is defined, so software
+  has autonomous authority (IF-PX4-005). An independent hardware permit would move this to SCC 2.'
+swci: 1
+lor:
+  requirements_analysis:
+    status: not-started
+    evidence_ids: []
+  architecture_analysis:
+    status: not-started
+    evidence_ids: []
+  design_analysis:
+    status: not-started
+    evidence_ids: []
+  code_analysis:
+    status: not-started
+    evidence_ids: []
+  safety_specific_testing:
+    status: not-started
+    evidence_ids: []
+lor_decision: null
+requirement_ids:
+- SYS-006
+owner: ROLE-SWL

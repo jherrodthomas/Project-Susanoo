@@ -1,6 +1,17 @@
 # Framework review against MIL-STD-882E, with build ideas
 
-**Status:** Review and proposal, 2026-11. Nothing here claims compliance.
+**Status:** Review 2026-11; build steps 1–5 implemented (see below). Nothing here claims compliance.
+
+> **Implementation status.** Baseline decided: the 2012 base edition. Built:
+> - [`standards/mil-std-882e/model.yaml`](../standards/mil-std-882e/model.yaml) (sections 3.1) and [`standards/tailoring/mil-std-882e.yaml`](../standards/tailoring/mil-std-882e.yaml) (3.2, status *proposed*)
+> - schemas in [`pdac/schemas/`](../pdac/schemas/) and a validator with rules R01–R12 in [`tools/pdac`](../tools/pdac/README.md), run in CI (3.3)
+> - a seeded HTS of 8 hazards, 7 SSFs, 8 candidate requirements and 2 test events (section 4)
+> - generated pages: [hazard log](../docs/wiki/Hazard-Tracking-Log.md), [conformance](../docs/wiki/MIL-STD-882E-Conformance.md), [applicability](../docs/wiki/MIL-STD-882E-Applicability.md), [gate readiness](../docs/wiki/Gate-Readiness.md) (3.4)
+> - housekeeping: edition citations corrected, task step numbering fixed, and Task 103 and Task 302 set to not-selected as alternatives to 102 and 301
+>
+> Not yet built: SAR, HMAR and progress-report skeletons in DID structure; the ARP4761A model; SysML v2.
+>
+> The gap tables below describe the framework **before** this build.
 **Source reviewed:** MIL-STD-882E, *System Safety*, 11 May 2012 (base edition, not Change 1). Paragraph and table numbers below refer to that edition.
 
 The question this review answers: can the v0.2 framework *produce and check* the evidence that the standard requires? It then proposes what to build so that it can.
@@ -124,7 +135,7 @@ Seed the HTS with hazards taken from material the repo already has:
 | Residual hydraulic pressure during service (crush, injection injury) | Maintenance | Maintenance ↔ walker | (new) | — |
 | Tip-over with pilot aboard | Walking, manipulation | Walker ↔ ground | (new) | Balance controller |
 
-The launch-permit function (row 6) is a useful early SSCM test case. If it can command the aircraft with no independent interlock, it is SCC 1 or 2, so with a Catastrophic severity it is **SwCI 1**. SwCI 1 requires analysis of code and in-depth safety testing, including the PX4 and adapter code. This result should feed the PX4 architecture trade now, while the design is still open.
+The launch-permit function (row 6, `SSF-006`) is a useful early SSCM test case. With no independent interlock it is SCC 1 (Autonomous), so even at Critical severity it is **SwCI 1**. SwCI 1 requires analysis of the code and in-depth safety-specific testing, including the PX4 adapter. Adding an independent hardware permit would make it SCC 2 and SwCI 2, which drops code analysis from the required LOR. This should feed the PX4 architecture trade now, while the design is still open.
 
 ## 5. Order of work
 1. **Housekeeping:** decide the edition and correct the citations, fix the step numbering, choose one source for framework vs wiki, add markdown and link checks to CI.
@@ -136,7 +147,7 @@ The launch-permit function (row 6) is a useful early SSCM test case. If it can c
 7. **Later:** a SysML v2 textual model as the source for Function, Interface and Component; change-impact diffs on PRs; a hash-pinned evidence manifest per release.
 
 ## 6. Decisions needed
-- Baseline edition: the 2012 base edition we hold, or Change 1.
+- ~~Baseline edition~~: decided, 2012 base edition.
 - Tailored severity definitions and probability bands, including the exposure basis.
 - The acceptance-authority and user-representative mapping, and who holds each simulated role.
 - Tooling (Python + JSON Schema is proposed) and whether CI should block merges.
