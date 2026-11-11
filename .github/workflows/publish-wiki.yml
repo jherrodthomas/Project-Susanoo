@@ -1,0 +1,55 @@
+name: Publish engineering handbook to GitHub Wiki
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/wiki/**'
+      - '.github/workflows/publish-wiki.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-project-susanoo-wiki
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out handbook source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Check Wiki deploy credential
+        env:
+          WIKI_TOKEN: ${{ secrets.WIKI_DEPLOY_TOKEN }}
+        run: |
+          if [ -z "$WIKI_TOKEN" ]; then
+            echo "::error::Configure repository secret WIKI_DEPLOY_TOKEN with wiki repository write permission."
+            exit 1
+          fi
+
+      - name: Publish pages to the separate Wiki repository
+        env:
+          WIKI_TOKEN: ${{ secrets.WIKI_DEPLOY_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          git config --global user.name "susanoo-wiki-publisher[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          AUTH="$(printf 'x-access-token:%s' "$WIKI_TOKEN" | base64 -w0)"
+          git -c http.extraheader="AUTHORIZATION: basic $AUTH" clone "https://github.com/${REPO}.wiki.git" wiki-publish
+          # Copy source pages into the wiki root. Do not delete pages maintained separately.
+          find docs/wiki -maxdepth 1 -type f -name '*.md' -exec cp '{}' wiki-publish/ \;
+          cd wiki-publish
+          git add -- '*.md'
+          if git diff --cached --quiet; then
+            echo "Wiki already up to date"
+            exit 0
+          fi
+          git commit -m "Publish Susanoo handbook from ${GITHUB_SHA}"
+          git -c http.extraheader="AUTHORIZATION: basic $AUTH" push origin HEAD
