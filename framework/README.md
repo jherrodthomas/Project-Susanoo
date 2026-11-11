@@ -20,4 +20,4 @@
 - Draft analyses, simulated tests and illustrative approvals must be explicitly identified.
 - Copyrighted standards text must not be copied into this repository.
 
-See [applicability](standards-applicability.md), [lifecycle](lifecycle.md), [process contracts](process-contracts.md), [traceability](traceability.md) and [execution plan](execution-plan.md).
+See [applicability](standards-applicability.md), [lifecycle](lifecycle.md), [process contracts](process-contracts.md), [traceability](traceability.md), [execution plan](execution-plan.md) and [documentation standard](documentation-standard.md).

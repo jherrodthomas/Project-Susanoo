@@ -1,0 +1,1883 @@
+# MIL-STD-882E work-product tree catalog (PDaC source of truth).
+#
+# Every folder under safety/mil-std-882e, its README diagrams (flow position,
+# block, boundary, SysML, inputs/outputs) and its generated SysML v2 view are
+# produced from this file by tools/gen_safety_docs.py. Edit here, regenerate,
+# and commit both. CI (tools/check_readme_diagrams.py) fails on drift.
+schema: susanoo/safety-tree/v0.1-draft
+base: safety/mil-std-882e
+default_status: Scaffold v0.1 — structure, diagrams and model views only
+disclaimer: >-
+  Planning artifact. No completed hazard analysis, verified mitigation, risk
+  acceptance, certification or MIL-STD-882E compliance is claimed. Category
+  names follow MIL-STD-882E; confirm definitions against the controlled
+  standard and the approved SSPP before formal use.
+
+# --------------------------------------------------------------------------
+# Eight iterative system safety process elements (MIL-STD-882E, 4.3)
+elements:
+  - {n: 1, short: Document approach, name: Document the system safety approach}
+  - {n: 2, short: Identify hazards, name: Identify and document hazards}
+  - {n: 3, short: Assess risk, name: Assess and document risk}
+  - {n: 4, short: Identify mitigations, name: Identify and document risk mitigation measures}
+  - {n: 5, short: Reduce risk, name: Reduce risk}
+  - {n: 6, short: Verify risk reduction, name: "Verify, validate and document risk reduction"}
+  - {n: 7, short: Accept risk, name: Accept risk and document}
+  - {n: 8, short: Manage life-cycle risk, name: Manage life-cycle risk}
+
+# --------------------------------------------------------------------------
+# System element registry; mirrors 00-system-definition/sysml/SusanooSystem.sysml
+system:
+  nodes:
+    SUS-I1:      {label: Integrated mech + UAV system, sysml: IntegratedSystem, usage: susanoo}
+    SUS-M1:      {label: Piloted walker, parent: SUS-I1, sysml: PilotedWalker, usage: susanoo.m1}
+    SUS-M1-WLK:  {label: "Structure, legs, joints & brakes", parent: SUS-M1, sysml: WalkerStructure, usage: susanoo.m1.wlk}
+    SUS-M1-MAN:  {label: Manipulator arms & end effectors, parent: SUS-M1, sysml: Manipulators, usage: susanoo.m1.man}
+    SUS-M1-PIL:  {label: "Pilot station, restraints & HMI", parent: SUS-M1, sysml: PilotStation, usage: susanoo.m1.pil}
+    SUS-M1-PWR:  {label: Series-hybrid power & isolation, parent: SUS-M1, sysml: PowerSystem, usage: susanoo.m1.pwr}
+    SUS-M1-CTL:  {label: Motion & balance control SW, parent: SUS-M1, sysml: MotionControl, usage: susanoo.m1.ctl}
+    SUS-M1-SAF:  {label: Safety monitor & protective stop, parent: SUS-M1, kind: safety, sysml: SafetyMonitor, usage: susanoo.m1.saf}
+    SUS-M1-DCK:  {label: "UAV dock - retention, power, data", parent: SUS-M1, kind: interface, sysml: UAVDock, usage: susanoo.m1.dck}
+    SUS-A1:      {label: Observation UAV, parent: SUS-I1, sysml: ObservationUAV, usage: susanoo.a1}
+    SUS-A1-FCS:  {label: Flight control - PX4 candidate, parent: SUS-A1, sysml: FlightControl, usage: susanoo.a1.fcs}
+    SUS-A1-PRP:  {label: "Motors, ESCs & propellers", parent: SUS-A1, sysml: Propulsion, usage: susanoo.a1.prp}
+    SUS-A1-PWR:  {label: UAV battery & power mgmt, parent: SUS-A1, sysml: UAVPower, usage: susanoo.a1.pwr}
+    SUS-A1-NAV:  {label: Navigation & telemetry link, parent: SUS-A1, sysml: NavTelemetry, usage: susanoo.a1.nav}
+    SUS-A1-PLD:  {label: Observation payload, parent: SUS-A1, sysml: ObservationPayload, usage: susanoo.a1.pld}
+    SUS-GSE:     {label: Ground support equipment, parent: SUS-I1, sysml: GroundSupport, usage: susanoo.gse}
+    SUS-GSE-SUP: {label: Maintenance supports & lockout, parent: SUS-GSE, sysml: MaintenanceSupports, usage: susanoo.gse.sup}
+    SUS-GSE-CHG: {label: Charging & fuelling equipment, parent: SUS-GSE, sysml: ChargingEquipment, usage: susanoo.gse.chg}
+    SUS-GSE-TST: {label: "Test rigs, HIL & simulation", parent: SUS-GSE, sysml: TestRigs, usage: susanoo.gse.tst}
+    EXT-PILOT:   {label: Pilot / operator, kind: external}
+    EXT-CREW:    {label: Ground crew & maintainers, kind: external}
+    EXT-BYST:    {label: Bystanders & nearby workers, kind: external}
+    EXT-TERRAIN: {label: Terrain & obstacles, kind: external}
+    EXT-AIR:     {label: "Airspace, GNSS & RF environment", kind: external}
+    EXT-SITE:    {label: Site infrastructure & logistics, kind: external}
+    EXT-ENV:     {label: Natural environment & receptors, kind: external}
+    EXT-AUTH:    {label: Risk acceptance authority, kind: external}
+  links:
+    - [SUS-M1-PIL, SUS-M1-CTL, commands]
+    - [SUS-M1-CTL, SUS-M1-WLK, joint actuation]
+    - [SUS-M1-CTL, SUS-M1-MAN, arm actuation]
+    - [SUS-M1-PWR, SUS-M1-WLK, DC power]
+    - [SUS-M1-SAF, SUS-M1-CTL, torque inhibit]
+    - [SUS-M1-SAF, SUS-M1-PWR, energy isolation]
+    - [SUS-M1-DCK, SUS-A1-PWR, dock charging]
+    - [SUS-M1-DCK, SUS-A1-FCS, dock data / rotor inhibit]
+    - [SUS-A1-NAV, SUS-A1-FCS, state estimate]
+    - [SUS-A1-FCS, SUS-A1-PRP, thrust command]
+    - [SUS-GSE-SUP, SUS-M1-WLK, mechanical support]
+    - [SUS-GSE-CHG, SUS-M1-PWR, shore charging]
+
+# --------------------------------------------------------------------------
+# Folders. `parent` builds the tree; `path` is relative to `base`.
+folders:
+
+  # ======================================================== ROOT
+  - id: ROOT
+    path: .
+    title: MIL-STD-882E System Safety Work Products
+    crosscut: hts
+    role: Safety lead
+    procedure: docs/wiki/MIL-STD-882E-Handbook.md
+    purpose: |
+      Controlled work-product tree for the SUS-I1 system safety program, organised by the
+      eight MIL-STD-882E process elements (folders `01`–`08`) with the 25 tasks nested under the
+      element they primarily serve. `00-system-definition` holds the analysis baseline and canonical
+      SysML models; `hazard-tracking-system` (Task 106) and `software-safety` (Section 4.4) cut
+      across all elements. Procedures live in the [Wiki handbook](../../docs/wiki/MIL-STD-882E-Handbook.md);
+      this tree holds the actual records and evidence.
+    scope: [SUS-I1]
+    boundary:
+      name: SUS-I1 system safety program
+      inside: [SUS-M1, SUS-A1, SUS-GSE]
+      outside: [EXT-PILOT, EXT-CREW, EXT-BYST, EXT-TERRAIN, EXT-AIR, EXT-ENV, EXT-AUTH]
+      flows:
+        - [EXT-PILOT, SUS-M1, commands / feedback]
+        - [EXT-CREW, SUS-GSE, maintenance / lockout]
+        - [SUS-M1, EXT-BYST, motion / contact hazards]
+        - [EXT-TERRAIN, SUS-M1, ground contact loads]
+        - [EXT-AIR, SUS-A1, navigation / RF link]
+        - [SUS-M1, EXT-ENV, emissions / fluids]
+        - [SUS-M1, SUS-A1, dock / undock]
+        - ["@boundary", EXT-AUTH, residual risk for decision]
+    model:
+      package: SafetyProgramFlow
+      views:
+        - kind: act
+          name: SystemSafetyProcess
+          title: eight-element iterative process
+          doc: Iterative MIL-STD-882E process applied to SUS-I1 configurations.
+          steps:
+            - {name: documentApproach, label: "1 Document approach - SSPP, HMP"}
+            - {name: identifyHazards, label: "2 Identify hazards - PHL, PHA, SSHA, SHA..."}
+            - {name: assessRisk, label: "3 Assess risk - severity x probability", safety: true}
+            - {name: identifyMitigations, label: "4 Identify mitigations - order of precedence"}
+            - {name: reduceRisk, label: "5 Reduce risk - safety requirements in design"}
+            - {name: verifyRiskReduction, label: "6 Verify risk reduction - Task 401 evidence"}
+            - {name: acceptRisk, label: "7 Accept risk - authorized human decision", safety: true}
+            - {name: manageLifecycleRisk, label: "8 Manage life-cycle risk - changes, mishaps"}
+          loops:
+            - [manageLifecycleRisk, identifyHazards, change or new hazard]
+            - [verifyRiskReduction, identifyMitigations, verification failed]
+    inputs:
+      - {doc: concept/CONOPS.md, item: CONOPS and operating scenarios}
+      - {doc: concept/architecture.md, item: Preliminary architecture}
+      - {doc: framework/standards-applicability.md, item: Standards applicability}
+    outputs:
+      - {ext: Release evidence manifest (pdac/product.yaml), item: Safety case and risk dispositions}
+      - {ext: Risk acceptance authority, item: Residual risk decision requests}
+    contents:
+      - {name: catalog.yaml, desc: Source of truth for this tree; regenerate READMEs after editing}
+    notes_md: |
+      ## Folder map
+
+      | Folder | 882E element | Tasks |
+      |---|---|---|
+      | `00-system-definition/` | Prerequisite to all | System baseline, canonical SysML |
+      | `01-safety-approach/` | 1 | 101, 102, 103, 104, 105, 108 |
+      | `02-hazard-identification/` | 2 | 201–210 |
+      | `03-risk-assessment/` | 3 | Risk matrix (Table I–III usage) |
+      | `04-mitigation-identification/` | 4 | Design order of precedence |
+      | `05-risk-reduction/` | 5 | Safety requirements |
+      | `06-verification/` | 6 | 303, 401, 402, 403 |
+      | `07-risk-acceptance/` | 7 | 301, 302, acceptance records |
+      | `08-lifecycle-risk-management/` | 8 | 107, 304 |
+      | `hazard-tracking-system/` | Cross-cutting | 106 |
+      | `software-safety/` | Cross-cutting | Section 4.4 |
+      | `templates/` | — | Record templates |
+
+      ## Documentation rule
+
+      Every folder README in this tree must carry the diagram set defined in
+      [`framework/documentation-standard.md`](../../framework/documentation-standard.md). Generate with
+      `python3 tools/gen_safety_docs.py`; CI runs `python3 tools/check_readme_diagrams.py`.
+
+  # ======================================================== 00
+  - id: SYSDEF
+    parent: ROOT
+    path: 00-system-definition
+    title: 00 · System Definition and Analysis Baseline
+    gate: G0 (refreshed at every gate)
+    role: Systems lead with safety lead
+    canonical_model:
+      - safety/mil-std-882e/00-system-definition/sysml/SusanooSystem.sysml
+      - safety/mil-std-882e/00-system-definition/sysml/SusanooSafety.sysml
+    purpose: |
+      Defines the system of interest, its decomposition, interfaces and external context that every
+      hazard analysis uses as its baseline. Holds the canonical SysML v2 models: `SusanooSystem`
+      (structure, ports, dock interface) and `SusanooSafety` (severity, probability, risk, SwCI,
+      mitigation precedence, hazard record). Per-folder SysML views import these packages.
+    scope: [SUS-I1]
+    boundary:
+      name: SUS-I1 system of interest
+      inside: [SUS-M1, SUS-A1, SUS-GSE]
+      outside: [EXT-PILOT, EXT-CREW, EXT-BYST, EXT-TERRAIN, EXT-AIR, EXT-SITE, EXT-ENV]
+      flows:
+        - [EXT-PILOT, SUS-M1, intent / alerts]
+        - [EXT-CREW, SUS-GSE, servicing / lockout]
+        - [SUS-GSE, SUS-M1, support / charging]
+        - [SUS-M1, SUS-A1, "dock power, data, retention"]
+        - [SUS-M1, EXT-TERRAIN, foot contact loads]
+        - [SUS-M1, EXT-BYST, motion envelope]
+        - [EXT-AIR, SUS-A1, GNSS / RF link]
+        - [EXT-SITE, SUS-GSE, "fuel, power, transport"]
+        - [SUS-M1, EXT-ENV, "exhaust, noise, fluids"]
+      excluded: [weapons or armament of any kind, public-road operation, autonomous walker operation without a pilot]
+    inputs:
+      - {doc: concept/CONOPS.md, item: "Missions, phases, users"}
+      - {doc: concept/architecture.md, item: Decomposition and interfaces}
+      - {doc: docs/wiki/SUS-M1-Architecture-and-Boundaries.md, item: "Power, control and dock diagrams"}
+      - {doc: pdac/product.yaml, item: Configuration ID SUS-I1-C001}
+    outputs:
+      - {ref: E2, item: Analysis baseline}
+      - {ref: SWS, item: Software-controlled functions}
+      - {ref: HTS, item: Subsystem IDs for hazard records}
+    contents:
+      - {name: sysml/SusanooSystem.sysml, desc: Canonical structure model (parts, ports, dock interface)}
+      - {name: sysml/SusanooSafety.sysml, desc: Canonical safety vocabulary (enums, Hazard item)}
+      - {name: interface-register.csv, desc: Controlled interface list with hazard links}
+
+  # ======================================================== 01
+  - id: E1
+    parent: ROOT
+    path: 01-safety-approach
+    title: 01 · Document the System Safety Approach
+    element: 1
+    gate: G0–G1, updated at each gate
+    applicability: Selected
+    role: Safety lead
+    purpose: |
+      Plans and governs the program: how hazards will be identified, assessed, mitigated, verified,
+      accepted and tracked for SUS-I1, who holds which authority, and which tasks are selected.
+      Management tasks 101–105 and 108 live here.
+    scope: [SUS-I1]
+    boundary:
+      name: Safety program management
+      inside: [SSPP and HMP, Task selection and tailoring, IPT and roles]
+      outside: [EXT-AUTH, Program management, Suppliers, Standards bodies]
+      flows:
+        - [Program management, SSPP and HMP, "schedule, resources, contract terms"]
+        - [Standards bodies, Task selection and tailoring, controlled standard editions]
+        - [SSPP and HMP, EXT-AUTH, risk acceptance authority matrix]
+        - [IPT and roles, Suppliers, safety data requirements]
+    model:
+      package: SafetyApproach
+      views:
+        - kind: bdd
+          title: safety program plan set
+          blocks:
+            - name: SafetyProgram
+              doc: Plans and agreements that document the SUS-I1 safety approach.
+              attributes: ["configurationId : String", "standardEdition : String"]
+              parts:
+                - {name: sspp, type: SystemSafetyProgramPlan}
+                - {name: hmp, type: HazardManagementPlan}
+                - {name: hmmp, type: HazMatManagementPlan, mult: "0..1"}
+                - {name: ipt, type: SafetyIPT}
+            - {name: SystemSafetyProgramPlan, stereotype: item, attributes: ["revision : String", "approvalRecord : String"]}
+            - {name: HazardManagementPlan, stereotype: item, attributes: ["riskMatrixRef : String", "closureCriteria : String"]}
+            - {name: HazMatManagementPlan, stereotype: item, attributes: ["inventoryRef : String"]}
+            - {name: SafetyIPT, stereotype: part, attributes: ["charter : String"]}
+    inputs:
+      - {ref: SYSDEF, item: System baseline}
+      - {doc: framework/standards-applicability.md, item: Standards and tailoring}
+      - {doc: framework/lifecycle.md, item: Gates G0–G7}
+    outputs:
+      - {ref: E2, item: Selected analysis tasks and methods}
+      - {ref: E3, item: Approved risk matrix reference}
+      - {ref: E7, item: Acceptance authority matrix}
+    contents:
+      - {name: task-applicability.yaml, desc: Task selection and tailoring decisions (see Wiki applicability page)}
+
+  - id: T101
+    parent: E1
+    path: 01-safety-approach/task-101-hazard-identification-and-mitigation-effort
+    title: Task 101 · Hazard Identification and Mitigation Effort
+    element: 1
+    tasks: [{id: 101, name: Hazard Identification and Mitigation Effort}]
+    gate: G0 onward
+    applicability: Selected
+    role: Safety lead
+    purpose: |
+      Establishes the integrated, iterative effort that runs the eight elements across SUS-M1,
+      SUS-A1 and their interfaces, using the systems engineering process rather than a parallel one.
+    scope: [SUS-I1]
+    boundary:
+      name: Integrated hazard effort
+      inside: [SUS-M1, SUS-A1, SUS-GSE]
+      outside: [Systems engineering process, EXT-AUTH, Test program]
+      flows:
+        - [Systems engineering process, SUS-M1, requirements and design baselines]
+        - [SUS-A1, Systems engineering process, ARP4761A safety assessment results]
+        - [Test program, SUS-M1, verification evidence]
+        - ["@boundary", EXT-AUTH, risk status]
+    model:
+      package: Task101_HazardEffort
+      views:
+        - kind: act
+          name: HazardIdentificationAndMitigationEffort
+          title: integrated effort loop
+          steps:
+            - {name: defineScope, label: Confirm configuration and boundary}
+            - {name: identify, label: Identify hazards per selected tasks}
+            - {name: assess, label: Assess initial risk, safety: true}
+            - {name: mitigate, label: Allocate mitigations and requirements}
+            - {name: verify, label: Verify mitigation effectiveness}
+            - {name: report, label: Report status and request decisions}
+          loops: [[report, identify, design or CONOPS change]]
+    inputs:
+      - {ref: SYSDEF, item: Configuration baseline}
+      - {ref: T102, item: Approved SSPP}
+    outputs:
+      - {ref: E2, item: Analysis tasking}
+      - {ref: T107, item: Effort status}
+    contents:
+      - {name: effort-record.yaml, desc: Task record using templates/task-record.yaml}
+
+  - id: T102
+    parent: E1
+    path: 01-safety-approach/task-102-system-safety-program-plan
+    title: Task 102 · System Safety Program Plan (SSPP)
+    element: 1
+    tasks: [{id: 102, name: System Safety Program Plan}]
+    gate: G0, revised at G2 and G6
+    applicability: Selected
+    role: Safety lead; approval by program authority
+    purpose: |
+      The SSPP: scope, organisation, authority, selected tasks, methods, risk matrix, hazard tracking,
+      software approach, verification and acceptance. Start from `templates/sspp-outline.md`.
+    scope: [SUS-I1]
+    boundary:
+      name: SSPP scope
+      inside: [SUS-M1, SUS-A1, SUS-GSE]
+      outside: [EXT-AUTH, Program management, PX4 upstream project]
+      flows:
+        - [Program management, "@boundary", resources and schedule]
+        - ["@boundary", EXT-AUTH, acceptance requests per risk level]
+        - [PX4 upstream project, SUS-A1, COTS / open-source software baseline]
+    model:
+      package: Task102_SSPP
+      views:
+        - kind: req
+          title: plan-level requirements
+          requirements:
+            - {id: SSPP-001, name: DefineRiskAuthority, text: SSPP shall name the risk acceptance authority for each risk level, risk: High, verify: Inspection}
+            - {id: SSPP-002, name: DefineTaskSelection, text: SSPP shall record selected and tailored tasks with rationale, risk: Medium, verify: Inspection}
+            - {id: SSPP-003, name: SeparateRiskScales, text: SSPP shall keep 882E risk and ARP4761A failure-condition scales distinct, risk: Medium, verify: Inspection}
+            - {id: SSPP-004, name: DefineSoftwareApproach, text: SSPP shall define the software contribution to system risk approach, risk: High, verify: Inspection}
+          verified_by:
+            - [SSPP-REVIEW, SSPP-001]
+            - [SSPP-REVIEW, SSPP-002]
+            - [SSPP-REVIEW, SSPP-003]
+            - [SSPP-REVIEW, SSPP-004]
+    inputs:
+      - {doc: safety/mil-std-882e/templates/sspp-outline.md, item: SSPP outline}
+      - {ref: E1, item: Task applicability}
+    outputs:
+      - {ref: T103, item: Plan baseline}
+      - {ref: E3, item: Risk matrix definition}
+      - {ref: SWS, item: Software safety approach}
+    contents:
+      - {name: sspp.md, desc: System Safety Program Plan (draft until approved)}
+
+  - id: T103
+    parent: E1
+    path: 01-safety-approach/task-103-hazard-management-plan
+    title: Task 103 · Hazard Management Plan (HMP)
+    element: 1
+    tasks: [{id: 103, name: Hazard Management Plan}]
+    gate: G0–G1
+    applicability: Selected
+    role: Safety lead
+    purpose: |
+      Defines how hazards move through their lifecycle, closure criteria, who may change status,
+      and how the hazard tracking system is operated.
+    scope: [SUS-I1]
+    boundary:
+      name: Hazard management process
+      inside: [Hazard lifecycle rules, Closure criteria, HTS operation]
+      outside: [EXT-AUTH, Change control board, Verification program]
+      flows:
+        - [Verification program, Closure criteria, evidence of effectiveness]
+        - [Closure criteria, EXT-AUTH, acceptance request]
+        - [Change control board, Hazard lifecycle rules, reopen triggers]
+    model:
+      package: Task103_HMP
+      views:
+        - kind: stm
+          name: HazardLifecycle
+          title: hazard status lifecycle
+          doc: Status transitions governed by the HMP; values match SusanooSafety::HazardStatus.
+          initial: Open
+          states:
+            - {name: Open, doc: identified and recorded}
+            - {name: Mitigated, doc: controls allocated and implemented}
+            - {name: Verified, doc: effectiveness evidenced}
+            - {name: PendingAcceptance, doc: residual risk awaiting decision}
+            - {name: Accepted, doc: authorized decision recorded}
+            - {name: Closed}
+            - {name: Monitor, doc: tracked in service}
+          transitions:
+            - [Open, Mitigated, mitigation recorded]
+            - [Mitigated, Verified, evidence accepted]
+            - [Verified, Mitigated, verification failed]
+            - [Verified, PendingAcceptance, acceptance requested]
+            - [PendingAcceptance, Accepted, authority approves]
+            - [PendingAcceptance, Mitigated, authority rejects]
+            - [Accepted, Monitor, fielded]
+            - [Monitor, Open, change or mishap]
+            - [Accepted, Closed, hazard eliminated or retired]
+          final: [Closed]
+    inputs:
+      - {ref: T102, item: SSPP}
+      - {ref: E3, item: Risk matrix}
+    outputs:
+      - {ref: HTS, item: Hazard workflow rules}
+      - {ref: E7, item: Closure criteria}
+    contents:
+      - {name: hmp.md, desc: Hazard Management Plan}
+
+  - id: T104
+    parent: E1
+    path: 01-safety-approach/task-104-government-reviews-and-audits
+    title: Task 104 · Government Reviews and Audits
+    element: 1
+    tasks: [{id: 104, name: Government Reviews and Audits}]
+    gate: As scheduled
+    applicability: Conditional — only if a government customer or authority is engaged
+    role: Safety lead
+    purpose: |
+      Supports external safety reviews and audits. Currently conditional: no government contract or
+      authority is assumed. Record the applicability decision and re-evaluation trigger here.
+    scope: [SUS-I1]
+    boundary:
+      name: Audit interface
+      inside: [Audit package, Action item log]
+      outside: [EXT-AUTH, Government or customer reviewer]
+      flows:
+        - [Audit package, Government or customer reviewer, evidence and analyses]
+        - [Government or customer reviewer, Action item log, findings]
+        - [Action item log, EXT-AUTH, closure status]
+    model:
+      package: Task104_Reviews
+      views:
+        - kind: act
+          name: ReviewAndAudit
+          steps:
+            - {name: confirmApplicability, label: Confirm task is applicable}
+            - {name: preparePackage, label: Prepare configuration-specific evidence package}
+            - {name: conductReview, label: Conduct review or audit}
+            - {name: trackActions, label: Track findings to closure}
+    inputs:
+      - {ref: HTS, item: Hazard status}
+      - {ref: T301, item: SAR}
+    outputs:
+      - {ref: T304, item: Audit findings}
+    contents:
+      - {name: applicability-decision.yaml, desc: Conditional applicability record}
+
+  - id: T105
+    parent: E1
+    path: 01-safety-approach/task-105-integrated-product-team-support
+    title: Task 105 · Integrated Product Team (IPT) Support
+    element: 1
+    tasks: [{id: 105, name: Integrated Product Team Support}]
+    gate: G0 onward
+    applicability: Selected
+    role: Safety lead
+    purpose: |
+      Embeds safety in the walker, UAV, controls, human factors and test teams so hazards and controls
+      are worked inside design decisions, not after them.
+    scope: [SUS-I1]
+    boundary:
+      name: Safety IPT
+      inside: [Safety lead, Systems lead, Software safety lead, Human factors lead, Test lead]
+      outside: [Suppliers, EXT-AUTH]
+      flows:
+        - [Suppliers, Systems lead, supplier safety data]
+        - [Safety lead, EXT-AUTH, escalations]
+        - [Human factors lead, Safety lead, MIL-STD-1472 findings]
+        - [Test lead, Safety lead, test hazards and results]
+    model:
+      package: Task105_IPT
+      views:
+        - kind: bdd
+          title: IPT composition
+          blocks:
+            - name: SafetyIPT
+              parts:
+                - {name: safetyLead, type: Role}
+                - {name: systemsLead, type: Role}
+                - {name: softwareSafetyLead, type: Role}
+                - {name: humanFactorsLead, type: Role}
+                - {name: testLead, type: Role}
+            - {name: Role, stereotype: part, attributes: ["name : String", "authority : String", "independent : Boolean"]}
+    inputs:
+      - {ref: T102, item: Organisation and authority}
+    outputs:
+      - {ref: E2, item: Analysis participation}
+    contents:
+      - {name: ipt-charter.md, desc: Charter, members and meeting record index}
+
+  - id: T108
+    parent: E1
+    path: 01-safety-approach/task-108-hazardous-materials-management-plan
+    title: Task 108 · Hazardous Materials Management Plan (HMMP)
+    element: 1
+    tasks: [{id: 108, name: Hazardous Materials Management Plan}]
+    gate: G1–G3
+    applicability: Selected
+    role: Environmental / HSE lead
+    purpose: |
+      Inventories and manages hazardous materials: engine fuel, hydraulic fluid (if electrohydraulic
+      actuation is chosen), lithium-ion cells in SUS-M1 and SUS-A1, coolants and lubricants.
+    scope: [SUS-M1-PWR, SUS-M1-WLK, SUS-A1-PWR, SUS-GSE-CHG]
+    boundary:
+      name: Hazardous materials
+      inside: [SUS-M1-PWR, SUS-A1-PWR, SUS-M1-WLK, SUS-GSE-CHG]
+      outside: [EXT-CREW, EXT-ENV, EXT-SITE]
+      flows:
+        - [SUS-GSE-CHG, SUS-M1-PWR, fuel and charge transfer]
+        - [SUS-M1-WLK, EXT-ENV, hydraulic leak or spill]
+        - [SUS-A1-PWR, EXT-CREW, cell thermal event exposure]
+        - [EXT-SITE, SUS-GSE-CHG, storage and disposal]
+    model:
+      package: Task108_HMMP
+      views:
+        - kind: bdd
+          title: hazardous material inventory
+          blocks:
+            - name: HazMatInventory
+              parts: [{name: entries, type: HazMatEntry, mult: "0..*"}]
+            - name: HazMatEntry
+              stereotype: item
+              attributes: ["material : String", "location : String", "quantity : Real", "sdsRef : String", "disposal : String"]
+            - {name: MaterialClass, stereotype: enum, values: [Fuel, HydraulicFluid, LithiumIonCell, Coolant, Lubricant]}
+    inputs:
+      - {ref: SYSDEF, item: Bill of materials (when available)}
+    outputs:
+      - {ref: T207, item: Exposure sources}
+      - {ref: T210, item: Environmental releases}
+    contents:
+      - {name: hazmat-inventory.csv, desc: Material, location, quantity, SDS, disposal}
+
+  # ======================================================== 02
+  - id: E2
+    parent: ROOT
+    path: 02-hazard-identification
+    title: 02 · Identify and Document Hazards
+    element: 2
+    gate: G0–G5
+    applicability: Selected progressively
+    role: Safety lead
+    purpose: |
+      All hazard analysis tasks (200-series). Analyses are iterative and feed each other; arrows in
+      the SysML activity are information flow, not a mandatory waterfall. Every hazard found here is
+      recorded in the hazard tracking system.
+    scope: [SUS-I1]
+    boundary:
+      name: Hazard analysis scope
+      inside: [SUS-M1, SUS-A1, SUS-GSE]
+      outside: [EXT-PILOT, EXT-CREW, EXT-BYST, EXT-AIR, EXT-ENV]
+      flows:
+        - [EXT-PILOT, SUS-M1, operator error and workload]
+        - [SUS-M1, EXT-BYST, crush / impact / fall]
+        - [SUS-A1, EXT-BYST, rotor strike / crash]
+        - [EXT-AIR, SUS-A1, link loss / GNSS denial]
+        - [EXT-CREW, SUS-GSE, maintenance exposure]
+        - [SUS-M1, EXT-ENV, releases]
+    model:
+      package: HazardAnalyses
+      views:
+        - kind: act
+          name: HazardAnalysisRelationships
+          title: analysis information flow
+          steps:
+            - {name: phl, label: Task 201 PHL}
+            - {name: pha, label: Task 202 PHA}
+            - {name: fha, label: Task 208 FHA}
+            - {name: srha, label: Task 203 SRHA}
+            - {name: ssha, label: Task 204 SSHA}
+            - {name: sha, label: Task 205 SHA}
+            - {name: osha, label: Task 206 O&SHA}
+          loops:
+            - [sha, ssha, interface cause found]
+            - [osha, pha, new operating scenario]
+    inputs:
+      - {ref: SYSDEF, item: System baseline}
+      - {ref: E1, item: Selected tasks}
+    outputs:
+      - {ref: HTS, item: Hazard records}
+      - {ref: E3, item: Hazards for risk assessment}
+    contents: []
+
+  - id: T201
+    parent: E2
+    path: 02-hazard-identification/task-201-preliminary-hazard-list
+    title: Task 201 · Preliminary Hazard List (PHL)
+    element: 2
+    tasks: [{id: 201, name: Preliminary Hazard List}]
+    gate: G0
+    applicability: Selected
+    role: Safety lead
+    purpose: |
+      First list of potential hazards for the concept: walker instability and fall, unintended motion,
+      crush and entrapment, stored energy, fire, rotor strike, docking retention failure, link loss.
+    scope: [SUS-I1]
+    boundary:
+      name: Concept-level system
+      inside: [SUS-M1, SUS-A1, SUS-GSE]
+      outside: [EXT-PILOT, EXT-BYST, EXT-TERRAIN, EXT-AIR]
+      flows:
+        - [EXT-PILOT, SUS-M1, "intent, workload"]
+        - [SUS-M1, EXT-BYST, motion envelope]
+        - [EXT-TERRAIN, SUS-M1, "slope, soft ground"]
+        - [EXT-AIR, SUS-A1, "wind, RF, GNSS"]
+        - [SUS-M1, SUS-A1, launch / recovery]
+      excluded: [detailed component failure modes (Task 204)]
+    model:
+      package: Task201_PHL
+      views:
+        - kind: bdd
+          title: PHL entry
+          blocks:
+            - name: PreliminaryHazardList
+              attributes: ["configurationId : String", "revision : String"]
+              parts: [{name: entries, type: PHLEntry, mult: "0..*"}]
+            - name: PHLEntry
+              stereotype: item
+              attributes: ["hazardId : String", "hazardSource : String", "missionPhase : String", "potentialMishap : String"]
+          specializations: []
+    inputs:
+      - {doc: concept/CONOPS.md, item: Missions and phases}
+      - {ref: SYSDEF, item: Concept decomposition}
+    outputs:
+      - {ref: T202, item: PHL}
+      - {ref: HTS, item: Initial hazard records}
+    contents:
+      - {name: phl.csv, desc: Preliminary hazard list}
+
+  - id: T202
+    parent: E2
+    path: 02-hazard-identification/task-202-preliminary-hazard-analysis
+    title: Task 202 · Preliminary Hazard Analysis (PHA)
+    element: 2
+    tasks: [{id: 202, name: Preliminary Hazard Analysis}]
+    gate: G1–G2
+    applicability: Selected
+    role: Safety lead with systems lead
+    purpose: |
+      Develops PHL entries into scenarios with causes, effects, initial risk and candidate controls at
+      subsystem level. Use `templates/pha-table.csv`.
+    scope: [SUS-M1, SUS-A1, SUS-GSE]
+    boundary:
+      name: Preliminary architecture
+      inside: [SUS-M1-WLK, SUS-M1-PWR, SUS-M1-CTL, SUS-M1-SAF, SUS-M1-DCK, SUS-A1]
+      outside: [EXT-PILOT, EXT-BYST, EXT-TERRAIN]
+      flows:
+        - [EXT-PILOT, SUS-M1-CTL, commands]
+        - [SUS-M1-SAF, SUS-M1-CTL, inhibit]
+        - [SUS-M1-PWR, SUS-M1-WLK, power]
+        - [SUS-M1-DCK, SUS-A1, retention / charge]
+        - [SUS-M1-WLK, EXT-BYST, contact]
+        - [EXT-TERRAIN, SUS-M1-WLK, ground reaction]
+    model:
+      package: Task202_PHA
+      views:
+        - kind: bdd
+          title: PHA worksheet row
+          blocks:
+            - name: PHARow
+              stereotype: item
+              attributes: ["hazardId : String", "scenario : String", "cause : String", "effect : String", "initialRisk : RiskAssessment", "candidateControl : String"]
+              parts: [{name: requirement, type: SafetyRequirement, mult: "0..*"}]
+    inputs:
+      - {ref: T201, item: PHL}
+      - {ref: E3, item: Risk matrix}
+      - {doc: concept/architecture.md, item: Preliminary architecture}
+    outputs:
+      - {ref: T203, item: Candidate safety requirements}
+      - {ref: T204, item: Subsystem focus areas}
+      - {ref: HTS, item: Updated hazard records}
+    contents:
+      - {name: pha.csv, desc: PHA worksheet based on templates/pha-table.csv}
+
+  - id: T203
+    parent: E2
+    path: 02-hazard-identification/task-203-system-requirements-hazard-analysis
+    title: Task 203 · System Requirements Hazard Analysis (SRHA)
+    element: 2
+    tasks: [{id: 203, name: System Requirements Hazard Analysis}]
+    gate: G1–G2
+    applicability: Selected
+    role: Safety lead with systems lead
+    purpose: |
+      Converts hazards and controls into verifiable system safety requirements and checks that the
+      requirements set, standards and design criteria cover identified hazards. Seeds with the
+      candidate requirements SYS-001..006 from `concept/architecture.md`.
+    scope: [SUS-M1-PIL, SUS-M1-SAF, SUS-M1-CTL, SUS-M1-DCK, SUS-A1-FCS]
+    boundary:
+      name: System requirements set
+      inside: [System safety requirements, Design criteria]
+      outside: [Hazard analyses, Applicable standards, Design baseline]
+      flows:
+        - [Hazard analyses, System safety requirements, controls to specify]
+        - [Applicable standards, Design criteria, criteria and guidance]
+        - [System safety requirements, Design baseline, allocation]
+    model:
+      package: Task203_SRHA
+      views:
+        - kind: req
+          title: candidate system safety requirements
+          requirements:
+            - {id: SYS-001, name: PilotReadinessInterlock, text: Inhibit leg actuation until pilot station readiness conditions are satisfied, risk: High, verify: Test}
+            - {id: SYS-002, name: ProtectiveStop, text: Provide an operator-requested protective stop with defined behavior per operating mode, risk: High, verify: Test}
+            - {id: SYS-003, name: RetainedRotorInhibit, text: Prevent UAV rotor startup while mechanically retained except under approved maintenance, risk: High, verify: Test}
+            - {id: SYS-004, name: FeedbackLossDegradedState, text: Detect loss of essential feedback and transition to a documented degraded state, risk: High, verify: Analysis}
+            - {id: SYS-005, name: DockStateReporting, text: Docking interface shall report positively confirmed retained or unretained state, risk: Medium, verify: Test}
+            - {id: SYS-006, name: LaunchRecoveryEnvelope, text: Inhibit UAV launch and recovery outside a verified operational envelope, risk: Medium, verify: Demonstration}
+          satisfied_by:
+            - [SUS-M1-PIL, SYS-001]
+            - [SUS-M1-SAF, SYS-002]
+            - [SUS-M1-DCK, SYS-003]
+            - [SUS-M1-CTL, SYS-004]
+            - [SUS-M1-DCK, SYS-005]
+            - [SUS-A1-FCS, SYS-006]
+    inputs:
+      - {ref: T202, item: Hazards and candidate controls}
+      - {doc: concept/architecture.md, item: Requirement candidates}
+    outputs:
+      - {ref: SREQ, item: Baselined safety requirements}
+      - {ref: T401, item: Verification methods}
+    contents:
+      - {name: srha.md, desc: Requirements coverage analysis}
+
+  - id: T204
+    parent: E2
+    path: 02-hazard-identification/task-204-subsystem-hazard-analysis
+    title: Task 204 · Subsystem Hazard Analysis (SSHA)
+    element: 2
+    tasks: [{id: 204, name: Subsystem Hazard Analysis}]
+    gate: G3
+    applicability: Selected
+    role: Safety lead with subsystem owners
+    purpose: |
+      Analyses each subsystem's design for failure modes, faults and hazardous conditions, including
+      software and human errors within the subsystem. One subfolder or file per subsystem.
+    scope: [SUS-M1-WLK, SUS-M1-MAN, SUS-M1-PWR, SUS-M1-CTL, SUS-M1-SAF, SUS-M1-DCK, SUS-A1]
+    boundary:
+      name: Each subsystem in isolation
+      inside: [SUS-M1-WLK, SUS-M1-PWR, SUS-M1-CTL, SUS-M1-SAF, SUS-M1-DCK]
+      outside: [Adjacent subsystems, SUS-A1, EXT-PILOT]
+      flows:
+        - [Adjacent subsystems, SUS-M1-PWR, interface failures as inputs]
+        - [SUS-M1-DCK, SUS-A1, interface effects passed to SHA]
+        - [EXT-PILOT, SUS-M1-CTL, erroneous command]
+      excluded: [subsystem-to-subsystem interactions (Task 205)]
+    model:
+      package: Task204_SSHA
+      views:
+        - kind: bdd
+          title: SSHA record per subsystem
+          blocks:
+            - name: SubsystemHazardAnalysis
+              attributes: ["subsystemId : String", "designRevision : String"]
+              parts: [{name: failureModes, type: FailureModeEntry, mult: "0..*"}]
+            - name: FailureModeEntry
+              stereotype: item
+              attributes: ["failureMode : String", "localEffect : String", "systemEffect : String", "detection : String", "hazardId : String", "softwareContribution : Boolean"]
+    inputs:
+      - {ref: T202, item: PHA focus areas}
+      - {ref: SYSDEF, item: Detailed subsystem design}
+    outputs:
+      - {ref: T205, item: Interface effects}
+      - {ref: SWS, item: Software causal factors}
+      - {ref: HTS, item: Subsystem hazards}
+    contents:
+      - {name: ssha-<subsystem-id>.csv, desc: One worksheet per subsystem (e.g. ssha-SUS-M1-PWR.csv)}
+
+  - id: T205
+    parent: E2
+    path: 02-hazard-identification/task-205-system-hazard-analysis
+    title: Task 205 · System Hazard Analysis (SHA)
+    element: 2
+    tasks: [{id: 205, name: System Hazard Analysis}]
+    gate: G3–G5
+    applicability: Selected
+    role: Safety lead
+    purpose: |
+      Analyses interfaces and interactions between subsystems and with the pilot: common-cause,
+      propagation, walker-UAV dock interactions, power and protective-stop interactions.
+    scope: [SUS-I1]
+    boundary:
+      name: Subsystem interfaces
+      inside: [SUS-M1-PWR, SUS-M1-CTL, SUS-M1-SAF, SUS-M1-DCK, SUS-A1-FCS, SUS-A1-PWR]
+      outside: [EXT-PILOT, EXT-AIR, External systems]
+      flows:
+        - [SUS-M1-SAF, SUS-M1-CTL, torque inhibit]
+        - [SUS-M1-SAF, SUS-M1-PWR, isolation]
+        - [SUS-M1-DCK, SUS-A1-PWR, charging]
+        - [SUS-M1-DCK, SUS-A1-FCS, rotor inhibit]
+        - [EXT-PILOT, SUS-M1-CTL, commands]
+        - [EXT-AIR, SUS-A1-FCS, navigation]
+      excluded: [external system-of-systems interactions (Task 209)]
+    model:
+      package: Task205_SHA
+      views:
+        - kind: ibd
+          name: SHAInterfaceContext
+          title: analysed interfaces
+          parts:
+            - {name: pwr, type: PowerSystem}
+            - {name: ctl, type: MotionControl}
+            - {name: saf, type: SafetyMonitor, kind: safety}
+            - {name: dck, type: UAVDock, kind: interface}
+            - {name: uav, type: ObservationUAV}
+          connections:
+            - [saf, ctl, torque inhibit]
+            - [saf, pwr, energy isolation]
+            - [pwr, ctl, drive power]
+            - [dck, uav, "retention, charge, rotor inhibit"]
+            - [pwr, dck, dock supply]
+    inputs:
+      - {ref: T204, item: Subsystem interface effects}
+      - {ref: SYSDEF, item: Interface register}
+    outputs:
+      - {ref: SREQ, item: Interface safety requirements}
+      - {ref: HTS, item: System-level hazards}
+    contents:
+      - {name: sha.csv, desc: Interface hazard worksheet}
+
+  - id: T206
+    parent: E2
+    path: 02-hazard-identification/task-206-operating-and-support-hazard-analysis
+    title: Task 206 · Operating and Support Hazard Analysis (O&SHA)
+    element: 2
+    tasks: [{id: 206, name: Operating and Support Hazard Analysis}]
+    gate: G3–G5
+    applicability: Selected
+    role: Safety lead with human factors lead
+    purpose: |
+      Analyses hazards in operation, maintenance, ingress/egress, transport, testing, UAV launch and
+      recovery, and procedures. Human-occupied testing requires its own authorization.
+    scope: [SUS-M1-PIL, SUS-M1-DCK, SUS-GSE]
+    boundary:
+      name: Operating and support tasks
+      inside: [Operating modes, Maintenance procedures, SUS-GSE]
+      outside: [EXT-PILOT, EXT-CREW, EXT-BYST]
+      flows:
+        - [EXT-PILOT, Operating modes, "mode selection, ingress / egress"]
+        - [EXT-CREW, Maintenance procedures, lockout / support / service]
+        - [Operating modes, EXT-BYST, exclusion zones]
+        - [SUS-GSE, Maintenance procedures, "supports, chargers"]
+    model:
+      package: Task206_OSHA
+      views:
+        - kind: stm
+          name: OperatingModes
+          title: operating modes analysed
+          initial: Shutdown
+          states:
+            - {name: Shutdown, doc: energy isolated}
+            - {name: MaintenanceLocked, doc: supported and locked out}
+            - {name: Standby, doc: pilot seated, actuation inhibited}
+            - {name: Walk}
+            - {name: Manipulate}
+            - {name: UAVLaunchRecovery, doc: walker stationary}
+            - {name: ProtectiveStop, doc: safe state, brakes applied}
+          transitions:
+            - [Shutdown, MaintenanceLocked, lockout applied]
+            - [MaintenanceLocked, Shutdown, lockout removed]
+            - [Shutdown, Standby, readiness confirmed]
+            - [Standby, Walk, pilot enable]
+            - [Walk, Standby, pilot hold]
+            - [Standby, Manipulate, arm enable]
+            - [Manipulate, Standby, arm disable]
+            - [Standby, UAVLaunchRecovery, envelope valid]
+            - [UAVLaunchRecovery, Standby, UAV docked or clear]
+            - [Walk, ProtectiveStop, stop request or fault]
+            - [Manipulate, ProtectiveStop, stop request or fault]
+            - [UAVLaunchRecovery, ProtectiveStop, abort]
+            - [ProtectiveStop, Standby, reset after review]
+            - [Standby, Shutdown, power down]
+    inputs:
+      - {doc: concept/CONOPS.md, item: Operating scenarios}
+      - {ref: T202, item: PHA}
+    outputs:
+      - {ref: SREQ, item: Procedural and design requirements}
+      - {ref: T303, item: Test hazard controls}
+      - {ref: HTS, item: Operating hazards}
+    contents:
+      - {name: osha.csv, desc: Task-step hazard worksheet}
+
+  - id: T207
+    parent: E2
+    path: 02-hazard-identification/task-207-health-hazard-analysis
+    title: Task 207 · Health Hazard Analysis (HHA)
+    element: 2
+    tasks: [{id: 207, name: Health Hazard Analysis}]
+    gate: G2–G5
+    applicability: Selected
+    role: Safety lead with human factors lead
+    purpose: |
+      Analyses exposure of pilot, crew and bystanders to noise, whole-body vibration, exhaust, heat,
+      chemicals, battery off-gas, ergonomic load and rotor noise.
+    scope: [SUS-M1-PIL, SUS-M1-PWR, SUS-M1-WLK, SUS-A1-PRP, SUS-A1-PWR]
+    boundary:
+      name: Human exposure
+      inside: [SUS-M1-PWR, SUS-M1-WLK, SUS-M1-PIL, SUS-A1-PRP]
+      outside: [EXT-PILOT, EXT-CREW, EXT-BYST]
+      flows:
+        - [SUS-M1-PWR, EXT-PILOT, "noise, exhaust, heat"]
+        - [SUS-M1-WLK, EXT-PILOT, whole-body vibration]
+        - [SUS-M1-PIL, EXT-PILOT, posture and restraint loads]
+        - [SUS-A1-PRP, EXT-CREW, rotor noise]
+        - [SUS-M1-PWR, EXT-CREW, fluids and battery off-gas]
+      excluded: [environmental receptors (Task 210)]
+    model:
+      package: Task207_HHA
+      views:
+        - kind: bdd
+          title: exposure record
+          blocks:
+            - name: HealthExposure
+              stereotype: item
+              attributes: ["agent : HealthHazardAgent", "source : String", "exposedPopulation : String", "exposureLimitRef : String", "measured : Boolean"]
+            - {name: HealthHazardAgent, stereotype: enum, values: [Acoustic, Vibration, Chemical, Thermal, Ergonomic, Biological, Radiation]}
+    inputs:
+      - {ref: T108, item: Hazardous materials}
+      - {ref: T206, item: Exposure tasks}
+    outputs:
+      - {ref: SREQ, item: Exposure limits as requirements}
+      - {ref: HTS, item: Health hazards}
+    contents:
+      - {name: hha.csv, desc: Exposure worksheet}
+
+  - id: T208
+    parent: E2
+    path: 02-hazard-identification/task-208-functional-hazard-analysis
+    title: Task 208 · Functional Hazard Analysis (FHA)
+    element: 2
+    tasks: [{id: 208, name: Functional Hazard Analysis}]
+    gate: G1–G2
+    applicability: Selected
+    role: Safety lead with software safety lead
+    purpose: |
+      Analyses system functions for loss, erroneous, untimely and unintended operation, and identifies
+      safety-significant functions and their software allocation. The SUS-A1 aircraft FHA under
+      ARP4761A is a separate artifact with a separate classification scale.
+    scope: [SUS-M1-CTL, SUS-M1-SAF, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FCS]
+    boundary:
+      name: System functions
+      inside: [Locomotion and balance, Protective stop, Pilot command, Dock retention, UAV flight control]
+      outside: [Physical implementation, ARP4761A aircraft FHA]
+      flows:
+        - [Pilot command, Locomotion and balance, intent]
+        - [Protective stop, Locomotion and balance, inhibit]
+        - [Dock retention, UAV flight control, rotor inhibit]
+        - [Locomotion and balance, Physical implementation, allocation]
+        - [UAV flight control, ARP4761A aircraft FHA, cross-reference only]
+    model:
+      package: Task208_FHA
+      views:
+        - kind: act
+          name: WalkerFunctionalChain
+          title: functional chain under analysis
+          steps:
+            - {name: senseIntent, label: Sense pilot intent}
+            - {name: estimateState, label: Estimate walker state}
+            - {name: planMotion, label: Plan motion and balance}
+            - {name: actuateJoints, label: Actuate joints}
+            - {name: monitorSafety, label: Monitor and enforce protective stop, safety: true}
+          loops: [[monitorSafety, actuateJoints, inhibit on fault]]
+        - kind: bdd
+          title: functional failure condition
+          blocks:
+            - name: FunctionalFailure
+              stereotype: item
+              attributes: ["functionId : String", "failureType : FunctionalFailureType", "hazardId : String", "swci : SoftwareControlCategory"]
+            - {name: FunctionalFailureType, stereotype: enum, values: [Loss, Erroneous, Untimely, Unintended, Degraded]}
+    inputs:
+      - {ref: SYSDEF, item: Function list}
+      - {ref: T201, item: PHL}
+    outputs:
+      - {ref: SWS, item: Safety-significant functions}
+      - {ref: T203, item: Functional safety requirements}
+    contents:
+      - {name: fha.csv, desc: Function x failure-type worksheet}
+
+  - id: T209
+    parent: E2
+    path: 02-hazard-identification/task-209-system-of-systems-hazard-analysis
+    title: Task 209 · System-of-Systems Hazard Analysis (SoSHA)
+    element: 2
+    tasks: [{id: 209, name: System-of-Systems Hazard Analysis}]
+    gate: G2–G5
+    applicability: Conditional — external systems not yet baselined
+    role: Safety lead
+    purpose: |
+      Analyses hazards from SUS-I1 interacting with external systems: GNSS, RF spectrum, airspace
+      users, site power and logistics, other vehicles and remote observers.
+    scope: [SUS-I1]
+    boundary:
+      name: SUS-I1 as constituent system
+      inside: [SUS-I1]
+      outside: [EXT-AIR, EXT-SITE, Other site vehicles, Remote video consumers]
+      flows:
+        - [EXT-AIR, SUS-I1, "GNSS, RF spectrum, airspace"]
+        - [EXT-SITE, SUS-I1, "power, fuel, transport"]
+        - [SUS-I1, Other site vehicles, shared workspace]
+        - [SUS-I1, Remote video consumers, observation feed]
+    model:
+      package: Task209_SoSHA
+      views:
+        - kind: ibd
+          name: SoSContext
+          title: system-of-systems context
+          parts:
+            - {name: sus, type: IntegratedSystem}
+            - {name: gnss, type: GnssConstellation, local: true}
+            - {name: airspace, type: AirspaceUsers, local: true}
+            - {name: site, type: SiteInfrastructureSystem, local: true}
+            - {name: vehicles, type: SiteVehicles, local: true}
+          connections:
+            - [gnss, sus, navigation signals]
+            - [airspace, sus, deconfliction]
+            - [site, sus, "power, fuel, comms"]
+            - [vehicles, sus, shared workspace]
+    inputs:
+      - {ref: T205, item: System hazards}
+      - {ref: E1, item: Applicability decision}
+    outputs:
+      - {ref: HTS, item: SoS hazards}
+    contents:
+      - {name: sosha.csv, desc: External interaction worksheet}
+
+  - id: T210
+    parent: E2
+    path: 02-hazard-identification/task-210-environmental-hazard-analysis
+    title: Task 210 · Environmental Hazard Analysis (EHA)
+    element: 2
+    tasks: [{id: 210, name: Environmental Hazard Analysis}]
+    gate: G2–G5
+    applicability: Selected
+    role: Environmental / HSE lead
+    purpose: |
+      Analyses environmental impacts across the lifecycle: emissions, spills, noise, battery
+      end-of-life, ground disturbance and disposal.
+    scope: [SUS-M1-PWR, SUS-M1-WLK, SUS-A1-PWR, SUS-GSE-CHG]
+    boundary:
+      name: Environmental aspects
+      inside: [SUS-M1-PWR, SUS-M1-WLK, SUS-A1-PWR, SUS-GSE-CHG]
+      outside: [EXT-ENV, EXT-SITE]
+      flows:
+        - [SUS-M1-PWR, EXT-ENV, exhaust and noise]
+        - [SUS-M1-WLK, EXT-ENV, "ground disturbance, fluid leaks"]
+        - [SUS-A1-PWR, EXT-SITE, battery end-of-life]
+        - [SUS-GSE-CHG, EXT-ENV, fuel spills]
+    model:
+      package: Task210_EHA
+      views:
+        - kind: bdd
+          title: environmental aspect record
+          blocks:
+            - name: EnvironmentalAspect
+              stereotype: item
+              attributes: ["aspect : String", "lifecyclePhase : LifecyclePhase", "receptor : String", "regulatoryRef : String"]
+            - {name: LifecyclePhase, stereotype: enum, values: [Manufacture, Test, Operation, Maintenance, Transport, Disposal]}
+    inputs:
+      - {ref: T108, item: Hazardous materials}
+    outputs:
+      - {ref: SREQ, item: Environmental requirements}
+      - {ref: HTS, item: Environmental hazards}
+    contents:
+      - {name: eha.csv, desc: Aspect and impact worksheet}
+
+  # ======================================================== 03
+  - id: E3
+    parent: ROOT
+    path: 03-risk-assessment
+    title: 03 · Assess and Document Risk
+    element: 3
+    gate: G1 onward
+    applicability: Selected
+    role: Safety lead
+    purpose: |
+      Holds the program risk assessment definitions: severity categories, probability levels, the
+      risk assessment matrix and risk levels, plus quantitative probability bands for SUS-I1 once
+      exposure is defined. Software contribution uses the separate criteria in `software-safety/`.
+    scope: [SUS-I1]
+    boundary:
+      name: Risk assessment criteria
+      inside: [Severity categories, Probability levels, Risk matrix]
+      outside: [EXT-AUTH, ARP4761A classification, Hazard records]
+      flows:
+        - [Hazard records, Risk matrix, severity and probability]
+        - [Risk matrix, EXT-AUTH, risk level drives authority]
+        - [ARP4761A classification, Risk matrix, kept separate - no mapping]
+    model:
+      package: RiskAssessment
+      views:
+        - kind: bdd
+          title: risk assessment types
+          blocks:
+            - {name: SeverityCategory, stereotype: enum, values: [Catastrophic, Critical, Marginal, Negligible]}
+            - {name: ProbabilityLevel, stereotype: enum, values: [Frequent, Probable, Occasional, Remote, Improbable, Eliminated]}
+            - {name: RiskLevel, stereotype: enum, values: [High, Serious, Medium, Low, Eliminated]}
+            - name: RiskAssessmentRecord
+              stereotype: attribute
+              attributes: ["severity : SeverityCategory", "probability : ProbabilityLevel", "level : RiskLevel", "rationale : String"]
+    inputs:
+      - {ref: T102, item: Matrix approval}
+      - {ref: E2, item: Hazards}
+    outputs:
+      - {ref: E4, item: Prioritised risks}
+      - {ref: E7, item: Risk levels for authority}
+      - {ref: HTS, item: Initial risk}
+    contents:
+      - {name: risk-matrix.yaml, desc: Machine-readable matrix used by PDaC checks}
+    notes_md: |
+      ## Candidate risk assessment matrix
+
+      Reproduces the structure of MIL-STD-882E Table III for planning. **Confirm against the
+      controlled standard and record SSPP approval before use.**
+
+      | Probability \ Severity | Catastrophic (1) | Critical (2) | Marginal (3) | Negligible (4) |
+      |---|---|---|---|---|
+      | Frequent (A) | High | High | Serious | Medium |
+      | Probable (B) | High | High | Serious | Medium |
+      | Occasional (C) | High | Serious | Medium | Low |
+      | Remote (D) | Serious | Medium | Medium | Low |
+      | Improbable (E) | Medium | Medium | Medium | Low |
+      | Eliminated (F) | Eliminated | Eliminated | Eliminated | Eliminated |
+
+  # ======================================================== 04
+  - id: E4
+    parent: ROOT
+    path: 04-mitigation-identification
+    title: 04 · Identify and Document Risk Mitigation Measures
+    element: 4
+    gate: G2–G3
+    applicability: Selected
+    role: Safety lead with design owners
+    purpose: |
+      Records candidate mitigations for each hazard, ordered by the system safety design order of
+      precedence, and the rationale when a lower-precedence measure is chosen.
+    scope: [SUS-I1]
+    boundary:
+      name: Mitigation selection
+      inside: [Mitigation records, Precedence rationale]
+      outside: [Design owners, Hazard records, Safety requirements]
+      flows:
+        - [Hazard records, Mitigation records, hazard and risk]
+        - [Design owners, Mitigation records, feasible design options]
+        - [Mitigation records, Safety requirements, selected controls]
+    model:
+      package: MitigationIdentification
+      views:
+        - kind: act
+          name: DesignOrderOfPrecedence
+          title: design order of precedence
+          steps:
+            - {name: eliminate, label: Eliminate hazard through design selection}
+            - {name: reduceByDesign, label: Reduce risk through design alteration}
+            - {name: engineeredFeatures, label: Incorporate engineered safety features, safety: true}
+            - {name: warningDevices, label: Incorporate detection and warning devices}
+            - {name: procedures, label: "Signage, procedures, training and PPE"}
+          loops: [[procedures, eliminate, residual risk too high]]
+    inputs:
+      - {ref: E3, item: Assessed risks}
+      - {ref: HTS, item: Hazards}
+    outputs:
+      - {ref: E5, item: Selected mitigations}
+      - {ref: HTS, item: Mitigation links}
+    contents:
+      - {name: mitigations.csv, desc: Mitigation register with precedence level}
+
+  # ======================================================== 05
+  - id: E5
+    parent: ROOT
+    path: 05-risk-reduction
+    title: 05 · Reduce Risk
+    element: 5
+    gate: G3–G4
+    applicability: Selected
+    role: Systems lead with safety lead
+    purpose: |
+      Tracks implementation of selected mitigations into requirements, design, software, procedures
+      and training, with allocation to SUS-I1 elements.
+    scope: [SUS-I1]
+    boundary:
+      name: Mitigation implementation
+      inside: [SUS-M1-SAF, SUS-M1-CTL, SUS-M1-DCK, SUS-M1-PIL]
+      outside: [Design baseline, Procedures and training, Change control board]
+      flows:
+        - [SUS-M1-SAF, Design baseline, implemented controls]
+        - [SUS-M1-PIL, Procedures and training, operator procedures]
+        - [Change control board, SUS-M1-CTL, approved changes]
+    model:
+      package: RiskReduction
+      views:
+        - kind: bdd
+          title: allocation of mitigations
+          blocks:
+            - name: MitigationImplementation
+              stereotype: item
+              attributes: ["mitigationId : String", "allocatedTo : String", "designRef : String", "status : String"]
+              parts: [{name: mitigation, type: Mitigation}, {name: requirement, type: SafetyRequirement, mult: "1..*"}]
+    inputs:
+      - {ref: E4, item: Selected mitigations}
+    outputs:
+      - {ref: E6, item: Items ready for verification}
+    contents:
+      - {name: implementation-status.csv, desc: Mitigation to design / procedure trace}
+
+  - id: SREQ
+    parent: E5
+    path: 05-risk-reduction/safety-requirements
+    title: Safety Requirements Register
+    element: 5
+    gate: G2–G4
+    applicability: Selected
+    role: Systems lead
+    purpose: |
+      Baselined safety requirements derived from SRHA, SHA, O&SHA, HHA and EHA, each allocated to a
+      system element and assigned a verification method. Released requirements need a verification
+      disposition (traceability rule 2).
+    scope: [SUS-M1-SAF, SUS-M1-CTL, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FCS]
+    boundary:
+      name: Safety requirement allocation
+      inside: [SUS-M1-SAF, SUS-M1-CTL, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FCS]
+      outside: [Verification program, Hazard records]
+      flows:
+        - [Hazard records, SUS-M1-SAF, hazard_id link]
+        - [SUS-M1-SAF, Verification program, verified_by]
+        - [SUS-M1-DCK, Verification program, verified_by]
+    model:
+      package: SafetyRequirements
+      views:
+        - kind: req
+          title: allocation and derivation
+          requirements:
+            - {id: SYS-002, name: ProtectiveStop, from: Task203_SRHA, text: Operator-requested protective stop with defined behavior per mode, risk: High, verify: Test}
+            - {id: SR-002-1, name: StopIndependence, text: Protective stop path shall not depend on motion-control software, risk: High, verify: Analysis}
+            - {id: SR-002-2, name: StopResponseTime, text: Protective stop reaction time shall meet the value set by hazard analysis (TBD), risk: High, verify: Test}
+            - {id: SYS-003, name: RetainedRotorInhibit, from: Task203_SRHA, text: No rotor startup while UAV mechanically retained, risk: High, verify: Test}
+            - {id: SR-003-1, name: LatchStateInterlock, text: Rotor arming shall require a positively confirmed unretained dock state, risk: High, verify: Test}
+          derives:
+            - [SYS-002, SR-002-1]
+            - [SYS-002, SR-002-2]
+            - [SYS-003, SR-003-1]
+          satisfied_by:
+            - [SUS-M1-SAF, SR-002-1]
+            - [SUS-M1-SAF, SR-002-2]
+            - [SUS-M1-DCK, SR-003-1]
+    inputs:
+      - {ref: T203, item: System safety requirements}
+      - {ref: T205, item: Interface requirements}
+      - {ref: T206, item: Procedural requirements}
+    outputs:
+      - {ref: T401, item: Requirements to verify}
+      - {ref: HTS, item: requirement_ids}
+    contents:
+      - {name: safety-requirements.yaml, desc: Typed requirement records (PDaC Requirement objects)}
+
+  # ======================================================== 06
+  - id: E6
+    parent: ROOT
+    path: 06-verification
+    title: 06 · Verify, Validate and Document Risk Reduction
+    element: 6
+    gate: G4–G5
+    applicability: Selected
+    role: Test lead with safety lead
+    purpose: |
+      Plans and records evidence that mitigations are implemented and effective: analysis,
+      inspection, demonstration, simulation and test, including fault injection. Simulated evidence
+      is labelled as simulated.
+    scope: [SUS-I1, SUS-GSE-TST]
+    boundary:
+      name: Verification program
+      inside: [SUS-GSE-TST, Test procedures, Evidence records]
+      outside: [SUS-M1, SUS-A1, EXT-AUTH]
+      flows:
+        - [SUS-GSE-TST, SUS-M1, supported rig tests]
+        - [SUS-GSE-TST, SUS-A1, HIL / SITL]
+        - [Evidence records, EXT-AUTH, verification summary]
+    model:
+      package: SafetyVerification
+      views:
+        - kind: act
+          name: VerifyRiskReduction
+          steps:
+            - {name: planVerification, label: Select method per requirement}
+            - {name: confirmTestSafety, label: Confirm test hazards controlled, safety: true}
+            - {name: execute, label: "Execute analysis, test or demonstration"}
+            - {name: recordEvidence, label: Record evidence with provenance and hash}
+            - {name: assessEffectiveness, label: Assess mitigation effectiveness}
+          loops: [[assessEffectiveness, planVerification, failed or inconclusive]]
+    inputs:
+      - {ref: SREQ, item: Requirements}
+      - {ref: E5, item: Implemented mitigations}
+    outputs:
+      - {ref: E7, item: Verified residual risk}
+      - {ref: HTS, item: evidence_ids}
+    contents: []
+
+  - id: T303
+    parent: E6
+    path: 06-verification/task-303-test-and-evaluation-participation
+    title: Task 303 · Test and Evaluation Participation
+    element: 6
+    tasks: [{id: 303, name: Test and Evaluation Participation}]
+    gate: G4–G5
+    applicability: Selected
+    role: Safety lead with test lead
+    purpose: |
+      Safety participation in test planning and execution: test hazard analysis, safety releases for
+      rig and human-in-the-loop tests, and use of test data to update hazards.
+    scope: [SUS-GSE-TST, SUS-M1, SUS-A1]
+    boundary:
+      name: Test events
+      inside: [SUS-GSE-TST, Test safety release]
+      outside: [EXT-PILOT, EXT-CREW, Test range or site]
+      flows:
+        - [Test safety release, EXT-PILOT, authorization for occupied test]
+        - [SUS-GSE-TST, EXT-CREW, exclusion zone]
+        - [Test range or site, SUS-GSE-TST, site rules]
+    model:
+      package: Task303_TestParticipation
+      views:
+        - kind: stm
+          name: TestSafetyRelease
+          initial: Planned
+          states:
+            - {name: Planned}
+            - {name: HazardsReviewed}
+            - {name: Released, doc: authorized for stated configuration}
+            - {name: Executed}
+            - {name: Suspended, doc: stop-test condition}
+          transitions:
+            - [Planned, HazardsReviewed, test hazard analysis complete]
+            - [HazardsReviewed, Released, independent review approves]
+            - [Released, Executed, test complete]
+            - [Released, Suspended, stop condition]
+            - [Suspended, HazardsReviewed, anomaly dispositioned]
+          final: [Executed]
+    inputs:
+      - {ref: T206, item: Operating hazards}
+      - {ref: SREQ, item: Requirements under test}
+    outputs:
+      - {ref: T401, item: Test results}
+      - {ref: T304, item: Test anomalies}
+    contents:
+      - {name: test-safety-releases/, desc: One release record per test event}
+
+  - id: T401
+    parent: E6
+    path: 06-verification/task-401-safety-verification
+    title: Task 401 · Safety Verification
+    element: 6
+    tasks: [{id: 401, name: Safety Verification}]
+    gate: G4–G5
+    applicability: Selected
+    role: Test lead with safety lead
+    purpose: |
+      Verifies each safety requirement and the effectiveness of each mitigation. Each evidence record
+      states provenance, version, integrity hash and whether it is simulated (traceability rule 6).
+    scope: [SUS-M1-SAF, SUS-M1-DCK, SUS-M1-PIL, SUS-A1-FCS]
+    boundary:
+      name: Verified safety requirements
+      inside: [SUS-M1-SAF, SUS-M1-DCK, SUS-M1-PIL]
+      outside: [SUS-GSE-TST, Evidence store]
+      flows:
+        - [SUS-GSE-TST, SUS-M1-SAF, fault injection]
+        - [SUS-GSE-TST, SUS-M1-DCK, latch state tests]
+        - [SUS-M1-SAF, Evidence store, results with hash]
+    model:
+      package: Task401_SafetyVerification
+      views:
+        - kind: req
+          title: verification relationships
+          requirements:
+            - {id: SYS-001, name: PilotReadinessInterlock, from: Task203_SRHA, text: Inhibit leg actuation until pilot readiness satisfied, risk: High, verify: Test}
+            - {id: SYS-002, name: ProtectiveStop, from: Task203_SRHA, text: Operator-requested protective stop per mode, risk: High, verify: Test}
+            - {id: SYS-003, name: RetainedRotorInhibit, from: Task203_SRHA, text: No rotor startup while retained, risk: High, verify: Test}
+          verified_by:
+            - [VER-001, SYS-001]
+            - [VER-002, SYS-002]
+            - [VER-003, SYS-003]
+    inputs:
+      - {ref: SREQ, item: Requirements}
+      - {ref: T303, item: Test results}
+    outputs:
+      - {ref: HTS, item: Verification status}
+      - {ref: T301, item: Verification summary}
+    contents:
+      - {name: verification-matrix.csv, desc: Requirement x method x evidence x result}
+
+  - id: T402
+    parent: E6
+    path: 06-verification/task-402-explosives-hazard-classification-data
+    title: Task 402 · Explosives Hazard Classification Data
+    element: 6
+    tasks: [{id: 402, name: Explosives Hazard Classification Data}]
+    gate: Re-evaluate at each gate
+    applicability: Not applicable — concept contains no ordnance or explosives
+    role: Safety lead
+    purpose: |
+      Placeholder that records the not-applicable decision and its re-evaluation trigger. Lithium
+      cells and fuel are handled by Tasks 108, 207 and 210, not here.
+    scope: []
+    boundary:
+      name: Explosive items (none)
+      inside: [No explosive or energetic items]
+      outside: [SUS-I1, Applicability review]
+      flows:
+        - [SUS-I1, Applicability review, configuration change adding energetics]
+        - [Applicability review, No explosive or energetic items, re-evaluation]
+    model:
+      package: Task402_Applicability
+      views:
+        - kind: stm
+          name: Task402Applicability
+          initial: NotApplicable
+          states:
+            - {name: NotApplicable}
+            - {name: UnderReview}
+            - {name: Applicable}
+          transitions:
+            - [NotApplicable, UnderReview, energetic item proposed]
+            - [UnderReview, NotApplicable, rejected]
+            - [UnderReview, Applicable, accepted into baseline]
+    inputs:
+      - {ref: E1, item: Applicability decision}
+    outputs:
+      - {ref: E1, item: Re-evaluation record}
+    contents:
+      - {name: applicability-decision.yaml, desc: Not-applicable rationale and trigger}
+
+  - id: T403
+    parent: E6
+    path: 06-verification/task-403-explosive-ordnance-disposal-data
+    title: Task 403 · Explosive Ordnance Disposal Data
+    element: 6
+    tasks: [{id: 403, name: Explosive Ordnance Disposal Data}]
+    gate: Re-evaluate at each gate
+    applicability: Not applicable — unarmed platform, no ordnance
+    role: Safety lead
+    purpose: |
+      Placeholder that records the not-applicable decision. Susanoo is unarmed; any change introducing
+      ordnance is outside the project charter and must be escalated, not analysed here.
+    scope: []
+    boundary:
+      name: Ordnance (none)
+      inside: [No ordnance]
+      outside: [SUS-I1, Project charter]
+      flows:
+        - [Project charter, No ordnance, unarmed by design]
+        - [SUS-I1, Project charter, any proposal escalated]
+    model:
+      package: Task403_Applicability
+      views:
+        - kind: stm
+          name: Task403Applicability
+          initial: NotApplicable
+          states:
+            - {name: NotApplicable}
+            - {name: Escalated, doc: outside charter}
+          transitions:
+            - [NotApplicable, Escalated, ordnance proposed]
+            - [Escalated, NotApplicable, proposal rejected]
+    inputs:
+      - {ref: E1, item: Applicability decision}
+    outputs:
+      - {ref: E1, item: Re-evaluation record}
+    contents:
+      - {name: applicability-decision.yaml, desc: Not-applicable rationale}
+
+  # ======================================================== 07
+  - id: E7
+    parent: ROOT
+    path: 07-risk-acceptance
+    title: 07 · Accept Risk and Document
+    element: 7
+    gate: G6
+    applicability: Selected
+    role: Risk acceptance authority (human only)
+    purpose: |
+      Holds safety assessment reports and formal residual-risk decisions. Automation may check that
+      evidence and links are complete; only an authorized human may accept risk. Illustrative or
+      simulated approvals are labelled as such.
+    scope: [SUS-I1]
+    boundary:
+      name: Risk acceptance
+      inside: [Acceptance records, SAR, HMAR]
+      outside: [EXT-AUTH, PDaC release]
+      flows:
+        - [SAR, EXT-AUTH, residual risk summary]
+        - [EXT-AUTH, Acceptance records, signed decision]
+        - [Acceptance records, PDaC release, approvals list]
+    model:
+      package: RiskAcceptance
+      views:
+        - kind: stm
+          name: RiskAcceptanceDecisionFlow
+          initial: Requested
+          states:
+            - {name: Requested}
+            - {name: UnderReview}
+            - {name: Accepted, doc: authority and record named}
+            - {name: Rejected}
+            - {name: Expired, doc: configuration changed}
+          transitions:
+            - [Requested, UnderReview, package complete]
+            - [UnderReview, Accepted, authority signs]
+            - [UnderReview, Rejected, further mitigation required]
+            - [Accepted, Expired, configuration or CONOPS change]
+            - [Expired, Requested, reassessed]
+    inputs:
+      - {ref: E6, item: Verified residual risk}
+      - {ref: E1, item: Authority matrix}
+    outputs:
+      - {ref: HTS, item: risk_acceptance status}
+      - {ref: E8, item: Accepted risk baseline}
+    contents: []
+
+  - id: T301
+    parent: E7
+    path: 07-risk-acceptance/task-301-safety-assessment-report
+    title: Task 301 · Safety Assessment Report (SAR)
+    element: 7
+    tasks: [{id: 301, name: Safety Assessment Report}]
+    gate: G5–G6
+    applicability: Selected
+    role: Safety lead
+    purpose: |
+      Comprehensive assessment of residual mishap risk for a specific configuration, prepared to
+      support acceptance decisions and release.
+    scope: [SUS-I1]
+    boundary:
+      name: Assessed configuration
+      inside: [SUS-M1, SUS-A1, SUS-GSE]
+      outside: [EXT-AUTH, EXT-PILOT]
+      flows:
+        - ["@boundary", EXT-AUTH, residual risk and open hazards]
+        - ["@boundary", EXT-PILOT, operating limitations and warnings]
+    model:
+      package: Task301_SAR
+      views:
+        - kind: bdd
+          title: SAR structure
+          blocks:
+            - name: SafetyAssessmentReport
+              stereotype: item
+              attributes: ["configurationId : String", "revision : String"]
+              parts:
+                - {name: hazards, type: Hazard, mult: "0..*"}
+                - {name: evidence, type: VerificationEvidence, mult: "0..*"}
+                - {name: limitations, type: OperatingLimitation, mult: "0..*"}
+            - {name: OperatingLimitation, stereotype: item, attributes: ["text : String", "hazardId : String"]}
+    inputs:
+      - {ref: HTS, item: Hazard log}
+      - {ref: T401, item: Verification summary}
+    outputs:
+      - {ref: ACC, item: Decision package}
+      - {ref: T104, item: Review package}
+    contents:
+      - {name: sar-<configuration-id>.md, desc: One SAR per assessed configuration}
+
+  - id: T302
+    parent: E7
+    path: 07-risk-acceptance/task-302-hazard-management-assessment-report
+    title: Task 302 · Hazard Management Assessment Report (HMAR)
+    element: 7
+    tasks: [{id: 302, name: Hazard Management Assessment Report}]
+    gate: G5–G6
+    applicability: Selected
+    role: Safety lead
+    purpose: |
+      Assesses hazard management status and residual risk for a configuration or milestone, typically
+      for a test or demonstration event.
+    scope: [SUS-I1]
+    boundary:
+      name: Milestone hazard status
+      inside: [Open hazards, Closed hazards]
+      outside: [EXT-AUTH, Test event]
+      flows:
+        - [Open hazards, EXT-AUTH, status and risk]
+        - [Test event, Open hazards, new findings]
+    model:
+      package: Task302_HMAR
+      views:
+        - kind: bdd
+          title: HMAR structure
+          blocks:
+            - name: HazardManagementAssessmentReport
+              stereotype: item
+              attributes: ["milestone : String", "configurationId : String", "openHigh : Integer", "openSerious : Integer"]
+              parts: [{name: hazards, type: Hazard, mult: "0..*"}]
+    inputs:
+      - {ref: HTS, item: Hazard status}
+    outputs:
+      - {ref: ACC, item: Milestone decision package}
+    contents:
+      - {name: hmar-<milestone>.md, desc: One report per milestone}
+
+  - id: ACC
+    parent: E7
+    path: 07-risk-acceptance/acceptance-records
+    title: Risk Acceptance Records
+    element: 7
+    gate: G6
+    applicability: Selected
+    role: Risk acceptance authority
+    purpose: |
+      Signed residual-risk decisions. Each record names the authority, hazard IDs, accepted risk
+      level, configuration, conditions and whether the approval is real or illustrative.
+    scope: [SUS-I1]
+    boundary:
+      name: Decision records
+      inside: [Acceptance records]
+      outside: [EXT-AUTH, HTS]
+      flows:
+        - [EXT-AUTH, Acceptance records, decision]
+        - [Acceptance records, HTS, decision_record link]
+    model:
+      package: AcceptanceRecords
+      views:
+        - kind: bdd
+          title: acceptance record
+          blocks:
+            - name: AcceptanceRecord
+              stereotype: item
+              attributes: ["recordId : String", "hazardIds : String", "configurationId : String", "conditions : String", "expiresOnChange : Boolean"]
+              parts: [{name: decision, type: RiskAcceptanceDecision}]
+    inputs:
+      - {ref: T301, item: Decision package}
+      - {ref: T302, item: Milestone package}
+    outputs:
+      - {ref: HTS, item: Acceptance status}
+      - {doc: pdac/product.yaml, item: release.approvals}
+    contents:
+      - {name: RA-<id>.yaml, desc: One record per decision}
+
+  # ======================================================== 08
+  - id: E8
+    parent: ROOT
+    path: 08-lifecycle-risk-management
+    title: 08 · Manage Life-Cycle Risk
+    element: 8
+    gate: G7
+    applicability: Selected
+    role: Safety lead with configuration manager
+    purpose: |
+      Keeps the safety baseline valid after release: change impact, deficiencies, mishaps and
+      near-misses, deviations and periodic progress reporting. Any change reopens affected analyses.
+    scope: [SUS-I1]
+    boundary:
+      name: Fielded configuration
+      inside: [SUS-M1, SUS-A1, SUS-GSE]
+      outside: [EXT-CREW, Change control board, Field reports]
+      flows:
+        - [Field reports, "@boundary", mishaps and anomalies]
+        - [Change control board, "@boundary", approved changes]
+        - [EXT-CREW, SUS-GSE, maintenance feedback]
+    model:
+      package: LifecycleRisk
+      views:
+        - kind: act
+          name: ManageLifecycleRisk
+          steps:
+            - {name: receive, label: "Receive change, deficiency, mishap or deviation"}
+            - {name: impact, label: Assess safety impact on hazards and controls, safety: true}
+            - {name: reanalyse, label: Reopen affected analyses}
+            - {name: reverify, label: Re-verify affected controls}
+            - {name: redecide, label: Re-request acceptance if risk changed}
+    inputs:
+      - {ref: E7, item: Accepted baseline}
+    outputs:
+      - {ref: E2, item: Reanalysis triggers}
+      - {ref: HTS, item: Reopened hazards}
+    contents: []
+
+  - id: T107
+    parent: E8
+    path: 08-lifecycle-risk-management/task-107-hazard-management-progress-report
+    title: Task 107 · Hazard Management Progress Report
+    element: 8
+    tasks: [{id: 107, name: Hazard Management Progress Report}]
+    gate: Periodic
+    applicability: Selected
+    role: Safety lead
+    purpose: |
+      Periodic report of hazard counts by status and risk level, overdue actions, and changes since
+      the last report — generated from the hazard tracking system where possible.
+    scope: [SUS-I1]
+    boundary:
+      name: Reporting period
+      inside: [HTS snapshot]
+      outside: [Program management, EXT-AUTH]
+      flows:
+        - [HTS snapshot, Program management, metrics]
+        - [HTS snapshot, EXT-AUTH, high and serious risk status]
+    model:
+      package: Task107_ProgressReport
+      views:
+        - kind: bdd
+          title: progress report metrics
+          blocks:
+            - name: ProgressReport
+              stereotype: item
+              attributes: ["period : String", "openCount : Integer", "closedCount : Integer", "highRiskOpen : Integer", "overdueActions : Integer"]
+    inputs:
+      - {ref: HTS, item: Hazard log snapshot}
+    outputs:
+      - {ext: Program management, item: Progress report}
+    contents:
+      - {name: reports/, desc: Dated reports (YYYY-MM.md)}
+
+  - id: T304
+    parent: E8
+    path: 08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations
+    title: Task 304 · Review of Changes, Deficiencies, Mishaps and Deviations
+    element: 8
+    tasks: [{id: 304, name: "Review of Changes, Deficiencies, Mishaps and Deviations"}]
+    gate: G7 (and any change)
+    applicability: Selected
+    role: Safety lead with configuration manager
+    purpose: |
+      Safety review of engineering changes, deficiency reports, mishaps, near-misses and deviations;
+      records the impact decision and links to reopened hazards.
+    scope: [SUS-I1]
+    boundary:
+      name: Change and event review
+      inside: [Impact assessments]
+      outside: [Change control board, Field reports, HTS]
+      flows:
+        - [Change control board, Impact assessments, ECR / deviation]
+        - [Field reports, Impact assessments, mishap or deficiency]
+        - [Impact assessments, HTS, affected hazards reopened]
+    model:
+      package: Task304_ChangeReview
+      views:
+        - kind: act
+          name: ChangeSafetyReview
+          steps:
+            - {name: intake, label: Log change or event}
+            - {name: screen, label: Screen for safety impact}
+            - {name: analyse, label: Analyse affected hazards and controls, safety: true}
+            - {name: decide, label: Record disposition and actions}
+          loops: [[decide, screen, new information]]
+    inputs:
+      - {ref: T303, item: Test anomalies}
+      - {ref: T104, item: Audit findings}
+    outputs:
+      - {ref: HTS, item: Reopened hazards}
+      - {ref: E2, item: Reanalysis requests}
+    contents:
+      - {name: reviews/, desc: One impact assessment per change or event}
+
+  # ======================================================== cross-cutting
+  - id: HTS
+    parent: ROOT
+    path: hazard-tracking-system
+    title: Task 106 · Hazard Tracking System (Hazard Log)
+    crosscut: hts
+    tasks: [{id: 106, name: Hazard Tracking System}]
+    gate: G0 onward
+    applicability: Selected
+    role: Safety lead
+    purpose: |
+      Closed-loop hazard log used by every element. One YAML record per hazard using
+      `templates/hazard-record.yaml`; CI resolves every ID link (traceability rule 1).
+    scope: [SUS-I1]
+    boundary:
+      name: Hazard log
+      inside: [Hazard records]
+      outside: [Analyses, Safety requirements, Evidence store, EXT-AUTH]
+      flows:
+        - [Analyses, Hazard records, new hazards]
+        - [Hazard records, Safety requirements, requirement_ids]
+        - [Evidence store, Hazard records, verification_evidence_ids]
+        - [EXT-AUTH, Hazard records, risk_acceptance]
+    model:
+      package: HazardTrackingSystem
+      views:
+        - kind: bdd
+          title: hazard record links
+          blocks:
+            - name: HazardLog
+              attributes: ["configurationId : String"]
+              parts: [{name: records, type: Hazard, mult: "0..*"}]
+        - kind: stm
+          name: HazardRecordStatus
+          title: record status
+          initial: Open
+          states:
+            - {name: Open}
+            - {name: Mitigated}
+            - {name: Verified}
+            - {name: Accepted}
+            - {name: Closed}
+          transitions:
+            - [Open, Mitigated, mitigation linked]
+            - [Mitigated, Verified, evidence linked]
+            - [Verified, Accepted, decision_record linked]
+            - [Accepted, Closed, closure criteria met]
+            - [Accepted, Open, change reopens]
+          final: [Closed]
+    inputs:
+      - {ref: E2, item: Hazards}
+      - {ref: SREQ, item: Requirement links}
+      - {ref: T401, item: Evidence links}
+      - {ref: ACC, item: Acceptance links}
+    outputs:
+      - {ref: T107, item: Status snapshot}
+      - {ref: T301, item: Hazard log}
+    contents:
+      - {name: hazards/, desc: HAZ-<nnn>.yaml records}
+
+  - id: SWS
+    parent: ROOT
+    path: software-safety
+    title: Software Contribution to System Risk (Section 4.4)
+    crosscut: sws
+    gate: G1–G5
+    applicability: Selected
+    role: Software safety lead
+    procedure: docs/wiki/MIL-STD-882E-Software-Safety.md
+    purpose: |
+      Software control category, software safety criticality and level-of-rigor assignments for
+      walker motion control, protective stop, pilot HMI, dock interlocks and PX4. MIL-STD-882E
+      criticality is kept distinct from any DO-178C assurance level.
+    scope: [SUS-M1-CTL, SUS-M1-SAF, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FCS]
+    boundary:
+      name: Safety-significant software
+      inside: [SUS-M1-CTL, SUS-M1-SAF, SUS-M1-DCK, SUS-A1-FCS]
+      outside: [PX4 upstream project, Toolchain and dependencies, EXT-PILOT]
+      flows:
+        - [PX4 upstream project, SUS-A1-FCS, pinned version and parameters]
+        - [Toolchain and dependencies, SUS-M1-CTL, build inputs]
+        - [EXT-PILOT, SUS-M1-CTL, commands via HMI]
+        - [SUS-M1-SAF, SUS-M1-CTL, independent inhibit]
+    model:
+      package: SoftwareSafety
+      views:
+        - kind: bdd
+          title: software criticality assignment
+          blocks:
+            - name: SoftwareFunctionAssessment
+              stereotype: item
+              attributes: ["functionId : String", "controlCategory : SoftwareControlCategory", "severity : SeverityCategory", "levelOfRigor : String", "independentMitigation : Boolean"]
+            - {name: SoftwareControlCategory, stereotype: enum, values: [Autonomous, SemiAutonomous, RedundantFaultTolerant, Influential, NoSafetyImpact]}
+    inputs:
+      - {ref: T208, item: Safety-significant functions}
+      - {ref: T204, item: Software causal factors}
+      - {doc: integrations/px4/README.md, item: PX4 integration plan}
+    outputs:
+      - {ref: SREQ, item: Software safety requirements}
+      - {ref: T401, item: Level-of-rigor verification tasks}
+    contents:
+      - {name: swci-assessment.csv, desc: Function x control category x severity x LOR}
+
+  - id: TPL
+    parent: ROOT
+    path: templates
+    title: Work-Product Templates
+    gate: All
+    role: Safety lead
+    purpose: |
+      Record templates used across the tree. Templates mirror `SusanooSafety.sysml` so records,
+      models and checks share one vocabulary.
+    scope: []
+    boundary:
+      name: Templates
+      inside: [hazard-record.yaml, task-record.yaml, pha-table.csv, sspp-outline.md]
+      outside: [Work-product folders]
+      flows:
+        - [hazard-record.yaml, Work-product folders, hazard records]
+        - [task-record.yaml, Work-product folders, task records]
+        - [pha-table.csv, Work-product folders, PHA worksheets]
+        - [sspp-outline.md, Work-product folders, SSPP]
+    model:
+      package: TemplateSchemas
+      views:
+        - kind: bdd
+          title: template schemas
+          blocks:
+            - name: TaskRecord
+              stereotype: item
+              attributes: ["taskId : Integer", "artifactId : String", "revision : String", "configurationId : String", "decision : String"]
+              parts: [{name: hazards, type: Hazard, mult: "0..*"}, {name: requirements, type: SafetyRequirement, mult: "0..*"}, {name: evidence, type: VerificationEvidence, mult: "0..*"}]
+    inputs:
+      - {ref: SYSDEF, item: SusanooSafety vocabulary}
+    outputs:
+      - {ref: HTS, item: Hazard record schema}
+    contents:
+      - {name: hazard-record.yaml, desc: Hazard record template}
+      - {name: task-record.yaml, desc: Task record template}
+      - {name: pha-table.csv, desc: PHA worksheet columns}
+      - {name: sspp-outline.md, desc: SSPP outline}
