@@ -1,0 +1,15 @@
+schema: susanoo/event/v0.1
+id: EVT-SIM-001
+title: Digital simulation and PX4 SITL campaign
+description: Walker dynamics simulation and PX4 software-in-the-loop docking scenarios. No hardware, no people exposed.
+status: planned
+gate: G4
+configuration: SUS-I1-C001
+modes: [MOD-02, MOD-03, MOD-04, MOD-05, MOD-06, MOD-07, MOD-08, MOD-09]
+subsystems: []
+exposure:
+  people: false
+  equipment: false
+  environment: false
+  notes: Simulation only. Results are evidence about models, not hardware.
+authorization: null

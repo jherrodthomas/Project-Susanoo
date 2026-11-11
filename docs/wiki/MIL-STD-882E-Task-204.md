@@ -1,6 +1,6 @@
 # Task 204 — Subsystem Hazard Analysis (SSHA)
 
-**Series:** Analysis · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** Candidate; confirm against program task selection
+**Series:** Analysis · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** see generated [task applicability and tailoring](MIL-STD-882E-Applicability)
 
 ## Purpose
 Apply subsystem hazard analysis (ssha) to the SUS-M1 piloted walker, SUS-A1 observation UAV and integrated docking/ground-support interfaces as relevant.
@@ -13,11 +13,9 @@ Subsystem design, PHA, interfaces, FMEA.
 
 ## Execution steps
 1. Confirm task objective, affected lifecycle phase and system boundary.
-2. Evaluate locomotion, actuators, pilot station, power, UAV and dock independently
-3. consider faults, energy, software and maintenance
-3. allocate mitigations.
-4. Record assumptions, unresolved issues, decisions and responsible owners.
-5. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
+2. Evaluate locomotion, actuators, pilot station, power, UAV and dock independently; consider faults, energy, software and maintenance; allocate mitigations.
+3. Record assumptions, unresolved issues, decisions and responsible owners.
+4. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
 
 ## Outputs
 Subsystem hazards and design-level controls.
@@ -34,4 +32,4 @@ Reviewer confirms correct configuration, traceable inputs, reproducible method, 
 ## Change triggers
 Reopen on relevant CONOPS, configuration, interface, software, parameter, operation, evidence or incident changes. Record affected links and review disposition.
 
-**Reference:** MIL-STD-882E with Change 1, Task 204; verify wording, contract applicability and DID requirements against the controlled standard before formal use.
+**Reference:** MIL-STD-882E (11 May 2012, base edition), Task 204; verify wording, contract applicability and DID requirements against the controlled standard before formal use.

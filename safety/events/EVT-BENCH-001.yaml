@@ -1,0 +1,17 @@
+schema: susanoo/event/v0.1
+id: EVT-BENCH-001
+title: Supported single-leg hydraulic actuator bench rig
+description: >-
+  Single leg on a rigid support frame driven by a hydraulic power unit; test crew in the room.
+  No pilot aboard. Purpose is actuator, feedback-monitor and stop-path characterisation.
+status: planned
+gate: G4
+configuration: SUS-I1-C001
+modes: [MOD-01, MOD-02, MOD-04, MOD-10]
+subsystems: [SUS-M1-WLK, SUS-M1-PWR, SUS-M1-SAF]
+exposure:
+  people: true
+  equipment: true
+  environment: false
+  notes: Test crew near pressurised hydraulics and moving leg. Event risk must be assessed and accepted before authorization (4.3.7).
+authorization: null

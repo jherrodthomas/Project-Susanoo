@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susanoo/verification/v0.1",
+  "title": "Verification record (MIL-STD-882E 4.3.6, Task 401)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "title", "method", "result", "configuration", "simulated"],
+  "properties": {
+    "schema": {"const": "susanoo/verification/v0.1"},
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "method": {"enum": ["analysis", "test", "demonstration", "inspection"]},
+    "result": {"enum": ["planned", "passed", "failed", "inconclusive"]},
+    "configuration": {"type": "string"},
+    "simulated": {"type": "boolean", "description": "True when performed in simulation only"},
+    "procedure": {"type": "string"},
+    "evidence": {"type": "array", "items": {"type": "object", "required": ["path"],
+      "properties": {"path": {"type": "string"}, "sha256": {"type": "string"}}}},
+    "date": {"type": "string", "format": "date"}
+  }
+}

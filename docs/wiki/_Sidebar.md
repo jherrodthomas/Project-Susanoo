@@ -14,5 +14,9 @@
 - [MIL-STD-882E Task Handbook](MIL-STD-882E-Handbook)
 
 - [MIL-STD-882E Visual Process Maps](MIL-STD-882E-Process-Maps)
+- [MIL-STD-882E Applicability](MIL-STD-882E-Applicability)
+- [MIL-STD-882E Conformance](MIL-STD-882E-Conformance)
+- [Hazard Tracking Log](Hazard-Tracking-Log)
+- [Gate Readiness](Gate-Readiness)
 
 - [SUS-M1 Architecture & Boundaries](SUS-M1-Architecture-and-Boundaries)

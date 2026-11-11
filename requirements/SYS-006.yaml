@@ -1,0 +1,28 @@
+schema: susanoo/requirement/v0.1
+id: SYS-006
+title: Launch and recovery envelope inhibit
+statement: UAV launch and recovery shall be inhibited outside a verified operational envelope of walker posture,
+  motion and dock state.
+status: candidate
+source:
+  documents:
+  - concept/CONOPS.md
+  - concept/architecture.md
+  scenario_ids:
+  - SCN-004
+  - SCN-005
+  - SCN-106
+  hazard_ids:
+  - HAZ-INT-001
+allocated_to:
+- SUS-M1-DCK
+- SUS-A1
+safety_significant: true
+verification:
+  method:
+  - test
+  - analysis
+  evidence_ids: []
+  disposition: open
+tbd:
+- Numeric thresholds and timing pending hazard analysis and trade studies

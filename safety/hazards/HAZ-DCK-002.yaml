@@ -1,0 +1,109 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-DCK-002
+title: False retained state releases UAV under motion
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-DCK
+- SUS-A1
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: The dock reports the UAV as retained (or released) incorrectly, so the walker moves with an
+  unretained aircraft or the release occurs during motion.
+modes:
+- MOD-03
+- MOD-04
+- MOD-06
+- MOD-08
+causal_factors:
+- id: CF1
+  type: software
+  description: Retention state fusion reports retained with latch open
+  ssf_ids:
+  - SSF-005
+- id: CF2
+  type: hardware
+  description: Latch sensor failure or latch wear
+- id: CF3
+  type: environment
+  description: Vibration during walking unseats a partially latched aircraft
+effects:
+- UAV falls from or is thrown off the walker
+mishap: UAV strikes pilot, crew or bystander; aircraft damaged
+initial_risk:
+  severity: 2
+  probability: D
+  rac: 2D
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design); compact UAV falling from height can
+    seriously injure a person nearby.
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 2
+  probability: E
+  rac: 2E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design); independent latch sensing and fail-closed
+    latch design.
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Fail-closed mechanical latch requiring powered actuation to open
+  precedence: b
+  state: identified
+  requirement_ids:
+  - SYS-005
+  verification:
+    method:
+    - inspection
+    - test
+    evidence_ids: []
+- id: M2
+  description: Independent dual sensing of latch position fused into the retained state
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-005
+  ssf_ids:
+  - SSF-005
+  verification:
+    method:
+    - test
+    evidence_ids: []
+- id: M3
+  description: Walker motion inhibited while retention state is unknown
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-005
+  verification:
+    method:
+    - test
+    evidence_ids: []
+requirement_ids:
+- SYS-005
+owner:
+  role: ROLE-UAV
+  person: null
+  org: Air vehicle
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 201
+  scenario_ids:
+  - SCN-005
+  - SCN-106
+  interface_ids:
+  - IF-PX4-003
+  documents:
+  - integrations/px4/interface-contract.md
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; no hardware design selected
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2

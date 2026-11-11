@@ -1,6 +1,6 @@
 # Task 106 — Hazard Tracking System
 
-**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** Candidate; confirm against program task selection
+**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** see generated [task applicability and tailoring](MIL-STD-882E-Applicability)
 
 ## Purpose
 Apply hazard tracking system to the SUS-M1 piloted walker, SUS-A1 observation UAV and integrated docking/ground-support interfaces as relevant.
@@ -13,11 +13,9 @@ Hazard analyses, risk criteria, mitigations and evidence.
 
 ## Execution steps
 1. Confirm task objective, affected lifecycle phase and system boundary.
-2. Create unique hazard records
-3. link scenario, causes, consequences, severity, probability, mitigations, tests and risk authority
-3. prevent undocumented closure.
-4. Record assumptions, unresolved issues, decisions and responsible owners.
-5. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
+2. Create unique hazard records; link scenario, causes, consequences, severity, probability, mitigations, tests and risk authority; prevent undocumented closure.
+3. Record assumptions, unresolved issues, decisions and responsible owners.
+4. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
 
 ## Outputs
 Controlled hazard register with IDs, history and status.
@@ -34,4 +32,4 @@ Reviewer confirms correct configuration, traceable inputs, reproducible method, 
 ## Change triggers
 Reopen on relevant CONOPS, configuration, interface, software, parameter, operation, evidence or incident changes. Record affected links and review disposition.
 
-**Reference:** MIL-STD-882E with Change 1, Task 106; verify wording, contract applicability and DID requirements against the controlled standard before formal use.
+**Reference:** MIL-STD-882E (11 May 2012, base edition), Task 106; verify wording, contract applicability and DID requirements against the controlled standard before formal use.

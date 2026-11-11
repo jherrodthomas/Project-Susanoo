@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susanoo/requirement/v0.1",
+  "title": "System requirement",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "title", "statement", "status", "source", "safety_significant", "verification"],
+  "properties": {
+    "schema": {"const": "susanoo/requirement/v0.1"},
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "statement": {"type": "string", "minLength": 10},
+    "status": {"enum": ["candidate", "baselined", "deleted"]},
+    "source": {"type": "object", "additionalProperties": false,
+      "properties": {
+        "documents": {"type": "array", "items": {"type": "string"}},
+        "scenario_ids": {"type": "array", "items": {"type": "string"}},
+        "hazard_ids": {"type": "array", "items": {"type": "string"}}
+      }},
+    "allocated_to": {"type": "array", "items": {"type": "string"}},
+    "safety_significant": {"type": "boolean"},
+    "verification": {"type": "object", "additionalProperties": false, "required": ["method"],
+      "properties": {
+        "method": {"type": "array", "items": {"enum": ["analysis", "test", "demonstration", "inspection", "TBD"]}},
+        "evidence_ids": {"type": "array", "items": {"type": "string"}},
+        "disposition": {"enum": ["open", "verified", "failed", "waived"]}
+      }},
+    "tbd": {"type": "array", "items": {"type": "string"}}
+  }
+}

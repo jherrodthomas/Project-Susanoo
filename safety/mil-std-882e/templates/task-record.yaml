@@ -1,16 +1,17 @@
-schema: susanoo/safety-task/v0.1-draft
-task_id: 201
+# Template for safety/mil-std-882e/tasks/T<task>.yaml (schema pdac/schemas/task-record.schema.json).
+# Create only for tasks with disposition 'selected' in standards/tailoring/mil-std-882e.yaml.
+schema: susanoo/safety-task/v0.2
+task_id: 202
 artifact_id: ART-TBD
 revision: 0.1-draft
-status: draft
+status: not-started               # not-started | in-work | in-review | approved
 configuration_id: SUS-I1-C001
-source_ids: []
+artifacts: []
 hazard_ids: []
 requirement_ids: []
 evidence_ids: []
-owner: TBD
+owner: ROLE-SL
 reviewer: null
-decision: pending
-change_request: null
+decision: pending                 # pending | accepted | returned
 assumptions: []
 open_actions: []

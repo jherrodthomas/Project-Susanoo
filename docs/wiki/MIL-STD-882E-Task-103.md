@@ -1,6 +1,6 @@
 # Task 103 — Hazard Management Plan
 
-**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** Candidate; confirm against program task selection
+**Series:** Management · **Status:** Draft procedure, tailored for SUS-I1 · **Applicability:** see generated [task applicability and tailoring](MIL-STD-882E-Applicability)
 
 ## Purpose
 Apply hazard management plan to the SUS-M1 piloted walker, SUS-A1 observation UAV and integrated docking/ground-support interfaces as relevant.
@@ -13,10 +13,9 @@ SSPP, risk matrix, authorities, hazard log schema.
 
 ## Execution steps
 1. Confirm task objective, affected lifecycle phase and system boundary.
-2. Define hazard lifecycle, classification, mitigation ownership, status, escalation, risk acceptance and closure rules
-3. require evidence and authorized decisions.
-4. Record assumptions, unresolved issues, decisions and responsible owners.
-5. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
+2. Define hazard lifecycle, classification, mitigation ownership, status, escalation, risk acceptance and closure rules; require evidence and authorized decisions.
+3. Record assumptions, unresolved issues, decisions and responsible owners.
+4. Link outcomes to the hazard register, requirements, architecture, verification and change records as applicable.
 
 ## Outputs
 Hazard management plan and disposition workflow.
@@ -33,4 +32,4 @@ Reviewer confirms correct configuration, traceable inputs, reproducible method, 
 ## Change triggers
 Reopen on relevant CONOPS, configuration, interface, software, parameter, operation, evidence or incident changes. Record affected links and review disposition.
 
-**Reference:** MIL-STD-882E with Change 1, Task 103; verify wording, contract applicability and DID requirements against the controlled standard before formal use.
+**Reference:** MIL-STD-882E (11 May 2012, base edition), Task 103; verify wording, contract applicability and DID requirements against the controlled standard before formal use.

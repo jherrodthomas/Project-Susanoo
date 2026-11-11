@@ -1,0 +1,26 @@
+schema: susanoo/requirement/v0.1
+id: SYS-003
+title: Docked rotor inhibit
+statement: The UAV shall be prevented from rotor startup while mechanically retained, except under an approved maintenance
+  procedure.
+status: candidate
+source:
+  documents:
+  - concept/CONOPS.md
+  - concept/architecture.md
+  scenario_ids:
+  - SCN-107
+  hazard_ids:
+  - HAZ-DCK-001
+allocated_to:
+- SUS-M1-DCK
+- SUS-A1
+safety_significant: true
+verification:
+  method:
+  - test
+  - inspection
+  evidence_ids: []
+  disposition: open
+tbd:
+- Numeric thresholds and timing pending hazard analysis and trade studies

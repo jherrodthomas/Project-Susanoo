@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susanoo/change-request/v0.1",
+  "title": "Change request (MIL-STD-882E 4.3.8, Task 304)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "title", "kind", "status", "affects"],
+  "properties": {
+    "schema": {"const": "susanoo/change-request/v0.1"},
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "kind": {"enum": ["ecp", "change-notice", "deficiency", "mishap", "deviation", "waiver"]},
+    "status": {"enum": ["draft", "submitted", "approved", "rejected", "implemented"]},
+    "affects": {"type": "array", "items": {"type": "string"}, "minItems": 1,
+                "description": "IDs of requirements, SSFs, mitigations (HAZ-x:M1), hazards or configurations"},
+    "description": {"type": "string"}
+  }
+}

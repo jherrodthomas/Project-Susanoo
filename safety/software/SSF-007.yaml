@@ -1,0 +1,30 @@
+schema: susanoo/ssf/v0.1
+id: SSF-007
+title: Balance and locomotion control
+description: Closed-loop balance and gait control of the walker.
+software_items:
+- SUS-M1-WLK/locomotion-controller (TBD CSCI)
+scc: 1
+scc_rationale: Time-critical autonomous control of leg actuators; no other entity can intervene within the balance-loss
+  time scale.
+swci: 1
+lor:
+  requirements_analysis:
+    status: not-started
+    evidence_ids: []
+  architecture_analysis:
+    status: not-started
+    evidence_ids: []
+  design_analysis:
+    status: not-started
+    evidence_ids: []
+  code_analysis:
+    status: not-started
+    evidence_ids: []
+  safety_specific_testing:
+    status: not-started
+    evidence_ids: []
+lor_decision: null
+requirement_ids:
+- SYS-008
+owner: ROLE-SWL

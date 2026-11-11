@@ -1,0 +1,105 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-WLK-001
+title: Stale or lost feedback causes runaway motion
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-WLK
+- SUS-M1-SAF
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: Actuator or posture feedback is lost, frozen or delayed and closed-loop control drives a joint
+  beyond its intended motion.
+modes:
+- MOD-04
+- MOD-05
+causal_factors:
+- id: CF1
+  type: hardware
+  description: Sensor, connector or bus failure
+- id: CF2
+  type: software
+  description: Monitor fails to detect stale data or detection is too slow
+  ssf_ids:
+  - SSF-004
+- id: CF3
+  type: software
+  description: Locomotion controller acts on stale state
+  ssf_ids:
+  - SSF-007
+effects:
+- Joint runaway, loss of balance
+mishap: Walker fall or limb strike injuring pilot or bystanders
+initial_risk:
+  severity: 1
+  probability: C
+  rac: 1C
+  risk_level: High
+  rationale: Preliminary qualitative judgement at concept stage (no design); feedback loss is a common failure class;
+    consequence includes fall with pilot.
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design); redundant sensing, staleness monitor
+    and mechanical joint limits.
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Mechanical joint end-stops and pressure relief limit runaway travel and force
+  precedence: b
+  state: identified
+  verification:
+    method:
+    - inspection
+    - analysis
+    evidence_ids: []
+- id: M2
+  description: Feedback staleness and plausibility monitor commanding the degraded state
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-004
+  ssf_ids:
+  - SSF-004
+  verification:
+    method:
+    - test
+    - analysis
+    evidence_ids: []
+- id: M3
+  description: Redundant posture sensing
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-004
+  verification:
+    method:
+    - analysis
+    evidence_ids: []
+requirement_ids:
+- SYS-004
+owner:
+  role: ROLE-WLK
+  person: null
+  org: Walker / mechanical
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 201
+  scenario_ids:
+  - SCN-101
+  documents:
+  - concept/architecture.md
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; no hardware design selected
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2

@@ -1,0 +1,116 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-WLK-002
+title: Walker tip-over or fall with pilot aboard
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-WLK
+- SUS-M1-PIL
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: The walker leaves its stability envelope on slope, uneven terrain or with an offset payload
+  and falls or overturns.
+modes:
+- MOD-04
+- MOD-05
+- MOD-09
+causal_factors:
+- id: CF1
+  type: software
+  description: Balance controller fails to recover or commands an unstable gait
+  ssf_ids:
+  - SSF-007
+- id: CF2
+  type: environment
+  description: Terrain gives way or slope exceeds envelope
+- id: CF3
+  type: human
+  description: Pilot commands manoeuvre or payload beyond limits
+effects:
+- Overturn or fall of the platform
+mishap: Pilot fatal or disabling injury in fall; crush of bystanders
+initial_risk:
+  severity: 1
+  probability: C
+  rac: 1C
+  risk_level: High
+  rationale: Preliminary qualitative judgement at concept stage (no design); legged platforms have frequent balance-loss
+    events during development.
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design); envelope limiting, rollover protection
+    and restraint.
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Low centre of gravity and wide stance selected in the architecture trade
+  precedence: b
+  state: identified
+  verification:
+    method:
+    - analysis
+    evidence_ids: []
+- id: M2
+  description: Rollover/fall protective structure and restraint at the pilot station
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-008
+  verification:
+    method:
+    - analysis
+    - test
+    evidence_ids: []
+- id: M3
+  description: Command and payload limiting to a verified stability envelope
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-008
+  ssf_ids:
+  - SSF-007
+  verification:
+    method:
+    - test
+    - analysis
+    evidence_ids: []
+- id: M4
+  description: Stability margin warning to the pilot
+  precedence: d
+  state: identified
+  requirement_ids:
+  - SYS-008
+  verification:
+    method:
+    - test
+    evidence_ids: []
+requirement_ids:
+- SYS-008
+owner:
+  role: ROLE-WLK
+  person: null
+  org: Walker / mechanical
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 201
+  scenario_ids:
+  - SCN-002
+  - SCN-003
+  - SCN-103
+  documents:
+  - concept/CONOPS.md
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; no hardware design selected
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2

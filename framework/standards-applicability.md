@@ -4,7 +4,7 @@
 
 | Standard | Status | Scope and purpose |
 |---|---|---|
-| MIL-STD-882E | Core-method | Integrated walker/UAV/GSE safety program, SSPP, PHL/PHA/SSHA/SHA/O&SHA and hazard tracking |
+| MIL-STD-882E (11 May 2012, base edition) | Core-method | Integrated walker/UAV/GSE safety program; modeled as data in `standards/mil-std-882e/model.yaml`, tailored in `standards/tailoring/mil-std-882e.yaml`, checked by `tools/pdac` |
 | ISO 12100 | Tailored | Walker mechanical hazards and risk reduction |
 | ISO 13849-1/-2 | Conditional | Safety-related control systems where appropriate |
 | IEC 61508 | Reference | Functional safety lifecycle and E/E/PE control methods |

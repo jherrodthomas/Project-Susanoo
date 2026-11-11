@@ -1,0 +1,30 @@
+schema: susanoo/ssf/v0.1
+id: SSF-002
+title: Protective stop supervisor
+description: Commands the mode-specific protective stop trajectory and holds posture.
+software_items:
+- SUS-M1-SAF/stop-supervisor (TBD CSCI)
+scc: 1
+scc_rationale: Executes the stop autonomously in a time-critical window with no predetermined intervention by another
+  control entity.
+swci: 1
+lor:
+  requirements_analysis:
+    status: not-started
+    evidence_ids: []
+  architecture_analysis:
+    status: not-started
+    evidence_ids: []
+  design_analysis:
+    status: not-started
+    evidence_ids: []
+  code_analysis:
+    status: not-started
+    evidence_ids: []
+  safety_specific_testing:
+    status: not-started
+    evidence_ids: []
+lor_decision: null
+requirement_ids:
+- SYS-002
+owner: ROLE-SWL
