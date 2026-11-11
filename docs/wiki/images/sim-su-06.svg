@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>SU-06 GPS lost during observation (emulated)</title>
+<desc>SU-06: GPS lost during observation (emulated). Outcome landed-clear; first failsafe [4.9, 'AUTO.LAND']; minimum distance to the pilot station below 8 m: 47.09 m; landing to dock 50.37 m.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker></defs>
+<rect x="0" y="0" width="1000" height="560" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">SU-06 · GPS lost during observation (emulated)</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">PX4 v1.16.2 SITL (SIH quadrotor) · outcome landed-clear · hazards HAZ-INT-001</text>
+<text x="960" y="44" font-size="11" fill="#475569" text-anchor="end">synthetic</text>
+<line x1="40" y1="82" x2="960" y2="82" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="98" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="60" y="108" font-size="11" fill="#475569">walker (dashed: at take-off)</text>
+<rect x="216.1" y="98" width="14" height="12" rx="3" fill="#C2410C" stroke="#C2410C" stroke-width="1.2"/>
+<text x="236.1" y="108" font-size="11" fill="#475569">dock</text>
+<rect x="274.3" y="98" width="14" height="12" rx="3" fill="none" stroke="#D2553F" stroke-width="1.2"/>
+<text x="294.3" y="108" font-size="11" fill="#475569">UAV path after injection (ground truth)</text>
+<rect x="507.8" y="98" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="527.8" y="108" font-size="11" fill="#475569">pilot keep-out 3 m</text>
+<rect x="40" y="130" width="520" height="360" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+<circle cx="300" cy="310" r="166.2" fill="none" stroke="#D97706" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="178.5" y="441.5" font-size="9.5" fill="#D97706" text-anchor="end">geofence 60 m</text>
+<rect x="297.2" y="302.8" width="5.5" height="8.3" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.4"/>
+<rect x="296" y="306" width="8" height="8" fill="#C2410C" stroke="#C2410C" stroke-width="1.2"/>
+<circle cx="300" cy="304.5" r="3.5" fill="#0F172A" stroke="#0F172A"/>
+<circle cx="383.1" cy="199.2" r="5" fill="none" stroke="#2E9E6A" stroke-width="1.6"/>
+<text x="391.1" y="193.2" font-size="9.5" fill="#2E9E6A">observation point</text>
+<path d="M382.6,198.4 L382.7,198.8 L382.3,199 L381.4,199 L380.4,199.1 L379,199.2 L378,199.4 L377.4,199.5 L377,199.7 L376.7,200 L376.5,200.2 L376.2,200.4 L375.7,200.5 L375.2,200.5 L374.5,200.4 L373.9,200.3 L373.2,200.3 L372.4,200.1 L371.7,199.8 L370.9,199.4 L370.1,199 L369.3,198.5 L368.3,197.7 L367.1,196.9 L366,196.2 L364.9,195.3 L364,194.6 L363.1,193.8 L362.4,193.1 L361.5,192.4 L360.8,191.9 L360,191.3 L359.4,190.8 L358.8,190.2 L358.3,189.6 L357.9,189.1 L357.5,188.6 L357.3,188.2 L357.1,187.9 L357.1,187.5 L357,187.2 L357,186.9 L357,186.6 L357,186.4 L357,186.2 L357,185.8 L357,185.3 L357,184.7 L357,184.2 L357,183.9 L357.1,183.5 L357.2,183.2 L357.2,183 L357.3,182.8 L357.3,182.8 L357.3,182.8 L357.3,182.8 L357.3,182.8 L357.3,182.8 L357.3,182.8 L357.3,182.8 L357.3,182.8" fill="none" stroke="#D2553F" stroke-width="2"/>
+<circle r="5" fill="#D2553F" cx="0" cy="0" transform="translate(357.3 182.8)"><animateMotion dur="11.7s" repeatCount="indefinite" path="M25.3,15.6 L25.4,16 L25,16.2 L24.1,16.2 L23.1,16.3 L21.7,16.4 L20.7,16.6 L20.1,16.7 L19.7,16.9 L19.4,17.2 L19.2,17.4 L18.9,17.6 L18.4,17.7 L17.9,17.7 L17.2,17.6 L16.6,17.5 L15.9,17.5 L15.1,17.3 L14.4,17 L13.6,16.6 L12.8,16.2 L12,15.7 L11,14.9 L9.8,14.1 L8.7,13.4 L7.6,12.5 L6.7,11.8 L5.8,11 L5.1,10.3 L4.2,9.6 L3.5,9.1 L2.7,8.5 L2.1,8 L1.5,7.4 L1,6.8 L0.6,6.3 L0.2,5.8 L0,5.4 L-0.2,5.1 L-0.2,4.7 L-0.3,4.4 L-0.3,4.1 L-0.3,3.8 L-0.3,3.6 L-0.3,3.4 L-0.3,3 L-0.3,2.5 L-0.3,1.9 L-0.3,1.4 L-0.3,1.1 L-0.2,0.7 L-0.1,0.4 L-0.1,0.2 L0,-0 L0,-0 L0,-0 L0,-0 L0,-0 L0,-0 L0,-0 L0,-0 L0,-0"/></circle>
+<text x="48" y="146" font-size="10" fill="#475569" font-weight="700">overview (north up)</text>
+<rect x="590" y="130" width="370" height="250" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+<circle cx="775" cy="241.1" r="41.7" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2" stroke-dasharray="4 3"/>
+<rect x="761.1" y="232.8" width="27.8" height="41.7" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.4"/>
+<rect x="771" y="264.9" width="8" height="8" fill="#C2410C" stroke="#C2410C" stroke-width="1.2"/>
+<circle cx="775" cy="241.1" r="3.5" fill="#0F172A" stroke="#0F172A"/>
+<text x="598" y="146" font-size="10" fill="#475569" font-weight="700">zoom on the dock: path below 8 m</text>
+<text x="598" y="354" font-size="10" fill="#0F172A">closest to the pilot below 8 m: 47.09 m</text>
+<text x="598" y="368" font-size="10" fill="#0F172A">landing: 50.37 m from the dock</text>
+<rect x="600" y="400" width="360" height="80" rx="3" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="600" y1="455.7" x2="960" y2="455.7" stroke="#D2553F" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M603.1,406.1 L609.2,406.2 L614.6,406.2 L620.8,406.4 L626.2,406.5 L632.3,406.7 L637.7,408 L643.8,409.8 L649.2,411.3 L654.6,412.7 L660.8,413.8 L666.9,414.9 L672.3,416.1 L678.5,417.5 L684.6,418.8 L690,419.9 L696.2,421.1 L702.3,422.3 L707.7,423.2 L713.8,424.2 L719.2,425.1 L725.4,425.9 L731.5,427 L737.7,428.1 L743.1,429.4 L749.2,431 L754.6,432.2 L760.8,433.7 L766.2,434.9 L772.3,436.3 L778.5,438 L783.8,439.6 L790,441.1 L796.2,443.2 L802.3,445.3 L807.7,447 L813.8,449.3 L819.2,451.6 L825.4,453.5 L831.5,455.5 L836.9,457.4 L843.1,459.1 L849.2,461 L854.6,462.5 L860.8,464.1 L866.2,465.6 L872.3,467.6 L878.5,469.8 L883.8,472 L890,473.7 L895.4,475.5 L901.5,477.5 L907.7,479.5 L913.1,480 L919.2,480 L924.6,480 L930.8,480 L936.9,480 L943.1,480 L948.5,480 L954.6,480 L960,480" fill="none" stroke="#0F172A" stroke-width="1.4"/>
+<text x="600" y="394" font-size="9.5" fill="#475569">altitude above the dock vs time after injection; modes below</text>
+<line x1="603.1" y1="480" x2="603.1" y2="488" stroke="#0F766E" stroke-width="1.5"/>
+<text x="605.1" y="498" font-size="9" fill="#0F766E">LOITER</text>
+<line x1="637.7" y1="480" x2="637.7" y2="488" stroke="#0F766E" stroke-width="1.5"/>
+<text x="639.7" y="498" font-size="9" fill="#0F766E">LAND</text>
+<line x1="960" y1="480" x2="960" y2="488" stroke="#0F766E" stroke-width="1.5"/>
+<text x="958" y="498" font-size="9" fill="#0F766E" text-anchor="end">LOITER</text>
+<line x1="40" y1="526" x2="960" y2="526" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="544" font-size="10.5" fill="#475569">Synthetic, no evidence credit · ground truth from PX4 SIH · injection at t = 0 · generated by sim/figures/uav_scenes.py from sim/results/uav/SU-06.json</text>
+</svg>

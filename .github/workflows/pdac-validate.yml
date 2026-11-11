@@ -82,5 +82,7 @@ jobs:
         run: python -m sim.search.search --check
       - name: Scenes and Simulation page current
         run: python -m sim.figures.scenes --check
+      - name: UAV scenes, summary and page current (from committed PX4 SITL results)
+        run: python -m sim.figures.uav_scenes --check
       - name: Simulation tests
         run: python -m unittest discover -s sim/tests -t .

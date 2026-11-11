@@ -1,0 +1,18 @@
+# SUS-A1 / dock geometry and PX4 configuration for the SITL failsafe scenarios. Every value has a unit, range,
+# status and source (checked by sim/plant/spec.py rules). Positions are local NED metres relative to the PX4 home
+# position, which is the dock at take-off. Nothing here is a design value (concept stage, no hardware).
+schema: susanoo/sim-spec/v0.1
+id: SPEC-UAV-001
+revision: 0.1-draft
+params:
+  pilot_station_n_m:   {value: 2.0,  unit: m, range: [-10, 10], status: assumed, source: "Pilot station 2 m forward of the dock (rear backpack dock, TS-004 option 1)"}
+  pilot_station_e_m:   {value: 0.0,  unit: m, range: [-10, 10], status: assumed, source: "Pilot station on the walker centreline"}
+  pilot_keepout_m:     {value: 3.0,  unit: m, range: [1, 10],   status: assumed, source: "Horizontal rotor keep-out around the pilot station below keepout_alt_m (HAZ-INT-001)"}
+  keepout_alt_m:       {value: 8.0,  unit: m, range: [2, 30],   status: assumed, source: "Altitude above the dock below which the keep-out applies"}
+  observe_n_m:         {value: 40.0, unit: m, range: [0, 200],  status: assumed, source: "Observation point north of the walker (CONOPS SCN-004)"}
+  observe_e_m:         {value: 30.0, unit: m, range: [-200, 200], status: assumed, source: "Observation point east of the walker"}
+  observe_alt_m:       {value: 25.0, unit: m, range: [10, 120], status: assumed, source: "Observation altitude above the dock"}
+  walker_moved_n_m:    {value: 20.0, unit: m, range: [0, 100],  status: assumed, source: "Walker displacement during the flight in the moved-walker scenarios (SCN-106)"}
+  geofence_radius_m:   {value: 60.0, unit: m, range: [20, 500], status: assumed, source: "Operating volume radius around the take-off point (EXT-AIRSPACE assumption)"}
+  link_loss_timeout_s: {value: 5.0,  unit: s, range: [1, 60],   status: assumed, source: "COM_DL_LOSS_T: GCS link loss detection time"}
+  sim_speed_factor:    {value: 4.0,  unit: "-", range: [1, 10], status: assumed, source: "PX4_SIM_SPEED_FACTOR for SIH lockstep runs"}
