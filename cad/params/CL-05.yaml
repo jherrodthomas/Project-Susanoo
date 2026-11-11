@@ -58,3 +58,10 @@ postures:                        # extra poses of this layout, built and analyse
     hip_height: 0.95             # target hip height when kneeling
     arm_drop_deg: 20             # arms stowed: upper arm closer to horizontal
     fore_angle_deg: 55           # forearm folded up, claws tucked clear of the ground
+    step: deployed               # the fold-down ladder is out when kneeling
+access:                          # ingress/egress aids at the front opening (SYS-012, SYS-019)
+  width: 0.62                    # ladder width between rails
+  reach: 0.55                    # how far forward of the hull the deployed ladder's foot lands
+  max_rise: 0.40                 # largest step rise allowed (placeholder until an access standard is chosen)
+  stowed_height: 0.70            # folded ladder pack height on the hull front
+  handle_offset: 0.14            # grab handles this far outside the opening edges

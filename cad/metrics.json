@@ -188,9 +188,9 @@
    "hip_height_m": 2.34,
    "cockpit_floor_m": 2.41,
    "pilot_eye_m": 3.62,
-   "placeholder_mass_kg": 4670,
+   "placeholder_mass_kg": 4700,
    "cg_m": [
-    -0.183,
+    -0.177,
     -0.001,
     2.754
    ],
@@ -228,11 +228,14 @@
      0.63
     ]
    ],
-   "static_margin_m": 0.116,
-   "static_tip_angle_deg": 2.4,
+   "static_margin_m": 0.122,
+   "static_tip_angle_deg": 2.5,
    "uav_dock": "onboard",
    "rotor_to_pilot_m": 0.86,
    "arm_ground_clearance_m": 0.93,
+   "egress_sill_m": 3.03,
+   "max_step_rise_m": 3.03,
+   "steps": 0,
    "postures": {
     "kneel": {
      "envelope_m": [
@@ -244,11 +247,11 @@
      "hip_height_m": 0.95,
      "cockpit_floor_m": 1.02,
      "pilot_eye_m": 2.23,
-     "placeholder_mass_kg": 4650,
+     "placeholder_mass_kg": 4670,
      "cg_m": [
-      -0.211,
+      -0.205,
       -0.001,
-      1.514
+      1.512
      ],
      "support_polygon_m": [
       [
@@ -284,11 +287,14 @@
        0.63
       ]
      ],
-     "static_margin_m": 0.088,
-     "static_tip_angle_deg": 3.3,
+     "static_margin_m": 0.094,
+     "static_tip_angle_deg": 3.6,
      "uav_dock": "onboard",
      "rotor_to_pilot_m": 0.86,
-     "arm_ground_clearance_m": 1.14
+     "arm_ground_clearance_m": 1.14,
+     "egress_sill_m": 1.64,
+     "max_step_rise_m": 0.33,
+     "steps": 4
     }
    }
   }

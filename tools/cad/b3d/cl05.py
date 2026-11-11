@@ -23,7 +23,7 @@ from build123d import (Box, Circle, Compound, Plane, Pos, Rectangle, Rot, Solid,
                        Spline, Vector, export_step, extrude, fillet, loft, make_face, Polyline, sweep, FilletPolyline)
 
 ROOT = Path(__file__).resolve().parents[3]
-CLASSES = ["structure", "actuator", "armor", "arm", "cage", "seat", "occupant", "power", "safety", "dock", "uav",
+CLASSES = ["structure", "actuator", "armor", "arm", "cage", "seat", "occupant", "power", "safety", "dock", "uav", "access",
            "rotor", "hose"]
 
 
@@ -192,6 +192,36 @@ def build(p: dict, common: dict, posture: str = "standing"):
     for bx, bz in ((ow / 2 + 0.05, zb - 0.03), (-ow / 2 - 0.05, zb - 0.03), (ow / 2 - c + 0.04, zb + oh + 0.07), (-ow / 2 + c - 0.04, zb + oh + 0.07)):
         put("structure", cyl((x1 + 0.04, bx, bz), (x1 + 0.07, bx, bz), 0.022))  # bolt heads on the frame
     put("seat", Pos(cx, 0, floor - 0.02) * Box(dx - 2 * w, wy - 2 * w, 0.04))
+
+    # Access: grab handles beside and above the front opening; a fold-down ladder hinged under its sill,
+    # deployed in postures that say so (step: deployed) and stowed as a folded pack otherwise
+    AC = p.get("access") or {}
+    treads = []
+    if AC:
+        gy = ow / 2 + AC.get("handle_offset", 0.14)
+        gx = x1 + 0.09
+        for s in (1, -1):
+            lo, hi = (gx, s * gy, zb - 0.28), (gx, s * gy, zb + 0.58)
+            put("access", cyl(lo, hi, 0.022), cyl((x1 - 0.01, s * gy, lo[2] + 0.04), (gx, s * gy, lo[2] + 0.04), 0.02),
+                cyl((x1 - 0.01, s * gy, hi[2] - 0.04), (gx, s * gy, hi[2] - 0.04), 0.02))
+        bar_z = zb + oh + 0.14
+        put("access", cyl((gx, -0.32, bar_z), (gx, 0.32, bar_z), 0.022),
+            *[cyl((x1 - 0.01, yy, bar_z), (gx, yy, bar_z), 0.02) for yy in (-0.28, 0.28)])
+        half = AC["width"] / 2
+        hinge = (x1 + 0.04, zb - 0.07)
+        put("access", ycyl((hinge[0], 0, hinge[1]), 0.03, AC["width"] + 0.06))
+        if pose and pose.get("step") == "deployed":
+            rises = math.ceil(zb / AC["max_rise"])            # equal rises from the ground to the sill
+            treads = [zb * k / rises for k in range(1, rises)]
+            bottom = (x1 + AC["reach"], treads[0] - 0.06)
+            for s in (1, -1):
+                put("access", cyl((hinge[0], s * half, hinge[1]), (bottom[0], s * half, bottom[1]), 0.025))
+            for tz in treads:
+                f_ = (tz - hinge[1]) / (bottom[1] - hinge[1])
+                tx = hinge[0] + f_ * (bottom[0] - hinge[0])
+                put("access", Pos(tx, 0, tz - 0.018) * Box(0.16, AC["width"], 0.035))
+        else:  # stowed: the ladder folded in two, flat against the hull under the opening
+            put("access", Pos(x1 + 0.05, 0, hinge[1] - AC["stowed_height"] / 2) * Box(0.06, AC["width"], AC["stowed_height"]))
     put("structure", ycyl((0, 0, hip_z), 0.26, 2 * L["hip_half_width"] + 0.10))  # hip drive housing
 
     # Seated pilot, seat and console
@@ -280,7 +310,9 @@ def build(p: dict, common: dict, posture: str = "standing"):
     for ddy in (bx * 0.35, -bx * 0.35):
         put("uav", cyl((base[0] - 0.14, base[1] + ddy, base[2] + 0.01), (base[0] + 0.14, base[1] + ddy, base[2] + 0.01), 0.01))
 
-    info = {"hip_z": hip_z, "floor": floor, "eye": list(eye), "feet": [list(f) for f in feet], "dock": "onboard",
+    climb = [0.0, *treads, zb]
+    egress = {"sill": zb, "treads": treads, "max_rise": max(b - a for a, b in zip(climb, climb[1:]))}
+    info = {"hip_z": hip_z, "floor": floor, "eye": list(eye), "feet": [list(f) for f in feet], "dock": "onboard", "egress": egress,
             "posture": posture, "knee": [kf, knee_z]}
     return parts, info
 

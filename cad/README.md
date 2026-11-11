@@ -1,6 +1,8 @@
 # Concept layouts (FreeCAD) — review and alignment
 
-**ID:** SUS-CAD-001 · **Revision:** 0.4-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CAD-001 · **Revision:** 0.5-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.5:* CL-05 access aids: fold-down ladder (stowed standing, deployed kneeling) and grab handles at the front opening; new metrics: front-opening sill height, ladder treads and largest step rise.
 
 *Changes in 0.4:* CL-05 kneel posture for ingress and egress: built, measured, rendered and drawn alongside the standing pose; new metric: arm ground clearance.
 
@@ -42,7 +44,7 @@ Metric definitions: *static margin* is the shortest horizontal distance from the
 | Cockpit floor (egress drop) | 2.33 m | 2.33 m | 2.33 m | 1.94 m | 2.41 m |
 | CG height | 2.63 m | 2.63 m | 2.63 m | 2.24 m | 2.75 m |
 | Static margin | 0.14 m ⚠ | 0.14 m ⚠ | 0.14 m ⚠ | 0.23 m ⚠ | 0.12 m ⚠ |
-| Static tip angle | 3.1° | 3.2° | 3.1° | 5.7° | 2.4° |
+| Static tip angle | 3.1° | 3.2° | 3.1° | 5.7° | 2.5° |
 | Rotor ↔ pilot (docked) | 0.79 m ⚠ | 0.63 m ⚠ | 3.14 m | 0.92 m ⚠ | 0.86 m ⚠ |
 | Placeholder mass | ~5.0 t | ~5.0 t | ~5.0 t | ~6.3 t | ~4.7 t |
 
@@ -122,6 +124,7 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 - The side windows give the pilot a view to the sides and are a candidate for the second exit CL-04 lacks, if they are sized and openable for egress (SYS-012); at concept size they are close to a minimum emergency opening.
 - The long claws hang low beside the legs, inside the walking envelope: a strike and pinch zone for anyone near the walker (HAZ-009) unless manipulation is inhibited and the arms are stowed while walking (SYS-013).
 - Kneel posture for egress (SYS-019): with the feet planted and the knees folded back, the hip drops from 2.34 m to 0.95 m and the cockpit floor from 2.41 m to about 1.0 m, a two-step climb instead of a ladder. The CG drops by more than a metre, so the tip angle improves, but the folded knees move mass rearward and the static margin shrinks: the kneel needs its own stability check. Lowering and rising create a crush zone under the pod and knees (HAZ-022). Kneeling is also a candidate controlled safe posture on loss of actuation energy (SYS-008, HAZ-021).
+- Access aids: the pilot leaves over the front-opening sill, which sits 0.62 m above the cockpit floor, so the real climb is from the sill (about 1.64 m when kneeling, 3.03 m standing), not from the floor. A fold-down ladder hinged under the sill deploys in the kneel with four treads at an even 0.33 m rise (placeholder limit 0.40 m), and grab handles beside and above the opening give three points of contact. Standing, the ladder is stowed folded on the hull: egress without kneeling is not possible, so a failure that prevents kneeling also blocks normal egress (HAZ-008). The ladder must be interlocked against deployment while walking, and ISO 2867 (access systems for earth-moving machinery) is a candidate reference for access dimensions; its applicability is not yet decided.
 
 Drawing sheet: [SUS-CAD-001-CL-05](drawings/CL-05.svg) (A3, 1:50, dimensioned side, plan and front views).
 
@@ -134,8 +137,11 @@ Drawing sheet: [SUS-CAD-001-CL-05](drawings/CL-05.svg) (A3, 1:50, dimensioned si
 | Overall height | 4.40 m | 3.02 m |
 | CG height | 2.75 m | 1.51 m |
 | Static margin | 0.12 m | 0.09 m |
-| Static tip angle | 2.4° | 3.3° |
+| Static tip angle | 2.5° | 3.6° |
 | Claws above ground | 0.93 m | 1.14 m |
+| Front-opening sill (actual climb height) | 3.03 m | 1.64 m |
+| Ladder treads | 0 | 4 |
+| Largest step rise | 3.03 m | 0.33 m |
 
 | | |
 |---|---|

@@ -101,7 +101,7 @@ const loader = new STLLoader();
 const fmt = (v, d = 2) => Number(v).toFixed(d);
 const legendSeen = new Map();
 const COMPONENT_NAMES = { 'SUS-M1-WLK': 'Walker structure & legs', 'SUS-M1-MAN': 'Manipulators', 'SUS-M1-PIL': 'Pilot station', 'SUS-M1-PWR': 'Power pack', 'SUS-M1-SAF': 'Safety monitor & e-stops', 'SUS-M1-DCK': 'UAV dock', 'SUS-A1': 'SUS-A1 UAV' };
-const CLASS_NAMES = { actuator: 'Actuators / joints', occupant: 'Pilot (seated)', cage: 'Protective cage', reference: '1.75 m person (scale)', armor: 'Armoured pod & plates', hose: 'Hydraulic hoses' };
+const CLASS_NAMES = { actuator: 'Actuators / joints', occupant: 'Pilot (seated)', cage: 'Protective cage', reference: '1.75 m person (scale)', armor: 'Armoured pod & plates', hose: 'Hydraulic hoses', access: 'Step & grab handles' };
 
 async function loadConcept(id, offsetY) {
   const man = await (await fetch(`../../build/cad/${id}/manifest.json`)).json();

@@ -45,9 +45,10 @@ CLASSES = {
     "rotor":     ("#1597c9", 0.35, "SUS-A1"),
         "armor":     ("#8d97a5", 1.0, "SUS-M1-PIL"),
     "hose":      ("#2e343d", 1.0, "SUS-M1-PWR"),
+    "access":    ("#e0b100", 1.0, "SUS-M1-PIL"),
     "reference": ("#a3acb9", 1.0, None),
 }
-DENSITY_CLASS = {"arm": "structure", "seat": "structure", "rotor": "uav", "hose": "structure"}
+DENSITY_CLASS = {"arm": "structure", "seat": "structure", "rotor": "uav", "hose": "structure", "access": "structure"}
 
 
 def V(x, y, z):
@@ -428,7 +429,7 @@ def build_from_b3d(p, common, posture="standing"):
             m.add(f"{cls}-{k:03d}", cls, solid)
     m.group = "walker"
     m.feet = [tuple(f) for f in info["feet"]]
-    return m, {"hip_z": info["hip_z"], "floor": info["floor"], "eye": info["eye"], "dock": info["dock"]}
+    return m, {k: info[k] for k in ("hip_z", "floor", "eye", "dock", "egress") if k in info}
 
 
 # --- Metrics --------------------------------------------------------------------------------------
@@ -496,6 +497,8 @@ def metrics(m: Model, info: dict, common: dict) -> dict:
         "uav_dock": info["dock"],
         "rotor_to_pilot_m": round(clearance, 2),
         "arm_ground_clearance_m": round(Part.makeCompound([pt["shape"] for pt in m.parts if pt["cls"] == "arm"]).BoundBox.ZMin / MM, 2),
+        **({"egress_sill_m": round(info["egress"]["sill"], 2), "max_step_rise_m": round(info["egress"]["max_rise"], 2),
+            "steps": len(info["egress"]["treads"])} if info.get("egress") else {}),
     }
 
 
