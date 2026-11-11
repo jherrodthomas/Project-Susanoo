@@ -1,37 +1,12 @@
-# Implementation plan and deliverables
+# Execution roadmap — SUS-M1/SUS-A1
 
-## Milestone 0 — Framework (current)
-- Integrated lifecycle and gates
-- Standards applicability and tailoring register
-- Process contracts and responsibility model
-- PDaC typed object and relationship rules
-- Honest compliance/status conventions
+1. **Concept baseline:** CONOPS, system boundaries, mission and operating modes, architecture trade studies.
+2. **System safety planning:** SSPP, initial PHL/PHA, pilot safety, emergency stop/egress and energy isolation concepts.
+3. **Requirements/MBSE:** stakeholder/system requirements, interfaces, functional decomposition and traceability.
+4. **Preliminary analyses:** walker machinery risk, stability, hydraulics; UAV FHA/PSSA; docking hazards.
+5. **Simulation and bench models:** supported actuator test rig, walker dynamics model, UAV simulator and interface tests.
+6. **Detailed assurance:** SSHA/SHA/O&SHA, UAV SSA, verification procedures, fault injection and discrepancies.
+7. **PDaC executable lifecycle:** schemas, validators, change impact, evidence manifest, version/configuration control.
+8. **Release:** reviewed simulation demonstrator and documented limitations, never unsubstantiated certification claims.
 
-## Milestone 1 — Program baseline
-- CONOPS, operating scenarios, assumptions, interfaces, WBS
-- SSPP and hazard tracking plan
-- Initial product/variant/configuration manifest
-
-## Milestone 2 — Requirements and preliminary assurance
-- Stakeholder/system/subsystem requirements and SysML models
-- PHL/PHA and UAV FHA
-- Initial controls, objectives and verification matrix
-
-## Milestone 3 — Design and analyses
-- UGV/UAV/GCS architecture and software baseline
-- SSHA, PSSA, FMEA, FTA, CCA with assumptions and review records
-- Cybersecurity and human factors assessment
-
-## Milestone 4 — Executable verification
-- Pinned upstream dependencies, reproducible simulation
-- Ground, air and integrated mission tests
-- Fault injection, recorded results and discrepancies
-- SHA/O&SHA and UAV SSA updates
-
-## Milestone 5 — Controlled release
-- PDaC package schemas and validators
-- Change-impact demonstration
-- Evidence manifest, safety case, open findings and release decisions
-
-## Definition of done
-No placeholder is marked complete. Each completed deliverable has configuration, author/reviewer, inputs, method, results and traceable evidence. Real-world qualification, airworthiness and formal risk acceptance remain outside the scope unless independently performed.
+**First implementation priority:** human safety architecture, actuation trade study, pilot/egress concept and UAV docking hazards before selecting physical hardware.
