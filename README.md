@@ -19,6 +19,7 @@ PDaC is **Product Development as Code**, not a synonym for digital thread: typed
 - [Process contracts](framework/process-contracts.md)
 - [PDaC traceability](framework/traceability.md)
 - [Execution plan](framework/execution-plan.md)
+- [MIL-STD-882E conformance review and build plan](framework/882e-conformance-review.md)
 - [Product manifest](pdac/product.yaml)
 
 ## Assurance approach
