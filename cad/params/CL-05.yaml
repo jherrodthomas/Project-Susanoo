@@ -59,6 +59,9 @@ detail:                          # build123d-only detail (no effect on the primi
   groove_heights: [0.55, 1.30]   # panel grooves around the hull, above its bottom
   fins: 7                        # cooling fins on the back of the power pack
   claw_length: 0.45              # claw drop below the hand (m)
+  heel_spur:                     # rear ground contact of each foot: sets the support polygon's rear edge
+    reach: 0.68                  # heel tip behind the ankle (was 0.40): static margin above 0.30 m in every posture
+    width: 0.30                  # was 0.16
 postures:                        # extra poses of this layout, built and analysed alongside the standing pose
   kneel:                         # lowered for ingress and egress (SYS-012); feet stay planted, knees fold back
     label: "kneeling for egress"

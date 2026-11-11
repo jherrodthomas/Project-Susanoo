@@ -146,7 +146,9 @@ def build(p: dict, common: dict, posture: str = "standing"):
         x0 = ax - 0.35 * fl
         pad = soft(Pos(ax, y, ft / 2) * Box(0.34, fw * 0.8, ft), 0.04)
         toes = [soft(Pos(ax + fl * 0.32, y + dy, ft * 0.4) * Box(fl * 0.42, fw * 0.36, ft * 0.8), 0.04) for dy in (-fw * 0.24, fw * 0.24)]
-        spur = soft(Pos(ax - fl * 0.28, y, ft * 0.35) * Box(fl * 0.28, fw * 0.32, ft * 0.7), 0.03)
+        HS = D.get("heel_spur") or {"reach": 0.42 * fl, "width": fw * 0.32}
+        spur_len = HS["reach"] - 0.08  # from just behind the ankle pad to the heel tip
+        spur = soft(Pos(ax - 0.08 - spur_len / 2, y, ft * 0.35) * Box(spur_len, HS["width"], ft * 0.7), 0.03)
         put("structure", pad, *toes, spur, cyl(ankle, (ax, y, ft), 0.09))
         for solid in (pad, *toes, spur):  # ground contacts from the real foot solids, not a nominal rectangle
             bb = solid.bounding_box()
