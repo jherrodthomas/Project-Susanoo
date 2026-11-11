@@ -1,6 +1,6 @@
 # Porting LionDriver's modeling, diagram and simulation approach to Susanoo
 
-**Status:** Plan, 2026-11. Steps 1 and 2 (core) built (see below); steps 3-5 not started. Source reviewed: [jherrodthomas/LionDriver](https://github.com/jherrodthomas/LionDriver) at `93bafc3` (`assurance/`, `.claude/skills/`, `.github/workflows/`).
+**Status:** Plan, 2026-11. Steps 1, 2 (core) and 3 built (see below); steps 4-5 not started. Source reviewed: [jherrodthomas/LionDriver](https://github.com/jherrodthomas/LionDriver) at `93bafc3` (`assurance/`, `.claude/skills/`, `.github/workflows/`).
 
 LionDriver is an ISO 26262 / ISO 21448 assurance effort on an openpilot fork. Susanoo uses MIL-STD-882E (11 May 2012) on a piloted walker and a PX4 UAV. The standards and the physics differ. The **method** ports almost unchanged.
 
@@ -59,8 +59,10 @@ Built: `models/sysml/model` (library, functions, architecture hand-written; requ
 
 Original plan: Port `sysml_lite.py` and the library in 882E terms. Hand-write `Architecture.sysml`. Generate `Requirements.sysml` and `Satisfaction.sysml` from `requirements/` and `safety/hazards/`. Port model checks M1 (elements), M4 (interfaces), M7 (risk level on every element), M9 (functions), and R1–R3. Views: V-01 context, V-02 hierarchy, V-03 IBD, V-08 N2, then the CONOPS mode state machine (MOD-01..10) and the VCRM. Add a CI job that runs OMG pilot validation. The SysML context view then replaces the step 1 context figure.
 
-### Step 3: 2D simulation
-Build the walker plant, `faults.yaml` and `report --check` with synthetic-labelled results. Then one search family (pressure loss mid-stride on a slope), with edge cases mapped to hazards and unmatched cases turned into findings. Then 2D scenes for the Catastrophic and Critical hazards, and the evidence-gate section stating that there is no credit without an approved fidelity case.
+### Step 3: 2D simulation (built)
+Built: `sim/` with a sourced parameter spec, a fault catalogue traced to hazard causal factors, a reduced-order walker plant (assumptions A1–A7; hydraulic and electric variants), the fault-catalogue report, failure-search family SF-01 (400 Monte Carlo + 480 cross-entropy evaluations, 8 edge cases, 3 findings), four animated side-view scenes and the `Simulation` wiki page, 17 tests and a CI job `simulation`. The evidence gate is in `sim/README.md`. Dock and UAV scenes need the top-down kit and PX4 SITL (step 4).
+
+Original plan: Build the walker plant, `faults.yaml` and `report --check` with synthetic-labelled results. Then one search family (pressure loss mid-stride on a slope), with edge cases mapped to hazards and unmatched cases turned into findings. Then 2D scenes for the Catastrophic and Critical hazards, and the evidence-gate section stating that there is no credit without an approved fidelity case.
 
 ### Step 4: UAV and fidelity
 PX4 SITL failsafe checks (lost link, geofence, battery, dock approach, abort). MuJoCo legged dynamics as fidelity level 2, cross-checked against the plant.

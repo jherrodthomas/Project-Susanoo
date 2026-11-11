@@ -1,0 +1,2476 @@
+{
+ "about": "Synthetic simulation output; design aid only, no evidence credit (sim/README.md, evidence gate).",
+ "edge_cases": [
+  {
+   "cause_gap": null,
+   "events": {
+    "alarm_t": 1.02,
+    "impact_speed": 4.835,
+    "lock_t": null,
+    "mishap_t": 1.575,
+    "stop_t": null
+   },
+   "family": "SF-01",
+   "finding": "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact",
+   "hazard": null,
+   "id": "EC-01",
+   "nofault_outcome": "safe",
+   "outcome": "hard-drop",
+   "params": {
+    "load_holding": "fails",
+    "pilot_reaction_s": 2.5,
+    "slope_deg": 8.5,
+    "stride_offset_m": 0.03,
+    "tau_leak_s": 0.05
+   },
+   "probes": [
+    {
+     "name": "pilot reacts in 0.5 s",
+     "outcome": "hard-drop",
+     "rho": -3.835
+    },
+    {
+     "name": "load holding works",
+     "outcome": "safe",
+     "rho": -0.1569
+    },
+    {
+     "name": "flat ground",
+     "outcome": "hard-drop",
+     "rho": -3.835
+    },
+    {
+     "name": "slow leak (tau 3 s)",
+     "outcome": "hard-drop",
+     "rho": -1.572
+    }
+   ],
+   "rho": -3.835,
+   "stop_active": false
+  },
+  {
+   "cause_gap": null,
+   "events": {
+    "alarm_t": 1.02,
+    "impact_speed": 4.835,
+    "lock_t": null,
+    "mishap_t": 1.575,
+    "stop_t": null
+   },
+   "family": "SF-01",
+   "finding": "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact",
+   "hazard": null,
+   "id": "EC-02",
+   "nofault_outcome": "safe",
+   "outcome": "hard-drop",
+   "params": {
+    "load_holding": "fails",
+    "pilot_reaction_s": 3.0,
+    "slope_deg": 0.0,
+    "stride_offset_m": 0.11,
+    "tau_leak_s": 0.05
+   },
+   "probes": [
+    {
+     "name": "pilot reacts in 0.5 s",
+     "outcome": "hard-drop",
+     "rho": -3.835
+    },
+    {
+     "name": "load holding works",
+     "outcome": "safe",
+     "rho": -0.0922
+    },
+    {
+     "name": "flat ground",
+     "outcome": "hard-drop",
+     "rho": -3.835
+    },
+    {
+     "name": "slow leak (tau 3 s)",
+     "outcome": "hard-drop",
+     "rho": -1.572
+    }
+   ],
+   "rho": -3.835,
+   "stop_active": false
+  },
+  {
+   "cause_gap": null,
+   "events": {
+    "alarm_t": 1.025,
+    "impact_speed": 4.816,
+    "lock_t": null,
+    "mishap_t": 1.59,
+    "stop_t": null
+   },
+   "family": "SF-01",
+   "finding": "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact",
+   "hazard": null,
+   "id": "EC-03",
+   "nofault_outcome": "safe",
+   "outcome": "hard-drop",
+   "params": {
+    "load_holding": "fails",
+    "pilot_reaction_s": 1.3,
+    "slope_deg": 1.0,
+    "stride_offset_m": 0.11,
+    "tau_leak_s": 0.06
+   },
+   "probes": [
+    {
+     "name": "pilot reacts in 0.5 s",
+     "outcome": "hard-drop",
+     "rho": -3.816
+    },
+    {
+     "name": "load holding works",
+     "outcome": "safe",
+     "rho": -0.0862
+    },
+    {
+     "name": "flat ground",
+     "outcome": "hard-drop",
+     "rho": -3.816
+    },
+    {
+     "name": "slow leak (tau 3 s)",
+     "outcome": "hard-drop",
+     "rho": -1.572
+    }
+   ],
+   "rho": -3.816,
+   "stop_active": false
+  },
+  {
+   "cause_gap": null,
+   "events": {
+    "alarm_t": 1.02,
+    "impact_speed": 4.835,
+    "lock_t": null,
+    "mishap_t": 1.575,
+    "stop_t": null
+   },
+   "family": "SF-01",
+   "finding": "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact",
+   "hazard": null,
+   "id": "EC-04",
+   "nofault_outcome": "safe",
+   "outcome": "hard-drop",
+   "params": {
+    "load_holding": "fails",
+    "pilot_reaction_s": 1.5,
+    "slope_deg": 8.0,
+    "stride_offset_m": 0.2,
+    "tau_leak_s": 0.05
+   },
+   "probes": [
+    {
+     "name": "pilot reacts in 0.5 s",
+     "outcome": "hard-drop",
+     "rho": -3.835
+    },
+    {
+     "name": "load holding works",
+     "outcome": "tip",
+     "rho": -1.3817
+    },
+    {
+     "name": "flat ground",
+     "outcome": "hard-drop",
+     "rho": -3.835
+    },
+    {
+     "name": "slow leak (tau 3 s)",
+     "outcome": "tip",
+     "rho": -1.9875
+    }
+   ],
+   "rho": -3.835,
+   "stop_active": false
+  },
+  {
+   "cause_gap": null,
+   "events": {
+    "alarm_t": 1.03,
+    "impact_speed": 0.0,
+    "lock_t": null,
+    "mishap_t": 1.61,
+    "stop_t": null
+   },
+   "family": "SF-01",
+   "finding": "Walker tips with no fault: case lies outside the nominal gait capability (terrain limit for CONOPS section 4)",
+   "hazard": null,
+   "id": "EC-05",
+   "nofault_outcome": "tip",
+   "outcome": "tip",
+   "params": {
+    "load_holding": "fails",
+    "pilot_reaction_s": 2.1,
+    "slope_deg": 8.0,
+    "stride_offset_m": 0.21,
+    "tau_leak_s": 0.08
+   },
+   "probes": [
+    {
+     "name": "pilot reacts in 0.5 s",
+     "outcome": "tip",
+     "rho": -2.828
+    },
+    {
+     "name": "load holding works",
+     "outcome": "tip",
+     "rho": -1.4147
+    },
+    {
+     "name": "flat ground",
+     "outcome": "hard-drop",
+     "rho": -3.778
+    },
+    {
+     "name": "slow leak (tau 3 s)",
+     "outcome": "tip",
+     "rho": -1.8627
+    }
+   ],
+   "rho": -2.828,
+   "stop_active": false
+  },
+  {
+   "cause_gap": null,
+   "events": {
+    "alarm_t": 1.145,
+    "impact_speed": 4.162,
+    "lock_t": null,
+    "mishap_t": 2.04,
+    "stop_t": null
+   },
+   "family": "SF-01",
+   "finding": "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact",
+   "hazard": null,
+   "id": "EC-06",
+   "nofault_outcome": "safe",
+   "outcome": "hard-drop",
+   "params": {
+    "load_holding": "fails",
+    "pilot_reaction_s": 2.1,
+    "slope_deg": 2.0,
+    "stride_offset_m": 0.27,
+    "tau_leak_s": 0.4
+   },
+   "probes": [
+    {
+     "name": "pilot reacts in 0.5 s",
+     "outcome": "hard-drop",
+     "rho": -3.162
+    },
+    {
+     "name": "load holding works",
+     "outcome": "tip",
+     "rho": -1.3604
+    },
+    {
+     "name": "flat ground",
+     "outcome": "hard-drop",
+     "rho": -3.162
+    },
+    {
+     "name": "slow leak (tau 3 s)",
+     "outcome": "tip",
+     "rho": -2.5004
+    }
+   ],
+   "rho": -3.162,
+   "stop_active": false
+  },
+  {
+   "cause_gap": null,
+   "events": {
+    "alarm_t": 1.05,
+    "impact_speed": 0.0,
+    "lock_t": null,
+    "mishap_t": 1.205,
+    "stop_t": null
+   },
+   "family": "SF-01",
+   "finding": "Walker tips with no fault: case lies outside the nominal gait capability (terrain limit for CONOPS section 4)",
+   "hazard": null,
+   "id": "EC-07",
+   "nofault_outcome": "tip",
+   "outcome": "tip",
+   "params": {
+    "load_holding": "works",
+    "pilot_reaction_s": 1.3,
+    "slope_deg": 9.0,
+    "stride_offset_m": 0.28,
+    "tau_leak_s": 0.14
+   },
+   "probes": [
+    {
+     "name": "pilot reacts in 0.5 s",
+     "outcome": "tip",
+     "rho": -2.3485
+    },
+    {
+     "name": "load holding works",
+     "outcome": "tip",
+     "rho": -2.3485
+    },
+    {
+     "name": "flat ground",
+     "outcome": "safe",
+     "rho": -0.5613
+    },
+    {
+     "name": "slow leak (tau 3 s)",
+     "outcome": "tip",
+     "rho": -1.5181
+    }
+   ],
+   "rho": -2.3485,
+   "stop_active": false
+  },
+  {
+   "cause_gap": "HAZ-WLK-002 lists no causal factor for FLT-01 (fault causes: HAZ-SAF-001:CF2)",
+   "events": {
+    "alarm_t": 1.645,
+    "impact_speed": 0.0,
+    "lock_t": null,
+    "mishap_t": 2.445,
+    "stop_t": null
+   },
+   "family": "SF-01",
+   "finding": null,
+   "hazard": "HAZ-WLK-002",
+   "id": "EC-08",
+   "nofault_outcome": "safe",
+   "outcome": "tip",
+   "params": {
+    "load_holding": "works",
+    "pilot_reaction_s": 1.3,
+    "slope_deg": 9.0,
+    "stride_offset_m": 0.18,
+    "tau_leak_s": 1.8
+   },
+   "probes": [
+    {
+     "name": "pilot reacts in 0.5 s",
+     "outcome": "tip",
+     "rho": -2.2784
+    },
+    {
+     "name": "load holding works",
+     "outcome": "tip",
+     "rho": -2.2784
+    },
+    {
+     "name": "flat ground",
+     "outcome": "safe",
+     "rho": 0.0255
+    },
+    {
+     "name": "slow leak (tau 3 s)",
+     "outcome": "tip",
+     "rho": -2.0978
+    }
+   ],
+   "rho": -2.2784,
+   "stop_active": false
+  }
+ ],
+ "falsification": {
+  "evaluations": 480,
+  "worst_rho": -3.847
+ },
+ "family": {
+  "base": {
+   "fault_onset_s": 1.0,
+   "monitor": true,
+   "variant": "hydraulic"
+  },
+  "fault": "FLT-01",
+  "id": "SF-01",
+  "space": {
+   "load_holding": {
+    "choice": [
+     "works",
+     "fails"
+    ]
+   },
+   "pilot_reaction_s": {
+    "uniform": [
+     0.5,
+     3.0
+    ]
+   },
+   "slope_deg": {
+    "uniform": [
+     0,
+     15
+    ]
+   },
+   "stride_offset_m": {
+    "uniform": [
+     0.0,
+     0.3
+    ]
+   },
+   "tau_leak_s": {
+    "loguniform": [
+     0.05,
+     5.0
+    ]
+   }
+  },
+  "title": "Hydraulic supply loss in mid-stride on a slope"
+ },
+ "findings": [
+  {
+   "edge_cases": [
+    "EC-01",
+    "EC-02",
+    "EC-03",
+    "EC-04",
+    "EC-06"
+   ],
+   "id": "FND-SF-01-01",
+   "text": "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact"
+  },
+  {
+   "edge_cases": [
+    "EC-05",
+    "EC-07"
+   ],
+   "id": "FND-SF-01-02",
+   "text": "Walker tips with no fault: case lies outside the nominal gait capability (terrain limit for CONOPS section 4)"
+  },
+  {
+   "edge_cases": [
+    "EC-08"
+   ],
+   "id": "FND-SF-01-03",
+   "text": "HAZ-WLK-002 lists no causal factor for FLT-01 (fault causes: HAZ-SAF-001:CF2)"
+  }
+ ],
+ "map": [
+  [
+   6.79,
+   0.658,
+   "safe"
+  ],
+  [
+   2.77,
+   0.528,
+   "safe"
+  ],
+  [
+   6.7,
+   0.096,
+   "tip"
+  ],
+  [
+   8.93,
+   0.31,
+   "tip"
+  ],
+  [
+   9.35,
+   2.303,
+   "safe"
+  ],
+  [
+   8.99,
+   1.8,
+   "tip"
+  ],
+  [
+   7.79,
+   0.954,
+   "tip"
+  ],
+  [
+   9.82,
+   0.325,
+   "tip"
+  ],
+  [
+   10.62,
+   0.214,
+   "safe"
+  ],
+  [
+   8.45,
+   0.082,
+   "safe"
+  ],
+  [
+   14.37,
+   2.475,
+   "safe"
+  ],
+  [
+   7.05,
+   4.568,
+   "safe"
+  ],
+  [
+   11.68,
+   0.173,
+   "hard-drop"
+  ],
+  [
+   11.37,
+   0.086,
+   "safe"
+  ],
+  [
+   6.97,
+   0.471,
+   "safe"
+  ],
+  [
+   14.78,
+   1.73,
+   "tip"
+  ],
+  [
+   6.31,
+   0.133,
+   "tip"
+  ],
+  [
+   14.97,
+   0.055,
+   "tip"
+  ],
+  [
+   0.63,
+   0.098,
+   "hard-drop"
+  ],
+  [
+   12.45,
+   0.296,
+   "safe"
+  ],
+  [
+   0.23,
+   0.273,
+   "hard-drop"
+  ],
+  [
+   12.49,
+   0.093,
+   "tip"
+  ],
+  [
+   13.63,
+   2.161,
+   "safe"
+  ],
+  [
+   10.3,
+   0.299,
+   "safe"
+  ],
+  [
+   1.56,
+   0.06,
+   "hard-drop"
+  ],
+  [
+   3.85,
+   2.22,
+   "safe"
+  ],
+  [
+   13.94,
+   4.501,
+   "tip"
+  ],
+  [
+   4.2,
+   3.417,
+   "hard-drop"
+  ],
+  [
+   6.17,
+   0.157,
+   "safe"
+  ],
+  [
+   1.38,
+   0.095,
+   "safe"
+  ],
+  [
+   8.85,
+   3.517,
+   "hard-drop"
+  ],
+  [
+   14.44,
+   0.055,
+   "tip"
+  ],
+  [
+   4.78,
+   4.985,
+   "safe"
+  ],
+  [
+   13.5,
+   1.49,
+   "tip"
+  ],
+  [
+   5.28,
+   1.173,
+   "tip"
+  ],
+  [
+   14.16,
+   0.057,
+   "hard-drop"
+  ],
+  [
+   5.69,
+   0.053,
+   "safe"
+  ],
+  [
+   14.9,
+   2.874,
+   "tip"
+  ],
+  [
+   6.61,
+   2.375,
+   "tip"
+  ],
+  [
+   4.65,
+   0.075,
+   "tip"
+  ],
+  [
+   7.46,
+   0.847,
+   "safe"
+  ],
+  [
+   5.52,
+   0.097,
+   "hard-drop"
+  ],
+  [
+   9.9,
+   0.383,
+   "hard-drop"
+  ],
+  [
+   2.98,
+   0.364,
+   "tip"
+  ],
+  [
+   5.77,
+   0.733,
+   "hard-drop"
+  ],
+  [
+   5.26,
+   3.092,
+   "hard-drop"
+  ],
+  [
+   12.33,
+   0.084,
+   "tip"
+  ],
+  [
+   5.74,
+   0.548,
+   "hard-drop"
+  ],
+  [
+   4.81,
+   2.272,
+   "hard-drop"
+  ],
+  [
+   8.56,
+   0.208,
+   "safe"
+  ],
+  [
+   6.08,
+   0.12,
+   "safe"
+  ],
+  [
+   11.95,
+   4.645,
+   "hard-drop"
+  ],
+  [
+   14.38,
+   1.169,
+   "tip"
+  ],
+  [
+   10.71,
+   1.618,
+   "safe"
+  ],
+  [
+   4.09,
+   0.246,
+   "safe"
+  ],
+  [
+   5.9,
+   1.918,
+   "hard-drop"
+  ],
+  [
+   1.95,
+   0.404,
+   "tip"
+  ],
+  [
+   8.25,
+   1.01,
+   "tip"
+  ],
+  [
+   6.96,
+   1.004,
+   "tip"
+  ],
+  [
+   3.2,
+   3.155,
+   "tip"
+  ],
+  [
+   3.93,
+   1.366,
+   "safe"
+  ],
+  [
+   6.61,
+   0.63,
+   "safe"
+  ],
+  [
+   3.27,
+   2.717,
+   "hard-drop"
+  ],
+  [
+   10.3,
+   3.396,
+   "tip"
+  ],
+  [
+   14.19,
+   0.483,
+   "safe"
+  ],
+  [
+   6.59,
+   0.655,
+   "safe"
+  ],
+  [
+   7.84,
+   2.433,
+   "hard-drop"
+  ],
+  [
+   14.32,
+   2.749,
+   "tip"
+  ],
+  [
+   14.53,
+   0.559,
+   "safe"
+  ],
+  [
+   7.55,
+   0.812,
+   "tip"
+  ],
+  [
+   8.16,
+   4.762,
+   "safe"
+  ],
+  [
+   0.99,
+   0.598,
+   "tip"
+  ],
+  [
+   4.04,
+   0.442,
+   "hard-drop"
+  ],
+  [
+   7.87,
+   0.082,
+   "hard-drop"
+  ],
+  [
+   1.94,
+   1.809,
+   "safe"
+  ],
+  [
+   0.18,
+   0.185,
+   "hard-drop"
+  ],
+  [
+   1.57,
+   1.448,
+   "hard-drop"
+  ],
+  [
+   10.77,
+   1.264,
+   "hard-drop"
+  ],
+  [
+   12.38,
+   0.852,
+   "tip"
+  ],
+  [
+   7.94,
+   2.52,
+   "tip"
+  ],
+  [
+   13.72,
+   0.901,
+   "hard-drop"
+  ],
+  [
+   13.36,
+   0.123,
+   "safe"
+  ],
+  [
+   2.01,
+   0.151,
+   "safe"
+  ],
+  [
+   6.52,
+   3.814,
+   "tip"
+  ],
+  [
+   6.04,
+   1.173,
+   "hard-drop"
+  ],
+  [
+   13.67,
+   4.322,
+   "tip"
+  ],
+  [
+   7.54,
+   1.176,
+   "safe"
+  ],
+  [
+   0.36,
+   1.671,
+   "hard-drop"
+  ],
+  [
+   2.2,
+   0.117,
+   "hard-drop"
+  ],
+  [
+   13.9,
+   0.078,
+   "tip"
+  ],
+  [
+   1.16,
+   0.078,
+   "hard-drop"
+  ],
+  [
+   6.45,
+   0.796,
+   "safe"
+  ],
+  [
+   2.72,
+   0.404,
+   "safe"
+  ],
+  [
+   9.07,
+   0.077,
+   "safe"
+  ],
+  [
+   12.03,
+   1.283,
+   "tip"
+  ],
+  [
+   8.55,
+   0.12,
+   "hard-drop"
+  ],
+  [
+   4.19,
+   0.085,
+   "hard-drop"
+  ],
+  [
+   2.0,
+   0.228,
+   "hard-drop"
+  ],
+  [
+   11.48,
+   0.324,
+   "hard-drop"
+  ],
+  [
+   4.53,
+   0.08,
+   "tip"
+  ],
+  [
+   3.48,
+   3.875,
+   "hard-drop"
+  ],
+  [
+   8.54,
+   0.582,
+   "tip"
+  ],
+  [
+   10.52,
+   1.669,
+   "safe"
+  ],
+  [
+   11.08,
+   0.163,
+   "safe"
+  ],
+  [
+   9.72,
+   0.053,
+   "hard-drop"
+  ],
+  [
+   8.25,
+   0.518,
+   "safe"
+  ],
+  [
+   9.57,
+   2.08,
+   "tip"
+  ],
+  [
+   5.8,
+   3.769,
+   "tip"
+  ],
+  [
+   8.13,
+   0.78,
+   "hard-drop"
+  ],
+  [
+   7.9,
+   0.785,
+   "hard-drop"
+  ],
+  [
+   8.41,
+   0.185,
+   "safe"
+  ],
+  [
+   11.59,
+   0.742,
+   "hard-drop"
+  ],
+  [
+   0.79,
+   0.213,
+   "hard-drop"
+  ],
+  [
+   1.1,
+   3.236,
+   "safe"
+  ],
+  [
+   0.68,
+   0.079,
+   "safe"
+  ],
+  [
+   14.68,
+   2.15,
+   "hard-drop"
+  ],
+  [
+   6.84,
+   0.128,
+   "safe"
+  ],
+  [
+   5.45,
+   0.095,
+   "hard-drop"
+  ],
+  [
+   5.46,
+   1.537,
+   "hard-drop"
+  ],
+  [
+   11.01,
+   0.15,
+   "tip"
+  ],
+  [
+   4.12,
+   0.829,
+   "safe"
+  ],
+  [
+   9.5,
+   1.606,
+   "safe"
+  ],
+  [
+   13.18,
+   0.06,
+   "hard-drop"
+  ],
+  [
+   0.4,
+   0.06,
+   "safe"
+  ],
+  [
+   13.69,
+   0.105,
+   "tip"
+  ],
+  [
+   7.18,
+   0.132,
+   "tip"
+  ],
+  [
+   12.03,
+   0.392,
+   "tip"
+  ],
+  [
+   6.67,
+   1.562,
+   "safe"
+  ],
+  [
+   9.8,
+   4.757,
+   "tip"
+  ],
+  [
+   6.41,
+   0.274,
+   "tip"
+  ],
+  [
+   8.15,
+   0.366,
+   "tip"
+  ],
+  [
+   4.48,
+   1.778,
+   "safe"
+  ],
+  [
+   10.43,
+   0.488,
+   "safe"
+  ],
+  [
+   3.28,
+   1.032,
+   "tip"
+  ],
+  [
+   10.64,
+   0.688,
+   "tip"
+  ],
+  [
+   6.57,
+   2.019,
+   "hard-drop"
+  ],
+  [
+   14.52,
+   1.441,
+   "hard-drop"
+  ],
+  [
+   0.36,
+   1.13,
+   "hard-drop"
+  ],
+  [
+   11.96,
+   0.603,
+   "tip"
+  ],
+  [
+   1.35,
+   0.405,
+   "safe"
+  ],
+  [
+   7.73,
+   0.613,
+   "tip"
+  ],
+  [
+   0.96,
+   0.62,
+   "safe"
+  ],
+  [
+   4.1,
+   0.081,
+   "safe"
+  ],
+  [
+   1.46,
+   2.145,
+   "hard-drop"
+  ],
+  [
+   11.48,
+   0.552,
+   "hard-drop"
+  ],
+  [
+   12.11,
+   0.232,
+   "tip"
+  ],
+  [
+   10.62,
+   3.38,
+   "tip"
+  ],
+  [
+   12.8,
+   2.045,
+   "tip"
+  ],
+  [
+   7.86,
+   1.316,
+   "hard-drop"
+  ],
+  [
+   13.73,
+   0.155,
+   "tip"
+  ],
+  [
+   4.81,
+   0.3,
+   "safe"
+  ],
+  [
+   7.07,
+   1.447,
+   "safe"
+  ],
+  [
+   13.68,
+   1.604,
+   "tip"
+  ],
+  [
+   4.69,
+   0.124,
+   "hard-drop"
+  ],
+  [
+   8.92,
+   0.14,
+   "safe"
+  ],
+  [
+   13.66,
+   3.747,
+   "tip"
+  ],
+  [
+   12.8,
+   0.466,
+   "tip"
+  ],
+  [
+   7.24,
+   0.138,
+   "tip"
+  ],
+  [
+   14.64,
+   1.943,
+   "tip"
+  ],
+  [
+   9.86,
+   0.149,
+   "hard-drop"
+  ],
+  [
+   6.75,
+   0.156,
+   "tip"
+  ],
+  [
+   2.35,
+   0.22,
+   "safe"
+  ],
+  [
+   9.55,
+   4.844,
+   "safe"
+  ],
+  [
+   8.58,
+   0.114,
+   "tip"
+  ],
+  [
+   12.33,
+   0.073,
+   "tip"
+  ],
+  [
+   13.34,
+   1.22,
+   "tip"
+  ],
+  [
+   0.29,
+   0.119,
+   "hard-drop"
+  ],
+  [
+   3.13,
+   0.611,
+   "hard-drop"
+  ],
+  [
+   4.74,
+   0.324,
+   "tip"
+  ],
+  [
+   5.4,
+   1.183,
+   "hard-drop"
+  ],
+  [
+   11.2,
+   1.853,
+   "tip"
+  ],
+  [
+   10.68,
+   0.446,
+   "safe"
+  ],
+  [
+   12.84,
+   2.443,
+   "tip"
+  ],
+  [
+   4.36,
+   0.282,
+   "hard-drop"
+  ],
+  [
+   11.32,
+   0.646,
+   "hard-drop"
+  ],
+  [
+   10.97,
+   0.228,
+   "tip"
+  ],
+  [
+   6.7,
+   0.291,
+   "safe"
+  ],
+  [
+   10.17,
+   1.305,
+   "hard-drop"
+  ],
+  [
+   8.89,
+   0.076,
+   "safe"
+  ],
+  [
+   6.51,
+   1.743,
+   "tip"
+  ],
+  [
+   9.71,
+   1.709,
+   "hard-drop"
+  ],
+  [
+   13.82,
+   0.881,
+   "tip"
+  ],
+  [
+   14.73,
+   1.898,
+   "tip"
+  ],
+  [
+   3.91,
+   0.119,
+   "hard-drop"
+  ],
+  [
+   3.07,
+   0.231,
+   "safe"
+  ],
+  [
+   3.81,
+   0.598,
+   "safe"
+  ],
+  [
+   8.61,
+   0.125,
+   "tip"
+  ],
+  [
+   8.51,
+   0.057,
+   "tip"
+  ],
+  [
+   3.67,
+   0.711,
+   "hard-drop"
+  ],
+  [
+   3.99,
+   2.917,
+   "safe"
+  ],
+  [
+   13.56,
+   0.611,
+   "tip"
+  ],
+  [
+   2.53,
+   1.55,
+   "safe"
+  ],
+  [
+   1.84,
+   2.23,
+   "safe"
+  ],
+  [
+   11.37,
+   0.266,
+   "tip"
+  ],
+  [
+   6.82,
+   0.32,
+   "tip"
+  ],
+  [
+   4.61,
+   1.1,
+   "safe"
+  ],
+  [
+   2.38,
+   0.333,
+   "safe"
+  ],
+  [
+   8.54,
+   0.111,
+   "hard-drop"
+  ],
+  [
+   0.8,
+   1.849,
+   "hard-drop"
+  ],
+  [
+   14.39,
+   0.793,
+   "tip"
+  ],
+  [
+   11.28,
+   0.468,
+   "tip"
+  ],
+  [
+   12.38,
+   0.086,
+   "tip"
+  ],
+  [
+   7.88,
+   0.366,
+   "safe"
+  ],
+  [
+   4.44,
+   0.854,
+   "hard-drop"
+  ],
+  [
+   11.28,
+   0.203,
+   "safe"
+  ],
+  [
+   12.67,
+   0.153,
+   "tip"
+  ],
+  [
+   10.42,
+   0.564,
+   "hard-drop"
+  ],
+  [
+   14.1,
+   2.874,
+   "tip"
+  ],
+  [
+   13.0,
+   0.348,
+   "hard-drop"
+  ],
+  [
+   8.5,
+   3.205,
+   "tip"
+  ],
+  [
+   13.23,
+   0.709,
+   "hard-drop"
+  ],
+  [
+   0.36,
+   0.11,
+   "hard-drop"
+  ],
+  [
+   2.12,
+   1.212,
+   "hard-drop"
+  ],
+  [
+   13.48,
+   0.206,
+   "tip"
+  ],
+  [
+   13.18,
+   0.127,
+   "tip"
+  ],
+  [
+   2.93,
+   2.37,
+   "safe"
+  ],
+  [
+   9.53,
+   1.244,
+   "tip"
+  ],
+  [
+   2.87,
+   2.879,
+   "hard-drop"
+  ],
+  [
+   14.42,
+   0.177,
+   "tip"
+  ],
+  [
+   10.44,
+   3.755,
+   "safe"
+  ],
+  [
+   12.92,
+   0.087,
+   "safe"
+  ],
+  [
+   7.52,
+   0.195,
+   "tip"
+  ],
+  [
+   8.85,
+   0.144,
+   "tip"
+  ],
+  [
+   4.15,
+   0.952,
+   "tip"
+  ],
+  [
+   13.76,
+   0.07,
+   "hard-drop"
+  ],
+  [
+   8.06,
+   0.351,
+   "safe"
+  ],
+  [
+   3.69,
+   0.181,
+   "safe"
+  ],
+  [
+   14.82,
+   0.058,
+   "tip"
+  ],
+  [
+   0.04,
+   3.034,
+   "hard-drop"
+  ],
+  [
+   4.81,
+   0.463,
+   "safe"
+  ],
+  [
+   8.91,
+   1.744,
+   "hard-drop"
+  ],
+  [
+   8.22,
+   0.163,
+   "tip"
+  ],
+  [
+   7.34,
+   0.138,
+   "safe"
+  ],
+  [
+   3.04,
+   4.368,
+   "safe"
+  ],
+  [
+   4.88,
+   0.823,
+   "tip"
+  ],
+  [
+   10.85,
+   2.584,
+   "safe"
+  ],
+  [
+   8.53,
+   0.61,
+   "safe"
+  ],
+  [
+   0.81,
+   0.355,
+   "hard-drop"
+  ],
+  [
+   11.48,
+   0.496,
+   "tip"
+  ],
+  [
+   3.82,
+   0.104,
+   "hard-drop"
+  ],
+  [
+   0.92,
+   0.331,
+   "safe"
+  ],
+  [
+   1.93,
+   1.621,
+   "hard-drop"
+  ],
+  [
+   7.83,
+   4.68,
+   "safe"
+  ],
+  [
+   1.37,
+   0.647,
+   "tip"
+  ],
+  [
+   10.2,
+   1.358,
+   "tip"
+  ],
+  [
+   3.8,
+   0.635,
+   "safe"
+  ],
+  [
+   5.46,
+   0.236,
+   "safe"
+  ],
+  [
+   2.41,
+   0.74,
+   "safe"
+  ],
+  [
+   6.94,
+   0.305,
+   "safe"
+  ],
+  [
+   3.23,
+   0.248,
+   "safe"
+  ],
+  [
+   7.2,
+   0.316,
+   "tip"
+  ],
+  [
+   6.71,
+   4.848,
+   "tip"
+  ],
+  [
+   8.1,
+   0.345,
+   "hard-drop"
+  ],
+  [
+   9.31,
+   0.545,
+   "safe"
+  ],
+  [
+   4.03,
+   0.264,
+   "tip"
+  ],
+  [
+   2.06,
+   0.152,
+   "hard-drop"
+  ],
+  [
+   12.58,
+   0.397,
+   "hard-drop"
+  ],
+  [
+   11.56,
+   0.546,
+   "safe"
+  ],
+  [
+   7.33,
+   0.119,
+   "safe"
+  ],
+  [
+   4.68,
+   0.352,
+   "hard-drop"
+  ],
+  [
+   4.71,
+   0.4,
+   "tip"
+  ],
+  [
+   8.02,
+   0.396,
+   "hard-drop"
+  ],
+  [
+   3.39,
+   0.192,
+   "safe"
+  ],
+  [
+   12.72,
+   1.56,
+   "hard-drop"
+  ],
+  [
+   9.91,
+   0.068,
+   "hard-drop"
+  ],
+  [
+   10.0,
+   4.067,
+   "hard-drop"
+  ],
+  [
+   1.35,
+   0.358,
+   "hard-drop"
+  ],
+  [
+   13.96,
+   0.185,
+   "hard-drop"
+  ],
+  [
+   3.03,
+   1.72,
+   "safe"
+  ],
+  [
+   11.14,
+   3.266,
+   "tip"
+  ],
+  [
+   10.52,
+   0.639,
+   "hard-drop"
+  ],
+  [
+   1.81,
+   3.299,
+   "hard-drop"
+  ],
+  [
+   7.43,
+   0.743,
+   "hard-drop"
+  ],
+  [
+   1.08,
+   0.059,
+   "hard-drop"
+  ],
+  [
+   3.93,
+   1.084,
+   "hard-drop"
+  ],
+  [
+   14.32,
+   0.266,
+   "tip"
+  ],
+  [
+   9.41,
+   0.872,
+   "hard-drop"
+  ],
+  [
+   1.03,
+   0.424,
+   "tip"
+  ],
+  [
+   0.57,
+   0.093,
+   "hard-drop"
+  ],
+  [
+   7.1,
+   0.055,
+   "hard-drop"
+  ],
+  [
+   10.2,
+   0.147,
+   "hard-drop"
+  ],
+  [
+   0.05,
+   0.621,
+   "safe"
+  ],
+  [
+   9.37,
+   0.661,
+   "tip"
+  ],
+  [
+   3.96,
+   0.081,
+   "safe"
+  ],
+  [
+   10.43,
+   1.181,
+   "tip"
+  ],
+  [
+   5.0,
+   1.195,
+   "hard-drop"
+  ],
+  [
+   4.29,
+   1.574,
+   "safe"
+  ],
+  [
+   5.43,
+   1.292,
+   "tip"
+  ],
+  [
+   14.84,
+   2.161,
+   "tip"
+  ],
+  [
+   7.69,
+   1.142,
+   "tip"
+  ],
+  [
+   13.05,
+   0.064,
+   "tip"
+  ],
+  [
+   3.79,
+   0.93,
+   "safe"
+  ],
+  [
+   5.01,
+   1.65,
+   "tip"
+  ],
+  [
+   9.62,
+   0.089,
+   "safe"
+  ],
+  [
+   1.88,
+   0.284,
+   "safe"
+  ],
+  [
+   14.61,
+   0.439,
+   "tip"
+  ],
+  [
+   4.02,
+   0.174,
+   "hard-drop"
+  ],
+  [
+   14.0,
+   4.749,
+   "tip"
+  ],
+  [
+   13.06,
+   0.122,
+   "tip"
+  ],
+  [
+   6.07,
+   3.224,
+   "tip"
+  ],
+  [
+   5.6,
+   0.208,
+   "tip"
+  ],
+  [
+   3.36,
+   1.389,
+   "hard-drop"
+  ],
+  [
+   10.12,
+   0.136,
+   "tip"
+  ],
+  [
+   2.63,
+   0.082,
+   "hard-drop"
+  ],
+  [
+   6.49,
+   0.101,
+   "safe"
+  ],
+  [
+   4.11,
+   0.316,
+   "safe"
+  ],
+  [
+   5.49,
+   0.165,
+   "hard-drop"
+  ],
+  [
+   10.05,
+   0.051,
+   "safe"
+  ],
+  [
+   14.87,
+   0.328,
+   "tip"
+  ],
+  [
+   8.36,
+   0.135,
+   "tip"
+  ],
+  [
+   4.16,
+   3.773,
+   "tip"
+  ],
+  [
+   8.57,
+   3.807,
+   "tip"
+  ],
+  [
+   8.09,
+   1.119,
+   "hard-drop"
+  ],
+  [
+   0.94,
+   0.427,
+   "hard-drop"
+  ],
+  [
+   0.17,
+   0.567,
+   "hard-drop"
+  ],
+  [
+   5.99,
+   2.019,
+   "tip"
+  ],
+  [
+   14.04,
+   0.46,
+   "tip"
+  ],
+  [
+   0.14,
+   0.096,
+   "hard-drop"
+  ],
+  [
+   12.16,
+   0.268,
+   "hard-drop"
+  ],
+  [
+   1.0,
+   1.013,
+   "safe"
+  ],
+  [
+   11.12,
+   0.132,
+   "tip"
+  ],
+  [
+   2.66,
+   0.081,
+   "hard-drop"
+  ],
+  [
+   0.33,
+   0.315,
+   "safe"
+  ],
+  [
+   0.31,
+   0.112,
+   "hard-drop"
+  ],
+  [
+   6.45,
+   4.21,
+   "safe"
+  ],
+  [
+   12.19,
+   0.069,
+   "tip"
+  ],
+  [
+   11.67,
+   0.561,
+   "tip"
+  ],
+  [
+   13.67,
+   0.065,
+   "hard-drop"
+  ],
+  [
+   12.85,
+   0.904,
+   "tip"
+  ],
+  [
+   1.82,
+   1.501,
+   "hard-drop"
+  ],
+  [
+   6.29,
+   0.294,
+   "safe"
+  ],
+  [
+   7.73,
+   0.058,
+   "safe"
+  ],
+  [
+   8.92,
+   3.649,
+   "hard-drop"
+  ],
+  [
+   11.07,
+   0.211,
+   "tip"
+  ],
+  [
+   0.79,
+   4.318,
+   "safe"
+  ],
+  [
+   3.51,
+   2.396,
+   "tip"
+  ],
+  [
+   11.97,
+   0.527,
+   "safe"
+  ],
+  [
+   10.67,
+   0.159,
+   "safe"
+  ],
+  [
+   12.98,
+   0.123,
+   "tip"
+  ],
+  [
+   1.61,
+   0.38,
+   "safe"
+  ],
+  [
+   12.0,
+   2.565,
+   "tip"
+  ],
+  [
+   11.95,
+   0.101,
+   "safe"
+  ],
+  [
+   13.93,
+   4.069,
+   "hard-drop"
+  ],
+  [
+   2.73,
+   0.299,
+   "hard-drop"
+  ],
+  [
+   1.08,
+   4.728,
+   "safe"
+  ],
+  [
+   8.4,
+   4.872,
+   "tip"
+  ],
+  [
+   12.67,
+   3.898,
+   "safe"
+  ],
+  [
+   2.71,
+   0.09,
+   "safe"
+  ],
+  [
+   4.17,
+   0.164,
+   "hard-drop"
+  ],
+  [
+   2.94,
+   4.883,
+   "hard-drop"
+  ],
+  [
+   13.06,
+   1.732,
+   "hard-drop"
+  ],
+  [
+   6.37,
+   2.184,
+   "safe"
+  ],
+  [
+   14.12,
+   0.246,
+   "safe"
+  ],
+  [
+   4.27,
+   2.781,
+   "tip"
+  ],
+  [
+   3.38,
+   0.451,
+   "safe"
+  ],
+  [
+   6.73,
+   0.067,
+   "hard-drop"
+  ],
+  [
+   9.88,
+   0.171,
+   "safe"
+  ],
+  [
+   0.23,
+   0.281,
+   "hard-drop"
+  ],
+  [
+   6.31,
+   0.241,
+   "tip"
+  ],
+  [
+   8.19,
+   0.079,
+   "hard-drop"
+  ],
+  [
+   0.24,
+   0.057,
+   "safe"
+  ],
+  [
+   10.02,
+   0.102,
+   "hard-drop"
+  ],
+  [
+   7.19,
+   1.006,
+   "safe"
+  ],
+  [
+   14.89,
+   0.308,
+   "tip"
+  ],
+  [
+   14.96,
+   0.068,
+   "tip"
+  ],
+  [
+   7.77,
+   0.737,
+   "tip"
+  ],
+  [
+   1.44,
+   1.942,
+   "tip"
+  ],
+  [
+   9.95,
+   4.353,
+   "tip"
+  ],
+  [
+   7.03,
+   0.054,
+   "tip"
+  ],
+  [
+   1.63,
+   0.335,
+   "tip"
+  ],
+  [
+   4.52,
+   0.517,
+   "safe"
+  ],
+  [
+   9.94,
+   0.523,
+   "safe"
+  ],
+  [
+   3.7,
+   0.336,
+   "hard-drop"
+  ],
+  [
+   2.55,
+   0.081,
+   "safe"
+  ],
+  [
+   2.16,
+   0.672,
+   "safe"
+  ],
+  [
+   6.2,
+   0.053,
+   "tip"
+  ],
+  [
+   2.35,
+   0.577,
+   "hard-drop"
+  ],
+  [
+   13.68,
+   0.61,
+   "tip"
+  ],
+  [
+   6.24,
+   0.072,
+   "hard-drop"
+  ],
+  [
+   4.93,
+   0.475,
+   "tip"
+  ],
+  [
+   8.52,
+   0.502,
+   "hard-drop"
+  ],
+  [
+   4.01,
+   0.792,
+   "hard-drop"
+  ],
+  [
+   5.77,
+   0.992,
+   "hard-drop"
+  ],
+  [
+   12.53,
+   0.066,
+   "tip"
+  ],
+  [
+   12.28,
+   1.12,
+   "hard-drop"
+  ],
+  [
+   7.26,
+   0.144,
+   "safe"
+  ],
+  [
+   5.6,
+   0.768,
+   "hard-drop"
+  ],
+  [
+   14.41,
+   0.269,
+   "tip"
+  ],
+  [
+   3.15,
+   1.676,
+   "safe"
+  ],
+  [
+   7.74,
+   1.609,
+   "hard-drop"
+  ],
+  [
+   8.84,
+   2.062,
+   "tip"
+  ],
+  [
+   6.03,
+   0.186,
+   "safe"
+  ],
+  [
+   12.47,
+   0.227,
+   "tip"
+  ],
+  [
+   9.63,
+   0.065,
+   "safe"
+  ],
+  [
+   8.28,
+   3.578,
+   "safe"
+  ],
+  [
+   8.7,
+   0.051,
+   "safe"
+  ],
+  [
+   2.59,
+   0.073,
+   "hard-drop"
+  ],
+  [
+   10.16,
+   2.001,
+   "tip"
+  ],
+  [
+   12.53,
+   4.094,
+   "tip"
+  ],
+  [
+   10.54,
+   0.311,
+   "tip"
+  ]
+ ],
+ "monte_carlo": {
+  "by_outcome": {
+   "hard-drop": 126,
+   "safe": 128,
+   "tip": 146
+  },
+  "n": 400,
+  "split": {
+   "load_holding=fails": {
+    "failures": 201,
+    "n": 201
+   },
+   "load_holding=works": {
+    "failures": 71,
+    "n": 199
+   }
+  }
+ },
+ "spec_digest": "48e1754c83f1"
+}
