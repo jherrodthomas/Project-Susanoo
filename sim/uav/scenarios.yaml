@@ -1,0 +1,60 @@
+# PX4 SITL failsafe scenarios (SIH quadrotor, headless). Each scenario names the hazards it informs, the PX4
+# parameters it sets (a candidate configuration, not a decision), the injection and what the interface contract
+# (integrations/px4/interface-contract.md) says should happen. Run by sim/uav/harness.py.
+schema: susanoo/uav-scenarios/v0.1
+scenarios:
+  - id: SU-01
+    title: GCS link lost during observation, return-to-launch configured
+    hazards: [HAZ-INT-001]
+    params: {NAV_DLL_ACT: 2}
+    inject: {link_loss_at_s: 10}
+    walker_moved: false
+    contract: "Loss of the integration link must invoke a defined, analysed contingency; recovery needs an explicit permit (IF-PX4-005/006)"
+  - id: SU-02
+    title: GCS link lost, return-to-launch, walker has moved since take-off
+    hazards: [HAZ-INT-001, HAZ-DCK-002]
+    params: {NAV_DLL_ACT: 2}
+    inject: {link_loss_at_s: 10}
+    walker_moved: true
+    contract: "PX4 home is the take-off point; the dock has moved with the walker"
+  - id: SU-03
+    title: GCS link lost during observation, land in place configured
+    hazards: [HAZ-INT-001]
+    params: {NAV_DLL_ACT: 3}
+    inject: {link_loss_at_s: 10}
+    walker_moved: false
+    contract: "Alternative contingency: land away from the walker"
+  - id: SU-04
+    title: Battery failure during observation
+    hazards: [HAZ-INT-001]
+    params: {COM_LOW_BAT_ACT: 3}
+    inject: {failure: {unit: battery, type: "off"}, at_s: 10}
+    walker_moved: false
+    contract: "Battery contingency must not bring the aircraft into the pilot keep-out without a permit"
+  - id: SU-05
+    title: Commanded beyond the geofence
+    hazards: [HAZ-INT-001]
+    params: {GF_ACTION: 2, GF_MAX_HOR_DIST: 60}
+    inject: {reposition_beyond_fence_at_s: 10}
+    walker_moved: false
+    contract: "Operations stay inside the defined volume (EXT-AIRSPACE)"
+  - id: SU-06
+    title: GPS lost during observation (emulated)
+    hazards: [HAZ-INT-001]
+    params: {}
+    inject: {set_params: {EKF2_GPS_CTRL: 0}, at_s: 10}
+    note: "SIH has no GPS failure injection (PX4 v1.16.2 supports it only in the Gazebo/jMAVSim bridge); GPS fusion is disabled in flight instead, which is the loss as the estimator sees it"
+    walker_moved: false
+    contract: "Navigation loss contingency; drift towards people or the walker"
+
+# Outcome classes (sim/uav/harness.py score()) mapped to hazards; first match wins. finding: a draft for review.
+outcome_rules:
+  - {outcome: keepout-breach, hazard: HAZ-INT-001, finding: "PX4 return-to-launch brings the aircraft to the dock, inside the pilot keep-out, with no integration manager recovery permit (IF-PX4-005/006 are bypassed)"}
+  - {outcome: landed-at-stale-home, hazard: HAZ-INT-001, finding: "PX4 home is the take-off point; after the walker moves, a return lands where the dock used to be, possibly among the ground crew"}
+  - {outcome: geofence-overshoot, hazard: HAZ-INT-001, finding: "Aircraft left the operating volume"}
+  - {outcome: landed-clear, hazard: null, finding: null}
+  - {outcome: contained, hazard: null, finding: null}
+  - {outcome: airborne-at-horizon, hazard: null, finding: "No failsafe outcome within the horizon"}
+# Findings that come from a metric rather than the outcome class.
+metric_rules:
+  - {metric: max_estimate_error_m, above: 10.0, hazard: HAZ-INT-001, finding: "PX4's reported position (IF-PX4-001) was wrong by more than 10 m; the integration manager must not trust it without validity checks"}

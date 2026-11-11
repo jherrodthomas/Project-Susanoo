@@ -21,7 +21,7 @@ Until then, results rank risks, find edge cases and guide tests. They never clos
 | 4 · Search | `search/families.yaml`, `search/search.py` | built (1 family) | Seeded Monte Carlo, then cross-entropy falsification. Each worst case is re-run three ways: with rounded parameters, with no fault, and under assumption probes. It is then mapped to a hazard, or raised as a finding. Writes `results/search-SF-01.*` and `results/edge-cases.md`. |
 | Scenes | `figures/scenes.py` | built | Animated 2D side views from plant runs: intended run as dashed green, performed run as solid red. The static pose is the end state. Writes `docs/wiki/images/sim-sc-*.svg` and the wiki page `docs/wiki/Simulation.md`. |
 | 2 · Scenarios | — | planned | Terrain and mission scenarios as data (slope, step, soft ground, wind, dock approach, link loss). |
-| UAV | — | planned (step 4) | PX4 SITL failsafes: lost link, geofence, battery, dock approach and abort. |
+| UAV | `uav/` | built | PX4 v1.16.2 SITL with the SIH quadrotor, run headless. `uav/harness.py` acts as the ground station and runs six failsafe scenarios: link loss with return-to-launch, link loss with return after the walker has moved, link loss with land-in-place, battery failure, a command past the geofence, and GPS loss. It writes `results/uav/SU-*.json` from ground truth. `figures/uav_scenes.py` turns those into top-down scenes, `results/uav/summary.md` and `docs/wiki/UAV-Simulation.md`. Outcomes are mapped to hazards by rules in `uav/scenarios.yaml`. |
 | Fidelity | — | planned (step 4) | Multibody legged dynamics (MuJoCo proposed, decision DQ-007), cross-checked against the plant. |
 | 3D | — | planned (step 5) | `scenes.yaml` per hazard, with a test that changing the look never changes the analysis. |
 
@@ -31,10 +31,17 @@ Until then, results rank risks, find edge cases and guide tests. They never clos
 python -m sim.plant.report          # fault catalogue runs
 python -m sim.search.search         # failure search (SF-01)
 python -m sim.figures.scenes        # 2D scenes and docs/wiki/Simulation.md
+python -m sim.figures.uav_scenes    # UAV scenes, summary and page, built from the committed SITL results
+
+# PX4 SITL (heavy; also run weekly and on demand by .github/workflows/px4-sitl.yml)
+pip install -r sim/uav/requirements.txt -r sim/uav/requirements-px4-build.txt
+sim/uav/fetch_px4.sh ~/px4          # clones v1.16.2 with submodules and builds px4_sitl_default (needs cmake, ninja, bc)
+python -m sim.uav.harness --px4 ~/px4            # re-run and rewrite sim/results/uav/*.json
+python -m sim.uav.harness --px4 ~/px4 --compare  # re-run and compare outcome classes only
 python -m unittest discover -s sim/tests -t .
 ```
 
-Each command accepts `--check`, which fails if its committed outputs are stale. Run them in the order above, because the scenes read the search results.
+The four generator commands accept `--check`, which fails if their committed outputs are stale. Run them in the order above, because the scenes read the search results. SITL runs are not bit-reproducible, so the PX4 results are committed, and `--compare` checks outcome classes rather than exact numbers.
 
 ## Honesty rules for scenes and results
 

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>SU-04 Battery failure during observation</title>
+<desc>SU-04: Battery failure during observation. Outcome landed-clear; first failsafe [7.3, 'AUTO.LAND']; minimum distance to the pilot station below 8 m: 48.35 m; landing to dock 50.53 m.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker></defs>
+<rect x="0" y="0" width="1000" height="560" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">SU-04 · Battery failure during observation</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">PX4 v1.16.2 SITL (SIH quadrotor) · outcome landed-clear · hazards HAZ-INT-001</text>
+<text x="960" y="44" font-size="11" fill="#475569" text-anchor="end">synthetic</text>
+<line x1="40" y1="82" x2="960" y2="82" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="98" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="60" y="108" font-size="11" fill="#475569">walker (dashed: at take-off)</text>
+<rect x="216.1" y="98" width="14" height="12" rx="3" fill="#C2410C" stroke="#C2410C" stroke-width="1.2"/>
+<text x="236.1" y="108" font-size="11" fill="#475569">dock</text>
+<rect x="274.3" y="98" width="14" height="12" rx="3" fill="none" stroke="#D2553F" stroke-width="1.2"/>
+<text x="294.3" y="108" font-size="11" fill="#475569">UAV path after injection (ground truth)</text>
+<rect x="507.8" y="98" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="527.8" y="108" font-size="11" fill="#475569">pilot keep-out 3 m</text>
+<rect x="40" y="130" width="520" height="360" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+<circle cx="300" cy="310" r="166.2" fill="none" stroke="#D97706" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="178.5" y="441.5" font-size="9.5" fill="#D97706" text-anchor="end">geofence 60 m</text>
+<rect x="297.2" y="302.8" width="5.5" height="8.3" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.4"/>
+<rect x="296" y="306" width="8" height="8" fill="#C2410C" stroke="#C2410C" stroke-width="1.2"/>
+<circle cx="300" cy="304.5" r="3.5" fill="#0F172A" stroke="#0F172A"/>
+<circle cx="383.1" cy="199.2" r="5" fill="none" stroke="#2E9E6A" stroke-width="1.6"/>
+<text x="391.1" y="193.2" font-size="9.5" fill="#2E9E6A">observation point</text>
+<path d="M383.6,198.9 L383.5,198.7 L383.2,198.5 L382.7,198.2 L382.3,197.9 L382.1,198 L382.1,198.1 L382.3,198.3 L382.4,198.3 L382.2,198.4 L382.1,198.5 L382.2,198.7 L382.2,199 L382.5,199.5 L382.7,199.9 L382.9,200.1 L382.7,200 L382.4,199.6 L382,199.3 L381.6,199.2 L381.3,199.1 L381,199 L380.7,198.8 L380.6,198.7 L380.9,198.8 L381.2,198.9 L381.6,199 L382.1,199.1 L382.4,198.9 L382.7,198.5 L383,198.3 L383.7,198.2 L384.2,198.1 L384.3,198 L384.5,198 L384.9,198.2 L385.1,198.4 L385.3,198.5 L385.5,198.8 L385.6,199 L385.5,199.1 L385.3,199 L385.1,199 L385.1,199 L385.1,199 L385.1,199 L385.1,199 L385.1,199 L385.1,199" fill="none" stroke="#D2553F" stroke-width="2"/>
+<circle r="5" fill="#D2553F" cx="0" cy="0" transform="translate(385.1 199)"><animateMotion dur="9.2s" repeatCount="indefinite" path="M-1.5,-0.1 L-1.6,-0.3 L-1.9,-0.5 L-2.4,-0.8 L-2.8,-1.1 L-3,-1 L-3,-0.9 L-2.8,-0.7 L-2.7,-0.7 L-2.9,-0.6 L-3,-0.5 L-2.9,-0.3 L-2.9,0 L-2.6,0.5 L-2.4,0.9 L-2.2,1.1 L-2.4,1 L-2.7,0.6 L-3.1,0.3 L-3.5,0.2 L-3.8,0.1 L-4.1,0 L-4.4,-0.2 L-4.5,-0.3 L-4.2,-0.2 L-3.9,-0.1 L-3.5,0 L-3,0.1 L-2.7,-0.1 L-2.4,-0.5 L-2.1,-0.7 L-1.4,-0.8 L-0.9,-0.9 L-0.8,-1 L-0.6,-1 L-0.2,-0.8 L-0,-0.6 L0.2,-0.5 L0.4,-0.2 L0.5,0 L0.4,0.1 L0.2,0 L-0,0 L-0,0 L-0,0 L-0,0 L-0,0 L-0,0 L-0,0"/></circle>
+<text x="48" y="146" font-size="10" fill="#475569" font-weight="700">overview (north up)</text>
+<rect x="590" y="130" width="370" height="250" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+<circle cx="775" cy="241.1" r="41.7" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2" stroke-dasharray="4 3"/>
+<rect x="761.1" y="232.8" width="27.8" height="41.7" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.4"/>
+<rect x="771" y="264.9" width="8" height="8" fill="#C2410C" stroke="#C2410C" stroke-width="1.2"/>
+<circle cx="775" cy="241.1" r="3.5" fill="#0F172A" stroke="#0F172A"/>
+<text x="598" y="146" font-size="10" fill="#475569" font-weight="700">zoom on the dock: path below 8 m</text>
+<text x="598" y="354" font-size="10" fill="#0F172A">closest to the pilot below 8 m: 48.35 m</text>
+<text x="598" y="368" font-size="10" fill="#0F172A">landing: 50.53 m from the dock</text>
+<rect x="600" y="400" width="360" height="80" rx="3" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="600" y1="456.5" x2="960" y2="456.5" stroke="#D2553F" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M603.9,407.5 L610.7,407.1 L618.5,406.9 L625.3,406.9 L633.1,406.7 L640.9,406.5 L647.7,406.4 L655.5,406.2 L663.2,406 L671,405.9 L677.8,406.6 L684.6,409.4 L692.4,412.2 L699.2,415.6 L707,419 L714.8,422 L722.6,424.7 L729.4,427.7 L737.2,430.3 L745,433.4 L751.8,436.7 L759.6,440.1 L767.4,443.1 L775.1,446.4 L781.9,449.4 L789.7,452 L797.5,454.1 L804.3,456.3 L811.1,458.2 L818.9,460.4 L826.7,462.4 L833.5,464.3 L841.3,465.9 L849.1,467.2 L855.9,468.7 L863.7,470 L870.5,471.7 L878.3,473.4 L886.1,474.9 L892.9,476.6 L900.6,477.8 L907.5,478.9 L915.2,479.5 L923,479.5 L930.8,479.5 L937.6,479.5 L945.4,479.5 L952.2,479.5 L960,479.5" fill="none" stroke="#0F172A" stroke-width="1.4"/>
+<text x="600" y="394" font-size="9.5" fill="#475569">altitude above the dock vs time after injection; modes below</text>
+<line x1="603.9" y1="480" x2="603.9" y2="488" stroke="#0F766E" stroke-width="1.5"/>
+<text x="605.9" y="498" font-size="9" fill="#0F766E">LOITER</text>
+<line x1="671" y1="480" x2="671" y2="488" stroke="#0F766E" stroke-width="1.5"/>
+<text x="673" y="498" font-size="9" fill="#0F766E">LAND</text>
+<line x1="40" y1="526" x2="960" y2="526" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="544" font-size="10.5" fill="#475569">Synthetic, no evidence credit · ground truth from PX4 SIH · injection at t = 0 · generated by sim/figures/uav_scenes.py from sim/results/uav/SU-04.json</text>
+</svg>

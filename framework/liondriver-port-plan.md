@@ -1,6 +1,6 @@
 # Porting LionDriver's modeling, diagram and simulation approach to Susanoo
 
-**Status:** Plan, 2026-11. Steps 1, 2 (core) and 3 built (see below); steps 4-5 not started. Source reviewed: [jherrodthomas/LionDriver](https://github.com/jherrodthomas/LionDriver) at `93bafc3` (`assurance/`, `.claude/skills/`, `.github/workflows/`).
+**Status:** Plan, 2026-11. Steps 1, 2 (core), 3 and 4 (PX4 SITL) built (see below); legged-dynamics fidelity and step 5 not started. Source reviewed: [jherrodthomas/LionDriver](https://github.com/jherrodthomas/LionDriver) at `93bafc3` (`assurance/`, `.claude/skills/`, `.github/workflows/`).
 
 LionDriver is an ISO 26262 / ISO 21448 assurance effort on an openpilot fork. Susanoo uses MIL-STD-882E (11 May 2012) on a piloted walker and a PX4 UAV. The standards and the physics differ. The **method** ports almost unchanged.
 
@@ -64,8 +64,10 @@ Built: `sim/` with a sourced parameter spec, a fault catalogue traced to hazard 
 
 Original plan: Build the walker plant, `faults.yaml` and `report --check` with synthetic-labelled results. Then one search family (pressure loss mid-stride on a slope), with edge cases mapped to hazards and unmatched cases turned into findings. Then 2D scenes for the Catastrophic and Critical hazards, and the evidence-gate section stating that there is no credit without an approved fidelity case.
 
-### Step 4: UAV and fidelity
-PX4 SITL failsafe checks (lost link, geofence, battery, dock approach, abort). MuJoCo legged dynamics as fidelity level 2, cross-checked against the plant.
+### Step 4: UAV and fidelity (PX4 SITL built)
+Built: `sim/uav` (pinned PX4 v1.16.2 SITL, SIH quadrotor, headless; harness acting as ground station; six failsafe scenarios scored on ground truth; outcome-to-hazard rules), top-down animated scenes and the `UAV-Simulation` wiki page from the committed results, 9 tests, a light PR check and a weekly/on-demand `PX4 SITL failsafe scenarios` workflow. Findings FND-UAV-01..03 and decision DQ-008 (link-loss contingency). Not built: the integration manager prototype in the loop, the dock approach and abort scenario, and MuJoCo legged dynamics (DQ-007).
+
+Original plan: PX4 SITL failsafe checks (lost link, geofence, battery, dock approach, abort). MuJoCo legged dynamics as fidelity level 2, cross-checked against the plant.
 
 ### Step 5: 3D
 `scenes.yaml` with one scene per hazard, plus the test that changing the look never changes the analysis. Blender stills and clips, or `machine`-kit pages, fed only from the results.

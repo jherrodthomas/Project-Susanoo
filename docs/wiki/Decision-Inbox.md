@@ -4,7 +4,7 @@
 
 Questions only the project lead can decide, from `decisions/register.yaml`. Answer in chat or in a pull request; Claude copies the answer into the register and applies it. Rules: `CLAUDE.md`.
 
-Status: open 5, queued 1, answered 0, applied 1, withdrawn 0
+Status: open 6, queued 1, answered 0, applied 1, withdrawn 0
 
 ## What monetary thresholds should the tailored severity categories use?
 
@@ -82,6 +82,22 @@ The records disagree. README.md and the seeded hazards assume **hydraulic actuat
 Blocks: SUS-M1-PWR sub-elements, IF-002, IF-003, sim plant model
 
 Sources: README.md, docs/wiki/SUS-M1-Architecture-and-Boundaries.md, concept/trade-studies.md, framework/liondriver-port-plan.md
+
+## What should the UAV do when it loses the link to the integration manager?
+
+`DQ-008` · reversibility **easy** · gate G2 · asked 2026-11-11
+
+In PX4 SITL (sim/results/uav/summary.md), return-to-launch on link loss **flies the aircraft back to the dock and descends 1.9 m from the pilot station**, inside the 3 m keep-out, with no recovery permit (SU-01). If the walker has moved, it lands 20 m away where the dock used to be (SU-02). Land-in-place keeps it 48 m clear (SU-03). The interface contract requires a defined, analysed contingency and an explicit permit for recovery.
+
+| Option | What it does and costs |
+|---|---|
+| **Hold briefly, then land in place (NAV_DLL_ACT = Land)** (recommended) | Keeps the aircraft away from people at the walker; the UAV must be recovered by hand. Proven clear in SU-03. |
+| Return to a rally point away from the walker | Keeps the aircraft recoverable; needs rally points kept up to date as the walker moves, and a permit before the final approach. More work in the integration manager. |
+| Return to the dock (PX4 default return) | Recovers the aircraft automatically, but breaches the pilot keep-out in SU-01 and lands at a stale home in SU-02. |
+
+Blocks: PX4 parameter baseline for SUS-A1, HAZ-INT-001 mitigation M4
+
+Sources: sim/results/uav/summary.md, integrations/px4/interface-contract.md, safety/hazards/HAZ-INT-001.yaml
 
 ## Queued
 

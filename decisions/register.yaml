@@ -139,3 +139,23 @@ decisions:
     status: queued
     asked: null
     sources: [framework/liondriver-port-plan.md]
+
+  - id: DQ-008
+    question: What should the UAV do when it loses the link to the integration manager?
+    context: >-
+      In PX4 SITL (sim/results/uav/summary.md), return-to-launch on link loss **flies the aircraft back to the dock and
+      descends 1.9 m from the pilot station**, inside the 3 m keep-out, with no recovery permit (SU-01). If the walker
+      has moved, it lands 20 m away where the dock used to be (SU-02). Land-in-place keeps it 48 m clear (SU-03).
+      The interface contract requires a defined, analysed contingency and an explicit permit for recovery.
+    options:
+      - {key: land, title: "Hold briefly, then land in place (NAV_DLL_ACT = Land)", detail: "Keeps the aircraft away from people at the walker; the UAV must be recovered by hand. Proven clear in SU-03."}
+      - {key: rally, title: Return to a rally point away from the walker, detail: "Keeps the aircraft recoverable; needs rally points kept up to date as the walker moves, and a permit before the final approach. More work in the integration manager."}
+      - {key: rtl, title: Return to the dock (PX4 default return), detail: "Recovers the aircraft automatically, but breaches the pilot keep-out in SU-01 and lands at a stale home in SU-02."}
+    recommendation: land
+    reversibility: easy
+    blocks: [PX4 parameter baseline for SUS-A1, HAZ-INT-001 mitigation M4]
+    gate: G2
+    decider: lead
+    status: open
+    asked: 2026-11-11
+    sources: [sim/results/uav/summary.md, integrations/px4/interface-contract.md, safety/hazards/HAZ-INT-001.yaml]
