@@ -19,4 +19,6 @@ package SusanooSatisfaction {
     satisfy 'SYS-007' by context.system.groundSupport;
     satisfy 'SYS-008' by context.system.walker.legs;
     satisfy 'SYS-008' by context.system.walker.pilotStation;
+    satisfy 'SYS-009' by context.system.walker.legs;
+    satisfy 'SYS-009' by context.system.walker.power;
 }

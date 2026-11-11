@@ -11,8 +11,8 @@
     "stop_t": null
    },
    "family": "SF-01",
-   "finding": "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact",
-   "hazard": null,
+   "finding": null,
+   "hazard": "HAZ-PIL-002",
    "id": "EC-01",
    "nofault_outcome": "safe",
    "outcome": "hard-drop",
@@ -58,8 +58,8 @@
     "stop_t": null
    },
    "family": "SF-01",
-   "finding": "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact",
-   "hazard": null,
+   "finding": null,
+   "hazard": "HAZ-PIL-002",
    "id": "EC-02",
    "nofault_outcome": "safe",
    "outcome": "hard-drop",
@@ -105,8 +105,8 @@
     "stop_t": null
    },
    "family": "SF-01",
-   "finding": "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact",
-   "hazard": null,
+   "finding": null,
+   "hazard": "HAZ-PIL-002",
    "id": "EC-03",
    "nofault_outcome": "safe",
    "outcome": "hard-drop",
@@ -152,8 +152,8 @@
     "stop_t": null
    },
    "family": "SF-01",
-   "finding": "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact",
-   "hazard": null,
+   "finding": null,
+   "hazard": "HAZ-PIL-002",
    "id": "EC-04",
    "nofault_outcome": "safe",
    "outcome": "hard-drop",
@@ -246,8 +246,8 @@
     "stop_t": null
    },
    "family": "SF-01",
-   "finding": "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact",
-   "hazard": null,
+   "finding": null,
+   "hazard": "HAZ-PIL-002",
    "id": "EC-06",
    "nofault_outcome": "safe",
    "outcome": "hard-drop",
@@ -331,7 +331,7 @@
    "stop_active": false
   },
   {
-   "cause_gap": "HAZ-WLK-002 lists no causal factor for FLT-01 (fault causes: HAZ-SAF-001:CF2)",
+   "cause_gap": null,
    "events": {
     "alarm_t": 1.645,
     "impact_speed": 0.0,
@@ -427,29 +427,11 @@
  "findings": [
   {
    "edge_cases": [
-    "EC-01",
-    "EC-02",
-    "EC-03",
-    "EC-04",
-    "EC-06"
-   ],
-   "id": "FND-SF-01-01",
-   "text": "Uncontrolled vertical drop of the cockpit on loss of actuator supply with no protective stop under way; no hazard record covers occupant vertical impact"
-  },
-  {
-   "edge_cases": [
     "EC-05",
     "EC-07"
    ],
-   "id": "FND-SF-01-02",
+   "id": "FND-SF-01-01",
    "text": "Walker tips with no fault: case lies outside the nominal gait capability (terrain limit for CONOPS section 4)"
-  },
-  {
-   "edge_cases": [
-    "EC-08"
-   ],
-   "id": "FND-SF-01-03",
-   "text": "HAZ-WLK-002 lists no causal factor for FLT-01 (fault causes: HAZ-SAF-001:CF2)"
   }
  ],
  "map": [

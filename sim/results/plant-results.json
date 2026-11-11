@@ -3,7 +3,9 @@
  "faults": [
   {
    "causes": [
-    "HAZ-SAF-001:CF2"
+    "HAZ-SAF-001:CF2",
+    "HAZ-WLK-002:CF4",
+    "HAZ-PIL-002:CF1"
    ],
    "id": "FLT-01",
    "injection": "supply fraction decays exponentially to zero from onset with time constant tau_leak_s",
@@ -36,7 +38,9 @@
   },
   {
    "causes": [
-    "HAZ-SAF-001:CF2"
+    "HAZ-SAF-001:CF2",
+    "HAZ-WLK-002:CF4",
+    "HAZ-PIL-002:CF1"
    ],
    "id": "FLT-04",
    "injection": "torque capacity decays to electric_sag_floor from onset with time constant tau_leak_s",

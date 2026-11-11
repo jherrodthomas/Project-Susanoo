@@ -69,9 +69,9 @@ interfaces:
   - {id: IF-003, name: "Battery to distribution", from: SUS-M1-PWR-BAT, to: SUS-M1-PWR-DIST, direction: bi, kind: [energy, data],
      exchange: "bidirectional power, BMS state", hazard_ids: [], source: wiki IF-003, status: candidate, decision: DQ-006}
   - {id: IF-004, name: "Control to joint actuators", from: SUS-M1-CTL, to: SUS-M1-WLK, direction: bi, kind: [data, energy],
-     exchange: "torque or pressure commands, joint feedback", hazard_ids: [HAZ-WLK-001, HAZ-WLK-002], source: wiki IF-004}
+     exchange: "torque or pressure commands, joint feedback", hazard_ids: [HAZ-WLK-001, HAZ-WLK-002, HAZ-PIL-002], source: wiki IF-004}
   - {id: IF-005, name: "Safety monitor to power", from: SUS-M1-SAF, to: SUS-M1-PWR, direction: uni, kind: [data, energy],
-     exchange: "inhibit, isolation", hazard_ids: [HAZ-SAF-001], source: wiki IF-005}
+     exchange: "inhibit, isolation", hazard_ids: [HAZ-SAF-001, HAZ-PIL-002], source: wiki IF-005}
   - {id: IF-006, name: "Walker dock to UAV", from: SUS-M1-DCK, to: SUS-A1, direction: bi, kind: [mechanical, energy, data],
      exchange: "retention, charging, data, release", hazard_ids: [HAZ-DCK-001, HAZ-DCK-002], source: wiki IF-006}
   - {id: IF-007, name: "UAV in airspace", from: SUS-A1, to: EXT-AIRSPACE, direction: bi, kind: [environment],

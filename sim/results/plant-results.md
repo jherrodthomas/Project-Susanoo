@@ -25,7 +25,7 @@ Outcome per fault and configuration. `rho` is the robustness margin (negative = 
 
 ### FLT-01 · Hydraulic supply pressure loss
 
-Causes: HAZ-SAF-001:CF2. Injection: supply fraction decays exponentially to zero from onset with time constant tau_leak_s.
+Causes: HAZ-SAF-001:CF2, HAZ-WLK-002:CF4, HAZ-PIL-002:CF1. Injection: supply fraction decays exponentially to zero from onset with time constant tau_leak_s.
 
 | Slope | Configuration | Outcome | rho | Alarm (s) | Stop (s, by) | Hold (s) | Mishap (s) | Impact (m/s) |
 |---|---|---|---|---|---|---|---|---|
@@ -70,7 +70,7 @@ Causes: HAZ-SAF-001:CF1. Injection: a protective stop requested at onset removes
 
 ### FLT-04 · Electric bus undervoltage
 
-Causes: HAZ-SAF-001:CF2. Injection: torque capacity decays to electric_sag_floor from onset with time constant tau_leak_s.
+Causes: HAZ-SAF-001:CF2, HAZ-WLK-002:CF4, HAZ-PIL-002:CF1. Injection: torque capacity decays to electric_sag_floor from onset with time constant tau_leak_s.
 
 | Slope | Configuration | Outcome | rho | Alarm (s) | Stop (s, by) | Hold (s) | Mishap (s) | Impact (m/s) |
 |---|---|---|---|---|---|---|---|---|
