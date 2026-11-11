@@ -31,3 +31,35 @@ jobs:
         run: python -m unittest discover -s tools/pdac/tests -t .
       - name: Figure tests
         run: python -m unittest discover -s tools/figures/tests -t .
+
+  sysml:
+    name: sysml model
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Install dependencies
+        run: pip install -r tools/pdac/requirements.txt -r tools/sysml/pilot/requirements.txt
+      - name: Generated model files match the requirement records
+        run: python -m tools.sysml.gen_requirements --check
+      - name: Model matches the item definition and records (M1 M2 M4 M9 R1 R2 R3)
+        run: python -m tools.sysml.check
+      - name: Views and SysML page are current
+        run: python -m tools.sysml.views --check
+      - name: SysML tests
+        run: python -m unittest discover -s tools/sysml/tests -t .
+      - name: Cache the OMG pilot implementation
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/susanoo-sysml-pilot
+          key: sysml-pilot-0.62.0
+      - name: SysML v2 conformance (OMG pilot implementation 0.62.0)
+        run: tools/sysml/pilot/validate.sh
