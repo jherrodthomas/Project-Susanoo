@@ -35,11 +35,11 @@ system:
     SUS-M1-MAN:  {label: Manipulator arms & end effectors, parent: SUS-M1, sysml: Manipulators, usage: susanoo.m1.man}
     SUS-M1-PIL:  {label: "Pilot station, restraints & HMI", parent: SUS-M1, sysml: PilotStation, usage: susanoo.m1.pil}
     SUS-M1-PWR:  {label: Series-hybrid power & isolation, parent: SUS-M1, sysml: PowerSystem, usage: susanoo.m1.pwr}
-    SUS-M1-CTL:  {label: Motion & balance control SW, parent: SUS-M1, sysml: MotionControl, usage: susanoo.m1.ctl}
+    SUS-M1-CTL:  {label: Motion & balance control SW, parent: SUS-M1, kind: software, sysml: MotionControl, usage: susanoo.m1.ctl}
     SUS-M1-SAF:  {label: Safety monitor & protective stop, parent: SUS-M1, kind: safety, sysml: SafetyMonitor, usage: susanoo.m1.saf}
     SUS-M1-DCK:  {label: "UAV dock - retention, power, data", parent: SUS-M1, kind: interface, sysml: UAVDock, usage: susanoo.m1.dck}
     SUS-A1:      {label: Observation UAV, parent: SUS-I1, sysml: ObservationUAV, usage: susanoo.a1}
-    SUS-A1-FCS:  {label: Flight control - PX4 candidate, parent: SUS-A1, sysml: FlightControl, usage: susanoo.a1.fcs}
+    SUS-A1-FCS:  {label: Flight control - PX4 candidate, parent: SUS-A1, kind: software, sysml: FlightControl, usage: susanoo.a1.fcs}
     SUS-A1-PRP:  {label: "Motors, ESCs & propellers", parent: SUS-A1, sysml: Propulsion, usage: susanoo.a1.prp}
     SUS-A1-PWR:  {label: UAV battery & power mgmt, parent: SUS-A1, sysml: UAVPower, usage: susanoo.a1.pwr}
     SUS-A1-NAV:  {label: Navigation & telemetry link, parent: SUS-A1, sysml: NavTelemetry, usage: susanoo.a1.nav}
@@ -836,34 +836,26 @@ folders:
       package: Task206_OSHA
       views:
         - kind: stm
-          name: OperatingModes
-          title: operating modes analysed
-          initial: Shutdown
-          states:
-            - {name: Shutdown, doc: energy isolated}
-            - {name: MaintenanceLocked, doc: supported and locked out}
-            - {name: Standby, doc: pilot seated, actuation inhibited}
-            - {name: Walk}
-            - {name: Manipulate}
-            - {name: UAVLaunchRecovery, doc: walker stationary}
-            - {name: ProtectiveStop, doc: safe state, brakes applied}
-          transitions:
-            - [Shutdown, MaintenanceLocked, lockout applied]
-            - [MaintenanceLocked, Shutdown, lockout removed]
-            - [Shutdown, Standby, readiness confirmed]
-            - [Standby, Walk, pilot enable]
-            - [Walk, Standby, pilot hold]
-            - [Standby, Manipulate, arm enable]
-            - [Manipulate, Standby, arm disable]
-            - [Standby, UAVLaunchRecovery, envelope valid]
-            - [UAVLaunchRecovery, Standby, UAV docked or clear]
-            - [Walk, ProtectiveStop, stop request or fault]
-            - [Manipulate, ProtectiveStop, stop request or fault]
-            - [UAVLaunchRecovery, ProtectiveStop, abort]
-            - [ProtectiveStop, Standby, reset after review]
-            - [Standby, Shutdown, power down]
+          title: CONOPS operating modes under analysis
+          caption: >-
+            Read directly from ConceptOperations::OperatingModes (concept/ConceptOperations.sysml), so the O&SHA
+            always analyses exactly the CONOPS modes MOD-01 to MOD-10 and their transitions. Every state and every
+            transition needs at least one O&SHA worksheet row.
+          source: concept/ConceptOperations.sysml
+          source_package: ConceptOperations
+          state_def: OperatingModes
+          usage: modesUnderAnalysis
+          doc: O&SHA scope - every CONOPS mode and transition, including ingress/egress, maintenance and UAV launch/recovery.
+        - kind: bdd
+          title: O&SHA worksheet row
+          blocks:
+            - name: OSHARow
+              stereotype: item
+              doc: One row per mode, transition or task step analysed.
+              attributes: ["modeId : String", "transitionId : String", "taskStep : String", "personnel : String", "hazardId : String", "procedureControl : String", "residualRisk : RiskAssessment"]
     inputs:
       - {doc: concept/CONOPS.md, item: Operating scenarios}
+      - {doc: concept/ConceptOperations.sysml, item: Operating modes MOD-01..MOD-10}
       - {ref: T202, item: PHA}
     outputs:
       - {ref: SREQ, item: Procedural and design requirements}

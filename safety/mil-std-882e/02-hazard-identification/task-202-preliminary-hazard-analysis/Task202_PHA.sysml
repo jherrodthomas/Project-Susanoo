@@ -13,6 +13,6 @@ package Task202_PHA {
         attribute effect : String;
         attribute initialRisk : RiskAssessment;
         attribute candidateControl : String;
-        part requirement : SafetyRequirement[0..*];
+        ref item requirement : SafetyRequirement[0..*];
     }
 }

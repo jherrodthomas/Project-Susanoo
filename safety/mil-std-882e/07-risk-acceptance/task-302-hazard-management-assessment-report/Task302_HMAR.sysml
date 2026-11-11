@@ -11,6 +11,6 @@ package Task302_HMAR {
         attribute configurationId : String;
         attribute openHigh : Integer;
         attribute openSerious : Integer;
-        part hazards : Hazard[0..*];
+        ref item hazards : Hazard[0..*];
     }
 }

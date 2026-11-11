@@ -12,8 +12,8 @@ package TemplateSchemas {
         attribute revision : String;
         attribute configurationId : String;
         attribute decision : String;
-        part hazards : Hazard[0..*];
-        part requirements : SafetyRequirement[0..*];
-        part evidence : VerificationEvidence[0..*];
+        ref item hazards : Hazard[0..*];
+        ref item requirements : SafetyRequirement[0..*];
+        ref item evidence : VerificationEvidence[0..*];
     }
 }

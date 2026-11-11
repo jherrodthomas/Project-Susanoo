@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1095.2" height="893" viewBox="0 0 1095.2 893" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 5 · SysML requirements — integration requirements</title>
+<desc>PX4-R-001 to PX4-R-004, derived from the interface contract's acceptance tests, with the parts that satisfy them and the SITL tests (phases P3–P4) planned to verify them.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1095.2" height="893" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 5 · SysML requirements — integration requirements</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">PX4-R-001 to PX4-R-004, derived from the interface contract's acceptance tests, with the parts that satisfy them and the SITL tests (phases</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">P3–P4) planned to verify them.</text>
+<text x="1055.2" y="44" font-size="11" fill="#475569" text-anchor="end">PX4Integration.sysml</text>
+<line x1="40" y1="102" x2="1055.2" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="126" width="1015.2" height="686" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<path d="M40 126 L239.1 126 L239.1 140 L229.1 150 L40 150 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="143" font-size="11.5" fill="#0F172A" font-weight="700">req [package] PX4Integration</text>
+<g transform="translate(56 166)">
+<path d="M171.4 220 L186.4 220 Q193.4 220 193.4 213 L193.4 81 Q193.4 74 200.4 74 L370.9 74" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M171.4 235 L369.4 235" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M171.4 557 L357.7 557" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M171.4 250 L186.4 250 Q193.4 250 193.4 257 L193.4 389 Q193.4 396 200.4 396 L361.1 396" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M793.5 216 L758.5 216 Q751.5 216 751.5 209 L751.5 81 Q751.5 74 744.5 74 L599.8 74" stroke="#2E9E6A" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ok)"/>
+<path d="M793.5 235 L601.3 235" stroke="#2E9E6A" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ok)"/>
+<path d="M793.5 254 L758.5 254 Q751.5 254 751.5 261 L751.5 389 Q751.5 396 744.5 396 L609.5 396" stroke="#2E9E6A" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ok)"/>
+<rect x="6" y="205" width="165.4" height="60" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="18" y="217" width="117.3" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="76.7" y="228.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">IntegrationSupervisor</text>
+<text x="18" y="251" font-size="12.5" fill="#0F172A" font-weight="700">Integration supervisor</text>
+<rect x="20.5" y="527" width="150.9" height="60" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="32.5" y="539" width="104.2" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="84.6" y="550.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">UAVControlAdapter</text>
+<text x="32.5" y="573" font-size="12.5" fill="#0F172A" font-weight="700">UAV control adapter</text>
+<rect x="370.9" y="6" width="228.9" height="135" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="370.9" y="6" width="228.9" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="370.9" y1="52" x2="599.8" y2="52" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="485.3" y="23" font-size="10" fill="#475569" text-anchor="middle">«requirement def»</text>
+<text x="485.3" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">LaunchOnlyWhenPermitted</text>
+<text x="382.9" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = PX4-R-001</text>
+<text x="382.9" y="85" font-size="10.5" fill="#475569">Launch authorised only in correct walker</text>
+<text x="382.9" y="100" font-size="10.5" fill="#475569">posture and dock state</text>
+<rect x="382.9" y="117" width="33.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="399.5" y="128.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">High</text>
+<rect x="422" y="117" width="34" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="439" y="128.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Test</text>
+<rect x="369.4" y="167" width="231.9" height="135" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="369.4" y="167" width="231.9" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="369.4" y1="213" x2="601.3" y2="213" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="485.4" y="184" font-size="10" fill="#475569" text-anchor="middle">«requirement def»</text>
+<text x="485.4" y="201" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">StaleStateBlocksLaunch</text>
+<text x="381.4" y="231" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = PX4-R-002</text>
+<text x="381.4" y="246" font-size="10.5" fill="#475569">Stale or inconsistent dock state prevents</text>
+<text x="381.4" y="261" font-size="10.5" fill="#475569">launch authorisation</text>
+<rect x="381.4" y="278" width="33.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="398" y="289.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">High</text>
+<rect x="420.5" y="278" width="34" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="437.5" y="289.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Test</text>
+<rect x="357.7" y="489" width="255.3" height="135" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="357.7" y="489" width="255.3" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="357.7" y1="535" x2="613" y2="535" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="485.4" y="506" font-size="10" fill="#475569" text-anchor="middle">«requirement def»</text>
+<text x="485.4" y="523" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">NoAuthorityCollision</text>
+<text x="369.7" y="553" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = PX4-R-003</text>
+<text x="369.7" y="568" font-size="10.5" fill="#475569">Flight and ground controller authority collision</text>
+<text x="369.7" y="583" font-size="10.5" fill="#475569">prevented</text>
+<rect x="369.7" y="600" width="33.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="386.3" y="611.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">High</text>
+<rect x="408.8" y="600" width="52.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="435.2" y="611.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Analysis</text>
+<rect x="361.1" y="328" width="248.4" height="135" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="361.1" y="328" width="248.4" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="361.1" y1="374" x2="609.5" y2="374" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="485.3" y="345" font-size="10" fill="#475569" text-anchor="middle">«requirement def»</text>
+<text x="485.3" y="362" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">LinkLossDoesNotMoveWalker</text>
+<text x="373.1" y="392" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = PX4-R-004</text>
+<text x="373.1" y="407" font-size="10.5" fill="#475569">Lost link during docking aborts and does not</text>
+<text x="373.1" y="422" font-size="10.5" fill="#475569">command walker movement</text>
+<rect x="373.1" y="439" width="33.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="389.7" y="450.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">High</text>
+<rect x="412.3" y="439" width="34" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="429.3" y="450.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Test</text>
+<rect x="793.5" y="197" width="183.7" height="76" rx="8" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.3"/>
+<rect x="805.5" y="209" width="44.7" height="16" rx="8.0" fill="#2E9E6A" stroke="none" stroke-width="1"/>
+<text x="827.9" y="220.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">P3–P4</text>
+<text x="805.5" y="243" font-size="12.5" fill="#0F172A" font-weight="700">PX4 SITL test campaign</text>
+<text x="805.5" y="260" font-size="10.5" fill="#475569">planned</text>
+<rect x="233.4" y="79" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="238.4" y="92" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="233.4" y="240" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="238.4" y="253" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="233.4" y="562" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="238.4" y="575" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="233.4" y="401" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="238.4" y="414" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="675" y="79" width="56.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="680" y="92" font-size="10.5" fill="#475569">«verify»</text>
+<rect x="675" y="240" width="56.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="680" y="253" font-size="10.5" fill="#475569">«verify»</text>
+<rect x="675" y="401" width="56.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="680" y="414" font-size="10.5" fill="#475569">«verify»</text>
+</g>
+<line x1="40" y1="838" x2="56" y2="838" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="62" y="842" font-size="11" fill="#475569">«satisfy»</text>
+<line x1="124.6" y1="838" x2="140.6" y2="838" stroke="#2E9E6A" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="146.6" y="842" font-size="11" fill="#475569">«verify»</text>
+<rect x="203.2" y="832" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2"/>
+<text x="225.2" y="842" font-size="11" fill="#475569">High risk</text>
+<text x="40" y="864" font-size="10.5" fill="#94A3B8">Generated by tools/figures/build_figures.py from integrations/px4/figures.yaml. Proposed integration: not implemented, integrated or verified.</text>
+</svg>

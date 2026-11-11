@@ -6,41 +6,20 @@ package Task206_OSHA {
     private import ScalarValues::*;
     private import SusanooSystem::*;
     private import SusanooSafety::*;
-    attribute def UavDockedOrClear;
-    attribute def Abort;
-    attribute def ArmDisable;
-    attribute def ArmEnable;
-    attribute def EnvelopeValid;
-    attribute def LockoutApplied;
-    attribute def LockoutRemoved;
-    attribute def PilotEnable;
-    attribute def PilotHold;
-    attribute def PowerDown;
-    attribute def ReadinessConfirmed;
-    attribute def ResetAfterReview;
-    attribute def StopRequestOrFault;
-    state def OperatingModes {
-        entry; then Shutdown;
-        state Shutdown { doc /* energy isolated */ }
-        state MaintenanceLocked { doc /* supported and locked out */ }
-        state Standby { doc /* pilot seated */ }
-        state Walk;
-        state Manipulate;
-        state UAVLaunchRecovery { doc /* walker stationary */ }
-        state ProtectiveStop { doc /* safe state */ }
-        transition t1 first Shutdown accept LockoutApplied then MaintenanceLocked;
-        transition t2 first MaintenanceLocked accept LockoutRemoved then Shutdown;
-        transition t3 first Shutdown accept ReadinessConfirmed then Standby;
-        transition t4 first Standby accept PilotEnable then Walk;
-        transition t5 first Walk accept PilotHold then Standby;
-        transition t6 first Standby accept ArmEnable then Manipulate;
-        transition t7 first Manipulate accept ArmDisable then Standby;
-        transition t8 first Standby accept EnvelopeValid then UAVLaunchRecovery;
-        transition t9 first UAVLaunchRecovery accept UavDockedOrClear then Standby;
-        transition t10 first Walk accept StopRequestOrFault then ProtectiveStop;
-        transition t11 first Manipulate accept StopRequestOrFault then ProtectiveStop;
-        transition t12 first UAVLaunchRecovery accept Abort then ProtectiveStop;
-        transition t13 first ProtectiveStop accept ResetAfterReview then Standby;
-        transition t14 first Standby accept PowerDown then Shutdown;
+    private import ConceptOperations::*;
+    // Analysed modes are owned by concept/ConceptOperations.sysml (single source of truth); not redefined here.
+    state modesUnderAnalysis : ConceptOperations::OperatingModes {
+        doc /* O&SHA scope - every CONOPS mode and transition, including ingress/egress, maintenance and UAV launch/recovery. */
+    }
+
+    item def OSHARow {
+        doc /* One row per mode, transition or task step analysed. */
+        attribute modeId : String;
+        attribute transitionId : String;
+        attribute taskStep : String;
+        attribute personnel : String;
+        attribute hazardId : String;
+        attribute procedureControl : String;
+        attribute residualRisk : RiskAssessment;
     }
 }

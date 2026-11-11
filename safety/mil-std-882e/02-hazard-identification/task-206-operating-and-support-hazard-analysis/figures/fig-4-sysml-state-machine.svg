@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="879.4" height="1857" viewBox="0 0 879.4 1857" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 4 · SysML state machine — CONOPS operating modes under analysis</title>
+<desc>Read directly from ConceptOperations::OperatingModes (concept/ConceptOperations.sysml), so the O&amp;SHA always analyses exactly the CONOPS modes MOD-01 to MOD-10 and their transitions. Every state and every transition needs at least one O&amp;SHA worksheet row.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="879.4" height="1857" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 4 · SysML state machine — CONOPS operating modes under analysis</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Read directly from ConceptOperations::OperatingModes (concept/ConceptOperations.sysml), so the O&amp;SHA always analyses exactly</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">the CONOPS modes MOD-01 to MOD-10 and their transitions. Every state and every transition needs at least one O&amp;SHA worksheet</text>
+<text x="40" y="100" font-size="12.5" fill="#475569">row.</text>
+<text x="40" y="117" font-size="11" fill="#94A3B8">Source: Task206_OSHA.sysml</text>
+<line x1="40" y1="134" x2="839.4" y2="134" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="158" width="799.4" height="1618" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<path d="M40 158 L360.8 158 L360.8 172 L350.8 182 L40 182 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="175" font-size="11.5" fill="#0F172A" font-weight="700">stm [state def] ConceptOperations::OperatingModes</text>
+<g transform="translate(56 198)">
+<path d="M344 24 L344 88" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M291 168 L291 183 Q291 190 284 190 L101 190 Q94 190 94 197 L94 314" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M122 394 L122 491 Q122 498 129 498 L281 498 Q288 498 288 505 L288 540" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M150 314 L150 209 Q150 202 157 202 L310 202 Q317 202 317 195 L317 168" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M252 620 L252 635 Q252 642 245 642 L84 642 Q77 642 77 649 L77 770" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M134 770 L134 735 Q134 728 127 728 L100 728 Q93 728 93 721 L93 661 Q93 654 100 654 L266 654 Q273 654 273 647 L273 620" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M295 620 L295 770" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M350 770 L350 735 Q350 728 343 728 L318 728 Q311 728 311 721 L311 644.5 Q311 642 313.5 642 L313.5 642 Q316 642 316 639.5 L316 620" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M337 620 L337 659 Q337 666 344 666 L533 666 Q540 666 540 673 L540 770" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M540 850 L540 996" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M540 1090 L540 1236" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M595 1236 L595 1201 Q595 1194 602 1194 L657 1194 Q664 1194 664 1187 L664 661 Q664 654 657 654 L365 654 Q358 654 358 647 L358 620" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M106 850 L106 877 Q106 884 113 884 L313 884 Q320 884 320 891 L320 1413 Q320 1420 327 1420 L372 1420 Q379 1420 379 1427 L379 1462" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M323 850 L323 865 Q323 872 330 872 L410 872 Q417 872 417 879 L417 1462" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M567 1316 L567 1413 Q567 1420 560 1420 L463 1420 Q456 1420 456 1427 L456 1462" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M494 1462 L494 1439 Q494 1432 501 1432 L678 1432 Q685 1432 685 1425 L685 649 Q685 642 678 642 L386 642 Q379 642 379 635 L379 620" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M344 540 L344 168" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M370 168 L370 195 Q370 202 377 202 L459 202 Q466 202 466 209 L466 314" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M520 314 L520 197 Q520 190 513 190 L404 190 Q397 190 397 183 L397 168" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<circle cx="344" cy="15" r="8" fill="#0F172A" stroke="#0F172A" stroke-width="1.4"/>
+<rect x="264" y="88" width="159.3" height="80" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="276" y="100" width="48.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="300.2" y="111.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">MOD-01</text>
+<text x="276" y="134" font-size="12.5" fill="#0F172A" font-weight="700">Off secured</text>
+<text x="276" y="151" font-size="10.5" fill="#475569">Energy isolated, supported</text>
+<rect x="38" y="314" width="167.8" height="80" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="50" y="326" width="48.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="74.2" y="337.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">MOD-02</text>
+<text x="50" y="360" font-size="12.5" fill="#0F172A" font-weight="700">Startup</text>
+<text x="50" y="377" font-size="10.5" fill="#475569">Pilot readiness and self-test</text>
+<rect x="231" y="540" width="169.6" height="80" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="243" y="552" width="48.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="267.2" y="563.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">MOD-03</text>
+<text x="243" y="586" font-size="12.5" fill="#0F172A" font-weight="700">Standby</text>
+<text x="243" y="603" font-size="10.5" fill="#475569">Stable pose, motion inhibited</text>
+<rect x="21" y="770" width="169.4" height="80" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="33" y="782" width="48.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="57.2" y="793.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">MOD-04</text>
+<text x="33" y="816" font-size="12.5" fill="#0F172A" font-weight="700">Piloted walk</text>
+<text x="33" y="833" font-size="10.5" fill="#475569">Bounded operator locomotion</text>
+<rect x="241" y="770" width="163.3" height="80" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="253" y="782" width="48.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="277.2" y="793.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">MOD-05</text>
+<text x="253" y="816" font-size="12.5" fill="#0F172A" font-weight="700">Manipulation</text>
+<text x="253" y="833" font-size="10.5" fill="#475569">Controlled payload handling</text>
+<rect x="454" y="770" width="171.7" height="80" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="466" y="782" width="48.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="490.2" y="793.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">MOD-06</text>
+<text x="466" y="816" font-size="12.5" fill="#0F172A" font-weight="700">UAV prepare</text>
+<text x="466" y="833" font-size="10.5" fill="#475569">Dock, clearance and preflight</text>
+<rect x="451" y="996" width="177.9" height="94" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="463" y="1008" width="48.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="487.2" y="1019.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">MOD-07</text>
+<text x="463" y="1042" font-size="12.5" fill="#0F172A" font-weight="700">UAV flight</text>
+<text x="463" y="1059" font-size="10.5" fill="#475569">Observation and return; walker</text>
+<text x="463" y="1073" font-size="10.5" fill="#475569">stationary</text>
+<rect x="484" y="1236" width="166.8" height="80" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="496" y="1248" width="48.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="520.2" y="1259.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">MOD-08</text>
+<text x="496" y="1282" font-size="12.5" fill="#0F172A" font-weight="700">UAV recovery</text>
+<text x="496" y="1299" font-size="10.5" fill="#475569">Approach, capture, retention</text>
+<rect x="341" y="1462" width="190.9" height="94" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="353" y="1474" width="48.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="377.2" y="1485.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">MOD-09</text>
+<text x="353" y="1508" font-size="12.5" fill="#0F172A" font-weight="700">Degraded emergency</text>
+<text x="353" y="1525" font-size="10.5" fill="#475569">Mode-specific fault response; not</text>
+<text x="353" y="1539" font-size="10.5" fill="#475569">instant zero torque</text>
+<rect x="412" y="314" width="162.2" height="80" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="424" y="326" width="48.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="448.2" y="337.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">MOD-10</text>
+<text x="424" y="360" font-size="12.5" fill="#0F172A" font-weight="700">Maintenance</text>
+<text x="424" y="377" font-size="10.5" fill="#475569">Supported, isolated service</text>
+<rect x="34" y="232" width="57.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="39" y="245" font-size="10.5" fill="#475569">power up</text>
+<rect x="8" y="458" width="111.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="13" y="471" font-size="10.5" fill="#475569">readiness confirmed</text>
+<rect x="153" y="232" width="85.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="158" y="245" font-size="10.5" fill="#475569">self test failed</text>
+<rect x="4" y="688" width="71.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="9" y="701" font-size="10.5" fill="#475569">walk enable</text>
+<rect x="96" y="688" width="86" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="101" y="701" font-size="10.5" fill="#475569">hold requested</text>
+<rect x="192" y="688" width="101.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="197" y="701" font-size="10.5" fill="#475569">manipulate enable</text>
+<rect x="314" y="688" width="86" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="319" y="701" font-size="10.5" fill="#475569">hold requested</text>
+<rect x="410" y="688" width="128" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="415" y="701" font-size="10.5" fill="#475569">UAV prepare requested</text>
+<rect x="444" y="914" width="94.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="449" y="927" font-size="10.5" fill="#475569">launch permitted</text>
+<rect x="430" y="1154" width="108" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="435" y="1167" font-size="10.5" fill="#475569">recovery requested</text>
+<rect x="554" y="914" width="107.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="559" y="927" font-size="10.5" fill="#475569">retention confirmed</text>
+<rect x="236" y="1154" width="82" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="241" y="1167" font-size="10.5" fill="#475569">fault detected</text>
+<rect x="333" y="1154" width="82" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="338" y="1167" font-size="10.5" fill="#475569">fault detected</text>
+<rect x="483" y="1380" width="82" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="488" y="1393" font-size="10.5" fill="#475569">fault detected</text>
+<rect x="688" y="1034" width="75.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="693" y="1047" font-size="10.5" fill="#475569">fault cleared</text>
+<rect x="230" y="345" width="111.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="235" y="358" font-size="10.5" fill="#475569">shutdown requested</text>
+<rect x="363" y="232" width="101.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="368" y="245" font-size="10.5" fill="#475569">service requested</text>
+<rect x="523" y="232" width="96.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="528" y="245" font-size="10.5" fill="#475569">service complete</text>
+</g>
+<line x1="40" y1="1802" x2="56" y2="1802" stroke="#475569" stroke-width="1.8"/>
+<text x="62" y="1806" font-size="11" fill="#475569">Transition (trigger)</text>
+<rect x="171" y="1796" width="14" height="12" rx="3" fill="#0F172A" stroke="#0F172A" stroke-width="1.2"/>
+<text x="193" y="1806" font-size="11" fill="#475569">Initial / final</text>
+<text x="40" y="1828" font-size="10.5" fill="#94A3B8">Generated by tools/gen_safety_docs.py from safety/mil-std-882e/catalog.yaml. Planning view: not evidence of completed analysis, verification or risk acceptance.</text>
+</svg>

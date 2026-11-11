@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="868.6" height="911" viewBox="0 0 868.6 911" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 4 · SysML requirements — allocation and derivation</title>
+<desc>Requirements view of package SafetyRequirements. The .sysml file is the model of record.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="868.6" height="911" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 4 · SysML requirements — allocation and derivation</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Requirements view of package SafetyRequirements. The .sysml file is the model of record.</text>
+<text x="828.6" y="44" font-size="11" fill="#475569" text-anchor="end">SafetyRequirements.sysml</text>
+<line x1="40" y1="85" x2="828.6" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="109" width="788.6" height="706" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<path d="M40 109 L263.7 109 L263.7 123 L253.7 133 L40 133 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="126" font-size="11.5" fill="#0F172A" font-weight="700">req [package] SafetyRequirements</text>
+<g transform="translate(56 149)">
+<path d="M316 568 L316 533 Q316 526 309 526 L127 526 Q120 526 120 519 L120 422" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M382 568 L382 422" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M637 568 L637 422" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M120 287 L120 170 Q120 163 127 163 L287 163 Q294 163 294 156 L294 141" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
+<path d="M382 287 L382 141" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
+<path d="M637 287 L637 141" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
+<rect x="207" y="6" width="262.2" height="135" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="207" y="6" width="262.2" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="207" y1="52" x2="469.2" y2="52" stroke="#64748B" stroke-width="1.1"/>
+<text x="338.1" y="23" font-size="10" fill="#475569" text-anchor="middle">«requirement · Task203_SRHA»</text>
+<text x="338.1" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">ProtectiveStop</text>
+<text x="219" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-002</text>
+<text x="219" y="85" font-size="10.5" fill="#475569">Operator-requested protective stop with defined</text>
+<text x="219" y="100" font-size="10.5" fill="#475569">behavior per mode</text>
+<rect x="219" y="117" width="33.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="235.6" y="128.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">High</text>
+<rect x="258.1" y="117" width="34" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="275.1" y="128.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Test</text>
+<rect x="6" y="287" width="228.1" height="135" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="6" y="287" width="228.1" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="6" y1="333" x2="234.1" y2="333" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="120.1" y="304" font-size="10" fill="#475569" text-anchor="middle">«requirement def»</text>
+<text x="120.1" y="321" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">StopIndependence</text>
+<text x="18" y="351" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SR-002-1</text>
+<text x="18" y="366" font-size="10.5" fill="#475569">Protective stop path shall not depend on</text>
+<text x="18" y="381" font-size="10.5" fill="#475569">motion-control software</text>
+<rect x="18" y="398" width="33.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="34.6" y="409.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">High</text>
+<rect x="57.1" y="398" width="52.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="83.5" y="409.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Analysis</text>
+<rect x="261" y="287" width="242.7" height="135" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="261" y="287" width="242.7" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="261" y1="333" x2="503.7" y2="333" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="382.4" y="304" font-size="10" fill="#475569" text-anchor="middle">«requirement def»</text>
+<text x="382.4" y="321" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">StopResponseTime</text>
+<text x="273" y="351" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SR-002-2</text>
+<text x="273" y="366" font-size="10.5" fill="#475569">Protective stop reaction time shall meet the</text>
+<text x="273" y="381" font-size="10.5" fill="#475569">value set by hazard analysis (TBD)</text>
+<rect x="273" y="398" width="33.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="289.6" y="409.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">High</text>
+<rect x="312.1" y="398" width="34" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="329.1" y="409.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Test</text>
+<rect x="524" y="6" width="226.6" height="135" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="524" y="6" width="226.6" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="524" y1="52" x2="750.6" y2="52" stroke="#64748B" stroke-width="1.1"/>
+<text x="637.3" y="23" font-size="10" fill="#475569" text-anchor="middle">«requirement · Task203_SRHA»</text>
+<text x="637.3" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">RetainedRotorInhibit</text>
+<text x="536" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-003</text>
+<text x="536" y="85" font-size="10.5" fill="#475569">No rotor startup while UAV mechanically</text>
+<text x="536" y="100" font-size="10.5" fill="#475569">retained</text>
+<rect x="536" y="117" width="33.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="552.6" y="128.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">High</text>
+<rect x="575.1" y="117" width="34" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="592.1" y="128.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Test</text>
+<rect x="530" y="287" width="214.6" height="135" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="530" y="287" width="214.6" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="530" y1="333" x2="744.6" y2="333" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="637.3" y="304" font-size="10" fill="#475569" text-anchor="middle">«requirement def»</text>
+<text x="637.3" y="321" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">LatchStateInterlock</text>
+<text x="542" y="351" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SR-003-1</text>
+<text x="542" y="366" font-size="10.5" fill="#475569">Rotor arming shall require a positively</text>
+<text x="542" y="381" font-size="10.5" fill="#475569">confirmed unretained dock state</text>
+<rect x="542" y="398" width="33.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="558.6" y="409.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">High</text>
+<rect x="581.1" y="398" width="34" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="598.1" y="409.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Test</text>
+<rect x="251" y="568" width="196" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="263" y="580" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="300.4" y="591.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<text x="263" y="614" font-size="12.5" fill="#0F172A" font-weight="700">Safety monitor &amp; protective</text>
+<text x="263" y="630" font-size="12.5" fill="#0F172A" font-weight="700">stop</text>
+<rect x="535" y="568" width="204.3" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="547" y="580" width="74.8" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
+<text x="584.4" y="591.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<text x="547" y="614" font-size="12.5" fill="#0F172A" font-weight="700">UAV dock - retention, power,</text>
+<text x="547" y="630" font-size="12.5" fill="#0F172A" font-weight="700">data</text>
+<rect x="56" y="486" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="61" y="499" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="318" y="486" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="323" y="499" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="573" y="486" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="578" y="499" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="37" y="205" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="42" y="218" font-size="10.5" fill="#475569">«deriveReqt»</text>
+<rect x="299" y="205" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="304" y="218" font-size="10.5" fill="#475569">«deriveReqt»</text>
+<rect x="554" y="205" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="559" y="218" font-size="10.5" fill="#475569">«deriveReqt»</text>
+</g>
+<line x1="40" y1="841" x2="56" y2="841" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="62" y="845" font-size="11" fill="#475569">«satisfy»</text>
+<line x1="124.6" y1="841" x2="140.6" y2="841" stroke="#7C3AED" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="146.6" y="845" font-size="11" fill="#475569">«deriveReqt»</text>
+<rect x="229" y="835" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2"/>
+<text x="251" y="845" font-size="11" fill="#475569">High risk</text>
+<rect x="309" y="835" width="14" height="12" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="331" y="845" font-size="11" fill="#475569">Medium risk</text>
+<rect x="402.7" y="835" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="424.7" y="845" font-size="11" fill="#475569">Defined in another package</text>
+<text x="40" y="867" font-size="10.5" fill="#94A3B8">Generated by tools/gen_safety_docs.py from safety/mil-std-882e/catalog.yaml. Planning view: not evidence of completed analysis, verification or risk</text>
+<text x="40" y="882" font-size="10.5" fill="#94A3B8">acceptance.</text>
+</svg>

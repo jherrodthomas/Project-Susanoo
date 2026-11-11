@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
-"""Generate MIL-STD-882E folder READMEs and SysML views from catalog.yaml.
+"""Generate the MIL-STD-882E folder READMEs, SVG figures and SysML views from catalog.yaml.
 
-PDaC rule: the folder tree, its diagrams and its SysML views are generated from
-one typed catalog so they cannot drift apart.
+PDaC rule: the folder tree, its figures and its SysML views come from one typed catalog (plus the SysML
+models it points at) so they cannot drift apart.
 
-Each README has a generated part (metadata, flow position, block diagram,
-boundary diagram, SysML model, inputs/outputs, contents) followed by the
-END_MARKER. Anything after the marker is human-authored and preserved on
-regeneration.
+Each folder gets:
+  README.md            metadata, purpose, figures, tables; human content below END_MARKER is preserved
+  figures/fig-N-*.svg  1 flow position · 2 block · 3 boundary · 4.. SysML views · last inputs/outputs
+  <Package>.sysml      generated SysML v2 view (the model of record for the folder)
 
 Usage:
     python3 tools/gen_safety_docs.py           # write files
     python3 tools/gen_safety_docs.py --check   # exit 1 if any file is stale
+Needs `npm ci` in tools/figures (pinned ELK layout engine).
 """
 from __future__ import annotations
 
@@ -24,31 +25,22 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools" / "figures"))
+import diagram  # noqa: E402
+import sysml_parse  # noqa: E402
+from figkit import MUTED, TONES  # noqa: E402
+
 CATALOG = ROOT / "safety" / "mil-std-882e" / "catalog.yaml"
 END_MARKER = "<!-- END GENERATED: content below this line is human-authored and preserved -->"
 DEFAULT_TAIL = "\n## Working content\n\n_No analysis content yet. Add authored material below this heading._\n"
-
-CLASSDEFS = [
-    "classDef system fill:#dceaf7,stroke:#55758f,color:#17324d",
-    "classDef safety fill:#fff0d9,stroke:#b28a3d,color:#513c16",
-    "classDef external fill:#e8f1e9,stroke:#63886a,color:#23412c",
-    "classDef interface fill:#eae7f5,stroke:#8370a3,color:#30254a",
-    "classDef muted fill:#f4f4f4,stroke:#b5b5b5,color:#8a8a8a,stroke-dasharray: 4 3",
-    "classDef current fill:#b28a3d,stroke:#513c16,color:#ffffff,stroke-width:2px",
-    "classDef work fill:#ffffff,stroke:#55758f,color:#17324d",
-]
+GEN = "tools/gen_safety_docs.py"
+KINDS = {"system", "software", "safety", "interface", "external"}
 
 
 # ----------------------------------------------------------------- helpers
 def mid(text: str) -> str:
-    """Mermaid-safe identifier."""
     s = re.sub(r"[^A-Za-z0-9]", "_", text)
     return ("n_" + s) if s[:1].isdigit() else s
-
-
-def q(text: str) -> str:
-    """Mermaid-safe quoted label."""
-    return '"' + str(text).replace('"', "'").replace("#", "No.") + '"'
 
 
 def sysml_name(text: str) -> str:
@@ -56,12 +48,21 @@ def sysml_name(text: str) -> str:
     return ("_" + s) if s[:1].isdigit() else s
 
 
-def doc(text: str, indent: str) -> str:
+def doc(text: str, indent: str = "") -> str:
     return f"{indent}doc /* {str(text).replace('*/', '* /')} */"
 
 
 def rel(target: Path, start: Path) -> str:
     return os.path.relpath(target, start).replace(os.sep, "/")
+
+
+def slug(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+
+
+def edge_leg(label: str, dashed: bool = False, tone: str = "") -> tuple[str, str, str]:
+    c = TONES[tone][0] if tone else MUTED
+    return ("line:" + c, c + (" dashed" if dashed else ""), label)
 
 
 class Ctx:
@@ -92,235 +93,293 @@ class Ctx:
         stack = list(keys)
         while stack:
             k = stack.pop()
-            if k in out:
-                continue
-            out.add(k)
-            stack.extend(self.children(k))
+            if k not in out:
+                out.add(k)
+                stack.extend(self.children(k))
         return out
 
-    def sysml_path(self, key: str) -> str | None:
+    def card(self, key: str, nid: str | None = None, tone: str | None = None) -> dict:
+        """A figure node for a registry element or a free-text boundary entry."""
         n = self.nodes.get(key)
-        return n.get("usage") if n else None
+        if n:
+            return {"id": nid or mid(key), "code": key, "title": n["label"], "tone": tone or n.get("kind", "system")}
+        return {"id": nid or mid(key), "title": key, "tone": tone or "work"}
 
 
-# ------------------------------------------------------- diagram builders
-def flow_position(ctx: Ctx, f: dict) -> str:
-    cls: dict[str, str] = {f"E{n}": "work" for n in ctx.elements}
-    cls["HTS"] = "work"
-    lines = ["flowchart LR"]
-    for n, e in ctx.elements.items():
-        lines.append(f"  E{n}[{q(f'{n} · ' + e['short'])}]")
-    nums = list(ctx.elements)
-    lines.append("  " + " --> ".join(f"E{n}" for n in nums))
-    lines.append(f"  E{nums[-1]} -. {q('change, deficiency or mishap')} .-> E2")
-    lines.append(f"  HTS[({q('Hazard tracking system · Task 106')})]")
-    lines.append("  E2 & E3 & E4 & E6 & E7 & E8 -.- HTS")
-    cur = f.get("element")
-    if cur and f.get("tasks"):
-        cls[f"E{cur}"] = "safety"
-        for t in f["tasks"]:
-            tid = f"T{t['id']}"
-            lines.append(f"  {tid}[{q('Task ' + str(t['id']) + ' · ' + t['name'])}]")
-            lines.append(f"  E{cur} --- {tid}")
-            cls[tid] = "current"
-    elif cur:
-        cls[f"E{cur}"] = "current"
-    if f.get("crosscut") == "hts":
-        cls["HTS"] = "current"
-    elif f.get("crosscut"):
-        lines.append(f"  X[{q(f['title'])}]")
-        lines.append("  X -.- E3 & E4 & E5 & E6")
-        cls["X"] = "current"
-        cls["HTS"] = "safety"
-    lines += [f"  class {k} {v}" for k, v in cls.items()]
-    lines += ["  " + c for c in CLASSDEFS]
-    return "\n".join(lines)
+# ------------------------------------------------------------- figures
+def fig_rail(ctx: Ctx, f: dict) -> dict:
+    spec = {"kind": "rail", "title": "Position in the MIL-STD-882E flow", "ref": f"catalog.yaml · {f['id']}"}
+    el = f.get("element")
+    if el and f.get("tasks"):
+        spec.update(current=el, tasks=[(t["id"], t["name"]) for t in f["tasks"]],
+                    subtitle=f"{f['title']} belongs to element {el} ({ctx.elements[el]['name'].lower()}). "
+                             "Everything it finds or decides is recorded in the hazard tracking system.")
+    elif el:
+        spec.update(current=el, subtitle=f"This folder is element {el} of the iterative system safety process: "
+                                         f"{ctx.elements[el]['name'].lower()}.")
+    elif f.get("crosscut") == "hts":
+        spec.update(hts_current=True, subtitle="The hazard tracking system is the closed loop shared by every element: "
+                                               "hazards in, mitigations, evidence and decisions linked, status out.")
+        if f["id"] == "ROOT":
+            spec.update(chip="Whole program: folders 00–08, hazard tracking and software safety", serves=list(range(1, 9)),
+                        hts_current=False,
+                        subtitle="The tree is organised by the eight MIL-STD-882E process elements; tasks sit under "
+                                 "the element they mainly serve.")
+    else:
+        served = sorted({ctx.folders[o["ref"]].get("element") for o in f.get("outputs", []) + f.get("inputs", [])
+                         if "ref" in o and ctx.folders[o["ref"]].get("element")})
+        spec.update(chip=f["title"], serves=served,
+                    subtitle=f"{f['title']} is not one element: it serves elements "
+                             f"{', '.join(map(str, served))} through the folders it feeds and reads.")
+    return spec
 
 
-def block_diagram(ctx: Ctx, f: dict) -> str:
+def fig_block(ctx: Ctx, f: dict) -> dict:
     scope = ctx.expand(f.get("scope", []))
-    lines = ["flowchart TB"]
-
-    def emit(key: str, indent: str):
-        kids = ctx.children(key)
-        if kids:
-            lines.append(f"{indent}subgraph {mid(key)}[{q(ctx.label(key))}]")
-            lines.append(f"{indent}  direction TB")
-            for k in kids:
-                emit(k, indent + "  ")
-            lines.append(f"{indent}end")
-        else:
-            lines.append(f"{indent}{mid(key)}[{q(ctx.label(key))}]")
-
-    roots = [k for k, v in ctx.nodes.items() if not v.get("parent") and v.get("kind") != "external"]
-    for r in roots:
-        emit(r, "  ")
-    for a, b, lab in ctx.links:
-        lines.append(f"  {mid(a)} -->|{q(lab)}| {mid(b)}")
+    nodes = []
     for k, v in ctx.nodes.items():
-        if v.get("kind") == "external" or ctx.children(k):
+        if v.get("kind") == "external":
             continue
-        cls = v.get("kind", "system") if k in scope else "muted"
-        lines.append(f"  class {mid(k)} {cls}")
-    lines += ["  " + c for c in CLASSDEFS]
-    return "\n".join(lines)
+        kids = ctx.children(k)
+        if not v.get("parent"):
+            nodes.append({"id": mid(k), "banner": f"{k} · {v['label']}", "tone": "work"})
+        elif kids:
+            inside = bool(ctx.expand([k]) & scope)
+            nodes.append({"id": mid(k), "title": f"{k} · {v['label']}", "parent": mid(v["parent"]),
+                          "tone": "system" if inside else "muted"})
+        else:
+            nodes.append({**ctx.card(k, tone=v.get("kind", "system") if k in scope else "muted"),
+                          "parent": mid(v["parent"]), "minw": 150, "maxw": 196})
+    edges = [{"src": mid(a), "dst": mid(b), "label": lab,
+              "tone": ctx.kind(a) if ctx.kind(a) in ("safety", "interface") else "ink"} for a, b, lab in ctx.links]
+    in_n = len([k for k in scope if not ctx.children(k)])
+    return {"title": "Block diagram", "ref": f"SusanooSystem.sysml · {f['id']}", "direction": "DOWN", "orient": "fixed",
+            "subtitle": (f"SUS-I1 decomposition. The {in_n} coloured blocks are in scope for this folder; hatched blocks "
+                         "are not." if scope else "SUS-I1 decomposition. No system element is in scope for this folder "
+                         "(all hatched)."),
+            "nodes": nodes, "edges": edges,
+            "legend": [edge_leg("Signal / energy flow"), edge_leg("Protective action", tone="safety")]}
 
 
-def bnode(key: str) -> str:
-    return "BND" if key == "@boundary" else mid(key)
-
-
-def boundary_diagram(ctx: Ctx, f: dict) -> str:
+def fig_boundary(ctx: Ctx, f: dict) -> dict:
     b = f["boundary"]
-    lines = ["flowchart LR"]
-    lines.append(f"  subgraph BND[{q('Boundary: ' + b['name'])}]")
-    lines.append("    direction TB")
+    nodes = [{"id": "BND", "banner": f"Boundary · {b['name']}", "tone": "safety", "dashed": True,
+              "legend": "Analysis boundary", "direction": "DOWN"}]
+    targets = {c for _, c, _ in b["flows"]}
+    left = [k for k in b["outside"] if k not in targets]
+    right = [k for k in b["outside"] if k in targets]
+    nodes = [ctx.card(k, tone="external") for k in left] + nodes
     for k in b["inside"]:
-        lines.append(f"    {mid(k)}[{q(ctx.label(k))}]")
-    lines.append("  end")
-    for k in b["outside"]:
-        lines.append(f"  {mid(k)}[{q(ctx.label(k))}]")
-    for a, c, lab in b["flows"]:
-        lines.append(f"  {bnode(a)} -->|{q(lab)}| {bnode(c)}")
-    for k in b["inside"]:
-        kind = ctx.kind(k)
-        lines.append(f"  class {mid(k)} {'system' if kind == 'external' else kind}")
-    for k in b["outside"]:
-        lines.append(f"  class {mid(k)} external")
-    lines.append("  style BND fill:none,stroke:#b28a3d,stroke-width:2px,stroke-dasharray: 6 4")
-    lines += ["  " + c for c in CLASSDEFS]
-    return "\n".join(lines)
+        nodes.append({**ctx.card(k), "parent": "BND"})
+    for k in right:
+        nodes.append(ctx.card(k, tone="external"))
+    edges = [{"src": "BND" if a == "@boundary" else mid(a), "dst": "BND" if c == "@boundary" else mid(c),
+              "code": str(i + 1), "label": lab} for i, (a, c, lab) in enumerate(b["flows"])]
+    return {"title": "Boundary diagram", "ref": f"catalog.yaml · {f['id']}", "direction": "RIGHT",
+            "subtitle": f"{b['name']}: what is inside the dashed boundary, what is outside, and every interaction "
+                        "that crosses it, numbered as in the table below.",
+            "nodes": nodes, "edges": edges,
+            "legend": [("#475569", "none", "1 · numbered crossing (see table)")]}
 
 
-def io_diagram(ctx: Ctx, f: dict) -> str:
-    me = mid(f["id"])
-    lines = ["flowchart LR", f"  {me}[{q(f['title'])}]"]
-    for i, it in enumerate(f.get("inputs", [])):
-        src = ctx.folders[it["ref"]]["title"] if "ref" in it else it.get("doc") or it.get("ext")
-        lines.append(f"  in{i}[{q(src)}] -->|{q(it['item'])}| {me}")
-        lines.append(f"  class in{i} {'work' if 'ref' in it else 'external'}")
-    for i, it in enumerate(f.get("outputs", [])):
-        dst = ctx.folders[it["ref"]]["title"] if "ref" in it else it.get("doc") or it.get("ext")
-        lines.append(f"  {me} -->|{q(it['item'])}| out{i}[{q(dst)}]")
-        lines.append(f"  class out{i} {'work' if 'ref' in it else 'external'}")
-    lines.append(f"  class {me} current")
-    lines += ["  " + c for c in CLASSDEFS]
-    return "\n".join(lines)
+def fig_io(ctx: Ctx, f: dict) -> dict:
+    nodes: list[dict] = []
+    edges, seen = [], {}
+
+    def node_for(it: dict) -> str:
+        if "ref" in it:
+            key, n = it["ref"], {"title": ctx.folders[it["ref"]]["title"], "sub": ctx.folders[it["ref"]]["path"],
+                                 "tone": "work"}
+        elif "doc" in it:
+            key, n = it["doc"], {"title": Path(it["doc"]).name, "sub": str(Path(it["doc"]).parent), "tone": "external"}
+        else:
+            key, n = it["ext"], {"title": it["ext"], "tone": "external"}
+        if key not in seen:
+            seen[key] = f"n{len(seen)}"
+            nodes.append({"id": seen[key], **n, "maxw": 220})
+        return seen[key]
+    for it in f.get("inputs", []):
+        edges.append({"src": node_for(it), "dst": "THIS", "label": it["item"]})
+    nodes.append({"id": "THIS", "code": f["id"], "title": f["title"], "tone": "current", "maxw": 230})
+    for it in f.get("outputs", []):
+        edges.append({"src": "THIS", "dst": node_for(it), "label": it["item"]})
+    return {"title": "Inputs and outputs", "ref": f"catalog.yaml · {f['id']}", "direction": "RIGHT",
+            "subtitle": "What this folder consumes (left) and produces (right). White cards are other folders in the "
+                        "tree; grey cards are documents or parties outside it.",
+            "nodes": nodes, "edges": edges}
 
 
 # ----------------------------------------------------------- SysML views
-def view_bdd(v: dict) -> tuple[str, str]:
-    m = ["classDiagram"]
-    s: list[str] = []
+def view_bdd(v: dict, pkg: str) -> tuple[dict, str]:
+    nodes, edges, s = [], [], []
     stereo = {b["name"]: b.get("stereotype", "part") for b in v["blocks"]}
+    label = {"part": "part def", "item": "item def", "attribute": "attribute def", "enum": "enum def"}
     for b in v["blocks"]:
         st = b.get("stereotype", "part")
-        m.append(f"  class {b['name']} {{")
-        m.append(f"    <<{'enumeration' if st == 'enum' else st}>>")
         if st == "enum":
-            m += [f"    {val}" for val in b["values"]]
+            nodes.append({"id": b["name"], "shape": "class", "title": b["name"], "stereotype": "enum def",
+                          "attrs": list(b["values"]), "tone": "interface"})
             s.append(f"    enum def {b['name']} {{")
             if b.get("doc"):
                 s.append(doc(b["doc"], "        "))
             s += [f"        enum {val};" for val in b["values"]]
             s.append("    }")
-            m.append("  }")
             continue
-        kw = {"part": "part def", "item": "item def", "attribute": "attribute def"}[st]
-        s.append(f"    {kw} {b['name']} {{")
+        s.append(f"    {label[st]} {b['name']} {{")
         if b.get("doc"):
             s.append(doc(b["doc"], "        "))
+        attrs = []
         for a in b.get("attributes", []):
             name, typ = [x.strip() for x in a.split(":")]
-            m.append(f"    +{typ} {name}")
+            attrs.append(f"{name} : {typ}")
             s.append(f"        attribute {name} : {typ};")
         for p in b.get("parts", []):
             mult = p.get("mult", "1")
-            tst = stereo.get(p["type"], p.get("usage", "part"))
+            tst = stereo.get(p["type"], p.get("usage", "item"))
             usage = {"part": "part", "item": "ref item", "attribute": "attribute", "enum": "attribute"}[tst]
             s.append(f"        {usage} {p['name']} : {p['type']}[{mult}];")
-        m.append("  }")
-        for p in b.get("parts", []):
-            arrow = "o--" if stereo.get(p["type"], "part") == "item" and b.get("stereotype") != "part" else "*--"
-            m.append(f'  {b["name"]} {arrow} "{p.get("mult", "1")}" {p["type"]} : {p["name"]}')
+            if p["type"] not in stereo and not any(n["id"] == p["type"] for n in nodes):
+                nodes.append({"id": p["type"], "shape": "class", "title": p["type"], "tone": "external",
+                              "stereotype": "item def · imported"})
+            edges.append({"src": b["name"], "dst": p["type"], "label": f"{p['name']} [{mult}]", "arrow": "diamond"})
         s.append("    }")
-    for parent, child in v.get("specializations", []):
-        m.append(f"  {parent} <|-- {child}")
-    # specializations in SysML: rewrite the child header
+        nodes.append({"id": b["name"], "shape": "class", "title": b["name"], "stereotype": label[st], "attrs": attrs,
+                      "tone": "system"})
+    for b in v["blocks"]:
+        for a in b.get("attributes", []):
+            name, typ = [x.strip() for x in a.split(":")]
+            if typ in stereo and typ != b["name"]:
+                edges.append({"src": b["name"], "dst": typ, "label": name, "tone": "interface", "dash": True})
     text = "\n".join(s)
     for parent, child in v.get("specializations", []):
+        edges.append({"src": child, "dst": parent, "arrow": "triangle"})
         text = re.sub(rf"(def {child}) \{{", rf"\1 :> {parent} {{", text)
-    return "\n".join(m), text
+    # keep definitions in catalog order with imported types after their owners
+    order = {b["name"]: i for i, b in enumerate(v["blocks"])}
+    nodes.sort(key=lambda n: order.get(n["id"], 999))
+    frag = {"frame": {"kind": "bdd", "type": "package", "name": pkg}, "direction": "RIGHT", "nodes": nodes,
+            "edges": edges, "legend": [edge_leg("Composition / reference (diamond at owner)"),
+                                       edge_leg("Attribute typed by", True, "interface"),
+                                       ("#EEF2FF", "#4F46E5", "Defined in this view"),
+                                       ("#F5F3FF", "#7C3AED", "Enumeration"),
+                                       ("#F1F5F9", "#64748B", "Imported definition")]}
+    return frag, text
 
 
-def view_req(ctx: Ctx, v: dict) -> tuple[str, str]:
-    m = ["requirementDiagram"]
-    s: list[str] = []
+RISK_TONE = {"High": "red", "Medium": "amber", "Low": "ok"}
+
+
+def view_req(ctx: Ctx, v: dict, pkg: str) -> tuple[dict, str]:
+    nodes, edges, s = [], [], []
     for r in v["requirements"]:
         rid = mid(r["id"])
-        m += [f"  requirement {rid} {{", f"    id: {q(r['id'])}", f"    text: {q(r['text'])}",
-              f"    risk: {r.get('risk', 'Medium')}", f"    verifymethod: {r.get('verify', 'Test')}", "  }"]
+        nodes.append({"id": rid, "shape": "requirement", "title": r["name"], "code": r["id"], "text": r["text"],
+                      "stereotype": f"requirement · {r['from']}" if r.get("from") else "requirement def",
+                      "tone": "external" if r.get("from") else "system",
+                      "pills": [(r.get("risk", "Medium"), RISK_TONE.get(r.get("risk", "Medium"), "amber")),
+                                (r.get("verify", "Test"), "system")]})
         if r.get("from"):
-            # Reuse the definition owned by another folder's package instead of redefining it.
             s.append(f"    requirement {rid.lower()} : {r['from']}::{r['name']};")
             continue
-        s.append(f"    requirement def <'{r['id']}'> {r['name']} {{")
-        s.append(doc(r["text"], "        "))
-        s.append("    }")
-        s.append(f"    requirement {rid.lower()} : {r['name']};")
-    elems = {}
+        s += [f"    requirement def <'{r['id']}'> {r['name']} {{", doc(r["text"], "        "), "    }",
+              f"    requirement {rid.lower()} : {r['name']};"]
+    seen = set()
     for el, rid in v.get("satisfied_by", []):
-        elems[el] = "part"
+        if el not in seen:
+            seen.add(el)
+            nodes.append({**ctx.card(el, nid="el_" + mid(el)), "minw": 150})
+        edges.append({"src": "el_" + mid(el), "dst": mid(rid), "label": "«satisfy»", "dash": True})
+        path = ctx.nodes.get(el, {}).get("usage", el)
+        s.append(f"    satisfy {mid(rid).lower()} by {path};")
     for el, rid in v.get("verified_by", []):
-        elems[el] = "verification"
-    for el, typ in elems.items():
-        m += [f"  element {mid(el)} {{", f"    type: {q(typ)}", "  }"]
-    for el, rid in v.get("satisfied_by", []):
-        m.append(f"  {mid(el)} - satisfies -> {mid(rid)}")
-        path = ctx.sysml_path(el)
-        target = path if path else el
-        s.append(f"    satisfy {mid(rid).lower()} by {target};")
-    for el, rid in v.get("verified_by", []):
-        m.append(f"  {mid(el)} - verifies -> {mid(rid)}")
-        s.append(f"    verification def <'{el}'> {sysml_name(el)} {{")
-        s.append(f"        objective {{ verify {mid(rid).lower()}; }}")
-        s.append("    }")
+        if el not in seen:
+            seen.add(el)
+            nodes.append({"id": "el_" + mid(el), "code": el, "title": "Verification case", "tone": "ok"})
+        edges.append({"src": "el_" + mid(el), "dst": mid(rid), "label": "«verify»", "dash": True, "tone": "ok"})
+        s += [f"    verification def <'{el}'> {sysml_name(el)} {{", f"        objective {{ verify {mid(rid).lower()}; }}",
+              "    }"]
     for a, b in v.get("derives", []):
-        m.append(f"  {mid(b)} - derives -> {mid(a)}")
+        edges.append({"src": mid(b), "dst": mid(a), "label": "«deriveReqt»", "dash": True, "tone": "interface"})
         s.append(f"    #derivation connection {{ end #original ::> {mid(a).lower()}; end #derive ::> {mid(b).lower()}; }}")
-    return "\n".join(m), "\n".join(s)
+    legend = [edge_leg("«satisfy»", True)]
+    if v.get("verified_by"):
+        legend.append(edge_leg("«verify»", True, "ok"))
+    if v.get("derives"):
+        legend.append(edge_leg("«deriveReqt»", True, "interface"))
+    legend += [("#FEF2F2", "#D2553F", "High risk"), ("#FFFBEB", "#D97706", "Medium risk")]
+    if any(r.get("from") for r in v["requirements"]):
+        legend.append(("#F1F5F9", "#64748B", "Defined in another package"))
+    frag = {"frame": {"kind": "req", "type": "package", "name": pkg}, "direction": "RIGHT", "nodes": nodes,
+            "edges": edges, "legend": legend}
+    return frag, "\n".join(s)
 
 
-def view_act(v: dict) -> tuple[str, str]:
-    m = ["flowchart TD", "  start((start))"]
+def view_act(v: dict) -> tuple[dict, str]:
+    nodes = [{"id": "start", "shape": "initial"}]
+    edges = []
     s = [f"    action def {v['name']} {{"]
     if v.get("doc"):
         s.append(doc(v["doc"], "        "))
+    for st in v["steps"]:
+        nodes.append({"id": st["name"], "shape": "action", "title": st["label"],
+                      "tone": "safety" if st.get("safety") else "system"})
+        s.append(f"        action {st['name']} {{ {doc(st['label'])} }}")
+    nodes.append({"id": "done", "shape": "final"})
+    s.append("        first start;")
     prev = "start"
     for st in v["steps"]:
-        n = st["name"]
-        m.append(f"  {n}[{q(st['label'])}]")
-        s.append(f"        action {n} {{ {doc(st['label'], '').strip()} }}")
-    s.append("        first start;")
-    for st in v["steps"]:
-        m.append(f"  {prev} --> {st['name']}")
+        edges.append({"src": prev, "dst": st["name"]})
         s.append(f"        first {prev} then {st['name']};" if prev != "start" else f"        then {st['name']};")
         prev = st["name"]
-    m.append(f"  {prev} --> done((done))")
+    edges.append({"src": prev, "dst": "done"})
     s.append(f"        first {prev} then done;")
     for a, b, lab in v.get("loops", []):
-        m.append(f"  {a} -. {q(lab)} .-> {b}")
+        edges.append({"src": a, "dst": b, "label": lab, "dash": True})
         s.append(f"        // iteration: {a} -> {b} when {lab} (informal; merge node omitted)")
-    for st in v["steps"]:
-        if st.get("safety"):
-            m.append(f"  class {st['name']} safety")
-    m += ["  " + c for c in CLASSDEFS]
     s.append("    }")
-    return "\n".join(m), "\n".join(s)
+    legend = [edge_leg("Control flow"), edge_leg("Iteration (back to an earlier step)", True)]
+    if any(st.get("safety") for st in v["steps"]):
+        legend.append(("#FFF7ED", "#C2410C", "Safety-critical step"))
+    frag = {"frame": {"kind": "act", "type": "action def", "name": v["name"]},
+            "direction": "DOWN" if len(v["steps"]) > 5 else "RIGHT", "nodes": nodes, "edges": edges, "legend": legend}
+    return frag, "\n".join(s)
 
 
-def view_stm(v: dict) -> tuple[str, str]:
-    m = ["stateDiagram-v2", f"  [*] --> {v['initial']}"]
+def stm_frag(name: str, states: list[dict], initial: str, transitions: list, final: list[str]) -> dict:
+    nodes = [{"id": "init", "shape": "initial"}]
+    for st in states:
+        nodes.append({"id": st["name"], "shape": "state", "title": st.get("title", st["name"]), "sub": st.get("doc", ""),
+                      "code": st.get("id", ""), "tone": st.get("tone", "system")})
+    edges = [{"src": "init", "dst": initial}]
+    for t in transitions:
+        edges.append({"src": t[0], "dst": t[1], "label": t[2] if len(t) > 2 else ""})
+    if final:
+        nodes.append({"id": "fin", "shape": "final"})
+        edges += [{"src": f_, "dst": "fin"} for f_ in final]
+    return {"frame": {"kind": "stm", "type": "state def", "name": name},
+            "direction": "DOWN" if len(states) > 6 else "RIGHT", "nodes": nodes,
+            "edges": edges, "legend": [edge_leg("Transition (trigger)"), ("#0F172A", "#0F172A", "Initial / final")]}
+
+
+ACRONYMS = {"uav": "UAV", "px4": "PX4", "hmi": "HMI"}
+
+
+def state_title(name: str) -> str:
+    ws = sysml_parse.words(name[:1].upper() + name[1:]).split()
+    ws = [ACRONYMS.get(w.lower(), w) for w in ws]
+    return " ".join([ws[0][:1].upper() + ws[0][1:], *ws[1:]]) if ws else name
+
+
+def view_stm(v: dict) -> tuple[dict, str]:
+    if v.get("source"):
+        sm = sysml_parse.state_machine(ROOT / v["source"], v["state_def"])
+        pkg = v["source_package"]
+        states = [{"name": st["name"], "id": st["id"], "doc": st["doc"],
+                   "title": state_title(st["name"])} for st in sm["states"]]
+        frag = stm_frag(f"{pkg}::{v['state_def']}", states, sm["initial"], sm["transitions"], [])
+        s = [f"    // Analysed modes are owned by {v['source']} (single source of truth); not redefined here.",
+             f"    state {v['usage']} : {pkg}::{v['state_def']} {{", doc(v.get("doc", sm["doc"]), "        "), "    }"]
+        return frag, "\n".join(s)
     triggers = sorted({t[2] for t in v["transitions"] if len(t) > 2 and t[2]})
     s = [f"    attribute def {sysml_name(t)};" for t in triggers]
     s.append(f"    state def {v['name']} {{")
@@ -328,27 +387,16 @@ def view_stm(v: dict) -> tuple[str, str]:
         s.append(doc(v["doc"], "        "))
     s.append(f"        entry; then {v['initial']};")
     for st in v["states"]:
-        m.append(f"  {st['name']} : {st['name']}")
-        if st.get("doc"):
-            m[-1] = f"  {st['name']} : {st['name']} - {st['doc']}"
-            s.append(f"        state {st['name']} {{ {doc(st['doc'], '').strip()} }}")
-        else:
-            s.append(f"        state {st['name']};")
+        s.append(f"        state {st['name']} {{ {doc(st['doc'])} }}" if st.get("doc") else f"        state {st['name']};")
     for i, t in enumerate(v["transitions"]):
-        a, b = t[0], t[1]
-        trig = t[2] if len(t) > 2 else ""
-        m.append(f"  {a} --> {b}" + (f" : {trig}" if trig else ""))
-        acc = f" accept {sysml_name(trig)}" if trig else ""
-        s.append(f"        transition t{i + 1} first {a}{acc} then {b};")
-    for fin in v.get("final", []):
-        m.append(f"  {fin} --> [*]")
+        acc = f" accept {sysml_name(t[2])}" if len(t) > 2 and t[2] else ""
+        s.append(f"        transition t{i + 1} first {t[0]}{acc} then {t[1]};")
     s.append("    }")
-    return "\n".join(m), "\n".join(s)
+    return stm_frag(v["name"], v["states"], v["initial"], v["transitions"], v.get("final", [])), "\n".join(s)
 
 
-def view_ibd(ctx: Ctx, v: dict) -> tuple[str, str]:
-    m = ["flowchart LR", f"  subgraph CTX[{q(v['name'] + ' : context')}]"]
-    s = []
+def view_ibd(v: dict) -> tuple[dict, str]:
+    nodes, edges, s = [], [], []
     for p in v["parts"]:
         if p.get("local"):
             s.append(f"    part def {p['type']};")
@@ -356,101 +404,96 @@ def view_ibd(ctx: Ctx, v: dict) -> tuple[str, str]:
     if v.get("doc"):
         s.append(doc(v["doc"], "        "))
     for p in v["parts"]:
-        m.append(f"    {p['name']}[{q(p['name'] + ' : ' + p['type'])}]")
+        nodes.append({"id": p["name"], "title": f"{p['name']} : {p['type']}",
+                      "tone": "external" if p.get("local") else p.get("kind", "system")})
         s.append(f"        part {p['name']} : {p['type']};")
-    m.append("  end")
     for i, (a, b, lab) in enumerate(v["connections"]):
-        m.append(f"  {a} <-->|{q(lab)}| {b}")
-        s.append(f"        connection c{i + 1} connect {a} to {b} {{ {doc(lab, '').strip()} }}")
-    for p in v["parts"]:
-        m.append(f"  class {p['name']} {'external' if p.get('local') else p.get('kind', 'system')}")
-    m.append("  style CTX fill:none,stroke:#55758f,stroke-dasharray: 6 4")
-    m += ["  " + c for c in CLASSDEFS]
+        edges.append({"src": a, "dst": b, "label": lab, "arrow": "none"})
+        s.append(f"        connection c{i + 1} connect {a} to {b} {{ {doc(lab)} }}")
     s.append("    }")
-    return "\n".join(m), "\n".join(s)
+    frag = {"frame": {"kind": "ibd", "type": "part def", "name": v["name"]}, "direction": "RIGHT", "nodes": nodes,
+            "edges": edges, "legend": [edge_leg("Connector"), ("#F1F5F9", "#64748B", "External part (declared locally)")]}
+    return frag, "\n".join(s)
 
 
-def system_bdd(ctx: Ctx) -> str:
-    m = ["classDiagram"]
+def system_bdd(ctx: Ctx) -> dict:
+    nodes, edges = [], []
     for k, v in ctx.nodes.items():
         if v.get("kind") == "external":
             continue
-        m.append(f"  class {mid(k)}[\"{v['sysml']}\"] {{")
-        m.append(f"    <<part def>>")
-        m.append(f"    {k}")
-        m.append("  }")
-    for k, v in ctx.nodes.items():
+        nodes.append({"id": mid(k), "shape": "class", "title": v["sysml"], "stereotype": "part def",
+                      "attrs": [f"short name = {k}"], "tone": v.get("kind", "system")})
         if v.get("parent"):
-            role = v["usage"].split(".")[-1]
-            m.append(f'  {mid(v["parent"])} *-- "1" {mid(k)} : {role}')
-    return "\n".join(m)
+            edges.append({"src": mid(v["parent"]), "dst": mid(k), "label": v["usage"].split(".")[-1], "arrow": "diamond"})
+    return {"title": "SysML block definition — SUS-I1 system breakdown", "ref": "SusanooSystem.sysml",
+            "subtitle": "Part definitions and composition in the canonical structure model; every folder view imports it.",
+            "frame": {"kind": "bdd", "type": "package", "name": "SusanooSystem"}, "direction": "RIGHT",
+            "nodes": nodes, "edges": edges,
+            "legend": [edge_leg("Composition (diamond at owner, label = usage name)"),
+                       ("#EEF2FF", "#4F46E5", "System"), ("#F0FDFA", "#0F766E", "Software-intensive"),
+                       ("#FFF7ED", "#C2410C", "Safety function"), ("#F5F3FF", "#7C3AED", "Interface")]}
 
 
-def build_views(ctx: Ctx, f: dict) -> tuple[list[tuple[str, str]], str | None]:
-    model = f.get("model")
-    if not model:
-        return [], None
-    mermaids: list[tuple[str, str]] = []
-    bodies: list[str] = []
+VIEW_TITLES = {"bdd": "SysML block definition", "req": "SysML requirements", "act": "SysML activity",
+               "stm": "SysML state machine", "ibd": "SysML internal block"}
+
+
+def build_views(ctx: Ctx, f: dict) -> tuple[list[dict], str | None]:
+    """(figure specs for the SysML section, generated .sysml text or None)."""
+    if f.get("canonical_model"):
+        return [system_bdd(ctx)], None
+    model = f["model"]
+    pkg = model["package"]
+    specs, bodies, extra = [], [], set()
     for v in model["views"]:
         k = v["kind"]
         if k == "bdd":
-            mm, ss = view_bdd(v)
+            frag, txt = view_bdd(v, pkg)
         elif k == "req":
-            mm, ss = view_req(ctx, v)
+            frag, txt = view_req(ctx, v, pkg)
+            extra |= {r["from"] for r in v["requirements"] if r.get("from")}
+            if v.get("derives"):
+                extra.add("RequirementDerivation")
         elif k == "act":
-            mm, ss = view_act(v)
+            frag, txt = view_act(v)
         elif k == "stm":
-            mm, ss = view_stm(v)
+            frag, txt = view_stm(v)
+            if v.get("source"):
+                extra.add(v["source_package"])
         elif k == "ibd":
-            mm, ss = view_ibd(ctx, v)
+            frag, txt = view_ibd(v)
         else:
             raise ValueError(f"{f['id']}: unknown view kind {k}")
-        title = {"bdd": "Block definition (bdd)", "req": "Requirements (req)", "act": "Activity (act)",
-                 "stm": "State machine (stm)", "ibd": "Internal block / context (ibd)"}[k]
-        mermaids.append((f"{title} — {v.get('title', v.get('name', model['package']))}", mm))
-        bodies.append(ss)
-    pkg = model["package"]
-    extra = sorted({r["from"] for v in model["views"] for r in v.get("requirements", []) if r.get("from")})
-    if any(v.get("derives") for v in model["views"]):
-        extra.insert(0, "RequirementDerivation")
-    header = [
-        f"// {pkg} — generated by tools/gen_safety_docs.py from safety/mil-std-882e/catalog.yaml.",
-        "// Do not edit by hand: change the catalog and regenerate.",
-        "// Status: planning view only; not evidence of completed analysis or verification.",
-        "",
-        f"package {pkg} {{",
-        "    private import ScalarValues::*;",
-        "    private import SusanooSystem::*;",
-        "    private import SusanooSafety::*;",
-        *[f"    private import {e}::*;" for e in extra],
-        "",
-    ]
-    text = "\n".join(header) + "\n\n".join(bodies) + "\n}\n"
-    return mermaids, text
+        name = v.get("title", v.get("name", pkg))
+        specs.append({**frag, "title": f"{VIEW_TITLES[k]} — {name}", "ref": f"{pkg}.sysml",
+                      "subtitle": v.get("caption", f"{VIEW_TITLES[k].replace('SysML ', '').capitalize()} view of "
+                                                   f"package {pkg}. The .sysml file is the model of record.")})
+        bodies.append(txt)
+    header = [f"// {pkg} — generated by {GEN} from safety/mil-std-882e/catalog.yaml.",
+              "// Do not edit by hand: change the catalog and regenerate.",
+              "// Status: planning view only; not evidence of completed analysis or verification.", "",
+              f"package {pkg} {{", "    private import ScalarValues::*;", "    private import SusanooSystem::*;",
+              "    private import SusanooSafety::*;", *[f"    private import {e}::*;" for e in sorted(extra)], ""]
+    return specs, "\n".join(header) + "\n\n".join(bodies) + "\n}\n"
 
 
 # ------------------------------------------------------------- README
-def mermaid(block: str) -> str:
-    return "```mermaid\n" + block + "\n```\n"
-
-
 def link_for(ctx: Ctx, here: Path, it: dict) -> str:
     if "ref" in it:
-        t = ctx.folders[it["ref"]]
-        return f"[{t['title']}]({rel(ctx.path(it['ref']) / 'README.md', here)})"
+        return f"[{ctx.folders[it['ref']]['title']}]({rel(ctx.path(it['ref']) / 'README.md', here)})"
     if "doc" in it:
         return f"[`{it['doc']}`]({rel(ROOT / it['doc'], here)})"
     return it["ext"]
 
 
-def render(ctx: Ctx, f: dict, sysml_text: str | None, views: list) -> str:
+def img(fig: dict) -> str:
+    return f"![Figure {fig['number']} · {fig['title']}](figures/{fig['_file']})\n"
+
+
+def render(ctx: Ctx, f: dict, figs: dict[str, list[dict]], sysml_text: str | None) -> str:
     here = ctx.path(f["id"])
     cat = ctx.cat
-    out: list[str] = []
-    out.append(f"# {f['title']}\n")
-    out.append(f"> **Status:** {f.get('status', cat['default_status'])}\n>\n> {cat['disclaimer']}\n")
-
+    out = [f"# {f['title']}\n", f"> **Status:** {f.get('status', cat['default_status'])}\n>\n> {cat['disclaimer']}\n"]
     el = ctx.elements.get(f.get("element"))
     rows = []
     if el:
@@ -464,75 +507,56 @@ def render(ctx: Ctx, f: dict, sysml_text: str | None, views: list) -> str:
             rows.append((label, f[key]))
     if f.get("procedure"):
         rows.append(("Procedure", f"[`{f['procedure']}`]({rel(ROOT / f['procedure'], here)})"))
-    parent = f.get("parent")
-    if parent:
-        rows.append(("Parent folder", f"[{ctx.folders[parent]['title']}]({rel(ctx.path(parent) / 'README.md', here)})"))
-    out.append("| Field | Value |\n|---|---|")
-    out += [f"| {a} | {b} |" for a, b in rows]
-    out.append("")
+    if f.get("parent"):
+        p = f["parent"]
+        rows.append(("Parent folder", f"[{ctx.folders[p]['title']}]({rel(ctx.path(p) / 'README.md', here)})"))
+    out += ["| Field | Value |", "|---|---|", *[f"| {a} | {b} |" for a, b in rows], ""]
     out.append(f"## Purpose\n\n{f['purpose'].strip()}\n")
 
-    out.append("## Position in the MIL-STD-882E flow\n")
-    out.append("Highlighted node(s) show where this folder sits in the eight-element iterative flow. "
-               "Dotted links are feedback and hazard-tracking-system interactions.\n")
-    out.append(mermaid(flow_position(ctx, f)))
-
-    out.append("## Block diagram\n")
-    out.append("System elements of SUS-I1 in scope for this folder are coloured "
-               "(blue = system, amber = safety function, purple = interface); greyed blocks are out of scope. "
-               f"Source of truth: [`SusanooSystem.sysml`]({rel(ctx.base / '00-system-definition/sysml/SusanooSystem.sysml', here)}).\n")
-    out.append(mermaid(block_diagram(ctx, f)))
+    out += ["## Position in the MIL-STD-882E flow\n", img(figs["rail"][0])]
+    out += ["## Block diagram\n", img(figs["block"][0]),
+            f"Source of truth: [`SusanooSystem.sysml`]({rel(ctx.base / '00-system-definition/sysml/SusanooSystem.sysml', here)}).\n"]
 
     b = f["boundary"]
-    out.append("## Boundary diagram\n")
-    out.append(f"Dashed frame = **{b['name']}** boundary. Everything outside it is an external entity or another folder's scope.\n")
-    out.append(mermaid(boundary_diagram(ctx, f)))
-    out.append("| From | To | Crossing / interaction |\n|---|---|---|")
-    blabel = lambda k: f"_{b['name']} (boundary)_" if k == "@boundary" else ctx.label(k)
-    out += [f"| {blabel(a)} | {blabel(c)} | {lab} |" for a, c, lab in b["flows"]]
+    out += ["## Boundary diagram\n", img(figs["boundary"][0])]
+    out.append("| # | From | To | Crossing / interaction |\n|---|---|---|---|")
+    blabel = lambda k: f"_{b['name']} (boundary)_" if k == "@boundary" else ctx.label(k)  # noqa: E731
+    out += [f"| {i + 1} | {blabel(a)} | {blabel(c)} | {lab} |" for i, (a, c, lab) in enumerate(b["flows"])]
     out.append("")
     if b.get("excluded"):
         out.append("**Explicitly excluded:** " + "; ".join(b["excluded"]) + "\n")
 
     out.append("## SysML model\n")
     if f.get("canonical_model"):
-        files = f["canonical_model"]
         out.append("Canonical SysML v2 textual models (model of record for every folder in this tree): "
-                   + ", ".join(f"[`{Path(x).name}`]({rel(ROOT / x, here)})" for x in files) + ".\n")
-        out.append("### Block definition (bdd) — SUS-I1 system breakdown\n")
-        out.append(mermaid(system_bdd(ctx)))
+                   + ", ".join(f"[`{Path(x).name}`]({rel(ROOT / x, here)})" for x in f["canonical_model"]) + ".\n")
+        out.append(img(figs["sysml"][0]))
     else:
         fname = f"{f['model']['package']}.sysml"
-        out.append(f"SysML v2 textual view: [`{fname}`]({fname}) (generated from the catalog; imports "
+        out.append(f"SysML v2 textual view: [`{fname}`]({fname}), generated from the catalog. It imports "
                    f"[`SusanooSystem`]({rel(ctx.base / '00-system-definition/sysml/SusanooSystem.sysml', here)}) and "
-                   f"[`SusanooSafety`]({rel(ctx.base / '00-system-definition/sysml/SusanooSafety.sysml', here)})). "
-                   "The Mermaid rendering below is a reading aid; the `.sysml` file is the model of record.\n")
-        for title, mm in views:
-            out.append(f"### {title}\n")
-            out.append(mermaid(mm))
+                   f"[`SusanooSafety`]({rel(ctx.base / '00-system-definition/sysml/SusanooSafety.sysml', here)}). "
+                   "The figures are drawn from the same data; the `.sysml` file is the model of record.\n")
+        for fig in figs["sysml"]:
+            out.append(img(fig))
         out.append("<details><summary>SysML v2 source</summary>\n\n```sysml\n" + sysml_text.rstrip() + "\n```\n\n</details>\n")
 
-    out.append("## Inputs and outputs\n")
-    out.append(mermaid(io_diagram(ctx, f)))
+    out += ["## Inputs and outputs\n", img(figs["io"][0])]
     if f.get("inputs"):
-        out.append("| Input | Source |\n|---|---|")
-        out += [f"| {it['item']} | {link_for(ctx, here, it)} |" for it in f["inputs"]]
-        out.append("")
+        out += ["| Input | Source |", "|---|---|", *[f"| {it['item']} | {link_for(ctx, here, it)} |" for it in f["inputs"]], ""]
     if f.get("outputs"):
-        out.append("| Output | Destination |\n|---|---|")
-        out += [f"| {it['item']} | {link_for(ctx, here, it)} |" for it in f["outputs"]]
-        out.append("")
+        out += ["| Output | Destination |", "|---|---|",
+                *[f"| {it['item']} | {link_for(ctx, here, it)} |" for it in f["outputs"]], ""]
 
     out.append("## Folder contents\n")
     out.append("| Item | Description | State |\n|---|---|---|")
-    kids = [c for c in cat["folders"] if c.get("parent") == f["id"]]
-    for c in kids:
+    for c in [c for c in cat["folders"] if c.get("parent") == f["id"]]:
         out.append(f"| [`{Path(c['path']).name}/`]({rel(ctx.path(c['id']) / 'README.md', here)}) | {c['title']} | folder |")
     for c in f.get("contents", []):
-        p = here / c["name"]
-        state = "present" if p.exists() else "planned"
-        name = f"[`{c['name']}`]({c['name']})" if p.exists() else f"`{c['name']}`"
-        out.append(f"| {name} | {c['desc']} | {state} |")
+        exists = (here / c["name"]).exists()
+        name = f"[`{c['name']}`]({c['name']})" if exists else f"`{c['name']}`"
+        out.append(f"| {name} | {c['desc']} | {'present' if exists else 'planned'} |")
+    out.append(f"| [`figures/`](figures/) | Generated SVG figures (do not edit) | generated |")
     if not f.get("canonical_model"):
         out.append(f"| [`{f['model']['package']}.sysml`]({f['model']['package']}.sysml) | Generated SysML v2 view | generated |")
     out.append("")
@@ -542,6 +566,7 @@ def render(ctx: Ctx, f: dict, sysml_text: str | None, views: list) -> str:
     return "\n".join(out) + "\n"
 
 
+# ------------------------------------------------------------- validation
 def validate(cat: dict) -> list[str]:
     """Structural checks on the catalog (PDaC rule 1: IDs unique, references resolve)."""
     errs: list[str] = []
@@ -553,6 +578,8 @@ def validate(cat: dict) -> list[str]:
     for k, v in nodes.items():
         if set(v) - {"label", "parent", "kind", "sysml", "usage"}:
             errs.append(f"node {k}: unexpected keys {sorted(set(v))} (unquoted comma?)")
+        if v.get("kind", "system") not in KINDS:
+            errs.append(f"node {k}: unknown kind {v['kind']}")
         if v.get("parent") and v["parent"] not in nodes:
             errs.append(f"node {k}: unknown parent {v['parent']}")
     for a, b, _ in cat["system"]["links"]:
@@ -596,11 +623,17 @@ def validate(cat: dict) -> list[str]:
             for r in v.get("requirements", []):
                 if set(r) - {"id", "name", "text", "risk", "verify", "from"}:
                     errs.append(f"{fid}: malformed requirement {r}")
+            if v.get("source"):
+                try:
+                    sysml_parse.state_machine(ROOT / v["source"], v["state_def"])
+                except Exception as e:  # noqa: BLE001
+                    errs.append(f"{fid}: {e}")
         if not f.get("model") and not f.get("canonical_model"):
             errs.append(f"{fid}: needs a SysML model (model or canonical_model)")
     return errs
 
 
+# ------------------------------------------------------------- main
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true", help="fail if generated files are stale")
@@ -611,20 +644,52 @@ def main() -> int:
         print("Catalog errors:\n  " + "\n  ".join(errs))
         return 2
     ctx = Ctx(cat)
-    stale: list[str] = []
+    footer = (f"Generated by {GEN} from safety/mil-std-882e/catalog.yaml. Planning view: not evidence of completed "
+              "analysis, verification or risk acceptance.")
+
+    plan = []          # (folder, figs dict, sysml text)
+    all_specs = []
     for f in cat["folders"]:
+        sysml_specs, sysml_text = build_views(ctx, f)
+        figs = {"rail": [fig_rail(ctx, f)], "block": [fig_block(ctx, f)], "boundary": [fig_boundary(ctx, f)],
+                "sysml": sysml_specs, "io": [fig_io(ctx, f)]}
+        n = 0
+        for key in ("rail", "block", "boundary", "sysml", "io"):
+            for spec in figs[key]:
+                n += 1
+                spec["number"] = str(n)
+                spec.setdefault("footer", footer)
+                spec["_file"] = f"fig-{n}-{slug(spec['title'].split(' — ')[0])}.svg"
+                all_specs.append(spec)
+        plan.append((f, figs, sysml_text))
+    svgs = diagram.render_all(all_specs)
+    for spec, s in zip(all_specs, svgs):
+        spec["_svg"] = s
+
+    stale: list[str] = []
+    for f, figs, sysml_text in plan:
         here = ctx.path(f["id"])
-        views, sysml_text = build_views(ctx, f)
         files: dict[Path, str] = {}
+        for group in figs.values():
+            for spec in group:
+                files[here / "figures" / spec["_file"]] = spec["_svg"]
         if sysml_text:
             files[here / f"{f['model']['package']}.sysml"] = sysml_text
         readme = here / "README.md"
         tail = DEFAULT_TAIL
-        if readme.exists():
-            cur = readme.read_text()
-            if END_MARKER in cur:
-                tail = cur.split(END_MARKER, 1)[1]
-        files[readme] = render(ctx, f, sysml_text, views) + "\n" + tail.lstrip("\n")
+        if readme.exists() and END_MARKER in readme.read_text():
+            tail = readme.read_text().split(END_MARKER, 1)[1]
+        files[readme] = render(ctx, f, figs, sysml_text) + "\n" + tail.lstrip("\n")
+        # figures no longer produced are stale
+        figdir = here / "figures"
+        if figdir.exists():
+            for old in figdir.glob("*.svg"):
+                if old not in files:
+                    if args.check:
+                        stale.append(str(old.relative_to(ROOT)) + " (orphan)")
+                    else:
+                        old.unlink()
+                        print(f"removed {old.relative_to(ROOT)}")
         for p, content in files.items():
             if p.exists() and p.read_text() == content:
                 continue
@@ -635,7 +700,7 @@ def main() -> int:
                 p.write_text(content)
                 print(f"wrote {p.relative_to(ROOT)}")
     if stale:
-        print("Stale generated files (run python3 tools/gen_safety_docs.py):\n  " + "\n  ".join(stale))
+        print(f"Stale generated files (run python3 {GEN}):\n  " + "\n  ".join(stale))
         return 1
     return 0
 

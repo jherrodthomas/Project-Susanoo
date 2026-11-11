@@ -2,9 +2,9 @@
 """Enforce framework/documentation-standard.md on folder READMEs.
 
 For every enforced root, each folder (except listed data folders) must have a
-README.md containing the required sections, each diagram section must carry at
-least one Mermaid diagram, and the SysML section must link an existing .sysml
-file. For the MIL-STD-882E tree the generated content must also be current.
+README.md containing the required sections; each diagram section must embed at
+least one generated SVG figure that exists; the SysML section must link an
+existing .sysml file; and every generator must report its output as current.
 
 Exit status 0 = compliant, 1 = violations found.
 """
@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Sections every folder README must have; True = must contain a Mermaid diagram.
+# Sections every folder README must have; True = must embed an SVG figure.
 BASE_SECTIONS = {
     "Purpose": False,
     "Block diagram": True,
@@ -32,16 +32,16 @@ ENFORCED = {
     "safety/mil-std-882e": {
         "extra": {"Position in the MIL-STD-882E flow": True},
         # Data folders that hold records, not documentation.
-        "skip_dirs": {"sysml", "hazards", "reports", "reviews", "test-safety-releases"},
+        "skip_dirs": {"sysml", "hazards", "reports", "reviews", "test-safety-releases", "figures"},
         "generator": ["tools/gen_safety_docs.py", "--check"],
     },
-    # Hand-authored roots: base sections only, no generator.
-    "concept": {"skip_dirs": set()},
-    "integrations/px4": {"skip_dirs": set()},
+    # Hand-authored READMEs; figures come from <folder>/figures.yaml.
+    "concept": {"skip_dirs": {"figures"}, "generator": ["tools/figures/build_figures.py", "--check"]},
+    "integrations/px4": {"skip_dirs": {"figures"}, "generator": ["tools/figures/build_figures.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)
-MERMAID = re.compile(r"```mermaid\n.+?```", re.S)
+FIGURE = re.compile(r"!\[[^\]]*\]\(([^)]+\.svg)\)")
 SYSML_LINK = re.compile(r"\]\(([^)]+\.sysml)\)")
 
 
@@ -62,8 +62,15 @@ def check_readme(readme: Path, required: dict[str, bool]) -> list[str]:
     for name, needs_diagram in required.items():
         if name not in secs:
             errs.append(f"{rel}: missing section '## {name}'")
-        elif needs_diagram and not MERMAID.search(secs[name]):
-            errs.append(f"{rel}: section '## {name}' has no Mermaid diagram")
+        elif needs_diagram:
+            figs = FIGURE.findall(secs[name])
+            if not figs:
+                errs.append(f"{rel}: section '## {name}' embeds no SVG figure")
+            for fig in figs:
+                if not (readme.parent / fig).exists():
+                    errs.append(f"{rel}: figure '{fig}' in '## {name}' does not exist")
+    if "```mermaid" in text:
+        errs.append(f"{rel}: uses Mermaid; use generated SVG figures (framework/documentation-standard.md)")
     if "SysML model" in secs:
         links = SYSML_LINK.findall(secs["SysML model"])
         if not links:
@@ -77,6 +84,7 @@ def check_readme(readme: Path, required: dict[str, bool]) -> list[str]:
 def main() -> int:
     errs: list[str] = []
     checked = 0
+    ran: set[tuple[str, ...]] = set()
     for root_rel, prof in ENFORCED.items():
         required = dict(BASE_SECTIONS, **prof.get("extra", {}))
         base = ROOT / root_rel
@@ -89,7 +97,8 @@ def main() -> int:
                 continue
             checked += 1
             errs += check_readme(readme, required)
-        if prof.get("generator"):
+        if prof.get("generator") and tuple(prof["generator"]) not in ran:
+            ran.add(tuple(prof["generator"]))
             r = subprocess.run([sys.executable, *prof["generator"]], cwd=ROOT, capture_output=True, text=True)
             if r.returncode != 0:
                 errs.append(f"{root_rel}: generated docs are stale or catalog invalid:\n{r.stdout}{r.stderr}")

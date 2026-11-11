@@ -11,7 +11,7 @@ package RiskReduction {
         attribute allocatedTo : String;
         attribute designRef : String;
         attribute status : String;
-        part mitigation : Mitigation[1];
-        part requirement : SafetyRequirement[1..*];
+        ref item mitigation : Mitigation[1];
+        ref item requirement : SafetyRequirement[1..*];
     }
 }

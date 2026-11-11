@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  readme-diagrams:
+  readme-figures:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,8 +21,16 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
-        run: pip install pyyaml==6.0.2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: tools/figures/package-lock.json
 
-      - name: Check folder READMEs, diagrams, SysML links and generated content
+      - name: Install dependencies
+        run: |
+          pip install pyyaml==6.0.2
+          npm ci --prefix tools/figures
+
+      - name: Check READMEs, regenerate every figure and SysML view, and diff
         run: python3 tools/check_readme_diagrams.py

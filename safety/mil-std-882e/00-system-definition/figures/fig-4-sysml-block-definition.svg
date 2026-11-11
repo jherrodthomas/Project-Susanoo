@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="935.4" height="1807" viewBox="0 0 935.4 1807" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 4 · SysML block definition — SUS-I1 system breakdown</title>
+<desc>Part definitions and composition in the canonical structure model; every folder view imports it.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="935.4" height="1807" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 4 · SysML block definition — SUS-I1 system breakdown</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Part definitions and composition in the canonical structure model; every folder view imports it.</text>
+<text x="895.4" y="44" font-size="11" fill="#475569" text-anchor="end">SusanooSystem.sysml</text>
+<line x1="40" y1="85" x2="895.4" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="109" width="855.4" height="1617" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<path d="M40 109 L242.6 109 L242.6 123 L232.6 133 L40 133 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="126" font-size="11.5" fill="#0F172A" font-weight="700">bdd [package] SusanooSystem</text>
+<g transform="translate(56 149)">
+<path d="M156 971 L171 971 Q178 971 178 964 L178 464 Q178 457 185 457 L314.8 457" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M464.8 427 L480.3 427 Q487.3 427 487.3 420 L487.3 53 Q487.3 46 494.3 46 L638.2 46" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M464.8 437 L492.3 437 Q499.3 437 499.3 430 L499.3 158 Q499.3 151 506.3 151 L638.2 151" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M464.8 447 L504.3 447 Q511.3 447 511.3 440 L511.3 263 Q511.3 256 518.3 256 L638.2 256" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M464.8 457 L516.3 457 Q523.3 457 523.3 450 L523.3 368 Q523.3 361 530.3 361 L638.2 361" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M464.8 466 L638.2 466" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M464.8 476 L492.3 476 Q499.3 476 499.3 483 L499.3 564 Q499.3 571 506.3 571 L638.2 571" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M464.8 486 L480.3 486 Q487.3 486 487.3 493 L487.3 669 Q487.3 676 494.3 676 L638.2 676" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M156 991 L314.6 991" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M464.6 964 L480.3 964 Q487.3 964 487.3 957 L487.3 788 Q487.3 781 494.3 781 L638.2 781" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M464.6 977 L492.3 977 Q499.3 977 499.3 970 L499.3 893 Q499.3 886 506.3 886 L638.2 886" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M464.6 991 L638.2 991" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M464.6 1004 L492.3 1004 Q499.3 1004 499.3 1011 L499.3 1089 Q499.3 1096 506.3 1096 L638.2 1096" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M464.6 1017 L480.3 1017 Q487.3 1017 487.3 1024 L487.3 1194 Q487.3 1201 494.3 1201 L638.2 1201" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M156 1010 L171 1010 Q178 1010 178 1017 L178 1319 Q178 1326 185 1326 L311.3 1326" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M465.3 1306 L638.2 1306" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M465.3 1326 L492.3 1326 Q499.3 1326 499.3 1333 L499.3 1404 Q499.3 1411 506.3 1411 L638.2 1411" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M465.3 1345 L480.3 1345 Q487.3 1345 487.3 1352 L487.3 1509 Q487.3 1516 494.3 1516 L638.2 1516" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<rect x="6" y="951" width="150" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="6" y="951" width="150" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="6" y1="997" x2="156" y2="997" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="81" y="968" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="81" y="985" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">IntegratedSystem</text>
+<text x="18" y="1015" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-I1</text>
+<rect x="314.8" y="417" width="150" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="314.8" y="417" width="150" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="314.8" y1="463" x2="464.8" y2="463" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="389.8" y="434" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="389.8" y="451" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">PilotedWalker</text>
+<text x="326.8" y="481" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-M1</text>
+<rect x="638.2" y="6" width="172.9" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="638.2" y="6" width="172.9" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="52" x2="811.1" y2="52" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="724.6" y="23" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="724.6" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">WalkerStructure</text>
+<text x="650.2" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-M1-WLK</text>
+<rect x="638.2" y="111" width="172.9" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="638.2" y="111" width="172.9" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="157" x2="811.1" y2="157" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="724.6" y="128" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="724.6" y="145" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">Manipulators</text>
+<text x="650.2" y="175" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-M1-MAN</text>
+<rect x="638.2" y="216" width="172.9" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="638.2" y="216" width="172.9" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="262" x2="811.1" y2="262" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="724.6" y="233" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="724.6" y="250" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">PilotStation</text>
+<text x="650.2" y="280" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-M1-PIL</text>
+<rect x="638.2" y="321" width="172.9" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="638.2" y="321" width="172.9" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="367" x2="811.1" y2="367" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="724.6" y="338" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="724.6" y="355" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">PowerSystem</text>
+<text x="650.2" y="385" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-M1-PWR</text>
+<rect x="638.2" y="426" width="172.9" height="79" rx="4" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="638.2" y="426" width="172.9" height="46" rx="4" fill="#F0FDFA" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="472" x2="811.1" y2="472" stroke="#0F766E" stroke-width="1.1"/>
+<text x="724.6" y="443" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="724.6" y="460" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">MotionControl</text>
+<text x="650.2" y="490" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-M1-CTL</text>
+<rect x="638.2" y="531" width="172.9" height="79" rx="4" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="638.2" y="531" width="172.9" height="46" rx="4" fill="#FFF7ED" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="577" x2="811.1" y2="577" stroke="#C2410C" stroke-width="1.1"/>
+<text x="724.6" y="548" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="724.6" y="565" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SafetyMonitor</text>
+<text x="650.2" y="595" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-M1-SAF</text>
+<rect x="638.2" y="636" width="172.9" height="79" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="638.2" y="636" width="172.9" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="682" x2="811.1" y2="682" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="724.6" y="653" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="724.6" y="670" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">UAVDock</text>
+<text x="650.2" y="700" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-M1-DCK</text>
+<rect x="314.6" y="951" width="150" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="314.6" y="951" width="150" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="314.6" y1="997" x2="464.6" y2="997" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="389.6" y="968" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="389.6" y="985" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">ObservationUAV</text>
+<text x="326.6" y="1015" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-A1</text>
+<rect x="638.2" y="741" width="172.9" height="79" rx="4" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="638.2" y="741" width="172.9" height="46" rx="4" fill="#F0FDFA" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="787" x2="811.1" y2="787" stroke="#0F766E" stroke-width="1.1"/>
+<text x="724.6" y="758" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="724.6" y="775" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">FlightControl</text>
+<text x="650.2" y="805" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-A1-FCS</text>
+<rect x="638.2" y="846" width="172.9" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="638.2" y="846" width="172.9" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="892" x2="811.1" y2="892" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="724.6" y="863" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="724.6" y="880" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">Propulsion</text>
+<text x="650.2" y="910" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-A1-PRP</text>
+<rect x="638.2" y="951" width="172.9" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="638.2" y="951" width="172.9" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="997" x2="811.1" y2="997" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="724.6" y="968" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="724.6" y="985" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">UAVPower</text>
+<text x="650.2" y="1015" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-A1-PWR</text>
+<rect x="638.2" y="1056" width="172.9" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="638.2" y="1056" width="172.9" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="1102" x2="811.1" y2="1102" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="724.6" y="1073" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="724.6" y="1090" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">NavTelemetry</text>
+<text x="650.2" y="1120" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-A1-NAV</text>
+<rect x="638.2" y="1161" width="172.9" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="638.2" y="1161" width="172.9" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="1207" x2="811.1" y2="1207" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="724.6" y="1178" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="724.6" y="1195" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">ObservationPayload</text>
+<text x="650.2" y="1225" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-A1-PLD</text>
+<rect x="311.3" y="1286" width="154" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="311.3" y="1286" width="154" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="311.3" y1="1332" x2="465.3" y2="1332" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="388.3" y="1303" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="388.3" y="1320" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">GroundSupport</text>
+<text x="323.3" y="1350" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-GSE</text>
+<rect x="638.2" y="1266" width="179.2" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="638.2" y="1266" width="179.2" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="1312" x2="817.4" y2="1312" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="727.8" y="1283" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="727.8" y="1300" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">MaintenanceSupports</text>
+<text x="650.2" y="1330" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-GSE-SUP</text>
+<rect x="638.2" y="1371" width="179.2" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="638.2" y="1371" width="179.2" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="1417" x2="817.4" y2="1417" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="727.8" y="1388" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="727.8" y="1405" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">ChargingEquipment</text>
+<text x="650.2" y="1435" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-GSE-CHG</text>
+<rect x="638.2" y="1476" width="179.2" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="638.2" y="1476" width="179.2" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="638.2" y1="1522" x2="817.4" y2="1522" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="727.8" y="1493" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="727.8" y="1510" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">TestRigs</text>
+<text x="650.2" y="1540" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">short name = SUS-GSE-TST</text>
+<rect x="220.1" y="462" width="27.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="225.1" y="475" font-size="10.5" fill="#475569">m1</text>
+<rect x="544.7" y="51" width="30.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="549.7" y="64" font-size="10.5" fill="#475569">wlk</text>
+<rect x="543.3" y="156" width="32.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="548.3" y="169" font-size="10.5" fill="#475569">man</text>
+<rect x="546.9" y="261" width="25.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="551.9" y="274" font-size="10.5" fill="#475569">pil</text>
+<rect x="544.3" y="366" width="30.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="549.3" y="379" font-size="10.5" fill="#475569">pwr</text>
+<rect x="546.5" y="471" width="26.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="551.5" y="484" font-size="10.5" fill="#475569">ctl</text>
+<rect x="545.1" y="576" width="29.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="550.1" y="589" font-size="10.5" fill="#475569">saf</text>
+<rect x="544.1" y="681" width="31.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="549.1" y="694" font-size="10.5" fill="#475569">dck</text>
+<rect x="220.8" y="996" width="25.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="225.8" y="1009" font-size="10.5" fill="#475569">a1</text>
+<rect x="545.1" y="786" width="29.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="550.1" y="799" font-size="10.5" fill="#475569">fcs</text>
+<rect x="545.1" y="891" width="29.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="550.1" y="904" font-size="10.5" fill="#475569">prp</text>
+<rect x="544.3" y="996" width="30.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="549.3" y="1009" font-size="10.5" fill="#475569">pwr</text>
+<rect x="544.1" y="1101" width="31.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="549.1" y="1114" font-size="10.5" fill="#475569">nav</text>
+<rect x="545.5" y="1206" width="28.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="550.5" y="1219" font-size="10.5" fill="#475569">pld</text>
+<rect x="218" y="1331" width="31.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="223" y="1344" font-size="10.5" fill="#475569">gse</text>
+<rect x="544.1" y="1311" width="31.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="549.1" y="1324" font-size="10.5" fill="#475569">sup</text>
+<rect x="544.1" y="1416" width="31.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="549.1" y="1429" font-size="10.5" fill="#475569">chg</text>
+<rect x="546.1" y="1521" width="27.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="551.1" y="1534" font-size="10.5" fill="#475569">tst</text>
+</g>
+<line x1="40" y1="1752" x2="56" y2="1752" stroke="#475569" stroke-width="1.8"/>
+<text x="62" y="1756" font-size="11" fill="#475569">Composition (diamond at owner, label = usage name)</text>
+<rect x="341.9" y="1746" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="363.9" y="1756" font-size="11" fill="#475569">System</text>
+<rect x="413.4" y="1746" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="435.4" y="1756" font-size="11" fill="#475569">Software-intensive</text>
+<rect x="543.2" y="1746" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="565.2" y="1756" font-size="11" fill="#475569">Safety function</text>
+<rect x="656.2" y="1746" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
+<text x="678.2" y="1756" font-size="11" fill="#475569">Interface</text>
+<text x="40" y="1778" font-size="10.5" fill="#94A3B8">Generated by tools/gen_safety_docs.py from safety/mil-std-882e/catalog.yaml. Planning view: not evidence of completed analysis, verification or risk acceptance.</text>
+</svg>

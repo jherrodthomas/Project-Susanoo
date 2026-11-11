@@ -31,89 +31,15 @@ Adopt [PX4 Autopilot](https://github.com/PX4/PX4-Autopilot) as the **candidate**
 
 ## Block diagram
 
-PX4 and the Susanoo-owned integration parts. Blue = system, amber = protective/authority function,
-purple = interface, grey = external dependency or tool.
 
-```mermaid
-flowchart TB
-  subgraph I1["SUS-I1 Integrated system"]
-    direction TB
-    subgraph A1["SUS-A1 Observation UAV"]
-      direction TB
-      PX4["PX4 Autopilot (pinned)<br/>stabilisation, navigation,<br/>flight modes, failsafes"]
-      ADP["UAV control adapter<br/>validated, fail-closed"]
-      CMP["Companion / payload<br/>observation, mission interface"]
-      PRP["Motors, ESCs, propellers"]
-      NAV["Nav sensors, GNSS, telemetry"]
-    end
-    subgraph M1["SUS-M1 Piloted walker"]
-      direction TB
-      DCK["SUS-M1-DCK Dock<br/>retention, charge, rotor inhibit"]
-      HMI["SUS-M1-PIL Pilot HMI"]
-      CTL["SUS-M1-CTL Walker control<br/>(no PX4)"]
-    end
-    SUP["SUS-I1 integration supervisor<br/>readiness, launch / recovery permit"]
-  end
-  QGC["QGroundControl<br/>dev monitoring only"]
-  ADP -->|"MAVLink / MAVSDK"| PX4
-  PX4 -->|"thrust"| PRP
-  NAV -->|"state estimate"| PX4
-  PX4 -->|"ROS 2 / uXRCE-DDS telemetry"| SUP
-  SUP -->|"permit / revoke / abort"| ADP
-  DCK -->|"retained state"| SUP
-  CTL -->|"posture / stationary"| SUP
-  SUP -->|"alerts"| HMI
-  CMP -->|"video, cues"| HMI
-  DCK -->|"charge / rotor inhibit"| PX4
-  QGC -.->|"parameters"| PX4
-  class PX4,CMP,PRP,NAV,HMI,CTL system
-  class ADP,SUP safety
-  class DCK interface
-  class QGC muted
-  classDef system fill:#dceaf7,stroke:#55758f,color:#17324d
-  classDef safety fill:#fff0d9,stroke:#b28a3d,color:#513c16
-  classDef interface fill:#eae7f5,stroke:#8370a3,color:#30254a
-  classDef muted fill:#f4f4f4,stroke:#b5b5b5,color:#8a8a8a,stroke-dasharray: 4 3
-```
+![Figure 1 · Block diagram](figures/fig-1-block-diagram.svg)
 
 ## Boundary diagram
 
 Dashed frame = the **PX4 flight-control assurance boundary**. It is distinct from the walker
 motion-control boundary; every crossing is an IF-PX4 contract item.
 
-```mermaid
-flowchart LR
-  subgraph BND["Boundary: PX4 flight-control assurance"]
-    direction TB
-    PX4["PX4 Autopilot + pinned parameters"]
-    ADP["UAV control adapter"]
-  end
-  SUP["SUS-I1 integration supervisor"]
-  DCK["SUS-M1-DCK dock"]
-  WLK["SUS-M1 walker posture"]
-  HMI["Pilot HMI"]
-  UP["PX4 upstream project"]
-  AIR["Airspace, GNSS, RF"]
-  PX4 -->|"IF-PX4-001/002 state, health, arming"| SUP
-  SUP -->|"IF-PX4-005/006 permit, recovery, abort"| ADP
-  DCK -->|"IF-PX4-003 occupied / retained"| SUP
-  WLK -->|"IF-PX4-004 posture / stationary"| SUP
-  BND -->|"IF-PX4-007 video, mission cues"| HMI
-  SUP <-->|"IF-PX4-008 fault notifications"| BND
-  DCK <-->|"IF-PX4-009 power handshake, rotor inhibit"| PX4
-  UP -->|"tagged release + SHA"| PX4
-  AIR -->|"navigation, link"| PX4
-  class PX4,ADP system
-  class SUP safety
-  class DCK interface
-  class WLK,HMI system
-  class UP,AIR external
-  classDef system fill:#dceaf7,stroke:#55758f,color:#17324d
-  classDef safety fill:#fff0d9,stroke:#b28a3d,color:#513c16
-  classDef interface fill:#eae7f5,stroke:#8370a3,color:#30254a
-  classDef external fill:#e8f1e9,stroke:#63886a,color:#23412c
-  style BND fill:none,stroke:#b28a3d,stroke-width:2px,stroke-dasharray: 6 4
-```
+![Figure 2 · Boundary diagram — PX4 assurance boundary](figures/fig-2-boundary-diagram.svg)
 
 | Crossing | Interface | Control / safety concern |
 |---|---|---|
@@ -135,121 +61,15 @@ from the contract's acceptance tests. It imports
 [`SusanooSystem`](../../safety/mil-std-882e/00-system-definition/sysml/SusanooSystem.sysml); `PX4Autopilot`
 specialises `SusanooSystem::FlightControl`.
 
-### Internal block / context (ibd) — PX4IntegrationContext
+![Figure 3 · SysML internal block — PX4IntegrationContext](figures/fig-3-sysml-internal-block.svg)
 
-```mermaid
-flowchart LR
-  subgraph CTX["PX4IntegrationContext : context"]
-    px4["px4 : PX4Autopilot"]
-    adapter["adapter : UAVControlAdapter"]
-    supervisor["supervisor : IntegrationSupervisor"]
-    dock["dock : UAVDock"]
-    walker["walker : PilotedWalker"]
-    gcs["gcs : GroundControlStation"]
-  end
-  px4 <-->|"if001 telemetry"| supervisor
-  supervisor <-->|"if005 permit"| adapter
-  adapter <-->|"ifMav MAVLink"| px4
-  dock <-->|"if003 retained"| supervisor
-  walker <-->|"if004 posture"| supervisor
-  dock <-->|"if009 power, rotor inhibit"| px4
-  gcs <-->|"gcsLink"| px4
-  class px4,walker system
-  class adapter,supervisor safety
-  class dock interface
-  class gcs muted
-  classDef system fill:#dceaf7,stroke:#55758f,color:#17324d
-  classDef safety fill:#fff0d9,stroke:#b28a3d,color:#513c16
-  classDef interface fill:#eae7f5,stroke:#8370a3,color:#30254a
-  classDef muted fill:#f4f4f4,stroke:#b5b5b5,color:#8a8a8a,stroke-dasharray: 4 3
-  style CTX fill:none,stroke:#55758f,stroke-dasharray: 6 4
-```
+![Figure 4 · SysML state machine — fail-closed launch permit](figures/fig-4-sysml-state-machine.svg)
 
-### State machine (stm) — LaunchPermit (fail-closed)
-
-```mermaid
-stateDiagram-v2
-  [*] --> denied
-  denied : denied - default, any stale input returns here
-  armable : armable - dock fresh, walker stationary
-  permitted : permitted - explicit pilot request
-  airborne : airborne - PX4 owns flight
-  contingency : contingency - analysed lost-link on aircraft AND walker
-  denied --> armable : posture stationary + dock retained fresh
-  armable --> permitted : pilot requests launch
-  armable --> denied : stale or inconsistent state
-  permitted --> denied : stale state or permit revoked
-  permitted --> airborne : UAV clear of dock
-  airborne --> contingency : link lost
-  airborne --> denied : recovered
-  contingency --> denied : recovered
-```
-
-### Requirements (req) — integration requirements
-
-```mermaid
-requirementDiagram
-  requirement PX4_R_001 {
-    id: "PX4-R-001"
-    text: "Launch authorised only in correct walker posture and dock state"
-    risk: High
-    verifymethod: Test
-  }
-  requirement PX4_R_002 {
-    id: "PX4-R-002"
-    text: "Stale or inconsistent dock state prevents launch authorisation"
-    risk: High
-    verifymethod: Test
-  }
-  requirement PX4_R_003 {
-    id: "PX4-R-003"
-    text: "Flight and ground controller authority collision prevented"
-    risk: High
-    verifymethod: Analysis
-  }
-  requirement PX4_R_004 {
-    id: "PX4-R-004"
-    text: "Lost link during docking aborts and does not command walker movement"
-    risk: High
-    verifymethod: Test
-  }
-  element SUP {
-    type: "IntegrationSupervisor"
-  }
-  element ADP {
-    type: "UAVControlAdapter"
-  }
-  element SITL {
-    type: "PX4 SITL test (P3-P4)"
-  }
-  SUP - satisfies -> PX4_R_001
-  SUP - satisfies -> PX4_R_002
-  ADP - satisfies -> PX4_R_003
-  SUP - satisfies -> PX4_R_004
-  SITL - verifies -> PX4_R_001
-  SITL - verifies -> PX4_R_002
-  SITL - verifies -> PX4_R_004
-```
+![Figure 5 · SysML requirements — integration requirements](figures/fig-5-sysml-requirements.svg)
 
 ## Inputs and outputs
 
-```mermaid
-flowchart LR
-  I1["PX4 upstream release"] -->|"source, license, docs"| X["PX4 integration"]
-  I2["concept/CONOPS.md"] -->|"SCN-004/005, modes 06-08"| X
-  I3["Task 203 SRHA"] -->|"SYS-003, SYS-005, SYS-006"| X
-  I4["Task 208 FHA"] -->|"safety-significant functions"| X
-  X -->|"PX4 version, parameters, SW functions"| O1["software-safety"]
-  X -->|"IF-PX4 interfaces"| O2["Task 205 SHA"]
-  X -->|"SITL / HIL evidence"| O3["Task 401 Safety verification"]
-  X -->|"aircraft FHA / PSSA inputs"| O4["ARP4761A assessment (separate)"]
-  class X current
-  class I1,I2,O4 external
-  class I3,I4,O1,O2,O3 work
-  classDef current fill:#b28a3d,stroke:#513c16,color:#ffffff
-  classDef external fill:#e8f1e9,stroke:#63886a,color:#23412c
-  classDef work fill:#ffffff,stroke:#55758f,color:#17324d
-```
+![Figure 6 · Inputs and outputs](figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
@@ -271,6 +91,8 @@ flowchart LR
 |---|---|---|
 | [`interface-contract.md`](interface-contract.md) | IF-PX4-001..009, authority principles, acceptance tests | present |
 | [`PX4Integration.sysml`](PX4Integration.sysml) | SysML v2 context, launch permit, requirements | present |
+| [`figures.yaml`](figures.yaml) | Figure specs; render with `python3 tools/figures/build_figures.py` | present |
+| [`figures/`](figures/) | Generated SVG figures (do not edit) | generated |
 | `dependency-baseline.yaml` | Pinned PX4, airframe, parameters, ROS 2, simulator versions | planned |
 
 ## Dependency baseline register

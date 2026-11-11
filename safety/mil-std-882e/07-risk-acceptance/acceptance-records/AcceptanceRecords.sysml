@@ -12,6 +12,6 @@ package AcceptanceRecords {
         attribute configurationId : String;
         attribute conditions : String;
         attribute expiresOnChange : Boolean;
-        part decision : RiskAcceptanceDecision[1];
+        ref item decision : RiskAcceptanceDecision[1];
     }
 }

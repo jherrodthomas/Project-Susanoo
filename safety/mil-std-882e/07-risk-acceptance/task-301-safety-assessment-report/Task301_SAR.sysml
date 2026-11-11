@@ -9,8 +9,8 @@ package Task301_SAR {
     item def SafetyAssessmentReport {
         attribute configurationId : String;
         attribute revision : String;
-        part hazards : Hazard[0..*];
-        part evidence : VerificationEvidence[0..*];
+        ref item hazards : Hazard[0..*];
+        ref item evidence : VerificationEvidence[0..*];
         ref item limitations : OperatingLimitation[0..*];
     }
     item def OperatingLimitation {

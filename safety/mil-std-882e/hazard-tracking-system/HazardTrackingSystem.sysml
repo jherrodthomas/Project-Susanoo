@@ -8,7 +8,7 @@ package HazardTrackingSystem {
     private import SusanooSafety::*;
     part def HazardLog {
         attribute configurationId : String;
-        part records : Hazard[0..*];
+        ref item records : Hazard[0..*];
     }
 
     attribute def ChangeReopens;
