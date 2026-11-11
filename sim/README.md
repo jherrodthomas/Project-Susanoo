@@ -23,7 +23,7 @@ Until then, results rank risks, find edge cases and guide tests. They never clos
 | 2 · Scenarios | — | planned | Terrain and mission scenarios as data (slope, step, soft ground, wind, dock approach, link loss). |
 | UAV | `uav/` | built | PX4 v1.16.2 SITL with the SIH quadrotor, run headless. `uav/harness.py` acts as the ground station and runs six failsafe scenarios: link loss with return-to-launch, link loss with return after the walker has moved, link loss with land-in-place, battery failure, a command past the geofence, and GPS loss. It writes `results/uav/SU-*.json` from ground truth. `figures/uav_scenes.py` turns those into top-down scenes, `results/uav/summary.md` and `docs/wiki/UAV-Simulation.md`. Outcomes are mapped to hazards by rules in `uav/scenarios.yaml`. |
 | Fidelity | — | planned (step 4) | Multibody legged dynamics (MuJoCo proposed, decision DQ-007), cross-checked against the plant. |
-| 3D | — | planned (step 5) | `scenes.yaml` per hazard, with a test that changing the look never changes the analysis. |
+| 3D | `scenes3d/` | built | `scenes.yaml` defines one scene per hazard or finding that has a motion source: a plant run, a search edge case or a SITL result. `export_scene.py` reads only each scene's `motion` block and writes `scenes3d/out/<id>.json`. `build_pages.py` writes single-file three.js pages (`docs/3d/<id>.html`) that replay that data on parametric walker and UAV models, plus `docs/wiki/3D-Scenes.md`. `render.mjs` renders stills and checks every page in Chromium. **The look never changes the analysis:** environment, condition, camera and variants are look-only, and `tests/test_scenes3d.py` proves the exporter never reads them. |
 
 ## Commands
 
@@ -32,6 +32,9 @@ python -m sim.plant.report          # fault catalogue runs
 python -m sim.search.search         # failure search (SF-01)
 python -m sim.figures.scenes        # 2D scenes and docs/wiki/Simulation.md
 python -m sim.figures.uav_scenes    # UAV scenes, summary and page, built from the committed SITL results
+python -m sim.scenes3d.export_scene # 3D scene analysis (reads only the motion blocks)
+python -m sim.scenes3d.build_pages  # docs/3d/*.html and docs/wiki/3D-Scenes.md
+npm pack three@0.170.0 && tar xzf three-0.170.0.tgz && node sim/scenes3d/render.mjs package   # stills + page checks
 
 # PX4 SITL (heavy; also run weekly and on demand by .github/workflows/px4-sitl.yml)
 pip install -r sim/uav/requirements.txt -r sim/uav/requirements-px4-build.txt

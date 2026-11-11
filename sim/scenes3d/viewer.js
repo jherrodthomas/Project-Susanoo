@@ -1,0 +1,193 @@
+// Susanoo 3D hazard scene viewer (three.js r170). Embedded in every docs/3d/*.html page by build_pages.py.
+// Reads window.SCENE = {analysis, look}. The analysis (frames, outcome, geometry) comes from export_scene.py;
+// the look (environment, condition, camera) is picture-only. Nothing here computes dynamics: it replays frames.
+// URL: ?t=end|<seconds>&paused=1 renders a fixed instant (used for stills and checks).
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const S = window.SCENE, A = S.analysis, L = S.look;
+const q = new URLSearchParams(location.search);
+const RED = 0xd2553f, GREEN = 0x2e9e6a, INK = 0x0f172a, SAFETY = 0xc2410c, HW = 0x4f46e5;
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.shadowMap.enabled = true;
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+const sky = new THREE.Color(L.condition.sky_tint || L.environment.sky);
+scene.background = sky;
+if (L.condition.fog_m) scene.fog = new THREE.Fog(sky, L.condition.fog_m * 0.25, L.condition.fog_m);
+scene.add(new THREE.HemisphereLight(0xffffff, new THREE.Color(L.environment.ground), L.condition.ambient));
+const sun = new THREE.DirectionalLight(0xffffff, 1.6 * L.condition.sun);
+sun.position.set(25, 40, 20);
+sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048);
+const sc = A.kind === 'uav' ? 90 : 20;
+Object.assign(sun.shadow.camera, { left: -sc, right: sc, top: sc, bottom: -sc, far: 200 });
+scene.add(sun);
+
+const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 2000);
+const controls = new OrbitControls(camera, renderer.domElement);
+
+const mat = (color, opts = {}) => new THREE.MeshStandardMaterial({ color, roughness: 0.7, metalness: 0.1, ...opts });
+const ghost = (color) => mat(color, { transparent: true, opacity: 0.28, depthWrite: false });
+
+function box(w, h, d, m) { const o = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), m); o.castShadow = true; o.receiveShadow = true; return o; }
+function rod(r, m) { const o = new THREE.Mesh(new THREE.CylinderGeometry(r, r, 1, 16), m); o.castShadow = true; return o; }
+function placeRod(o, a, b) {
+  const d = new THREE.Vector3().subVectors(b, a); const len = d.length();
+  o.position.copy(a).addScaledVector(d, 0.5); o.scale.set(1, Math.max(len, 1e-3), 1);
+  o.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), d.clone().normalize());
+}
+function label(text, color = '#ffffff', bg = '#d2553f', size = 64) {
+  const c = document.createElement('canvas'); const g = c.getContext('2d');
+  g.font = `bold ${size}px Inter, Arial, sans-serif`; const w = g.measureText(text).width + 40;
+  c.width = w; c.height = size + 30; g.fillStyle = bg; g.beginPath(); g.roundRect(0, 0, w, size + 30, 24); g.fill();
+  g.fillStyle = color; g.font = `bold ${size}px Inter, Arial, sans-serif`; g.fillText(text, 20, size + 2);
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), depthTest: false }));
+  s.scale.set(w / 120, (size + 30) / 120, 1); return s;
+}
+function ground(extent, slopeDeg) {
+  const g = new THREE.Group();
+  const plane = new THREE.Mesh(new THREE.PlaneGeometry(extent * 2, extent * 2), mat(L.environment.ground, { roughness: 1 }));
+  plane.rotation.x = -Math.PI / 2; plane.receiveShadow = true; g.add(plane);
+  const grid = new THREE.GridHelper(extent * 2, Math.round(extent * 2 / (A.kind === 'uav' ? 10 : 1)), L.environment.grid, L.environment.grid);
+  grid.position.y = 0.01; grid.material.opacity = 0.35; grid.material.transparent = true; g.add(grid);
+  g.rotation.z = -THREE.MathUtils.degToRad(slopeDeg || 0);   // +X runs downhill
+  scene.add(g); return g;
+}
+
+// ---------------------------------------------------------------- walker (parametric, from the plant spec)
+function makeWalker(spec, m, accent) {
+  const w = { root: new THREE.Group() };
+  w.body = new THREE.Group();
+  const cab = box(1.3, 1.0, 1.2, m); w.body.add(cab);
+  const glass = box(0.05, 0.5, 0.9, accent ? mat(0x223344, { transparent: true, opacity: 0.6 }) : m);
+  glass.position.set(0.66, 0.15, 0); w.body.add(glass);
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.14, 20, 14), accent ? mat(0xf1c27d) : m); head.position.set(0.25, 0.2, 0); w.body.add(head);
+  for (const z of [-0.75, 0.75]) { const arm = box(0.9, 0.18, 0.18, m); arm.position.set(0.55, -0.2, z); w.body.add(arm); }
+  const dock = box(0.6, 0.12, 0.7, accent ? mat(SAFETY) : m); dock.position.set(-0.8, 0.55, 0); w.body.add(dock);
+  w.root.add(w.body);
+  w.stance = rod(0.12, m); w.swing = rod(0.12, m); w.root.add(w.stance, w.swing);
+  w.foot = box(2 * spec.foot_half_length_m, 0.15, 0.5, m); w.rear = box(1.0, 0.15, 0.5, m);
+  scene.add(w.root); return w;
+}
+function poseWalker(w, f, slopeDeg, g) {
+  const [t, x, z] = f;
+  w.body.position.set(x, z, 0);
+  const th = THREE.MathUtils.degToRad(slopeDeg || 0);
+  const front = new THREE.Vector3(0, 0, 0.3), rearX = -1.2;
+  // the rear (swing) foot rests on the sloped ground at local x = rearX: world (x cos th, -x sin th)
+  const rear = new THREE.Vector3(rearX * Math.cos(th), -rearX * Math.sin(th), -0.3);
+  placeRod(w.stance, front, new THREE.Vector3(x, z - 0.45, 0.3));
+  placeRod(w.swing, rear, new THREE.Vector3(x, z - 0.45, -0.3));
+  w.foot.position.set(0, 0.08, 0.3); w.rear.position.set(rearX, 0.08, -0.3);
+  if (!w.foot.parent) { g.add(w.foot); g.add(w.rear); }
+}
+
+// ---------------------------------------------------------------- UAV
+function makeUav(scale) {
+  const u = new THREE.Group(); const m = mat(INK); const r = mat(RED, { transparent: true, opacity: 0.7 });
+  u.add(box(0.3, 0.12, 0.3, m));
+  for (const a of [45, 135, 225, 315]) {
+    const rad = THREE.MathUtils.degToRad(a); const arm = box(0.42, 0.04, 0.05, m);
+    arm.position.set(Math.cos(rad) * 0.2, 0, Math.sin(rad) * 0.2); arm.rotation.y = -rad; u.add(arm);
+    const rotor = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 0.02, 24), r);
+    rotor.position.set(Math.cos(rad) * 0.4, 0.06, Math.sin(rad) * 0.4); u.add(rotor);
+  }
+  u.scale.setScalar(scale); scene.add(u); return u;
+}
+const ned = (n, e, alt) => new THREE.Vector3(e, alt, -n);
+
+// ---------------------------------------------------------------- build
+let update, tEnd, hudExtra = () => '';
+if (A.kind === 'walker') {
+  const g = ground(L.environment.extent_m, A.slope_deg);
+  const sp = A.spec;
+  const perf = makeWalker(sp, mat(0xe7e9ec), true);
+  perf.body.children[0].material = mat(0xf3d2cb);
+  const intd = makeWalker(sp, ghost(GREEN), false);
+  const tp = new THREE.Mesh(new THREE.PlaneGeometry(3, sp.com_height_m + 1.5), new THREE.MeshBasicMaterial({ color: RED, transparent: true, opacity: 0.08, side: THREE.DoubleSide, depthWrite: false }));
+  tp.rotation.y = Math.PI / 2; tp.position.set(sp.tip_offset_m, (sp.com_height_m + 1.5) / 2, 0); scene.add(tp);
+  const P = A.performed.frames, I = A.intended.frames;
+  tEnd = Math.max(P[P.length - 1][0], I[I.length - 1][0]) + 1.5;
+  const at = (F, t) => { let i = 0; while (i < F.length - 1 && F[i + 1][0] <= t) i++;
+    if (i >= F.length - 1) return F[F.length - 1];
+    const a = F[i], b = F[i + 1], u = (t - a[0]) / (b[0] - a[0]); return [t, a[1] + (b[1] - a[1]) * u, a[2] + (b[2] - a[2]) * u]; };
+  let marker = null;
+  const ev = A.performed.events;
+  if (A.performed.outcome !== 'safe') {
+    marker = label(A.performed.outcome === 'tip' ? `TIP at ${ev.mishap_t} s` : `HARD DROP ${ev.impact_speed.toFixed(1)} m/s at ${ev.mishap_t} s`);
+    scene.add(marker); marker.visible = false;
+  }
+  update = (t) => {
+    const fp = at(P, t), fi = at(I, t);
+    poseWalker(perf, fp, A.slope_deg, g); poseWalker(intd, fi, A.slope_deg, g);
+    if (marker) { marker.visible = t >= ev.mishap_t; marker.position.set(fp[1], fp[2] + 1.6, 0); }
+  };
+  const presets = { side: [1.4, 3.0, 10.5], 'three-quarter': [7.5, 5.5, 9] };
+  camera.position.set(...(presets[L.camera] || presets.side)); controls.target.set(0.4, 2.2, 0);
+  hudExtra = () => `performed <b>${A.performed.outcome}</b> · intended ${A.intended.outcome} · slope ${A.slope_deg}°`;
+} else {
+  ground(L.environment.extent_m, 0);
+  const F = A.frames;
+  tEnd = F[F.length - 1][0] + 2;
+  const fence = new THREE.Line(new THREE.BufferGeometry().setFromPoints(Array.from({ length: 129 }, (_, i) => {
+    const a = i / 128 * Math.PI * 2; return new THREE.Vector3(Math.cos(a) * A.geofence_m, 0.1, Math.sin(a) * A.geofence_m); })),
+    new THREE.LineDashedMaterial({ color: 0xd97706, dashSize: 3, gapSize: 2 }));
+  fence.computeLineDistances(); scene.add(fence);
+  const keep = new THREE.Mesh(new THREE.CylinderGeometry(A.keepout_m, A.keepout_m, A.keepout_alt_m, 48, 1, true),
+    new THREE.MeshBasicMaterial({ color: RED, transparent: true, opacity: 0.12, side: THREE.DoubleSide, depthWrite: false }));
+  keep.position.copy(ned(A.pilot_m[0], A.pilot_m[1], A.keepout_alt_m / 2)); scene.add(keep);
+  const standing = (n, m) => { const w = new THREE.Group(); const b = box(1.3, 1.0, 1.2, m); b.position.y = 3.0; w.add(b);
+    for (const z of [-0.3, 0.3]) { const l = rod(0.12, m); placeRod(l, new THREE.Vector3(0, 0, z), new THREE.Vector3(0, 2.55, z)); w.add(l); }
+    w.position.copy(ned(n + 1.1, 0, 0)); w.rotation.y = Math.PI / 2; scene.add(w); };
+  standing(A.dock_m[0], mat(0xe7e9ec));
+  if (A.walker_moved) standing(0, ghost(HW));
+  const dock = box(0.7, 0.15, 0.7, mat(SAFETY)); dock.position.copy(ned(A.dock_m[0], A.dock_m[1], 0.08)); scene.add(dock);
+  const pts = F.map(f => ned(f[1], f[2], f[3]));
+  scene.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: RED })));
+  const obs = new THREE.Mesh(new THREE.SphereGeometry(0.6, 16, 12), mat(GREEN)); obs.position.copy(ned(...A.observe_m)); scene.add(obs);
+  const uav = makeUav(3.0);
+  const at = (t) => { let i = 0; while (i < F.length - 1 && F[i + 1][0] <= t) i++;
+    if (i >= F.length - 1) return F[F.length - 1]; const a = F[i], b = F[i + 1], u = (t - a[0]) / (b[0] - a[0]);
+    return [t, a[1] + (b[1] - a[1]) * u, a[2] + (b[2] - a[2]) * u, a[3] + (b[3] - a[3]) * u, a[4]]; };
+  let mode = '';
+  update = (t) => { const f = at(t); uav.position.copy(ned(f[1], f[2], f[3])); mode = f[4]; };
+  // high oblique view from the side of the path, aimed between the dock, the take-off point and the observation point
+  const [on, oe] = A.observe_m;
+  const d0 = A.dock_m, len = Math.hypot(on - d0[0], oe - d0[1]) || 1;
+  const un = (on - d0[0]) / len, ue = (oe - d0[1]) / len;
+  const mn = (d0[0] + on + 0) / 3, me = (d0[1] + oe + 0) / 3;
+  camera.position.copy(ned(mn - un * 30 + ue * 38, me - ue * 30 - un * 38, 42));
+  controls.target.copy(ned(mn, me, 4));
+  hudExtra = () => `outcome <b>${A.outcome}</b> · mode ${mode.replace('AUTO.', '')} · closest to pilot below ${A.keepout_alt_m} m: ${A.min_pilot_distance_low_m ?? '—'} m · UAV drawn at 3× scale`;
+}
+controls.update();
+
+// ---------------------------------------------------------------- HUD and time
+const hud = document.getElementById('hud');
+const slider = document.getElementById('time');
+const btn = document.getElementById('play');
+slider.max = tEnd.toFixed(2);
+let t = 0, playing = !q.has('paused'), last = performance.now();
+const tq = q.get('t');
+if (tq) { t = tq === 'end' ? tEnd - 0.01 : Math.min(parseFloat(tq), tEnd); }
+btn.onclick = () => { playing = !playing; btn.textContent = playing ? 'Pause' : 'Play'; };
+btn.textContent = playing ? 'Pause' : 'Play';
+slider.oninput = () => { t = parseFloat(slider.value); };
+function frame(now) {
+  if (playing) { t += (now - last) / 1000; if (t > tEnd) t = 0; }
+  last = now;
+  update(t); slider.value = t.toFixed(2);
+  hud.innerHTML = `<div class="title">${A.id} · ${A.title}</div><div>${A.hazards.join(', ')} · ${A.source}: ${A.reference}</div>` +
+    `<div>${hudExtra()}</div><div>t = ${t.toFixed(1)} s</div>`;
+  controls.update(); renderer.render(scene, camera);
+  window.__state = { t, tEnd, outcome: A.kind === 'walker' ? A.performed.outcome : A.outcome, id: A.id };
+  window.__ready = true;
+  requestAnimationFrame(frame);
+}
+window.addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
+requestAnimationFrame(frame);
