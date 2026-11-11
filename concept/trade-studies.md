@@ -1,0 +1,16 @@
+# Architecture trade studies — open
+
+## TS-001 Actuation
+Alternatives: centralized hydraulic; distributed electrohydraulic; electromechanical. Compare power density, controllability, leakage/fire risk, stored energy, maintainability, mass, noise, heat, fault response, supply chain, simulation fidelity and cost. **No winner selected.**
+
+## TS-002 Pilot architecture
+Alternatives: seated protected cockpit; standing open-frame pilot; remote operator. Compare ergonomics, ingress/egress, restraint, fall/rollover protection, visibility, emergency extraction, human-machine interface and structural packaging.
+
+## TS-003 Locomotion
+Alternatives: bipedal; quadrupedal; hybrid leg-wheel. Compare stability, complexity, energy consumption, terrain capability, fall consequences and testability.
+
+## TS-004 UAV docking
+Alternatives: rear backpack dock; shoulder-mounted dock; separate portable station. Compare rotor clearance, center of gravity, accessibility, charging, environmental protection, approach geometry, emergency separation and operator exposure.
+
+## Decision process
+Each study records criteria, weights, assumptions, quantitative evidence, safety impact, reviewer, decision authority, selected baseline and linked change request. Rendered concepts are not evidence of feasibility.
