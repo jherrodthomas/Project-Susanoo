@@ -13,6 +13,10 @@ if [[ "${1:-}" != "--no-render" ]]; then
   node tools/cad/render.cjs
 fi
 "$PY" tools/cad/drawings.py
+BPY="${BPY_PYTHON:-/opt/bpy/bin/python}"
+if [[ "${1:-}" != "--no-render" && -x "$BPY" ]]; then
+  "$BPY" tools/cad/blender_render.py   # photoreal renders (optional: needs `pip install bpy==5.3.0`)
+fi
 if [[ "${1:-}" != "--no-render" ]]; then
   node tools/cad/sheet_png.cjs cad/drawings/CL-*.svg --pdf
 fi

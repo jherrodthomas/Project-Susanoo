@@ -1,6 +1,8 @@
 # Concept layouts (FreeCAD) — review and alignment
 
-**ID:** SUS-CAD-001 · **Revision:** 0.9-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CAD-001 · **Revision:** 0.10-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.10:* photoreal Blender renders of the CL-05 reference layout (§2a).
 
 *Changes in 0.9:* CL-05 UAV dock raised 0.45 m: docked rotors 1.09 m from the pilot's head, over the 1 m review flag.
 
@@ -36,6 +38,15 @@ What to look for in the review:
 | How big is it next to a person? | Every view: the 1.75 m figure | HAZ-009 |
 
 Metric definitions: *static margin* is the shortest horizontal distance from the centre of gravity to the edge of the support polygon (the convex hull of the ground contacts); *static tip angle* is the angle whose tangent is margin ÷ CG height; *placeholder mass* comes from solid volumes times the effective densities in [`params/common.yaml`](params/common.yaml). Values in red on the images are below 0.3 m static margin or 1.0 m rotor clearance, the project's provisional review flags. They are not requirements.
+
+## 2a. Reference layout CL-05, photoreal renders
+
+Rendered with Blender 5.3 (Cycles) by [`tools/cad/blender_render.py`](../tools/cad/blender_render.py) from exactly the meshes the metrics and drawing sheets use; only materials, daylight and camera are added. Concept renders for communication: placeholder geometry, not a design, and not AI-generated.
+
+| | |
+|---|---|
+| ![CL-05 standing, front three-quarter view from eye height, with a 1.75 m person for scale](renders/blender/CL-05-hero.jpg) | ![CL-05 from the rear: power pack, raised UAV dock and roll bar](renders/blender/CL-05-rear.jpg) |
+| ![CL-05 kneeling for egress with the fold-down ladder deployed and the claws stowed](renders/blender/CL-05-kneel.jpg) | ![CL-05 emergency exit: side hatch open, shoulder step and rope ladder deployed](renders/blender/CL-05-emergency.jpg) |
 
 ## 2. Layouts
 
@@ -207,6 +218,7 @@ Drawing sheet: [SUS-CAD-001-CL-05-kneel](drawings/CL-05-kneel.svg).
 | Reference layout geometry (CL-05) | [`tools/cad/b3d/cl05.py`](../tools/cad/b3d/cl05.py) in build123d 0.9 ([`environment.yml`](../tools/cad/b3d/environment.yml)) | `build/cad-src/CL-05/`: one STEP file per part class and `info.json`, imported by the step below |
 | Geometry and metrics | [`tools/cad/build_concepts.py`](../tools/cad/build_concepts.py) under FreeCAD 1.1 | `build/cad/CL-nn/`: `.FCStd`, `.step`, STL per part class; [`metrics.json`](metrics.json) (committed) |
 | Drawing sheets | [`tools/cad/drawings.py`](../tools/cad/drawings.py) (FreeCAD TechDraw hidden-line projection) | [`drawings/CL-nn.svg`](drawings/) and [`drawings/concept-layouts.pdf`](drawings/concept-layouts.pdf) (committed): A3, 1:50, third-angle side, plan and front views with dimensions, CG and support polygon |
+| Photoreal renders (CL-05) | [`tools/cad/blender_render.py`](../tools/cad/blender_render.py), Blender 5.3 `bpy` module, Cycles | [`renders/blender/`](renders/blender/) (committed; not run in CI, about 5 minutes of CPU for the set) |
 | Review images | [`tools/cad/render.cjs`](../tools/cad/render.cjs) and [`viewer.html`](../tools/cad/viewer.html) (three.js in headless Chromium) | [`renders/`](renders/) (committed) |
 | This page | `tools/pdac/generate.py` | Section 2, from the layout records and `metrics.json` |
 
