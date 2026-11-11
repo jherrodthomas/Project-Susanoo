@@ -4,7 +4,7 @@
 
 Questions only the project lead can decide, from `decisions/register.yaml`. Answer in chat or in a pull request; Claude copies the answer into the register and applies it. Rules: `CLAUDE.md`.
 
-Status: open 6, queued 1, answered 0, applied 1, withdrawn 0
+Status: open 6, queued 0, answered 0, applied 2, withdrawn 0
 
 ## What monetary thresholds should the tailored severity categories use?
 
@@ -99,14 +99,9 @@ Blocks: PX4 parameter baseline for SUS-A1, HAZ-INT-001 mitigation M4
 
 Sources: sim/results/uav/summary.md, integrations/px4/interface-contract.md, safety/hazards/HAZ-INT-001.yaml
 
-## Queued
-
-| ID | Question | Decider | Recommendation |
-|---|---|---|---|
-| DQ-007 | Which engine should the higher-fidelity legged-dynamics simulation use? | claude | MuJoCo |
-
 ## Decided
 
 | ID | Question | Choice | By | Date | Status | Applied in |
 |---|---|---|---|---|---|---|
 | DQ-001 | Which edition of MIL-STD-882E is the project baseline? | 2012 base edition | lead | 2026-11-11 | applied | `standards/mil-std-882e/model.yaml`, `framework/882e-conformance-review.md` |
+| DQ-007 | Which engine should the higher-fidelity legged-dynamics simulation use? | MuJoCo | lead | 2026-11-11 | applied | `sim/mujoco/model.py`, `sim/mujoco/l2.py`, `sim/results/l2-crosscheck.md` |

@@ -22,7 +22,7 @@ Until then, results rank risks, find edge cases and guide tests. They never clos
 | Scenes | `figures/scenes.py` | built | Animated 2D side views from plant runs: intended run as dashed green, performed run as solid red. The static pose is the end state. Writes `docs/wiki/images/sim-sc-*.svg` and the wiki page `docs/wiki/Simulation.md`. |
 | 2 · Scenarios | — | planned | Terrain and mission scenarios as data (slope, step, soft ground, wind, dock approach, link loss). |
 | UAV | `uav/` | built | PX4 v1.16.2 SITL with the SIH quadrotor, run headless. `uav/harness.py` acts as the ground station and runs six failsafe scenarios: link loss with return-to-launch, link loss with return after the walker has moved, link loss with land-in-place, battery failure, a command past the geofence, and GPS loss. It writes `results/uav/SU-*.json` from ground truth. `figures/uav_scenes.py` turns those into top-down scenes, `results/uav/summary.md` and `docs/wiki/UAV-Simulation.md`. Outcomes are mapped to hazards by rules in `uav/scenarios.yaml`. |
-| Fidelity | — | planned (step 4) | Multibody legged dynamics (MuJoCo proposed, decision DQ-007), cross-checked against the plant. |
+| 2 · Fidelity | `mujoco/` | built | Level-2 planar two-legged walker in MuJoCo 3.3.5, generated from `spec/walker.yaml` and `spec/walker_l2.yaml`. It has real foot contact, joint torques limited by capacity, mechanical load holding, and a real step during a protective stop. It reuses level 1's cases, faults and outcome definitions. `mujoco/crosscheck.py` runs the fault catalogue, no-fault slopes and every search edge case on both levels and writes `results/l2-crosscheck.*`. Each disagreement carries a note; agreement between two models is not validation against hardware. |
 | 3D | `scenes3d/` | built | `scenes.yaml` defines one scene per hazard or finding that has a motion source: a plant run, a search edge case or a SITL result. `export_scene.py` reads only each scene's `motion` block and writes `scenes3d/out/<id>.json`. `build_pages.py` writes single-file three.js pages (`docs/3d/<id>.html`) that replay that data on parametric walker and UAV models, plus `docs/wiki/3D-Scenes.md`. `render.mjs` renders stills and checks every page in Chromium. **The look never changes the analysis:** environment, condition, camera and variants are look-only, and `tests/test_scenes3d.py` proves the exporter never reads them. |
 
 ## Commands
@@ -32,6 +32,7 @@ python -m sim.plant.report          # fault catalogue runs
 python -m sim.search.search         # failure search (SF-01)
 python -m sim.figures.scenes        # 2D scenes and docs/wiki/Simulation.md
 python -m sim.figures.uav_scenes    # UAV scenes, summary and page, built from the committed SITL results
+pip install -r sim/mujoco/requirements.txt && python -m sim.mujoco.crosscheck   # level 1 vs level 2 (--compare in CI)
 python -m sim.scenes3d.export_scene # 3D scene analysis (reads only the motion blocks)
 python -m sim.scenes3d.build_pages  # docs/3d/*.html and docs/wiki/3D-Scenes.md
 npm pack three@0.170.0 && tar xzf three-0.170.0.tgz && node sim/scenes3d/render.mjs package   # stills + page checks

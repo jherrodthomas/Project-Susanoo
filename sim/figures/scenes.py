@@ -192,7 +192,9 @@ def page(metas: list) -> str:
            f"No-fault capability by slope: {nominal}.\n\n",
            "Results: [plant results](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/plant-results.md) · "
            "[search SF-01](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/search-SF-01.md) · "
-           "[edge cases](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/edge-cases.md)\n\n## Scenes\n\n"]
+           "[edge cases](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/edge-cases.md) · "
+           "[level-1 vs level-2 MuJoCo cross-check](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/l2-crosscheck.md)"
+           "\n\n## Scenes\n\n"]
     for m in metas:
         out.append(f"### {m['id']} · {m['title']}\n\n{m['hazard']} · {m['source']} · performed **{m['performed']}**"
                    f"{' at ' + str(m['mishap_t']) + ' s' if m['mishap_t'] else ''}, intended {m['intended']}.\n\n"

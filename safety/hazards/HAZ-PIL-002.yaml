@@ -113,6 +113,8 @@ hazmat: not-applicable
 assumptions:
 - Concept configuration SUS-I1-C001; no hardware design selected
 - Drop height and speed come from the reduced-order plant (sim/plant/walker.py); they rank the risk, they are not evidence
+- The level-2 MuJoCo model reproduces the drop in every cross-checked case (about 4.1 m/s against 4.8 m/s at level 1;
+  sim/results/l2-crosscheck.md); still synthetic
 open_actions:
 - Set the engagement time and holding load in SYS-009 once the actuation trade closes (Task 203)
 - Set the injurious vertical impact speed in the Health Hazard Analysis (Task 207); the simulation uses a 1.0 m/s placeholder

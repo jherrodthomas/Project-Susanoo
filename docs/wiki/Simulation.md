@@ -8,7 +8,7 @@ Layer 1 plant (`sim/plant/walker.py`): a reduced-order sagittal walker with stat
 
 No-fault capability by slope: 0° safe; 4° safe; 8° safe; 10° safe; 12° safe; 15° tip.
 
-Results: [plant results](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/plant-results.md) · [search SF-01](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/search-SF-01.md) · [edge cases](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/edge-cases.md)
+Results: [plant results](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/plant-results.md) · [search SF-01](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/search-SF-01.md) · [edge cases](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/edge-cases.md) · [level-1 vs level-2 MuJoCo cross-check](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/l2-crosscheck.md)
 
 ## Scenes
 
