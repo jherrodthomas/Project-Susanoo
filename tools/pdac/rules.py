@@ -205,6 +205,10 @@ def check_links(repo: Repo):
     for rid, r in reqs.items():
         for h in (r.get("source") or {}).get("hazard_ids") or []:
             yield from need(rid, h, hzs, "hazard")
+        for d in r.get("derived_from") or []:
+            yield from need(rid, d, reqs, "parent requirement (derived_from)")
+            if d == rid:
+                yield Finding("L00", "error", rid, "requirement is derived from itself")
         for e in (r.get("verification") or {}).get("evidence_ids") or []:
             yield from need(rid, e, vers, "verification")
     pool = repo.all_ids() | mitigation_ids

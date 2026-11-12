@@ -183,7 +183,7 @@ function frame(now) {
   last = now;
   update(t); slider.value = t.toFixed(2);
   hud.innerHTML = `<div class="title">${A.id} · ${A.title}</div><div>${A.hazards.join(', ')} · ${A.source}: ${A.reference}</div>` +
-    `<div>${hudExtra()}</div><div>t = ${t.toFixed(1)} s</div>`;
+    `<div>${hudExtra()}</div><div>t = ${t.toFixed(1)} s</div><div class="note">Synthetic replay · no evidence credit</div>`;
   controls.update(); renderer.render(scene, camera);
   window.__state = { t, tEnd, outcome: A.kind === 'walker' ? A.performed.outcome : A.outcome, id: A.id };
   window.__ready = true;

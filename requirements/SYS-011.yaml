@@ -1,0 +1,26 @@
+schema: susanoo/requirement/v0.1
+id: SYS-011
+title: Protective stop reaction time
+statement: The protective stop shall begin its defined safe behavior within the reaction time allocated by hazard
+  analysis for each operating mode.
+derived_from:
+- SYS-002
+status: candidate
+source:
+  documents:
+  - safety/mil-std-882e/05-risk-reduction/safety-requirements/README.md
+  scenario_ids:
+  - SCN-101
+  - SCN-103
+  hazard_ids:
+  - HAZ-SAF-001
+allocated_to:
+- SUS-M1-SAF
+safety_significant: true
+verification:
+  method:
+  - test
+  evidence_ids: []
+  disposition: open
+tbd:
+- Reaction time per mode pending hazard analysis and the walker plant model (sim/spec/walker.yaml)

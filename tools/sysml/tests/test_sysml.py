@@ -23,6 +23,14 @@ class Reader(unittest.TestCase):
         with self.assertRaisesRegex(ModelError, r"x.sysml:2: construct not supported"):
             parse_text("package P {\n  state def S;\n}", "x.sysml")
 
+    def test_attribute_and_item_defs_with_ref_features(self):
+        d = parse_text("package P {\n attribute def R { attribute s : E; }\n"
+                       " item def H { attribute r : R; ref item m : M[0..*]; }\n}", "x")
+        r, h = d[0].members
+        self.assertEqual((r.kind, r.name, r.members[0].type), ("attribute_def", "R", "E"))
+        self.assertEqual((h.kind, [m.kind for m in h.members]), ("item_def", ["attribute", "ref"]))
+        self.assertEqual((h.members[1].name, h.members[1].type), ("m", "M"))
+
     def test_metadata_values(self):
         d = parse_text("package P { part <'A-1'> a : T { @M { k = E::v; s = \"x\"; t = (\"a\", \"b\"); } } }", "x")
         part = d[0].members[0]

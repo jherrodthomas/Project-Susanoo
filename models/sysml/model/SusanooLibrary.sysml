@@ -89,4 +89,79 @@ package SusanooLibrary {
         enum influential;
         enum noSafetyImpact;
     }
+    enum def SeverityCategory {
+        doc /* Table I severity categories (1-4). */
+        enum Catastrophic;
+        enum Critical;
+        enum Marginal;
+        enum Negligible;
+    }
+    enum def ProbabilityLevel {
+        doc /* Table II probability levels (A-F). */
+        enum Frequent;
+        enum Probable;
+        enum Occasional;
+        enum Remote;
+        enum Improbable;
+        enum Eliminated;
+    }
+    enum def HazardStatus {
+        doc /* Hazard lifecycle status used by the hazard tracking system (Task 106). */
+        enum open;
+        enum monitor;
+        enum mitigated;
+        enum verified;
+        enum pendingAcceptance;
+        enum accepted;
+        enum closed;
+    }
+    enum def MitigationPrecedence {
+        doc /* System safety design order of precedence (4.3.4). */
+        enum eliminateByDesign;
+        enum reduceByDesignAlteration;
+        enum engineeredFeatures;
+        enum warningDevices;
+        enum signageProceduresTrainingPpe;
+    }
+    attribute def RiskAssessment {
+        doc /* Severity x probability -> risk level, with rationale. */
+        attribute severity : SeverityCategory;
+        attribute probability : ProbabilityLevel;
+        attribute level : RiskLevel;
+        attribute rationale : ScalarValues::String;
+    }
+
+    // ------------------------------------------------------------ record references
+    // Items that stand for YAML records in requirements/ and safety/, used by the work-product views under
+    // safety/mil-std-882e. The records stay the source of truth.
+    item def SafetyRequirement {
+        doc /* A safety-significant requirement record, requirements/SYS-*.yaml. */
+        attribute id : ScalarValues::String;
+    }
+    item def Mitigation {
+        doc /* A mitigation entry in a hazard record. */
+        attribute id : ScalarValues::String;
+        attribute precedence : MitigationPrecedence;
+        ref item requirements : SafetyRequirement[0..*];
+    }
+    item def VerificationEvidence {
+        doc /* Evidence with provenance, version, integrity hash and a simulated flag. */
+        attribute id : ScalarValues::String;
+        attribute simulated : ScalarValues::Boolean;
+    }
+    item def RiskAcceptanceDecision {
+        doc /* A recorded acceptance by a named human authority (rule R13). */
+        attribute authority : ScalarValues::String;
+        attribute acceptedLevel : RiskLevel;
+    }
+    item def Hazard {
+        doc /* A hazard record, safety/hazards/HAZ-*.yaml. */
+        attribute id : ScalarValues::String;
+        attribute status : HazardStatus;
+        attribute initialRisk : RiskAssessment;
+        attribute targetRisk : RiskAssessment;
+        ref item mitigations : Mitigation[0..*];
+        ref item evidence : VerificationEvidence[0..*];
+        ref item acceptance : RiskAcceptanceDecision[0..1];
+    }
 }

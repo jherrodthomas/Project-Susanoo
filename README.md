@@ -1,29 +1,230 @@
-# Project Susanoo
+<p align="center">
+  <img src="docs/readme/banner.svg" alt="Project Susanoo: a human-piloted mechanized walker and a dockable observation UAV, engineered as code against MIL-STD-882E" width="100%">
+</p>
 
-**SUS-M1 — Human-Piloted Mechanized Platform with Integrated Observation UAV**
+<p align="center">
+  <a href="https://github.com/jherrodthomas/Project-Susanoo/actions/workflows/pdac-validate.yml"><img alt="PDaC / MIL-STD-882E validation" src="https://github.com/jherrodthomas/Project-Susanoo/actions/workflows/pdac-validate.yml/badge.svg"></a>
+  <a href="https://github.com/jherrodthomas/Project-Susanoo/actions/workflows/docs-check.yml"><img alt="Documentation standard" src="https://github.com/jherrodthomas/Project-Susanoo/actions/workflows/docs-check.yml/badge.svg"></a>
+  <a href="https://github.com/jherrodthomas/Project-Susanoo/actions/workflows/px4-sitl.yml"><img alt="PX4 SITL" src="https://github.com/jherrodthomas/Project-Susanoo/actions/workflows/px4-sitl.yml/badge.svg"></a>
+</p>
 
-Project Susanoo is an open-source, simulation-first product-development demonstrator centered on a **human-piloted mechanized walker** and a **dockable, unarmed observation UAV (SUS-A1)**. The platform explores material handling, logistics, inspection, and field support—not weapon systems.
+<p align="center">
+  <a href="concept/CONOPS.md"><b>CONOPS</b></a> ·
+  <a href="architecture/item-definition.yaml"><b>Item definition</b></a> ·
+  <a href="safety/mil-std-882e/README.md"><b>882E work products</b></a> ·
+  <a href="docs/wiki/Hazard-Tracking-Log.md"><b>Hazard log</b></a> ·
+  <a href="models/sysml/README.md"><b>SysML model</b></a> ·
+  <a href="sim/README.md"><b>Simulation</b></a> ·
+  <a href="docs/wiki/Decision-Inbox.md"><b>Decision inbox</b></a>
+</p>
 
-The design reference is an industrial, open-frame, hydraulically actuated mechanized walker with a protected operator station. Hydraulic actuation is an **initial hypothesis**, subject to an electrohydraulic/electromechanical trade study. The UAV provides aerial observation and can dock with the platform, with deployment and recovery envelopes to be defined and verified.
+**Susanoo** is an open, simulation-first engineering demonstrator: a **human-piloted mechanized walker (SUS-M1)** for
+material handling, inspection and field support, and an **unarmed observation UAV (SUS-A1)** that launches from and
+docks on its back. It is built as **Product Development as Code**. Hazards, requirements, interfaces, the standard
+itself and the decisions waiting on a human are typed records. A model, a validator, simulations and every figure on
+this page are generated from those records and checked in CI.
 
-## Product Development as Code (PDaC)
-PDaC is **Product Development as Code**, not a synonym for digital thread: typed product objects, versioned configurations, executable rules, controlled changes, evidence, approvals, and releases. A traceable digital thread is one outcome.
+> [!IMPORTANT]
+> **Concept stage.** No prototype, certification, qualification, airworthiness approval or risk acceptance is
+> claimed. Risk levels are preliminary judgements, simulation is synthetic with no evidence credit, and every
+> authority is simulated until the project lead records otherwise.
 
-## Start here
-- [Concept and CONOPS](concept/CONOPS.md)
-- [System architecture](concept/architecture.md)
-- [Actuation and UAV integration trade studies](concept/trade-studies.md)
-- [Integrated standards framework](framework/README.md)
-- [Standards applicability](framework/standards-applicability.md)
-- [Lifecycle and review gates](framework/lifecycle.md)
-- [Process contracts](framework/process-contracts.md)
-- [PDaC traceability](framework/traceability.md)
-- [Execution plan](framework/execution-plan.md)
-- [MIL-STD-882E conformance review and build plan](framework/882e-conformance-review.md)
+---
+
+## The problem
+
+**1 · A novel, human-occupied machine has no ready-made safety case.** A piloted walker that carries a drone is not a
+vehicle, an aircraft or a fixed machine. MIL-STD-882E, ISO 12100 / 13849, ARP4761A and MIL-STD-1472 each cover a
+slice of it. The hard hazards sit in the gaps between them: the dock interface, the protective stop, the moment the UAV
+returns to a moving walker.
+
+**2 · Safety documentation drifts away from the design.** The hazard log lives in a spreadsheet, the architecture in a
+drawing and the requirements in a document, each edited by hand. By the first design review they disagree, and nobody
+can tell which one is true.
+
+**3 · Compliance gets claimed instead of shown.** "Compliant with MIL-STD-882E" is easy to write and hard to check
+without a clause mapping, traceable evidence and a named human who accepted the residual risk.
+
+### Pain points, and what Susanoo does about them
+
+| Pain point | What usually happens | What Susanoo does | See it |
+|---|---|---|---|
+| Diagrams go stale | Hand-drawn, out of date by the next review | Every figure is generated from records; CI regenerates and diffs it | [882E tree](safety/mil-std-882e/README.md) · [standard](framework/documentation-standard.md) |
+| Hazard log nobody trusts | A spreadsheet with free-text risk | One YAML record per hazard, validated against MIL-STD-882E modelled as data (20 rules) | [`safety/hazards/`](safety/hazards/) · [`tools/pdac`](tools/pdac/README.md) |
+| Models and documents disagree | Element names and IDs drift between tools | One item definition; the SysML v2 model is checked against it and passes the OMG pilot | [`architecture/`](architecture/item-definition.yaml) · [`models/sysml/`](models/sysml/README.md) |
+| Simulation quietly becomes "evidence" | Plots pasted into reports | Every result is stamped *synthetic, no evidence credit* until a fidelity case is approved | [`sim/`](sim/README.md) |
+| Automation "approves" things | Green CI read as sign-off | AI drafts at independence level I0; only a recorded human review accepts anything (rule R13) | [`CLAUDE.md`](CLAUDE.md) |
+| Questions for the lead get lost | Buried in chat threads | A decision register with options, a recommendation and a generated inbox | [`decisions/`](decisions/register.yaml) · [inbox](docs/wiki/Decision-Inbox.md) |
+| The standard is quoted, not applied | Copied clauses, vague tailoring | 882E (2012) encoded as data, tailored per task with rationale, no copied text | [`standards/`](standards/mil-std-882e/model.yaml) |
+
+---
+
+## The system
+
+<p align="center">
+  <img src="docs/wiki/images/sus-i1-context.svg" alt="SUS-I1 system context: walker, UAV, integration manager and ground support inside the boundary; pilot, observer, crew, bystanders, terrain, airspace, GNSS/RF and weather outside, joined by numbered interfaces" width="100%">
+</p>
+
+| SUS-M1 · Piloted walker | SUS-A1 · Observation UAV | SUS-I1 · Integration |
+|---|---|---|
+| Protected pilot station, legs and manipulators, series-hybrid power, and an **independent safety monitor** that owns the protective stop. | Unarmed quadrotor on a pinned **PX4** baseline, docking on the walker for retention, charging and data. | An **integration manager** that grants launch and recovery only from a safe walker state (fail-closed), plus ground support. |
+
+<table>
+  <tr>
+    <td width="55%"><img src="docs/wiki/images/3d-s3-01-dusk.png" alt="3D replay of hazard scene S3-01: the walker tips on a slope after a slow supply leak; synthetic, no evidence credit"></td>
+    <td width="45%"><img src="docs/wiki/images/sim-sc-01.svg" alt="Scenario SC-01: slow supply leak on a slope, intended safe stop versus performed tip"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><sub>Hazard scene S3-01 and scenario SC-01: a slow supply leak on a 9° slope tips the walker before load holding engages. Synthetic; this finding fed back into HAZ-WLK-002. <a href="docs/3d/index.html">All 3D scenes</a></sub></td>
+  </tr>
+</table>
+
+---
+
+## By the numbers
+
+<p align="center"><img src="docs/readme/at-a-glance.svg" alt="Figure 1: project at a glance, counts of hazards, target risk, requirements, 882E tasks, architecture and simulation runs" width="100%"></p>
+
+<!-- readme:numbers:start (generated by tools/readme/build_readme.py; do not edit) -->
+| What | Count | Source |
+|---|---|---|
+| Hazards tracked (Task 106) | **9** (9 open) · initial 4 High, 4 Serious, 1 Medium → target 9 Medium | [`safety/hazards/`](safety/hazards/) |
+| Mitigations planned | **37** | hazard records |
+| Safety requirements | **12** (12 candidate, 12 with verification open) | [`requirements/`](requirements/) |
+| Safety-significant software functions | **8** | [`safety/software/`](safety/software/) |
+| Architecture | **18** elements, **8** externals, **30** interfaces, **9** functions | [`architecture/item-definition.yaml`](architecture/item-definition.yaml) |
+| MIL-STD-882E tasks | **25** tailored: 19 selected, 2 conditional, 2 not selected, 2 n/a · gate **G0** | [`standards/tailoring/`](standards/tailoring/mil-std-882e.yaml) |
+| SysML v2 files passing the OMG pilot | **45** | [`models/sysml/`](models/sysml/model/) |
+| Work-product folders with generated figures | **39** | [`safety/mil-std-882e/`](safety/mil-std-882e/README.md) |
+| Decisions for the lead | **6** open of 11 | [`decisions/register.yaml`](decisions/register.yaml) |
+| Simulation runs (synthetic) | **400** walker Monte Carlo + **6** PX4 SITL · **3** findings | [`sim/results/`](sim/results/) |
+<!-- readme:numbers:end -->
+
+## Where the risk is
+
+<p align="center"><img src="docs/readme/risk-matrix.svg" alt="Figure 2: hazards on the MIL-STD-882E risk matrix, initial and target risk" width="100%"></p>
+
+<!-- readme:hazards:start (generated by tools/readme/build_readme.py; do not edit) -->
+| Hazard | What could go wrong | Initial | Target | Mitigations |
+|---|---|---|---|---|
+| [`HAZ-DCK-001`](safety/hazards/HAZ-DCK-001.yaml) | Rotor start while UAV is retained or a person is at the dock | 2C Serious | 2E Medium | 4 |
+| [`HAZ-DCK-002`](safety/hazards/HAZ-DCK-002.yaml) | False retained state releases UAV under motion | 2D Medium | 2E Medium | 3 |
+| [`HAZ-INT-001`](safety/hazards/HAZ-INT-001.yaml) | UAV launch or recovery outside the safe envelope | 2C Serious | 2E Medium | 7 |
+| [`HAZ-PIL-001`](safety/hazards/HAZ-PIL-001.yaml) | Unintended leg motion during pilot ingress or egress | 1C High | 1E Medium | 4 |
+| [`HAZ-PIL-002`](safety/hazards/HAZ-PIL-002.yaml) | Uncontrolled vertical drop of the cockpit on loss of leg support | 2C Serious | 2E Medium | 4 |
+| [`HAZ-PWR-001`](safety/hazards/HAZ-PWR-001.yaml) | Residual hydraulic pressure during maintenance | 1D Serious | 1E Medium | 4 |
+| [`HAZ-SAF-001`](safety/hazards/HAZ-SAF-001.yaml) | Protective stop does not reach a safe state | 1C High | 1E Medium | 3 |
+| [`HAZ-WLK-001`](safety/hazards/HAZ-WLK-001.yaml) | Stale or lost feedback causes runaway motion | 1C High | 1E Medium | 3 |
+| [`HAZ-WLK-002`](safety/hazards/HAZ-WLK-002.yaml) | Walker tip-over or fall with pilot aboard | 1C High | 1E Medium | 5 |
+<!-- readme:hazards:end -->
+
+The full log, with causal factors, mitigations in design order of precedence, and software contributions, is generated
+from the records as the [Hazard Tracking Log](docs/wiki/Hazard-Tracking-Log.md).
+
+## What simulation found
+
+<p align="center"><img src="docs/readme/simulation.svg" alt="Figure 3: walker failure search SF-01 outcomes and PX4 SITL failsafe scenario outcomes, synthetic" width="100%"></p>
+
+Two results changed the design intent:
+- **Load holding must hold.** In failure search SF-01, every sample in which load holding failed ended in a tip or a
+  hard drop.
+- **PX4's own return-to-launch is unsafe here.** It brings the UAV back inside the pilot keep-out, or to where the dock
+  *used to be* before the walker moved. Recovery therefore needs an explicit permit from the integration manager
+  (IF-PX4-005/006).
+
+Both are recorded against the hazards as drafts for the safety lead. See [walker results](sim/results/search-SF-01.md)
+and [UAV results](sim/results/uav/summary.md).
+
+---
+
+## How it works
+
+<p align="center"><img src="safety/mil-std-882e/figures/fig-1-position-in-the-mil-std-882e-flow.svg" alt="The eight MIL-STD-882E process elements with the hazard tracking system beneath them" width="100%"></p>
+
+The work-product tree follows the **eight MIL-STD-882E process elements**, from documenting the approach through
+managing life-cycle risk. Every hazard, mitigation, piece of evidence and decision lands in one hazard tracking
+system. Each folder README carries a generated flow position, block, boundary, SysML, and inputs/outputs figure.
+
+<p align="center"><img src="framework/figures/fig-1-documentation-pipeline.svg" alt="Records and SysML models drive generators, which publish READMEs, figures and SysML views that CI rebuilds and diffs" width="90%"></p>
+
+1. **Records are the source of truth:** YAML under `standards/`, `architecture/`, `safety/`, `requirements/`,
+   `decisions/` and `sim/spec/`.
+2. **Validators enforce the standard:** `tools/pdac` applies MIL-STD-882E rules, `tools/sysml` checks the model
+   against the records, and the OMG pilot checks SysML v2 conformance.
+3. **Everything else is generated:** wiki pages, figures, the SysML views, simulation scenes and this README's numbers.
+4. **CI regenerates and diffs:** a stale figure, a broken link, an unresolved ID or a weakened rule fails the build.
+5. **Humans decide:** risk acceptance, baselines and gate passes need a named human reviewer. CI passing never counts.
+
+---
+
+## Repository map
+
+| Folder | What lives there |
+|---|---|
+| [`concept/`](concept/README.md) | CONOPS, modes MOD-01..10, scenarios, preliminary architecture, trade studies |
+| [`architecture/`](architecture/item-definition.yaml) | Item definition: elements, externals, interfaces IF-nnn, functions |
+| [`models/sysml/`](models/sysml/README.md) | SysML v2 model, checked against the records and the OMG pilot |
+| [`requirements/`](requirements/) | System safety requirements SYS-nnn with allocation and verification |
+| [`safety/`](safety/mil-std-882e/README.md) | Hazard records, software safety functions, events, and the 882E work-product tree |
+| [`standards/`](standards/mil-std-882e/model.yaml) | MIL-STD-882E (2012) as data, plus project tailoring |
+| [`sim/`](sim/README.md) | Walker plant model, failure search, PX4 SITL scenarios, 2D and 3D scenes |
+| [`integrations/px4/`](integrations/px4/README.md) | PX4 baseline, interface contract, fail-closed launch permit |
+| [`decisions/`](decisions/register.yaml) · [`reviews/`](reviews/README.md) | Questions for the lead; human review records |
+| [`framework/`](framework/README.md) | Lifecycle, process contracts, traceability, documentation standard |
+| [`tools/`](tools/) | Validators, generators and the figure kit |
+
+## Run it
+
+Set up once (Python 3.12, Node 22; JDK 21 for SysML conformance):
+
+```bash
+pip install -r tools/pdac/requirements.txt -r tools/sysml/pilot/requirements.txt
+```
+
+```bash
+npm ci --prefix tools/figures
+```
+
+Validate the records and check that everything generated is current:
+
+```bash
+python -m tools.pdac.validate
+```
+
+```bash
+python tools/check_readme_diagrams.py
+```
+
+```bash
+python -m tools.readme.build_readme --check
+```
+
+The full list of checks, the same ones CI runs, is in [`CLAUDE.md`](CLAUDE.md).
+
+---
+
+## Standards and scope
+
+MIL-STD-882E (11 May 2012, base edition) is the integrated system safety method. ISO 12100, ISO 13849 and IEC 61508
+methods are evaluated for machinery and control-system risks, and MIL-STD-1472 informs operator human factors.
+SAE ARP4754B and ARP4761A are adopted voluntarily for UAV development and aircraft safety assessment; DO-178C/DO-254
+need separate applicability decisions. The ARP4761A failure-condition scale is kept apart from 882E risk.
+
+**Not in scope:** weapons or armament of any kind, autonomous walker operation without a pilot, public-road
+operation, and authorized human-occupied testing (which requires separate review and test authorization).
+
+<details>
+<summary><b>All documentation</b></summary>
+
+- [Concept and CONOPS](concept/CONOPS.md) · [System architecture](concept/architecture.md) · [Trade studies](concept/trade-studies.md)
+- [Integrated standards framework](framework/README.md) · [Standards applicability](framework/standards-applicability.md)
+- [Lifecycle and review gates](framework/lifecycle.md) · [Process contracts](framework/process-contracts.md) · [PDaC traceability](framework/traceability.md)
+- [Execution plan](framework/execution-plan.md) · [MIL-STD-882E conformance review and build plan](framework/882e-conformance-review.md)
+- [LionDriver port plan](framework/liondriver-port-plan.md) · [Documentation standard](framework/documentation-standard.md)
+- [MIL-STD-882E work-product tree](safety/mil-std-882e/README.md) · [Hazard tracking log](docs/wiki/Hazard-Tracking-Log.md) · [PDaC validator](tools/pdac/README.md)
 - [Product manifest](pdac/product.yaml)
-- [Hazard tracking log (generated)](docs/wiki/Hazard-Tracking-Log.md) · [PDaC validator](tools/pdac/README.md)
 
-## Assurance approach
-MIL-STD-882E is the integrated system safety method. ISO 12100, ISO 13849 and IEC 61508 methods are evaluated for machinery and control-system risks; MIL-STD-1472 informs operator human factors. SAE ARP4754B and ARP4761A are voluntarily adopted for the UAV development and aircraft safety assessment; DO-178C/DO-254 require separate applicability decisions.
+</details>
 
-**Status: concept v0.2.** No built prototype, certification, qualification, airworthiness approval or formal government risk acceptance is claimed.
+<sub>Original design. Susanoo is an unarmed civil demonstrator; any change toward armament is outside the project
+charter. The front-page figures and numbers are generated by <code>tools/readme/build_readme.py</code> from the records.</sub>
