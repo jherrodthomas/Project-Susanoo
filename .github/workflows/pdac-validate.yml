@@ -127,5 +127,7 @@ jobs:
         run: pip install -r tools/pdac/requirements.txt -r sim/mujoco/requirements.txt
       - name: Level-1 vs level-2 cross-check reproduces the committed results (outcomes exact, numbers within tolerance)
         run: python -m sim.mujoco.crosscheck --compare
+      - name: Actuator sizing against CF4 reproduces the committed failing cases
+        run: python -m sim.mujoco.sizing --compare
       - name: MuJoCo tests
         run: python -m unittest sim.tests.test_mujoco

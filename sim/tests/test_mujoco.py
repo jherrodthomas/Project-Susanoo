@@ -51,6 +51,23 @@ class Model(unittest.TestCase):
             mujoco.mj_jacBody(sim.m, sim.d, jp, jr, sim.foot_body["s"])
             self.assertLess(float(np.abs(jp @ sim.d.qvel).max() + np.abs(jr @ sim.d.qvel).max()), 1e-9)
 
+    def test_protective_stop_on_a_slope_steps_downhill_and_holds(self):
+        """The stop steps towards the horizontal capture point; along the slope a vertical torso reads as uphill of the
+        foot, and stepping that way tipped every stop from 8 degrees up."""
+        for slope in (8, 16, 20):
+            self.assertEqual(l2.simulate({"slope_deg": slope, "stride_offset_m": 0.12, "stop_request_s": 1.0})["outcome"],
+                             "safe", slope)
+
+    def test_sizing_proposal_clears_the_envelope_and_matches_sys_010(self):
+        from sim.mujoco import sizing
+        res = json.loads(sizing.OUT_JSON.read_text())
+        pr = res["proposal"]
+        self.assertEqual(pr["failures"], 0)
+        self.assertAlmostEqual(pr["ankle_ratio"], 1.5, places=2)
+        req = _read_yaml(ROOT / "requirements" / "SYS-010.yaml")["statement"]
+        self.assertIn("1.5 m g L_foot", req)
+        self.assertIn(f"{pr['knee_torque_max_nm'] / 1000:g} kN m", req)
+
     def test_locked_walker_holds_still_and_ignores_rounding(self):
         """Load holding is a solver constraint: once locked the walker stays put, so the outcome cannot hang on
         rounding (explicit lock springs at omega*dt ~ 1.9 made it rock and tip depending on the CPU)."""

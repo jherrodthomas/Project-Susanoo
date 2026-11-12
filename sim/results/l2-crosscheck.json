@@ -17,9 +17,14 @@
    "title": "No fault (capability by slope)"
   },
   "SF-01": {
-   "agree": 8,
+   "agree": 7,
    "cases": 8,
    "title": "Failure search SF-01: Hydraulic supply loss in mid-stride on a slope (edge cases)"
+  },
+  "STOP": {
+   "agree": 2,
+   "cases": 2,
+   "title": "Protective stop on a slope (no fault)"
   }
  },
  "l2_spec": "sim/spec/walker_l2.yaml",
@@ -354,6 +359,52 @@
    "note": "Level 1 scales leg support force linearly with capacity (assumption A4), so 35% capacity cannot hold the body. In level 2 nearly straight legs need little knee torque, so 35% of the knee torque still holds. A4 is pessimistic for straight-legged stance and optimistic for a deep crouch."
   },
   {
+   "agree": true,
+   "case": {
+    "slope_deg": 16,
+    "stop_request_s": 1.0,
+    "stride_offset_m": 0.12
+   },
+   "family": "STOP",
+   "id": "STOP-16",
+   "l1": {
+    "impact_speed": 0.0,
+    "lock_t": null,
+    "mishap_t": null,
+    "outcome": "safe"
+   },
+   "l2": {
+    "impact_speed": 0.0,
+    "lock_t": null,
+    "mishap_t": null,
+    "outcome": "safe"
+   },
+   "note": null
+  },
+  {
+   "agree": true,
+   "case": {
+    "slope_deg": 20,
+    "stop_request_s": 1.0,
+    "stride_offset_m": 0.12
+   },
+   "family": "STOP",
+   "id": "STOP-20",
+   "l1": {
+    "impact_speed": 0.0,
+    "lock_t": null,
+    "mishap_t": null,
+    "outcome": "safe"
+   },
+   "l2": {
+    "impact_speed": 0.0,
+    "lock_t": null,
+    "mishap_t": null,
+    "outcome": "safe"
+   },
+   "note": null
+  },
+  {
    "agree": false,
    "case": {
     "fault": "FLT-01",
@@ -583,7 +634,7 @@
    "note": null
   },
   {
-   "agree": true,
+   "agree": false,
    "case": {
     "fault": "FLT-01",
     "fault_onset_s": 1.0,
@@ -605,11 +656,11 @@
    },
    "l2": {
     "impact_speed": 0.0,
-    "lock_t": null,
-    "mishap_t": 4.544,
-    "outcome": "tip"
+    "lock_t": 4.85,
+    "mishap_t": null,
+    "outcome": "safe"
    },
-   "note": null
+   "note": "A slow leak at 16.5 degrees with load holding working; the pilot's protective stop starts at 3.9 s with 49% capacity. Level 1 plants the second foot, crouches and loses balance as its centre-of-pressure limit shrinks (A3), tipping 45 ms after the hold engages. Level 2 does not complete the stop step at that capacity, stays on the stance foot and holds it with the ankle until the hold engages; with the ankle at or below about 15 kN m (level 1's limit corresponds to about 17 kN m) it tips as level 1 does. The case sits on the same actuator-capacity boundary as CAP-16 (sim/results/sizing-cf4.md). Its earlier level-2 tip came from the protective-stop step going uphill, now fixed."
   }
  ],
  "spec_digest": "48e1754c83f1",
