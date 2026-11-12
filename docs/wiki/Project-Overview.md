@@ -3,7 +3,7 @@
 > Published from [`README.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/README.md) in the repository.
 
 <p align="center">
-  <img src="assets/docs/readme/banner.svg" alt="Project Susanoo: a human-piloted mechanized walker and a dockable observation UAV, engineered as code against MIL-STD-882E" width="100%">
+  <img src="assets/docs/readme/banner.svg" alt="Project Susanoo: the CL-05 reference layout of the human-piloted bipedal walker, rendered from the project CAD standing, kneeling for egress and in unarmed military livery" width="100%">
 </p>
 
 <p align="center">

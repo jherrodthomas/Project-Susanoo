@@ -1,0 +1,268 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Concept-layout review renderer. Loaded by tools/cad/render.cjs over a local HTTP server:
+     viewer.html?ids=CL-01[,CL-02...]&view=iso|side|top|dock|lineup -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Susanoo concept render</title>
+<style>
+  :root { --ink: #1d2430; --muted: #5a6474; --bg: #f3f4f6; --rule: #d5d9e0; }
+  html, body { margin: 0; background: var(--bg); font-family: "DejaVu Sans", "Liberation Sans", Arial, sans-serif; color: var(--ink); }
+  #frame { position: relative; width: 1500px; height: 960px; overflow: hidden; }
+  canvas { display: block; }
+  .hdr { position: absolute; left: 28px; top: 22px; right: 28px; }
+  .hdr h1 { margin: 0; font-size: 26px; font-weight: 700; letter-spacing: 0.2px; }
+  .hdr .sub { margin-top: 6px; font-size: 15px; color: var(--muted); }
+  .badge { display: inline-block; margin-left: 10px; padding: 2px 8px; border: 1.5px solid #b45309; color: #b45309; font-size: 12px; font-weight: 700; border-radius: 3px; vertical-align: 4px; letter-spacing: 0.6px; }
+  .metrics { position: absolute; left: 0; right: 0; bottom: 44px; padding: 10px 28px 8px; background: rgba(243,244,246,0.94); border-top: 1px solid var(--rule); display: flex; gap: 26px; font-size: 14px; }
+  .metrics div b { display: block; font-size: 19px; color: var(--ink); }
+  .metrics div { color: var(--muted); }
+  .metrics .warn b { color: #b91c1c; }
+  .legend { position: absolute; right: 28px; top: 112px; font-size: 13px; color: var(--muted); line-height: 1.65; text-align: left; background: rgba(243,244,246,0.85); padding: 6px 10px; border-radius: 4px; }
+  .legend span { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 7px; vertical-align: -1px; }
+  .foot { position: absolute; left: 0; right: 0; bottom: 0; padding: 9px 28px 14px; background: #f3f4f6; font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 7px; display: flex; justify-content: space-between; }
+  .lbl { font-size: 13px; color: var(--ink); background: rgba(255,255,255,0.88); padding: 2px 6px; border-radius: 3px; border: 1px solid var(--rule); white-space: nowrap; }
+  .lbl.warn { color: #b91c1c; border-color: #fca5a5; font-weight: 700; }
+  .lbl.big { font-size: 15px; font-weight: 700; }
+</style>
+<script type="importmap">
+{ "imports": {
+    "three": "./node_modules/three/build/three.module.js",
+    "three/addons/": "./node_modules/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div id="frame"></div>
+<script type="module">
+import * as THREE from 'three';
+import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+
+THREE.Object3D.DEFAULT_UP.set(0, 0, 1);
+const q = new URLSearchParams(location.search);
+const ids = q.get('ids').split(',');
+const view = q.get('view') || 'iso';
+const W = 1500, H = 960;
+const frame = document.getElementById('frame');
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(W, H);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+frame.appendChild(renderer.domElement);
+const labels = new CSS2DRenderer();
+labels.setSize(W, H);
+Object.assign(labels.domElement.style, { position: 'absolute', top: '0', left: '0' });
+frame.appendChild(labels.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#f3f4f6');
+scene.add(new THREE.HemisphereLight('#ffffff', '#b9bec7', 1.6));
+const sun = new THREE.DirectionalLight('#ffffff', 2.2);
+sun.position.set(6, -9, 14);
+sun.castShadow = true;
+sun.shadow.mapSize.set(4096, 4096);
+Object.assign(sun.shadow.camera, { left: -12, right: 12, top: 12, bottom: -12, near: 1, far: 50 });
+sun.shadow.bias = -0.0004;
+scene.add(sun);
+const fill = new THREE.DirectionalLight('#dfe8ff', 0.6);
+fill.position.set(-8, 6, 5);
+scene.add(fill);
+
+const ground = new THREE.Mesh(new THREE.PlaneGeometry(80, 80), new THREE.ShadowMaterial({ opacity: 0.16 }));
+ground.receiveShadow = true;
+scene.add(ground);
+const grid = new THREE.GridHelper(40, 40, '#c3c8d0', '#dde0e5');
+grid.rotation.x = Math.PI / 2;
+grid.position.z = 0.001;
+scene.add(grid);
+
+function label(text, pos, cls = '') {
+  const el = document.createElement('div');
+  el.className = 'lbl ' + cls;
+  el.textContent = text;
+  const o = new CSS2DObject(el);
+  o.position.set(...pos);
+  scene.add(o);
+  return o;
+}
+function line(points, color = '#1d2430', dashed = false, width = 1) {
+  const g = new THREE.BufferGeometry().setFromPoints(points.map(p => new THREE.Vector3(...p)));
+  const m = dashed ? new THREE.LineDashedMaterial({ color, dashSize: 0.08, gapSize: 0.06 }) : new THREE.LineBasicMaterial({ color, linewidth: width });
+  const l = dashed ? new THREE.Line(g, m).computeLineDistances() : new THREE.Line(g, m);
+  scene.add(l);
+  return l;
+}
+
+const loader = new STLLoader();
+const fmt = (v, d = 2) => Number(v).toFixed(d);
+const legendSeen = new Map();
+const COMPONENT_NAMES = { 'SUS-M1-WLK': 'Walker structure & legs', 'SUS-M1-MAN': 'Manipulators', 'SUS-M1-PIL': 'Pilot station', 'SUS-M1-PWR': 'Power pack', 'SUS-M1-SAF': 'Safety monitor & e-stops', 'SUS-M1-DCK': 'UAV dock', 'SUS-A1': 'SUS-A1 UAV' };
+const CLASS_NAMES = { actuator: 'Actuators / joints', occupant: 'Pilot (seated)', cage: 'Protective cage', reference: '1.75 m person (scale)', armor: 'Armoured pod & plates', hose: 'Hydraulic hoses', access: 'Step & grab handles', escape: 'Emergency escape ladder', payload: 'Carried load (placeholder, mass TBD)' };
+
+async function loadConcept(id, offsetY) {
+  const man = await (await fetch(`../../build/cad/${id}/manifest.json`)).json();
+  const group = new THREE.Group();
+  group.position.y = offsetY;
+  for (const m of man.meshes) {
+    const geo = await new Promise((res, rej) => loader.load(`../../build/cad/${id}/${m.file}`, res, undefined, rej));
+    geo.scale(0.001, 0.001, 0.001);
+    const mat = new THREE.MeshStandardMaterial({ color: m.color, roughness: 0.62, metalness: m.cls === 'actuator' ? 0.35 : 0.12,
+      transparent: m.opacity < 1, opacity: m.opacity, side: THREE.DoubleSide, depthWrite: m.opacity >= 1 });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.castShadow = m.opacity >= 1;
+    mesh.receiveShadow = true;
+    group.add(mesh);
+    if (m.opacity >= 1 && m.cls !== 'reference') {
+      const edges = new THREE.LineSegments(new THREE.EdgesGeometry(geo, 35), new THREE.LineBasicMaterial({ color: '#1d2430', transparent: true, opacity: 0.28 }));
+      group.add(edges);
+    }
+    const key = CLASS_NAMES[m.cls] || COMPONENT_NAMES[m.component] || m.cls;
+    if (m.cls !== 'rotor' && m.cls !== 'seat' && !legendSeen.has(key)) legendSeen.set(key, m.color);
+  }
+  scene.add(group);
+  return man;
+}
+
+const mans = [];
+const spacing = 6.5;
+for (let i = 0; i < ids.length; i++) mans.push(await loadConcept(ids[i], view === 'lineup' ? (i - (ids.length - 1) / 2) * spacing : 0));
+
+// Bounds of what was loaded
+const box = new THREE.Box3().setFromObject(scene.children.filter(o => o.isGroup).reduce((g, o) => (g.add(o.clone()), g), new THREE.Group()));
+const center = box.getCenter(new THREE.Vector3());
+const size = box.getSize(new THREE.Vector3());
+
+const man = mans[0];
+const M = man.metrics;
+if (view !== 'lineup' && view !== 'dock' && view !== 'hero') {
+  // Centre of gravity marker and its projection on the ground
+  const [cx, cy, cz] = M.cg_m;
+  const cgMat1 = new THREE.MeshBasicMaterial({ color: '#111827', transparent: true }), cgMat2 = new THREE.MeshBasicMaterial({ color: '#facc15', transparent: true });
+  for (let k = 0; k < 4; k++) {
+    const s = new THREE.Mesh(new THREE.SphereGeometry(0.09, 24, 12, k * Math.PI / 2, Math.PI / 2), k % 2 ? cgMat1 : cgMat2);
+    s.position.set(cx, cy, cz);
+    s.renderOrder = 10; s.material.depthTest = false;
+    scene.add(s);
+  }
+  line([[cx, cy, cz], [cx, cy, 0.01]], '#111827', true);
+  // Support polygon on the ground
+  const poly = M.support_polygon_m.map(([x, y]) => [x, y, 0.012]);
+  const pl = line([...poly, poly[0]], '#0f766e', false, 2);
+  if (view === 'top') { pl.material.depthTest = false; pl.renderOrder = 9; }
+  const pm = new THREE.Mesh(new THREE.ShapeGeometry(new THREE.Shape(M.support_polygon_m.map(([x, y]) => new THREE.Vector2(x, y)))),
+    new THREE.MeshBasicMaterial({ color: '#14b8a6', transparent: true, opacity: view === 'top' ? 0.38 : 0.22, depthWrite: false, depthTest: view !== 'top' }));
+  pm.position.z = 0.008;
+  pm.renderOrder = 8;
+  scene.add(pm);
+}
+
+let camera;
+const target = center.clone();
+if (view === 'iso' || view === 'dock' || view === 'hero') {
+  camera = new THREE.PerspectiveCamera(view === 'dock' ? 30 : 32, W / H, 0.1, 200);
+  if (view === 'hero') {
+    // Low front three-quarter view from a standing person's eye height, looking into the cockpit
+    const r = Math.max(size.x, size.y, size.z) * 2.75;
+    camera.fov = 30;
+    camera.position.set(center.x + r * 0.92, center.y - r * 0.40, 1.7);
+    target.set(center.x, center.y + size.y * 0.12, size.z * 0.46);
+  } else if (view === 'dock') {
+    const [a, b] = man.rotor_pilot_points;
+    target.set((a[0] + b[0]) / 2, (a[1] + b[1]) / 2, (a[2] + b[2]) / 2);
+    const d = man.metrics.uav_dock === 'offboard' ? 9.5 : 5.2;
+    camera.position.set(target.x + d * 0.55, target.y - d * 0.75, target.z + d * 0.45);
+  } else {
+    const r = Math.max(size.x, size.y * (view === 'lineup' ? 0.55 : 1), size.z) * (view === 'lineup' ? 2.0 : 2.45);
+    camera.position.set(center.x + r * 0.78, center.y - r * 0.72, center.z + r * 0.40);
+    target.z = size.z * (view === 'lineup' ? 0.40 : 0.50);
+  }
+} else if (view === 'lineup') {
+  // Orthographic three-quarter view: every concept at exactly the same scale
+  const aspect = W / H;
+  const span = Math.max(size.y * 0.40, size.z * 0.80);
+  camera = new THREE.OrthographicCamera(-span * aspect, span * aspect, span, -span, 0.1, 400);
+  target.set(center.x, center.y, size.z * 0.38);
+  camera.position.set(target.x + 60, target.y - 45, target.z + 32);
+} else {
+  // Half-height chosen so the ground sits just above the metrics strip and the top clears the header.
+  const span = view === 'side' ? Math.max(size.z / 1.45, size.x / 2.6) : Math.max(size.x, size.y) * 0.62;
+  const aspect = W / H;
+  camera = new THREE.OrthographicCamera(-span * aspect, span * aspect, span, -span, 0.1, 200);
+  if (view === 'side') { target.z = 0.70 * span; camera.position.set(center.x, center.y - 40, target.z); }
+  if (view === 'top') { camera.up.set(1, 0, 0); target.x = center.x + span * 0.08; camera.position.set(target.x, center.y, 40); camera.zoom = 0.92; }
+  camera.updateProjectionMatrix();
+}
+camera.updateProjectionMatrix();
+camera.lookAt(target);
+
+// Annotations per view
+if (view === 'side') {
+  const x = box.max.x + 0.35;
+  line([[x, 0, 0], [x, 0, M.height_m]], '#1d2430');
+  for (const z of [0, M.height_m]) line([[x - 0.12, 0, z], [x + 0.12, 0, z]], '#1d2430');
+  label(`${fmt(M.height_m)} m overall`, [x + 0.15, 0, M.height_m / 2], 'big');
+  line([[box.min.x - 0.2, 0, M.cockpit_floor_m], [x - 0.3, 0, M.cockpit_floor_m]], '#e2701f', true);
+  label(`cockpit floor ${fmt(M.cockpit_floor_m)} m (egress drop)`, [box.min.x - 0.25, 0, M.cockpit_floor_m + 0.12]);
+  label(`pilot eye ${fmt(M.pilot_eye_m)} m`, [man.eye[0] + 0.5, 0, man.eye[2] + 0.18]);
+  label(`CG ${fmt(M.cg_m[2])} m`, [M.cg_m[0] - 0.75, 0, M.cg_m[2] + 0.12]);
+}
+if (view === 'top') {
+  label(`CG · static margin ${fmt(M.static_margin_m)} m · tip angle ${fmt(M.static_tip_angle_deg, 1)}°`, [M.cg_m[0], Math.min(...M.support_polygon_m.map(p => p[1])) - 1.45, 0.05], M.static_margin_m < 0.3 ? 'warn big' : 'big');
+  label('support polygon (feet)', [Math.max(...M.support_polygon_m.map(p => p[0])), Math.max(...M.support_polygon_m.map(p => p[1])) + 0.75, 0.05]);
+  line([[M.cg_m[0], M.cg_m[1], 0.02], [M.cg_m[0], Math.min(...M.support_polygon_m.map(p => p[1])) - 0.85, 0.02]], '#b91c1c', true).material.depthTest = false;
+  label('front ↑', [box.max.x - 0.1, box.min.y + 0.3, 0.05], 'big');
+}
+if (view === 'dock') {
+  const [a, b] = man.rotor_pilot_points;
+  line([a, b], '#b91c1c', false, 3);
+  label(`rotor ↔ pilot ${fmt(M.rotor_to_pilot_m)} m`, [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2, Math.max(a[2], b[2]) + 0.25], M.rotor_to_pilot_m < 1.0 ? 'warn big' : 'big');
+}
+if (view === 'lineup') {
+  mans.forEach((m, i) => label(`${m.id} · ${m.metrics.height_m} m`, [box.max.x * 0.2, (i - (ids.length - 1) / 2) * spacing, -0.6], 'big'));
+}
+
+// Header, metrics strip, legend and footer
+const VIEW_NAMES = { hero: 'Front view from eye height (1.7 m)', iso: 'Three-quarter view', side: 'Side elevation (orthographic)', top: 'Plan view: support polygon and centre of gravity', dock: 'UAV dock: rotor clearance to the pilot', lineup: 'Concept line-up at the same scale' };
+const hdr = document.createElement('div');
+hdr.className = 'hdr';
+const title = view === 'lineup' ? `Concept layouts ${ids.join(' · ')}` : `${man.id} · ${man.title}`;
+hdr.innerHTML = `<h1>${title}<span class="badge">CONCEPT MOCKUP</span></h1><div class="sub">${VIEW_NAMES[view]} — placeholder geometry for review and alignment, not a design</div>`;
+frame.appendChild(hdr);
+const lg = document.createElement('div');
+lg.className = 'legend';
+lg.innerHTML = [...legendSeen].map(([k, c]) => `<div><span style="background:${c}"></span>${k}</div>`).join('')
+  + (view !== 'lineup' ? `<div><span style="background:#facc15;border-radius:50%"></span>Centre of gravity (placeholder mass)</div><div><span style="background:#14b8a6"></span>Support polygon</div>` : '');
+frame.appendChild(lg);
+if (view !== 'lineup') {
+  const mt = document.createElement('div');
+  mt.className = 'metrics';
+  const warnTip = M.static_margin_m < 0.3 ? 'warn' : '', warnRot = M.rotor_to_pilot_m < 1.0 ? 'warn' : '';
+  mt.innerHTML = `<div><b>${M.envelope_m.map(v => fmt(v, 1)).join(' × ')} m</b>envelope L × W × H</div>
+    <div><b>${fmt(M.cg_m[2])} m</b>CG height</div>
+    <div class="${warnTip}"><b>${fmt(M.static_margin_m)} m</b>static margin</div>
+    <div class="${warnTip}"><b>${fmt(M.static_tip_angle_deg, 1)}°</b>static tip angle</div>
+    <div><b>${fmt(M.cockpit_floor_m)} m</b>cockpit floor</div>
+    <div class="${warnRot}"><b>${fmt(M.rotor_to_pilot_m)} m</b>rotor ↔ pilot</div>
+    <div><b>~${(M.placeholder_mass_kg / 1000).toFixed(1)} t</b>placeholder mass</div>`;
+  frame.appendChild(mt);
+} else {
+  const mt = document.createElement('div');
+  mt.className = 'metrics';
+  mt.innerHTML = mans.map(m => `<div><b>${m.id}</b>${m.title}</div>`).join('');
+  frame.appendChild(mt);
+}
+const ft = document.createElement('div');
+ft.className = 'foot';
+ft.innerHTML = `<span>Project Susanoo · SUS-CAD-001 · built with FreeCAD from cad/params · ${view === 'lineup' ? '' : 'metrics are properties of placeholder geometry'}</span><span>Drafted by an AI assistant (I0) · not reviewed · CC BY 4.0</span>`;
+frame.appendChild(ft);
+
+renderer.render(scene, camera);
+labels.render(scene, camera);
+window.__ready = true;
+</script>
+</body>
+</html>

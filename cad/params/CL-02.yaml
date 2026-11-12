@@ -1,0 +1,35 @@
+# CL-02 Biped, seated protected cockpit, shoulder-mounted dock.
+# Concept layout for review and alignment only. Every dimension is a placeholder (metres).
+id: CL-02
+title: "Biped, seated protected cockpit, shoulder-mounted dock"
+locomotion: biped
+leg:
+  hip_half_width: 0.62
+  thigh: 1.10
+  shank: 1.10
+  knee_forward: 0.20
+  ankle_height: 0.32
+  radius: 0.14
+  joint_radius: 0.21
+  foot: [1.05, 0.55, 0.15]       # length, width, thickness
+torso:
+  core: [1.00, 1.70, 1.45]       # depth (x), width (y), height (z); rear part of the hull
+  bottom_offset: 0.25            # torso bottom sits this far below the hip axis
+cockpit:
+  frame: [1.15, 1.10, 1.40]      # protective cage, x depth, y width, z height, ahead of the core
+  floor_offset: 0.10             # cockpit floor above torso bottom
+  tube_radius: 0.045
+arm:
+  shoulder_y: 1.02
+  shoulder_drop: 0.30
+  upper: 1.00
+  fore: 0.95
+  radius: 0.10
+power:
+  pack: [0.45, 1.20, 0.80]       # behind the core
+safety:
+  beacon: true
+dock:
+  type: shoulder
+  platform: [0.70, 0.70, 0.06]
+  center: [0.72, -0.60, 0.22]    # beside the cockpit on the right shoulder: x from the core's rear edge, y, z above top

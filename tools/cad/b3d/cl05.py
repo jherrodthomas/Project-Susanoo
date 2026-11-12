@@ -1,0 +1,468 @@
+# SPDX-License-Identifier: Apache-2.0
+"""CL-05 reference layout, authored in build123d (the layout the project lead chose to develop, 2026-11-11).
+
+    /opt/b3d/bin/python tools/cad/b3d/cl05.py [--out build/cad-src/CL-05]
+
+Reads cad/params/CL-05.yaml (the same parameters as the FreeCAD primitive layout, plus a `detail` block) and
+writes one STEP file per part class (structure, actuator, armor, arm, cage, seat, occupant, power, safety, dock,
+uav, rotor, hose) and info.json (hip height, cockpit floor, eye point, ground contacts, dock type). The FreeCAD
+pipeline (tools/cad/build_concepts.py, style "build123d") imports these for metrics, renders and drawing
+sheets, so the analysis tools do not depend on how the geometry was authored.
+
+Units: modelled in metres, exported in millimetres. Concept geometry for review and alignment, not a design.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import math
+from pathlib import Path
+
+import yaml
+from build123d import (Box, Circle, Compound, Plane, Pos, Rectangle, Rot, Solid, Sphere,
+                       Spline, Vector, export_step, extrude, fillet, loft, make_face, Polyline, sweep, FilletPolyline)
+
+ROOT = Path(__file__).resolve().parents[3]
+CLASSES = ["structure", "actuator", "armor", "arm", "cage", "seat", "occupant", "power", "safety", "dock", "uav", "access", "escape",
+           "rotor", "hose", "payload"]
+
+
+# --- Helpers (metres) -----------------------------------------------------------------------------
+
+def v(*a):
+    return Vector(*a)
+
+
+def plane_along(p1, p2):
+    """Plane at p1 whose z axis points to p2 and whose x axis stays in the plane of the segment and world Y."""
+    z = (v(*p2) - v(*p1)).normalized()
+    ref = v(0, 1, 0) if abs(z.Y) < 0.95 else v(1, 0, 0)
+    x = ref.cross(z).normalized()
+    return Plane(origin=v(*p1), x_dir=x, z_dir=z)
+
+
+def cyl(p1, p2, r):
+    d = v(*p2) - v(*p1)
+    return Solid.make_cylinder(r, d.length, plane_along(p1, p2))
+
+
+def ycyl(c, r, width):
+    """Cylinder along world Y centred at c: joint axles, wheels of the dock latch, bolts."""
+    return Solid.make_cylinder(r, width, Plane(origin=v(c[0], c[1] - width / 2, c[2]), x_dir=v(1, 0, 0), z_dir=v(0, 1, 0)))
+
+
+def soft(part, r):
+    """Fillet every edge if the kernel allows it; otherwise return the part unchanged (concept geometry)."""
+    try:
+        return fillet(part.edges(), r)
+    except Exception:  # noqa: BLE001
+        return part
+
+
+def limb(p1, p2, d1, w1, d2, w2, r=0.025):
+    """Tapered limb: a loft between rectangles (depth d in the segment's plane, width w along Y)."""
+    a, b = plane_along(p1, p2), plane_along(p2, p1)
+    b = Plane(origin=b.origin, x_dir=a.x_dir, z_dir=a.z_dir)
+    part = loft([a * Rectangle(d1, w1), b * Rectangle(d2, w2)])
+    return soft(part, r)
+
+
+def tube(points, r, bend=None):
+    """Circular tube swept along a polyline (with filleted corners) or a spline through the points."""
+    path = FilletPolyline(*[v(*p) for p in points], radius=bend) if bend else Spline(*[v(*p) for p in points])
+    return sweep(Plane(origin=path @ 0, z_dir=path % 0) * Circle(r), path=path)
+
+
+def hydraulic(p1, p2, r=0.055):
+    """Cylinder barrel, rod and clevis eyes at both ends."""
+    mid = v(*p1) + (v(*p2) - v(*p1)) * 0.58
+    parts = [cyl(p1, tuple(mid), r), cyl(tuple(mid), p2, r * 0.42)]
+    for p in (p1, p2):
+        parts.append(ycyl(p, r * 0.75, r * 2.2))
+    return parts
+
+
+def add(a, b):
+    return tuple(x + y for x, y in zip(a, b))
+
+
+def lerp(a, b, t):
+    return tuple(x + (y - x) * t for x, y in zip(a, b))
+
+
+# --- Model ----------------------------------------------------------------------------------------
+
+def fold_knee(hip, ankle, thigh, shank):
+    """Knee position (x, z) for a reverse-jointed leg: the intersection of the thigh circle about the hip and the
+    shank circle about the ankle that lies behind the hip-ankle line."""
+    (hx, hz), (ax_, az) = hip, ankle
+    dx, dz = ax_ - hx, az - hz
+    d = math.hypot(dx, dz)
+    if not abs(thigh - shank) <= d <= thigh + shank:
+        raise ValueError(f"hip-ankle distance {d:.3f} m cannot be reached with thigh {thigh} m and shank {shank} m")
+    a = (thigh ** 2 - shank ** 2 + d ** 2) / (2 * d)
+    h = math.sqrt(max(thigh ** 2 - a ** 2, 0.0))
+    mx, mz = hx + a * dx / d, hz + a * dz / d
+    sols = [(mx + h * dz / d, mz - h * dx / d), (mx - h * dz / d, mz + h * dx / d)]
+    return min(sols, key=lambda k: k[0])  # behind: the smaller x
+
+
+def build(p: dict, common: dict, posture: str = "standing", gait: dict | None = None):
+    """gait (walk animation frames only): {"hip_z": m, "legs": {1: (ankle_x, lift), -1: (...)}, "arms": pose} per frame."""
+    parts: dict[str, list] = {c: [] for c in CLASSES}
+    put = lambda cls, *shapes: parts[cls].extend(shapes)  # noqa: E731
+    D = p.get("detail", {})
+
+    # Legs: reverse-jointed (knee behind the hip), raised ankle, two-toe foot with a heel spur
+    L = p["leg"]
+    kf, ax = L["knee_forward"], L.get("ankle_forward", 0.0)
+    knee_z = L["ankle_height"] + math.sqrt(L["shank"] ** 2 - (ax - kf) ** 2)
+    hip_z = knee_z + math.sqrt(L["thigh"] ** 2 - kf ** 2)
+    pose = (p.get("postures") or {}).get(posture) if posture != "standing" else None
+    if posture != "standing" and pose is None:
+        raise ValueError(f"unknown posture {posture!r}")
+    if pose and "hip_height" in pose:  # lower the hip with the feet planted; the knee folds further back
+        hip_z = pose["hip_height"]
+        kf, knee_z = fold_knee((0.0, hip_z), (ax, L["ankle_height"]), L["thigh"], L["shank"])
+    fl, fw, ft = L["foot"]
+    feet = []
+    if gait:
+        hip_z = gait["hip_z"]
+    for s in (1, -1):
+        y = s * L["hip_half_width"]
+        ax_l, lift = gait["legs"][s] if gait else (ax, 0.0)
+        az = L["ankle_height"] + lift
+        if gait:  # each leg solved from its own ankle target, knee behind the hip-ankle line
+            kf, knee_z = fold_knee((0.0, hip_z), (ax_l, az), L["thigh"], L["shank"])
+        hip, knee, ankle = (0, y, hip_z), (kf, y, knee_z), (ax_l, y, az)
+        put("structure", limb(hip, knee, 0.30, 0.26, 0.22, 0.22), limb(knee, ankle, 0.22, 0.22, 0.16, 0.18))
+        put("actuator", ycyl(hip, 0.20, 0.40), ycyl(knee, 0.16, 0.34), ycyl(ankle, 0.12, 0.28))
+        for c, r_, w in ((hip, 0.11, 0.46), (knee, 0.09, 0.40), (ankle, 0.07, 0.32)):
+            put("structure", ycyl(c, r_, w))  # axle caps
+        # Armour: thigh plate on the outside, shin guard on the front of the forward-sloping shin
+        put("armor", limb(lerp(hip, knee, 0.15), lerp(hip, knee, 0.85), 0.34, 0.06, 0.28, 0.06, 0.02).moved(
+            Pos(0, s * 0.16, 0)))
+        shin_dir = (v(*ankle) - v(*knee)).normalized()
+        normal = shin_dir.cross(v(0, 1, 0)).normalized() * -1
+        off = tuple(normal * 0.12)
+        put("armor", limb(add(lerp(knee, ankle, 0.12), off), add(lerp(knee, ankle, 0.82), off), 0.05, 0.26, 0.05, 0.22, 0.015))
+        put("armor", soft(Pos(kf - 0.20, y, knee_z) * Box(0.16, 0.32, 0.34), 0.05))  # knee guard behind the joint
+        put("actuator", *hydraulic((-0.05, y + s * 0.20, hip_z + 0.28), add(lerp(hip, knee, 0.75), (0, s * 0.20, 0))))
+        put("actuator", *hydraulic(add(lerp(hip, knee, 0.45), (0.10, s * 0.19, 0)), add(lerp(knee, ankle, 0.7), (0.06, s * 0.19, 0)), 0.048))
+        # Foot: two toes forward, a heel spur behind, a pad under the ankle link
+        x0 = ax_l - 0.35 * fl
+        pad = soft(Pos(ax_l, y, lift + ft / 2) * Box(0.34, fw * 0.8, ft), 0.04)
+        toes = [soft(Pos(ax_l + fl * 0.32, y + dy, lift + ft * 0.4) * Box(fl * 0.42, fw * 0.36, ft * 0.8), 0.04) for dy in (-fw * 0.24, fw * 0.24)]
+        HS = D.get("heel_spur") or {"reach": 0.42 * fl, "width": fw * 0.32}
+        spur_len = HS["reach"] - 0.08  # from just behind the ankle pad to the heel tip
+        spur = soft(Pos(ax_l - 0.08 - spur_len / 2, y, lift + ft * 0.35) * Box(spur_len, HS["width"], ft * 0.7), 0.03)
+        put("structure", pad, *toes, spur, cyl(ankle, (ax_l, y, lift + ft), 0.09))
+        for solid in (pad, *toes, spur):  # ground contacts from the real foot solids, not a nominal rectangle
+            bb = solid.bounding_box()
+            feet += [(bb.min.X, bb.min.Y), (bb.max.X, bb.min.Y), (bb.min.X, bb.max.Y), (bb.max.X, bb.max.Y)]
+        # Hose from the hull down the back of the thigh to the knee actuator
+        put("hose", tube([(-0.30, y + s * 0.30, hip_z + 0.10), (-0.48, y + s * 0.34, hip_z - 0.35),
+                          (kf - 0.15, y + s * 0.30, knee_z + 0.25), (kf + 0.02, y + s * 0.24, knee_z + 0.05)], 0.032))
+
+    # Pod: shell with a chamfered chin, faceted front window with a raised frame, side windows, panel grooves
+    P = p["pod"]
+    dx, wy, hz = P["size"]
+    x1 = P["x_front"]
+    x0 = x1 - dx
+    z0 = hip_z - P["bottom_offset"]
+    z1 = z0 + hz
+    w = P["wall"]
+    floor = z0 + P["floor_offset"]
+    cx = x0 + dx / 2
+    outer = soft(Pos(cx, 0, z0 + hz / 2) * Box(dx, wy, hz), P["edge_radius"])
+    inner = Pos(cx, 0, z0 + hz / 2) * Box(dx - 2 * w, wy - 2 * w, hz - 2 * w)
+    ch = D.get("chin_chamfer", 0.25)  # sloped lower front, like the reference's chin
+    chin = Pos(x1, 0, z0) * Rot(0, 45, 0) * Box(ch * math.sqrt(2), wy + 0.2, ch * math.sqrt(2))
+    ow, oh, osill = P["opening"]
+    zb = floor + 0.5 + osill
+    c = 0.16
+    pts = [(-ow / 2, zb), (ow / 2, zb), (ow / 2, zb + oh - c), (ow / 2 - c, zb + oh), (-ow / 2 + c, zb + oh), (-ow / 2, zb + oh - c)]
+    yz = Plane(origin=(x1 - 0.5, 0, 0), x_dir=(0, 1, 0), z_dir=(1, 0, 0))
+    window = extrude(yz * make_face(Polyline(*pts, close=True)), amount=1.0)
+    hull = outer - inner - chin - window
+    swx, swz = P["side_window"]
+    wx = x1 - P["seat_back_from_front"] + 0.25
+    hull = hull - Pos(wx, 0, floor + 0.80 + swz / 2) * Box(swx, wy + 0.4, swz)
+    for gz in D.get("groove_heights", []):  # shallow panel grooves around the hull
+        ring = Pos(cx, 0, z0 + gz) * Box(dx + 0.1, wy + 0.1, 0.014) - Pos(cx, 0, z0 + gz) * Box(dx - 0.024, wy - 0.024, 0.02)
+        hull = hull - ring
+    put("armor", hull)
+    big = [(x * 1.14, (z - zb) * 1.12 + zb - 0.05) for x, z in pts]
+    frame = extrude(Plane(origin=(x1 - 0.01, 0, 0), x_dir=(0, 1, 0), z_dir=(1, 0, 0)) *
+                    (make_face(Polyline(*big, close=True)) - make_face(Polyline(*pts, close=True))), amount=0.05)
+    put("armor", frame)
+    for side in (1, -1):  # side window frames
+        put("armor", Pos(wx, side * (wy / 2 + 0.015), floor + 0.80 + swz / 2) * (Box(swx + 0.10, 0.03, swz + 0.10) - Box(swx, 0.05, swz)))
+    # Emergency exit: each side window is a push-out hatch with red internal release handles. A fold-out arm
+    # (davit) carries a rope ladder out past the shoulder plates and arms, so the pilot can leave standing,
+    # without power and without kneeling. Deployed on one side in postures that say so (escape: deployed).
+    EX = p.get("emergency_exit") or {}
+    emergency = None
+    if EX:
+        sill = floor + 0.80
+        open_side = {"right": -1, "left": 1}[EX.get("side", "right")]
+        deployed = bool(pose and pose.get("escape") == "deployed")
+        for side in (1, -1):
+            ys = side * wy / 2
+            hx = wx + swx / 2 - 0.05
+            put("safety", cyl((hx, side * (wy / 2 - w), sill + swz * 0.55), (hx, side * (wy / 2 - w - 0.08), sill + swz * 0.55), 0.016),
+                Pos(hx, side * (wy / 2 - w - 0.09), sill + swz * 0.55) * Box(0.035, 0.03, 0.15))
+            if deployed and side == open_side:
+                put("access", Pos(wx - swx / 2 - 0.03, ys + side * (swx / 2 + 0.03), sill + swz / 2) * Box(0.035, swx, swz))
+                reach = EX["davit_reach"]
+                root, tip = (wx, ys, sill + 0.12), (wx, ys + side * reach, sill + 0.12)
+                put("access", cyl(root, tip, 0.032), cyl((wx, ys, sill - 0.30), (wx, ys + side * reach * 0.85, sill + 0.10), 0.022),
+                    Pos(wx, ys + side * 0.03, sill - 0.10) * Box(0.12, 0.06, 0.50))
+                half = EX["ladder_width"] / 2
+                put("access", cyl((wx - half - 0.04, tip[1], tip[2]), (wx + half + 0.04, tip[1], tip[2]), 0.025))
+                bottom = EX["bottom_clearance"]
+                for dxr in (-half, half):
+                    put("escape", cyl((wx + dxr, tip[1], tip[2]), (wx + dxr, tip[1], bottom), 0.012))
+                for k in range(int((tip[2] - bottom) / EX["rung_spacing"]) + 1):
+                    zr = bottom + k * EX["rung_spacing"]
+                    put("escape", cyl((wx - half, tip[1], zr), (wx + half, tip[1], zr), 0.018))
+            else:  # escape ladder and folded davit stowed in a pouch under the hatch
+                put("access", Pos(wx, ys + side * 0.05, sill - 0.22) * soft(Box(0.34, 0.09, 0.24), 0.02))
+        emergency = {"sill": sill, "clear": [swx, swz], "side": EX.get("side", "right"), "deployed": deployed,
+                     "ladder_y": wy / 2 + EX["davit_reach"]}
+    for bx, bz in ((ow / 2 + 0.05, zb - 0.03), (-ow / 2 - 0.05, zb - 0.03), (ow / 2 - c + 0.04, zb + oh + 0.07), (-ow / 2 + c - 0.04, zb + oh + 0.07)):
+        put("structure", cyl((x1 + 0.04, bx, bz), (x1 + 0.07, bx, bz), 0.022))  # bolt heads on the frame
+    put("seat", Pos(cx, 0, floor - 0.02) * Box(dx - 2 * w, wy - 2 * w, 0.04))
+
+    # Access: grab handles beside and above the front opening; a fold-down ladder hinged under its sill,
+    # deployed in postures that say so (step: deployed) and stowed as a folded pack otherwise
+    AC = p.get("access") or {}
+    treads = []
+    if AC:
+        gy = ow / 2 + AC.get("handle_offset", 0.14)
+        gx = x1 + 0.09
+        for s in (1, -1):
+            lo, hi = (gx, s * gy, zb - 0.28), (gx, s * gy, zb + 0.58)
+            put("access", cyl(lo, hi, 0.022), cyl((x1 - 0.01, s * gy, lo[2] + 0.04), (gx, s * gy, lo[2] + 0.04), 0.02),
+                cyl((x1 - 0.01, s * gy, hi[2] - 0.04), (gx, s * gy, hi[2] - 0.04), 0.02))
+        bar_z = zb + oh + 0.14
+        put("access", cyl((gx, -0.32, bar_z), (gx, 0.32, bar_z), 0.022),
+            *[cyl((x1 - 0.01, yy, bar_z), (gx, yy, bar_z), 0.02) for yy in (-0.28, 0.28)])
+        half = AC["width"] / 2
+        hinge = (x1 + 0.04, zb - 0.07)
+        put("access", ycyl((hinge[0], 0, hinge[1]), 0.03, AC["width"] + 0.06))
+        if pose and pose.get("step") == "deployed":
+            rises = math.ceil(zb / AC["max_rise"])            # equal rises from the ground to the sill
+            treads = [zb * k / rises for k in range(1, rises)]
+            bottom = (x1 + AC["reach"], treads[0] - 0.06)
+            for s in (1, -1):
+                put("access", cyl((hinge[0], s * half, hinge[1]), (bottom[0], s * half, bottom[1]), 0.025))
+            for tz in treads:
+                f_ = (tz - hinge[1]) / (bottom[1] - hinge[1])
+                tx = hinge[0] + f_ * (bottom[0] - hinge[0])
+                put("access", Pos(tx, 0, tz - 0.018) * Box(0.16, AC["width"], 0.035))
+        else:  # stowed: the ladder folded in two, flat against the hull under the opening
+            put("access", Pos(x1 + 0.05, 0, hinge[1] - AC["stowed_height"] / 2) * Box(0.06, AC["width"], AC["stowed_height"]))
+    put("structure", ycyl((0, 0, hip_z), 0.26, 2 * L["hip_half_width"] + 0.10))  # hip drive housing
+
+    # Seated pilot, seat and console
+    h = (x1 - P["seat_back_from_front"] + 0.30, 0, floor + 0.47)
+    put("seat", Pos(h[0] + 0.05, 0, floor + 0.38) * soft(Box(0.50, 0.50, 0.08), 0.02),
+        Pos(h[0] - 0.22, 0, floor + 0.75) * soft(Box(0.08, 0.50, 0.70), 0.02), cyl((h[0], 0, floor), (h[0], 0, floor + 0.34), 0.05),
+        Pos(h[0] + 0.62, 0, h[2] + 0.12) * soft(Box(0.16, 0.70, 0.22), 0.02))
+    neck = (h[0] - 0.06, 0, h[2] + 0.58)
+    head = (neck[0] + 0.02, 0, neck[2] + 0.16)
+    put("occupant", Pos(*h) * Sphere(0.15), cyl(h, neck, 0.16), Pos(*head) * Sphere(0.11))
+    for s in (1, -1):
+        kn = (h[0] + 0.45, s * 0.11, h[2] + 0.02)
+        put("occupant", cyl((h[0], s * 0.11, h[2]), kn, 0.075), cyl(kn, (kn[0] + 0.05, s * 0.11, floor + 0.06), 0.055),
+            cyl((neck[0], s * 0.20, neck[2] - 0.05), (h[0] + 0.48, s * 0.20, h[2] + 0.20), 0.045))
+    eye = (head[0] + 0.07, 0, head[2])
+
+    # Arms: low shoulders, long hanging forearms, three curved claws per hand
+    S, A = p["shoulder"], p["arm"]
+    sx, sy, sz = S["plate"]
+    ap_ = pose or (gait or {}).get("arms")  # a posture's arm pose, or the walk's stowed arms (SYS-013)
+    ang = math.radians(ap_.get("arm_drop_deg", A["drop_angle_deg"]) if ap_ else A["drop_angle_deg"])
+    fa = math.radians(ap_.get("fore_angle_deg", A.get("fore_angle_deg", 12)) if ap_ else A.get("fore_angle_deg", 12))
+    carry = None
+    CA = (ap_ or {}).get("carry")
+    if CA:  # carry pose (SYS-020): solve the arm for a hand target that clamps the load just ahead of the pod
+        sh0 = (x1 - sx / 2 - 0.05, z1 - S["drop"] - sz - 0.05)
+        hx, hz_ = x1 + CA["gap"] + CA["length"] / 2, CA["hand_height"]
+        d = math.hypot(hx - sh0[0], hz_ - sh0[1])
+        if d >= A["upper"] + A["fore"]:
+            raise ValueError("carry hand target out of reach")
+        base_ = math.atan2(hz_ - sh0[1], hx - sh0[0])
+        el_ = base_ - math.acos((A["upper"] ** 2 + d * d - A["fore"] ** 2) / (2 * A["upper"] * d))  # elbow below
+        elx, elz = sh0[0] + A["upper"] * math.cos(el_), sh0[1] + A["upper"] * math.sin(el_)
+        ang, fa = -el_, math.atan2(hz_ - elz, hx - elx)
+        lw = 2 * (wy / 2 + 0.18 - 0.13) - 0.02  # clamped between the hand pads: width set by the arm spacing
+        lx0, lz0 = x1 + CA["gap"], hz_ - CA["height"] / 2
+        put("payload", Pos(lx0 + CA["length"] / 2, 0, hz_) * Box(CA["length"], lw, CA["height"]))
+        # Nearest ground the pilot sees straight ahead: over the window sill, and over the load's front top edge
+        sill_ = floor + 0.5 + P["opening"][2]
+        seen = lambda px, pz: eye[0] + (px - eye[0]) * eye[2] / (eye[2] - pz)  # noqa: E731
+        carry = {"load_size": [CA["length"], round(lw, 3), CA["height"]], "load_center": [lx0 + CA["length"] / 2, 0.0, hz_],
+                 "load_bottom": lz0, "load_top": lz0 + CA["height"], "load_front": lx0 + CA["length"],
+                 "arm_drop_deg": round(math.degrees(ang), 1), "fore_angle_deg": round(math.degrees(fa), 1),
+                 "ground_seen_unloaded": seen(x1, sill_),
+                 "ground_seen_loaded": max(seen(x1, sill_), seen(lx0 + CA["length"], lz0 + CA["height"]) if lz0 + CA["height"] < eye[2] else float("inf"))}
+    for s in (1, -1):
+        yc = s * (wy / 2 + sy / 2 - 0.08)
+        sh = (x1 - sx / 2 - 0.05, s * (wy / 2 + 0.18), z1 - S["drop"] - sz - 0.05)
+        ST = S.get("step")
+        if ST:  # the shoulder plate becomes a step: a tread flush with the hatch sill, over the shoulder joint
+            sill_z = floor + 0.80 + ST.get("offset", 0.0)
+            xf = x1 - 0.05
+            xr = wx - P["side_window"][0] / 2 - ST.get("rear_overhang", 0.05)
+            yo = wy / 2 + ST["width"]
+            th = ST["thickness"]
+            put("armor", soft(Pos((xf + xr) / 2, s * (wy / 2 + ST["width"] / 2), sill_z - th / 2) * Box(xf - xr, ST["width"], th), 0.02))
+            put("armor", Pos((xf + xr) / 2, s * (yo - 0.015), sill_z + 0.025) * Box(xf - xr, 0.03, 0.05))  # toe lip
+            put("armor", soft(Pos(x1 - sx / 2 - 0.05, s * (yo - 0.02), sill_z - th - ST["skirt"] / 2) * Box(sx, 0.04, ST["skirt"]), 0.015))
+            n = int((xf - xr - 0.06) / 0.08)
+            for k in range(n):  # non-slip strips across the tread
+                put("access", Pos(xr + 0.05 + k * 0.08, s * (wy / 2 + ST["width"] / 2 - 0.02), sill_z + 0.006) * Box(0.025, ST["width"] - 0.10, 0.012))
+            for gx in (xr - 0.07, wx + P["side_window"][0] / 2 + 0.08):  # grab rails either side of the hatch
+                put("access", cyl((gx, s * (wy / 2 + 0.09), sill_z + 0.12), (gx, s * (wy / 2 + 0.09), sill_z + 0.95), 0.02),
+                    *[cyl((gx, s * (wy / 2 - 0.01), zz), (gx, s * (wy / 2 + 0.09), zz), 0.018) for zz in (sill_z + 0.16, sill_z + 0.91)])
+            if emergency is not None:
+                emergency["ledge"] = {"height": sill_z, "outer_y": yo, "length": xf - xr}
+        else:
+            put("armor", soft(Pos(x1 - sx / 2 - 0.05, yc, z1 - S["drop"] - sz / 2) * Box(sx, sy, sz), 0.09))
+        el = add(sh, (A["upper"] * math.cos(ang), 0, -A["upper"] * math.sin(ang)))
+        wr = add(el, (A["fore"] * math.cos(fa), 0, A["fore"] * math.sin(fa)))
+        put("actuator", ycyl(sh, 0.17, 0.30), ycyl(el, 0.13, 0.26), ycyl(wr, 0.10, 0.22))
+        put("arm", limb(sh, el, 0.22, 0.20, 0.17, 0.17), limb(el, wr, 0.17, 0.17, 0.13, 0.15))
+        put("armor", limb(lerp(sh, el, 0.15), lerp(sh, el, 0.85), 0.26, 0.05, 0.22, 0.05, 0.015).moved(Pos(0, s * 0.12, 0)))
+        put("actuator", *hydraulic(add(sh, (0.10, 0, 0.16)), add(lerp(sh, el, 0.8), (0.0, 0, 0.12)), 0.042))
+        put("arm", soft(Pos(wr[0], wr[1], wr[2] - 0.08) * Box(0.20, 0.26, 0.18), 0.03))
+        for k, dy in enumerate((-0.08, 0.0, 0.08)):
+            base = (wr[0] + 0.06, wr[1] + dy, wr[2] - 0.16)
+            cl = D.get("claw_length", 0.45)  # claw drop below the hand; scales the curve
+            pts_ = [base] + [add(base, (dx_ * cl, 0, dz_ * cl)) for dx_, dz_ in ((0.25, -0.30), (0.33, -0.70), (0.15, -0.95), (-0.08, -1.05))]
+            put("arm", tube(pts_, 0.034))
+            tip_dir = v(*pts_[-1]) - v(*pts_[-2])
+            put("arm", Solid.make_cone(0.034, 0.0, 0.10, Plane(origin=v(*pts_[-1]), z_dir=tip_dir)))
+
+    # Roll bar (swept tube with bent corners), power pack with fins and vents, safety items
+    R = p["rollbar"]
+    top = z1 + R["rise"]
+    for s in (1, -1):
+        yb = s * (wy / 2 - 0.22)
+        put("cage", tube([(x0 + 0.20, yb, z1 - 0.05), (x0 + 0.20, yb, top), (x0 + 0.85, yb, top - 0.10), (x0 + 0.95, yb, z1 - 0.02)], R["tube_radius"], bend=0.10))
+    put("cage", cyl((x0 + 0.20, -(wy / 2 - 0.22), top), (x0 + 0.20, wy / 2 - 0.22, top), R["tube_radius"]),
+        cyl((x0 + 0.85, -(wy / 2 - 0.22), top - 0.10), (x0 + 0.85, wy / 2 - 0.22, top - 0.10), R["tube_radius"]))
+    W = p["power"]
+    px, py, pz = W["pack"]
+    pk0 = x0 - px + 0.06
+    pc = (pk0 + px / 2, 0, z0 + 0.35 + pz / 2)
+    put("power", soft(Pos(*pc) * Box(px, py, pz), 0.06))
+    for k in range(D.get("fins", 7)):
+        zf = z0 + 0.45 + k * (pz - 0.2) / max(1, D.get("fins", 7) - 1)
+        put("power", Pos(pk0 - 0.03, 0, zf) * Box(0.06, py * 0.8, 0.025))
+    for k in range(W["vents"]):
+        yv = (k - (W["vents"] - 1) / 2) * 0.17
+        put("power", cyl((pk0 + px * 0.55, yv, z0 + 0.35 + pz), (pk0 + px * 0.55, yv, z0 + 0.35 + pz + 0.10), 0.065))
+    put("safety", cyl((x0 + 0.55, 0, z1), (x0 + 0.55, 0, z1 + 0.05), 0.09), cyl((x0 + 0.55, 0, z1 + 0.05), (x0 + 0.55, 0, z1 + 0.17), 0.06),
+        cyl((x1 - 0.35, wy / 2, z0 + 0.55), (x1 - 0.35, wy / 2 + 0.06, z0 + 0.55), 0.045),
+        cyl((pk0, 0.35, z0 + 0.7), (pk0 - 0.06, 0.35, z0 + 0.7), 0.045),
+        Pos(x0 + 0.40, -wy / 2 - 0.07, z0 + 0.45) * Box(0.30, 0.14, 0.26))
+
+    # Rear dock with latches and the SUS-A1 quadrotor on it
+    Dk = p["dock"]
+    pxd, pyd, pzd = Dk["platform"]
+    ptop = z0 + 0.35 + pz
+    dc = (pk0 + Dk["center"][0], Dk["center"][1], ptop + Dk["center"][2])
+    put("dock", soft(Pos(dc[0], dc[1], dc[2] + pzd / 2) * Box(pxd, pyd, pzd), 0.015))
+    sdx = min(pxd, pyd) / 2 - 0.08
+    for ddx, ddy in ((sdx, sdx), (sdx, -sdx), (-sdx, sdx), (-sdx, -sdx)):
+        put("dock", cyl((dc[0] + ddx, dc[1] + ddy, ptop), (dc[0] + ddx, dc[1] + ddy, dc[2]), 0.03))
+    for ddy in (0.16, -0.16):
+        put("dock", Pos(dc[0], dc[1] + ddy, dc[2] + pzd + 0.03) * Box(0.10, 0.05, 0.06))
+    U = common["uav"]
+    bx, by, bz = U["body"]
+    base = (dc[0], dc[1], dc[2] + pzd)
+    zu = base[2] + U["skid_height"]
+    put("uav", soft(Pos(base[0], base[1], zu + bz / 2) * Box(bx, by, bz), 0.02), Pos(base[0] + bx / 2, base[1], zu + 0.02) * Sphere(0.045))
+    for ddx, ddy in ((1, 1), (1, -1), (-1, 1), (-1, -1)):
+        reach = U["arm_reach"] / math.sqrt(2)
+        hub = (base[0] + ddx * reach, base[1] + ddy * reach, zu + bz * 0.7)
+        put("uav", cyl((base[0], base[1], zu + bz * 0.7), hub, 0.014), cyl(hub, add(hub, (0, 0, 0.05)), 0.028))
+        put("rotor", cyl(add(hub, (0, 0, 0.055)), add(hub, (0, 0, 0.065)), U["rotor_radius"]))
+    for ddy in (bx * 0.35, -bx * 0.35):
+        put("uav", cyl((base[0] - 0.14, base[1] + ddy, base[2] + 0.01), (base[0] + 0.14, base[1] + ddy, base[2] + 0.01), 0.01))
+
+    climb = [0.0, *treads, zb]
+    egress = {"sill": zb, "treads": treads, "max_rise": max(b - a for a, b in zip(climb, climb[1:])), "emergency": emergency}
+    info = {"hip_z": hip_z, "floor": floor, "eye": list(eye), "feet": [list(f) for f in feet], "dock": "onboard", "egress": egress,
+            "posture": posture, "knee": [kf, knee_z], **({"carry": carry} if carry else {})}
+    return parts, info
+
+
+def walk_frames(p: dict, common: dict, out: Path, frames: int) -> None:
+    """One walk cycle as per-frame STL meshes (mm) per part class, for tools/cad/blender_walk.py.
+
+    Gait (cad/params/CL-05.yaml walk:): each foot is planted for the duty fraction of the cycle and swings
+    forward in a lifted arc for the rest; the two legs are half a cycle apart. The body advances one stride
+    per cycle at constant speed, so a planted foot stays fixed on the ground. The arms are held in the stowed
+    pose given by walk: arms (SYS-013: manipulation inhibited and arms stowed while walking). Concept kinematics only:
+    no dynamics, balance or load model."""
+    from build123d import export_stl
+    W = p["walk"]
+    S, duty, h = W["stride"], W["duty"], W["lift"]
+    L = p["leg"]
+    ax = L.get("ankle_forward", 0.0)
+    kf0 = L["knee_forward"]
+    knee_z0 = L["ankle_height"] + math.sqrt(L["shank"] ** 2 - (ax - kf0) ** 2)
+    hip0 = knee_z0 + math.sqrt(L["thigh"] ** 2 - kf0 ** 2)
+    meta = {"frames": frames, "stride_m": S, "duty": duty, "body_x": []}
+    for i in range(frames):
+        phase = i / frames
+        legs = {}
+        for s, offset in ((1, 0.0), (-1, 0.5)):
+            f = (phase + offset) % 1.0
+            if f < duty:  # stance: foot fixed in the world while the body moves forward
+                rel, lift = ax + S * (duty / 2 - f), 0.0
+            else:         # swing: the foot travels a whole stride in the world on a lifted arc; relative to
+                g = (f - duty) / (1 - duty)  # the advancing hip that is duty x stride, lift-off to touch-down
+                rel, lift = ax + S * duty * (g - 0.5), h * math.sin(math.pi * g)
+            legs[s] = (rel, lift)
+        hip_z = hip0 - W["crouch"] - W["bob"] * math.cos(4 * math.pi * phase)
+        parts, _ = build(p, common, "standing", gait={"hip_z": hip_z, "legs": legs, "arms": W.get("arms")})
+        d = out / f"f{i:03d}"
+        d.mkdir(parents=True, exist_ok=True)
+        for cls, shapes in parts.items():
+            if shapes:
+                export_stl(Compound(shapes).scale(1000), str(d / f"{cls}.stl"), tolerance=2.0, angular_tolerance=0.35)
+        meta["body_x"].append(S * phase)
+        print(f"walk frame {i + 1}/{frames}", flush=True)
+    (out / "walk.json").write_text(json.dumps(meta, indent=1))
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--out", type=Path, default=ROOT / "build/cad-src")
+    ap.add_argument("--walk", type=int, default=0, help="also write a walk cycle of this many frames")
+    args = ap.parse_args()
+    p = yaml.safe_load((ROOT / "cad/params/CL-05.yaml").read_text())
+    common = yaml.safe_load((ROOT / "cad/params/common.yaml").read_text())
+    if args.walk:
+        walk_frames(p, common, args.out / f"{p['id']}-walk", args.walk)
+        return 0
+    for posture in ["standing", *(p.get("postures") or {})]:
+        parts, info = build(p, common, posture)
+        out = args.out / (p["id"] if posture == "standing" else f"{p['id']}-{posture}")
+        out.mkdir(parents=True, exist_ok=True)
+        for cls, shapes in parts.items():
+            if shapes:
+                export_step(Compound(shapes).scale(1000), str(out / f"{cls}.step"))
+        (out / "info.json").write_text(json.dumps(info, indent=1))
+        print(f"{p['id']} {posture} (build123d): {sum(len(s) for s in parts.values())} solids, hip {info['hip_z']:.2f} m, "
+              f"knee {info['knee'][1]:.2f} m -> {out}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
