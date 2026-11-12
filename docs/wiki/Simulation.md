@@ -14,11 +14,11 @@ Results: [plant results](https://github.com/jherrodthomas/Project-Susanoo/blob/m
 
 ### SC-01 · Slow supply leak on a slope: balance lost before the hold engages
 
-HAZ-WLK-002 · edge case EC-08 (search SF-01) · performed **tip** at 2.92 s, intended safe.
+HAZ-WLK-002 · edge case EC-07 (search SF-01) · performed **tip** at 3.485 s, intended safe.
 
 ![SC-01 Slow supply leak on a slope: balance lost before the hold engages](images/sim-sc-01.svg)
 
-Case: `variant=hydraulic, fault=FLT-01, slope_deg=13.0, tau_leak_s=2.05, pilot_reaction_s=2.6, stride_offset_m=0.27, load_holding=works, monitor=True`
+Case: `variant=hydraulic, fault=FLT-01, slope_deg=16.0, tau_leak_s=2.56, pilot_reaction_s=2.4, stride_offset_m=0.16, load_holding=works, monitor=True`
 
 ### SC-02 · Protective stop removes leg force instead of crouching
 
@@ -42,5 +42,5 @@ HAZ-PIL-002 · edge case EC-01 (search SF-01) · performed **hard-drop** at 1.57
 
 ![SC-04 Burst supply loss with failed load holding: cockpit drops](images/sim-sc-04.svg)
 
-Case: `variant=hydraulic, fault=FLT-01, slope_deg=11.5, tau_leak_s=0.05, pilot_reaction_s=2.1, stride_offset_m=0.19, load_holding=fails, monitor=True`
+Case: `variant=hydraulic, fault=FLT-01, slope_deg=15.5, tau_leak_s=0.05, pilot_reaction_s=2.1, stride_offset_m=0.19, load_holding=fails, monitor=True`
 

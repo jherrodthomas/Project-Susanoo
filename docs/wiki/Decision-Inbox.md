@@ -4,7 +4,7 @@
 
 Questions only the project lead can decide, from `decisions/register.yaml`. Answer in chat or in a pull request; Claude copies the answer into the register and applies it. Rules: `CLAUDE.md`.
 
-Status: open 6, queued 0, answered 0, applied 3, withdrawn 0
+Status: open 7, queued 0, answered 0, applied 4, withdrawn 0
 
 ## What monetary thresholds should the tailored severity categories use?
 
@@ -99,6 +99,22 @@ Blocks: PX4 parameter baseline for SUS-A1, HAZ-INT-001 mitigation M4
 
 Sources: sim/results/uav/summary.md, integrations/px4/interface-contract.md, safety/hazards/HAZ-INT-001.yaml
 
+## How far may payload and gait move the walker's centre of mass ahead of the stance foot when it is on a 20 degree slope?
+
+`DQ-011` · reversibility **easy** · gate G2 · asked 2026-11-12
+
+With the 20 degree slope limit (DQ-010) the failure search now covers 0-20 degrees and finds the walker **tipping with no fault at 19-20 degrees when the CoM sits 0.24-0.26 m ahead of the foot** (SF-01 EC-04, EC-05, EC-08). The no-fault gait holds a CoM offset of up to 0.165 m at 20 degrees at level 2 (0.226 m at level 1), 0.20 m at 18 degrees and 0.25 m at 15 degrees; the nominal gait uses 0.10 m. The search samples offsets up to 0.30 m.
+
+| Option | What it does and costs |
+|---|---|
+| **Keep 20 degrees and limit the CoM offset to 0.12 m** (recommended) | 0.045 m below the level-2 no-fault limit at 20 degrees; payload placement and gait must stay inside it (SYS-008, HAZ-WLK-002 M3). The search space is narrowed to 0-0.12 m. |
+| Limit the CoM offset by slope | 0.20 m up to 15 degrees, 0.12 m at 20 degrees; more usable payload, but the limit becomes a table the envelope protection must enforce. |
+| Lower the slope limit to 15 degrees | Keeps offsets up to 0.20 m usable with margin; less terrain. Reopens DQ-010. |
+
+Blocks: SYS-008 envelope, HAZ-WLK-002 M3, failure-search space for SF-01
+
+Sources: sim/results/search-SF-01.md, sim/results/l2-crosscheck.md, safety/hazards/HAZ-WLK-002.yaml
+
 ## Decided
 
 | ID | Question | Choice | By | Date | Status | Applied in |
@@ -106,3 +122,4 @@ Sources: sim/results/uav/summary.md, integrations/px4/interface-contract.md, saf
 | DQ-001 | Which edition of MIL-STD-882E is the project baseline? | 2012 base edition | lead | 2026-11-11 | applied | `standards/mil-std-882e/model.yaml`, `framework/882e-conformance-review.md` |
 | DQ-007 | Which engine should the higher-fidelity legged-dynamics simulation use? | MuJoCo | lead | 2026-11-11 | applied | `sim/mujoco/model.py`, `sim/mujoco/l2.py`, `sim/results/l2-crosscheck.md` |
 | DQ-009 | How should the level-1 walker start each case, now that the level-2 cross-check disagrees with it on EC-07 and EC-08? | Start both models on level 1's periodic orbit | claude | 2026-11-12 | applied | `sim/plant/walker.py`, `sim/mujoco/l2.py`, `sim/results/search-SF-01.md`, `sim/results/l2-crosscheck.md`, `safety/hazards/HAZ-WLK-002.yaml` |
+| DQ-010 | What slope limit should CONOPS section 4 set for the walker? | 20 degrees | lead | 2026-11-12 | applied | `concept/CONOPS.md`, `architecture/item-definition.yaml`, `requirements/SYS-008.yaml`, `safety/hazards/HAZ-WLK-002.yaml`, `sim/search/families.yaml` |

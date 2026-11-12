@@ -54,7 +54,7 @@ externals:
   - {id: EXT-OBSERVER, name: "Safety observer", assumption: "Holds an independent stop and enforces the exclusion zone"}
   - {id: EXT-CREW, name: "Ground crew and maintainers", assumption: "Follow isolation procedures; may not"}
   - {id: EXT-BYSTANDER, name: "Bystanders", assumption: "Kept outside the exclusion zone by procedure only"}
-  - {id: EXT-TERRAIN, name: "Terrain and obstacles", assumption: "Slope, payload and ground limits TBD (CONOPS 4)"}
+  - {id: EXT-TERRAIN, name: "Terrain and obstacles", assumption: "Slope limit 20 degrees (CONOPS 4, DQ-010); CoM offset, payload and ground limits TBD (DQ-011)"}
   - {id: EXT-AIRSPACE, name: "Airspace, people and property under the UAV", assumption: "Operations inside a defined, unpopulated volume"}
   - {id: EXT-GNSS-RF, name: "GNSS and RF environment", assumption: "Signals may be degraded, lost or spoofed"}
   - {id: EXT-WEATHER, name: "Weather", assumption: "Wind and precipitation limits TBD"}

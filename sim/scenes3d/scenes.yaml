@@ -7,7 +7,7 @@ scenes:
   - id: S3-01
     hazards: [HAZ-WLK-002]
     title: Slow supply leak on a slope; balance lost before the hold engages
-    motion: {source: edge, family: SF-01, edge_case: EC-08}
+    motion: {source: edge, family: SF-01, edge_case: EC-07}
     look: {environment: hillside, condition: clear, camera: side}
     variants:
       - {id: S3-01-dusk, look: {condition: dusk}}
