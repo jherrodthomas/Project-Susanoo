@@ -38,6 +38,9 @@ jobs:
       - name: Front-page README figures and numbers match the records
         run: python -m tools.readme.build_readme --check
 
+      - name: Wiki copies of the repository pages are current (docs/wiki, assets.txt)
+        run: python -m tools.wiki.build_wiki --check
+
       - name: Every page and figure explains its abbreviations and codes (docs/terms.yaml)
         run: python -m tools.terms.terms --check
 

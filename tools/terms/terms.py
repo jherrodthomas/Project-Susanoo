@@ -300,6 +300,9 @@ def decorate(rel: str | Path, text: str) -> str:
     """Add or refresh the terms block (.md) or line (.svg) of a page or figure about to be written."""
     rel = Path(rel).as_posix()
     rel = rel[len(str(ROOT)) + 1:] if rel.startswith(str(ROOT)) else rel
+    if rel.endswith(".md") and Path(rel).name.startswith("_"):
+        # wiki chrome (_Sidebar.md, _Footer.md) shows on every wiki page: no terms block there
+        return re.sub(r"\n*" + re.escape(START) + r".*?" + re.escape(END) + r"\n*", "\n", text, flags=re.S).lstrip("\n")
     if rel.endswith(".md") and rel != "docs/terms.md":
         return decorate_markdown(text)
     if rel.endswith(".svg"):
