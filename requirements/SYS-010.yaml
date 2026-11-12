@@ -1,0 +1,27 @@
+schema: susanoo/requirement/v0.1
+id: SYS-010
+title: Protective stop independence
+statement: The protective stop path shall achieve its defined safe behavior without depending on the mission, motion
+  and balance control software.
+derived_from:
+- SYS-002
+status: candidate
+source:
+  documents:
+  - docs/wiki/SUS-M1-Architecture-and-Boundaries.md
+  - safety/mil-std-882e/05-risk-reduction/safety-requirements/README.md
+  scenario_ids:
+  - SCN-101
+  hazard_ids:
+  - HAZ-SAF-001
+allocated_to:
+- SUS-M1-SAF
+safety_significant: true
+verification:
+  method:
+  - analysis
+  - test
+  evidence_ids: []
+  disposition: open
+tbd:
+- Degree of independence (separate processor, hardwired path) pending the SSHA of SUS-M1-SAF and its SwCI

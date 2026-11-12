@@ -49,4 +49,19 @@ package SusanooRequirements {
         @Source { record = "requirements/SYS-009.yaml"; }
         @HazardRef { ids = ("HAZ-PIL-002"); }
     }
+    requirement <'SYS-010'> protectiveStopIndependence : SystemRequirement {
+        doc /* The protective stop path shall achieve its defined safe behavior without depending on the mission, motion and balance control software. */
+        @Source { record = "requirements/SYS-010.yaml"; }
+        @HazardRef { ids = ("HAZ-SAF-001"); }
+    }
+    requirement <'SYS-011'> protectiveStopReactionTime : SystemRequirement {
+        doc /* The protective stop shall begin its defined safe behavior within the reaction time allocated by hazard analysis for each operating mode. */
+        @Source { record = "requirements/SYS-011.yaml"; }
+        @HazardRef { ids = ("HAZ-SAF-001"); }
+    }
+    requirement <'SYS-012'> rotorArmingRequiresConfirmedRelease : SystemRequirement {
+        doc /* UAV rotor arming shall require a positively confirmed unretained dock state reported over the docking interface. */
+        @Source { record = "requirements/SYS-012.yaml"; }
+        @HazardRef { ids = ("HAZ-DCK-001"); }
+    }
 }

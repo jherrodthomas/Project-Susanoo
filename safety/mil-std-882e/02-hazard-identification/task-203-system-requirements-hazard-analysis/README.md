@@ -57,6 +57,7 @@ package Task203_SRHA {
     private import ScalarValues::*;
     private import SusanooLibrary::*;
     private import SusanooArchitecture::*;
+    private import RequirementDerivation::*;
     private import SusanooRequirements::*;
     // Requirement records shown here are owned by models/sysml/model/Requirements.sysml (generated from requirements/); satisfy relations by Satisfaction.sysml.
     view requirementsInScope {
@@ -69,7 +70,13 @@ package Task203_SRHA {
         expose SusanooRequirements::'SYS-007';
         expose SusanooRequirements::'SYS-008';
         expose SusanooRequirements::'SYS-009';
+        expose SusanooRequirements::'SYS-010';
+        expose SusanooRequirements::'SYS-011';
+        expose SusanooRequirements::'SYS-012';
     }
+    #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> SusanooRequirements::'SYS-010'; }
+    #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> SusanooRequirements::'SYS-011'; }
+    #derivation connection { end #original ::> SusanooRequirements::'SYS-003'; end #derive ::> SusanooRequirements::'SYS-012'; }
 }
 ```
 

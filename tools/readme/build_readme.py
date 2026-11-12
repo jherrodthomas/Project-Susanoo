@@ -89,98 +89,48 @@ def stats(d: dict) -> dict:
 
 
 # ================================================================ banner
+CONCEPT_ART = OUT / "concept-walker-uav.jpg"
+
+
 def banner(s: dict) -> str:
-    W, H = 1280, 420
-    out = ['<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">'
-           '<stop offset="0" stop-color="#0B1220"/><stop offset="1" stop-color="#1E293B"/></linearGradient>'
-           '<linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5EEAD4" '
-           'stop-opacity=".55"/><stop offset="1" stop-color="#0F766E" stop-opacity=".25"/></linearGradient>'
-           '<radialGradient id="glow" cx=".72" cy=".42" r=".55"><stop offset="0" stop-color="#4F46E5" '
-           'stop-opacity=".35"/><stop offset="1" stop-color="#4F46E5" stop-opacity="0"/></radialGradient>'
-           '<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" '
-           'fill="none" stroke="#FFFFFF" stroke-opacity=".045" stroke-width="1"/></pattern></defs>',
-           fk.rect(0, 0, W, H, fill="url(#bg)", stroke="none", rx=18, sw=0),
-           fk.rect(0, 0, W, H, fill="url(#grid)", stroke="none", rx=18, sw=0),
-           fk.rect(0, 0, W, H, fill="url(#glow)", stroke="none", rx=18, sw=0)]
-    # --- copy
+    """Hero banner: the concept image full-bleed, a dark left gradient for the title, and headline counts."""
+    import base64
+    W, H = 1280, 548
+    img = base64.b64encode(CONCEPT_ART.read_bytes()).decode()
+    out = ['<defs><linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">'
+           '<stop offset="0" stop-color="#0B1220" stop-opacity=".96"/>'
+           '<stop offset=".38" stop-color="#0B1220" stop-opacity=".78"/>'
+           '<stop offset=".62" stop-color="#0B1220" stop-opacity="0"/></linearGradient>'
+           '<linearGradient id="foot" x1="0" y1="0" x2="0" y2="1"><stop offset=".7" stop-color="#0B1220" '
+           'stop-opacity="0"/><stop offset="1" stop-color="#0B1220" stop-opacity=".75"/></linearGradient>'
+           f'<clipPath id="card"><rect width="{W}" height="{H}" rx="18"/></clipPath></defs>',
+           f'<g clip-path="url(#card)"><image href="data:image/jpeg;base64,{img}" x="0" y="0" width="{W}" '
+           f'height="{H}" preserveAspectRatio="xMidYMid slice"/>',
+           fk.rect(0, 0, W, H, fill="url(#fade)", stroke="none", rx=0, sw=0),
+           fk.rect(0, 0, W, H, fill="url(#foot)", stroke="none", rx=0, sw=0), "</g>"]
     x = 64
-    out.append(fk.text(x, 92, "PROJECT SUSANOO  ·  SUS-I1", size=13, fill="#5EEAD4", weight=700))
-    out.append(fk.text(x, 158, "Susanoo", size=64, fill="#FFFFFF", weight=800))
-    for i, ln in enumerate(["A human-piloted mechanized walker and a dockable", "observation UAV, engineered as code against",
+    out.append(fk.text(x, 104, "PROJECT SUSANOO  ·  SUS-I1", size=13, fill="#5EEAD4", weight=700))
+    out.append(fk.text(x, 176, "Susanoo", size=72, fill="#FFFFFF", weight=800))
+    for i, ln in enumerate(["A human-piloted mechanized walker and a dockable",
+                            "observation UAV, engineered as code against",
                             "MIL-STD-882E: every claim traced, checked and drawn."]):
-        out.append(fk.text(x, 200 + 26 * i, ln, size=19, fill="#CBD5E1"))
+        out.append(fk.text(x, 222 + 28 * i, ln, size=20, fill="#E2E8F0"))
     chips = [(f"{s['hazards']}", "hazards tracked"), (f"{s['interfaces']}", "interfaces"),
              (f"{s['reqs']}", "safety requirements"), (f"{s['sysml']}", "SysML files validated")]
     cx = x
     for num, lab in chips:
-        w = fk.text_w(num, 22, True) + fk.text_w(lab, 12.5) + 40
-        out.append(fk.rect(cx, 300, w, 46, fill="#FFFFFF", stroke="#FFFFFF", rx=12, sw=0, opacity="0.06"))
-        out.append(fk.rect(cx, 300, w, 46, fill="none", stroke="#334155", rx=12, sw=1))
-        out.append(fk.text(cx + 14, 330, num, size=22, fill="#FFFFFF", weight=800))
-        out.append(fk.text(cx + 22 + fk.text_w(num, 22, True), 329, lab, size=12.5, fill="#94A3B8"))
+        w = fk.text_w(num, 22, True) * 1.1 + fk.text_w(lab, 12.5) + 40
+        out.append(fk.rect(cx, 340, w, 46, fill="#0B1220", stroke="#334155", rx=12, sw=1, opacity="0.82"))
+        out.append(fk.text(cx + 14, 370, num, size=22, fill="#FFFFFF", weight=800))
+        out.append(fk.text(cx + 24 + fk.text_w(num, 22, True) * 1.1, 369, lab, size=12.5, fill="#CBD5E1"))
         cx += w + 10
-    out.append(fk.text(x, 384, "Simulation-first  ·  Unarmed  ·  Nothing certified, accepted or flight-qualified",
-                       size=12.5, fill="#64748B"))
-    out += walker_art()
-    return fk.svg(W, H, "Project Susanoo", "Human-piloted mechanized walker and dockable observation UAV, "
-                  "engineered as code against MIL-STD-882E.", out).replace(fk.rect(0, 0, W, H, fill="#FFFFFF", stroke="none", rx=0, sw=0), "")
-
-
-def walker_art() -> list[str]:
-    """Original line-art of the SUS-M1 walker with SUS-A1 returning to its dock (concept illustration)."""
-    o: list[str] = []
-    st, acc, uav, safe = "#CBD5E1", "#818CF8", "#5EEAD4", "#FB923C"
-    gy = 372
-    o.append(fk.line(760, gy, 1236, gy, stroke="#334155", sw=1.5))
-    for i in range(0, 470, 26):
-        o.append(fk.line(770 + i, gy + 6, 760 + i, gy + 16, stroke="#1F2A3D", sw=1.2))
-    # exclusion zone
-    o.append(fk.el("ellipse", cx="985", cy=str(gy), rx="205", ry="16", fill="none", stroke=safe, stroke_width="1.2",
-                   stroke_dasharray="6 6", opacity="0.6"))
-    # back leg (darker)
-    for hip, knee, ank, toe, c in [((945, 268), (888, 312), (925, 360), (958, 368), "#475569"),
-                                   ((1010, 268), (1068, 314), (1030, 360), (1066, 368), st)]:
-        o.append(fk.path(f"M{hip[0]} {hip[1]} L{knee[0]} {knee[1]} L{ank[0]} {ank[1]}", stroke=c, sw=9, fill="none"))
-        o.append(fk.path(f"M{ank[0] - 22} {gy} L{toe[0] + 6} {gy}", stroke=c, sw=7))
-        for p in (hip, knee, ank):
-            o.append(fk.circle(p[0], p[1], 6.5, fill="#0B1220", stroke=acc, sw=2.2))
-    # hips / chassis
-    o.append(fk.rect(915, 246, 130, 34, fill="#1E293B", stroke=st, rx=10, sw=2))
-    # pilot pod: protected cockpit
-    pod = "M905 246 L905 168 Q905 136 936 128 L1028 128 Q1062 136 1066 168 L1066 246 Z"
-    o.append(fk.path(pod, stroke=st, sw=2.4, fill="#162033"))
-    o.append(fk.path("M922 220 L922 172 Q924 150 946 146 L1018 146 Q1044 152 1048 176 L1048 220 Z",
-                     stroke=uav, sw=1.6, fill="url(#glass)"))
-    # pilot silhouette
-    o.append(fk.path("M958 220 Q958 198 985 196 Q1012 198 1012 220 Z", stroke=st, sw=1.6, fill="#0B1220"))
-    o.append(fk.circle(985, 176, 13, fill="#0B1220", stroke=st, sw=1.6))
-    o.append(fk.path("M974 174 Q985 168 996 174 L996 180 Q985 184 974 180 Z", stroke="none", sw=0, fill=uav))
-    o.append(fk.line(962, 214, 1008, 214, stroke=safe, sw=2))
-    # protective-stop / safety monitor badge
-    o.append(fk.circle(1052, 236, 8, fill=safe, stroke="none", sw=0))
-    o.append(fk.text(1052, 240, "!", size=11, fill="#0B1220", weight=800, anchor="middle"))
-    # manipulator arm
-    o.append(fk.path("M1066 196 L1112 224 L1104 268", stroke=st, sw=7, fill="none"))
-    for p in ((1066, 196), (1112, 224)):
-        o.append(fk.circle(p[0], p[1], 5.5, fill="#0B1220", stroke=acc, sw=2))
-    o.append(fk.path("M1096 268 L1104 284 L1112 268", stroke=st, sw=3, fill="none"))
-    # dock on the back of the pod
-    o.append(fk.rect(912, 112, 76, 10, fill="#1E293B", stroke=acc, rx=4, sw=1.8))
-    o.append(fk.line(950, 112, 950, 104, stroke=acc, sw=2))
-    # UAV returning: dashed approach path into the dock
-    o.append(fk.path("M1170 82 C 1120 70, 990 60, 950 100", stroke=uav, sw=1.6, dash="5 6", fill="none"))
-    ux, uy = 1182, 78
-    for dx, dy in ((-26, -14), (26, -14), (-26, 14), (26, 14)):
-        o.append(fk.line(ux, uy, ux + dx, uy + dy, stroke=uav, sw=2.4))
-        o.append(fk.el("ellipse", cx=fk.fmt(ux + dx), cy=fk.fmt(uy + dy), rx="15", ry="4.5", fill="none",
-                       stroke=uav, stroke_width="1.6", opacity="0.9"))
-    o.append(fk.rect(ux - 11, uy - 7, 22, 14, fill="#0B1220", stroke=uav, rx=4, sw=2))
-    # observation cone
-    o.append(fk.path(f"M{ux} {uy + 8} L{ux - 70} {gy - 4} L{ux + 40} {gy - 4} Z", stroke="none", sw=0,
-                     fill="#5EEAD4").replace('fill="#5EEAD4"', 'fill="#5EEAD4" fill-opacity="0.06"'))
-    o.append(fk.text(1236, 402, "Concept illustration · SUS-M1 walker, SUS-A1 returning to its dock",
-                     size=10.5, fill="#475569", anchor="end"))
-    return o
+    out.append(fk.text(x, 424, "Simulation-first  ·  Unarmed  ·  Nothing certified, accepted or flight-qualified",
+                       size=13, fill="#94A3B8"))
+    out.append(fk.text(W - 24, H - 18, "Concept art (AI-generated) of the original SUS-M1 walker with SUS-A1 "
+                       "descending to its dock", size=11, fill="#CBD5E1", anchor="end"))
+    svg = fk.svg(W, H, "Project Susanoo", "Human-piloted mechanized walker and dockable observation UAV, "
+                 "engineered as code against MIL-STD-882E.", out)
+    return svg.replace(fk.rect(0, 0, W, H, fill="#FFFFFF", stroke="none", rx=0, sw=0), "", 1)
 
 
 # ================================================================ at a glance
@@ -337,11 +287,6 @@ def simulation(d: dict, s: dict) -> str:
                          "failsafe scenarios for the UAV. Design aids that feed the hazard records; not evidence.",
                          "sim/results")
     out = list(head)
-    # stamp
-    stamp = "SYNTHETIC · NO EVIDENCE CREDIT"
-    sw_ = fk.text_w(stamp, 10.5, True) + 24
-    out.append(fk.rect(W - M - sw_, y0 + 18, sw_, 24, fill=TONES["amber"][1], stroke=TONES["amber"][0], rx=12, sw=1.2))
-    out.append(fk.text(W - M - sw_ / 2, y0 + 34, stamp, size=10.5, fill=TONES["amber"][0], weight=700, anchor="middle"))
     # left: SF-01
     x, y = M, y0 + 40
     colw = (W - 2 * M - 40) / 2

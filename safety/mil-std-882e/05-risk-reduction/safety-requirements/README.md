@@ -14,8 +14,9 @@
 
 ## Purpose
 
-Baselined safety requirements derived from SRHA, SHA, O&SHA, HHA and EHA, each allocated to a
-system element and assigned a verification method. Released requirements need a verification
+Safety requirements derived from SRHA, SHA, O&SHA, HHA and EHA, each allocated to a system element and
+assigned a verification method. The records live in [`requirements/`](../../../../requirements/); derived
+requirements name their parent in `derived_from`. Released requirements need a verification
 disposition (traceability rule 2).
 
 ## Position in the MIL-STD-882E flow
@@ -60,26 +61,14 @@ package SafetyRequirements {
     // Requirement records shown here are owned by models/sysml/model/Requirements.sysml (generated from requirements/); satisfy relations by Satisfaction.sysml.
     view requirementsInScope {
         expose SusanooRequirements::'SYS-002';
+        expose SusanooRequirements::'SYS-010';
+        expose SusanooRequirements::'SYS-011';
         expose SusanooRequirements::'SYS-003';
+        expose SusanooRequirements::'SYS-012';
     }
-    requirement def <'SR-002-1'> StopIndependence {
-        doc /* Protective stop path shall not depend on motion-control software */
-    }
-    requirement sr_002_1 : StopIndependence;
-    requirement def <'SR-002-2'> StopResponseTime {
-        doc /* Protective stop reaction time shall meet the value set by hazard analysis (TBD) */
-    }
-    requirement sr_002_2 : StopResponseTime;
-    requirement def <'SR-003-1'> LatchStateInterlock {
-        doc /* Rotor arming shall require a positively confirmed unretained dock state */
-    }
-    requirement sr_003_1 : LatchStateInterlock;
-    satisfy sr_002_1 by context.system.walker.safetyMonitor;
-    satisfy sr_002_2 by context.system.walker.safetyMonitor;
-    satisfy sr_003_1 by context.system.walker.dock;
-    #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> sr_002_1; }
-    #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> sr_002_2; }
-    #derivation connection { end #original ::> SusanooRequirements::'SYS-003'; end #derive ::> sr_003_1; }
+    #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> SusanooRequirements::'SYS-010'; }
+    #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> SusanooRequirements::'SYS-011'; }
+    #derivation connection { end #original ::> SusanooRequirements::'SYS-003'; end #derive ::> SusanooRequirements::'SYS-012'; }
 }
 ```
 

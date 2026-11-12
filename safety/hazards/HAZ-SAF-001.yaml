@@ -65,6 +65,7 @@ mitigations:
   state: identified
   requirement_ids:
   - SYS-002
+  - SYS-011
   ssf_ids:
   - SSF-002
   verification:
@@ -78,12 +79,15 @@ mitigations:
   state: identified
   requirement_ids:
   - SYS-002
+  - SYS-010
   verification:
     method:
     - test
     evidence_ids: []
 requirement_ids:
 - SYS-002
+- SYS-010
+- SYS-011
 owner:
   role: ROLE-SWL
   person: null

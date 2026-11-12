@@ -1,0 +1,27 @@
+schema: susanoo/requirement/v0.1
+id: SYS-012
+title: Rotor arming requires confirmed release
+statement: UAV rotor arming shall require a positively confirmed unretained dock state reported over the docking
+  interface.
+derived_from:
+- SYS-003
+status: candidate
+source:
+  documents:
+  - integrations/px4/interface-contract.md
+  - safety/mil-std-882e/05-risk-reduction/safety-requirements/README.md
+  scenario_ids:
+  - SCN-107
+  hazard_ids:
+  - HAZ-DCK-001
+allocated_to:
+- SUS-M1-DCK
+- SUS-I1-INT
+safety_significant: true
+verification:
+  method:
+  - test
+  evidence_ids: []
+  disposition: open
+tbd:
+- Interaction with the hardware latch interlock (HAZ-DCK-001 M1) pending the dock trade study (TS-004)

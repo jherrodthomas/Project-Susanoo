@@ -90,7 +90,7 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 |---|---|---|
 | Hazards tracked (Task 106) | **9** (9 open) · initial 4 High, 4 Serious, 1 Medium → target 9 Medium | [`safety/hazards/`](safety/hazards/) |
 | Mitigations planned | **37** | hazard records |
-| Safety requirements | **9** (9 candidate, 9 with verification open) | [`requirements/`](requirements/) |
+| Safety requirements | **12** (12 candidate, 12 with verification open) | [`requirements/`](requirements/) |
 | Safety-significant software functions | **8** | [`safety/software/`](safety/software/) |
 | Architecture | **18** elements, **8** externals, **30** interfaces, **9** functions | [`architecture/item-definition.yaml`](architecture/item-definition.yaml) |
 | MIL-STD-882E tasks | **25** tailored: 19 selected, 2 conditional, 2 not selected, 2 n/a · gate **G0** | [`standards/tailoring/`](standards/tailoring/mil-std-882e.yaml) |

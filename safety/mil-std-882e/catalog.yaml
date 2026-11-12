@@ -1171,8 +1171,9 @@ folders:
     applicability: Selected
     role: Systems lead
     purpose: |
-      Baselined safety requirements derived from SRHA, SHA, O&SHA, HHA and EHA, each allocated to a
-      system element and assigned a verification method. Released requirements need a verification
+      Safety requirements derived from SRHA, SHA, O&SHA, HHA and EHA, each allocated to a system element and
+      assigned a verification method. The records live in [`requirements/`](../../../../requirements/); derived
+      requirements name their parent in `derived_from`. Released requirements need a verification
       disposition (traceability rule 2).
     scope: [SUS-M1-SAF, SUS-M1-CTL, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FC]
     boundary:
@@ -1188,20 +1189,15 @@ folders:
       views:
         - kind: req
           title: allocation and derivation
+          caption: >-
+            Requirement records in requirements/ with their allocation (Satisfaction.sysml) and derivation
+            (derived_from in each record). SYS-010..012 refine SYS-002 and SYS-003.
           requirements:
             - {id: SYS-002, record: true}
-            - {id: SR-002-1, name: StopIndependence, text: Protective stop path shall not depend on motion-control software, risk: High, verify: Analysis}
-            - {id: SR-002-2, name: StopResponseTime, text: Protective stop reaction time shall meet the value set by hazard analysis (TBD), risk: High, verify: Test}
+            - {id: SYS-010, record: true}
+            - {id: SYS-011, record: true}
             - {id: SYS-003, record: true}
-            - {id: SR-003-1, name: LatchStateInterlock, text: Rotor arming shall require a positively confirmed unretained dock state, risk: High, verify: Test}
-          derives:
-            - [SYS-002, SR-002-1]
-            - [SYS-002, SR-002-2]
-            - [SYS-003, SR-003-1]
-          satisfied_by:
-            - [SUS-M1-SAF, SR-002-1]
-            - [SUS-M1-SAF, SR-002-2]
-            - [SUS-M1-DCK, SR-003-1]
+            - {id: SYS-012, record: true}
     inputs:
       - {ref: T203, item: System safety requirements}
       - {ref: T205, item: Interface requirements}

@@ -425,7 +425,11 @@ def view_req(ctx: Ctx, v: dict, pkg: str) -> tuple[dict, str]:
     for el, rids in verifies.items():
         s += [f"    verification def <'{el}'> {sysml_name(el)} {{", "        objective {",
               *[f"            verify {ref[r]};" for r in rids], "        }", "    }"]
-    for a, b in v.get("derives", []):
+    derives = list(v.get("derives", []))
+    for r in entries:
+        if r.get("record"):
+            derives += [(parent, r["id"]) for parent in ctx.reqs[r["id"]].get("derived_from", []) if parent in in_view]
+    for a, b in derives:
         edges.append({"src": mid(b), "dst": mid(a), "label": "«deriveReqt»", "dash": True, "tone": "interface"})
         s.append(f"    #derivation connection {{ end #original ::> {ref[a]}; end #derive ::> {ref[b]}; }}")
     if exposed:
@@ -435,7 +439,7 @@ def view_req(ctx: Ctx, v: dict, pkg: str) -> tuple[dict, str]:
     legend = [edge_leg("«satisfy»", True)]
     if v.get("verified_by"):
         legend.append(edge_leg("«verify»", True, "ok"))
-    if v.get("derives"):
+    if derives:
         legend.append(edge_leg("«deriveReqt»", True, "interface"))
     if exposed:
         legend.append(("#F1F5F9", "#64748B", "Requirement record (requirements/)"))
@@ -585,7 +589,7 @@ def build_views(ctx: Ctx, f: dict) -> tuple[list[dict], str | None]:
             frag, txt = view_req(ctx, v, pkg)
             if v.get("records") or any(r.get("record") for r in v.get("requirements", [])):
                 extra.add("SusanooRequirements")
-            if v.get("derives"):
+            if "#derivation" in txt:
                 extra.add("RequirementDerivation")
         elif k == "act":
             frag, txt = view_act(v)
