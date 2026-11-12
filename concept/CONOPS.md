@@ -83,13 +83,13 @@ Assess ingress/egress, restraints, visibility, alarms, workload, manual authorit
 ## 9. Candidate requirements
 | Source | Candidate |
 |---|---|
-| SCN-001 | SYS-001 pilot-readiness actuation interlock; SYS-017 controlled lowered posture for ingress and egress |
-| SCN-002/101 | SYS-004 feedback fault detection and degraded behavior; SYS-016 arms stowed or in the carry pose to walk |
-| SCN-003 | SYS-008 stability envelope; SYS-018 loaded walking limits (carrying while walking allowed under conditions, DQ-014) |
+| SCN-001 | SYS-001 pilot-readiness actuation interlock; SYS-018 controlled lowered posture for ingress and egress |
+| SCN-002/101 | SYS-004 feedback fault detection and degraded behavior; SYS-017 arms stowed or in the carry pose to walk |
+| SCN-003 | SYS-008 stability envelope; SYS-019 loaded walking limits (carrying while walking allowed under conditions, DQ-014) |
 | SCN-004/105 | UAV lost-link behavior and display integrity (TBD) |
 | SCN-005/106 | SYS-005 docking retention; SYS-006 envelope inhibit |
 | SCN-107 | SYS-003 docked rotor inhibit |
-| SCN-108 | Isolation (TBD); SYS-019 emergency egress without power or kneeling |
+| SCN-108 | Isolation (TBD); SYS-020 emergency egress without power or kneeling |
 
 ## 10. Design alternatives and open decisions
 Hydraulic, electrohydraulic or electromechanical actuation; seated or standing pilot; rear/shoulder/separate UAV dock. Selection requires trade studies and safety review. **Locomotion is bipedal** (DQ-012), and the reference concept layout is CL-05, a reverse-jointed pod with claw arms (DQ-013; [cad/README.md](../cad/README.md)). No concept rendering establishes feasibility.

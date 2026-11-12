@@ -114,7 +114,7 @@ mitigations:
   precedence: c
   state: identified
   requirement_ids:
-  - SYS-018
+  - SYS-019
   verification:
     method:
     - analysis
@@ -122,7 +122,7 @@ mitigations:
     evidence_ids: []
 requirement_ids:
 - SYS-008
-- SYS-018
+- SYS-019
 owner:
   role: ROLE-WLK
   person: null
@@ -159,5 +159,5 @@ open_actions:
 - Derive a safety requirement for margin-based load holding (M5) (Task 203)
 - 'Check carried loads against the 0.12 m CoM offset cap: on placeholder CL-05 mass (4,590 kg) and flat ground, a
   load at the carry pose centre (1.15 m ahead of the ankles) brings the combined CoM 0.12 m ahead of the ankles at
-  about 2,000 kg; indicative only, to be replaced by the dynamic analysis on a 20 degree slope (SYS-018)'
+  about 2,000 kg; indicative only, to be replaced by the dynamic analysis on a 20 degree slope (SYS-019)'
 

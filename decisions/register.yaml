@@ -281,7 +281,7 @@ decisions:
   - id: DQ-014
     question: May the walker carry a payload while walking?
     context: >-
-      An arm-stow interlock for walking (SYS-016) would rule out carrying while walking, and the scenarios keep travel
+      An arm-stow interlock for walking (SYS-017) would rule out carrying while walking, and the scenarios keep travel
       (SCN-002) and payload handling (SCN-003) apart. **One concept-art image shows CL-05 walking with a pallet in its
       claws.** Carrying while walking adds load swing, stability under load and a load dropped on the move.
     options:
@@ -290,11 +290,11 @@ decisions:
       - {key: open, title: Leave it open, detail: "Stays TBD until a trade study."}
     recommendation: no-carry
     reversibility: easy
-    blocks: [SYS-016 interlock, SYS-018, HAZ-MAN-002]
+    blocks: [SYS-017 interlock, SYS-019, HAZ-MAN-002]
     gate: G2
     decider: lead
     status: applied
     asked: 2026-11-12
     answer: {choice: conditional, by: lead, at: 2026-11-12, via: chat, note: "2"}
-    applied_in: [requirements/SYS-016.yaml, requirements/SYS-018.yaml, safety/hazards/HAZ-MAN-002.yaml, safety/hazards/HAZ-WLK-002.yaml, cad/README.md]
+    applied_in: [requirements/SYS-017.yaml, requirements/SYS-019.yaml, safety/hazards/HAZ-MAN-002.yaml, safety/hazards/HAZ-WLK-002.yaml, cad/README.md]
     sources: [cad/README.md, cad/concept-art/README.md]

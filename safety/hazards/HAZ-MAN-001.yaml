@@ -59,7 +59,7 @@ mitigations:
   precedence: c
   state: identified
   requirement_ids:
-  - SYS-016
+  - SYS-017
   verification:
     method:
     - test
@@ -70,7 +70,7 @@ mitigations:
   precedence: c
   state: identified
   requirement_ids:
-  - SYS-016
+  - SYS-017
   verification:
     method:
     - test
@@ -84,7 +84,7 @@ mitigations:
     - demonstration
     evidence_ids: []
 requirement_ids:
-- SYS-016
+- SYS-017
 owner:
   role: ROLE-WLK
   person: null
@@ -108,4 +108,4 @@ assumptions:
   remove it'
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
-- Define the stowed position, its tolerance and the stow detection and locking means (SYS-016)
+- Define the stowed position, its tolerance and the stow detection and locking means (SYS-017)
