@@ -52,6 +52,16 @@ folders:
     links:
       - {text: SUS-I1 item definition (wiki page), href: docs/wiki/SUS-I1-Item-Definition.md}
 
+  architecture/trades:
+    title: Architecture trade studies
+    purpose: >-
+      One record per trade study (TS-nnn): question, alternatives, weighted criteria, evidence and scores. The project
+      lead confirms the weights and selects an alternative; the Trade Studies wiki page is built from here.
+    planned: "Score matrix of each study: alternatives against weighted criteria, with the evidence behind each score."
+    links:
+      - {text: Trade Studies (wiki page), href: docs/wiki/Trade-Studies.md}
+      - {text: Trade-study decision process, href: concept/trade-studies.md}
+
   cad/drawings:
     title: Concept layout drawing sheets
     purpose: >-
@@ -332,6 +342,16 @@ folders:
     planned: "Level 1 against level 2: outcome and margin for every cross-check case, drawn from sim/results/l2-crosscheck.json."
     links:
       - {text: Cross-check results, href: sim/results/l2-crosscheck.md}
+
+  sim/trades:
+    title: Trade-study evidence
+    purpose: >-
+      Simulations run as evidence for the architecture trade studies (`fault_response.yaml`, `fault_response.py` for
+      TS-001). Results are synthetic and carry no evidence credit.
+    planned: "Supply-loss outcome for each TS-001 alternative with load holding working and failed, drawn from sim/results/ts001-fault-response.json."
+    links:
+      - {text: TS-001 supply-loss evidence, href: sim/results/ts001-fault-response.md}
+      - {text: Trade Studies (wiki page), href: docs/wiki/Trade-Studies.md}
 
   sim/plant:
     title: Level-1 walker plant
