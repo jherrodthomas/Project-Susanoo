@@ -50,6 +50,19 @@ class Plant(unittest.TestCase):
     def test_nominal_flat_is_safe(self):
         self.assertEqual(walker.simulate({}, P)["outcome"], "safe")
 
+    def test_case_starts_on_the_gait_periodic_orbit(self):
+        """A8: the start state is the balance loop's own periodic orbit, so a no-fault run returns to it one sway
+        period later; starting on the sway reference put the capture point at the foot edge (DQ-009)."""
+        p = spec.load()
+        case = {"slope_deg": 9.0, "stride_offset_m": 0.28}
+        x0, v0 = walker.initial_state(dict(walker.default_case(), **case), p, p["com_height_m"])
+        q = dict(p, horizon_s=p["sway_period_s"])
+        tr = walker.simulate(case, q, trace_every=p["dt_s"])["trace"]
+        self.assertAlmostEqual(tr[0][1], x0, delta=0.001)          # first sample is after one step
+        self.assertAlmostEqual(tr[-1][1], x0, delta=0.002)
+        omega = (p["gravity_mps2"] / p["com_height_m"]) ** 0.5
+        self.assertLess(x0 + v0 / omega, p["foot_half_length_m"])
+
     def test_correct_stop_safe_faulty_stop_drops(self):
         self.assertEqual(walker.simulate({"stop_request_s": 1.0}, P)["outcome"], "safe")
         r = walker.simulate({"fault": "FLT-03"}, P)

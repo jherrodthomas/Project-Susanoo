@@ -22,6 +22,10 @@ A6  The pilot hears the low-supply alarm (c < low_supply_alarm) and requests a p
     also request a stop directly (stop_request_s), as an operator would.
 A7  Tipping is irrecoverable beyond tip_offset. Contact, rotation after tipping and terrain compliance are not
     modelled; the run stops at the first mishap.
+A8  A case starts in mid-gait on the periodic orbit of the unsaturated balance loop (initial_state): the CoM at the
+    gait's mean offset plus the loop's own sway response, not at the reference sway with the reference velocity.
+    Starting on the reference put the capture point up to 0.3 m ahead of the CoM, a state the gait never reaches,
+    and tipped edge cases with no fault (resolved with the level-2 cross-check, sim/results/l2-crosscheck.md).
 """
 from __future__ import annotations
 
@@ -46,6 +50,20 @@ def capacity(case: dict, p: dict, t: float) -> float:
     return floor + (1.0 - floor) * decay
 
 
+def initial_state(case: dict, p: dict, z0: float) -> tuple[float, float]:
+    """CoM offset and velocity at t = 0 on the periodic orbit of the unsaturated balance loop (assumption A8).
+
+    With p = xi + k (xi - x_ref) and xi = x + vx / omega, the loop is x'' = -k w0^2 (x - x_ref) - (1 + k) w0 x', so a
+    sway reference A sin(w t) is followed as Im(A H e^{jwt}) with H = k w0^2 / (k w0^2 - w^2 + j (1 + k) w0 w).
+    Shared with the level-2 model, so both start in the same state.
+    """
+    th = math.radians(case["slope_deg"])
+    w0, k = math.sqrt(p["gravity_mps2"] / z0), p["balance_gain"]
+    w, a = 2 * math.pi / p["sway_period_s"], p["sway_amplitude_m"]
+    h = k * w0 ** 2 / complex(k * w0 ** 2 - w ** 2, (1 + k) * w0 * w)
+    return case["stride_offset_m"] + p["slope_lean"] * z0 * math.tan(th) + a * h.imag, a * w * h.real
+
+
 def simulate(case: dict, p: dict, trace_every: float = 0.05) -> dict:
     c0 = default_case()
     c0.update(case)
@@ -66,7 +84,8 @@ def simulate(case: dict, p: dict, trace_every: float = 0.05) -> dict:
     def x_ref_single(z, t):
         return case["stride_offset_m"] + p["slope_lean"] * z * math.tan(th) + p["sway_amplitude_m"] * math.sin(w_s * t)
 
-    x, vx, z, vz = x_ref_single(z0, 0.0), p["sway_amplitude_m"] * w_s, z0, 0.0
+    x, vx = initial_state(case, p, z0)
+    z, vz = z0, 0.0
     phase, stop_t, lock_t, alarm_t, low_since = "single", None, None, None, None
     frozen = None
     stop_reason = None

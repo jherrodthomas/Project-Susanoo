@@ -18,9 +18,9 @@
    "outcome": "hard-drop",
    "params": {
     "load_holding": "fails",
-    "pilot_reaction_s": 2.5,
-    "slope_deg": 8.5,
-    "stride_offset_m": 0.03,
+    "pilot_reaction_s": 2.1,
+    "slope_deg": 11.5,
+    "stride_offset_m": 0.19,
     "tau_leak_s": 0.05
    },
    "probes": [
@@ -32,7 +32,7 @@
     {
      "name": "load holding works",
      "outcome": "safe",
-     "rho": -0.1569
+     "rho": -0.5193
     },
     {
      "name": "flat ground",
@@ -41,55 +41,8 @@
     },
     {
      "name": "slow leak (tau 3 s)",
-     "outcome": "hard-drop",
-     "rho": -1.572
-    }
-   ],
-   "rho": -3.835,
-   "stop_active": false
-  },
-  {
-   "cause_gap": null,
-   "events": {
-    "alarm_t": 1.02,
-    "impact_speed": 4.835,
-    "lock_t": null,
-    "mishap_t": 1.575,
-    "stop_t": null
-   },
-   "family": "SF-01",
-   "finding": null,
-   "hazard": "HAZ-PIL-002",
-   "id": "EC-02",
-   "nofault_outcome": "safe",
-   "outcome": "hard-drop",
-   "params": {
-    "load_holding": "fails",
-    "pilot_reaction_s": 3.0,
-    "slope_deg": 0.0,
-    "stride_offset_m": 0.11,
-    "tau_leak_s": 0.05
-   },
-   "probes": [
-    {
-     "name": "pilot reacts in 0.5 s",
-     "outcome": "hard-drop",
-     "rho": -3.835
-    },
-    {
-     "name": "load holding works",
-     "outcome": "safe",
-     "rho": -0.0922
-    },
-    {
-     "name": "flat ground",
-     "outcome": "hard-drop",
-     "rho": -3.835
-    },
-    {
-     "name": "slow leak (tau 3 s)",
-     "outcome": "hard-drop",
-     "rho": -1.572
+     "outcome": "tip",
+     "rho": -2.4976
     }
    ],
    "rho": -3.835,
@@ -107,14 +60,14 @@
    "family": "SF-01",
    "finding": null,
    "hazard": "HAZ-PIL-002",
-   "id": "EC-03",
+   "id": "EC-02",
    "nofault_outcome": "safe",
    "outcome": "hard-drop",
    "params": {
     "load_holding": "fails",
-    "pilot_reaction_s": 1.3,
-    "slope_deg": 1.0,
-    "stride_offset_m": 0.11,
+    "pilot_reaction_s": 0.6,
+    "slope_deg": 12.0,
+    "stride_offset_m": 0.03,
     "tau_leak_s": 0.06
    },
    "probes": [
@@ -126,7 +79,7 @@
     {
      "name": "load holding works",
      "outcome": "safe",
-     "rho": -0.0862
+     "rho": -0.1779
     },
     {
      "name": "flat ground",
@@ -154,14 +107,14 @@
    "family": "SF-01",
    "finding": null,
    "hazard": "HAZ-PIL-002",
-   "id": "EC-04",
+   "id": "EC-03",
    "nofault_outcome": "safe",
    "outcome": "hard-drop",
    "params": {
     "load_holding": "fails",
-    "pilot_reaction_s": 1.5,
-    "slope_deg": 8.0,
-    "stride_offset_m": 0.2,
+    "pilot_reaction_s": 0.9,
+    "slope_deg": 6.0,
+    "stride_offset_m": 0.25,
     "tau_leak_s": 0.05
    },
    "probes": [
@@ -172,8 +125,8 @@
     },
     {
      "name": "load holding works",
-     "outcome": "tip",
-     "rho": -1.3817
+     "outcome": "safe",
+     "rho": -0.4893
     },
     {
      "name": "flat ground",
@@ -182,8 +135,8 @@
     },
     {
      "name": "slow leak (tau 3 s)",
-     "outcome": "tip",
-     "rho": -1.9875
+     "outcome": "hard-drop",
+     "rho": -1.572
     }
    ],
    "rho": -3.835,
@@ -192,57 +145,104 @@
   {
    "cause_gap": null,
    "events": {
-    "alarm_t": 1.03,
-    "impact_speed": 0.0,
+    "alarm_t": 1.025,
+    "impact_speed": 4.816,
     "lock_t": null,
-    "mishap_t": 1.61,
+    "mishap_t": 1.59,
     "stop_t": null
    },
    "family": "SF-01",
-   "finding": "Walker tips with no fault: case lies outside the nominal gait capability (terrain limit for CONOPS section 4)",
-   "hazard": null,
-   "id": "EC-05",
-   "nofault_outcome": "tip",
-   "outcome": "tip",
+   "finding": null,
+   "hazard": "HAZ-PIL-002",
+   "id": "EC-04",
+   "nofault_outcome": "safe",
+   "outcome": "hard-drop",
    "params": {
     "load_holding": "fails",
-    "pilot_reaction_s": 2.1,
-    "slope_deg": 8.0,
-    "stride_offset_m": 0.21,
-    "tau_leak_s": 0.08
+    "pilot_reaction_s": 1.8,
+    "slope_deg": 9.0,
+    "stride_offset_m": 0.04,
+    "tau_leak_s": 0.06
    },
    "probes": [
     {
      "name": "pilot reacts in 0.5 s",
-     "outcome": "tip",
-     "rho": -2.828
+     "outcome": "hard-drop",
+     "rho": -3.816
     },
     {
      "name": "load holding works",
-     "outcome": "tip",
-     "rho": -1.4147
+     "outcome": "safe",
+     "rho": -0.1193
     },
     {
      "name": "flat ground",
      "outcome": "hard-drop",
-     "rho": -3.778
+     "rho": -3.816
     },
     {
      "name": "slow leak (tau 3 s)",
-     "outcome": "tip",
-     "rho": -1.8627
+     "outcome": "hard-drop",
+     "rho": -1.572
     }
    ],
-   "rho": -2.828,
+   "rho": -3.816,
    "stop_active": false
   },
   {
    "cause_gap": null,
    "events": {
-    "alarm_t": 1.145,
-    "impact_speed": 4.162,
+    "alarm_t": 1.02,
+    "impact_speed": 4.835,
     "lock_t": null,
-    "mishap_t": 2.04,
+    "mishap_t": 1.575,
+    "stop_t": null
+   },
+   "family": "SF-01",
+   "finding": null,
+   "hazard": "HAZ-PIL-002",
+   "id": "EC-05",
+   "nofault_outcome": "safe",
+   "outcome": "hard-drop",
+   "params": {
+    "load_holding": "fails",
+    "pilot_reaction_s": 3.0,
+    "slope_deg": 0.0,
+    "stride_offset_m": 0.11,
+    "tau_leak_s": 0.05
+   },
+   "probes": [
+    {
+     "name": "pilot reacts in 0.5 s",
+     "outcome": "hard-drop",
+     "rho": -3.835
+    },
+    {
+     "name": "load holding works",
+     "outcome": "safe",
+     "rho": -0.0585
+    },
+    {
+     "name": "flat ground",
+     "outcome": "hard-drop",
+     "rho": -3.835
+    },
+    {
+     "name": "slow leak (tau 3 s)",
+     "outcome": "hard-drop",
+     "rho": -1.572
+    }
+   ],
+   "rho": -3.835,
+   "stop_active": false
+  },
+  {
+   "cause_gap": null,
+   "events": {
+    "alarm_t": 1.025,
+    "impact_speed": 4.816,
+    "lock_t": null,
+    "mishap_t": 1.59,
     "stop_t": null
    },
    "family": "SF-01",
@@ -253,90 +253,90 @@
    "outcome": "hard-drop",
    "params": {
     "load_holding": "fails",
-    "pilot_reaction_s": 2.1,
-    "slope_deg": 2.0,
-    "stride_offset_m": 0.27,
-    "tau_leak_s": 0.4
+    "pilot_reaction_s": 1.3,
+    "slope_deg": 1.0,
+    "stride_offset_m": 0.11,
+    "tau_leak_s": 0.06
    },
    "probes": [
     {
      "name": "pilot reacts in 0.5 s",
      "outcome": "hard-drop",
-     "rho": -3.162
+     "rho": -3.816
     },
     {
      "name": "load holding works",
-     "outcome": "tip",
-     "rho": -1.3604
+     "outcome": "safe",
+     "rho": -0.0546
     },
     {
      "name": "flat ground",
      "outcome": "hard-drop",
-     "rho": -3.162
+     "rho": -3.816
     },
     {
      "name": "slow leak (tau 3 s)",
-     "outcome": "tip",
-     "rho": -2.5004
+     "outcome": "hard-drop",
+     "rho": -1.572
     }
    ],
-   "rho": -3.162,
+   "rho": -3.816,
    "stop_active": false
   },
   {
    "cause_gap": null,
    "events": {
-    "alarm_t": 1.05,
+    "alarm_t": 1.405,
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 1.205,
+    "mishap_t": 2.695,
     "stop_t": null
    },
    "family": "SF-01",
-   "finding": "Walker tips with no fault: case lies outside the nominal gait capability (terrain limit for CONOPS section 4)",
-   "hazard": null,
+   "finding": null,
+   "hazard": "HAZ-WLK-002",
    "id": "EC-07",
-   "nofault_outcome": "tip",
+   "nofault_outcome": "safe",
    "outcome": "tip",
    "params": {
-    "load_holding": "works",
-    "pilot_reaction_s": 1.3,
+    "load_holding": "fails",
+    "pilot_reaction_s": 1.7,
     "slope_deg": 9.0,
-    "stride_offset_m": 0.28,
-    "tau_leak_s": 0.14
+    "stride_offset_m": 0.3,
+    "tau_leak_s": 1.13
    },
    "probes": [
     {
      "name": "pilot reacts in 0.5 s",
      "outcome": "tip",
-     "rho": -2.3485
+     "rho": -2.2046
     },
     {
      "name": "load holding works",
      "outcome": "tip",
-     "rho": -2.3485
+     "rho": -1.4264
     },
     {
      "name": "flat ground",
-     "outcome": "safe",
-     "rho": -0.5613
+     "outcome": "hard-drop",
+     "rho": -2.353
     },
     {
      "name": "slow leak (tau 3 s)",
      "outcome": "tip",
-     "rho": -1.5181
+     "rho": -2.3409
     }
    ],
-   "rho": -2.3485,
+   "rho": -2.6285,
    "stop_active": false
   },
   {
    "cause_gap": null,
    "events": {
-    "alarm_t": 1.645,
+    "alarm_t": 1.735,
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 2.445,
+    "mishap_t": 2.92,
     "stop_t": null
    },
    "family": "SF-01",
@@ -347,40 +347,40 @@
    "outcome": "tip",
    "params": {
     "load_holding": "works",
-    "pilot_reaction_s": 1.3,
-    "slope_deg": 9.0,
-    "stride_offset_m": 0.18,
-    "tau_leak_s": 1.8
+    "pilot_reaction_s": 2.6,
+    "slope_deg": 13.0,
+    "stride_offset_m": 0.27,
+    "tau_leak_s": 2.05
    },
    "probes": [
     {
      "name": "pilot reacts in 0.5 s",
      "outcome": "tip",
-     "rho": -2.2784
+     "rho": -1.7746
     },
     {
      "name": "load holding works",
      "outcome": "tip",
-     "rho": -2.2784
+     "rho": -2.4308
     },
     {
      "name": "flat ground",
      "outcome": "safe",
-     "rho": 0.0255
+     "rho": -0.1859
     },
     {
      "name": "slow leak (tau 3 s)",
      "outcome": "tip",
-     "rho": -2.0978
+     "rho": -2.2757
     }
    ],
-   "rho": -2.2784,
+   "rho": -2.4308,
    "stop_active": false
   }
  ],
  "falsification": {
   "evaluations": 480,
-  "worst_rho": -3.847
+  "worst_rho": -3.849
  },
  "family": {
   "base": {
@@ -424,16 +424,7 @@
   },
   "title": "Hydraulic supply loss in mid-stride on a slope"
  },
- "findings": [
-  {
-   "edge_cases": [
-    "EC-05",
-    "EC-07"
-   ],
-   "id": "FND-SF-01-01",
-   "text": "Walker tips with no fault: case lies outside the nominal gait capability (terrain limit for CONOPS section 4)"
-  }
- ],
+ "findings": [],
  "map": [
   [
    6.79,
@@ -448,12 +439,12 @@
   [
    6.7,
    0.096,
-   "tip"
+   "safe"
   ],
   [
    8.93,
    0.31,
-   "tip"
+   "safe"
   ],
   [
    9.35,
@@ -463,17 +454,17 @@
   [
    8.99,
    1.8,
-   "tip"
+   "safe"
   ],
   [
    7.79,
    0.954,
-   "tip"
+   "hard-drop"
   ],
   [
    9.82,
    0.325,
-   "tip"
+   "safe"
   ],
   [
    10.62,
@@ -513,17 +504,17 @@
   [
    14.78,
    1.73,
-   "tip"
+   "hard-drop"
   ],
   [
    6.31,
    0.133,
-   "tip"
+   "hard-drop"
   ],
   [
    14.97,
    0.055,
-   "tip"
+   "safe"
   ],
   [
    0.63,
@@ -543,7 +534,7 @@
   [
    12.49,
    0.093,
-   "tip"
+   "hard-drop"
   ],
   [
    13.63,
@@ -568,7 +559,7 @@
   [
    13.94,
    4.501,
-   "tip"
+   "safe"
   ],
   [
    4.2,
@@ -593,7 +584,7 @@
   [
    14.44,
    0.055,
-   "tip"
+   "hard-drop"
   ],
   [
    4.78,
@@ -608,7 +599,7 @@
   [
    5.28,
    1.173,
-   "tip"
+   "hard-drop"
   ],
   [
    14.16,
@@ -628,12 +619,12 @@
   [
    6.61,
    2.375,
-   "tip"
+   "safe"
   ],
   [
    4.65,
    0.075,
-   "tip"
+   "safe"
   ],
   [
    7.46,
@@ -653,7 +644,7 @@
   [
    2.98,
    0.364,
-   "tip"
+   "safe"
   ],
   [
    5.77,
@@ -668,7 +659,7 @@
   [
    12.33,
    0.084,
-   "tip"
+   "hard-drop"
   ],
   [
    5.74,
@@ -698,7 +689,7 @@
   [
    14.38,
    1.169,
-   "tip"
+   "safe"
   ],
   [
    10.71,
@@ -718,17 +709,17 @@
   [
    1.95,
    0.404,
-   "tip"
+   "hard-drop"
   ],
   [
    8.25,
    1.01,
-   "tip"
+   "hard-drop"
   ],
   [
    6.96,
    1.004,
-   "tip"
+   "safe"
   ],
   [
    3.2,
@@ -773,7 +764,7 @@
   [
    14.32,
    2.749,
-   "tip"
+   "safe"
   ],
   [
    14.53,
@@ -783,7 +774,7 @@
   [
    7.55,
    0.812,
-   "tip"
+   "hard-drop"
   ],
   [
    8.16,
@@ -793,7 +784,7 @@
   [
    0.99,
    0.598,
-   "tip"
+   "hard-drop"
   ],
   [
    4.04,
@@ -853,7 +844,7 @@
   [
    6.52,
    3.814,
-   "tip"
+   "safe"
   ],
   [
    6.04,
@@ -863,7 +854,7 @@
   [
    13.67,
    4.322,
-   "tip"
+   "hard-drop"
   ],
   [
    7.54,
@@ -883,7 +874,7 @@
   [
    13.9,
    0.078,
-   "tip"
+   "hard-drop"
   ],
   [
    1.16,
@@ -908,7 +899,7 @@
   [
    12.03,
    1.283,
-   "tip"
+   "hard-drop"
   ],
   [
    8.55,
@@ -933,7 +924,7 @@
   [
    4.53,
    0.08,
-   "tip"
+   "safe"
   ],
   [
    3.48,
@@ -943,7 +934,7 @@
   [
    8.54,
    0.582,
-   "tip"
+   "safe"
   ],
   [
    10.52,
@@ -968,7 +959,7 @@
   [
    9.57,
    2.08,
-   "tip"
+   "safe"
   ],
   [
    5.8,
@@ -1033,7 +1024,7 @@
   [
    11.01,
    0.15,
-   "tip"
+   "hard-drop"
   ],
   [
    4.12,
@@ -1058,17 +1049,17 @@
   [
    13.69,
    0.105,
-   "tip"
+   "hard-drop"
   ],
   [
    7.18,
    0.132,
-   "tip"
+   "safe"
   ],
   [
    12.03,
    0.392,
-   "tip"
+   "safe"
   ],
   [
    6.67,
@@ -1078,17 +1069,17 @@
   [
    9.8,
    4.757,
-   "tip"
+   "safe"
   ],
   [
    6.41,
    0.274,
-   "tip"
+   "safe"
   ],
   [
    8.15,
    0.366,
-   "tip"
+   "hard-drop"
   ],
   [
    4.48,
@@ -1103,12 +1094,12 @@
   [
    3.28,
    1.032,
-   "tip"
+   "hard-drop"
   ],
   [
    10.64,
    0.688,
-   "tip"
+   "hard-drop"
   ],
   [
    6.57,
@@ -1128,7 +1119,7 @@
   [
    11.96,
    0.603,
-   "tip"
+   "safe"
   ],
   [
    1.35,
@@ -1138,7 +1129,7 @@
   [
    7.73,
    0.613,
-   "tip"
+   "hard-drop"
   ],
   [
    0.96,
@@ -1163,7 +1154,7 @@
   [
    12.11,
    0.232,
-   "tip"
+   "safe"
   ],
   [
    10.62,
@@ -1183,7 +1174,7 @@
   [
    13.73,
    0.155,
-   "tip"
+   "safe"
   ],
   [
    4.81,
@@ -1198,7 +1189,7 @@
   [
    13.68,
    1.604,
-   "tip"
+   "safe"
   ],
   [
    4.69,
@@ -1218,12 +1209,12 @@
   [
    12.8,
    0.466,
-   "tip"
+   "safe"
   ],
   [
    7.24,
    0.138,
-   "tip"
+   "hard-drop"
   ],
   [
    14.64,
@@ -1238,7 +1229,7 @@
   [
    6.75,
    0.156,
-   "tip"
+   "hard-drop"
   ],
   [
    2.35,
@@ -1253,12 +1244,12 @@
   [
    8.58,
    0.114,
-   "tip"
+   "safe"
   ],
   [
    12.33,
    0.073,
-   "tip"
+   "safe"
   ],
   [
    13.34,
@@ -1278,7 +1269,7 @@
   [
    4.74,
    0.324,
-   "tip"
+   "safe"
   ],
   [
    5.4,
@@ -1288,7 +1279,7 @@
   [
    11.2,
    1.853,
-   "tip"
+   "hard-drop"
   ],
   [
    10.68,
@@ -1313,7 +1304,7 @@
   [
    10.97,
    0.228,
-   "tip"
+   "hard-drop"
   ],
   [
    6.7,
@@ -1333,7 +1324,7 @@
   [
    6.51,
    1.743,
-   "tip"
+   "safe"
   ],
   [
    9.71,
@@ -1343,7 +1334,7 @@
   [
    13.82,
    0.881,
-   "tip"
+   "hard-drop"
   ],
   [
    14.73,
@@ -1368,12 +1359,12 @@
   [
    8.61,
    0.125,
-   "tip"
+   "safe"
   ],
   [
    8.51,
    0.057,
-   "tip"
+   "safe"
   ],
   [
    3.67,
@@ -1388,7 +1379,7 @@
   [
    13.56,
    0.611,
-   "tip"
+   "hard-drop"
   ],
   [
    2.53,
@@ -1403,12 +1394,12 @@
   [
    11.37,
    0.266,
-   "tip"
+   "safe"
   ],
   [
    6.82,
    0.32,
-   "tip"
+   "safe"
   ],
   [
    4.61,
@@ -1433,17 +1424,17 @@
   [
    14.39,
    0.793,
-   "tip"
+   "hard-drop"
   ],
   [
    11.28,
    0.468,
-   "tip"
+   "hard-drop"
   ],
   [
    12.38,
    0.086,
-   "tip"
+   "hard-drop"
   ],
   [
    7.88,
@@ -1463,7 +1454,7 @@
   [
    12.67,
    0.153,
-   "tip"
+   "hard-drop"
   ],
   [
    10.42,
@@ -1483,7 +1474,7 @@
   [
    8.5,
    3.205,
-   "tip"
+   "safe"
   ],
   [
    13.23,
@@ -1503,12 +1494,12 @@
   [
    13.48,
    0.206,
-   "tip"
+   "hard-drop"
   ],
   [
    13.18,
    0.127,
-   "tip"
+   "safe"
   ],
   [
    2.93,
@@ -1518,7 +1509,7 @@
   [
    9.53,
    1.244,
-   "tip"
+   "safe"
   ],
   [
    2.87,
@@ -1528,7 +1519,7 @@
   [
    14.42,
    0.177,
-   "tip"
+   "hard-drop"
   ],
   [
    10.44,
@@ -1543,17 +1534,17 @@
   [
    7.52,
    0.195,
-   "tip"
+   "safe"
   ],
   [
    8.85,
    0.144,
-   "tip"
+   "safe"
   ],
   [
    4.15,
    0.952,
-   "tip"
+   "hard-drop"
   ],
   [
    13.76,
@@ -1573,7 +1564,7 @@
   [
    14.82,
    0.058,
-   "tip"
+   "hard-drop"
   ],
   [
    0.04,
@@ -1593,7 +1584,7 @@
   [
    8.22,
    0.163,
-   "tip"
+   "hard-drop"
   ],
   [
    7.34,
@@ -1608,7 +1599,7 @@
   [
    4.88,
    0.823,
-   "tip"
+   "hard-drop"
   ],
   [
    10.85,
@@ -1628,7 +1619,7 @@
   [
    11.48,
    0.496,
-   "tip"
+   "hard-drop"
   ],
   [
    3.82,
@@ -1653,12 +1644,12 @@
   [
    1.37,
    0.647,
-   "tip"
+   "safe"
   ],
   [
    10.2,
    1.358,
-   "tip"
+   "hard-drop"
   ],
   [
    3.8,
@@ -1688,7 +1679,7 @@
   [
    7.2,
    0.316,
-   "tip"
+   "hard-drop"
   ],
   [
    6.71,
@@ -1708,7 +1699,7 @@
   [
    4.03,
    0.264,
-   "tip"
+   "hard-drop"
   ],
   [
    2.06,
@@ -1738,7 +1729,7 @@
   [
    4.71,
    0.4,
-   "tip"
+   "hard-drop"
   ],
   [
    8.02,
@@ -1783,7 +1774,7 @@
   [
    11.14,
    3.266,
-   "tip"
+   "hard-drop"
   ],
   [
    10.52,
@@ -1813,7 +1804,7 @@
   [
    14.32,
    0.266,
-   "tip"
+   "safe"
   ],
   [
    9.41,
@@ -1823,7 +1814,7 @@
   [
    1.03,
    0.424,
-   "tip"
+   "hard-drop"
   ],
   [
    0.57,
@@ -1848,7 +1839,7 @@
   [
    9.37,
    0.661,
-   "tip"
+   "hard-drop"
   ],
   [
    3.96,
@@ -1873,22 +1864,22 @@
   [
    5.43,
    1.292,
-   "tip"
+   "safe"
   ],
   [
    14.84,
    2.161,
-   "tip"
+   "hard-drop"
   ],
   [
    7.69,
    1.142,
-   "tip"
+   "hard-drop"
   ],
   [
    13.05,
    0.064,
-   "tip"
+   "hard-drop"
   ],
   [
    3.79,
@@ -1898,7 +1889,7 @@
   [
    5.01,
    1.65,
-   "tip"
+   "hard-drop"
   ],
   [
    9.62,
@@ -1913,7 +1904,7 @@
   [
    14.61,
    0.439,
-   "tip"
+   "safe"
   ],
   [
    4.02,
@@ -1928,7 +1919,7 @@
   [
    13.06,
    0.122,
-   "tip"
+   "safe"
   ],
   [
    6.07,
@@ -1938,7 +1929,7 @@
   [
    5.6,
    0.208,
-   "tip"
+   "hard-drop"
   ],
   [
    3.36,
@@ -1948,7 +1939,7 @@
   [
    10.12,
    0.136,
-   "tip"
+   "hard-drop"
   ],
   [
    2.63,
@@ -1978,12 +1969,12 @@
   [
    14.87,
    0.328,
-   "tip"
+   "hard-drop"
   ],
   [
    8.36,
    0.135,
-   "tip"
+   "hard-drop"
   ],
   [
    4.16,
@@ -1993,7 +1984,7 @@
   [
    8.57,
    3.807,
-   "tip"
+   "safe"
   ],
   [
    8.09,
@@ -2013,12 +2004,12 @@
   [
    5.99,
    2.019,
-   "tip"
+   "safe"
   ],
   [
    14.04,
    0.46,
-   "tip"
+   "safe"
   ],
   [
    0.14,
@@ -2038,7 +2029,7 @@
   [
    11.12,
    0.132,
-   "tip"
+   "safe"
   ],
   [
    2.66,
@@ -2063,12 +2054,12 @@
   [
    12.19,
    0.069,
-   "tip"
+   "safe"
   ],
   [
    11.67,
    0.561,
-   "tip"
+   "hard-drop"
   ],
   [
    13.67,
@@ -2078,7 +2069,7 @@
   [
    12.85,
    0.904,
-   "tip"
+   "safe"
   ],
   [
    1.82,
@@ -2103,7 +2094,7 @@
   [
    11.07,
    0.211,
-   "tip"
+   "hard-drop"
   ],
   [
    0.79,
@@ -2113,7 +2104,7 @@
   [
    3.51,
    2.396,
-   "tip"
+   "safe"
   ],
   [
    11.97,
@@ -2128,7 +2119,7 @@
   [
    12.98,
    0.123,
-   "tip"
+   "safe"
   ],
   [
    1.61,
@@ -2138,7 +2129,7 @@
   [
    12.0,
    2.565,
-   "tip"
+   "safe"
   ],
   [
    11.95,
@@ -2203,7 +2194,7 @@
   [
    4.27,
    2.781,
-   "tip"
+   "hard-drop"
   ],
   [
    3.38,
@@ -2228,7 +2219,7 @@
   [
    6.31,
    0.241,
-   "tip"
+   "safe"
   ],
   [
    8.19,
@@ -2253,22 +2244,22 @@
   [
    14.89,
    0.308,
-   "tip"
+   "safe"
   ],
   [
    14.96,
    0.068,
-   "tip"
+   "safe"
   ],
   [
    7.77,
    0.737,
-   "tip"
+   "hard-drop"
   ],
   [
    1.44,
    1.942,
-   "tip"
+   "hard-drop"
   ],
   [
    9.95,
@@ -2278,12 +2269,12 @@
   [
    7.03,
    0.054,
-   "tip"
+   "safe"
   ],
   [
    1.63,
    0.335,
-   "tip"
+   "safe"
   ],
   [
    4.52,
@@ -2313,7 +2304,7 @@
   [
    6.2,
    0.053,
-   "tip"
+   "hard-drop"
   ],
   [
    2.35,
@@ -2323,7 +2314,7 @@
   [
    13.68,
    0.61,
-   "tip"
+   "hard-drop"
   ],
   [
    6.24,
@@ -2333,7 +2324,7 @@
   [
    4.93,
    0.475,
-   "tip"
+   "safe"
   ],
   [
    8.52,
@@ -2353,7 +2344,7 @@
   [
    12.53,
    0.066,
-   "tip"
+   "hard-drop"
   ],
   [
    12.28,
@@ -2373,7 +2364,7 @@
   [
    14.41,
    0.269,
-   "tip"
+   "hard-drop"
   ],
   [
    3.15,
@@ -2388,7 +2379,7 @@
   [
    8.84,
    2.062,
-   "tip"
+   "hard-drop"
   ],
   [
    6.03,
@@ -2398,7 +2389,7 @@
   [
    12.47,
    0.227,
-   "tip"
+   "hard-drop"
   ],
   [
    9.63,
@@ -2433,14 +2424,14 @@
   [
    10.54,
    0.311,
-   "tip"
+   "safe"
   ]
  ],
  "monte_carlo": {
   "by_outcome": {
-   "hard-drop": 126,
-   "safe": 128,
-   "tip": 146
+   "hard-drop": 189,
+   "safe": 187,
+   "tip": 24
   },
   "n": 400,
   "split": {
@@ -2449,7 +2440,7 @@
     "n": 201
    },
    "load_holding=works": {
-    "failures": 71,
+    "failures": 12,
     "n": 199
    }
   }
