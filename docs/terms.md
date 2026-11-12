@@ -189,13 +189,16 @@ A record code is a prefix and a number, for example `HAZ-WLK-002` or `SYS-010`.
 | SC-nnn | 2D walker scene (sim/figures) |
 | SCN-nnn | CONOPS scenario (SCN-0nn nominal, SCN-1nn off-nominal) |
 | SF-nnn | walker failure-search family (sim/search) |
+| SPEC-nnn | simulation parameter spec record (sim/spec/) |
 | SSF-nnn | safety-significant software function record (safety/software/) |
 | SSPP-nnn | plan-level requirement in the SSPP view |
+| STOP-nnn | level-1/level-2 cross-check case, protective stop on a slope with no fault |
 | SU-nnn | UAV PX4 SITL scenario |
 | SUS-CONOPS-001 | the SUS-I1 concept of operations document ID |
 | SUS-I1-C001 | configuration 001 of SUS-I1, the baseline every record applies to |
 | SUS-RISKDEF-001 | the project's tailored risk definitions (standards/tailoring) |
 | SYS-nnn | system safety requirement record (requirements/SYS-nnn.yaml) |
+| SZ-nnn | actuator sizing study at level 2 (sim/mujoco/sizing.yaml) |
 | TS-nnn | architecture trade study |
 | V-nnn | SysML view (tools/sysml/views.py) |
 | VER-nnn | verification record or case |
@@ -243,8 +246,9 @@ From the item definition.
 | SUS-M1-MAN | manipulation arms and end effectors |
 | SUS-M1-PIL | pilot station, restraints, displays and controls |
 | SUS-M1-PWR | power generation, storage, distribution and thermal control |
-| SUS-M1-PWR-BAT | battery pack, BMS and contactors |
+| SUS-M1-PWR-BAT | battery pack, BMS and contactors (alternative B) |
 | SUS-M1-PWR-DIST | protected power distribution |
-| SUS-M1-PWR-GEN | engine-generator and governor |
+| SUS-M1-PWR-GEN | engine-generator and governor (alternative B) |
+| SUS-M1-PWR-HPU | hydraulic power unit, accumulators and isolation (alternative A) |
 | SUS-M1-SAF | independent safety monitor, protective stop and isolation |
 | SUS-M1-WLK | chassis, legs, joint actuators and stability sensing |

@@ -99,11 +99,11 @@ def fig_register(ctx: Ctx, reqs: dict) -> str:
     cols["status"] = cols["disp"] + 84
     y = y0 + 30
     for key, lab in (("id", "ID"), ("title", "Title"), ("alloc", "Allocated to")):
-        out.append(fk.text(cols[key], y, lab.upper(), size=10, fill=MUTED, weight=700))
+        out.append(fk.text(cols[key], y, lab, size=10.5, fill=MUTED, weight=700))
     for i, m in enumerate(methods):
-        out.append(fk.text(mx0 + i * mw + mw / 2, y, m.upper(), size=10, fill=MUTED, weight=700, anchor="middle"))
-    out.append(fk.text(cols["disp"], y, "DISPOSITION", size=10, fill=MUTED, weight=700))
-    out.append(fk.text(cols["status"], y, "STATUS", size=10, fill=MUTED, weight=700))
+        out.append(fk.text(mx0 + i * mw + mw / 2, y, m.capitalize(), size=10.5, fill=MUTED, weight=700, anchor="middle"))
+    out.append(fk.text(cols["disp"], y, "Disposition", size=10.5, fill=MUTED, weight=700))
+    out.append(fk.text(cols["status"], y, "Status", size=10.5, fill=MUTED, weight=700))
     y += 12
     out.append(fk.line(M, y, W - M, y, stroke=HAIR, sw=1))
     rh = 34
@@ -114,9 +114,11 @@ def fig_register(ctx: Ctx, reqs: dict) -> str:
         cy = top + rh / 2 + 4
         pill, _ = fk.pill(cols["id"], cy - 12, rid, TONES["safety"][0] if r.get("safety_significant") else MUTED)
         out += pill
-        title = fk.wrap(r["title"], 252, 12, True, max_lines=1)[0]
         derived = r.get("derived_from", [])
-        out.append(fk.text(cols["title"], cy - (5 if derived else 0), title, size=12, fill=INK, weight=700))
+        lines = fk.wrap(r["title"], 252, 12, True, max_lines=1 if derived else 2)
+        for j, ln in enumerate(lines):
+            dy = -5 + 14 * j if derived or len(lines) > 1 else 0
+            out.append(fk.text(cols["title"], cy + dy, ln, size=12 if len(lines) == 1 else 11.5, fill=INK, weight=700))
         if derived:
             out.append(fk.text(cols["title"], cy + 9, "derived from " + ", ".join(derived), size=10,
                                fill=TONES["interface"][0]))

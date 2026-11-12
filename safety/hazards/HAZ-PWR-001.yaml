@@ -9,7 +9,8 @@ subsystems:
 applicability:
   configurations:
   - SUS-I1-C001
-  hardware: []
+  hardware:
+  - SUS-M1-PWR-HPU
   software: []
 hazardous_condition: Stored hydraulic pressure remains in actuators or accumulators when a maintainer opens a line
   or works in a crush zone.
@@ -105,3 +106,4 @@ assumptions:
 - Concept configuration SUS-I1-C001; no hardware design selected
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
+- Applies to power alternative A (centralised hydraulic) only; close as not applicable if TS-001 selects alternative B (decision DQ-006)

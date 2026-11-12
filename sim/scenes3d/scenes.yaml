@@ -42,4 +42,6 @@ scenes:
 not_modelled:
   - {hazard: HAZ-PIL-001, reason: "Ingress and egress motion is not in the plant (no pilot or structure contact model)"}
   - {hazard: HAZ-PWR-001, reason: "Stored-energy release during maintenance is not modelled"}
+  - {hazard: HAZ-PWR-002, reason: "Battery thermal behaviour is not in the plant (no cell or pack thermal model)"}
+  - {hazard: HAZ-PWR-003, reason: "Fuel system and fire are not in the plant"}
   - {hazard: HAZ-DCK-001, reason: "Rotor start on the dock needs a dock and rotor model; SITL starts on the ground"}
