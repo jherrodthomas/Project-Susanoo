@@ -1,0 +1,29 @@
+schema: susanoo/requirement/v0.1
+id: SYS-013
+title: UAV link-loss contingency lands clear of the walker
+statement: On loss of the integration link the UAV shall hold for a set time and then land in place, and shall not return
+  to the dock or descend within the pilot keep-out without a recovery permit from the integration manager.
+status: candidate
+source:
+  documents:
+  - integrations/px4/interface-contract.md
+  - sim/results/uav/summary.md
+  - decisions/register.yaml
+  scenario_ids:
+  - SCN-105
+  - SCN-106
+  hazard_ids:
+  - HAZ-INT-001
+allocated_to:
+- SUS-A1
+- SUS-I1-INT
+safety_significant: true
+verification:
+  method:
+  - test
+  - analysis
+  evidence_ids: []
+  disposition: open
+tbd:
+- Hold time before landing (PX4 COM_DL_LOSS_T) pending hazard analysis
+- Low-battery and navigation-loss contingencies are not covered by decision DQ-008 and remain open

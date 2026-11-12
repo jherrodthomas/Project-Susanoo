@@ -15,8 +15,9 @@ package SusanooArchitecture {
     part def SafetyMonitor { doc /* Independent safety monitor, protective stop and isolation */ }
     part def UavDock { doc /* UAV dock, retention, charging and release */ }
     part def PowerSystem { doc /* Power generation, storage, distribution and thermal control */ }
-    part def EngineGenerator { doc /* Engine-generator and governor */ }
-    part def BatteryPack { doc /* Battery pack, BMS and contactors */ }
+    part def HydraulicPowerUnit { doc /* Hydraulic power unit, accumulators and isolation (alternative A) */ }
+    part def EngineGenerator { doc /* Engine-generator and governor (alternative B) */ }
+    part def BatteryPack { doc /* Battery pack, BMS and contactors (alternative B) */ }
     part def PowerDistribution { doc /* Protected power distribution */ }
     part def ObservationUav { doc /* Dockable observation UAV */ }
     part def FlightController { doc /* PX4-based flight controller */ }
@@ -105,6 +106,9 @@ package SusanooArchitecture {
                     @ItemElement { kind = ElementKind::electrical; safetyRole = SafetyRole::none; status = ElementStatus::concept; }
                     perform powerGenerationStorageDistributionAndIsolation;
                     perform maintenanceSupportAndEnergyIsolation;
+                    part <'SUS-M1-PWR-HPU'> hydraulicPowerUnit : HydraulicPowerUnit {
+                        @ItemElement { kind = ElementKind::mechanical; safetyRole = SafetyRole::none; status = ElementStatus::candidate; decision = "DQ-006"; }
+                    }
                     part <'SUS-M1-PWR-GEN'> engineGenerator : EngineGenerator {
                         @ItemElement { kind = ElementKind::mechanical; safetyRole = SafetyRole::none; status = ElementStatus::candidate; decision = "DQ-006"; }
                     }
@@ -152,11 +156,11 @@ package SusanooArchitecture {
         }
         connection <'IF-002'> engineGeneratorToDistribution : Exchange connect system.walker.power.engineGenerator to system.walker.power.distribution {
             doc /* Engine-generator to distribution */
-            @InterfaceSpec { direction = Direction::uni; kinds = ("energy"); exchange = "electric power, voltage, thermal state"; status = ElementStatus::candidate; decision = "DQ-006"; }
+            @InterfaceSpec { direction = Direction::uni; kinds = ("energy"); exchange = "electric power, voltage, thermal state"; hazards = ("HAZ-PWR-003"); status = ElementStatus::candidate; decision = "DQ-006"; }
         }
         connection <'IF-003'> batteryToDistribution : Exchange connect system.walker.power.battery to system.walker.power.distribution {
             doc /* Battery to distribution */
-            @InterfaceSpec { direction = Direction::bi; kinds = ("energy", "data"); exchange = "bidirectional power, BMS state"; status = ElementStatus::candidate; decision = "DQ-006"; }
+            @InterfaceSpec { direction = Direction::bi; kinds = ("energy", "data"); exchange = "bidirectional power, BMS state"; hazards = ("HAZ-PWR-002"); status = ElementStatus::candidate; decision = "DQ-006"; }
         }
         connection <'IF-004'> controlToJointActuators : Exchange connect system.walker.motionControl to system.walker.legs {
             doc /* Control to joint actuators */
@@ -265,6 +269,10 @@ package SusanooArchitecture {
         connection <'IF-022'> safetySensing : Exchange connect system.walker.legs to system.walker.safetyMonitor {
             doc /* Safety sensing */
             @InterfaceSpec { direction = Direction::uni; kinds = ("data"); exchange = "posture, joint and pressure sensing for the monitor"; hazards = ("HAZ-WLK-001"); }
+        }
+        connection <'IF-023'> hydraulicPowerToJointActuators : Exchange connect system.walker.power.hydraulicPowerUnit to system.walker.legs {
+            doc /* Hydraulic power to joint actuators */
+            @InterfaceSpec { direction = Direction::bi; kinds = ("energy"); exchange = "pressurised fluid supply and return"; hazards = ("HAZ-PWR-001"); status = ElementStatus::candidate; decision = "DQ-006"; }
         }
     }
 }

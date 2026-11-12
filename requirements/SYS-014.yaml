@@ -1,0 +1,27 @@
+schema: susanoo/requirement/v0.1
+id: SYS-014
+title: Independent traction battery isolation
+statement: If the series-hybrid power alternative is retained, the walker shall isolate the traction battery on cell
+  over-temperature, over-voltage or over-current independently of the motion controller, and warn the pilot.
+status: candidate
+source:
+  documents:
+  - concept/trade-studies.md
+  - concept/CONOPS.md
+  scenario_ids:
+  - SCN-108
+  hazard_ids:
+  - HAZ-PWR-002
+allocated_to:
+- SUS-M1-PWR-BAT
+- SUS-M1-SAF
+safety_significant: true
+verification:
+  method:
+  - test
+  - analysis
+  evidence_ids: []
+  disposition: open
+tbd:
+- Cell chemistry and thresholds pending TS-001
+- Applies to power alternative B only (decision DQ-006)

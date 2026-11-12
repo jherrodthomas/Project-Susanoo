@@ -37,8 +37,11 @@ elements:
   - {id: SUS-M1-SAF, parent: SUS-M1, name: "Independent safety monitor, protective stop and isolation", kind: computing, safety_role: protective, status: concept}
   - {id: SUS-M1-DCK, parent: SUS-M1, name: "UAV dock, retention, charging and release", kind: mixed, safety_role: protective, status: concept}
   - {id: SUS-M1-PWR, parent: SUS-M1, name: "Power generation, storage, distribution and thermal control", kind: electrical, safety_role: none, status: concept}
-  - {id: SUS-M1-PWR-GEN, parent: SUS-M1-PWR, name: "Engine-generator and governor", kind: mechanical, safety_role: none, status: candidate, decision: DQ-006}
-  - {id: SUS-M1-PWR-BAT, parent: SUS-M1-PWR, name: "Battery pack, BMS and contactors", kind: electrical, safety_role: none, status: candidate, decision: DQ-006}
+  # Power sub-elements: two named alternatives are analysed until TS-001 closes (decision DQ-006, open-both).
+  # Alternative A (centralised hydraulic): SUS-M1-PWR-HPU. Alternative B (series-hybrid): SUS-M1-PWR-GEN and -BAT.
+  - {id: SUS-M1-PWR-HPU, parent: SUS-M1-PWR, name: "Hydraulic power unit, accumulators and isolation (alternative A)", kind: mechanical, safety_role: none, status: candidate, decision: DQ-006}
+  - {id: SUS-M1-PWR-GEN, parent: SUS-M1-PWR, name: "Engine-generator and governor (alternative B)", kind: mechanical, safety_role: none, status: candidate, decision: DQ-006}
+  - {id: SUS-M1-PWR-BAT, parent: SUS-M1-PWR, name: "Battery pack, BMS and contactors (alternative B)", kind: electrical, safety_role: none, status: candidate, decision: DQ-006}
   - {id: SUS-M1-PWR-DIST, parent: SUS-M1-PWR, name: "Protected power distribution", kind: electrical, safety_role: none, status: candidate, decision: DQ-006}
   - {id: SUS-A1, parent: SUS-I1, name: "Dockable observation UAV", kind: system, safety_role: none, status: concept}
   - {id: SUS-A1-FC, parent: SUS-A1, name: "PX4-based flight controller", kind: computing, safety_role: none, status: concept}
@@ -65,9 +68,9 @@ interfaces:
   - {id: IF-001, name: "Pilot controls and displays", from: EXT-PILOT, to: SUS-M1-PIL, direction: bi, kind: [human, data],
      exchange: "commands, state, warnings", hazard_ids: [HAZ-PIL-001], source: wiki IF-001}
   - {id: IF-002, name: "Engine-generator to distribution", from: SUS-M1-PWR-GEN, to: SUS-M1-PWR-DIST, direction: uni, kind: [energy],
-     exchange: "electric power, voltage, thermal state", hazard_ids: [], source: wiki IF-002, status: candidate, decision: DQ-006}
+     exchange: "electric power, voltage, thermal state", hazard_ids: [HAZ-PWR-003], source: wiki IF-002, status: candidate, decision: DQ-006}
   - {id: IF-003, name: "Battery to distribution", from: SUS-M1-PWR-BAT, to: SUS-M1-PWR-DIST, direction: bi, kind: [energy, data],
-     exchange: "bidirectional power, BMS state", hazard_ids: [], source: wiki IF-003, status: candidate, decision: DQ-006}
+     exchange: "bidirectional power, BMS state", hazard_ids: [HAZ-PWR-002], source: wiki IF-003, status: candidate, decision: DQ-006}
   - {id: IF-004, name: "Control to joint actuators", from: SUS-M1-CTL, to: SUS-M1-WLK, direction: bi, kind: [data, energy],
      exchange: "torque or pressure commands, joint feedback", hazard_ids: [HAZ-WLK-001, HAZ-WLK-002, HAZ-PIL-002], source: wiki IF-004}
   - {id: IF-005, name: "Safety monitor to power", from: SUS-M1-SAF, to: SUS-M1-PWR, direction: uni, kind: [data, energy],
@@ -122,3 +125,5 @@ interfaces:
      exchange: "motor commands", hazard_ids: [HAZ-DCK-001], source: "docs/wiki/SUS-M1-Architecture-and-Boundaries.md (docking diagram)"}
   - {id: IF-022, name: "Safety sensing", from: SUS-M1-WLK, to: SUS-M1-SAF, direction: uni, kind: [data],
      exchange: "posture, joint and pressure sensing for the monitor", hazard_ids: [HAZ-WLK-001], source: "docs/wiki/SUS-M1-Architecture-and-Boundaries.md (control boundary diagram)"}
+  - {id: IF-023, name: "Hydraulic power to joint actuators", from: SUS-M1-PWR-HPU, to: SUS-M1-WLK, direction: bi, kind: [energy],
+     exchange: "pressurised fluid supply and return", hazard_ids: [HAZ-PWR-001], source: "concept/trade-studies.md (TS-001 alternative A)", status: candidate, decision: DQ-006}
