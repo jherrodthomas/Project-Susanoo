@@ -143,8 +143,8 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 | What | Count | Source |
 |---|---|---|
 | Hazards tracked (Task 106) | **15** (15 open) · initial 7 High, 7 Serious, 1 Medium → target 1 Serious, 14 Medium | [`safety/hazards/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/hazards) |
-| Mitigations planned | **58** | hazard records |
-| Safety requirements | **19** (19 candidate, 19 with verification open) | [`requirements/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/requirements) |
+| Mitigations planned | **59** | hazard records |
+| Safety requirements | **20** (20 candidate, 20 with verification open) | [`requirements/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/requirements) |
 | Safety-significant software functions | **8** | [`safety/software/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/software) |
 | Architecture | **19** elements, **8** externals, **31** interfaces, **9** functions | [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml) |
 | MIL-STD-882E tasks | **25** tailored: 19 selected, 2 conditional, 2 not selected, 2 n/a · gate **G0** | [`standards/tailoring/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/tailoring/mil-std-882e.yaml) |
@@ -174,7 +174,7 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 | [`HAZ-PWR-003`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-PWR-003.yaml) | Fuel leak and fire at the engine-generator | 1D Serious | 1E Medium | 3 |
 | [`HAZ-SAF-001`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-SAF-001.yaml) | Protective stop does not reach a safe state | 1C High | 1E Medium | 3 |
 | [`HAZ-WLK-001`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-WLK-001.yaml) | Stale or lost feedback causes runaway motion | 1C High | 1E Medium | 3 |
-| [`HAZ-WLK-002`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-WLK-002.yaml) | Walker tip-over or fall with pilot aboard | 1C High | 1E Medium | 6 |
+| [`HAZ-WLK-002`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-WLK-002.yaml) | Walker tip-over or fall with pilot aboard | 1C High | 1E Medium | 7 |
 | [`HAZ-WLK-003`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-WLK-003.yaml) | Crushing under the pod or legs while kneeling or rising | 1C High | 1E Medium | 3 |
 <!-- readme:hazards:end -->
 

@@ -31,16 +31,17 @@ package SusanooSatisfaction {
     satisfy 'SYS-014' by context.system.walker.safetyMonitor;
     satisfy 'SYS-015' by context.system.walker.power.engineGenerator;
     satisfy 'SYS-015' by context.system.walker.safetyMonitor;
-    satisfy 'SYS-016' by context.system.walker.manipulators;
-    satisfy 'SYS-016' by context.system.walker.motionControl;
-    satisfy 'SYS-016' by context.system.walker.safetyMonitor;
-    satisfy 'SYS-017' by context.system.walker.legs;
-    satisfy 'SYS-017' by context.system.walker.pilotStation;
+    satisfy 'SYS-016' by context.system.walker.legs;
+    satisfy 'SYS-017' by context.system.walker.manipulators;
+    satisfy 'SYS-017' by context.system.walker.motionControl;
     satisfy 'SYS-017' by context.system.walker.safetyMonitor;
-    satisfy 'SYS-018' by context.system.walker.manipulators;
     satisfy 'SYS-018' by context.system.walker.legs;
-    satisfy 'SYS-018' by context.system.walker.motionControl;
+    satisfy 'SYS-018' by context.system.walker.pilotStation;
     satisfy 'SYS-018' by context.system.walker.safetyMonitor;
-    satisfy 'SYS-019' by context.system.walker.pilotStation;
+    satisfy 'SYS-019' by context.system.walker.manipulators;
+    satisfy 'SYS-019' by context.system.walker.legs;
+    satisfy 'SYS-019' by context.system.walker.motionControl;
     satisfy 'SYS-019' by context.system.walker.safetyMonitor;
+    satisfy 'SYS-020' by context.system.walker.pilotStation;
+    satisfy 'SYS-020' by context.system.walker.safetyMonitor;
 }
