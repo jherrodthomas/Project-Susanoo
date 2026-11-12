@@ -42,6 +42,8 @@ ENFORCED = {
     "requirements": {"skip_dirs": {"figures"}, "generator": ["tools/figures/requirements_readme.py", "--check"]},
     # Generated README; figures and tables from verification/, safety/hazards/ and requirements/.
     "verification": {"skip_dirs": {"figures"}, "generator": ["tools/figures/verification_readme.py", "--check"]},
+    # Generated README; figures and tables from changes/ and the hazard links rule R10 follows.
+    "changes": {"skip_dirs": {"figures"}, "generator": ["tools/figures/changes_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)
