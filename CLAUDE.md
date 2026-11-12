@@ -6,7 +6,9 @@ Susanoo is a simulation-first demonstrator: a human-piloted walker (SUS-M1) and 
 
 - The records are the YAML under `standards/`, `architecture/`, `safety/`, `requirements/`, `verification/`, `changes/`, `reviews/` and `decisions/`, plus the simulation inputs `sim/spec/`, `sim/faults.yaml` and `sim/search/families.yaml`.
 - The hand-written SysML files in `models/sysml/model/` are checked against those records. Files starting `// GENERATED` are not hand-written.
-- Built from the records: pages under `docs/wiki/` marked `GENERATED`, `docs/wiki/images/sus-i1-*.svg` and `sysml-*.svg`, `safety/generated/`, `sim/results/` (the PX4 SITL JSON under `sim/results/uav/` is written by `sim/uav/harness.py`), `docs/wiki/images/sim-*.svg`, `sim/scenes3d/out/`, `docs/3d/`, `docs/wiki/images/3d-*.png`, and the generated `.sysml` files. **Never edit a generated file**; edit the record and regenerate.
+- Built from the records: the README blocks marked `readme:` and `docs/readme/*.svg`, the folder READMEs, figures and
+  `.sysml` views under `safety/mil-std-882e/` (from its `catalog.yaml`), `concept/figures/`, `integrations/px4/figures/`,
+  `framework/figures/`, pages under `docs/wiki/` marked `GENERATED`, `docs/wiki/images/sus-i1-*.svg` and `sysml-*.svg`, `safety/generated/`, `sim/results/` (the PX4 SITL JSON under `sim/results/uav/` is written by `sim/uav/harness.py`), `docs/wiki/images/sim-*.svg`, `sim/scenes3d/out/`, `docs/3d/`, `docs/wiki/images/3d-*.png`, and the generated `.sysml` files. **Never edit a generated file**; edit the record and regenerate.
 - Before handing over any change, run:
 
   ```bash
@@ -24,6 +26,10 @@ Susanoo is a simulation-first demonstrator: a human-piloted walker (SUS-M1) and 
   python -m sim.figures.uav_scenes     # from committed PX4 SITL results; re-running SITL: sim/README.md
   python -m sim.scenes3d.export_scene && python -m sim.scenes3d.build_pages   # 3D; stills: sim/README.md
   python -m unittest discover -s sim/tests -t .
+  python3 tools/gen_safety_docs.py && python3 tools/figures/build_figures.py   # 882E tree, concept, PX4 figures (npm ci --prefix tools/figures once)
+  python3 tools/check_readme_diagrams.py   # folder README standard (framework/documentation-standard.md)
+  tools/validate_doc_sysml.sh              # documentation SysML views with the project model; OMG pilot
+  python -m tools.readme.build_readme      # front-page README figures and numbers
   ```
 
   CI runs the same commands with `--check` and fails on errors or stale output.
