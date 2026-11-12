@@ -104,6 +104,9 @@ def check_item_references(repo):
         for s in ev.get("subsystems") or []:
             if s not in elements:
                 yield Finding("A03", "error", eid, f"subsystem {s} is not an element of the item definition")
+        for s in ev.get("hardware") or []:
+            if s not in elements:
+                yield Finding("A03", "error", eid, f"hardware {s} is not an element of the item definition")
     for rid, r in repo.objects["requirement"].items():
         for s in r.get("allocated_to") or []:
             if s not in elements:

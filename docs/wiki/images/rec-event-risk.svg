@@ -1,20 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="442.6" viewBox="0 0 1080 442.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="452.1" viewBox="0 0 1080 452.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
 <title>Figure 1 · Event risk</title>
-<desc>Each bench, test or simulation event, what it exposes, and every hazard that applies to it (same configuration, a shared mode and subsystem). A hazard needs an event risk assessment and a human acceptance before people, equipment or the environment are exposed (rule R06, Task 303).</desc>
+<desc>Each bench, test or simulation event, what it exposes, and every hazard that applies to it (same configuration, a shared mode and subsystem, and the hazard's hardware where it names any). A hazard needs an event risk assessment and a human acceptance before people, equipment or the environment are exposed (rule R06, Task 303).</desc>
 <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="1080" height="359" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1080" height="354" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · Event risk</text>
-<text x="40" y="66" font-size="12.5" fill="#475569">Each bench, test or simulation event, what it exposes, and every hazard that applies to it (same configuration, a shared mode and subsystem). A hazard</text>
-<text x="40" y="83" font-size="12.5" fill="#475569">needs an event risk assessment and a human acceptance before people, equipment or the environment are exposed (rule R06, Task 303).</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Each bench, test or simulation event, what it exposes, and every hazard that applies to it (same configuration, a shared mode and subsystem, and the</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">hazard's hardware where it names any). A hazard needs an event risk assessment and a human acceptance before people, equipment or the environment</text>
+<text x="40" y="100" font-size="12.5" fill="#475569">are exposed (rule R06, Task 303).</text>
 <text x="1040" y="44" font-size="11" fill="#475569" text-anchor="end">safety/events/</text>
-<line x1="40" y1="102" x2="1040" y2="102" stroke="#E2E8F0" stroke-width="1"/>
-<g transform="translate(0 124)">
+<line x1="40" y1="119" x2="1040" y2="119" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(0 141)">
 <text x="48" y="14" font-size="10.5" fill="#475569" font-weight="700">Event</text>
 <text x="400" y="14" font-size="10.5" fill="#475569" font-weight="700" text-anchor="middle">Gate</text>
 <text x="438" y="14" font-size="10.5" fill="#475569" font-weight="700">Exposes</text>
 <text x="588" y="14" font-size="10.5" fill="#475569" font-weight="700">Hazards that apply</text>
 <line x1="40" y1="24" x2="1040" y2="24" stroke="#CBD5E1" stroke-width="1"/>
-<rect x="40" y="24" width="1000" height="70" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="40" y="24" width="1000" height="48" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <text x="48" y="41" font-size="11" fill="#0F172A">EVT-BENCH-001  Supported single-leg hydraulic actuator b…</text>
 <rect x="387.6" y="28.5" width="24.8" height="17" rx="8.5" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
 <text x="400" y="40.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">G4</text>
@@ -22,76 +23,73 @@
 <text x="459.4" y="40.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">people</text>
 <rect x="485.8" y="28.5" width="59.2" height="17" rx="8.5" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
 <text x="515.4" y="40.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">equipment</text>
-<rect x="588" y="28.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="627.5" y="40.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-MAN-001</text>
-<rect x="672.1" y="28.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="711.6" y="40.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-MAN-002</text>
-<rect x="756.2" y="28.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="795.7" y="40.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PIL-001</text>
-<rect x="840.3" y="28.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="879.8" y="40.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PIL-002</text>
-<rect x="924.4" y="28.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="963.9" y="40.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PWR-001</text>
-<rect x="588" y="50.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="627.5" y="62.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PWR-002</text>
-<rect x="672.1" y="50.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="711.6" y="62.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PWR-003</text>
-<rect x="756.2" y="50.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="795.7" y="62.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-SAF-001</text>
-<rect x="840.3" y="50.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="879.8" y="62.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-WLK-001</text>
-<rect x="924.4" y="50.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="963.9" y="62.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-WLK-002</text>
-<rect x="588" y="72.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="627.5" y="84.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-WLK-003</text>
-<text x="48" y="111" font-size="11" fill="#0F172A">EVT-SIM-001  Digital simulation and PX4 SITL campaign</text>
-<rect x="387.6" y="98.5" width="24.8" height="17" rx="8.5" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
-<text x="400" y="110.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">G4</text>
-<rect x="438" y="98.5" width="46.5" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
-<text x="461.2" y="110.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">nothing</text>
+<rect x="588" y="28.5" width="95.6" height="17" rx="8.5" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="635.8" y="40.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PIL-001 1D</text>
+<rect x="688.6" y="28.5" width="95.6" height="17" rx="8.5" fill="#FEF3C7" stroke="#A16207" stroke-width="1"/>
+<text x="736.3" y="40.4" font-size="9.5" fill="#A16207" font-weight="700" text-anchor="middle">HAZ-PIL-002 2E</text>
+<rect x="789.1" y="28.5" width="95.6" height="17" rx="8.5" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="836.9" y="40.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PWR-001 1D</text>
+<rect x="889.7" y="28.5" width="95.6" height="17" rx="8.5" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="937.4" y="40.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-SAF-001 1D</text>
+<rect x="588" y="50.5" width="95.6" height="17" rx="8.5" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="635.8" y="62.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-WLK-001 1D</text>
+<rect x="688.6" y="50.5" width="95.6" height="17" rx="8.5" fill="#FEF3C7" stroke="#A16207" stroke-width="1"/>
+<text x="736.3" y="62.4" font-size="9.5" fill="#A16207" font-weight="700" text-anchor="middle">HAZ-WLK-002 1E</text>
+<rect x="789.1" y="50.5" width="95.6" height="17" rx="8.5" fill="#FEF3C7" stroke="#A16207" stroke-width="1"/>
+<text x="836.9" y="62.4" font-size="9.5" fill="#A16207" font-weight="700" text-anchor="middle">HAZ-WLK-003 1E</text>
+<text x="48" y="89" font-size="11" fill="#0F172A">EVT-SIM-001  Digital simulation and PX4 SITL campaign</text>
+<rect x="387.6" y="76.5" width="24.8" height="17" rx="8.5" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="400" y="88.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">G4</text>
+<rect x="438" y="76.5" width="46.5" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="461.2" y="88.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">nothing</text>
+<rect x="588" y="76.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
+<text x="627.5" y="88.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-DCK-001</text>
+<rect x="672.1" y="76.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
+<text x="711.6" y="88.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-DCK-002</text>
+<rect x="756.2" y="76.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
+<text x="795.7" y="88.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<rect x="840.3" y="76.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
+<text x="879.8" y="88.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-MAN-001</text>
+<rect x="924.4" y="76.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
+<text x="963.9" y="88.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-MAN-002</text>
 <rect x="588" y="98.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="627.5" y="110.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-DCK-001</text>
+<text x="627.5" y="110.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PIL-001</text>
 <rect x="672.1" y="98.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="711.6" y="110.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-DCK-002</text>
+<text x="711.6" y="110.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PIL-002</text>
 <rect x="756.2" y="98.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="795.7" y="110.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<text x="795.7" y="110.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PIL-003</text>
 <rect x="840.3" y="98.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="879.8" y="110.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-MAN-001</text>
+<text x="879.8" y="110.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PWR-002</text>
 <rect x="924.4" y="98.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="963.9" y="110.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-MAN-002</text>
+<text x="963.9" y="110.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PWR-003</text>
 <rect x="588" y="120.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="627.5" y="132.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PIL-001</text>
+<text x="627.5" y="132.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-SAF-001</text>
 <rect x="672.1" y="120.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="711.6" y="132.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PIL-002</text>
+<text x="711.6" y="132.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-WLK-001</text>
 <rect x="756.2" y="120.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="795.7" y="132.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PIL-003</text>
+<text x="795.7" y="132.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-WLK-002</text>
 <rect x="840.3" y="120.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="879.8" y="132.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PWR-002</text>
-<rect x="924.4" y="120.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="963.9" y="132.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-PWR-003</text>
-<rect x="588" y="142.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="627.5" y="154.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-SAF-001</text>
-<rect x="672.1" y="142.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="711.6" y="154.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-WLK-001</text>
-<rect x="756.2" y="142.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="795.7" y="154.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-WLK-002</text>
-<rect x="840.3" y="142.5" width="79.1" height="17" rx="8.5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
-<text x="879.8" y="154.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-WLK-003</text>
-<line x1="40" y1="164" x2="1040" y2="164" stroke="#E2E8F0" stroke-width="1"/>
+<text x="879.8" y="132.4" font-size="9.5" fill="#94A3B8" font-weight="700" text-anchor="middle">HAZ-WLK-003</text>
+<line x1="40" y1="142" x2="1040" y2="142" stroke="#E2E8F0" stroke-width="1"/>
 </g>
-<rect x="40" y="304" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.2"/>
-<text x="62" y="314" font-size="11" fill="#475569">Applies, not yet assessed</text>
-<rect x="207.5" y="304" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
-<text x="229.5" y="314" font-size="11" fill="#475569">Exposed</text>
-<rect x="285.5" y="304" width="14" height="12" rx="3" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.2"/>
-<text x="307.5" y="314" font-size="11" fill="#475569">Nothing exposed</text>
-<text x="40" y="332" font-size="10.5" fill="#94A3B8">Generated by tools/previews/record_figures.py from safety/events/EVT-*.yaml and safety/hazards/HAZ-*.yaml. Drafted at independence level I0; nothing shown here is reviewed, verified or accepted.</text>
-<g class="terms" data-base-h="359">
-<rect x="0" y="359" width="1080" height="83.6" fill="#FFFFFF"/>
-<line x1="40" y1="363" x2="1040" y2="363" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="378.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · EVT-nnn = test or demonstration event record (safety/events/) · G0–G7 = lifecycle gate</text>
-<text x="40" y="393.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(G0 concept to G7 change and sustainment) · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3</text>
-<text x="40" y="407.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">independent organisation) · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · R01 … = validator rule in tools/pdac (R13 = only a named human review</text>
-<text x="40" y="422.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">accepts anything) · SITL = software-in-the-loop simulation · SUS-A1 = dockable observation UAV · UAV = uncrewed aerial vehicle (drone)</text>
+<rect x="40" y="299" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.2"/>
+<text x="62" y="309" font-size="11" fill="#475569">Applies, not yet assessed</text>
+<rect x="207.5" y="299" width="14" height="12" rx="3" fill="#FFEDD5" stroke="#C2410C" stroke-width="1.2"/>
+<text x="229.5" y="309" font-size="11" fill="#475569">Event risk Serious (assessed, not accepted)</text>
+<rect x="471" y="299" width="14" height="12" rx="3" fill="#FEF3C7" stroke="#A16207" stroke-width="1.2"/>
+<text x="493" y="309" font-size="11" fill="#475569">Event risk Medium (assessed, not accepted)</text>
+<rect x="732.2" y="299" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="754.2" y="309" font-size="11" fill="#475569">Exposed</text>
+<rect x="810.2" y="299" width="14" height="12" rx="3" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.2"/>
+<text x="832.2" y="309" font-size="11" fill="#475569">Nothing exposed</text>
+<text x="40" y="327" font-size="10.5" fill="#94A3B8">Generated by tools/previews/record_figures.py from safety/events/EVT-*.yaml and safety/hazards/HAZ-*.yaml. Drafted at independence level I0; nothing shown here is reviewed, verified or accepted.</text>
+<g class="terms" data-base-h="354">
+<rect x="0" y="354" width="1080" height="98.1" fill="#FFFFFF"/>
+<line x1="40" y1="358" x2="1040" y2="358" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="373.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: 1A–4F = risk assessment code, severity 1–4 plus probability A–F (e.g. 1C) · AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · EVT-nnn =</text>
+<text x="40" y="388.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">test or demonstration event record (safety/events/) · F-nnn = system function in the item definition · G0–G7 = lifecycle gate (G0 concept to G7 change and sustainment) · HAZ-nnn =</text>
+<text x="40" y="402.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · PX4 = PX4 Autopilot, the</text>
+<text x="40" y="417.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">open-source flight-control software candidate for SUS-A1 · R01 … = validator rule in tools/pdac (R13 = only a named human review accepts anything) · SITL = software-in-the-loop</text>
+<text x="40" y="431.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">simulation · SUS-A1 = dockable observation UAV · UAV = uncrewed aerial vehicle (drone)</text>
 </g>
 </svg>

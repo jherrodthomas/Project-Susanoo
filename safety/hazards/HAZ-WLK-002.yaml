@@ -54,7 +54,19 @@ target_risk:
   rationale: Preliminary qualitative judgement at concept stage (no design); envelope limiting, rollover protection
     and restraint.
   definitions: SUS-RISKDEF-001
-event_risks: []
+event_risks:
+- event_id: EVT-BENCH-001
+  configuration: SUS-I1-C001
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: "Preliminary event risk (AI draft, I0), not accepted. EVT-BENCH-001 is one leg on a rigid support frame driven
+    by a hydraulic power unit, test crew in the room, no pilot, cockpit, arms, battery or engine. No pilot, and
+    the leg is held by a rigid frame, so the walker cannot tip over. The residual is the frame or its anchors
+    failing under dynamic leg loads; assumes the frame is designed and proof-loaded for the maximum actuator
+    force."
+  definitions: SUS-RISKDEF-001
 mitigations:
 - id: M1
   description: Low centre of gravity and wide stance selected in the architecture trade

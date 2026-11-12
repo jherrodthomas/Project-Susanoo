@@ -48,7 +48,19 @@ target_risk:
   rationale: Preliminary qualitative judgement at concept stage (no design); mode-specific stop with mechanical
     load holding and independent stop path.
   definitions: SUS-RISKDEF-001
-event_risks: []
+event_risks:
+- event_id: EVT-BENCH-001
+  configuration: SUS-I1-C001
+  severity: 1
+  probability: D
+  rac: 1D
+  risk_level: Serious
+  rationale: "Preliminary event risk (AI draft, I0), not accepted. EVT-BENCH-001 is one leg on a rigid support frame driven
+    by a hydraulic power unit, test crew in the room, no pilot, cockpit, arms, battery or engine. Stop-path
+    characterisation is a purpose of the event, so stops will be exercised while the leg moves under pressure; a
+    stop that does not hold posture can let the leg strike or fall. Assumes crew outside the guarded envelope
+    during powered runs and an independent hardwired stop that removes supply. Without them, C."
+  definitions: SUS-RISKDEF-001
 mitigations:
 - id: M1
   description: Load-holding valves / brakes hold posture on loss of power

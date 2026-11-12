@@ -339,3 +339,45 @@ decisions:
     status: open
     asked: 2026-11-12
     sources: [architecture/trades/TS-001.yaml, concept/trade-studies.md]
+
+  - id: DQ-017
+    question: Should a hazard tied to specific hardware stop applying to test events that do not contain that hardware?
+    context: >-
+      Rule R06 decided which hazards apply to an event from its configuration, modes and subsystems only. **The
+      battery and fuel hazards (tagged SUS-M1-PWR-BAT and SUS-M1-PWR-GEN) therefore applied to the hydraulic bench
+      rig EVT-BENCH-001, which has neither**, and each needed an event risk and an acceptance. Probability F is not
+      available for them (rule R02).
+    options:
+      - {key: hardware, title: Honour the hardware tag, detail: "Events list the hardware present; a hazard tagged with hardware applies only where that hardware is listed. An event that lists none keeps every hazard (conservative)."}
+      - {key: keep, title: Keep the rule as it is, detail: "Absent hazards stay at probability E and each still needs an acceptance."}
+    recommendation: hardware
+    reversibility: easy
+    blocks: [EVT-BENCH-001 event risk]
+    gate: G4
+    decider: lead
+    status: applied
+    asked: 2026-11-12
+    answer: {choice: hardware, by: lead, at: 2026-11-12, via: chat, note: "yes, check the hardware tag"}
+    applied_in: [tools/pdac/rules.py, tools/pdac/rules_ext.py, pdac/schemas/event.schema.json, safety/events/EVT-BENCH-001.yaml, safety/hazards/HAZ-PWR-002.yaml, safety/hazards/HAZ-PWR-003.yaml, tools/pdac/README.md]
+    sources: [safety/events/EVT-BENCH-001.yaml, tools/pdac/rules.py]
+
+  - id: DQ-018
+    question: Should the manipulator-arm hazards be tied to the arms, so they stop applying to events without arms?
+    context: >-
+      After DQ-017 a hazard tagged with hardware applies only to events that contain it. **HAZ-MAN-001 (person struck
+      by the arms) and HAZ-MAN-002 (carried load) carried no hardware tag, so they still applied to the bench rig
+      EVT-BENCH-001, which has no arms.** Tagging them with SUS-M1-MAN narrows where they apply; it does not change
+      their risk on the walker.
+    options:
+      - {key: tag, title: Tag both with SUS-M1-MAN, detail: "They drop out of events without arms; every event with arms, or that lists no hardware, keeps them."}
+      - {key: keep, title: Leave them untagged, detail: "They stay on the bench rig at probability E and each needs an acceptance."}
+    recommendation: tag
+    reversibility: easy
+    blocks: [EVT-BENCH-001 event risk]
+    gate: G4
+    decider: lead
+    status: applied
+    asked: 2026-11-12
+    answer: {choice: tag, by: lead, at: 2026-11-12, via: chat, note: "yes, tag the arm hazards with SUS-M1-MAN"}
+    applied_in: [safety/hazards/HAZ-MAN-001.yaml, safety/hazards/HAZ-MAN-002.yaml]
+    sources: [safety/events/EVT-BENCH-001.yaml, decisions/register.yaml]

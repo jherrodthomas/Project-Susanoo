@@ -136,7 +136,14 @@ def event_applies(event: dict, hazard: dict) -> bool:
     if not set(event.get("modes") or []) & set(hazard.get("modes") or []):
         return False
     subs = set(event.get("subsystems") or [])
-    return not subs or bool(subs & set(hazard.get("subsystems") or []))
+    if subs and not subs & set(hazard.get("subsystems") or []):
+        return False
+    # A hazard tied to specific hardware applies only where that hardware is present. An event that does not list
+    # its hardware is treated as containing everything (conservative).
+    hw = set((hazard.get("applicability") or {}).get("hardware") or [])
+    if hw and "hardware" in event:
+        return bool(hw & set(event.get("hardware") or []))
+    return True
 
 
 # ---------------------------------------------------------------- rules
