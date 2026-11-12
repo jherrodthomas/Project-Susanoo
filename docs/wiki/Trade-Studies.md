@@ -41,13 +41,13 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | ID | Title | Status | Alternatives | Criteria scored | Weights | Selected |
 |---|---|---|---|---|---|---|
-| TS-001 | Actuation and power architecture | in-work | 3 | 1 of 12 | draft | — |
+| TS-001 | Actuation and power architecture | in-work | 3 | 1 of 12 | confirmed | — |
 
 ## TS-001 · Actuation and power architecture
 
 **Question.** Which actuation and power architecture should SUS-M1 baseline?
 
-Status **in-work** · decision authority lead · weights draft (DQ-016) · decisions DQ-006, DQ-016
+Status **in-work** · decision authority lead · weights confirmed (DQ-016) · decisions DQ-006, DQ-016
 
 Joint actuation of the walker and the power source that goes with it. Two power alternatives are analysed side by side until this study closes (decision DQ-006); alternative B is split by joint actuator type because the two respond differently to faults local to one joint. The pilot station, locomotion and UAV dock are other studies (TS-002 to TS-004).
 
@@ -106,7 +106,6 @@ Requirements waiting on this study: SYS-007, SYS-009, SYS-014, SYS-015, SYS-016.
 
 ### Open actions
 
-- Confirm or change the criteria weights (decision DQ-016)
 - Obtain the vendor data for TS-001-E03; it unblocks TS-001-E04 and TS-001-E05
 - Test whether the residual bus floor (assumed 35% in sim/spec/walker.yaml) is credible for the series-hybrid bus; the C09 difference between A and B rests on it
 - Score the remaining criteria from evidence, then set the study to ready-for-decision for the lead
