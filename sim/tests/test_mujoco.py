@@ -58,13 +58,13 @@ class Model(unittest.TestCase):
             self.assertEqual(l2.simulate({"slope_deg": slope, "stride_offset_m": 0.12, "stop_request_s": 1.0})["outcome"],
                              "safe", slope)
 
-    def test_sizing_proposal_clears_the_envelope_and_matches_sys_013(self):
+    def test_sizing_proposal_clears_the_envelope_and_matches_sys_016(self):
         from sim.mujoco import sizing
         res = json.loads(sizing.OUT_JSON.read_text())
         pr = res["proposal"]
         self.assertEqual(pr["failures"], 0)
         self.assertAlmostEqual(pr["ankle_ratio"], 1.5, places=2)
-        req = _read_yaml(ROOT / "requirements" / "SYS-013.yaml")["statement"]
+        req = _read_yaml(ROOT / "requirements" / "SYS-016.yaml")["statement"]
         self.assertIn("1.5 m g L_foot", req)
         self.assertIn(f"{pr['knee_torque_max_nm'] / 1000:g} kN m", req)
 

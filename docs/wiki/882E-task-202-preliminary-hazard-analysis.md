@@ -75,7 +75,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 |---|---|---|---|---|
 | 1 | EXT-PILOT: Pilot | SUS-M1-CTL: Mission, motion and balance control | commands | — |
 | 2 | SUS-M1-SAF: Independent safety monitor, protective stop and isolation | SUS-M1-CTL: Mission, motion and balance control | inhibit | — |
-| 3 | SUS-M1-PWR: Power generation, storage, distribution and thermal control | SUS-M1-WLK: Chassis, legs, joint actuators and stability sensing | power | — |
+| 3 | SUS-M1-PWR: Power generation, storage, distribution and thermal control | SUS-M1-WLK: Chassis, legs, joint actuators and stability sensing | power | IF-023 |
 | 4 | SUS-M1-DCK: UAV dock, retention, charging and release | SUS-A1: Dockable observation UAV | retention / charge | IF-006, IF-PX4-009 |
 | 5 | SUS-M1-WLK: Chassis, legs, joint actuators and stability sensing | EXT-BYSTANDER: Bystanders | contact | IF-012 |
 | 6 | EXT-TERRAIN: Terrain and obstacles | SUS-M1-WLK: Chassis, legs, joint actuators and stability sensing | ground reaction | IF-010 |
