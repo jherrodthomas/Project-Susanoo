@@ -48,7 +48,18 @@ target_risk:
   rationale: Preliminary qualitative judgement at concept stage (no design); separated and shielded fuel system,
     fuel shut-off on protective stop, and a refuelling procedure.
   definitions: SUS-RISKDEF-001
-event_risks: []
+event_risks:
+- event_id: EVT-BENCH-001
+  configuration: SUS-I1-C001
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: "Preliminary event risk (AI draft, I0), not accepted. EVT-BENCH-001 is one leg on a rigid support frame driven
+    by a hydraulic power unit, test crew in the room, no pilot, cockpit, arms, battery or engine. No engine or
+    fuel on the rig, so the hazard is not present in this event. E rather than F (rule R02); it would drop out if
+    event applicability honoured the hazard's hardware (SUS-M1-PWR-GEN)."
+  definitions: SUS-RISKDEF-001
 mitigations:
 - id: M1
   description: Separate the fuel system and exhaust from the cockpit and from each other, with drip and heat shields

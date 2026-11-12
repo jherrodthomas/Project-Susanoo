@@ -51,7 +51,19 @@ target_risk:
     rate); arm stow interlock for walking, manipulation inhibit without a confirmed clear zone, and the exclusion
     zone
   definitions: SUS-RISKDEF-001
-event_risks: []
+event_risks:
+- event_id: EVT-BENCH-001
+  configuration: SUS-I1-C001
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: "Preliminary event risk (AI draft, I0), not accepted. EVT-BENCH-001 is one leg on a rigid support frame driven
+    by a hydraulic power unit, test crew in the room, no pilot, cockpit, arms, battery or engine. The rig has no
+    manipulator arms, so the hazard is not present in this event. Probability F needs a selected precedence-a
+    mitigation (rule R02), so E is recorded; it would drop out if event applicability honoured the hazard's
+    hardware."
+  definitions: SUS-RISKDEF-001
 mitigations:
 - id: M1
   description: Arms stowed and locked before walking is enabled, and held stowed until walking stops (CL-05 stowed

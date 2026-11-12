@@ -53,7 +53,18 @@ target_risk:
   rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
     rate); loaded-walking limits and interlocks reduce but are not expected to remove load motion while walking
   definitions: SUS-RISKDEF-001
-event_risks: []
+event_risks:
+- event_id: EVT-BENCH-001
+  configuration: SUS-I1-C001
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: "Preliminary event risk (AI draft, I0), not accepted. EVT-BENCH-001 is one leg on a rigid support frame driven
+    by a hydraulic power unit, test crew in the room, no pilot, cockpit, arms, battery or engine. No arms and no
+    carried load on the rig, so the hazard is not present in this event. E rather than F for the same reason as
+    HAZ-MAN-001 (rule R02)."
+  definitions: SUS-RISKDEF-001
 mitigations:
 - id: M1
   description: Loaded walking only with the load confirmed secured, the arms locked in a defined carry pose and mass

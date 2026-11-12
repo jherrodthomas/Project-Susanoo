@@ -43,7 +43,19 @@ target_risk:
   rationale: Preliminary qualitative judgement at concept stage (no design); lockable isolation with gauge-verified
     zero energy and mechanical supports.
   definitions: SUS-RISKDEF-001
-event_risks: []
+event_risks:
+- event_id: EVT-BENCH-001
+  configuration: SUS-I1-C001
+  severity: 1
+  probability: D
+  rac: 1D
+  risk_level: Serious
+  rationale: "Preliminary event risk (AI draft, I0), not accepted. EVT-BENCH-001 is one leg on a rigid support frame driven
+    by a hydraulic power unit, test crew in the room, no pilot, cockpit, arms, battery or engine. Applies fully:
+    the rig will be re-plumbed and its fittings changed often, with stored pressure in the actuator and any
+    accumulator. Fluid-injection injury can be fatal. Assumes lockout/tagout, gauge-verified zero pressure and the
+    leg on mechanical supports before any line is opened. Without them, C."
+  definitions: SUS-RISKDEF-001
 mitigations:
 - id: M1
   description: Evaluate electromechanical actuation (trade study) to eliminate stored hydraulic energy
