@@ -53,7 +53,7 @@ package SusanooArchitecture {
             @ExternalElement;
         }
         part <'EXT-TERRAIN'> terrain : Terrain {
-            doc /* Slope limit 20 degrees (CONOPS 4, DQ-010); CoM offset, payload and ground limits TBD (DQ-011) */
+            doc /* Slope limit 20 degrees with CoM offset at most 0.12 m (CONOPS 4, DQ-010, DQ-011); payload and ground limits TBD */
             @ExternalElement;
         }
         part <'EXT-AIRSPACE'> airspace : Airspace {

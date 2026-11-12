@@ -12,7 +12,7 @@ families:
       slope_deg: {uniform: [0, 20]}   # the CONOPS section 4 slope limit (DQ-010)
       tau_leak_s: {loguniform: [0.05, 5.0]}
       pilot_reaction_s: {uniform: [0.5, 3.0]}
-      stride_offset_m: {uniform: [0.0, 0.3]}
+      stride_offset_m: {uniform: [0.0, 0.12]}   # CoM offset limit (DQ-011)
       load_holding: {choice: [works, fails]}
     round: {slope_deg: 0.5, tau_leak_s: 0.01, pilot_reaction_s: 0.1, stride_offset_m: 0.01}
     monte_carlo: {n: 400, seed: 11}

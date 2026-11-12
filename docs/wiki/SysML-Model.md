@@ -2,7 +2,7 @@
 
 # SysML v2 Model
 
-Textual SysML v2 model of SUS-I1 in `models/sysml/model` (digest `14d91b10849c`): 27 parts (8 external), 30 connections, 9 functions, 12 requirements, 20 satisfy relations.
+Textual SysML v2 model of SUS-I1 in `models/sysml/model` (digest `1a735e794a63`): 27 parts (8 external), 30 connections, 9 functions, 12 requirements, 20 satisfy relations.
 
 > Concept model, not reviewed. Checked against the records by `tools/sysml/check.py` and validated as SysML v2 by the OMG pilot implementation (`tools/sysml/pilot/validate.sh`). Neither check is a review.
 
