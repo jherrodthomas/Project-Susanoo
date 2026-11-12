@@ -31,4 +31,5 @@ package SusanooSatisfaction {
     satisfy 'SYS-014' by context.system.walker.safetyMonitor;
     satisfy 'SYS-015' by context.system.walker.power.engineGenerator;
     satisfy 'SYS-015' by context.system.walker.safetyMonitor;
+    satisfy 'SYS-016' by context.system.walker.legs;
 }

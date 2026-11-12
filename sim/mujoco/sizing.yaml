@@ -1,0 +1,34 @@
+# Actuator sizing against HAZ-WLK-002 CF4 (supply loss shrinks the balance capacity before load holding engages).
+# Runs on level 2 (sim/mujoco/l2.py): level 1 has no joint torques (its centre-of-pressure limit A3 and leg force A4
+# stand in for them). Every value in a sweep is run on the whole envelope grid with load holding working; a failure
+# is any outcome other than safe. The proposal is a draft for the lead (I0): it becomes a design value only through
+# the actuation trade (TS-001, DQ-006) and a reviewed requirement.
+schema: susanoo/sim-sizing/v0.1
+id: SZ-01
+title: Ankle and knee torque against supply loss on a slope
+hazard: HAZ-WLK-002
+causal_factor: CF4
+base: {fault: FLT-01, variant: hydraulic, fault_onset_s: 1.0, monitor: true, load_holding: works}
+# The operating envelope (CONOPS section 4: 20 degrees, CoM offset at most 0.12 m; DQ-010, DQ-011) and the SF-01 leak
+# and pilot ranges.
+grid:
+  slope_deg: [0, 10, 14, 16, 18, 20]
+  stride_offset_m: [0.0, 0.06, 0.12]
+  tau_leak_s: [0.05, 0.5, 1.0, 1.5, 2.0, 3.0, 5.0]
+  pilot_reaction_s: [0.5, 1.5, 3.0]
+# Denser grid at the envelope corner, where the failures are; run for the proposal and the lowest clear ankle value.
+corner_grid:
+  slope_deg: [17, 18, 19, 20]
+  stride_offset_m: [0.09, 0.105, 0.12]
+  tau_leak_s: [1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 5.0]
+  pilot_reaction_s: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+sweeps:
+  - {id: ankle, param: ankle_torque_max_nm, values: [15000, 20000, 22000, 24000, 26500], with: {}}
+  - {id: knee, param: knee_torque_max_nm, values: [10000, 15000, 20000, 30000], with: {ankle_torque_max_nm: 26500}}
+proposal:
+  ankle_torque_max_nm: 26500
+  knee_torque_max_nm: 22500
+  rationale: >-
+    Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), about 10%
+    above the lowest value that clears the grid; knee 1.5 times the lowest value that clears it with that ankle.
+    Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).

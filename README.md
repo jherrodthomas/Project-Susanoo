@@ -139,8 +139,8 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 | What | Count | Source |
 |---|---|---|
 | Hazards tracked (Task 106) | **11** (11 open) · initial 4 High, 6 Serious, 1 Medium → target 11 Medium | [`safety/hazards/`](safety/hazards/) |
-| Mitigations planned | **44** | hazard records |
-| Safety requirements | **15** (15 candidate, 15 with verification open) | [`requirements/`](requirements/) |
+| Mitigations planned | **45** | hazard records |
+| Safety requirements | **16** (16 candidate, 16 with verification open) | [`requirements/`](requirements/) |
 | Safety-significant software functions | **8** | [`safety/software/`](safety/software/) |
 | Architecture | **19** elements, **8** externals, **31** interfaces, **9** functions | [`architecture/item-definition.yaml`](architecture/item-definition.yaml) |
 | MIL-STD-882E tasks | **25** tailored: 19 selected, 2 conditional, 2 not selected, 2 n/a · gate **G0** | [`standards/tailoring/`](standards/tailoring/mil-std-882e.yaml) |
@@ -167,7 +167,7 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 | [`HAZ-PWR-003`](safety/hazards/HAZ-PWR-003.yaml) | Fuel leak and fire at the engine-generator | 1D Serious | 1E Medium | 3 |
 | [`HAZ-SAF-001`](safety/hazards/HAZ-SAF-001.yaml) | Protective stop does not reach a safe state | 1C High | 1E Medium | 3 |
 | [`HAZ-WLK-001`](safety/hazards/HAZ-WLK-001.yaml) | Stale or lost feedback causes runaway motion | 1C High | 1E Medium | 3 |
-| [`HAZ-WLK-002`](safety/hazards/HAZ-WLK-002.yaml) | Walker tip-over or fall with pilot aboard | 1C High | 1E Medium | 5 |
+| [`HAZ-WLK-002`](safety/hazards/HAZ-WLK-002.yaml) | Walker tip-over or fall with pilot aboard | 1C High | 1E Medium | 6 |
 <!-- readme:hazards:end -->
 
 The full log, with causal factors, mitigations in design order of precedence, and software contributions, is generated
