@@ -19,6 +19,7 @@ from sim.mujoco import l2
 from sim.mujoco.model import L2_SPEC
 from sim.plant import spec, walker
 from tools.pdac.load import _read_yaml
+from tools.terms.terms import decorate
 
 CFG = SIM / "mujoco" / "crosscheck.yaml"
 OUT_JSON = ROOT / "sim" / "results" / "l2-crosscheck.json"
@@ -114,14 +115,14 @@ def main(argv=None) -> int:
     res = run()
     if a.compare:
         bad = compare(res, json.loads(OUT_JSON.read_text()))
-        if not bad and OUT_MD.read_text() != page(json.loads(OUT_JSON.read_text())):
+        if not bad and OUT_MD.read_text() != decorate(OUT_MD, page(json.loads(OUT_JSON.read_text()))):
             bad.append("l2-crosscheck.md does not match l2-crosscheck.json")
         for b in bad:
             print(b)
         print(f"{len(res['rows'])} cases, {len(bad)} difference(s) from the committed results")
         return 1 if bad else 0
     OUT_JSON.write_text(dumps(res), encoding="utf-8")
-    OUT_MD.write_text(page(json.loads(dumps(res))), encoding="utf-8")   # the page is always built from the JSON
+    OUT_MD.write_text(decorate(OUT_MD, page(json.loads(dumps(res)))), encoding="utf-8")   # built from the JSON
     print(f"wrote {OUT_JSON.relative_to(ROOT)} and {OUT_MD.relative_to(ROOT)}; unexplained: {res['unexplained'] or 'none'}")
     return 0
 

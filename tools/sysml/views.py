@@ -19,6 +19,7 @@ import sys
 from tools.figures import figkit as fk
 from tools.pdac.load import ROOT
 from tools.sysml.model import MODEL_DIR, MODEL_FILES, SYSTEM_ID, Model, ModelError, load
+from tools.terms.terms import decorate  # noqa: E402
 
 OUT = {
     "V-02": "docs/wiki/images/sysml-v02-hierarchy.svg",
@@ -231,6 +232,7 @@ def main(argv=None) -> int:
         return 1
     stale = []
     for rel, text in out.items():
+        text = decorate(rel, text)          # terms block / line (tools/terms)
         p = ROOT / rel
         if p.exists() and p.read_text(encoding="utf-8") == text:
             continue

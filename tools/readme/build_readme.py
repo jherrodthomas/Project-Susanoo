@@ -28,6 +28,8 @@ import yaml
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools" / "figures"))
 import layoutkit as fk  # noqa: E402
+sys.path.insert(0, str(ROOT))
+from tools.terms.terms import decorate  # noqa: E402
 from layoutkit import INK, MUTED, FAINT, LINE, HAIR, CHIP, GREY_BG, TONES  # noqa: E402
 
 OUT = ROOT / "docs" / "readme"
@@ -400,6 +402,7 @@ def main() -> int:
              README: apply_blocks(README.read_text(), blocks(d, s))}
     stale = []
     for p, content in files.items():
+        content = decorate(p.relative_to(ROOT).as_posix(), content)
         if p.exists() and p.read_text() == content:
             continue
         if args.check:

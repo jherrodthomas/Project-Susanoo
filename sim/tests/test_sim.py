@@ -8,6 +8,7 @@ from sim.figures import scenes
 from sim.plant import report, spec, walker
 from sim.search import search
 from tools.pdac.load import _read_yaml
+from tools.terms.terms import decorate
 
 P = spec.load()
 
@@ -122,7 +123,7 @@ class Outputs(unittest.TestCase):
     def test_all_outputs_current(self):
         for mod in (report, search, scenes):
             for rel, text in mod.outputs().items():
-                self.assertEqual((ROOT / rel).read_text(encoding="utf-8"), text, f"{rel} stale")
+                self.assertEqual((ROOT / rel).read_text(encoding="utf-8"), decorate(rel, text), f"{rel} stale")
 
     def test_scene_static_pose_is_end_state(self):
         for rel, svg in scenes.outputs().items():

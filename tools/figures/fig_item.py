@@ -16,6 +16,7 @@ from pathlib import Path
 from tools.pdac.load import ROOT, _read_yaml
 from tools.figures import figkit as fk
 from tools.figures.figkit import FigureError
+from tools.terms.terms import decorate  # noqa: E402
 
 ITEM = "architecture/item-definition.yaml"
 LAYOUT = "architecture/layout.yaml"
@@ -282,6 +283,7 @@ def main(argv=None) -> int:
         return 1
     stale = []
     for rel, text in outputs.items():
+        text = decorate(rel, text)          # terms block / line (tools/terms)
         path = ROOT / rel
         if path.exists() and path.read_text(encoding="utf-8") == text:
             continue
