@@ -339,3 +339,24 @@ decisions:
     status: open
     asked: 2026-11-12
     sources: [architecture/trades/TS-001.yaml, concept/trade-studies.md]
+
+  - id: DQ-017
+    question: Should a hazard tied to specific hardware stop applying to test events that do not contain that hardware?
+    context: >-
+      Rule R06 decided which hazards apply to an event from its configuration, modes and subsystems only. **The
+      battery and fuel hazards (tagged SUS-M1-PWR-BAT and SUS-M1-PWR-GEN) therefore applied to the hydraulic bench
+      rig EVT-BENCH-001, which has neither**, and each needed an event risk and an acceptance. Probability F is not
+      available for them (rule R02).
+    options:
+      - {key: hardware, title: Honour the hardware tag, detail: "Events list the hardware present; a hazard tagged with hardware applies only where that hardware is listed. An event that lists none keeps every hazard (conservative)."}
+      - {key: keep, title: Keep the rule as it is, detail: "Absent hazards stay at probability E and each still needs an acceptance."}
+    recommendation: hardware
+    reversibility: easy
+    blocks: [EVT-BENCH-001 event risk]
+    gate: G4
+    decider: lead
+    status: applied
+    asked: 2026-11-12
+    answer: {choice: hardware, by: lead, at: 2026-11-12, via: chat, note: "yes, check the hardware tag"}
+    applied_in: [tools/pdac/rules.py, tools/pdac/rules_ext.py, pdac/schemas/event.schema.json, safety/events/EVT-BENCH-001.yaml, safety/hazards/HAZ-PWR-002.yaml, safety/hazards/HAZ-PWR-003.yaml, tools/pdac/README.md]
+    sources: [safety/events/EVT-BENCH-001.yaml, tools/pdac/rules.py]

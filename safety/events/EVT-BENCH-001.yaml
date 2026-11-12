@@ -9,6 +9,7 @@ gate: G4
 configuration: SUS-I1-C001
 modes: [MOD-01, MOD-02, MOD-04, MOD-10]
 subsystems: [SUS-M1-WLK, SUS-M1-PWR, SUS-M1-SAF]
+hardware: [SUS-M1-WLK, SUS-M1-PWR-HPU, SUS-M1-SAF]   # one leg, its hydraulic power unit, the stop chain (decision DQ-017)
 exposure:
   people: true
   equipment: true

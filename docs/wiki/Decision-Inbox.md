@@ -33,7 +33,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 </details>
 <!-- terms:end -->
 
-Status: open 1, queued 0, answered 2, applied 13, withdrawn 0
+Status: open 1, queued 0, answered 2, applied 14, withdrawn 0
 
 ## How should the actuation trade study (TS-001) weigh its twelve criteria?
 
@@ -70,3 +70,4 @@ Sources: architecture/trades/TS-001.yaml, concept/trade-studies.md
 | DQ-013 | Which locomotion should the walker use? | Bipedal | lead | 2026-11-11 | applied | `concept/CONOPS.md`, `cad/README.md` |
 | DQ-014 | Which concept layout is the reference for further development? | CL-05 reverse-jointed pod | lead | 2026-11-11 | applied | `cad/README.md`, `safety/hazards/HAZ-WLK-002.yaml` |
 | DQ-015 | May the walker carry a payload while walking? | Allow carrying while walking under conditions | lead | 2026-11-12 | applied | `requirements/SYS-017.yaml`, `requirements/SYS-019.yaml`, `safety/hazards/HAZ-MAN-002.yaml`, `safety/hazards/HAZ-WLK-002.yaml`, `cad/README.md` |
+| DQ-017 | Should a hazard tied to specific hardware stop applying to test events that do not contain that hardware? | Honour the hardware tag | lead | 2026-11-12 | applied | `tools/pdac/rules.py`, `tools/pdac/rules_ext.py`, `pdac/schemas/event.schema.json`, `safety/events/EVT-BENCH-001.yaml`, `safety/hazards/HAZ-PWR-002.yaml`, `safety/hazards/HAZ-PWR-003.yaml`, `tools/pdac/README.md` |

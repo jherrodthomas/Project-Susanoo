@@ -48,19 +48,7 @@ target_risk:
   rationale: Preliminary qualitative judgement at concept stage (no design); pack separated from the cockpit by a
     fire barrier and vented away from it, independent BMS isolation, and emergency egress.
   definitions: SUS-RISKDEF-001
-event_risks:
-- event_id: EVT-BENCH-001
-  configuration: SUS-I1-C001
-  severity: 1
-  probability: E
-  rac: 1E
-  risk_level: Medium
-  rationale: "Preliminary event risk (AI draft, I0), not accepted. EVT-BENCH-001 is one leg on a rigid support frame driven
-    by a hydraulic power unit, test crew in the room, no pilot, cockpit, arms, battery or engine. No traction
-    battery on the rig (the hydraulic power unit runs from building power), so the hazard is not present in this
-    event. E rather than F (rule R02); it would drop out if event applicability honoured the hazard's hardware
-    (SUS-M1-PWR-BAT)."
-  definitions: SUS-RISKDEF-001
+event_risks: []
 mitigations:
 - id: M1
   description: Select a cell chemistry with low thermal-runaway energy (trade study TS-001)
