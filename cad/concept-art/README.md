@@ -5,7 +5,7 @@
 | Field | Value |
 |---|---|
 | Tool | Higgsfield, model `gpt_image_2_6`, image-to-image, quality high, 2K, 16:9, via the Higgsfield MCP connector |
-| Generated | 2026-11-11, by Claude (AI assistant) at the project lead's request; not reviewed |
+| Generated | 2026-11-11 and 2026-11-12, by Claude (AI assistant) at the project lead's request; not reviewed |
 | Source renders | [`renders/blender/`](../renders/blender/), imported by URL from this repository's branch |
 | Prompt constraints | Keep the machine's geometry and parts unchanged; unarmed civilian machine (no weapons, military insignia or camouflage); no text or logos |
 | Rights | Higgsfield's help center states it claims no ownership of outputs and does not restrict commercial use. Higgsfield's terms prohibit using outputs to train AI models. Purely AI-generated images may not be protected by copyright in some jurisdictions; to the extent rights exist, the files are offered under [CC BY 4.0](../../LICENSE-docs) like the rest of the documentation |
@@ -20,6 +20,27 @@
 | ![CL-05 kneeling at morning shift change, the pilot climbing the ladder, a crew member with a clipboard](CL-05-kneel-morning.jpg) **Kneel for ingress, morning** | `CL-05-kneel.jpg`, job `f27db76a` | Stowed claws drawn closer to the opening than the CAD places them |
 | ![CL-05 emergency drill in a hazy warehouse, the pilot leaving the side hatch onto the orange rope ladder](CL-05-emergency-warehouse.jpg) **Emergency exit drill, warehouse** | `CL-05-emergency.jpg`, job `3ec32fc5` | The rope ladder hangs flat against the hull over the safety box and leg instead of from the swing-out davit 0.60 m out: the snag the davit exists to avoid |
 | ![CL-05 emergency-egress training at dusk, the pilot in a fall-arrest harness descending the rope ladder, a trainer supervising](CL-05-emergency-training.jpg) **Emergency egress training, dusk** | `CL-05-emergency.jpg`, job `ec01b505` | The pilot wears a fall-arrest harness: a candidate control for HAZ-023 suggested by the image, to be evaluated, not evidence |
+
+## Kneel clip (image-to-video)
+
+<video src="CL-05-kneel-clip.mp4" controls width="100%"></video>
+
+[`CL-05-kneel-clip.mp4`](CL-05-kneel-clip.mp4) · 8 s, with generated sound · FLUX 3 Video via Higgsfield, start frame `CL-05-hero.jpg`, end frame `CL-05-kneel.jpg`, job `8413db6a` (re-encoded to 720p for the repository). A parallel MiniMax H3 attempt failed on the provider's side.
+
+![Nine frames of the kneel clip, one per second, from standing to kneeling with the ladder deployed](CL-05-kneel-clip-frames.jpg)
+
+What differs from the CAD: in seconds 2 to 4 the legs briefly morph (the knees read as forward-bending) and the walker shifts instead of keeping both feet planted; the camera drifts slightly. The clip communicates the idea of the kneel; it is not a kinematic study, which belongs to the simulation work of SYS-009 and SYS-019.
+
+## Military settings (unarmed)
+
+The same machine in the military livery of [`renders/blender/`](../renders/blender/) (`--livery military`: olive drab, coyote tan, dark bronze hydraulics, safety markings muted but kept), shown in military logistics, engineering and relief roles. **The project scope is unarmed** ([CLAUDE.md](../../CLAUDE.md), [CONOPS](../../concept/CONOPS.md) §1): every prompt excluded weapons, turrets, missiles and ammunition, and real-world national insignia, flags and unit markings; all four images were checked against that. An armed variant would be a scope change for the project lead to decide formally, not an art choice.
+
+| Image | Source render, job | What differs from the CAD, and notes |
+|---|---|---|
+| ![CL-05 in olive drab at a desert forward logistics base carrying a pallet of bottled water toward supply trucks, soldiers in plain uniforms directing it](CL-05-military-logistics.jpg) **Forward logistics base** | `CL-05-hero-military.jpg`, job `f82bd302` | Carries a pallet in its claws (payload limits are TBD, SYS-013); drone on a side platform instead of the rear dock |
+| ![CL-05 in olive drab lifting a broken concrete slab at an earthquake site while army engineers, rescue workers and search dogs watch](CL-05-military-engineering.jpg) **Disaster engineering** | `CL-05-hero-military.jpg`, job `11068be0` | Rescue crew shown inside the arm's reach: the strike and pinch zone of HAZ-009. A scene to prevent, not a procedure |
+| ![CL-05 kneeling under camouflage netting at dusk, the pilot climbing down the ladder while two mechanics work at a tool cart](CL-05-military-maintenance.jpg) **Field maintenance, dusk** | `CL-05-kneel-military.jpg`, job `79b790c8` | Close to the CAD |
+| ![CL-05 kneeling in a snowy mountain village, the pilot handing medical supply cases to relief workers beside a field hospital tent](CL-05-military-relief.jpg) **Winter disaster relief** | `CL-05-kneel-military.jpg`, job `c0cf31bc` | The red internal release handle reads as a small red cross. The Red Cross emblem is legally protected; the design should keep that handle unmistakably a handle |
 
 ## Ideas worth carrying back to the design
 

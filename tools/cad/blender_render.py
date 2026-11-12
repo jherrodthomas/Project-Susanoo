@@ -44,6 +44,24 @@ FINISH = {
     "reference": ((0.35, 0.36, 0.38), 0.00, 0.60, {}),                # 1.75 m scale figure
 }
 
+# Military livery: the same unarmed machine in a subdued military paint scheme (olive drab and coyote tan).
+# Access and safety items keep a muted but visible colour: they are safety markings, not decoration.
+LIVERIES = {
+    "industrial": {},
+    "military": {
+        "armor":  ((0.16, 0.18, 0.10), 0.05, 0.62, {}),   # olive drab, matte
+        "arm":    ((0.36, 0.30, 0.20), 0.10, 0.60, {}),   # coyote tan
+        "cage":   ((0.30, 0.26, 0.17), 0.10, 0.55, {}),   # tan roll bar
+        "power":  ((0.14, 0.15, 0.09), 0.05, 0.65, {}),
+        "dock":   ((0.20, 0.21, 0.16), 0.40, 0.55, {}),
+        "access": ((0.55, 0.45, 0.10), 0.10, 0.55, {}),   # subdued yellow: still a safety marking
+        "escape": ((0.55, 0.22, 0.06), 0.00, 0.75, {}),
+        "uav":    ((0.18, 0.20, 0.14), 0.10, 0.50, {}),
+        "occupant": ((0.24, 0.27, 0.17), 0.00, 0.85, {}),
+        "actuator": ((0.22, 0.19, 0.12), 0.55, 0.45, {}),  # dark bronze hydraulics
+    },
+}
+
 # Shots: layout folder, camera position relative to the walker's footprint centre, look-at height fraction, lens
 SHOTS = {
     "hero":      {"src": "CL-05",           "cam": (7.2, -5.0, 1.70), "look": 0.48, "lens": 35},
@@ -162,12 +180,12 @@ def camera(scene, pos, target, lens):
     scene.camera = cam
 
 
-def render(shot: str, spec: dict, samples: int, size=(1600, 1000)) -> Path:
+def render(shot: str, spec: dict, samples: int, size=(1600, 1000), livery: str = "industrial") -> Path:
     src = BUILD / spec["src"]
     man = json.loads((src / "manifest.json").read_text())
     scene = reset_scene()
     for m in man["meshes"]:
-        f = FINISH.get(m["cls"], ((0.5, 0.5, 0.5), 0.0, 0.5, {}))
+        f = LIVERIES[livery].get(m["cls"]) or FINISH.get(m["cls"], ((0.5, 0.5, 0.5), 0.0, 0.5, {}))
         import_mesh(src / m["file"], material(m["cls"], *f))
     world_and_lights(scene)
     ground(scene)
@@ -188,7 +206,8 @@ def render(shot: str, spec: dict, samples: int, size=(1600, 1000)) -> Path:
     scene.render.image_settings.file_format = "JPEG"
     scene.render.image_settings.quality = 90
     OUT.mkdir(parents=True, exist_ok=True)
-    out = OUT / f"{man['id'].split('-')[0]}-{man['id'].split('-')[1]}-{shot}.jpg"
+    suffix = "" if livery == "industrial" else f"-{livery}"
+    out = OUT / f"{man['id'].split('-')[0]}-{man['id'].split('-')[1]}-{shot}{suffix}.jpg"
     scene.render.filepath = str(out)
     bpy.ops.render.render(write_still=True)
     return out
@@ -198,9 +217,10 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--samples", type=int, default=96)
     ap.add_argument("--shots", nargs="*", default=list(SHOTS))
+    ap.add_argument("--livery", choices=list(LIVERIES), default="industrial")
     args = ap.parse_args()
     for shot in args.shots:
-        out = render(shot, SHOTS[shot], args.samples)
+        out = render(shot, SHOTS[shot], args.samples, livery=args.livery)
         print(f"wrote {out.relative_to(ROOT)}")
     return 0
 
