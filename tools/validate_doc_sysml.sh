@@ -15,7 +15,7 @@ cd "$ROOT"
 # The project model first (in the reader's dependency order), then the documentation views that import it.
 mapfile -t MODEL < <(python3 -c "from tools.sysml.model import MODEL_FILES, MODEL_DIR; print('\n'.join(str(MODEL_DIR / f) for f in MODEL_FILES))")
 mapfile -t VIEWS < <(find safety/mil-std-882e -name '*.sysml' | sort)
-FILES=("${MODEL[@]}" concept/ConceptOperations.sysml integrations/px4/PX4Integration.sysml decisions/DecisionRegister.sysml sim/SimulationEvidence.sysml "${VIEWS[@]}")
+FILES=("${MODEL[@]}" concept/ConceptOperations.sysml integrations/px4/PX4Integration.sysml decisions/DecisionRegister.sysml sim/SimulationEvidence.sysml framework/Lifecycle.sysml "${VIEWS[@]}")
 OUT="$(java -cp "$JAR:$BUILD" SysMLValidate "$KERNEL/sysml.library" "${FILES[@]}" 2>&1 \
   | grep -vE '^(Reading |log4j:|Picked up JAVA_TOOL_OPTIONS)')" || { echo "$OUT"; exit 1; }
 echo "$OUT"

@@ -230,7 +230,7 @@ system. Each folder README carries a generated flow position, block, boundary, S
 | [`sim/`](Simulation-Track) | Walker plant model, failure search, PX4 SITL scenarios, 2D and 3D scenes |
 | [`integrations/px4/`](PX4-Integration-Model) | PX4 baseline, interface contract, fail-closed launch permit |
 | [`decisions/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) · [`reviews/`](Review-Records) | Questions for the lead; human review records |
-| [`framework/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/README.md) | Lifecycle, process contracts, traceability, documentation standard |
+| [`framework/`](Framework) | Lifecycle, process contracts, traceability, documentation standard |
 | [`tools/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools) | Validators, generators and the figure kit |
 
 ## Run it
@@ -277,7 +277,7 @@ operation, and authorized human-occupied testing (which requires separate review
 <summary><b>All documentation</b></summary>
 
 - [Concept and CONOPS](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md) · [System architecture](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/architecture.md) · [Trade studies](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/trade-studies.md)
-- [Integrated standards framework](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/README.md) · [Standards applicability](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/standards-applicability.md)
+- [Integrated standards framework](Framework) · [Standards applicability](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/standards-applicability.md)
 - [Lifecycle and review gates](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/lifecycle.md) · [Process contracts](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/process-contracts.md) · [PDaC traceability](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/traceability.md)
 - [Execution plan](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/execution-plan.md) · [MIL-STD-882E conformance review and build plan](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/882e-conformance-review.md)
 - [LionDriver port plan](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/liondriver-port-plan.md) · [Documentation standard](Documentation-Standard)

@@ -21,6 +21,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - concept
   - integrations/px4
   - integrations           # generated README (tools/figures/integrations_readme.py)
+  - framework              # generated README top (tools/figures/framework_readme.py)
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -190,13 +191,6 @@ folders:
       the records; the process maps are exported from `docs/diagrams/mil-std-882e`. Never edit a generated file.
     hero: {img: docs/wiki/images/sus-i1-boundary.svg, caption: "sus-i1-boundary.svg"}
     gallery_glob: docs/wiki/images/*.{svg,png}
-
-  framework:
-    hero: {img: framework/figures/fig-1-documentation-pipeline.svg, caption: "How folder documentation is produced and enforced", link: framework/documentation-standard.md}
-    gallery:
-      - {img: docs/wiki/images/safety-lifecycle.svg, caption: "Safety lifecycle process map (illustrative)"}
-      - {img: docs/wiki/images/responsibility-swimlanes.svg, caption: "Responsibility swimlanes (illustrative)"}
-      - {img: docs/wiki/images/analysis-dependencies.svg, caption: "Analysis dependencies (illustrative)"}
 
   models/sysml:
     hero: {img: docs/wiki/images/sysml-v02-hierarchy.svg, caption: "Part hierarchy (view V-02)"}

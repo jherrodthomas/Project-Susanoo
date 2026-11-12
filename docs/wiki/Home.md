@@ -57,6 +57,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   every view imports
 - [Integrations](Integrations): the PX4 interfaces, what bears on each hazard they carry, and the SITL runs
   that exercised them
+- [Framework](Framework): the standards the project uses and how, the lifecycle gates with the MIL-STD-882E
+  tasks due at each, and the method pages
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

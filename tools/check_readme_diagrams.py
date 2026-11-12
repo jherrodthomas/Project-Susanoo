@@ -65,6 +65,9 @@ ENFORCED = {
     # Generated README of the system models; models/sysml/ keeps its hand-written page.
     "models": {"skip_dirs": {"figures", "sysml"}, "generator": ["tools/figures/models_readme.py", "--check"]},
     "integrations": {"skip_dirs": {"figures", "px4"}, "generator": ["tools/figures/integrations_readme.py", "--check"]},
+    # framework/figures.yaml (documentation-standard figure) is built by build_figures.py; the README top by its own.
+    "framework": {"skip_dirs": {"figures"}, "generator": ["tools/figures/framework_readme.py", "--check"],
+                  "extra_generators": [["tools/figures/build_figures.py", "--check"]]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

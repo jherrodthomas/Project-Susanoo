@@ -160,7 +160,7 @@ Model of record for the vocabulary: [`SusanooLibrary.sysml`](https://github.com/
 |---|---|
 | MIL-STD-882E | the published standard (not copied) |
 | Lead decisions | [Decision register](Decision-Register) |
-| Applicability and lifecycle | [`framework/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/README.md) |
+| Applicability and lifecycle | [`framework/`](Framework) |
 
 | Output | Destination |
 |---|---|
