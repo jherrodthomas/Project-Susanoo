@@ -42,6 +42,7 @@ FINISH = {
     "access":    ((0.75, 0.52, 0.01), 0.10, 0.45, {}),                # safety-yellow steps and rails
     "escape":    ((0.85, 0.20, 0.03), 0.00, 0.75, {}),                # webbing ladder
     "reference": ((0.35, 0.36, 0.38), 0.00, 0.60, {}),                # 1.75 m scale figure
+    "payload":   ((0.45, 0.33, 0.18), 0.00, 0.80, {}),                # carried load (crate), mass TBD
 }
 
 # Military livery: the same unarmed machine in a subdued military paint scheme (olive drab and coyote tan).
@@ -68,6 +69,7 @@ SHOTS = {
     "rear":      {"src": "CL-05",           "cam": (-7.0, -7.5, 2.8), "look": 0.45, "lens": 35},
     "kneel":     {"src": "CL-05-kneel",     "cam": (6.4, -4.2, 1.60), "look": 0.45, "lens": 35},
     "emergency": {"src": "CL-05-emergency", "cam": (2.2, -8.0, 2.4),  "look": 0.50, "lens": 35},
+    "carry":     {"src": "CL-05-carry",     "cam": (7.6, -4.6, 1.70), "look": 0.45, "lens": 35},
 }
 
 

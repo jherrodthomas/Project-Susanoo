@@ -48,6 +48,7 @@ CLASSES = {
     "access":    ("#e0b100", 1.0, "SUS-M1-PIL"),
     "escape":    ("#d9480f", 1.0, "SUS-M1-PIL"),
     "reference": ("#a3acb9", 1.0, None),
+    "payload":   ("#b08850", 1.0, None),   # carried load: not part of the walker, mass TBD (SYS-020)
 }
 DENSITY_CLASS = {"arm": "structure", "seat": "structure", "rotor": "uav", "hose": "structure", "access": "structure", "escape": "structure"}
 
@@ -425,12 +426,12 @@ def build_from_b3d(p, common, posture="standing"):
         cls = step.stem
         if cls not in CLASSES:
             raise ValueError(f"{p['id']}: unknown part class {cls!r} in {step.name}")
-        m.group = "uav" if cls in ("uav", "rotor") else "walker"
+        m.group = "uav" if cls in ("uav", "rotor") else "payload" if cls == "payload" else "walker"
         for k, solid in enumerate(Part.read(str(step)).Solids):
             m.add(f"{cls}-{k:03d}", cls, solid)
     m.group = "walker"
     m.feet = [tuple(f) for f in info["feet"]]
-    return m, {k: info[k] for k in ("hip_z", "floor", "eye", "dock", "egress") if k in info}
+    return m, {k: info[k] for k in ("hip_z", "floor", "eye", "dock", "egress", "carry") if k in info}
 
 
 # --- Metrics --------------------------------------------------------------------------------------
@@ -504,6 +505,49 @@ def metrics(m: Model, info: dict, common: dict) -> dict:
         **({"egress_sill_m": round(info["egress"]["sill"], 2), "max_step_rise_m": round(info["egress"]["max_rise"], 2),
             "steps": len(info["egress"]["treads"])} if info.get("egress") else {}),
         **(emergency_metrics(m, info["egress"]["emergency"]) if (info.get("egress") or {}).get("emergency") else {}),
+        **(carry_metrics(info["carry"], mass, cg, poly) if info.get("carry") else {}),
+    }
+
+
+FLAG_MARGIN = 0.30  # provisional review flag for static margin (m), as on the review images
+
+
+def carry_metrics(c: dict, mass: float, cg, poly) -> dict:
+    """Carry pose (SYS-020). The load's mass is TBD, so it is left out of the walker's mass and CG; instead this
+    reports the load mass at which the standstill static margin falls to the review flag and to zero (tip-over),
+    with the load's centre of mass at the centre of its envelope. Relative to placeholder walker mass only."""
+    lc = c["load_center"]
+
+    def marg(kg):
+        tot = mass + kg
+        return margin(poly, ((cg.x * mass + lc[0] * kg) / tot, (cg.y * mass + lc[1] * kg) / tot))
+
+    def first_below(target):
+        kg, step = 0.0, 10.0
+        peak = marg(0.0)
+        while kg < 50 * mass:
+            kg += step
+            mk = marg(kg)
+            peak = max(peak, mk)
+            if mk < target and mk < peak:
+                lo, hi = kg - step, kg
+                for _ in range(40):
+                    mid = (lo + hi) / 2
+                    lo, hi = (mid, hi) if marg(mid) >= target else (lo, mid)
+                return lo
+        return None
+
+    best = max(range(0, int(mass), 10), key=lambda k: marg(float(k)))
+    return {
+        "carry_load_envelope_m": [round(v, 2) for v in c["load_size"]],
+        "carry_load_centre_m": [round(v, 3) for v in c["load_center"]],
+        "carry_load_bottom_m": round(c["load_bottom"], 2),
+        "carry_arm_angles_deg": [c["arm_drop_deg"], c["fore_angle_deg"]],
+        "carry_margin_peak": {"load_kg": int(round(best, -1)), "static_margin_m": round(marg(float(best)), 3)},
+        "carry_load_at_margin_flag_kg": None if (k := first_below(FLAG_MARGIN)) is None else int(round(k, -1)),
+        "carry_load_at_tipover_kg": None if (k := first_below(0.0)) is None else int(round(k, -1)),
+        "ground_seen_ahead_unloaded_m": round(c["ground_seen_unloaded"], 2),
+        "ground_seen_ahead_loaded_m": round(c["ground_seen_loaded"], 2),
     }
 
 

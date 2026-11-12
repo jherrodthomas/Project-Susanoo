@@ -5,7 +5,7 @@ Process guidance for the unarmed SUS-M1 piloted walker and SUS-A1 observation UA
 <!-- BEGIN GENERATED: status (tools/pdac/generate.py) -->
 **Status:** Concept. Simulation-first; no hardware built, no certification, qualification, airworthiness approval or formal risk acceptance claimed.
 
-**PDaC records** (`b57973e8c0c0`): 15 scenarios · [24 hazards](../../safety/preliminary-hazard-list.md) (initial risk, proposed: 10 high, 10 serious, 4 medium) · 20 requirements (20 candidate) · 3 open trade studies · 0 recorded approvals · release `SUS-I1-R0.2` planned. No risk has been accepted.
+**PDaC records** (`2da597ae79e0`): 15 scenarios · [24 hazards](../../safety/preliminary-hazard-list.md) (initial risk, proposed: 10 high, 10 serious, 4 medium) · 20 requirements (20 candidate) · 3 open trade studies · 0 recorded approvals · release `SUS-I1-R0.2` planned. No risk has been accepted.
 <!-- END GENERATED: status -->
 
 ## Navigate

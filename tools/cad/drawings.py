@@ -158,7 +158,7 @@ def draw(p: dict, common: dict, met: dict, doc_rev: str, posture: str = "standin
     source = f"cad/params/{p['id']}.yaml"
     if posture != "standing":
         p = {**p, "id": f"{p['id']}-{posture}", "title": f"{p['title']} — {p['postures'][posture].get('label', posture).upper()}"}
-    walker = Part.makeCompound([pt["shape"] for pt in m.parts if pt["group"] in ("walker",)])
+    walker = Part.makeCompound([pt["shape"] for pt in m.parts if pt["group"] in ("walker", "payload")])
     uav = [pt["shape"] for pt in m.parts if pt["group"] in ("uav", "offboard")]
     uav = Part.makeCompound(uav) if uav else None
     ref = Part.makeCompound([pt["shape"] for pt in m.parts if pt["group"] == "reference"])

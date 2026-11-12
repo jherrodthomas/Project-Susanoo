@@ -220,10 +220,19 @@ def cad_concepts(model: pdaclib.Model) -> str:
                                     ("Emergency hatch clear opening", "emergency_clear_m", "{0[0]:.2f} × {0[1]:.2f} m"),
                                     ("Escape ladder clearance to the walker", "escape_clearance_m", "{:.2f} m"),
                                     ("Shoulder step height (flush with the hatch sill)", "hatch_step_m", "{:.2f} m"),
-                                    ("Gap from shoulder step to escape ladder", "step_to_ladder_gap_m", "{:.2f} m")):
+                                    ("Gap from shoulder step to escape ladder", "step_to_ladder_gap_m", "{:.2f} m"),
+                                    ("Carried load envelope (placeholder)", "carry_load_envelope_m", "{0[0]:.2f} × {0[1]:.2f} × {0[2]:.2f} m"),
+                                    ("Load bottom above ground", "carry_load_bottom_m", "{:.2f} m"),
+                                    ("Arm angles (upper arm below horizontal / forearm)", "carry_arm_angles_deg", "{0[0]:.0f}° / {0[1]:.0f}°"),
+                                    ("Nearest ground seen straight ahead", "ground_seen_ahead_loaded_m", "{:.2f} m"),
+                                    ("Load mass giving the largest static margin", "carry_margin_peak", "{0[load_kg]} kg ({0[static_margin_m]:.2f} m)"),
+                                    ("Load mass at the 0.30 m margin flag", "carry_load_at_margin_flag_kg", "{} kg"),
+                                    ("Load mass at standstill tip-over", "carry_load_at_tipover_kg", "{} kg")):
                 if key and key not in sm and key not in pm:
                     continue
                 a_, b_ = (sm["cg_m"][2], pm["cg_m"][2]) if key is None else (sm.get(key), pm.get(key))
+                if key == "ground_seen_ahead_loaded_m":  # the standing column shows the same sight line without a load
+                    a_ = pm.get("ground_seen_ahead_unloaded_m")
                 show = lambda v: "—" if v is None else fmt.format(v)  # noqa: E731
                 out.append(f"| {label} | {show(a_)} | {show(b_)} |")
             rp = f"renders/{cl['id']}-{posture}"

@@ -69,6 +69,13 @@ postures:                        # extra poses of this layout, built and analyse
     arm_drop_deg: 20             # arms stowed: upper arm closer to horizontal
     fore_angle_deg: 55           # forearm folded up, claws tucked clear of the ground
     step: deployed               # the fold-down ladder is out when kneeling
+  carry:                         # loaded walk (MOD-11, SYS-020): load clamped between the hands just ahead of the pod
+    label: "carrying a load"
+    carry:                       # arm angles are solved for this hand target; load mass is TBD (SYS-020)
+      hand_height: 1.80          # load centre height: its top stays below the pilot's sight line over the window sill
+      gap: 0.10                  # load's rear face ahead of the pod front
+      length: 0.80               # placeholder load envelope, fore-aft (its width is set by the hand spacing)
+      height: 0.60               # placeholder load envelope, vertical
   emergency:                     # standing, no power: right-hand hatch open, escape ladder deployed (SYS-012, HAZ-008)
     label: "emergency exit"
     escape: deployed

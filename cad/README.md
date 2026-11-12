@@ -1,6 +1,8 @@
 # Concept layouts (FreeCAD) — review and alignment
 
-**ID:** SUS-CAD-001 · **Revision:** 0.17-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CAD-001 · **Revision:** 0.18-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.18:* CL-05 carry pose for loaded walking (SYS-020): load clamped between the hands ahead of the pod, measured, rendered and drawn; standstill load-mass sensitivity of the static margin and the pilot's forward sight line; new part class `payload`, kept out of the walker's placeholder mass.
 
 *Changes in 0.17:* concept-art note on carrying while walking now points to SYS-020 (loaded walking allowed under conditions, decided by the project lead).
 
@@ -68,6 +70,12 @@ Rendered with Blender 5.3 (Cycles) by [`tools/cad/blender_render.py`](../tools/c
 |---|---|
 | ![CL-05 standing in olive-drab military livery, with a 1.75 m person for scale](renders/blender/CL-05-hero-military.jpg) | ![CL-05 kneeling in military livery with the ladder deployed](renders/blender/CL-05-kneel-military.jpg) |
 | ![CL-05 from the rear in military livery: power pack, raised dock and roll bar](renders/blender/CL-05-rear-military.jpg) | ![CL-05 emergency exit in military livery: hatch open, shoulder step and rope ladder](renders/blender/CL-05-emergency-military.jpg) |
+
+**Carrying a load** (MOD-11 loaded walk, SYS-020; placeholder load, mass TBD):
+
+| | |
+|---|---|
+| ![CL-05 carrying a placeholder load clamped between its hands ahead of the pod, with a 1.75 m person for scale](renders/blender/CL-05-carry.jpg) | ![CL-05 carrying a placeholder load in military livery](renders/blender/CL-05-carry-military.jpg) |
 
 **Walk cycle** (military livery; `cl05.py --walk 48`, then `blender_walk.py`): [![CL-05 walking in military livery with the arms stowed, side view tracking alongside, with a 1.75 m person standing still for scale](renders/blender/CL-05-walk-military.gif)](renders/blender/CL-05-walk-military.mp4)
 
@@ -171,6 +179,7 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 - The side windows give the pilot a view to the sides and are a candidate for the second exit CL-04 lacks, if they are sized and openable for egress (SYS-012); at concept size they are close to a minimum emergency opening.
 - The long claws hang low beside the legs, inside the walking envelope: a strike and pinch zone for anyone near the walker (HAZ-009) unless manipulation is inhibited and the arms are stowed while walking (SYS-013).
 - Stowed walking pose modelled (cad/params/CL-05.yaml walk: arms): lowest claw 0.85 m -> 2.43 m, claw reach 1.77 m -> 1.49 m forward of the hips, arms 0.42 m from the legs through the walk cycle. The claws are still at head height beside a moving walker; SYS-013 now requires walking to be inhibited until the arms are stowed and locked.
+- Carry pose for loaded walking (MOD-11, SYS-020): the load is clamped between the hands 0.10 m ahead of the pod with its centre 1.80 m up; the upper arms hang straight down and the forearms reach forward 13 deg below horizontal. The load top (2.10 m) stays under the pilot's sight line over the window sill, so the nearest ground seen straight ahead is 3.98 m with or without it; a load carried 0.20 m higher would push that out by about 0.3 m. The load bottom is 1.50 m up, clear of the swinging feet; the load is 0.16 m from the hull and the wrist joints 0.03 m from its sides. With the arms down the walker's own CG moves back: static margin 0.35 m unloaded. Load mass is TBD, so it is left out of the placeholder CG. At standstill, with the load's centre of mass at the centre of its envelope, a load ahead of the pod first improves the margin (0.59 m at about 890 kg, about a fifth of the placeholder walker mass), reaches the 0.30 m flag at about 2,580 kg and tips the standing walker forward at about 5,910 kg. These are standstill figures on placeholder mass, not limits: walking adds inertial loads and swing (HAZ-024) and needs the dynamic analysis of SYS-009, and SYS-020's payload limits must come from that. The placeholder load is 1.53 m wide (set by the hand spacing), wider than the pod, and it sits where the fold-down ladder lands, so it must be set down before kneeling for egress.
 - Kneel posture for egress (SYS-019): with the feet planted and the knees folded back, the hip drops from 2.34 m to 0.95 m and the cockpit floor from 2.41 m to about 1.0 m, a two-step climb instead of a ladder. The CG drops by more than a metre, so the tip angle improves, but the folded knees move mass rearward and the static margin shrinks: the kneel needs its own stability check. Lowering and rising create a crush zone under the pod and knees (HAZ-022). Kneeling is also a candidate controlled safe posture on loss of actuation energy (SYS-008, HAZ-021).
 - Access aids: the pilot leaves over the front-opening sill, which sits 0.62 m above the cockpit floor, so the real climb is from the sill (about 1.64 m when kneeling, 3.03 m standing), not from the floor. A fold-down ladder hinged under the sill deploys in the kneel with four treads at an even 0.33 m rise (placeholder limit 0.40 m), and grab handles beside and above the opening give three points of contact. Standing, the ladder is stowed folded on the hull: egress without kneeling is not possible, so a failure that prevents kneeling also blocks normal egress (HAZ-008). The ladder must be interlocked against deployment while walking, and ISO 2867 (access systems for earth-moving machinery) is a candidate reference for access dimensions; its applicability is not yet decided.
 - Emergency exit (SYS-012): both side windows are push-out hatches (clear opening 0.62 x 0.72 m) with red release handles inside, so the pilot can leave standing, without power and without kneeling, and has a second way out if the front opening is blocked (HAZ-008) or there is a fire in the pod (HAZ-017). A fold-out davit carries a rope ladder 0.60 m out from the hull; deployed, it clears the walker by 0.25 m. The hatch sill is 3.2 m up when standing: the descent is a fall-from-height hazard (HAZ-023). The shoulder plate under each hatch is now the exit step: a tread flush with the hatch sill, 0.42 m deep, with non-slip strips, a toe lip, an armour skirt over the shoulder joint and grab rails either side of the hatch; the pilot steps out onto it and across a 0.18 m gap to the escape ladder. The treads add mass behind the hips: static margin fell from 0.12 to 0.10 m standing and from 0.09 to 0.07 m kneeling, which the longer heel spurs (next finding) then recovered. Whether the clear opening is large enough for a pilot in protective equipment is TBD.
@@ -178,6 +187,38 @@ Options: TS-001 centralized hydraulic; TS-002 seated protected cockpit; TS-003 b
 - Rotor clearance: with the dock on short struts above the power pack the docked rotors came within 0.86 m of the pilot's head, under the 1 m flag (HAZ-011, SYS-003). Raising the platform 0.45 m on taller struts gives 1.09 m for 8 cm of extra overall height (4.48 m) and no measurable change in static margin; 0.30 m would give only 0.99 m. The measure is straight-line distance: the hull wall and roll bar already stand between rotor and pilot in the seat, so the clearance matters most while the pilot is outside the pod (ingress, egress, maintenance) and the rotor inhibit (SYS-003) remains the primary control. Taller struts are a longer lever for dock loads while walking (HAZ-013). Raising the dock also brings the rotors to 0.29 m from the roll bar, the nearest part of the walker's own structure: launch and recovery must clear it (HAZ-012, SYS-006), now tracked as the rotor-to-structure metric for every layout.
 
 Drawing sheet: [SUS-CAD-001-CL-05](drawings/CL-05.svg) (A3, 1:50, dimensioned side, plan and front views).
+
+**Carry posture** (carrying a load).
+
+| | Standing | Carry |
+|---|---|---|
+| Cockpit floor (egress drop) | 2.41 m | 2.41 m |
+| Hip height | 2.34 m | 2.34 m |
+| Overall height | 4.48 m | 4.48 m |
+| CG height | 2.72 m | 2.71 m |
+| Static margin | 0.38 m | 0.35 m |
+| Static tip angle | 7.9° | 7.4° |
+| Claws above ground | 0.93 m | 1.13 m |
+| Front-opening sill (actual climb height) | 3.03 m | 3.03 m |
+| Ladder treads | 0 | 0 |
+| Largest step rise | 3.03 m | 3.03 m |
+| Emergency hatch sill | 3.21 m | 3.21 m |
+| Emergency hatch clear opening | 0.62 × 0.72 m | 0.62 × 0.72 m |
+| Shoulder step height (flush with the hatch sill) | 3.21 m | 3.21 m |
+| Gap from shoulder step to escape ladder | 0.18 m | 0.18 m |
+| Carried load envelope (placeholder) | — | 0.80 × 1.53 × 0.60 m |
+| Load bottom above ground | — | 1.50 m |
+| Arm angles (upper arm below horizontal / forearm) | — | 90° / -13° |
+| Nearest ground seen straight ahead | 3.98 m | 3.98 m |
+| Load mass giving the largest static margin | — | 890 kg (0.59 m) |
+| Load mass at the 0.30 m margin flag | — | 2580 kg |
+| Load mass at standstill tip-over | — | 5910 kg |
+
+| | |
+|---|---|
+| ![CL-05 carry, front view](renders/CL-05-carry-hero.png) | ![CL-05 carry, side elevation](renders/CL-05-carry-side.png) |
+
+Drawing sheet: [SUS-CAD-001-CL-05-carry](drawings/CL-05-carry.svg).
 
 **Emergency posture** (emergency exit).
 

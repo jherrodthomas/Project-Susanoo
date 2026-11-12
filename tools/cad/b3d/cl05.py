@@ -24,7 +24,7 @@ from build123d import (Box, Circle, Compound, Plane, Pos, Rectangle, Rot, Solid,
 
 ROOT = Path(__file__).resolve().parents[3]
 CLASSES = ["structure", "actuator", "armor", "arm", "cage", "seat", "occupant", "power", "safety", "dock", "uav", "access", "escape",
-           "rotor", "hose"]
+           "rotor", "hose", "payload"]
 
 
 # --- Helpers (metres) -----------------------------------------------------------------------------
@@ -285,6 +285,29 @@ def build(p: dict, common: dict, posture: str = "standing", gait: dict | None = 
     ap_ = pose or (gait or {}).get("arms")  # a posture's arm pose, or the walk's stowed arms (SYS-013)
     ang = math.radians(ap_.get("arm_drop_deg", A["drop_angle_deg"]) if ap_ else A["drop_angle_deg"])
     fa = math.radians(ap_.get("fore_angle_deg", A.get("fore_angle_deg", 12)) if ap_ else A.get("fore_angle_deg", 12))
+    carry = None
+    CA = (ap_ or {}).get("carry")
+    if CA:  # carry pose (SYS-020): solve the arm for a hand target that clamps the load just ahead of the pod
+        sh0 = (x1 - sx / 2 - 0.05, z1 - S["drop"] - sz - 0.05)
+        hx, hz_ = x1 + CA["gap"] + CA["length"] / 2, CA["hand_height"]
+        d = math.hypot(hx - sh0[0], hz_ - sh0[1])
+        if d >= A["upper"] + A["fore"]:
+            raise ValueError("carry hand target out of reach")
+        base_ = math.atan2(hz_ - sh0[1], hx - sh0[0])
+        el_ = base_ - math.acos((A["upper"] ** 2 + d * d - A["fore"] ** 2) / (2 * A["upper"] * d))  # elbow below
+        elx, elz = sh0[0] + A["upper"] * math.cos(el_), sh0[1] + A["upper"] * math.sin(el_)
+        ang, fa = -el_, math.atan2(hz_ - elz, hx - elx)
+        lw = 2 * (wy / 2 + 0.18 - 0.13) - 0.02  # clamped between the hand pads: width set by the arm spacing
+        lx0, lz0 = x1 + CA["gap"], hz_ - CA["height"] / 2
+        put("payload", Pos(lx0 + CA["length"] / 2, 0, hz_) * Box(CA["length"], lw, CA["height"]))
+        # Nearest ground the pilot sees straight ahead: over the window sill, and over the load's front top edge
+        sill_ = floor + 0.5 + P["opening"][2]
+        seen = lambda px, pz: eye[0] + (px - eye[0]) * eye[2] / (eye[2] - pz)  # noqa: E731
+        carry = {"load_size": [CA["length"], round(lw, 3), CA["height"]], "load_center": [lx0 + CA["length"] / 2, 0.0, hz_],
+                 "load_bottom": lz0, "load_top": lz0 + CA["height"], "load_front": lx0 + CA["length"],
+                 "arm_drop_deg": round(math.degrees(ang), 1), "fore_angle_deg": round(math.degrees(fa), 1),
+                 "ground_seen_unloaded": seen(x1, sill_),
+                 "ground_seen_loaded": max(seen(x1, sill_), seen(lx0 + CA["length"], lz0 + CA["height"]) if lz0 + CA["height"] < eye[2] else float("inf"))}
     for s in (1, -1):
         yc = s * (wy / 2 + sy / 2 - 0.08)
         sh = (x1 - sx / 2 - 0.05, s * (wy / 2 + 0.18), z1 - S["drop"] - sz - 0.05)
@@ -374,7 +397,7 @@ def build(p: dict, common: dict, posture: str = "standing", gait: dict | None = 
     climb = [0.0, *treads, zb]
     egress = {"sill": zb, "treads": treads, "max_rise": max(b - a for a, b in zip(climb, climb[1:])), "emergency": emergency}
     info = {"hip_z": hip_z, "floor": floor, "eye": list(eye), "feet": [list(f) for f in feet], "dock": "onboard", "egress": egress,
-            "posture": posture, "knee": [kf, knee_z]}
+            "posture": posture, "knee": [kf, knee_z], **({"carry": carry} if carry else {})}
     return parts, info
 
 

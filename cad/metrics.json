@@ -316,6 +316,96 @@
      "hatch_step_m": 1.82,
      "step_to_ladder_gap_m": 0.18
     },
+    "carry": {
+     "envelope_m": [
+      3.01,
+      2.29,
+      4.48
+     ],
+     "height_m": 4.48,
+     "hip_height_m": 2.34,
+     "cockpit_floor_m": 2.41,
+     "pilot_eye_m": 3.62,
+     "placeholder_mass_kg": 4590,
+     "cg_m": [
+      -0.23,
+      -0.001,
+      2.715
+     ],
+     "support_polygon_m": [
+      [
+       -0.58,
+       -0.7
+      ],
+      [
+       -0.07,
+       -0.75
+      ],
+      [
+       0.204,
+       -0.76
+      ],
+      [
+       0.604,
+       -0.76
+      ],
+      [
+       0.604,
+       0.76
+      ],
+      [
+       0.204,
+       0.76
+      ],
+      [
+       -0.07,
+       0.75
+      ],
+      [
+       -0.58,
+       0.7
+      ]
+     ],
+     "static_margin_m": 0.35,
+     "static_tip_angle_deg": 7.4,
+     "uav_dock": "onboard",
+     "rotor_to_pilot_m": 1.09,
+     "rotor_to_structure_m": 0.29,
+     "arm_ground_clearance_m": 1.13,
+     "egress_sill_m": 3.03,
+     "max_step_rise_m": 3.03,
+     "steps": 0,
+     "emergency_sill_m": 3.21,
+     "emergency_clear_m": [
+      0.62,
+      0.72
+     ],
+     "hatch_step_m": 3.21,
+     "step_to_ladder_gap_m": 0.18,
+     "carry_load_envelope_m": [
+      0.8,
+      1.53,
+      0.6
+     ],
+     "carry_load_centre_m": [
+      1.25,
+      0.0,
+      1.8
+     ],
+     "carry_load_bottom_m": 1.5,
+     "carry_arm_angles_deg": [
+      90.2,
+      -12.7
+     ],
+     "carry_margin_peak": {
+      "load_kg": 890,
+      "static_margin_m": 0.591
+     },
+     "carry_load_at_margin_flag_kg": 2580,
+     "carry_load_at_tipover_kg": 5910,
+     "ground_seen_ahead_unloaded_m": 3.98,
+     "ground_seen_ahead_loaded_m": 3.98
+    },
     "emergency": {
      "envelope_m": [
       3.29,
