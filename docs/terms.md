@@ -16,6 +16,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | Term | Meaning |
 |---|---|
 | 3D | three-dimensional |
+| A-LOSS | TS-001 supply-loss mode, hydraulic supply lost and torque to zero (sim/trades) |
 | AI | artificial intelligence (here, an AI assistant drafting at independence level I0) |
 | ASAM | Association for Standardization of Automation and Measuring Systems |
 | ASIL | Automotive Safety Integrity Level (ISO 26262 term in the LionDriver port plan) |
@@ -23,6 +24,8 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | AUTOSAR | AUTomotive Open System ARchitecture (LionDriver port plan) |
 | B-EHA | TS-001 alternative B with electrohydraulic joint actuators (series-hybrid power) |
 | B-EMA | TS-001 alternative B with electromechanical joint actuators (series-hybrid power) |
+| B-ISOL | TS-001 supply-loss mode, battery isolated and torque to zero (sim/trades) |
+| B-SAG | TS-001 supply-loss mode, bus undervoltage with residual torque (sim/trades) |
 | BMS | battery management system |
 | BSD | Berkeley Software Distribution (the BSD licence) |
 | CAD | computer-aided design |
@@ -37,6 +40,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | COTS | commercial off-the-shelf |
 | CPU | central processing unit |
 | DAL | development assurance level (DO-178C / DO-254) |
+| DC | direct current |
 | DDS | Data Distribution Service, the middleware ROS 2 uses |
 | DID | data item description (a deliverable format referenced by MIL-STD-882E tasks) |
 | DoD | US Department of Defense |
@@ -59,6 +63,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | FHA | functional hazard analysis (MIL-STD-882E Task 208; also ARP4761A aircraft FHA) |
 | FLUX | FLUX, a family of image and video generation models (used through Higgsfield for concept art) |
 | FMEA | failure modes and effects analysis |
+| FMECA | failure modes, effects and criticality analysis |
 | FMU | Functional Mock-up Unit, a packaged simulation model |
 | FreeCAD | open-source parametric CAD program used for the concept layouts |
 | FRET | Formal Requirements Elicitation Tool (NASA) |
@@ -79,6 +84,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | HMI | human-machine interface |
 | HMMP | hazardous materials management plan (MIL-STD-882E Task 108) |
 | HMP | hazard management plan (MIL-STD-882E Task 103) |
+| HPU | hydraulic power unit |
 | HSE | health, safety and environment |
 | HTML | HyperText Markup Language (web page) |
 | HTS | hazard tracking system (MIL-STD-882E Task 106; here safety/hazards/) |

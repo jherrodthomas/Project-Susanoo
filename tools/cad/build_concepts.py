@@ -48,7 +48,7 @@ CLASSES = {
     "access":    ("#e0b100", 1.0, "SUS-M1-PIL"),
     "escape":    ("#d9480f", 1.0, "SUS-M1-PIL"),
     "reference": ("#a3acb9", 1.0, None),
-    "payload":   ("#b08850", 1.0, None),   # carried load: not part of the walker, mass TBD (SYS-020)
+    "payload":   ("#b08850", 1.0, None),   # carried load: not part of the walker, mass TBD (SYS-019)
 }
 DENSITY_CLASS = {"arm": "structure", "seat": "structure", "rotor": "uav", "hose": "structure", "access": "structure", "escape": "structure"}
 
@@ -513,7 +513,7 @@ FLAG_MARGIN = 0.30  # provisional review flag for static margin (m), as on the r
 
 
 def carry_metrics(c: dict, mass: float, cg, poly) -> dict:
-    """Carry pose (SYS-020). The load's mass is TBD, so it is left out of the walker's mass and CG; instead this
+    """Carry pose (SYS-019). The load's mass is TBD, so it is left out of the walker's mass and CG; instead this
     reports the load mass at which the standstill static margin falls to the review flag and to zero (tip-over),
     with the load's centre of mass at the centre of its envelope. Relative to placeholder walker mass only."""
     lc = c["load_center"]

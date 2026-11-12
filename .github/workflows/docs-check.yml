@@ -38,6 +38,12 @@ jobs:
       - name: Front-page README figures and numbers match the records
         run: python -m tools.readme.build_readme --check
 
+      - name: Every folder has a visual preview (docs/previews.yaml)
+        run: python -m tools.previews.build_previews --check
+
+      - name: Preview tests
+        run: python -m unittest discover -s tools/previews/tests -t .
+
       - name: Wiki copies of the repository pages are current (docs/wiki, assets.txt)
         run: python -m tools.wiki.build_wiki --check
 
