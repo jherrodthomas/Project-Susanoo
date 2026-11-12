@@ -129,6 +129,17 @@ abbreviations:
   PL: Program Lead (simulated role ROLE-PL)
   CE: Chief Engineer (simulated role ROLE-CE)
   HTML: HyperText Markup Language (web page)
+  CAD: computer-aided design
+  CC: Creative Commons; CC BY 4.0 is the Creative Commons Attribution 4.0 licence used for the documentation
+  CG: centre of gravity
+  FCStd: FreeCAD document file
+  FreeCAD: open-source parametric CAD program used for the concept layouts
+  FLUX: FLUX, a family of image and video generation models (used through Higgsfield for concept art)
+  MCP: Model Context Protocol, how the AI assistant connects to external tools
+  PDF: Portable Document Format
+  STEP: ISO 10303 exchange format for 3D CAD geometry
+  STL: stereolithography triangle-mesh file format
+  URL: uniform resource locator (a web address)
 
 standards:
   MIL-STD-882E: US DoD Standard Practice for System Safety (11 May 2012, base edition)
@@ -180,6 +191,8 @@ codes:
   SUS-RISKDEF-001: the project's tailored risk definitions (standards/tailoring)
   SUS-I1-C001: configuration 001 of SUS-I1, the baseline every record applies to
   R01-R12: the first twelve validator rules in tools/pdac
+  CL-: concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout)
+  SUS-CAD-001: the concept layouts document (cad/README.md); its drawing sheets are SUS-CAD-001-CL-nn
 
 classes:
   G#: lifecycle gate (G0 concept to G7 change and sustainment)
@@ -208,6 +221,31 @@ class_labels:
 # Words written in capitals that are ordinary words (figure banners, emphasis), names, roman numerals and code
 # identifiers: not abbreviations.
 not_terms:
+  # CAD drawing-sheet title blocks and view labels (cad/drawings), and the licence name CC BY
+  - CARRYING
+  - DRAWING
+  - DRAWN
+  - EGRESS
+  - ELEVATION
+  - EMERGENCY
+  - EXIT
+  - FOR
+  - FRONT
+  - KNEELING
+  - LICENCE
+  - LOAD
+  - NOT
+  - NOTES
+  - PLAN
+  - REVIEWED
+  - REVISION
+  - SCALE
+  - SHEET
+  - SIDE
+  - SOURCE
+  - UNITS
+  - VIEW
+  - BY
   # figure banners and titles written in capitals
   - INTEGRATED
   - MECHANIZED

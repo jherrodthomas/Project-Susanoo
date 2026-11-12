@@ -1,0 +1,9 @@
+# build123d environment for the layouts authored in code-CAD (tools/cad/b3d/). Create it with:
+#   micromamba create -y -p /opt/b3d -f tools/cad/b3d/environment.yml
+name: susanoo-b3d
+channels:
+  - conda-forge
+dependencies:
+  - build123d=0.9.1
+  - python=3.12
+  - pyyaml

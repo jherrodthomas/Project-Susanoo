@@ -1,0 +1,51 @@
+# SPDX-License-Identifier: Apache-2.0
+# Rebuild the FreeCAD concept layouts (SUS-CAD-001) when their parameters or tools change. Fails if the
+# committed cad/metrics.json is out of date, and attaches the STEP, FCStd and STL files to the run.
+# Review images are rendered locally (tools/cad/make.sh) and committed; they are not checked here.
+name: cad
+
+on:
+  pull_request:
+    paths: ["cad/**", "tools/cad/**", ".github/workflows/cad.yaml"]
+  push:
+    branches: [main]
+    paths: ["cad/**", "tools/cad/**", ".github/workflows/cad.yaml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: build concept layouts in FreeCAD
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - uses: mamba-org/setup-micromamba@v2
+      with:
+        environment-file: tools/cad/environment.yml
+        cache-environment: true
+    - name: Author the build123d layouts (separate environment)
+      run: |
+        micromamba create -y -n b3d -f tools/cad/b3d/environment.yml
+        for script in tools/cad/b3d/cl*.py; do micromamba run -n b3d python "$script"; done
+    - name: Build geometry and metrics
+      run: python tools/cad/build_concepts.py
+    - name: Drawing sheets
+      run: python tools/cad/drawings.py
+    - name: Committed metrics and drawing sheets are current
+      run: git diff --exit-code cad/metrics.json cad/drawings/*.svg || (echo "::error::cad/metrics.json or a drawing is stale: run tools/cad/make.sh and commit" && exit 1)
+    - uses: actions/upload-artifact@v4
+      with:
+        name: susanoo-concept-layouts
+        path: |
+          build/cad/*/*.step
+          build/cad/*/*.FCStd
+          build/cad/*/*.stl
+          cad/drawings/concept-layouts.pdf
