@@ -60,6 +60,8 @@ ENFORCED = {
     # Generated README of the standard model and tailoring; the two subfolders keep their own pages.
     "standards": {"skip_dirs": {"figures", "mil-std-882e", "tailoring"},
                   "generator": ["tools/figures/standards_readme.py", "--check"]},
+    # Generated README of the system models; models/sysml/ keeps its hand-written page.
+    "models": {"skip_dirs": {"figures", "sysml"}, "generator": ["tools/figures/models_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

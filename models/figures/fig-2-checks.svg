@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1345.5" height="889.1" viewBox="0 0 1345.5 889.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 2 · How the model is checked against the records</title>
+<desc>Each rule of tools/sysml/check.py compares a record with a model file on every pull request; the views are drawn from the checked model. A finding fails CI.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1345.5" height="820" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 2 · How the model is checked against the records</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Each rule of tools/sysml/check.py compares a record with a model file on every pull request; the views are drawn from the checked model. A finding fails CI.</text>
+<text x="1305.5" y="44" font-size="11" fill="#475569" text-anchor="end">tools/sysml/check.py</text>
+<line x1="40" y1="85" x2="1305.5" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 109)">
+<rect x="6" y="6" width="228.2" height="476" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="698.1" y="96" width="241.2" height="528" rx="12" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="1013.3" y="91" width="246.2" height="288" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M208.5 157 L644.1 157 Q651.1 157 651.1 164 L651.1 177 Q651.1 184 658.1 184 L736.6 184" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M208.5 83 L656.1 83 Q663.1 83 663.1 90 L663.1 158 Q663.1 165 670.1 165 L736.6 165" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M208.5 231 L254.2 231 Q261.2 231 261.2 224 L261.2 210 Q261.2 203 268.2 203 L736.6 203" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M208.5 297 L254.2 297 Q261.2 297 261.2 290 L261.2 287 Q261.2 280 268.2 280 L716.1 280" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M208.5 428 L644.1 428 Q651.1 428 651.1 421 L651.1 396 Q651.1 389 658.1 389 L686.1 389 Q693.1 389 700.1 389 L716.1 388.7" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M208.5 446 L254.2 446 Q261.2 446 261.2 453 L261.2 561 Q261.2 568 268.2 568 L742.2 568" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M208.5 363 L686.1 363 Q693.1 363 700.1 363 L716.1 363.3" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M890.6 196.7 L937.3 196.7 Q944.3 196.7 951.3 196.7 L959.3 196.7 Q966.3 196.7 966.3 203.7 L966.3 244 Q966.3 251 973.3 251 L1031.3 251" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M895.1 568 L959.3 568 Q966.3 568 966.3 561 L966.3 338 Q966.3 331 973.3 331 L1031.3 331" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M890.6 171.3 L937.3 171.3 Q944.3 171.3 951.3 171.3 L1031.3 171" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="18" y="18" width="204.2" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="120.1" y="33" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">RECORDS · SOURCE OF TRUTH</text>
+<rect x="710.1" y="108" width="215.7" height="22" rx="11" fill="#0F766E" stroke="none" stroke-width="0"/>
+<text x="817.9" y="123" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">MODEL · MODELS/SYSML/MODEL</text>
+<rect x="1025.3" y="103" width="222.2" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="1136.4" y="118" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">VIEWS · TOOLS/SYSML/VIEWS.PY</text>
+<rect x="31.6" y="130" width="176.9" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="43.6" y="154" font-size="12.5" fill="#0F172A" font-weight="700">Item definition elements</text>
+<text x="43.6" y="171" font-size="10.5" fill="#475569">19 records</text>
+<rect x="28.8" y="56" width="179.7" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="40.8" y="80" font-size="12.5" fill="#0F172A" font-weight="700">Item definition externals</text>
+<text x="40.8" y="97" font-size="10.5" fill="#475569">8 records</text>
+<rect x="24" y="204" width="184.5" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="36" y="228" font-size="12.5" fill="#0F172A" font-weight="700">Item definition interfaces</text>
+<text x="36" y="245" font-size="10.5" fill="#475569">31 records</text>
+<rect x="28.8" y="278" width="179.7" height="38" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="40.8" y="302" font-size="12.5" fill="#0F172A" font-weight="700">Item definition functions</text>
+<rect x="57" y="410" width="151.5" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="69" y="434" font-size="12.5" fill="#0F172A" font-weight="700">Requirement records</text>
+<text x="69" y="451" font-size="10.5" fill="#475569">20 records</text>
+<rect x="72.5" y="336" width="136" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="84.5" y="360" font-size="12.5" fill="#0F172A" font-weight="700">Hazard records</text>
+<text x="84.5" y="377" font-size="10.5" fill="#475569">15 records</text>
+<rect x="736.6" y="146" width="154" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="748.6" y="158" width="99.7" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="798.4" y="169.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Architecture.sysml</text>
+<text x="748.6" y="192" font-size="12.5" fill="#0F172A" font-weight="700">SusanooArchitecture</text>
+<text x="748.6" y="209" font-size="10.5" fill="#475569">hand-written</text>
+<rect x="716.1" y="242" width="139.6" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="728.1" y="254" width="88.7" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="772.5" y="265.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Functions.sysml</text>
+<text x="728.1" y="288" font-size="12.5" fill="#0F172A" font-weight="700">SusanooFunctions</text>
+<text x="728.1" y="305" font-size="10.5" fill="#475569">hand-written</text>
+<rect x="716.1" y="338" width="161.1" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="728.1" y="350" width="105.1" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="780.7" y="361.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Requirements.sysml</text>
+<text x="728.1" y="384" font-size="12.5" fill="#0F172A" font-weight="700">SusanooRequirements</text>
+<text x="728.1" y="401" font-size="10.5" fill="#475569">generated</text>
+<rect x="742.2" y="530" width="152.9" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="754.2" y="542" width="98.9" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="803.7" y="553.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Satisfaction.sysml</text>
+<text x="754.2" y="576" font-size="12.5" fill="#0F172A" font-weight="700">SusanooSatisfaction</text>
+<text x="754.2" y="593" font-size="10.5" fill="#475569">generated</text>
+<rect x="716.1" y="434" width="205.2" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="728.1" y="446" width="116.3" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="786.2" y="457.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SusanooLibrary.sysml</text>
+<text x="728.1" y="480" font-size="12.5" fill="#0F172A" font-weight="700">SusanooLibrary</text>
+<text x="728.1" y="497" font-size="10.5" fill="#475569">vocabulary, metadata; OMG pilot only</text>
+<rect x="1031.3" y="221" width="136" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1043.3" y="233" width="34.2" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1060.4" y="244.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">V-02</text>
+<text x="1043.3" y="267" font-size="12.5" fill="#0F172A" font-weight="700">Element hierarchy</text>
+<rect x="1031.3" y="301" width="178.5" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1043.3" y="313" width="34.2" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1060.4" y="324.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">V-07</text>
+<text x="1043.3" y="347" font-size="12.5" fill="#0F172A" font-weight="700">Requirement satisfaction</text>
+<rect x="1031.3" y="141" width="137.2" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1043.3" y="153" width="34.2" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1060.4" y="164.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">V-08</text>
+<text x="1043.3" y="187" font-size="12.5" fill="#0F172A" font-weight="700">N2 interface chart</text>
+<rect x="301.2" y="162" width="329.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="304.2" y="163" width="24.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="316.6" y="174.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">M1</text>
+<text x="333" y="175" font-size="10.5" fill="#475569">parts inside SUS-I1, same parent, name, kind, role, status</text>
+<rect x="321.6" y="88" width="289.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="324.6" y="89" width="24.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="337" y="100.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">M2</text>
+<text x="353.4" y="101" font-size="10.5" fill="#475569">parts outside SUS-I1, same name and assumption</text>
+<rect x="330.4" y="208" width="271.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="333.4" y="209" width="24.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="345.9" y="220.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">M4</text>
+<text x="362.3" y="221" font-size="10.5" fill="#475569">connections with the same ends and attributes</text>
+<rect x="336.8" y="285" width="258.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="339.8" y="286" width="24.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="352.2" y="297.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">M9</text>
+<text x="368.6" y="298" font-size="10.5" fill="#475569">actions performed by exactly the performers</text>
+<rect x="326.5" y="433" width="279.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="329.5" y="434" width="24.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="342" y="445.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">R1</text>
+<text x="358.4" y="446" font-size="10.5" fill="#475569">generated files current (also Satisfaction.sysml)</text>
+<rect x="321.6" y="573" width="289" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="324.6" y="574" width="24.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="337.1" y="585.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">R2</text>
+<text x="353.5" y="586" font-size="10.5" fill="#475569">satisfy ends inside SUS-I1, matches allocated_to</text>
+<rect x="312.6" y="368" width="307.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="315.6" y="369" width="24.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="328" y="380.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">R3</text>
+<text x="344.4" y="381" font-size="10.5" fill="#475569">safety-significant requirements name existing hazards</text>
+</g>
+<rect x="40" y="759" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="62" y="769" font-size="11" fill="#475569">Work product</text>
+<rect x="139.9" y="759" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="161.9" y="769" font-size="11" fill="#475569">Software-intensive element</text>
+<line x1="312.6" y1="765" x2="328.6" y2="765" stroke="#C2410C" stroke-width="1.8"/>
+<text x="334.6" y="769" font-size="11" fill="#475569">Rule compares record with model (code)</text>
+<line x1="551.2" y1="765" x2="567.2" y2="765" stroke="#475569" stroke-width="1.8"/>
+<text x="573.2" y="769" font-size="11" fill="#475569">View drawn from</text>
+<text x="40" y="791" font-size="10.5" fill="#94A3B8">Generated by tools/figures/models_readme.py from the .sysml files, tools/sysml/check.py and the records. The records are the source of truth; the model is checked against them. Passing a check is not a review.</text>
+<g class="terms" data-base-h="820">
+<rect x="0" y="820" width="1345.5" height="69.1" fill="#FFFFFF"/>
+<line x1="40" y1="824" x2="1305.5" y2="824" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="839.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CI = continuous integration (the automated checks GitHub runs on every change) · M1, M2 … = mitigation in a hazard record (M1, M2 …), or a SysML model check rule in tools/sysml · OMG = Object Management Group, publisher of</text>
+<text x="40" y="854.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SysML · R01 … = validator rule in tools/pdac (R13 = only a named human review accepts anything) · SUS-I1 = integrated mechanized walker and observation UAV · SysML = Systems Modeling Language (SysML v2) · UAV = uncrewed aerial</text>
+<text x="40" y="868.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">vehicle (drone) · V-nnn = SysML view (tools/sysml/views.py)</text>
+</g>
+</svg>

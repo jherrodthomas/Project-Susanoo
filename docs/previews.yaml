@@ -33,6 +33,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - safety
   - sim
   - standards
+  - models
 
 exempt:                  # tests, tooling internals, figure stores shown by the README above them
   - "**/figures"
@@ -202,14 +203,6 @@ folders:
     gallery:
       - {img: integrations/px4/figures/fig-3-sysml-internal-block.svg, caption: "PX4 interfaces (SysML internal block)", link: integrations/px4/README.md}
       - {img: integrations/px4/figures/fig-4-sysml-state-machine.svg, caption: "UAV states (SysML state machine)", link: integrations/px4/README.md}
-
-  models:
-    title: Models
-    purpose: System models of record. Today this is the SysML v2 model in `sysml/`.
-    hero: {img: docs/wiki/images/sysml-v02-hierarchy.svg, caption: "SysML part hierarchy", link: models/sysml/README.md}
-    gallery:
-      - {img: docs/wiki/images/sysml-v07-satisfy.svg, caption: "Requirement satisfaction", link: models/sysml/README.md}
-      - {img: docs/wiki/images/sysml-v08-n2.svg, caption: "N2 interface chart", link: models/sysml/README.md}
 
   models/sysml:
     hero: {img: docs/wiki/images/sysml-v02-hierarchy.svg, caption: "Part hierarchy (view V-02)"}

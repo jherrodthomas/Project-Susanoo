@@ -52,6 +52,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   it must pass before it counts
 - [Standards and tailoring](Standards-and-Tailoring): MIL-STD-882E as code, how each obligation is checked,
   and the tailored risk matrix with who may accept each level
+- [Models](Models): the SysML v2 model files, how each is checked against the records, and the packages
+  every view imports
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

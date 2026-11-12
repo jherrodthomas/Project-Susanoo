@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1113.2" height="1128.6" viewBox="0 0 1113.2 1128.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 5 · SysML packages and imports</title>
+<desc>The five project packages and the documentation views that import them, read from every .sysml file the OMG pilot validates. No view redefines a system part or requirement.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1113.2" height="1074" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 5 · SysML packages and imports</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The five project packages and the documentation views that import them, read from every .sysml file the OMG pilot validates. No view redefines a system</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">part or requirement.</text>
+<text x="1073.2" y="44" font-size="11" fill="#475569" text-anchor="end">models/sysml/model/</text>
+<line x1="40" y1="102" x2="1073.2" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="126" width="1033.2" height="852" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<path d="M40 126 L233 126 L233 140 L223 150 L40 150 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="143" font-size="11.5" fill="#0F172A" font-weight="700">pkg [package] SusanooModel</text>
+<g transform="translate(56 166)">
+<path d="M352 231 L352 114 Q352 107 359 107 L473 107 Q480 107 480 100 L480 85" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M352 456 L352 310" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M407 456 L407 421 Q407 414 414 414 L504 414 Q511 414 511 407 L511 85" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M585 456 L585 126 Q585 119 578 119 L548 119 Q541 119 541 112 L541 85" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M416 681 L416 646 Q416 639 409 639 L403 639 Q396 639 396 632 L396 535" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M470 681 L470 564 Q470 557 477 557 L550 557 Q557 557 557 550 L557 535" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M83 681 L83 564 Q83 557 90 557 L324 557 Q331 557 331 550 L331 535" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M261 681 L261 576 Q261 569 268 569 L356 569 Q363 569 363 562 L363 535" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M599 681 L599 646 Q599 639 592 639 L574 639 Q567 639 567 632 L567 576 Q567 569 560 569 L436 569 Q429 569 429 562 L429 535" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M694 681 L694 640.5 Q694 639 692.5 639 L692.5 639 Q691 639 691 637.5 L691 114 Q691 107 684 107 L579 107 Q572 107 572 100 L572 85" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M647 681 L647 644 Q647 639 652 639 L652 639 Q657 639 657 634 L657 564 Q657 557 650 557 L621 557 Q614 557 614 550 L614 535" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="449" y="6" width="154" height="79" rx="4" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="449" y="6" width="154" height="46" rx="4" fill="#F0FDFA" stroke="none" stroke-width="0"/>
+<line x1="449" y1="52" x2="603" y2="52" stroke="#0F766E" stroke-width="1.1"/>
+<text x="526" y="23" font-size="10" fill="#475569" text-anchor="middle">«package»</text>
+<text x="526" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SusanooLibrary</text>
+<text x="461" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SusanooLibrary.sysml</text>
+<rect x="277" y="231" width="150" height="79" rx="4" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="277" y="231" width="150" height="46" rx="4" fill="#F0FDFA" stroke="none" stroke-width="0"/>
+<line x1="277" y1="277" x2="427" y2="277" stroke="#0F766E" stroke-width="1.1"/>
+<text x="352" y="248" font-size="10" fill="#475569" text-anchor="middle">«package»</text>
+<text x="352" y="265" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SusanooFunctions</text>
+<text x="289" y="295" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Functions.sysml</text>
+<rect x="298" y="456" width="163.2" height="79" rx="4" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="298" y="456" width="163.2" height="46" rx="4" fill="#F0FDFA" stroke="none" stroke-width="0"/>
+<line x1="298" y1="502" x2="461.2" y2="502" stroke="#0F766E" stroke-width="1.1"/>
+<text x="379.6" y="473" font-size="10" fill="#475569" text-anchor="middle">«package»</text>
+<text x="379.6" y="490" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SusanooArchitecture</text>
+<text x="310" y="520" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Architecture.sysml</text>
+<rect x="500" y="456" width="170.6" height="79" rx="4" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="500" y="456" width="170.6" height="46" rx="4" fill="#F0FDFA" stroke="none" stroke-width="0"/>
+<line x1="500" y1="502" x2="670.6" y2="502" stroke="#0F766E" stroke-width="1.1"/>
+<text x="585.3" y="473" font-size="10" fill="#475569" text-anchor="middle">«package»</text>
+<text x="585.3" y="490" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SusanooRequirements</text>
+<text x="512" y="520" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Requirements.sysml</text>
+<rect x="362" y="681" width="162.1" height="79" rx="4" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="362" y="681" width="162.1" height="46" rx="4" fill="#F0FDFA" stroke="none" stroke-width="0"/>
+<line x1="362" y1="727" x2="524.1" y2="727" stroke="#0F766E" stroke-width="1.1"/>
+<text x="443" y="698" font-size="10" fill="#475569" text-anchor="middle">«package»</text>
+<text x="443" y="715" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SusanooSatisfaction</text>
+<text x="374" y="745" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Satisfaction.sysml</text>
+<rect x="6" y="681" width="153.5" height="79" rx="4" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="6" y="681" width="153.5" height="46" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<line x1="6" y1="727" x2="159.5" y2="727" stroke="#475569" stroke-width="1.1"/>
+<text x="82.7" y="698" font-size="10" fill="#475569" text-anchor="middle">«package»</text>
+<text x="82.7" y="715" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">Concept operations</text>
+<text x="18" y="745" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">ConceptOperations</text>
+<rect x="186" y="681" width="150" height="79" rx="4" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="186" y="681" width="150" height="46" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<line x1="186" y1="727" x2="336" y2="727" stroke="#475569" stroke-width="1.1"/>
+<text x="261" y="698" font-size="10" fill="#475569" text-anchor="middle">«package»</text>
+<text x="261" y="715" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">PX4 integration</text>
+<text x="198" y="745" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">PX4Integration</text>
+<rect x="629" y="6" width="150" height="79" rx="4" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="629" y="6" width="150" height="46" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<line x1="629" y1="52" x2="779" y2="52" stroke="#475569" stroke-width="1.1"/>
+<text x="704" y="23" font-size="10" fill="#475569" text-anchor="middle">«package»</text>
+<text x="704" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">Decision register</text>
+<text x="641" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">DecisionRegister</text>
+<rect x="805" y="6" width="190.2" height="79" rx="4" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="805" y="6" width="190.2" height="46" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<line x1="805" y1="52" x2="995.2" y2="52" stroke="#475569" stroke-width="1.1"/>
+<text x="900.1" y="23" font-size="10" fill="#475569" text-anchor="middle">«package»</text>
+<text x="900.1" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">Simulation evidence gate</text>
+<text x="817" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SimulationEvidence</text>
+<rect x="551" y="681" width="191" height="109" rx="4" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="551" y="681" width="191" height="46" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<line x1="551" y1="727" x2="742" y2="727" stroke="#475569" stroke-width="1.1"/>
+<text x="646.5" y="698" font-size="10" fill="#475569" text-anchor="middle">«38 packages»</text>
+<text x="646.5" y="715" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">882E work-product views</text>
+<text x="563" y="745" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SafetyApproach</text>
+<text x="563" y="760" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Task101_HazardEffort</text>
+<text x="563" y="775" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">… 36 more</text>
+<rect x="292" y="149" width="58.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="297" y="162" font-size="10.5" fill="#475569">«import»</text>
+<rect x="292" y="374" width="58.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="297" y="387" font-size="10.5" fill="#475569">«import»</text>
+<rect x="451" y="261.5" width="58.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="456" y="274.5" font-size="10.5" fill="#475569">«import»</text>
+<rect x="525" y="261.5" width="58.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="530" y="274.5" font-size="10.5" fill="#475569">«import»</text>
+<rect x="336" y="599" width="58.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="341" y="612" font-size="10.5" fill="#475569">«import»</text>
+<rect x="410" y="599" width="58.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="415" y="612" font-size="10.5" fill="#475569">«import»</text>
+<rect x="23" y="599" width="58.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="28" y="612" font-size="10.5" fill="#475569">«import»</text>
+<rect x="201" y="599" width="58.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="206" y="612" font-size="10.5" fill="#475569">«import»</text>
+<rect x="484" y="599" width="81" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="489" y="612" font-size="10.5" fill="#475569">«import» ×38</text>
+<rect x="608" y="374" width="81" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="613" y="387" font-size="10.5" fill="#475569">«import» ×38</text>
+<rect x="580" y="599" width="75.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="585" y="612" font-size="10.5" fill="#475569">«import» ×3</text>
+</g>
+<line x1="40" y1="1004" x2="56" y2="1004" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="62" y="1008" font-size="11" fill="#475569">«import» (count of packages)</text>
+<rect x="226.6" y="998" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="248.6" y="1008" font-size="11" fill="#475569">Project model package</text>
+<rect x="377.5" y="998" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="399.5" y="1008" font-size="11" fill="#475569">Documentation views</text>
+<text x="40" y="1030" font-size="10.5" fill="#94A3B8">Generated by tools/figures/models_readme.py from the .sysml files, tools/sysml/check.py and the records. The records are the source of truth; the model is checked against them. Passing a check is not a</text>
+<text x="40" y="1045" font-size="10.5" fill="#94A3B8">review.</text>
+<g class="terms" data-base-h="1074">
+<rect x="0" y="1074" width="1113.2" height="54.6" fill="#FFFFFF"/>
+<line x1="40" y1="1078" x2="1073.2" y2="1078" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1093.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: OMG = Object Management Group, publisher of SysML · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SUS-A1 = dockable observation UAV · SysML =</text>
+<text x="40" y="1108.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Systems Modeling Language (SysML v2) · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>
