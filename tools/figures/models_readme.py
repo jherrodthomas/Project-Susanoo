@@ -90,7 +90,7 @@ def group_of(path: str) -> str:
     if path.startswith("safety/mil-std-882e/"):
         return "882E work-product views"
     return {"concept": "Concept operations", "integrations": "PX4 integration", "decisions": "Decision register",
-            "sim": "Simulation evidence gate", "framework": "Lifecycle gates"}.get(path.split("/")[0], path.split("/")[0])
+            "sim": "Simulation evidence gate", "framework": "Lifecycle gates", "tools": "Docs check (CI)"}.get(path.split("/")[0], path.split("/")[0])
 
 
 def load() -> dict:

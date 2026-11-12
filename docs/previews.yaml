@@ -22,6 +22,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - integrations/px4
   - integrations           # generated README (tools/figures/integrations_readme.py)
   - framework              # generated README top (tools/figures/framework_readme.py)
+  - tools                  # generated README (tools/figures/tools_readme.py)
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -48,7 +49,6 @@ exempt:                  # tests, tooling internals, figure stores shown by the 
   - ".github/**"
   - ".claude"
   - ".claude/**"
-  - "tools"
   - "tools/**"
 
 folders:

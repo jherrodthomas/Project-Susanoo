@@ -231,7 +231,7 @@ system. Each folder README carries a generated flow position, block, boundary, S
 | [`integrations/px4/`](PX4-Integration-Model) | PX4 baseline, interface contract, fail-closed launch permit |
 | [`decisions/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) · [`reviews/`](Review-Records) | Questions for the lead; human review records |
 | [`framework/`](Framework) | Lifecycle, process contracts, traceability, documentation standard |
-| [`tools/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools) | Validators, generators and the figure kit |
+| [`tools/`](Tools) | Validators, generators and the figure kit |
 
 ## Run it
 

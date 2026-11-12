@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1099.6" height="1078.6" viewBox="0 0 1099.6 1078.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 3 · Block diagram</title>
+<desc>The tool packages and top-level scripts, with how many modules of each import another package. Every package imports terms/: each page and figure is decorated with its terms before it is written.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1099.6" height="1024" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 3 · Block diagram</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The tool packages and top-level scripts, with how many modules of each import another package. Every package imports terms/: each page and figure is decorated</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">with its terms before it is written.</text>
+<text x="1059.6" y="44" font-size="11" fill="#475569" text-anchor="end">tools/</text>
+<line x1="40" y1="102" x2="1059.6" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 126)">
+<rect x="6" y="6" width="1007.6" height="790" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M416.9 132 L416.9 193 Q416.9 200 409.9 200 L384.4 200 Q377.4 200 377.4 207 L377.4 220" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M482 132 L482 155 Q482 162 489 162 L624.5 162 Q631.5 162 631.5 169 L631.5 347 Q631.5 354 624.5 354 L537.3 354 Q532.3 354 532.3 359 L532.3 364" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M384.3 132 L384.3 137 Q384.3 142 379.3 142 L144.2 142 Q137.2 142 137.2 149 L137.2 615 Q137.2 622 130.2 622 L96.5 622 Q89.5 622 89.5 629 L89.5 702" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M229.6 574 L229.6 625 Q229.6 632 222.6 632 L110.9 632 Q103.9 632 103.9 639 L103.9 702" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M405.8 220 L405.8 215 Q405.8 210 410.8 210 L420.9 210 Q427.9 210 427.9 203 L427.9 149 Q427.9 142 434.9 142 L444.4 142 Q449.4 142 449.4 137 L449.4 132" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M388.8 296 L388.8 498" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M456.9 296 L456.9 301 Q456.9 306 461.9 306 L484.6 306 Q491.6 306 491.6 313 L491.6 364" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M354.7 296 L354.7 301 Q354.7 306 349.7 306 L328 306 Q321 306 321 313 L321 635 Q321 642 314 642 L125.4 642 Q118.4 642 118.4 649 L118.4 702" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M431.1 574 L431.1 645 Q431.1 652 424.1 652 L139.8 652 Q132.8 652 132.8 659 L132.8 702" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M661.4 132 L661.4 137 Q661.4 142 656.4 142 L565.4 142 Q558.4 142 558.4 149 L558.4 193 Q558.4 200 551.4 200 L441.2 200 Q434.2 200 434.2 207 L434.2 220" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M699.3 132 L699.3 481 Q699.3 488 692.3 488 L478.5 488 Q473.5 488 473.5 493 L473.5 498" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M737.2 132 L737.2 155 Q737.2 162 744.2 162 L878.5 162 Q885.5 162 885.5 169 L885.5 675 Q885.5 682 878.5 682 L183 682 Q176 682 176 689 L176 702" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M899.5 132 L899.5 145 Q899.5 152 892.5 152 L627.5 152 Q620.5 152 620.5 159 L620.5 203 Q620.5 210 613.5 210 L467.6 210 Q462.6 210 462.6 215 L462.6 220" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M947.6 132 L947.6 685 Q947.6 692 940.6 692 L195.5 692 Q190.5 692 190.5 697 L190.5 702" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M450.9 364 L450.9 323 Q450.9 316 443.9 316 L429.9 316 Q422.9 316 422.9 309 L422.9 296" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M464.5 440 L464.5 481 Q464.5 488 457.5 488 L436.1 488 Q431.1 488 431.1 493 L431.1 498" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M518.7 440 L518.7 445 Q518.7 450 523.7 450 L703.3 450 Q710.3 450 710.3 457 L710.3 655 Q710.3 662 703.3 662 L154.2 662 Q147.2 662 147.2 669 L147.2 702" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M803.4 574 L803.4 665 Q803.4 672 796.4 672 L168.6 672 Q161.6 672 161.6 679 L161.6 702" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M123.2 132 L123.2 145 Q123.2 152 130.2 152 L342.1 152 Q349.1 152 349.1 159 L349.1 220" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M75.1 132 L75.1 702" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="18" y="18" width="81.3" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="58.7" y="33" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">TOOLS/</text>
+<rect x="148.2" y="498" width="162.8" height="76" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="160.2" y="510" width="32.4" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="176.4" y="521.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad/</text>
+<text x="160.2" y="544" font-size="12.5" fill="#0F172A" font-weight="700">7 modules, 1,924 lines</text>
+<text x="160.2" y="561" font-size="10.5" fill="#475569">7 entry points</text>
+<rect x="320.7" y="220" width="170.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="332.7" y="232" width="48.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="356.8" y="243.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/</text>
+<text x="332.7" y="266" font-size="12.5" fill="#0F172A" font-weight="700">20 modules, 7,129 lines</text>
+<text x="332.7" y="283" font-size="10.5" fill="#475569">16 entry points</text>
+<rect x="346.4" y="498" width="169.4" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="358.4" y="510" width="38" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="377.5" y="521.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac/</text>
+<text x="358.4" y="544" font-size="12.5" fill="#0F172A" font-weight="700">5 modules, 1,382 lines</text>
+<text x="358.4" y="561" font-size="10.5" fill="#475569">2 entry points · own README</text>
+<rect x="623.5" y="56" width="151.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="635.5" y="68" width="57.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="664.1" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">previews/</text>
+<text x="635.5" y="102" font-size="12.5" fill="#0F172A" font-weight="700">2 modules, 865 lines</text>
+<text x="635.5" y="119" font-size="10.5" fill="#475569">2 entry points</text>
+<rect x="851.4" y="56" width="144.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="863.4" y="68" width="48.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="887.8" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">readme/</text>
+<text x="863.4" y="102" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 437 lines</text>
+<text x="863.4" y="119" font-size="10.5" fill="#475569">1 entry point</text>
+<rect x="410.2" y="364" width="162.8" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="422.2" y="376" width="42.4" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="443.4" y="387.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sysml/</text>
+<text x="422.2" y="410" font-size="12.5" fill="#0F172A" font-weight="700">6 modules, 1,041 lines</text>
+<text x="422.2" y="427" font-size="10.5" fill="#475569">5 entry points</text>
+<rect x="60.7" y="702" width="144.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="72.7" y="714" width="41.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="93.3" y="725.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">terms/</text>
+<text x="72.7" y="748" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 399 lines</text>
+<text x="72.7" y="765" font-size="10.5" fill="#475569">1 entry point</text>
+<rect x="731.3" y="498" width="144.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="743.3" y="510" width="34.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="760.3" y="521.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">wiki/</text>
+<text x="743.3" y="544" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 188 lines</text>
+<text x="743.3" y="561" font-size="10.5" fill="#475569">1 entry point</text>
+<rect x="27" y="56" width="144.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="39" y="68" width="69.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="73.6" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">worksheets/</text>
+<text x="39" y="102" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 851 lines</text>
+<text x="39" y="119" font-size="10.5" fill="#475569">1 entry point</text>
+<rect x="351.7" y="56" width="162.8" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="363.7" y="68" width="53" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="390.2" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">top level</text>
+<text x="363.7" y="102" font-size="12.5" fill="#0F172A" font-weight="700">3 modules, 1,056 lines</text>
+<text x="363.7" y="119" font-size="10.5" fill="#475569">3 entry points</text>
+<rect x="358.1" y="172" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="363.1" y="185" font-size="10.5" fill="#475569">3 imports</text>
+<rect x="578.4" y="249" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="583.4" y="262" font-size="10.5" fill="#475569">1 import</text>
+<rect x="84.1" y="393" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="89.1" y="406" font-size="10.5" fill="#475569">1 import</text>
+<rect x="170.8" y="594" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="175.8" y="607" font-size="10.5" fill="#475569">2 imports</text>
+<rect x="428.9" y="172" width="64.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="433.9" y="185" font-size="10.5" fill="#475569">16 imports</text>
+<rect x="330" y="393" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="335" y="406" font-size="10.5" fill="#475569">6 imports</text>
+<rect x="492.6" y="326" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="497.6" y="339" font-size="10.5" fill="#475569">1 import</text>
+<rect x="262.2" y="460" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="267.2" y="473" font-size="10.5" fill="#475569">3 imports</text>
+<rect x="378" y="594" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="383" y="607" font-size="10.5" fill="#475569">1 import</text>
+<rect x="499.6" y="172" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="504.6" y="185" font-size="10.5" fill="#475569">2 imports</text>
+<rect x="640.5" y="326" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="645.5" y="339" font-size="10.5" fill="#475569">2 imports</text>
+<rect x="826.7" y="393" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="831.7" y="406" font-size="10.5" fill="#475569">2 imports</text>
+<rect x="567.4" y="172" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="572.4" y="185" font-size="10.5" fill="#475569">1 import</text>
+<rect x="894.5" y="393" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="899.5" y="406" font-size="10.5" fill="#475569">1 import</text>
+<rect x="397.8" y="326" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="402.8" y="339" font-size="10.5" fill="#475569">1 import</text>
+<rect x="405.7" y="460" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="410.7" y="473" font-size="10.5" fill="#475569">3 imports</text>
+<rect x="657.2" y="527" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="662.2" y="540" font-size="10.5" fill="#475569">1 import</text>
+<rect x="750.3" y="594" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="755.3" y="607" font-size="10.5" fill="#475569">1 import</text>
+<rect x="296" y="172" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="301" y="185" font-size="10.5" fill="#475569">1 import</text>
+<rect x="22" y="393" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="27" y="406" font-size="10.5" fill="#475569">1 import</text>
+</g>
+<rect x="40" y="948" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="62" y="958" font-size="11" fill="#475569">CAD pipeline</text>
+<rect x="140.6" y="948" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="162.6" y="958" font-size="11" fill="#475569">Package</text>
+<rect x="218.6" y="948" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="240.6" y="958" font-size="11" fill="#475569">Package with a validator</text>
+<line x1="379.6" y1="954" x2="395.6" y2="954" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="401.6" y="958" font-size="11" fill="#475569">Imports (count of modules)</text>
+<text x="40" y="980" font-size="10.5" fill="#94A3B8">Generated by tools/figures/tools_readme.py from the tools' docstrings and imports and the CI workflows. Tools check links, schemas and staleness; passing them is not a review and accepts nothing (rule</text>
+<text x="40" y="995" font-size="10.5" fill="#94A3B8">R13).</text>
+<g class="terms" data-base-h="1024">
+<rect x="0" y="1024" width="1099.6" height="54.6" fill="#FFFFFF"/>
+<line x1="40" y1="1028" x2="1059.6" y2="1028" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1043.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CAD = computer-aided design · CI = continuous integration (the automated checks GitHub runs on every change) · R01 … = validator rule in tools/pdac (R13 = only a named human</text>
+<text x="40" y="1058.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">review accepts anything)</text>
+</g>
+</svg>

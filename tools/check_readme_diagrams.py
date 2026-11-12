@@ -68,6 +68,10 @@ ENFORCED = {
     # framework/figures.yaml (documentation-standard figure) is built by build_figures.py; the README top by its own.
     "framework": {"skip_dirs": {"figures"}, "generator": ["tools/figures/framework_readme.py", "--check"],
                   "extra_generators": [["tools/figures/build_figures.py", "--check"]]},
+    # Generated README of the tools; the packages are code (pdac/ keeps its own page).
+    "tools": {"skip_dirs": {"cad", "figures", "pdac", "previews", "readme", "sysml", "terms", "wiki", "worksheets",
+                            "__pycache__"},
+              "generator": ["tools/figures/tools_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

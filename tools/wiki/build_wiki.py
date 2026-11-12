@@ -60,7 +60,8 @@ def sources() -> dict[Path, str]:
              ROOT / "standards/README.md": "Standards-and-Tailoring",
              ROOT / "models/README.md": "Models",
              ROOT / "integrations/README.md": "Integrations",
-             ROOT / "framework/README.md": "Framework"}
+             ROOT / "framework/README.md": "Framework",
+             ROOT / "tools/README.md": "Tools"}
     for r in sorted(TREE_DIR.rglob("README.md")):
         if "figures" not in r.parts:
             pages[r] = tree_page(r)
@@ -141,6 +142,7 @@ def sidebar(current: str) -> str:
              "- [Models](Models)",
              "- [Integrations](Integrations)",
              "- [Framework](Framework)",
+             "- [Tools](Tools)",
              "- [882E work products](882E-Work-Products)"]
     for p, n in tree:
         depth = len(p.parent.relative_to(TREE_DIR).parts)
