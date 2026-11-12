@@ -57,6 +57,9 @@ ENFORCED = {
     "sim": {"skip_dirs": {"figures", "mujoco", "plant", "results", "scenes3d", "search", "spec", "tests", "trades", "uav",
                           "__pycache__"},
             "generator": ["tools/figures/sim_readme.py", "--check"]},
+    # Generated README of the standard model and tailoring; the two subfolders keep their own pages.
+    "standards": {"skip_dirs": {"figures", "mil-std-882e", "tailoring"},
+                  "generator": ["tools/figures/standards_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

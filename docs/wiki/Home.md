@@ -50,6 +50,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   events, requirements and reviews fit together
 - [Simulation track](Simulation-Track): every simulation result set, what it exercises, and the evidence gate
   it must pass before it counts
+- [Standards and tailoring](Standards-and-Tailoring): MIL-STD-882E as code, how each obligation is checked,
+  and the tailored risk matrix with who may accept each level
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

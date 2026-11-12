@@ -32,6 +32,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - architecture
   - safety
   - sim
+  - standards
 
 exempt:                  # tests, tooling internals, figure stores shown by the README above them
   - "**/figures"
@@ -397,15 +398,6 @@ folders:
     gallery:
       - {img: docs/wiki/images/sim-su-02.svg, caption: "SU-02 (synthetic)"}
       - {img: docs/wiki/images/sim-su-03.svg, caption: "SU-03 (synthetic)"}
-
-  standards:
-    title: Standards and tailoring
-    purpose: >-
-      The machine-readable MIL-STD-882E model (`mil-std-882e/`) and the project's tailoring of it (`tailoring/`).
-    hero: {img: docs/wiki/images/safety-lifecycle.svg, caption: "Safety lifecycle process map (illustrative)"}
-    gallery:
-      - {img: safety/mil-std-882e/figures/fig-1-position-in-the-mil-std-882e-flow.svg, caption: "The eight-element MIL-STD-882E process", link: safety/mil-std-882e/README.md}
-      - {img: docs/wiki/images/analysis-dependencies.svg, caption: "Analysis dependencies (illustrative)"}
 
   standards/mil-std-882e:
     title: MIL-STD-882E model

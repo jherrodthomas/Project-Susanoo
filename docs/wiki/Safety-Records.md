@@ -59,7 +59,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Test events | [`events/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/events/README.md) (event risk before people are exposed) |
 | Work-product tree | [`mil-std-882e/`](882E-Work-Products) |
 | SysML model | [`HazardTrackingSystem.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/hazard-tracking-system/HazardTrackingSystem.sysml) (generated from the 882E catalog) |
-| Rules | R01–R13 — `python -m tools.pdac.validate`; standard as code in [`standards/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/standards) |
+| Rules | R01–R13 — `python -m tools.pdac.validate`; standard as code in [`standards/`](Standards-and-Tailoring) |
 
 ## Purpose
 
