@@ -31,6 +31,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - decisions
   - architecture
   - safety
+  - sim
 
 exempt:                  # tests, tooling internals, figure stores shown by the README above them
   - "**/figures"
@@ -280,13 +281,6 @@ folders:
     gallery:
       - {img: docs/wiki/images/software-safety.svg, caption: "Software safety process map (illustrative)"}
       - {img: safety/mil-std-882e/software-safety/figures/fig-4-sysml-block-definition.svg, caption: "SSF record structure", link: safety/mil-std-882e/software-safety/README.md}
-
-  sim:
-    hero: {img: docs/readme/simulation.svg, caption: "Simulation results summary (synthetic)"}
-    gallery:
-      - {img: docs/wiki/images/sim-sc-01.svg, caption: "Walker scenario SC-01 (synthetic)"}
-      - {img: docs/wiki/images/sim-su-01.svg, caption: "UAV scenario SU-01 (synthetic)"}
-      - {img: docs/wiki/images/3d-s3-01.png, caption: "3D scene S3-01", link: docs/3d/README.md}
 
   sim/mujoco:
     title: Level-2 multibody simulation (MuJoCo)

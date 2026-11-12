@@ -144,7 +144,7 @@ Model of record for the hazard record lifecycle: [`HazardTrackingSystem.sysml`](
 |---|---|
 | Hazard analyses | [882E work-product tree](882E-Work-Products) |
 | Element and interface IDs | [Architecture records](Architecture-Records) |
-| Simulation findings (no credit) | [`sim/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/README.md) |
+| Simulation findings (no credit) | [`sim/`](Simulation-Track) |
 | Severity basis and scope | [Decision register](Decision-Register) |
 
 | Output | Destination |

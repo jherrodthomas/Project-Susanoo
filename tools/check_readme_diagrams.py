@@ -53,6 +53,10 @@ ENFORCED = {
     # Generated front page of the safety records; the subfolders keep their own pages (mil-std-882e/ is its own root).
     "safety": {"skip_dirs": {"figures", "mil-std-882e", "hazards", "software", "events", "generated"},
                "generator": ["tools/figures/safety_readme.py", "--check"]},
+    # Generated top of the simulation page (hand-written part below the END marker); subfolders keep their own pages.
+    "sim": {"skip_dirs": {"figures", "mujoco", "plant", "results", "scenes3d", "search", "spec", "tests", "trades", "uav",
+                          "__pycache__"},
+            "generator": ["tools/figures/sim_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

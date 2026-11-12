@@ -18,7 +18,7 @@
   <a href="882E-Work-Products"><b>882E work products</b></a> ·
   <a href="Hazard-Tracking-Log"><b>Hazard log</b></a> ·
   <a href="https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/README.md"><b>SysML model</b></a> ·
-  <a href="https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/README.md"><b>Simulation</b></a> ·
+  <a href="Simulation-Track"><b>Simulation</b></a> ·
   <a href="Decision-Inbox"><b>Decision inbox</b></a>
 </p>
 
@@ -106,7 +106,7 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 | Diagrams go stale | Hand-drawn, out of date by the next review | Every figure is generated from records; CI regenerates and diffs it | [882E tree](882E-Work-Products) · [standard](Documentation-Standard) |
 | Hazard log nobody trusts | A spreadsheet with free-text risk | One YAML record per hazard, validated against MIL-STD-882E modelled as data (20 rules) | [`safety/hazards/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/hazards) · [`tools/pdac`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/README.md) |
 | Models and documents disagree | Element names and IDs drift between tools | One item definition; the SysML v2 model is checked against it and passes the OMG pilot | [`architecture/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml) · [`models/sysml/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/README.md) |
-| Simulation quietly becomes "evidence" | Plots pasted into reports | Every result is stamped *synthetic, no evidence credit* until a fidelity case is approved | [`sim/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/README.md) |
+| Simulation quietly becomes "evidence" | Plots pasted into reports | Every result is stamped *synthetic, no evidence credit* until a fidelity case is approved | [`sim/`](Simulation-Track) |
 | Automation "approves" things | Green CI read as sign-off | AI drafts at independence level I0; only a recorded human review accepts anything (rule R13) | [`CLAUDE.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/CLAUDE.md) |
 | Questions for the lead get lost | Buried in chat threads | A decision register with options, a recommendation and a generated inbox | [`decisions/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) · [inbox](Decision-Inbox) |
 | The standard is quoted, not applied | Copied clauses, vague tailoring | 882E (2012) encoded as data, tailored per task with rationale, no copied text | [`standards/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/mil-std-882e/model.yaml) |
@@ -227,7 +227,7 @@ system. Each folder README carries a generated flow position, block, boundary, S
 | [`requirements/`](Requirements-Register) | System safety requirements SYS-nnn with allocation and verification |
 | [`safety/`](882E-Work-Products) | Hazard records, software safety functions, events, and the 882E work-product tree |
 | [`standards/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/mil-std-882e/model.yaml) | MIL-STD-882E (2012) as data, plus project tailoring |
-| [`sim/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/README.md) | Walker plant model, failure search, PX4 SITL scenarios, 2D and 3D scenes |
+| [`sim/`](Simulation-Track) | Walker plant model, failure search, PX4 SITL scenarios, 2D and 3D scenes |
 | [`integrations/px4/`](PX4-Integration-Model) | PX4 baseline, interface contract, fail-closed launch permit |
 | [`decisions/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) · [`reviews/`](Review-Records) | Questions for the lead; human review records |
 | [`framework/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/README.md) | Lifecycle, process contracts, traceability, documentation standard |
