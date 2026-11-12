@@ -39,6 +39,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | CONOPS | concept of operations |
 | COTS | commercial off-the-shelf |
 | CPU | central processing unit |
+| CSCI | computer software configuration item |
 | DAL | development assurance level (DO-178C / DO-254) |
 | DC | direct current |
 | DDS | Data Distribution Service, the middleware ROS 2 uses |

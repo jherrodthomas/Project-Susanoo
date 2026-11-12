@@ -47,6 +47,12 @@ jobs:
       - name: Preview tests
         run: python -m unittest discover -s tools/previews/tests -t .
 
+      - name: System V cycle page, wiki page and still are current (tools/vcycle)
+        run: python -m tools.vcycle.build_vcycle --check
+
+      - name: System V cycle tests
+        run: python -m unittest discover -s tools/vcycle/tests -t .
+
       - name: Wiki copies of the repository pages are current (docs/wiki, assets.txt)
         run: python -m tools.wiki.build_wiki --check
 
