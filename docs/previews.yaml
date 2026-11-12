@@ -29,6 +29,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - changes
   - reviews
   - decisions
+  - architecture
 
 exempt:                  # tests, tooling internals, figure stores shown by the README above them
   - "**/figures"
@@ -44,19 +45,6 @@ exempt:                  # tests, tooling internals, figure stores shown by the 
   - "tools/**"
 
 folders:
-  architecture:
-    title: Architecture records
-    purpose: >-
-      The SUS-I1 item definition, the single source for every element, external element and interface, and the
-      hand-placed layout used to draw it. Figures, SysML checks and the wiki item-definition page are built from here.
-    hero: {img: docs/wiki/images/sus-i1-boundary.svg, caption: "SUS-I1 boundary and interfaces, drawn from item-definition.yaml"}
-    gallery:
-      - {img: docs/wiki/images/sus-i1-context.svg, caption: "System context: SUS-I1 and its external elements"}
-      - {img: docs/wiki/images/sysml-v02-hierarchy.svg, caption: "SysML part hierarchy checked against this record"}
-      - {img: docs/wiki/images/sysml-v08-n2.svg, caption: "N2 interface chart"}
-    links:
-      - {text: SUS-I1 item definition (wiki page), href: docs/wiki/SUS-I1-Item-Definition.md}
-
   architecture/trades:
     title: Architecture trade studies
     purpose: >-

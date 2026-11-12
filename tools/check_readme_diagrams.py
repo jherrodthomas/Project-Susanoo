@@ -48,6 +48,8 @@ ENFORCED = {
     "reviews": {"skip_dirs": {"figures"}, "generator": ["tools/figures/reviews_readme.py", "--check"]},
     # Generated README and SysML lifecycle from decisions/register.yaml.
     "decisions": {"skip_dirs": {"figures"}, "generator": ["tools/figures/decisions_readme.py", "--check"]},
+    # Generated README from the item definition; trades/ keeps its preview page (docs/previews.yaml).
+    "architecture": {"skip_dirs": {"figures", "trades"}, "generator": ["tools/figures/architecture_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

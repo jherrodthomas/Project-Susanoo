@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="875.2" height="1670.1" viewBox="0 0 875.2 1670.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 2 · Functions and the elements that perform them</title>
+<desc>The 9 system functions of the item definition, the operating modes and CONOPS scenarios they serve, and the elements that perform them.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="875.2" height="1514" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 2 · Functions and the elements that perform them</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The 9 system functions of the item definition, the operating modes and CONOPS scenarios they serve,</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">and the elements that perform them.</text>
+<text x="835.2" y="44" font-size="11" fill="#475569" text-anchor="end">architecture/item-definition.yaml</text>
+<line x1="40" y1="102" x2="835.2" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 126)">
+<rect x="6" y="136" width="283.2" height="958" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="415.2" y="6" width="374" height="1280" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M271.2 430 L369.2 430 Q376.2 430 376.2 437 L376.2 528 Q376.2 535 383.2 535 L403.2 535 Q410.2 535 417.2 535 L516.2 535 Q523.2 535 523.2 542 L523.2 806 Q523.2 811 528.2 811 L533.2 811" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 411 L381.2 411 Q388.2 411 388.2 418 L388.2 439 Q388.2 446 395.2 446 L533.2 446" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 449 L357.2 449 Q364.2 449 364.2 456 L364.2 538 Q364.2 545 371.2 545 L403.2 545 Q410.2 545 417.2 545 L506.2 545 Q513.2 545 513.2 552 L513.2 714.3 Q513.2 721.3 520.2 721.3 L533.2 721.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 913.3 L287.2 913.3 Q294.2 913.3 301.2 913.3 L357.2 913.3 Q364.2 913.3 364.2 906.3 L364.2 764 Q364.2 757 371.2 757 L403.2 757 Q410.2 757 417.2 757 L436.2 757 Q443.2 757 443.2 764 L443.2 1111 Q443.2 1118 450.2 1118 L533.2 1118" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 938.7 L287.2 938.7 Q294.2 938.7 301.2 938.7 L369.2 938.7 Q376.2 938.7 376.2 931.7 L376.2 774 Q376.2 767 383.2 767 L403.2 767 Q410.2 767 417.2 767 L446.2 767 Q453.2 767 453.2 774 L453.2 842 Q453.2 849 460.2 849 L533.2 849" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 842.7 L287.2 842.7 Q294.2 842.7 301.2 842.7 L345.2 842.7 Q352.2 842.7 352.2 835.7 L352.2 754 Q352.2 747 359.2 747 L403.2 747 Q410.2 747 417.2 747 L533.2 746.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 817.3 L287.2 817.3 Q294.2 817.3 301.2 817.3 L333.2 817.3 Q340.2 817.3 340.2 810.3 L340.2 695 Q340.2 688 347.2 688 L456.2 688 Q463.2 688 463.2 695 L463.2 938 Q463.2 945 470.2 945 L533.2 945" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 609.3 L287.2 609.3 Q294.2 609.3 301.2 609.3 L321.2 609.3 Q328.2 609.3 328.2 616.3 L328.2 641 Q328.2 648 335.2 648 L496.2 648 Q503.2 648 503.2 655 L503.2 900 Q503.2 907 510.2 907 L533.2 907" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 634.7 L287.2 634.7 Q294.2 634.7 301.2 634.7 L309.2 634.7 Q316.2 634.7 316.2 641.7 L316.2 651 Q316.2 658 323.2 658 L486.2 658 Q493.2 658 493.2 665 L493.2 823 Q493.2 830 500.2 830 L533.2 830" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 710.7 L287.2 710.7 Q294.2 710.7 301.2 710.7 L309.2 710.7 Q316.2 710.7 316.2 703.7 L316.2 675 Q316.2 668 323.2 668 L476.2 668 Q483.2 668 483.2 675 L483.2 1002.3 Q483.2 1009.3 490.2 1009.3 L533.2 1009.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 741.3 L287.2 741.3 Q294.2 741.3 301.2 741.3 L321.2 741.3 Q328.2 741.3 328.2 734.3 L328.2 685 Q328.2 678 335.2 678 L466.2 678 Q473.2 678 473.2 685 L473.2 919 Q473.2 926 480.2 926 L533.2 926" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 205 L309.2 205 Q316.2 205 316.2 198 L316.2 91 Q316.2 84 323.2 84 L446.2 84 Q453.2 84 453.2 91 L453.2 165 Q453.2 172 460.2 172 L533.2 172" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 224 L321.2 224 Q328.2 224 328.2 217 L328.2 101 Q328.2 94 335.2 94 L533.2 94" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 243 L333.2 243 Q340.2 243 340.2 236 L340.2 111 Q340.2 104 347.2 104 L436.2 104 Q443.2 104 443.2 111 L443.2 255 Q443.2 262 450.2 262 L533.2 262" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 327 L309.7 327 Q316.2 327 316.2 333.5 L316.2 333.5 Q316.2 340 322.7 340 L436.2 340 Q443.2 340 443.2 347 L443.2 522.3 Q443.2 529.3 450.2 529.3 L533.2 529.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 349.5 L287.2 349.5 Q294.2 349.5 301.2 349.5 L533.2 350" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 304.5 L287.2 304.5 Q294.2 304.5 301.2 304.5 L345.2 304.5 Q352.2 304.5 352.2 297.5 L352.2 199 Q352.2 192 359.2 192 L533.2 192" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 513.3 L287.2 513.3 Q294.2 513.3 301.2 513.3 L345.2 513.3 Q352.2 513.3 352.2 520.3 L352.2 548 Q352.2 555 359.2 555 L403.2 555 Q410.2 555 417.2 555 L533.2 554.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 538.7 L287.2 538.7 Q294.2 538.7 301.2 538.7 L333.2 538.7 Q340.2 538.7 340.2 545.7 L340.2 631 Q340.2 638 347.2 638 L533.2 638" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 1045.3 L287.2 1045.3 Q294.2 1045.3 301.2 1045.3 L309.2 1045.3 Q316.2 1045.3 316.2 1052.3 L316.2 1215 Q316.2 1222 323.2 1222 L533.2 1222" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M271.2 1014.7 L287.2 1014.7 Q294.2 1014.7 301.2 1014.7 L309.2 1014.7 Q316.2 1014.7 316.2 1021.7 L316.2 1028 Q316.2 1035 323.2 1035 L403.2 1035 Q410.2 1035 417.2 1035 L533.2 1034.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="18" y="148" width="144.4" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="90.2" y="163" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">FUNCTIONS · F-NN</text>
+<rect x="427.2" y="18" width="126.2" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="490.3" y="33" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">PERFORMED BY</text>
+<rect x="121.4" y="392" width="149.8" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="133.4" y="404" width="34.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="150.5" y="415.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">F-01</text>
+<text x="133.4" y="438" font-size="12.5" fill="#0F172A" font-weight="700">Piloted locomotion</text>
+<text x="133.4" y="455" font-size="10.5" fill="#475569">modes MOD-04 · SCN-002</text>
+<rect x="115.6" y="888" width="155.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="127.6" y="900" width="34.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="144.7" y="911.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">F-02</text>
+<text x="127.6" y="934" font-size="12.5" fill="#0F172A" font-weight="700">Payload manipulation</text>
+<text x="127.6" y="951" font-size="10.5" fill="#475569">modes MOD-05 · SCN-003</text>
+<rect x="26.1" y="792" width="245.1" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="38.1" y="804" width="34.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="55.2" y="815.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">F-03</text>
+<text x="38.1" y="838" font-size="12.5" fill="#0F172A" font-weight="700">Pilot readiness, ingress and egress</text>
+<text x="38.1" y="855" font-size="10.5" fill="#475569">modes MOD-02, MOD-03 · SCN-001, SCN-006</text>
+<rect x="30.3" y="584" width="240.9" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="42.3" y="596" width="34.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="59.4" y="607.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">F-04</text>
+<text x="42.3" y="630" font-size="12.5" fill="#0F172A" font-weight="700">Protective stop and fault response</text>
+<text x="42.3" y="647" font-size="10.5" fill="#475569">modes MOD-09 · SCN-101, SCN-103</text>
+<rect x="26.9" y="680" width="244.3" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="38.9" y="692" width="34.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="56" y="703.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">F-05</text>
+<text x="38.9" y="726" font-size="12.5" fill="#0F172A" font-weight="700">Power generation, storage,</text>
+<text x="38.9" y="742" font-size="12.5" fill="#0F172A" font-weight="700">distribution and isolation</text>
+<text x="38.9" y="759" font-size="10.5" fill="#475569">modes MOD-01, MOD-02 · SCN-102, SCN-108</text>
+<rect x="71.2" y="186" width="200" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="83.2" y="198" width="34.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="100.3" y="209.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">F-06</text>
+<text x="83.2" y="232" font-size="12.5" fill="#0F172A" font-weight="700">Aerial observation</text>
+<text x="83.2" y="249" font-size="10.5" fill="#475569">modes MOD-07 · SCN-004, SCN-105</text>
+<rect x="24" y="282" width="247.2" height="90" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="36" y="294" width="34.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="53.1" y="305.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">F-07</text>
+<text x="36" y="328" font-size="12.5" fill="#0F172A" font-weight="700">UAV launch, recovery and retention</text>
+<text x="36" y="345" font-size="10.5" fill="#475569">modes MOD-06, MOD-08 · SCN-004, SCN-005,</text>
+<text x="36" y="359" font-size="10.5" fill="#475569">SCN-106, SCN-107</text>
+<rect x="77.1" y="488" width="194.1" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="89.1" y="500" width="34.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="106.2" y="511.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">F-08</text>
+<text x="89.1" y="534" font-size="12.5" fill="#0F172A" font-weight="700">UAV charging</text>
+<text x="89.1" y="551" font-size="10.5" fill="#475569">modes MOD-03, MOD-06 · SCN-005</text>
+<rect x="45.9" y="984" width="225.3" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="57.9" y="996" width="34.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="1007.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">F-09</text>
+<text x="57.9" y="1030" font-size="12.5" fill="#0F172A" font-weight="700">Maintenance support and energy</text>
+<text x="57.9" y="1046" font-size="12.5" fill="#0F172A" font-weight="700">isolation</text>
+<text x="57.9" y="1063" font-size="10.5" fill="#475569">modes MOD-10 · SCN-102, SCN-006</text>
+<rect x="533.2" y="792" width="198.4" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="545.2" y="804" width="74.8" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="582.6" y="815.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-CTL</text>
+<text x="545.2" y="838" font-size="12.5" fill="#0F172A" font-weight="700">Mission, motion and balance</text>
+<text x="545.2" y="854" font-size="12.5" fill="#0F172A" font-weight="700">control</text>
+<rect x="533.2" y="408" width="235.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="545.2" y="420" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="582.6" y="431.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<text x="545.2" y="454" font-size="12.5" fill="#0F172A" font-weight="700">Chassis, legs, joint actuators and</text>
+<text x="545.2" y="470" font-size="12.5" fill="#0F172A" font-weight="700">stability sensing</text>
+<rect x="533.2" y="696" width="229.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="545.2" y="708" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="582.6" y="719.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<text x="545.2" y="742" font-size="12.5" fill="#0F172A" font-weight="700">Pilot station, restraints, displays</text>
+<text x="545.2" y="758" font-size="12.5" fill="#0F172A" font-weight="700">and controls</text>
+<rect x="533.2" y="1080" width="188.4" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="545.2" y="1092" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="582.6" y="1103.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-MAN</text>
+<text x="545.2" y="1126" font-size="12.5" fill="#0F172A" font-weight="700">Manipulation arms and end</text>
+<text x="545.2" y="1142" font-size="12.5" fill="#0F172A" font-weight="700">effectors</text>
+<rect x="533.2" y="888" width="202.6" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="545.2" y="900" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="582.6" y="911.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<text x="545.2" y="934" font-size="12.5" fill="#0F172A" font-weight="700">Independent safety monitor,</text>
+<text x="545.2" y="950" font-size="12.5" fill="#0F172A" font-weight="700">protective stop and isolation</text>
+<rect x="533.2" y="984" width="217.9" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="545.2" y="996" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="582.6" y="1007.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR</text>
+<text x="545.2" y="1030" font-size="12.5" fill="#0F172A" font-weight="700">Power generation, storage,</text>
+<text x="545.2" y="1046" font-size="12.5" fill="#0F172A" font-weight="700">distribution and thermal control</text>
+<rect x="533.2" y="152" width="192" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="545.2" y="164" width="67.7" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="579.1" y="175.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1-FC</text>
+<text x="545.2" y="198" font-size="12.5" fill="#0F172A" font-weight="700">PX4-based flight controller</text>
+<rect x="533.2" y="56" width="222.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="545.2" y="68" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="582.6" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1-NAV</text>
+<text x="545.2" y="102" font-size="12.5" fill="#0F172A" font-weight="700">Navigation sensors, camera and</text>
+<text x="545.2" y="118" font-size="12.5" fill="#0F172A" font-weight="700">telemetry</text>
+<rect x="533.2" y="232" width="202" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="545.2" y="244" width="81.9" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="586.2" y="255.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1-PROP</text>
+<text x="545.2" y="278" font-size="12.5" fill="#0F172A" font-weight="700">Motors, ESCs and propellers</text>
+<rect x="533.2" y="504" width="238" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="545.2" y="516" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="582.6" y="527.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<text x="545.2" y="550" font-size="12.5" fill="#0F172A" font-weight="700">UAV dock, retention, charging and</text>
+<text x="545.2" y="566" font-size="12.5" fill="#0F172A" font-weight="700">release</text>
+<rect x="533.2" y="312" width="209.4" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="545.2" y="324" width="74.8" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="582.6" y="335.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
+<text x="545.2" y="358" font-size="12.5" fill="#0F172A" font-weight="700">Integration manager and PX4</text>
+<text x="545.2" y="374" font-size="12.5" fill="#0F172A" font-weight="700">command adapter</text>
+<rect x="533.2" y="600" width="168.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="545.2" y="612" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="582.6" y="623.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1-PWR</text>
+<text x="545.2" y="646" font-size="12.5" fill="#0F172A" font-weight="700">UAV battery and power</text>
+<text x="545.2" y="662" font-size="12.5" fill="#0F172A" font-weight="700">management</text>
+<rect x="533.2" y="1176" width="204.2" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="545.2" y="1188" width="58.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="574.4" y="1199.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-GSE</text>
+<text x="545.2" y="1222" font-size="12.5" fill="#0F172A" font-weight="700">Ground support, maintenance</text>
+<text x="545.2" y="1238" font-size="12.5" fill="#0F172A" font-weight="700">supports, charging and test</text>
+<text x="545.2" y="1254" font-size="12.5" fill="#0F172A" font-weight="700">equipment</text>
+</g>
+<rect x="40" y="1438" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="62" y="1448" font-size="11" fill="#475569">System element</text>
+<rect x="154.4" y="1438" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="176.4" y="1448" font-size="11" fill="#475569">Software-intensive element</text>
+<rect x="327.1" y="1438" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="349.1" y="1448" font-size="11" fill="#475569">Safety function</text>
+<line x1="440.1" y1="1444" x2="456.1" y2="1444" stroke="#475569" stroke-width="1.8"/>
+<text x="462.1" y="1448" font-size="11" fill="#475569">performed_by</text>
+<text x="40" y="1470" font-size="10.5" fill="#94A3B8">Generated by tools/figures/architecture_readme.py from architecture/item-definition.yaml, safety/hazards/ and requirements/. Concept-stage item definition (status</text>
+<text x="40" y="1485" font-size="10.5" fill="#94A3B8">draft): not a baseline.</text>
+<g class="terms" data-base-h="1514">
+<rect x="0" y="1514" width="875.2" height="156.1" fill="#FFFFFF"/>
+<line x1="40" y1="1518" x2="835.2" y2="1518" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1533.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CONOPS = concept of operations · ESC = electronic speed controller (drives a UAV motor) · F-nnn = system function in the item definition ·</text>
+<text x="40" y="1548.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">MOD-nnn = operating mode from the CONOPS (MOD-01 to MOD-10) · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 ·</text>
+<text x="40" y="1562.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SCN-nnn = CONOPS scenario (SCN-0nn nominal, SCN-1nn off-nominal) · SUS-A1 = dockable observation UAV · SUS-A1-FC = PX4-based flight controller ·</text>
+<text x="40" y="1577.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SUS-A1-NAV = navigation sensors, camera and telemetry · SUS-A1-PROP = motors, ESCs and propellers · SUS-A1-PWR = UAV battery and power management</text>
+<text x="40" y="1591.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">· SUS-GSE = ground support, maintenance supports, charging and test equipment · SUS-I1-INT = integration manager and PX4 command adapter ·</text>
+<text x="40" y="1606.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK = UAV dock, retention, charging and release · SUS-M1-MAN = manipulation arms and</text>
+<text x="40" y="1620.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">end effectors · SUS-M1-PIL = pilot station, restraints, displays and controls · SUS-M1-PWR = power generation, storage, distribution and thermal</text>
+<text x="40" y="1635.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">control · SUS-M1-SAF = independent safety monitor, protective stop and isolation · SUS-M1-WLK = chassis, legs, joint actuators and stability</text>
+<text x="40" y="1649.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">sensing · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

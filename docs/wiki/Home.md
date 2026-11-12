@@ -44,6 +44,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   review records
 - [Decision register](Decision-Register): every question for the lead, its answer and where it was applied,
   with the decision lifecycle in SysML
+- [Architecture records](Architecture-Records): every element, external, interface and function of the item
+  definition, with what rests on each
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)
