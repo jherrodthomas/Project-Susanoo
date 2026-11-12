@@ -42,7 +42,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 Converts hazards and controls into verifiable system safety requirements and checks that the
 requirements set, standards and design criteria cover identified hazards. The requirements themselves
-are records in [`requirements/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/requirements) (SYS-001 ...); this folder holds the coverage
+are records in [`requirements/`](Requirements-Register) (SYS-001 ...); this folder holds the coverage
 analysis.
 
 ## Position in the MIL-STD-882E flow

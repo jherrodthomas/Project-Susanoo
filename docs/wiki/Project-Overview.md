@@ -144,7 +144,7 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 |---|---|---|
 | Hazards tracked (Task 106) | **11** (11 open) · initial 4 High, 6 Serious, 1 Medium → target 11 Medium | [`safety/hazards/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/hazards) |
 | Mitigations planned | **45** | hazard records |
-| Safety requirements | **16** (16 candidate, 16 with verification open) | [`requirements/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/requirements) |
+| Safety requirements | **16** (16 candidate, 16 with verification open) | [`requirements/`](Requirements-Register) |
 | Safety-significant software functions | **8** | [`safety/software/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/software) |
 | Architecture | **19** elements, **8** externals, **31** interfaces, **9** functions | [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml) |
 | MIL-STD-882E tasks | **25** tailored: 19 selected, 2 conditional, 2 not selected, 2 n/a · gate **G0** | [`standards/tailoring/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/tailoring/mil-std-882e.yaml) |
@@ -220,7 +220,7 @@ system. Each folder README carries a generated flow position, block, boundary, S
 | [`concept/`](Concept-Model) | CONOPS, modes MOD-01..10, scenarios, preliminary architecture, trade studies |
 | [`architecture/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml) | Item definition: elements, externals, interfaces IF-nnn, functions |
 | [`models/sysml/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/README.md) | SysML v2 model, checked against the records and the OMG pilot |
-| [`requirements/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/requirements) | System safety requirements SYS-nnn with allocation and verification |
+| [`requirements/`](Requirements-Register) | System safety requirements SYS-nnn with allocation and verification |
 | [`safety/`](882E-Work-Products) | Hazard records, software safety functions, events, and the 882E work-product tree |
 | [`standards/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/mil-std-882e/model.yaml) | MIL-STD-882E (2012) as data, plus project tailoring |
 | [`sim/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/README.md) | Walker plant model, failure search, PX4 SITL scenarios, 2D and 3D scenes |
