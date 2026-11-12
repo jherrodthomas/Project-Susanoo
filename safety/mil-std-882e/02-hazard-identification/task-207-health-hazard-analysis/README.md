@@ -26,25 +26,25 @@ chemicals, battery off-gas, ergonomic load and rotor noise.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | SUS-M1-PWR: Series-hybrid power & isolation | EXT-PILOT: Pilot / operator | noise, exhaust, heat |
-| 2 | SUS-M1-WLK: Structure, legs, joints & brakes | EXT-PILOT: Pilot / operator | whole-body vibration |
-| 3 | SUS-M1-PIL: Pilot station, restraints & HMI | EXT-PILOT: Pilot / operator | posture and restraint loads |
-| 4 | SUS-A1-PRP: Motors, ESCs & propellers | EXT-CREW: Ground crew & maintainers | rotor noise |
-| 5 | SUS-M1-PWR: Series-hybrid power & isolation | EXT-CREW: Ground crew & maintainers | fluids and battery off-gas |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | SUS-M1-PWR: Power generation, storage, distribution and thermal control | EXT-PILOT: Pilot | noise, exhaust, heat | — |
+| 2 | SUS-M1-WLK: Chassis, legs, joint actuators and stability sensing | EXT-PILOT: Pilot | whole-body vibration | — |
+| 3 | SUS-M1-PIL: Pilot station, restraints, displays and controls | EXT-PILOT: Pilot | posture and restraint loads | IF-001 |
+| 4 | SUS-A1-PROP: Motors, ESCs and propellers | EXT-CREW: Ground crew and maintainers | rotor noise | — |
+| 5 | SUS-M1-PWR: Power generation, storage, distribution and thermal control | EXT-CREW: Ground crew and maintainers | fluids and battery off-gas | IF-008 |
 
 **Explicitly excluded:** environmental receptors (Task 210)
 
 ## SysML model
 
-SysML v2 textual view: [`Task207_HHA.sysml`](Task207_HHA.sysml), generated from the catalog. It imports [`SusanooSystem`](../../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`Task207_HHA.sysml`](Task207_HHA.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML block definition — exposure record](figures/fig-4-sysml-block-definition.svg)
 
@@ -57,8 +57,8 @@ SysML v2 textual view: [`Task207_HHA.sysml`](Task207_HHA.sysml), generated from 
 
 package Task207_HHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     item def HealthExposure {
         attribute agent : HealthHazardAgent;
         attribute source : String;

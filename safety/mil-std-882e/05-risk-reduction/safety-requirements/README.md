@@ -26,21 +26,21 @@ disposition (traceability rule 2).
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | Hazard records | SUS-M1-SAF: Safety monitor & protective stop | hazard_id link |
-| 2 | SUS-M1-SAF: Safety monitor & protective stop | Verification program | verified_by |
-| 3 | SUS-M1-DCK: UAV dock - retention, power, data | Verification program | verified_by |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | Hazard records | SUS-M1-SAF: Independent safety monitor, protective stop and isolation | hazard_id link | — |
+| 2 | SUS-M1-SAF: Independent safety monitor, protective stop and isolation | Verification program | verified_by | — |
+| 3 | SUS-M1-DCK: UAV dock, retention, charging and release | Verification program | verified_by | — |
 
 ## SysML model
 
-SysML v2 textual view: [`SafetyRequirements.sysml`](SafetyRequirements.sysml), generated from the catalog. It imports [`SusanooSystem`](../../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`SafetyRequirements.sysml`](SafetyRequirements.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML requirements — allocation and derivation](figures/fig-4-sysml-requirements.svg)
 
@@ -53,11 +53,15 @@ SysML v2 textual view: [`SafetyRequirements.sysml`](SafetyRequirements.sysml), g
 
 package SafetyRequirements {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     private import RequirementDerivation::*;
-    private import Task203_SRHA::*;
-    requirement sys_002 : Task203_SRHA::ProtectiveStop;
+    private import SusanooRequirements::*;
+    // Requirement records shown here are owned by models/sysml/model/Requirements.sysml (generated from requirements/); satisfy relations by Satisfaction.sysml.
+    view requirementsInScope {
+        expose SusanooRequirements::'SYS-002';
+        expose SusanooRequirements::'SYS-003';
+    }
     requirement def <'SR-002-1'> StopIndependence {
         doc /* Protective stop path shall not depend on motion-control software */
     }
@@ -66,17 +70,16 @@ package SafetyRequirements {
         doc /* Protective stop reaction time shall meet the value set by hazard analysis (TBD) */
     }
     requirement sr_002_2 : StopResponseTime;
-    requirement sys_003 : Task203_SRHA::RetainedRotorInhibit;
     requirement def <'SR-003-1'> LatchStateInterlock {
         doc /* Rotor arming shall require a positively confirmed unretained dock state */
     }
     requirement sr_003_1 : LatchStateInterlock;
-    satisfy sr_002_1 by susanoo.m1.saf;
-    satisfy sr_002_2 by susanoo.m1.saf;
-    satisfy sr_003_1 by susanoo.m1.dck;
-    #derivation connection { end #original ::> sys_002; end #derive ::> sr_002_1; }
-    #derivation connection { end #original ::> sys_002; end #derive ::> sr_002_2; }
-    #derivation connection { end #original ::> sys_003; end #derive ::> sr_003_1; }
+    satisfy sr_002_1 by context.system.walker.safetyMonitor;
+    satisfy sr_002_2 by context.system.walker.safetyMonitor;
+    satisfy sr_003_1 by context.system.walker.dock;
+    #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> sr_002_1; }
+    #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> sr_002_2; }
+    #derivation connection { end #original ::> SusanooRequirements::'SYS-003'; end #derive ::> sr_003_1; }
 }
 ```
 

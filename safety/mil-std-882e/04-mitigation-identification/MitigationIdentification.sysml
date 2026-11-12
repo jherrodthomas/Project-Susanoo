@@ -4,8 +4,8 @@
 
 package MitigationIdentification {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def DesignOrderOfPrecedence {
         action eliminate { doc /* Eliminate hazard through design selection */ }
         action reduceByDesign { doc /* Reduce risk through design alteration */ }

@@ -26,24 +26,24 @@ subsystem level. Use `templates/pha-table.csv`.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | EXT-PILOT: Pilot / operator | SUS-M1-CTL: Motion & balance control SW | commands |
-| 2 | SUS-M1-SAF: Safety monitor & protective stop | SUS-M1-CTL: Motion & balance control SW | inhibit |
-| 3 | SUS-M1-PWR: Series-hybrid power & isolation | SUS-M1-WLK: Structure, legs, joints & brakes | power |
-| 4 | SUS-M1-DCK: UAV dock - retention, power, data | SUS-A1: Observation UAV | retention / charge |
-| 5 | SUS-M1-WLK: Structure, legs, joints & brakes | EXT-BYST: Bystanders & nearby workers | contact |
-| 6 | EXT-TERRAIN: Terrain & obstacles | SUS-M1-WLK: Structure, legs, joints & brakes | ground reaction |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | EXT-PILOT: Pilot | SUS-M1-CTL: Mission, motion and balance control | commands | — |
+| 2 | SUS-M1-SAF: Independent safety monitor, protective stop and isolation | SUS-M1-CTL: Mission, motion and balance control | inhibit | — |
+| 3 | SUS-M1-PWR: Power generation, storage, distribution and thermal control | SUS-M1-WLK: Chassis, legs, joint actuators and stability sensing | power | — |
+| 4 | SUS-M1-DCK: UAV dock, retention, charging and release | SUS-A1: Dockable observation UAV | retention / charge | IF-006, IF-PX4-009 |
+| 5 | SUS-M1-WLK: Chassis, legs, joint actuators and stability sensing | EXT-BYSTANDER: Bystanders | contact | IF-012 |
+| 6 | EXT-TERRAIN: Terrain and obstacles | SUS-M1-WLK: Chassis, legs, joint actuators and stability sensing | ground reaction | IF-010 |
 
 ## SysML model
 
-SysML v2 textual view: [`Task202_PHA.sysml`](Task202_PHA.sysml), generated from the catalog. It imports [`SusanooSystem`](../../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`Task202_PHA.sysml`](Task202_PHA.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML block definition — PHA worksheet row](figures/fig-4-sysml-block-definition.svg)
 
@@ -56,8 +56,8 @@ SysML v2 textual view: [`Task202_PHA.sysml`](Task202_PHA.sysml), generated from 
 
 package Task202_PHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     item def PHARow {
         attribute hazardId : String;
         attribute scenario : String;

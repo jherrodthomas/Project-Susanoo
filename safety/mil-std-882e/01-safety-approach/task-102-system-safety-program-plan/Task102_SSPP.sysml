@@ -4,8 +4,8 @@
 
 package Task102_SSPP {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     requirement def <'SSPP-001'> DefineRiskAuthority {
         doc /* SSPP shall name the risk acceptance authority for each risk level */
     }

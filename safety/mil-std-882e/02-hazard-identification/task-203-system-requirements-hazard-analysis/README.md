@@ -16,8 +16,9 @@
 ## Purpose
 
 Converts hazards and controls into verifiable system safety requirements and checks that the
-requirements set, standards and design criteria cover identified hazards. Seeds with the
-candidate requirements SYS-001..006 from `concept/architecture.md`.
+requirements set, standards and design criteria cover identified hazards. The requirements themselves
+are records in [`requirements/`](../../../../requirements/) (SYS-001 ...); this folder holds the coverage
+analysis.
 
 ## Position in the MIL-STD-882E flow
 
@@ -27,23 +28,23 @@ candidate requirements SYS-001..006 from `concept/architecture.md`.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | Hazard analyses | System safety requirements | controls to specify |
-| 2 | Applicable standards | Design criteria | criteria and guidance |
-| 3 | System safety requirements | Design baseline | allocation |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | Hazard analyses | System safety requirements | controls to specify | — |
+| 2 | Applicable standards | Design criteria | criteria and guidance | — |
+| 3 | System safety requirements | Design baseline | allocation | — |
 
 ## SysML model
 
-SysML v2 textual view: [`Task203_SRHA.sysml`](Task203_SRHA.sysml), generated from the catalog. It imports [`SusanooSystem`](../../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`Task203_SRHA.sysml`](Task203_SRHA.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML requirements — candidate system safety requirements](figures/fig-4-sysml-requirements.svg)
+![Figure 4 · SysML requirements — system safety requirements and allocation](figures/fig-4-sysml-requirements.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -54,38 +55,21 @@ SysML v2 textual view: [`Task203_SRHA.sysml`](Task203_SRHA.sysml), generated fro
 
 package Task203_SRHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
-    requirement def <'SYS-001'> PilotReadinessInterlock {
-        doc /* Inhibit leg actuation until pilot station readiness conditions are satisfied */
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
+    private import SusanooRequirements::*;
+    // Requirement records shown here are owned by models/sysml/model/Requirements.sysml (generated from requirements/); satisfy relations by Satisfaction.sysml.
+    view requirementsInScope {
+        expose SusanooRequirements::'SYS-001';
+        expose SusanooRequirements::'SYS-002';
+        expose SusanooRequirements::'SYS-003';
+        expose SusanooRequirements::'SYS-004';
+        expose SusanooRequirements::'SYS-005';
+        expose SusanooRequirements::'SYS-006';
+        expose SusanooRequirements::'SYS-007';
+        expose SusanooRequirements::'SYS-008';
+        expose SusanooRequirements::'SYS-009';
     }
-    requirement sys_001 : PilotReadinessInterlock;
-    requirement def <'SYS-002'> ProtectiveStop {
-        doc /* Provide an operator-requested protective stop with defined behavior per operating mode */
-    }
-    requirement sys_002 : ProtectiveStop;
-    requirement def <'SYS-003'> RetainedRotorInhibit {
-        doc /* Prevent UAV rotor startup while mechanically retained except under approved maintenance */
-    }
-    requirement sys_003 : RetainedRotorInhibit;
-    requirement def <'SYS-004'> FeedbackLossDegradedState {
-        doc /* Detect loss of essential feedback and transition to a documented degraded state */
-    }
-    requirement sys_004 : FeedbackLossDegradedState;
-    requirement def <'SYS-005'> DockStateReporting {
-        doc /* Docking interface shall report positively confirmed retained or unretained state */
-    }
-    requirement sys_005 : DockStateReporting;
-    requirement def <'SYS-006'> LaunchRecoveryEnvelope {
-        doc /* Inhibit UAV launch and recovery outside a verified operational envelope */
-    }
-    requirement sys_006 : LaunchRecoveryEnvelope;
-    satisfy sys_001 by susanoo.m1.pil;
-    satisfy sys_002 by susanoo.m1.saf;
-    satisfy sys_003 by susanoo.m1.dck;
-    satisfy sys_004 by susanoo.m1.ctl;
-    satisfy sys_005 by susanoo.m1.dck;
-    satisfy sys_006 by susanoo.a1.fcs;
 }
 ```
 
@@ -98,11 +82,11 @@ package Task203_SRHA {
 | Input | Source |
 |---|---|
 | Hazards and candidate controls | [Task 202 · Preliminary Hazard Analysis (PHA)](../task-202-preliminary-hazard-analysis/README.md) |
-| Requirement candidates | [`concept/architecture.md`](../../../../concept/architecture.md) |
+| Requirement records (requirements/) | [`requirements/SYS-001.yaml`](../../../../requirements/SYS-001.yaml) |
 
 | Output | Destination |
 |---|---|
-| Baselined safety requirements | [Safety Requirements Register](../../05-risk-reduction/safety-requirements/README.md) |
+| Requirements to derive and allocate | [Safety Requirements Register](../../05-risk-reduction/safety-requirements/README.md) |
 | Verification methods | [Task 401 · Safety Verification](../../06-verification/task-401-safety-verification/README.md) |
 
 ## Folder contents

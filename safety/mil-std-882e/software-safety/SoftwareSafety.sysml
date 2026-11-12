@@ -4,20 +4,13 @@
 
 package SoftwareSafety {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     item def SoftwareFunctionAssessment {
         attribute functionId : String;
         attribute controlCategory : SoftwareControlCategory;
         attribute severity : SeverityCategory;
         attribute levelOfRigor : String;
         attribute independentMitigation : Boolean;
-    }
-    enum def SoftwareControlCategory {
-        enum Autonomous;
-        enum SemiAutonomous;
-        enum RedundantFaultTolerant;
-        enum Influential;
-        enum NoSafetyImpact;
     }
 }

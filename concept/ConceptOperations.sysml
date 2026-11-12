@@ -5,7 +5,7 @@
 
 package ConceptOperations {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
+    private import SusanooArchitecture::*;
 
     // ------------------------------------------------------ mode triggers
     attribute def PowerUp;
@@ -80,7 +80,7 @@ package ConceptOperations {
     use case def <'SCN-004'> Observation {
         subject sys : IntegratedSystem;
         actor pilot : Pilot;
-        actor airspace : AirspaceGnssRf;
+        actor airspace : Airspace;
         objective { doc /* Launch UAV from a permitted stationary state, collect imagery, return. */ }
     }
     use case def <'SCN-005'> Recovery {

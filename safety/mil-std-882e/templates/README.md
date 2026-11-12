@@ -12,7 +12,7 @@
 
 ## Purpose
 
-Record templates used across the tree. Templates mirror `SusanooSafety.sysml` so records,
+Record templates used across the tree. Templates mirror the `SusanooLibrary` record items so records,
 models and checks share one vocabulary.
 
 ## Position in the MIL-STD-882E flow
@@ -23,22 +23,22 @@ models and checks share one vocabulary.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | hazard-record.yaml | Work-product folders | hazard records |
-| 2 | task-record.yaml | Work-product folders | task records |
-| 3 | pha-table.csv | Work-product folders | PHA worksheets |
-| 4 | sspp-outline.md | Work-product folders | SSPP |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | hazard-record.yaml | Work-product folders | hazard records | — |
+| 2 | task-record.yaml | Work-product folders | task records | — |
+| 3 | pha-table.csv | Work-product folders | PHA worksheets | — |
+| 4 | sspp-outline.md | Work-product folders | SSPP | — |
 
 ## SysML model
 
-SysML v2 textual view: [`TemplateSchemas.sysml`](TemplateSchemas.sysml), generated from the catalog. It imports [`SusanooSystem`](../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`TemplateSchemas.sysml`](TemplateSchemas.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML block definition — template schemas](figures/fig-4-sysml-block-definition.svg)
 
@@ -51,8 +51,8 @@ SysML v2 textual view: [`TemplateSchemas.sysml`](TemplateSchemas.sysml), generat
 
 package TemplateSchemas {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     item def TaskRecord {
         attribute taskId : Integer;
         attribute artifactId : String;
@@ -74,7 +74,7 @@ package TemplateSchemas {
 
 | Input | Source |
 |---|---|
-| SusanooSafety vocabulary | [00 · System Definition and Analysis Baseline](../00-system-definition/README.md) |
+| SusanooLibrary vocabulary | [00 · System Definition and Analysis Baseline](../00-system-definition/README.md) |
 
 | Output | Destination |
 |---|---|

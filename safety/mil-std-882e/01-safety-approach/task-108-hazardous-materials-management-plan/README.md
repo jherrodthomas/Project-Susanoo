@@ -26,22 +26,22 @@ actuation is chosen), lithium-ion cells in SUS-M1 and SUS-A1, coolants and lubri
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | SUS-GSE-CHG: Charging & fuelling equipment | SUS-M1-PWR: Series-hybrid power & isolation | fuel and charge transfer |
-| 2 | SUS-M1-WLK: Structure, legs, joints & brakes | EXT-ENV: Natural environment & receptors | hydraulic leak or spill |
-| 3 | SUS-A1-PWR: UAV battery & power mgmt | EXT-CREW: Ground crew & maintainers | cell thermal event exposure |
-| 4 | EXT-SITE: Site infrastructure & logistics | SUS-GSE-CHG: Charging & fuelling equipment | storage and disposal |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | SUS-GSE: Ground support, maintenance supports, charging and test equipment | SUS-M1-PWR: Power generation, storage, distribution and thermal control | fuel and charge transfer | — |
+| 2 | SUS-M1-WLK: Chassis, legs, joint actuators and stability sensing | Natural environment and receptors | hydraulic leak or spill | — |
+| 3 | SUS-A1-PWR: UAV battery and power management | EXT-CREW: Ground crew and maintainers | cell thermal event exposure | — |
+| 4 | Site infrastructure and logistics | SUS-GSE: Ground support, maintenance supports, charging and test equipment | storage and disposal | — |
 
 ## SysML model
 
-SysML v2 textual view: [`Task108_HMMP.sysml`](Task108_HMMP.sysml), generated from the catalog. It imports [`SusanooSystem`](../../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`Task108_HMMP.sysml`](Task108_HMMP.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML block definition — hazardous material inventory](figures/fig-4-sysml-block-definition.svg)
 
@@ -54,8 +54,8 @@ SysML v2 textual view: [`Task108_HMMP.sysml`](Task108_HMMP.sysml), generated fro
 
 package Task108_HMMP {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def HazMatInventory {
         ref item entries : HazMatEntry[0..*];
     }

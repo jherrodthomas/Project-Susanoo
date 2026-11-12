@@ -1,75 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="779" viewBox="0 0 760 779" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
-<title>Figure 4 · SysML block definition — risk assessment types</title>
-<desc>Block definition view of package RiskAssessment. The .sysml file is the model of record.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="796" viewBox="0 0 760 796" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 4 · SysML block definition — risk assessment vocabulary</title>
+<desc>The MIL-STD-882E risk vocabulary as defined once in SusanooLibrary (models/sysml/model), drawn from the library itself. Hazard records use these values for initial and target risk.</desc>
 <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="760" height="779" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
-<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 4 · SysML block definition — risk assessment types</text>
-<text x="40" y="66" font-size="12.5" fill="#475569">Block definition view of package RiskAssessment. The .sysml file is the model of record.</text>
-<text x="40" y="83" font-size="11" fill="#94A3B8">Source: RiskAssessment.sysml</text>
-<line x1="40" y1="100" x2="720" y2="100" stroke="#E2E8F0" stroke-width="1"/>
-<rect x="40" y="124" width="600" height="537" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
-<path d="M40 124 L246 124 L246 138 L236 148 L40 148 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="50" y="141" font-size="11.5" fill="#0F172A" font-weight="700">bdd [package] RiskAssessment</text>
-<g transform="translate(56 164)">
-<path d="M345 202 L310 202 Q303 202 303 195 L303 75 Q303 68 296 68 L156 68" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
-<path d="M345 233 L156 233" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
-<path d="M345 264 L310 264 Q303 264 303 271 L303 399 Q303 406 296 406 L156 406" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
-<rect x="6" y="6" width="150" height="124" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
-<rect x="6" y="6" width="150" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
-<line x1="6" y1="52" x2="156" y2="52" stroke="#7C3AED" stroke-width="1.1"/>
-<text x="81" y="23" font-size="10" fill="#475569" text-anchor="middle">«enum def»</text>
-<text x="81" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SeverityCategory</text>
-<text x="18" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Catastrophic</text>
-<text x="18" y="85" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Critical</text>
-<text x="18" y="100" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Marginal</text>
-<text x="18" y="115" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Negligible</text>
-<rect x="6" y="156" width="150" height="154" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
-<rect x="6" y="156" width="150" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
-<line x1="6" y1="202" x2="156" y2="202" stroke="#7C3AED" stroke-width="1.1"/>
-<text x="81" y="173" font-size="10" fill="#475569" text-anchor="middle">«enum def»</text>
-<text x="81" y="190" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">ProbabilityLevel</text>
-<text x="18" y="220" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Frequent</text>
-<text x="18" y="235" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Probable</text>
-<text x="18" y="250" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Occasional</text>
-<text x="18" y="265" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Remote</text>
-<text x="18" y="280" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Improbable</text>
-<text x="18" y="295" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Eliminated</text>
-<rect x="6" y="336" width="150" height="139" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
-<rect x="6" y="336" width="150" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
-<line x1="6" y1="382" x2="156" y2="382" stroke="#7C3AED" stroke-width="1.1"/>
-<text x="81" y="353" font-size="10" fill="#475569" text-anchor="middle">«enum def»</text>
-<text x="81" y="370" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">RiskLevel</text>
-<text x="18" y="400" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">High</text>
-<text x="18" y="415" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Serious</text>
-<text x="18" y="430" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Medium</text>
-<text x="18" y="445" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Low</text>
-<text x="18" y="460" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Eliminated</text>
-<rect x="345" y="171" width="217" height="124" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="345" y="171" width="217" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
-<line x1="345" y1="217" x2="562" y2="217" stroke="#4F46E5" stroke-width="1.1"/>
-<text x="453.5" y="188" font-size="10" fill="#475569" text-anchor="middle">«attribute def»</text>
-<text x="453.5" y="205" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">RiskAssessmentRecord</text>
-<text x="357" y="235" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">severity : SeverityCategory</text>
-<text x="357" y="250" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">probability : ProbabilityLevel</text>
-<text x="357" y="265" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">level : RiskLevel</text>
-<text x="357" y="280" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">rationale : String</text>
-<rect x="223.8" y="73" width="53.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="228.8" y="86" font-size="10.5" fill="#475569">severity</text>
-<rect x="218" y="238" width="65" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="223" y="251" font-size="10.5" fill="#475569">probability</text>
-<rect x="231.9" y="411" width="37.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="236.9" y="424" font-size="10.5" fill="#475569">level</text>
+<rect x="0" y="0" width="760" height="796" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 4 · SysML block definition — risk assessment vocabulary</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The MIL-STD-882E risk vocabulary as defined once in SusanooLibrary (models/sysml/model), drawn from the</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">library itself. Hazard records use these values for initial and target risk.</text>
+<text x="40" y="100" font-size="11" fill="#94A3B8">Source: RiskAssessment.sysml</text>
+<line x1="40" y1="117" x2="720" y2="117" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="141" width="617.2" height="537" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<path d="M40 141 L246 141 L246 155 L236 165 L40 165 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="158" font-size="11.5" fill="#0F172A" font-weight="700">bdd [package] RiskAssessment</text>
+<g transform="translate(56 181)">
+<path d="M223 202 L238 202 Q245 202 245 195 L245 75 Q245 68 252 68 L412 68" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
+<path d="M223 233 L412 233" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
+<path d="M223 264 L238 264 Q245 264 245 271 L245 399 Q245 406 252 406 L412 406" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
+<rect x="6" y="171" width="217" height="124" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="6" y="171" width="217" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="6" y1="217" x2="223" y2="217" stroke="#64748B" stroke-width="1.1"/>
+<text x="114.5" y="188" font-size="10" fill="#475569" text-anchor="middle">«attribute def · SusanooLibrary»</text>
+<text x="114.5" y="205" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">RiskAssessment</text>
+<text x="18" y="235" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">severity : SeverityCategory</text>
+<text x="18" y="250" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">probability : ProbabilityLevel</text>
+<text x="18" y="265" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">level : RiskLevel</text>
+<text x="18" y="280" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">rationale : String</text>
+<rect x="412" y="6" width="167.2" height="124" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="412" y="6" width="167.2" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="412" y1="52" x2="579.2" y2="52" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="495.6" y="23" font-size="10" fill="#475569" text-anchor="middle">«enum def · SusanooLibrary»</text>
+<text x="495.6" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SeverityCategory</text>
+<text x="424" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Catastrophic</text>
+<text x="424" y="85" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Critical</text>
+<text x="424" y="100" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Marginal</text>
+<text x="424" y="115" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Negligible</text>
+<rect x="412" y="156" width="167.2" height="154" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="412" y="156" width="167.2" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="412" y1="202" x2="579.2" y2="202" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="495.6" y="173" font-size="10" fill="#475569" text-anchor="middle">«enum def · SusanooLibrary»</text>
+<text x="495.6" y="190" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">ProbabilityLevel</text>
+<text x="424" y="220" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Frequent</text>
+<text x="424" y="235" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Probable</text>
+<text x="424" y="250" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Occasional</text>
+<text x="424" y="265" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Remote</text>
+<text x="424" y="280" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Improbable</text>
+<text x="424" y="295" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Eliminated</text>
+<rect x="412" y="336" width="167.2" height="139" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="412" y="336" width="167.2" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="412" y1="382" x2="579.2" y2="382" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="495.6" y="353" font-size="10" fill="#475569" text-anchor="middle">«enum def · SusanooLibrary»</text>
+<text x="495.6" y="370" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">RiskLevel</text>
+<text x="424" y="400" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">High</text>
+<text x="424" y="415" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Serious</text>
+<text x="424" y="430" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Medium</text>
+<text x="424" y="445" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Low</text>
+<text x="424" y="460" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Eliminated</text>
+<rect x="290.8" y="73" width="53.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="295.8" y="86" font-size="10.5" fill="#475569">severity</text>
+<rect x="285" y="238" width="65" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="290" y="251" font-size="10.5" fill="#475569">probability</text>
+<rect x="298.9" y="411" width="37.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="303.9" y="424" font-size="10.5" fill="#475569">level</text>
 </g>
-<line x1="40" y1="687" x2="56" y2="687" stroke="#475569" stroke-width="1.8"/>
-<text x="62" y="691" font-size="11" fill="#475569">Composition / reference (diamond at owner)</text>
-<line x1="296.5" y1="687" x2="312.5" y2="687" stroke="#7C3AED" stroke-width="1.8" stroke-dasharray="3 2"/>
-<text x="318.5" y="691" font-size="11" fill="#475569">Attribute typed by</text>
-<rect x="423.5" y="681" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
-<text x="445.5" y="691" font-size="11" fill="#475569">Defined in this view</text>
-<rect x="559.5" y="681" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
-<text x="581.5" y="691" font-size="11" fill="#475569">Enumeration</text>
-<rect x="40" y="703" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
-<text x="62" y="713" font-size="11" fill="#475569">Imported definition</text>
-<text x="40" y="735" font-size="10.5" fill="#94A3B8">Generated by tools/gen_safety_docs.py from safety/mil-std-882e/catalog.yaml. Planning view: not evidence of completed analysis,</text>
-<text x="40" y="750" font-size="10.5" fill="#94A3B8">verification or risk acceptance.</text>
+<line x1="40" y1="704" x2="56" y2="704" stroke="#475569" stroke-width="1.8"/>
+<text x="62" y="708" font-size="11" fill="#475569">Composition / reference (diamond at owner)</text>
+<line x1="296.5" y1="704" x2="312.5" y2="704" stroke="#7C3AED" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="318.5" y="708" font-size="11" fill="#475569">Attribute typed by</text>
+<rect x="423.5" y="698" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="445.5" y="708" font-size="11" fill="#475569">Defined in this view</text>
+<rect x="559.5" y="698" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
+<text x="581.5" y="708" font-size="11" fill="#475569">Enumeration</text>
+<rect x="40" y="720" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="62" y="730" font-size="11" fill="#475569">Imported from SusanooLibrary</text>
+<text x="40" y="752" font-size="10.5" fill="#94A3B8">Generated by tools/gen_safety_docs.py from safety/mil-std-882e/catalog.yaml. Planning view: not evidence of completed analysis,</text>
+<text x="40" y="767" font-size="10.5" fill="#94A3B8">verification or risk acceptance.</text>
 </svg>

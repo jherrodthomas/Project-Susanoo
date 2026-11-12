@@ -4,8 +4,8 @@
 
 package SafetyApproach {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def SafetyProgram {
         doc /* Plans and agreements that document the SUS-I1 safety approach. */
         attribute configurationId : String;

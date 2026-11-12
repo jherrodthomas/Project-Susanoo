@@ -4,8 +4,8 @@
 
 package Task202_PHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     item def PHARow {
         attribute hazardId : String;
         attribute scenario : String;

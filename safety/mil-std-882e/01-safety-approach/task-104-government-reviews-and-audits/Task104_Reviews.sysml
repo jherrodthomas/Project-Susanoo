@@ -4,8 +4,8 @@
 
 package Task104_Reviews {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def ReviewAndAudit {
         action confirmApplicability { doc /* Confirm task is applicable */ }
         action preparePackage { doc /* Prepare configuration-specific evidence package */ }

@@ -4,8 +4,8 @@
 
 package HazardTrackingSystem {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def HazardLog {
         attribute configurationId : String;
         ref item records : Hazard[0..*];

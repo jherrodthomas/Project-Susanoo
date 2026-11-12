@@ -4,8 +4,8 @@
 
 package Task208_FHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def WalkerFunctionalChain {
         action senseIntent { doc /* Sense pilot intent */ }
         action estimateState { doc /* Estimate walker state */ }

@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| System element | SUS-A1-FCS (flight control) and its SUS-I1 interfaces |
+| System elements | SUS-A1-FC (PX4 flight controller), SUS-I1-INT (integration manager and command adapter) and their IF-PX4-nnn interfaces in [`item-definition.yaml`](../../architecture/item-definition.yaml) |
 | Lifecycle gate | G2 (architecture) through G4 (simulation readiness) |
 | Accountable role | UAV lead with software safety lead |
 | Interface contract | [`interface-contract.md`](interface-contract.md) |
@@ -58,8 +58,8 @@ QGroundControl as an operations procedure; weapons or autonomous targeting.
 SysML v2 textual model: [`PX4Integration.sysml`](PX4Integration.sysml) — integration context (parts and
 IF-PX4 connections), the fail-closed launch-permit state machine and the integration requirements derived
 from the contract's acceptance tests. It imports
-[`SusanooSystem`](../../safety/mil-std-882e/00-system-definition/sysml/SusanooSystem.sysml); `PX4Autopilot`
-specialises `SusanooSystem::FlightControl`.
+the project model's [`SusanooArchitecture`](../../models/sysml/model/Architecture.sysml); `PX4Autopilot`
+specialises `SusanooArchitecture::FlightController`.
 
 ![Figure 3 · SysML internal block — PX4IntegrationContext](figures/fig-3-sysml-internal-block.svg)
 

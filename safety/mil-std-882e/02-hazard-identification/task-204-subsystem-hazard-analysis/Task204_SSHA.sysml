@@ -4,8 +4,8 @@
 
 package Task204_SSHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def SubsystemHazardAnalysis {
         attribute subsystemId : String;
         attribute designRevision : String;

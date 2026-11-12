@@ -4,8 +4,8 @@
 
 package Task303_TestParticipation {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     attribute def AnomalyDispositioned;
     attribute def IndependentReviewApproves;
     attribute def StopCondition;

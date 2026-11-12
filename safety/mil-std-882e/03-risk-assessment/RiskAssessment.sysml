@@ -4,33 +4,7 @@
 
 package RiskAssessment {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
-    enum def SeverityCategory {
-        enum Catastrophic;
-        enum Critical;
-        enum Marginal;
-        enum Negligible;
-    }
-    enum def ProbabilityLevel {
-        enum Frequent;
-        enum Probable;
-        enum Occasional;
-        enum Remote;
-        enum Improbable;
-        enum Eliminated;
-    }
-    enum def RiskLevel {
-        enum High;
-        enum Serious;
-        enum Medium;
-        enum Low;
-        enum Eliminated;
-    }
-    attribute def RiskAssessmentRecord {
-        attribute severity : SeverityCategory;
-        attribute probability : ProbabilityLevel;
-        attribute level : RiskLevel;
-        attribute rationale : String;
-    }
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
+
 }

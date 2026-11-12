@@ -4,11 +4,15 @@
 
 package SafetyRequirements {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     private import RequirementDerivation::*;
-    private import Task203_SRHA::*;
-    requirement sys_002 : Task203_SRHA::ProtectiveStop;
+    private import SusanooRequirements::*;
+    // Requirement records shown here are owned by models/sysml/model/Requirements.sysml (generated from requirements/); satisfy relations by Satisfaction.sysml.
+    view requirementsInScope {
+        expose SusanooRequirements::'SYS-002';
+        expose SusanooRequirements::'SYS-003';
+    }
     requirement def <'SR-002-1'> StopIndependence {
         doc /* Protective stop path shall not depend on motion-control software */
     }
@@ -17,15 +21,14 @@ package SafetyRequirements {
         doc /* Protective stop reaction time shall meet the value set by hazard analysis (TBD) */
     }
     requirement sr_002_2 : StopResponseTime;
-    requirement sys_003 : Task203_SRHA::RetainedRotorInhibit;
     requirement def <'SR-003-1'> LatchStateInterlock {
         doc /* Rotor arming shall require a positively confirmed unretained dock state */
     }
     requirement sr_003_1 : LatchStateInterlock;
-    satisfy sr_002_1 by susanoo.m1.saf;
-    satisfy sr_002_2 by susanoo.m1.saf;
-    satisfy sr_003_1 by susanoo.m1.dck;
-    #derivation connection { end #original ::> sys_002; end #derive ::> sr_002_1; }
-    #derivation connection { end #original ::> sys_002; end #derive ::> sr_002_2; }
-    #derivation connection { end #original ::> sys_003; end #derive ::> sr_003_1; }
+    satisfy sr_002_1 by context.system.walker.safetyMonitor;
+    satisfy sr_002_2 by context.system.walker.safetyMonitor;
+    satisfy sr_003_1 by context.system.walker.dock;
+    #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> sr_002_1; }
+    #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> sr_002_2; }
+    #derivation connection { end #original ::> SusanooRequirements::'SYS-003'; end #derive ::> sr_003_1; }
 }

@@ -4,8 +4,8 @@
 
 package HazardAnalyses {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def HazardAnalysisRelationships {
         action phl { doc /* Task 201 PHL */ }
         action pha { doc /* Task 202 PHA */ }

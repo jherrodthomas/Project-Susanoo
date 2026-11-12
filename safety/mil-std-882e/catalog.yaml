@@ -26,49 +26,8 @@ elements:
   - {n: 8, short: Manage life-cycle risk, name: Manage life-cycle risk}
 
 # --------------------------------------------------------------------------
-# System element registry; mirrors 00-system-definition/sysml/SusanooSystem.sysml
-system:
-  nodes:
-    SUS-I1:      {label: Integrated mech + UAV system, sysml: IntegratedSystem, usage: susanoo}
-    SUS-M1:      {label: Piloted walker, parent: SUS-I1, sysml: PilotedWalker, usage: susanoo.m1}
-    SUS-M1-WLK:  {label: "Structure, legs, joints & brakes", parent: SUS-M1, sysml: WalkerStructure, usage: susanoo.m1.wlk}
-    SUS-M1-MAN:  {label: Manipulator arms & end effectors, parent: SUS-M1, sysml: Manipulators, usage: susanoo.m1.man}
-    SUS-M1-PIL:  {label: "Pilot station, restraints & HMI", parent: SUS-M1, sysml: PilotStation, usage: susanoo.m1.pil}
-    SUS-M1-PWR:  {label: Series-hybrid power & isolation, parent: SUS-M1, sysml: PowerSystem, usage: susanoo.m1.pwr}
-    SUS-M1-CTL:  {label: Motion & balance control SW, parent: SUS-M1, kind: software, sysml: MotionControl, usage: susanoo.m1.ctl}
-    SUS-M1-SAF:  {label: Safety monitor & protective stop, parent: SUS-M1, kind: safety, sysml: SafetyMonitor, usage: susanoo.m1.saf}
-    SUS-M1-DCK:  {label: "UAV dock - retention, power, data", parent: SUS-M1, kind: interface, sysml: UAVDock, usage: susanoo.m1.dck}
-    SUS-A1:      {label: Observation UAV, parent: SUS-I1, sysml: ObservationUAV, usage: susanoo.a1}
-    SUS-A1-FCS:  {label: Flight control - PX4 candidate, parent: SUS-A1, kind: software, sysml: FlightControl, usage: susanoo.a1.fcs}
-    SUS-A1-PRP:  {label: "Motors, ESCs & propellers", parent: SUS-A1, sysml: Propulsion, usage: susanoo.a1.prp}
-    SUS-A1-PWR:  {label: UAV battery & power mgmt, parent: SUS-A1, sysml: UAVPower, usage: susanoo.a1.pwr}
-    SUS-A1-NAV:  {label: Navigation & telemetry link, parent: SUS-A1, sysml: NavTelemetry, usage: susanoo.a1.nav}
-    SUS-A1-PLD:  {label: Observation payload, parent: SUS-A1, sysml: ObservationPayload, usage: susanoo.a1.pld}
-    SUS-GSE:     {label: Ground support equipment, parent: SUS-I1, sysml: GroundSupport, usage: susanoo.gse}
-    SUS-GSE-SUP: {label: Maintenance supports & lockout, parent: SUS-GSE, sysml: MaintenanceSupports, usage: susanoo.gse.sup}
-    SUS-GSE-CHG: {label: Charging & fuelling equipment, parent: SUS-GSE, sysml: ChargingEquipment, usage: susanoo.gse.chg}
-    SUS-GSE-TST: {label: "Test rigs, HIL & simulation", parent: SUS-GSE, sysml: TestRigs, usage: susanoo.gse.tst}
-    EXT-PILOT:   {label: Pilot / operator, kind: external}
-    EXT-CREW:    {label: Ground crew & maintainers, kind: external}
-    EXT-BYST:    {label: Bystanders & nearby workers, kind: external}
-    EXT-TERRAIN: {label: Terrain & obstacles, kind: external}
-    EXT-AIR:     {label: "Airspace, GNSS & RF environment", kind: external}
-    EXT-SITE:    {label: Site infrastructure & logistics, kind: external}
-    EXT-ENV:     {label: Natural environment & receptors, kind: external}
-    EXT-AUTH:    {label: Risk acceptance authority, kind: external}
-  links:
-    - [SUS-M1-PIL, SUS-M1-CTL, commands]
-    - [SUS-M1-CTL, SUS-M1-WLK, joint actuation]
-    - [SUS-M1-CTL, SUS-M1-MAN, arm actuation]
-    - [SUS-M1-PWR, SUS-M1-WLK, DC power]
-    - [SUS-M1-SAF, SUS-M1-CTL, torque inhibit]
-    - [SUS-M1-SAF, SUS-M1-PWR, energy isolation]
-    - [SUS-M1-DCK, SUS-A1-PWR, dock charging]
-    - [SUS-M1-DCK, SUS-A1-FCS, dock data / rotor inhibit]
-    - [SUS-A1-NAV, SUS-A1-FCS, state estimate]
-    - [SUS-A1-FCS, SUS-A1-PRP, thrust command]
-    - [SUS-GSE-SUP, SUS-M1-WLK, mechanical support]
-    - [SUS-GSE-CHG, SUS-M1-PWR, shore charging]
+# System elements, externals and interfaces are NOT defined here: they are read from
+# architecture/item-definition.yaml (the record) and models/sysml/model (the SysML model, for usage paths).
 
 # --------------------------------------------------------------------------
 # Folders. `parent` builds the tree; `path` is relative to `base`.
@@ -96,16 +55,16 @@ folders:
     boundary:
       name: SUS-I1 system safety program
       inside: [SUS-M1, SUS-A1, SUS-GSE]
-      outside: [EXT-PILOT, EXT-CREW, EXT-BYST, EXT-TERRAIN, EXT-AIR, EXT-ENV, EXT-AUTH]
+      outside: [EXT-PILOT, EXT-CREW, EXT-BYSTANDER, EXT-TERRAIN, EXT-GNSS-RF, Natural environment and receptors, Risk acceptance authority]
       flows:
         - [EXT-PILOT, SUS-M1, commands / feedback]
         - [EXT-CREW, SUS-GSE, maintenance / lockout]
-        - [SUS-M1, EXT-BYST, motion / contact hazards]
+        - [SUS-M1, EXT-BYSTANDER, motion / contact hazards]
         - [EXT-TERRAIN, SUS-M1, ground contact loads]
-        - [EXT-AIR, SUS-A1, navigation / RF link]
-        - [SUS-M1, EXT-ENV, emissions / fluids]
+        - [EXT-GNSS-RF, SUS-A1, navigation / RF link]
+        - [SUS-M1, Natural environment and receptors, emissions / fluids]
         - [SUS-M1, SUS-A1, dock / undock]
-        - ["@boundary", EXT-AUTH, residual risk for decision]
+        - ["@boundary", Risk acceptance authority, residual risk for decision]
     model:
       package: SafetyProgramFlow
       views:
@@ -186,42 +145,43 @@ folders:
     gate: G0 (refreshed at every gate)
     role: Systems lead with safety lead
     canonical_model:
-      - safety/mil-std-882e/00-system-definition/sysml/SusanooSystem.sysml
-      - safety/mil-std-882e/00-system-definition/sysml/SusanooSafety.sysml
+      - models/sysml/model/Architecture.sysml
+      - models/sysml/model/SusanooLibrary.sysml
+      - models/sysml/model/Requirements.sysml
     purpose: |
       Defines the system of interest, its decomposition, interfaces and external context that every
-      hazard analysis uses as its baseline. Holds the canonical SysML v2 models: `SusanooSystem`
-      (structure, ports, dock interface) and `SusanooSafety` (severity, probability, risk, SwCI,
-      mitigation precedence, hazard record). Per-folder SysML views import these packages.
+      hazard analysis uses as its baseline. The records live outside this tree and are not restated here:
+      [`architecture/item-definition.yaml`](../../../architecture/item-definition.yaml) (elements, externals,
+      interfaces IF-nnn) and the SysML model in [`models/sysml/model`](../../../models/sysml/model/)
+      (`SusanooArchitecture`, `SusanooLibrary`, `SusanooRequirements`). Every folder view in this tree imports
+      that model, and every figure reads its elements and interfaces from the record.
     scope: [SUS-I1]
     boundary:
       name: SUS-I1 system of interest
       inside: [SUS-M1, SUS-A1, SUS-GSE]
-      outside: [EXT-PILOT, EXT-CREW, EXT-BYST, EXT-TERRAIN, EXT-AIR, EXT-SITE, EXT-ENV]
+      outside: [EXT-PILOT, EXT-CREW, EXT-BYSTANDER, EXT-TERRAIN, EXT-GNSS-RF, Site infrastructure and logistics, Natural environment and receptors]
       flows:
         - [EXT-PILOT, SUS-M1, intent / alerts]
         - [EXT-CREW, SUS-GSE, servicing / lockout]
         - [SUS-GSE, SUS-M1, support / charging]
         - [SUS-M1, SUS-A1, "dock power, data, retention"]
         - [SUS-M1, EXT-TERRAIN, foot contact loads]
-        - [SUS-M1, EXT-BYST, motion envelope]
-        - [EXT-AIR, SUS-A1, GNSS / RF link]
-        - [EXT-SITE, SUS-GSE, "fuel, power, transport"]
-        - [SUS-M1, EXT-ENV, "exhaust, noise, fluids"]
+        - [SUS-M1, EXT-BYSTANDER, motion envelope]
+        - [EXT-GNSS-RF, SUS-A1, GNSS / RF link]
+        - [Site infrastructure and logistics, SUS-GSE, "fuel, power, transport"]
+        - [SUS-M1, Natural environment and receptors, "exhaust, noise, fluids"]
       excluded: [weapons or armament of any kind, public-road operation, autonomous walker operation without a pilot]
     inputs:
       - {doc: concept/CONOPS.md, item: "Missions, phases, users"}
-      - {doc: concept/architecture.md, item: Decomposition and interfaces}
+      - {doc: architecture/item-definition.yaml, item: Elements and interfaces (record)}
+      - {doc: models/sysml/model/Architecture.sysml, item: SysML context and usage paths}
       - {doc: docs/wiki/SUS-M1-Architecture-and-Boundaries.md, item: "Power, control and dock diagrams"}
       - {doc: pdac/product.yaml, item: Configuration ID SUS-I1-C001}
     outputs:
       - {ref: E2, item: Analysis baseline}
       - {ref: SWS, item: Software-controlled functions}
       - {ref: HTS, item: Subsystem IDs for hazard records}
-    contents:
-      - {name: sysml/SusanooSystem.sysml, desc: Canonical structure model (parts, ports, dock interface)}
-      - {name: sysml/SusanooSafety.sysml, desc: Canonical safety vocabulary (enums, Hazard item)}
-      - {name: interface-register.csv, desc: Controlled interface list with hazard links}
+    contents: []
 
   # ======================================================== 01
   - id: E1
@@ -240,11 +200,11 @@ folders:
     boundary:
       name: Safety program management
       inside: [SSPP and HMP, Task selection and tailoring, IPT and roles]
-      outside: [EXT-AUTH, Program management, Suppliers, Standards bodies]
+      outside: [Risk acceptance authority, Program management, Suppliers, Standards bodies]
       flows:
         - [Program management, SSPP and HMP, "schedule, resources, contract terms"]
         - [Standards bodies, Task selection and tailoring, controlled standard editions]
-        - [SSPP and HMP, EXT-AUTH, risk acceptance authority matrix]
+        - [SSPP and HMP, Risk acceptance authority, risk acceptance authority matrix]
         - [IPT and roles, Suppliers, safety data requirements]
     model:
       package: SafetyApproach
@@ -291,12 +251,12 @@ folders:
     boundary:
       name: Integrated hazard effort
       inside: [SUS-M1, SUS-A1, SUS-GSE]
-      outside: [Systems engineering process, EXT-AUTH, Test program]
+      outside: [Systems engineering process, Risk acceptance authority, Test program]
       flows:
         - [Systems engineering process, SUS-M1, requirements and design baselines]
         - [SUS-A1, Systems engineering process, ARP4761A safety assessment results]
         - [Test program, SUS-M1, verification evidence]
-        - ["@boundary", EXT-AUTH, risk status]
+        - ["@boundary", Risk acceptance authority, risk status]
     model:
       package: Task101_HazardEffort
       views:
@@ -336,10 +296,10 @@ folders:
     boundary:
       name: SSPP scope
       inside: [SUS-M1, SUS-A1, SUS-GSE]
-      outside: [EXT-AUTH, Program management, PX4 upstream project]
+      outside: [Risk acceptance authority, Program management, PX4 upstream project]
       flows:
         - [Program management, "@boundary", resources and schedule]
-        - ["@boundary", EXT-AUTH, acceptance requests per risk level]
+        - ["@boundary", Risk acceptance authority, acceptance requests per risk level]
         - [PX4 upstream project, SUS-A1, COTS / open-source software baseline]
     model:
       package: Task102_SSPP
@@ -382,10 +342,10 @@ folders:
     boundary:
       name: Hazard management process
       inside: [Hazard lifecycle rules, Closure criteria, HTS operation]
-      outside: [EXT-AUTH, Change control board, Verification program]
+      outside: [Risk acceptance authority, Change control board, Verification program]
       flows:
         - [Verification program, Closure criteria, evidence of effectiveness]
-        - [Closure criteria, EXT-AUTH, acceptance request]
+        - [Closure criteria, Risk acceptance authority, acceptance request]
         - [Change control board, Hazard lifecycle rules, reopen triggers]
     model:
       package: Task103_HMP
@@ -393,7 +353,7 @@ folders:
         - kind: stm
           name: HazardLifecycle
           title: hazard status lifecycle
-          doc: Status transitions governed by the HMP; values match SusanooSafety::HazardStatus.
+          doc: Status transitions governed by the HMP; values follow SusanooLibrary::HazardStatus.
           initial: Open
           states:
             - {name: Open, doc: identified and recorded}
@@ -439,11 +399,11 @@ folders:
     boundary:
       name: Audit interface
       inside: [Audit package, Action item log]
-      outside: [EXT-AUTH, Government or customer reviewer]
+      outside: [Risk acceptance authority, Government or customer reviewer]
       flows:
         - [Audit package, Government or customer reviewer, evidence and analyses]
         - [Government or customer reviewer, Action item log, findings]
-        - [Action item log, EXT-AUTH, closure status]
+        - [Action item log, Risk acceptance authority, closure status]
     model:
       package: Task104_Reviews
       views:
@@ -478,10 +438,10 @@ folders:
     boundary:
       name: Safety IPT
       inside: [Safety lead, Systems lead, Software safety lead, Human factors lead, Test lead]
-      outside: [Suppliers, EXT-AUTH]
+      outside: [Suppliers, Risk acceptance authority]
       flows:
         - [Suppliers, Systems lead, supplier safety data]
-        - [Safety lead, EXT-AUTH, escalations]
+        - [Safety lead, Risk acceptance authority, escalations]
         - [Human factors lead, Safety lead, MIL-STD-1472 findings]
         - [Test lead, Safety lead, test hazards and results]
     model:
@@ -517,16 +477,16 @@ folders:
     purpose: |
       Inventories and manages hazardous materials: engine fuel, hydraulic fluid (if electrohydraulic
       actuation is chosen), lithium-ion cells in SUS-M1 and SUS-A1, coolants and lubricants.
-    scope: [SUS-M1-PWR, SUS-M1-WLK, SUS-A1-PWR, SUS-GSE-CHG]
+    scope: [SUS-M1-PWR, SUS-M1-WLK, SUS-A1-PWR, SUS-GSE]
     boundary:
       name: Hazardous materials
-      inside: [SUS-M1-PWR, SUS-A1-PWR, SUS-M1-WLK, SUS-GSE-CHG]
-      outside: [EXT-CREW, EXT-ENV, EXT-SITE]
+      inside: [SUS-M1-PWR, SUS-A1-PWR, SUS-M1-WLK, SUS-GSE]
+      outside: [EXT-CREW, Natural environment and receptors, Site infrastructure and logistics]
       flows:
-        - [SUS-GSE-CHG, SUS-M1-PWR, fuel and charge transfer]
-        - [SUS-M1-WLK, EXT-ENV, hydraulic leak or spill]
+        - [SUS-GSE, SUS-M1-PWR, fuel and charge transfer]
+        - [SUS-M1-WLK, Natural environment and receptors, hydraulic leak or spill]
         - [SUS-A1-PWR, EXT-CREW, cell thermal event exposure]
-        - [EXT-SITE, SUS-GSE-CHG, storage and disposal]
+        - [Site infrastructure and logistics, SUS-GSE, storage and disposal]
     model:
       package: Task108_HMMP
       views:
@@ -564,14 +524,14 @@ folders:
     boundary:
       name: Hazard analysis scope
       inside: [SUS-M1, SUS-A1, SUS-GSE]
-      outside: [EXT-PILOT, EXT-CREW, EXT-BYST, EXT-AIR, EXT-ENV]
+      outside: [EXT-PILOT, EXT-CREW, EXT-BYSTANDER, EXT-GNSS-RF, Natural environment and receptors]
       flows:
         - [EXT-PILOT, SUS-M1, operator error and workload]
-        - [SUS-M1, EXT-BYST, crush / impact / fall]
-        - [SUS-A1, EXT-BYST, rotor strike / crash]
-        - [EXT-AIR, SUS-A1, link loss / GNSS denial]
+        - [SUS-M1, EXT-BYSTANDER, crush / impact / fall]
+        - [SUS-A1, EXT-BYSTANDER, rotor strike / crash]
+        - [EXT-GNSS-RF, SUS-A1, link loss / GNSS denial]
         - [EXT-CREW, SUS-GSE, maintenance exposure]
-        - [SUS-M1, EXT-ENV, releases]
+        - [SUS-M1, Natural environment and receptors, releases]
     model:
       package: HazardAnalyses
       views:
@@ -613,12 +573,12 @@ folders:
     boundary:
       name: Concept-level system
       inside: [SUS-M1, SUS-A1, SUS-GSE]
-      outside: [EXT-PILOT, EXT-BYST, EXT-TERRAIN, EXT-AIR]
+      outside: [EXT-PILOT, EXT-BYSTANDER, EXT-TERRAIN, EXT-GNSS-RF]
       flows:
         - [EXT-PILOT, SUS-M1, "intent, workload"]
-        - [SUS-M1, EXT-BYST, motion envelope]
+        - [SUS-M1, EXT-BYSTANDER, motion envelope]
         - [EXT-TERRAIN, SUS-M1, "slope, soft ground"]
-        - [EXT-AIR, SUS-A1, "wind, RF, GNSS"]
+        - [EXT-GNSS-RF, SUS-A1, "wind, RF, GNSS"]
         - [SUS-M1, SUS-A1, launch / recovery]
       excluded: [detailed component failure modes (Task 204)]
     model:
@@ -659,13 +619,13 @@ folders:
     boundary:
       name: Preliminary architecture
       inside: [SUS-M1-WLK, SUS-M1-PWR, SUS-M1-CTL, SUS-M1-SAF, SUS-M1-DCK, SUS-A1]
-      outside: [EXT-PILOT, EXT-BYST, EXT-TERRAIN]
+      outside: [EXT-PILOT, EXT-BYSTANDER, EXT-TERRAIN]
       flows:
         - [EXT-PILOT, SUS-M1-CTL, commands]
         - [SUS-M1-SAF, SUS-M1-CTL, inhibit]
         - [SUS-M1-PWR, SUS-M1-WLK, power]
         - [SUS-M1-DCK, SUS-A1, retention / charge]
-        - [SUS-M1-WLK, EXT-BYST, contact]
+        - [SUS-M1-WLK, EXT-BYSTANDER, contact]
         - [EXT-TERRAIN, SUS-M1-WLK, ground reaction]
     model:
       package: Task202_PHA
@@ -699,9 +659,10 @@ folders:
     role: Safety lead with systems lead
     purpose: |
       Converts hazards and controls into verifiable system safety requirements and checks that the
-      requirements set, standards and design criteria cover identified hazards. Seeds with the
-      candidate requirements SYS-001..006 from `concept/architecture.md`.
-    scope: [SUS-M1-PIL, SUS-M1-SAF, SUS-M1-CTL, SUS-M1-DCK, SUS-A1-FCS]
+      requirements set, standards and design criteria cover identified hazards. The requirements themselves
+      are records in [`requirements/`](../../../../requirements/) (SYS-001 ...); this folder holds the coverage
+      analysis.
+    scope: [SUS-M1-PIL, SUS-M1-SAF, SUS-M1-CTL, SUS-M1-DCK, SUS-A1-FC]
     boundary:
       name: System requirements set
       inside: [System safety requirements, Design criteria]
@@ -714,26 +675,16 @@ folders:
       package: Task203_SRHA
       views:
         - kind: req
-          title: candidate system safety requirements
-          requirements:
-            - {id: SYS-001, name: PilotReadinessInterlock, text: Inhibit leg actuation until pilot station readiness conditions are satisfied, risk: High, verify: Test}
-            - {id: SYS-002, name: ProtectiveStop, text: Provide an operator-requested protective stop with defined behavior per operating mode, risk: High, verify: Test}
-            - {id: SYS-003, name: RetainedRotorInhibit, text: Prevent UAV rotor startup while mechanically retained except under approved maintenance, risk: High, verify: Test}
-            - {id: SYS-004, name: FeedbackLossDegradedState, text: Detect loss of essential feedback and transition to a documented degraded state, risk: High, verify: Analysis}
-            - {id: SYS-005, name: DockStateReporting, text: Docking interface shall report positively confirmed retained or unretained state, risk: Medium, verify: Test}
-            - {id: SYS-006, name: LaunchRecoveryEnvelope, text: Inhibit UAV launch and recovery outside a verified operational envelope, risk: Medium, verify: Demonstration}
-          satisfied_by:
-            - [SUS-M1-PIL, SYS-001]
-            - [SUS-M1-SAF, SYS-002]
-            - [SUS-M1-DCK, SYS-003]
-            - [SUS-M1-CTL, SYS-004]
-            - [SUS-M1-DCK, SYS-005]
-            - [SUS-A1-FCS, SYS-006]
+          title: system safety requirements and allocation
+          caption: >-
+            Every safety-significant requirement record in requirements/ with its allocation, read from the
+            project SysML model (Requirements.sysml and Satisfaction.sysml). Nothing is restated here.
+          records: all
     inputs:
       - {ref: T202, item: Hazards and candidate controls}
-      - {doc: concept/architecture.md, item: Requirement candidates}
+      - {doc: requirements/SYS-001.yaml, item: Requirement records (requirements/)}
     outputs:
-      - {ref: SREQ, item: Baselined safety requirements}
+      - {ref: SREQ, item: Requirements to derive and allocate}
       - {ref: T401, item: Verification methods}
     contents:
       - {name: srha.md, desc: Requirements coverage analysis}
@@ -797,15 +748,15 @@ folders:
     scope: [SUS-I1]
     boundary:
       name: Subsystem interfaces
-      inside: [SUS-M1-PWR, SUS-M1-CTL, SUS-M1-SAF, SUS-M1-DCK, SUS-A1-FCS, SUS-A1-PWR]
-      outside: [EXT-PILOT, EXT-AIR, External systems]
+      inside: [SUS-M1-PWR, SUS-M1-CTL, SUS-M1-SAF, SUS-M1-DCK, SUS-A1-FC, SUS-A1-PWR]
+      outside: [EXT-PILOT, EXT-GNSS-RF, External systems]
       flows:
         - [SUS-M1-SAF, SUS-M1-CTL, torque inhibit]
         - [SUS-M1-SAF, SUS-M1-PWR, isolation]
         - [SUS-M1-DCK, SUS-A1-PWR, charging]
-        - [SUS-M1-DCK, SUS-A1-FCS, rotor inhibit]
+        - [SUS-M1-DCK, SUS-A1-FC, rotor inhibit]
         - [EXT-PILOT, SUS-M1-CTL, commands]
-        - [EXT-AIR, SUS-A1-FCS, navigation]
+        - [EXT-GNSS-RF, SUS-A1-FC, navigation]
       excluded: [external system-of-systems interactions (Task 209)]
     model:
       package: Task205_SHA
@@ -817,8 +768,8 @@ folders:
             - {name: pwr, type: PowerSystem}
             - {name: ctl, type: MotionControl}
             - {name: saf, type: SafetyMonitor, kind: safety}
-            - {name: dck, type: UAVDock, kind: interface}
-            - {name: uav, type: ObservationUAV}
+            - {name: dck, type: UavDock, kind: interface}
+            - {name: uav, type: ObservationUav}
           connections:
             - [saf, ctl, torque inhibit]
             - [saf, pwr, energy isolation]
@@ -850,11 +801,11 @@ folders:
     boundary:
       name: Operating and support tasks
       inside: [Operating modes, Maintenance procedures, SUS-GSE]
-      outside: [EXT-PILOT, EXT-CREW, EXT-BYST]
+      outside: [EXT-PILOT, EXT-CREW, EXT-BYSTANDER]
       flows:
         - [EXT-PILOT, Operating modes, "mode selection, ingress / egress"]
         - [EXT-CREW, Maintenance procedures, lockout / support / service]
-        - [Operating modes, EXT-BYST, exclusion zones]
+        - [Operating modes, EXT-BYSTANDER, exclusion zones]
         - [SUS-GSE, Maintenance procedures, "supports, chargers"]
     model:
       package: Task206_OSHA
@@ -900,16 +851,16 @@ folders:
     purpose: |
       Analyses exposure of pilot, crew and bystanders to noise, whole-body vibration, exhaust, heat,
       chemicals, battery off-gas, ergonomic load and rotor noise.
-    scope: [SUS-M1-PIL, SUS-M1-PWR, SUS-M1-WLK, SUS-A1-PRP, SUS-A1-PWR]
+    scope: [SUS-M1-PIL, SUS-M1-PWR, SUS-M1-WLK, SUS-A1-PROP, SUS-A1-PWR]
     boundary:
       name: Human exposure
-      inside: [SUS-M1-PWR, SUS-M1-WLK, SUS-M1-PIL, SUS-A1-PRP]
-      outside: [EXT-PILOT, EXT-CREW, EXT-BYST]
+      inside: [SUS-M1-PWR, SUS-M1-WLK, SUS-M1-PIL, SUS-A1-PROP]
+      outside: [EXT-PILOT, EXT-CREW, EXT-BYSTANDER]
       flows:
         - [SUS-M1-PWR, EXT-PILOT, "noise, exhaust, heat"]
         - [SUS-M1-WLK, EXT-PILOT, whole-body vibration]
         - [SUS-M1-PIL, EXT-PILOT, posture and restraint loads]
-        - [SUS-A1-PRP, EXT-CREW, rotor noise]
+        - [SUS-A1-PROP, EXT-CREW, rotor noise]
         - [SUS-M1-PWR, EXT-CREW, fluids and battery off-gas]
       excluded: [environmental receptors (Task 210)]
     model:
@@ -944,7 +895,7 @@ folders:
       Analyses system functions for loss, erroneous, untimely and unintended operation, and identifies
       safety-significant functions and their software allocation. The SUS-A1 aircraft FHA under
       ARP4761A is a separate artifact with a separate classification scale.
-    scope: [SUS-M1-CTL, SUS-M1-SAF, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FCS]
+    scope: [SUS-M1-CTL, SUS-M1-SAF, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FC]
     boundary:
       name: System functions
       inside: [Locomotion and balance, Protective stop, Pilot command, Dock retention, UAV flight control]
@@ -1000,10 +951,10 @@ folders:
     boundary:
       name: SUS-I1 as constituent system
       inside: [SUS-I1]
-      outside: [EXT-AIR, EXT-SITE, Other site vehicles, Remote video consumers]
+      outside: [EXT-GNSS-RF, Site infrastructure and logistics, Other site vehicles, Remote video consumers]
       flows:
-        - [EXT-AIR, SUS-I1, "GNSS, RF spectrum, airspace"]
-        - [EXT-SITE, SUS-I1, "power, fuel, transport"]
+        - [EXT-GNSS-RF, SUS-I1, "GNSS, RF spectrum, airspace"]
+        - [Site infrastructure and logistics, SUS-I1, "power, fuel, transport"]
         - [SUS-I1, Other site vehicles, shared workspace]
         - [SUS-I1, Remote video consumers, observation feed]
     model:
@@ -1043,16 +994,16 @@ folders:
     purpose: |
       Analyses environmental impacts across the lifecycle: emissions, spills, noise, battery
       end-of-life, ground disturbance and disposal.
-    scope: [SUS-M1-PWR, SUS-M1-WLK, SUS-A1-PWR, SUS-GSE-CHG]
+    scope: [SUS-M1-PWR, SUS-M1-WLK, SUS-A1-PWR, SUS-GSE]
     boundary:
       name: Environmental aspects
-      inside: [SUS-M1-PWR, SUS-M1-WLK, SUS-A1-PWR, SUS-GSE-CHG]
-      outside: [EXT-ENV, EXT-SITE]
+      inside: [SUS-M1-PWR, SUS-M1-WLK, SUS-A1-PWR, SUS-GSE]
+      outside: [Natural environment and receptors, Site infrastructure and logistics]
       flows:
-        - [SUS-M1-PWR, EXT-ENV, exhaust and noise]
-        - [SUS-M1-WLK, EXT-ENV, "ground disturbance, fluid leaks"]
-        - [SUS-A1-PWR, EXT-SITE, battery end-of-life]
-        - [SUS-GSE-CHG, EXT-ENV, fuel spills]
+        - [SUS-M1-PWR, Natural environment and receptors, exhaust and noise]
+        - [SUS-M1-WLK, Natural environment and receptors, "ground disturbance, fluid leaks"]
+        - [SUS-A1-PWR, Site infrastructure and logistics, battery end-of-life]
+        - [SUS-GSE, Natural environment and receptors, fuel spills]
     model:
       package: Task210_EHA
       views:
@@ -1088,23 +1039,24 @@ folders:
     boundary:
       name: Risk assessment criteria
       inside: [Severity categories, Probability levels, Risk matrix]
-      outside: [EXT-AUTH, ARP4761A classification, Hazard records]
+      outside: [Risk acceptance authority, ARP4761A classification, Hazard records]
       flows:
         - [Hazard records, Risk matrix, severity and probability]
-        - [Risk matrix, EXT-AUTH, risk level drives authority]
+        - [Risk matrix, Risk acceptance authority, risk level drives authority]
         - [ARP4761A classification, Risk matrix, kept separate - no mapping]
     model:
       package: RiskAssessment
       views:
         - kind: bdd
-          title: risk assessment types
+          title: risk assessment vocabulary
+          caption: >-
+            The MIL-STD-882E risk vocabulary as defined once in SusanooLibrary (models/sysml/model), drawn from the
+            library itself. Hazard records use these values for initial and target risk.
           blocks:
-            - {name: SeverityCategory, stereotype: enum, values: [Catastrophic, Critical, Marginal, Negligible]}
-            - {name: ProbabilityLevel, stereotype: enum, values: [Frequent, Probable, Occasional, Remote, Improbable, Eliminated]}
-            - {name: RiskLevel, stereotype: enum, values: [High, Serious, Medium, Low, Eliminated]}
-            - name: RiskAssessmentRecord
-              stereotype: attribute
-              attributes: ["severity : SeverityCategory", "probability : ProbabilityLevel", "level : RiskLevel", "rationale : String"]
+            - {name: RiskAssessment, import: SusanooLibrary}
+            - {name: SeverityCategory, import: SusanooLibrary}
+            - {name: ProbabilityLevel, import: SusanooLibrary}
+            - {name: RiskLevel, import: SusanooLibrary}
     inputs:
       - {ref: T102, item: Matrix approval}
       - {ref: E2, item: Hazards}
@@ -1222,10 +1174,10 @@ folders:
       Baselined safety requirements derived from SRHA, SHA, O&SHA, HHA and EHA, each allocated to a
       system element and assigned a verification method. Released requirements need a verification
       disposition (traceability rule 2).
-    scope: [SUS-M1-SAF, SUS-M1-CTL, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FCS]
+    scope: [SUS-M1-SAF, SUS-M1-CTL, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FC]
     boundary:
       name: Safety requirement allocation
-      inside: [SUS-M1-SAF, SUS-M1-CTL, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FCS]
+      inside: [SUS-M1-SAF, SUS-M1-CTL, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FC]
       outside: [Verification program, Hazard records]
       flows:
         - [Hazard records, SUS-M1-SAF, hazard_id link]
@@ -1237,10 +1189,10 @@ folders:
         - kind: req
           title: allocation and derivation
           requirements:
-            - {id: SYS-002, name: ProtectiveStop, from: Task203_SRHA, text: Operator-requested protective stop with defined behavior per mode, risk: High, verify: Test}
+            - {id: SYS-002, record: true}
             - {id: SR-002-1, name: StopIndependence, text: Protective stop path shall not depend on motion-control software, risk: High, verify: Analysis}
             - {id: SR-002-2, name: StopResponseTime, text: Protective stop reaction time shall meet the value set by hazard analysis (TBD), risk: High, verify: Test}
-            - {id: SYS-003, name: RetainedRotorInhibit, from: Task203_SRHA, text: No rotor startup while UAV mechanically retained, risk: High, verify: Test}
+            - {id: SYS-003, record: true}
             - {id: SR-003-1, name: LatchStateInterlock, text: Rotor arming shall require a positively confirmed unretained dock state, risk: High, verify: Test}
           derives:
             - [SYS-002, SR-002-1]
@@ -1273,15 +1225,15 @@ folders:
       Plans and records evidence that mitigations are implemented and effective: analysis,
       inspection, demonstration, simulation and test, including fault injection. Simulated evidence
       is labelled as simulated.
-    scope: [SUS-I1, SUS-GSE-TST]
+    scope: [SUS-I1, SUS-GSE]
     boundary:
       name: Verification program
-      inside: [SUS-GSE-TST, Test procedures, Evidence records]
-      outside: [SUS-M1, SUS-A1, EXT-AUTH]
+      inside: [SUS-GSE, Test procedures, Evidence records]
+      outside: [SUS-M1, SUS-A1, Risk acceptance authority]
       flows:
-        - [SUS-GSE-TST, SUS-M1, supported rig tests]
-        - [SUS-GSE-TST, SUS-A1, HIL / SITL]
-        - [Evidence records, EXT-AUTH, verification summary]
+        - [SUS-GSE, SUS-M1, supported rig tests]
+        - [SUS-GSE, SUS-A1, HIL / SITL]
+        - [Evidence records, Risk acceptance authority, verification summary]
     model:
       package: SafetyVerification
       views:
@@ -1314,15 +1266,15 @@ folders:
     purpose: |
       Safety participation in test planning and execution: test hazard analysis, safety releases for
       rig and human-in-the-loop tests, and use of test data to update hazards.
-    scope: [SUS-GSE-TST, SUS-M1, SUS-A1]
+    scope: [SUS-GSE, SUS-M1, SUS-A1]
     boundary:
       name: Test events
-      inside: [SUS-GSE-TST, Test safety release]
+      inside: [SUS-GSE, Test safety release]
       outside: [EXT-PILOT, EXT-CREW, Test range or site]
       flows:
         - [Test safety release, EXT-PILOT, authorization for occupied test]
-        - [SUS-GSE-TST, EXT-CREW, exclusion zone]
-        - [Test range or site, SUS-GSE-TST, site rules]
+        - [SUS-GSE, EXT-CREW, exclusion zone]
+        - [Test range or site, SUS-GSE, site rules]
     model:
       package: Task303_TestParticipation
       views:
@@ -1363,14 +1315,14 @@ folders:
     purpose: |
       Verifies each safety requirement and the effectiveness of each mitigation. Each evidence record
       states provenance, version, integrity hash and whether it is simulated (traceability rule 6).
-    scope: [SUS-M1-SAF, SUS-M1-DCK, SUS-M1-PIL, SUS-A1-FCS]
+    scope: [SUS-M1-SAF, SUS-M1-DCK, SUS-M1-PIL, SUS-A1-FC]
     boundary:
       name: Verified safety requirements
       inside: [SUS-M1-SAF, SUS-M1-DCK, SUS-M1-PIL]
-      outside: [SUS-GSE-TST, Evidence store]
+      outside: [SUS-GSE, Evidence store]
       flows:
-        - [SUS-GSE-TST, SUS-M1-SAF, fault injection]
-        - [SUS-GSE-TST, SUS-M1-DCK, latch state tests]
+        - [SUS-GSE, SUS-M1-SAF, fault injection]
+        - [SUS-GSE, SUS-M1-DCK, latch state tests]
         - [SUS-M1-SAF, Evidence store, results with hash]
     model:
       package: Task401_SafetyVerification
@@ -1378,9 +1330,9 @@ folders:
         - kind: req
           title: verification relationships
           requirements:
-            - {id: SYS-001, name: PilotReadinessInterlock, from: Task203_SRHA, text: Inhibit leg actuation until pilot readiness satisfied, risk: High, verify: Test}
-            - {id: SYS-002, name: ProtectiveStop, from: Task203_SRHA, text: Operator-requested protective stop per mode, risk: High, verify: Test}
-            - {id: SYS-003, name: RetainedRotorInhibit, from: Task203_SRHA, text: No rotor startup while retained, risk: High, verify: Test}
+            - {id: SYS-001, record: true}
+            - {id: SYS-002, record: true}
+            - {id: SYS-003, record: true}
           verified_by:
             - [VER-001, SYS-001]
             - [VER-002, SYS-002]
@@ -1491,10 +1443,10 @@ folders:
     boundary:
       name: Risk acceptance
       inside: [Acceptance records, SAR, HMAR]
-      outside: [EXT-AUTH, PDaC release]
+      outside: [Risk acceptance authority, PDaC release]
       flows:
-        - [SAR, EXT-AUTH, residual risk summary]
-        - [EXT-AUTH, Acceptance records, signed decision]
+        - [SAR, Risk acceptance authority, residual risk summary]
+        - [Risk acceptance authority, Acceptance records, signed decision]
         - [Acceptance records, PDaC release, approvals list]
     model:
       package: RiskAcceptance
@@ -1538,9 +1490,9 @@ folders:
     boundary:
       name: Assessed configuration
       inside: [SUS-M1, SUS-A1, SUS-GSE]
-      outside: [EXT-AUTH, EXT-PILOT]
+      outside: [Risk acceptance authority, EXT-PILOT]
       flows:
-        - ["@boundary", EXT-AUTH, residual risk and open hazards]
+        - ["@boundary", Risk acceptance authority, residual risk and open hazards]
         - ["@boundary", EXT-PILOT, operating limitations and warnings]
     model:
       package: Task301_SAR
@@ -1581,9 +1533,9 @@ folders:
     boundary:
       name: Milestone hazard status
       inside: [Open hazards, Closed hazards]
-      outside: [EXT-AUTH, Test event]
+      outside: [Risk acceptance authority, Test event]
       flows:
-        - [Open hazards, EXT-AUTH, status and risk]
+        - [Open hazards, Risk acceptance authority, status and risk]
         - [Test event, Open hazards, new findings]
     model:
       package: Task302_HMAR
@@ -1617,9 +1569,9 @@ folders:
     boundary:
       name: Decision records
       inside: [Acceptance records]
-      outside: [EXT-AUTH, HTS]
+      outside: [Risk acceptance authority, HTS]
       flows:
-        - [EXT-AUTH, Acceptance records, decision]
+        - [Risk acceptance authority, Acceptance records, decision]
         - [Acceptance records, HTS, decision_record link]
     model:
       package: AcceptanceRecords
@@ -1695,10 +1647,10 @@ folders:
     boundary:
       name: Reporting period
       inside: [HTS snapshot]
-      outside: [Program management, EXT-AUTH]
+      outside: [Program management, Risk acceptance authority]
       flows:
         - [HTS snapshot, Program management, metrics]
-        - [HTS snapshot, EXT-AUTH, high and serious risk status]
+        - [HTS snapshot, Risk acceptance authority, high and serious risk status]
     model:
       package: Task107_ProgressReport
       views:
@@ -1775,12 +1727,12 @@ folders:
     boundary:
       name: Hazard log
       inside: [Hazard records]
-      outside: [Analyses, Safety requirements, Evidence store, EXT-AUTH]
+      outside: [Analyses, Safety requirements, Evidence store, Risk acceptance authority]
       flows:
         - [Analyses, Hazard records, new hazards]
         - [Hazard records, Safety requirements, requirement_ids]
         - [Evidence store, Hazard records, verification_evidence_ids]
-        - [EXT-AUTH, Hazard records, risk_acceptance]
+        - [Risk acceptance authority, Hazard records, risk_acceptance]
     model:
       package: HazardTrackingSystem
       views:
@@ -1831,13 +1783,13 @@ folders:
       walker motion control, protective stop, pilot HMI, dock interlocks and PX4. The safety-significant
       software function records live in [`safety/software/`](../../software/) (SSF-001 ...). MIL-STD-882E
       criticality is kept distinct from any DO-178C assurance level.
-    scope: [SUS-M1-CTL, SUS-M1-SAF, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FCS]
+    scope: [SUS-M1-CTL, SUS-M1-SAF, SUS-M1-PIL, SUS-M1-DCK, SUS-A1-FC]
     boundary:
       name: Safety-significant software
-      inside: [SUS-M1-CTL, SUS-M1-SAF, SUS-M1-DCK, SUS-A1-FCS]
+      inside: [SUS-M1-CTL, SUS-M1-SAF, SUS-M1-DCK, SUS-A1-FC]
       outside: [PX4 upstream project, Toolchain and dependencies, EXT-PILOT]
       flows:
-        - [PX4 upstream project, SUS-A1-FCS, pinned version and parameters]
+        - [PX4 upstream project, SUS-A1-FC, pinned version and parameters]
         - [Toolchain and dependencies, SUS-M1-CTL, build inputs]
         - [EXT-PILOT, SUS-M1-CTL, commands via HMI]
         - [SUS-M1-SAF, SUS-M1-CTL, independent inhibit]
@@ -1850,7 +1802,7 @@ folders:
             - name: SoftwareFunctionAssessment
               stereotype: item
               attributes: ["functionId : String", "controlCategory : SoftwareControlCategory", "severity : SeverityCategory", "levelOfRigor : String", "independentMitigation : Boolean"]
-            - {name: SoftwareControlCategory, stereotype: enum, values: [Autonomous, SemiAutonomous, RedundantFaultTolerant, Influential, NoSafetyImpact]}
+            - {name: SoftwareControlCategory, import: SusanooLibrary}
     inputs:
       - {ref: T208, item: Safety-significant functions}
       - {ref: T204, item: Software causal factors}
@@ -1868,7 +1820,7 @@ folders:
     gate: All
     role: Safety lead
     purpose: |
-      Record templates used across the tree. Templates mirror `SusanooSafety.sysml` so records,
+      Record templates used across the tree. Templates mirror the `SusanooLibrary` record items so records,
       models and checks share one vocabulary.
     scope: []
     boundary:
@@ -1891,7 +1843,7 @@ folders:
               attributes: ["taskId : Integer", "artifactId : String", "revision : String", "configurationId : String", "decision : String"]
               parts: [{name: hazards, type: Hazard, mult: "0..*"}, {name: requirements, type: SafetyRequirement, mult: "0..*"}, {name: evidence, type: VerificationEvidence, mult: "0..*"}]
     inputs:
-      - {ref: SYSDEF, item: SusanooSafety vocabulary}
+      - {ref: SYSDEF, item: SusanooLibrary vocabulary}
     outputs:
       - {ref: HTS, item: Hazard record schema}
     contents:

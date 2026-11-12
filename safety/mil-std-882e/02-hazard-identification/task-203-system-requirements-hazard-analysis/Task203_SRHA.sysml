@@ -4,36 +4,19 @@
 
 package Task203_SRHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
-    requirement def <'SYS-001'> PilotReadinessInterlock {
-        doc /* Inhibit leg actuation until pilot station readiness conditions are satisfied */
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
+    private import SusanooRequirements::*;
+    // Requirement records shown here are owned by models/sysml/model/Requirements.sysml (generated from requirements/); satisfy relations by Satisfaction.sysml.
+    view requirementsInScope {
+        expose SusanooRequirements::'SYS-001';
+        expose SusanooRequirements::'SYS-002';
+        expose SusanooRequirements::'SYS-003';
+        expose SusanooRequirements::'SYS-004';
+        expose SusanooRequirements::'SYS-005';
+        expose SusanooRequirements::'SYS-006';
+        expose SusanooRequirements::'SYS-007';
+        expose SusanooRequirements::'SYS-008';
+        expose SusanooRequirements::'SYS-009';
     }
-    requirement sys_001 : PilotReadinessInterlock;
-    requirement def <'SYS-002'> ProtectiveStop {
-        doc /* Provide an operator-requested protective stop with defined behavior per operating mode */
-    }
-    requirement sys_002 : ProtectiveStop;
-    requirement def <'SYS-003'> RetainedRotorInhibit {
-        doc /* Prevent UAV rotor startup while mechanically retained except under approved maintenance */
-    }
-    requirement sys_003 : RetainedRotorInhibit;
-    requirement def <'SYS-004'> FeedbackLossDegradedState {
-        doc /* Detect loss of essential feedback and transition to a documented degraded state */
-    }
-    requirement sys_004 : FeedbackLossDegradedState;
-    requirement def <'SYS-005'> DockStateReporting {
-        doc /* Docking interface shall report positively confirmed retained or unretained state */
-    }
-    requirement sys_005 : DockStateReporting;
-    requirement def <'SYS-006'> LaunchRecoveryEnvelope {
-        doc /* Inhibit UAV launch and recovery outside a verified operational envelope */
-    }
-    requirement sys_006 : LaunchRecoveryEnvelope;
-    satisfy sys_001 by susanoo.m1.pil;
-    satisfy sys_002 by susanoo.m1.saf;
-    satisfy sys_003 by susanoo.m1.dck;
-    satisfy sys_004 by susanoo.m1.ctl;
-    satisfy sys_005 by susanoo.m1.dck;
-    satisfy sys_006 by susanoo.a1.fcs;
 }

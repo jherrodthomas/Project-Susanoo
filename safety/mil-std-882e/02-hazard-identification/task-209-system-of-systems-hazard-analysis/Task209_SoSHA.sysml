@@ -4,8 +4,8 @@
 
 package Task209_SoSHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def GnssConstellation;
     part def AirspaceUsers;
     part def SiteInfrastructureSystem;

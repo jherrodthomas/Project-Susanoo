@@ -26,23 +26,23 @@ exposure is defined. Software contribution uses the separate criteria in `softwa
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | Hazard records | Risk matrix | severity and probability |
-| 2 | Risk matrix | EXT-AUTH: Risk acceptance authority | risk level drives authority |
-| 3 | ARP4761A classification | Risk matrix | kept separate - no mapping |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | Hazard records | Risk matrix | severity and probability | — |
+| 2 | Risk matrix | Risk acceptance authority | risk level drives authority | — |
+| 3 | ARP4761A classification | Risk matrix | kept separate - no mapping | — |
 
 ## SysML model
 
-SysML v2 textual view: [`RiskAssessment.sysml`](RiskAssessment.sysml), generated from the catalog. It imports [`SusanooSystem`](../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`RiskAssessment.sysml`](RiskAssessment.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML block definition — risk assessment types](figures/fig-4-sysml-block-definition.svg)
+![Figure 4 · SysML block definition — risk assessment vocabulary](figures/fig-4-sysml-block-definition.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -53,35 +53,9 @@ SysML v2 textual view: [`RiskAssessment.sysml`](RiskAssessment.sysml), generated
 
 package RiskAssessment {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
-    enum def SeverityCategory {
-        enum Catastrophic;
-        enum Critical;
-        enum Marginal;
-        enum Negligible;
-    }
-    enum def ProbabilityLevel {
-        enum Frequent;
-        enum Probable;
-        enum Occasional;
-        enum Remote;
-        enum Improbable;
-        enum Eliminated;
-    }
-    enum def RiskLevel {
-        enum High;
-        enum Serious;
-        enum Medium;
-        enum Low;
-        enum Eliminated;
-    }
-    attribute def RiskAssessmentRecord {
-        attribute severity : SeverityCategory;
-        attribute probability : ProbabilityLevel;
-        attribute level : RiskLevel;
-        attribute rationale : String;
-    }
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
+
 }
 ```
 

@@ -4,25 +4,28 @@
 
 package Task401_SafetyVerification {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
-    private import Task203_SRHA::*;
-    requirement sys_001 : Task203_SRHA::PilotReadinessInterlock;
-    requirement sys_002 : Task203_SRHA::ProtectiveStop;
-    requirement sys_003 : Task203_SRHA::RetainedRotorInhibit;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
+    private import SusanooRequirements::*;
+    // Requirement records shown here are owned by models/sysml/model/Requirements.sysml (generated from requirements/); satisfy relations by Satisfaction.sysml.
+    view requirementsInScope {
+        expose SusanooRequirements::'SYS-001';
+        expose SusanooRequirements::'SYS-002';
+        expose SusanooRequirements::'SYS-003';
+    }
     verification def <'VER-001'> Ver001 {
         objective {
-            verify sys_001;
+            verify SusanooRequirements::'SYS-001';
         }
     }
     verification def <'VER-002'> Ver002 {
         objective {
-            verify sys_002;
+            verify SusanooRequirements::'SYS-002';
         }
     }
     verification def <'VER-003'> Ver003 {
         objective {
-            verify sys_003;
+            verify SusanooRequirements::'SYS-003';
         }
     }
 }

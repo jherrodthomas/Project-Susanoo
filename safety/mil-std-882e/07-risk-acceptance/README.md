@@ -26,21 +26,21 @@ simulated approvals are labelled as such.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | SAR | EXT-AUTH: Risk acceptance authority | residual risk summary |
-| 2 | EXT-AUTH: Risk acceptance authority | Acceptance records | signed decision |
-| 3 | Acceptance records | PDaC release | approvals list |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | SAR | Risk acceptance authority | residual risk summary | — |
+| 2 | Risk acceptance authority | Acceptance records | signed decision | — |
+| 3 | Acceptance records | PDaC release | approvals list | — |
 
 ## SysML model
 
-SysML v2 textual view: [`RiskAcceptance.sysml`](RiskAcceptance.sysml), generated from the catalog. It imports [`SusanooSystem`](../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`RiskAcceptance.sysml`](RiskAcceptance.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML state machine — RiskAcceptanceDecisionFlow](figures/fig-4-sysml-state-machine.svg)
 
@@ -53,8 +53,8 @@ SysML v2 textual view: [`RiskAcceptance.sysml`](RiskAcceptance.sysml), generated
 
 package RiskAcceptance {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     attribute def AuthoritySigns;
     attribute def ConfigurationOrConopsChange;
     attribute def FurtherMitigationRequired;

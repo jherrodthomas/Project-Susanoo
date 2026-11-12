@@ -26,21 +26,21 @@ is labelled as simulated.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | SUS-GSE-TST: Test rigs, HIL & simulation | SUS-M1: Piloted walker | supported rig tests |
-| 2 | SUS-GSE-TST: Test rigs, HIL & simulation | SUS-A1: Observation UAV | HIL / SITL |
-| 3 | Evidence records | EXT-AUTH: Risk acceptance authority | verification summary |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | SUS-GSE: Ground support, maintenance supports, charging and test equipment | SUS-M1: Piloted walker | supported rig tests | IF-019 |
+| 2 | SUS-GSE: Ground support, maintenance supports, charging and test equipment | SUS-A1: Dockable observation UAV | HIL / SITL | — |
+| 3 | Evidence records | Risk acceptance authority | verification summary | — |
 
 ## SysML model
 
-SysML v2 textual view: [`SafetyVerification.sysml`](SafetyVerification.sysml), generated from the catalog. It imports [`SusanooSystem`](../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`SafetyVerification.sysml`](SafetyVerification.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML activity — VerifyRiskReduction](figures/fig-4-sysml-activity.svg)
 
@@ -53,8 +53,8 @@ SysML v2 textual view: [`SafetyVerification.sysml`](SafetyVerification.sysml), g
 
 package SafetyVerification {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def VerifyRiskReduction {
         action planVerification { doc /* Select method per requirement */ }
         action confirmTestSafety { doc /* Confirm test hazards controlled */ }

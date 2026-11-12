@@ -26,22 +26,22 @@ Management tasks 101–105 and 108 live here.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | Program management | SSPP and HMP | schedule, resources, contract terms |
-| 2 | Standards bodies | Task selection and tailoring | controlled standard editions |
-| 3 | SSPP and HMP | EXT-AUTH: Risk acceptance authority | risk acceptance authority matrix |
-| 4 | IPT and roles | Suppliers | safety data requirements |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | Program management | SSPP and HMP | schedule, resources, contract terms | — |
+| 2 | Standards bodies | Task selection and tailoring | controlled standard editions | — |
+| 3 | SSPP and HMP | Risk acceptance authority | risk acceptance authority matrix | — |
+| 4 | IPT and roles | Suppliers | safety data requirements | — |
 
 ## SysML model
 
-SysML v2 textual view: [`SafetyApproach.sysml`](SafetyApproach.sysml), generated from the catalog. It imports [`SusanooSystem`](../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`SafetyApproach.sysml`](SafetyApproach.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML block definition — safety program plan set](figures/fig-4-sysml-block-definition.svg)
 
@@ -54,8 +54,8 @@ SysML v2 textual view: [`SafetyApproach.sysml`](SafetyApproach.sysml), generated
 
 package SafetyApproach {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def SafetyProgram {
         doc /* Plans and agreements that document the SUS-I1 safety approach. */
         attribute configurationId : String;

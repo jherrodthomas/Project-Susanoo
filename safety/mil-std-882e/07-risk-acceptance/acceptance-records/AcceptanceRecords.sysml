@@ -4,8 +4,8 @@
 
 package AcceptanceRecords {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     item def AcceptanceRecord {
         attribute recordId : String;
         attribute hazardIds : String;

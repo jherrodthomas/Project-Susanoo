@@ -4,8 +4,8 @@
 
 package Task206_OSHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     private import ConceptOperations::*;
     // Analysed modes are owned by concept/ConceptOperations.sysml (single source of truth); not redefined here.
     state modesUnderAnalysis : ConceptOperations::OperatingModes {

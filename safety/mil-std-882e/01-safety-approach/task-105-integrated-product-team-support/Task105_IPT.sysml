@@ -4,8 +4,8 @@
 
 package Task105_IPT {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def SafetyIPT {
         part safetyLead : Role[1];
         part systemsLead : Role[1];

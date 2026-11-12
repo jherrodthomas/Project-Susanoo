@@ -4,8 +4,8 @@
 
 package Task107_ProgressReport {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     item def ProgressReport {
         attribute period : String;
         attribute openCount : Integer;

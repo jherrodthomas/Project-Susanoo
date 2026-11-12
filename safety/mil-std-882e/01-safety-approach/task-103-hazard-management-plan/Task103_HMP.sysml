@@ -4,8 +4,8 @@
 
 package Task103_HMP {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     attribute def AcceptanceRequested;
     attribute def AuthorityApproves;
     attribute def AuthorityRejects;
@@ -16,7 +16,7 @@ package Task103_HMP {
     attribute def MitigationRecorded;
     attribute def VerificationFailed;
     state def HazardLifecycle {
-        doc /* Status transitions governed by the HMP; values match SusanooSafety::HazardStatus. */
+        doc /* Status transitions governed by the HMP; values follow SusanooLibrary::HazardStatus. */
         entry; then Open;
         state Open { doc /* identified and recorded */ }
         state Mitigated { doc /* controls allocated and implemented */ }

@@ -4,8 +4,8 @@
 
 package RiskAcceptance {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     attribute def AuthoritySigns;
     attribute def ConfigurationOrConopsChange;
     attribute def FurtherMitigationRequired;

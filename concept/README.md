@@ -51,7 +51,7 @@ System boundary per CONOPS section 2. Numbered crossings match the table.
 
 SysML v2 textual model: [`ConceptOperations.sysml`](ConceptOperations.sysml) — the CONOPS operating
 modes as a state machine and the nominal scenarios as use cases. It imports
-[`SusanooSystem`](../safety/mil-std-882e/00-system-definition/sysml/SusanooSystem.sysml). The `.sysml`
+the project model's [`SusanooArchitecture`](../models/sysml/model/Architecture.sysml). The `.sysml`
 file is the model of record; Figure 3 is drawn directly from it, so the figure cannot drift from the model.
 [Task 206 (O&SHA)](../safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/README.md)
 analyses the same state machine.

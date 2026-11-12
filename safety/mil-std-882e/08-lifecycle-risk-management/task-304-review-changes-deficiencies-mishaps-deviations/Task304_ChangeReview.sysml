@@ -4,8 +4,8 @@
 
 package Task304_ChangeReview {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def ChangeSafetyReview {
         action intake { doc /* Log change or event */ }
         action screen { doc /* Screen for safety impact */ }

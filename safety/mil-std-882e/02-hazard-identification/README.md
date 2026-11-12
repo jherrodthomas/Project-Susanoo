@@ -26,24 +26,24 @@ recorded in the hazard tracking system.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | EXT-PILOT: Pilot / operator | SUS-M1: Piloted walker | operator error and workload |
-| 2 | SUS-M1: Piloted walker | EXT-BYST: Bystanders & nearby workers | crush / impact / fall |
-| 3 | SUS-A1: Observation UAV | EXT-BYST: Bystanders & nearby workers | rotor strike / crash |
-| 4 | EXT-AIR: Airspace, GNSS & RF environment | SUS-A1: Observation UAV | link loss / GNSS denial |
-| 5 | EXT-CREW: Ground crew & maintainers | SUS-GSE: Ground support equipment | maintenance exposure |
-| 6 | SUS-M1: Piloted walker | EXT-ENV: Natural environment & receptors | releases |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | EXT-PILOT: Pilot | SUS-M1: Piloted walker | operator error and workload | IF-001, IF-015 |
+| 2 | SUS-M1: Piloted walker | EXT-BYSTANDER: Bystanders | crush / impact / fall | IF-012 |
+| 3 | SUS-A1: Dockable observation UAV | EXT-BYSTANDER: Bystanders | rotor strike / crash | — |
+| 4 | EXT-GNSS-RF: GNSS and RF environment | SUS-A1: Dockable observation UAV | link loss / GNSS denial | IF-013 |
+| 5 | EXT-CREW: Ground crew and maintainers | SUS-GSE: Ground support, maintenance supports, charging and test equipment | maintenance exposure | — |
+| 6 | SUS-M1: Piloted walker | Natural environment and receptors | releases | — |
 
 ## SysML model
 
-SysML v2 textual view: [`HazardAnalyses.sysml`](HazardAnalyses.sysml), generated from the catalog. It imports [`SusanooSystem`](../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`HazardAnalyses.sysml`](HazardAnalyses.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML activity — analysis information flow](figures/fig-4-sysml-activity.svg)
 
@@ -56,8 +56,8 @@ SysML v2 textual view: [`HazardAnalyses.sysml`](HazardAnalyses.sysml), generated
 
 package HazardAnalyses {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def HazardAnalysisRelationships {
         action phl { doc /* Task 201 PHL */ }
         action pha { doc /* Task 202 PHA */ }

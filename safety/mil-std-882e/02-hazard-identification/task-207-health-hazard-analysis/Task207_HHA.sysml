@@ -4,8 +4,8 @@
 
 package Task207_HHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     item def HealthExposure {
         attribute agent : HealthHazardAgent;
         attribute source : String;

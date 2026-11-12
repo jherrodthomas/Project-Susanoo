@@ -4,8 +4,8 @@
 
 package Task101_HazardEffort {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def HazardIdentificationAndMitigationEffort {
         action defineScope { doc /* Confirm configuration and boundary */ }
         action identify { doc /* Identify hazards per selected tasks */ }

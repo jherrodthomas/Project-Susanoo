@@ -26,21 +26,21 @@ states provenance, version, integrity hash and whether it is simulated (traceabi
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | SUS-GSE-TST: Test rigs, HIL & simulation | SUS-M1-SAF: Safety monitor & protective stop | fault injection |
-| 2 | SUS-GSE-TST: Test rigs, HIL & simulation | SUS-M1-DCK: UAV dock - retention, power, data | latch state tests |
-| 3 | SUS-M1-SAF: Safety monitor & protective stop | Evidence store | results with hash |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | SUS-GSE: Ground support, maintenance supports, charging and test equipment | SUS-M1-SAF: Independent safety monitor, protective stop and isolation | fault injection | — |
+| 2 | SUS-GSE: Ground support, maintenance supports, charging and test equipment | SUS-M1-DCK: UAV dock, retention, charging and release | latch state tests | — |
+| 3 | SUS-M1-SAF: Independent safety monitor, protective stop and isolation | Evidence store | results with hash | — |
 
 ## SysML model
 
-SysML v2 textual view: [`Task401_SafetyVerification.sysml`](Task401_SafetyVerification.sysml), generated from the catalog. It imports [`SusanooSystem`](../../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`Task401_SafetyVerification.sysml`](Task401_SafetyVerification.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML requirements — verification relationships](figures/fig-4-sysml-requirements.svg)
 
@@ -53,25 +53,28 @@ SysML v2 textual view: [`Task401_SafetyVerification.sysml`](Task401_SafetyVerifi
 
 package Task401_SafetyVerification {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
-    private import Task203_SRHA::*;
-    requirement sys_001 : Task203_SRHA::PilotReadinessInterlock;
-    requirement sys_002 : Task203_SRHA::ProtectiveStop;
-    requirement sys_003 : Task203_SRHA::RetainedRotorInhibit;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
+    private import SusanooRequirements::*;
+    // Requirement records shown here are owned by models/sysml/model/Requirements.sysml (generated from requirements/); satisfy relations by Satisfaction.sysml.
+    view requirementsInScope {
+        expose SusanooRequirements::'SYS-001';
+        expose SusanooRequirements::'SYS-002';
+        expose SusanooRequirements::'SYS-003';
+    }
     verification def <'VER-001'> Ver001 {
         objective {
-            verify sys_001;
+            verify SusanooRequirements::'SYS-001';
         }
     }
     verification def <'VER-002'> Ver002 {
         objective {
-            verify sys_002;
+            verify SusanooRequirements::'SYS-002';
         }
     }
     verification def <'VER-003'> Ver003 {
         objective {
-            verify sys_003;
+            verify SusanooRequirements::'SYS-003';
         }
     }
 }

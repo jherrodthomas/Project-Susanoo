@@ -25,21 +25,21 @@ near-misses, deviations and periodic progress reporting. Any change reopens affe
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | Field reports | _Fielded configuration (boundary)_ | mishaps and anomalies |
-| 2 | Change control board | _Fielded configuration (boundary)_ | approved changes |
-| 3 | EXT-CREW: Ground crew & maintainers | SUS-GSE: Ground support equipment | maintenance feedback |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | Field reports | _Fielded configuration (boundary)_ | mishaps and anomalies | — |
+| 2 | Change control board | _Fielded configuration (boundary)_ | approved changes | — |
+| 3 | EXT-CREW: Ground crew and maintainers | SUS-GSE: Ground support, maintenance supports, charging and test equipment | maintenance feedback | — |
 
 ## SysML model
 
-SysML v2 textual view: [`LifecycleRisk.sysml`](LifecycleRisk.sysml), generated from the catalog. It imports [`SusanooSystem`](../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`LifecycleRisk.sysml`](LifecycleRisk.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML activity — ManageLifecycleRisk](figures/fig-4-sysml-activity.svg)
 
@@ -52,8 +52,8 @@ SysML v2 textual view: [`LifecycleRisk.sysml`](LifecycleRisk.sysml), generated f
 
 package LifecycleRisk {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def ManageLifecycleRisk {
         action receive { doc /* Receive change, deficiency, mishap or deviation */ }
         action impact { doc /* Assess safety impact on hazards and controls */ }

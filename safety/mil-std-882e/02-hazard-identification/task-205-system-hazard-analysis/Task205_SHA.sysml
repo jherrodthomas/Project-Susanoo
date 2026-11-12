@@ -4,14 +4,14 @@
 
 package Task205_SHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def SHAInterfaceContext {
         part pwr : PowerSystem;
         part ctl : MotionControl;
         part saf : SafetyMonitor;
-        part dck : UAVDock;
-        part uav : ObservationUAV;
+        part dck : UavDock;
+        part uav : ObservationUav;
         connection c1 connect saf to ctl { doc /* torque inhibit */ }
         connection c2 connect saf to pwr { doc /* energy isolation */ }
         connection c3 connect pwr to ctl { doc /* drive power */ }

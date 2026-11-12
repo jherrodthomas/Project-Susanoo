@@ -26,23 +26,23 @@ software and human errors within the subsystem. One subfolder or file per subsys
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | Adjacent subsystems | SUS-M1-PWR: Series-hybrid power & isolation | interface failures as inputs |
-| 2 | SUS-M1-DCK: UAV dock - retention, power, data | SUS-A1: Observation UAV | interface effects passed to SHA |
-| 3 | EXT-PILOT: Pilot / operator | SUS-M1-CTL: Motion & balance control SW | erroneous command |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | Adjacent subsystems | SUS-M1-PWR: Power generation, storage, distribution and thermal control | interface failures as inputs | — |
+| 2 | SUS-M1-DCK: UAV dock, retention, charging and release | SUS-A1: Dockable observation UAV | interface effects passed to SHA | IF-006, IF-PX4-009 |
+| 3 | EXT-PILOT: Pilot | SUS-M1-CTL: Mission, motion and balance control | erroneous command | — |
 
 **Explicitly excluded:** subsystem-to-subsystem interactions (Task 205)
 
 ## SysML model
 
-SysML v2 textual view: [`Task204_SSHA.sysml`](Task204_SSHA.sysml), generated from the catalog. It imports [`SusanooSystem`](../../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`Task204_SSHA.sysml`](Task204_SSHA.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML block definition — SSHA record per subsystem](figures/fig-4-sysml-block-definition.svg)
 
@@ -55,8 +55,8 @@ SysML v2 textual view: [`Task204_SSHA.sysml`](Task204_SSHA.sysml), generated fro
 
 package Task204_SSHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def SubsystemHazardAnalysis {
         attribute subsystemId : String;
         attribute designRevision : String;

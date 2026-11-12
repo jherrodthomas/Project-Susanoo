@@ -4,8 +4,8 @@
 
 package Task201_PHL {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def PreliminaryHazardList {
         attribute configurationId : String;
         attribute revision : String;

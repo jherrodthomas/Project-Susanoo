@@ -4,8 +4,8 @@
 
 package Task301_SAR {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     item def SafetyAssessmentReport {
         attribute configurationId : String;
         attribute revision : String;

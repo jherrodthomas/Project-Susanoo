@@ -26,22 +26,22 @@ are worked inside design decisions, not after them.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | Suppliers | Systems lead | supplier safety data |
-| 2 | Safety lead | EXT-AUTH: Risk acceptance authority | escalations |
-| 3 | Human factors lead | Safety lead | MIL-STD-1472 findings |
-| 4 | Test lead | Safety lead | test hazards and results |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | Suppliers | Systems lead | supplier safety data | — |
+| 2 | Safety lead | Risk acceptance authority | escalations | — |
+| 3 | Human factors lead | Safety lead | MIL-STD-1472 findings | — |
+| 4 | Test lead | Safety lead | test hazards and results | — |
 
 ## SysML model
 
-SysML v2 textual view: [`Task105_IPT.sysml`](Task105_IPT.sysml), generated from the catalog. It imports [`SusanooSystem`](../../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`Task105_IPT.sysml`](Task105_IPT.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML block definition — IPT composition](figures/fig-4-sysml-block-definition.svg)
 
@@ -54,8 +54,8 @@ SysML v2 textual view: [`Task105_IPT.sysml`](Task105_IPT.sysml), generated from 
 
 package Task105_IPT {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def SafetyIPT {
         part safetyLead : Role[1];
         part systemsLead : Role[1];

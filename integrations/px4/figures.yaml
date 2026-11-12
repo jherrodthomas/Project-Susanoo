@@ -17,12 +17,12 @@ figures:
       - {id: M1, title: "SUS-M1 · Piloted walker", parent: I1}
       - {id: CTL, code: SUS-M1-CTL, title: Walker control, sub: no PX4, tone: software, parent: M1}
       - {id: DCK, code: SUS-M1-DCK, title: Dock, sub: "retention, charge, rotor inhibit", tone: interface, parent: M1}
-      - {id: SUP, title: Integration supervisor, sub: "readiness, launch / recovery permit", tone: safety, parent: I1}
+      - {id: SUP, code: SUS-I1-INT, title: Integration manager, sub: "readiness, launch / recovery permit", tone: safety, parent: I1}
       - {id: A1, title: "SUS-A1 · Observation UAV", parent: I1}
-      - {id: ADP, title: UAV control adapter, sub: "validated, fail-closed", tone: safety, parent: A1}
+      - {id: ADP, code: SUS-I1-INT, title: PX4 command adapter, sub: "validated, fail-closed", tone: safety, parent: A1}
       - {id: NAV, code: SUS-A1-NAV, title: "Nav sensors, GNSS, telemetry", parent: A1}
-      - {id: PX4, code: SUS-A1-FCS, title: PX4 Autopilot (pinned), sub: "stabilisation, navigation, modes, failsafes", tone: software, parent: A1}
-      - {id: PRP, code: SUS-A1-PRP, title: "Motors, ESCs, propellers", parent: A1}
+      - {id: PX4, code: SUS-A1-FC, title: PX4 Autopilot (pinned), sub: "stabilisation, navigation, modes, failsafes", tone: software, parent: A1}
+      - {id: PRP, code: SUS-A1-PROP, title: "Motors, ESCs, propellers", parent: A1}
       - {id: CMP, title: Companion / payload, sub: "observation, mission interface", parent: A1}
       - {id: HMI, code: SUS-M1-PIL, title: Pilot HMI, sub: "alerts, UAV video", parent: I1}
     edges:
@@ -51,13 +51,13 @@ figures:
     direction: RIGHT
     nodes:
       - {id: UP, title: PX4 upstream project, sub: tagged release + SHA, tone: external}
-      - {id: AIR, code: EXT-AIR, title: "Airspace, GNSS, RF", tone: external}
+      - {id: AIR, code: EXT-GNSS-RF, title: "GNSS and RF environment", tone: external}
       - {id: DCK, code: SUS-M1-DCK, title: Dock, tone: interface}
       - {id: WLK, code: SUS-M1, title: Walker posture}
       - {id: BND, banner: "Boundary · PX4 flight-control assurance", tone: safety, dashed: true, legend: Assurance boundary}
-      - {id: ADP, title: UAV control adapter, tone: safety, parent: BND}
+      - {id: ADP, code: SUS-I1-INT, title: PX4 command adapter, tone: safety, parent: BND}
       - {id: PX4, title: PX4 Autopilot + pinned parameters, tone: software, parent: BND}
-      - {id: SUP, title: Integration supervisor, tone: safety}
+      - {id: SUP, code: SUS-I1-INT, title: Integration manager, tone: safety}
       - {id: HMI, code: SUS-M1-PIL, title: Pilot HMI}
     edges:
       - {src: UP, dst: PX4, label: pinned baseline}

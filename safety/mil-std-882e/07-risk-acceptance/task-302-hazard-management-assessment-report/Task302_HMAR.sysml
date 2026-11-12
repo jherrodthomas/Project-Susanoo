@@ -4,8 +4,8 @@
 
 package Task302_HMAR {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     item def HazardManagementAssessmentReport {
         attribute milestone : String;
         attribute configurationId : String;

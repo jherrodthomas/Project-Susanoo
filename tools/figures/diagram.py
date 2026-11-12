@@ -149,19 +149,47 @@ def to_elk(spec: dict) -> dict:
                                       "elk.nodeSize.constraints": "[MINIMUM_SIZE]",
                                       "elk.nodeSize.minimum": f"({fk.fmt(minw)}, 60)",
                                       "elk.direction": n.get("direction", spec.get("direction", "RIGHT")),
+                                      **({"elk.hierarchyHandling": "SEPARATE_CHILDREN"}
+                                         if spec.get("hierarchy") == "separate" else {}),
                                       **n.get("elk", {})}}
         measure(n)
         return {"id": nid, "width": round(n["_w"], 1), "height": round(n["_h"], 1)}
 
-    edges = []
+    separate = spec.get("hierarchy") == "separate"
+    parent = {n["id"]: n.get("parent") for n in spec["nodes"]}
+
+    def chain(nid):
+        out = []
+        while nid is not None:
+            out.append(nid)
+            nid = parent.get(nid)
+        return out
+
+    def lca(a: str, b: str) -> str:
+        ca = chain(parent.get(a))
+        cb = set(chain(parent.get(b)))
+        return next((x for x in ca if x in cb), "root")
+    owned: dict[str, list[dict]] = {}
     for i, e in enumerate(spec.get("edges", [])):
         d = {"id": f"e{i}", "sources": [e["src"]], "targets": [e["dst"]]}
         if e.get("label") or e.get("code"):
             w, h = label_size(e)
             d["labels"] = [{"id": f"e{i}l", "text": e.get("label", ""), "width": round(w, 1), "height": h}]
-        edges.append(d)
+        owned.setdefault(lca(e["src"], e["dst"]) if separate else "root", []).append(d)
     opts = dict(ROOT_OPTS, **{"elk.direction": spec.get("direction", "RIGHT")}, **spec.get("elk", {}))
-    return {"id": "root", "layoutOptions": opts, "children": [build(c) for c in kids.get(None, [])], "edges": edges}
+    if separate:
+        # Each container is laid out on its own; every edge lives in the lowest container holding both ends.
+        opts["elk.hierarchyHandling"] = "SEPARATE_CHILDREN"
+    children = [build(c) for c in kids.get(None, [])]
+
+    def attach(g: dict):
+        if g["id"] in owned and g["id"] != "root":
+            g["edges"] = owned[g["id"]]
+        for c in g.get("children", []):
+            attach(c)
+    for c in children:
+        attach(c)
+    return {"id": "root", "layoutOptions": opts, "children": children, "edges": owned.get("root", [])}
 
 
 def run_elk(graphs: list[dict]) -> list[dict]:
@@ -414,7 +442,7 @@ def render_graph(spec: dict, laid: dict) -> str:
 
     def collect(g: dict):
         for le in g.get("edges", []):
-            ox, oy = absol.get(le.get("container", "root"), (0.0, 0.0))
+            ox, oy = absol.get(le.get("container", g["id"]), (0.0, 0.0))
             for sec in le.get("sections", []):
                 bend_pts.extend((p["x"] + ox, p["y"] + oy) for p in sec.get("bendPoints", []))
                 for key in ("startPoint", "endPoint"):
@@ -434,16 +462,16 @@ def render_graph(spec: dict, laid: dict) -> str:
             sizes_of(c)
     sizes_of(laid)
     parent_of = {n["id"]: n.get("parent") for n in spec["nodes"]}
-    child_bottom: dict[str, float] = {}
-    for cid_, (cx, cy) in absol.items():
-        p = parent_of.get(cid_)
-        if cid_ != "root" and p:
-            child_bottom[p] = max(child_bottom.get(p, 0), cy + sizes[cid_][1])
+    kids_of: dict[str, list[str]] = {}
+    for cid_, p in parent_of.items():
+        if p:
+            kids_of.setdefault(p, []).append(cid_)
     # ELK can leave an empty band at the bottom of a container for hierarchy ports. Trim it when nothing but
-    # straight edge exits sits in the band; those exits move up with the border.
+    # straight edge exits sits in the band; those exits move up with the border. Deepest containers first, so a
+    # parent sees its children's trimmed heights.
     trimmed = []
-    for depth, cid, x, y, w, h in containers:
-        content = child_bottom.get(cid, y + h) + 18
+    for depth, cid, x, y, w, h in sorted(containers, key=lambda t: -t[0]):
+        content = max((absol[k][1] + sizes[k][1] for k in kids_of.get(cid, []) if k in absol), default=y + h - 18) + 18
         inside = lambda px, py: x - 1 <= px <= x + w + 1 and content < py <= y + h + 1  # noqa: E731
         movable = [(p, px, py) for p, px, py in ends if inside(px, py)]
         if (content < y + h - 4 and not any(inside(px, py) for px, py in bend_pts)
@@ -451,6 +479,7 @@ def render_graph(spec: dict, laid: dict) -> str:
             for p, _, _ in movable:
                 p["y"] -= (y + h) - content
             h = content - y
+            sizes[cid] = (sizes[cid][0], h)
         trimmed.append((depth, cid, x, y, w, h))
     containers = trimmed
 
@@ -464,11 +493,12 @@ def render_graph(spec: dict, laid: dict) -> str:
     by_id = {f"e{i}": e for i, e in enumerate(spec.get("edges", []))}
 
     def edges_of(g: dict):
-        yield from g.get("edges", [])
+        for le in g.get("edges", []):
+            yield le, g["id"]
         for c in g.get("children", []):
             yield from edges_of(c)
-    for le in edges_of(laid):
-        off = absol.get(le.get("container", "root"), (0.0, 0.0))
+    for le, owner in edges_of(laid):
+        off = absol.get(le.get("container", owner), (0.0, 0.0))
         es, ls = draw_edge(by_id[le["id"]], le, off)
         edge_svg += es
         label_svg += ls

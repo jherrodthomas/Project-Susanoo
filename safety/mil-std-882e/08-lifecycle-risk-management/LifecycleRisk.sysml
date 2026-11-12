@@ -4,8 +4,8 @@
 
 package LifecycleRisk {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def ManageLifecycleRisk {
         action receive { doc /* Receive change, deficiency, mishap or deviation */ }
         action impact { doc /* Assess safety impact on hazards and controls */ }

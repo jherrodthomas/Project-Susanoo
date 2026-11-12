@@ -1,14 +1,15 @@
 // PX4Integration — SysML v2 view of the SUS-A1 / PX4 integration boundary.
-// Hand-authored; keep in step with integrations/px4/README.md and interface-contract.md.
+// Hand-authored; keep in step with integrations/px4/README.md, interface-contract.md and the IF-PX4-nnn
+// interfaces in architecture/item-definition.yaml (SUS-I1-INT is the integration manager / adapter).
 // Status: proposed, not implemented or verified. Thresholds, timing and safe
 // states are TBD. PX4 is an external, version-pinned dependency.
 
 package PX4Integration {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
+    private import SusanooArchitecture::*;
 
     // --------------------------------------------------------- structure
-    part def PX4Autopilot :> FlightControl {
+    part def PX4Autopilot :> FlightController {
         doc /* Upstream PX4 (BSD-3-Clause), pinned by tag + commit SHA. Owns flight
              * stabilisation, navigation, flight modes and configured failsafes. */
         attribute version : String;
@@ -41,8 +42,8 @@ package PX4Integration {
         part px4 : PX4Autopilot;
         part adapter : UAVControlAdapter;
         part supervisor : IntegrationSupervisor;
-        part dock : UAVDock;
-        part walker : PilotedWalker;
+        part dock : UavDock;
+        part walker : Walker;
         part gcs : GroundControlStation;
 
         connection if001 connect px4.dds to supervisor.telemetryIn { doc /* IF-PX4-001/002 state, health, arming */ }

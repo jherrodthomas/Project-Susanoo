@@ -26,21 +26,21 @@ rig and human-in-the-loop tests, and use of test data to update hazards.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | Test safety release | EXT-PILOT: Pilot / operator | authorization for occupied test |
-| 2 | SUS-GSE-TST: Test rigs, HIL & simulation | EXT-CREW: Ground crew & maintainers | exclusion zone |
-| 3 | Test range or site | SUS-GSE-TST: Test rigs, HIL & simulation | site rules |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | Test safety release | EXT-PILOT: Pilot | authorization for occupied test | — |
+| 2 | SUS-GSE: Ground support, maintenance supports, charging and test equipment | EXT-CREW: Ground crew and maintainers | exclusion zone | — |
+| 3 | Test range or site | SUS-GSE: Ground support, maintenance supports, charging and test equipment | site rules | — |
 
 ## SysML model
 
-SysML v2 textual view: [`Task303_TestParticipation.sysml`](Task303_TestParticipation.sysml), generated from the catalog. It imports [`SusanooSystem`](../../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`Task303_TestParticipation.sysml`](Task303_TestParticipation.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML state machine — TestSafetyRelease](figures/fig-4-sysml-state-machine.svg)
 
@@ -53,8 +53,8 @@ SysML v2 textual view: [`Task303_TestParticipation.sysml`](Task303_TestParticipa
 
 package Task303_TestParticipation {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     attribute def AnomalyDispositioned;
     attribute def IndependentReviewApproves;
     attribute def StopCondition;

@@ -4,8 +4,8 @@
 
 package Task403_Applicability {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     attribute def OrdnanceProposed;
     attribute def ProposalRejected;
     state def Task403Applicability {

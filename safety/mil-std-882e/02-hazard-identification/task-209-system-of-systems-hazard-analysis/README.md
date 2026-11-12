@@ -26,22 +26,22 @@ users, site power and logistics, other vehicles and remote observers.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | EXT-AIR: Airspace, GNSS & RF environment | SUS-I1: Integrated mech + UAV system | GNSS, RF spectrum, airspace |
-| 2 | EXT-SITE: Site infrastructure & logistics | SUS-I1: Integrated mech + UAV system | power, fuel, transport |
-| 3 | SUS-I1: Integrated mech + UAV system | Other site vehicles | shared workspace |
-| 4 | SUS-I1: Integrated mech + UAV system | Remote video consumers | observation feed |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | EXT-GNSS-RF: GNSS and RF environment | SUS-I1: Integrated mechanized walker and observation uav | GNSS, RF spectrum, airspace | IF-013 |
+| 2 | Site infrastructure and logistics | SUS-I1: Integrated mechanized walker and observation uav | power, fuel, transport | — |
+| 3 | SUS-I1: Integrated mechanized walker and observation uav | Other site vehicles | shared workspace | — |
+| 4 | SUS-I1: Integrated mechanized walker and observation uav | Remote video consumers | observation feed | — |
 
 ## SysML model
 
-SysML v2 textual view: [`Task209_SoSHA.sysml`](Task209_SoSHA.sysml), generated from the catalog. It imports [`SusanooSystem`](../../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`Task209_SoSHA.sysml`](Task209_SoSHA.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML internal block — system-of-systems context](figures/fig-4-sysml-internal-block.svg)
 
@@ -54,8 +54,8 @@ SysML v2 textual view: [`Task209_SoSHA.sysml`](Task209_SoSHA.sysml), generated f
 
 package Task209_SoSHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def GnssConstellation;
     part def AirspaceUsers;
     part def SiteInfrastructureSystem;

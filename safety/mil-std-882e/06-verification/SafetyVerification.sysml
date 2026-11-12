@@ -4,8 +4,8 @@
 
 package SafetyVerification {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def VerifyRiskReduction {
         action planVerification { doc /* Select method per requirement */ }
         action confirmTestSafety { doc /* Confirm test hazards controlled */ }

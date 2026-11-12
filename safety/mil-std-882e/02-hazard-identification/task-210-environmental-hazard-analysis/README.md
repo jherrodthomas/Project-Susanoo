@@ -26,22 +26,22 @@ end-of-life, ground disturbance and disposal.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | SUS-M1-PWR: Series-hybrid power & isolation | EXT-ENV: Natural environment & receptors | exhaust and noise |
-| 2 | SUS-M1-WLK: Structure, legs, joints & brakes | EXT-ENV: Natural environment & receptors | ground disturbance, fluid leaks |
-| 3 | SUS-A1-PWR: UAV battery & power mgmt | EXT-SITE: Site infrastructure & logistics | battery end-of-life |
-| 4 | SUS-GSE-CHG: Charging & fuelling equipment | EXT-ENV: Natural environment & receptors | fuel spills |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | SUS-M1-PWR: Power generation, storage, distribution and thermal control | Natural environment and receptors | exhaust and noise | — |
+| 2 | SUS-M1-WLK: Chassis, legs, joint actuators and stability sensing | Natural environment and receptors | ground disturbance, fluid leaks | — |
+| 3 | SUS-A1-PWR: UAV battery and power management | Site infrastructure and logistics | battery end-of-life | — |
+| 4 | SUS-GSE: Ground support, maintenance supports, charging and test equipment | Natural environment and receptors | fuel spills | — |
 
 ## SysML model
 
-SysML v2 textual view: [`Task210_EHA.sysml`](Task210_EHA.sysml), generated from the catalog. It imports [`SusanooSystem`](../../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`Task210_EHA.sysml`](Task210_EHA.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML block definition — environmental aspect record](figures/fig-4-sysml-block-definition.svg)
 
@@ -54,8 +54,8 @@ SysML v2 textual view: [`Task210_EHA.sysml`](Task210_EHA.sysml), generated from 
 
 package Task210_EHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     item def EnvironmentalAspect {
         attribute aspect : String;
         attribute lifecyclePhase : LifecyclePhase;

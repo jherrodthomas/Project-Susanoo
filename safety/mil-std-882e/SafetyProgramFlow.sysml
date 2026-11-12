@@ -4,8 +4,8 @@
 
 package SafetyProgramFlow {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def SystemSafetyProcess {
         doc /* Iterative MIL-STD-882E process applied to SUS-I1 configurations. */
         action documentApproach { doc /* 1 Document approach - SSPP, HMP */ }

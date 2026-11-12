@@ -4,8 +4,8 @@
 
 package TemplateSchemas {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     item def TaskRecord {
         attribute taskId : Integer;
         attribute artifactId : String;

@@ -22,7 +22,7 @@ figures:
       - {id: MAN, code: SUS-M1-MAN, title: Manipulator arms, parent: M1}
       - {id: DCK, code: SUS-M1-DCK, title: UAV dock, sub: "TS-004 dock location", tone: interface, parent: M1, dashed: true}
       - {id: A1, title: "SUS-A1 · Observation UAV", parent: I1}
-      - {id: FCS, code: SUS-A1-FCS, title: Flight control, sub: PX4 candidate, tone: software, parent: A1}
+      - {id: FCS, code: SUS-A1-FC, title: Flight control, sub: PX4 candidate, tone: software, parent: A1}
       - {id: UAVP, code: SUS-A1, title: "Airframe, propulsion, battery, sensors, link", parent: A1}
       - {id: GSE, code: SUS-GSE, title: Ground support equipment, sub: "Supports, charging, test rigs", parent: I1}
     edges:
@@ -52,12 +52,12 @@ figures:
       - {id: SUP, title: Mission supervisor, tone: external}
       - {id: MNT, title: Maintainer, tone: external}
       - {id: TER, code: EXT-TERRAIN, title: "Terrain, weather", tone: external}
-      - {id: AIR, code: EXT-AIR, title: "Airspace, GNSS, RF", tone: external}
+      - {id: AIR, code: EXT-GNSS-RF, title: "Airspace, GNSS, RF", tone: external}
       - {id: BND, banner: "Boundary · SUS-I1 concept system", tone: safety, dashed: true, legend: System boundary}
       - {id: M1, code: SUS-M1, title: Piloted walker, parent: BND}
       - {id: A1, code: SUS-A1, title: Observation UAV, parent: BND}
       - {id: GSE, code: SUS-GSE, title: Ground support, parent: BND}
-      - {id: PPL, code: EXT-BYST, title: Personnel and bystanders, tone: external}
+      - {id: PPL, code: EXT-BYSTANDER, title: Personnel and bystanders, tone: external}
     edges:
       - {src: PILOT, dst: M1, code: "1", label: "commands, intervention"}
       - {src: M1, dst: PILOT, code: "2", label: "status, alarms, UAV video"}

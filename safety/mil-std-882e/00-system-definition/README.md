@@ -13,9 +13,11 @@
 ## Purpose
 
 Defines the system of interest, its decomposition, interfaces and external context that every
-hazard analysis uses as its baseline. Holds the canonical SysML v2 models: `SusanooSystem`
-(structure, ports, dock interface) and `SusanooSafety` (severity, probability, risk, SwCI,
-mitigation precedence, hazard record). Per-folder SysML views import these packages.
+hazard analysis uses as its baseline. The records live outside this tree and are not restated here:
+[`architecture/item-definition.yaml`](../../../architecture/item-definition.yaml) (elements, externals,
+interfaces IF-nnn) and the SysML model in [`models/sysml/model`](../../../models/sysml/model/)
+(`SusanooArchitecture`, `SusanooLibrary`, `SusanooRequirements`). Every folder view in this tree imports
+that model, and every figure reads its elements and interfaces from the record.
 
 ## Position in the MIL-STD-882E flow
 
@@ -25,29 +27,29 @@ mitigation precedence, hazard record). Per-folder SysML views import these packa
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | EXT-PILOT: Pilot / operator | SUS-M1: Piloted walker | intent / alerts |
-| 2 | EXT-CREW: Ground crew & maintainers | SUS-GSE: Ground support equipment | servicing / lockout |
-| 3 | SUS-GSE: Ground support equipment | SUS-M1: Piloted walker | support / charging |
-| 4 | SUS-M1: Piloted walker | SUS-A1: Observation UAV | dock power, data, retention |
-| 5 | SUS-M1: Piloted walker | EXT-TERRAIN: Terrain & obstacles | foot contact loads |
-| 6 | SUS-M1: Piloted walker | EXT-BYST: Bystanders & nearby workers | motion envelope |
-| 7 | EXT-AIR: Airspace, GNSS & RF environment | SUS-A1: Observation UAV | GNSS / RF link |
-| 8 | EXT-SITE: Site infrastructure & logistics | SUS-GSE: Ground support equipment | fuel, power, transport |
-| 9 | SUS-M1: Piloted walker | EXT-ENV: Natural environment & receptors | exhaust, noise, fluids |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | EXT-PILOT: Pilot | SUS-M1: Piloted walker | intent / alerts | IF-001, IF-015 |
+| 2 | EXT-CREW: Ground crew and maintainers | SUS-GSE: Ground support, maintenance supports, charging and test equipment | servicing / lockout | — |
+| 3 | SUS-GSE: Ground support, maintenance supports, charging and test equipment | SUS-M1: Piloted walker | support / charging | IF-019 |
+| 4 | SUS-M1: Piloted walker | SUS-A1: Dockable observation UAV | dock power, data, retention | IF-006, IF-PX4-007, IF-PX4-009 |
+| 5 | SUS-M1: Piloted walker | EXT-TERRAIN: Terrain and obstacles | foot contact loads | IF-010 |
+| 6 | SUS-M1: Piloted walker | EXT-BYSTANDER: Bystanders | motion envelope | IF-012 |
+| 7 | EXT-GNSS-RF: GNSS and RF environment | SUS-A1: Dockable observation UAV | GNSS / RF link | IF-013 |
+| 8 | Site infrastructure and logistics | SUS-GSE: Ground support, maintenance supports, charging and test equipment | fuel, power, transport | — |
+| 9 | SUS-M1: Piloted walker | Natural environment and receptors | exhaust, noise, fluids | — |
 
 **Explicitly excluded:** weapons or armament of any kind; public-road operation; autonomous walker operation without a pilot
 
 ## SysML model
 
-Canonical SysML v2 textual models (model of record for every folder in this tree): [`SusanooSystem.sysml`](sysml/SusanooSystem.sysml), [`SusanooSafety.sysml`](sysml/SusanooSafety.sysml).
+Project SysML v2 model (model of record for every folder in this tree, validated by the OMG pilot in CI): [`Architecture.sysml`](../../../models/sysml/model/Architecture.sysml), [`SusanooLibrary.sysml`](../../../models/sysml/model/SusanooLibrary.sysml), [`Requirements.sysml`](../../../models/sysml/model/Requirements.sysml).
 
 ![Figure 4 · SysML block definition — SUS-I1 system breakdown](figures/fig-4-sysml-block-definition.svg)
 
@@ -58,7 +60,8 @@ Canonical SysML v2 textual models (model of record for every folder in this tree
 | Input | Source |
 |---|---|
 | Missions, phases, users | [`concept/CONOPS.md`](../../../concept/CONOPS.md) |
-| Decomposition and interfaces | [`concept/architecture.md`](../../../concept/architecture.md) |
+| Elements and interfaces (record) | [`architecture/item-definition.yaml`](../../../architecture/item-definition.yaml) |
+| SysML context and usage paths | [`models/sysml/model/Architecture.sysml`](../../../models/sysml/model/Architecture.sysml) |
 | Power, control and dock diagrams | [`docs/wiki/SUS-M1-Architecture-and-Boundaries.md`](../../../docs/wiki/SUS-M1-Architecture-and-Boundaries.md) |
 | Configuration ID SUS-I1-C001 | [`pdac/product.yaml`](../../../pdac/product.yaml) |
 
@@ -72,9 +75,6 @@ Canonical SysML v2 textual models (model of record for every folder in this tree
 
 | Item | Description | State |
 |---|---|---|
-| [`sysml/SusanooSystem.sysml`](sysml/SusanooSystem.sysml) | Canonical structure model (parts | present |
-| [`sysml/SusanooSafety.sysml`](sysml/SusanooSafety.sysml) | Canonical safety vocabulary (enums | present |
-| `interface-register.csv` | Controlled interface list with hazard links | planned |
 | [`figures/`](figures/) | Generated SVG figures (do not edit) | generated |
 
 <!-- END GENERATED: content below this line is human-authored and preserved -->

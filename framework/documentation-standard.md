@@ -77,8 +77,10 @@ horizontal scrolling.
 ## Modelling rules
 
 1. **SysML v2 textual notation is the model of record.** Figures are drawn from the same data.
-2. Canonical packages live in `safety/mil-std-882e/00-system-definition/sysml/`: `SusanooSystem` and
-   `SusanooSafety`. Every folder view imports both; do not redefine system parts or risk enums locally.
+2. There is one system model: [`models/sysml/model`](../models/sysml/model/) (`SusanooArchitecture`,
+   `SusanooLibrary`, `SusanooRequirements`), checked against the records in `architecture/` and `requirements/`.
+   Elements, externals and interfaces are read from [`architecture/item-definition.yaml`](../architecture/item-definition.yaml).
+   Every folder view imports the model; do not redefine system parts, requirements or risk enums locally.
 3. A model element has one owner. Other folders reference it rather than restating it: requirements by
    qualified name; state machines by reading the owning `.sysml` file. Task 206 (O&SHA), for example,
    analyses `ConceptOperations::OperatingModes`, and its figure is drawn from `concept/ConceptOperations.sysml`.

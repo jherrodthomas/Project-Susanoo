@@ -27,23 +27,23 @@ ARP4761A is a separate artifact with a separate classification scale.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | Pilot command | Locomotion and balance | intent |
-| 2 | Protective stop | Locomotion and balance | inhibit |
-| 3 | Dock retention | UAV flight control | rotor inhibit |
-| 4 | Locomotion and balance | Physical implementation | allocation |
-| 5 | UAV flight control | ARP4761A aircraft FHA | cross-reference only |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | Pilot command | Locomotion and balance | intent | — |
+| 2 | Protective stop | Locomotion and balance | inhibit | — |
+| 3 | Dock retention | UAV flight control | rotor inhibit | — |
+| 4 | Locomotion and balance | Physical implementation | allocation | — |
+| 5 | UAV flight control | ARP4761A aircraft FHA | cross-reference only | — |
 
 ## SysML model
 
-SysML v2 textual view: [`Task208_FHA.sysml`](Task208_FHA.sysml), generated from the catalog. It imports [`SusanooSystem`](../../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`Task208_FHA.sysml`](Task208_FHA.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML activity — functional chain under analysis](figures/fig-4-sysml-activity.svg)
 
@@ -58,8 +58,8 @@ SysML v2 textual view: [`Task208_FHA.sysml`](Task208_FHA.sysml), generated from 
 
 package Task208_FHA {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def WalkerFunctionalChain {
         action senseIntent { doc /* Sense pilot intent */ }
         action estimateState { doc /* Estimate walker state */ }

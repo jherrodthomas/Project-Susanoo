@@ -4,8 +4,8 @@
 
 package RiskReduction {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     item def MitigationImplementation {
         attribute mitigationId : String;
         attribute allocatedTo : String;

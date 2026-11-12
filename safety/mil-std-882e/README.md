@@ -30,26 +30,26 @@ this tree holds the actual records and evidence.
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | EXT-PILOT: Pilot / operator | SUS-M1: Piloted walker | commands / feedback |
-| 2 | EXT-CREW: Ground crew & maintainers | SUS-GSE: Ground support equipment | maintenance / lockout |
-| 3 | SUS-M1: Piloted walker | EXT-BYST: Bystanders & nearby workers | motion / contact hazards |
-| 4 | EXT-TERRAIN: Terrain & obstacles | SUS-M1: Piloted walker | ground contact loads |
-| 5 | EXT-AIR: Airspace, GNSS & RF environment | SUS-A1: Observation UAV | navigation / RF link |
-| 6 | SUS-M1: Piloted walker | EXT-ENV: Natural environment & receptors | emissions / fluids |
-| 7 | SUS-M1: Piloted walker | SUS-A1: Observation UAV | dock / undock |
-| 8 | _SUS-I1 system safety program (boundary)_ | EXT-AUTH: Risk acceptance authority | residual risk for decision |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | EXT-PILOT: Pilot | SUS-M1: Piloted walker | commands / feedback | IF-001, IF-015 |
+| 2 | EXT-CREW: Ground crew and maintainers | SUS-GSE: Ground support, maintenance supports, charging and test equipment | maintenance / lockout | — |
+| 3 | SUS-M1: Piloted walker | EXT-BYSTANDER: Bystanders | motion / contact hazards | IF-012 |
+| 4 | EXT-TERRAIN: Terrain and obstacles | SUS-M1: Piloted walker | ground contact loads | IF-010 |
+| 5 | EXT-GNSS-RF: GNSS and RF environment | SUS-A1: Dockable observation UAV | navigation / RF link | IF-013 |
+| 6 | SUS-M1: Piloted walker | Natural environment and receptors | emissions / fluids | — |
+| 7 | SUS-M1: Piloted walker | SUS-A1: Dockable observation UAV | dock / undock | IF-006, IF-PX4-007, IF-PX4-009 |
+| 8 | _SUS-I1 system safety program (boundary)_ | Risk acceptance authority | residual risk for decision | — |
 
 ## SysML model
 
-SysML v2 textual view: [`SafetyProgramFlow.sysml`](SafetyProgramFlow.sysml), generated from the catalog. It imports [`SusanooSystem`](00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`SafetyProgramFlow.sysml`](SafetyProgramFlow.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML activity — eight-element iterative process](figures/fig-4-sysml-activity.svg)
 
@@ -62,8 +62,8 @@ SysML v2 textual view: [`SafetyProgramFlow.sysml`](SafetyProgramFlow.sysml), gen
 
 package SafetyProgramFlow {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     action def SystemSafetyProcess {
         doc /* Iterative MIL-STD-882E process applied to SUS-I1 configurations. */
         action documentApproach { doc /* 1 Document approach - SSPP, HMP */ }

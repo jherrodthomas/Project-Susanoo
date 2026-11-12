@@ -55,3 +55,21 @@ def state_machine(path: Path, name: str) -> dict:
             raise SysMLParseError(f"{path}: transition {a} -> {b} references an undeclared state")
     return {"name": name, "doc": doc.group(1) if doc else "", "initial": init.group(1), "states": states,
             "transitions": trans}
+
+
+def definition(path: Path, name: str) -> dict:
+    """{'kind': 'enum'|'attribute'|'item'|'part', 'members': [...]} for a definition in a .sysml file.
+
+    Enum members are the literal names; other definitions list 'name : Type' for each attribute or ref feature."""
+    text = Path(path).read_text()
+    m = re.search(rf"\b(enum|attribute|item|part) def\s+(?:<'[^']*'>\s+)?{re.escape(name)}\s*\{{", text)
+    if not m:
+        raise SysMLParseError(f"{path}: no definition named {name}")
+    body = _block(text, rf"\b{m.group(1)} def\s+(?:<'[^']*'>\s+)?{re.escape(name)}\s*\{{")
+    body = re.sub(r"doc\s*/\*.*?\*/", "", body, flags=re.S)
+    if m.group(1) == "enum":
+        members = re.findall(r"^\s*enum\s+(\w+)\s*;", body, re.M)
+    else:
+        members = [f"{n} : {t.split('::')[-1]}{mult or ''}" for n, t, mult in re.findall(
+            r"^\s*(?:ref\s+)?(?:attribute|item|part)\s+(\w+)\s*:\s*([\w:]+)(\[[^\]]*\])?\s*;", body, re.M)]
+    return {"kind": m.group(1), "members": members}

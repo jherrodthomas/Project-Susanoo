@@ -4,8 +4,8 @@
 
 package Task108_HMMP {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def HazMatInventory {
         ref item entries : HazMatEntry[0..*];
     }

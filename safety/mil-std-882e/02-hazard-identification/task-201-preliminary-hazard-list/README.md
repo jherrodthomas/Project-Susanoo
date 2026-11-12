@@ -26,25 +26,25 @@ crush and entrapment, stored energy, fire, rotor strike, docking retention failu
 
 ![Figure 2 · Block diagram](figures/fig-2-block-diagram.svg)
 
-Source of truth: [`SusanooSystem.sysml`](../../00-system-definition/sysml/SusanooSystem.sysml).
+Elements and interfaces: [`architecture/item-definition.yaml`](../../../../architecture/item-definition.yaml); SysML: [`Architecture.sysml`](../../../../models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
 ![Figure 3 · Boundary diagram](figures/fig-3-boundary-diagram.svg)
 
-| # | From | To | Crossing / interaction |
-|---|---|---|---|
-| 1 | EXT-PILOT: Pilot / operator | SUS-M1: Piloted walker | intent, workload |
-| 2 | SUS-M1: Piloted walker | EXT-BYST: Bystanders & nearby workers | motion envelope |
-| 3 | EXT-TERRAIN: Terrain & obstacles | SUS-M1: Piloted walker | slope, soft ground |
-| 4 | EXT-AIR: Airspace, GNSS & RF environment | SUS-A1: Observation UAV | wind, RF, GNSS |
-| 5 | SUS-M1: Piloted walker | SUS-A1: Observation UAV | launch / recovery |
+| # | From | To | Crossing / interaction | Interface (item definition) |
+|---|---|---|---|---|
+| 1 | EXT-PILOT: Pilot | SUS-M1: Piloted walker | intent, workload | IF-001, IF-015 |
+| 2 | SUS-M1: Piloted walker | EXT-BYSTANDER: Bystanders | motion envelope | IF-012 |
+| 3 | EXT-TERRAIN: Terrain and obstacles | SUS-M1: Piloted walker | slope, soft ground | IF-010 |
+| 4 | EXT-GNSS-RF: GNSS and RF environment | SUS-A1: Dockable observation UAV | wind, RF, GNSS | IF-013 |
+| 5 | SUS-M1: Piloted walker | SUS-A1: Dockable observation UAV | launch / recovery | IF-006, IF-PX4-007, IF-PX4-009 |
 
 **Explicitly excluded:** detailed component failure modes (Task 204)
 
 ## SysML model
 
-SysML v2 textual view: [`Task201_PHL.sysml`](Task201_PHL.sysml), generated from the catalog. It imports [`SusanooSystem`](../../00-system-definition/sysml/SusanooSystem.sysml) and [`SusanooSafety`](../../00-system-definition/sysml/SusanooSafety.sysml). The figures are drawn from the same data; the `.sysml` file is the model of record.
+SysML v2 textual view: [`Task201_PHL.sysml`](Task201_PHL.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](../../../../models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
 ![Figure 4 · SysML block definition — PHL entry](figures/fig-4-sysml-block-definition.svg)
 
@@ -57,8 +57,8 @@ SysML v2 textual view: [`Task201_PHL.sysml`](Task201_PHL.sysml), generated from 
 
 package Task201_PHL {
     private import ScalarValues::*;
-    private import SusanooSystem::*;
-    private import SusanooSafety::*;
+    private import SusanooLibrary::*;
+    private import SusanooArchitecture::*;
     part def PreliminaryHazardList {
         attribute configurationId : String;
         attribute revision : String;
