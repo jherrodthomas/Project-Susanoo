@@ -20,7 +20,7 @@
     "load_holding": "fails",
     "pilot_reaction_s": 2.1,
     "slope_deg": 15.5,
-    "stride_offset_m": 0.19,
+    "stride_offset_m": 0.08,
     "tau_leak_s": 0.05
    },
    "probes": [
@@ -32,7 +32,7 @@
     {
      "name": "load holding works",
      "outcome": "safe",
-     "rho": -0.6375
+     "rho": -0.4083
     },
     {
      "name": "flat ground",
@@ -41,8 +41,8 @@
     },
     {
      "name": "slow leak (tau 3 s)",
-     "outcome": "tip",
-     "rho": -2.3871
+     "outcome": "hard-drop",
+     "rho": -2.0079
     }
    ],
    "rho": -3.835,
@@ -67,7 +67,7 @@
     "load_holding": "fails",
     "pilot_reaction_s": 0.6,
     "slope_deg": 16.0,
-    "stride_offset_m": 0.03,
+    "stride_offset_m": 0.01,
     "tau_leak_s": 0.06
    },
    "probes": [
@@ -79,7 +79,7 @@
     {
      "name": "load holding works",
      "outcome": "safe",
-     "rho": -0.2887
+     "rho": -0.249
     },
     {
      "name": "flat ground",
@@ -114,7 +114,7 @@
     "load_holding": "fails",
     "pilot_reaction_s": 0.9,
     "slope_deg": 8.5,
-    "stride_offset_m": 0.25,
+    "stride_offset_m": 0.1,
     "tau_leak_s": 0.05
    },
    "probes": [
@@ -126,7 +126,7 @@
     {
      "name": "load holding works",
      "outcome": "safe",
-     "rho": -0.5591
+     "rho": -0.2531
     },
     {
      "name": "flat ground",
@@ -135,8 +135,8 @@
     },
     {
      "name": "slow leak (tau 3 s)",
-     "outcome": "tip",
-     "rho": -1.7202
+     "outcome": "hard-drop",
+     "rho": -1.572
     }
    ],
    "rho": -3.835,
@@ -146,150 +146,150 @@
    "cause_gap": null,
    "events": {
     "alarm_t": 1.025,
-    "impact_speed": 4.797,
+    "impact_speed": 4.816,
     "lock_t": null,
-    "mishap_t": 1.605,
-    "stop_t": null
-   },
-   "family": "SF-01",
-   "finding": "Walker tips with no fault: case lies outside the nominal gait capability (terrain limit for CONOPS section 4)",
-   "hazard": null,
-   "id": "EC-04",
-   "nofault_outcome": "tip",
-   "outcome": "hard-drop",
-   "params": {
-    "load_holding": "fails",
-    "pilot_reaction_s": 2.0,
-    "slope_deg": 20.0,
-    "stride_offset_m": 0.25,
-    "tau_leak_s": 0.07
-   },
-   "probes": [
-    {
-     "name": "pilot reacts in 0.5 s",
-     "outcome": "hard-drop",
-     "rho": -3.797
-    },
-    {
-     "name": "load holding works",
-     "outcome": "tip",
-     "rho": -1.4679
-    },
-    {
-     "name": "flat ground",
-     "outcome": "hard-drop",
-     "rho": -3.797
-    },
-    {
-     "name": "slow leak (tau 3 s)",
-     "outcome": "tip",
-     "rho": -2.0305
-    }
-   ],
-   "rho": -3.797,
-   "stop_active": false
-  },
-  {
-   "cause_gap": null,
-   "events": {
-    "alarm_t": 1.065,
-    "impact_speed": 4.589,
-    "lock_t": null,
-    "mishap_t": 1.765,
-    "stop_t": null
-   },
-   "family": "SF-01",
-   "finding": "Walker tips with no fault: case lies outside the nominal gait capability (terrain limit for CONOPS section 4)",
-   "hazard": null,
-   "id": "EC-05",
-   "nofault_outcome": "tip",
-   "outcome": "hard-drop",
-   "params": {
-    "load_holding": "fails",
-    "pilot_reaction_s": 1.6,
-    "slope_deg": 19.0,
-    "stride_offset_m": 0.26,
-    "tau_leak_s": 0.18
-   },
-   "probes": [
-    {
-     "name": "pilot reacts in 0.5 s",
-     "outcome": "hard-drop",
-     "rho": -3.589
-    },
-    {
-     "name": "load holding works",
-     "outcome": "tip",
-     "rho": -1.4754
-    },
-    {
-     "name": "flat ground",
-     "outcome": "hard-drop",
-     "rho": -3.589
-    },
-    {
-     "name": "slow leak (tau 3 s)",
-     "outcome": "tip",
-     "rho": -2.0779
-    }
-   ],
-   "rho": -3.589,
-   "stop_active": false
-  },
-  {
-   "cause_gap": null,
-   "events": {
-    "alarm_t": 1.165,
-    "impact_speed": 0.0,
-    "lock_t": null,
-    "mishap_t": 2.06,
+    "mishap_t": 1.59,
     "stop_t": null
    },
    "family": "SF-01",
    "finding": null,
-   "hazard": "HAZ-WLK-002",
-   "id": "EC-06",
+   "hazard": "HAZ-PIL-002",
+   "id": "EC-04",
    "nofault_outcome": "safe",
-   "outcome": "tip",
+   "outcome": "hard-drop",
    "params": {
     "load_holding": "fails",
-    "pilot_reaction_s": 2.1,
-    "slope_deg": 17.0,
-    "stride_offset_m": 0.27,
-    "tau_leak_s": 0.45
+    "pilot_reaction_s": 1.8,
+    "slope_deg": 12.0,
+    "stride_offset_m": 0.02,
+    "tau_leak_s": 0.06
    },
    "probes": [
     {
      "name": "pilot reacts in 0.5 s",
-     "outcome": "tip",
-     "rho": -2.7495
+     "outcome": "hard-drop",
+     "rho": -3.816
     },
     {
      "name": "load holding works",
-     "outcome": "tip",
-     "rho": -1.4578
+     "outcome": "safe",
+     "rho": -0.1589
     },
     {
      "name": "flat ground",
      "outcome": "hard-drop",
-     "rho": -3.062
+     "rho": -3.816
     },
     {
      "name": "slow leak (tau 3 s)",
-     "outcome": "tip",
-     "rho": -2.1768
+     "outcome": "hard-drop",
+     "rho": -1.572
     }
    ],
-   "rho": -2.7495,
+   "rho": -3.816,
    "stop_active": false
   },
   {
    "cause_gap": null,
    "events": {
-    "alarm_t": 1.915,
+    "alarm_t": 1.02,
+    "impact_speed": 4.835,
+    "lock_t": null,
+    "mishap_t": 1.575,
+    "stop_t": null
+   },
+   "family": "SF-01",
+   "finding": null,
+   "hazard": "HAZ-PIL-002",
+   "id": "EC-05",
+   "nofault_outcome": "safe",
+   "outcome": "hard-drop",
+   "params": {
+    "load_holding": "fails",
+    "pilot_reaction_s": 3.0,
+    "slope_deg": 0.0,
+    "stride_offset_m": 0.05,
+    "tau_leak_s": 0.05
+   },
+   "probes": [
+    {
+     "name": "pilot reacts in 0.5 s",
+     "outcome": "hard-drop",
+     "rho": -3.835
+    },
+    {
+     "name": "load holding works",
+     "outcome": "safe",
+     "rho": 0.0419
+    },
+    {
+     "name": "flat ground",
+     "outcome": "hard-drop",
+     "rho": -3.835
+    },
+    {
+     "name": "slow leak (tau 3 s)",
+     "outcome": "hard-drop",
+     "rho": -1.572
+    }
+   ],
+   "rho": -3.835,
+   "stop_active": false
+  },
+  {
+   "cause_gap": null,
+   "events": {
+    "alarm_t": 1.025,
+    "impact_speed": 4.816,
+    "lock_t": null,
+    "mishap_t": 1.59,
+    "stop_t": null
+   },
+   "family": "SF-01",
+   "finding": null,
+   "hazard": "HAZ-PIL-002",
+   "id": "EC-06",
+   "nofault_outcome": "safe",
+   "outcome": "hard-drop",
+   "params": {
+    "load_holding": "fails",
+    "pilot_reaction_s": 1.3,
+    "slope_deg": 1.5,
+    "stride_offset_m": 0.04,
+    "tau_leak_s": 0.06
+   },
+   "probes": [
+    {
+     "name": "pilot reacts in 0.5 s",
+     "outcome": "hard-drop",
+     "rho": -3.816
+    },
+    {
+     "name": "load holding works",
+     "outcome": "safe",
+     "rho": 0.0511
+    },
+    {
+     "name": "flat ground",
+     "outcome": "hard-drop",
+     "rho": -3.816
+    },
+    {
+     "name": "slow leak (tau 3 s)",
+     "outcome": "hard-drop",
+     "rho": -1.572
+    }
+   ],
+   "rho": -3.816,
+   "stop_active": false
+  },
+  {
+   "cause_gap": null,
+   "events": {
+    "alarm_t": 1.535,
     "impact_speed": 0.0,
-    "lock_t": 3.455,
-    "mishap_t": 3.485,
+    "lock_t": null,
+    "mishap_t": 3.09,
     "stop_t": null
    },
    "family": "SF-01",
@@ -299,83 +299,83 @@
    "nofault_outcome": "safe",
    "outcome": "tip",
    "params": {
-    "load_holding": "works",
-    "pilot_reaction_s": 2.4,
-    "slope_deg": 16.0,
-    "stride_offset_m": 0.16,
-    "tau_leak_s": 2.56
+    "load_holding": "fails",
+    "pilot_reaction_s": 2.3,
+    "slope_deg": 18.0,
+    "stride_offset_m": 0.1,
+    "tau_leak_s": 1.49
    },
    "probes": [
     {
      "name": "pilot reacts in 0.5 s",
-     "outcome": "safe",
-     "rho": -0.9524
+     "outcome": "hard-drop",
+     "rho": -2.108
     },
     {
      "name": "load holding works",
      "outcome": "tip",
-     "rho": -2.3252
+     "rho": -1.4834
     },
     {
      "name": "flat ground",
-     "outcome": "safe",
-     "rho": 0.1223
+     "outcome": "hard-drop",
+     "rho": -2.108
     },
     {
      "name": "slow leak (tau 3 s)",
      "outcome": "tip",
-     "rho": -2.4403
+     "rho": -2.5189
     }
    ],
-   "rho": -2.3252,
+   "rho": -2.6318,
    "stop_active": false
   },
   {
    "cause_gap": null,
    "events": {
-    "alarm_t": 1.695,
+    "alarm_t": 2.46,
     "impact_speed": 0.0,
-    "lock_t": null,
-    "mishap_t": 2.52,
-    "stop_t": null
+    "lock_t": 4.855,
+    "mishap_t": 4.9,
+    "stop_t": 3.865
    },
    "family": "SF-01",
-   "finding": "Walker tips with no fault: case lies outside the nominal gait capability (terrain limit for CONOPS section 4)",
-   "hazard": null,
+   "finding": null,
+   "hazard": "HAZ-WLK-002",
    "id": "EC-08",
-   "nofault_outcome": "tip",
+   "nofault_outcome": "safe",
    "outcome": "tip",
    "params": {
     "load_holding": "works",
-    "pilot_reaction_s": 2.4,
-    "slope_deg": 19.5,
-    "stride_offset_m": 0.24,
-    "tau_leak_s": 1.94
+    "pilot_reaction_s": 1.4,
+    "slope_deg": 16.5,
+    "stride_offset_m": 0.1,
+    "tau_leak_s": 4.09
    },
    "probes": [
     {
      "name": "pilot reacts in 0.5 s",
-     "outcome": "tip",
-     "rho": -2.3188
+     "outcome": "safe",
+     "rho": -0.1692
     },
     {
      "name": "load holding works",
      "outcome": "tip",
-     "rho": -2.3188
+     "rho": -1.532
     },
     {
      "name": "flat ground",
      "outcome": "safe",
-     "rho": -0.1004
+     "rho": 0.3075
     },
     {
      "name": "slow leak (tau 3 s)",
-     "outcome": "tip",
-     "rho": -2.1511
+     "outcome": "safe",
+     "rho": -1.0483
     }
    ],
-   "rho": -2.3188,
-   "stop_active": false
+   "rho": -1.532,
+   "stop_active": true
   }
  ],
  "falsification": {
@@ -412,7 +412,7 @@
    "stride_offset_m": {
     "uniform": [
      0.0,
-     0.3
+     0.12
     ]
    },
    "tau_leak_s": {
@@ -424,17 +424,7 @@
   },
   "title": "Hydraulic supply loss in mid-stride on a slope"
  },
- "findings": [
-  {
-   "edge_cases": [
-    "EC-04",
-    "EC-05",
-    "EC-08"
-   ],
-   "id": "FND-SF-01-01",
-   "text": "Walker tips with no fault: case lies outside the nominal gait capability (terrain limit for CONOPS section 4)"
-  }
- ],
+ "findings": [],
  "map": [
   [
    9.05,
@@ -514,7 +504,7 @@
   [
    19.71,
    1.73,
-   "tip"
+   "hard-drop"
   ],
   [
    8.42,
@@ -524,7 +514,7 @@
   [
    19.96,
    0.055,
-   "tip"
+   "safe"
   ],
   [
    0.84,
@@ -569,7 +559,7 @@
   [
    18.58,
    4.501,
-   "tip"
+   "safe"
   ],
   [
    5.6,
@@ -734,7 +724,7 @@
   [
    4.27,
    3.155,
-   "tip"
+   "hard-drop"
   ],
   [
    5.24,
@@ -774,7 +764,7 @@
   [
    19.1,
    2.749,
-   "tip"
+   "safe"
   ],
   [
    19.37,
@@ -829,12 +819,12 @@
   [
    16.5,
    0.852,
-   "tip"
+   "safe"
   ],
   [
    10.59,
    2.52,
-   "tip"
+   "safe"
   ],
   [
    18.3,
@@ -854,7 +844,7 @@
   [
    8.7,
    3.814,
-   "tip"
+   "safe"
   ],
   [
    8.06,
@@ -864,7 +854,7 @@
   [
    18.23,
    4.322,
-   "tip"
+   "hard-drop"
   ],
   [
    10.06,
@@ -909,7 +899,7 @@
   [
    16.03,
    1.283,
-   "tip"
+   "hard-drop"
   ],
   [
    11.39,
@@ -974,7 +964,7 @@
   [
    7.73,
    3.769,
-   "tip"
+   "hard-drop"
   ],
   [
    10.84,
@@ -1079,7 +1069,7 @@
   [
    13.07,
    4.757,
-   "tip"
+   "safe"
   ],
   [
    8.55,
@@ -1169,7 +1159,7 @@
   [
    14.16,
    3.38,
-   "tip"
+   "hard-drop"
   ],
   [
    17.07,
@@ -1219,7 +1209,7 @@
   [
    17.07,
    0.466,
-   "tip"
+   "safe"
   ],
   [
    9.65,
@@ -1264,7 +1254,7 @@
   [
    17.79,
    1.22,
-   "tip"
+   "hard-drop"
   ],
   [
    0.38,
@@ -1334,7 +1324,7 @@
   [
    8.68,
    1.743,
-   "tip"
+   "safe"
   ],
   [
    12.94,
@@ -1344,7 +1334,7 @@
   [
    18.43,
    0.881,
-   "tip"
+   "hard-drop"
   ],
   [
    19.64,
@@ -1484,7 +1474,7 @@
   [
    11.34,
    3.205,
-   "tip"
+   "safe"
   ],
   [
    17.64,
@@ -1504,7 +1494,7 @@
   [
    17.97,
    0.206,
-   "tip"
+   "hard-drop"
   ],
   [
    17.57,
@@ -1529,7 +1519,7 @@
   [
    19.23,
    0.177,
-   "tip"
+   "hard-drop"
   ],
   [
    13.92,
@@ -1659,7 +1649,7 @@
   [
    13.6,
    1.358,
-   "tip"
+   "hard-drop"
   ],
   [
    5.06,
@@ -1694,7 +1684,7 @@
   [
    8.94,
    4.848,
-   "tip"
+   "safe"
   ],
   [
    10.81,
@@ -1784,7 +1774,7 @@
   [
    14.86,
    3.266,
-   "tip"
+   "hard-drop"
   ],
   [
    14.03,
@@ -1814,7 +1804,7 @@
   [
    19.09,
    0.266,
-   "tip"
+   "safe"
   ],
   [
    12.55,
@@ -1859,7 +1849,7 @@
   [
    13.91,
    1.181,
-   "tip"
+   "safe"
   ],
   [
    6.66,
@@ -1879,7 +1869,7 @@
   [
    19.78,
    2.161,
-   "tip"
+   "hard-drop"
   ],
   [
    10.25,
@@ -1914,7 +1904,7 @@
   [
    19.48,
    0.439,
-   "tip"
+   "safe"
   ],
   [
    5.36,
@@ -1924,7 +1914,7 @@
   [
    18.67,
    4.749,
-   "tip"
+   "safe"
   ],
   [
    17.42,
@@ -1934,7 +1924,7 @@
   [
    8.09,
    3.224,
-   "tip"
+   "safe"
   ],
   [
    7.47,
@@ -1989,12 +1979,12 @@
   [
    5.54,
    3.773,
-   "tip"
+   "hard-drop"
   ],
   [
    11.43,
    3.807,
-   "tip"
+   "safe"
   ],
   [
    10.78,
@@ -2014,7 +2004,7 @@
   [
    7.99,
    2.019,
-   "tip"
+   "safe"
   ],
   [
    18.72,
@@ -2114,7 +2104,7 @@
   [
    4.68,
    2.396,
-   "tip"
+   "safe"
   ],
   [
    15.95,
@@ -2139,7 +2129,7 @@
   [
    16.0,
    2.565,
-   "tip"
+   "safe"
   ],
   [
    15.94,
@@ -2149,7 +2139,7 @@
   [
    18.58,
    4.069,
-   "tip"
+   "hard-drop"
   ],
   [
    3.63,
@@ -2164,7 +2154,7 @@
   [
    11.2,
    4.872,
-   "tip"
+   "hard-drop"
   ],
   [
    16.89,
@@ -2274,7 +2264,7 @@
   [
    13.27,
    4.353,
-   "tip"
+   "hard-drop"
   ],
   [
    9.37,
@@ -2324,7 +2314,7 @@
   [
    18.24,
    0.61,
-   "tip"
+   "hard-drop"
   ],
   [
    8.32,
@@ -2389,7 +2379,7 @@
   [
    11.79,
    2.062,
-   "tip"
+   "hard-drop"
   ],
   [
    8.05,
@@ -2424,7 +2414,7 @@
   [
    13.54,
    2.001,
-   "tip"
+   "safe"
   ],
   [
    16.71,
@@ -2439,9 +2429,9 @@
  ],
  "monte_carlo": {
   "by_outcome": {
-   "hard-drop": 177,
-   "safe": 173,
-   "tip": 50
+   "hard-drop": 196,
+   "safe": 194,
+   "tip": 10
   },
   "n": 400,
   "split": {
@@ -2450,7 +2440,7 @@
     "n": 201
    },
    "load_holding=works": {
-    "failures": 26,
+    "failures": 5,
     "n": 199
    }
   }

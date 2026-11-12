@@ -27,7 +27,7 @@ ORIGIN = (360, 400)   # px of the support centre on the ground
 
 SCENES = [
     {"id": "SC-01", "hazard": "HAZ-WLK-002", "title": "Slow supply leak on a slope: balance lost before the hold engages",
-     "source": "edge case EC-07 (search SF-01)", "edge": ("SF-01", "EC-07")},
+     "source": "edge case EC-08 (search SF-01)", "edge": ("SF-01", "EC-08")},
     {"id": "SC-02", "hazard": "HAZ-SAF-001", "title": "Protective stop removes leg force instead of crouching",
      "source": "fault FLT-03", "performed": {"fault": "FLT-03"}, "intended": {"stop_request_s": 1.0}},
     {"id": "SC-03", "hazard": "HAZ-WLK-001", "title": "Frozen posture feedback with no staleness monitor",

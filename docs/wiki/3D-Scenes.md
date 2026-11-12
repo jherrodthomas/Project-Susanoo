@@ -8,13 +8,13 @@ Interactive three.js scenes replaying plant, failure-search and PX4 SITL results
 
 ### S3-01 · Slow supply leak on a slope; balance lost before the hold engages
 
-HAZ-WLK-002 · walker · source SF-01 EC-07 · outcome **tip** · hillside, clear
+HAZ-WLK-002 · walker · source SF-01 EC-08 · outcome **tip** · hillside, clear
 
 ![S3-01](images/3d-s3-01.png)
 
 ### S3-01-dusk · Slow supply leak on a slope; balance lost before the hold engages
 
-HAZ-WLK-002 · walker · source SF-01 EC-07 · outcome **tip** · hillside, dusk
+HAZ-WLK-002 · walker · source SF-01 EC-08 · outcome **tip** · hillside, dusk
 
 ![S3-01-dusk](images/3d-s3-01-dusk.png)
 

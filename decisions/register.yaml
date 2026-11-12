@@ -221,6 +221,8 @@ decisions:
     blocks: [SYS-008 envelope, HAZ-WLK-002 M3, failure-search space for SF-01]
     gate: G2
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-12
+    answer: {choice: offset-012, by: lead, at: 2026-11-12, via: chat, note: "cap the CoM offset at 0.12 m"}
+    applied_in: [concept/CONOPS.md, architecture/item-definition.yaml, models/sysml/model/Architecture.sysml, requirements/SYS-008.yaml, safety/hazards/HAZ-WLK-002.yaml, sim/search/families.yaml]
     sources: [sim/results/search-SF-01.md, sim/results/l2-crosscheck.md, safety/hazards/HAZ-WLK-002.yaml]
