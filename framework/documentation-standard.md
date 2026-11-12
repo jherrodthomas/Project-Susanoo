@@ -60,6 +60,21 @@ Every diagram section embeds a generated SVG from the folder's `figures/` direct
 cannot hold the house style, and CI rejects it in enforced roots. A metadata table and a status line stating
 what is **not** claimed precede section 1.
 
+## Folder previews
+
+Every folder in the repository shows a reader what it holds before they open a file: a main figure and a thumbnail
+gallery, each linking to the full figure or its page. Folders in the enforced roots above meet this through their
+README sections. Every other folder is listed in [`docs/previews.yaml`](../docs/previews.yaml):
+
+- **No README:** `python -m tools.previews.build_previews` writes one, with a title, purpose, the preview and a
+  contents table built from the folder (record titles are read from the files).
+- **Hand-written README:** it inserts a preview block under the page's opening and leaves the rest alone.
+- **No figure yet:** the entry says what the figure will show (`planned`) until it exists.
+- **Exempt:** tests, tooling internals and `figures/` stores, which the README above them already shows.
+
+CI fails on a folder with no entry, on a missing image and on a stale preview, so a new folder gets a preview from
+the start.
+
 ## Abbreviations, acronyms and record codes
 
 Readers should never meet an unexplained abbreviation. Every term is defined once, in
