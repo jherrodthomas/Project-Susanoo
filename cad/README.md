@@ -1,6 +1,8 @@
 # Concept layouts (FreeCAD) — review and alignment
 
-**ID:** SUS-CAD-001 · **Revision:** 0.14-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CAD-001 · **Revision:** 0.15-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.15:* stowed arm pose for walking (§2a): claws folded up beside the pod; walk clip re-rendered.
 
 *Changes in 0.14:* Blender walk-cycle animation of CL-05 in military livery, posed frame by frame from the CAD (§2a).
 
@@ -65,7 +67,7 @@ Rendered with Blender 5.3 (Cycles) by [`tools/cad/blender_render.py`](../tools/c
 
 **Walk cycle** (military livery; `cl05.py --walk 48`, then `blender_walk.py`): [![CL-05 walking in military livery, side view tracking alongside, with a 1.75 m person standing still for scale](renders/blender/CL-05-walk-military.gif)](renders/blender/CL-05-walk-military.mp4)
 
-Every frame is the build123d model re-posed by the gait in [`params/CL-05.yaml`](params/CL-05.yaml) (`walk:`): stride 1.0 m, each foot planted for 60 % of the cycle and swung on a 0.22 m arc for the rest, with a small crouch and body bob. The knees are solved from hip and ankle positions, so they always bend backward exactly as in the CAD (unlike the AI walk clip in [`concept-art/`](concept-art/README.md)). This is concept kinematics for communication only: there is no dynamics, balance, actuator or load model behind it, and it says nothing about whether the walker can walk this way. Gait stability is still open under SYS-009 (HAZ-006, HAZ-021). The claws are shown in the standing pose, held forward; SYS-013 expects them stowed while walking (HAZ-009), and a stowed walking pose for the arms is not modelled yet.
+Every frame is the build123d model re-posed by the gait in [`params/CL-05.yaml`](params/CL-05.yaml) (`walk:`): stride 1.0 m, each foot planted for 60 % of the cycle and swung on a 0.22 m arc for the rest, with a small crouch and body bob. The knees are solved from hip and ankle positions, so they always bend backward exactly as in the CAD (unlike the AI walk clip in [`concept-art/`](concept-art/README.md)). This is concept kinematics for communication only: there is no dynamics, balance, actuator or load model behind it, and it says nothing about whether the walker can walk this way. Gait stability is still open under SYS-009 (HAZ-006, HAZ-021). The arms are stowed while walking, as SYS-013 expects (HAZ-009): upper arm 45° down beside the hull and forearm folded nearly upright (`walk: arms`), which lifts the lowest claw from 0.85 m to 2.43 m above the ground and pulls the claw tips back from 1.77 m to 1.49 m forward of the hips. Through the cycle the lowest point of the arm stays above 2.1 m and the arms keep 0.42 m from the legs. A tighter fold puts the claws into their own upper arm or the hull; at this fold they clear the hull by 0.10 m and the upper arm by 0.09 m, placeholder-geometry figures only. A 2.4 m claw height is still above a person's head beside a moving walker: the stowed pose reduces the strike zone, it does not remove it, and arm stowage must be interlocked with walking (SYS-013).
 
 **AI concept art** made from these renders (Higgsfield, image-to-image) is kept apart in [`concept-art/`](concept-art/README.md), each image labelled with its source render and where it departs from the CAD. It is for communication, never for dimensions.
 

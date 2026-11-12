@@ -90,3 +90,6 @@ walk:                            # concept walk cycle for the Blender animation 
   lift: 0.22                     # peak foot lift during swing
   crouch: 0.06                   # hip lowered from standing while walking
   bob: 0.025                     # vertical hip bob amplitude
+  arms:                          # arms stowed while walking (SYS-013, HAZ-009): claws tucked up beside the pod
+    arm_drop_deg: 45             # upper arm angled down beside the hull
+    fore_angle_deg: 80           # forearm folded nearly upright; a tighter fold puts the claws into the arm or hull

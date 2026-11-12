@@ -108,7 +108,7 @@ def fold_knee(hip, ankle, thigh, shank):
 
 
 def build(p: dict, common: dict, posture: str = "standing", gait: dict | None = None):
-    """gait (walk animation frames only): {"hip_z": m, "legs": {1: (ankle_x, lift), -1: (...)}} per frame."""
+    """gait (walk animation frames only): {"hip_z": m, "legs": {1: (ankle_x, lift), -1: (...)}, "arms": pose} per frame."""
     parts: dict[str, list] = {c: [] for c in CLASSES}
     put = lambda cls, *shapes: parts[cls].extend(shapes)  # noqa: E731
     D = p.get("detail", {})
@@ -282,8 +282,9 @@ def build(p: dict, common: dict, posture: str = "standing", gait: dict | None = 
     # Arms: low shoulders, long hanging forearms, three curved claws per hand
     S, A = p["shoulder"], p["arm"]
     sx, sy, sz = S["plate"]
-    ang = math.radians(pose.get("arm_drop_deg", A["drop_angle_deg"]) if pose else A["drop_angle_deg"])
-    fa = math.radians(pose.get("fore_angle_deg", A.get("fore_angle_deg", 12)) if pose else A.get("fore_angle_deg", 12))
+    ap_ = pose or (gait or {}).get("arms")  # a posture's arm pose, or the walk's stowed arms (SYS-013)
+    ang = math.radians(ap_.get("arm_drop_deg", A["drop_angle_deg"]) if ap_ else A["drop_angle_deg"])
+    fa = math.radians(ap_.get("fore_angle_deg", A.get("fore_angle_deg", 12)) if ap_ else A.get("fore_angle_deg", 12))
     for s in (1, -1):
         yc = s * (wy / 2 + sy / 2 - 0.08)
         sh = (x1 - sx / 2 - 0.05, s * (wy / 2 + 0.18), z1 - S["drop"] - sz - 0.05)
@@ -382,7 +383,8 @@ def walk_frames(p: dict, common: dict, out: Path, frames: int) -> None:
 
     Gait (cad/params/CL-05.yaml walk:): each foot is planted for the duty fraction of the cycle and swings
     forward in a lifted arc for the rest; the two legs are half a cycle apart. The body advances one stride
-    per cycle at constant speed, so a planted foot stays fixed on the ground. Concept kinematics only:
+    per cycle at constant speed, so a planted foot stays fixed on the ground. The arms are held in the stowed
+    pose given by walk: arms (SYS-013: manipulation inhibited and arms stowed while walking). Concept kinematics only:
     no dynamics, balance or load model."""
     from build123d import export_stl
     W = p["walk"]
@@ -405,7 +407,7 @@ def walk_frames(p: dict, common: dict, out: Path, frames: int) -> None:
                 rel, lift = ax + S * duty * (g - 0.5), h * math.sin(math.pi * g)
             legs[s] = (rel, lift)
         hip_z = hip0 - W["crouch"] - W["bob"] * math.cos(4 * math.pi * phase)
-        parts, _ = build(p, common, "standing", gait={"hip_z": hip_z, "legs": legs})
+        parts, _ = build(p, common, "standing", gait={"hip_z": hip_z, "legs": legs, "arms": W.get("arms")})
         d = out / f"f{i:03d}"
         d.mkdir(parents=True, exist_ok=True)
         for cls, shapes in parts.items():
