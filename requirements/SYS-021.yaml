@@ -1,0 +1,29 @@
+schema: susanoo/requirement/v0.1
+id: SYS-021
+title: UAV data validity and staleness annunciation
+statement: The pilot display shall mark UAV imagery, position and telemetry as not valid when they fail validity
+  checks, and as not current when they have not updated within a defined time, so that they are never shown as current
+  and valid when they are not.
+status: candidate
+source:
+  documents:
+  - safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml
+  scenario_ids:
+  - SCN-105
+  hazard_ids:
+  - HAZ-INT-002
+  - HAZ-INT-003
+allocated_to:
+- SUS-I1-INT
+- SUS-M1-PIL
+safety_significant: true
+verification:
+  method:
+  - test
+  - analysis
+  evidence_ids: []
+  disposition: open
+tbd:
+- Staleness time
+- Validity checks for position and imagery (independent reference)
+- Form of the not-valid and not-current indication

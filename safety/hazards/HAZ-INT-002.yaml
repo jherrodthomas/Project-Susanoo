@@ -1,0 +1,93 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-INT-002
+title: Pilot acts on misleading UAV imagery or position
+status: open
+system: SUS-I1
+subsystems:
+- SUS-A1
+- SUS-I1-INT
+- SUS-M1-PIL
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: UAV imagery, telemetry or position shown to the pilot is wrong but looks valid, and the pilot
+  uses it to choose where the walker goes or where people are.
+modes:
+- MOD-04
+- MOD-07
+causal_factors:
+- id: CF1
+  type: interface
+  description: Wrong georeferencing, camera pointing or position estimate passed to the pilot display (IF-PX4-001)
+- id: CF2
+  type: environment
+  description: GNSS degradation or spoofing gives a plausible but wrong position
+- id: CF3
+  type: human
+  description: Pilot relies on the UAV picture over direct view and the observer
+effects:
+- Walker steered toward a hazard or a person the imagery did not show
+mishap: Person struck or stepped on, or the walker driven onto unsafe ground, on the strength of wrong information
+initial_risk:
+  severity: 1
+  probability: D
+  rac: 1D
+  risk_level: Serious
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); the walker can kill a person it walks into; imagery is a secondary source behind direct view and the observer
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); validity checks and annunciation on UAV data, and procedures that keep direct view and the observer primary
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: UAV data shown with validity status; position and imagery checked against an independent source before
+    use
+  precedence: c
+  state: identified
+  verification:
+    method:
+    - test
+    - analysis
+    evidence_ids: []
+  requirement_ids:
+  - SYS-021
+- id: M2
+  description: 'Procedure: UAV imagery is advisory; walking decisions rest on direct view and the safety observer'
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-021
+owner:
+  role: ROLE-UAV
+  person: null
+  org: Air vehicle
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 208
+  scenario_ids:
+  - SCN-105
+  documents:
+  - safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; raised from the FHA gap row F-06 erroneous (AI-drafted, I0)
+- UAV flight functions are classified in the ARP4761A aircraft FHA; this record covers the walker-side consequence
+  only
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- Decide whether UAV data validity annunciation is a safety-significant software function (new SSF)

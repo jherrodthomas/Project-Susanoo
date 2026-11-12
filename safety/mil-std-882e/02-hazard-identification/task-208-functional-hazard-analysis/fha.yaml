@@ -3,7 +3,8 @@
 # of safety/generated/worksheets.xlsx are generated from this file (python -m tools.worksheets.build).
 #
 # AI-drafted (I0), not reviewed. Rows link existing hazard records only where the failure leads to that
-# hazard; "gap" rows have no hazard record yet and need analysis. No severity or probability is assigned
+# hazard; "gap" rows have no hazard record yet and need analysis (the six original gaps were raised as
+# HAZ-PIL-004, HAZ-INT-002, HAZ-INT-003, HAZ-DCK-003, HAZ-DCK-004 and HAZ-DCK-005). No severity or probability is assigned
 # here: the worksheet shows the worst initial severity of the linked hazards, read from their records.
 # UAV flight functions (F-06) are classified separately in the ARP4761A aircraft FHA; this sheet only
 # records how a UAV functional failure reaches the walker and the people around it.
@@ -29,7 +30,7 @@ rows:
   - {function: F-02, failure: unintended, condition: "Arm leaves the stowed or carry pose while walking", effect: "Claws or load swing into the walking envelope", hazards: [HAZ-MAN-001, HAZ-MAN-002], status: drafted}
   - {function: F-02, failure: degraded, condition: "Reduced arm force or speed under load", effect: "Load shifts and moves the centre of mass ahead of the stance foot", hazards: [HAZ-MAN-002, HAZ-WLK-002], status: drafted}
   # F-03 Pilot readiness, ingress and egress
-  - {function: F-03, failure: loss, condition: "Walker cannot lower to the egress posture", effect: "Normal egress blocked; only the side-hatch emergency exit remains", hazards: [HAZ-PIL-003], status: gap, note: "Blocked normal egress (SCN-104) has no hazard record of its own"}
+  - {function: F-03, failure: loss, condition: "Walker cannot lower to the egress posture", effect: "Normal egress blocked; only the side-hatch emergency exit remains", hazards: [HAZ-PIL-004, HAZ-PIL-003], status: drafted, note: "Raised as HAZ-PIL-004 from this row"}
   - {function: F-03, failure: erroneous, condition: "Readiness reported true with restraint, hatch or controls not ready", effect: "Leg motion enabled during ingress or egress", hazards: [HAZ-PIL-001], status: drafted}
   - {function: F-03, failure: untimely, condition: "Motion enabled before ingress is complete", effect: "Pilot or crew caught by moving structure", hazards: [HAZ-PIL-001], status: drafted}
   - {function: F-03, failure: unintended, condition: "Kneel or rise without a confirmed clear zone", effect: "Person under the pod or beside the legs crushed", hazards: [HAZ-WLK-003], status: drafted}
@@ -48,8 +49,8 @@ rows:
   - {function: F-05, failure: degraded, condition: "Reduced pressure or bus voltage", effect: "Reduced balance authority (slow leak on a slope)", hazards: [HAZ-WLK-002], status: drafted}
   # F-06 Aerial observation (aircraft-level classification: ARP4761A FHA, not here)
   - {function: F-06, failure: loss, condition: "UAV link or imagery lost", effect: "Lost-link contingency must keep the aircraft clear of the walker", hazards: [HAZ-INT-001], status: drafted}
-  - {function: F-06, failure: erroneous, condition: "Misleading imagery or position shown to the pilot", effect: "Pilot decisions based on wrong information", hazards: [], status: gap, note: "No walker-side hazard record for misleading UAV information yet"}
-  - {function: F-06, failure: untimely, condition: "Stale or frozen imagery", effect: "Pilot acts on an out-of-date picture", hazards: [], status: gap, note: "No walker-side hazard record for stale UAV information yet"}
+  - {function: F-06, failure: erroneous, condition: "Misleading imagery or position shown to the pilot", effect: "Pilot decisions based on wrong information", hazards: [HAZ-INT-002], status: drafted, note: "Raised as HAZ-INT-002 from this row"}
+  - {function: F-06, failure: untimely, condition: "Stale or frozen imagery", effect: "Pilot acts on an out-of-date picture", hazards: [HAZ-INT-003], status: drafted, note: "Raised as HAZ-INT-003 from this row"}
   - {function: F-06, failure: unintended, condition: "UAV flies into the pilot keep-out", effect: "Rotor or airframe strike on pilot or crew", hazards: [HAZ-INT-001], status: drafted}
   - {function: F-06, failure: degraded, condition: "Degraded navigation (GNSS loss)", effect: "Position error of the aircraft near people", hazards: [HAZ-INT-001], status: drafted}
   # F-07 UAV launch, recovery and retention
@@ -60,9 +61,9 @@ rows:
   - {function: F-07, failure: degraded, condition: "Recovery outside the safe envelope", effect: "Collision during capture", hazards: [HAZ-INT-001], status: drafted}
   # F-08 UAV charging
   - {function: F-08, failure: loss, condition: "UAV not charged", effect: "Reduced flight endurance; lost-link and low-battery contingencies more likely", hazards: [HAZ-INT-001], status: drafted}
-  - {function: F-08, failure: erroneous, condition: "Overcharge or wrong charge profile", effect: "UAV battery thermal event at the dock", hazards: [], status: gap, note: "No hazard record for a UAV battery thermal event at the dock"}
-  - {function: F-08, failure: untimely, condition: "Charging continues during launch preparation", effect: "Energised connector at release", hazards: [], status: gap, note: "To analyse with the dock interface"}
-  - {function: F-08, failure: unintended, condition: "Charging energised with a person at the dock", effect: "Electrical exposure during handling", hazards: [], status: gap, note: "To analyse with the dock interface"}
+  - {function: F-08, failure: erroneous, condition: "Overcharge or wrong charge profile", effect: "UAV battery thermal event at the dock", hazards: [HAZ-DCK-003], status: drafted, note: "Raised as HAZ-DCK-003 from this row"}
+  - {function: F-08, failure: untimely, condition: "Charging continues during launch preparation", effect: "Energised connector at release", hazards: [HAZ-DCK-004], status: drafted, note: "Raised as HAZ-DCK-004 from this row"}
+  - {function: F-08, failure: unintended, condition: "Charging energised with a person at the dock", effect: "Electrical exposure during handling", hazards: [HAZ-DCK-005], status: drafted, note: "Raised as HAZ-DCK-005 from this row"}
   - {function: F-08, failure: degraded, condition: "Partial charge reported as full", effect: "Flight starts with less endurance than shown", hazards: [HAZ-INT-001], status: drafted}
   # F-09 Maintenance support and energy isolation
   - {function: F-09, failure: loss, condition: "Isolation points unavailable", effect: "Maintenance with stored energy present", hazards: [HAZ-PWR-001], status: drafted}

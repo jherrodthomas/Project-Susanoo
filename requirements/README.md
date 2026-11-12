@@ -56,3 +56,5 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | [`SYS-018.yaml`](SYS-018.yaml) | Controlled lowered posture for ingress and egress |
 | [`SYS-019.yaml`](SYS-019.yaml) | Loaded walking limits |
 | [`SYS-020.yaml`](SYS-020.yaml) | Emergency egress without power or kneeling |
+| [`SYS-021.yaml`](SYS-021.yaml) | UAV data validity and staleness annunciation |
+| [`SYS-022.yaml`](SYS-022.yaml) | Dock charging protection and isolation |

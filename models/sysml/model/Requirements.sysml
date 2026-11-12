@@ -32,7 +32,7 @@ package SusanooRequirements {
     requirement <'SYS-006'> launchAndRecoveryEnvelopeInhibit : SystemRequirement {
         doc /* UAV launch and recovery shall be inhibited outside a verified operational envelope of walker posture, motion and dock state. */
         @Source { record = "requirements/SYS-006.yaml"; }
-        @HazardRef { ids = ("HAZ-INT-001"); }
+        @HazardRef { ids = ("HAZ-INT-001", "HAZ-DCK-004"); }
     }
     requirement <'SYS-007'> storedHydraulicEnergyIsolation : SystemRequirement {
         doc /* The walker shall provide lockable isolation and verifiable dissipation of stored hydraulic pressure before maintenance access. */
@@ -92,7 +92,7 @@ package SusanooRequirements {
     requirement <'SYS-018'> controlledLoweredPostureForIngressAndEgress : SystemRequirement {
         doc /* The walker shall provide a controlled lowered posture for ingress and egress, with the cockpit floor at or below a defined height, entered and left at a controlled speed only while the area under and around the pod and legs is confirmed clear, and shall inhibit walking while an access ladder is deployed. */
         @Source { record = "requirements/SYS-018.yaml"; }
-        @HazardRef { ids = ("HAZ-WLK-003", "HAZ-PIL-001"); }
+        @HazardRef { ids = ("HAZ-WLK-003", "HAZ-PIL-001", "HAZ-PIL-004"); }
     }
     requirement <'SYS-019'> loadedWalkingLimits : SystemRequirement {
         doc /* The walker shall permit walking with a payload only while the payload is confirmed secured, both arms are locked in a defined carry pose and payload mass and centre of gravity are within defined limits, and shall then limit walking speed, step height and terrain slope to defined loaded values inside the stability envelope of SYS-008. */
@@ -102,6 +102,16 @@ package SusanooRequirements {
     requirement <'SYS-020'> emergencyEgressWithoutPowerOrKneeling : SystemRequirement {
         doc /* The pilot shall be able to leave the walker from the standing posture without platform power and without kneeling, through an exit other than the front opening, with a descent aid and handholds that keep three points of contact to the ground. */
         @Source { record = "requirements/SYS-020.yaml"; }
-        @HazardRef { ids = ("HAZ-PIL-003"); }
+        @HazardRef { ids = ("HAZ-PIL-003", "HAZ-PIL-004"); }
+    }
+    requirement <'SYS-021'> uavDataValidityAndStalenessAnnunciation : SystemRequirement {
+        doc /* The pilot display shall mark UAV imagery, position and telemetry as not valid when they fail validity checks, and as not current when they have not updated within a defined time, so that they are never shown as current and valid when they are not. */
+        @Source { record = "requirements/SYS-021.yaml"; }
+        @HazardRef { ids = ("HAZ-INT-002", "HAZ-INT-003"); }
+    }
+    requirement <'SYS-022'> dockChargingProtectionAndIsolation : SystemRequirement {
+        doc /* The dock shall charge the UAV battery only when the aircraft is seated and confirmed, shall stop charging on over-voltage, over-current or over-temperature independently of the charging software, and shall keep its charging contacts de-energised and shrouded whenever no UAV is seated or charging has been isolated for handling. */
+        @Source { record = "requirements/SYS-022.yaml"; }
+        @HazardRef { ids = ("HAZ-DCK-003", "HAZ-DCK-005"); }
     }
 }

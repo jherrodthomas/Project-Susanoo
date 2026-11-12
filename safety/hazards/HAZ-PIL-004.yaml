@@ -1,0 +1,107 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-PIL-004
+title: Normal egress blocked when the walker cannot lower
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-WLK
+- SUS-M1-PIL
+- SUS-M1-SAF
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: The walker cannot reach the lowered (kneel) posture, so the front-opening egress is not available
+  when the pilot must leave.
+modes:
+- MOD-03
+- MOD-09
+causal_factors:
+- id: CF1
+  type: hardware
+  description: Leg actuator, supply or load-holding fault prevents lowering
+- id: CF2
+  type: software
+  description: Lowering inhibited by a fault response or a stuck interlock
+  ssf_ids:
+  - SSF-002
+- id: CF3
+  type: environment
+  description: Terrain or slope does not allow the kneel posture
+effects:
+- Pilot remains at height; leaving needs the side-hatch emergency exit
+mishap: Pilot trapped during a fire, medical emergency or other event that needs prompt egress; or injured by an
+  improvised descent
+initial_risk:
+  severity: 1
+  probability: D
+  rac: 1D
+  risk_level: Serious
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); being trapped is only harmful together with another emergency, but then it can be fatal
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); an emergency exit that needs neither power nor kneeling, and lowering faults detected and annunciated
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Emergency exit through a side hatch that needs neither platform power nor the kneel posture (CL-05
+    side hatches)
+  precedence: b
+  state: identified
+  requirement_ids:
+  - SYS-020
+  verification:
+    method:
+    - analysis
+    - demonstration
+    evidence_ids: []
+- id: M2
+  description: Lowered posture with defined lowering limits and a confirmed clear zone
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-018
+  verification:
+    method:
+    - test
+    evidence_ids: []
+- id: M3
+  description: Egress procedure and training for the case where the walker cannot lower
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-018
+- SYS-020
+owner:
+  role: ROLE-WLK
+  person: null
+  org: Walker / mechanical
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 208
+  scenario_ids:
+  - SCN-104
+  - SCN-006
+  documents:
+  - safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; raised from the FHA gap row F-03 loss (AI-drafted, I0)
+- 'CL-05 normal egress needs the kneel: standing, the fold-down ladder is stowed (cad/README.md)'
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- Define the maximum time to egress when the walker cannot lower (SYS-020 TBD)

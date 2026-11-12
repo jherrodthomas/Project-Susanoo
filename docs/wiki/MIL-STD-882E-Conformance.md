@@ -109,25 +109,25 @@ Status key: *no errors* = automated rule found no errors in current records (thi
 ## Task 106.2 HTS data elements
 | Element | Data element | Record field | Populated |
 |---|---|---|---|
-| 106.2a | Hazard | `hazardous_condition` | 15/15 |
-| 106.2b | System | `system` | 15/15 |
-| 106.2c | Subsystem (if applicable) | `subsystems` | 15/15 |
-| 106.2d | Applicability (version specific hardware/software) | `applicability` | 15/15 |
-| 106.2e | Requirements references | `requirement_ids` | 15/15 |
-| 106.2f | System mode | `modes` | 15/15 |
-| 106.2g | Causal factor (hardware, software, human, environment) | `causal_factors` | 15/15 |
-| 106.2h | Effects | `effects` | 15/15 |
-| 106.2i | Mishap | `mishap` | 15/15 |
-| 106.2j | Initial RAC | `initial_risk` | 15/15 |
-| 106.2k | Target RAC | `target_risk` | 15/15 |
-| 106.2l | Event RAC(s) | `event_risks` | 7/15 |
-| 106.2m | Mitigation measures (identified and selected, version traced) | `mitigations` | 15/15 |
-| 106.2n | Hazard status | `status` | 15/15 |
-| 106.2o | Verification and validation method | `mitigations[].verification.method` | 15/15 |
-| 106.2p | Action person(s) and organizational element | `owner` | 15/15 |
-| 106.2q | Record of risk acceptance(s) | `acceptances` | 0/15 |
+| 106.2a | Hazard | `hazardous_condition` | 21/21 |
+| 106.2b | System | `system` | 21/21 |
+| 106.2c | Subsystem (if applicable) | `subsystems` | 21/21 |
+| 106.2d | Applicability (version specific hardware/software) | `applicability` | 21/21 |
+| 106.2e | Requirements references | `requirement_ids` | 21/21 |
+| 106.2f | System mode | `modes` | 21/21 |
+| 106.2g | Causal factor (hardware, software, human, environment) | `causal_factors` | 21/21 |
+| 106.2h | Effects | `effects` | 21/21 |
+| 106.2i | Mishap | `mishap` | 21/21 |
+| 106.2j | Initial RAC | `initial_risk` | 21/21 |
+| 106.2k | Target RAC | `target_risk` | 21/21 |
+| 106.2l | Event RAC(s) | `event_risks` | 7/21 |
+| 106.2m | Mitigation measures (identified and selected, version traced) | `mitigations` | 21/21 |
+| 106.2n | Hazard status | `status` | 21/21 |
+| 106.2o | Verification and validation method | `mitigations[].verification.method` | 21/21 |
+| 106.2p | Action person(s) and organizational element | `owner` | 21/21 |
+| 106.2q | Record of risk acceptance(s) | `acceptances` | 0/21 |
 | 106.2r | Hazard management log | `git history of safety/hazards/ (records change only via reviewed PRs)` | git history |
-| 106.2s | HAZMAT data elements | `hazmat` | 15/15 |
+| 106.2s | HAZMAT data elements | `hazmat` | 21/21 |
 
 Event RACs (l) and acceptances (q) are expected to be empty until test events are planned and risk is accepted.
 

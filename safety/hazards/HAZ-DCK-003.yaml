@@ -1,0 +1,98 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-DCK-003
+title: UAV battery thermal event while charging on the dock
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-DCK
+- SUS-A1
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: The UAV battery is overcharged, charged with a wrong profile or charged while damaged on the
+  walker-mounted dock.
+modes:
+- MOD-03
+- MOD-06
+causal_factors:
+- id: CF1
+  type: hardware
+  description: Charger or UAV battery management fault
+- id: CF2
+  type: interface
+  description: Wrong charge profile or cell data exchanged between dock and UAV
+- id: CF3
+  type: environment
+  description: High ambient temperature or a battery damaged in a hard landing
+effects:
+- Battery venting, fire or smoke on the dock, close to the pod
+mishap: Burns or smoke inhalation for the pilot or crew; fire spreading to the walker
+initial_risk:
+  severity: 2
+  probability: D
+  rac: 2D
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); a small UAV battery fire close to the pod can seriously injure, but the cell energy is limited
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 2
+  probability: E
+  rac: 2E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); charger protections, cell monitoring, thermal cut-off and a fire-separated dock
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Charger with independent over-voltage, over-current and over-temperature cut-off
+  precedence: c
+  state: identified
+  verification:
+    method:
+    - test
+    evidence_ids: []
+  requirement_ids:
+  - SYS-022
+- id: M2
+  description: Dock separated from the pod by a fire barrier, with venting away from the pilot
+  precedence: b
+  state: identified
+  verification:
+    method:
+    - analysis
+    - inspection
+    evidence_ids: []
+- id: M3
+  description: Do not charge a battery after a hard landing until inspected
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-022
+owner:
+  role: ROLE-UAV
+  person: null
+  org: Air vehicle
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 208
+  scenario_ids:
+  - SCN-005
+  - SCN-108
+  documents:
+  - safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; raised from the FHA gap row F-08 erroneous (AI-drafted, I0)
+- Walker traction-battery thermal runaway is covered separately by HAZ-PWR-002
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2

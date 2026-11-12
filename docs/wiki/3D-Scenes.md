@@ -91,3 +91,9 @@ HAZ-INT-001, HAZ-DCK-002 · uav · source SU-02 · outcome **landed-at-stale-hom
 | HAZ-MAN-002 | A carried load is not in the plant (no payload, grip or load-swing model); CL-05 carry pose is CAD only (cad/README.md) |
 | HAZ-WLK-003 | Kneel and rise are not in the plant (no lowered posture or person contact model); CL-05 kneel is CAD only (cad/README.md) |
 | HAZ-PIL-003 | Emergency egress through the side hatch is not in the plant (no pilot or descent model) |
+| HAZ-PIL-004 | Blocked egress needs a pilot and egress model; the plant does not model the kneel |
+| HAZ-INT-002 | Misleading UAV data needs a display and pilot model; SITL does not model the pilot |
+| HAZ-INT-003 | Stale UAV imagery needs a display and pilot model; SITL does not model the pilot |
+| HAZ-DCK-003 | Battery thermal behaviour on the dock is not modelled |
+| HAZ-DCK-004 | Dock charging and connector electrics are not modelled |
+| HAZ-DCK-005 | Dock charging and connector electrics are not modelled |

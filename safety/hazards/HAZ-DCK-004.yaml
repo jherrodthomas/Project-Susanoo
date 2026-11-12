@@ -1,0 +1,88 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-DCK-004
+title: Charging connector energised at UAV release or launch
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-DCK
+- SUS-A1
+- SUS-I1-INT
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: Charging is still active when the UAV is released or launched, so the dock-to-UAV connector
+  separates under load.
+modes:
+- MOD-06
+- MOD-08
+causal_factors:
+- id: CF1
+  type: interface
+  description: Launch or release permit does not require charging to be off
+- id: CF2
+  type: hardware
+  description: Charge contactor welded or slow to open
+effects:
+- Arcing at the connector; damage to the dock or the UAV; possible ignition near the pod
+mishap: Minor burn or electrical injury to a crew member near the dock; equipment damage
+initial_risk:
+  severity: 3
+  probability: D
+  rac: 3D
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); dock charging voltage is TBD; at low voltage the main consequences are arcing, damage and minor injury
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 3
+  probability: E
+  rac: 3E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); charging de-energised and confirmed off as a condition of the launch and release permits
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Launch and release permits require charging de-energised and confirmed off
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-006
+  verification:
+    method:
+    - test
+    evidence_ids: []
+- id: M2
+  description: Connector rated to break under load, or mechanically prevented from separating while energised
+  precedence: b
+  state: identified
+  verification:
+    method:
+    - analysis
+    evidence_ids: []
+requirement_ids:
+- SYS-006
+owner:
+  role: ROLE-UAV
+  person: null
+  org: Air vehicle
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 208
+  scenario_ids:
+  - SCN-004
+  - SCN-005
+  documents:
+  - safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; raised from the FHA gap row F-08 untimely (AI-drafted, I0)
+- Charging voltage and current are TBD until the UAV battery and dock are selected
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- Confirm whether SYS-006 (launch and recovery envelope inhibit) should name charging state explicitly

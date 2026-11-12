@@ -41,12 +41,18 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 |---|---|
 | [`HAZ-DCK-001.yaml`](HAZ-DCK-001.yaml) | Rotor start while UAV is retained or a person is at the dock |
 | [`HAZ-DCK-002.yaml`](HAZ-DCK-002.yaml) | False retained state releases UAV under motion |
+| [`HAZ-DCK-003.yaml`](HAZ-DCK-003.yaml) | UAV battery thermal event while charging on the dock |
+| [`HAZ-DCK-004.yaml`](HAZ-DCK-004.yaml) | Charging connector energised at UAV release or launch |
+| [`HAZ-DCK-005.yaml`](HAZ-DCK-005.yaml) | Electrical exposure at the dock while charging with a person present |
 | [`HAZ-INT-001.yaml`](HAZ-INT-001.yaml) | UAV launch or recovery outside the safe envelope |
+| [`HAZ-INT-002.yaml`](HAZ-INT-002.yaml) | Pilot acts on misleading UAV imagery or position |
+| [`HAZ-INT-003.yaml`](HAZ-INT-003.yaml) | Pilot acts on stale or frozen UAV imagery |
 | [`HAZ-MAN-001.yaml`](HAZ-MAN-001.yaml) | Person struck or pinned by the arms or claws |
 | [`HAZ-MAN-002.yaml`](HAZ-MAN-002.yaml) | Carried load swings, shifts or drops while walking |
 | [`HAZ-PIL-001.yaml`](HAZ-PIL-001.yaml) | Unintended leg motion during pilot ingress or egress |
 | [`HAZ-PIL-002.yaml`](HAZ-PIL-002.yaml) | Uncontrolled vertical drop of the cockpit on loss of leg support |
 | [`HAZ-PIL-003.yaml`](HAZ-PIL-003.yaml) | Fall from height during emergency egress |
+| [`HAZ-PIL-004.yaml`](HAZ-PIL-004.yaml) | Normal egress blocked when the walker cannot lower |
 | [`HAZ-PWR-001.yaml`](HAZ-PWR-001.yaml) | Residual hydraulic pressure during maintenance |
 | [`HAZ-PWR-002.yaml`](HAZ-PWR-002.yaml) | Battery thermal runaway near the pilot station |
 | [`HAZ-PWR-003.yaml`](HAZ-PWR-003.yaml) | Fuel leak and fire at the engine-generator |
