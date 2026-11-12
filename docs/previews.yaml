@@ -37,6 +37,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
 
 exempt:                  # tests, tooling internals, figure stores shown by the README above them
   - "**/figures"
+  - "**/figures/**"          # e.g. concept/figures/records (record-driven figures, tools/figures/concept_readme.py)
   - "**/tests"
   - "**/__pycache__"
   - "**/node_modules"

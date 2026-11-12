@@ -36,7 +36,9 @@ ENFORCED = {
         "generator": ["tools/gen_safety_docs.py", "--check"],
     },
     # Hand-authored READMEs; figures come from <folder>/figures.yaml.
-    "concept": {"skip_dirs": {"figures"}, "generator": ["tools/figures/build_figures.py", "--check"]},
+    "concept": {"skip_dirs": {"figures"}, "generator": ["tools/figures/build_figures.py", "--check"],
+                # The record-driven section (modes and scenarios, figures 6-7) between the concept-records markers.
+                "extra_generators": [["tools/figures/concept_readme.py", "--check"]]},
     "integrations/px4": {"skip_dirs": {"figures"}, "generator": ["tools/figures/build_figures.py", "--check"]},
     # Generated README; figures and tables from requirements/SYS-*.yaml.
     "requirements": {"skip_dirs": {"figures"}, "generator": ["tools/figures/requirements_readme.py", "--check"]},
@@ -121,9 +123,11 @@ def main() -> int:
                 continue
             checked += 1
             errs += check_readme(readme, required)
-        if prof.get("generator") and tuple(prof["generator"]) not in ran:
-            ran.add(tuple(prof["generator"]))
-            r = subprocess.run([sys.executable, *prof["generator"]], cwd=ROOT, capture_output=True, text=True)
+        for gen in ([prof["generator"]] if prof.get("generator") else []) + prof.get("extra_generators", []):
+            if tuple(gen) in ran:
+                continue
+            ran.add(tuple(gen))
+            r = subprocess.run([sys.executable, *gen], cwd=ROOT, capture_output=True, text=True)
             if r.returncode != 0:
                 errs.append(f"{root_rel}: generated docs are stale or catalog invalid:\n{r.stdout}{r.stderr}")
     if errs:

@@ -176,6 +176,7 @@ horizontal scrolling.
 | Simulation track (generated top, hand-written below) | `sim/` inputs and committed results | `python3 tools/figures/sim_readme.py` |
 | Standards and tailoring (generated README) | 882E model, tailoring, SusanooLibrary.sysml | `python3 tools/figures/standards_readme.py` |
 | Models (generated README) | `.sysml` files, `tools/sysml/check.py`, records | `python3 tools/figures/models_readme.py` |
+| Concept: modes and scenarios section (generated, inside the hand-written README) | ConceptOperations.sysml, CONOPS.md, hazards, requirements | `python3 tools/figures/concept_readme.py` |
 | Everything | | `python3 tools/check_readme_diagrams.py` |
 
 One-time setup: `npm ci` in `tools/figures` (installs the pinned `elkjs` layout engine) and `pip install pyyaml`.
