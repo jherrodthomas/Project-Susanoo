@@ -1,6 +1,8 @@
 # Concept layouts (FreeCAD) — review and alignment
 
-**ID:** SUS-CAD-001 · **Revision:** 0.13-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CAD-001 · **Revision:** 0.14-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.14:* Blender walk-cycle animation of CL-05 in military livery, posed frame by frame from the CAD (§2a).
 
 *Changes in 0.13:* AI walk clip in military livery added to [`concept-art/`](concept-art/README.md).
 
@@ -60,6 +62,10 @@ Rendered with Blender 5.3 (Cycles) by [`tools/cad/blender_render.py`](../tools/c
 |---|---|
 | ![CL-05 standing in olive-drab military livery, with a 1.75 m person for scale](renders/blender/CL-05-hero-military.jpg) | ![CL-05 kneeling in military livery with the ladder deployed](renders/blender/CL-05-kneel-military.jpg) |
 | ![CL-05 from the rear in military livery: power pack, raised dock and roll bar](renders/blender/CL-05-rear-military.jpg) | ![CL-05 emergency exit in military livery: hatch open, shoulder step and rope ladder](renders/blender/CL-05-emergency-military.jpg) |
+
+**Walk cycle** (military livery; `cl05.py --walk 48`, then `blender_walk.py`): [![CL-05 walking in military livery, side view tracking alongside, with a 1.75 m person standing still for scale](renders/blender/CL-05-walk-military.gif)](renders/blender/CL-05-walk-military.mp4)
+
+Every frame is the build123d model re-posed by the gait in [`params/CL-05.yaml`](params/CL-05.yaml) (`walk:`): stride 1.0 m, each foot planted for 60 % of the cycle and swung on a 0.22 m arc for the rest, with a small crouch and body bob. The knees are solved from hip and ankle positions, so they always bend backward exactly as in the CAD (unlike the AI walk clip in [`concept-art/`](concept-art/README.md)). This is concept kinematics for communication only: there is no dynamics, balance, actuator or load model behind it, and it says nothing about whether the walker can walk this way. Gait stability is still open under SYS-009 (HAZ-006, HAZ-021). The claws are shown in the standing pose, held forward; SYS-013 expects them stowed while walking (HAZ-009), and a stowed walking pose for the arms is not modelled yet.
 
 **AI concept art** made from these renders (Higgsfield, image-to-image) is kept apart in [`concept-art/`](concept-art/README.md), each image labelled with its source render and where it departs from the CAD. It is for communication, never for dimensions.
 
