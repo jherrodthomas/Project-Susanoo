@@ -49,7 +49,7 @@ criteria:
 - {id: C10, title: Supply chain, weight: 6, measure: "Availability of actuators in the SYS-016 torque class and of spares"}
 - {id: C11, title: Simulation fidelity, weight: 4, measure: "How well the alternative can be modelled in the level-2 simulation with available component data"}
 - {id: C12, title: Cost, weight: 10, measure: "Purchase and integration cost of actuation and power for one walker"}
-weights_status: draft
+weights_status: confirmed
 weights_decision_id: DQ-016
 evidence:
 - id: TS-001-E01
@@ -114,7 +114,6 @@ selection: null
 review_id: null
 author: {name: Claude, human: false, independence: I0}
 open_actions:
-- Confirm or change the criteria weights (decision DQ-016)
 - Obtain the vendor data for TS-001-E03; it unblocks TS-001-E04 and TS-001-E05
 - Test whether the residual bus floor (assumed 35% in sim/spec/walker.yaml) is credible for the series-hybrid bus; the C09 difference between A and B rests on it
 - Score the remaining criteria from evidence, then set the study to ready-for-decision for the lead

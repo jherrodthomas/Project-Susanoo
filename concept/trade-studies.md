@@ -36,7 +36,7 @@ Each power hazard names its alternative in `applicability.hardware`; hazards wit
 
 **Study record.** TS-001 is in work as a record, [`architecture/trades/TS-001.yaml`](../architecture/trades/TS-001.yaml),
 shown on the generated [Trade Studies](../docs/wiki/Trade-Studies.md) page. It splits alternative B by joint actuator
-(electrohydraulic B-EHA, electromechanical B-EMA), holds draft criteria weights for the lead (decision DQ-016), and scores
+(electrohydraulic B-EHA, electromechanical B-EMA), holds the criteria weights the lead confirmed (decision DQ-016), and scores
 only what has evidence: so far fault response, from the walker simulations
 ([`sim/results/ts001-fault-response.md`](../sim/results/ts001-fault-response.md)).
 
