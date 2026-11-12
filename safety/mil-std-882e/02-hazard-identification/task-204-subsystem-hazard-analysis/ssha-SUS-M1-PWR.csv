@@ -1,0 +1,11 @@
+Failure mode / cause,Type,Effect,Hazard,Severity (initial),Mitigations,Requirements
+CF1 Loss of actuator supply (hydraulic line burst or bus loss) together with load-holding valves or brakes that fail to engage (latent failure),hardware,"Cockpit strikes its rest stops at about 4.8 m/s after a 1.2 m fall (simulation SF-01 EC-01, synthetic)",HAZ-PIL-002,2 Critical,M1(a) M2(b) M3(c) M4(c),SYS-009
+"CF2 Load holding engages, but slower than the cockpit falls from operating height (engagement delay longer than the free-fall time)",hardware,"Cockpit strikes its rest stops at about 4.8 m/s after a 1.2 m fall (simulation SF-01 EC-01, synthetic)",HAZ-PIL-002,2 Critical,M1(a) M2(b) M3(c) M4(c),SYS-009
+CF1 Accumulator or trapped volume not vented by isolation,hardware,Sudden limb movement; high-pressure fluid release,HAZ-PWR-001,1 Catastrophic,M1(a) M2(c) M3(c) M4(e),SYS-007
+CF2 Maintainer skips isolation or verification step,human,Sudden limb movement; high-pressure fluid release,HAZ-PWR-001,1 Catastrophic,M1(a) M2(c) M3(c) M4(e),SYS-007
+"CF1 Internal cell short, over-charge or over-temperature not detected or not isolated by the BMS",hardware,"Fire, toxic and flammable vent gas, and heat at or near the pilot station",HAZ-PWR-002,1 Catastrophic,M1(a) M2(b) M3(c) M4(e),SYS-014
+CF2 Mechanical damage to the pack in a fall or overturn (SCN-103),environment,"Fire, toxic and flammable vent gas, and heat at or near the pilot station",HAZ-PWR-002,1 Catastrophic,M1(a) M2(b) M3(c) M4(e),SYS-014
+CF3 Damaged or wet pack charged or returned to service without inspection,human,"Fire, toxic and flammable vent gas, and heat at or near the pilot station",HAZ-PWR-002,1 Catastrophic,M1(a) M2(b) M3(c) M4(e),SYS-014
+"CF1 Fuel line, fitting or tank failure from vibration or a fall (SCN-103)",hardware,Fuel fire on the walker; burning fuel on the ground around it,HAZ-PWR-003,1 Catastrophic,M1(b) M2(c) M3(e),SYS-015
+"CF2 Refuelling with the engine hot or running, or near an ignition source",human,Fuel fire on the walker; burning fuel on the ground around it,HAZ-PWR-003,1 Catastrophic,M1(b) M2(c) M3(e),SYS-015
+CF3 Exhaust or engine surface hotter than the fuel's autoignition temperature next to a leak path,hardware,Fuel fire on the walker; burning fuel on the ground around it,HAZ-PWR-003,1 Catastrophic,M1(b) M2(c) M3(e),SYS-015
