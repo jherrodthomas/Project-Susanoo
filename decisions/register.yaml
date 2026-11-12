@@ -336,8 +336,10 @@ decisions:
     blocks: [TS-001 scoring]
     gate: G2
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-12
+    answer: {choice: draft, by: lead, at: 2026-11-12, via: chat, note: "confirm the drafted weights"}
+    applied_in: [architecture/trades/TS-001.yaml]
     sources: [architecture/trades/TS-001.yaml, concept/trade-studies.md]
 
   - id: DQ-017
