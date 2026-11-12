@@ -50,6 +50,9 @@ ENFORCED = {
     "decisions": {"skip_dirs": {"figures"}, "generator": ["tools/figures/decisions_readme.py", "--check"]},
     # Generated README from the item definition; trades/ keeps its preview page (docs/previews.yaml).
     "architecture": {"skip_dirs": {"figures", "trades"}, "generator": ["tools/figures/architecture_readme.py", "--check"]},
+    # Generated front page of the safety records; the subfolders keep their own pages (mil-std-882e/ is its own root).
+    "safety": {"skip_dirs": {"figures", "mil-std-882e", "hazards", "software", "events", "generated"},
+               "generator": ["tools/figures/safety_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

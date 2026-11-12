@@ -151,7 +151,7 @@ package DecisionRegister {
 | Input | Source |
 |---|---|
 | How to sort and ask | [`CLAUDE.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/CLAUDE.md#decisions-for-the-lead) |
-| Questions raised by work | [`concept/trade-studies.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/trade-studies.md), [`sim/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/README.md), [`safety/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/README.md) |
+| Questions raised by work | [`concept/trade-studies.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/trade-studies.md), [`sim/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/README.md), [`safety/`](Safety-Records) |
 | Answers | the project lead (chat, inbox, review or pull request) |
 
 | Output | Destination |

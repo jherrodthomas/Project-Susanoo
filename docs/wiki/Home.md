@@ -46,6 +46,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   with the decision lifecycle in SysML
 - [Architecture records](Architecture-Records): every element, external, interface and function of the item
   definition, with what rests on each
+- [Safety records](Safety-Records): every hazard with its preliminary risk, and how hazards, software functions,
+  events, requirements and reviews fit together
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

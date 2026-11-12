@@ -30,6 +30,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - reviews
   - decisions
   - architecture
+  - safety
 
 exempt:                  # tests, tooling internals, figure stores shown by the README above them
   - "**/figures"
@@ -238,19 +239,6 @@ folders:
     title: Record schemas
     purpose: One JSON schema per record type. The validator checks every record against its schema before the MIL-STD-882E rules run.
     hero: {img: docs/wiki/images/rec-record-model.svg, caption: "Record model: how the record types reference each other"}
-
-  safety:
-    title: Safety records
-    purpose: >-
-      The hazard tracking system (`hazards/`), safety-significant software functions (`software/`), test-event risk
-      (`events/`), generated exports (`generated/`) and the MIL-STD-882E work-product tree (`mil-std-882e/`).
-    hero: {img: docs/readme/risk-matrix.svg, caption: "Current hazard risk on the MIL-STD-882E matrix"}
-    gallery:
-      - {img: safety/mil-std-882e/figures/fig-1-position-in-the-mil-std-882e-flow.svg, caption: "The eight-element MIL-STD-882E process", link: safety/mil-std-882e/README.md}
-      - {img: docs/wiki/images/hazard-management.svg, caption: "Hazard management process map (illustrative)"}
-      - {img: docs/wiki/images/software-safety.svg, caption: "Software safety process map (illustrative)"}
-    links:
-      - {text: Hazard Tracking Log (wiki page), href: docs/wiki/Hazard-Tracking-Log.md}
 
   safety/events:
     title: Test and simulation events
