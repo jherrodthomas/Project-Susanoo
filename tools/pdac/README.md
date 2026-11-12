@@ -65,7 +65,7 @@ CI (`.github/workflows/pdac-validate.yml`) runs all three on every pull request.
 | R03 | Order of precedence: Catastrophic/Critical hazards may not rely only on signage, procedures, training or PPE; d/e-only needs rationale | 4.3.4 |
 | R04 | Hazard cannot be verified/accepted/closed until every selected mitigation is implemented with passed evidence | 4.3.6 |
 | R05 | Acceptance by the authority for that risk level, user-representative concurrence for Serious/High, accepted level covers target, event and Table VI software risk | 4.3.1c, 4.3.7 |
-| R06 | Events exposing people, equipment or environment need assessed and accepted event risk for every applicable hazard (warning while planned, error once authorized) | 4.3.7, Task 303 |
+| R06 | Events exposing people, equipment or environment need assessed and accepted event risk for every applicable hazard (warning while planned, error once authorized). A hazard applies when the event shares its configuration, a mode and a subsystem, and, if the hazard names hardware, the event lists that hardware | 4.3.7, Task 303 |
 | R07 | SSFs linked to hazards; SwCI matches Table V; incomplete LOR needs a documented PM decision before the hazard progresses | 4.4 |
 | R08 | Tailored risk definitions documented, derived from Table I, cited by every assessment; warning until approved | 4.3.3d-e |
 | R09 | Task 106.2 data elements populated | 4.3.1d, Task 106 |
@@ -75,7 +75,7 @@ CI (`.github/workflows/pdac-validate.yml`) runs all three on every pull request.
 | R13 | Acceptance only through a review record with a named human reviewer in the right role; an AI review is I0 and never accepts (see `reviews/README.md`) | 4.3.7; project rule |
 | A01 | Item definition valid: schema, unique IDs, parents, candidate elements name a decision that exists | 4.3.2 |
 | A02 | Interface endpoints are elements or externals; hazard links resolve | 4.3.2 |
-| A03 | Hazard and event subsystems, requirement allocations and hazard interface IDs name real elements and interfaces | 4.3.2, Task 106.2c |
+| A03 | Hazard and event subsystems, event hardware, requirement allocations and hazard interface IDs name real elements and interfaces | 4.3.2, Task 106.2c |
 | A04 | Every element and external element has an interface; every function has real performers | 4.3.2 |
 | D01 | Decision register lifecycle: recommendation first, answers match options, a lead decision is never answered by Claude, applied decisions say where, about ten open | Project rule |
 

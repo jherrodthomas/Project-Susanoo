@@ -109,6 +109,24 @@ class Rules(unittest.TestCase):
         r.objects["event"]["EVT-SIM-001"]["status"] = "authorized"
         self.assertFalse(any(f.obj == "EVT-SIM-001" for f in errors(r, "R06")))
 
+    def test_r06_hardware_tag_limits_applicability(self):
+        from tools.pdac.rules import event_applies
+        r = fresh()
+        ev = dict(r.objects["event"]["EVT-BENCH-001"])
+        bat = r.objects["hazard"]["HAZ-PWR-002"]           # tagged SUS-M1-PWR-BAT; the rig has no battery
+        hpu = r.objects["hazard"]["HAZ-PWR-001"]           # tagged SUS-M1-PWR-HPU; the rig has one
+        self.assertFalse(event_applies(ev, bat))
+        self.assertTrue(event_applies(ev, hpu))
+        ev.pop("hardware")                                 # hardware not listed: conservative, everything applies
+        self.assertTrue(event_applies(ev, bat))
+        ev["hardware"] = ["SUS-M1-PWR-BAT"]
+        self.assertTrue(event_applies(ev, bat))
+
+    def test_a03_event_hardware_must_exist(self):
+        r = fresh()
+        r.objects["event"]["EVT-BENCH-001"]["hardware"] = ["SUS-M1-NOPE"]
+        self.assertTrue(any("hardware SUS-M1-NOPE" in f.message for f in errors(r, "A03")))
+
     def test_r07_swci_mismatch_and_lor_decision(self):
         r = fresh()
         r.objects["ssf"]["SSF-003"]["swci"] = 4
@@ -261,6 +279,13 @@ class TradeStudies(unittest.TestCase):
     def ts(self, r):
         return r.objects["trade"]["TS-001"]
 
+    def reopen_weights_decision(self, r):
+        """Put DQ-016 back to open in this copy, so the rule is tested whatever the register says now."""
+        d = next(d for d in r.decisions["decisions"] if d["id"] == "DQ-016")
+        d["status"], d["asked"] = "open", "2026-11-12"
+        d.pop("answer", None)
+        d.pop("applied_in", None)
+
     def test_committed_trade_study_is_clean(self):
         self.assertFalse(errors(BASE, "T01"))
 
@@ -271,6 +296,7 @@ class TradeStudies(unittest.TestCase):
 
     def test_weights_confirmed_only_by_applied_lead_decision(self):
         r = fresh()
+        self.reopen_weights_decision(r)
         self.ts(r)["weights_status"] = "confirmed"
         self.assertTrue(any("weights are confirmed" in f.message for f in errors(r, "T01")))
 
@@ -282,6 +308,7 @@ class TradeStudies(unittest.TestCase):
 
     def test_selection_needs_lead_decision_and_human_review(self):
         r = fresh()
+        self.reopen_weights_decision(r)
         t = self.ts(r)
         t["status"], t["selection"] = "selected", {"alternative": "A", "decision_id": "DQ-016"}
         self.assertTrue(any("applied lead decision" in f.message for f in errors(r, "T01")))

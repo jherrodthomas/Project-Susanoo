@@ -49,7 +49,19 @@ target_risk:
   rationale: Preliminary qualitative judgement at concept stage (no design); redundant sensing, staleness monitor
     and mechanical joint limits.
   definitions: SUS-RISKDEF-001
-event_risks: []
+event_risks:
+- event_id: EVT-BENCH-001
+  configuration: SUS-I1-C001
+  severity: 1
+  probability: D
+  rac: 1D
+  risk_level: Serious
+  rationale: "Preliminary event risk (AI draft, I0), not accepted. EVT-BENCH-001 is one leg on a rigid support frame driven
+    by a hydraulic power unit, test crew in the room, no pilot, cockpit, arms, battery or engine. Feedback-monitor
+    characterisation means feedback faults will be injected, so runaway motion is an expected test condition
+    rather than a rare failure. Assumes mechanical end-stops and pressure relief on the rig, crew outside the
+    guarded envelope and fault injection only from outside it. Without them, C."
+  definitions: SUS-RISKDEF-001
 mitigations:
 - id: M1
   description: Mechanical joint end-stops and pressure relief limit runaway travel and force

@@ -48,7 +48,18 @@ target_risk:
   rationale: Preliminary; fail-safe load holding that needs no signal or supply to engage, plus an energy-absorbing
     seat, makes the uncontrolled drop improbable.
   definitions: SUS-RISKDEF-001
-event_risks: []
+event_risks:
+- event_id: EVT-BENCH-001
+  configuration: SUS-I1-C001
+  severity: 2
+  probability: E
+  rac: 2E
+  risk_level: Medium
+  rationale: "Preliminary event risk (AI draft, I0), not accepted. EVT-BENCH-001 is one leg on a rigid support frame driven
+    by a hydraulic power unit, test crew in the room, no pilot, cockpit, arms, battery or engine. There is no
+    cockpit or pilot, so the cockpit-drop mishap cannot occur. A leg dropping in the frame on supply loss is
+    assessed under HAZ-SAF-001 and HAZ-PIL-001."
+  definitions: SUS-RISKDEF-001
 mitigations:
 - id: M1
   description: Select self-locking (non-backdrivable) joint actuation in the actuation trade, so loss of supply cannot

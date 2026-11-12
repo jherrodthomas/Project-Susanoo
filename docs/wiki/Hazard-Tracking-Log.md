@@ -78,16 +78,16 @@ Status: open 15 · total 15
 | HAZ-INT-001 | UAV launch or recovery outside the safe envelope | MOD-06, MOD-07, MOD-08 | 2C Serious | 2E Medium | — | (a identified) | SSF-006, SSF-008 | High | open | ROLE-UAV |
 | HAZ-MAN-001 | Person struck or pinned by the arms or claws | MOD-04, MOD-05 | 1C High | 1E Medium | — | (c identified) | SSF-001 | High | open | ROLE-WLK |
 | HAZ-MAN-002 | Carried load swings, shifts or drops while walking | MOD-04, MOD-05 | 1C High | 1D Serious | — | (b identified) | SSF-001 | High | open | ROLE-WLK |
-| HAZ-PIL-001 | Unintended leg motion during pilot ingress or egress | MOD-02, MOD-03, MOD-10 | 1C High | 1E Medium | — | (b identified) | SSF-001 | High | open | ROLE-WLK |
-| HAZ-PIL-002 | Uncontrolled vertical drop of the cockpit on loss of leg support | MOD-04, MOD-05, MOD-09 | 2C Serious | 2E Medium | — | (a identified) | — | — | open | ROLE-WLK |
+| HAZ-PIL-001 | Unintended leg motion during pilot ingress or egress | MOD-02, MOD-03, MOD-10 | 1C High | 1E Medium | EVT-BENCH-001: 1D Serious | (b identified) | SSF-001 | High | open | ROLE-WLK |
+| HAZ-PIL-002 | Uncontrolled vertical drop of the cockpit on loss of leg support | MOD-04, MOD-05, MOD-09 | 2C Serious | 2E Medium | EVT-BENCH-001: 2E Medium | (a identified) | — | — | open | ROLE-WLK |
 | HAZ-PIL-003 | Fall from height during emergency egress | MOD-09 | 1D Serious | 1E Medium | — | (b identified) | — | — | open | ROLE-WLK |
-| HAZ-PWR-001 | Residual hydraulic pressure during maintenance | MOD-01, MOD-10 | 1D Serious | 1E Medium | — | (a identified) | — | — | open | ROLE-WLK |
+| HAZ-PWR-001 | Residual hydraulic pressure during maintenance | MOD-01, MOD-10 | 1D Serious | 1E Medium | EVT-BENCH-001: 1D Serious | (a identified) | — | — | open | ROLE-WLK |
 | HAZ-PWR-002 | Battery thermal runaway near the pilot station | MOD-02, MOD-04, MOD-09, MOD-10 | 1D Serious | 1E Medium | — | (a identified) | — | — | open | ROLE-WLK |
 | HAZ-PWR-003 | Fuel leak and fire at the engine-generator | MOD-01, MOD-02, MOD-04, MOD-10 | 1D Serious | 1E Medium | — | (b identified) | — | — | open | ROLE-WLK |
-| HAZ-SAF-001 | Protective stop does not reach a safe state | MOD-04, MOD-05, MOD-09 | 1C High | 1E Medium | — | (b identified) | SSF-002 | High | open | ROLE-SWL |
-| HAZ-WLK-001 | Stale or lost feedback causes runaway motion | MOD-04, MOD-05 | 1C High | 1E Medium | — | (b identified) | SSF-004, SSF-007 | High | open | ROLE-WLK |
-| HAZ-WLK-002 | Walker tip-over or fall with pilot aboard | MOD-04, MOD-05, MOD-09 | 1C High | 1E Medium | — | (b identified) | SSF-007 | High | open | ROLE-WLK |
-| HAZ-WLK-003 | Crushing under the pod or legs while kneeling or rising | MOD-02, MOD-03 | 1C High | 1E Medium | — | (c identified) | SSF-001 | High | open | ROLE-WLK |
+| HAZ-SAF-001 | Protective stop does not reach a safe state | MOD-04, MOD-05, MOD-09 | 1C High | 1E Medium | EVT-BENCH-001: 1D Serious | (b identified) | SSF-002 | High | open | ROLE-SWL |
+| HAZ-WLK-001 | Stale or lost feedback causes runaway motion | MOD-04, MOD-05 | 1C High | 1E Medium | EVT-BENCH-001: 1D Serious | (b identified) | SSF-004, SSF-007 | High | open | ROLE-WLK |
+| HAZ-WLK-002 | Walker tip-over or fall with pilot aboard | MOD-04, MOD-05, MOD-09 | 1C High | 1E Medium | EVT-BENCH-001: 1E Medium | (b identified) | SSF-007 | High | open | ROLE-WLK |
+| HAZ-WLK-003 | Crushing under the pod or legs while kneeling or rising | MOD-02, MOD-03 | 1C High | 1E Medium | EVT-BENCH-001: 1E Medium | (c identified) | SSF-001 | High | open | ROLE-WLK |
 
 *SW contribution* is the Table VI risk level recorded because required LOR tasks are incomplete (4.4.3b). It must be decided by the PM and covered by any acceptance.
 
@@ -106,7 +106,7 @@ Status: open 15 · total 15
 ## Test events and exposure (4.3.7, Task 303)
 | Event | Title | Status | Exposure | Applicable hazards | Event risk accepted |
 |---|---|---|---|---|---|
-| EVT-BENCH-001 | Supported single-leg hydraulic actuator bench rig | planned | people, equipment | 11 | 0/11 |
+| EVT-BENCH-001 | Supported single-leg hydraulic actuator bench rig | planned | people, equipment | 7 | 0/7 |
 | EVT-SIM-001 | Digital simulation and PX4 SITL campaign | planned | none | 14 | n/a |
 
 Hazard management log (106.2r): the git history of `safety/hazards/`.

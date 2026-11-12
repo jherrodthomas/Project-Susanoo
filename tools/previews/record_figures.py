@@ -351,11 +351,14 @@ def event_risk(repo) -> str:
                      _chips_wrap(items)])
     body, h = table(cols, rows, W)
     sub = ("Each bench, test or simulation event, what it exposes, and every hazard that applies to it "
-           "(same configuration, a shared mode and subsystem). A hazard needs an event risk assessment and a human "
+           "(same configuration, a shared mode and subsystem, and the hazard's hardware where it names any). A hazard needs an event risk assessment and a human "
            "acceptance before people, equipment or the environment are exposed (rule R06, Task 303).")
     return frame("1", "Event risk", sub, "safety/events/", W, body, h,
-                 [legend_tone("grey", "Applies, not yet assessed"), legend_tone("orange", "Exposed"),
-                  legend_tone("ok", "Nothing exposed")],
+                 [legend_tone("grey", "Applies, not yet assessed")] +
+                 [legend_tone(k, f"Event risk {k} (assessed, not accepted)") for k in ("High", "Serious", "Medium", "Low")
+                  if any(e.get("event_id") in events and e.get("risk_level") == k
+                         for h in hz.values() for e in h.get("event_risks") or [])] +
+                 [legend_tone("orange", "Exposed"), legend_tone("ok", "Nothing exposed")],
                  "safety/events/EVT-*.yaml and safety/hazards/HAZ-*.yaml")
 
 

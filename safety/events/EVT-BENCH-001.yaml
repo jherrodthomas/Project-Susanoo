@@ -9,9 +9,18 @@ gate: G4
 configuration: SUS-I1-C001
 modes: [MOD-01, MOD-02, MOD-04, MOD-10]
 subsystems: [SUS-M1-WLK, SUS-M1-PWR, SUS-M1-SAF]
+hardware: [SUS-M1-WLK, SUS-M1-PWR-HPU, SUS-M1-SAF]   # one leg, its hydraulic power unit, the stop chain (decision DQ-017)
 exposure:
   people: true
   equipment: true
   environment: false
-  notes: Test crew near pressurised hydraulics and moving leg. Event risk must be assessed and accepted before authorization (4.3.7).
+  notes: >-
+    Test crew near pressurised hydraulics and moving leg. Event risk must be assessed and accepted before
+    authorization (4.3.7). The preliminary event risks drafted in the hazard records (2026-11-12, I0, not accepted)
+    assume these event conditions; each assessment says how its probability rises without them. (1) A guarded leg
+    envelope, with the crew outside it whenever the hydraulic supply is on. (2) A hardware enable chain and a
+    hold-to-run pendant. (3) An independent hardwired stop that removes supply. (4) Mechanical end-stops and pressure
+    relief on the rig. (5) Fault injection only from outside the envelope. (6) Lockout/tagout, gauge-verified zero
+    pressure and the leg on mechanical supports before any line is opened. (7) A support frame designed and
+    proof-loaded for the maximum actuator force.
 authorization: null
