@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1004.1" viewBox="0 0 760 1004.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 4 · SysML requirements — plan-level requirements</title>
+<desc>Requirements view of package Task102_SSPP. The .sysml file is the model of record.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="760" height="906" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 4 · SysML requirements — plan-level requirements</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Requirements view of package Task102_SSPP. The .sysml file is the model of record.</text>
+<text x="40" y="83" font-size="11" fill="#94A3B8">Source: Task102_SSPP.sysml</text>
+<line x1="40" y1="100" x2="720" y2="100" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="124" width="621" height="686" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<path d="M40 124 L239.9 124 L239.9 138 L229.9 148 L40 148 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="141" font-size="11.5" fill="#0F172A" font-weight="700">req [package] Task102_SSPP</text>
+<g transform="translate(56 164)">
+<path d="M447 223 L412 223 Q405 223 405 216 L405 81 Q405 74 398 74 L266.5 74" stroke="#2E9E6A" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ok)"/>
+<path d="M447 235 L266.5 235" stroke="#2E9E6A" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ok)"/>
+<path d="M447 247 L412 247 Q405 247 405 254 L405 389 Q405 396 398 396 L266.5 396" stroke="#2E9E6A" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ok)"/>
+<path d="M447 259 L424 259 Q417 259 417 266 L417 550 Q417 557 410 557 L266.5 557" stroke="#2E9E6A" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ok)"/>
+<rect x="6" y="6" width="260.5" height="135" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="6" y="6" width="260.5" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="6" y1="52" x2="266.5" y2="52" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="136.2" y="23" font-size="10" fill="#475569" text-anchor="middle">«requirement def · candidate»</text>
+<text x="136.2" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">DefineRiskAuthority</text>
+<text x="18" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SSPP-001</text>
+<text x="18" y="85" font-size="10.5" fill="#475569">SSPP shall name the risk acceptance authority</text>
+<text x="18" y="100" font-size="10.5" fill="#475569">for each risk level</text>
+<rect x="18" y="117" width="33.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="34.6" y="128.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">High</text>
+<rect x="57.1" y="117" width="64.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="89.5" y="128.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Inspection</text>
+<rect x="10.4" y="167" width="256.1" height="135" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="10.4" y="167" width="256.1" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="10.4" y1="213" x2="266.5" y2="213" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="138.4" y="184" font-size="10" fill="#475569" text-anchor="middle">«requirement def · candidate»</text>
+<text x="138.4" y="201" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">DefineTaskSelection</text>
+<text x="22.4" y="231" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SSPP-002</text>
+<text x="22.4" y="246" font-size="10.5" fill="#475569">SSPP shall record selected and tailored tasks</text>
+<text x="22.4" y="261" font-size="10.5" fill="#475569">with rationale</text>
+<rect x="22.4" y="278" width="45.8" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
+<text x="45.3" y="289.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Medium</text>
+<rect x="74.2" y="278" width="64.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="106.6" y="289.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Inspection</text>
+<rect x="26.6" y="328" width="239.9" height="135" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="26.6" y="328" width="239.9" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="26.6" y1="374" x2="266.5" y2="374" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="146.5" y="345" font-size="10" fill="#475569" text-anchor="middle">«requirement def · candidate»</text>
+<text x="146.5" y="362" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SeparateRiskScales</text>
+<text x="38.6" y="392" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SSPP-003</text>
+<text x="38.6" y="407" font-size="10.5" fill="#475569">SSPP shall keep 882E risk and ARP4761A</text>
+<text x="38.6" y="422" font-size="10.5" fill="#475569">failure-condition scales distinct</text>
+<rect x="38.6" y="439" width="45.8" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
+<text x="61.5" y="450.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Medium</text>
+<rect x="90.4" y="439" width="64.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="122.8" y="450.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Inspection</text>
+<rect x="9.1" y="489" width="257.4" height="135" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="9.1" y="489" width="257.4" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="9.1" y1="535" x2="266.5" y2="535" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="137.8" y="506" font-size="10" fill="#475569" text-anchor="middle">«requirement def · candidate»</text>
+<text x="137.8" y="523" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">DefineSoftwareApproach</text>
+<text x="21.1" y="553" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SSPP-004</text>
+<text x="21.1" y="568" font-size="10.5" fill="#475569">SSPP shall define the software contribution to</text>
+<text x="21.1" y="583" font-size="10.5" fill="#475569">system risk approach</text>
+<rect x="21.1" y="600" width="33.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="37.7" y="611.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">High</text>
+<rect x="60.2" y="600" width="64.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="92.6" y="611.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Inspection</text>
+<rect x="447" y="211" width="136" height="60" rx="8" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.3"/>
+<rect x="459" y="223" width="86.8" height="16" rx="8.0" fill="#2E9E6A" stroke="none" stroke-width="1"/>
+<text x="502.4" y="234.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SSPP-REVIEW</text>
+<text x="459" y="257" font-size="12.5" fill="#0F172A" font-weight="700">Verification case</text>
+<rect x="328.5" y="79" width="56.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="333.5" y="92" font-size="10.5" fill="#475569">«verify»</text>
+<rect x="328.5" y="240" width="56.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="333.5" y="253" font-size="10.5" fill="#475569">«verify»</text>
+<rect x="328.5" y="401" width="56.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="333.5" y="414" font-size="10.5" fill="#475569">«verify»</text>
+<rect x="328.5" y="562" width="56.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="333.5" y="575" font-size="10.5" fill="#475569">«verify»</text>
+</g>
+<line x1="40" y1="836" x2="56" y2="836" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="62" y="840" font-size="11" fill="#475569">«satisfy»</text>
+<line x1="124.6" y1="836" x2="140.6" y2="836" stroke="#2E9E6A" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="146.6" y="840" font-size="11" fill="#475569">«verify»</text>
+<rect x="203.2" y="830" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="225.2" y="840" font-size="11" fill="#475569">Candidate defined in this view</text>
+<text x="40" y="862" font-size="10.5" fill="#94A3B8">Generated by tools/gen_safety_docs.py from safety/mil-std-882e/catalog.yaml. Planning view: not evidence of completed analysis,</text>
+<text x="40" y="877" font-size="10.5" fill="#94A3B8">verification or risk acceptance.</text>
+<g class="terms" data-base-h="906">
+<rect x="0" y="906" width="760" height="98.1" fill="#FFFFFF"/>
+<line x1="40" y1="910" x2="720" y2="910" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="925.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: ARP4754B = SAE guidelines for development of civil aircraft and systems · ARP4761A = SAE guidelines for the safety</text>
+<text x="40" y="940.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">assessment process on civil aircraft · DoD = US Department of Defense · MIL-STD-882E = US DoD Standard Practice for System</text>
+<text x="40" y="954.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Safety (11 May 2012, base edition) · SAE = SAE International, publisher of ARP4754B and ARP4761A · SSPP = system safety</text>
+<text x="40" y="969.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">program plan (MIL-STD-882E Task 102) · SSPP-nnn = plan-level requirement in the SSPP view · SysML = Systems Modeling</text>
+<text x="40" y="983.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Language (SysML v2) · US = United States</text>
+</g>
+</svg>

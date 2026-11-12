@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 from sim.plant import spec
+from tools.terms.terms import decorate  # noqa: E402
 
 SIM = Path(__file__).resolve().parent
 ROOT = SIM.parent
@@ -25,6 +26,7 @@ def dumps(obj) -> str:
 def write_or_check(outputs: dict, check: bool, hint: str) -> int:
     stale = []
     for rel, text in outputs.items():
+        text = decorate(rel, text)          # terms block / line (tools/terms)
         path = ROOT / rel
         if path.exists() and path.read_text(encoding="utf-8") == text:
             continue

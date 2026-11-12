@@ -10,6 +10,7 @@
     "id": {"type": "string"},
     "title": {"type": "string"},
     "statement": {"type": "string", "minLength": 10},
+    "derived_from": {"type": "array", "items": {"type": "string"}, "description": "Parent requirement IDs (SysML deriveReqt)"},
     "status": {"enum": ["candidate", "baselined", "deleted"]},
     "source": {"type": "object", "additionalProperties": false,
       "properties": {

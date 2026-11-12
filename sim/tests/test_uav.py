@@ -7,6 +7,7 @@ from sim.figures import uav_scenes
 from sim.plant.spec import check as check_spec
 from sim.uav import harness
 from tools.pdac.load import _read_yaml
+from tools.terms.terms import decorate
 
 SPEC = check_spec(_read_yaml(harness.SPEC))
 CFG = _read_yaml(harness.SCENARIOS)
@@ -73,7 +74,7 @@ class Outputs(unittest.TestCase):
 
     def test_generated_outputs_current(self):
         for rel, text in uav_scenes.outputs().items():
-            self.assertEqual((ROOT / rel).read_text(encoding="utf-8"), text, f"{rel} stale")
+            self.assertEqual((ROOT / rel).read_text(encoding="utf-8"), decorate(rel, text), f"{rel} stale")
 
 
 if __name__ == "__main__":

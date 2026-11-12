@@ -1,0 +1,39 @@
+# Figure specs for framework/documentation-standard.md, rendered by tools/figures/build_figures.py.
+figures:
+  - file: fig-1-documentation-pipeline.svg
+    number: "1"
+    title: How folder documentation is produced and enforced
+    subtitle: >-
+      One catalog and the SysML models drive every generated README, figure and SysML view; hand-authored folders
+      keep a figures.yaml. CI rebuilds everything and fails on any difference or missing section.
+    ref: framework/documentation-standard.md
+    direction: RIGHT
+    nodes:
+      - {id: SRC, banner: Sources of truth, tone: work}
+      - {id: ITEM, parent: SRC, code: item-definition.yaml, title: "Elements, externals, interfaces", tone: work}
+      - {id: CAT, parent: SRC, code: catalog.yaml, title: "Folders, scope, boundaries, views", tone: work}
+      - {id: SYS, parent: SRC, code: .sysml, title: "models/sysml (project model), ConceptOperations, PX4Integration", tone: software}
+      - {id: FY, parent: SRC, code: figures.yaml, title: Hand-authored figure specs, tone: work}
+      - {id: GEN, banner: Generators, tone: system}
+      - {id: G1, parent: GEN, code: gen_safety_docs.py, title: "MIL-STD-882E tree", tone: system}
+      - {id: G2, parent: GEN, code: build_figures.py, title: "concept, px4, framework", tone: system}
+      - {id: KIT, code: tools/figures, title: "Figure kit + pinned ELK layout", sub: "figkit.py · diagram.py · elk_layout.js", tone: interface}
+      - {id: OUT, banner: Published in each folder, tone: work}
+      - {id: RD, parent: OUT, code: README.md, title: Generated part + human part below marker, tone: work}
+      - {id: SVG, parent: OUT, code: figures/*.svg, title: "Flow, block, boundary, SysML, I/O figures", tone: work}
+      - {id: VW, parent: OUT, code: "*.sysml", title: Folder SysML view, tone: software}
+      - {id: CI, code: CI, title: check_readme_diagrams.py, sub: "sections · figures · SysML links · regenerate and diff", tone: safety}
+    edges:
+      - [CAT, G1, ""]
+      - [ITEM, G1, "", {dash: true}]
+      - [SYS, G1, "paths, requirements, state machines", {dash: true}]
+      - [SYS, G2, state machines, {dash: true}]
+      - [FY, G2, ""]
+      - [G1, KIT, specs]
+      - [G2, KIT, specs]
+      - [KIT, SVG, SVG]
+      - [G1, RD, ""]
+      - [G1, VW, ""]
+      - [OUT, CI, every push and PR, {tone: safety}]
+    legend:
+      - ["line:#475569", "#475569 dashed", "Read from model (no restatement)"]

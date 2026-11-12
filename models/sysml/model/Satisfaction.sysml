@@ -21,5 +21,9 @@ package SusanooSatisfaction {
     satisfy 'SYS-008' by context.system.walker.pilotStation;
     satisfy 'SYS-009' by context.system.walker.legs;
     satisfy 'SYS-009' by context.system.walker.power;
-    satisfy 'SYS-010' by context.system.walker.legs;
+    satisfy 'SYS-010' by context.system.walker.safetyMonitor;
+    satisfy 'SYS-011' by context.system.walker.safetyMonitor;
+    satisfy 'SYS-012' by context.system.walker.dock;
+    satisfy 'SYS-012' by context.system.integrationManager;
+    satisfy 'SYS-013' by context.system.walker.legs;
 }

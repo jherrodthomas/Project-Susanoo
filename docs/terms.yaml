@@ -1,0 +1,368 @@
+# Abbreviations, acronyms and record codes for Project Susanoo: the one list.
+# Every page and figure explains the terms it uses from this file (tools/terms/terms.py; CI runs --check).
+# System element and external IDs (SUS-M1-SAF, EXT-PILOT ...) are NOT listed here: they come from
+# architecture/item-definition.yaml. Keep meanings short and plain; a reader should not need another page.
+
+abbreviations:
+  3D: three-dimensional
+  US: United States
+  NASA: US National Aeronautics and Space Administration
+  SPICE: Software Process Improvement and Capability dEtermination (ISO/IEC 33000 series)
+  ASAM: Association for Standardization of Automation and Measuring Systems
+  EIA: Electronic Industries Alliance
+  AI: artificial intelligence (here, an AI assistant drafting at independence level I0)
+  BMS: battery management system
+  BSD: Berkeley Software Distribution (the BSD licence)
+  CAN: Controller Area Network, a vehicle data bus
+  CCA: common cause analysis
+  CI: continuous integration (the automated checks GitHub runs on every change)
+  CoM: centre of mass
+  CONOPS: concept of operations
+  COTS: commercial off-the-shelf
+  CPU: central processing unit
+  DAL: development assurance level (DO-178C / DO-254)
+  DDS: Data Distribution Service, the middleware ROS 2 uses
+  DID: data item description (a deliverable format referenced by MIL-STD-882E tasks)
+  DoD: US Department of Defense
+  DoDI: Department of Defense Instruction
+  E-stop: emergency stop
+  ECP: engineering change proposal
+  ECR: engineering change request
+  EHA: environmental hazard analysis (MIL-STD-882E Task 210)
+  EHS: environment, health and safety
+  ELK: Eclipse Layout Kernel, the engine that lays out the generated figures
+  EMD: engineering and manufacturing development (acquisition phase)
+  EMI: electromagnetic interference
+  EOD: explosive ordnance disposal
+  EPS: electric power steering (automotive example in the LionDriver port plan)
+  ESC: electronic speed controller (drives a UAV motor)
+  FFI: freedom from interference (ISO 26262 term in the LionDriver port plan)
+  FHA: functional hazard analysis (MIL-STD-882E Task 208; also ARP4761A aircraft FHA)
+  FMEA: failure modes and effects analysis
+  FMU: Functional Mock-up Unit, a packaged simulation model
+  FRET: Formal Requirements Elicitation Tool (NASA)
+  FTA: fault tree analysis
+  FTTI: fault tolerant time interval (ISO 26262 term in the LionDriver port plan)
+  GCS: ground control station
+  GNSS: global navigation satellite system (GPS and similar)
+  GPS: Global Positioning System
+  GSE: ground support equipment
+  GSN: Goal Structuring Notation, for safety-case arguments
+  HARA: hazard analysis and risk assessment (ISO 26262 term in the LionDriver port plan)
+  HAZMAT: hazardous materials
+  HE: hazardous event (ISO 26262 term in the LionDriver port plan)
+  HHA: health hazard analysis (MIL-STD-882E Task 207)
+  HIL: hardware-in-the-loop testing
+  HMAR: hazard management assessment report (MIL-STD-882E Task 302)
+  HMI: human-machine interface
+  HMMP: hazardous materials management plan (MIL-STD-882E Task 108)
+  HMP: hazard management plan (MIL-STD-882E Task 103)
+  HSE: health, safety and environment
+  HTS: hazard tracking system (MIL-STD-882E Task 106; here safety/hazards/)
+  IBD: internal block diagram (SysML)
+  ICD: interface control document
+  ID: identifier
+  IF: interface (a count of interfaces in block diagrams, or an IF-nnn record)
+  IPPD: integrated product and process development
+  IPT: integrated product team
+  JDK: Java Development Kit
+  JSON: JavaScript Object Notation, a data file format
+  LOR: level of rigor (software safety tasks, MIL-STD-882E 4.4)
+  MAVLink: Micro Air Vehicle Link, the PX4 telemetry and command protocol
+  MAVSDK: MAVLink software development kit
+  MBSE: model-based systems engineering
+  MSA: materiel solution analysis (acquisition phase)
+  MuJoCo: Multi-Joint dynamics with Contact, the physics engine for the level-2 walker model
+  NIST: US National Institute of Standards and Technology
+  OMG: Object Management Group, publisher of SysML
+  OS: operations and support (acquisition phase)
+  PD: production and deployment (acquisition phase)
+  PDaC: Product Development as Code
+  PHA: preliminary hazard analysis (MIL-STD-882E Task 202)
+  PHL: preliminary hazard list (MIL-STD-882E Task 201)
+  PLr: required performance level (ISO 13849)
+  PM: program manager
+  PPE: personal protective equipment
+  PR: pull request (a proposed change on GitHub)
+  PSSA: preliminary system safety assessment (ARP4761A)
+  PX4: PX4 Autopilot, the open-source flight-control software candidate for SUS-A1
+  RAC: risk assessment code, severity category plus probability level (e.g. 1C)
+  RF: radio frequency
+  ROS: Robot Operating System (ROS 2)
+  RTCA: RTCA, Inc., publisher of DO-178C and DO-254
+  RTL: return to launch (a PX4 flight mode)
+  SAE: SAE International, publisher of ARP4754B and ARP4761A
+  SAR: safety assessment report (MIL-STD-882E Task 301)
+  SCC: software control category (MIL-STD-882E Table IV)
+  SDS: safety data sheet
+  SE: systems engineering
+  SHA: system hazard analysis (MIL-STD-882E Task 205)
+  SHA-256: a cryptographic hash used to pin a downloaded file
+  SIH: simulation-in-hardware, PX4's built-in headless simulator
+  SITL: software-in-the-loop simulation
+  SoS: system of systems
+  SoSHA: system-of-systems hazard analysis (MIL-STD-882E Task 209)
+  SP: Special Publication (NIST)
+  SRHA: system requirements hazard analysis (MIL-STD-882E Task 203)
+  SSA: system safety assessment (ARP4761A)
+  SSCM: software safety criticality matrix (MIL-STD-882E Table V)
+  SSHA: subsystem hazard analysis (MIL-STD-882E Task 204)
+  SSPP: system safety program plan (MIL-STD-882E Task 102)
+  SVG: Scalable Vector Graphics, the figure file format
+  SW: software
+  SwCI: software criticality index (MIL-STD-882E Table V)
+  SysML: Systems Modeling Language (SysML v2)
+  TBD: to be determined
+  TD: technology development (acquisition phase)
+  UAV: uncrewed aerial vehicle (drone)
+  VCRM: verification cross-reference matrix
+  YAML: a plain-text data format used for the records
+  ASIL: Automotive Safety Integrity Level (ISO 26262 term in the LionDriver port plan)
+  ASPICE: Automotive SPICE process assessment model (LionDriver port plan)
+  AUTOSAR: AUTomotive Open System ARchitecture (LionDriver port plan)
+  OpenSCENARIO: ASAM standard format for driving scenarios (LionDriver port plan)
+  MGT: management (MIL-STD-882E task type)
+  ENG: engineering (MIL-STD-882E task type)
+  GC: generally applicable to design change (MIL-STD-882E Table A-I)
+  NA: not applicable (MIL-STD-882E Table A-I)
+  PE: Program Executive (simulated role ROLE-PE)
+  PL: Program Lead (simulated role ROLE-PL)
+  CE: Chief Engineer (simulated role ROLE-CE)
+  HTML: HyperText Markup Language (web page)
+
+standards:
+  MIL-STD-882E: US DoD Standard Practice for System Safety (11 May 2012, base edition)
+  MIL-STD-1472: US DoD design criteria for human engineering
+  MIL-STD-810H: US DoD environmental engineering test methods
+  MIL-STD-461: US DoD electromagnetic interference requirements
+  MIL-HDBK-516: US DoD airworthiness certification criteria handbook
+  ARP4754B: SAE guidelines for development of civil aircraft and systems
+  ARP4761A: SAE guidelines for the safety assessment process on civil aircraft
+  DO-178C: RTCA software considerations in airborne systems
+  DO-254: RTCA design assurance for airborne electronic hardware
+  DO-330: RTCA software tool qualification considerations
+  ISO: International Organization for Standardization (ISO 12100 machinery risk, ISO 13849 control safety, ISO 26262 road vehicles)
+  IEC: International Electrotechnical Commission (IEC 61508 functional safety)
+  EIA-649: SAE / EIA configuration management standard
+  AS9100: aerospace quality management standard
+
+codes:
+  HAZ-: hazard record (safety/hazards/HAZ-xxx-nnn.yaml)
+  SYS-: system safety requirement record (requirements/SYS-nnn.yaml)
+  IF-: interface in the item definition (architecture/item-definition.yaml)
+  IF-PX4-: PX4 integration interface (integrations/px4/interface-contract.md)
+  SSF-: safety-significant software function record (safety/software/)
+  EVT-: test or demonstration event record (safety/events/)
+  VER-: verification record or case
+  REV-: review record (reviews/)
+  CR-: change request record (changes/)
+  DQ-: decision question for the project lead (decisions/register.yaml)
+  ROLE-: project role in the tailoring record (simulated until the lead says otherwise)
+  MOD-: operating mode from the CONOPS (MOD-01 to MOD-10)
+  SCN-: CONOPS scenario (SCN-0nn nominal, SCN-1nn off-nominal)
+  TS-: architecture trade study
+  F-: system function in the item definition
+  V-: SysML view (tools/sysml/views.py)
+  SF-: walker failure-search family (sim/search)
+  FLT-: walker fault in sim/faults.yaml
+  EC-: edge case found by a failure search
+  SU-: UAV PX4 SITL scenario
+  SC-: 2D walker scene (sim/figures)
+  S3-: 3D hazard scene (sim/scenes3d)
+  FND-UAV-: finding from the UAV simulations, for the safety lead
+  NOM-: level-1/level-2 cross-check case, no fault (capability by slope)
+  CAT-: level-1/level-2 cross-check case from the fault catalogue
+  CAP-: level-1/level-2 cross-check case at the actuator-capacity boundary
+  STOP-: level-1/level-2 cross-check case, protective stop on a slope with no fault
+  SZ-: actuator sizing study at level 2 (sim/mujoco/sizing.yaml)
+  SPEC-: simulation parameter spec record (sim/spec/)
+  DI-SAFT-: data item description number for a MIL-STD-882E deliverable
+  SSPP-: plan-level requirement in the SSPP view
+  PX4-R-: PX4 integration requirement (integrations/px4/PX4Integration.sysml)
+  SUS-CONOPS-001: the SUS-I1 concept of operations document ID
+  SUS-RISKDEF-001: the project's tailored risk definitions (standards/tailoring)
+  SUS-I1-C001: configuration 001 of SUS-I1, the baseline every record applies to
+  R01-R12: the first twelve validator rules in tools/pdac
+
+classes:
+  G#: lifecycle gate (G0 concept to G7 change and sustainment)
+  M#: mitigation in a hazard record (M1, M2 …), or a SysML model check rule in tools/sysml
+  CF#: causal factor in a hazard record (CF1, CF2 …)
+  R#: validator rule in tools/pdac (R13 = only a named human review accepts anything)
+  L#: link-resolution validator rule (L00)
+  A#: item-definition validator rule (A01–A04)
+  D#: decision-register validator rule (D01)
+  I#: review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation)
+  P#: PX4 integration phase (P0 SITL to P6 physical test readiness)
+  RAC#: risk assessment code, severity 1–4 plus probability A–F (e.g. 1C)
+
+class_labels:
+  G#: G0–G7
+  M#: M1, M2 …
+  CF#: CF1, CF2 …
+  R#: R01 …
+  L#: L00
+  A#: A01–A04
+  D#: D01
+  I#: I0–I3
+  P#: P0–P6
+  RAC#: 1A–4F
+
+# Words written in capitals that are ordinary words (figure banners, emphasis), names, roman numerals and code
+# identifiers: not abbreviations.
+not_terms:
+  # figure banners and titles written in capitals
+  - INTEGRATED
+  - MECHANIZED
+  - OBSERVATION
+  - BOUNDARY
+  - WALKER
+  - AND
+  - THIS
+  - FOLDER
+  - SYSTEM
+  - SAFETY
+  - HAZARD
+  - HAZARDS
+  - HAZARDOUS
+  - LOITER
+  - LAND
+  - AUTO
+  - TIP
+  - HARD
+  - DROP
+  - RISK
+  - REQUIREMENTS
+  - REQUIREMENT
+  - PROGRAM
+  - GENERATED
+  - MECH
+  - TASKS
+  - ARCHITECTURE
+  - MANAGEMENT
+  - SCOPE
+  - SUBSYSTEM
+  - MITIGATION
+  - NONE
+  - CONFIGURATION
+  - IMPORTANT
+  - "OFF"
+  - STARTUP
+  - STANDBY
+  - PILOTED
+  - WALK
+  - MANIPULATION
+  - PREPARE
+  - FLIGHT
+  - RECOVERY
+  - DEGRADED
+  - MAINTENANCE
+  - CONCEPT
+  - TARGET
+  - SIMULATION
+  - PROJECT
+  - SUSANOO
+  - SEVERITY
+  - HIGH
+  - SERIOUS
+  - MEDIUM
+  - LOW
+  - ELIMINATED
+  - PROBABILITY
+  - MONTE
+  - CARLO
+  - FAILSAFE
+  - SCENARIOS
+  - END
+  - ENFORCED
+  - FOLDERS
+  - SOURCES
+  - TRUTH
+  - GENERATORS
+  - PUBLISHED
+  - OF
+  - IN
+  - EACH
+  - BOTH
+  - AS
+  - SET
+  - INTEREST
+  - EFFORT
+  - PROCESS
+  - AUDIT
+  - INTERFACE
+  - INTERFACES
+  - MATERIALS
+  - ANALYSIS
+  - PRELIMINARY
+  - ISOLATION
+  - OPERATING
+  - SUPPORT
+  - HUMAN
+  - EXPOSURE
+  - FUNCTIONS
+  - CONSTITUENT
+  - ENVIRONMENTAL
+  - ASPECTS
+  - ASSESSMENT
+  - CRITERIA
+  - SELECTION
+  - IMPLEMENTATION
+  - ALLOCATION
+  - VERIFICATION
+  - TEST
+  - EVENTS
+  - EVENT
+  - VERIFIED
+  - EXPLOSIVE
+  - ITEMS
+  - ORDNANCE
+  - DECISION
+  - RECORDS
+  - ACCEPTANCE
+  - ASSESSED
+  - MILESTONE
+  - STATUS
+  - FIELDED
+  - REPORTING
+  - PERIOD
+  - CHANGE
+  - REVIEW
+  - LOG
+  - SOFTWARE
+  - TEMPLATES
+  - SAFETY-SIGNIFICANT
+  - CONCEPT-LEVEL
+  - FLIGHT-CONTROL
+  - ASSURANCE
+  # names and file names
+  - README
+  - READMEs
+  - CLAUDE
+  - PyYAML
+  - LionDriver
+  - GitHub
+  - UAVDock
+  - PHLEntry
+  - PHARow
+  - OSHARow
+  - UAV-Simulation
+  # roman numerals (Table III, Table A-II ...)
+  - II
+  - III
+  - IV
+  - VI
+  - A-I
+  - A-II
+  - I-III
+  # placeholders written in examples
+  - HAZ-x
+  - CFn
+  - TS-xxx
+  - IF-nnn
+  - IF-PX4-nnn
+  - SYS-nnn
+  - YYYY-MM
+  - PROC-TBD
+  - CPU-min
+  - R01-R12

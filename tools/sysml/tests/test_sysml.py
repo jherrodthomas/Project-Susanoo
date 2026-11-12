@@ -7,6 +7,7 @@ from pathlib import Path
 from tools.pdac.load import ROOT, _read_yaml
 from tools.sysml import check, gen_requirements, views
 from tools.sysml.model import MODEL_DIR, ModelError, load, parse_text
+from tools.terms.terms import decorate
 
 M = load()
 ITEM = _read_yaml(ROOT / "architecture/item-definition.yaml")
@@ -22,6 +23,14 @@ class Reader(unittest.TestCase):
     def test_unsupported_construct_names_file_and_line(self):
         with self.assertRaisesRegex(ModelError, r"x.sysml:2: construct not supported"):
             parse_text("package P {\n  state def S;\n}", "x.sysml")
+
+    def test_attribute_and_item_defs_with_ref_features(self):
+        d = parse_text("package P {\n attribute def R { attribute s : E; }\n"
+                       " item def H { attribute r : R; ref item m : M[0..*]; }\n}", "x")
+        r, h = d[0].members
+        self.assertEqual((r.kind, r.name, r.members[0].type), ("attribute_def", "R", "E"))
+        self.assertEqual((h.kind, [m.kind for m in h.members]), ("item_def", ["attribute", "ref"]))
+        self.assertEqual((h.members[1].name, h.members[1].type), ("m", "M"))
 
     def test_metadata_values(self):
         d = parse_text("package P { part <'A-1'> a : T { @M { k = E::v; s = \"x\"; t = (\"a\", \"b\"); } } }", "x")
@@ -91,7 +100,7 @@ class Generated(unittest.TestCase):
 
     def test_views_current(self):
         for rel, text in views.build().items():
-            self.assertEqual((ROOT / rel).read_text(encoding="utf-8"), text, f"{rel} stale; run tools.sysml.views")
+            self.assertEqual((ROOT / rel).read_text(encoding="utf-8"), decorate(rel, text), f"{rel} stale; run tools.sysml.views")
 
     def test_n2_lists_every_interface(self):
         svg = views.v08(M, "x")

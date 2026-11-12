@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1096.5" height="1083" viewBox="0 0 1096.5 1083" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 2 · Boundary diagram — PX4 assurance boundary</title>
+<desc>PX4 and its command adapter form a flight-control assurance boundary separate from walker motion control. Every crossing is an item in interface-contract.md (pill = IF-PX4 number).</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1096.5" height="984.9" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 2 · Boundary diagram — PX4 assurance boundary</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">PX4 and its command adapter form a flight-control assurance boundary separate from walker motion control. Every crossing is an item in</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">interface-contract.md (pill = IF-PX4 number).</text>
+<text x="1056.5" y="44" font-size="11" fill="#475569" text-anchor="end">interface-contract.md</text>
+<line x1="40" y1="102" x2="1056.5" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 126)">
+<rect x="691" y="233" width="280.2" height="260" rx="12" fill="none" stroke="#C2410C" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M931 66 L931 221 Q931 228 931 235 L931 405.2 Q931 411 925.2 411 L924.5 411 Q919.5 411 919.5 416 L919.5 421" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M729 66 L729 81 Q729 88 736 88 L818 88 Q825 88 825 95 L825 163 Q825 170 832 170 L913 170 Q920 170 920 177 L920 221 Q920 228 920 235 L920 394 Q920 401 913 401 L892.8 401 Q885.8 401 885.8 408 L885.8 421" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193 66 L193 93 Q193 100 200 100 L715 100 Q722 100 722 107 L722 175 Q722 182 729 182 L902 182 Q909 182 909 189 L909 221 Q909 228 909 235 L909 384 Q909 391 902 391 L859.1 391 Q852.1 391 852.1 398 L852.1 421" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)" marker-start="url(#arr-interface)"/>
+<path d="M147 66 L147 662.9 Q147 669.9 154 669.9 L403 669.9 Q410 669.9 410 676.9 L410 711.9" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M243 560.9 L243 580.9 Q243 587.9 250 587.9 L429 587.9 Q436 587.9 436 594.9 L436 711.9" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M869 475 L869 558.9 Q869 565.9 869 572.9 L869 580.9 Q869 587.9 862 587.9 L727 587.9 Q720 587.9 720 594.9 L720 662.9 Q720 669.9 713 669.9 L518 669.9 Q511 669.9 511 676.9 L511 711.9" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M486 711.9 L486 213 Q486 206 493 206 L811 206 Q818 206 818 213 L818 221 Q818 228 818 235 L818.4 283" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M818.4 343 L818.4 421" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M879 493 L879 711.9" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M461 711.9 L461 592.9 Q461 587.9 466 587.9 L466 587.9 Q471 587.9 471 582.9 L471 201 Q471 194 478 194 L821 194 Q828 194 828 201 L828 233" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)" marker-start="url(#arr-ink)"/>
+<rect x="703" y="245" width="256.2" height="22" rx="11" fill="#C2410C" stroke="none" stroke-width="0"/>
+<text x="831.1" y="260" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">BOUNDARY · PX4 FLIGHT-CONTROL ASSURANCE</text>
+<rect x="851" y="12" width="159.5" height="54" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="863" y="36" font-size="12.5" fill="#0F172A" font-weight="700">PX4 upstream project</text>
+<text x="863" y="53" font-size="10.5" fill="#475569">tagged release + SHA</text>
+<rect x="634" y="6" width="190.9" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="646" y="18" width="83.4" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="687.7" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">EXT-GNSS-RF</text>
+<text x="646" y="52" font-size="12.5" fill="#0F172A" font-weight="700">GNSS and RF environment</text>
+<rect x="102" y="6" width="136" height="60" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="114" y="18" width="74.8" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
+<text x="151.4" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<text x="114" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Dock</text>
+<rect x="175" y="500.9" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="187" y="512.9" width="49.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="211.9" y="524.3" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1</text>
+<text x="187" y="546.9" font-size="12.5" fill="#0F172A" font-weight="700">Walker posture</text>
+<rect x="737.5" y="283" width="161.8" height="60" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="749.5" y="295" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="786.9" y="306.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
+<text x="749.5" y="329" font-size="12.5" fill="#0F172A" font-weight="700">PX4 command adapter</text>
+<rect x="784.7" y="421" width="168.5" height="54" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<text x="796.7" y="445" font-size="12.5" fill="#0F172A" font-weight="700">PX4 Autopilot + pinned</text>
+<text x="796.7" y="461" font-size="12.5" fill="#0F172A" font-weight="700">parameters</text>
+<rect x="385" y="711.9" width="151.5" height="60" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="397" y="723.9" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="434.4" y="735.3" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
+<text x="397" y="757.9" font-size="12.5" fill="#0F172A" font-weight="700">Integration manager</text>
+<rect x="811" y="711.9" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="823" y="723.9" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="860.4" y="735.3" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<text x="823" y="757.9" font-size="12.5" fill="#0F172A" font-weight="700">Pilot HMI</text>
+<rect x="839" y="130" width="90.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="844" y="143" font-size="10.5" fill="#475569">pinned baseline</text>
+<rect x="735" y="130" width="88.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="740" y="143" font-size="10.5" fill="#475569">navigation, link</text>
+<rect x="525" y="130" width="194.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="528" y="131" width="29.1" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
+<text x="542.5" y="142.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">009</text>
+<text x="561.1" y="143" font-size="10.5" fill="#475569">power handshake, rotor inhibit</text>
+<rect x="4" y="387.9" width="141.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="7" y="388.9" width="29.1" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="21.5" y="400.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">003</text>
+<text x="40.1" y="400.9" font-size="10.5" fill="#475569">occupied / retained</text>
+<rect x="290" y="629.9" width="143.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="293" y="630.9" width="29.1" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="307.5" y="642.3" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">004</text>
+<text x="326.1" y="642.9" font-size="10.5" fill="#475569">posture / stationary</text>
+<rect x="551" y="629.9" width="167.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="554" y="630.9" width="49.8" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="578.9" y="642.3" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">001/002</text>
+<text x="607.8" y="642.9" font-size="10.5" fill="#475569">state, health, arming</text>
+<rect x="489" y="387.9" width="177.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="492" y="388.9" width="49.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="516.9" y="400.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">005/006</text>
+<text x="545.8" y="400.9" font-size="10.5" fill="#475569">permit, recovery, abort</text>
+<rect x="707" y="363" width="111.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="712" y="376" font-size="10.5" fill="#475569">validated commands</text>
+<rect x="734" y="629.9" width="143" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="737" y="630.9" width="29.1" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="751.5" y="642.3" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">007</text>
+<text x="770.1" y="642.9" font-size="10.5" fill="#475569">video, mission cues</text>
+<rect x="335" y="387.9" width="133.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="338" y="388.9" width="29.1" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="352.5" y="400.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">008</text>
+<text x="371.1" y="400.9" font-size="10.5" fill="#475569">fault notifications</text>
+</g>
+<rect x="40" y="923.9" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="62" y="933.9" font-size="11" fill="#475569">External entity</text>
+<rect x="150" y="923.9" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
+<text x="172" y="933.9" font-size="11" fill="#475569">Interface</text>
+<rect x="233.8" y="923.9" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="255.8" y="933.9" font-size="11" fill="#475569">System element</text>
+<rect x="348.2" y="923.9" width="14" height="12" rx="3" fill="none" stroke="#C2410C" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="370.2" y="933.9" font-size="11" fill="#475569">Assurance boundary</text>
+<rect x="486.5" y="923.9" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="508.5" y="933.9" font-size="11" fill="#475569">Safety function</text>
+<rect x="599.5" y="923.9" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="621.5" y="933.9" font-size="11" fill="#475569">Software-intensive element</text>
+<rect x="772.2" y="923.9" width="14" height="12" rx="3" fill="#475569" stroke="none" stroke-width="1.2"/>
+<text x="794.2" y="933.9" font-size="11" fill="#475569">001 · IF-PX4 interface ID</text>
+<line x1="945.2" y1="929.9" x2="961.2" y2="929.9" stroke="#C2410C" stroke-width="1.8"/>
+<text x="967.2" y="933.9" font-size="11" fill="#475569">Authority path</text>
+<text x="40" y="955.9" font-size="10.5" fill="#94A3B8">Generated by tools/figures/build_figures.py from integrations/px4/figures.yaml. Proposed integration: not implemented, integrated or verified.</text>
+<g class="terms" data-base-h="984.9">
+<rect x="0" y="984.9" width="1096.5" height="98.1" fill="#FFFFFF"/>
+<line x1="40" y1="988.9" x2="1056.5" y2="988.9" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1004.6" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: DoD = US Department of Defense · EXT-GNSS-RF = external element: GNSS and RF environment · GNSS = global navigation satellite system (GPS and similar) · GPS = Global Positioning</text>
+<text x="40" y="1019.1" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">System · HMI = human-machine interface · ID = identifier · IF-nnn = interface in the item definition (architecture/item-definition.yaml) · MIL-STD-882E = US DoD Standard Practice for</text>
+<text x="40" y="1033.6" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">System Safety (11 May 2012, base edition) · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · RF = radio frequency · SHA = system hazard analysis</text>
+<text x="40" y="1048.1" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(MIL-STD-882E Task 205) · SUS-A1 = dockable observation UAV · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1 = piloted walker · SUS-M1-DCK = UAV dock, retention,</text>
+<text x="40" y="1062.6" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">charging and release · SUS-M1-PIL = pilot station, restraints, displays and controls · UAV = uncrewed aerial vehicle (drone) · US = United States</text>
+</g>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="927.1" viewBox="0 0 760 927.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 4 · SysML use cases — nominal scenarios</title>
+<desc>CONOPS section 6 scenarios SCN-001 to SCN-006 as use cases of SUS-I1 with their actors. Off-nominal scenarios SCN-101 to SCN-108 feed the PHL and O&amp;SHA instead.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="760" height="829" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 4 · SysML use cases — nominal scenarios</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">CONOPS section 6 scenarios SCN-001 to SCN-006 as use cases of SUS-I1 with their</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">actors. Off-nominal scenarios SCN-101 to SCN-108 feed the PHL and O&amp;SHA instead.</text>
+<text x="720" y="44" font-size="11" fill="#475569" text-anchor="end">ConceptOperations.sysml</text>
+<line x1="40" y1="102" x2="720" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="126" width="623.2" height="622" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<path d="M40 126 L253 126 L253 140 L243 150 L40 150 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="143" font-size="11.5" fill="#0F172A" font-weight="700">uc [package] ConceptOperations</text>
+<g transform="translate(56 166)">
+<rect x="174.1" y="6" width="232" height="554" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M89.1 305 L116.1 305 Q123.1 305 123.1 298 L123.1 97 Q123.1 90 130.1 90 L192.1 90" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M89.1 326 L140.1 326 Q147.1 326 147.1 319 L147.1 258 Q147.1 251 154.1 251 L192.1 251" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M89.1 337 L192.1 337" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M89.1 347 L116.1 347 Q123.1 347 123.1 354 L123.1 416 Q123.1 423 130.1 423 L192.1 423" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M89.1 358 L104.1 358 Q111.1 358 111.1 365 L111.1 502 Q111.1 509 118.1 509 L192.1 509" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M89.1 316 L128.1 316 Q135.1 316 135.1 309 L135.1 183 Q135.1 176 142.1 176 L192.1 176" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M89.1 129 L104.1 129 Q111.1 129 111.1 122 L111.1 75 Q111.1 68 118.1 68 L192.1 68" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M89.1 154 L192.1 154" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M388.1 423 L475.1 423" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="190.1" y="32" font-size="13" fill="#0F172A" font-weight="700">SUS-I1 : IntegratedSystem</text>
+<circle cx="57.1" cy="304" r="7" fill="#FFFFFF" stroke="#64748B" stroke-width="1.6"/>
+<line x1="57.1" y1="311" x2="57.1" y2="329" stroke="#64748B" stroke-width="1.6"/>
+<line x1="44.1" y1="318" x2="70.1" y2="318" stroke="#64748B" stroke-width="1.6"/>
+<line x1="57.1" y1="329" x2="47.1" y2="343" stroke="#64748B" stroke-width="1.6"/>
+<line x1="57.1" y1="329" x2="67.1" y2="343" stroke="#64748B" stroke-width="1.6"/>
+<text x="57.1" y="361" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">Pilot</text>
+<circle cx="47.6" cy="114" r="7" fill="#FFFFFF" stroke="#64748B" stroke-width="1.6"/>
+<line x1="47.6" y1="121" x2="47.6" y2="139" stroke="#64748B" stroke-width="1.6"/>
+<line x1="34.6" y1="128" x2="60.6" y2="128" stroke="#64748B" stroke-width="1.6"/>
+<line x1="47.6" y1="139" x2="37.6" y2="153" stroke="#64748B" stroke-width="1.6"/>
+<line x1="47.6" y1="139" x2="57.6" y2="153" stroke="#64748B" stroke-width="1.6"/>
+<text x="47.6" y="171" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">Ground crew</text>
+<ellipse cx="290.1" cy="79" rx="98" ry="33" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="263.1" y="62" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="290.1" y="73.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SCN-001</text>
+<text x="290.1" y="93" font-size="12" fill="#0F172A" font-weight="700" text-anchor="middle">Ingress / startup</text>
+<ellipse cx="290.1" cy="251" rx="98" ry="33" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="263.1" y="234" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="290.1" y="245.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SCN-002</text>
+<text x="290.1" y="265" font-size="12" fill="#0F172A" font-weight="700" text-anchor="middle">Travel</text>
+<ellipse cx="290.1" cy="337" rx="98" ry="33" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="263.1" y="320" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="290.1" y="331.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SCN-003</text>
+<text x="290.1" y="351" font-size="12" fill="#0F172A" font-weight="700" text-anchor="middle">Handling</text>
+<ellipse cx="290.1" cy="423" rx="98" ry="33" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="263.1" y="406" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="290.1" y="417.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SCN-004</text>
+<text x="290.1" y="437" font-size="12" fill="#0F172A" font-weight="700" text-anchor="middle">Observation</text>
+<ellipse cx="290.1" cy="509" rx="98" ry="33" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="263.1" y="492" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="290.1" y="503.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SCN-005</text>
+<text x="290.1" y="523" font-size="12" fill="#0F172A" font-weight="700" text-anchor="middle">Recovery</text>
+<ellipse cx="290.1" cy="165" rx="98" ry="33" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="263.1" y="148" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="290.1" y="159.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SCN-006</text>
+<text x="290.1" y="179" font-size="12" fill="#0F172A" font-weight="700" text-anchor="middle">Shutdown</text>
+<circle cx="530.1" cy="395" r="7" fill="#FFFFFF" stroke="#64748B" stroke-width="1.6"/>
+<line x1="530.1" y1="402" x2="530.1" y2="420" stroke="#64748B" stroke-width="1.6"/>
+<line x1="517.1" y1="409" x2="543.1" y2="409" stroke="#64748B" stroke-width="1.6"/>
+<line x1="530.1" y1="420" x2="520.1" y2="434" stroke="#64748B" stroke-width="1.6"/>
+<line x1="530.1" y1="420" x2="540.1" y2="434" stroke="#64748B" stroke-width="1.6"/>
+<text x="530.1" y="452" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">Airspace / GNSS</text>
+</g>
+<line x1="40" y1="774" x2="56" y2="774" stroke="#475569" stroke-width="1.8"/>
+<text x="62" y="778" font-size="11" fill="#475569">Actor participates</text>
+<text x="40" y="800" font-size="10.5" fill="#94A3B8">Generated by tools/figures/build_figures.py from concept/figures.yaml. Unapproved concept: proposed structure and behaviour only.</text>
+<g class="terms" data-base-h="829">
+<rect x="0" y="829" width="760" height="98.1" fill="#FFFFFF"/>
+<line x1="40" y1="833" x2="720" y2="833" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="848.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CONOPS = concept of operations · DoD = US Department of Defense · GNSS = global navigation satellite system (GPS and</text>
+<text x="40" y="863.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">similar) · GPS = Global Positioning System · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base</text>
+<text x="40" y="877.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">edition) · PHL = preliminary hazard list (MIL-STD-882E Task 201) · SCN-nnn = CONOPS scenario (SCN-0nn nominal, SCN-1nn</text>
+<text x="40" y="892.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">off-nominal) · SHA = system hazard analysis (MIL-STD-882E Task 205) · SUS-I1 = integrated mechanized walker and observation</text>
+<text x="40" y="906.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">UAV · SysML = Systems Modeling Language (SysML v2) · UAV = uncrewed aerial vehicle (drone) · US = United States</text>
+</g>
+</svg>

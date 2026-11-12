@@ -6,6 +6,7 @@ import unittest
 
 from sim.common import ROOT
 from sim.scenes3d import build_pages, export_scene
+from tools.terms.terms import decorate
 
 CFG = export_scene.load()
 
@@ -70,7 +71,7 @@ class Outputs(unittest.TestCase):
     def test_exports_and_pages_current(self):
         for mod in (export_scene, build_pages):
             for rel, text in mod.outputs().items():
-                self.assertEqual((ROOT / rel).read_text(encoding="utf-8"), text, f"{rel} stale")
+                self.assertEqual((ROOT / rel).read_text(encoding="utf-8"), decorate(rel, text), f"{rel} stale")
 
     def test_three_is_pinned_in_every_page(self):
         v = CFG["three"]["version"]
@@ -82,7 +83,7 @@ class Outputs(unittest.TestCase):
         for e in build_pages.entries(CFG):
             self.assertIn("sun", e["look"]["condition"])
 
-    def test_pages_carry_the_synthetic_stamp(self):
+    def test_pages_carry_the_synthetic_label(self):
         for p in (ROOT / "docs/3d").glob("S3-*.html"):
             self.assertIn("no evidence credit", p.read_text())
 

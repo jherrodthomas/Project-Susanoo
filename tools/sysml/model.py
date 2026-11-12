@@ -94,7 +94,7 @@ class Decl:
 
 
 DEFS = {"enum": "enum_def", "metadata": "metadata_def", "connection": "connection_def", "part": "part_def",
-        "action": "action_def", "requirement": "requirement_def"}
+        "action": "action_def", "requirement": "requirement_def", "attribute": "attribute_def", "item": "item_def"}
 
 
 class Parser:
@@ -261,7 +261,18 @@ class Parser:
             d = Decl("end", self.ident(), self.f, tok.line)
             self.expect(";")
             return d
-        if w == "attribute":
+        if w == "ref":
+            # ref item|part name : Type[mult];  (reference features in item definitions)
+            kind = self.next().text
+            if kind not in ("item", "part"):
+                raise self.error(tok, "ref must be followed by item or part")
+            name = self.ident()
+            self.expect(":")
+            typ = self.qualified()
+            self.multiplicity()
+            self.expect(";")
+            return Decl("ref", name, self.f, tok.line, type=typ)
+        if w == "attribute" and self.peek().text != "def":
             name = self.ident()
             self.expect(":")
             typ = self.qualified()

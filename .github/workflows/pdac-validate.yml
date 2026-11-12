@@ -110,7 +110,7 @@ jobs:
         run: python -m sim.scenes3d.export_scene --check
       - name: Scene pages and 3D-Scenes page current
         run: python -m sim.scenes3d.build_pages --check
-      - name: Pages load in Chromium with the pinned three.js, show the stamp and the right outcome
+      - name: Pages load in Chromium with the pinned three.js, show the synthetic label and the right outcome
         run: node sim/scenes3d/render.mjs package --check-only
 
   mujoco:

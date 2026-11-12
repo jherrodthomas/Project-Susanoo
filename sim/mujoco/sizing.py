@@ -21,6 +21,7 @@ from sim.mujoco import l2
 from sim.mujoco.model import L2_SPEC, load_params
 from sim.plant import spec
 from tools.pdac.load import _read_yaml
+from tools.terms.terms import decorate
 
 CFG = SIM / "mujoco" / "sizing.yaml"
 OUT_JSON = ROOT / "sim" / "results" / "sizing-cf4.json"
@@ -138,14 +139,14 @@ def main(argv=None) -> int:
     if a.compare:
         old = json.loads(OUT_JSON.read_text())
         bad = compare(res, old)
-        if not bad and OUT_MD.read_text() != page(old):
+        if not bad and OUT_MD.read_text() != decorate(OUT_MD, page(old)):
             bad.append("sizing-cf4.md does not match sizing-cf4.json")
         for b in bad:
             print(b)
         print(f"{len(res['sweeps'])} sweeps, {len(bad)} difference(s) from the committed results")
         return 1 if bad else 0
     OUT_JSON.write_text(dumps(res), encoding="utf-8")
-    OUT_MD.write_text(page(json.loads(dumps(res))), encoding="utf-8")
+    OUT_MD.write_text(decorate(OUT_MD, page(json.loads(dumps(res)))), encoding="utf-8")   # built from the JSON
     print(f"wrote {OUT_JSON.relative_to(ROOT)} and {OUT_MD.relative_to(ROOT)}; proposal failures: {res['proposal']['failures']}")
     return 0
 

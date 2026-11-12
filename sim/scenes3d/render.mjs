@@ -1,4 +1,4 @@
-// Render stills of the 3D scene pages and check each page (no console errors, the synthetic stamp, the outcome).
+// Render stills of the 3D scene pages and check each page (no console errors, the synthetic label, the outcome).
 // Usage: node sim/scenes3d/render.mjs THREE_DIR [--check-only]
 //   THREE_DIR: an unpacked npm package of three (npm pack three@<version>); its build/three.module.min.js must match
 //   the SHA-256 pinned in sim/scenes3d/scenes.yaml. Requests to the pinned jsDelivr URLs are served from it.
@@ -35,12 +35,12 @@ for (const f of pages) {
   await page.goto('file://' + join(root, 'docs/3d', f) + '?t=end&paused=1');
   await page.waitForFunction(() => window.__ready === true, null, { timeout: 30000 });
   await page.waitForTimeout(300);
-  const st = await page.evaluate(() => ({ ...window.__state, stamp: document.getElementById('stamp').textContent, hud: document.getElementById('hud').textContent }));
+  const st = await page.evaluate(() => ({ ...window.__state, hud: document.getElementById('hud').textContent }));
   const scene = JSON.parse(readFileSync(join(root, 'docs/3d', f), 'utf8').match(/window\.SCENE = (.*);<\/script>/)[1]);
   const A = scene.analysis;
   const want = A.kind === 'walker' ? A.performed.outcome : A.outcome;
   const problems = [...errors];
-  if (!st.stamp.includes('no evidence credit')) problems.push('missing synthetic stamp');
+  if (!st.hud.includes('no evidence credit')) problems.push('missing synthetic label');
   if (st.outcome !== want || !st.hud.includes(want)) problems.push(`outcome ${st.outcome} / HUD does not show ${want}`);
   if (problems.length) { bad++; console.log(`FAIL ${f}: ${problems.join('; ')}`); } else console.log(`ok   ${f} (${want})`);
   if (!checkOnly) writeFileSync(join(root, 'docs/wiki/images', '3d-' + f.replace('.html', '').toLowerCase() + '.png'), await page.screenshot());

@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1288" height="1067.1" viewBox="0 0 1288 1067.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 2 · Boundary diagram</title>
+<desc>System boundary per CONOPS section 2: the three constituent systems inside, stakeholders and environment outside, every crossing numbered as in the table below.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1288" height="998" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 2 · Boundary diagram</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">System boundary per CONOPS section 2: the three constituent systems inside, stakeholders and environment outside, every crossing numbered as in the table below.</text>
+<text x="1248" y="44" font-size="11" fill="#475569" text-anchor="end">concept/CONOPS.md §2–3</text>
+<line x1="40" y1="85" x2="1248" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 109)">
+<rect x="586" y="217" width="267.5" height="374" rx="12" fill="none" stroke="#C2410C" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M155 66 L155 175 Q155 182 162 182 L631 182 Q638 182 638 189 L638 395" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M638 455 L638 611 Q638 618 631 618 L178 618 Q171 618 171 611 L171 95 Q171 88 178 88 L194 88 Q201 88 201 81 L201 66" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M466 66 L466 81 Q466 88 473 88 L516 88 Q523 88 523 95 L523 163 Q523 170 530 170 L641 170 Q648 170 648 177 L648 217" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M630 66 L630 81 Q630 88 637 88 L651 88 Q658 88 658 95 L658 217" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M794 66 L794 163 Q794 170 787 170 L753 170 Q746 170 746 177 L746 205 Q746 212 746 219 L745.5 267" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M956 66 L956 163 Q956 170 949 170 L831 170 Q824 170 824 177 L824 205 Q824 212 824 219 L824 378 Q824 385 817 385 L711 385 Q706 385 706 390 L706 395" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1126 66 L1126 175 Q1126 182 1119 182 L842 182 Q835 182 835 189 L835 205 Q835 212 835 219 L835 496 Q835 503 828 503 L778.7 503 Q773.7 503 773.7 508 L773.7 513" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M672 455 L672 742" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M751 573 L751 611 Q751 618 744 618 L741 618 Q734 618 734 625 L734 742" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M745.5 327 L745.5 368 Q745.5 375 738.5 375 L679 375 Q672 375 672 382 L672 395" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M706 455 L706 460 Q706 465 711 465 L721.3 465 Q728.3 465 728.3 472 L728.3 513" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="598" y="229" width="243.5" height="22" rx="11" fill="#C2410C" stroke="none" stroke-width="0"/>
+<text x="719.8" y="244" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">BOUNDARY · SUS-I1 CONCEPT SYSTEM</text>
+<rect x="110" y="6" width="136" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="122" y="18" width="72.6" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="158.3" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">EXT-PILOT</text>
+<text x="122" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Pilot</text>
+<rect x="398" y="28" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="410" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Safety observer</text>
+<rect x="560" y="28" width="140" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="572" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Mission supervisor</text>
+<rect x="726" y="28" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="738" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Maintainer</text>
+<rect x="888" y="6" width="136" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="900" y="18" width="86.8" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="943.4" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">EXT-TERRAIN</text>
+<text x="900" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Terrain, weather</text>
+<rect x="1050" y="6" width="152" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="1062" y="18" width="83.4" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="1103.7" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">EXT-GNSS-RF</text>
+<text x="1062" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Airspace, GNSS, RF</text>
+<rect x="604" y="395" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="616" y="407" width="49.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="640.9" y="418.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1</text>
+<text x="616" y="441" font-size="12.5" fill="#0F172A" font-weight="700">Piloted walker</text>
+<rect x="683" y="513" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="695" y="525" width="49.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="719.9" y="536.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1</text>
+<text x="695" y="559" font-size="12.5" fill="#0F172A" font-weight="700">Observation UAV</text>
+<rect x="677.5" y="267" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="689.5" y="279" width="58.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="718.7" y="290.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-GSE</text>
+<text x="689.5" y="313" font-size="12.5" fill="#0F172A" font-weight="700">Ground support</text>
+<rect x="610" y="742" width="186.2" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="622" y="754" width="101" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="672.5" y="765.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">EXT-BYSTANDER</text>
+<text x="622" y="788" font-size="12.5" fill="#0F172A" font-weight="700">Personnel and bystanders</text>
+<rect x="4" y="130" width="149.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="7" y="131" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="15.8" y="142.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="28.7" y="143" font-size="10.5" fill="#475569">commands, intervention</text>
+<rect x="174" y="130" width="163.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="177" y="131" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="185.8" y="142.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="198.7" y="143" font-size="10.5" fill="#475569">status, alarms, UAV video</text>
+<rect x="348" y="130" width="173.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="351" y="131" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="359.8" y="142.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3</text>
+<text x="372.7" y="143" font-size="10.5" fill="#475569">exclusion zone, intervention</text>
+<rect x="537" y="130" width="119.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="540" y="131" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="548.8" y="142.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">4</text>
+<text x="561.7" y="143" font-size="10.5" fill="#475569">operational limits</text>
+<rect x="672" y="130" width="119.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="675" y="131" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="683.8" y="142.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">5</text>
+<text x="696.7" y="143" font-size="10.5" fill="#475569">isolation, service</text>
+<rect x="811" y="130" width="142.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="814" y="131" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="822.8" y="142.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">6</text>
+<text x="835.7" y="143" font-size="10.5" fill="#475569">ground loads, weather</text>
+<rect x="1014" y="130" width="109.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="1017" y="131" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1025.8" y="142.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">7</text>
+<text x="1038.7" y="143" font-size="10.5" fill="#475569">navigation, link</text>
+<rect x="489" y="660" width="180.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="492" y="661" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="500.8" y="672.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">8</text>
+<text x="513.7" y="673" font-size="10.5" fill="#475569">motion envelope, crush zones</text>
+<rect x="737" y="660" width="157.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="740" y="661" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="748.8" y="672.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">9</text>
+<text x="761.7" y="673" font-size="10.5" fill="#475569">rotor and impact hazards</text>
+<rect x="647" y="347" width="98.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="652" y="360" font-size="10.5" fill="#475569">support, charging</text>
+<rect x="691.2" y="475" width="37.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="696.2" y="488" font-size="10.5" fill="#475569">dock</text>
+</g>
+<rect x="40" y="937" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="62" y="947" font-size="11" fill="#475569">External entity</text>
+<rect x="150" y="937" width="14" height="12" rx="3" fill="none" stroke="#C2410C" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="172" y="947" font-size="11" fill="#475569">System boundary</text>
+<rect x="271.8" y="937" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="293.8" y="947" font-size="11" fill="#475569">System element</text>
+<rect x="386.2" y="937" width="14" height="12" rx="3" fill="#475569" stroke="none" stroke-width="1.2"/>
+<text x="408.2" y="947" font-size="11" fill="#475569">1 · numbered crossing (see table)</text>
+<text x="40" y="969" font-size="10.5" fill="#94A3B8">Generated by tools/figures/build_figures.py from concept/figures.yaml. Unapproved concept: proposed structure and behaviour only.</text>
+<g class="terms" data-base-h="998">
+<rect x="0" y="998" width="1288" height="69.1" fill="#FFFFFF"/>
+<line x1="40" y1="1002" x2="1248" y2="1002" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1017.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CONOPS = concept of operations · EXT-BYSTANDER = external element: bystanders · EXT-GNSS-RF = external element: GNSS and RF environment · EXT-PILOT = external element: pilot · EXT-TERRAIN = external element:</text>
+<text x="40" y="1032.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">terrain and obstacles · GNSS = global navigation satellite system (GPS and similar) · GPS = Global Positioning System · RF = radio frequency · SUS-A1 = dockable observation UAV · SUS-GSE = ground support, maintenance</text>
+<text x="40" y="1046.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">supports, charging and test equipment · SUS-I1 = integrated mechanized walker and observation UAV · SUS-M1 = piloted walker · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

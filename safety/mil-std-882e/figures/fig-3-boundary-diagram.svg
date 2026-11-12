@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980.9" height="1048.9" viewBox="0 0 980.9 1048.9" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 3 · Boundary diagram</title>
+<desc>SUS-I1 system safety program: what is inside the dashed boundary, what is outside, and every interaction that crosses it, numbered as in the table below.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="980.9" height="965.3" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 3 · Boundary diagram</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">SUS-I1 system safety program: what is inside the dashed boundary, what is outside, and every interaction that crosses</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">it, numbered as in the table below.</text>
+<text x="940.9" y="44" font-size="11" fill="#475569" text-anchor="end">catalog.yaml · safety/mil-std-882e</text>
+<line x1="40" y1="102" x2="940.9" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 126)">
+<rect x="258" y="217" width="407.2" height="278" rx="12" fill="none" stroke="#C2410C" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M193 66 L193 163 Q193 170 200 170 L314 170 Q321 170 321 177 L321 205 Q321 212 321 219 L321.3 286.2" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M576 66 L576 81 Q576 88 569 88 L541 88 Q534 88 534 95 L534 205 Q534 212 534 219 L534.1 267" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M310 346.2 L310 561.3 Q310 568.3 303 568.3 L170 568.3 Q163 568.3 163 575.3 L163 692.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M367 66 L367 205 Q367 212 367 219 L366.7 286.2" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M799 66 L799 163 Q799 170 792 170 L653 170 Q646 170 646 177 L646 205 Q646 212 646 219 L646 400 Q646 407 639 407 L526.5 407 Q521.5 407 521.5 412 L521.5 417" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M344 346.2 L344 692.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M378 346.2 L378 362 Q378 369 385 369 L450.8 369 Q457.8 369 457.8 376 L457.8 417" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M354 495 L354 561.3 Q354 568.3 361 568.3 L545 568.3 Q552 568.3 552 575.3 L552 692.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="270" y="229" width="304.3" height="22" rx="11" fill="#C2410C" stroke="none" stroke-width="0"/>
+<text x="422.1" y="244" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">BOUNDARY · SUS-I1 SYSTEM SAFETY PROGRAM</text>
+<rect x="125" y="6" width="136" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="137" y="18" width="72.6" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="173.3" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">EXT-PILOT</text>
+<text x="137" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Pilot</text>
+<rect x="474" y="6" width="203.6" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="486" y="18" width="65.5" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="518.7" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">EXT-CREW</text>
+<text x="486" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Ground crew and maintainers</text>
+<rect x="287" y="6" width="160.6" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="299" y="18" width="86.8" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="342.4" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">EXT-TERRAIN</text>
+<text x="299" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Terrain and obstacles</text>
+<rect x="704" y="6" width="190.9" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="716" y="18" width="83.4" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="757.7" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">EXT-GNSS-RF</text>
+<text x="716" y="52" font-size="12.5" fill="#0F172A" font-weight="700">GNSS and RF environment</text>
+<rect x="276" y="286.2" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="288" y="298.2" width="49.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="312.9" y="309.6" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1</text>
+<text x="288" y="332.2" font-size="12.5" fill="#0F172A" font-weight="700">Piloted walker</text>
+<rect x="394.1" y="417" width="191.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="406.1" y="429" width="49.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="431" y="440.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1</text>
+<text x="406.1" y="463" font-size="12.5" fill="#0F172A" font-weight="700">Dockable observation UAV</text>
+<rect x="432" y="267" width="204.2" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="444" y="279" width="58.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="473.2" y="290.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-GSE</text>
+<text x="444" y="313" font-size="12.5" fill="#0F172A" font-weight="700">Ground support, maintenance</text>
+<text x="444" y="329" font-size="12.5" fill="#0F172A" font-weight="700">supports, charging and test</text>
+<text x="444" y="345" font-size="12.5" fill="#0F172A" font-weight="700">equipment</text>
+<rect x="95" y="692.3" width="136" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="107" y="704.3" width="101" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="157.5" y="715.7" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">EXT-BYSTANDER</text>
+<text x="107" y="738.3" font-size="12.5" fill="#0F172A" font-weight="700">Bystanders</text>
+<rect x="257" y="692.3" width="174.7" height="54" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="269" y="716.3" font-size="12.5" fill="#0F172A" font-weight="700">Natural environment and</text>
+<text x="269" y="732.3" font-size="12.5" fill="#0F172A" font-weight="700">receptors</text>
+<rect x="458" y="692.3" width="187.4" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="470" y="716.3" font-size="12.5" fill="#0F172A" font-weight="700">Risk acceptance authority</text>
+<rect x="50" y="130" width="140.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="53" y="131" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="61.8" y="142.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="74.7" y="143" font-size="10.5" fill="#475569">commands / feedback</text>
+<rect x="389" y="130" width="142.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="392" y="131" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="400.8" y="142.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="413.7" y="143" font-size="10.5" fill="#475569">maintenance / lockout</text>
+<rect x="4" y="610.3" width="157.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="7" y="611.3" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="15.8" y="622.7" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3</text>
+<text x="28.7" y="623.3" font-size="10.5" fill="#475569">motion / contact hazards</text>
+<rect x="227" y="130" width="138.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="230" y="131" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="238.8" y="142.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">4</text>
+<text x="251.7" y="143" font-size="10.5" fill="#475569">ground contact loads</text>
+<rect x="664" y="130" width="133" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="667" y="131" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="675.8" y="142.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">5</text>
+<text x="688.7" y="143" font-size="10.5" fill="#475569">navigation / RF link</text>
+<rect x="220" y="610.3" width="121.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="223" y="611.3" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="231.8" y="622.7" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">6</text>
+<text x="244.7" y="623.3" font-size="10.5" fill="#475569">emissions / fluids</text>
+<rect x="353" y="379" width="104.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="356" y="380" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="364.8" y="391.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">7</text>
+<text x="377.7" y="392" font-size="10.5" fill="#475569">dock / undock</text>
+<rect x="392" y="610.3" width="157.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="395" y="611.3" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="403.8" y="622.7" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">8</text>
+<text x="416.7" y="623.3" font-size="10.5" fill="#475569">residual risk for decision</text>
+</g>
+<rect x="40" y="904.3" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="62" y="914.3" font-size="11" fill="#475569">External entity</text>
+<rect x="150" y="904.3" width="14" height="12" rx="3" fill="none" stroke="#C2410C" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="172" y="914.3" font-size="11" fill="#475569">Analysis boundary</text>
+<rect x="278.4" y="904.3" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="300.4" y="914.3" font-size="11" fill="#475569">System element</text>
+<rect x="392.8" y="904.3" width="14" height="12" rx="3" fill="#475569" stroke="none" stroke-width="1.2"/>
+<text x="414.8" y="914.3" font-size="11" fill="#475569">1 · numbered crossing (see table)</text>
+<text x="40" y="936.3" font-size="10.5" fill="#94A3B8">Generated by tools/gen_safety_docs.py from safety/mil-std-882e/catalog.yaml. Planning view: not evidence of completed analysis, verification or risk acceptance.</text>
+<g class="terms" data-base-h="965.3">
+<rect x="0" y="965.3" width="980.9" height="83.6" fill="#FFFFFF"/>
+<line x1="40" y1="969.3" x2="940.9" y2="969.3" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="985" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: EXT-BYSTANDER = external element: bystanders · EXT-CREW = external element: ground crew and maintainers · EXT-GNSS-RF = external element: GNSS and RF</text>
+<text x="40" y="999.5" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">environment · EXT-PILOT = external element: pilot · EXT-TERRAIN = external element: terrain and obstacles · GNSS = global navigation satellite system (GPS and</text>
+<text x="40" y="1014" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">similar) · GPS = Global Positioning System · RF = radio frequency · SUS-A1 = dockable observation UAV · SUS-GSE = ground support, maintenance supports, charging and</text>
+<text x="40" y="1028.5" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">test equipment · SUS-I1 = integrated mechanized walker and observation UAV · SUS-M1 = piloted walker · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

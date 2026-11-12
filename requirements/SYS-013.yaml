@@ -1,0 +1,26 @@
+schema: susanoo/requirement/v0.1
+id: SYS-013
+title: Actuator torque reserve against supply loss
+statement: Each ankle actuator shall deliver at least 1.5 m g L_foot of torque at full actuator supply and at least
+  0.6 m g L_foot at the supply at which load holding engages, and each knee actuator at least 22.5 kN m at full
+  supply (SPEC-WLK-001 mass and geometry), so that a loss of supply inside the operating envelope does not tip the
+  walker before load holding engages.
+status: candidate
+source:
+  documents:
+  - sim/results/sizing-cf4.md
+  - sim/results/l2-crosscheck.md
+  hazard_ids:
+  - HAZ-WLK-002
+allocated_to:
+- SUS-M1-WLK
+safety_significant: true
+verification:
+  method:
+  - analysis
+  - test
+  evidence_ids: []
+  disposition: open
+tbd:
+- Values are preliminary (sizing SZ-01, level 2 only, synthetic) and assume torque falls in proportion to supply;
+  confirm with the selected actuator's torque-supply characteristic in the actuation trade (TS-001, DQ-006)

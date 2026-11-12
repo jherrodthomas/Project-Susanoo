@@ -15,6 +15,7 @@ import json
 import sys
 
 from sim.common import ABOUT, ROOT, SIM, write_or_check
+from tools.terms.terms import expand, find, label, load as load_terms
 from sim.scenes3d.export_scene import load
 from tools.pdac.load import _read_yaml
 
@@ -42,14 +43,17 @@ html,body{{margin:0;height:100%;overflow:hidden;background:#0f172a;font-family:I
 #hud{{position:fixed;left:12px;top:12px;max-width:min(640px,calc(100vw - 24px));background:rgba(255,255,255,.88);color:#0f172a;
 border-radius:10px;padding:10px 12px;font-size:13px;line-height:1.45}}
 #hud .title{{font-weight:700;font-size:15px}}
-#stamp{{position:fixed;right:12px;top:12px;background:#d2553f;color:#fff;font-weight:700;font-size:12px;border-radius:8px;padding:6px 10px}}
+#hud .note{{color:#64748b;font-size:11.5px;margin-top:2px}}
+#terms{{position:fixed;left:12px;right:12px;bottom:58px;background:rgba(255,255,255,.82);color:#475569;
+border-radius:8px;padding:5px 10px;font-size:11px;line-height:1.4}}
 #bar{{position:fixed;left:12px;right:12px;bottom:12px;display:flex;gap:10px;align-items:center;background:rgba(255,255,255,.88);
 border-radius:10px;padding:8px 12px}}
 #bar input{{flex:1}} button{{font:inherit;border:1px solid #cbd5e1;background:#fff;border-radius:6px;padding:4px 10px}}
 </style>
 <script type="importmap">{{"imports":{{"three":"{cdn}build/three.module.min.js","three/addons/":"{cdn}examples/jsm/"}}}}</script>
 </head><body>
-<div id="hud"></div><div id="stamp">SYNTHETIC · no evidence credit</div>
+<div id="hud"></div>
+<div id="terms">{terms}</div>
 <div id="bar"><button id="play">Pause</button><input id="time" type="range" min="0" max="1" step="0.01" value="0"></div>
 <script>window.SCENE = {scene};</script>
 <script type="module">
@@ -59,10 +63,22 @@ border-radius:10px;padding:8px 12px}}
 """
 
 
+def terms_line(analysis: dict) -> str:
+    """Terms for what the info panel shows: scene, hazards, source and, for the UAV, the PX4 flight modes."""
+    shown = [analysis["id"], analysis["title"], *analysis["hazards"], str(analysis.get("reference", ""))]
+    if analysis["kind"] == "uav":
+        shown += ["UAV", "PX4", *(m.replace("AUTO.", "") for _, m in analysis.get("mode_changes") or [])]
+    keys = expand(find(" ".join(shown))[0])
+    defs, _ = load_terms()
+    return "Terms: " + " · ".join(f"{html.escape(label(k))} = {html.escape(defs[k])}"
+                                  for k in sorted(keys, key=lambda q: label(q).lower()))
+
+
 def page(sid: str, title: str, analysis: dict, look: dict, version: str) -> str:
     data = json.dumps({"analysis": analysis, "look": look}, sort_keys=True, separators=(",", ":")).replace("</", "<\\/")
     viewer = (SIM / "scenes3d" / "viewer.js").read_text(encoding="utf-8")
-    return PAGE.format(title=html.escape(f"{sid} {title}"), cdn=CDN.format(v=version), scene=data, viewer=viewer)
+    return PAGE.format(title=html.escape(f"{sid} {title}"), cdn=CDN.format(v=version), scene=data, viewer=viewer,
+                       terms=terms_line(analysis))
 
 
 def entries(cfg: dict) -> list[dict]:
