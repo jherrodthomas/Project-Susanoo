@@ -42,6 +42,16 @@ The same machine in the military livery of [`renders/blender/`](../renders/blend
 | ![CL-05 kneeling under camouflage netting at dusk, the pilot climbing down the ladder while two mechanics work at a tool cart](CL-05-military-maintenance.jpg) **Field maintenance, dusk** | `CL-05-kneel-military.jpg`, job `79b790c8` | Close to the CAD |
 | ![CL-05 kneeling in a snowy mountain village, the pilot handing medical supply cases to relief workers beside a field hospital tent](CL-05-military-relief.jpg) **Winter disaster relief** | `CL-05-kneel-military.jpg`, job `c0cf31bc` | The red internal release handle reads as a small red cross. The Red Cross emblem is legally protected; the design should keep that handle unmistakably a handle |
 
+### Walk clip, military livery (image-to-video)
+
+<video src="CL-05-military-walk-clip.mp4" controls width="100%"></video>
+
+[`CL-05-military-walk-clip.mp4`](CL-05-military-walk-clip.mp4) · 8 s, with generated sound · FLUX 3 Video via Higgsfield, start frame `CL-05-hero-military.jpg`, job `71699eae` (re-encoded to 720p). Unarmed; no insignia.
+
+![Nine frames of the walk clip, one per second: the walker steps forward with the camera tracking alongside](CL-05-military-walk-clip-frames.jpg)
+
+What differs from the CAD: in several frames the knees bend forward like a human's instead of backward, so the model has lost the reverse-jointed legs; the lower legs are simplified. The clip shows a plausible pace (about four steps in 8 s) and a level pod, but it says nothing about the real gait: walking dynamics, step length and foot clearance belong to the simulation work of SYS-009.
+
 ## Ideas worth carrying back to the design
 
 - A fall-arrest harness and anchor point for emergency descent from the side hatch (HAZ-023, SYS-012).

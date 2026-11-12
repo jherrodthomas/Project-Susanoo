@@ -1,6 +1,8 @@
 # Concept layouts (FreeCAD) — review and alignment
 
-**ID:** SUS-CAD-001 · **Revision:** 0.12-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CAD-001 · **Revision:** 0.13-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.13:* AI walk clip in military livery added to [`concept-art/`](concept-art/README.md).
 
 *Changes in 0.12:* military livery renders of CL-05 (unarmed; §2a); AI kneel clip and military-setting concept art in [`concept-art/`](concept-art/README.md).
 
