@@ -7,6 +7,7 @@ from pathlib import Path
 from tools.pdac.load import ROOT, _read_yaml
 from tools.sysml import check, gen_requirements, views
 from tools.sysml.model import MODEL_DIR, ModelError, load, parse_text
+from tools.terms.terms import decorate
 
 M = load()
 ITEM = _read_yaml(ROOT / "architecture/item-definition.yaml")
@@ -99,7 +100,7 @@ class Generated(unittest.TestCase):
 
     def test_views_current(self):
         for rel, text in views.build().items():
-            self.assertEqual((ROOT / rel).read_text(encoding="utf-8"), text, f"{rel} stale; run tools.sysml.views")
+            self.assertEqual((ROOT / rel).read_text(encoding="utf-8"), decorate(rel, text), f"{rel} stale; run tools.sysml.views")
 
     def test_n2_lists_every_interface(self):
         svg = views.v08(M, "x")

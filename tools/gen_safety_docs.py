@@ -31,6 +31,7 @@ import diagram  # noqa: E402
 from tools.sysml import model as sysml_model  # noqa: E402  main's SysML reader (models/sysml/model)
 import sysml_parse  # noqa: E402
 from layoutkit import MUTED, TONES  # noqa: E402
+from tools.terms.terms import decorate  # noqa: E402
 
 CATALOG = ROOT / "safety" / "mil-std-882e" / "catalog.yaml"
 END_MARKER = "<!-- END GENERATED: content below this line is human-authored and preserved -->"
@@ -155,7 +156,7 @@ def short_ifs(ids: list[str]) -> str:
 
 # ------------------------------------------------------------- figures
 def fig_rail(ctx: Ctx, f: dict) -> dict:
-    spec = {"kind": "rail", "title": "Position in the MIL-STD-882E flow", "ref": f"catalog.yaml · {f['id']}"}
+    spec = {"kind": "rail", "title": "Position in the MIL-STD-882E flow", "ref": f"catalog.yaml · {f['path'] if f['path'] != '.' else 'safety/mil-std-882e'}"}
     el = f.get("element")
     if el and f.get("tasks"):
         spec.update(current=el, tasks=[(t["id"], t["name"]) for t in f["tasks"]],
@@ -240,7 +241,7 @@ def fig_block(ctx: Ctx, f: dict) -> dict:
                       f"{sorted(c['ifs'])[0]} …", "arrow": "both" if len(c["pairs"]) > 1 else "end",
                       "tone": "safety" if c["safety"] else "ink", "dash": True})
     in_n = len([k for k in scope if not ctx.children(k)])
-    return {"title": "Block diagram", "ref": f"item-definition.yaml · {f['id']}", "direction": "DOWN",
+    return {"title": "Block diagram", "ref": "architecture/item-definition.yaml", "direction": "DOWN",
             "hierarchy": "separate",
             "subtitle": (f"SUS-I1 decomposition. The {in_n} coloured blocks are in scope for this folder; hatched blocks "
                          "are not." if scope else "SUS-I1 decomposition. No system element is in scope for this folder "
@@ -264,7 +265,7 @@ def fig_boundary(ctx: Ctx, f: dict) -> dict:
         nodes.append(ctx.card(k, tone="external"))
     edges = [{"src": "BND" if a == "@boundary" else mid(a), "dst": "BND" if c == "@boundary" else mid(c),
               "code": str(i + 1), "label": lab} for i, (a, c, lab) in enumerate(b["flows"])]
-    return {"title": "Boundary diagram", "ref": f"catalog.yaml · {f['id']}", "direction": "RIGHT",
+    return {"title": "Boundary diagram", "ref": f"catalog.yaml · {f['path'] if f['path'] != '.' else 'safety/mil-std-882e'}", "direction": "RIGHT",
             "subtitle": f"{b['name']}: what is inside the dashed boundary, what is outside, and every interaction "
                         "that crosses it, numbered as in the table below.",
             "nodes": nodes, "edges": edges,
@@ -289,10 +290,10 @@ def fig_io(ctx: Ctx, f: dict) -> dict:
         return seen[key]
     for it in f.get("inputs", []):
         edges.append({"src": node_for(it), "dst": "THIS", "label": it["item"]})
-    nodes.append({"id": "THIS", "code": f["id"], "title": f["title"], "tone": "current", "maxw": 230})
+    nodes.append({"id": "THIS", "code": "THIS FOLDER", "title": f["title"], "tone": "current", "maxw": 230})
     for it in f.get("outputs", []):
         edges.append({"src": "THIS", "dst": node_for(it), "label": it["item"]})
-    return {"title": "Inputs and outputs", "ref": f"catalog.yaml · {f['id']}", "direction": "RIGHT",
+    return {"title": "Inputs and outputs", "ref": f"catalog.yaml · {f['path'] if f['path'] != '.' else 'safety/mil-std-882e'}", "direction": "RIGHT",
             "subtitle": "What this folder consumes (left) and produces (right). White cards are other folders in the "
                         "tree; grey cards are documents or parties outside it.",
             "nodes": nodes, "edges": edges}
@@ -861,6 +862,7 @@ def main() -> int:
                         old.unlink()
                         print(f"removed {old.relative_to(ROOT)}")
         for p, content in files.items():
+            content = decorate(p.relative_to(ROOT).as_posix(), content)
             if p.exists() and p.read_text() == content:
                 continue
             if args.check:

@@ -5,6 +5,7 @@ import unittest
 from tools.pdac import rules
 from tools.pdac.load import load
 from tools.pdac.report import build
+from tools.terms.terms import decorate
 
 BASE = load()
 
@@ -39,7 +40,7 @@ class Baseline(unittest.TestCase):
 
     def test_generated_files_current(self):
         for rel, text in build(BASE).items():
-            self.assertEqual((BASE.root / rel).read_text(encoding="utf-8"), text, f"{rel} stale; run report")
+            self.assertEqual((BASE.root / rel).read_text(encoding="utf-8"), decorate(rel, text), f"{rel} stale; run report")
 
     def test_table_v_examples(self):
         self.assertEqual(BASE.model["sscm"][1][2], 1)

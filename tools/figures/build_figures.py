@@ -37,9 +37,11 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(ROOT / "tools"))
+sys.path.insert(0, str(ROOT))
 import diagram  # noqa: E402
 import sysml_parse  # noqa: E402
 from gen_safety_docs import state_title, stm_frag  # noqa: E402
+from tools.terms.terms import decorate  # noqa: E402
 
 FOLDERS = ["concept", "integrations/px4", "framework"]
 
@@ -84,6 +86,7 @@ def main() -> int:
             specs.append(normalise(spec, folder, footer))
     stale = []
     for path, svg in zip(jobs, diagram.render_all(specs)):
+        svg = decorate(path.relative_to(ROOT).as_posix(), svg)
         if path.exists() and path.read_text() == svg:
             continue
         if args.check:

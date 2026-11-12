@@ -6,6 +6,7 @@ import unittest
 from tools.figures import fig_item as f
 from tools.figures.figkit import FigureError, wrap
 from tools.pdac.load import _read_yaml
+from tools.terms.terms import decorate
 
 ITEM = _read_yaml(f.ROOT / f.ITEM)
 LAYOUT = _read_yaml(f.ROOT / f.LAYOUT)
@@ -18,7 +19,7 @@ def texts(svg: str) -> str:
 class Current(unittest.TestCase):
     def test_committed_figures_are_current(self):
         for rel, text in f.build().items():
-            self.assertEqual((f.ROOT / rel).read_text(encoding="utf-8"), text, f"{rel} stale; run fig_item")
+            self.assertEqual((f.ROOT / rel).read_text(encoding="utf-8"), decorate(rel, text), f"{rel} stale; run fig_item")
 
     def test_every_element_external_and_interface_drawn(self):
         svg = texts(f.build_view("boundary", ITEM, LAYOUT, "x"))

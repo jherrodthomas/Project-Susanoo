@@ -38,6 +38,12 @@ jobs:
       - name: Front-page README figures and numbers match the records
         run: python -m tools.readme.build_readme --check
 
+      - name: Every page and figure explains its abbreviations and codes (docs/terms.yaml)
+        run: python -m tools.terms.terms --check
+
+      - name: Terms tests
+        run: python -m unittest discover -s tools/terms/tests -t .
+
   doc-sysml:
     name: documentation SysML (OMG pilot)
     runs-on: ubuntu-latest
