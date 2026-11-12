@@ -37,5 +37,5 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Item | Title |
 |---|---|
-| [`families.yaml`](families.yaml) |  |
+| [`families.yaml`](families.yaml) | Failure-search families (layer 4). A family is data: the fault, the parameter space, the search budget, |
 | [`search.py`](search.py) |  |

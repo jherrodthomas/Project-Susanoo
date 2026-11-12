@@ -38,5 +38,5 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | [`build_pages.py`](build_pages.py) |  |
 | [`export_scene.py`](export_scene.py) |  |
 | [`render.mjs`](render.mjs) |  |
-| [`scenes.yaml`](scenes.yaml) |  |
+| [`scenes.yaml`](scenes.yaml) | 3D hazard scenes (step 5). One scene per hazard or finding that has a motion source. The `motion` block is the |
 | [`viewer.js`](viewer.js) |  |

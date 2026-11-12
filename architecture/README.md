@@ -37,4 +37,4 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Item | Title |
 |---|---|
 | [`item-definition.yaml`](item-definition.yaml) | SUS-I1 integrated mechanized walker and observation UAV |
-| [`layout.yaml`](layout.yaml) |  |
+| [`layout.yaml`](layout.yaml) | Box positions [x, y, width, height] for the generated item-definition figures (tools/figures/fig_item.py). |

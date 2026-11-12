@@ -37,4 +37,4 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Item | Title |
 |---|---|
-| [`model.yaml`](model.yaml) |  |
+| [`model.yaml`](model.yaml) | MIL-STD-882E as data. |

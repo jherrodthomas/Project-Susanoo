@@ -29,7 +29,9 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Item | Title |
 |---|---|
 | [`crosscheck.py`](crosscheck.py) |  |
-| [`crosscheck.yaml`](crosscheck.yaml) |  |
+| [`crosscheck.yaml`](crosscheck.yaml) | Level-1 (sim/plant/walker.py) vs level-2 (sim/mujoco/l2.py) cross-check. Every case runs on both models; the |
 | [`l2.py`](l2.py) |  |
 | [`model.py`](model.py) |  |
 | [`requirements.txt`](requirements.txt) |  |
+| [`sizing.py`](sizing.py) |  |
+| [`sizing.yaml`](sizing.yaml) | Ankle and knee torque against supply loss on a slope |

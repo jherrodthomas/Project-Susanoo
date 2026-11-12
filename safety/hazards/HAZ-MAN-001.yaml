@@ -1,0 +1,111 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-MAN-001
+title: Person struck or pinned by the arms or claws
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-MAN
+- SUS-M1-WLK
+- SUS-M1-SAF
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: A person is inside the reach of the manipulator arms or claws while they move, or while the
+  walker moves with the arms out of their stowed position.
+modes:
+- MOD-04
+- MOD-05
+causal_factors:
+- id: CF1
+  type: human
+  description: Person inside the exclusion zone or the arms' reach (crew, observer or bystander)
+- id: CF2
+  type: hardware
+  description: 'Arms not stowed and locked while walking: in the CL-05 layout the hanging claws reach 0.85 m above
+    the ground beside the legs, inside the walking envelope'
+- id: CF3
+  type: software
+  description: Manipulation commanded or not inhibited while walking or while the exclusion zone is not confirmed
+    clear
+  ssf_ids:
+  - SSF-001
+effects:
+- Person struck, crushed or pinned by an arm, claw or end effector
+mishap: Fatal or disabling crush or impact injury to a person near the walker
+initial_risk:
+  severity: 1
+  probability: C
+  rac: 1C
+  risk_level: High
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); multi-tonne arms with claws; crew work close to the walker on every sortie
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); arm stow interlock for walking, manipulation inhibit without a confirmed clear zone, and the exclusion
+    zone
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Arms stowed and locked before walking is enabled, and held stowed until walking stops (CL-05 stowed
+    pose lifts the claws to 2.43 m and pulls them back from 1.77 m to 1.49 m ahead of the hips)
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-017
+  verification:
+    method:
+    - test
+    - analysis
+    evidence_ids: []
+- id: M2
+  description: Manipulation inhibited unless the exclusion zone around the arms' reach is confirmed clear
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-017
+  verification:
+    method:
+    - test
+    evidence_ids: []
+- id: M3
+  description: Exclusion zone procedure with a safety observer holding an independent stop
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-017
+owner:
+  role: ROLE-WLK
+  person: null
+  org: Walker / mechanical
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 201
+  scenario_ids:
+  - SCN-002
+  - SCN-003
+  documents:
+  - cad/README.md
+  - concept/CONOPS.md
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; geometry from the CL-05 reference layout (cad/README.md), placeholder dimensions
+  only
+- 'Stowed, the claws are still about 2.4 m up beside a moving walker: stowage reduces the strike zone, it does not
+  remove it'
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- Define the stowed position, its tolerance and the stow detection and locking means (SYS-017)

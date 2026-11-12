@@ -4,7 +4,8 @@ What is physics here and an assumption in level 1:
   - the centre of pressure is limited by the foot's contact with the ground, not by an assumed +/- L * c;
   - leg support, balance and torso pitch come from joint torques limited by actuator capacity;
   - load holding locks the joints mechanically (a solver-enforced joint constraint at the current angle);
-  - the protective stop really steps the swing foot back to the ground before crouching.
+  - the protective stop really steps the swing foot to the ground, towards the horizontal capture point, before
+    crouching.
 What is unchanged from level 1 (so outcomes are comparable): the case dictionary, the faults and capacity curve,
 alarm, pilot reaction, monitor and lock logic, and the outcome definitions (tip beyond tip_offset from the support
 centre; hard drop when the CoM reaches crouch height faster than safe_drop_speed). Contact after a mishap is not
@@ -28,6 +29,7 @@ from sim.plant.walker import capacity, default_case, initial_state
 LIMIT = {"hip": "hip_torque_max_nm", "knee": "knee_torque_max_nm", "ankle": "ankle_torque_max_nm"}
 STANCE0 = {"hip_s": -0.15, "knee_s": 0.3, "ankle_s": -0.15}
 SWING0 = {"hip_w": -0.6, "knee_w": 1.2, "ankle_w": -0.6}
+STOP_STEP_M = 1.2          # protective-stop step length along the ground
 
 
 class L2:
@@ -199,7 +201,11 @@ class L2:
                     ev["stop_t"] = round(t, 3)
                     if stop_reason in ("pilot", "monitor"):
                         phase = "stepping"
-                        swing_goal = self.sole_pos("s")[0] - 1.2
+                        # step towards the capture point, so the CoM lies inside the double support it plants
+                        # (horizontal capture point: along the slope a vertical torso reads as uphill of the foot)
+                        ss = self.sole_pos("s")
+                        (xh0, zh0), (vh0, _) = hv(com - ss), hv(vel)
+                        swing_goal = ss[0] + math.copysign(STOP_STEP_M, xh0 + vh0 / math.sqrt(g / max(zh0, 0.1)))
             if lock_t is None and c["load_holding"] == "works":
                 if cap < p["lock_threshold"]:
                     low_since = t if low_since is None else low_since

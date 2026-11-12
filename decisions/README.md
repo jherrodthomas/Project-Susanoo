@@ -16,4 +16,4 @@ Every question for the project lead, with options, a recommendation, what it blo
 
 | Item | Title |
 |---|---|
-| [`register.yaml`](register.yaml) |  |
+| [`register.yaml`](register.yaml) | Decision register: every question for the project lead (the safety authority). |

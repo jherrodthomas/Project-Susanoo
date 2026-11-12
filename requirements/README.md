@@ -51,3 +51,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | [`SYS-013.yaml`](SYS-013.yaml) | UAV link-loss contingency lands clear of the walker |
 | [`SYS-014.yaml`](SYS-014.yaml) | Independent traction battery isolation |
 | [`SYS-015.yaml`](SYS-015.yaml) | Fuel shut-off on protective stop |
+| [`SYS-016.yaml`](SYS-016.yaml) | Actuator torque reserve against supply loss |
+| [`SYS-017.yaml`](SYS-017.yaml) | Arm stow interlock for walking |
+| [`SYS-018.yaml`](SYS-018.yaml) | Controlled lowered posture for ingress and egress |
+| [`SYS-019.yaml`](SYS-019.yaml) | Loaded walking limits |
+| [`SYS-020.yaml`](SYS-020.yaml) | Emergency egress without power or kneeling |

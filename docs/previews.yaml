@@ -22,6 +22,8 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - integrations/px4
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
+  - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
+  - cad/concept-art
 
 exempt:                  # tests, tooling internals, figure stores shown by the README above them
   - "**/figures"
@@ -49,6 +51,51 @@ folders:
       - {img: docs/wiki/images/sysml-v08-n2.svg, caption: "N2 interface chart"}
     links:
       - {text: SUS-I1 item definition (wiki page), href: docs/wiki/SUS-I1-Item-Definition.md}
+
+  cad/drawings:
+    title: Concept layout drawing sheets
+    purpose: >-
+      One drawing sheet per concept layout (SUS-CAD-001-CL-nn), built from the FreeCAD models, plus all sheets in one
+      PDF (`concept-layouts.pdf`). Concept layouts, not a design.
+    hero: {img: cad/drawings/CL-05.svg, caption: "CL-05, the reference layout"}
+    gallery_glob: cad/drawings/*.svg
+    links:
+      - {text: All sheets (PDF), href: cad/drawings/concept-layouts.pdf}
+      - {text: Concept layouts review, href: cad/README.md}
+
+  cad/params:
+    title: Concept layout parameters
+    purpose: >-
+      The parameters of each concept layout (`CL-nn.yaml`) and those they share (`common.yaml`). The FreeCAD models,
+      metrics, drawing sheets and renders are all built from these files.
+    hero: {img: cad/renders/lineup.png, caption: "All concept layouts side by side"}
+    gallery:
+      - {img: cad/renders/CL-05-hero.png, caption: "CL-05"}
+      - {img: cad/renders/CL-05-kneel-hero.png, caption: "CL-05 kneeling"}
+      - {img: cad/drawings/CL-05.svg, caption: "CL-05 drawing sheet"}
+    links:
+      - {text: Concept layouts review, href: cad/README.md}
+
+  cad/renders:
+    title: Concept layout renders
+    purpose: >-
+      Review renders of every concept layout from five views (hero, iso, side, top, dock), rendered locally from the
+      FreeCAD models (`tools/cad/make.sh`). Concept layouts, not a design.
+    hero: {img: cad/renders/lineup.png, caption: "All concept layouts side by side"}
+    gallery_glob: cad/renders/*-hero.png
+    links:
+      - {text: Blender renders, href: cad/renders/blender/README.md}
+      - {text: Concept layouts review, href: cad/README.md}
+
+  cad/renders/blender:
+    title: Blender renders of CL-05
+    purpose: >-
+      Lit Blender renders and a walk cycle of the CL-05 reference layout, in plain and unarmed military livery.
+      Rendered from the CAD; for communication, not engineering.
+    hero: {img: cad/renders/blender/CL-05-hero.jpg, caption: "CL-05"}
+    gallery_glob: cad/renders/blender/*.{jpg,gif}
+    links:
+      - {text: Walk cycle video, href: cad/renders/blender/CL-05-walk-military.mp4}
 
   changes:
     hero: {img: docs/wiki/images/verification-change.svg, caption: "Verification and change process map (illustrative)"}
@@ -123,14 +170,13 @@ folders:
   docs/readme:
     title: Front-page figures
     purpose: >-
-      Figures on the repository front page, built by `tools/readme/build_readme.py` from the records. The concept
-      image is an illustration, not a design.
+      Figures on the repository front page, built by `tools/readme/build_readme.py` from the records and the CAD
+      renders.
     hero: {img: docs/readme/banner.svg, caption: "Banner"}
     gallery:
       - {img: docs/readme/at-a-glance.svg, caption: "At a glance"}
       - {img: docs/readme/risk-matrix.svg, caption: "Risk matrix"}
       - {img: docs/readme/simulation.svg, caption: "Simulation summary (synthetic)"}
-      - {img: docs/readme/concept-walker-uav.jpg, caption: "Concept illustration"}
 
   docs/wiki:
     hero: {img: docs/wiki/images/safety-lifecycle.svg, caption: "Safety lifecycle process map (illustrative)"}

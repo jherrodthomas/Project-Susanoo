@@ -93,8 +93,22 @@ mitigations:
     method:
     - demonstration
     evidence_ids: []
+- id: M5
+  description: 'Ingress and egress from a controlled lowered (kneel) posture with a fold-down ladder and grab handles,
+    the ladder interlocked against walking (CL-05: cockpit floor from 2.41 m to about 1.0 m, four treads, largest
+    rise 0.33 m)'
+  precedence: b
+  state: identified
+  requirement_ids:
+  - SYS-018
+  verification:
+    method:
+    - analysis
+    - demonstration
+    evidence_ids: []
 requirement_ids:
 - SYS-001
+- SYS-018
 owner:
   role: ROLE-WLK
   person: null
@@ -113,5 +127,7 @@ source:
 hazmat: not-applicable
 assumptions:
 - Concept configuration SUS-I1-C001; no hardware design selected
+- 'In the CL-05 reference layout (cad/README.md) normal egress needs the kneel: standing, the ladder is stowed, so
+  a failure that prevents kneeling also blocks normal egress (side-hatch emergency exit: HAZ-PIL-003, SYS-020)'
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2

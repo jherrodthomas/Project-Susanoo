@@ -230,6 +230,12 @@ def _num(v: str) -> float:
     return float(re.match(r"[-0-9.]+", v).group(0))
 
 
+def _px(v: str) -> float:
+    """A CSS length in pixels: drawing sheets give their size in mm, which is not 1 px per unit."""
+    m = re.match(r"([-0-9.]+)\s*([a-z]*)", v.strip())
+    return float(m.group(1)) * {"mm": 96 / 25.4, "cm": 96 / 2.54, "in": 96.0, "pt": 96 / 72, "pc": 16.0}.get(m.group(2), 1.0)
+
+
 def _fmt(v: float) -> str:
     return f"{v:.1f}".rstrip("0").rstrip(".")
 
@@ -250,7 +256,7 @@ def decorate_svg(svg: str, rel: str = "") -> str:
     root = re.search(r"<svg\b[^>]*>", svg).group(0)
     vb = [float(x) for x in re.search(r'viewBox="([^"]+)"', root).group(1).replace(",", " ").split()]
     minx, miny, vw, vh = vb
-    wpx = _num(re.search(r'\bwidth="([^"]+)"', root).group(1)) if re.search(r'\bwidth="', root) else vw
+    wpx = _px(re.search(r'\bwidth="([^"]+)"', root).group(1)) if re.search(r'\bwidth="', root) else vw
     k = vw / wpx if wpx else 1.0                      # viewBox units per rendered pixel
     size, lh, pad = 10.5 * k, 14.5 * k, 16 * k
     x0 = minx + 40 * k if vw > 400 * k else minx + 12 * k

@@ -141,11 +141,16 @@ def _describe(p: Path) -> str:
     try:
         if p.suffix in (".yaml", ".yml"):
             d = yaml.safe_load(p.read_text(encoding="utf-8"))
-            if isinstance(d, dict):
-                return " · ".join(str(d[k]) for k in ("title",) if d.get(k)) or ""
+            if isinstance(d, dict) and d.get("title"):
+                return str(d["title"])
+            m = re.match(r"#\s*(.+)", p.read_text(encoding="utf-8"))     # else the file's opening comment
+            return m.group(1).strip() if m else ""
         if p.suffix == ".json":
             d = json.loads(p.read_text(encoding="utf-8"))
             return str(d.get("title", "")) if isinstance(d, dict) else ""
+        if p.suffix == ".svg":
+            m = re.search(r"<title>([^<]+)</title>", p.read_text(encoding="utf-8"))
+            return m.group(1).strip() if m else ""
         if p.suffix == ".html":
             m = re.search(r"<title>([^<]+)</title>", p.read_text(encoding="utf-8"))
             return m.group(1).strip() if m else ""

@@ -1,0 +1,22 @@
+# Shared parameters for every concept layout. Units: metres, kilograms per cubic metre.
+# PLACEHOLDERS. Effective densities turn solid concept volumes into a rough mass distribution so the
+# centre of gravity can be compared between layouts. They are not a mass estimate of a design.
+effective_density:      # kg/m^3 applied to the solid volume of each part class
+  structure: 900        # open frame and hollow members modelled as solids
+  actuator: 2600
+  cage: 1200
+  armor: 1400          # armoured pod and plates (modelled as solid plates)
+  occupant: 1000        # pilot mannequin, about 90 kg
+  power: 2200
+  safety: 800
+  dock: 700
+  uav: 350
+reference_human:
+  height: 1.75          # standing figure drawn next to every concept for scale
+pilot:
+  seated: true          # every layout uses TS-002 "seated protected cockpit"; other pilot options not modelled yet
+uav:                    # SUS-A1 compact quadrotor (TS-004 alternatives differ only in where it docks)
+  body: [0.32, 0.22, 0.10]
+  arm_reach: 0.30       # hub centre to motor axis
+  rotor_radius: 0.16
+  skid_height: 0.10

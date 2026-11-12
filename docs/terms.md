@@ -23,9 +23,12 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | AUTOSAR | AUTomotive Open System ARchitecture (LionDriver port plan) |
 | BMS | battery management system |
 | BSD | Berkeley Software Distribution (the BSD licence) |
+| CAD | computer-aided design |
 | CAN | Controller Area Network, a vehicle data bus |
+| CC | Creative Commons; CC BY 4.0 is the Creative Commons Attribution 4.0 licence used for the documentation |
 | CCA | common cause analysis |
 | CE | Chief Engineer (simulated role ROLE-CE) |
+| CG | centre of gravity |
 | CI | continuous integration (the automated checks GitHub runs on every change) |
 | CoM | centre of mass |
 | CONOPS | concept of operations |
@@ -49,10 +52,13 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | EOD | explosive ordnance disposal |
 | EPS | electric power steering (automotive example in the LionDriver port plan) |
 | ESC | electronic speed controller (drives a UAV motor) |
+| FCStd | FreeCAD document file |
 | FFI | freedom from interference (ISO 26262 term in the LionDriver port plan) |
 | FHA | functional hazard analysis (MIL-STD-882E Task 208; also ARP4761A aircraft FHA) |
+| FLUX | FLUX, a family of image and video generation models (used through Higgsfield for concept art) |
 | FMEA | failure modes and effects analysis |
 | FMU | Functional Mock-up Unit, a packaged simulation model |
+| FreeCAD | open-source parametric CAD program used for the concept layouts |
 | FRET | Formal Requirements Elicitation Tool (NASA) |
 | FTA | fault tree analysis |
 | FTTI | fault tolerant time interval (ISO 26262 term in the LionDriver port plan) |
@@ -86,6 +92,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | MAVLink | Micro Air Vehicle Link, the PX4 telemetry and command protocol |
 | MAVSDK | MAVLink software development kit |
 | MBSE | model-based systems engineering |
+| MCP | Model Context Protocol, how the AI assistant connects to external tools |
 | MGT | management (MIL-STD-882E task type) |
 | MSA | materiel solution analysis (acquisition phase) |
 | MuJoCo | Multi-Joint dynamics with Contact, the physics engine for the level-2 walker model |
@@ -97,6 +104,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | OS | operations and support (acquisition phase) |
 | PD | production and deployment (acquisition phase) |
 | PDaC | Product Development as Code |
+| PDF | Portable Document Format |
 | PE | Program Executive (simulated role ROLE-PE) |
 | PHA | preliminary hazard analysis (MIL-STD-882E Task 202) |
 | PHL | preliminary hazard list (MIL-STD-882E Task 201) |
@@ -130,6 +138,8 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | SSCM | software safety criticality matrix (MIL-STD-882E Table V) |
 | SSHA | subsystem hazard analysis (MIL-STD-882E Task 204) |
 | SSPP | system safety program plan (MIL-STD-882E Task 102) |
+| STEP | ISO 10303 exchange format for 3D CAD geometry |
+| STL | stereolithography triangle-mesh file format |
 | SVG | Scalable Vector Graphics, the figure file format |
 | SW | software |
 | SwCI | software criticality index (MIL-STD-882E Table V) |
@@ -137,6 +147,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | TBD | to be determined |
 | TD | technology development (acquisition phase) |
 | UAV | uncrewed aerial vehicle (drone) |
+| URL | uniform resource locator (a web address) |
 | US | United States |
 | VCRM | verification cross-reference matrix |
 | YAML | a plain-text data format used for the records |
@@ -168,6 +179,7 @@ A record code is a prefix and a number, for example `HAZ-WLK-002` or `SYS-010`.
 |---|---|
 | CAP-nnn | level-1/level-2 cross-check case at the actuator-capacity boundary |
 | CAT-nnn | level-1/level-2 cross-check case from the fault catalogue |
+| CL-nnn | concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout) |
 | CR-nnn | change request record (changes/) |
 | DI-SAFT-nnn | data item description number for a MIL-STD-882E deliverable |
 | DQ-nnn | decision question for the project lead (decisions/register.yaml) |
@@ -189,13 +201,17 @@ A record code is a prefix and a number, for example `HAZ-WLK-002` or `SYS-010`.
 | SC-nnn | 2D walker scene (sim/figures) |
 | SCN-nnn | CONOPS scenario (SCN-0nn nominal, SCN-1nn off-nominal) |
 | SF-nnn | walker failure-search family (sim/search) |
+| SPEC-nnn | simulation parameter spec record (sim/spec/) |
 | SSF-nnn | safety-significant software function record (safety/software/) |
 | SSPP-nnn | plan-level requirement in the SSPP view |
+| STOP-nnn | level-1/level-2 cross-check case, protective stop on a slope with no fault |
 | SU-nnn | UAV PX4 SITL scenario |
+| SUS-CAD-001 | the concept layouts document (cad/README.md); its drawing sheets are SUS-CAD-001-CL-nn |
 | SUS-CONOPS-001 | the SUS-I1 concept of operations document ID |
 | SUS-I1-C001 | configuration 001 of SUS-I1, the baseline every record applies to |
 | SUS-RISKDEF-001 | the project's tailored risk definitions (standards/tailoring) |
 | SYS-nnn | system safety requirement record (requirements/SYS-nnn.yaml) |
+| SZ-nnn | actuator sizing study at level 2 (sim/mujoco/sizing.yaml) |
 | TS-nnn | architecture trade study |
 | V-nnn | SysML view (tools/sysml/views.py) |
 | VER-nnn | verification record or case |

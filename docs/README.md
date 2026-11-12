@@ -41,6 +41,6 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | [`diagrams/`](diagrams/) | Diagram sources |
 | [`readme/`](readme/) | Front-page figures |
 | [`wiki/`](wiki/) | Wiki source and publication |
-| [`previews.yaml`](previews.yaml) |  |
+| [`previews.yaml`](previews.yaml) | Folder previews: what every folder shows a reader before they open anything. |
 | [`terms.md`](terms.md) | Abbreviations, acronyms and record codes |
-| [`terms.yaml`](terms.yaml) |  |
+| [`terms.yaml`](terms.yaml) | Abbreviations, acronyms and record codes for Project Susanoo: the one list. |
