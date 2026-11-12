@@ -1,0 +1,1421 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1362" height="3181.6" viewBox="0 0 1362 3181.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Task 208 · Functional Hazard Analysis worksheet</title>
+<desc>Spreadsheet view of Task 208 · Functional Hazard Analysis, generated from fha.yaml (AI-drafted I0) + hazard records.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1362" height="3083.5" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1362" height="48" rx="0" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="16" y="30" font-size="16" fill="#FFFFFF" font-weight="700">Task 208 · Functional Hazard Analysis — worksheet</text>
+<text x="448.4" y="30" font-size="11" fill="#94A3B8">fha.csv · generated from fha.yaml (AI-drafted I0) + hazard records</text>
+<rect x="1246.8" y="14" width="103.2" height="20" rx="10" fill="#334155" stroke="none" stroke-width="0"/>
+<text x="1255.8" y="28" font-size="10.5" fill="#FFFFFF">Nothing accepted</text>
+<rect x="1078.4" y="14" width="160.5" height="20" rx="10" fill="#B45309" stroke="none" stroke-width="0"/>
+<text x="1087.4" y="28" font-size="10.5" fill="#FFFFFF">AI-drafted I0 · not reviewed</text>
+<rect x="0" y="48" width="1362" height="18" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="72" y="61" font-size="10" fill="#64748B" text-anchor="middle">A</text>
+<line x1="34" y1="48" x2="34" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="190" y="61" font-size="10" fill="#64748B" text-anchor="middle">B</text>
+<line x1="110" y1="48" x2="110" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="395" y="61" font-size="10" fill="#64748B" text-anchor="middle">C</text>
+<line x1="270" y1="48" x2="270" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="650" y="61" font-size="10" fill="#64748B" text-anchor="middle">D</text>
+<line x1="520" y1="48" x2="520" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="845" y="61" font-size="10" fill="#64748B" text-anchor="middle">E</text>
+<line x1="780" y1="48" x2="780" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="980" y="61" font-size="10" fill="#64748B" text-anchor="middle">F</text>
+<line x1="910" y1="48" x2="910" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1095" y="61" font-size="10" fill="#64748B" text-anchor="middle">G</text>
+<line x1="1050" y1="48" x2="1050" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1250" y="61" font-size="10" fill="#64748B" text-anchor="middle">H</text>
+<line x1="1140" y1="48" x2="1140" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="0" y="66" width="1362" height="34" rx="0" fill="#1E293B" stroke="none" stroke-width="0"/>
+<text x="17" y="87" font-size="10" fill="#94A3B8" text-anchor="middle">1</text>
+<text x="42" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Function</text>
+<line x1="34" y1="66" x2="34" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="118" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Failure type</text>
+<line x1="110" y1="66" x2="110" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="278" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Functional failure condition</text>
+<line x1="270" y1="66" x2="270" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="528" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Effect</text>
+<line x1="520" y1="66" x2="520" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="788" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Linked hazards</text>
+<line x1="780" y1="66" x2="780" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="918" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Worst linked severity</text>
+<line x1="910" y1="66" x2="910" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="1058" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Status</text>
+<line x1="1050" y1="66" x2="1050" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="1148" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Note</text>
+<line x1="1140" y1="66" x2="1140" y2="100" stroke="#334155" stroke-width="1"/>
+<rect x="0" y="100" width="1362" height="24" rx="0" fill="#E2E8F0" stroke="#E2E8F0" stroke-width="1"/>
+<text x="42" y="116.5" font-size="11.5" fill="#0F172A" font-weight="700">F-01 · Piloted locomotion</text>
+<rect x="0" y="124" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="124" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="141" font-size="10" fill="#64748B" text-anchor="middle">2</text>
+<line x1="34" y1="124" x2="34" y2="185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="124" x2="110" y2="185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="124" x2="270" y2="185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="124" x2="520" y2="185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="124" x2="780" y2="185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="124" x2="910" y2="185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="124" x2="1050" y2="185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="124" x2="1140" y2="185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="185" x2="1362" y2="185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="124" x2="110" y2="185" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="139" font-size="11.5" fill="#1D4ED8" font-weight="700">F-01</text>
+<text x="118" y="139" font-size="11.5" fill="#1D4ED8" font-weight="700">Loss</text>
+<text x="118" y="155" font-size="10.5" fill="#64748B">Function not provided when</text>
+<text x="118" y="168.5" font-size="10.5" fill="#64748B">needed</text>
+<text x="278" y="139" font-size="11.5" fill="#0F172A">Gait or balance control stops mid-step</text>
+<text x="528" y="139" font-size="11.5" fill="#0F172A">Walker loses balance and may fall with the</text>
+<text x="528" y="154" font-size="11.5" fill="#0F172A">pilot aboard</text>
+<rect x="788" y="130" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="142" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="918" y="129" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="141" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="141" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="158" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="171" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="129" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="141.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="139" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="185" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="185" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="202" font-size="10" fill="#64748B" text-anchor="middle">3</text>
+<line x1="34" y1="185" x2="34" y2="246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="185" x2="110" y2="246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="185" x2="270" y2="246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="185" x2="520" y2="246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="185" x2="780" y2="246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="185" x2="910" y2="246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="185" x2="1050" y2="246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="185" x2="1140" y2="246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="246" x2="1362" y2="246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="185" x2="110" y2="246" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="200" font-size="11.5" fill="#1D4ED8" font-weight="700">F-01</text>
+<text x="118" y="200" font-size="11.5" fill="#1D4ED8" font-weight="700">Erroneous</text>
+<text x="118" y="216" font-size="10.5" fill="#64748B">Function provided with a</text>
+<text x="118" y="229.5" font-size="10.5" fill="#64748B">wrong output</text>
+<text x="278" y="200" font-size="11.5" fill="#0F172A">Wrong joint commands or a wrong state</text>
+<text x="278" y="215" font-size="11.5" fill="#0F172A">estimate</text>
+<text x="528" y="200" font-size="11.5" fill="#0F172A">Unstable gait or runaway leg motion; tip-over</text>
+<rect x="788" y="191" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="203" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-001</text>
+<rect x="788" y="210" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="222" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="918" y="190" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="202" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="202" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="219" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="232" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="190" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="202.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="200" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="246" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="246" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="263" font-size="10" fill="#64748B" text-anchor="middle">4</text>
+<line x1="34" y1="246" x2="34" y2="307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="246" x2="110" y2="307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="246" x2="270" y2="307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="246" x2="520" y2="307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="246" x2="780" y2="307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="246" x2="910" y2="307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="246" x2="1050" y2="307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="246" x2="1140" y2="307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="307" x2="1362" y2="307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="246" x2="110" y2="307" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="261" font-size="11.5" fill="#1D4ED8" font-weight="700">F-01</text>
+<text x="118" y="261" font-size="11.5" fill="#1D4ED8" font-weight="700">Untimely</text>
+<text x="118" y="277" font-size="10.5" fill="#64748B">Function provided too early</text>
+<text x="118" y="290.5" font-size="10.5" fill="#64748B">or too late</text>
+<text x="278" y="261" font-size="11.5" fill="#0F172A">Balance correction acts late on stale</text>
+<text x="278" y="276" font-size="11.5" fill="#0F172A">feedback</text>
+<text x="528" y="261" font-size="11.5" fill="#0F172A">Capture point leaves the support before</text>
+<text x="528" y="276" font-size="11.5" fill="#0F172A">recovery; fall</text>
+<rect x="788" y="252" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="264" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-001</text>
+<rect x="788" y="271" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="283" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="918" y="251" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="263" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="263" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="280" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="293" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="251" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="263.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="261" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="307" width="1362" height="74" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="307" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="324" font-size="10" fill="#64748B" text-anchor="middle">5</text>
+<line x1="34" y1="307" x2="34" y2="381" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="307" x2="110" y2="381" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="307" x2="270" y2="381" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="307" x2="520" y2="381" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="307" x2="780" y2="381" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="307" x2="910" y2="381" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="307" x2="1050" y2="381" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="307" x2="1140" y2="381" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="381" x2="1362" y2="381" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="307" x2="110" y2="381" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="322" font-size="11.5" fill="#1D4ED8" font-weight="700">F-01</text>
+<text x="118" y="322" font-size="11.5" fill="#1D4ED8" font-weight="700">Unintended</text>
+<text x="118" y="338" font-size="10.5" fill="#64748B">Function provided when not</text>
+<text x="118" y="351.5" font-size="10.5" fill="#64748B">demanded</text>
+<text x="278" y="322" font-size="11.5" fill="#0F172A">Leg motion without a pilot command,</text>
+<text x="278" y="337" font-size="11.5" fill="#0F172A">including kneel or rise</text>
+<text x="528" y="322" font-size="11.5" fill="#0F172A">People near the legs or under the pod are</text>
+<text x="528" y="337" font-size="11.5" fill="#0F172A">struck or crushed</text>
+<rect x="788" y="313" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="325" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-001</text>
+<rect x="788" y="332" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="344" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-001</text>
+<rect x="788" y="351" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="363" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-003</text>
+<rect x="918" y="312" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="324" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="324" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="341" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="354" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="312" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="324.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="322" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="381" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="381" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="398" font-size="10" fill="#64748B" text-anchor="middle">6</text>
+<line x1="34" y1="381" x2="34" y2="442" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="381" x2="110" y2="442" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="381" x2="270" y2="442" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="381" x2="520" y2="442" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="381" x2="780" y2="442" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="381" x2="910" y2="442" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="381" x2="1050" y2="442" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="381" x2="1140" y2="442" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="442" x2="1362" y2="442" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="381" x2="110" y2="442" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="396" font-size="11.5" fill="#1D4ED8" font-weight="700">F-01</text>
+<text x="118" y="396" font-size="11.5" fill="#1D4ED8" font-weight="700">Degraded</text>
+<text x="118" y="412" font-size="10.5" fill="#64748B">Function provided with</text>
+<text x="118" y="425.5" font-size="10.5" fill="#64748B">reduced performance</text>
+<text x="278" y="396" font-size="11.5" fill="#0F172A">Reduced actuator capacity as supply falls</text>
+<text x="528" y="396" font-size="11.5" fill="#0F172A">Balance capacity shrinks before load holding</text>
+<text x="528" y="411" font-size="11.5" fill="#0F172A">engages; fall or drop</text>
+<rect x="788" y="387" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="399" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="788" y="406" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="418" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-002</text>
+<rect x="918" y="386" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="398" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="398" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="415" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="428" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="386" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="398.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="396" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="442" width="1362" height="24" rx="0" fill="#E2E8F0" stroke="#E2E8F0" stroke-width="1"/>
+<text x="42" y="458.5" font-size="11.5" fill="#0F172A" font-weight="700">F-02 · Payload manipulation</text>
+<rect x="0" y="466" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="466" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="483" font-size="10" fill="#64748B" text-anchor="middle">7</text>
+<line x1="34" y1="466" x2="34" y2="527" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="466" x2="110" y2="527" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="466" x2="270" y2="527" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="466" x2="520" y2="527" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="466" x2="780" y2="527" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="466" x2="910" y2="527" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="466" x2="1050" y2="527" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="466" x2="1140" y2="527" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="527" x2="1362" y2="527" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="466" x2="110" y2="527" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="481" font-size="11.5" fill="#1D4ED8" font-weight="700">F-02</text>
+<text x="118" y="481" font-size="11.5" fill="#1D4ED8" font-weight="700">Loss</text>
+<text x="118" y="497" font-size="10.5" fill="#64748B">Function not provided when</text>
+<text x="118" y="510.5" font-size="10.5" fill="#64748B">needed</text>
+<text x="278" y="481" font-size="11.5" fill="#0F172A">Grip or arm hold lost</text>
+<text x="528" y="481" font-size="11.5" fill="#0F172A">Load falls; while walking it can strike people</text>
+<text x="528" y="496" font-size="11.5" fill="#0F172A">or upset the walker</text>
+<rect x="788" y="472" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="484" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-MAN-002</text>
+<rect x="918" y="471" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="483" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="483" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="500" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="513" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="471" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="483.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="481" font-size="11.5" fill="#0F172A">A load dropped at a standstill has no</text>
+<text x="1148" y="496" font-size="11.5" fill="#0F172A">hazard record yet</text>
+<rect x="0" y="527" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="527" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="544" font-size="10" fill="#64748B" text-anchor="middle">8</text>
+<line x1="34" y1="527" x2="34" y2="588" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="527" x2="110" y2="588" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="527" x2="270" y2="588" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="527" x2="520" y2="588" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="527" x2="780" y2="588" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="527" x2="910" y2="588" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="527" x2="1050" y2="588" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="527" x2="1140" y2="588" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="588" x2="1362" y2="588" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="527" x2="110" y2="588" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="542" font-size="11.5" fill="#1D4ED8" font-weight="700">F-02</text>
+<text x="118" y="542" font-size="11.5" fill="#1D4ED8" font-weight="700">Erroneous</text>
+<text x="118" y="558" font-size="10.5" fill="#64748B">Function provided with a</text>
+<text x="118" y="571.5" font-size="10.5" fill="#64748B">wrong output</text>
+<text x="278" y="542" font-size="11.5" fill="#0F172A">Arm moves to a wrong position or with</text>
+<text x="278" y="557" font-size="11.5" fill="#0F172A">wrong force</text>
+<text x="528" y="542" font-size="11.5" fill="#0F172A">Person in reach struck or pinned</text>
+<rect x="788" y="533" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="545" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-MAN-001</text>
+<rect x="918" y="532" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="544" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="544" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="561" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="574" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="532" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="544.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="542" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="588" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="588" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="605" font-size="10" fill="#64748B" text-anchor="middle">9</text>
+<line x1="34" y1="588" x2="34" y2="649" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="588" x2="110" y2="649" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="588" x2="270" y2="649" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="588" x2="520" y2="649" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="588" x2="780" y2="649" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="588" x2="910" y2="649" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="588" x2="1050" y2="649" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="588" x2="1140" y2="649" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="649" x2="1362" y2="649" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="588" x2="110" y2="649" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="603" font-size="11.5" fill="#1D4ED8" font-weight="700">F-02</text>
+<text x="118" y="603" font-size="11.5" fill="#1D4ED8" font-weight="700">Untimely</text>
+<text x="118" y="619" font-size="10.5" fill="#64748B">Function provided too early</text>
+<text x="118" y="632.5" font-size="10.5" fill="#64748B">or too late</text>
+<text x="278" y="603" font-size="11.5" fill="#0F172A">Arm moves before the exclusion zone is</text>
+<text x="278" y="618" font-size="11.5" fill="#0F172A">confirmed clear</text>
+<text x="528" y="603" font-size="11.5" fill="#0F172A">Person in reach struck or pinned</text>
+<rect x="788" y="594" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="606" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-MAN-001</text>
+<rect x="918" y="593" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="605" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="605" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="622" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="635" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="593" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="605.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="603" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="649" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="649" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="666" font-size="10" fill="#64748B" text-anchor="middle">10</text>
+<line x1="34" y1="649" x2="34" y2="710" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="649" x2="110" y2="710" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="649" x2="270" y2="710" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="649" x2="520" y2="710" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="649" x2="780" y2="710" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="649" x2="910" y2="710" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="649" x2="1050" y2="710" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="649" x2="1140" y2="710" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="710" x2="1362" y2="710" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="649" x2="110" y2="710" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="664" font-size="11.5" fill="#1D4ED8" font-weight="700">F-02</text>
+<text x="118" y="664" font-size="11.5" fill="#1D4ED8" font-weight="700">Unintended</text>
+<text x="118" y="680" font-size="10.5" fill="#64748B">Function provided when not</text>
+<text x="118" y="693.5" font-size="10.5" fill="#64748B">demanded</text>
+<text x="278" y="664" font-size="11.5" fill="#0F172A">Arm leaves the stowed or carry pose while</text>
+<text x="278" y="679" font-size="11.5" fill="#0F172A">walking</text>
+<text x="528" y="664" font-size="11.5" fill="#0F172A">Claws or load swing into the walking</text>
+<text x="528" y="679" font-size="11.5" fill="#0F172A">envelope</text>
+<rect x="788" y="655" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="667" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-MAN-001</text>
+<rect x="788" y="674" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="686" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-MAN-002</text>
+<rect x="918" y="654" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="666" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="666" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="683" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="696" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="654" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="666.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="664" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="710" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="710" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="727" font-size="10" fill="#64748B" text-anchor="middle">11</text>
+<line x1="34" y1="710" x2="34" y2="771" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="710" x2="110" y2="771" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="710" x2="270" y2="771" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="710" x2="520" y2="771" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="710" x2="780" y2="771" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="710" x2="910" y2="771" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="710" x2="1050" y2="771" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="710" x2="1140" y2="771" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="771" x2="1362" y2="771" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="710" x2="110" y2="771" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="725" font-size="11.5" fill="#1D4ED8" font-weight="700">F-02</text>
+<text x="118" y="725" font-size="11.5" fill="#1D4ED8" font-weight="700">Degraded</text>
+<text x="118" y="741" font-size="10.5" fill="#64748B">Function provided with</text>
+<text x="118" y="754.5" font-size="10.5" fill="#64748B">reduced performance</text>
+<text x="278" y="725" font-size="11.5" fill="#0F172A">Reduced arm force or speed under load</text>
+<text x="528" y="725" font-size="11.5" fill="#0F172A">Load shifts and moves the centre of mass</text>
+<text x="528" y="740" font-size="11.5" fill="#0F172A">ahead of the stance foot</text>
+<rect x="788" y="716" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="728" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-MAN-002</text>
+<rect x="788" y="735" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="747" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="918" y="715" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="727" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="727" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="744" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="757" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="715" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="727.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="725" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="771" width="1362" height="24" rx="0" fill="#E2E8F0" stroke="#E2E8F0" stroke-width="1"/>
+<text x="42" y="787.5" font-size="11.5" fill="#0F172A" font-weight="700">F-03 · Pilot readiness, ingress and egress</text>
+<rect x="0" y="795" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="795" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="812" font-size="10" fill="#64748B" text-anchor="middle">12</text>
+<line x1="34" y1="795" x2="34" y2="856" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="795" x2="110" y2="856" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="795" x2="270" y2="856" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="795" x2="520" y2="856" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="795" x2="780" y2="856" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="795" x2="910" y2="856" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="795" x2="1050" y2="856" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="795" x2="1140" y2="856" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="856" x2="1362" y2="856" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="795" x2="110" y2="856" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="810" font-size="11.5" fill="#1D4ED8" font-weight="700">F-03</text>
+<text x="118" y="810" font-size="11.5" fill="#1D4ED8" font-weight="700">Loss</text>
+<text x="118" y="826" font-size="10.5" fill="#64748B">Function not provided when</text>
+<text x="118" y="839.5" font-size="10.5" fill="#64748B">needed</text>
+<text x="278" y="810" font-size="11.5" fill="#0F172A">Walker cannot lower to the egress posture</text>
+<text x="528" y="810" font-size="11.5" fill="#0F172A">Normal egress blocked; only the side-hatch</text>
+<text x="528" y="825" font-size="11.5" fill="#0F172A">emergency exit remains</text>
+<rect x="788" y="801" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="813" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-003</text>
+<rect x="918" y="800" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="812" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="812" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="829" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="842" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="800" width="33.3" height="17" rx="8.5" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<text x="1066" y="812.5" font-size="10.5" fill="#991B1B">gap</text>
+<text x="1148" y="810" font-size="11.5" fill="#0F172A">Blocked normal egress (SCN-104)</text>
+<text x="1148" y="825" font-size="11.5" fill="#0F172A">has no hazard record of its own</text>
+<rect x="0" y="856" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="856" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="873" font-size="10" fill="#64748B" text-anchor="middle">13</text>
+<line x1="34" y1="856" x2="34" y2="917" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="856" x2="110" y2="917" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="856" x2="270" y2="917" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="856" x2="520" y2="917" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="856" x2="780" y2="917" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="856" x2="910" y2="917" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="856" x2="1050" y2="917" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="856" x2="1140" y2="917" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="917" x2="1362" y2="917" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="856" x2="110" y2="917" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="871" font-size="11.5" fill="#1D4ED8" font-weight="700">F-03</text>
+<text x="118" y="871" font-size="11.5" fill="#1D4ED8" font-weight="700">Erroneous</text>
+<text x="118" y="887" font-size="10.5" fill="#64748B">Function provided with a</text>
+<text x="118" y="900.5" font-size="10.5" fill="#64748B">wrong output</text>
+<text x="278" y="871" font-size="11.5" fill="#0F172A">Readiness reported true with restraint,</text>
+<text x="278" y="886" font-size="11.5" fill="#0F172A">hatch or controls not ready</text>
+<text x="528" y="871" font-size="11.5" fill="#0F172A">Leg motion enabled during ingress or egress</text>
+<rect x="788" y="862" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="874" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-001</text>
+<rect x="918" y="861" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="873" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="873" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="890" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="903" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="861" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="873.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="871" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="917" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="917" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="934" font-size="10" fill="#64748B" text-anchor="middle">14</text>
+<line x1="34" y1="917" x2="34" y2="978" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="917" x2="110" y2="978" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="917" x2="270" y2="978" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="917" x2="520" y2="978" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="917" x2="780" y2="978" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="917" x2="910" y2="978" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="917" x2="1050" y2="978" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="917" x2="1140" y2="978" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="978" x2="1362" y2="978" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="917" x2="110" y2="978" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="932" font-size="11.5" fill="#1D4ED8" font-weight="700">F-03</text>
+<text x="118" y="932" font-size="11.5" fill="#1D4ED8" font-weight="700">Untimely</text>
+<text x="118" y="948" font-size="10.5" fill="#64748B">Function provided too early</text>
+<text x="118" y="961.5" font-size="10.5" fill="#64748B">or too late</text>
+<text x="278" y="932" font-size="11.5" fill="#0F172A">Motion enabled before ingress is complete</text>
+<text x="528" y="932" font-size="11.5" fill="#0F172A">Pilot or crew caught by moving structure</text>
+<rect x="788" y="923" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="935" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-001</text>
+<rect x="918" y="922" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="934" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="934" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="951" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="964" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="922" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="934.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="932" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="978" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="978" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="995" font-size="10" fill="#64748B" text-anchor="middle">15</text>
+<line x1="34" y1="978" x2="34" y2="1039" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="978" x2="110" y2="1039" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="978" x2="270" y2="1039" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="978" x2="520" y2="1039" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="978" x2="780" y2="1039" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="978" x2="910" y2="1039" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="978" x2="1050" y2="1039" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="978" x2="1140" y2="1039" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1039" x2="1362" y2="1039" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="978" x2="110" y2="1039" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="993" font-size="11.5" fill="#1D4ED8" font-weight="700">F-03</text>
+<text x="118" y="993" font-size="11.5" fill="#1D4ED8" font-weight="700">Unintended</text>
+<text x="118" y="1009" font-size="10.5" fill="#64748B">Function provided when not</text>
+<text x="118" y="1022.5" font-size="10.5" fill="#64748B">demanded</text>
+<text x="278" y="993" font-size="11.5" fill="#0F172A">Kneel or rise without a confirmed clear</text>
+<text x="278" y="1008" font-size="11.5" fill="#0F172A">zone</text>
+<text x="528" y="993" font-size="11.5" fill="#0F172A">Person under the pod or beside the legs</text>
+<text x="528" y="1008" font-size="11.5" fill="#0F172A">crushed</text>
+<rect x="788" y="984" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="996" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-003</text>
+<rect x="918" y="983" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="995" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="995" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="1012" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="1025" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="983" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="995.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="993" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="1039" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1039" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1056" font-size="10" fill="#64748B" text-anchor="middle">16</text>
+<line x1="34" y1="1039" x2="34" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1039" x2="110" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1039" x2="270" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1039" x2="520" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1039" x2="780" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1039" x2="910" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1039" x2="1050" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1039" x2="1140" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1100" x2="1362" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1039" x2="110" y2="1100" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1054" font-size="11.5" fill="#1D4ED8" font-weight="700">F-03</text>
+<text x="118" y="1054" font-size="11.5" fill="#1D4ED8" font-weight="700">Degraded</text>
+<text x="118" y="1070" font-size="10.5" fill="#64748B">Function provided with</text>
+<text x="118" y="1083.5" font-size="10.5" fill="#64748B">reduced performance</text>
+<text x="278" y="1054" font-size="11.5" fill="#0F172A">Uncontrolled or too-fast lowering</text>
+<text x="528" y="1054" font-size="11.5" fill="#0F172A">Crush under the pod; drop loads on the</text>
+<text x="528" y="1069" font-size="11.5" fill="#0F172A">restrained pilot</text>
+<rect x="788" y="1045" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1057" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-003</text>
+<rect x="788" y="1064" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1076" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-002</text>
+<rect x="918" y="1044" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="1056" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="1056" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="1073" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="1086" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="1044" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="1056.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="1054" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="1100" width="1362" height="24" rx="0" fill="#E2E8F0" stroke="#E2E8F0" stroke-width="1"/>
+<text x="42" y="1116.5" font-size="11.5" fill="#0F172A" font-weight="700">F-04 · Protective stop and fault response</text>
+<rect x="0" y="1124" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1124" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1141" font-size="10" fill="#64748B" text-anchor="middle">17</text>
+<line x1="34" y1="1124" x2="34" y2="1185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1124" x2="110" y2="1185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1124" x2="270" y2="1185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1124" x2="520" y2="1185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1124" x2="780" y2="1185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1124" x2="910" y2="1185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1124" x2="1050" y2="1185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1124" x2="1140" y2="1185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1185" x2="1362" y2="1185" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1124" x2="110" y2="1185" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1139" font-size="11.5" fill="#1D4ED8" font-weight="700">F-04</text>
+<text x="118" y="1139" font-size="11.5" fill="#1D4ED8" font-weight="700">Loss</text>
+<text x="118" y="1155" font-size="10.5" fill="#64748B">Function not provided when</text>
+<text x="118" y="1168.5" font-size="10.5" fill="#64748B">needed</text>
+<text x="278" y="1139" font-size="11.5" fill="#0F172A">Protective stop not executed on demand</text>
+<text x="528" y="1139" font-size="11.5" fill="#0F172A">Hazardous motion continues</text>
+<rect x="788" y="1130" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1142" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-SAF-001</text>
+<rect x="788" y="1149" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1161" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-001</text>
+<rect x="918" y="1129" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="1141" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="1141" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="1158" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="1171" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="1129" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="1141.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="1139" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="1185" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1185" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1202" font-size="10" fill="#64748B" text-anchor="middle">18</text>
+<line x1="34" y1="1185" x2="34" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1185" x2="110" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1185" x2="270" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1185" x2="520" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1185" x2="780" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1185" x2="910" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1185" x2="1050" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1185" x2="1140" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1246" x2="1362" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1185" x2="110" y2="1246" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1200" font-size="11.5" fill="#1D4ED8" font-weight="700">F-04</text>
+<text x="118" y="1200" font-size="11.5" fill="#1D4ED8" font-weight="700">Erroneous</text>
+<text x="118" y="1216" font-size="10.5" fill="#64748B">Function provided with a</text>
+<text x="118" y="1229.5" font-size="10.5" fill="#64748B">wrong output</text>
+<text x="278" y="1200" font-size="11.5" fill="#0F172A">Stop drives the walker to an unstable</text>
+<text x="278" y="1215" font-size="11.5" fill="#0F172A">posture</text>
+<text x="528" y="1200" font-size="11.5" fill="#0F172A">Fall or collapse with the pilot aboard</text>
+<rect x="788" y="1191" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1203" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-SAF-001</text>
+<rect x="788" y="1210" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1222" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="918" y="1190" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="1202" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="1202" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="1219" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="1232" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="1190" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="1202.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="1200" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="1246" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1246" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1263" font-size="10" fill="#64748B" text-anchor="middle">19</text>
+<line x1="34" y1="1246" x2="34" y2="1307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1246" x2="110" y2="1307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1246" x2="270" y2="1307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1246" x2="520" y2="1307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1246" x2="780" y2="1307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1246" x2="910" y2="1307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1246" x2="1050" y2="1307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1246" x2="1140" y2="1307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1307" x2="1362" y2="1307" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1246" x2="110" y2="1307" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1261" font-size="11.5" fill="#1D4ED8" font-weight="700">F-04</text>
+<text x="118" y="1261" font-size="11.5" fill="#1D4ED8" font-weight="700">Untimely</text>
+<text x="118" y="1277" font-size="10.5" fill="#64748B">Function provided too early</text>
+<text x="118" y="1290.5" font-size="10.5" fill="#64748B">or too late</text>
+<text x="278" y="1261" font-size="11.5" fill="#0F172A">Stop completes later than the reaction time</text>
+<text x="528" y="1261" font-size="11.5" fill="#0F172A">Motion continues into the person or obstacle</text>
+<rect x="788" y="1252" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1264" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-SAF-001</text>
+<rect x="918" y="1251" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="1263" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="1263" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="1280" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="1293" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="1251" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="1263.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="1261" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="1307" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1307" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1324" font-size="10" fill="#64748B" text-anchor="middle">20</text>
+<line x1="34" y1="1307" x2="34" y2="1368" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1307" x2="110" y2="1368" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1307" x2="270" y2="1368" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1307" x2="520" y2="1368" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1307" x2="780" y2="1368" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1307" x2="910" y2="1368" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1307" x2="1050" y2="1368" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1307" x2="1140" y2="1368" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1368" x2="1362" y2="1368" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1307" x2="110" y2="1368" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1322" font-size="11.5" fill="#1D4ED8" font-weight="700">F-04</text>
+<text x="118" y="1322" font-size="11.5" fill="#1D4ED8" font-weight="700">Unintended</text>
+<text x="118" y="1338" font-size="10.5" fill="#64748B">Function provided when not</text>
+<text x="118" y="1351.5" font-size="10.5" fill="#64748B">demanded</text>
+<text x="278" y="1322" font-size="11.5" fill="#0F172A">Spurious stop while walking or carrying a</text>
+<text x="278" y="1337" font-size="11.5" fill="#0F172A">load</text>
+<text x="528" y="1322" font-size="11.5" fill="#0F172A">Abrupt stop can upset the walker or shake</text>
+<text x="528" y="1337" font-size="11.5" fill="#0F172A">the load loose</text>
+<rect x="788" y="1313" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1325" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="788" y="1332" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1344" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-MAN-002</text>
+<rect x="918" y="1312" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="1324" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="1324" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="1341" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="1354" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="1312" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="1324.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="1322" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="1368" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1368" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1385" font-size="10" fill="#64748B" text-anchor="middle">21</text>
+<line x1="34" y1="1368" x2="34" y2="1429" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1368" x2="110" y2="1429" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1368" x2="270" y2="1429" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1368" x2="520" y2="1429" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1368" x2="780" y2="1429" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1368" x2="910" y2="1429" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1368" x2="1050" y2="1429" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1368" x2="1140" y2="1429" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1429" x2="1362" y2="1429" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1368" x2="110" y2="1429" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1383" font-size="11.5" fill="#1D4ED8" font-weight="700">F-04</text>
+<text x="118" y="1383" font-size="11.5" fill="#1D4ED8" font-weight="700">Degraded</text>
+<text x="118" y="1399" font-size="10.5" fill="#64748B">Function provided with</text>
+<text x="118" y="1412.5" font-size="10.5" fill="#64748B">reduced performance</text>
+<text x="278" y="1383" font-size="11.5" fill="#0F172A">Stop reaches only part of the actuators</text>
+<text x="528" y="1383" font-size="11.5" fill="#0F172A">Safe state not reached</text>
+<rect x="788" y="1374" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1386" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-SAF-001</text>
+<rect x="918" y="1373" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="1385" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="1385" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="1402" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="1415" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="1373" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="1385.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="1383" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="1429" width="1362" height="24" rx="0" fill="#E2E8F0" stroke="#E2E8F0" stroke-width="1"/>
+<text x="42" y="1445.5" font-size="11.5" fill="#0F172A" font-weight="700">F-05 · Power generation, storage, distribution and isolation</text>
+<rect x="0" y="1453" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1453" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1470" font-size="10" fill="#64748B" text-anchor="middle">22</text>
+<line x1="34" y1="1453" x2="34" y2="1514" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1453" x2="110" y2="1514" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1453" x2="270" y2="1514" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1453" x2="520" y2="1514" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1453" x2="780" y2="1514" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1453" x2="910" y2="1514" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1453" x2="1050" y2="1514" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1453" x2="1140" y2="1514" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1514" x2="1362" y2="1514" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1453" x2="110" y2="1514" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1468" font-size="11.5" fill="#1D4ED8" font-weight="700">F-05</text>
+<text x="118" y="1468" font-size="11.5" fill="#1D4ED8" font-weight="700">Loss</text>
+<text x="118" y="1484" font-size="10.5" fill="#64748B">Function not provided when</text>
+<text x="118" y="1497.5" font-size="10.5" fill="#64748B">needed</text>
+<text x="278" y="1468" font-size="11.5" fill="#0F172A">Actuator supply lost while walking</text>
+<text x="528" y="1468" font-size="11.5" fill="#0F172A">Balance lost before load holding engages;</text>
+<text x="528" y="1483" font-size="11.5" fill="#0F172A">cockpit drop</text>
+<rect x="788" y="1459" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1471" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="788" y="1478" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1490" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-002</text>
+<rect x="918" y="1458" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="1470" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="1470" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="1487" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="1500" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="1458" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="1470.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="1468" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="1514" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1514" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1531" font-size="10" fill="#64748B" text-anchor="middle">23</text>
+<line x1="34" y1="1514" x2="34" y2="1575" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1514" x2="110" y2="1575" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1514" x2="270" y2="1575" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1514" x2="520" y2="1575" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1514" x2="780" y2="1575" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1514" x2="910" y2="1575" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1514" x2="1050" y2="1575" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1514" x2="1140" y2="1575" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1575" x2="1362" y2="1575" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1514" x2="110" y2="1575" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1529" font-size="11.5" fill="#1D4ED8" font-weight="700">F-05</text>
+<text x="118" y="1529" font-size="11.5" fill="#1D4ED8" font-weight="700">Erroneous</text>
+<text x="118" y="1545" font-size="10.5" fill="#64748B">Function provided with a</text>
+<text x="118" y="1558.5" font-size="10.5" fill="#64748B">wrong output</text>
+<text x="278" y="1529" font-size="11.5" fill="#0F172A">Isolation reported complete with energy</text>
+<text x="278" y="1544" font-size="11.5" fill="#0F172A">still stored</text>
+<text x="528" y="1529" font-size="11.5" fill="#0F172A">Maintainer exposed to stored pressure or</text>
+<text x="528" y="1544" font-size="11.5" fill="#0F172A">energy</text>
+<rect x="788" y="1520" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1532" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-001</text>
+<rect x="918" y="1519" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="1531" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="1531" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="1548" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="1561" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="1519" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="1531.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="1529" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="1575" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1575" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1592" font-size="10" fill="#64748B" text-anchor="middle">24</text>
+<line x1="34" y1="1575" x2="34" y2="1636" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1575" x2="110" y2="1636" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1575" x2="270" y2="1636" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1575" x2="520" y2="1636" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1575" x2="780" y2="1636" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1575" x2="910" y2="1636" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1575" x2="1050" y2="1636" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1575" x2="1140" y2="1636" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1636" x2="1362" y2="1636" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1575" x2="110" y2="1636" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1590" font-size="11.5" fill="#1D4ED8" font-weight="700">F-05</text>
+<text x="118" y="1590" font-size="11.5" fill="#1D4ED8" font-weight="700">Untimely</text>
+<text x="118" y="1606" font-size="10.5" fill="#64748B">Function provided too early</text>
+<text x="118" y="1619.5" font-size="10.5" fill="#64748B">or too late</text>
+<text x="278" y="1590" font-size="11.5" fill="#0F172A">Isolation or shut-off late on a thermal or</text>
+<text x="278" y="1605" font-size="11.5" fill="#0F172A">fuel fault</text>
+<text x="528" y="1590" font-size="11.5" fill="#0F172A">Fire or thermal event near the pilot grows</text>
+<rect x="788" y="1581" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1593" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-002</text>
+<rect x="788" y="1600" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1612" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-003</text>
+<rect x="918" y="1580" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="1592" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="1592" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="1609" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="1622" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="1580" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="1592.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="1590" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="1636" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1636" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1653" font-size="10" fill="#64748B" text-anchor="middle">25</text>
+<line x1="34" y1="1636" x2="34" y2="1697" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1636" x2="110" y2="1697" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1636" x2="270" y2="1697" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1636" x2="520" y2="1697" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1636" x2="780" y2="1697" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1636" x2="910" y2="1697" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1636" x2="1050" y2="1697" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1636" x2="1140" y2="1697" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1697" x2="1362" y2="1697" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1636" x2="110" y2="1697" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1651" font-size="11.5" fill="#1D4ED8" font-weight="700">F-05</text>
+<text x="118" y="1651" font-size="11.5" fill="#1D4ED8" font-weight="700">Unintended</text>
+<text x="118" y="1667" font-size="10.5" fill="#64748B">Function provided when not</text>
+<text x="118" y="1680.5" font-size="10.5" fill="#64748B">demanded</text>
+<text x="278" y="1651" font-size="11.5" fill="#0F172A">System energised during maintenance</text>
+<text x="528" y="1651" font-size="11.5" fill="#0F172A">Unexpected pressure or motion injures a</text>
+<text x="528" y="1666" font-size="11.5" fill="#0F172A">maintainer</text>
+<rect x="788" y="1642" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1654" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-001</text>
+<rect x="918" y="1641" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="1653" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="1653" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="1670" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="1683" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="1641" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="1653.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="1651" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="1697" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1697" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1714" font-size="10" fill="#64748B" text-anchor="middle">26</text>
+<line x1="34" y1="1697" x2="34" y2="1758" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1697" x2="110" y2="1758" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1697" x2="270" y2="1758" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1697" x2="520" y2="1758" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1697" x2="780" y2="1758" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1697" x2="910" y2="1758" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1697" x2="1050" y2="1758" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1697" x2="1140" y2="1758" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1758" x2="1362" y2="1758" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1697" x2="110" y2="1758" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1712" font-size="11.5" fill="#1D4ED8" font-weight="700">F-05</text>
+<text x="118" y="1712" font-size="11.5" fill="#1D4ED8" font-weight="700">Degraded</text>
+<text x="118" y="1728" font-size="10.5" fill="#64748B">Function provided with</text>
+<text x="118" y="1741.5" font-size="10.5" fill="#64748B">reduced performance</text>
+<text x="278" y="1712" font-size="11.5" fill="#0F172A">Reduced pressure or bus voltage</text>
+<text x="528" y="1712" font-size="11.5" fill="#0F172A">Reduced balance authority (slow leak on a</text>
+<text x="528" y="1727" font-size="11.5" fill="#0F172A">slope)</text>
+<rect x="788" y="1703" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1715" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="918" y="1702" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="1714" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="1714" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="1731" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="1744" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="1702" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="1714.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="1712" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="1758" width="1362" height="24" rx="0" fill="#E2E8F0" stroke="#E2E8F0" stroke-width="1"/>
+<text x="42" y="1774.5" font-size="11.5" fill="#0F172A" font-weight="700">F-06 · Aerial observation</text>
+<rect x="0" y="1782" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1782" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1799" font-size="10" fill="#64748B" text-anchor="middle">27</text>
+<line x1="34" y1="1782" x2="34" y2="1843" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1782" x2="110" y2="1843" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1782" x2="270" y2="1843" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1782" x2="520" y2="1843" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1782" x2="780" y2="1843" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1782" x2="910" y2="1843" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1782" x2="1050" y2="1843" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1782" x2="1140" y2="1843" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1843" x2="1362" y2="1843" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1782" x2="110" y2="1843" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1797" font-size="11.5" fill="#1D4ED8" font-weight="700">F-06</text>
+<text x="118" y="1797" font-size="11.5" fill="#1D4ED8" font-weight="700">Loss</text>
+<text x="118" y="1813" font-size="10.5" fill="#64748B">Function not provided when</text>
+<text x="118" y="1826.5" font-size="10.5" fill="#64748B">needed</text>
+<text x="278" y="1797" font-size="11.5" fill="#0F172A">UAV link or imagery lost</text>
+<text x="528" y="1797" font-size="11.5" fill="#0F172A">Lost-link contingency must keep the aircraft</text>
+<text x="528" y="1812" font-size="11.5" fill="#0F172A">clear of the walker</text>
+<rect x="788" y="1788" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1800" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="918" y="1787" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="1799" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="940" y="1799" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="918" y="1816" font-size="10" fill="#64748B">permanent partial</text>
+<text x="918" y="1829" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1058" y="1787" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="1799.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="1797" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="1843" width="1362" height="56.5" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1843" width="34" height="56.5" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1860" font-size="10" fill="#64748B" text-anchor="middle">28</text>
+<line x1="34" y1="1843" x2="34" y2="1899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1843" x2="110" y2="1899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1843" x2="270" y2="1899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1843" x2="520" y2="1899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1843" x2="780" y2="1899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1843" x2="910" y2="1899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1843" x2="1050" y2="1899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1843" x2="1140" y2="1899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1899.5" x2="1362" y2="1899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1843" x2="110" y2="1899.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1858" font-size="11.5" fill="#1D4ED8" font-weight="700">F-06</text>
+<text x="118" y="1858" font-size="11.5" fill="#1D4ED8" font-weight="700">Erroneous</text>
+<text x="118" y="1874" font-size="10.5" fill="#64748B">Function provided with a</text>
+<text x="118" y="1887.5" font-size="10.5" fill="#64748B">wrong output</text>
+<text x="278" y="1858" font-size="11.5" fill="#0F172A">Misleading imagery or position shown to</text>
+<text x="278" y="1873" font-size="11.5" fill="#0F172A">the pilot</text>
+<text x="528" y="1858" font-size="11.5" fill="#0F172A">Pilot decisions based on wrong information</text>
+<text x="918" y="1858" font-size="11.5" fill="#0F172A">—</text>
+<rect x="1058" y="1848" width="33.3" height="17" rx="8.5" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<text x="1066" y="1860.5" font-size="10.5" fill="#991B1B">gap</text>
+<text x="1148" y="1858" font-size="11.5" fill="#0F172A">No walker-side hazard record for</text>
+<text x="1148" y="1873" font-size="11.5" fill="#0F172A">misleading UAV information yet</text>
+<rect x="0" y="1899.5" width="1362" height="56.5" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1899.5" width="34" height="56.5" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1916.5" font-size="10" fill="#64748B" text-anchor="middle">29</text>
+<line x1="34" y1="1899.5" x2="34" y2="1956" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1899.5" x2="110" y2="1956" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1899.5" x2="270" y2="1956" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1899.5" x2="520" y2="1956" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1899.5" x2="780" y2="1956" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1899.5" x2="910" y2="1956" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1899.5" x2="1050" y2="1956" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1899.5" x2="1140" y2="1956" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1956" x2="1362" y2="1956" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1899.5" x2="110" y2="1956" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1914.5" font-size="11.5" fill="#1D4ED8" font-weight="700">F-06</text>
+<text x="118" y="1914.5" font-size="11.5" fill="#1D4ED8" font-weight="700">Untimely</text>
+<text x="118" y="1930.5" font-size="10.5" fill="#64748B">Function provided too early</text>
+<text x="118" y="1944" font-size="10.5" fill="#64748B">or too late</text>
+<text x="278" y="1914.5" font-size="11.5" fill="#0F172A">Stale or frozen imagery</text>
+<text x="528" y="1914.5" font-size="11.5" fill="#0F172A">Pilot acts on an out-of-date picture</text>
+<text x="918" y="1914.5" font-size="11.5" fill="#0F172A">—</text>
+<rect x="1058" y="1904.5" width="33.3" height="17" rx="8.5" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<text x="1066" y="1917" font-size="10.5" fill="#991B1B">gap</text>
+<text x="1148" y="1914.5" font-size="11.5" fill="#0F172A">No walker-side hazard record for</text>
+<text x="1148" y="1929.5" font-size="11.5" fill="#0F172A">stale UAV information yet</text>
+<rect x="0" y="1956" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1956" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1973" font-size="10" fill="#64748B" text-anchor="middle">30</text>
+<line x1="34" y1="1956" x2="34" y2="2017" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1956" x2="110" y2="2017" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="1956" x2="270" y2="2017" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="1956" x2="520" y2="2017" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="1956" x2="780" y2="2017" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="1956" x2="910" y2="2017" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="1956" x2="1050" y2="2017" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="1956" x2="1140" y2="2017" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2017" x2="1362" y2="2017" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="1956" x2="110" y2="2017" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1971" font-size="11.5" fill="#1D4ED8" font-weight="700">F-06</text>
+<text x="118" y="1971" font-size="11.5" fill="#1D4ED8" font-weight="700">Unintended</text>
+<text x="118" y="1987" font-size="10.5" fill="#64748B">Function provided when not</text>
+<text x="118" y="2000.5" font-size="10.5" fill="#64748B">demanded</text>
+<text x="278" y="1971" font-size="11.5" fill="#0F172A">UAV flies into the pilot keep-out</text>
+<text x="528" y="1971" font-size="11.5" fill="#0F172A">Rotor or airframe strike on pilot or crew</text>
+<rect x="788" y="1962" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="1974" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="918" y="1961" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="1973" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="940" y="1973" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="918" y="1990" font-size="10" fill="#64748B">permanent partial</text>
+<text x="918" y="2003" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1058" y="1961" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="1973.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="1971" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="2017" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="2017" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2034" font-size="10" fill="#64748B" text-anchor="middle">31</text>
+<line x1="34" y1="2017" x2="34" y2="2078" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2017" x2="110" y2="2078" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2017" x2="270" y2="2078" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2017" x2="520" y2="2078" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2017" x2="780" y2="2078" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2017" x2="910" y2="2078" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2017" x2="1050" y2="2078" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2017" x2="1140" y2="2078" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2078" x2="1362" y2="2078" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2017" x2="110" y2="2078" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2032" font-size="11.5" fill="#1D4ED8" font-weight="700">F-06</text>
+<text x="118" y="2032" font-size="11.5" fill="#1D4ED8" font-weight="700">Degraded</text>
+<text x="118" y="2048" font-size="10.5" fill="#64748B">Function provided with</text>
+<text x="118" y="2061.5" font-size="10.5" fill="#64748B">reduced performance</text>
+<text x="278" y="2032" font-size="11.5" fill="#0F172A">Degraded navigation (GNSS loss)</text>
+<text x="528" y="2032" font-size="11.5" fill="#0F172A">Position error of the aircraft near people</text>
+<rect x="788" y="2023" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2035" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="918" y="2022" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="2034" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="940" y="2034" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="918" y="2051" font-size="10" fill="#64748B">permanent partial</text>
+<text x="918" y="2064" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1058" y="2022" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="2034.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="2032" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="2078" width="1362" height="24" rx="0" fill="#E2E8F0" stroke="#E2E8F0" stroke-width="1"/>
+<text x="42" y="2094.5" font-size="11.5" fill="#0F172A" font-weight="700">F-07 · UAV launch, recovery and retention</text>
+<rect x="0" y="2102" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="2102" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2119" font-size="10" fill="#64748B" text-anchor="middle">32</text>
+<line x1="34" y1="2102" x2="34" y2="2163" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2102" x2="110" y2="2163" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2102" x2="270" y2="2163" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2102" x2="520" y2="2163" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2102" x2="780" y2="2163" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2102" x2="910" y2="2163" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2102" x2="1050" y2="2163" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2102" x2="1140" y2="2163" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2163" x2="1362" y2="2163" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2102" x2="110" y2="2163" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2117" font-size="11.5" fill="#1D4ED8" font-weight="700">F-07</text>
+<text x="118" y="2117" font-size="11.5" fill="#1D4ED8" font-weight="700">Loss</text>
+<text x="118" y="2133" font-size="10.5" fill="#64748B">Function not provided when</text>
+<text x="118" y="2146.5" font-size="10.5" fill="#64748B">needed</text>
+<text x="278" y="2117" font-size="11.5" fill="#0F172A">Retention lost on the dock</text>
+<text x="528" y="2117" font-size="11.5" fill="#0F172A">UAV released while the walker moves</text>
+<rect x="788" y="2108" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2120" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-DCK-002</text>
+<rect x="918" y="2107" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="2119" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="940" y="2119" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="918" y="2136" font-size="10" fill="#64748B">permanent partial</text>
+<text x="918" y="2149" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1058" y="2107" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="2119.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="2117" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="2163" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="2163" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2180" font-size="10" fill="#64748B" text-anchor="middle">33</text>
+<line x1="34" y1="2163" x2="34" y2="2224" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2163" x2="110" y2="2224" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2163" x2="270" y2="2224" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2163" x2="520" y2="2224" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2163" x2="780" y2="2224" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2163" x2="910" y2="2224" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2163" x2="1050" y2="2224" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2163" x2="1140" y2="2224" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2224" x2="1362" y2="2224" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2163" x2="110" y2="2224" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2178" font-size="11.5" fill="#1D4ED8" font-weight="700">F-07</text>
+<text x="118" y="2178" font-size="11.5" fill="#1D4ED8" font-weight="700">Erroneous</text>
+<text x="118" y="2194" font-size="10.5" fill="#64748B">Function provided with a</text>
+<text x="118" y="2207.5" font-size="10.5" fill="#64748B">wrong output</text>
+<text x="278" y="2178" font-size="11.5" fill="#0F172A">Dock reports retained when it is not</text>
+<text x="528" y="2178" font-size="11.5" fill="#0F172A">Walker moves with an unretained aircraft</text>
+<rect x="788" y="2169" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2181" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-DCK-002</text>
+<rect x="918" y="2168" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="2180" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="940" y="2180" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="918" y="2197" font-size="10" fill="#64748B">permanent partial</text>
+<text x="918" y="2210" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1058" y="2168" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="2180.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="2178" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="2224" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="2224" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2241" font-size="10" fill="#64748B" text-anchor="middle">34</text>
+<line x1="34" y1="2224" x2="34" y2="2285" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2224" x2="110" y2="2285" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2224" x2="270" y2="2285" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2224" x2="520" y2="2285" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2224" x2="780" y2="2285" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2224" x2="910" y2="2285" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2224" x2="1050" y2="2285" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2224" x2="1140" y2="2285" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2285" x2="1362" y2="2285" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2224" x2="110" y2="2285" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2239" font-size="11.5" fill="#1D4ED8" font-weight="700">F-07</text>
+<text x="118" y="2239" font-size="11.5" fill="#1D4ED8" font-weight="700">Untimely</text>
+<text x="118" y="2255" font-size="10.5" fill="#64748B">Function provided too early</text>
+<text x="118" y="2268.5" font-size="10.5" fill="#64748B">or too late</text>
+<text x="278" y="2239" font-size="11.5" fill="#0F172A">Release during walker motion</text>
+<text x="528" y="2239" font-size="11.5" fill="#0F172A">Aircraft strikes pilot or crew</text>
+<rect x="788" y="2230" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2242" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-DCK-002</text>
+<rect x="788" y="2249" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2261" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="918" y="2229" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="2241" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="940" y="2241" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="918" y="2258" font-size="10" fill="#64748B">permanent partial</text>
+<text x="918" y="2271" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1058" y="2229" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="2241.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="2239" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="2285" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="2285" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2302" font-size="10" fill="#64748B" text-anchor="middle">35</text>
+<line x1="34" y1="2285" x2="34" y2="2346" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2285" x2="110" y2="2346" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2285" x2="270" y2="2346" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2285" x2="520" y2="2346" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2285" x2="780" y2="2346" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2285" x2="910" y2="2346" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2285" x2="1050" y2="2346" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2285" x2="1140" y2="2346" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2346" x2="1362" y2="2346" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2285" x2="110" y2="2346" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2300" font-size="11.5" fill="#1D4ED8" font-weight="700">F-07</text>
+<text x="118" y="2300" font-size="11.5" fill="#1D4ED8" font-weight="700">Unintended</text>
+<text x="118" y="2316" font-size="10.5" fill="#64748B">Function provided when not</text>
+<text x="118" y="2329.5" font-size="10.5" fill="#64748B">demanded</text>
+<text x="278" y="2300" font-size="11.5" fill="#0F172A">Rotor start while retained or a person is at</text>
+<text x="278" y="2315" font-size="11.5" fill="#0F172A">the dock</text>
+<text x="528" y="2300" font-size="11.5" fill="#0F172A">Rotor strike on maintainer or pilot</text>
+<rect x="788" y="2291" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2303" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-DCK-001</text>
+<rect x="918" y="2290" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="2302" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="940" y="2302" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="918" y="2319" font-size="10" fill="#64748B">permanent partial</text>
+<text x="918" y="2332" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1058" y="2290" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="2302.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="2300" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="2346" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="2346" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2363" font-size="10" fill="#64748B" text-anchor="middle">36</text>
+<line x1="34" y1="2346" x2="34" y2="2407" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2346" x2="110" y2="2407" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2346" x2="270" y2="2407" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2346" x2="520" y2="2407" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2346" x2="780" y2="2407" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2346" x2="910" y2="2407" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2346" x2="1050" y2="2407" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2346" x2="1140" y2="2407" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2407" x2="1362" y2="2407" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2346" x2="110" y2="2407" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2361" font-size="11.5" fill="#1D4ED8" font-weight="700">F-07</text>
+<text x="118" y="2361" font-size="11.5" fill="#1D4ED8" font-weight="700">Degraded</text>
+<text x="118" y="2377" font-size="10.5" fill="#64748B">Function provided with</text>
+<text x="118" y="2390.5" font-size="10.5" fill="#64748B">reduced performance</text>
+<text x="278" y="2361" font-size="11.5" fill="#0F172A">Recovery outside the safe envelope</text>
+<text x="528" y="2361" font-size="11.5" fill="#0F172A">Collision during capture</text>
+<rect x="788" y="2352" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2364" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="918" y="2351" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="2363" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="940" y="2363" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="918" y="2380" font-size="10" fill="#64748B">permanent partial</text>
+<text x="918" y="2393" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1058" y="2351" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="2363.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="2361" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="2407" width="1362" height="24" rx="0" fill="#E2E8F0" stroke="#E2E8F0" stroke-width="1"/>
+<text x="42" y="2423.5" font-size="11.5" fill="#0F172A" font-weight="700">F-08 · UAV charging</text>
+<rect x="0" y="2431" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="2431" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2448" font-size="10" fill="#64748B" text-anchor="middle">37</text>
+<line x1="34" y1="2431" x2="34" y2="2492" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2431" x2="110" y2="2492" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2431" x2="270" y2="2492" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2431" x2="520" y2="2492" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2431" x2="780" y2="2492" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2431" x2="910" y2="2492" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2431" x2="1050" y2="2492" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2431" x2="1140" y2="2492" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2492" x2="1362" y2="2492" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2431" x2="110" y2="2492" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2446" font-size="11.5" fill="#1D4ED8" font-weight="700">F-08</text>
+<text x="118" y="2446" font-size="11.5" fill="#1D4ED8" font-weight="700">Loss</text>
+<text x="118" y="2462" font-size="10.5" fill="#64748B">Function not provided when</text>
+<text x="118" y="2475.5" font-size="10.5" fill="#64748B">needed</text>
+<text x="278" y="2446" font-size="11.5" fill="#0F172A">UAV not charged</text>
+<text x="528" y="2446" font-size="11.5" fill="#0F172A">Reduced flight endurance; lost-link and</text>
+<text x="528" y="2461" font-size="11.5" fill="#0F172A">low-battery contingencies more likely</text>
+<rect x="788" y="2437" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2449" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="918" y="2436" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="2448" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="940" y="2448" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="918" y="2465" font-size="10" fill="#64748B">permanent partial</text>
+<text x="918" y="2478" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1058" y="2436" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="2448.5" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="2446" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="2492" width="1362" height="56.5" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="2492" width="34" height="56.5" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2509" font-size="10" fill="#64748B" text-anchor="middle">38</text>
+<line x1="34" y1="2492" x2="34" y2="2548.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2492" x2="110" y2="2548.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2492" x2="270" y2="2548.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2492" x2="520" y2="2548.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2492" x2="780" y2="2548.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2492" x2="910" y2="2548.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2492" x2="1050" y2="2548.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2492" x2="1140" y2="2548.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2548.5" x2="1362" y2="2548.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2492" x2="110" y2="2548.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2507" font-size="11.5" fill="#1D4ED8" font-weight="700">F-08</text>
+<text x="118" y="2507" font-size="11.5" fill="#1D4ED8" font-weight="700">Erroneous</text>
+<text x="118" y="2523" font-size="10.5" fill="#64748B">Function provided with a</text>
+<text x="118" y="2536.5" font-size="10.5" fill="#64748B">wrong output</text>
+<text x="278" y="2507" font-size="11.5" fill="#0F172A">Overcharge or wrong charge profile</text>
+<text x="528" y="2507" font-size="11.5" fill="#0F172A">UAV battery thermal event at the dock</text>
+<text x="918" y="2507" font-size="11.5" fill="#0F172A">—</text>
+<rect x="1058" y="2497" width="33.3" height="17" rx="8.5" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<text x="1066" y="2509.5" font-size="10.5" fill="#991B1B">gap</text>
+<text x="1148" y="2507" font-size="11.5" fill="#0F172A">No hazard record for a UAV battery</text>
+<text x="1148" y="2522" font-size="11.5" fill="#0F172A">thermal event at the dock</text>
+<rect x="0" y="2548.5" width="1362" height="56.5" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="2548.5" width="34" height="56.5" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2565.5" font-size="10" fill="#64748B" text-anchor="middle">39</text>
+<line x1="34" y1="2548.5" x2="34" y2="2605" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2548.5" x2="110" y2="2605" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2548.5" x2="270" y2="2605" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2548.5" x2="520" y2="2605" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2548.5" x2="780" y2="2605" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2548.5" x2="910" y2="2605" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2548.5" x2="1050" y2="2605" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2548.5" x2="1140" y2="2605" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2605" x2="1362" y2="2605" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2548.5" x2="110" y2="2605" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2563.5" font-size="11.5" fill="#1D4ED8" font-weight="700">F-08</text>
+<text x="118" y="2563.5" font-size="11.5" fill="#1D4ED8" font-weight="700">Untimely</text>
+<text x="118" y="2579.5" font-size="10.5" fill="#64748B">Function provided too early</text>
+<text x="118" y="2593" font-size="10.5" fill="#64748B">or too late</text>
+<text x="278" y="2563.5" font-size="11.5" fill="#0F172A">Charging continues during launch</text>
+<text x="278" y="2578.5" font-size="11.5" fill="#0F172A">preparation</text>
+<text x="528" y="2563.5" font-size="11.5" fill="#0F172A">Energised connector at release</text>
+<text x="918" y="2563.5" font-size="11.5" fill="#0F172A">—</text>
+<rect x="1058" y="2553.5" width="33.3" height="17" rx="8.5" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<text x="1066" y="2566" font-size="10.5" fill="#991B1B">gap</text>
+<text x="1148" y="2563.5" font-size="11.5" fill="#0F172A">To analyse with the dock interface</text>
+<rect x="0" y="2605" width="1362" height="56.5" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="2605" width="34" height="56.5" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2622" font-size="10" fill="#64748B" text-anchor="middle">40</text>
+<line x1="34" y1="2605" x2="34" y2="2661.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2605" x2="110" y2="2661.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2605" x2="270" y2="2661.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2605" x2="520" y2="2661.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2605" x2="780" y2="2661.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2605" x2="910" y2="2661.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2605" x2="1050" y2="2661.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2605" x2="1140" y2="2661.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2661.5" x2="1362" y2="2661.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2605" x2="110" y2="2661.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2620" font-size="11.5" fill="#1D4ED8" font-weight="700">F-08</text>
+<text x="118" y="2620" font-size="11.5" fill="#1D4ED8" font-weight="700">Unintended</text>
+<text x="118" y="2636" font-size="10.5" fill="#64748B">Function provided when not</text>
+<text x="118" y="2649.5" font-size="10.5" fill="#64748B">demanded</text>
+<text x="278" y="2620" font-size="11.5" fill="#0F172A">Charging energised with a person at the</text>
+<text x="278" y="2635" font-size="11.5" fill="#0F172A">dock</text>
+<text x="528" y="2620" font-size="11.5" fill="#0F172A">Electrical exposure during handling</text>
+<text x="918" y="2620" font-size="11.5" fill="#0F172A">—</text>
+<rect x="1058" y="2610" width="33.3" height="17" rx="8.5" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<text x="1066" y="2622.5" font-size="10.5" fill="#991B1B">gap</text>
+<text x="1148" y="2620" font-size="11.5" fill="#0F172A">To analyse with the dock interface</text>
+<rect x="0" y="2661.5" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="2661.5" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2678.5" font-size="10" fill="#64748B" text-anchor="middle">41</text>
+<line x1="34" y1="2661.5" x2="34" y2="2722.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2661.5" x2="110" y2="2722.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2661.5" x2="270" y2="2722.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2661.5" x2="520" y2="2722.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2661.5" x2="780" y2="2722.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2661.5" x2="910" y2="2722.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2661.5" x2="1050" y2="2722.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2661.5" x2="1140" y2="2722.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2722.5" x2="1362" y2="2722.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2661.5" x2="110" y2="2722.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2676.5" font-size="11.5" fill="#1D4ED8" font-weight="700">F-08</text>
+<text x="118" y="2676.5" font-size="11.5" fill="#1D4ED8" font-weight="700">Degraded</text>
+<text x="118" y="2692.5" font-size="10.5" fill="#64748B">Function provided with</text>
+<text x="118" y="2706" font-size="10.5" fill="#64748B">reduced performance</text>
+<text x="278" y="2676.5" font-size="11.5" fill="#0F172A">Partial charge reported as full</text>
+<text x="528" y="2676.5" font-size="11.5" fill="#0F172A">Flight starts with less endurance than shown</text>
+<rect x="788" y="2667.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2679.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="918" y="2666.5" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="2678.5" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="940" y="2678.5" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="918" y="2695.5" font-size="10" fill="#64748B">permanent partial</text>
+<text x="918" y="2708.5" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1058" y="2666.5" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="2679" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="2676.5" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="2722.5" width="1362" height="24" rx="0" fill="#E2E8F0" stroke="#E2E8F0" stroke-width="1"/>
+<text x="42" y="2739" font-size="11.5" fill="#0F172A" font-weight="700">F-09 · Maintenance support and energy isolation</text>
+<rect x="0" y="2746.5" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="2746.5" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2763.5" font-size="10" fill="#64748B" text-anchor="middle">42</text>
+<line x1="34" y1="2746.5" x2="34" y2="2807.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2746.5" x2="110" y2="2807.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2746.5" x2="270" y2="2807.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2746.5" x2="520" y2="2807.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2746.5" x2="780" y2="2807.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2746.5" x2="910" y2="2807.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2746.5" x2="1050" y2="2807.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2746.5" x2="1140" y2="2807.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2807.5" x2="1362" y2="2807.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2746.5" x2="110" y2="2807.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2761.5" font-size="11.5" fill="#1D4ED8" font-weight="700">F-09</text>
+<text x="118" y="2761.5" font-size="11.5" fill="#1D4ED8" font-weight="700">Loss</text>
+<text x="118" y="2777.5" font-size="10.5" fill="#64748B">Function not provided when</text>
+<text x="118" y="2791" font-size="10.5" fill="#64748B">needed</text>
+<text x="278" y="2761.5" font-size="11.5" fill="#0F172A">Isolation points unavailable</text>
+<text x="528" y="2761.5" font-size="11.5" fill="#0F172A">Maintenance with stored energy present</text>
+<rect x="788" y="2752.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2764.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-001</text>
+<rect x="918" y="2751.5" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="2763.5" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="2763.5" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="2780.5" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="2793.5" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="2751.5" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="2764" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="2761.5" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="2807.5" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="2807.5" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2824.5" font-size="10" fill="#64748B" text-anchor="middle">43</text>
+<line x1="34" y1="2807.5" x2="34" y2="2868.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2807.5" x2="110" y2="2868.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2807.5" x2="270" y2="2868.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2807.5" x2="520" y2="2868.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2807.5" x2="780" y2="2868.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2807.5" x2="910" y2="2868.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2807.5" x2="1050" y2="2868.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2807.5" x2="1140" y2="2868.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2868.5" x2="1362" y2="2868.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2807.5" x2="110" y2="2868.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2822.5" font-size="11.5" fill="#1D4ED8" font-weight="700">F-09</text>
+<text x="118" y="2822.5" font-size="11.5" fill="#1D4ED8" font-weight="700">Erroneous</text>
+<text x="118" y="2838.5" font-size="10.5" fill="#64748B">Function provided with a</text>
+<text x="118" y="2852" font-size="10.5" fill="#64748B">wrong output</text>
+<text x="278" y="2822.5" font-size="11.5" fill="#0F172A">Zero-energy check passes wrongly</text>
+<text x="528" y="2822.5" font-size="11.5" fill="#0F172A">Maintainer exposed to stored pressure</text>
+<rect x="788" y="2813.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2825.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-001</text>
+<rect x="918" y="2812.5" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="2824.5" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="2824.5" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="2841.5" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="2854.5" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="2812.5" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="2825" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="2822.5" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="2868.5" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="2868.5" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2885.5" font-size="10" fill="#64748B" text-anchor="middle">44</text>
+<line x1="34" y1="2868.5" x2="34" y2="2929.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2868.5" x2="110" y2="2929.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2868.5" x2="270" y2="2929.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2868.5" x2="520" y2="2929.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2868.5" x2="780" y2="2929.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2868.5" x2="910" y2="2929.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2868.5" x2="1050" y2="2929.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2868.5" x2="1140" y2="2929.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2929.5" x2="1362" y2="2929.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2868.5" x2="110" y2="2929.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2883.5" font-size="11.5" fill="#1D4ED8" font-weight="700">F-09</text>
+<text x="118" y="2883.5" font-size="11.5" fill="#1D4ED8" font-weight="700">Untimely</text>
+<text x="118" y="2899.5" font-size="10.5" fill="#64748B">Function provided too early</text>
+<text x="118" y="2913" font-size="10.5" fill="#64748B">or too late</text>
+<text x="278" y="2883.5" font-size="11.5" fill="#0F172A">Residual pressure released late</text>
+<text x="528" y="2883.5" font-size="11.5" fill="#0F172A">Injection or crush injury during work</text>
+<rect x="788" y="2874.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2886.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-001</text>
+<rect x="918" y="2873.5" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="2885.5" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="2885.5" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="2902.5" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="2915.5" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="2873.5" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="2886" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="2883.5" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="2929.5" width="1362" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="2929.5" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="2946.5" font-size="10" fill="#64748B" text-anchor="middle">45</text>
+<line x1="34" y1="2929.5" x2="34" y2="2990.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2929.5" x2="110" y2="2990.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2929.5" x2="270" y2="2990.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2929.5" x2="520" y2="2990.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2929.5" x2="780" y2="2990.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2929.5" x2="910" y2="2990.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2929.5" x2="1050" y2="2990.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2929.5" x2="1140" y2="2990.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2990.5" x2="1362" y2="2990.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2929.5" x2="110" y2="2990.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="2944.5" font-size="11.5" fill="#1D4ED8" font-weight="700">F-09</text>
+<text x="118" y="2944.5" font-size="11.5" fill="#1D4ED8" font-weight="700">Unintended</text>
+<text x="118" y="2960.5" font-size="10.5" fill="#64748B">Function provided when not</text>
+<text x="118" y="2974" font-size="10.5" fill="#64748B">demanded</text>
+<text x="278" y="2944.5" font-size="11.5" fill="#0F172A">Unexpected motion during maintenance</text>
+<text x="528" y="2944.5" font-size="11.5" fill="#0F172A">Maintainer caught by moving structure</text>
+<rect x="788" y="2935.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2947.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-001</text>
+<rect x="788" y="2954.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="2966.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-001</text>
+<rect x="918" y="2934.5" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="2946.5" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="2946.5" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="2963.5" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="2976.5" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="2934.5" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="2947" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="2944.5" font-size="11.5" fill="#0F172A"></text>
+<rect x="0" y="2990.5" width="1362" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="2990.5" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="3007.5" font-size="10" fill="#64748B" text-anchor="middle">46</text>
+<line x1="34" y1="2990.5" x2="34" y2="3051.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2990.5" x2="110" y2="3051.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="270" y1="2990.5" x2="270" y2="3051.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="520" y1="2990.5" x2="520" y2="3051.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="780" y1="2990.5" x2="780" y2="3051.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="910" y1="2990.5" x2="910" y2="3051.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1050" y1="2990.5" x2="1050" y2="3051.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1140" y1="2990.5" x2="1140" y2="3051.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3051.5" x2="1362" y2="3051.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="110" y1="2990.5" x2="110" y2="3051.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="3005.5" font-size="11.5" fill="#1D4ED8" font-weight="700">F-09</text>
+<text x="118" y="3005.5" font-size="11.5" fill="#1D4ED8" font-weight="700">Degraded</text>
+<text x="118" y="3021.5" font-size="10.5" fill="#64748B">Function provided with</text>
+<text x="118" y="3035" font-size="10.5" fill="#64748B">reduced performance</text>
+<text x="278" y="3005.5" font-size="11.5" fill="#0F172A">Mechanical supports carry only part of the</text>
+<text x="278" y="3020.5" font-size="11.5" fill="#0F172A">load</text>
+<text x="528" y="3005.5" font-size="11.5" fill="#0F172A">Structure settles onto the maintainer</text>
+<rect x="788" y="2996.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="793" y="3008.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-001</text>
+<rect x="918" y="2995.5" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="926" y="3007.5" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="940" y="3007.5" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="918" y="3024.5" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="918" y="3037.5" font-size="10" fill="#64748B">disability</text>
+<rect x="1058" y="2995.5" width="50.4" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1066" y="3008" font-size="10.5" fill="#075985">drafted</text>
+<text x="1148" y="3005.5" font-size="11.5" fill="#0F172A"></text>
+<text x="16" y="3073.5" font-size="10.5" fill="#64748B">45 rows · Severity is read from the linked hazards' initial ratings, never assigned here. UAV flight functions are classified in the ARP4761A aircraft FHA.</text>
+<rect x="0.5" y="0.5" width="1361" height="3082.5" rx="0" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+<g class="terms" data-base-h="3083.5">
+<rect x="0" y="3083.5" width="1362" height="98.1" fill="#FFFFFF"/>
+<line x1="40" y1="3087.5" x2="1322" y2="3087.5" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="3103.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · ARP4754B = SAE guidelines for development of civil aircraft and systems · ARP4761A = SAE guidelines for the safety assessment process on</text>
+<text x="40" y="3117.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">civil aircraft · CONOPS = concept of operations · DoD = US Department of Defense · F-nnn = system function in the item definition · FHA = functional hazard analysis (MIL-STD-882E Task 208; also ARP4761A aircraft FHA) · GNSS = global</text>
+<text x="40" y="3132.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">navigation satellite system (GPS and similar) · GPS = Global Positioning System · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent</text>
+<text x="40" y="3146.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">organisation) · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base edition) · SAE = SAE International, publisher of ARP4754B and ARP4761A · SCN-nnn = CONOPS scenario (SCN-0nn nominal, SCN-1nn off-nominal) ·</text>
+<text x="40" y="3161.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">UAV = uncrewed aerial vehicle (drone) · US = United States</text>
+</g>
+</svg>

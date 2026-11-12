@@ -1,0 +1,728 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1308" height="1551.6" viewBox="0 0 1308 1551.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Task 401 · Safety verification matrix worksheet</title>
+<desc>Spreadsheet view of Task 401 · Safety verification matrix, generated from requirements/SYS-*.yaml.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1308" height="1424.5" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1308" height="48" rx="0" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="16" y="30" font-size="16" fill="#FFFFFF" font-weight="700">Task 401 · Safety verification matrix — worksheet</text>
+<text x="429.6" y="30" font-size="11" fill="#94A3B8">verification-matrix.csv · generated from requirements/SYS-*.yaml</text>
+<rect x="1192.8" y="14" width="103.2" height="20" rx="10" fill="#334155" stroke="none" stroke-width="0"/>
+<text x="1201.8" y="28" font-size="10.5" fill="#FFFFFF">Nothing accepted</text>
+<rect x="1024.4" y="14" width="160.5" height="20" rx="10" fill="#B45309" stroke="none" stroke-width="0"/>
+<text x="1033.4" y="28" font-size="10.5" fill="#FFFFFF">AI-drafted I0 · not reviewed</text>
+<rect x="0" y="48" width="1308" height="18" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="139" y="61" font-size="10" fill="#64748B" text-anchor="middle">A</text>
+<line x1="34" y1="48" x2="34" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="454" y="61" font-size="10" fill="#64748B" text-anchor="middle">B</text>
+<line x1="244" y1="48" x2="244" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="729" y="61" font-size="10" fill="#64748B" text-anchor="middle">C</text>
+<line x1="664" y1="48" x2="664" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="859" y="61" font-size="10" fill="#64748B" text-anchor="middle">D</text>
+<line x1="794" y1="48" x2="794" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="979" y="61" font-size="10" fill="#64748B" text-anchor="middle">E</text>
+<line x1="924" y1="48" x2="924" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1074" y="61" font-size="10" fill="#64748B" text-anchor="middle">F</text>
+<line x1="1034" y1="48" x2="1034" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1162" y="61" font-size="10" fill="#64748B" text-anchor="middle">G</text>
+<line x1="1114" y1="48" x2="1114" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1258" y="61" font-size="10" fill="#64748B" text-anchor="middle">H</text>
+<line x1="1210" y1="48" x2="1210" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="0" y="66" width="1308" height="34" rx="0" fill="#1E293B" stroke="none" stroke-width="0"/>
+<text x="17" y="87" font-size="10" fill="#94A3B8" text-anchor="middle">1</text>
+<text x="42" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Requirement</text>
+<line x1="34" y1="66" x2="34" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="252" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Statement</text>
+<line x1="244" y1="66" x2="244" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="672" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Hazards</text>
+<line x1="664" y1="66" x2="664" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="802" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Allocated to</text>
+<line x1="794" y1="66" x2="794" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="932" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Method</text>
+<line x1="924" y1="66" x2="924" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="1042" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Evidence</text>
+<line x1="1034" y1="66" x2="1034" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="1122" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Disposition</text>
+<line x1="1114" y1="66" x2="1114" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="1218" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Status</text>
+<line x1="1210" y1="66" x2="1210" y2="100" stroke="#334155" stroke-width="1"/>
+<rect x="0" y="100" width="1308" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="100" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="117" font-size="10" fill="#64748B" text-anchor="middle">2</text>
+<line x1="34" y1="100" x2="34" y2="159" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="100" x2="244" y2="159" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="100" x2="664" y2="159" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="100" x2="794" y2="159" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="100" x2="924" y2="159" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="100" x2="1034" y2="159" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="100" x2="1114" y2="159" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="100" x2="1210" y2="159" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="159" x2="1308" y2="159" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="100" x2="244" y2="159" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="115" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-001</text>
+<text x="42" y="131" font-size="10.5" fill="#64748B">Pilot-readiness actuation interlock</text>
+<text x="252" y="115" font-size="11.5" fill="#0F172A">The system shall inhibit leg actuation until pilot station readiness</text>
+<text x="252" y="130" font-size="11.5" fill="#0F172A">conditions (restraint fastened, hatch secured, controls neutral, exclusion</text>
+<text x="252" y="145" font-size="11.5" fill="#0F172A">zone confirmed) are satisfied.</text>
+<rect x="672" y="106" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="118" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-001</text>
+<rect x="802" y="106" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="118" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="802" y="125" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="137" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PIL</text>
+<rect x="932" y="106" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="118" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<rect x="932" y="125" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="137" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
+<text x="1042" y="115" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="105" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="117.5" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="105" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="117.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="159" width="1308" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="159" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="176" font-size="10" fill="#64748B" text-anchor="middle">3</text>
+<line x1="34" y1="159" x2="34" y2="218" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="159" x2="244" y2="218" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="159" x2="664" y2="218" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="159" x2="794" y2="218" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="159" x2="924" y2="218" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="159" x2="1034" y2="218" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="159" x2="1114" y2="218" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="159" x2="1210" y2="218" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="218" x2="1308" y2="218" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="159" x2="244" y2="218" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="174" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-002</text>
+<text x="42" y="190" font-size="10.5" fill="#64748B">Operator protective stop</text>
+<text x="252" y="174" font-size="11.5" fill="#0F172A">The system shall provide an operator-requested protective stop with a</text>
+<text x="252" y="189" font-size="11.5" fill="#0F172A">defined, analyzed safe behavior for each operating mode that does not</text>
+<text x="252" y="204" font-size="11.5" fill="#0F172A">depend on instant zero torque.</text>
+<rect x="672" y="165" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="177" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-SAF-001</text>
+<rect x="802" y="165" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="177" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="932" y="165" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="177" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<rect x="932" y="184" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="196" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
+<text x="1042" y="174" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="164" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="176.5" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="164" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="176.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="218" width="1308" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="218" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="235" font-size="10" fill="#64748B" text-anchor="middle">4</text>
+<line x1="34" y1="218" x2="34" y2="273" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="218" x2="244" y2="273" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="218" x2="664" y2="273" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="218" x2="794" y2="273" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="218" x2="924" y2="273" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="218" x2="1034" y2="273" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="218" x2="1114" y2="273" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="218" x2="1210" y2="273" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="273" x2="1308" y2="273" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="218" x2="244" y2="273" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="233" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-003</text>
+<text x="42" y="249" font-size="10.5" fill="#64748B">Docked rotor inhibit</text>
+<text x="252" y="233" font-size="11.5" fill="#0F172A">The UAV shall be prevented from rotor startup while mechanically</text>
+<text x="252" y="248" font-size="11.5" fill="#0F172A">retained, except under an approved maintenance procedure.</text>
+<rect x="672" y="224" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="236" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-DCK-001</text>
+<rect x="802" y="224" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="236" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-DCK</text>
+<rect x="802" y="243" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="255" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1</text>
+<rect x="932" y="224" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="236" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<rect x="932" y="243" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="255" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
+<text x="1042" y="233" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="223" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="235.5" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="223" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="235.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="273" width="1308" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="273" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="290" font-size="10" fill="#64748B" text-anchor="middle">5</text>
+<line x1="34" y1="273" x2="34" y2="328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="273" x2="244" y2="328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="273" x2="664" y2="328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="273" x2="794" y2="328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="273" x2="924" y2="328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="273" x2="1034" y2="328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="273" x2="1114" y2="328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="273" x2="1210" y2="328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="328" x2="1308" y2="328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="273" x2="244" y2="328" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="288" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-004</text>
+<text x="42" y="304" font-size="10.5" fill="#64748B">Feedback fault detection</text>
+<text x="252" y="288" font-size="11.5" fill="#0F172A">The system shall detect loss or staleness of essential actuator and</text>
+<text x="252" y="303" font-size="11.5" fill="#0F172A">posture feedback and transition to a documented degraded state.</text>
+<rect x="672" y="279" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="291" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-001</text>
+<rect x="802" y="279" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="291" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="802" y="298" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="310" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="932" y="279" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="291" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<rect x="932" y="298" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="310" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
+<text x="1042" y="288" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="278" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="290.5" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="278" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="290.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="328" width="1308" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="328" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="345" font-size="10" fill="#64748B" text-anchor="middle">6</text>
+<line x1="34" y1="328" x2="34" y2="383" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="328" x2="244" y2="383" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="328" x2="664" y2="383" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="328" x2="794" y2="383" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="328" x2="924" y2="383" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="328" x2="1034" y2="383" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="328" x2="1114" y2="383" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="328" x2="1210" y2="383" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="383" x2="1308" y2="383" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="328" x2="244" y2="383" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="343" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-005</text>
+<text x="42" y="359" font-size="10.5" fill="#64748B">Positive docking retention state</text>
+<text x="252" y="343" font-size="11.5" fill="#0F172A">The docking interface shall report a positively confirmed</text>
+<text x="252" y="358" font-size="11.5" fill="#0F172A">retained/unretained state derived from independent sensing.</text>
+<rect x="672" y="334" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="346" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-DCK-002</text>
+<rect x="802" y="334" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="346" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-DCK</text>
+<rect x="932" y="334" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="346" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<rect x="932" y="353" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="365" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
+<text x="1042" y="343" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="333" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="345.5" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="333" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="345.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="383" width="1308" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="383" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="400" font-size="10" fill="#64748B" text-anchor="middle">7</text>
+<line x1="34" y1="383" x2="34" y2="438" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="383" x2="244" y2="438" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="383" x2="664" y2="438" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="383" x2="794" y2="438" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="383" x2="924" y2="438" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="383" x2="1034" y2="438" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="383" x2="1114" y2="438" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="383" x2="1210" y2="438" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="438" x2="1308" y2="438" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="383" x2="244" y2="438" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="398" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-006</text>
+<text x="42" y="414" font-size="10.5" fill="#64748B">Launch and recovery envelope inhibit</text>
+<text x="252" y="398" font-size="11.5" fill="#0F172A">UAV launch and recovery shall be inhibited outside a verified operational</text>
+<text x="252" y="413" font-size="11.5" fill="#0F172A">envelope of walker posture, motion and dock state.</text>
+<rect x="672" y="389" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="401" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="802" y="389" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="401" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-DCK</text>
+<rect x="802" y="408" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="420" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1</text>
+<rect x="932" y="389" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="401" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<rect x="932" y="408" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="420" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
+<text x="1042" y="398" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="388" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="400.5" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="388" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="400.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="438" width="1308" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="438" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="455" font-size="10" fill="#64748B" text-anchor="middle">8</text>
+<line x1="34" y1="438" x2="34" y2="493" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="438" x2="244" y2="493" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="438" x2="664" y2="493" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="438" x2="794" y2="493" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="438" x2="924" y2="493" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="438" x2="1034" y2="493" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="438" x2="1114" y2="493" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="438" x2="1210" y2="493" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="493" x2="1308" y2="493" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="438" x2="244" y2="493" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="453" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-007</text>
+<text x="42" y="469" font-size="10.5" fill="#64748B">Stored hydraulic energy isolation</text>
+<text x="252" y="453" font-size="11.5" fill="#0F172A">The walker shall provide lockable isolation and verifiable dissipation of</text>
+<text x="252" y="468" font-size="11.5" fill="#0F172A">stored hydraulic pressure before maintenance access.</text>
+<rect x="672" y="444" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="456" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-001</text>
+<rect x="802" y="444" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="456" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PWR</text>
+<rect x="802" y="463" width="52" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="475" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-GSE</text>
+<rect x="932" y="444" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="456" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
+<rect x="932" y="463" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="475" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
+<text x="1042" y="453" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="443" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="455.5" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="443" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="455.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="493" width="1308" height="74" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="493" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="510" font-size="10" fill="#64748B" text-anchor="middle">9</text>
+<line x1="34" y1="493" x2="34" y2="567" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="493" x2="244" y2="567" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="493" x2="664" y2="567" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="493" x2="794" y2="567" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="493" x2="924" y2="567" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="493" x2="1034" y2="567" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="493" x2="1114" y2="567" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="493" x2="1210" y2="567" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="567" x2="1308" y2="567" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="493" x2="244" y2="567" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="508" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-008</text>
+<text x="42" y="524" font-size="10.5" fill="#64748B">Stability envelope protection</text>
+<text x="252" y="508" font-size="11.5" fill="#0F172A">The walker shall limit commanded motion and payload to a verified static</text>
+<text x="252" y="523" font-size="11.5" fill="#0F172A">and dynamic stability envelope, including a terrain slope limit of 20</text>
+<text x="252" y="538" font-size="11.5" fill="#0F172A">degrees with the centre of mass no more than 0.12 m ahead of the stance</text>
+<text x="252" y="553" font-size="11.5" fill="#0F172A">foot, and provide pilot protection in a fall or overturn.</text>
+<rect x="672" y="499" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="511" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="802" y="499" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="511" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="802" y="518" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="530" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PIL</text>
+<rect x="932" y="499" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="511" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
+<rect x="932" y="518" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="530" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<text x="1042" y="508" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="498" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="510.5" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="498" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="510.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="567" width="1308" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="567" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="584" font-size="10" fill="#64748B" text-anchor="middle">10</text>
+<line x1="34" y1="567" x2="34" y2="626" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="567" x2="244" y2="626" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="567" x2="664" y2="626" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="567" x2="794" y2="626" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="567" x2="924" y2="626" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="567" x2="1034" y2="626" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="567" x2="1114" y2="626" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="567" x2="1210" y2="626" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="626" x2="1308" y2="626" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="567" x2="244" y2="626" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="582" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-009</text>
+<text x="42" y="598" font-size="10.5" fill="#64748B">Fail-safe load holding</text>
+<text x="252" y="582" font-size="11.5" fill="#0F172A">The walker shall hold its posture without supply or command on loss of</text>
+<text x="252" y="597" font-size="11.5" fill="#0F172A">actuator supply, with load holding engaging in less than the free-fall time</text>
+<text x="252" y="612" font-size="11.5" fill="#0F172A">from the highest operating posture.</text>
+<rect x="672" y="573" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="585" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-002</text>
+<rect x="802" y="573" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="585" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="802" y="592" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="604" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PWR</text>
+<rect x="932" y="573" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="585" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<rect x="932" y="592" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="604" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
+<text x="1042" y="582" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="572" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="584.5" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="572" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="584.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="626" width="1308" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="626" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="643" font-size="10" fill="#64748B" text-anchor="middle">11</text>
+<line x1="34" y1="626" x2="34" y2="681" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="626" x2="244" y2="681" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="626" x2="664" y2="681" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="626" x2="794" y2="681" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="626" x2="924" y2="681" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="626" x2="1034" y2="681" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="626" x2="1114" y2="681" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="626" x2="1210" y2="681" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="681" x2="1308" y2="681" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="626" x2="244" y2="681" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="641" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-010</text>
+<text x="42" y="657" font-size="10.5" fill="#64748B">Protective stop independence</text>
+<text x="252" y="641" font-size="11.5" fill="#0F172A">The protective stop path shall achieve its defined safe behavior without</text>
+<text x="252" y="656" font-size="11.5" fill="#0F172A">depending on the mission, motion and balance control software.</text>
+<rect x="672" y="632" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="644" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-SAF-001</text>
+<rect x="802" y="632" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="644" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="932" y="632" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="644" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
+<rect x="932" y="651" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="663" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<text x="1042" y="641" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="631" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="643.5" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="631" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="643.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="681" width="1308" height="44" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="681" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="698" font-size="10" fill="#64748B" text-anchor="middle">12</text>
+<line x1="34" y1="681" x2="34" y2="725" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="681" x2="244" y2="725" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="681" x2="664" y2="725" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="681" x2="794" y2="725" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="681" x2="924" y2="725" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="681" x2="1034" y2="725" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="681" x2="1114" y2="725" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="681" x2="1210" y2="725" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="725" x2="1308" y2="725" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="681" x2="244" y2="725" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="696" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-011</text>
+<text x="42" y="712" font-size="10.5" fill="#64748B">Protective stop reaction time</text>
+<text x="252" y="696" font-size="11.5" fill="#0F172A">The protective stop shall begin its defined safe behavior within the</text>
+<text x="252" y="711" font-size="11.5" fill="#0F172A">reaction time allocated by hazard analysis for each operating mode.</text>
+<rect x="672" y="687" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="699" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-SAF-001</text>
+<rect x="802" y="687" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="699" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="932" y="687" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="699" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<text x="1042" y="696" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="686" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="698.5" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="686" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="698.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="725" width="1308" height="56.5" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="725" width="34" height="56.5" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="742" font-size="10" fill="#64748B" text-anchor="middle">13</text>
+<line x1="34" y1="725" x2="34" y2="781.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="725" x2="244" y2="781.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="725" x2="664" y2="781.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="725" x2="794" y2="781.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="725" x2="924" y2="781.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="725" x2="1034" y2="781.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="725" x2="1114" y2="781.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="725" x2="1210" y2="781.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="781.5" x2="1308" y2="781.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="725" x2="244" y2="781.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="740" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-012</text>
+<text x="42" y="756" font-size="10.5" fill="#64748B">Rotor arming requires confirmed</text>
+<text x="42" y="769.5" font-size="10.5" fill="#64748B">release</text>
+<text x="252" y="740" font-size="11.5" fill="#0F172A">UAV rotor arming shall require a positively confirmed unretained dock</text>
+<text x="252" y="755" font-size="11.5" fill="#0F172A">state reported over the docking interface.</text>
+<rect x="672" y="731" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="743" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-DCK-001</text>
+<rect x="802" y="731" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="743" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-DCK</text>
+<rect x="802" y="750" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="762" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-I1-INT</text>
+<rect x="932" y="731" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="743" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<text x="1042" y="740" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="730" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="742.5" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="730" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="742.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="781.5" width="1308" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="781.5" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="798.5" font-size="10" fill="#64748B" text-anchor="middle">14</text>
+<line x1="34" y1="781.5" x2="34" y2="840.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="781.5" x2="244" y2="840.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="781.5" x2="664" y2="840.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="781.5" x2="794" y2="840.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="781.5" x2="924" y2="840.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="781.5" x2="1034" y2="840.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="781.5" x2="1114" y2="840.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="781.5" x2="1210" y2="840.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="840.5" x2="1308" y2="840.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="781.5" x2="244" y2="840.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="796.5" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-013</text>
+<text x="42" y="812.5" font-size="10.5" fill="#64748B">UAV link-loss contingency lands clear</text>
+<text x="42" y="826" font-size="10.5" fill="#64748B">of the walker</text>
+<text x="252" y="796.5" font-size="11.5" fill="#0F172A">On loss of the integration link the UAV shall hold for a set time and then</text>
+<text x="252" y="811.5" font-size="11.5" fill="#0F172A">land in place, and shall not return to the dock or descend within the pilot</text>
+<text x="252" y="826.5" font-size="11.5" fill="#0F172A">keep-out without a recovery permit from the integration manager.</text>
+<rect x="672" y="787.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="799.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="802" y="787.5" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="799.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1</text>
+<rect x="802" y="806.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="818.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-I1-INT</text>
+<rect x="932" y="787.5" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="799.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<rect x="932" y="806.5" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="818.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
+<text x="1042" y="796.5" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="786.5" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="799" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="786.5" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="799" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="840.5" width="1308" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="840.5" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="857.5" font-size="10" fill="#64748B" text-anchor="middle">15</text>
+<line x1="34" y1="840.5" x2="34" y2="899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="840.5" x2="244" y2="899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="840.5" x2="664" y2="899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="840.5" x2="794" y2="899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="840.5" x2="924" y2="899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="840.5" x2="1034" y2="899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="840.5" x2="1114" y2="899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="840.5" x2="1210" y2="899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="899.5" x2="1308" y2="899.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="840.5" x2="244" y2="899.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="855.5" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-014</text>
+<text x="42" y="871.5" font-size="10.5" fill="#64748B">Independent traction battery isolation</text>
+<text x="252" y="855.5" font-size="11.5" fill="#0F172A">If the series-hybrid power alternative is retained, the walker shall isolate</text>
+<text x="252" y="870.5" font-size="11.5" fill="#0F172A">the traction battery on cell over-temperature, over-voltage or over-current</text>
+<text x="252" y="885.5" font-size="11.5" fill="#0F172A">independently of the motion controller, and warn the pilot.</text>
+<rect x="672" y="846.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="858.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-002</text>
+<rect x="802" y="846.5" width="94" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="858.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PWR-BAT</text>
+<rect x="802" y="865.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="877.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="932" y="846.5" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="858.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<rect x="932" y="865.5" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="877.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
+<text x="1042" y="855.5" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="845.5" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="858" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="845.5" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="858" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="899.5" width="1308" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="899.5" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="916.5" font-size="10" fill="#64748B" text-anchor="middle">16</text>
+<line x1="34" y1="899.5" x2="34" y2="958.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="899.5" x2="244" y2="958.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="899.5" x2="664" y2="958.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="899.5" x2="794" y2="958.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="899.5" x2="924" y2="958.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="899.5" x2="1034" y2="958.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="899.5" x2="1114" y2="958.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="899.5" x2="1210" y2="958.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="958.5" x2="1308" y2="958.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="899.5" x2="244" y2="958.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="914.5" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-015</text>
+<text x="42" y="930.5" font-size="10.5" fill="#64748B">Fuel shut-off on protective stop</text>
+<text x="252" y="914.5" font-size="11.5" fill="#0F172A">If the series-hybrid power alternative is retained, a protective stop or</text>
+<text x="252" y="929.5" font-size="11.5" fill="#0F172A">detected fall shall shut off fuel to the engine-generator and stop the</text>
+<text x="252" y="944.5" font-size="11.5" fill="#0F172A">engine.</text>
+<rect x="672" y="905.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="917.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-003</text>
+<rect x="802" y="905.5" width="94" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="917.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PWR-GEN</text>
+<rect x="802" y="924.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="936.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="932" y="905.5" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="917.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<text x="1042" y="914.5" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="904.5" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="917" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="904.5" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="917" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="958.5" width="1308" height="89" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="958.5" width="34" height="89" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="975.5" font-size="10" fill="#64748B" text-anchor="middle">17</text>
+<line x1="34" y1="958.5" x2="34" y2="1047.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="958.5" x2="244" y2="1047.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="958.5" x2="664" y2="1047.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="958.5" x2="794" y2="1047.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="958.5" x2="924" y2="1047.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="958.5" x2="1034" y2="1047.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="958.5" x2="1114" y2="1047.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="958.5" x2="1210" y2="1047.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1047.5" x2="1308" y2="1047.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="958.5" x2="244" y2="1047.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="973.5" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-016</text>
+<text x="42" y="989.5" font-size="10.5" fill="#64748B">Actuator torque reserve against supply</text>
+<text x="42" y="1003" font-size="10.5" fill="#64748B">loss</text>
+<text x="252" y="973.5" font-size="11.5" fill="#0F172A">Each ankle actuator shall deliver at least 1.5 m g L_foot of torque at full</text>
+<text x="252" y="988.5" font-size="11.5" fill="#0F172A">actuator supply and at least 0.6 m g L_foot at the supply at which load</text>
+<text x="252" y="1003.5" font-size="11.5" fill="#0F172A">holding engages, and each knee actuator at least 22.5 kN m at full supply</text>
+<text x="252" y="1018.5" font-size="11.5" fill="#0F172A">(SPEC-WLK-001 mass and geometry), so that a loss of supply inside the</text>
+<text x="252" y="1033.5" font-size="11.5" fill="#0F172A">operating envelope does not tip the walker before load holding engages.</text>
+<rect x="672" y="964.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="976.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="802" y="964.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="976.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="932" y="964.5" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="976.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
+<rect x="932" y="983.5" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="995.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<text x="1042" y="973.5" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="963.5" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="976" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="963.5" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="976" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="1047.5" width="1308" height="89" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1047.5" width="34" height="89" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1064.5" font-size="10" fill="#64748B" text-anchor="middle">18</text>
+<line x1="34" y1="1047.5" x2="34" y2="1136.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="1047.5" x2="244" y2="1136.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="1047.5" x2="664" y2="1136.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="1047.5" x2="794" y2="1136.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="1047.5" x2="924" y2="1136.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="1047.5" x2="1034" y2="1136.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="1047.5" x2="1114" y2="1136.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="1047.5" x2="1210" y2="1136.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1136.5" x2="1308" y2="1136.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="1047.5" x2="244" y2="1136.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1062.5" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-017</text>
+<text x="42" y="1078.5" font-size="10.5" fill="#64748B">Arm stow interlock for walking</text>
+<text x="252" y="1062.5" font-size="11.5" fill="#0F172A">The walker shall inhibit walking until both manipulator arms are confirmed</text>
+<text x="252" y="1077.5" font-size="11.5" fill="#0F172A">stowed and locked, or locked in the carry pose under the loaded-walking</text>
+<text x="252" y="1092.5" font-size="11.5" fill="#0F172A">conditions of SYS-019, shall hold the arms in that pose until walking has</text>
+<text x="252" y="1107.5" font-size="11.5" fill="#0F172A">stopped, and shall inhibit manipulation while the exclusion zone around the</text>
+<text x="252" y="1122.5" font-size="11.5" fill="#0F172A">arms' reach is not confirmed clear.</text>
+<rect x="672" y="1053.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="1065.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-MAN-001</text>
+<rect x="672" y="1072.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="1084.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-MAN-002</text>
+<rect x="802" y="1053.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="1065.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-MAN</text>
+<rect x="802" y="1072.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="1084.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-CTL</text>
+<rect x="802" y="1091.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="1103.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="932" y="1053.5" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="1065.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<rect x="932" y="1072.5" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="1084.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
+<text x="1042" y="1062.5" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="1052.5" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="1065" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="1052.5" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="1065" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="1136.5" width="1308" height="89" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1136.5" width="34" height="89" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1153.5" font-size="10" fill="#64748B" text-anchor="middle">19</text>
+<line x1="34" y1="1136.5" x2="34" y2="1225.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="1136.5" x2="244" y2="1225.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="1136.5" x2="664" y2="1225.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="1136.5" x2="794" y2="1225.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="1136.5" x2="924" y2="1225.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="1136.5" x2="1034" y2="1225.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="1136.5" x2="1114" y2="1225.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="1136.5" x2="1210" y2="1225.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1225.5" x2="1308" y2="1225.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="1136.5" x2="244" y2="1225.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1151.5" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-018</text>
+<text x="42" y="1167.5" font-size="10.5" fill="#64748B">Controlled lowered posture for ingress</text>
+<text x="42" y="1181" font-size="10.5" fill="#64748B">and egress</text>
+<text x="252" y="1151.5" font-size="11.5" fill="#0F172A">The walker shall provide a controlled lowered posture for ingress and</text>
+<text x="252" y="1166.5" font-size="11.5" fill="#0F172A">egress, with the cockpit floor at or below a defined height, entered and left</text>
+<text x="252" y="1181.5" font-size="11.5" fill="#0F172A">at a controlled speed only while the area under and around the pod and</text>
+<text x="252" y="1196.5" font-size="11.5" fill="#0F172A">legs is confirmed clear, and shall inhibit walking while an access ladder is</text>
+<text x="252" y="1211.5" font-size="11.5" fill="#0F172A">deployed.</text>
+<rect x="672" y="1142.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="1154.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-003</text>
+<rect x="672" y="1161.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="1173.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-001</text>
+<rect x="802" y="1142.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="1154.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="802" y="1161.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="1173.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PIL</text>
+<rect x="802" y="1180.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="1192.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="932" y="1142.5" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="1154.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
+<rect x="932" y="1161.5" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="1173.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<rect x="932" y="1180.5" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="1192.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
+<text x="1042" y="1151.5" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="1141.5" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="1154" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="1141.5" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="1154" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="1225.5" width="1308" height="93" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1225.5" width="34" height="93" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1242.5" font-size="10" fill="#64748B" text-anchor="middle">20</text>
+<line x1="34" y1="1225.5" x2="34" y2="1318.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="1225.5" x2="244" y2="1318.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="1225.5" x2="664" y2="1318.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="1225.5" x2="794" y2="1318.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="1225.5" x2="924" y2="1318.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="1225.5" x2="1034" y2="1318.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="1225.5" x2="1114" y2="1318.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="1225.5" x2="1210" y2="1318.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1318.5" x2="1308" y2="1318.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="1225.5" x2="244" y2="1318.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1240.5" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-019</text>
+<text x="42" y="1256.5" font-size="10.5" fill="#64748B">Loaded walking limits</text>
+<text x="252" y="1240.5" font-size="11.5" fill="#0F172A">The walker shall permit walking with a payload only while the payload is</text>
+<text x="252" y="1255.5" font-size="11.5" fill="#0F172A">confirmed secured, both arms are locked in a defined carry pose and</text>
+<text x="252" y="1270.5" font-size="11.5" fill="#0F172A">payload mass and centre of gravity are within defined limits, and shall then</text>
+<text x="252" y="1285.5" font-size="11.5" fill="#0F172A">limit walking speed, step height and terrain slope to defined loaded values</text>
+<text x="252" y="1300.5" font-size="11.5" fill="#0F172A">inside the stability envelope of SYS-008.</text>
+<rect x="672" y="1231.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="1243.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-MAN-002</text>
+<rect x="672" y="1250.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="1262.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="802" y="1231.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="1243.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-MAN</text>
+<rect x="802" y="1250.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="1262.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="802" y="1269.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="1281.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-CTL</text>
+<rect x="802" y="1288.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="1300.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="932" y="1231.5" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="1243.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
+<rect x="932" y="1250.5" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="1262.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
+<text x="1042" y="1240.5" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="1230.5" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="1243" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="1230.5" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="1243" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="1318.5" width="1308" height="74" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1318.5" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1335.5" font-size="10" fill="#64748B" text-anchor="middle">21</text>
+<line x1="34" y1="1318.5" x2="34" y2="1392.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="1318.5" x2="244" y2="1392.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="664" y1="1318.5" x2="664" y2="1392.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="794" y1="1318.5" x2="794" y2="1392.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="924" y1="1318.5" x2="924" y2="1392.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1034" y1="1318.5" x2="1034" y2="1392.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1114" y1="1318.5" x2="1114" y2="1392.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1210" y1="1318.5" x2="1210" y2="1392.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1392.5" x2="1308" y2="1392.5" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="244" y1="1318.5" x2="244" y2="1392.5" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1333.5" font-size="11.5" fill="#1D4ED8" font-weight="700">SYS-020</text>
+<text x="42" y="1349.5" font-size="10.5" fill="#64748B">Emergency egress without power or</text>
+<text x="42" y="1363" font-size="10.5" fill="#64748B">kneeling</text>
+<text x="252" y="1333.5" font-size="11.5" fill="#0F172A">The pilot shall be able to leave the walker from the standing posture</text>
+<text x="252" y="1348.5" font-size="11.5" fill="#0F172A">without platform power and without kneeling, through an exit other than the</text>
+<text x="252" y="1363.5" font-size="11.5" fill="#0F172A">front opening, with a descent aid and handholds that keep three points of</text>
+<text x="252" y="1378.5" font-size="11.5" fill="#0F172A">contact to the ground.</text>
+<rect x="672" y="1324.5" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="677" y="1336.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-003</text>
+<rect x="802" y="1324.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="1336.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PIL</text>
+<rect x="802" y="1343.5" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="807" y="1355.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="932" y="1324.5" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="1336.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
+<rect x="932" y="1343.5" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="937" y="1355.5" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
+<text x="1042" y="1333.5" font-size="11.5" fill="#0F172A">0 items</text>
+<rect x="1122" y="1323.5" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1130" y="1336" font-size="10.5" fill="#92400E">open</text>
+<rect x="1218" y="1323.5" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1226" y="1336" font-size="10.5" fill="#075985">candidate</text>
+<text x="16" y="1414.5" font-size="10.5" fill="#64748B">20 rows</text>
+<rect x="0.5" y="0.5" width="1307" height="1423.5" rx="0" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+<g class="terms" data-base-h="1424.5">
+<rect x="0" y="1424.5" width="1308" height="127.1" fill="#FFFFFF"/>
+<line x1="40" y1="1428.5" x2="1268" y2="1428.5" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1444.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · BMS = battery management system · F-nnn = system function in the item definition · HAZ-nnn = hazard record</text>
+<text x="40" y="1458.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 ·</text>
+<text x="40" y="1473.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SPEC-nnn = simulation parameter spec record (sim/spec/) · SUS-A1 = dockable observation UAV · SUS-GSE = ground support, maintenance supports, charging and test equipment · SUS-I1-INT = integration manager and PX4 command</text>
+<text x="40" y="1487.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">adapter · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK = UAV dock, retention, charging and release · SUS-M1-MAN = manipulation arms and end effectors · SUS-M1-PIL = pilot station, restraints, displays and</text>
+<text x="40" y="1502.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">controls · SUS-M1-PWR = power generation, storage, distribution and thermal control · SUS-M1-PWR-BAT = battery pack, BMS and contactors (alternative B) · SUS-M1-PWR-GEN = engine-generator and governor (alternative B) ·</text>
+<text x="40" y="1516.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SUS-M1-SAF = independent safety monitor, protective stop and isolation · SUS-M1-WLK = chassis, legs, joint actuators and stability sensing · SYS-nnn = system safety requirement record (requirements/SYS-nnn.yaml) · UAV =</text>
+<text x="40" y="1531.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>
