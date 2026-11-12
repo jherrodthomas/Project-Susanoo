@@ -33,8 +33,8 @@ causal_factors:
   type: hardware
   description: Loss of actuator supply (hydraulic pressure or bus voltage) shrinks the balance capacity before load
     holding engages; a slow leak on a slope tips the walker, and a hold that engages with the capture point outside
-    the foot tips it too (simulation SF-01 EC-07 at levels 1 and 2; EC-08 at level 1, and at level 2 with the ankle
-    at or below about 15 kN m; sizing SZ-01; synthetic)
+    the foot tips it too (simulation SF-01 EC-07 and EC-08 at level 1; at level 2 with the adopted torques EC-07 drops
+    the cockpit instead and EC-08 tips only with the ankle at or below about 12 kN m; sizing SZ-01; synthetic)
 effects:
 - Overturn or fall of the platform
 mishap: Pilot fatal or disabling injury in fall; crush of bystanders
@@ -162,14 +162,14 @@ assumptions:
   boundary (sim/results/l2-crosscheck.md, sim/results/sizing-cf4.md)'
 - 'Envelope: slope limit 20 degrees with the CoM no more than 0.12 m ahead of the stance foot (CONOPS section 4,
   lead decisions DQ-010 and DQ-011); the failure search covers this envelope and finds no tip without a fault'
-- 'Reference layout CL-05 (cad/README.md, decision DQ-013): reverse-jointed legs with the knees behind the hips and
+- 'Reference layout CL-05 (cad/README.md, decision DQ-014): reverse-jointed legs with the knees behind the hips and
   the centre of gravity 0.33 m behind the ankles, so a backward fall puts the knees first; heel spurs give a standstill
   static margin of 0.38 m standing and 0.35 m kneeling on placeholder mass'
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
-- 'Confirm the SYS-016 torque reserve in the actuation trade (TS-001, DQ-006): at level 2 the ankle decides CF4 (the
-  assumed 20 kN m leaves four tips at 20 degrees and 0.12 m; 24 kN m clears the envelope), knee torque matters only
-  below about 15 kN m (sim/results/sizing-cf4.md)'
+- 'Confirm the SYS-016 torque reserve in the actuation trade (TS-001, DQ-006): the level-2 spec adopts the sized ankle
+  26.5 kN m and knee 22.5 kN m (DQ-012); a real actuator must show that torque falls no faster than supply down to the
+  load-holding threshold (sim/results/sizing-cf4.md)'
 - Derive a safety requirement for margin-based load holding (M5) (Task 203)
 - 'Check carried loads against the 0.12 m CoM offset cap: on placeholder CL-05 mass (4,590 kg) and flat ground, a
   load at the carry pose centre (1.15 m ahead of the ankles) brings the combined CoM 0.12 m ahead of the ankles at

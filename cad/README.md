@@ -34,7 +34,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 </details>
 <!-- terms:end -->
 
-*Changes in 0.20:* CL-05 findings mapped onto the records: new hazards HAZ-MAN-001, HAZ-MAN-002, HAZ-WLK-003 and HAZ-PIL-003, requirements SYS-017 to SYS-020, additions to HAZ-WLK-002, HAZ-PIL-001, HAZ-DCK-001 and HAZ-INT-001, and the lead's decisions DQ-012 to DQ-014.
+*Changes in 0.20:* CL-05 findings mapped onto the records: new hazards HAZ-MAN-001, HAZ-MAN-002, HAZ-WLK-003 and HAZ-PIL-003, requirements SYS-017 to SYS-020, additions to HAZ-WLK-002, HAZ-PIL-001, HAZ-DCK-001 and HAZ-INT-001, and the lead's decisions DQ-013 to DQ-015.
 
 *Changes in 0.19:* brought onto `main`. The layout tables are built by `tools/cad/readme.py` from `metrics.json`. Hazard and requirement cross-references from the drafting branch are left out until the findings are mapped onto the records under `safety/` and `requirements/` (§4).
 
@@ -44,7 +44,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 ## 1. What the layouts compare
 
-Each layout (`CL-nn`) is one combination of architecture alternatives. Locomotion is **bipedal** (decided by the project lead on 2026-11-11, DQ-012). CL-01 to CL-03 share one open-frame biped, a centralized hydraulic actuation hypothesis (drawn as yellow cylinders) and a seated protected cockpit, and differ only in where the UAV docks. CL-04 is an armoured-pod restyle. CL-05 is the **reference layout** (chosen by the project lead, DQ-013): a tall pod with front and side windows, reverse-jointed legs and long claw arms, with its proportions taken from the lead's AI-generated Industrial Utility Walker. Neither CL-04 nor CL-05 reuses a source mesh or image; both are original parametric geometry, and CL-05 is authored in build123d code. Standing and remote-pilot stations and electromechanical actuation are not modelled yet.
+Each layout (`CL-nn`) is one combination of architecture alternatives. Locomotion is **bipedal** (decided by the project lead on 2026-11-11, DQ-013). CL-01 to CL-03 share one open-frame biped, a centralized hydraulic actuation hypothesis (drawn as yellow cylinders) and a seated protected cockpit, and differ only in where the UAV docks. CL-04 is an armoured-pod restyle. CL-05 is the **reference layout** (chosen by the project lead, DQ-014): a tall pod with front and side windows, reverse-jointed legs and long claw arms, with its proportions taken from the lead's AI-generated Industrial Utility Walker. Neither CL-04 nor CL-05 reuses a source mesh or image; both are original parametric geometry, and CL-05 is authored in build123d code. Standing and remote-pilot stations and electromechanical actuation are not modelled yet.
 
 What to look for in the review:
 
@@ -73,7 +73,7 @@ Rendered with Blender 5.3 (Cycles) by [`tools/cad/blender_render.py`](../tools/c
 | ![CL-05 standing in olive-drab military livery, with a 1.75 m person for scale](renders/blender/CL-05-hero-military.jpg) | ![CL-05 kneeling in military livery with the ladder deployed](renders/blender/CL-05-kneel-military.jpg) |
 | ![CL-05 from the rear in military livery: power pack, raised dock and roll bar](renders/blender/CL-05-rear-military.jpg) | ![CL-05 emergency exit in military livery: hatch open, shoulder step and rope ladder](renders/blender/CL-05-emergency-military.jpg) |
 
-**Carrying a load** (placeholder load, mass TBD). Carrying while walking is allowed under conditions (decided by the project lead on 2026-11-12, DQ-014; SYS-019, HAZ-MAN-002): a secured load, the arms locked in a carry pose, and mass, centre-of-gravity, speed, step-height and slope limits that are all still TBD.
+**Carrying a load** (placeholder load, mass TBD). Carrying while walking is allowed under conditions (decided by the project lead on 2026-11-12, DQ-015; SYS-019, HAZ-MAN-002): a secured load, the arms locked in a carry pose, and mass, centre-of-gravity, speed, step-height and slope limits that are all still TBD.
 
 | | |
 |---|---|

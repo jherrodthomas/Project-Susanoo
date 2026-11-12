@@ -32,7 +32,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 </details>
 <!-- terms:end -->
 
-Status: open 0, queued 0, answered 2, applied 12, withdrawn 0
+Status: open 0, queued 0, answered 2, applied 13, withdrawn 0
 
 ## Decided
 
@@ -49,6 +49,7 @@ Status: open 0, queued 0, answered 2, applied 12, withdrawn 0
 | DQ-009 | How should the level-1 walker start each case, now that the level-2 cross-check disagrees with it on EC-07 and EC-08? | Start both models on level 1's periodic orbit | claude | 2026-11-12 | applied | `sim/plant/walker.py`, `sim/mujoco/l2.py`, `sim/results/search-SF-01.md`, `sim/results/l2-crosscheck.md`, `safety/hazards/HAZ-WLK-002.yaml` |
 | DQ-010 | What slope limit should CONOPS section 4 set for the walker? | 20 degrees | lead | 2026-11-12 | applied | `concept/CONOPS.md`, `architecture/item-definition.yaml`, `requirements/SYS-008.yaml`, `safety/hazards/HAZ-WLK-002.yaml`, `sim/search/families.yaml` |
 | DQ-011 | How far may payload and gait move the walker's centre of mass ahead of the stance foot when it is on a 20 degree slope? | Keep 20 degrees and limit the CoM offset to 0.12 m | lead | 2026-11-12 | applied | `concept/CONOPS.md`, `architecture/item-definition.yaml`, `models/sysml/model/Architecture.sysml`, `requirements/SYS-008.yaml`, `safety/hazards/HAZ-WLK-002.yaml`, `sim/search/families.yaml` |
-| DQ-012 | Which locomotion should the walker use? | Bipedal | lead | 2026-11-11 | applied | `concept/CONOPS.md`, `cad/README.md` |
-| DQ-013 | Which concept layout is the reference for further development? | CL-05 reverse-jointed pod | lead | 2026-11-11 | applied | `cad/README.md`, `safety/hazards/HAZ-WLK-002.yaml` |
-| DQ-014 | May the walker carry a payload while walking? | Allow carrying while walking under conditions | lead | 2026-11-12 | applied | `requirements/SYS-017.yaml`, `requirements/SYS-019.yaml`, `safety/hazards/HAZ-MAN-002.yaml`, `safety/hazards/HAZ-WLK-002.yaml`, `cad/README.md` |
+| DQ-012 | Should the level-2 walker spec adopt the ankle and knee torques sized against supply loss? | Adopt the sized values in sim/spec/walker_l2.yaml | lead | 2026-11-12 | applied | `sim/spec/walker_l2.yaml`, `sim/results/l2-crosscheck.md`, `sim/results/sizing-cf4.md`, `safety/hazards/HAZ-WLK-002.yaml` |
+| DQ-013 | Which locomotion should the walker use? | Bipedal | lead | 2026-11-11 | applied | `concept/CONOPS.md`, `cad/README.md` |
+| DQ-014 | Which concept layout is the reference for further development? | CL-05 reverse-jointed pod | lead | 2026-11-11 | applied | `cad/README.md`, `safety/hazards/HAZ-WLK-002.yaml` |
+| DQ-015 | May the walker carry a payload while walking? | Allow carrying while walking under conditions | lead | 2026-11-12 | applied | `requirements/SYS-017.yaml`, `requirements/SYS-019.yaml`, `safety/hazards/HAZ-MAN-002.yaml`, `safety/hazards/HAZ-WLK-002.yaml`, `cad/README.md` |

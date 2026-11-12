@@ -85,14 +85,14 @@ Assess ingress/egress, restraints, visibility, alarms, workload, manual authorit
 |---|---|
 | SCN-001 | SYS-001 pilot-readiness actuation interlock; SYS-018 controlled lowered posture for ingress and egress |
 | SCN-002/101 | SYS-004 feedback fault detection and degraded behavior; SYS-017 arms stowed or in the carry pose to walk |
-| SCN-003 | SYS-008 stability envelope; SYS-019 loaded walking limits (carrying while walking allowed under conditions, DQ-014) |
+| SCN-003 | SYS-008 stability envelope; SYS-019 loaded walking limits (carrying while walking allowed under conditions, DQ-015) |
 | SCN-004/105 | UAV lost-link behavior and display integrity (TBD) |
 | SCN-005/106 | SYS-005 docking retention; SYS-006 envelope inhibit |
 | SCN-107 | SYS-003 docked rotor inhibit |
 | SCN-108 | Isolation (TBD); SYS-020 emergency egress without power or kneeling |
 
 ## 10. Design alternatives and open decisions
-Hydraulic, electrohydraulic or electromechanical actuation; seated or standing pilot; rear/shoulder/separate UAV dock. Selection requires trade studies and safety review. **Locomotion is bipedal** (DQ-012), and the reference concept layout is CL-05, a reverse-jointed pod with claw arms (DQ-013; [cad/README.md](../cad/README.md)). No concept rendering establishes feasibility.
+Hydraulic, electrohydraulic or electromechanical actuation; seated or standing pilot; rear/shoulder/separate UAV dock. Selection requires trade studies and safety review. **Locomotion is bipedal** (DQ-013), and the reference concept layout is CL-05, a reverse-jointed pod with claw arms (DQ-014; [cad/README.md](../cad/README.md)). No concept rendering establishes feasibility.
 
 ## 11. Success criteria and assurance
 Demonstrate simulated locomotion, manipulation, UAV observation/recovery, fault response, traceable requirements/hazards/tests and a controlled PDaC release. Quantitative acceptance criteria remain TBD. MIL-STD-882E is the integrated safety method; machinery/human factors techniques support walker analysis; ARP4754B/ARP4761A are voluntarily applied to UAV development and safety assessment. None implies certification.

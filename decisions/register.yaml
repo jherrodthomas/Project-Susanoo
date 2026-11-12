@@ -239,6 +239,26 @@ decisions:
     sources: [sim/results/search-SF-01.md, sim/results/l2-crosscheck.md, safety/hazards/HAZ-WLK-002.yaml]
 
   - id: DQ-012
+    question: Should the level-2 walker spec adopt the ankle and knee torques sized against supply loss?
+    context: >-
+      Sizing SZ-01 (sim/results/sizing-cf4.md) finds **the assumed 20 kN m ankle leaves four tips at the envelope corner
+      (20 degrees, 0.12 m) under a slow supply leak; 24 kN m clears it**. The draft proposal is ankle 26.5 kN m
+      (1.5 m g L_foot) and knee 22.5 kN m (the assumed 60 kN m knee is far above what CF4 needs), drafted as SYS-016.
+    options:
+      - {key: adopt, title: Adopt the sized values in sim/spec/walker_l2.yaml, detail: "Level 2 then models a walker that meets SYS-016; the cross-check and sizing are re-run. The actuation trade still has to confirm a real actuator."}
+      - {key: keep, title: Keep the assumed values until the actuation trade closes, detail: "No change; the level-2 results keep showing the four corner tips."}
+    recommendation: adopt
+    reversibility: easy
+    blocks: [level-2 walker spec, SYS-016]
+    gate: G2
+    decider: lead
+    status: applied
+    asked: null
+    answer: {choice: adopt, by: lead, at: 2026-11-12, via: chat, note: "adopt the sized ankle and knee torques in the spec"}
+    applied_in: [sim/spec/walker_l2.yaml, sim/results/l2-crosscheck.md, sim/results/sizing-cf4.md, safety/hazards/HAZ-WLK-002.yaml]
+    sources: [sim/results/sizing-cf4.md, requirements/SYS-016.yaml]
+
+  - id: DQ-013
     question: Which locomotion should the walker use?
     context: >-
       CONOPS section 10 still listed biped, quadruped and hybrid locomotion as open. The concept layouts
@@ -258,7 +278,7 @@ decisions:
     applied_in: [concept/CONOPS.md, cad/README.md]
     sources: [cad/README.md]
 
-  - id: DQ-013
+  - id: DQ-014
     question: Which concept layout is the reference for further development?
     context: >-
       Five concept layouts (CL-01 to CL-05) were drawn for review. **The lead chose CL-05**, the reverse-jointed pod with
@@ -278,7 +298,7 @@ decisions:
     applied_in: [cad/README.md, safety/hazards/HAZ-WLK-002.yaml]
     sources: [cad/README.md]
 
-  - id: DQ-014
+  - id: DQ-015
     question: May the walker carry a payload while walking?
     context: >-
       An arm-stow interlock for walking (SYS-017) would rule out carrying while walking, and the scenarios keep travel
