@@ -1,0 +1,1271 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1610" height="1620.6" viewBox="0 0 1610 1620.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Task 201 · Preliminary Hazard List worksheet</title>
+<desc>Spreadsheet view of Task 201 · Preliminary Hazard List, generated from safety/hazards/*.yaml.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1610" height="1508" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1610" height="48" rx="0" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="16" y="30" font-size="16" fill="#FFFFFF" font-weight="700">Task 201 · Preliminary Hazard List — worksheet</text>
+<text x="416.2" y="30" font-size="11" fill="#94A3B8">phl.csv · generated from safety/hazards/*.yaml</text>
+<rect x="1494.8" y="14" width="103.2" height="20" rx="10" fill="#334155" stroke="none" stroke-width="0"/>
+<text x="1503.8" y="28" font-size="10.5" fill="#FFFFFF">Nothing accepted</text>
+<rect x="1326.4" y="14" width="160.5" height="20" rx="10" fill="#B45309" stroke="none" stroke-width="0"/>
+<text x="1335.4" y="28" font-size="10.5" fill="#FFFFFF">AI-drafted I0 · not reviewed</text>
+<rect x="0" y="48" width="1610" height="182" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="18" y="74" font-size="13" fill="#0F172A" font-weight="700">How each risk is derived</text>
+<text x="18" y="96" font-size="12" fill="#334155">The analyst selects a severity (1–4, by the worst credible mishap) and a</text>
+<text x="18" y="112.5" font-size="12" fill="#334155">probability (A–F, by likelihood over the item's life). MIL-STD-882E Table III</text>
+<text x="18" y="129" font-size="12" fill="#334155">maps the pair to a risk level. Both selections and the stated basis are shown for</text>
+<text x="18" y="145.5" font-size="12" fill="#334155">every hazard, so a reviewer can challenge the inputs, not just the result.</text>
+<rect x="18" y="178" width="330" height="26" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="28" y="195" font-size="12" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">severity 1 + probability C → RAC 1C → High</text>
+<text x="18" y="222" font-size="10.5" fill="#64748B">Definitions: SUS-RISKDEF-001 (Table III unchanged).</text>
+<text x="540" y="72" font-size="12" fill="#0F172A" font-weight="700">Initial risk · 15 hazards</text>
+<text x="661" y="90" font-size="9" fill="#334155" text-anchor="middle">1 Catastrophic</text>
+<text x="719" y="90" font-size="9" fill="#334155" text-anchor="middle">2 Critical</text>
+<text x="777" y="90" font-size="9" fill="#334155" text-anchor="middle">3 Marginal</text>
+<text x="835" y="90" font-size="9" fill="#334155" text-anchor="middle">4 Negligible</text>
+<text x="540" y="112" font-size="9.5" fill="#334155">A Frequent</text>
+<rect x="632" y="98" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="690" y="98" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="748" y="98" width="56" height="19" rx="0" fill="#FFEDD5" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="806" y="98" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="540" y="133" font-size="9.5" fill="#334155">B Probable</text>
+<rect x="632" y="119" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="690" y="119" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="748" y="119" width="56" height="19" rx="0" fill="#FFEDD5" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="806" y="119" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="540" y="154" font-size="9.5" fill="#334155">C Occasional</text>
+<rect x="632" y="140" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<text x="660" y="154" font-size="12" fill="#B91C1C" font-weight="700" text-anchor="middle">7</text>
+<rect x="690" y="140" width="56" height="19" rx="0" fill="#FFEDD5" stroke="#FFFFFF" stroke-width="1"/>
+<text x="718" y="154" font-size="12" fill="#C2410C" font-weight="700" text-anchor="middle">3</text>
+<rect x="748" y="140" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="806" y="140" width="56" height="19" rx="0" fill="#DCFCE7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="540" y="175" font-size="9.5" fill="#334155">D Remote</text>
+<rect x="632" y="161" width="56" height="19" rx="0" fill="#FFEDD5" stroke="#FFFFFF" stroke-width="1"/>
+<text x="660" y="175" font-size="12" fill="#C2410C" font-weight="700" text-anchor="middle">4</text>
+<rect x="690" y="161" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="718" y="175" font-size="12" fill="#B45309" font-weight="700" text-anchor="middle">1</text>
+<rect x="748" y="161" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="806" y="161" width="56" height="19" rx="0" fill="#DCFCE7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="540" y="196" font-size="9.5" fill="#334155">E Improbable</text>
+<rect x="632" y="182" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="690" y="182" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="748" y="182" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="806" y="182" width="56" height="19" rx="0" fill="#DCFCE7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="540" y="217" font-size="9.5" fill="#334155">F Eliminated</text>
+<rect x="632" y="203" width="56" height="19" rx="0" fill="#F1F5F9" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="690" y="203" width="56" height="19" rx="0" fill="#F1F5F9" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="748" y="203" width="56" height="19" rx="0" fill="#F1F5F9" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="806" y="203" width="56" height="19" rx="0" fill="#F1F5F9" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="0" y="230" width="1610" height="18" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="124" y="243" font-size="10" fill="#64748B" text-anchor="middle">A</text>
+<line x1="34" y1="230" x2="34" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="344" y="243" font-size="10" fill="#64748B" text-anchor="middle">B</text>
+<line x1="214" y1="230" x2="214" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="579" y="243" font-size="10" fill="#64748B" text-anchor="middle">C</text>
+<line x1="474" y1="230" x2="474" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="744" y="243" font-size="10" fill="#64748B" text-anchor="middle">D</text>
+<line x1="684" y1="230" x2="684" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="845" y="243" font-size="10" fill="#64748B" text-anchor="middle">E</text>
+<line x1="804" y1="230" x2="804" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="952" y="243" font-size="10" fill="#64748B" text-anchor="middle">F</text>
+<line x1="886" y1="230" x2="886" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1084" y="243" font-size="10" fill="#64748B" text-anchor="middle">G</text>
+<line x1="1018" y1="230" x2="1018" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1209" y="243" font-size="10" fill="#64748B" text-anchor="middle">H</text>
+<line x1="1150" y1="230" x2="1150" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1383" y="243" font-size="10" fill="#64748B" text-anchor="middle">I</text>
+<line x1="1268" y1="230" x2="1268" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1553" y="243" font-size="10" fill="#64748B" text-anchor="middle">J</text>
+<line x1="1498" y1="230" x2="1498" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="0" y="248" width="1610" height="24" rx="0" fill="#334155" stroke="none" stroke-width="0"/>
+<rect x="886" y="269" width="612" height="3" rx="0" fill="#F59E0B" stroke="none" stroke-width="0"/>
+<text x="1192" y="264" font-size="10.5" fill="#E2E8F0" font-weight="700" text-anchor="middle">INITIAL RISK — selected values → Table III</text>
+<rect x="0" y="272" width="1610" height="34" rx="0" fill="#1E293B" stroke="none" stroke-width="0"/>
+<text x="17" y="293" font-size="10" fill="#94A3B8" text-anchor="middle">1</text>
+<text x="42" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Hazard</text>
+<line x1="34" y1="272" x2="34" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="222" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Hazardous condition</text>
+<line x1="214" y1="272" x2="214" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="482" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Worst credible mishap</text>
+<line x1="474" y1="272" x2="474" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="692" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Subsystems</text>
+<line x1="684" y1="272" x2="684" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="812" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Modes</text>
+<line x1="804" y1="272" x2="804" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="894" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Severity</text>
+<line x1="886" y1="272" x2="886" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="1026" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Probability</text>
+<line x1="1018" y1="272" x2="1018" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="1158" y="287" font-size="11" fill="#F8FAFC" font-weight="700">RAC → level</text>
+<line x1="1150" y1="272" x2="1150" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="1276" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Basis (rationale)</text>
+<line x1="1268" y1="272" x2="1268" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="1506" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Status / owner</text>
+<line x1="1498" y1="272" x2="1498" y2="306" stroke="#334155" stroke-width="1"/>
+<rect x="0" y="306" width="1610" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="306" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="323" font-size="10" fill="#64748B" text-anchor="middle">2</text>
+<line x1="34" y1="306" x2="34" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="306" x2="214" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="306" x2="474" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="306" x2="684" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="306" x2="804" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="306" x2="886" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="306" x2="1018" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="306" x2="1150" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="306" x2="1268" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="306" x2="1498" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="367" x2="1610" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="306" x2="214" y2="367" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="321" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-001</text>
+<text x="42" y="337" font-size="10.5" fill="#64748B">Rotor start while UAV is retained</text>
+<text x="42" y="350.5" font-size="10.5" fill="#64748B">or a person is at the dock</text>
+<text x="222" y="321" font-size="11.5" fill="#0F172A">UAV motors spin up while the aircraft is</text>
+<text x="222" y="336" font-size="11.5" fill="#0F172A">mechanically retained or while a maintainer</text>
+<text x="222" y="351" font-size="11.5" fill="#0F172A">or pilot is within rotor reach.</text>
+<text x="482" y="321" font-size="11.5" fill="#0F172A">Laceration or eye injury to</text>
+<text x="482" y="336" font-size="11.5" fill="#0F172A">maintainer or pilot; damage to dock</text>
+<rect x="692" y="312" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="324" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-DCK</text>
+<rect x="692" y="331" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="343" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1</text>
+<rect x="812" y="312" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="324" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-06</text>
+<rect x="812" y="331" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="343" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-10</text>
+<rect x="894" y="311" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="323" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="916" y="323" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="894" y="340" font-size="10" fill="#64748B">permanent partial</text>
+<text x="894" y="353" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1026" y="311" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="323" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="1048" y="323" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="1026" y="340" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="1026" y="353" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="1158" y="314" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="314" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="314" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="314" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="321" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="321" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="321" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="321" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="328" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="328" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1178" y="328" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="328" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="335" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1168" y="335" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="335" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="335" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="342" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="342" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="342" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="342" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="349" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="349" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="349" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="349" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="313" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="1225" y="328.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">2C</text>
+<text x="1225" y="348" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<text x="1276" y="321" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> rotor strike can cause</text>
+<text x="1276" y="334.5" font-size="10.5" fill="#334155">permanent partial disability; dock</text>
+<text x="1276" y="348" font-size="10.5" fill="#334155">operations are frequent.</text>
+<rect x="1506" y="311" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="323.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="343" font-size="10.5" fill="#64748B">ROLE-UAV</text>
+<rect x="0" y="367" width="1610" height="93" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="367" width="34" height="93" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="384" font-size="10" fill="#64748B" text-anchor="middle">3</text>
+<line x1="34" y1="367" x2="34" y2="460" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="367" x2="214" y2="460" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="367" x2="474" y2="460" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="367" x2="684" y2="460" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="367" x2="804" y2="460" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="367" x2="886" y2="460" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="367" x2="1018" y2="460" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="367" x2="1150" y2="460" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="367" x2="1268" y2="460" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="367" x2="1498" y2="460" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="460" x2="1610" y2="460" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="367" x2="214" y2="460" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="382" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-002</text>
+<text x="42" y="398" font-size="10.5" fill="#64748B">False retained state releases</text>
+<text x="42" y="411.5" font-size="10.5" fill="#64748B">UAV under motion</text>
+<text x="222" y="382" font-size="11.5" fill="#0F172A">The dock reports the UAV as retained (or</text>
+<text x="222" y="397" font-size="11.5" fill="#0F172A">released) incorrectly, so the walker moves</text>
+<text x="222" y="412" font-size="11.5" fill="#0F172A">with an unretained aircraft or the release</text>
+<text x="222" y="427" font-size="11.5" fill="#0F172A">occurs during motion.</text>
+<text x="482" y="382" font-size="11.5" fill="#0F172A">UAV strikes pilot, crew or</text>
+<text x="482" y="397" font-size="11.5" fill="#0F172A">bystander; aircraft damaged</text>
+<rect x="692" y="373" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="385" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-DCK</text>
+<rect x="692" y="392" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="404" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1</text>
+<rect x="812" y="373" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="385" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-03</text>
+<rect x="812" y="392" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="404" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-04</text>
+<rect x="812" y="411" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="423" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-06</text>
+<rect x="812" y="430" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="442" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-08</text>
+<rect x="894" y="372" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="384" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="916" y="384" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="894" y="401" font-size="10" fill="#64748B">permanent partial</text>
+<text x="894" y="414" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1026" y="372" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="384" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">D</text>
+<text x="1048" y="384" font-size="11.5" fill="#0F172A">Remote</text>
+<text x="1026" y="401" font-size="10" fill="#64748B">unlikely, but possible to</text>
+<text x="1026" y="414" font-size="10" fill="#64748B">occur in the life of an …</text>
+<rect x="1158" y="375" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="375" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="375" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="375" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="382" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="382" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="382" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="382" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="389" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="389" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1178" y="389" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="389" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="396" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1168" y="396" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1178" y="396" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="396" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="403" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="403" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="403" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="403" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="410" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="410" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="410" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="410" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="374" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="1225" y="389.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">2D</text>
+<text x="1225" y="409" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1276" y="382" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> compact UAV falling from</text>
+<text x="1276" y="395.5" font-size="10.5" fill="#334155">height can seriously injure a person</text>
+<text x="1276" y="409" font-size="10.5" fill="#334155">nearby.</text>
+<rect x="1506" y="372" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="384.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="404" font-size="10.5" fill="#64748B">ROLE-UAV</text>
+<rect x="0" y="460" width="1610" height="74" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="460" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="477" font-size="10" fill="#64748B" text-anchor="middle">4</text>
+<line x1="34" y1="460" x2="34" y2="534" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="460" x2="214" y2="534" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="460" x2="474" y2="534" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="460" x2="684" y2="534" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="460" x2="804" y2="534" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="460" x2="886" y2="534" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="460" x2="1018" y2="534" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="460" x2="1150" y2="534" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="460" x2="1268" y2="534" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="460" x2="1498" y2="534" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="534" x2="1610" y2="534" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="460" x2="214" y2="534" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="475" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-INT-001</text>
+<text x="42" y="491" font-size="10.5" fill="#64748B">UAV launch or recovery outside</text>
+<text x="42" y="504.5" font-size="10.5" fill="#64748B">the safe envelope</text>
+<text x="222" y="475" font-size="11.5" fill="#0F172A">Launch or recovery proceeds while the</text>
+<text x="222" y="490" font-size="11.5" fill="#0F172A">walker is moving, mis-postured or the dock is</text>
+<text x="222" y="505" font-size="11.5" fill="#0F172A">not ready, or the approach is not aborted on</text>
+<text x="222" y="520" font-size="11.5" fill="#0F172A">loss of link.</text>
+<text x="482" y="475" font-size="11.5" fill="#0F172A">Rotor or airframe strike injuring</text>
+<text x="482" y="490" font-size="11.5" fill="#0F172A">pilot or crew</text>
+<rect x="692" y="466" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="478" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-DCK</text>
+<rect x="692" y="485" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="497" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1</text>
+<rect x="812" y="466" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="478" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-06</text>
+<rect x="812" y="485" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="497" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-07</text>
+<rect x="812" y="504" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="516" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-08</text>
+<rect x="894" y="465" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="477" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="916" y="477" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="894" y="494" font-size="10" fill="#64748B">permanent partial</text>
+<text x="894" y="507" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1026" y="465" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="477" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="1048" y="477" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="1026" y="494" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="1026" y="507" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="1158" y="468" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="468" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="468" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="468" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="475" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="475" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="475" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="475" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="482" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="482" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1178" y="482" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="482" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="489" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1168" y="489" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="489" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="489" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="496" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="496" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="496" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="496" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="503" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="503" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="503" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="503" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="467" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="1225" y="482.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">2C</text>
+<text x="1225" y="502" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<text x="1276" y="475" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> recovery near an occupied</text>
+<text x="1276" y="488.5" font-size="10.5" fill="#334155">station is a frequent, demanding operation.</text>
+<rect x="1506" y="465" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="477.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="497" font-size="10.5" fill="#64748B">ROLE-UAV</text>
+<rect x="0" y="534" width="1610" height="74" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="534" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="551" font-size="10" fill="#64748B" text-anchor="middle">5</text>
+<line x1="34" y1="534" x2="34" y2="608" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="534" x2="214" y2="608" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="534" x2="474" y2="608" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="534" x2="684" y2="608" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="534" x2="804" y2="608" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="534" x2="886" y2="608" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="534" x2="1018" y2="608" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="534" x2="1150" y2="608" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="534" x2="1268" y2="608" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="534" x2="1498" y2="608" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="608" x2="1610" y2="608" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="534" x2="214" y2="608" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="549" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-MAN-001</text>
+<text x="42" y="565" font-size="10.5" fill="#64748B">Person struck or pinned by the</text>
+<text x="42" y="578.5" font-size="10.5" fill="#64748B">arms or claws</text>
+<text x="222" y="549" font-size="11.5" fill="#0F172A">A person is inside the reach of the</text>
+<text x="222" y="564" font-size="11.5" fill="#0F172A">manipulator arms or claws while they move,</text>
+<text x="222" y="579" font-size="11.5" fill="#0F172A">or while the walker moves with the arms out</text>
+<text x="222" y="594" font-size="11.5" fill="#0F172A">of their stowed position.</text>
+<text x="482" y="549" font-size="11.5" fill="#0F172A">Fatal or disabling crush or impact</text>
+<text x="482" y="564" font-size="11.5" fill="#0F172A">injury to a person near the walker</text>
+<rect x="692" y="540" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="552" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-MAN</text>
+<rect x="692" y="559" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="571" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="692" y="578" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="590" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="812" y="540" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="552" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-04</text>
+<rect x="812" y="559" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="571" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-05</text>
+<rect x="894" y="539" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="551" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="916" y="551" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="894" y="568" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="894" y="581" font-size="10" fill="#64748B">disability</text>
+<rect x="1026" y="539" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="551" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="1048" y="551" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="1026" y="568" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="1026" y="581" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="1158" y="542" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="542" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="542" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="542" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="549" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="549" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="549" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="549" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="556" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1168" y="556" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1178" y="556" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="556" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="563" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1168" y="563" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="563" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="563" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="570" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="570" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="570" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="570" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="577" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="577" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="577" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="577" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="541" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="1225" y="556.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="1225" y="576" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<text x="1276" y="549" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> multi-tonne arms with claws;</text>
+<text x="1276" y="562.5" font-size="10.5" fill="#334155">crew work close to the walker on every</text>
+<text x="1276" y="576" font-size="10.5" fill="#334155">sortie</text>
+<rect x="1506" y="539" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="551.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="571" font-size="10.5" fill="#64748B">ROLE-WLK</text>
+<rect x="0" y="608" width="1610" height="93" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="608" width="34" height="93" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="625" font-size="10" fill="#64748B" text-anchor="middle">6</text>
+<line x1="34" y1="608" x2="34" y2="701" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="608" x2="214" y2="701" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="608" x2="474" y2="701" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="608" x2="684" y2="701" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="608" x2="804" y2="701" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="608" x2="886" y2="701" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="608" x2="1018" y2="701" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="608" x2="1150" y2="701" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="608" x2="1268" y2="701" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="608" x2="1498" y2="701" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="701" x2="1610" y2="701" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="608" x2="214" y2="701" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="623" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-MAN-002</text>
+<text x="42" y="639" font-size="10.5" fill="#64748B">Carried load swings, shifts or</text>
+<text x="42" y="652.5" font-size="10.5" fill="#64748B">drops while walking</text>
+<text x="222" y="623" font-size="11.5" fill="#0F172A">A payload is carried in the arms while the</text>
+<text x="222" y="638" font-size="11.5" fill="#0F172A">walker walks (allowed under conditions,</text>
+<text x="222" y="653" font-size="11.5" fill="#0F172A">decision DQ-015) and moves relative to the</text>
+<text x="222" y="668" font-size="11.5" fill="#0F172A">walker.</text>
+<text x="482" y="623" font-size="11.5" fill="#0F172A">Fatal or disabling injury to a</text>
+<text x="482" y="638" font-size="11.5" fill="#0F172A">person struck by the load, or to the</text>
+<text x="482" y="653" font-size="11.5" fill="#0F172A">pilot in a resulting fall</text>
+<rect x="692" y="614" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="626" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-MAN</text>
+<rect x="692" y="633" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="645" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="692" y="652" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="664" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-CTL</text>
+<rect x="692" y="671" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="683" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="812" y="614" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="626" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-04</text>
+<rect x="812" y="633" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="645" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-05</text>
+<rect x="894" y="613" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="625" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="916" y="625" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="894" y="642" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="894" y="655" font-size="10" fill="#64748B">disability</text>
+<rect x="1026" y="613" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="625" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="1048" y="625" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="1026" y="642" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="1026" y="655" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="1158" y="616" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="616" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="616" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="616" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="623" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="623" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="623" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="623" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="630" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1168" y="630" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1178" y="630" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="630" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="637" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1168" y="637" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="637" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="637" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="644" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="644" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="644" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="644" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="651" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="651" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="651" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="651" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="615" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="1225" y="630.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="1225" y="650" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<text x="1276" y="623" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> a dropped or swinging load</text>
+<text x="1276" y="636.5" font-size="10.5" fill="#334155">from a 4.5 m walker can strike people or</text>
+<text x="1276" y="650" font-size="10.5" fill="#334155">upset the walker</text>
+<rect x="1506" y="613" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="625.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="645" font-size="10.5" fill="#64748B">ROLE-WLK</text>
+<rect x="0" y="701" width="1610" height="74" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="701" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="718" font-size="10" fill="#64748B" text-anchor="middle">7</text>
+<line x1="34" y1="701" x2="34" y2="775" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="701" x2="214" y2="775" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="701" x2="474" y2="775" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="701" x2="684" y2="775" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="701" x2="804" y2="775" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="701" x2="886" y2="775" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="701" x2="1018" y2="775" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="701" x2="1150" y2="775" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="701" x2="1268" y2="775" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="701" x2="1498" y2="775" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="775" x2="1610" y2="775" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="701" x2="214" y2="775" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="716" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-001</text>
+<text x="42" y="732" font-size="10.5" fill="#64748B">Unintended leg motion during</text>
+<text x="42" y="745.5" font-size="10.5" fill="#64748B">pilot ingress or egress</text>
+<text x="222" y="716" font-size="11.5" fill="#0F172A">Leg or chassis actuators move while the</text>
+<text x="222" y="731" font-size="11.5" fill="#0F172A">pilot or ground crew is in the ingress path or</text>
+<text x="222" y="746" font-size="11.5" fill="#0F172A">partially restrained.</text>
+<text x="482" y="716" font-size="11.5" fill="#0F172A">Crush or fall injury to pilot or</text>
+<text x="482" y="731" font-size="11.5" fill="#0F172A">ground crew during ingress/egress</text>
+<rect x="692" y="707" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="719" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PIL</text>
+<rect x="692" y="726" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="738" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="692" y="745" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="757" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="812" y="707" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="719" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-02</text>
+<rect x="812" y="726" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="738" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-03</text>
+<rect x="812" y="745" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="757" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-10</text>
+<rect x="894" y="706" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="718" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="916" y="718" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="894" y="735" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="894" y="748" font-size="10" fill="#64748B">disability</text>
+<rect x="1026" y="706" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="718" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="1048" y="718" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="1026" y="735" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="1026" y="748" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="1158" y="709" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="709" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="709" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="709" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="716" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="716" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="716" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="716" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="723" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1168" y="723" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1178" y="723" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="723" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="730" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1168" y="730" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="730" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="730" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="737" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="737" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="737" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="737" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="744" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="744" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="744" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="744" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="708" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="1225" y="723.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="1225" y="743" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<text x="1276" y="716" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> crush between multi-tonne</text>
+<text x="1276" y="729.5" font-size="10.5" fill="#334155">structure can be fatal; ingress occurs</text>
+<text x="1276" y="743" font-size="10.5" fill="#334155">every sortie.</text>
+<rect x="1506" y="706" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="718.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="738" font-size="10.5" fill="#64748B">ROLE-WLK</text>
+<rect x="0" y="775" width="1610" height="110" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="775" width="34" height="110" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="792" font-size="10" fill="#64748B" text-anchor="middle">8</text>
+<line x1="34" y1="775" x2="34" y2="885" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="775" x2="214" y2="885" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="775" x2="474" y2="885" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="775" x2="684" y2="885" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="775" x2="804" y2="885" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="775" x2="886" y2="885" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="775" x2="1018" y2="885" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="775" x2="1150" y2="885" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="775" x2="1268" y2="885" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="775" x2="1498" y2="885" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="885" x2="1610" y2="885" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="775" x2="214" y2="885" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="790" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-002</text>
+<text x="42" y="806" font-size="10.5" fill="#64748B">Uncontrolled vertical drop of the</text>
+<text x="42" y="819.5" font-size="10.5" fill="#64748B">cockpit on loss of leg support</text>
+<text x="222" y="790" font-size="11.5" fill="#0F172A">Leg support force is lost faster than load</text>
+<text x="222" y="805" font-size="11.5" fill="#0F172A">holding can engage (supply burst with failed</text>
+<text x="222" y="820" font-size="11.5" fill="#0F172A">or slow load-holding valves or brakes), so</text>
+<text x="222" y="835" font-size="11.5" fill="#0F172A">the cockpit falls freely to its rest height with</text>
+<text x="222" y="850" font-size="11.5" fill="#0F172A">the pilot aboard and no protective stop under</text>
+<text x="222" y="865" font-size="11.5" fill="#0F172A">way.</text>
+<text x="482" y="790" font-size="11.5" fill="#0F172A">Spinal compression, head or neck</text>
+<text x="482" y="805" font-size="11.5" fill="#0F172A">injury to the restrained pilot</text>
+<rect x="692" y="781" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="793" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PIL</text>
+<rect x="692" y="800" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="812" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="692" y="819" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="831" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PWR</text>
+<rect x="812" y="781" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="793" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-04</text>
+<rect x="812" y="800" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="812" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-05</text>
+<rect x="812" y="819" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="831" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-09</text>
+<rect x="894" y="780" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="792" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="916" y="792" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="894" y="809" font-size="10" fill="#64748B">permanent partial</text>
+<text x="894" y="822" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="1026" y="780" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="792" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="1048" y="792" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="1026" y="809" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="1026" y="822" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="1158" y="783" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="783" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="783" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="783" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="790" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="790" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="790" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="790" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="797" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="797" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1178" y="797" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="797" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="804" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1168" y="804" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="804" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="804" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="811" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="811" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="811" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="811" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="818" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="818" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="818" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="818" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="782" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="1225" y="797.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">2C</text>
+<text x="1225" y="817" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<text x="1276" y="790" font-size="10.5" fill="#334155">Preliminary, drafted from failure search</text>
+<text x="1276" y="803.5" font-size="10.5" fill="#334155">SF-01 edge cases EC-01 to EC-06</text>
+<text x="1276" y="817" font-size="10.5" fill="#334155">(synthetic, no evidence credit). A drop of</text>
+<text x="1276" y="830.5" font-size="10.5" fill="#334155">about 1.2 m onto rest stops can cause</text>
+<text x="1276" y="844" font-size="10.5" fill="#334155">permanent partial disability; supply loss is</text>
+<text x="1276" y="857.5" font-size="10.5" fill="#334155">credible over the item life and nothing yet</text>
+<text x="1276" y="871" font-size="10.5" fill="#334155">prevents the fall.</text>
+<rect x="1506" y="780" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="792.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="812" font-size="10.5" fill="#64748B">ROLE-WLK</text>
+<rect x="0" y="885" width="1610" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="885" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="902" font-size="10" fill="#64748B" text-anchor="middle">9</text>
+<line x1="34" y1="885" x2="34" y2="946" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="885" x2="214" y2="946" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="885" x2="474" y2="946" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="885" x2="684" y2="946" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="885" x2="804" y2="946" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="885" x2="886" y2="946" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="885" x2="1018" y2="946" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="885" x2="1150" y2="946" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="885" x2="1268" y2="946" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="885" x2="1498" y2="946" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="946" x2="1610" y2="946" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="885" x2="214" y2="946" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="900" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-003</text>
+<text x="42" y="916" font-size="10.5" fill="#64748B">Fall from height during</text>
+<text x="42" y="929.5" font-size="10.5" fill="#64748B">emergency egress</text>
+<text x="222" y="900" font-size="11.5" fill="#0F172A">The pilot leaves the standing walker through</text>
+<text x="222" y="915" font-size="11.5" fill="#0F172A">a side hatch about 3.2 m above the ground</text>
+<text x="222" y="930" font-size="11.5" fill="#0F172A">without power or kneeling.</text>
+<text x="482" y="900" font-size="11.5" fill="#0F172A">Fatal or disabling fall injury to the</text>
+<text x="482" y="915" font-size="11.5" fill="#0F172A">pilot</text>
+<rect x="692" y="891" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="903" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PIL</text>
+<rect x="692" y="910" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="922" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="812" y="891" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="903" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-09</text>
+<rect x="894" y="890" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="902" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="916" y="902" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="894" y="919" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="894" y="932" font-size="10" fill="#64748B">disability</text>
+<rect x="1026" y="890" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="902" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">D</text>
+<text x="1048" y="902" font-size="11.5" fill="#0F172A">Remote</text>
+<text x="1026" y="919" font-size="10" fill="#64748B">unlikely, but possible to</text>
+<text x="1026" y="932" font-size="10" fill="#64748B">occur in the life of an …</text>
+<rect x="1158" y="893" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="893" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="893" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="893" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="900" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="900" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="900" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="900" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="907" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="907" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1178" y="907" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="907" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="914" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1168" y="914" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="914" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="914" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="921" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="921" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="921" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="921" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="928" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="928" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="928" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="928" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="892" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="1225" y="907.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="1225" y="927" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<text x="1276" y="900" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> emergency egress is rare, but</text>
+<text x="1276" y="913.5" font-size="10.5" fill="#334155">a 3.2 m fall can be fatal</text>
+<rect x="1506" y="890" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="902.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="922" font-size="10.5" fill="#64748B">ROLE-WLK</text>
+<rect x="0" y="946" width="1610" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="946" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="963" font-size="10" fill="#64748B" text-anchor="middle">10</text>
+<line x1="34" y1="946" x2="34" y2="1007" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="946" x2="214" y2="1007" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="946" x2="474" y2="1007" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="946" x2="684" y2="1007" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="946" x2="804" y2="1007" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="946" x2="886" y2="1007" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="946" x2="1018" y2="1007" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="946" x2="1150" y2="1007" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="946" x2="1268" y2="1007" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="946" x2="1498" y2="1007" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1007" x2="1610" y2="1007" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="946" x2="214" y2="1007" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="961" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-001</text>
+<text x="42" y="977" font-size="10.5" fill="#64748B">Residual hydraulic pressure</text>
+<text x="42" y="990.5" font-size="10.5" fill="#64748B">during maintenance</text>
+<text x="222" y="961" font-size="11.5" fill="#0F172A">Stored hydraulic pressure remains in</text>
+<text x="222" y="976" font-size="11.5" fill="#0F172A">actuators or accumulators when a maintainer</text>
+<text x="222" y="991" font-size="11.5" fill="#0F172A">opens a line or works in a crush zone.</text>
+<text x="482" y="961" font-size="11.5" fill="#0F172A">Crush or fluid-injection injury to</text>
+<text x="482" y="976" font-size="11.5" fill="#0F172A">maintainer</text>
+<rect x="692" y="952" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="964" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PWR</text>
+<rect x="692" y="971" width="52" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="983" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-GSE</text>
+<rect x="812" y="952" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="964" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-01</text>
+<rect x="812" y="971" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="983" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-10</text>
+<rect x="894" y="951" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="963" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="916" y="963" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="894" y="980" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="894" y="993" font-size="10" fill="#64748B">disability</text>
+<rect x="1026" y="951" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="963" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">D</text>
+<text x="1048" y="963" font-size="11.5" fill="#0F172A">Remote</text>
+<text x="1026" y="980" font-size="10" fill="#64748B">unlikely, but possible to</text>
+<text x="1026" y="993" font-size="10" fill="#64748B">occur in the life of an …</text>
+<rect x="1158" y="954" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="954" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="954" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="954" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="961" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="961" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="961" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="961" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="968" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="968" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1178" y="968" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="968" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="975" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1168" y="975" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="975" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="975" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="982" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="982" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="982" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="982" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="989" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="989" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="989" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="989" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="953" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="1225" y="968.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="1225" y="988" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<text x="1276" y="961" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> hydraulic injection and crush</text>
+<text x="1276" y="974.5" font-size="10.5" fill="#334155">injuries can be fatal; maintenance is</text>
+<text x="1276" y="988" font-size="10.5" fill="#334155">periodic.</text>
+<rect x="1506" y="951" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="963.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="983" font-size="10.5" fill="#64748B">ROLE-WLK</text>
+<rect x="0" y="1007" width="1610" height="93" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1007" width="34" height="93" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1024" font-size="10" fill="#64748B" text-anchor="middle">11</text>
+<line x1="34" y1="1007" x2="34" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="1007" x2="214" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="1007" x2="474" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="1007" x2="684" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="1007" x2="804" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="1007" x2="886" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="1007" x2="1018" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="1007" x2="1150" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="1007" x2="1268" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="1007" x2="1498" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1100" x2="1610" y2="1100" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="1007" x2="214" y2="1100" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1022" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-002</text>
+<text x="42" y="1038" font-size="10.5" fill="#64748B">Battery thermal runaway near the</text>
+<text x="42" y="1051.5" font-size="10.5" fill="#64748B">pilot station</text>
+<text x="222" y="1022" font-size="11.5" fill="#0F172A">A traction battery cell enters thermal</text>
+<text x="222" y="1037" font-size="11.5" fill="#0F172A">runaway and propagates through the pack</text>
+<text x="222" y="1052" font-size="11.5" fill="#0F172A">while the pilot is seated or a maintainer is</text>
+<text x="222" y="1067" font-size="11.5" fill="#0F172A">working on the walker.</text>
+<text x="482" y="1022" font-size="11.5" fill="#0F172A">Burn or inhalation injury to the pilot</text>
+<text x="482" y="1037" font-size="11.5" fill="#0F172A">or a maintainer; loss of the walker</text>
+<rect x="692" y="1013" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="1025" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PWR</text>
+<rect x="692" y="1032" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="1044" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PIL</text>
+<rect x="812" y="1013" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1025" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-02</text>
+<rect x="812" y="1032" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1044" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-04</text>
+<rect x="812" y="1051" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1063" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-09</text>
+<rect x="812" y="1070" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1082" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-10</text>
+<rect x="894" y="1012" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="1024" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="916" y="1024" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="894" y="1041" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="894" y="1054" font-size="10" fill="#64748B">disability</text>
+<rect x="1026" y="1012" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="1024" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">D</text>
+<text x="1048" y="1024" font-size="11.5" fill="#0F172A">Remote</text>
+<text x="1026" y="1041" font-size="10" fill="#64748B">unlikely, but possible to</text>
+<text x="1026" y="1054" font-size="10" fill="#64748B">occur in the life of an …</text>
+<rect x="1158" y="1015" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1015" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1015" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1015" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1022" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1022" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1022" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1022" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1029" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1029" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1029" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1029" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1036" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1168" y="1036" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1036" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1036" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1043" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1043" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1043" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1043" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1050" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1050" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1050" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1050" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="1014" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="1225" y="1029.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="1225" y="1049" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<text x="1276" y="1022" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> a pack fire beside an occupied</text>
+<text x="1276" y="1035.5" font-size="10.5" fill="#334155">cockpit can be fatal; runaway is remote for</text>
+<text x="1276" y="1049" font-size="10.5" fill="#334155">a managed pack.</text>
+<rect x="1506" y="1012" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="1024.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="1044" font-size="10.5" fill="#64748B">ROLE-WLK</text>
+<rect x="0" y="1100" width="1610" height="93" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1100" width="34" height="93" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1117" font-size="10" fill="#64748B" text-anchor="middle">12</text>
+<line x1="34" y1="1100" x2="34" y2="1193" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="1100" x2="214" y2="1193" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="1100" x2="474" y2="1193" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="1100" x2="684" y2="1193" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="1100" x2="804" y2="1193" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="1100" x2="886" y2="1193" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="1100" x2="1018" y2="1193" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="1100" x2="1150" y2="1193" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="1100" x2="1268" y2="1193" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="1100" x2="1498" y2="1193" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1193" x2="1610" y2="1193" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="1100" x2="214" y2="1193" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1115" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-003</text>
+<text x="42" y="1131" font-size="10.5" fill="#64748B">Fuel leak and fire at the</text>
+<text x="42" y="1144.5" font-size="10.5" fill="#64748B">engine-generator</text>
+<text x="222" y="1115" font-size="11.5" fill="#0F172A">Fuel leaks onto a hot engine or exhaust</text>
+<text x="222" y="1130" font-size="11.5" fill="#0F172A">surface, or is spilled during refuelling, and</text>
+<text x="222" y="1145" font-size="11.5" fill="#0F172A">ignites while people are on or near the</text>
+<text x="222" y="1160" font-size="11.5" fill="#0F172A">walker.</text>
+<text x="482" y="1115" font-size="11.5" fill="#0F172A">Burn injury to the pilot, a</text>
+<text x="482" y="1130" font-size="11.5" fill="#0F172A">maintainer or ground crew</text>
+<rect x="692" y="1106" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="1118" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PWR</text>
+<rect x="692" y="1125" width="52" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="1137" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-GSE</text>
+<rect x="812" y="1106" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1118" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-01</text>
+<rect x="812" y="1125" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1137" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-02</text>
+<rect x="812" y="1144" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1156" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-04</text>
+<rect x="812" y="1163" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1175" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-10</text>
+<rect x="894" y="1105" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="1117" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="916" y="1117" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="894" y="1134" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="894" y="1147" font-size="10" fill="#64748B">disability</text>
+<rect x="1026" y="1105" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="1117" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">D</text>
+<text x="1048" y="1117" font-size="11.5" fill="#0F172A">Remote</text>
+<text x="1026" y="1134" font-size="10" fill="#64748B">unlikely, but possible to</text>
+<text x="1026" y="1147" font-size="10" fill="#64748B">occur in the life of an …</text>
+<rect x="1158" y="1108" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1108" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1108" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1108" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1115" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1115" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1115" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1115" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1122" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1122" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1122" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1122" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1129" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1168" y="1129" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1129" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1129" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1136" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1136" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1136" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1136" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1143" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1143" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1143" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1143" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="1107" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="1225" y="1122.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="1225" y="1142" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<text x="1276" y="1115" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> a fuel fire beside an occupied</text>
+<text x="1276" y="1128.5" font-size="10.5" fill="#334155">cockpit can be fatal; leaks are remote for a</text>
+<text x="1276" y="1142" font-size="10.5" fill="#334155">protected fuel system.</text>
+<rect x="1506" y="1105" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="1117.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="1137" font-size="10.5" fill="#64748B">ROLE-WLK</text>
+<rect x="0" y="1193" width="1610" height="74" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1193" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1210" font-size="10" fill="#64748B" text-anchor="middle">13</text>
+<line x1="34" y1="1193" x2="34" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="1193" x2="214" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="1193" x2="474" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="1193" x2="684" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="1193" x2="804" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="1193" x2="886" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="1193" x2="1018" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="1193" x2="1150" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="1193" x2="1268" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="1193" x2="1498" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1267" x2="1610" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="1193" x2="214" y2="1267" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1208" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-SAF-001</text>
+<text x="42" y="1224" font-size="10.5" fill="#64748B">Protective stop does not reach a</text>
+<text x="42" y="1237.5" font-size="10.5" fill="#64748B">safe state</text>
+<text x="222" y="1208" font-size="11.5" fill="#0F172A">On a protective-stop request the walker</text>
+<text x="222" y="1223" font-size="11.5" fill="#0F172A">continues moving, collapses, or drops a</text>
+<text x="222" y="1238" font-size="11.5" fill="#0F172A">payload instead of reaching the mode's</text>
+<text x="222" y="1253" font-size="11.5" fill="#0F172A">defined safe state.</text>
+<text x="482" y="1208" font-size="11.5" fill="#0F172A">Fall, crush or impact injury to pilot</text>
+<text x="482" y="1223" font-size="11.5" fill="#0F172A">or bystanders</text>
+<rect x="692" y="1199" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="1211" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="692" y="1218" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="1230" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="812" y="1199" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1211" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-04</text>
+<rect x="812" y="1218" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1230" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-05</text>
+<rect x="812" y="1237" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1249" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-09</text>
+<rect x="894" y="1198" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="1210" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="916" y="1210" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="894" y="1227" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="894" y="1240" font-size="10" fill="#64748B">disability</text>
+<rect x="1026" y="1198" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="1210" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="1048" y="1210" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="1026" y="1227" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="1026" y="1240" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="1158" y="1201" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1201" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1201" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1201" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1208" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1208" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1208" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1208" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1215" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1168" y="1215" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1215" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1215" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1222" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1222" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1222" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1222" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1229" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1229" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1229" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1229" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1236" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1236" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1236" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1236" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="1200" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="1225" y="1215.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="1225" y="1235" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<text x="1276" y="1208" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> no stop architecture exists;</text>
+<text x="1276" y="1221.5" font-size="10.5" fill="#334155">collapse with pilot aboard can be fatal.</text>
+<rect x="1506" y="1198" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="1210.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="1230" font-size="10.5" fill="#64748B">ROLE-SWL</text>
+<rect x="0" y="1267" width="1610" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1267" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1284" font-size="10" fill="#64748B" text-anchor="middle">14</text>
+<line x1="34" y1="1267" x2="34" y2="1328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="1267" x2="214" y2="1328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="1267" x2="474" y2="1328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="1267" x2="684" y2="1328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="1267" x2="804" y2="1328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="1267" x2="886" y2="1328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="1267" x2="1018" y2="1328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="1267" x2="1150" y2="1328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="1267" x2="1268" y2="1328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="1267" x2="1498" y2="1328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1328" x2="1610" y2="1328" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="1267" x2="214" y2="1328" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1282" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-001</text>
+<text x="42" y="1298" font-size="10.5" fill="#64748B">Stale or lost feedback causes</text>
+<text x="42" y="1311.5" font-size="10.5" fill="#64748B">runaway motion</text>
+<text x="222" y="1282" font-size="11.5" fill="#0F172A">Actuator or posture feedback is lost, frozen</text>
+<text x="222" y="1297" font-size="11.5" fill="#0F172A">or delayed and closed-loop control drives a</text>
+<text x="222" y="1312" font-size="11.5" fill="#0F172A">joint beyond its intended motion.</text>
+<text x="482" y="1282" font-size="11.5" fill="#0F172A">Walker fall or limb strike injuring</text>
+<text x="482" y="1297" font-size="11.5" fill="#0F172A">pilot or bystanders</text>
+<rect x="692" y="1273" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="1285" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="692" y="1292" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="1304" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="812" y="1273" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1285" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-04</text>
+<rect x="812" y="1292" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1304" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-05</text>
+<rect x="894" y="1272" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="1284" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="916" y="1284" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="894" y="1301" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="894" y="1314" font-size="10" fill="#64748B">disability</text>
+<rect x="1026" y="1272" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="1284" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="1048" y="1284" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="1026" y="1301" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="1026" y="1314" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="1158" y="1275" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1275" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1275" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1275" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1282" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1282" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1282" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1282" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1289" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1168" y="1289" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1289" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1289" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1296" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1296" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1296" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1296" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1303" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1303" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1303" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1303" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1310" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1310" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1310" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1310" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="1274" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="1225" y="1289.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="1225" y="1309" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<text x="1276" y="1282" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> feedback loss is a common</text>
+<text x="1276" y="1295.5" font-size="10.5" fill="#334155">failure class; consequence includes fall</text>
+<text x="1276" y="1309" font-size="10.5" fill="#334155">with pilot.</text>
+<rect x="1506" y="1272" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="1284.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="1304" font-size="10.5" fill="#64748B">ROLE-WLK</text>
+<rect x="0" y="1328" width="1610" height="74" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1328" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1345" font-size="10" fill="#64748B" text-anchor="middle">15</text>
+<line x1="34" y1="1328" x2="34" y2="1402" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="1328" x2="214" y2="1402" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="1328" x2="474" y2="1402" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="1328" x2="684" y2="1402" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="1328" x2="804" y2="1402" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="1328" x2="886" y2="1402" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="1328" x2="1018" y2="1402" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="1328" x2="1150" y2="1402" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="1328" x2="1268" y2="1402" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="1328" x2="1498" y2="1402" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1402" x2="1610" y2="1402" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="1328" x2="214" y2="1402" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1343" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-002</text>
+<text x="42" y="1359" font-size="10.5" fill="#64748B">Walker tip-over or fall with pilot</text>
+<text x="42" y="1372.5" font-size="10.5" fill="#64748B">aboard</text>
+<text x="222" y="1343" font-size="11.5" fill="#0F172A">The walker leaves its stability envelope on</text>
+<text x="222" y="1358" font-size="11.5" fill="#0F172A">slope, uneven terrain or with an offset</text>
+<text x="222" y="1373" font-size="11.5" fill="#0F172A">payload and falls or overturns.</text>
+<text x="482" y="1343" font-size="11.5" fill="#0F172A">Pilot fatal or disabling injury in fall;</text>
+<text x="482" y="1358" font-size="11.5" fill="#0F172A">crush of bystanders</text>
+<rect x="692" y="1334" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="1346" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="692" y="1353" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="1365" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PIL</text>
+<rect x="812" y="1334" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1346" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-04</text>
+<rect x="812" y="1353" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1365" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-05</text>
+<rect x="812" y="1372" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1384" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-09</text>
+<rect x="894" y="1333" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="1345" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="916" y="1345" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="894" y="1362" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="894" y="1375" font-size="10" fill="#64748B">disability</text>
+<rect x="1026" y="1333" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="1345" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="1048" y="1345" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="1026" y="1362" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="1026" y="1375" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="1158" y="1336" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1336" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1336" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1336" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1343" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1343" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1343" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1343" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1350" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1168" y="1350" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1350" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1350" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1357" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1357" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1357" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1357" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1364" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1364" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1364" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1364" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1371" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1371" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1371" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1371" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="1335" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="1225" y="1350.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="1225" y="1370" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<text x="1276" y="1343" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> legged platforms have frequent</text>
+<text x="1276" y="1356.5" font-size="10.5" fill="#334155">balance-loss events during development.</text>
+<rect x="1506" y="1333" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="1345.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="1365" font-size="10.5" fill="#64748B">ROLE-WLK</text>
+<rect x="0" y="1402" width="1610" height="74" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1402" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1419" font-size="10" fill="#64748B" text-anchor="middle">16</text>
+<line x1="34" y1="1402" x2="34" y2="1476" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="1402" x2="214" y2="1476" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="474" y1="1402" x2="474" y2="1476" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="684" y1="1402" x2="684" y2="1476" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="804" y1="1402" x2="804" y2="1476" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="886" y1="1402" x2="886" y2="1476" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1018" y1="1402" x2="1018" y2="1476" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1150" y1="1402" x2="1150" y2="1476" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1268" y1="1402" x2="1268" y2="1476" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1498" y1="1402" x2="1498" y2="1476" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1476" x2="1610" y2="1476" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="214" y1="1402" x2="214" y2="1476" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1417" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-003</text>
+<text x="42" y="1433" font-size="10.5" fill="#64748B">Crushing under the pod or legs</text>
+<text x="42" y="1446.5" font-size="10.5" fill="#64748B">while kneeling or rising</text>
+<text x="222" y="1417" font-size="11.5" fill="#0F172A">A person is beside or under the walker while</text>
+<text x="222" y="1432" font-size="11.5" fill="#0F172A">it lowers to or rises from the kneel posture</text>
+<text x="222" y="1447" font-size="11.5" fill="#0F172A">used for ingress and egress.</text>
+<text x="482" y="1417" font-size="11.5" fill="#0F172A">Fatal or disabling crush injury</text>
+<rect x="692" y="1408" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="1420" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-WLK</text>
+<rect x="692" y="1427" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="1439" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-CTL</text>
+<rect x="692" y="1446" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="697" y="1458" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-SAF</text>
+<rect x="812" y="1408" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1420" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-02</text>
+<rect x="812" y="1427" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="817" y="1439" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MOD-03</text>
+<rect x="894" y="1407" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="902" y="1419" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="916" y="1419" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="894" y="1436" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="894" y="1449" font-size="10" fill="#64748B">disability</text>
+<rect x="1026" y="1407" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="1034" y="1419" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="1048" y="1419" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="1026" y="1436" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="1026" y="1449" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="1158" y="1410" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1410" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1410" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1410" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1417" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1417" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1417" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1417" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1424" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="1168" y="1424" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1424" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1424" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1431" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1431" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1431" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1431" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1438" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1438" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1438" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1438" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="1158" y="1445" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1168" y="1445" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1178" y="1445" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1188" y="1445" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1206" y="1409" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="1225" y="1424.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="1225" y="1444" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<text x="1276" y="1417" font-size="10.5" fill="#334155"><tspan fill="#B45309" font-weight="700">Preliminary.</tspan> the CL-05 pod drops about 1.4</text>
+<text x="1276" y="1430.5" font-size="10.5" fill="#334155">m (hip 2.34 m to 0.95 m) on every ingress</text>
+<text x="1276" y="1444" font-size="10.5" fill="#334155">and egress</text>
+<rect x="1506" y="1407" width="39.1" height="17" rx="8.5" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<text x="1514" y="1419.5" font-size="10.5" fill="#92400E">open</text>
+<text x="1506" y="1439" font-size="10.5" fill="#64748B">ROLE-WLK</text>
+<text x="16" y="1498" font-size="10.5" fill="#64748B">15 rows · mini-grid: rows A–F probability, columns 1–4 severity; outlined cell = the selection</text>
+<rect x="0.5" y="0.5" width="1609" height="1507" rx="0" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+<g class="terms" data-base-h="1508">
+<rect x="0" y="1508" width="1610" height="112.6" fill="#FFFFFF"/>
+<line x1="40" y1="1512" x2="1570" y2="1512" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1527.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: 1A–4F = risk assessment code, severity 1–4 plus probability A–F (e.g. 1C) · AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · CONOPS = concept of operations · DoD = US Department of Defense · DQ-nnn = decision question for the project</text>
+<text x="40" y="1542.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">lead (decisions/register.yaml) · EC-nnn = edge case found by a failure search · F-nnn = system function in the item definition · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent</text>
+<text x="40" y="1556.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">organisation) · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base edition) · MOD-nnn = operating mode from the CONOPS (MOD-01 to MOD-10) · RAC = risk assessment code, severity category plus probability level (e.g. 1C) · ROLE-nnn = project role in the</text>
+<text x="40" y="1571.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">tailoring record (simulated until the lead says otherwise) · SF-nnn = walker failure-search family (sim/search) · SUS-A1 = dockable observation UAV · SUS-GSE = ground support, maintenance supports, charging and test equipment · SUS-M1-CTL = mission, motion and balance control ·</text>
+<text x="40" y="1585.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SUS-M1-DCK = UAV dock, retention, charging and release · SUS-M1-MAN = manipulation arms and end effectors · SUS-M1-PIL = pilot station, restraints, displays and controls · SUS-M1-PWR = power generation, storage, distribution and thermal control · SUS-M1-SAF = independent safety</text>
+<text x="40" y="1600.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">monitor, protective stop and isolation · SUS-M1-WLK = chassis, legs, joint actuators and stability sensing · SUS-RISKDEF-001 = the project's tailored risk definitions (standards/tailoring) · UAV = uncrewed aerial vehicle (drone) · US = United States</text>
+</g>
+</svg>

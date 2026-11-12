@@ -1,0 +1,13 @@
+Failure mode / cause,Type,Effect,Hazard,Severity (initial),Mitigations,Requirements
+CF1 Arming check or dock interlock permits arming while retained,software,"Rotor contact with hands, face or eyes; retained airframe breaks free",HAZ-DCK-001,2 Critical,M1(c) M2(c) M3(c) M4(e),SYS-003 SYS-012
+CF2 Maintainer arms the aircraft on the dock outside procedure,human,"Rotor contact with hands, face or eyes; retained airframe breaks free",HAZ-DCK-001,2 Critical,M1(c) M2(c) M3(c) M4(e),SYS-003 SYS-012
+CF3 Charging handshake energises propulsion (IF-PX4-009),interface,"Rotor contact with hands, face or eyes; retained airframe breaks free",HAZ-DCK-001,2 Critical,M1(c) M2(c) M3(c) M4(e),SYS-003 SYS-012
+CF1 Retention state fusion reports retained with latch open,software,UAV falls from or is thrown off the walker,HAZ-DCK-002,2 Critical,M1(b) M2(c) M3(c),SYS-005
+CF2 Latch sensor failure or latch wear,hardware,UAV falls from or is thrown off the walker,HAZ-DCK-002,2 Critical,M1(b) M2(c) M3(c),SYS-005
+CF3 Vibration during walking unseats a partially latched aircraft,environment,UAV falls from or is thrown off the walker,HAZ-DCK-002,2 Critical,M1(b) M2(c) M3(c),SYS-005
+CF1 Integration manager grants a launch/recovery permit on stale or inconsistent state,software,"UAV collides with walker, pilot station or crew",HAZ-INT-001,2 Critical,M1(a) M2(c) M3(c) M4(c) M5(c) M6(c) M7(c),SYS-006 SYS-013
+CF2 Lost integration link during approach (IF-PX4-006),interface,"UAV collides with walker, pilot station or crew",HAZ-INT-001,2 Critical,M1(a) M2(c) M3(c) M4(c) M5(c) M6(c) M7(c),SYS-006 SYS-013
+CF3 Gusts near the walker structure during recovery,environment,"UAV collides with walker, pilot station or crew",HAZ-INT-001,2 Critical,M1(a) M2(c) M3(c) M4(c) M5(c) M6(c) M7(c),SYS-006 SYS-013
+CF4 A PX4 failsafe (return-to-launch on link loss or low battery) flies a recovery to the dock with no integration manager permit; in SITL it descended 1.9 m from the pilot station (simulation SU-01; synthetic),software,"UAV collides with walker, pilot station or crew",HAZ-INT-001,2 Critical,M1(a) M2(c) M3(c) M4(c) M5(c) M6(c) M7(c),SYS-006 SYS-013
+"CF5 PX4 home stays at the take-off point after the walker moves, so a return lands where the dock used to be, possibly among the ground crew (simulation SU-02; synthetic)",interface,"UAV collides with walker, pilot station or crew",HAZ-INT-001,2 Critical,M1(a) M2(c) M3(c) M4(c) M5(c) M6(c) M7(c),SYS-006 SYS-013
+CF6 The integration manager trusts PX4's reported position (IF-PX4-001) without validity checks; under GPS loss the estimate was 170 m wrong (simulation SU-06; synthetic),software,"UAV collides with walker, pilot station or crew",HAZ-INT-001,2 Critical,M1(a) M2(c) M3(c) M4(c) M5(c) M6(c) M7(c),SYS-006 SYS-013

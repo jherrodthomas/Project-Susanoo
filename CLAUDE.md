@@ -75,6 +75,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   python3 tools/figures/concept_readme.py        # concept/README.md modes-and-scenarios section and its figures 6-7
   python3 tools/check_readme_diagrams.py   # folder README standard (framework/documentation-standard.md)
   tools/validate_doc_sysml.sh              # documentation SysML views with the project model; OMG pilot
+  python -m tools.worksheets.build         # analysis worksheets: <name>.svg/.csv per 882E folder, safety/generated/worksheets.xlsx
   python -m tools.readme.build_readme      # front-page README figures and numbers
   python -m tools.previews.record_figures  # record figures docs/wiki/images/rec-*.svg (decisions, traceability, SSFs …)
   python -m tools.previews.build_previews  # folder previews (docs/previews.yaml): every folder shows its figures

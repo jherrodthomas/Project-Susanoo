@@ -35,6 +35,9 @@ jobs:
       - name: Check READMEs, regenerate every figure and SysML view, and diff
         run: python3 tools/check_readme_diagrams.py
 
+      - name: Analysis worksheets (images, CSV, Excel workbook) match the records
+        run: python -m tools.worksheets.build --check
+
       - name: Front-page README figures and numbers match the records
         run: python -m tools.readme.build_readme --check
 

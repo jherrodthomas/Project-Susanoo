@@ -138,6 +138,7 @@ abbreviations:
   CE: Chief Engineer (simulated role ROLE-CE)
   HTML: HyperText Markup Language (web page)
   CAD: computer-aided design
+  CSV: comma-separated values, a plain-text table format any spreadsheet program opens
   CC: Creative Commons; CC BY 4.0 is the Creative Commons Attribution 4.0 licence used for the documentation
   CG: centre of gravity
   FCStd: FreeCAD document file
@@ -232,6 +233,15 @@ class_labels:
 # Words written in capitals that are ordinary words (figure banners, emphasis), names, roman numerals and code
 # identifiers: not abbreviations.
 not_terms:
+  # worksheet group bands (tools/worksheets/build.py)
+  - INITIAL
+  - ACTIVITIES
+  - LEVEL
+  - RIGOR
+  - PLANNED
+  - AFTER
+  - SELECTED
+  - VALUES
   # CAD drawing-sheet title blocks and view labels (cad/drawings), and the licence name CC BY
   - CARRYING
   - DRAWING

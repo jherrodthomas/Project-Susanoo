@@ -1,0 +1,46 @@
+Function,Failure type,Functional failure condition,Effect,Linked hazards,Worst linked severity,Status,Note
+F-01,Loss Function not provided when needed,Gait or balance control stops mid-step,Walker loses balance and may fall with the pilot aboard,HAZ-WLK-002,1 Catastrophic,drafted,
+F-01,Erroneous Function provided with a wrong output,Wrong joint commands or a wrong state estimate,Unstable gait or runaway leg motion; tip-over,HAZ-WLK-001 HAZ-WLK-002,1 Catastrophic,drafted,
+F-01,Untimely Function provided too early or too late,Balance correction acts late on stale feedback,Capture point leaves the support before recovery; fall,HAZ-WLK-001 HAZ-WLK-002,1 Catastrophic,drafted,
+F-01,Unintended Function provided when not demanded,"Leg motion without a pilot command, including kneel or rise",People near the legs or under the pod are struck or crushed,HAZ-WLK-001 HAZ-PIL-001 HAZ-WLK-003,1 Catastrophic,drafted,
+F-01,Degraded Function provided with reduced performance,Reduced actuator capacity as supply falls,Balance capacity shrinks before load holding engages; fall or drop,HAZ-WLK-002 HAZ-PIL-002,1 Catastrophic,drafted,
+F-02,Loss Function not provided when needed,Grip or arm hold lost,Load falls; while walking it can strike people or upset the walker,HAZ-MAN-002,1 Catastrophic,drafted,A load dropped at a standstill has no hazard record yet
+F-02,Erroneous Function provided with a wrong output,Arm moves to a wrong position or with wrong force,Person in reach struck or pinned,HAZ-MAN-001,1 Catastrophic,drafted,
+F-02,Untimely Function provided too early or too late,Arm moves before the exclusion zone is confirmed clear,Person in reach struck or pinned,HAZ-MAN-001,1 Catastrophic,drafted,
+F-02,Unintended Function provided when not demanded,Arm leaves the stowed or carry pose while walking,Claws or load swing into the walking envelope,HAZ-MAN-001 HAZ-MAN-002,1 Catastrophic,drafted,
+F-02,Degraded Function provided with reduced performance,Reduced arm force or speed under load,Load shifts and moves the centre of mass ahead of the stance foot,HAZ-MAN-002 HAZ-WLK-002,1 Catastrophic,drafted,
+F-03,Loss Function not provided when needed,Walker cannot lower to the egress posture,Normal egress blocked; only the side-hatch emergency exit remains,HAZ-PIL-003,1 Catastrophic,gap,Blocked normal egress (SCN-104) has no hazard record of its own
+F-03,Erroneous Function provided with a wrong output,"Readiness reported true with restraint, hatch or controls not ready",Leg motion enabled during ingress or egress,HAZ-PIL-001,1 Catastrophic,drafted,
+F-03,Untimely Function provided too early or too late,Motion enabled before ingress is complete,Pilot or crew caught by moving structure,HAZ-PIL-001,1 Catastrophic,drafted,
+F-03,Unintended Function provided when not demanded,Kneel or rise without a confirmed clear zone,Person under the pod or beside the legs crushed,HAZ-WLK-003,1 Catastrophic,drafted,
+F-03,Degraded Function provided with reduced performance,Uncontrolled or too-fast lowering,Crush under the pod; drop loads on the restrained pilot,HAZ-WLK-003 HAZ-PIL-002,1 Catastrophic,drafted,
+F-04,Loss Function not provided when needed,Protective stop not executed on demand,Hazardous motion continues,HAZ-SAF-001 HAZ-WLK-001,1 Catastrophic,drafted,
+F-04,Erroneous Function provided with a wrong output,Stop drives the walker to an unstable posture,Fall or collapse with the pilot aboard,HAZ-SAF-001 HAZ-WLK-002,1 Catastrophic,drafted,
+F-04,Untimely Function provided too early or too late,Stop completes later than the reaction time,Motion continues into the person or obstacle,HAZ-SAF-001,1 Catastrophic,drafted,
+F-04,Unintended Function provided when not demanded,Spurious stop while walking or carrying a load,Abrupt stop can upset the walker or shake the load loose,HAZ-WLK-002 HAZ-MAN-002,1 Catastrophic,drafted,
+F-04,Degraded Function provided with reduced performance,Stop reaches only part of the actuators,Safe state not reached,HAZ-SAF-001,1 Catastrophic,drafted,
+F-05,Loss Function not provided when needed,Actuator supply lost while walking,Balance lost before load holding engages; cockpit drop,HAZ-WLK-002 HAZ-PIL-002,1 Catastrophic,drafted,
+F-05,Erroneous Function provided with a wrong output,Isolation reported complete with energy still stored,Maintainer exposed to stored pressure or energy,HAZ-PWR-001,1 Catastrophic,drafted,
+F-05,Untimely Function provided too early or too late,Isolation or shut-off late on a thermal or fuel fault,Fire or thermal event near the pilot grows,HAZ-PWR-002 HAZ-PWR-003,1 Catastrophic,drafted,
+F-05,Unintended Function provided when not demanded,System energised during maintenance,Unexpected pressure or motion injures a maintainer,HAZ-PWR-001,1 Catastrophic,drafted,
+F-05,Degraded Function provided with reduced performance,Reduced pressure or bus voltage,Reduced balance authority (slow leak on a slope),HAZ-WLK-002,1 Catastrophic,drafted,
+F-06,Loss Function not provided when needed,UAV link or imagery lost,Lost-link contingency must keep the aircraft clear of the walker,HAZ-INT-001,2 Critical,drafted,
+F-06,Erroneous Function provided with a wrong output,Misleading imagery or position shown to the pilot,Pilot decisions based on wrong information,,—,gap,No walker-side hazard record for misleading UAV information yet
+F-06,Untimely Function provided too early or too late,Stale or frozen imagery,Pilot acts on an out-of-date picture,,—,gap,No walker-side hazard record for stale UAV information yet
+F-06,Unintended Function provided when not demanded,UAV flies into the pilot keep-out,Rotor or airframe strike on pilot or crew,HAZ-INT-001,2 Critical,drafted,
+F-06,Degraded Function provided with reduced performance,Degraded navigation (GNSS loss),Position error of the aircraft near people,HAZ-INT-001,2 Critical,drafted,
+F-07,Loss Function not provided when needed,Retention lost on the dock,UAV released while the walker moves,HAZ-DCK-002,2 Critical,drafted,
+F-07,Erroneous Function provided with a wrong output,Dock reports retained when it is not,Walker moves with an unretained aircraft,HAZ-DCK-002,2 Critical,drafted,
+F-07,Untimely Function provided too early or too late,Release during walker motion,Aircraft strikes pilot or crew,HAZ-DCK-002 HAZ-INT-001,2 Critical,drafted,
+F-07,Unintended Function provided when not demanded,Rotor start while retained or a person is at the dock,Rotor strike on maintainer or pilot,HAZ-DCK-001,2 Critical,drafted,
+F-07,Degraded Function provided with reduced performance,Recovery outside the safe envelope,Collision during capture,HAZ-INT-001,2 Critical,drafted,
+F-08,Loss Function not provided when needed,UAV not charged,Reduced flight endurance; lost-link and low-battery contingencies more likely,HAZ-INT-001,2 Critical,drafted,
+F-08,Erroneous Function provided with a wrong output,Overcharge or wrong charge profile,UAV battery thermal event at the dock,,—,gap,No hazard record for a UAV battery thermal event at the dock
+F-08,Untimely Function provided too early or too late,Charging continues during launch preparation,Energised connector at release,,—,gap,To analyse with the dock interface
+F-08,Unintended Function provided when not demanded,Charging energised with a person at the dock,Electrical exposure during handling,,—,gap,To analyse with the dock interface
+F-08,Degraded Function provided with reduced performance,Partial charge reported as full,Flight starts with less endurance than shown,HAZ-INT-001,2 Critical,drafted,
+F-09,Loss Function not provided when needed,Isolation points unavailable,Maintenance with stored energy present,HAZ-PWR-001,1 Catastrophic,drafted,
+F-09,Erroneous Function provided with a wrong output,Zero-energy check passes wrongly,Maintainer exposed to stored pressure,HAZ-PWR-001,1 Catastrophic,drafted,
+F-09,Untimely Function provided too early or too late,Residual pressure released late,Injection or crush injury during work,HAZ-PWR-001,1 Catastrophic,drafted,
+F-09,Unintended Function provided when not demanded,Unexpected motion during maintenance,Maintainer caught by moving structure,HAZ-PWR-001 HAZ-PIL-001,1 Catastrophic,drafted,
+F-09,Degraded Function provided with reduced performance,Mechanical supports carry only part of the load,Structure settles onto the maintainer,HAZ-PWR-001,1 Catastrophic,drafted,
