@@ -107,7 +107,8 @@ def fold_knee(hip, ankle, thigh, shank):
     return min(sols, key=lambda k: k[0])  # behind: the smaller x
 
 
-def build(p: dict, common: dict, posture: str = "standing"):
+def build(p: dict, common: dict, posture: str = "standing", gait: dict | None = None):
+    """gait (walk animation frames only): {"hip_z": m, "legs": {1: (ankle_x, lift), -1: (...)}} per frame."""
     parts: dict[str, list] = {c: [] for c in CLASSES}
     put = lambda cls, *shapes: parts[cls].extend(shapes)  # noqa: E731
     D = p.get("detail", {})
@@ -125,9 +126,15 @@ def build(p: dict, common: dict, posture: str = "standing"):
         kf, knee_z = fold_knee((0.0, hip_z), (ax, L["ankle_height"]), L["thigh"], L["shank"])
     fl, fw, ft = L["foot"]
     feet = []
+    if gait:
+        hip_z = gait["hip_z"]
     for s in (1, -1):
         y = s * L["hip_half_width"]
-        hip, knee, ankle = (0, y, hip_z), (kf, y, knee_z), (ax, y, L["ankle_height"])
+        ax_l, lift = gait["legs"][s] if gait else (ax, 0.0)
+        az = L["ankle_height"] + lift
+        if gait:  # each leg solved from its own ankle target, knee behind the hip-ankle line
+            kf, knee_z = fold_knee((0.0, hip_z), (ax_l, az), L["thigh"], L["shank"])
+        hip, knee, ankle = (0, y, hip_z), (kf, y, knee_z), (ax_l, y, az)
         put("structure", limb(hip, knee, 0.30, 0.26, 0.22, 0.22), limb(knee, ankle, 0.22, 0.22, 0.16, 0.18))
         put("actuator", ycyl(hip, 0.20, 0.40), ycyl(knee, 0.16, 0.34), ycyl(ankle, 0.12, 0.28))
         for c, r_, w in ((hip, 0.11, 0.46), (knee, 0.09, 0.40), (ankle, 0.07, 0.32)):
@@ -143,13 +150,13 @@ def build(p: dict, common: dict, posture: str = "standing"):
         put("actuator", *hydraulic((-0.05, y + s * 0.20, hip_z + 0.28), add(lerp(hip, knee, 0.75), (0, s * 0.20, 0))))
         put("actuator", *hydraulic(add(lerp(hip, knee, 0.45), (0.10, s * 0.19, 0)), add(lerp(knee, ankle, 0.7), (0.06, s * 0.19, 0)), 0.048))
         # Foot: two toes forward, a heel spur behind, a pad under the ankle link
-        x0 = ax - 0.35 * fl
-        pad = soft(Pos(ax, y, ft / 2) * Box(0.34, fw * 0.8, ft), 0.04)
-        toes = [soft(Pos(ax + fl * 0.32, y + dy, ft * 0.4) * Box(fl * 0.42, fw * 0.36, ft * 0.8), 0.04) for dy in (-fw * 0.24, fw * 0.24)]
+        x0 = ax_l - 0.35 * fl
+        pad = soft(Pos(ax_l, y, lift + ft / 2) * Box(0.34, fw * 0.8, ft), 0.04)
+        toes = [soft(Pos(ax_l + fl * 0.32, y + dy, lift + ft * 0.4) * Box(fl * 0.42, fw * 0.36, ft * 0.8), 0.04) for dy in (-fw * 0.24, fw * 0.24)]
         HS = D.get("heel_spur") or {"reach": 0.42 * fl, "width": fw * 0.32}
         spur_len = HS["reach"] - 0.08  # from just behind the ankle pad to the heel tip
-        spur = soft(Pos(ax - 0.08 - spur_len / 2, y, ft * 0.35) * Box(spur_len, HS["width"], ft * 0.7), 0.03)
-        put("structure", pad, *toes, spur, cyl(ankle, (ax, y, ft), 0.09))
+        spur = soft(Pos(ax_l - 0.08 - spur_len / 2, y, lift + ft * 0.35) * Box(spur_len, HS["width"], ft * 0.7), 0.03)
+        put("structure", pad, *toes, spur, cyl(ankle, (ax_l, y, lift + ft), 0.09))
         for solid in (pad, *toes, spur):  # ground contacts from the real foot solids, not a nominal rectangle
             bb = solid.bounding_box()
             feet += [(bb.min.X, bb.min.Y), (bb.max.X, bb.min.Y), (bb.min.X, bb.max.Y), (bb.max.X, bb.max.Y)]
@@ -370,12 +377,55 @@ def build(p: dict, common: dict, posture: str = "standing"):
     return parts, info
 
 
+def walk_frames(p: dict, common: dict, out: Path, frames: int) -> None:
+    """One walk cycle as per-frame STL meshes (mm) per part class, for tools/cad/blender_walk.py.
+
+    Gait (cad/params/CL-05.yaml walk:): each foot is planted for the duty fraction of the cycle and swings
+    forward in a lifted arc for the rest; the two legs are half a cycle apart. The body advances one stride
+    per cycle at constant speed, so a planted foot stays fixed on the ground. Concept kinematics only:
+    no dynamics, balance or load model."""
+    from build123d import export_stl
+    W = p["walk"]
+    S, duty, h = W["stride"], W["duty"], W["lift"]
+    L = p["leg"]
+    ax = L.get("ankle_forward", 0.0)
+    kf0 = L["knee_forward"]
+    knee_z0 = L["ankle_height"] + math.sqrt(L["shank"] ** 2 - (ax - kf0) ** 2)
+    hip0 = knee_z0 + math.sqrt(L["thigh"] ** 2 - kf0 ** 2)
+    meta = {"frames": frames, "stride_m": S, "duty": duty, "body_x": []}
+    for i in range(frames):
+        phase = i / frames
+        legs = {}
+        for s, offset in ((1, 0.0), (-1, 0.5)):
+            f = (phase + offset) % 1.0
+            if f < duty:  # stance: foot fixed in the world while the body moves forward
+                rel, lift = ax + S * (duty / 2 - f), 0.0
+            else:         # swing: the foot travels a whole stride in the world on a lifted arc; relative to
+                g = (f - duty) / (1 - duty)  # the advancing hip that is duty x stride, lift-off to touch-down
+                rel, lift = ax + S * duty * (g - 0.5), h * math.sin(math.pi * g)
+            legs[s] = (rel, lift)
+        hip_z = hip0 - W["crouch"] - W["bob"] * math.cos(4 * math.pi * phase)
+        parts, _ = build(p, common, "standing", gait={"hip_z": hip_z, "legs": legs})
+        d = out / f"f{i:03d}"
+        d.mkdir(parents=True, exist_ok=True)
+        for cls, shapes in parts.items():
+            if shapes:
+                export_stl(Compound(shapes).scale(1000), str(d / f"{cls}.stl"), tolerance=2.0, angular_tolerance=0.35)
+        meta["body_x"].append(S * phase)
+        print(f"walk frame {i + 1}/{frames}", flush=True)
+    (out / "walk.json").write_text(json.dumps(meta, indent=1))
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", type=Path, default=ROOT / "build/cad-src")
+    ap.add_argument("--walk", type=int, default=0, help="also write a walk cycle of this many frames")
     args = ap.parse_args()
     p = yaml.safe_load((ROOT / "cad/params/CL-05.yaml").read_text())
     common = yaml.safe_load((ROOT / "cad/params/common.yaml").read_text())
+    if args.walk:
+        walk_frames(p, common, args.out / f"{p['id']}-walk", args.walk)
+        return 0
     for posture in ["standing", *(p.get("postures") or {})]:
         parts, info = build(p, common, posture)
         out = args.out / (p["id"] if posture == "standing" else f"{p['id']}-{posture}")

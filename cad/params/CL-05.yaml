@@ -84,3 +84,9 @@ emergency_exit:                  # side-window hatches with a fold-out davit and
   ladder_width: 0.40
   rung_spacing: 0.30
   bottom_clearance: 0.25         # lowest rung above the ground
+walk:                            # concept walk cycle for the Blender animation (no dynamics, balance or load model)
+  stride: 1.0                    # body advance per full cycle (two steps)
+  duty: 0.6                      # fraction of the cycle each foot is planted
+  lift: 0.22                     # peak foot lift during swing
+  crouch: 0.06                   # hip lowered from standing while walking
+  bob: 0.025                     # vertical hip bob amplitude
