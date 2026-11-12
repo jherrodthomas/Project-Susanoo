@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="991.9" height="945.1" viewBox="0 0 991.9 945.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 5 · SysML block definition — PX4Integration</title>
+<desc>Part and port definitions of the PX4 integration view, read from PX4Integration.sysml. The internal connections, launch-permit state machine and requirements are on the PX4 page.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="991.9" height="876" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 5 · SysML block definition — PX4Integration</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Part and port definitions of the PX4 integration view, read from PX4Integration.sysml. The internal connections,</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">launch-permit state machine and requirements are on the PX4 page.</text>
+<text x="951.9" y="44" font-size="11" fill="#475569" text-anchor="end">integrations/px4/PX4Integration.sysml</text>
+<line x1="40" y1="102" x2="951.9" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="126" width="911.9" height="654" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<path d="M40 126 L241.5 126 L241.5 140 L231.5 150 L40 150 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="143" font-size="11.5" fill="#0F172A" font-weight="700">bdd [package] PX4Integration</text>
+<g transform="translate(56 166)">
+<path d="M311.2 452 L326.2 452 Q333.2 452 333.2 459 L333.2 514 Q333.2 521 340.2 521 L362.2 521 Q369.2 521 369.2 528 L369.2 547 Q369.2 554 376.2 554 L562.4 554" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M311.2 383 L374.2 383 Q381.2 383 381.2 376 L381.2 276 Q381.2 269 388.2 269 L562.4 269" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M311.2 299 L338.2 299 Q345.2 299 345.2 306 L345.2 482 Q345.2 489 352.2 489 L513.4 489 Q520.4 489 520.4 496 L520.4 520 Q520.4 527 527.4 527 L562.4 527" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M311.2 252 L374.2 252 Q381.2 252 381.2 245 L381.2 182 Q381.2 175 388.2 175 L514.9 175 Q520.4 175 520.4 169.5 L520.4 169.5 Q520.4 164 525.9 164 L562.4 164" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M311.2 137 L562.4 137" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M311.2 158 L386.2 158 Q393.2 158 393.2 165 L393.2 224 Q393.2 231 400.2 231 L514.9 231 Q520.4 231 520.4 236.5 L520.4 236.5 Q520.4 242 525.9 242 L562.4 242" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M311.2 115 L326.2 115 Q333.2 115 333.2 108 L333.2 53 Q333.2 46 340.2 46 L562.4 46" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M562.4 413 L359.7 413 Q357.2 413 357.2 415.5 L357.2 415.5 Q357.2 418 354.7 418 L311.2 418" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M562.4 383 L524.4 383 Q520.4 383 520.4 379 L520.4 379 Q520.4 375 516.4 375 L364.2 375 Q357.2 375 357.2 368 L357.2 282 Q357.2 275 350.2 275 L311.2 275" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M562.4 352 L527.4 352 Q520.4 352 520.4 345 L520.4 344 Q520.4 337 513.4 337 L376.2 337 Q369.2 337 369.2 330 L369.2 187 Q369.2 180 362.2 180 L311.2 180" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M562.4 444 L523.9 444 Q520.4 444 520.4 447.5 L520.4 447.5 Q520.4 451 516.9 451 L364.2 451 Q357.2 451 357.2 458 L357.2 546 Q357.2 553 350.2 553 L311.2 553" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<rect x="119.4" y="348" width="191.8" height="139" rx="4" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="119.4" y="348" width="191.8" height="46" rx="4" fill="#F0FDFA" stroke="none" stroke-width="0"/>
+<line x1="119.4" y1="394" x2="311.2" y2="394" stroke="#0F766E" stroke-width="1.1"/>
+<text x="215.3" y="365" font-size="10" fill="#475569" text-anchor="middle">«part def :&gt; FlightController»</text>
+<text x="215.3" y="382" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">PX4Autopilot</text>
+<text x="131.4" y="412" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">version : String</text>
+<text x="131.4" y="427" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">commitSha : String</text>
+<text x="131.4" y="442" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">parameterSetHash : String</text>
+<text x="131.4" y="457" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">port mavlink : MissionPort</text>
+<text x="131.4" y="472" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">port dds : TelemetryPort</text>
+<rect x="75.3" y="228" width="235.9" height="94" rx="4" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="75.3" y="228" width="235.9" height="46" rx="4" fill="#F0FDFA" stroke="none" stroke-width="0"/>
+<line x1="75.3" y1="274" x2="311.2" y2="274" stroke="#0F766E" stroke-width="1.1"/>
+<text x="193.2" y="245" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="193.2" y="262" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">UAVControlAdapter</text>
+<text x="87.3" y="292" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">port toPx4 : ~MissionPort</text>
+<text x="87.3" y="307" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">port fromSupervisor : ~PermitPort</text>
+<rect x="75.3" y="93" width="235.9" height="109" rx="4" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="75.3" y="93" width="235.9" height="46" rx="4" fill="#FFF7ED" stroke="none" stroke-width="0"/>
+<line x1="75.3" y1="139" x2="311.2" y2="139" stroke="#C2410C" stroke-width="1.1"/>
+<text x="193.2" y="110" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="193.2" y="127" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">IntegrationSupervisor</text>
+<text x="87.3" y="157" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">port permit : PermitPort</text>
+<text x="87.3" y="172" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">port telemetryIn : ~TelemetryPort</text>
+<text x="87.3" y="187" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">port dockState : ~DockStatePort</text>
+<rect x="6" y="513" width="305.2" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="6" y="513" width="305.2" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="6" y1="559" x2="311.2" y2="559" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="158.6" y="530" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="158.6" y="547" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">GroundControlStation</text>
+<text x="18" y="577" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">QGroundControl: development monitoring and …</text>
+<rect x="562.4" y="321" width="273.7" height="154" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="562.4" y="321" width="273.7" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="562.4" y1="367" x2="836.1" y2="367" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="699.2" y="338" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="699.2" y="355" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">PX4IntegrationContext</text>
+<text x="574.4" y="385" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">part px4 : PX4Autopilot</text>
+<text x="574.4" y="400" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">part adapter : UAVControlAdapter</text>
+<text x="574.4" y="415" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">part supervisor : IntegrationSupervisor</text>
+<text x="574.4" y="430" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">part dock : UavDock</text>
+<text x="574.4" y="445" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">part walker : Walker</text>
+<text x="574.4" y="460" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">part gcs : GroundControlStation</text>
+<rect x="562.4" y="501" width="248.5" height="79" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="562.4" y="501" width="248.5" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="562.4" y1="547" x2="810.9" y2="547" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="686.6" y="518" font-size="10" fill="#475569" text-anchor="middle">«port def»</text>
+<text x="686.6" y="535" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">MissionPort</text>
+<text x="574.4" y="565" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">MAVLink / MAVSDK mission operations</text>
+<rect x="562.4" y="216" width="305.2" height="79" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="562.4" y="216" width="305.2" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="562.4" y1="262" x2="867.6" y2="262" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="715" y="233" font-size="10" fill="#475569" text-anchor="middle">«port def»</text>
+<text x="715" y="250" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">TelemetryPort</text>
+<text x="574.4" y="280" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">ROS 2 via uXRCE-DDS: state, health, arming …</text>
+<rect x="562.4" y="111" width="311.5" height="79" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="562.4" y="111" width="311.5" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="562.4" y1="157" x2="873.9" y2="157" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="718.1" y="128" font-size="10" fill="#475569" text-anchor="middle">«port def»</text>
+<text x="718.1" y="145" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">PermitPort</text>
+<text x="574.4" y="175" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Launch permit/revoke, recovery/abort intent …</text>
+<rect x="562.4" y="6" width="280" height="79" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="562.4" y="6" width="280" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="562.4" y1="52" x2="842.4" y2="52" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="702.4" y="23" font-size="10" fill="#475569" text-anchor="middle">«port def»</text>
+<text x="702.4" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">DockStatePort</text>
+<text x="574.4" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Dock occupied/retained, walker posture …</text>
+<rect x="431.6" y="559" width="50.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="436.6" y="572" font-size="10.5" fill="#475569">mavlink</text>
+<rect x="441.1" y="274" width="31.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="446.1" y="287" font-size="10.5" fill="#475569">dds</text>
+<rect x="435.5" y="494" width="42.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="440.5" y="507" font-size="10.5" fill="#475569">toPx4</text>
+<rect x="413.2" y="180" width="87.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="418.2" y="193" font-size="10.5" fill="#475569">fromSupervisor</text>
+<rect x="435.1" y="142" width="43.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="440.1" y="155" font-size="10.5" fill="#475569">permit</text>
+<rect x="420.8" y="236" width="71.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="425.8" y="249" font-size="10.5" fill="#475569">telemetryIn</text>
+<rect x="425" y="51" width="63.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="430" y="64" font-size="10.5" fill="#475569">dockState</text>
+<rect x="441.1" y="418" width="31.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="446.1" y="431" font-size="10.5" fill="#475569">px4</text>
+<rect x="431.6" y="380" width="50.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="436.6" y="393" font-size="10.5" fill="#475569">adapter</text>
+<rect x="424.3" y="342" width="64.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="429.3" y="355" font-size="10.5" fill="#475569">supervisor</text>
+<rect x="441.1" y="456" width="31.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="446.1" y="469" font-size="10.5" fill="#475569">gcs</text>
+</g>
+<line x1="40" y1="806" x2="56" y2="806" stroke="#475569" stroke-width="1.8"/>
+<text x="62" y="810" font-size="11" fill="#475569">Composition (diamond at owner)</text>
+<line x1="236.5" y1="806" x2="252.5" y2="806" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="258.5" y="810" font-size="11" fill="#475569">Port typed by</text>
+<rect x="340.3" y="800" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="362.3" y="810" font-size="11" fill="#475569">PX4 and its adapter</text>
+<rect x="477.2" y="800" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="499.2" y="810" font-size="11" fill="#475569">Integration supervisor</text>
+<rect x="627.4" y="800" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
+<text x="649.4" y="810" font-size="11" fill="#475569">Port definition</text>
+<rect x="734.5" y="800" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="756.5" y="810" font-size="11" fill="#475569">Other part</text>
+<text x="40" y="832" font-size="10.5" fill="#94A3B8">Generated by tools/figures/integrations_readme.py from the item definition, PX4Integration.sysml, SSFs and SITL results. Proposed integration: not implemented, integrated or verified;</text>
+<text x="40" y="847" font-size="10.5" fill="#94A3B8">SITL is synthetic with no evidence credit.</text>
+<g class="terms" data-base-h="876">
+<rect x="0" y="876" width="991.9" height="69.1" fill="#FFFFFF"/>
+<line x1="40" y1="880" x2="951.9" y2="880" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="895.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: MAVLink = Micro Air Vehicle Link, the PX4 telemetry and command protocol · MAVSDK = MAVLink software development kit · PX4 = PX4 Autopilot, the open-source</text>
+<text x="40" y="910.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">flight-control software candidate for SUS-A1 · ROS = Robot Operating System (ROS 2) · SITL = software-in-the-loop simulation · SSF-nnn = safety-significant software</text>
+<text x="40" y="924.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">function record (safety/software/) · SUS-A1 = dockable observation UAV · SysML = Systems Modeling Language (SysML v2) · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

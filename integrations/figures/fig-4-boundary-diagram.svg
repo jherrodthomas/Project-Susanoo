@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1483.7" height="707.6" viewBox="0 0 1483.7 707.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 4 · Boundary diagram</title>
+<desc>Inside: the PX4 flight controller and the integration manager with its command adapter. Every IF-PX4 interface is numbered as in the table.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1483.7" height="624" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 4 · Boundary diagram</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Inside: the PX4 flight controller and the integration manager with its command adapter. Every IF-PX4 interface is numbered as in the table.</text>
+<text x="1443.7" y="44" font-size="11" fill="#475569" text-anchor="end">architecture/item-definition.yaml</text>
+<line x1="40" y1="85" x2="1443.7" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 109)">
+<rect x="620.1" y="210" width="777.6" height="208.7" rx="12" fill="none" stroke="#C2410C" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M1187.7 304 L1182.7 304 Q1177.7 304 1177.7 299 L1177.7 267 Q1177.7 260 1170.7 260 L864.5 260 Q857.5 260 857.5 267 L857.5 332.3 Q857.5 337.3 852.5 337.3 L847.5 337.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1187.7 314 L1174.7 314 Q1167.7 314 1167.7 307 L1167.7 299 Q1167.7 292 1160.7 292 L874.5 292 Q867.5 292 867.5 299 L867.5 343 Q867.5 350 860.5 350 L847.5 350" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M217.1 286 L566.1 286 Q573.1 286 573.1 293 L573.1 343 Q573.1 350 580.1 350 L638.1 350" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M217.1 375 L608.1 375 Q615.1 375 622.1 375 L638.1 375.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M847.5 362.7 L870.5 362.7 Q877.5 362.7 877.5 355.7 L877.5 331 Q877.5 324 884.5 324 L1187.7 324" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M847.5 375.3 L880.5 375.3 Q887.5 375.3 887.5 368.3 L887.5 363 Q887.5 356 894.5 356 L1160.7 356 Q1167.7 356 1167.7 349 L1167.7 341 Q1167.7 334 1174.7 334 L1187.7 334" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M217.1 44 L620.1 44" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M847.5 388 L1170.7 388 Q1177.7 388 1177.7 381 L1177.7 349 Q1177.7 344 1182.7 344 L1187.7 344" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)" marker-start="url(#arr-ink)"/>
+<path d="M217.1 260 L232.1 260 Q239.1 260 239.1 253 L239.1 153 Q239.1 146 246.1 146 L620.1 146" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)" marker-start="url(#arr-ink)"/>
+<rect x="632.1" y="222" width="217.8" height="22" rx="11" fill="#C2410C" stroke="none" stroke-width="0"/>
+<text x="741" y="237" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">BOUNDARY · PX4 INTEGRATION</text>
+<rect x="6" y="235" width="211.1" height="76" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="18" y="247" width="74.8" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="55.4" y="258.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<text x="18" y="281" font-size="12.5" fill="#0F172A" font-weight="700">UAV dock, retention, charging</text>
+<text x="18" y="297" font-size="12.5" fill="#0F172A" font-weight="700">and release</text>
+<rect x="18.7" y="337" width="198.4" height="76" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="30.7" y="349" width="74.8" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="68.1" y="360.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-CTL</text>
+<text x="30.7" y="383" font-size="12.5" fill="#0F172A" font-weight="700">Mission, motion and balance</text>
+<text x="30.7" y="399" font-size="12.5" fill="#0F172A" font-weight="700">control</text>
+<rect x="21.4" y="6" width="195.7" height="76" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="33.4" y="18" width="74.8" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="70.8" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1-NAV</text>
+<text x="33.4" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Navigation sensors, camera</text>
+<text x="33.4" y="68" font-size="12.5" fill="#0F172A" font-weight="700">and telemetry</text>
+<rect x="1187.7" y="294" width="192" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="1199.7" y="306" width="67.7" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="1233.6" y="317.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1-FC</text>
+<text x="1199.7" y="340" font-size="12.5" fill="#0F172A" font-weight="700">PX4-based flight controller</text>
+<rect x="638.1" y="324.7" width="209.4" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="650.1" y="336.7" width="74.8" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="687.5" y="348.1" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
+<text x="650.1" y="370.7" font-size="12.5" fill="#0F172A" font-weight="700">Integration manager and PX4</text>
+<text x="650.1" y="386.7" font-size="12.5" fill="#0F172A" font-weight="700">command adapter</text>
+<rect x="620.1" y="6" width="172.7" height="76" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="632.1" y="18" width="74.8" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="669.5" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<text x="632.1" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Pilot station, restraints,</text>
+<text x="632.1" y="68" font-size="12.5" fill="#0F172A" font-weight="700">displays and controls</text>
+<rect x="620.1" y="108" width="168.7" height="76" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="632.1" y="120" width="74.8" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="669.5" y="131.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1-PWR</text>
+<text x="632.1" y="154" font-size="12.5" fill="#0F172A" font-weight="700">UAV battery and power</text>
+<text x="632.1" y="170" font-size="12.5" fill="#0F172A" font-weight="700">management</text>
+<rect x="900.4" y="263" width="254.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="903.4" y="264" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="912.2" y="275.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="925.1" y="276" font-size="10.5" fill="#475569">IF-PX4-001 flight state, position and status</text>
+<rect x="907.4" y="295" width="240.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="910.4" y="296" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="919.2" y="307.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="932" y="308" font-size="10.5" fill="#475569">IF-PX4-002 UAV health and arming state</text>
+<rect x="298.9" y="291" width="234.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="301.9" y="292" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="310.7" y="303.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3</text>
+<text x="323.5" y="304" font-size="10.5" fill="#475569">IF-PX4-003 dock occupied and retained</text>
+<rect x="279.1" y="380" width="274" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="282.1" y="381" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="290.9" y="392.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">4</text>
+<text x="303.8" y="393" font-size="10.5" fill="#475569">IF-PX4-004 walker posture and stationary state</text>
+<rect x="916.4" y="327" width="222.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="919.4" y="328" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="928.2" y="339.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">5</text>
+<text x="941" y="340" font-size="10.5" fill="#475569">IF-PX4-005 launch permit and revoke</text>
+<rect x="915.9" y="359" width="223.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="918.9" y="360" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="927.7" y="371.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">6</text>
+<text x="940.5" y="372" font-size="10.5" fill="#475569">IF-PX4-006 recovery and abort intent</text>
+<rect x="296.2" y="49" width="239.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="299.2" y="50" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="308" y="61.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">7</text>
+<text x="320.8" y="62" font-size="10.5" fill="#475569">IF-PX4-007 UAV video and mission cues</text>
+<rect x="895.5" y="391" width="264.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="898.5" y="392" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="907.3" y="403.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">8</text>
+<text x="920.2" y="404" font-size="10.5" fill="#475569">IF-PX4-008 fault and contingency notification</text>
+<rect x="290.9" y="151" width="250.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="293.9" y="152" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="302.7" y="163.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">9</text>
+<text x="315.6" y="164" font-size="10.5" fill="#475569">IF-PX4-009 power and charging handshake</text>
+</g>
+<rect x="40" y="563" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="62" y="573" font-size="11" fill="#475569">External entity</text>
+<rect x="150" y="563" width="14" height="12" rx="3" fill="none" stroke="#C2410C" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="172" y="573" font-size="11" fill="#475569">Analysis boundary</text>
+<rect x="278.4" y="563" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="300.4" y="573" font-size="11" fill="#475569">Software-intensive element</text>
+<rect x="451.1" y="563" width="14" height="12" rx="3" fill="#475569" stroke="none" stroke-width="1.2"/>
+<text x="473.1" y="573" font-size="11" fill="#475569">1 · numbered crossing (see table)</text>
+<text x="40" y="595" font-size="10.5" fill="#94A3B8">Generated by tools/figures/integrations_readme.py from the item definition, PX4Integration.sysml, SSFs and SITL results. Proposed integration: not implemented, integrated or verified; SITL is synthetic with no evidence credit.</text>
+<g class="terms" data-base-h="624">
+<rect x="0" y="624" width="1483.7" height="83.6" fill="#FFFFFF"/>
+<line x1="40" y1="628" x2="1443.7" y2="628" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="643.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: IF-nnn = interface in the item definition (architecture/item-definition.yaml) · IF-PX4-nnn = PX4 integration interface (integrations/px4/interface-contract.md) · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SITL</text>
+<text x="40" y="658.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">= software-in-the-loop simulation · SSF-nnn = safety-significant software function record (safety/software/) · SUS-A1 = dockable observation UAV · SUS-A1-FC = PX4-based flight controller · SUS-A1-NAV = navigation sensors, camera and telemetry · SUS-A1-PWR =</text>
+<text x="40" y="672.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">UAV battery and power management · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK = UAV dock, retention, charging and release · SUS-M1-PIL = pilot station, restraints, displays and</text>
+<text x="40" y="687.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">controls · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

@@ -20,6 +20,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - .
   - concept
   - integrations/px4
+  - integrations           # generated README (tools/figures/integrations_readme.py)
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -196,14 +197,6 @@ folders:
       - {img: docs/wiki/images/safety-lifecycle.svg, caption: "Safety lifecycle process map (illustrative)"}
       - {img: docs/wiki/images/responsibility-swimlanes.svg, caption: "Responsibility swimlanes (illustrative)"}
       - {img: docs/wiki/images/analysis-dependencies.svg, caption: "Analysis dependencies (illustrative)"}
-
-  integrations:
-    title: Integrations
-    purpose: Integration of third-party software into SUS-I1. Today this is the PX4 flight stack for SUS-A1.
-    hero: {img: integrations/px4/figures/fig-2-boundary-diagram.svg, caption: "PX4 integration boundary", link: integrations/px4/README.md}
-    gallery:
-      - {img: integrations/px4/figures/fig-3-sysml-internal-block.svg, caption: "PX4 interfaces (SysML internal block)", link: integrations/px4/README.md}
-      - {img: integrations/px4/figures/fig-4-sysml-state-machine.svg, caption: "UAV states (SysML state machine)", link: integrations/px4/README.md}
 
   models/sysml:
     hero: {img: docs/wiki/images/sysml-v02-hierarchy.svg, caption: "Part hierarchy (view V-02)"}
