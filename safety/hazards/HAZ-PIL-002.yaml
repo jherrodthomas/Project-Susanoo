@@ -36,7 +36,7 @@ initial_risk:
   probability: C
   rac: 2C
   risk_level: Serious
-  rationale: Preliminary, drafted from failure search SF-01 edge cases EC-01 to EC-04 and EC-06 (synthetic, no evidence credit). A drop of about
+  rationale: Preliminary, drafted from failure search SF-01 edge cases EC-01 to EC-05 (synthetic, no evidence credit). A drop of about
     1.2 m onto rest stops can cause permanent partial disability; supply loss is credible over the item life and
     nothing yet prevents the fall.
   definitions: SUS-RISKDEF-001
@@ -113,6 +113,8 @@ hazmat: not-applicable
 assumptions:
 - Concept configuration SUS-I1-C001; no hardware design selected
 - Drop height and speed come from the reduced-order plant (sim/plant/walker.py); they rank the risk, they are not evidence
+- The level-2 MuJoCo model reproduces the drop in every cross-checked case (about 4.1 m/s against 4.8 m/s at level 1;
+  sim/results/l2-crosscheck.md); still synthetic
 open_actions:
 - Set the engagement time and holding load in SYS-009 once the actuation trade closes (Task 203)
 - Set the injurious vertical impact speed in the Health Hazard Analysis (Task 207); the simulation uses a 1.0 m/s placeholder

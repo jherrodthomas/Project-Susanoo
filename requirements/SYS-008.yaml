@@ -1,8 +1,8 @@
 schema: susanoo/requirement/v0.1
 id: SYS-008
 title: Stability envelope protection
-statement: The walker shall limit commanded motion and payload to a verified static and dynamic stability envelope
-  and provide pilot protection in a fall or overturn.
+statement: The walker shall limit commanded motion and payload to a verified static and dynamic stability envelope,
+  including a terrain slope limit of 20 degrees, and provide pilot protection in a fall or overturn.
 status: candidate
 source:
   documents:
@@ -26,4 +26,5 @@ verification:
   evidence_ids: []
   disposition: open
 tbd:
-- Numeric thresholds and timing pending hazard analysis and trade studies
+- The CoM offset (payload and gait) allowed at the 20 degree slope limit (decision DQ-011)
+- Other numeric thresholds and timing pending hazard analysis and trade studies

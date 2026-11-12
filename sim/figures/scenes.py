@@ -27,7 +27,7 @@ ORIGIN = (360, 400)   # px of the support centre on the ground
 
 SCENES = [
     {"id": "SC-01", "hazard": "HAZ-WLK-002", "title": "Slow supply leak on a slope: balance lost before the hold engages",
-     "source": "edge case EC-08 (search SF-01)", "edge": ("SF-01", "EC-08")},
+     "source": "edge case EC-07 (search SF-01)", "edge": ("SF-01", "EC-07")},
     {"id": "SC-02", "hazard": "HAZ-SAF-001", "title": "Protective stop removes leg force instead of crouching",
      "source": "fault FLT-03", "performed": {"fault": "FLT-03"}, "intended": {"stop_request_s": 1.0}},
     {"id": "SC-03", "hazard": "HAZ-WLK-001", "title": "Frozen posture feedback with no staleness monitor",
@@ -192,7 +192,9 @@ def page(metas: list) -> str:
            f"No-fault capability by slope: {nominal}.\n\n",
            "Results: [plant results](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/plant-results.md) · "
            "[search SF-01](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/search-SF-01.md) · "
-           "[edge cases](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/edge-cases.md)\n\n## Scenes\n\n"]
+           "[edge cases](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/edge-cases.md) · "
+           "[level-1 vs level-2 MuJoCo cross-check](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/l2-crosscheck.md)"
+           "\n\n## Scenes\n\n"]
     for m in metas:
         out.append(f"### {m['id']} · {m['title']}\n\n{m['hazard']} · {m['source']} · performed **{m['performed']}**"
                    f"{' at ' + str(m['mishap_t']) + ' s' if m['mishap_t'] else ''}, intended {m['intended']}.\n\n"

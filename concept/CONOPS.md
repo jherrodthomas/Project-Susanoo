@@ -12,7 +12,7 @@ Walker: chassis, legs, feet, manipulation arms, operator station, actuation and 
 Pilot (commands and emergency intervention), safety observer (exclusion zone and intervention), mission supervisor (operational limits), maintainer (isolation and service), systems lead (architecture), safety lead (hazard management), UAV lead (aircraft assurance), verification lead (test evidence).
 
 ## 4. Assumptions and operating envelope
-Initial operation is digital simulation and supported bench rigs. Terrain slope, payload, speed, center of gravity, endurance, wind, docking tolerance and radio range are TBD. Future occupied tests require independent safety review, mechanical supports, egress procedures and test authorization. Amphibious mobility is excluded.
+Initial operation is digital simulation and supported bench rigs. The walker's slope limit is 20 degrees (lead decision DQ-010, 2026-11-12), valid for a centre of mass close over the stance foot; the payload and gait offset that goes with it is open (DQ-011). Payload, speed, center of gravity, endurance, wind, docking tolerance and radio range are TBD. Future occupied tests require independent safety review, mechanical supports, egress procedures and test authorization. Amphibious mobility is excluded.
 
 ## 5. Modes
 | ID | Mode | Entry / function | Safe transition concern |

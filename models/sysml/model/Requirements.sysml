@@ -40,7 +40,7 @@ package SusanooRequirements {
         @HazardRef { ids = ("HAZ-PWR-001"); }
     }
     requirement <'SYS-008'> stabilityEnvelopeProtection : SystemRequirement {
-        doc /* The walker shall limit commanded motion and payload to a verified static and dynamic stability envelope and provide pilot protection in a fall or overturn. */
+        doc /* The walker shall limit commanded motion and payload to a verified static and dynamic stability envelope, including a terrain slope limit of 20 degrees, and provide pilot protection in a fall or overturn. */
         @Source { record = "requirements/SYS-008.yaml"; }
         @HazardRef { ids = ("HAZ-WLK-002"); }
     }

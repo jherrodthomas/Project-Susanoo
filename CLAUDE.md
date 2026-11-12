@@ -25,6 +25,7 @@ Susanoo is a simulation-first demonstrator: a human-piloted walker (SUS-M1) and 
   python -m sim.plant.report && python -m sim.search.search && python -m sim.figures.scenes
   python -m sim.figures.uav_scenes     # from committed PX4 SITL results; re-running SITL: sim/README.md
   python -m sim.scenes3d.export_scene && python -m sim.scenes3d.build_pages   # 3D; stills: sim/README.md
+  python -m sim.mujoco.crosscheck      # level 1 vs level 2; needs sim/mujoco/requirements.txt
   python -m unittest discover -s sim/tests -t .
   python3 tools/gen_safety_docs.py && python3 tools/figures/build_figures.py   # 882E tree, concept, PX4 figures (npm ci --prefix tools/figures once)
   python3 tools/check_readme_diagrams.py   # folder README standard (framework/documentation-standard.md)
