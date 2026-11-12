@@ -1,0 +1,911 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1216" height="2062.6" viewBox="0 0 1216 2062.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Task 205 · System Hazard Analysis (interfaces) worksheet</title>
+<desc>Spreadsheet view of Task 205 · System Hazard Analysis (interfaces), generated from architecture/item-definition.yaml (interfaces).</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1216" height="1863" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1216" height="48" rx="0" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="16" y="30" font-size="16" fill="#FFFFFF" font-weight="700">Task 205 · System Hazard Analysis (interfaces) — worksheet</text>
+<text x="520.8" y="30" font-size="11" fill="#94A3B8">sha.csv · generated from architecture/item-definition.yaml (interfaces)</text>
+<rect x="1100.8" y="14" width="103.2" height="20" rx="10" fill="#334155" stroke="none" stroke-width="0"/>
+<text x="1109.8" y="28" font-size="10.5" fill="#FFFFFF">Nothing accepted</text>
+<rect x="932.4" y="14" width="160.5" height="20" rx="10" fill="#B45309" stroke="none" stroke-width="0"/>
+<text x="941.4" y="28" font-size="10.5" fill="#FFFFFF">AI-drafted I0 · not reviewed</text>
+<rect x="0" y="48" width="1216" height="18" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="129" y="61" font-size="10" fill="#64748B" text-anchor="middle">A</text>
+<line x1="34" y1="48" x2="34" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="324" y="61" font-size="10" fill="#64748B" text-anchor="middle">B</text>
+<line x1="224" y1="48" x2="224" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="524" y="61" font-size="10" fill="#64748B" text-anchor="middle">C</text>
+<line x1="424" y1="48" x2="424" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="679" y="61" font-size="10" fill="#64748B" text-anchor="middle">D</text>
+<line x1="624" y1="48" x2="624" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="864" y="61" font-size="10" fill="#64748B" text-anchor="middle">E</text>
+<line x1="734" y1="48" x2="734" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1059" y="61" font-size="10" fill="#64748B" text-anchor="middle">F</text>
+<line x1="994" y1="48" x2="994" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1169" y="61" font-size="10" fill="#64748B" text-anchor="middle">G</text>
+<line x1="1124" y1="48" x2="1124" y2="66" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="0" y="66" width="1216" height="34" rx="0" fill="#1E293B" stroke="none" stroke-width="0"/>
+<text x="17" y="87" font-size="10" fill="#94A3B8" text-anchor="middle">1</text>
+<text x="42" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Interface</text>
+<line x1="34" y1="66" x2="34" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="232" y="81" font-size="11" fill="#F8FAFC" font-weight="700">From</text>
+<line x1="224" y1="66" x2="224" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="432" y="81" font-size="11" fill="#F8FAFC" font-weight="700">To</text>
+<line x1="424" y1="66" x2="424" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="632" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Kind</text>
+<line x1="624" y1="66" x2="624" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="742" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Exchange</text>
+<line x1="734" y1="66" x2="734" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="1002" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Hazards</text>
+<line x1="994" y1="66" x2="994" y2="100" stroke="#334155" stroke-width="1"/>
+<text x="1132" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Status</text>
+<line x1="1124" y1="66" x2="1124" y2="100" stroke="#334155" stroke-width="1"/>
+<rect x="0" y="100" width="1216" height="44" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="100" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="117" font-size="10" fill="#64748B" text-anchor="middle">2</text>
+<line x1="34" y1="100" x2="34" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="100" x2="224" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="100" x2="424" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="100" x2="624" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="100" x2="734" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="100" x2="994" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="100" x2="1124" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="144" x2="1216" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="100" x2="224" y2="144" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="115" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-001</text>
+<text x="42" y="131" font-size="10.5" fill="#64748B">Pilot controls and displays</text>
+<text x="232" y="115" font-size="11.5" fill="#0F172A">EXT-PILOT · Pilot</text>
+<text x="432" y="115" font-size="11.5" fill="#0F172A">SUS-M1-PIL · Pilot station,</text>
+<text x="432" y="130" font-size="11.5" fill="#0F172A">restraints, displays and controls</text>
+<rect x="632" y="106" width="40" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="118" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">human</text>
+<rect x="676" y="106" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="681" y="118" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="115" font-size="11.5" fill="#0F172A">commands, state, warnings</text>
+<rect x="1002" y="106" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="118" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-001</text>
+<rect x="1132" y="105" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="117.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="144" width="1216" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="144" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="161" font-size="10" fill="#64748B" text-anchor="middle">3</text>
+<line x1="34" y1="144" x2="34" y2="203" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="144" x2="224" y2="203" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="144" x2="424" y2="203" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="144" x2="624" y2="203" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="144" x2="734" y2="203" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="144" x2="994" y2="203" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="144" x2="1124" y2="203" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="203" x2="1216" y2="203" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="144" x2="224" y2="203" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="159" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-002</text>
+<text x="42" y="175" font-size="10.5" fill="#64748B">Engine-generator to distribution</text>
+<text x="232" y="159" font-size="11.5" fill="#0F172A">SUS-M1-PWR-GEN ·</text>
+<text x="232" y="174" font-size="11.5" fill="#0F172A">Engine-generator and governor</text>
+<text x="232" y="189" font-size="11.5" fill="#0F172A">(alternative B)</text>
+<text x="432" y="159" font-size="11.5" fill="#0F172A">SUS-M1-PWR-DIST · Protected</text>
+<text x="432" y="174" font-size="11.5" fill="#0F172A">power distribution</text>
+<rect x="632" y="150" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="162" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">energy</text>
+<text x="742" y="159" font-size="11.5" fill="#0F172A">electric power, voltage, thermal state</text>
+<rect x="1002" y="150" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="162" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-003</text>
+<rect x="1132" y="149" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1140" y="161.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="203" width="1216" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="203" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="220" font-size="10" fill="#64748B" text-anchor="middle">4</text>
+<line x1="34" y1="203" x2="34" y2="262" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="203" x2="224" y2="262" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="203" x2="424" y2="262" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="203" x2="624" y2="262" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="203" x2="734" y2="262" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="203" x2="994" y2="262" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="203" x2="1124" y2="262" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="262" x2="1216" y2="262" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="203" x2="224" y2="262" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="218" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-003</text>
+<text x="42" y="234" font-size="10.5" fill="#64748B">Battery to distribution</text>
+<text x="232" y="218" font-size="11.5" fill="#0F172A">SUS-M1-PWR-BAT · Battery pack,</text>
+<text x="232" y="233" font-size="11.5" fill="#0F172A">BMS and contactors (alternative</text>
+<text x="232" y="248" font-size="11.5" fill="#0F172A">B)</text>
+<text x="432" y="218" font-size="11.5" fill="#0F172A">SUS-M1-PWR-DIST · Protected</text>
+<text x="432" y="233" font-size="11.5" fill="#0F172A">power distribution</text>
+<rect x="632" y="209" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="221" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">energy</text>
+<rect x="682" y="209" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="687" y="221" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="218" font-size="11.5" fill="#0F172A">bidirectional power, BMS state</text>
+<rect x="1002" y="209" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="221" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-002</text>
+<rect x="1132" y="208" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1140" y="220.5" font-size="10.5" fill="#075985">candidate</text>
+<rect x="0" y="262" width="1216" height="74" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="262" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="279" font-size="10" fill="#64748B" text-anchor="middle">5</text>
+<line x1="34" y1="262" x2="34" y2="336" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="262" x2="224" y2="336" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="262" x2="424" y2="336" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="262" x2="624" y2="336" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="262" x2="734" y2="336" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="262" x2="994" y2="336" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="262" x2="1124" y2="336" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="336" x2="1216" y2="336" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="262" x2="224" y2="336" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="277" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-004</text>
+<text x="42" y="293" font-size="10.5" fill="#64748B">Control to joint actuators</text>
+<text x="232" y="277" font-size="11.5" fill="#0F172A">SUS-M1-CTL · Mission, motion</text>
+<text x="232" y="292" font-size="11.5" fill="#0F172A">and balance control</text>
+<text x="432" y="277" font-size="11.5" fill="#0F172A">SUS-M1-WLK · Chassis, legs,</text>
+<text x="432" y="292" font-size="11.5" fill="#0F172A">joint actuators and stability</text>
+<text x="432" y="307" font-size="11.5" fill="#0F172A">sensing</text>
+<rect x="632" y="268" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="280" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<rect x="670" y="268" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="675" y="280" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">energy</text>
+<text x="742" y="277" font-size="11.5" fill="#0F172A">torque or pressure commands, joint feedback</text>
+<rect x="1002" y="268" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="280" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-001</text>
+<rect x="1002" y="287" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="299" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="1002" y="306" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="318" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-002</text>
+<rect x="1132" y="267" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="279.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="336" width="1216" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="336" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="353" font-size="10" fill="#64748B" text-anchor="middle">6</text>
+<line x1="34" y1="336" x2="34" y2="395" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="336" x2="224" y2="395" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="336" x2="424" y2="395" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="336" x2="624" y2="395" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="336" x2="734" y2="395" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="336" x2="994" y2="395" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="336" x2="1124" y2="395" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="395" x2="1216" y2="395" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="336" x2="224" y2="395" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="351" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-005</text>
+<text x="42" y="367" font-size="10.5" fill="#64748B">Safety monitor to power</text>
+<text x="232" y="351" font-size="11.5" fill="#0F172A">SUS-M1-SAF · Independent</text>
+<text x="232" y="366" font-size="11.5" fill="#0F172A">safety monitor, protective stop</text>
+<text x="232" y="381" font-size="11.5" fill="#0F172A">and isolation</text>
+<text x="432" y="351" font-size="11.5" fill="#0F172A">SUS-M1-PWR · Power generation,</text>
+<text x="432" y="366" font-size="11.5" fill="#0F172A">storage, distribution and thermal</text>
+<text x="432" y="381" font-size="11.5" fill="#0F172A">control</text>
+<rect x="632" y="342" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="354" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<rect x="670" y="342" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="675" y="354" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">energy</text>
+<text x="742" y="351" font-size="11.5" fill="#0F172A">inhibit, isolation</text>
+<rect x="1002" y="342" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="354" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-SAF-001</text>
+<rect x="1002" y="361" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="373" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-002</text>
+<rect x="1132" y="341" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="353.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="395" width="1216" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="395" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="412" font-size="10" fill="#64748B" text-anchor="middle">7</text>
+<line x1="34" y1="395" x2="34" y2="450" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="395" x2="224" y2="450" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="395" x2="424" y2="450" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="395" x2="624" y2="450" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="395" x2="734" y2="450" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="395" x2="994" y2="450" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="395" x2="1124" y2="450" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="450" x2="1216" y2="450" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="395" x2="224" y2="450" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="410" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-006</text>
+<text x="42" y="426" font-size="10.5" fill="#64748B">Walker dock to UAV</text>
+<text x="232" y="410" font-size="11.5" fill="#0F172A">SUS-M1-DCK · UAV dock,</text>
+<text x="232" y="425" font-size="11.5" fill="#0F172A">retention, charging and release</text>
+<text x="432" y="410" font-size="11.5" fill="#0F172A">SUS-A1 · Dockable observation</text>
+<text x="432" y="425" font-size="11.5" fill="#0F172A">UAV</text>
+<rect x="632" y="401" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="413" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">mechanical</text>
+<rect x="632" y="420" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="432" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">energy</text>
+<rect x="682" y="420" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="687" y="432" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="410" font-size="11.5" fill="#0F172A">retention, charging, data, release</text>
+<rect x="1002" y="401" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="413" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-DCK-001</text>
+<rect x="1002" y="420" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="432" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-DCK-002</text>
+<rect x="1132" y="400" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="412.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="450" width="1216" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="450" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="467" font-size="10" fill="#64748B" text-anchor="middle">8</text>
+<line x1="34" y1="450" x2="34" y2="509" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="450" x2="224" y2="509" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="450" x2="424" y2="509" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="450" x2="624" y2="509" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="450" x2="734" y2="509" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="450" x2="994" y2="509" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="450" x2="1124" y2="509" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="509" x2="1216" y2="509" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="450" x2="224" y2="509" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="465" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-007</text>
+<text x="42" y="481" font-size="10.5" fill="#64748B">UAV in airspace</text>
+<text x="232" y="465" font-size="11.5" fill="#0F172A">SUS-A1 · Dockable observation</text>
+<text x="232" y="480" font-size="11.5" fill="#0F172A">UAV</text>
+<text x="432" y="465" font-size="11.5" fill="#0F172A">EXT-AIRSPACE · Airspace,</text>
+<text x="432" y="480" font-size="11.5" fill="#0F172A">people and property under the</text>
+<text x="432" y="495" font-size="11.5" fill="#0F172A">UAV</text>
+<rect x="632" y="456" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="468" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">environment</text>
+<text x="742" y="465" font-size="11.5" fill="#0F172A">flight, exposure of people and property</text>
+<rect x="1002" y="456" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="468" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="1132" y="455" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="467.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="509" width="1216" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="509" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="526" font-size="10" fill="#64748B" text-anchor="middle">9</text>
+<line x1="34" y1="509" x2="34" y2="568" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="509" x2="224" y2="568" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="509" x2="424" y2="568" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="509" x2="624" y2="568" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="509" x2="734" y2="568" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="509" x2="994" y2="568" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="509" x2="1124" y2="568" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="568" x2="1216" y2="568" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="509" x2="224" y2="568" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="524" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-008</text>
+<text x="42" y="540" font-size="10.5" fill="#64748B">Maintainer to energy sources</text>
+<text x="232" y="524" font-size="11.5" fill="#0F172A">EXT-CREW · Ground crew and</text>
+<text x="232" y="539" font-size="11.5" fill="#0F172A">maintainers</text>
+<text x="432" y="524" font-size="11.5" fill="#0F172A">SUS-M1-PWR · Power generation,</text>
+<text x="432" y="539" font-size="11.5" fill="#0F172A">storage, distribution and thermal</text>
+<text x="432" y="554" font-size="11.5" fill="#0F172A">control</text>
+<rect x="632" y="515" width="40" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="527" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">human</text>
+<rect x="676" y="515" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="681" y="527" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">energy</text>
+<text x="742" y="524" font-size="11.5" fill="#0F172A">lockout, isolation, inspection, service</text>
+<rect x="1002" y="515" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="527" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-001</text>
+<rect x="1132" y="514" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="526.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="568" width="1216" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="568" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="585" font-size="10" fill="#64748B" text-anchor="middle">10</text>
+<line x1="34" y1="568" x2="34" y2="627" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="568" x2="224" y2="627" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="568" x2="424" y2="627" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="568" x2="624" y2="627" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="568" x2="734" y2="627" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="568" x2="994" y2="627" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="568" x2="1124" y2="627" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="627" x2="1216" y2="627" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="568" x2="224" y2="627" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="583" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-PX4-001</text>
+<text x="42" y="599" font-size="10.5" fill="#64748B">Flight state, position and status</text>
+<text x="232" y="583" font-size="11.5" fill="#0F172A">SUS-A1-FC · PX4-based flight</text>
+<text x="232" y="598" font-size="11.5" fill="#0F172A">controller</text>
+<text x="432" y="583" font-size="11.5" fill="#0F172A">SUS-I1-INT · Integration</text>
+<text x="432" y="598" font-size="11.5" fill="#0F172A">manager and PX4 command</text>
+<text x="432" y="613" font-size="11.5" fill="#0F172A">adapter</text>
+<rect x="632" y="574" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="586" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="583" font-size="11.5" fill="#0F172A">flight state, position, status; freshness and</text>
+<text x="742" y="598" font-size="11.5" fill="#0F172A">source validity</text>
+<rect x="1002" y="574" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="586" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="1132" y="573" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="585.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="627" width="1216" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="627" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="644" font-size="10" fill="#64748B" text-anchor="middle">11</text>
+<line x1="34" y1="627" x2="34" y2="686" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="627" x2="224" y2="686" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="627" x2="424" y2="686" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="627" x2="624" y2="686" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="627" x2="734" y2="686" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="627" x2="994" y2="686" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="627" x2="1124" y2="686" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="686" x2="1216" y2="686" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="627" x2="224" y2="686" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="642" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-PX4-002</text>
+<text x="42" y="658" font-size="10.5" fill="#64748B">UAV health and arming state</text>
+<text x="232" y="642" font-size="11.5" fill="#0F172A">SUS-A1-FC · PX4-based flight</text>
+<text x="232" y="657" font-size="11.5" fill="#0F172A">controller</text>
+<text x="432" y="642" font-size="11.5" fill="#0F172A">SUS-I1-INT · Integration</text>
+<text x="432" y="657" font-size="11.5" fill="#0F172A">manager and PX4 command</text>
+<text x="432" y="672" font-size="11.5" fill="#0F172A">adapter</text>
+<rect x="632" y="633" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="645" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="642" font-size="11.5" fill="#0F172A">health, arming state; disagreement handling</text>
+<rect x="1002" y="633" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="645" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-DCK-001</text>
+<rect x="1132" y="632" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="644.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="686" width="1216" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="686" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="703" font-size="10" fill="#64748B" text-anchor="middle">12</text>
+<line x1="34" y1="686" x2="34" y2="745" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="686" x2="224" y2="745" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="686" x2="424" y2="745" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="686" x2="624" y2="745" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="686" x2="734" y2="745" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="686" x2="994" y2="745" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="686" x2="1124" y2="745" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="745" x2="1216" y2="745" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="686" x2="224" y2="745" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="701" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-PX4-003</text>
+<text x="42" y="717" font-size="10.5" fill="#64748B">Dock occupied and retained</text>
+<text x="232" y="701" font-size="11.5" fill="#0F172A">SUS-M1-DCK · UAV dock,</text>
+<text x="232" y="716" font-size="11.5" fill="#0F172A">retention, charging and release</text>
+<text x="432" y="701" font-size="11.5" fill="#0F172A">SUS-I1-INT · Integration</text>
+<text x="432" y="716" font-size="11.5" fill="#0F172A">manager and PX4 command</text>
+<text x="432" y="731" font-size="11.5" fill="#0F172A">adapter</text>
+<rect x="632" y="692" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="704" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="701" font-size="11.5" fill="#0F172A">occupied/retained state with independent</text>
+<text x="742" y="716" font-size="11.5" fill="#0F172A">plausibility</text>
+<rect x="1002" y="692" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="704" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-DCK-002</text>
+<rect x="1132" y="691" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="703.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="745" width="1216" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="745" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="762" font-size="10" fill="#64748B" text-anchor="middle">13</text>
+<line x1="34" y1="745" x2="34" y2="804" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="745" x2="224" y2="804" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="745" x2="424" y2="804" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="745" x2="624" y2="804" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="745" x2="734" y2="804" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="745" x2="994" y2="804" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="745" x2="1124" y2="804" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="804" x2="1216" y2="804" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="745" x2="224" y2="804" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="760" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-PX4-004</text>
+<text x="42" y="776" font-size="10.5" fill="#64748B">Walker posture and stationary</text>
+<text x="42" y="789.5" font-size="10.5" fill="#64748B">state</text>
+<text x="232" y="760" font-size="11.5" fill="#0F172A">SUS-M1-CTL · Mission, motion</text>
+<text x="232" y="775" font-size="11.5" fill="#0F172A">and balance control</text>
+<text x="432" y="760" font-size="11.5" fill="#0F172A">SUS-I1-INT · Integration</text>
+<text x="432" y="775" font-size="11.5" fill="#0F172A">manager and PX4 command</text>
+<text x="432" y="790" font-size="11.5" fill="#0F172A">adapter</text>
+<rect x="632" y="751" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="763" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="760" font-size="11.5" fill="#0F172A">posture, stationary flag for the</text>
+<text x="742" y="775" font-size="11.5" fill="#0F172A">launch/recovery envelope</text>
+<rect x="1002" y="751" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="763" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="1132" y="750" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="762.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="804" width="1216" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="804" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="821" font-size="10" fill="#64748B" text-anchor="middle">14</text>
+<line x1="34" y1="804" x2="34" y2="863" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="804" x2="224" y2="863" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="804" x2="424" y2="863" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="804" x2="624" y2="863" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="804" x2="734" y2="863" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="804" x2="994" y2="863" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="804" x2="1124" y2="863" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="863" x2="1216" y2="863" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="804" x2="224" y2="863" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="819" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-PX4-005</text>
+<text x="42" y="835" font-size="10.5" fill="#64748B">Launch permit and revoke</text>
+<text x="232" y="819" font-size="11.5" fill="#0F172A">SUS-I1-INT · Integration</text>
+<text x="232" y="834" font-size="11.5" fill="#0F172A">manager and PX4 command</text>
+<text x="232" y="849" font-size="11.5" fill="#0F172A">adapter</text>
+<text x="432" y="819" font-size="11.5" fill="#0F172A">SUS-A1-FC · PX4-based flight</text>
+<text x="432" y="834" font-size="11.5" fill="#0F172A">controller</text>
+<rect x="632" y="810" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="822" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="819" font-size="11.5" fill="#0F172A">explicit, fail-closed launch authorization</text>
+<rect x="1002" y="810" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="822" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="1132" y="809" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="821.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="863" width="1216" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="863" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="880" font-size="10" fill="#64748B" text-anchor="middle">15</text>
+<line x1="34" y1="863" x2="34" y2="922" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="863" x2="224" y2="922" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="863" x2="424" y2="922" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="863" x2="624" y2="922" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="863" x2="734" y2="922" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="863" x2="994" y2="922" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="863" x2="1124" y2="922" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="922" x2="1216" y2="922" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="863" x2="224" y2="922" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="878" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-PX4-006</text>
+<text x="42" y="894" font-size="10.5" fill="#64748B">Recovery and abort intent</text>
+<text x="232" y="878" font-size="11.5" fill="#0F172A">SUS-I1-INT · Integration</text>
+<text x="232" y="893" font-size="11.5" fill="#0F172A">manager and PX4 command</text>
+<text x="232" y="908" font-size="11.5" fill="#0F172A">adapter</text>
+<text x="432" y="878" font-size="11.5" fill="#0F172A">SUS-A1-FC · PX4-based flight</text>
+<text x="432" y="893" font-size="11.5" fill="#0F172A">controller</text>
+<rect x="632" y="869" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="881" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="878" font-size="11.5" fill="#0F172A">recovery request, abort; contingency on lost</text>
+<text x="742" y="893" font-size="11.5" fill="#0F172A">link</text>
+<rect x="1002" y="869" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="881" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="1132" y="868" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="880.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="922" width="1216" height="44" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="922" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="939" font-size="10" fill="#64748B" text-anchor="middle">16</text>
+<line x1="34" y1="922" x2="34" y2="966" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="922" x2="224" y2="966" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="922" x2="424" y2="966" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="922" x2="624" y2="966" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="922" x2="734" y2="966" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="922" x2="994" y2="966" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="922" x2="1124" y2="966" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="966" x2="1216" y2="966" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="922" x2="224" y2="966" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="937" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-PX4-007</text>
+<text x="42" y="953" font-size="10.5" fill="#64748B">UAV video and mission cues</text>
+<text x="232" y="937" font-size="11.5" fill="#0F172A">SUS-A1-NAV · Navigation</text>
+<text x="232" y="952" font-size="11.5" fill="#0F172A">sensors, camera and telemetry</text>
+<text x="432" y="937" font-size="11.5" fill="#0F172A">SUS-M1-PIL · Pilot station,</text>
+<text x="432" y="952" font-size="11.5" fill="#0F172A">restraints, displays and controls</text>
+<rect x="632" y="928" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="940" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="937" font-size="11.5" fill="#0F172A">video, mission cues; latency, distraction</text>
+<rect x="1132" y="927" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="939.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="966" width="1216" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="966" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="983" font-size="10" fill="#64748B" text-anchor="middle">17</text>
+<line x1="34" y1="966" x2="34" y2="1025" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="966" x2="224" y2="1025" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="966" x2="424" y2="1025" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="966" x2="624" y2="1025" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="966" x2="734" y2="1025" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="966" x2="994" y2="1025" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="966" x2="1124" y2="1025" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1025" x2="1216" y2="1025" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="966" x2="224" y2="1025" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="981" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-PX4-008</text>
+<text x="42" y="997" font-size="10.5" fill="#64748B">Fault and contingency notification</text>
+<text x="232" y="981" font-size="11.5" fill="#0F172A">SUS-I1-INT · Integration</text>
+<text x="232" y="996" font-size="11.5" fill="#0F172A">manager and PX4 command</text>
+<text x="232" y="1011" font-size="11.5" fill="#0F172A">adapter</text>
+<text x="432" y="981" font-size="11.5" fill="#0F172A">SUS-A1-FC · PX4-based flight</text>
+<text x="432" y="996" font-size="11.5" fill="#0F172A">controller</text>
+<rect x="632" y="972" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="984" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="981" font-size="11.5" fill="#0F172A">time-stamped, prioritised fault notifications</text>
+<rect x="1002" y="972" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="984" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="1132" y="971" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="983.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1025" width="1216" height="44" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1025" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1042" font-size="10" fill="#64748B" text-anchor="middle">18</text>
+<line x1="34" y1="1025" x2="34" y2="1069" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1025" x2="224" y2="1069" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1025" x2="424" y2="1069" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1025" x2="624" y2="1069" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1025" x2="734" y2="1069" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1025" x2="994" y2="1069" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1025" x2="1124" y2="1069" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1069" x2="1216" y2="1069" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1025" x2="224" y2="1069" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1040" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-PX4-009</text>
+<text x="42" y="1056" font-size="10.5" fill="#64748B">Power and charging handshake</text>
+<text x="232" y="1040" font-size="11.5" fill="#0F172A">SUS-M1-DCK · UAV dock,</text>
+<text x="232" y="1055" font-size="11.5" fill="#0F172A">retention, charging and release</text>
+<text x="432" y="1040" font-size="11.5" fill="#0F172A">SUS-A1-PWR · UAV battery and</text>
+<text x="432" y="1055" font-size="11.5" fill="#0F172A">power management</text>
+<rect x="632" y="1031" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1043" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">energy</text>
+<rect x="682" y="1031" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="687" y="1043" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="1040" font-size="11.5" fill="#0F172A">charging handshake, rotor inhibit, energy</text>
+<text x="742" y="1055" font-size="11.5" fill="#0F172A">isolation</text>
+<rect x="1002" y="1031" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1043" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-DCK-001</text>
+<rect x="1132" y="1030" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1042.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1069" width="1216" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1069" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1086" font-size="10" fill="#64748B" text-anchor="middle">19</text>
+<line x1="34" y1="1069" x2="34" y2="1128" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1069" x2="224" y2="1128" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1069" x2="424" y2="1128" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1069" x2="624" y2="1128" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1069" x2="734" y2="1128" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1069" x2="994" y2="1128" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1069" x2="1124" y2="1128" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1128" x2="1216" y2="1128" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1069" x2="224" y2="1128" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1084" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-010</text>
+<text x="42" y="1100" font-size="10.5" fill="#64748B">Walker on terrain</text>
+<text x="232" y="1084" font-size="11.5" fill="#0F172A">SUS-M1-WLK · Chassis, legs,</text>
+<text x="232" y="1099" font-size="11.5" fill="#0F172A">joint actuators and stability</text>
+<text x="232" y="1114" font-size="11.5" fill="#0F172A">sensing</text>
+<text x="432" y="1084" font-size="11.5" fill="#0F172A">EXT-TERRAIN · Terrain and</text>
+<text x="432" y="1099" font-size="11.5" fill="#0F172A">obstacles</text>
+<rect x="632" y="1075" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1087" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">mechanical</text>
+<rect x="632" y="1094" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1106" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">environment</text>
+<text x="742" y="1084" font-size="11.5" fill="#0F172A">contact loads, terrain sensing</text>
+<rect x="1002" y="1075" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1087" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="1132" y="1074" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1086.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1128" width="1216" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1128" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1145" font-size="10" fill="#64748B" text-anchor="middle">20</text>
+<line x1="34" y1="1128" x2="34" y2="1187" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1128" x2="224" y2="1187" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1128" x2="424" y2="1187" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1128" x2="624" y2="1187" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1128" x2="734" y2="1187" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1128" x2="994" y2="1187" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1128" x2="1124" y2="1187" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1187" x2="1216" y2="1187" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1128" x2="224" y2="1187" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1143" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-011</text>
+<text x="42" y="1159" font-size="10.5" fill="#64748B">Observer stop</text>
+<text x="232" y="1143" font-size="11.5" fill="#0F172A">EXT-OBSERVER · Safety</text>
+<text x="232" y="1158" font-size="11.5" fill="#0F172A">observer</text>
+<text x="432" y="1143" font-size="11.5" fill="#0F172A">SUS-M1-SAF · Independent</text>
+<text x="432" y="1158" font-size="11.5" fill="#0F172A">safety monitor, protective stop</text>
+<text x="432" y="1173" font-size="11.5" fill="#0F172A">and isolation</text>
+<rect x="632" y="1134" width="40" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1146" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">human</text>
+<rect x="676" y="1134" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="681" y="1146" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="1143" font-size="11.5" fill="#0F172A">independent stop request</text>
+<rect x="1002" y="1134" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1146" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-SAF-001</text>
+<rect x="1132" y="1133" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1145.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1187" width="1216" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1187" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1204" font-size="10" fill="#64748B" text-anchor="middle">21</text>
+<line x1="34" y1="1187" x2="34" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1187" x2="224" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1187" x2="424" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1187" x2="624" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1187" x2="734" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1187" x2="994" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1187" x2="1124" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1246" x2="1216" y2="1246" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1187" x2="224" y2="1246" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1202" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-012</text>
+<text x="42" y="1218" font-size="10.5" fill="#64748B">Walker motion near people</text>
+<text x="232" y="1202" font-size="11.5" fill="#0F172A">SUS-M1-WLK · Chassis, legs,</text>
+<text x="232" y="1217" font-size="11.5" fill="#0F172A">joint actuators and stability</text>
+<text x="232" y="1232" font-size="11.5" fill="#0F172A">sensing</text>
+<text x="432" y="1202" font-size="11.5" fill="#0F172A">EXT-BYSTANDER · Bystanders</text>
+<rect x="632" y="1193" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1205" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">mechanical</text>
+<rect x="632" y="1212" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1224" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">environment</text>
+<text x="742" y="1202" font-size="11.5" fill="#0F172A">moving structure, exclusion zone</text>
+<rect x="1002" y="1193" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1205" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-002</text>
+<rect x="1002" y="1212" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1224" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-SAF-001</text>
+<rect x="1132" y="1192" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1204.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1246" width="1216" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1246" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1263" font-size="10" fill="#64748B" text-anchor="middle">22</text>
+<line x1="34" y1="1246" x2="34" y2="1301" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1246" x2="224" y2="1301" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1246" x2="424" y2="1301" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1246" x2="624" y2="1301" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1246" x2="734" y2="1301" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1246" x2="994" y2="1301" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1246" x2="1124" y2="1301" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1301" x2="1216" y2="1301" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1246" x2="224" y2="1301" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1261" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-013</text>
+<text x="42" y="1277" font-size="10.5" fill="#64748B">Navigation and telemetry link</text>
+<text x="232" y="1261" font-size="11.5" fill="#0F172A">SUS-A1-NAV · Navigation</text>
+<text x="232" y="1276" font-size="11.5" fill="#0F172A">sensors, camera and telemetry</text>
+<text x="432" y="1261" font-size="11.5" fill="#0F172A">EXT-GNSS-RF · GNSS and RF</text>
+<text x="432" y="1276" font-size="11.5" fill="#0F172A">environment</text>
+<rect x="632" y="1252" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1264" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<rect x="632" y="1271" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1283" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">environment</text>
+<text x="742" y="1261" font-size="11.5" fill="#0F172A">GNSS, telemetry, RF link</text>
+<rect x="1002" y="1252" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1264" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="1132" y="1251" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1263.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1301" width="1216" height="44" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1301" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1318" font-size="10" fill="#64748B" text-anchor="middle">23</text>
+<line x1="34" y1="1301" x2="34" y2="1345" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1301" x2="224" y2="1345" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1301" x2="424" y2="1345" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1301" x2="624" y2="1345" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1301" x2="734" y2="1345" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1301" x2="994" y2="1345" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1301" x2="1124" y2="1345" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1345" x2="1216" y2="1345" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1301" x2="224" y2="1345" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1316" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-014</text>
+<text x="42" y="1332" font-size="10.5" fill="#64748B">Weather on the UAV</text>
+<text x="232" y="1316" font-size="11.5" fill="#0F172A">EXT-WEATHER · Weather</text>
+<text x="432" y="1316" font-size="11.5" fill="#0F172A">SUS-A1 · Dockable observation</text>
+<text x="432" y="1331" font-size="11.5" fill="#0F172A">UAV</text>
+<rect x="632" y="1307" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1319" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">environment</text>
+<text x="742" y="1316" font-size="11.5" fill="#0F172A">wind, precipitation, temperature</text>
+<rect x="1002" y="1307" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1319" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="1132" y="1306" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1318.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1345" width="1216" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1345" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1362" font-size="10" fill="#64748B" text-anchor="middle">24</text>
+<line x1="34" y1="1345" x2="34" y2="1404" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1345" x2="224" y2="1404" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1345" x2="424" y2="1404" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1345" x2="624" y2="1404" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1345" x2="734" y2="1404" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1345" x2="994" y2="1404" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1345" x2="1124" y2="1404" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1404" x2="1216" y2="1404" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1345" x2="224" y2="1404" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1360" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-015</text>
+<text x="42" y="1376" font-size="10.5" fill="#64748B">Pilot stop request</text>
+<text x="232" y="1360" font-size="11.5" fill="#0F172A">EXT-PILOT · Pilot</text>
+<text x="432" y="1360" font-size="11.5" fill="#0F172A">SUS-M1-SAF · Independent</text>
+<text x="432" y="1375" font-size="11.5" fill="#0F172A">safety monitor, protective stop</text>
+<text x="432" y="1390" font-size="11.5" fill="#0F172A">and isolation</text>
+<rect x="632" y="1351" width="40" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1363" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">human</text>
+<rect x="676" y="1351" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="681" y="1363" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="1360" font-size="11.5" fill="#0F172A">protective stop request</text>
+<rect x="1002" y="1351" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1363" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-SAF-001</text>
+<rect x="1132" y="1350" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1362.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1404" width="1216" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1404" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1421" font-size="10" fill="#64748B" text-anchor="middle">25</text>
+<line x1="34" y1="1404" x2="34" y2="1463" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1404" x2="224" y2="1463" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1404" x2="424" y2="1463" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1404" x2="624" y2="1463" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1404" x2="734" y2="1463" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1404" x2="994" y2="1463" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1404" x2="1124" y2="1463" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1463" x2="1216" y2="1463" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1404" x2="224" y2="1463" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1419" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-016</text>
+<text x="42" y="1435" font-size="10.5" fill="#64748B">Torque inhibit and brakes</text>
+<text x="232" y="1419" font-size="11.5" fill="#0F172A">SUS-M1-SAF · Independent</text>
+<text x="232" y="1434" font-size="11.5" fill="#0F172A">safety monitor, protective stop</text>
+<text x="232" y="1449" font-size="11.5" fill="#0F172A">and isolation</text>
+<text x="432" y="1419" font-size="11.5" fill="#0F172A">SUS-M1-WLK · Chassis, legs,</text>
+<text x="432" y="1434" font-size="11.5" fill="#0F172A">joint actuators and stability</text>
+<text x="432" y="1449" font-size="11.5" fill="#0F172A">sensing</text>
+<rect x="632" y="1410" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1422" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<rect x="670" y="1410" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="675" y="1422" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">energy</text>
+<text x="742" y="1419" font-size="11.5" fill="#0F172A">torque inhibit, brakes, load holding</text>
+<rect x="1002" y="1410" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1422" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-SAF-001</text>
+<rect x="1002" y="1429" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1441" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-001</text>
+<rect x="1132" y="1409" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1421.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1463" width="1216" height="44" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1463" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1480" font-size="10" fill="#64748B" text-anchor="middle">26</text>
+<line x1="34" y1="1463" x2="34" y2="1507" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1463" x2="224" y2="1507" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1463" x2="424" y2="1507" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1463" x2="624" y2="1507" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1463" x2="734" y2="1507" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1463" x2="994" y2="1507" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1463" x2="1124" y2="1507" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1507" x2="1216" y2="1507" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1463" x2="224" y2="1507" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1478" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-017</text>
+<text x="42" y="1494" font-size="10.5" fill="#64748B">Pilot motion request</text>
+<text x="232" y="1478" font-size="11.5" fill="#0F172A">SUS-M1-PIL · Pilot station,</text>
+<text x="232" y="1493" font-size="11.5" fill="#0F172A">restraints, displays and controls</text>
+<text x="432" y="1478" font-size="11.5" fill="#0F172A">SUS-M1-CTL · Mission, motion</text>
+<text x="432" y="1493" font-size="11.5" fill="#0F172A">and balance control</text>
+<rect x="632" y="1469" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1481" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="1478" font-size="11.5" fill="#0F172A">requested motion, mode</text>
+<rect x="1002" y="1469" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1481" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PIL-001</text>
+<rect x="1132" y="1468" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1480.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1507" width="1216" height="44" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1507" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1524" font-size="10" fill="#64748B" text-anchor="middle">27</text>
+<line x1="34" y1="1507" x2="34" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1507" x2="224" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1507" x2="424" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1507" x2="624" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1507" x2="734" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1507" x2="994" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1507" x2="1124" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1551" x2="1216" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1507" x2="224" y2="1551" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1522" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-018</text>
+<text x="42" y="1538" font-size="10.5" fill="#64748B">Arm commands</text>
+<text x="232" y="1522" font-size="11.5" fill="#0F172A">SUS-M1-CTL · Mission, motion</text>
+<text x="232" y="1537" font-size="11.5" fill="#0F172A">and balance control</text>
+<text x="432" y="1522" font-size="11.5" fill="#0F172A">SUS-M1-MAN · Manipulation arms</text>
+<text x="432" y="1537" font-size="11.5" fill="#0F172A">and end effectors</text>
+<rect x="632" y="1513" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1525" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<rect x="670" y="1513" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="675" y="1525" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">energy</text>
+<text x="742" y="1522" font-size="11.5" fill="#0F172A">arm commands, load feedback</text>
+<rect x="1132" y="1512" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1524.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1551" width="1216" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1551" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1568" font-size="10" fill="#64748B" text-anchor="middle">28</text>
+<line x1="34" y1="1551" x2="34" y2="1610" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1551" x2="224" y2="1610" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1551" x2="424" y2="1610" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1551" x2="624" y2="1610" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1551" x2="734" y2="1610" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1551" x2="994" y2="1610" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1551" x2="1124" y2="1610" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1610" x2="1216" y2="1610" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1551" x2="224" y2="1610" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1566" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-019</text>
+<text x="42" y="1582" font-size="10.5" fill="#64748B">Ground support to walker</text>
+<text x="232" y="1566" font-size="11.5" fill="#0F172A">SUS-GSE · Ground support,</text>
+<text x="232" y="1581" font-size="11.5" fill="#0F172A">maintenance supports, charging</text>
+<text x="232" y="1596" font-size="11.5" fill="#0F172A">and test equipment</text>
+<text x="432" y="1566" font-size="11.5" fill="#0F172A">SUS-M1 · Piloted walker</text>
+<rect x="632" y="1557" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1569" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">mechanical</text>
+<rect x="632" y="1576" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1588" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">energy</text>
+<text x="742" y="1566" font-size="11.5" fill="#0F172A">maintenance supports, external charging,</text>
+<text x="742" y="1581" font-size="11.5" fill="#0F172A">test connections</text>
+<rect x="1002" y="1557" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1569" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-001</text>
+<rect x="1132" y="1556" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1568.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1610" width="1216" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1610" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1627" font-size="10" fill="#64748B" text-anchor="middle">29</text>
+<line x1="34" y1="1610" x2="34" y2="1669" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1610" x2="224" y2="1669" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1610" x2="424" y2="1669" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1610" x2="624" y2="1669" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1610" x2="734" y2="1669" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1610" x2="994" y2="1669" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1610" x2="1124" y2="1669" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1669" x2="1216" y2="1669" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1610" x2="224" y2="1669" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1625" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-020</text>
+<text x="42" y="1641" font-size="10.5" fill="#64748B">Launch and recovery authorization</text>
+<text x="232" y="1625" font-size="11.5" fill="#0F172A">SUS-M1-PIL · Pilot station,</text>
+<text x="232" y="1640" font-size="11.5" fill="#0F172A">restraints, displays and controls</text>
+<text x="432" y="1625" font-size="11.5" fill="#0F172A">SUS-I1-INT · Integration</text>
+<text x="432" y="1640" font-size="11.5" fill="#0F172A">manager and PX4 command</text>
+<text x="432" y="1655" font-size="11.5" fill="#0F172A">adapter</text>
+<rect x="632" y="1616" width="40" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1628" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">human</text>
+<rect x="676" y="1616" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="681" y="1628" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="1625" font-size="11.5" fill="#0F172A">operator launch/recovery request and</text>
+<text x="742" y="1640" font-size="11.5" fill="#0F172A">authorization, status</text>
+<rect x="1002" y="1616" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1628" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-INT-001</text>
+<rect x="1132" y="1615" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1627.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1669" width="1216" height="44" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1669" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1686" font-size="10" fill="#64748B" text-anchor="middle">30</text>
+<line x1="34" y1="1669" x2="34" y2="1713" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1669" x2="224" y2="1713" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1669" x2="424" y2="1713" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1669" x2="624" y2="1713" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1669" x2="734" y2="1713" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1669" x2="994" y2="1713" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1669" x2="1124" y2="1713" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1713" x2="1216" y2="1713" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1669" x2="224" y2="1713" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1684" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-021</text>
+<text x="42" y="1700" font-size="10.5" fill="#64748B">Motor commands</text>
+<text x="232" y="1684" font-size="11.5" fill="#0F172A">SUS-A1-FC · PX4-based flight</text>
+<text x="232" y="1699" font-size="11.5" fill="#0F172A">controller</text>
+<text x="432" y="1684" font-size="11.5" fill="#0F172A">SUS-A1-PROP · Motors, ESCs</text>
+<text x="432" y="1699" font-size="11.5" fill="#0F172A">and propellers</text>
+<rect x="632" y="1675" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1687" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<rect x="670" y="1675" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="675" y="1687" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">energy</text>
+<text x="742" y="1684" font-size="11.5" fill="#0F172A">motor commands</text>
+<rect x="1002" y="1675" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1687" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-DCK-001</text>
+<rect x="1132" y="1674" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1686.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1713" width="1216" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1713" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1730" font-size="10" fill="#64748B" text-anchor="middle">31</text>
+<line x1="34" y1="1713" x2="34" y2="1772" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1713" x2="224" y2="1772" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1713" x2="424" y2="1772" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1713" x2="624" y2="1772" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1713" x2="734" y2="1772" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1713" x2="994" y2="1772" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1713" x2="1124" y2="1772" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1772" x2="1216" y2="1772" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1713" x2="224" y2="1772" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1728" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-022</text>
+<text x="42" y="1744" font-size="10.5" fill="#64748B">Safety sensing</text>
+<text x="232" y="1728" font-size="11.5" fill="#0F172A">SUS-M1-WLK · Chassis, legs,</text>
+<text x="232" y="1743" font-size="11.5" fill="#0F172A">joint actuators and stability</text>
+<text x="232" y="1758" font-size="11.5" fill="#0F172A">sensing</text>
+<text x="432" y="1728" font-size="11.5" fill="#0F172A">SUS-M1-SAF · Independent</text>
+<text x="432" y="1743" font-size="11.5" fill="#0F172A">safety monitor, protective stop</text>
+<text x="432" y="1758" font-size="11.5" fill="#0F172A">and isolation</text>
+<rect x="632" y="1719" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1731" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">data</text>
+<text x="742" y="1728" font-size="11.5" fill="#0F172A">posture, joint and pressure sensing for the</text>
+<text x="742" y="1743" font-size="11.5" fill="#0F172A">monitor</text>
+<rect x="1002" y="1719" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1731" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-WLK-001</text>
+<rect x="1132" y="1718" width="38.9" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1140" y="1730.5" font-size="10.5" fill="#334155">draft</text>
+<rect x="0" y="1772" width="1216" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1772" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1789" font-size="10" fill="#64748B" text-anchor="middle">32</text>
+<line x1="34" y1="1772" x2="34" y2="1831" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1772" x2="224" y2="1831" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="424" y1="1772" x2="424" y2="1831" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="624" y1="1772" x2="624" y2="1831" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="734" y1="1772" x2="734" y2="1831" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="994" y1="1772" x2="994" y2="1831" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1124" y1="1772" x2="1124" y2="1831" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1831" x2="1216" y2="1831" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="224" y1="1772" x2="224" y2="1831" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1787" font-size="11.5" fill="#1D4ED8" font-weight="700">IF-023</text>
+<text x="42" y="1803" font-size="10.5" fill="#64748B">Hydraulic power to joint actuators</text>
+<text x="232" y="1787" font-size="11.5" fill="#0F172A">SUS-M1-PWR-HPU · Hydraulic</text>
+<text x="232" y="1802" font-size="11.5" fill="#0F172A">power unit, accumulators and</text>
+<text x="232" y="1817" font-size="11.5" fill="#0F172A">isolation (alternative A)</text>
+<text x="432" y="1787" font-size="11.5" fill="#0F172A">SUS-M1-WLK · Chassis, legs,</text>
+<text x="432" y="1802" font-size="11.5" fill="#0F172A">joint actuators and stability</text>
+<text x="432" y="1817" font-size="11.5" fill="#0F172A">sensing</text>
+<rect x="632" y="1778" width="46" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="637" y="1790" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">energy</text>
+<text x="742" y="1787" font-size="11.5" fill="#0F172A">pressurised fluid supply and return</text>
+<rect x="1002" y="1778" width="76" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<text x="1007" y="1790" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">HAZ-PWR-001</text>
+<rect x="1132" y="1777" width="63.1" height="17" rx="8.5" fill="#E0F2FE" stroke="none" stroke-width="0"/>
+<text x="1140" y="1789.5" font-size="10.5" fill="#075985">candidate</text>
+<text x="16" y="1853" font-size="10.5" fill="#64748B">31 rows</text>
+<rect x="0.5" y="0.5" width="1215" height="1862" rx="0" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+<g class="terms" data-base-h="1863">
+<rect x="0" y="1863" width="1216" height="199.6" fill="#FFFFFF"/>
+<line x1="40" y1="1867" x2="1176" y2="1867" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1882.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · BMS = battery management system · ESC = electronic speed controller (drives a UAV motor) · EXT-AIRSPACE =</text>
+<text x="40" y="1897.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">external element: airspace, people and property under the UAV · EXT-BYSTANDER = external element: bystanders · EXT-CREW = external element: ground crew and maintainers · EXT-GNSS-RF = external element: GNSS</text>
+<text x="40" y="1911.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">and RF environment · EXT-OBSERVER = external element: safety observer · EXT-PILOT = external element: pilot · EXT-TERRAIN = external element: terrain and obstacles · EXT-WEATHER = external element: weather ·</text>
+<text x="40" y="1926.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">F-nnn = system function in the item definition · GNSS = global navigation satellite system (GPS and similar) · GPS = Global Positioning System · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) ·</text>
+<text x="40" y="1940.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · IF-nnn = interface in the item definition (architecture/item-definition.yaml) · IF-PX4-nnn = PX4</text>
+<text x="40" y="1955.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">integration interface (integrations/px4/interface-contract.md) · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · RF = radio frequency · SUS-A1 = dockable observation UAV ·</text>
+<text x="40" y="1969.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SUS-A1-FC = PX4-based flight controller · SUS-A1-NAV = navigation sensors, camera and telemetry · SUS-A1-PROP = motors, ESCs and propellers · SUS-A1-PWR = UAV battery and power management · SUS-GSE = ground</text>
+<text x="40" y="1984.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">support, maintenance supports, charging and test equipment · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1 = piloted walker · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK</text>
+<text x="40" y="1998.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">= UAV dock, retention, charging and release · SUS-M1-MAN = manipulation arms and end effectors · SUS-M1-PIL = pilot station, restraints, displays and controls · SUS-M1-PWR = power generation, storage,</text>
+<text x="40" y="2013.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">distribution and thermal control · SUS-M1-PWR-BAT = battery pack, BMS and contactors (alternative B) · SUS-M1-PWR-DIST = protected power distribution · SUS-M1-PWR-GEN = engine-generator and governor</text>
+<text x="40" y="2027.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(alternative B) · SUS-M1-PWR-HPU = hydraulic power unit, accumulators and isolation (alternative A) · SUS-M1-SAF = independent safety monitor, protective stop and isolation · SUS-M1-WLK = chassis, legs, joint</text>
+<text x="40" y="2042.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">actuators and stability sensing · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

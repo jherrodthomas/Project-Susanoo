@@ -1,0 +1,1613 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1330" height="1351.1" viewBox="0 0 1330 1351.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Risk register · initial and target risk worksheet</title>
+<desc>Spreadsheet view of Risk register · initial and target risk, generated from safety/hazards/*.yaml (initial_risk, target_risk, acceptances).</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1330" height="1253" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1330" height="48" rx="0" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="16" y="30" font-size="16" fill="#FFFFFF" font-weight="700">Risk register · initial and target risk — worksheet</text>
+<text x="422.4" y="30" font-size="11" fill="#94A3B8">risk-register.csv · generated from safety/hazards/*.yaml (initial_risk, target_risk, acceptances)</text>
+<rect x="1214.8" y="14" width="103.2" height="20" rx="10" fill="#334155" stroke="none" stroke-width="0"/>
+<text x="1223.8" y="28" font-size="10.5" fill="#FFFFFF">Nothing accepted</text>
+<rect x="1046.4" y="14" width="160.5" height="20" rx="10" fill="#B45309" stroke="none" stroke-width="0"/>
+<text x="1055.4" y="28" font-size="10.5" fill="#FFFFFF">AI-drafted I0 · not reviewed</text>
+<rect x="0" y="48" width="1330" height="182" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="18" y="74" font-size="13" fill="#0F172A" font-weight="700">How each risk is derived</text>
+<text x="18" y="96" font-size="12" fill="#334155">The analyst selects a severity (1–4, by the worst credible mishap) and a</text>
+<text x="18" y="112.5" font-size="12" fill="#334155">probability (A–F, by likelihood over the item's life). MIL-STD-882E Table III</text>
+<text x="18" y="129" font-size="12" fill="#334155">maps the pair to a risk level. Both selections and the stated basis are shown for</text>
+<text x="18" y="145.5" font-size="12" fill="#334155">every hazard, so a reviewer can challenge the inputs, not just the result.</text>
+<rect x="18" y="178" width="330" height="26" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="28" y="195" font-size="12" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">severity 1 + probability C → RAC 1C → High</text>
+<text x="18" y="222" font-size="10.5" fill="#64748B">Definitions: SUS-RISKDEF-001 (Table III unchanged).</text>
+<text x="540" y="72" font-size="12" fill="#0F172A" font-weight="700">Initial risk · 15 hazards</text>
+<text x="661" y="90" font-size="9" fill="#334155" text-anchor="middle">1 Catastrophic</text>
+<text x="719" y="90" font-size="9" fill="#334155" text-anchor="middle">2 Critical</text>
+<text x="777" y="90" font-size="9" fill="#334155" text-anchor="middle">3 Marginal</text>
+<text x="835" y="90" font-size="9" fill="#334155" text-anchor="middle">4 Negligible</text>
+<text x="540" y="112" font-size="9.5" fill="#334155">A Frequent</text>
+<rect x="632" y="98" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="690" y="98" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="748" y="98" width="56" height="19" rx="0" fill="#FFEDD5" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="806" y="98" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="540" y="133" font-size="9.5" fill="#334155">B Probable</text>
+<rect x="632" y="119" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="690" y="119" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="748" y="119" width="56" height="19" rx="0" fill="#FFEDD5" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="806" y="119" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="540" y="154" font-size="9.5" fill="#334155">C Occasional</text>
+<rect x="632" y="140" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<text x="660" y="154" font-size="12" fill="#B91C1C" font-weight="700" text-anchor="middle">7</text>
+<rect x="690" y="140" width="56" height="19" rx="0" fill="#FFEDD5" stroke="#FFFFFF" stroke-width="1"/>
+<text x="718" y="154" font-size="12" fill="#C2410C" font-weight="700" text-anchor="middle">3</text>
+<rect x="748" y="140" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="806" y="140" width="56" height="19" rx="0" fill="#DCFCE7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="540" y="175" font-size="9.5" fill="#334155">D Remote</text>
+<rect x="632" y="161" width="56" height="19" rx="0" fill="#FFEDD5" stroke="#FFFFFF" stroke-width="1"/>
+<text x="660" y="175" font-size="12" fill="#C2410C" font-weight="700" text-anchor="middle">4</text>
+<rect x="690" y="161" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="718" y="175" font-size="12" fill="#B45309" font-weight="700" text-anchor="middle">1</text>
+<rect x="748" y="161" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="806" y="161" width="56" height="19" rx="0" fill="#DCFCE7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="540" y="196" font-size="9.5" fill="#334155">E Improbable</text>
+<rect x="632" y="182" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="690" y="182" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="748" y="182" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="806" y="182" width="56" height="19" rx="0" fill="#DCFCE7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="540" y="217" font-size="9.5" fill="#334155">F Eliminated</text>
+<rect x="632" y="203" width="56" height="19" rx="0" fill="#F1F5F9" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="690" y="203" width="56" height="19" rx="0" fill="#F1F5F9" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="748" y="203" width="56" height="19" rx="0" fill="#F1F5F9" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="806" y="203" width="56" height="19" rx="0" fill="#F1F5F9" stroke="#FFFFFF" stroke-width="1"/>
+<text x="900" y="72" font-size="12" fill="#0F172A" font-weight="700">Target risk · 15 hazards</text>
+<text x="1021" y="90" font-size="9" fill="#334155" text-anchor="middle">1 Catastrophic</text>
+<text x="1079" y="90" font-size="9" fill="#334155" text-anchor="middle">2 Critical</text>
+<text x="1137" y="90" font-size="9" fill="#334155" text-anchor="middle">3 Marginal</text>
+<text x="1195" y="90" font-size="9" fill="#334155" text-anchor="middle">4 Negligible</text>
+<text x="900" y="112" font-size="9.5" fill="#334155">A Frequent</text>
+<rect x="992" y="98" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1050" y="98" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1108" y="98" width="56" height="19" rx="0" fill="#FFEDD5" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1166" y="98" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="900" y="133" font-size="9.5" fill="#334155">B Probable</text>
+<rect x="992" y="119" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1050" y="119" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1108" y="119" width="56" height="19" rx="0" fill="#FFEDD5" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1166" y="119" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="900" y="154" font-size="9.5" fill="#334155">C Occasional</text>
+<rect x="992" y="140" width="56" height="19" rx="0" fill="#FEE2E2" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1050" y="140" width="56" height="19" rx="0" fill="#FFEDD5" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1108" y="140" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1166" y="140" width="56" height="19" rx="0" fill="#DCFCE7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="900" y="175" font-size="9.5" fill="#334155">D Remote</text>
+<rect x="992" y="161" width="56" height="19" rx="0" fill="#FFEDD5" stroke="#FFFFFF" stroke-width="1"/>
+<text x="1020" y="175" font-size="12" fill="#C2410C" font-weight="700" text-anchor="middle">1</text>
+<rect x="1050" y="161" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1108" y="161" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1166" y="161" width="56" height="19" rx="0" fill="#DCFCE7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="900" y="196" font-size="9.5" fill="#334155">E Improbable</text>
+<rect x="992" y="182" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="1020" y="196" font-size="12" fill="#B45309" font-weight="700" text-anchor="middle">10</text>
+<rect x="1050" y="182" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="1078" y="196" font-size="12" fill="#B45309" font-weight="700" text-anchor="middle">4</text>
+<rect x="1108" y="182" width="56" height="19" rx="0" fill="#FEF3C7" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1166" y="182" width="56" height="19" rx="0" fill="#DCFCE7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="900" y="217" font-size="9.5" fill="#334155">F Eliminated</text>
+<rect x="992" y="203" width="56" height="19" rx="0" fill="#F1F5F9" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1050" y="203" width="56" height="19" rx="0" fill="#F1F5F9" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1108" y="203" width="56" height="19" rx="0" fill="#F1F5F9" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="1166" y="203" width="56" height="19" rx="0" fill="#F1F5F9" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="0" y="230" width="1330" height="18" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="134" y="243" font-size="10" fill="#64748B" text-anchor="middle">A</text>
+<line x1="34" y1="230" x2="34" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="300" y="243" font-size="10" fill="#64748B" text-anchor="middle">B</text>
+<line x1="234" y1="230" x2="234" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="432" y="243" font-size="10" fill="#64748B" text-anchor="middle">C</text>
+<line x1="366" y1="230" x2="366" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="557" y="243" font-size="10" fill="#64748B" text-anchor="middle">D</text>
+<line x1="498" y1="230" x2="498" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="682" y="243" font-size="10" fill="#64748B" text-anchor="middle">E</text>
+<line x1="616" y1="230" x2="616" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="814" y="243" font-size="10" fill="#64748B" text-anchor="middle">F</text>
+<line x1="748" y1="230" x2="748" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="939" y="243" font-size="10" fill="#64748B" text-anchor="middle">G</text>
+<line x1="880" y1="230" x2="880" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1043" y="243" font-size="10" fill="#64748B" text-anchor="middle">H</text>
+<line x1="998" y1="230" x2="998" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1163" y="243" font-size="10" fill="#64748B" text-anchor="middle">I</text>
+<line x1="1088" y1="230" x2="1088" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1283" y="243" font-size="10" fill="#64748B" text-anchor="middle">J</text>
+<line x1="1238" y1="230" x2="1238" y2="248" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="0" y="248" width="1330" height="24" rx="0" fill="#334155" stroke="none" stroke-width="0"/>
+<rect x="234" y="269" width="382" height="3" rx="0" fill="#F59E0B" stroke="none" stroke-width="0"/>
+<text x="425" y="264" font-size="10.5" fill="#E2E8F0" font-weight="700" text-anchor="middle">INITIAL RISK</text>
+<rect x="616" y="269" width="382" height="3" rx="0" fill="#22C55E" stroke="none" stroke-width="0"/>
+<text x="807" y="264" font-size="10.5" fill="#E2E8F0" font-weight="700" text-anchor="middle">TARGET RISK</text>
+<rect x="0" y="272" width="1330" height="34" rx="0" fill="#1E293B" stroke="none" stroke-width="0"/>
+<text x="17" y="293" font-size="10" fill="#94A3B8" text-anchor="middle">1</text>
+<text x="42" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Hazard</text>
+<line x1="34" y1="272" x2="34" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="242" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Severity</text>
+<line x1="234" y1="272" x2="234" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="374" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Probability</text>
+<line x1="366" y1="272" x2="366" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="506" y="287" font-size="11" fill="#F8FAFC" font-weight="700">RAC → level</text>
+<line x1="498" y1="272" x2="498" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="624" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Severity</text>
+<line x1="616" y1="272" x2="616" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="756" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Probability</text>
+<line x1="748" y1="272" x2="748" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="888" y="287" font-size="11" fill="#F8FAFC" font-weight="700">RAC → level</text>
+<line x1="880" y1="272" x2="880" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="1006" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Mitigations</text>
+<line x1="998" y1="272" x2="998" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="1096" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Acceptance</text>
+<line x1="1088" y1="272" x2="1088" y2="306" stroke="#334155" stroke-width="1"/>
+<text x="1246" y="287" font-size="11" fill="#F8FAFC" font-weight="700">Owner</text>
+<line x1="1238" y1="272" x2="1238" y2="306" stroke="#334155" stroke-width="1"/>
+<rect x="0" y="306" width="1330" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="306" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="323" font-size="10" fill="#64748B" text-anchor="middle">2</text>
+<line x1="34" y1="306" x2="34" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="306" x2="234" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="306" x2="366" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="306" x2="498" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="306" x2="616" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="306" x2="748" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="306" x2="880" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="306" x2="998" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="306" x2="1088" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="306" x2="1238" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="367" x2="1330" y2="367" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="306" x2="234" y2="367" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="321" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-001</text>
+<text x="42" y="337" font-size="10.5" fill="#64748B">Rotor start while UAV is retained or</text>
+<text x="42" y="350.5" font-size="10.5" fill="#64748B">a person is at the dock</text>
+<rect x="242" y="311" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="323" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="264" y="323" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="242" y="340" font-size="10" fill="#64748B">permanent partial</text>
+<text x="242" y="353" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="374" y="311" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="323" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="396" y="323" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="374" y="340" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="374" y="353" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="506" y="314" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="314" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="314" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="314" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="321" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="321" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="321" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="321" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="328" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="328" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="526" y="328" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="328" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="335" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="516" y="335" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="335" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="335" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="342" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="342" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="342" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="342" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="349" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="349" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="349" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="349" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="313" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="573" y="328.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">2C</text>
+<text x="573" y="348" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<rect x="624" y="311" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="323" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="646" y="323" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="624" y="340" font-size="10" fill="#64748B">permanent partial</text>
+<text x="624" y="353" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="756" y="311" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="323" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="323" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="340" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="353" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="314" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="314" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="314" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="314" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="321" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="321" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="321" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="321" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="328" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="328" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="328" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="328" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="335" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="335" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="335" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="335" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="342" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="898" y="342" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="908" y="342" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="342" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="349" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="349" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="349" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="349" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="313" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="328.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">2E</text>
+<text x="955" y="348" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="321" font-size="11.5" fill="#0F172A">4 identified</text>
+<rect x="1096" y="311" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="323.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="343" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="321" font-size="11.5" fill="#0F172A">ROLE-UAV</text>
+<rect x="0" y="367" width="1330" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="367" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="384" font-size="10" fill="#64748B" text-anchor="middle">3</text>
+<line x1="34" y1="367" x2="34" y2="428" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="367" x2="234" y2="428" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="367" x2="366" y2="428" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="367" x2="498" y2="428" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="367" x2="616" y2="428" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="367" x2="748" y2="428" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="367" x2="880" y2="428" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="367" x2="998" y2="428" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="367" x2="1088" y2="428" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="367" x2="1238" y2="428" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="428" x2="1330" y2="428" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="367" x2="234" y2="428" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="382" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-002</text>
+<text x="42" y="398" font-size="10.5" fill="#64748B">False retained state releases UAV</text>
+<text x="42" y="411.5" font-size="10.5" fill="#64748B">under motion</text>
+<rect x="242" y="372" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="384" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="264" y="384" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="242" y="401" font-size="10" fill="#64748B">permanent partial</text>
+<text x="242" y="414" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="374" y="372" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="384" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">D</text>
+<text x="396" y="384" font-size="11.5" fill="#0F172A">Remote</text>
+<text x="374" y="401" font-size="10" fill="#64748B">unlikely, but possible to</text>
+<text x="374" y="414" font-size="10" fill="#64748B">occur in the life of an …</text>
+<rect x="506" y="375" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="375" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="375" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="375" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="382" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="382" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="382" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="382" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="389" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="389" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="526" y="389" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="389" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="396" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="516" y="396" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="526" y="396" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="396" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="403" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="403" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="403" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="403" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="410" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="410" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="410" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="410" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="374" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="573" y="389.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">2D</text>
+<text x="573" y="409" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<rect x="624" y="372" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="384" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="646" y="384" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="624" y="401" font-size="10" fill="#64748B">permanent partial</text>
+<text x="624" y="414" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="756" y="372" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="384" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="384" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="401" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="414" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="375" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="375" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="375" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="375" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="382" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="382" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="382" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="382" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="389" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="389" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="389" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="389" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="396" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="396" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="396" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="396" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="403" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="898" y="403" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="908" y="403" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="403" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="410" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="410" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="410" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="410" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="374" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="389.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">2E</text>
+<text x="955" y="409" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="382" font-size="11.5" fill="#0F172A">3 identified</text>
+<rect x="1096" y="372" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="384.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="404" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="382" font-size="11.5" fill="#0F172A">ROLE-UAV</text>
+<rect x="0" y="428" width="1330" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="428" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="445" font-size="10" fill="#64748B" text-anchor="middle">4</text>
+<line x1="34" y1="428" x2="34" y2="489" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="428" x2="234" y2="489" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="428" x2="366" y2="489" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="428" x2="498" y2="489" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="428" x2="616" y2="489" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="428" x2="748" y2="489" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="428" x2="880" y2="489" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="428" x2="998" y2="489" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="428" x2="1088" y2="489" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="428" x2="1238" y2="489" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="489" x2="1330" y2="489" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="428" x2="234" y2="489" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="443" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-INT-001</text>
+<text x="42" y="459" font-size="10.5" fill="#64748B">UAV launch or recovery outside the</text>
+<text x="42" y="472.5" font-size="10.5" fill="#64748B">safe envelope</text>
+<rect x="242" y="433" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="445" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="264" y="445" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="242" y="462" font-size="10" fill="#64748B">permanent partial</text>
+<text x="242" y="475" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="374" y="433" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="445" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="396" y="445" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="374" y="462" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="374" y="475" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="506" y="436" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="436" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="436" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="436" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="443" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="443" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="443" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="443" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="450" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="450" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="526" y="450" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="450" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="457" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="516" y="457" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="457" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="457" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="464" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="464" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="464" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="464" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="471" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="471" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="471" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="471" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="435" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="573" y="450.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">2C</text>
+<text x="573" y="470" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<rect x="624" y="433" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="445" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="646" y="445" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="624" y="462" font-size="10" fill="#64748B">permanent partial</text>
+<text x="624" y="475" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="756" y="433" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="445" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="445" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="462" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="475" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="436" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="436" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="436" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="436" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="443" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="443" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="443" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="443" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="450" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="450" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="450" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="450" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="457" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="457" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="457" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="457" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="464" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="898" y="464" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="908" y="464" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="464" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="471" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="471" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="471" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="471" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="435" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="450.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">2E</text>
+<text x="955" y="470" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="443" font-size="11.5" fill="#0F172A">7 identified</text>
+<rect x="1096" y="433" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="445.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="465" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="443" font-size="11.5" fill="#0F172A">ROLE-UAV</text>
+<rect x="0" y="489" width="1330" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="489" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="506" font-size="10" fill="#64748B" text-anchor="middle">5</text>
+<line x1="34" y1="489" x2="34" y2="550" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="489" x2="234" y2="550" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="489" x2="366" y2="550" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="489" x2="498" y2="550" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="489" x2="616" y2="550" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="489" x2="748" y2="550" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="489" x2="880" y2="550" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="489" x2="998" y2="550" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="489" x2="1088" y2="550" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="489" x2="1238" y2="550" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="550" x2="1330" y2="550" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="489" x2="234" y2="550" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="504" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-MAN-001</text>
+<text x="42" y="520" font-size="10.5" fill="#64748B">Person struck or pinned by the arms</text>
+<text x="42" y="533.5" font-size="10.5" fill="#64748B">or claws</text>
+<rect x="242" y="494" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="506" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="264" y="506" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="242" y="523" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="242" y="536" font-size="10" fill="#64748B">disability</text>
+<rect x="374" y="494" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="506" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="396" y="506" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="374" y="523" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="374" y="536" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="506" y="497" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="497" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="497" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="497" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="504" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="504" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="504" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="504" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="511" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="516" y="511" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="526" y="511" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="511" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="518" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="516" y="518" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="518" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="518" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="525" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="525" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="525" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="525" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="532" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="532" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="532" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="532" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="496" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="573" y="511.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="573" y="531" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<rect x="624" y="494" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="506" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="646" y="506" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="624" y="523" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="624" y="536" font-size="10" fill="#64748B">disability</text>
+<rect x="756" y="494" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="506" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="506" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="523" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="536" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="497" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="497" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="497" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="497" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="504" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="504" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="504" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="504" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="511" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="511" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="511" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="511" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="518" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="518" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="518" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="518" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="525" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="898" y="525" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="525" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="525" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="532" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="532" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="532" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="532" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="496" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="511.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">1E</text>
+<text x="955" y="531" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="504" font-size="11.5" fill="#0F172A">3 identified</text>
+<rect x="1096" y="494" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="506.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="526" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="504" font-size="11.5" fill="#0F172A">ROLE-WLK</text>
+<rect x="0" y="550" width="1330" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="550" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="567" font-size="10" fill="#64748B" text-anchor="middle">6</text>
+<line x1="34" y1="550" x2="34" y2="611" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="550" x2="234" y2="611" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="550" x2="366" y2="611" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="550" x2="498" y2="611" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="550" x2="616" y2="611" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="550" x2="748" y2="611" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="550" x2="880" y2="611" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="550" x2="998" y2="611" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="550" x2="1088" y2="611" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="550" x2="1238" y2="611" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="611" x2="1330" y2="611" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="550" x2="234" y2="611" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="565" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-MAN-002</text>
+<text x="42" y="581" font-size="10.5" fill="#64748B">Carried load swings, shifts or drops</text>
+<text x="42" y="594.5" font-size="10.5" fill="#64748B">while walking</text>
+<rect x="242" y="555" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="567" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="264" y="567" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="242" y="584" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="242" y="597" font-size="10" fill="#64748B">disability</text>
+<rect x="374" y="555" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="567" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="396" y="567" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="374" y="584" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="374" y="597" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="506" y="558" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="558" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="558" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="558" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="565" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="565" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="565" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="565" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="572" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="516" y="572" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="526" y="572" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="572" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="579" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="516" y="579" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="579" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="579" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="586" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="586" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="586" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="586" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="593" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="593" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="593" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="593" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="557" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="573" y="572.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="573" y="592" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<rect x="624" y="555" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="567" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="646" y="567" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="624" y="584" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="624" y="597" font-size="10" fill="#64748B">disability</text>
+<rect x="756" y="555" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="567" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">D</text>
+<text x="778" y="567" font-size="11.5" fill="#0F172A">Remote</text>
+<text x="756" y="584" font-size="10" fill="#64748B">unlikely, but possible to</text>
+<text x="756" y="597" font-size="10" fill="#64748B">occur in the life of an …</text>
+<rect x="888" y="558" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="558" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="558" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="558" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="565" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="565" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="565" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="565" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="572" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="572" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="572" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="572" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="579" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="898" y="579" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="579" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="579" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="586" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="898" y="586" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="586" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="586" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="593" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="593" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="593" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="593" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="557" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="955" y="572.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="955" y="592" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<text x="1006" y="565" font-size="11.5" fill="#0F172A">3 identified</text>
+<rect x="1096" y="555" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="567.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="587" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="565" font-size="11.5" fill="#0F172A">ROLE-WLK</text>
+<rect x="0" y="611" width="1330" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="611" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="628" font-size="10" fill="#64748B" text-anchor="middle">7</text>
+<line x1="34" y1="611" x2="34" y2="672" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="611" x2="234" y2="672" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="611" x2="366" y2="672" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="611" x2="498" y2="672" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="611" x2="616" y2="672" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="611" x2="748" y2="672" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="611" x2="880" y2="672" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="611" x2="998" y2="672" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="611" x2="1088" y2="672" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="611" x2="1238" y2="672" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="672" x2="1330" y2="672" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="611" x2="234" y2="672" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="626" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-001</text>
+<text x="42" y="642" font-size="10.5" fill="#64748B">Unintended leg motion during pilot</text>
+<text x="42" y="655.5" font-size="10.5" fill="#64748B">ingress or egress</text>
+<rect x="242" y="616" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="628" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="264" y="628" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="242" y="645" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="242" y="658" font-size="10" fill="#64748B">disability</text>
+<rect x="374" y="616" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="628" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="396" y="628" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="374" y="645" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="374" y="658" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="506" y="619" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="619" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="619" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="619" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="626" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="626" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="626" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="626" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="633" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="516" y="633" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="526" y="633" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="633" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="640" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="516" y="640" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="640" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="640" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="647" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="647" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="647" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="647" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="654" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="654" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="654" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="654" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="618" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="573" y="633.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="573" y="653" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<rect x="624" y="616" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="628" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="646" y="628" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="624" y="645" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="624" y="658" font-size="10" fill="#64748B">disability</text>
+<rect x="756" y="616" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="628" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="628" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="645" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="658" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="619" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="619" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="619" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="619" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="626" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="626" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="626" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="626" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="633" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="633" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="633" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="633" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="640" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="640" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="640" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="640" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="647" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="898" y="647" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="647" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="647" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="654" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="654" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="654" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="654" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="618" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="633.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">1E</text>
+<text x="955" y="653" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="626" font-size="11.5" fill="#0F172A">5 identified</text>
+<rect x="1096" y="616" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="628.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="648" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="626" font-size="11.5" fill="#0F172A">ROLE-WLK</text>
+<rect x="0" y="672" width="1330" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="672" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="689" font-size="10" fill="#64748B" text-anchor="middle">8</text>
+<line x1="34" y1="672" x2="34" y2="733" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="672" x2="234" y2="733" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="672" x2="366" y2="733" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="672" x2="498" y2="733" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="672" x2="616" y2="733" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="672" x2="748" y2="733" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="672" x2="880" y2="733" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="672" x2="998" y2="733" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="672" x2="1088" y2="733" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="672" x2="1238" y2="733" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="733" x2="1330" y2="733" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="672" x2="234" y2="733" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="687" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-002</text>
+<text x="42" y="703" font-size="10.5" fill="#64748B">Uncontrolled vertical drop of the</text>
+<text x="42" y="716.5" font-size="10.5" fill="#64748B">cockpit on loss of leg support</text>
+<rect x="242" y="677" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="689" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="264" y="689" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="242" y="706" font-size="10" fill="#64748B">permanent partial</text>
+<text x="242" y="719" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="374" y="677" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="689" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="396" y="689" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="374" y="706" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="374" y="719" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="506" y="680" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="680" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="680" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="680" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="687" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="687" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="687" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="687" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="694" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="694" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="526" y="694" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="694" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="701" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="516" y="701" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="701" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="701" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="708" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="708" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="708" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="708" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="715" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="715" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="715" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="715" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="679" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="573" y="694.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">2C</text>
+<text x="573" y="714" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<rect x="624" y="677" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="689" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="646" y="689" font-size="11.5" fill="#0F172A">Critical</text>
+<text x="624" y="706" font-size="10" fill="#64748B">permanent partial</text>
+<text x="624" y="719" font-size="10" fill="#64748B">disability, or …</text>
+<rect x="756" y="677" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="689" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="689" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="706" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="719" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="680" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="680" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="680" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="680" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="687" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="687" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="687" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="687" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="694" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="694" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="694" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="694" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="701" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="701" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="701" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="701" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="708" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="898" y="708" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="908" y="708" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="708" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="715" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="715" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="715" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="715" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="679" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="694.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">2E</text>
+<text x="955" y="714" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="687" font-size="11.5" fill="#0F172A">4 identified</text>
+<rect x="1096" y="677" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="689.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="709" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="687" font-size="11.5" fill="#0F172A">ROLE-WLK</text>
+<rect x="0" y="733" width="1330" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="733" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="750" font-size="10" fill="#64748B" text-anchor="middle">9</text>
+<line x1="34" y1="733" x2="34" y2="794" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="733" x2="234" y2="794" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="733" x2="366" y2="794" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="733" x2="498" y2="794" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="733" x2="616" y2="794" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="733" x2="748" y2="794" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="733" x2="880" y2="794" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="733" x2="998" y2="794" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="733" x2="1088" y2="794" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="733" x2="1238" y2="794" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="794" x2="1330" y2="794" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="733" x2="234" y2="794" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="748" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-003</text>
+<text x="42" y="764" font-size="10.5" fill="#64748B">Fall from height during emergency</text>
+<text x="42" y="777.5" font-size="10.5" fill="#64748B">egress</text>
+<rect x="242" y="738" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="750" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="264" y="750" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="242" y="767" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="242" y="780" font-size="10" fill="#64748B">disability</text>
+<rect x="374" y="738" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="750" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">D</text>
+<text x="396" y="750" font-size="11.5" fill="#0F172A">Remote</text>
+<text x="374" y="767" font-size="10" fill="#64748B">unlikely, but possible to</text>
+<text x="374" y="780" font-size="10" fill="#64748B">occur in the life of an …</text>
+<rect x="506" y="741" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="741" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="741" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="741" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="748" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="748" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="748" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="748" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="755" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="755" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="526" y="755" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="755" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="762" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="516" y="762" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="762" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="762" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="769" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="769" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="769" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="769" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="776" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="776" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="776" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="776" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="740" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="573" y="755.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="573" y="775" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<rect x="624" y="738" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="750" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="646" y="750" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="624" y="767" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="624" y="780" font-size="10" fill="#64748B">disability</text>
+<rect x="756" y="738" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="750" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="750" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="767" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="780" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="741" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="741" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="741" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="741" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="748" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="748" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="748" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="748" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="755" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="755" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="755" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="755" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="762" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="762" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="762" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="762" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="769" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="898" y="769" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="769" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="769" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="776" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="776" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="776" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="776" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="740" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="755.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">1E</text>
+<text x="955" y="775" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="748" font-size="11.5" fill="#0F172A">3 identified</text>
+<rect x="1096" y="738" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="750.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="770" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="748" font-size="11.5" fill="#0F172A">ROLE-WLK</text>
+<rect x="0" y="794" width="1330" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="794" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="811" font-size="10" fill="#64748B" text-anchor="middle">10</text>
+<line x1="34" y1="794" x2="34" y2="855" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="794" x2="234" y2="855" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="794" x2="366" y2="855" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="794" x2="498" y2="855" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="794" x2="616" y2="855" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="794" x2="748" y2="855" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="794" x2="880" y2="855" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="794" x2="998" y2="855" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="794" x2="1088" y2="855" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="794" x2="1238" y2="855" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="855" x2="1330" y2="855" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="794" x2="234" y2="855" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="809" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-001</text>
+<text x="42" y="825" font-size="10.5" fill="#64748B">Residual hydraulic pressure during</text>
+<text x="42" y="838.5" font-size="10.5" fill="#64748B">maintenance</text>
+<rect x="242" y="799" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="811" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="264" y="811" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="242" y="828" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="242" y="841" font-size="10" fill="#64748B">disability</text>
+<rect x="374" y="799" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="811" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">D</text>
+<text x="396" y="811" font-size="11.5" fill="#0F172A">Remote</text>
+<text x="374" y="828" font-size="10" fill="#64748B">unlikely, but possible to</text>
+<text x="374" y="841" font-size="10" fill="#64748B">occur in the life of an …</text>
+<rect x="506" y="802" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="802" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="802" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="802" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="809" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="809" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="809" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="809" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="816" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="816" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="526" y="816" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="816" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="823" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="516" y="823" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="823" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="823" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="830" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="830" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="830" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="830" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="837" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="837" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="837" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="837" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="801" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="573" y="816.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="573" y="836" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<rect x="624" y="799" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="811" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="646" y="811" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="624" y="828" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="624" y="841" font-size="10" fill="#64748B">disability</text>
+<rect x="756" y="799" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="811" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="811" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="828" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="841" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="802" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="802" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="802" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="802" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="809" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="809" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="809" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="809" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="816" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="816" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="816" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="816" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="823" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="823" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="823" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="823" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="830" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="898" y="830" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="830" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="830" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="837" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="837" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="837" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="837" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="801" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="816.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">1E</text>
+<text x="955" y="836" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="809" font-size="11.5" fill="#0F172A">4 identified</text>
+<rect x="1096" y="799" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="811.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="831" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="809" font-size="11.5" fill="#0F172A">ROLE-WLK</text>
+<rect x="0" y="855" width="1330" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="855" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="872" font-size="10" fill="#64748B" text-anchor="middle">11</text>
+<line x1="34" y1="855" x2="34" y2="916" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="855" x2="234" y2="916" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="855" x2="366" y2="916" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="855" x2="498" y2="916" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="855" x2="616" y2="916" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="855" x2="748" y2="916" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="855" x2="880" y2="916" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="855" x2="998" y2="916" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="855" x2="1088" y2="916" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="855" x2="1238" y2="916" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="916" x2="1330" y2="916" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="855" x2="234" y2="916" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="870" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-002</text>
+<text x="42" y="886" font-size="10.5" fill="#64748B">Battery thermal runaway near the</text>
+<text x="42" y="899.5" font-size="10.5" fill="#64748B">pilot station</text>
+<rect x="242" y="860" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="872" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="264" y="872" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="242" y="889" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="242" y="902" font-size="10" fill="#64748B">disability</text>
+<rect x="374" y="860" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="872" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">D</text>
+<text x="396" y="872" font-size="11.5" fill="#0F172A">Remote</text>
+<text x="374" y="889" font-size="10" fill="#64748B">unlikely, but possible to</text>
+<text x="374" y="902" font-size="10" fill="#64748B">occur in the life of an …</text>
+<rect x="506" y="863" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="863" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="863" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="863" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="870" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="870" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="870" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="870" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="877" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="877" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="526" y="877" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="877" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="884" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="516" y="884" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="884" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="884" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="891" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="891" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="891" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="891" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="898" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="898" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="898" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="898" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="862" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="573" y="877.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="573" y="897" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<rect x="624" y="860" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="872" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="646" y="872" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="624" y="889" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="624" y="902" font-size="10" fill="#64748B">disability</text>
+<rect x="756" y="860" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="872" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="872" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="889" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="902" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="863" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="863" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="863" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="863" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="870" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="870" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="870" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="870" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="877" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="877" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="877" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="877" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="884" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="884" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="884" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="884" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="891" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="898" y="891" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="891" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="891" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="898" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="898" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="898" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="898" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="862" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="877.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">1E</text>
+<text x="955" y="897" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="870" font-size="11.5" fill="#0F172A">4 identified</text>
+<rect x="1096" y="860" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="872.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="892" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="870" font-size="11.5" fill="#0F172A">ROLE-WLK</text>
+<rect x="0" y="916" width="1330" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="916" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="933" font-size="10" fill="#64748B" text-anchor="middle">12</text>
+<line x1="34" y1="916" x2="34" y2="977" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="916" x2="234" y2="977" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="916" x2="366" y2="977" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="916" x2="498" y2="977" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="916" x2="616" y2="977" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="916" x2="748" y2="977" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="916" x2="880" y2="977" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="916" x2="998" y2="977" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="916" x2="1088" y2="977" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="916" x2="1238" y2="977" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="977" x2="1330" y2="977" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="916" x2="234" y2="977" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="931" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-003</text>
+<text x="42" y="947" font-size="10.5" fill="#64748B">Fuel leak and fire at the</text>
+<text x="42" y="960.5" font-size="10.5" fill="#64748B">engine-generator</text>
+<rect x="242" y="921" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="933" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="264" y="933" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="242" y="950" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="242" y="963" font-size="10" fill="#64748B">disability</text>
+<rect x="374" y="921" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="933" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">D</text>
+<text x="396" y="933" font-size="11.5" fill="#0F172A">Remote</text>
+<text x="374" y="950" font-size="10" fill="#64748B">unlikely, but possible to</text>
+<text x="374" y="963" font-size="10" fill="#64748B">occur in the life of an …</text>
+<rect x="506" y="924" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="924" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="924" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="924" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="931" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="931" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="931" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="931" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="938" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="938" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="526" y="938" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="938" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="945" width="9" height="6" rx="1" fill="#C2410C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="516" y="945" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="945" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="945" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="952" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="952" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="952" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="952" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="959" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="959" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="959" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="959" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="923" width="38" height="22" rx="6" fill="#FFEDD5" stroke="#C2410C" stroke-width="1"/>
+<text x="573" y="938.5" font-size="12.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="573" y="958" font-size="10.5" fill="#C2410C" font-weight="700" text-anchor="middle">Serious</text>
+<rect x="624" y="921" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="933" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="646" y="933" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="624" y="950" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="624" y="963" font-size="10" fill="#64748B">disability</text>
+<rect x="756" y="921" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="933" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="933" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="950" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="963" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="924" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="924" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="924" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="924" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="931" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="931" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="931" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="931" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="938" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="938" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="938" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="938" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="945" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="945" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="945" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="945" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="952" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="898" y="952" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="952" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="952" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="959" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="959" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="959" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="959" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="923" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="938.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">1E</text>
+<text x="955" y="958" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="931" font-size="11.5" fill="#0F172A">3 identified</text>
+<rect x="1096" y="921" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="933.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="953" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="931" font-size="11.5" fill="#0F172A">ROLE-WLK</text>
+<rect x="0" y="977" width="1330" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="977" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="994" font-size="10" fill="#64748B" text-anchor="middle">13</text>
+<line x1="34" y1="977" x2="34" y2="1038" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="977" x2="234" y2="1038" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="977" x2="366" y2="1038" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="977" x2="498" y2="1038" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="977" x2="616" y2="1038" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="977" x2="748" y2="1038" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="977" x2="880" y2="1038" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="977" x2="998" y2="1038" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="977" x2="1088" y2="1038" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="977" x2="1238" y2="1038" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1038" x2="1330" y2="1038" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="977" x2="234" y2="1038" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="992" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-SAF-001</text>
+<text x="42" y="1008" font-size="10.5" fill="#64748B">Protective stop does not reach a</text>
+<text x="42" y="1021.5" font-size="10.5" fill="#64748B">safe state</text>
+<rect x="242" y="982" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="994" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="264" y="994" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="242" y="1011" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="242" y="1024" font-size="10" fill="#64748B">disability</text>
+<rect x="374" y="982" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="994" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="396" y="994" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="374" y="1011" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="374" y="1024" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="506" y="985" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="985" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="985" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="985" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="992" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="992" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="992" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="992" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="999" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="516" y="999" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="526" y="999" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="999" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1006" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="516" y="1006" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="1006" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="1006" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1013" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="1013" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="1013" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="1013" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1020" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="1020" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="1020" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="1020" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="984" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="573" y="999.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="573" y="1019" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<rect x="624" y="982" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="994" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="646" y="994" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="624" y="1011" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="624" y="1024" font-size="10" fill="#64748B">disability</text>
+<rect x="756" y="982" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="994" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="994" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="1011" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="1024" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="985" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="985" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="985" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="985" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="992" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="992" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="992" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="992" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="999" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="999" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="999" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="999" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1006" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="1006" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="1006" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="1006" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1013" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="898" y="1013" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="1013" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="1013" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1020" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="1020" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="1020" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="1020" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="984" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="999.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">1E</text>
+<text x="955" y="1019" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="992" font-size="11.5" fill="#0F172A">3 identified</text>
+<rect x="1096" y="982" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="994.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="1014" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="992" font-size="11.5" fill="#0F172A">ROLE-SWL</text>
+<rect x="0" y="1038" width="1330" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1038" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1055" font-size="10" fill="#64748B" text-anchor="middle">14</text>
+<line x1="34" y1="1038" x2="34" y2="1099" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="1038" x2="234" y2="1099" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="1038" x2="366" y2="1099" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="1038" x2="498" y2="1099" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="1038" x2="616" y2="1099" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="1038" x2="748" y2="1099" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="1038" x2="880" y2="1099" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="1038" x2="998" y2="1099" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="1038" x2="1088" y2="1099" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="1038" x2="1238" y2="1099" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1099" x2="1330" y2="1099" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="1038" x2="234" y2="1099" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1053" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-001</text>
+<text x="42" y="1069" font-size="10.5" fill="#64748B">Stale or lost feedback causes</text>
+<text x="42" y="1082.5" font-size="10.5" fill="#64748B">runaway motion</text>
+<rect x="242" y="1043" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="1055" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="264" y="1055" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="242" y="1072" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="242" y="1085" font-size="10" fill="#64748B">disability</text>
+<rect x="374" y="1043" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="1055" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="396" y="1055" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="374" y="1072" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="374" y="1085" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="506" y="1046" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="1046" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="1046" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="1046" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1053" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="1053" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="1053" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="1053" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1060" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="516" y="1060" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="526" y="1060" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="1060" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1067" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="516" y="1067" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="1067" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="1067" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1074" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="1074" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="1074" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="1074" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1081" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="1081" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="1081" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="1081" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="1045" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="573" y="1060.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="573" y="1080" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<rect x="624" y="1043" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="1055" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="646" y="1055" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="624" y="1072" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="624" y="1085" font-size="10" fill="#64748B">disability</text>
+<rect x="756" y="1043" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="1055" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="1055" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="1072" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="1085" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="1046" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="1046" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="1046" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="1046" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1053" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="1053" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="1053" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="1053" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1060" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="1060" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="1060" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="1060" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1067" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="1067" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="1067" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="1067" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1074" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="898" y="1074" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="1074" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="1074" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1081" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="1081" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="1081" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="1081" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="1045" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="1060.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">1E</text>
+<text x="955" y="1080" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="1053" font-size="11.5" fill="#0F172A">3 identified</text>
+<rect x="1096" y="1043" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="1055.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="1075" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="1053" font-size="11.5" fill="#0F172A">ROLE-WLK</text>
+<rect x="0" y="1099" width="1330" height="61" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="0" y="1099" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1116" font-size="10" fill="#64748B" text-anchor="middle">15</text>
+<line x1="34" y1="1099" x2="34" y2="1160" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="1099" x2="234" y2="1160" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="1099" x2="366" y2="1160" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="1099" x2="498" y2="1160" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="1099" x2="616" y2="1160" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="1099" x2="748" y2="1160" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="1099" x2="880" y2="1160" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="1099" x2="998" y2="1160" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="1099" x2="1088" y2="1160" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="1099" x2="1238" y2="1160" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1160" x2="1330" y2="1160" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="1099" x2="234" y2="1160" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1114" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-002</text>
+<text x="42" y="1130" font-size="10.5" fill="#64748B">Walker tip-over or fall with pilot</text>
+<text x="42" y="1143.5" font-size="10.5" fill="#64748B">aboard</text>
+<rect x="242" y="1104" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="1116" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="264" y="1116" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="242" y="1133" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="242" y="1146" font-size="10" fill="#64748B">disability</text>
+<rect x="374" y="1104" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="1116" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="396" y="1116" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="374" y="1133" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="374" y="1146" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="506" y="1107" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="1107" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="1107" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="1107" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1114" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="1114" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="1114" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="1114" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1121" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="516" y="1121" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="526" y="1121" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="1121" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1128" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="516" y="1128" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="1128" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="1128" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1135" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="1135" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="1135" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="1135" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1142" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="1142" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="1142" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="1142" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="1106" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="573" y="1121.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="573" y="1141" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<rect x="624" y="1104" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="1116" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="646" y="1116" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="624" y="1133" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="624" y="1146" font-size="10" fill="#64748B">disability</text>
+<rect x="756" y="1104" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="1116" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="1116" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="1133" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="1146" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="1107" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="1107" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="1107" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="1107" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1114" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="1114" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="1114" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="1114" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1121" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="1121" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="1121" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="1121" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1128" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="1128" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="1128" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="1128" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1135" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="898" y="1135" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="1135" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="1135" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1142" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="1142" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="1142" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="1142" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="1106" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="1121.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">1E</text>
+<text x="955" y="1141" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="1114" font-size="11.5" fill="#0F172A">7 identified</text>
+<rect x="1096" y="1104" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="1116.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="1136" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="1114" font-size="11.5" fill="#0F172A">ROLE-WLK</text>
+<rect x="0" y="1160" width="1330" height="61" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="1160" width="34" height="61" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="17" y="1177" font-size="10" fill="#64748B" text-anchor="middle">16</text>
+<line x1="34" y1="1160" x2="34" y2="1221" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="1160" x2="234" y2="1221" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="366" y1="1160" x2="366" y2="1221" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="498" y1="1160" x2="498" y2="1221" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="616" y1="1160" x2="616" y2="1221" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="748" y1="1160" x2="748" y2="1221" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="880" y1="1160" x2="880" y2="1221" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="998" y1="1160" x2="998" y2="1221" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1088" y1="1160" x2="1088" y2="1221" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="1238" y1="1160" x2="1238" y2="1221" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1221" x2="1330" y2="1221" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="234" y1="1160" x2="234" y2="1221" stroke="#94A3B8" stroke-width="2"/>
+<text x="42" y="1175" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-003</text>
+<text x="42" y="1191" font-size="10.5" fill="#64748B">Crushing under the pod or legs while</text>
+<text x="42" y="1204.5" font-size="10.5" fill="#64748B">kneeling or rising</text>
+<rect x="242" y="1165" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="250" y="1177" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="264" y="1177" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="242" y="1194" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="242" y="1207" font-size="10" fill="#64748B">disability</text>
+<rect x="374" y="1165" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="382" y="1177" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">C</text>
+<text x="396" y="1177" font-size="11.5" fill="#0F172A">Occasional</text>
+<text x="374" y="1194" font-size="10" fill="#64748B">likely to occur sometime</text>
+<text x="374" y="1207" font-size="10" fill="#64748B">in the life of an item</text>
+<rect x="506" y="1168" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="1168" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="1168" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="1168" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1175" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="516" y="1175" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="526" y="1175" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="536" y="1175" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1182" width="9" height="6" rx="1" fill="#B91C1C" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="516" y="1182" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="526" y="1182" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="1182" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1189" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="516" y="1189" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="1189" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="1189" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1196" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="516" y="1196" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="526" y="1196" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="536" y="1196" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="506" y="1203" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="516" y="1203" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="526" y="1203" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="536" y="1203" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="554" y="1167" width="38" height="22" rx="6" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1"/>
+<text x="573" y="1182.5" font-size="12.5" fill="#B91C1C" font-weight="700" text-anchor="middle">1C</text>
+<text x="573" y="1202" font-size="10.5" fill="#B91C1C" font-weight="700" text-anchor="middle">High</text>
+<rect x="624" y="1165" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="632" y="1177" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="646" y="1177" font-size="11.5" fill="#0F172A">Catastrophic</text>
+<text x="624" y="1194" font-size="10" fill="#64748B">death or permanent total</text>
+<text x="624" y="1207" font-size="10" fill="#64748B">disability</text>
+<rect x="756" y="1165" width="16" height="16" rx="4" fill="#0F172A" stroke="none" stroke-width="0"/>
+<text x="764" y="1177" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">E</text>
+<text x="778" y="1177" font-size="11.5" fill="#0F172A">Improbable</text>
+<text x="756" y="1194" font-size="10" fill="#64748B">so unlikely, occurrence</text>
+<text x="756" y="1207" font-size="10" fill="#64748B">may not be experienced</text>
+<rect x="888" y="1168" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="1168" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="1168" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="1168" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1175" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="1175" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="908" y="1175" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="918" y="1175" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1182" width="9" height="6" rx="1" fill="#FEE2E2" stroke="none" stroke-width="0"/>
+<rect x="898" y="1182" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="908" y="1182" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="1182" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1189" width="9" height="6" rx="1" fill="#FFEDD5" stroke="none" stroke-width="0"/>
+<rect x="898" y="1189" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="1189" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="1189" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1196" width="9" height="6" rx="1" fill="#B45309" stroke="#0F172A" stroke-width="1.2"/>
+<rect x="898" y="1196" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="908" y="1196" width="9" height="6" rx="1" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<rect x="918" y="1196" width="9" height="6" rx="1" fill="#DCFCE7" stroke="none" stroke-width="0"/>
+<rect x="888" y="1203" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="898" y="1203" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="908" y="1203" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="918" y="1203" width="9" height="6" rx="1" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="936" y="1167" width="38" height="22" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="1"/>
+<text x="955" y="1182.5" font-size="12.5" fill="#B45309" font-weight="700" text-anchor="middle">1E</text>
+<text x="955" y="1202" font-size="10.5" fill="#B45309" font-weight="700" text-anchor="middle">Medium</text>
+<text x="1006" y="1175" font-size="11.5" fill="#0F172A">3 identified</text>
+<rect x="1096" y="1165" width="79.3" height="17" rx="8.5" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="1104" y="1177.5" font-size="10.5" fill="#475569">not accepted</text>
+<text x="1096" y="1197" font-size="10.5" fill="#64748B">authority TBD</text>
+<text x="1246" y="1175" font-size="11.5" fill="#0F172A">ROLE-WLK</text>
+<text x="16" y="1243" font-size="10.5" fill="#64748B">15 rows · mini-grid: rows A–F probability, columns 1–4 severity; outlined cell = the selection · Acceptance needs a named human reviewer in the acceptance role (rule R13); none is recorded.</text>
+<rect x="0.5" y="0.5" width="1329" height="1252" rx="0" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+<g class="terms" data-base-h="1253">
+<rect x="0" y="1253" width="1330" height="98.1" fill="#FFFFFF"/>
+<line x1="40" y1="1257" x2="1290" y2="1257" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1272.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: 1A–4F = risk assessment code, severity 1–4 plus probability A–F (e.g. 1C) · AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · DoD = US Department of Defense · F-nnn = system function</text>
+<text x="40" y="1287.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">in the item definition · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · MIL-STD-882E = US DoD Standard Practice</text>
+<text x="40" y="1301.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">for System Safety (11 May 2012, base edition) · R01 … = validator rule in tools/pdac (R13 = only a named human review accepts anything) · RAC = risk assessment code, severity category plus probability level (e.g. 1C) · ROLE-nnn</text>
+<text x="40" y="1316.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">= project role in the tailoring record (simulated until the lead says otherwise) · SUS-RISKDEF-001 = the project's tailored risk definitions (standards/tailoring) · TBD = to be determined · UAV = uncrewed aerial vehicle (drone)</text>
+<text x="40" y="1330.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">· US = United States</text>
+</g>
+</svg>
