@@ -1,0 +1,102 @@
+# CL-05 Reverse-jointed pod biped: tall faceted pod with the pilot visible through front and side windows,
+# reverse-jointed (digitigrade) legs, long arms with curved claws hanging close to the ground.
+# Proportions taken from the project lead's AI-generated "Industrial Utility Walker" (CGTrader AI / Meshy,
+# 2026-11-11, one three-quarter view so far). The geometry is original and parametric; the generated mesh
+# is not used. Concept layout for review and alignment only. Every dimension is a placeholder (metres).
+id: CL-05
+title: "Reverse-jointed pod biped, claw arms, rear dock"
+locomotion: biped
+style: build123d                 # solids authored in tools/cad/b3d/cl05.py (reference layout)
+leg:
+  hip_half_width: 0.55
+  thigh: 1.00
+  shank: 1.05
+  knee_forward: -0.45            # knee behind the hip: reverse-jointed
+  ankle_forward: 0.10            # ankle slightly ahead of the hip
+  ankle_height: 0.55             # raised ankle on a long link to the foot
+  radius: 0.13
+  joint_radius: 0.19
+  foot: [0.95, 0.50, 0.16]
+  armour: [0.36, 0.30]
+pod:
+  size: [1.40, 1.45, 1.85]       # taller, narrower pod than CL-04
+  bottom_offset: 0.05            # the pod sits on top of the hips
+  x_front: 0.75
+  wall: 0.07
+  edge_radius: 0.10
+  opening: [0.80, 0.70, 0.12]    # smaller front window
+  side_window: [0.62, 0.72]      # x length, height; through both sides; also the emergency hatches
+  floor_offset: 0.12
+  seat_back_from_front: 0.96
+shoulder:
+  plate: [0.55, 0.40, 0.45]
+  drop: 0.70                     # low shoulders: arms hang from the lower front of the pod
+  step:                          # the shoulder plate as a step for the side-hatch exit (SYS-012, HAZ-023)
+    width: 0.42                  # tread depth outward from the hull
+    thickness: 0.07
+    offset: 0.0                  # tread top relative to the hatch sill (flush)
+    rear_overhang: 0.05          # tread runs this far behind the hatch's rear edge
+    skirt: 0.25                  # armour skirt below the tread's outer edge, over the shoulder joint
+arm:
+  upper: 0.95
+  fore: 0.85
+  radius: 0.10
+  drop_angle_deg: 35
+  fore_angle_deg: -68            # forearm hangs steeply toward the ground
+  claw: true
+power:
+  pack: [0.50, 1.15, 1.10]
+  vents: 3
+rollbar:
+  rise: 0.22
+  tube_radius: 0.045
+dock:
+  type: rear-backpack
+  platform: [0.75, 0.75, 0.06]
+  center: [-0.05, 0.0, 0.45]      # raised on struts (was 0.08): docked rotors 1.09 m from the pilot's head, over the 1 m flag
+detail:                          # build123d-only detail (no effect on the primitive layouts)
+  chin_chamfer: 0.28             # sloped lower front of the pod
+  groove_heights: [0.55, 1.30]   # panel grooves around the hull, above its bottom
+  fins: 7                        # cooling fins on the back of the power pack
+  claw_length: 0.45              # claw drop below the hand (m)
+  heel_spur:                     # rear ground contact of each foot: sets the support polygon's rear edge
+    reach: 0.68                  # heel tip behind the ankle (was 0.40): static margin above 0.30 m in every posture
+    width: 0.30                  # was 0.16
+postures:                        # extra poses of this layout, built and analysed alongside the standing pose
+  kneel:                         # lowered for ingress and egress (SYS-012); feet stay planted, knees fold back
+    label: "kneeling for egress"
+    hip_height: 0.95             # target hip height when kneeling
+    arm_drop_deg: 20             # arms stowed: upper arm closer to horizontal
+    fore_angle_deg: 55           # forearm folded up, claws tucked clear of the ground
+    step: deployed               # the fold-down ladder is out when kneeling
+  carry:                         # loaded walk (MOD-11, SYS-020): load clamped between the hands just ahead of the pod
+    label: "carrying a load"
+    carry:                       # arm angles are solved for this hand target; load mass is TBD (SYS-020)
+      hand_height: 1.80          # load centre height: its top stays below the pilot's sight line over the window sill
+      gap: 0.10                  # load's rear face ahead of the pod front
+      length: 0.80               # placeholder load envelope, fore-aft (its width is set by the hand spacing)
+      height: 0.60               # placeholder load envelope, vertical
+  emergency:                     # standing, no power: right-hand hatch open, escape ladder deployed (SYS-012, HAZ-008)
+    label: "emergency exit"
+    escape: deployed
+access:                          # ingress/egress aids at the front opening (SYS-012, SYS-019)
+  width: 0.62                    # ladder width between rails
+  reach: 0.55                    # how far forward of the hull the deployed ladder's foot lands
+  max_rise: 0.40                 # largest step rise allowed (placeholder until an access standard is chosen)
+  stowed_height: 0.70            # folded ladder pack height on the hull front
+  handle_offset: 0.14            # grab handles this far outside the opening edges
+emergency_exit:                  # side-window hatches with a fold-out davit and rope ladder (SYS-012, HAZ-008, HAZ-017)
+  side: right                    # side the ladder is shown deployed on (either side can be used)
+  davit_reach: 0.60              # how far the davit carries the ladder out from the hull, clear of the arm
+  ladder_width: 0.40
+  rung_spacing: 0.30
+  bottom_clearance: 0.25         # lowest rung above the ground
+walk:                            # concept walk cycle for the Blender animation (no dynamics, balance or load model)
+  stride: 1.0                    # body advance per full cycle (two steps)
+  duty: 0.6                      # fraction of the cycle each foot is planted
+  lift: 0.22                     # peak foot lift during swing
+  crouch: 0.06                   # hip lowered from standing while walking
+  bob: 0.025                     # vertical hip bob amplitude
+  arms:                          # arms stowed while walking (SYS-013, HAZ-009): claws tucked up beside the pod
+    arm_drop_deg: 45             # upper arm angled down beside the hull
+    fore_angle_deg: 80           # forearm folded nearly upright; a tighter fold puts the claws into the arm or hull

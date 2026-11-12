@@ -1,424 +1,548 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1341.1" height="3199.1" viewBox="0 0 1341.1 3199.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1449.1" height="4143.1" viewBox="0 0 1449.1 4143.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
 <title>Figure 4 · SysML requirements — system safety requirements and allocation</title>
 <desc>Every safety-significant requirement record in requirements/ with its allocation, read from the project SysML model (Requirements.sysml and Satisfaction.sysml). Nothing is restated here.</desc>
 <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="1341.1" height="3101" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1449.1" height="4045" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 4 · SysML requirements — system safety requirements and allocation</text>
 <text x="40" y="66" font-size="12.5" fill="#475569">Every safety-significant requirement record in requirements/ with its allocation, read from the project SysML model (Requirements.sysml and Satisfaction.sysml). Nothing is restated here.</text>
-<text x="1301.1" y="44" font-size="11" fill="#475569" text-anchor="end">Task203_SRHA.sysml</text>
-<line x1="40" y1="85" x2="1301.1" y2="85" stroke="#E2E8F0" stroke-width="1"/>
-<rect x="40" y="109" width="1261.1" height="2911" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<text x="1409.1" y="44" font-size="11" fill="#475569" text-anchor="end">Task203_SRHA.sysml</text>
+<line x1="40" y1="85" x2="1409.1" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="109" width="1369.1" height="3855" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
 <path d="M40 109 L239.9 109 L239.9 123 L229.9 133 L40 133 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="50" y="126" font-size="11.5" fill="#0F172A" font-weight="700">req [package] Task203_SRHA</text>
 <g transform="translate(56 149)">
-<path d="M1012 2182 L985 2182 Q978 2182 978 2175 L978 2002 Q978 1995 971 1995 L821.7 1995" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 1771 L850.7 1771 Q843.7 1771 843.7 1778 L843.7 1933 Q843.7 1940 836.7 1940 L821.7 1940" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 2192 L973 2192 Q966 2192 966 2185 L966 2083 Q966 2076 959 2076 L297.4 2076 Q290.4 2076 290.4 2083 L290.4 2152 Q290.4 2159 283.4 2159 L268.4 2159" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 569 L985 569 Q978 569 978 576 L978 783 Q978 790 971 790 L297.4 790 Q290.4 790 290.4 783 L290.4 433 Q290.4 426 283.4 426 L268.4 426" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 388 L268.4 388" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 1557 L973 1557 Q966 1557 966 1564 L966 1573 Q966 1580 959 1580 L850.7 1580 Q843.7 1580 843.7 1587 L843.7 1752 Q843.7 1759 836.7 1759 L821.7 1759" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 2173 L997 2173 Q990 2173 990 2166 L990 1816 Q990 1809 983 1809 L821.7 1809" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 554 L973 554 Q966 554 966 561 L966 682 Q966 689 959 689 L821.7 689" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 538 L821.7 538" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 403 L973 403 Q966 403 966 410 L966 455 Q966 462 959 462 L862.7 462 Q855.7 462 855.7 469 L855.7 481 Q855.7 488 848.7 488 L821.7 488" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 1043 L850.7 1043 Q843.7 1043 843.7 1050 L843.7 1089 Q843.7 1096 836.7 1096 L821.7 1096" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 1146 L821.7 1146" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 1542 L849.2 1542 Q843.7 1542 843.7 1547.5 L843.7 1547.5 Q843.7 1553 838.2 1553 L821.7 1553" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 1745 L973 1745 Q966 1745 966 1738 L966 1625 Q966 1618 959 1618 L821.7 1618" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 1511 L985 1511 Q978 1511 978 1504 L978 1191 Q978 1184 971 1184 L862.7 1184 Q855.7 1184 855.7 1177 L855.7 967 Q855.7 960 848.7 960 L821.7 960" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 1013 L973 1013 Q966 1013 966 1006 L966 907 Q966 900 959 900 L821.7 900" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 2201 L777.6 2201" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 2211 L973 2211 Q966 2211 966 2218 L966 2370 Q966 2377 959 2377 L778.5 2377" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 523 L973 523 Q966 523 966 516 L966 507 Q966 500 959 500 L850.7 500 Q843.7 500 843.7 493 L843.7 319 Q843.7 312 836.7 312 L797.3 312" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 262 L797.3 262" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 373 L973 373 Q966 373 966 366 L966 351 Q966 344 959 344 L862.7 344 Q855.7 344 855.7 337 L855.7 133 Q855.7 126 848.7 126 L821.7 126" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 236 L973 236 Q966 236 966 229 L966 73 Q966 66 959 66 L821.7 66" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 2598 L821.7 2598" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 2220 L985 2220 Q978 2220 978 2227 L978 2515 Q978 2522 971 2522 L850.7 2522 Q843.7 2522 843.7 2529 L843.7 2531 Q843.7 2538 836.7 2538 L821.7 2538" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 2794 L821.7 2794" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 2230 L997 2230 Q990 2230 990 2237 L990 2553 Q990 2560 983 2560 L850.7 2560 Q843.7 2560 843.7 2567 L843.7 2732 Q843.7 2739 836.7 2739 L821.7 2739" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1012 1526 L973 1526 Q966 1526 966 1519 L966 1349 Q966 1342 959 1342 L821.7 1342" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M517.7 2201 L268.4 2201" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
-<path d="M516.8 2377 L297.4 2377 Q290.4 2377 290.4 2370 L290.4 2249 Q290.4 2242 283.4 2242 L268.4 2242" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
-<path d="M522.5 287 L297.4 287 Q290.4 287 290.4 294 L290.4 344 Q290.4 351 283.4 351 L268.4 351" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
-<rect x="558.9" y="1885" width="262.8" height="165" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="558.9" y="1885" width="262.8" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="558.9" y1="1931" x2="821.7" y2="1931" stroke="#64748B" stroke-width="1.1"/>
-<text x="690.3" y="1902" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="690.3" y="1919" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">pilotReadinessActuationInterlock</text>
-<text x="570.9" y="1949" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-001</text>
-<text x="570.9" y="1964" font-size="10.5" fill="#475569">The system shall inhibit leg actuation until pilot</text>
-<text x="570.9" y="1979" font-size="10.5" fill="#475569">station readiness conditions (restraint</text>
-<text x="570.9" y="1994" font-size="10.5" fill="#475569">fastened, hatch secured, controls neutral,</text>
-<text x="570.9" y="2009" font-size="10.5" fill="#475569">exclusion zone confirmed) are satisfied.</text>
-<rect x="570.9" y="2026" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="618.3" y="2037.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="671.6" y="2026" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="686.9" y="2037.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="708.1" y="2026" width="77.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="747" y="2037.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">demonstration</text>
-<rect x="6" y="2118" width="262.4" height="165" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="6" y="2118" width="262.4" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="6" y1="2164" x2="268.4" y2="2164" stroke="#64748B" stroke-width="1.1"/>
-<text x="137.2" y="2135" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="137.2" y="2152" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">operatorProtectiveStop</text>
-<text x="18" y="2182" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-002</text>
-<text x="18" y="2197" font-size="10.5" fill="#475569">The system shall provide an operator-requested</text>
-<text x="18" y="2212" font-size="10.5" fill="#475569">protective stop with a defined, analyzed safe</text>
-<text x="18" y="2227" font-size="10.5" fill="#475569">behavior for each operating mode that does not</text>
-<text x="18" y="2242" font-size="10.5" fill="#475569">depend on instant zero torque.</text>
-<rect x="18" y="2259" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="65.4" y="2270.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="118.7" y="2259" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="134" y="2270.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="155.2" y="2259" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="180.9" y="2270.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
-<rect x="12.2" y="313" width="256.2" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="12.2" y="313" width="256.2" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="12.2" y1="359" x2="268.4" y2="359" stroke="#64748B" stroke-width="1.1"/>
-<text x="140.3" y="330" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="140.3" y="347" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">dockedRotorInhibit</text>
-<text x="24.2" y="377" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-003</text>
-<text x="24.2" y="392" font-size="10.5" fill="#475569">The UAV shall be prevented from rotor startup</text>
-<text x="24.2" y="407" font-size="10.5" fill="#475569">while mechanically retained, except under an</text>
-<text x="24.2" y="422" font-size="10.5" fill="#475569">approved maintenance procedure.</text>
-<rect x="24.2" y="439" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="71.6" y="450.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="124.9" y="439" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="140.2" y="450.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="161.4" y="439" width="60.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="191.7" y="450.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">inspection</text>
-<rect x="573.7" y="1709" width="248" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="573.7" y="1709" width="248" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="573.7" y1="1755" x2="821.7" y2="1755" stroke="#64748B" stroke-width="1.1"/>
-<text x="697.7" y="1726" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="697.7" y="1743" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">feedbackFaultDetection</text>
-<text x="585.7" y="1773" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-004</text>
-<text x="585.7" y="1788" font-size="10.5" fill="#475569">The system shall detect loss or staleness of</text>
-<text x="585.7" y="1803" font-size="10.5" fill="#475569">essential actuator and posture feedback and</text>
-<text x="585.7" y="1818" font-size="10.5" fill="#475569">transition to a documented degraded state.</text>
-<rect x="585.7" y="1835" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="633.1" y="1846.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="686.4" y="1835" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="701.7" y="1846.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="722.9" y="1835" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="748.6" y="1846.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
-<rect x="566.5" y="614" width="255.2" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="566.5" y="614" width="255.2" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="566.5" y1="660" x2="821.7" y2="660" stroke="#64748B" stroke-width="1.1"/>
-<text x="694.1" y="631" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="694.1" y="648" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">positiveDockingRetentionState</text>
-<text x="578.5" y="678" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-005</text>
-<text x="578.5" y="693" font-size="10.5" fill="#475569">The docking interface shall report a positively</text>
-<text x="578.5" y="708" font-size="10.5" fill="#475569">confirmed retained/unretained state derived</text>
-<text x="578.5" y="723" font-size="10.5" fill="#475569">from independent sensing.</text>
-<rect x="578.5" y="740" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="625.9" y="751.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="679.2" y="740" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="694.5" y="751.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="715.7" y="740" width="60.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="746" y="751.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">inspection</text>
-<rect x="560.8" y="438" width="260.9" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="560.8" y="438" width="260.9" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="560.8" y1="484" x2="821.7" y2="484" stroke="#64748B" stroke-width="1.1"/>
-<text x="691.2" y="455" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="691.2" y="472" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">launchAndRecoveryEnvelopeInhibit</text>
-<text x="572.8" y="502" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-006</text>
-<text x="572.8" y="517" font-size="10.5" fill="#475569">UAV launch and recovery shall be inhibited</text>
-<text x="572.8" y="532" font-size="10.5" fill="#475569">outside a verified operational envelope of</text>
-<text x="572.8" y="547" font-size="10.5" fill="#475569">walker posture, motion and dock state.</text>
-<rect x="572.8" y="564" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="620.2" y="575.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="673.5" y="564" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="688.8" y="575.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="710" y="564" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="735.7" y="575.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
-<rect x="542.8" y="1046" width="278.9" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="542.8" y="1046" width="278.9" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="542.8" y1="1092" x2="821.7" y2="1092" stroke="#64748B" stroke-width="1.1"/>
-<text x="682.2" y="1063" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="682.2" y="1080" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">storedHydraulicEnergyIsolation</text>
-<text x="554.8" y="1110" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-007</text>
-<text x="554.8" y="1125" font-size="10.5" fill="#475569">The walker shall provide lockable isolation and</text>
-<text x="554.8" y="1140" font-size="10.5" fill="#475569">verifiable dissipation of stored hydraulic</text>
-<text x="554.8" y="1155" font-size="10.5" fill="#475569">pressure before maintenance access.</text>
-<rect x="554.8" y="1172" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="602.2" y="1183.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="655.5" y="1172" width="60.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="685.8" y="1183.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">inspection</text>
-<rect x="722" y="1172" width="77.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="760.9" y="1183.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">demonstration</text>
-<rect x="558.4" y="1488" width="263.3" height="195" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="558.4" y="1488" width="263.3" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="558.4" y1="1534" x2="821.7" y2="1534" stroke="#64748B" stroke-width="1.1"/>
-<text x="690.1" y="1505" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="690.1" y="1522" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">stabilityEnvelopeProtection</text>
-<text x="570.4" y="1552" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-008</text>
-<text x="570.4" y="1567" font-size="10.5" fill="#475569">The walker shall limit commanded motion and</text>
-<text x="570.4" y="1582" font-size="10.5" fill="#475569">payload to a verified static and dynamic</text>
-<text x="570.4" y="1597" font-size="10.5" fill="#475569">stability envelope, including a terrain slope limit</text>
-<text x="570.4" y="1612" font-size="10.5" fill="#475569">of 20 degrees with the centre of mass no more</text>
-<text x="570.4" y="1627" font-size="10.5" fill="#475569">than 0.12 m ahead of the stance foot, and</text>
-<text x="570.4" y="1642" font-size="10.5" fill="#475569">provide pilot protection in a fall or overturn.</text>
-<rect x="570.4" y="1659" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="617.8" y="1670.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="671.1" y="1659" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="696.8" y="1670.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
-<rect x="728.4" y="1659" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="743.6" y="1670.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="566" y="840" width="255.7" height="180" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="566" y="840" width="255.7" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="566" y1="886" x2="821.7" y2="886" stroke="#64748B" stroke-width="1.1"/>
-<text x="693.9" y="857" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="693.9" y="874" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">failSafeLoadHolding</text>
-<text x="578" y="904" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-009</text>
-<text x="578" y="919" font-size="10.5" fill="#475569">The walker shall hold its posture without</text>
-<text x="578" y="934" font-size="10.5" fill="#475569">supply or command on loss of actuator supply,</text>
-<text x="578" y="949" font-size="10.5" fill="#475569">with load holding engaging in less than the</text>
-<text x="578" y="964" font-size="10.5" fill="#475569">free-fall time from the highest operating</text>
-<text x="578" y="979" font-size="10.5" fill="#475569">posture.</text>
-<rect x="578" y="996" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="625.4" y="1007.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="678.7" y="996" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="694" y="1007.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="715.2" y="996" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="740.9" y="1007.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
-<rect x="517.7" y="2126" width="259.9" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="517.7" y="2126" width="259.9" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="517.7" y1="2172" x2="777.6" y2="2172" stroke="#64748B" stroke-width="1.1"/>
-<text x="647.7" y="2143" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="647.7" y="2160" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">protectiveStopIndependence</text>
-<text x="529.7" y="2190" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-010</text>
-<text x="529.7" y="2205" font-size="10.5" fill="#475569">The protective stop path shall achieve its</text>
-<text x="529.7" y="2220" font-size="10.5" fill="#475569">defined safe behavior without depending on the</text>
-<text x="529.7" y="2235" font-size="10.5" fill="#475569">mission, motion and balance control software.</text>
-<rect x="529.7" y="2252" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="577.1" y="2263.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="630.4" y="2252" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="656.1" y="2263.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
-<rect x="687.7" y="2252" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="702.9" y="2263.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="516.8" y="2302" width="261.8" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="516.8" y="2302" width="261.8" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="516.8" y1="2348" x2="778.6" y2="2348" stroke="#64748B" stroke-width="1.1"/>
-<text x="647.7" y="2319" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="647.7" y="2336" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">protectiveStopReactionTime</text>
-<text x="528.8" y="2366" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-011</text>
-<text x="528.8" y="2381" font-size="10.5" fill="#475569">The protective stop shall begin its defined safe</text>
-<text x="528.8" y="2396" font-size="10.5" fill="#475569">behavior within the reaction time allocated by</text>
-<text x="528.8" y="2411" font-size="10.5" fill="#475569">hazard analysis for each operating mode.</text>
-<rect x="528.8" y="2428" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="576.1" y="2439.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="629.5" y="2428" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="644.7" y="2439.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="522.5" y="212" width="274.8" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="522.5" y="212" width="274.8" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="522.5" y1="258" x2="797.2" y2="258" stroke="#64748B" stroke-width="1.1"/>
-<text x="659.8" y="229" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="659.8" y="246" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">rotorArmingRequiresConfirmedRelease</text>
-<text x="534.5" y="276" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-012</text>
-<text x="534.5" y="291" font-size="10.5" fill="#475569">UAV rotor arming shall require a positively</text>
-<text x="534.5" y="306" font-size="10.5" fill="#475569">confirmed unretained dock state reported over</text>
-<text x="534.5" y="321" font-size="10.5" fill="#475569">the docking interface.</text>
-<rect x="534.5" y="338" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="581.8" y="349.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="635.2" y="338" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="650.5" y="349.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="473.6" y="6" width="348.1" height="180" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="473.6" y="6" width="348.1" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="473.6" y1="52" x2="821.7" y2="52" stroke="#64748B" stroke-width="1.1"/>
-<text x="647.6" y="23" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="647.6" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">uavLinkLossContingencyLandsClearOfTheWalker</text>
-<text x="485.6" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-013</text>
-<text x="485.6" y="85" font-size="10.5" fill="#475569">On loss of the integration link the UAV shall</text>
-<text x="485.6" y="100" font-size="10.5" fill="#475569">hold for a set time and then land in place, and</text>
-<text x="485.6" y="115" font-size="10.5" fill="#475569">shall not return to the dock or descend within</text>
-<text x="485.6" y="130" font-size="10.5" fill="#475569">the pilot keep-out without a recovery permit</text>
-<text x="485.6" y="145" font-size="10.5" fill="#475569">from the integration manager.</text>
-<rect x="485.6" y="162" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="533" y="173.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="586.3" y="162" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="601.6" y="173.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="622.8" y="162" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="648.5" y="173.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
-<rect x="553.2" y="2478" width="268.5" height="180" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="553.2" y="2478" width="268.5" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="553.2" y1="2524" x2="821.7" y2="2524" stroke="#64748B" stroke-width="1.1"/>
-<text x="687.5" y="2495" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="687.5" y="2512" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">independentTractionBatteryIsolation</text>
-<text x="565.2" y="2542" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-014</text>
-<text x="565.2" y="2557" font-size="10.5" fill="#475569">If the series-hybrid power alternative is</text>
-<text x="565.2" y="2572" font-size="10.5" fill="#475569">retained, the walker shall isolate the traction</text>
-<text x="565.2" y="2587" font-size="10.5" fill="#475569">battery on cell over-temperature, over-voltage</text>
-<text x="565.2" y="2602" font-size="10.5" fill="#475569">or over-current independently of the motion</text>
-<text x="565.2" y="2617" font-size="10.5" fill="#475569">controller, and warn the pilot.</text>
-<rect x="565.2" y="2634" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="612.6" y="2645.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="665.9" y="2634" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="681.2" y="2645.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="702.4" y="2634" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="728.1" y="2645.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
-<rect x="558.7" y="2684" width="263" height="165" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="558.7" y="2684" width="263" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="558.7" y1="2730" x2="821.7" y2="2730" stroke="#64748B" stroke-width="1.1"/>
-<text x="690.2" y="2701" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="690.2" y="2718" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">fuelShutOffOnProtectiveStop</text>
-<text x="570.7" y="2748" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-015</text>
-<text x="570.7" y="2763" font-size="10.5" fill="#475569">If the series-hybrid power alternative is</text>
-<text x="570.7" y="2778" font-size="10.5" fill="#475569">retained, a protective stop or detected fall shall</text>
-<text x="570.7" y="2793" font-size="10.5" fill="#475569">shut off fuel to the engine-generator and stop</text>
-<text x="570.7" y="2808" font-size="10.5" fill="#475569">the engine.</text>
-<rect x="570.7" y="2825" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="618.1" y="2836.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="671.4" y="2825" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="686.7" y="2836.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="515.9" y="1222" width="305.8" height="240" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
-<rect x="515.9" y="1222" width="305.8" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<line x1="515.9" y1="1268" x2="821.7" y2="1268" stroke="#64748B" stroke-width="1.1"/>
-<text x="668.8" y="1239" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
-<text x="668.8" y="1256" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">actuatorTorqueReserveAgainstSupplyLoss</text>
-<text x="527.9" y="1286" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-016</text>
-<text x="527.9" y="1301" font-size="10.5" fill="#475569">Each ankle actuator shall deliver at least 1.5 m</text>
-<text x="527.9" y="1316" font-size="10.5" fill="#475569">g L_foot of torque at full actuator supply and</text>
-<text x="527.9" y="1331" font-size="10.5" fill="#475569">at least 0.6 m g L_foot at the supply at which</text>
-<text x="527.9" y="1346" font-size="10.5" fill="#475569">load holding engages, and each knee actuator</text>
-<text x="527.9" y="1361" font-size="10.5" fill="#475569">at least 22.5 kN m at full supply</text>
-<text x="527.9" y="1376" font-size="10.5" fill="#475569">(SPEC-WLK-001 mass and geometry), so that a</text>
-<text x="527.9" y="1391" font-size="10.5" fill="#475569">loss of supply inside the operating envelope</text>
-<text x="527.9" y="1406" font-size="10.5" fill="#475569">does not tip the walker before load holding</text>
-<text x="527.9" y="1421" font-size="10.5" fill="#475569">engages.</text>
-<rect x="527.9" y="1438" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="575.3" y="1449.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
-<rect x="628.6" y="1438" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="654.3" y="1449.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
-<rect x="685.9" y="1438" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="701.1" y="1449.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
-<rect x="1012" y="2163" width="202.6" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="1024" y="2175" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="1061.4" y="2186.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
-<text x="1024" y="2209" font-size="12.5" fill="#0F172A" font-weight="700">Independent safety monitor,</text>
-<text x="1024" y="2225" font-size="12.5" fill="#0F172A" font-weight="700">protective stop and isolation</text>
-<rect x="1012" y="1720" width="172.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1024" y="1732" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1061.4" y="1743.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
-<text x="1024" y="1766" font-size="12.5" fill="#0F172A" font-weight="700">Pilot station, restraints,</text>
-<text x="1024" y="1782" font-size="12.5" fill="#0F172A" font-weight="700">displays and controls</text>
-<rect x="1012" y="508" width="211.1" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="1024" y="520" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="1061.4" y="531.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
-<text x="1024" y="554" font-size="12.5" fill="#0F172A" font-weight="700">UAV dock, retention, charging</text>
-<text x="1024" y="570" font-size="12.5" fill="#0F172A" font-weight="700">and release</text>
-<rect x="1012" y="358" width="191.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1024" y="370" width="49.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1048.9" y="381.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1</text>
-<text x="1024" y="404" font-size="12.5" fill="#0F172A" font-weight="700">Dockable observation UAV</text>
-<rect x="1012" y="1496" width="208.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1024" y="1508" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1061.4" y="1519.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
-<text x="1024" y="1542" font-size="12.5" fill="#0F172A" font-weight="700">Chassis, legs, joint actuators</text>
-<text x="1024" y="1558" font-size="12.5" fill="#0F172A" font-weight="700">and stability sensing</text>
-<rect x="1012" y="982" width="190.7" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1024" y="994" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1061.4" y="1005.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR</text>
-<text x="1024" y="1028" font-size="12.5" fill="#0F172A" font-weight="700">Power generation, storage,</text>
-<text x="1024" y="1044" font-size="12.5" fill="#0F172A" font-weight="700">distribution and thermal</text>
-<text x="1024" y="1060" font-size="12.5" fill="#0F172A" font-weight="700">control</text>
-<rect x="1012" y="1100" width="204.2" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1024" y="1112" width="58.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1053.2" y="1123.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-GSE</text>
-<text x="1024" y="1146" font-size="12.5" fill="#0F172A" font-weight="700">Ground support, maintenance</text>
-<text x="1024" y="1162" font-size="12.5" fill="#0F172A" font-weight="700">supports, charging and test</text>
-<text x="1024" y="1178" font-size="12.5" fill="#0F172A" font-weight="700">equipment</text>
-<rect x="1012" y="211" width="209.4" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
-<rect x="1024" y="223" width="74.8" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
-<text x="1061.4" y="234.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
-<text x="1024" y="257" font-size="12.5" fill="#0F172A" font-weight="700">Integration manager and PX4</text>
-<text x="1024" y="273" font-size="12.5" fill="#0F172A" font-weight="700">command adapter</text>
-<rect x="1012" y="2560" width="184.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1024" y="2572" width="99.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1073.9" y="2583.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR-BAT</text>
-<text x="1024" y="2606" font-size="12.5" fill="#0F172A" font-weight="700">Battery pack, BMS and</text>
-<text x="1024" y="2622" font-size="12.5" fill="#0F172A" font-weight="700">contactors (alternative B)</text>
-<rect x="1012" y="2756" width="172.5" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1024" y="2768" width="99.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1073.9" y="2779.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR-GEN</text>
-<text x="1024" y="2802" font-size="12.5" fill="#0F172A" font-weight="700">Engine-generator and</text>
-<text x="1024" y="2818" font-size="12.5" fill="#0F172A" font-weight="700">governor (alternative B)</text>
-<rect x="883.7" y="2000" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="2013" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="1776" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="1789" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="616.5" y="2081" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="621.5" y="2094" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="616.5" y="795" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="621.5" y="808" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="616.5" y="393" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="621.5" y="406" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="1585" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="1598" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="1814" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="1827" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="694" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="707" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="543" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="556" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="467" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="480" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="1048" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="1061" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="1151" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="1164" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="1547" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="1560" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="1623" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="1636" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="1189" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="1202" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="905" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="918" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="2206" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="2219" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="2382" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="2395" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="505" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="518" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="267" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="280" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="349" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="362" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="71" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="84" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="2603" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="2616" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="2527" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="2540" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="2799" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="2812" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="2565" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="2578" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="883.7" y="1347" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="888.7" y="1360" font-size="10.5" fill="#475569">«satisfy»</text>
-<rect x="330.4" y="2206" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="335.4" y="2219" font-size="10.5" fill="#475569">«deriveReqt»</text>
-<rect x="330.4" y="2382" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="335.4" y="2395" font-size="10.5" fill="#475569">«deriveReqt»</text>
-<rect x="330.4" y="292" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="335.4" y="305" font-size="10.5" fill="#475569">«deriveReqt»</text>
+<path d="M1120 1879 L1069 1879 Q1062 1879 1062 1886 L1062 2651 Q1062 2658 1055 2658 L821.7 2658" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 2144 L1105 2144 Q1098 2144 1098 2151 L1098 2706 Q1098 2713 1091 2713 L821.7 2713" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1841 L1009 1841 Q1002 1841 1002 1834 L1002 1339 Q1002 1332 995 1332 L297.4 1332 Q290.4 1332 290.4 1339 L290.4 1408 Q290.4 1415 283.4 1415 L268.4 1415" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 3095 L973 3095 Q966 3095 966 3088 L966 2992 Q966 2985 959 2985 L297.4 2985 Q290.4 2985 290.4 2992 L290.4 3418 Q290.4 3425 283.4 3425 L268.4 3425" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 3563 L297.4 3563 Q290.4 3563 290.4 3556 L290.4 3507 Q290.4 3500 283.4 3500 L268.4 3500" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1020 L973 1020 Q966 1020 966 1027 L966 1199 Q966 1206 959 1206 L821.7 1206" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1835 L1033 1835 Q1026 1835 1026 1828 L1026 1263 Q1026 1256 1019 1256 L821.7 1256" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 3110 L821.7 3110" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 3126 L973 3126 Q966 3126 966 3133 L966 3254 Q966 3261 959 3261 L821.7 3261" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 3548 L997 3548 Q990 3548 990 3541 L990 3318 Q990 3311 983 3311 L821.7 3311" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 56 L821.7 56" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 189 L985 189 Q978 189 978 182 L978 113 Q978 106 971 106 L821.7 106" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1031 L997 1031 Q990 1031 990 1038 L990 1616 Q990 1623 983 1623 L821.7 1623" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 2098 L973 2098 Q966 2098 966 2091 L966 1695 Q966 1688 959 1688 L821.7 1688" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 988 L1105 988 Q1098 988 1098 981 L1098 309 Q1098 302 1091 302 L821.7 302" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 86 L973 86 Q966 86 966 93 L966 235 Q966 242 959 242 L821.7 242" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1848 L985 1848 Q978 1848 978 1841 L978 1464 Q978 1457 971 1457 L777.6 1457" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1854 L778.5 1854" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 3141 L985 3141 Q978 3141 978 3148 L978 3430 Q978 3437 971 3437 L797.3 3437" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 3644 L973 3644 Q966 3644 966 3637 L966 3494 Q966 3487 959 3487 L797.3 3487" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 3578 L985 3578 Q978 3578 978 3585 L978 3625 Q978 3632 971 3632 L850.7 3632 Q843.7 3632 843.7 3639 L843.7 3666 Q843.7 3673 836.7 3673 L821.7 3673" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 3670 L973 3670 Q966 3670 966 3677 L966 3726 Q966 3733 959 3733 L821.7 3733" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 2517 L821.7 2517" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1873 L1057 1873 Q1050 1873 1050 1880 L1050 2450 Q1050 2457 1043 2457 L821.7 2457" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 2904 L821.7 2904" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1886 L1093 1886 Q1086 1886 1086 1893 L1086 2842 Q1086 2849 1079 2849 L821.7 2849" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1010 L821.7 1010" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 650 L850.7 650 Q843.7 650 843.7 657 L843.7 688 Q843.7 695 836.7 695 L821.7 695" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 752 L821.7 752" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1829 L1045 1829 Q1038 1829 1038 1822 L1038 815 Q1038 808 1031 808 L821.7 808" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1042 L1021 1042 Q1014 1042 1014 1049 L1014 2001 Q1014 2008 1007 2008 L821.7 2008" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 2113 L821.7 2113" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1860 L1033 1860 Q1026 1860 1026 1867 L1026 2053 Q1026 2060 1019 2060 L821.7 2060" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 624 L1093 624 Q1086 624 1086 617 L1086 440 Q1086 433 1079 433 L821.7 433" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 999 L1069 999 Q1062 999 1062 992 L1062 530 Q1062 523 1055 523 L821.7 523" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 726 L1081 726 Q1074 726 1074 719 L1074 485 Q1074 478 1067 478 L821.7 478" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1822 L1057 1822 Q1050 1822 1050 1815 L1050 575 Q1050 568 1043 568 L821.7 568" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 2129 L1081 2129 Q1074 2129 1074 2136 L1074 2304 Q1074 2311 1067 2311 L821.7 2311" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1120 1867 L1045 1867 Q1038 1867 1038 1874 L1038 2244 Q1038 2251 1031 2251 L821.7 2251" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M517.7 1457 L268.4 1457" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
+<path d="M516.8 1854 L297.4 1854 Q290.4 1854 290.4 1847 L290.4 1505 Q290.4 1498 283.4 1498 L268.4 1498" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
+<path d="M522.5 3462 L268.4 3462" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
+<rect x="558.9" y="2603" width="262.8" height="165" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="558.9" y="2603" width="262.8" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="558.9" y1="2649" x2="821.7" y2="2649" stroke="#64748B" stroke-width="1.1"/>
+<text x="690.3" y="2620" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="690.3" y="2637" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">pilotReadinessActuationInterlock</text>
+<text x="570.9" y="2667" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-001</text>
+<text x="570.9" y="2682" font-size="10.5" fill="#475569">The system shall inhibit leg actuation until pilot</text>
+<text x="570.9" y="2697" font-size="10.5" fill="#475569">station readiness conditions (restraint</text>
+<text x="570.9" y="2712" font-size="10.5" fill="#475569">fastened, hatch secured, controls neutral,</text>
+<text x="570.9" y="2727" font-size="10.5" fill="#475569">exclusion zone confirmed) are satisfied.</text>
+<rect x="570.9" y="2744" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="618.3" y="2755.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="671.6" y="2744" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="686.9" y="2755.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="708.1" y="2744" width="77.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="747" y="2755.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">demonstration</text>
+<rect x="6" y="1374" width="262.4" height="165" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="6" y="1374" width="262.4" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="6" y1="1420" x2="268.4" y2="1420" stroke="#64748B" stroke-width="1.1"/>
+<text x="137.2" y="1391" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="137.2" y="1408" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">operatorProtectiveStop</text>
+<text x="18" y="1438" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-002</text>
+<text x="18" y="1453" font-size="10.5" fill="#475569">The system shall provide an operator-requested</text>
+<text x="18" y="1468" font-size="10.5" fill="#475569">protective stop with a defined, analyzed safe</text>
+<text x="18" y="1483" font-size="10.5" fill="#475569">behavior for each operating mode that does not</text>
+<text x="18" y="1498" font-size="10.5" fill="#475569">depend on instant zero torque.</text>
+<rect x="18" y="1515" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="65.4" y="1526.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="118.7" y="1515" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="134" y="1526.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="155.2" y="1515" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="180.9" y="1526.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
+<rect x="12.2" y="3387" width="256.2" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="12.2" y="3387" width="256.2" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="12.2" y1="3433" x2="268.4" y2="3433" stroke="#64748B" stroke-width="1.1"/>
+<text x="140.3" y="3404" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="140.3" y="3421" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">dockedRotorInhibit</text>
+<text x="24.2" y="3451" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-003</text>
+<text x="24.2" y="3466" font-size="10.5" fill="#475569">The UAV shall be prevented from rotor startup</text>
+<text x="24.2" y="3481" font-size="10.5" fill="#475569">while mechanically retained, except under an</text>
+<text x="24.2" y="3496" font-size="10.5" fill="#475569">approved maintenance procedure.</text>
+<rect x="24.2" y="3513" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="71.6" y="3524.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="124.9" y="3513" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="140.2" y="3524.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="161.4" y="3513" width="60.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="191.7" y="3524.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">inspection</text>
+<rect x="573.7" y="1156" width="248" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="573.7" y="1156" width="248" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="573.7" y1="1202" x2="821.7" y2="1202" stroke="#64748B" stroke-width="1.1"/>
+<text x="697.7" y="1173" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="697.7" y="1190" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">feedbackFaultDetection</text>
+<text x="585.7" y="1220" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-004</text>
+<text x="585.7" y="1235" font-size="10.5" fill="#475569">The system shall detect loss or staleness of</text>
+<text x="585.7" y="1250" font-size="10.5" fill="#475569">essential actuator and posture feedback and</text>
+<text x="585.7" y="1265" font-size="10.5" fill="#475569">transition to a documented degraded state.</text>
+<rect x="585.7" y="1282" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="633.1" y="1293.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="686.4" y="1282" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="701.7" y="1293.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="722.9" y="1282" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="748.6" y="1293.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
+<rect x="566.5" y="3035" width="255.2" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="566.5" y="3035" width="255.2" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="566.5" y1="3081" x2="821.7" y2="3081" stroke="#64748B" stroke-width="1.1"/>
+<text x="694.1" y="3052" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="694.1" y="3069" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">positiveDockingRetentionState</text>
+<text x="578.5" y="3099" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-005</text>
+<text x="578.5" y="3114" font-size="10.5" fill="#475569">The docking interface shall report a positively</text>
+<text x="578.5" y="3129" font-size="10.5" fill="#475569">confirmed retained/unretained state derived</text>
+<text x="578.5" y="3144" font-size="10.5" fill="#475569">from independent sensing.</text>
+<rect x="578.5" y="3161" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="625.9" y="3172.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="679.2" y="3161" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="694.5" y="3172.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="715.7" y="3161" width="60.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="746" y="3172.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">inspection</text>
+<rect x="560.8" y="3211" width="260.9" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="560.8" y="3211" width="260.9" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="560.8" y1="3257" x2="821.7" y2="3257" stroke="#64748B" stroke-width="1.1"/>
+<text x="691.2" y="3228" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="691.2" y="3245" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">launchAndRecoveryEnvelopeInhibit</text>
+<text x="572.8" y="3275" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-006</text>
+<text x="572.8" y="3290" font-size="10.5" fill="#475569">UAV launch and recovery shall be inhibited</text>
+<text x="572.8" y="3305" font-size="10.5" fill="#475569">outside a verified operational envelope of</text>
+<text x="572.8" y="3320" font-size="10.5" fill="#475569">walker posture, motion and dock state.</text>
+<rect x="572.8" y="3337" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="620.2" y="3348.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="673.5" y="3337" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="688.8" y="3348.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="710" y="3337" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="735.7" y="3348.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
+<rect x="542.8" y="6" width="278.9" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="542.8" y="6" width="278.9" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="542.8" y1="52" x2="821.7" y2="52" stroke="#64748B" stroke-width="1.1"/>
+<text x="682.2" y="23" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="682.2" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">storedHydraulicEnergyIsolation</text>
+<text x="554.8" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-007</text>
+<text x="554.8" y="85" font-size="10.5" fill="#475569">The walker shall provide lockable isolation and</text>
+<text x="554.8" y="100" font-size="10.5" fill="#475569">verifiable dissipation of stored hydraulic</text>
+<text x="554.8" y="115" font-size="10.5" fill="#475569">pressure before maintenance access.</text>
+<rect x="554.8" y="132" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="602.2" y="143.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="655.5" y="132" width="60.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="685.8" y="143.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">inspection</text>
+<rect x="722" y="132" width="77.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="760.9" y="143.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">demonstration</text>
+<rect x="558.4" y="1558" width="263.3" height="195" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="558.4" y="1558" width="263.3" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="558.4" y1="1604" x2="821.7" y2="1604" stroke="#64748B" stroke-width="1.1"/>
+<text x="690.1" y="1575" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="690.1" y="1592" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">stabilityEnvelopeProtection</text>
+<text x="570.4" y="1622" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-008</text>
+<text x="570.4" y="1637" font-size="10.5" fill="#475569">The walker shall limit commanded motion and</text>
+<text x="570.4" y="1652" font-size="10.5" fill="#475569">payload to a verified static and dynamic</text>
+<text x="570.4" y="1667" font-size="10.5" fill="#475569">stability envelope, including a terrain slope limit</text>
+<text x="570.4" y="1682" font-size="10.5" fill="#475569">of 20 degrees with the centre of mass no more</text>
+<text x="570.4" y="1697" font-size="10.5" fill="#475569">than 0.12 m ahead of the stance foot, and</text>
+<text x="570.4" y="1712" font-size="10.5" fill="#475569">provide pilot protection in a fall or overturn.</text>
+<rect x="570.4" y="1729" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="617.8" y="1740.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="671.1" y="1729" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="696.8" y="1740.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
+<rect x="728.4" y="1729" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="743.6" y="1740.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="566" y="182" width="255.7" height="180" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="566" y="182" width="255.7" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="566" y1="228" x2="821.7" y2="228" stroke="#64748B" stroke-width="1.1"/>
+<text x="693.9" y="199" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="693.9" y="216" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">failSafeLoadHolding</text>
+<text x="578" y="246" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-009</text>
+<text x="578" y="261" font-size="10.5" fill="#475569">The walker shall hold its posture without</text>
+<text x="578" y="276" font-size="10.5" fill="#475569">supply or command on loss of actuator supply,</text>
+<text x="578" y="291" font-size="10.5" fill="#475569">with load holding engaging in less than the</text>
+<text x="578" y="306" font-size="10.5" fill="#475569">free-fall time from the highest operating</text>
+<text x="578" y="321" font-size="10.5" fill="#475569">posture.</text>
+<rect x="578" y="338" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="625.4" y="349.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="678.7" y="338" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="694" y="349.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="715.2" y="338" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="740.9" y="349.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
+<rect x="517.7" y="1382" width="259.9" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="517.7" y="1382" width="259.9" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="517.7" y1="1428" x2="777.6" y2="1428" stroke="#64748B" stroke-width="1.1"/>
+<text x="647.7" y="1399" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="647.7" y="1416" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">protectiveStopIndependence</text>
+<text x="529.7" y="1446" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-010</text>
+<text x="529.7" y="1461" font-size="10.5" fill="#475569">The protective stop path shall achieve its</text>
+<text x="529.7" y="1476" font-size="10.5" fill="#475569">defined safe behavior without depending on the</text>
+<text x="529.7" y="1491" font-size="10.5" fill="#475569">mission, motion and balance control software.</text>
+<rect x="529.7" y="1508" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="577.1" y="1519.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="630.4" y="1508" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="656.1" y="1519.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
+<rect x="687.7" y="1508" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="702.9" y="1519.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="516.8" y="1779" width="261.8" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="516.8" y="1779" width="261.8" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="516.8" y1="1825" x2="778.6" y2="1825" stroke="#64748B" stroke-width="1.1"/>
+<text x="647.7" y="1796" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="647.7" y="1813" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">protectiveStopReactionTime</text>
+<text x="528.8" y="1843" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-011</text>
+<text x="528.8" y="1858" font-size="10.5" fill="#475569">The protective stop shall begin its defined safe</text>
+<text x="528.8" y="1873" font-size="10.5" fill="#475569">behavior within the reaction time allocated by</text>
+<text x="528.8" y="1888" font-size="10.5" fill="#475569">hazard analysis for each operating mode.</text>
+<rect x="528.8" y="1905" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="576.1" y="1916.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="629.5" y="1905" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="644.7" y="1916.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="522.5" y="3387" width="274.8" height="150" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="522.5" y="3387" width="274.8" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="522.5" y1="3433" x2="797.2" y2="3433" stroke="#64748B" stroke-width="1.1"/>
+<text x="659.8" y="3404" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="659.8" y="3421" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">rotorArmingRequiresConfirmedRelease</text>
+<text x="534.5" y="3451" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-012</text>
+<text x="534.5" y="3466" font-size="10.5" fill="#475569">UAV rotor arming shall require a positively</text>
+<text x="534.5" y="3481" font-size="10.5" fill="#475569">confirmed unretained dock state reported over</text>
+<text x="534.5" y="3496" font-size="10.5" fill="#475569">the docking interface.</text>
+<rect x="534.5" y="3513" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="581.8" y="3524.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="635.2" y="3513" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="650.5" y="3524.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="473.6" y="3613" width="348.1" height="180" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="473.6" y="3613" width="348.1" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="473.6" y1="3659" x2="821.7" y2="3659" stroke="#64748B" stroke-width="1.1"/>
+<text x="647.6" y="3630" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="647.6" y="3647" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">uavLinkLossContingencyLandsClearOfTheWalker</text>
+<text x="485.6" y="3677" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-013</text>
+<text x="485.6" y="3692" font-size="10.5" fill="#475569">On loss of the integration link the UAV shall</text>
+<text x="485.6" y="3707" font-size="10.5" fill="#475569">hold for a set time and then land in place, and</text>
+<text x="485.6" y="3722" font-size="10.5" fill="#475569">shall not return to the dock or descend within</text>
+<text x="485.6" y="3737" font-size="10.5" fill="#475569">the pilot keep-out without a recovery permit</text>
+<text x="485.6" y="3752" font-size="10.5" fill="#475569">from the integration manager.</text>
+<rect x="485.6" y="3769" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="533" y="3780.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="586.3" y="3769" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="601.6" y="3780.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="622.8" y="3769" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="648.5" y="3780.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
+<rect x="553.2" y="2397" width="268.5" height="180" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="553.2" y="2397" width="268.5" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="553.2" y1="2443" x2="821.7" y2="2443" stroke="#64748B" stroke-width="1.1"/>
+<text x="687.5" y="2414" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="687.5" y="2431" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">independentTractionBatteryIsolation</text>
+<text x="565.2" y="2461" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-014</text>
+<text x="565.2" y="2476" font-size="10.5" fill="#475569">If the series-hybrid power alternative is</text>
+<text x="565.2" y="2491" font-size="10.5" fill="#475569">retained, the walker shall isolate the traction</text>
+<text x="565.2" y="2506" font-size="10.5" fill="#475569">battery on cell over-temperature, over-voltage</text>
+<text x="565.2" y="2521" font-size="10.5" fill="#475569">or over-current independently of the motion</text>
+<text x="565.2" y="2536" font-size="10.5" fill="#475569">controller, and warn the pilot.</text>
+<rect x="565.2" y="2553" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="612.6" y="2564.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="665.9" y="2553" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="681.2" y="2564.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="702.4" y="2553" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="728.1" y="2564.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
+<rect x="558.7" y="2794" width="263" height="165" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="558.7" y="2794" width="263" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="558.7" y1="2840" x2="821.7" y2="2840" stroke="#64748B" stroke-width="1.1"/>
+<text x="690.2" y="2811" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="690.2" y="2828" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">fuelShutOffOnProtectiveStop</text>
+<text x="570.7" y="2858" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-015</text>
+<text x="570.7" y="2873" font-size="10.5" fill="#475569">If the series-hybrid power alternative is</text>
+<text x="570.7" y="2888" font-size="10.5" fill="#475569">retained, a protective stop or detected fall shall</text>
+<text x="570.7" y="2903" font-size="10.5" fill="#475569">shut off fuel to the engine-generator and stop</text>
+<text x="570.7" y="2918" font-size="10.5" fill="#475569">the engine.</text>
+<rect x="570.7" y="2935" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="618.1" y="2946.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="671.4" y="2935" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="686.7" y="2946.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="515.9" y="890" width="305.8" height="240" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="515.9" y="890" width="305.8" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="515.9" y1="936" x2="821.7" y2="936" stroke="#64748B" stroke-width="1.1"/>
+<text x="668.8" y="907" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="668.8" y="924" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">actuatorTorqueReserveAgainstSupplyLoss</text>
+<text x="527.9" y="954" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-016</text>
+<text x="527.9" y="969" font-size="10.5" fill="#475569">Each ankle actuator shall deliver at least 1.5 m</text>
+<text x="527.9" y="984" font-size="10.5" fill="#475569">g L_foot of torque at full actuator supply and</text>
+<text x="527.9" y="999" font-size="10.5" fill="#475569">at least 0.6 m g L_foot at the supply at which</text>
+<text x="527.9" y="1014" font-size="10.5" fill="#475569">load holding engages, and each knee actuator</text>
+<text x="527.9" y="1029" font-size="10.5" fill="#475569">at least 22.5 kN m at full supply</text>
+<text x="527.9" y="1044" font-size="10.5" fill="#475569">(SPEC-WLK-001 mass and geometry), so that a</text>
+<text x="527.9" y="1059" font-size="10.5" fill="#475569">loss of supply inside the operating envelope</text>
+<text x="527.9" y="1074" font-size="10.5" fill="#475569">does not tip the walker before load holding</text>
+<text x="527.9" y="1089" font-size="10.5" fill="#475569">engages.</text>
+<rect x="527.9" y="1106" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="575.3" y="1117.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="628.6" y="1106" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="654.3" y="1117.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
+<rect x="685.9" y="1106" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="701.1" y="1117.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="558.7" y="639" width="263" height="225" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="558.7" y="639" width="263" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="558.7" y1="685" x2="821.7" y2="685" stroke="#64748B" stroke-width="1.1"/>
+<text x="690.2" y="656" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="690.2" y="673" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">armStowInterlockForWalking</text>
+<text x="570.7" y="703" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-017</text>
+<text x="570.7" y="718" font-size="10.5" fill="#475569">The walker shall inhibit walking until both</text>
+<text x="570.7" y="733" font-size="10.5" fill="#475569">manipulator arms are confirmed stowed and</text>
+<text x="570.7" y="748" font-size="10.5" fill="#475569">locked, or locked in the carry pose under the</text>
+<text x="570.7" y="763" font-size="10.5" fill="#475569">loaded-walking conditions of SYS-019, shall</text>
+<text x="570.7" y="778" font-size="10.5" fill="#475569">hold the arms in that pose until walking has</text>
+<text x="570.7" y="793" font-size="10.5" fill="#475569">stopped, and shall inhibit manipulation while the</text>
+<text x="570.7" y="808" font-size="10.5" fill="#475569">exclusion zone around the arms' reach is not</text>
+<text x="570.7" y="823" font-size="10.5" fill="#475569">confirmed clear.</text>
+<rect x="570.7" y="840" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="618.1" y="851.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="671.4" y="840" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="686.7" y="851.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="707.9" y="840" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="733.6" y="851.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
+<rect x="478.8" y="1955" width="342.9" height="210" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="478.8" y="1955" width="342.9" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="478.8" y1="2001" x2="821.7" y2="2001" stroke="#64748B" stroke-width="1.1"/>
+<text x="650.3" y="1972" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="650.3" y="1989" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">controlledLoweredPostureForIngressAndEgress</text>
+<text x="490.8" y="2019" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-018</text>
+<text x="490.8" y="2034" font-size="10.5" fill="#475569">The walker shall provide a controlled lowered</text>
+<text x="490.8" y="2049" font-size="10.5" fill="#475569">posture for ingress and egress, with the cockpit</text>
+<text x="490.8" y="2064" font-size="10.5" fill="#475569">floor at or below a defined height, entered and</text>
+<text x="490.8" y="2079" font-size="10.5" fill="#475569">left at a controlled speed only while the area</text>
+<text x="490.8" y="2094" font-size="10.5" fill="#475569">under and around the pod and legs is confirmed</text>
+<text x="490.8" y="2109" font-size="10.5" fill="#475569">clear, and shall inhibit walking while an access</text>
+<text x="490.8" y="2124" font-size="10.5" fill="#475569">ladder is deployed.</text>
+<rect x="490.8" y="2141" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="538.2" y="2152.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="591.5" y="2141" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="617.2" y="2152.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
+<rect x="648.8" y="2141" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="664" y="2152.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="685.3" y="2141" width="77.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="724.1" y="2152.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">demonstration</text>
+<rect x="563.6" y="388" width="258.1" height="225" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="563.6" y="388" width="258.1" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="563.6" y1="434" x2="821.7" y2="434" stroke="#64748B" stroke-width="1.1"/>
+<text x="692.6" y="405" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="692.6" y="422" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">loadedWalkingLimits</text>
+<text x="575.6" y="452" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-019</text>
+<text x="575.6" y="467" font-size="10.5" fill="#475569">The walker shall permit walking with a payload</text>
+<text x="575.6" y="482" font-size="10.5" fill="#475569">only while the payload is confirmed secured,</text>
+<text x="575.6" y="497" font-size="10.5" fill="#475569">both arms are locked in a defined carry pose</text>
+<text x="575.6" y="512" font-size="10.5" fill="#475569">and payload mass and centre of gravity are</text>
+<text x="575.6" y="527" font-size="10.5" fill="#475569">within defined limits, and shall then limit</text>
+<text x="575.6" y="542" font-size="10.5" fill="#475569">walking speed, step height and terrain slope to</text>
+<text x="575.6" y="557" font-size="10.5" fill="#475569">defined loaded values inside the stability</text>
+<text x="575.6" y="572" font-size="10.5" fill="#475569">envelope of SYS-008.</text>
+<rect x="575.6" y="589" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="623" y="600.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="676.3" y="589" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="702" y="600.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
+<rect x="733.6" y="589" width="30.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="748.8" y="600.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">test</text>
+<rect x="523.2" y="2191" width="298.5" height="180" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="523.2" y="2191" width="298.5" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="523.2" y1="2237" x2="821.7" y2="2237" stroke="#64748B" stroke-width="1.1"/>
+<text x="672.5" y="2208" font-size="10" fill="#475569" text-anchor="middle">«requirement · candidate»</text>
+<text x="672.5" y="2225" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">emergencyEgressWithoutPowerOrKneeling</text>
+<text x="535.2" y="2255" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id = SYS-020</text>
+<text x="535.2" y="2270" font-size="10.5" fill="#475569">The pilot shall be able to leave the walker from</text>
+<text x="535.2" y="2285" font-size="10.5" fill="#475569">the standing posture without platform power and</text>
+<text x="535.2" y="2300" font-size="10.5" fill="#475569">without kneeling, through an exit other than the</text>
+<text x="535.2" y="2315" font-size="10.5" fill="#475569">front opening, with a descent aid and handholds</text>
+<text x="535.2" y="2330" font-size="10.5" fill="#475569">that keep three points of contact to the ground.</text>
+<rect x="535.2" y="2347" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="582.6" y="2358.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
+<rect x="635.9" y="2347" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="661.6" y="2358.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">analysis</text>
+<rect x="693.2" y="2347" width="77.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="732" y="2358.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">demonstration</text>
+<rect x="1120" y="1816" width="202.6" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="1132" y="1828" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="1169.4" y="1839.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<text x="1132" y="1862" font-size="12.5" fill="#0F172A" font-weight="700">Independent safety monitor,</text>
+<text x="1132" y="1878" font-size="12.5" fill="#0F172A" font-weight="700">protective stop and isolation</text>
+<rect x="1120" y="2083" width="172.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1132" y="2095" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1169.4" y="2106.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<text x="1132" y="2129" font-size="12.5" fill="#0F172A" font-weight="700">Pilot station, restraints,</text>
+<text x="1132" y="2145" font-size="12.5" fill="#0F172A" font-weight="700">displays and controls</text>
+<rect x="1120" y="3080" width="211.1" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="1132" y="3092" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="1169.4" y="3103.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<text x="1132" y="3126" font-size="12.5" fill="#0F172A" font-weight="700">UAV dock, retention, charging</text>
+<text x="1132" y="3142" font-size="12.5" fill="#0F172A" font-weight="700">and release</text>
+<rect x="1120" y="3533" width="191.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1132" y="3545" width="49.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1156.9" y="3556.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1</text>
+<text x="1132" y="3579" font-size="12.5" fill="#0F172A" font-weight="700">Dockable observation UAV</text>
+<rect x="1120" y="977" width="208.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1132" y="989" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1169.4" y="1000.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<text x="1132" y="1023" font-size="12.5" fill="#0F172A" font-weight="700">Chassis, legs, joint actuators</text>
+<text x="1132" y="1039" font-size="12.5" fill="#0F172A" font-weight="700">and stability sensing</text>
+<rect x="1120" y="25" width="190.7" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1132" y="37" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1169.4" y="48.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR</text>
+<text x="1132" y="71" font-size="12.5" fill="#0F172A" font-weight="700">Power generation, storage,</text>
+<text x="1132" y="87" font-size="12.5" fill="#0F172A" font-weight="700">distribution and thermal</text>
+<text x="1132" y="103" font-size="12.5" fill="#0F172A" font-weight="700">control</text>
+<rect x="1120" y="143" width="204.2" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1132" y="155" width="58.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1161.2" y="166.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-GSE</text>
+<text x="1132" y="189" font-size="12.5" fill="#0F172A" font-weight="700">Ground support, maintenance</text>
+<text x="1132" y="205" font-size="12.5" fill="#0F172A" font-weight="700">supports, charging and test</text>
+<text x="1132" y="221" font-size="12.5" fill="#0F172A" font-weight="700">equipment</text>
+<rect x="1120" y="3619" width="209.4" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="1132" y="3631" width="74.8" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="1169.4" y="3642.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
+<text x="1132" y="3665" font-size="12.5" fill="#0F172A" font-weight="700">Integration manager and PX4</text>
+<text x="1132" y="3681" font-size="12.5" fill="#0F172A" font-weight="700">command adapter</text>
+<rect x="1120" y="2479" width="184.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1132" y="2491" width="99.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1181.9" y="2502.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR-BAT</text>
+<text x="1132" y="2525" font-size="12.5" fill="#0F172A" font-weight="700">Battery pack, BMS and</text>
+<text x="1132" y="2541" font-size="12.5" fill="#0F172A" font-weight="700">contactors (alternative B)</text>
+<rect x="1120" y="2866" width="172.5" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1132" y="2878" width="99.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1181.9" y="2889.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR-GEN</text>
+<text x="1132" y="2912" font-size="12.5" fill="#0F172A" font-weight="700">Engine-generator and</text>
+<text x="1132" y="2928" font-size="12.5" fill="#0F172A" font-weight="700">governor (alternative B)</text>
+<rect x="1120" y="599" width="188.4" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1132" y="611" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1169.4" y="622.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-MAN</text>
+<text x="1132" y="645" font-size="12.5" fill="#0F172A" font-weight="700">Manipulation arms and end</text>
+<text x="1132" y="661" font-size="12.5" fill="#0F172A" font-weight="700">effectors</text>
+<rect x="1120" y="701" width="198.4" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="1132" y="713" width="74.8" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="1169.4" y="724.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-CTL</text>
+<text x="1132" y="747" font-size="12.5" fill="#0F172A" font-weight="700">Mission, motion and balance</text>
+<text x="1132" y="763" font-size="12.5" fill="#0F172A" font-weight="700">control</text>
+<rect x="883.7" y="2663" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="2676" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="2718" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="2731" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="616.5" y="1337" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="621.5" y="1350" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="616.5" y="2990" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="621.5" y="3003" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="616.5" y="3568" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="621.5" y="3581" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="1211" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="1224" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="1261" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="1274" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="3115" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="3128" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="3266" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="3279" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="3316" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="3329" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="61" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="74" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="111" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="124" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="1628" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="1641" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="1693" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="1706" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="307" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="320" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="247" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="260" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="1462" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="1475" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="1859" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="1872" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="3442" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="3455" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="3492" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="3505" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="3637" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="3650" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="3738" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="3751" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="2522" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="2535" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="2462" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="2475" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="2909" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="2922" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="2854" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="2867" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="1015" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="1028" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="655" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="668" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="757" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="770" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="813" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="826" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="2013" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="2026" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="2118" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="2131" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="2065" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="2078" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="438" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="451" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="528" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="541" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="483" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="496" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="573" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="586" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="2316" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="2329" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="883.7" y="2256" width="62.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="888.7" y="2269" font-size="10.5" fill="#475569">«satisfy»</text>
+<rect x="330.4" y="1462" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="335.4" y="1475" font-size="10.5" fill="#475569">«deriveReqt»</text>
+<rect x="330.4" y="1859" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="335.4" y="1872" font-size="10.5" fill="#475569">«deriveReqt»</text>
+<rect x="330.4" y="3467" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="335.4" y="3480" font-size="10.5" fill="#475569">«deriveReqt»</text>
 </g>
-<line x1="40" y1="3046" x2="56" y2="3046" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
-<text x="62" y="3050" font-size="11" fill="#475569">«satisfy»</text>
-<line x1="124.6" y1="3046" x2="140.6" y2="3046" stroke="#7C3AED" stroke-width="1.8" stroke-dasharray="3 2"/>
-<text x="146.6" y="3050" font-size="11" fill="#475569">«deriveReqt»</text>
-<rect x="229" y="3040" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
-<text x="251" y="3050" font-size="11" fill="#475569">Requirement record (requirements/)</text>
-<text x="40" y="3072" font-size="10.5" fill="#94A3B8">Generated by tools/gen_safety_docs.py from safety/mil-std-882e/catalog.yaml. Planning view: not evidence of completed analysis, verification or risk acceptance.</text>
-<g class="terms" data-base-h="3101">
-<rect x="0" y="3101" width="1341.1" height="98.1" fill="#FFFFFF"/>
-<line x1="40" y1="3105" x2="1301.1" y2="3105" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="3120.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: BMS = battery management system · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SPEC-nnn = simulation parameter spec record (sim/spec/) · SUS-A1 = dockable observation UAV · SUS-GSE =</text>
-<text x="40" y="3135.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">ground support, maintenance supports, charging and test equipment · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1-DCK = UAV dock, retention, charging and release · SUS-M1-PIL = pilot station, restraints,</text>
-<text x="40" y="3149.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">displays and controls · SUS-M1-PWR = power generation, storage, distribution and thermal control · SUS-M1-PWR-BAT = battery pack, BMS and contactors (alternative B) · SUS-M1-PWR-GEN = engine-generator and governor (alternative B)</text>
-<text x="40" y="3164.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">· SUS-M1-SAF = independent safety monitor, protective stop and isolation · SUS-M1-WLK = chassis, legs, joint actuators and stability sensing · SYS-nnn = system safety requirement record (requirements/SYS-nnn.yaml) · SysML =</text>
-<text x="40" y="3178.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Systems Modeling Language (SysML v2) · UAV = uncrewed aerial vehicle (drone)</text>
+<line x1="40" y1="3990" x2="56" y2="3990" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="62" y="3994" font-size="11" fill="#475569">«satisfy»</text>
+<line x1="124.6" y1="3990" x2="140.6" y2="3990" stroke="#7C3AED" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="146.6" y="3994" font-size="11" fill="#475569">«deriveReqt»</text>
+<rect x="229" y="3984" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="251" y="3994" font-size="11" fill="#475569">Requirement record (requirements/)</text>
+<text x="40" y="4016" font-size="10.5" fill="#94A3B8">Generated by tools/gen_safety_docs.py from safety/mil-std-882e/catalog.yaml. Planning view: not evidence of completed analysis, verification or risk acceptance.</text>
+<g class="terms" data-base-h="4045">
+<rect x="0" y="4045" width="1449.1" height="98.1" fill="#FFFFFF"/>
+<line x1="40" y1="4049" x2="1409.1" y2="4049" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="4064.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: BMS = battery management system · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SPEC-nnn = simulation parameter spec record (sim/spec/) · SUS-A1 = dockable observation UAV · SUS-GSE = ground support,</text>
+<text x="40" y="4079.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">maintenance supports, charging and test equipment · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK = UAV dock, retention, charging and release · SUS-M1-MAN = manipulation arms</text>
+<text x="40" y="4093.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">and end effectors · SUS-M1-PIL = pilot station, restraints, displays and controls · SUS-M1-PWR = power generation, storage, distribution and thermal control · SUS-M1-PWR-BAT = battery pack, BMS and contactors (alternative B) · SUS-M1-PWR-GEN =</text>
+<text x="40" y="4108.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">engine-generator and governor (alternative B) · SUS-M1-SAF = independent safety monitor, protective stop and isolation · SUS-M1-WLK = chassis, legs, joint actuators and stability sensing · SYS-nnn = system safety requirement record</text>
+<text x="40" y="4122.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(requirements/SYS-nnn.yaml) · SysML = Systems Modeling Language (SysML v2) · UAV = uncrewed aerial vehicle (drone)</text>
 </g>
 </svg>

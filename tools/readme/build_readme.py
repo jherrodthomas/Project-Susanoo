@@ -91,47 +91,63 @@ def stats(d: dict) -> dict:
 
 
 # ================================================================ banner
-CONCEPT_ART = OUT / "concept-walker-uav.jpg"
+RENDERS = ROOT / "cad/renders/blender"
 
 
 def banner(s: dict) -> str:
-    """Hero banner: the concept image full-bleed, a dark left gradient for the title, and headline counts."""
+    """Hero banner from the CAD: the CL-05 reference layout as rendered from its own meshes (cad/, SUS-CAD-001),
+    standing in the centre, kneeling for egress and in military livery on the right; title and chips on the left.
+    The height chip is read from cad/metrics.json. Renders, not AI concept art: the front page shows the CAD."""
     import base64
-    W, H = 1280, 548
-    img = base64.b64encode(CONCEPT_ART.read_bytes()).decode()
+
+    def jpg(name: str) -> str:
+        return "data:image/jpeg;base64," + base64.b64encode((RENDERS / name).read_bytes()).decode()
+
+    height = json.loads((ROOT / "cad/metrics.json").read_text())["concepts"]["CL-05"]["height_m"]
+    W, H, BG, AMBER = 1200, 400, "#0F1418", "#F2B705"
+    hx, hw = 400, 470                      # hero render
+    sx, sw_, sh = 878, 314, 192            # side renders
     out = ['<defs><linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">'
-           '<stop offset="0" stop-color="#0B1220" stop-opacity=".96"/>'
-           '<stop offset=".38" stop-color="#0B1220" stop-opacity=".78"/>'
-           '<stop offset=".62" stop-color="#0B1220" stop-opacity="0"/></linearGradient>'
-           '<linearGradient id="foot" x1="0" y1="0" x2="0" y2="1"><stop offset=".7" stop-color="#0B1220" '
-           'stop-opacity="0"/><stop offset="1" stop-color="#0B1220" stop-opacity=".75"/></linearGradient>'
-           f'<clipPath id="card"><rect width="{W}" height="{H}" rx="18"/></clipPath></defs>',
-           f'<g clip-path="url(#card)"><image href="data:image/jpeg;base64,{img}" x="0" y="0" width="{W}" '
-           f'height="{H}" preserveAspectRatio="xMidYMid slice"/>',
-           fk.rect(0, 0, W, H, fill="url(#fade)", stroke="none", rx=0, sw=0),
-           fk.rect(0, 0, W, H, fill="url(#foot)", stroke="none", rx=0, sw=0), "</g>"]
-    x = 64
-    out.append(fk.text(x, 104, "PROJECT SUSANOO  ·  SUS-I1", size=13, fill="#5EEAD4", weight=700))
-    out.append(fk.text(x, 176, "Susanoo", size=72, fill="#FFFFFF", weight=800))
-    for i, ln in enumerate(["A human-piloted mechanized walker and a dockable",
-                            "observation UAV, engineered as code against",
-                            "MIL-STD-882E: every claim traced, checked and drawn."]):
-        out.append(fk.text(x, 222 + 28 * i, ln, size=20, fill="#E2E8F0"))
-    chips = [(f"{s['hazards']}", "hazards tracked"), (f"{s['interfaces']}", "interfaces"),
-             (f"{s['reqs']}", "safety requirements"), (f"{s['sysml']}", "SysML files validated")]
-    cx = x
-    for num, lab in chips:
-        w = fk.text_w(num, 22, True) * 1.1 + fk.text_w(lab, 12.5) + 40
-        out.append(fk.rect(cx, 340, w, 46, fill="#0B1220", stroke="#334155", rx=12, sw=1, opacity="0.82"))
-        out.append(fk.text(cx + 14, 370, num, size=22, fill="#FFFFFF", weight=800))
-        out.append(fk.text(cx + 24 + fk.text_w(num, 22, True) * 1.1, 369, lab, size=12.5, fill="#CBD5E1"))
-        cx += w + 10
-    out.append(fk.text(x, 424, "Simulation-first  ·  Unarmed  ·  Nothing certified, accepted or flight-qualified",
-                       size=13, fill="#94A3B8"))
-    out.append(fk.text(W - 24, H - 18, "Concept art (AI-generated) of the original SUS-M1 walker with SUS-A1 "
-                       "descending to its dock", size=11, fill="#CBD5E1", anchor="end"))
-    svg = fk.svg(W, H, "Project Susanoo", "Human-piloted mechanized walker and dockable observation UAV, "
-                 "engineered as code against MIL-STD-882E.", out)
+           f'<stop offset="0" stop-color="{BG}" stop-opacity="1"/><stop offset=".12" stop-color="{BG}" stop-opacity=".55"/>'
+           f'<stop offset=".34" stop-color="{BG}" stop-opacity="0"/></linearGradient>'
+           '<pattern id="hazard" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">'
+           f'<rect width="14" height="28" fill="{AMBER}"/><rect x="14" width="14" height="28" fill="#11171B"/></pattern>'
+           f'<clipPath id="hero"><rect x="{hx}" y="0" width="{hw}" height="{H}"/></clipPath>'
+           f'<clipPath id="s1"><rect x="{sx}" y="6" width="{sw_}" height="{sh}" rx="4"/></clipPath>'
+           f'<clipPath id="s2"><rect x="{sx}" y="202" width="{sw_}" height="{sh}" rx="4"/></clipPath></defs>',
+           fk.rect(0, 0, W, H, fill=BG, stroke="none", rx=0, sw=0),
+           f'<image href="{jpg("CL-05-hero.jpg")}" x="{hx}" y="0" width="{hw}" height="{H}" '
+           'preserveAspectRatio="xMidYMid slice" clip-path="url(#hero)"/>',
+           fk.rect(hx, 0, hw, H, fill="url(#fade)", stroke="none", rx=0, sw=0)]
+    for cid, y, name, tag in (("s1", 6, "CL-05-kneel.jpg", "Kneel for egress · ladder deployed"),
+                              ("s2", 202, "CL-05-hero-military.jpg", "Military livery · unarmed")):
+        out.append(f'<image href="{jpg(name)}" x="{sx}" y="{y}" width="{sw_}" height="{sh}" '
+                   f'preserveAspectRatio="xMidYMid slice" clip-path="url(#{cid})"/>')
+        tw = fk.text_w(tag, 10.5) + 14
+        out.append(fk.rect(sx + 8, y + sh - 25, tw, 18, fill=BG, stroke="none", rx=3, sw=0, opacity="0.72"))
+        out.append(fk.text(sx + 15, y + sh - 12, tag, size=10.5, fill="#E8EDF1"))
+    out.append(fk.rect(0, 0, 8, H, fill="url(#hazard)", stroke="none", rx=0, sw=0))
+    x = 40
+    out.append(fk.text(x, 79, "PROJECT", size=13, fill=AMBER, weight=700))
+    out.append(fk.text(x, 133, "SUSANOO", size=46, fill="#EEF2F5", weight=800))
+    for i, ln in enumerate(["Human-piloted bipedal walker (SUS-M1) with a",
+                            "dockable observation UAV (SUS-A1), developed",
+                            "simulation-first as Product Development as Code."]):
+        out.append(fk.text(x, 168 + 21.5 * i, ln, size=15.5, fill="#C4CED6"))
+    chips = ["Reference layout CL-05", f"{height:.1f} m · reverse-jointed", "Unarmed", "MIL-STD-882E"]
+    cx, cy = x, 250
+    for c in chips:
+        w = fk.text_w(c, 12) + 20
+        if cx + w > x + 350:
+            cx, cy = x, cy + 32
+        out.append(fk.rect(cx, cy, w, 25, fill="none", stroke="#3A4852", rx=3, sw=1))
+        out.append(fk.text(cx + 10, cy + 17, c, size=12, fill="#D7DEE4"))
+        cx += w + 6
+    for i, ln in enumerate(["Concept renders from the project CAD (placeholder",
+                            "geometry, not a design) · CC BY 4.0"]):
+        out.append(fk.text(x, H - 33 + 15 * i, ln, size=10.5, fill="#8A98A3"))
+    svg = fk.svg(W, H, "Project Susanoo", "Human-piloted bipedal walker with a dockable observation UAV: the CL-05 "
+                 "reference layout rendered from the project CAD.", out)
     return svg.replace(fk.rect(0, 0, W, H, fill="#FFFFFF", stroke="none", rx=0, sw=0), "", 1)
 
 

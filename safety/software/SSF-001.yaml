@@ -1,7 +1,8 @@
 schema: susanoo/ssf/v0.1
 id: SSF-001
 title: Motion-enable interlock logic
-description: Evaluates pilot-station readiness conditions and enables leg actuation.
+description: Evaluates pilot-station readiness conditions and enables leg actuation; also gates walking on the arms
+  being stowed or locked in the carry pose (SYS-017, SYS-019) and kneel or rise on a confirmed clear zone (SYS-018).
 software_items:
 - SUS-M1-SAF/motion-enable (TBD CSCI)
 scc: 2
@@ -27,4 +28,7 @@ lor:
 lor_decision: null
 requirement_ids:
 - SYS-001
+- SYS-017
+- SYS-018
+- SYS-019
 owner: ROLE-SWL

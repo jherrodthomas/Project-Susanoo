@@ -122,12 +122,21 @@ def fig_register(ctx: Ctx, reqs: dict) -> str:
         if derived:
             out.append(fk.text(cols["title"], cy + 9, "derived from " + ", ".join(derived), size=10,
                                fill=TONES["interface"][0]))
-        x = cols["alloc"]
+        rows, x = [[]], cols["alloc"]               # wrap allocation pills that would reach the method columns
         for el in r.get("allocated_to", []):
-            tone = ctx.kind(el) if ctx.kind(el) in TONES else "system"
-            p, w = fk.pill(x, cy - 12, el, TONES[tone][1], color=TONES[tone][0], stroke=TONES[tone][0])
-            out += p
+            w = fk.pill_w(el)
+            if x + w > mx0 - 10 and rows[-1]:
+                rows.append([])
+                x = cols["alloc"]
+            rows[-1].append(el)
             x += w + 6
+        for j, row in enumerate(rows):
+            x, py = cols["alloc"], cy - 12 + (j * 17 - 8.5 if len(rows) > 1 else 0)
+            for el in row:
+                tone = ctx.kind(el) if ctx.kind(el) in TONES else "system"
+                p, w = fk.pill(x, py, el, TONES[tone][1], color=TONES[tone][0], stroke=TONES[tone][0])
+                out += p
+                x += w + 6
         for i, m in enumerate(methods):
             cx = mx0 + i * mw + mw / 2
             on = m in r["verification"]["method"]

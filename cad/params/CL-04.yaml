@@ -1,0 +1,45 @@
+# CL-04 Biped armoured pod: enclosed hull around a seated pilot, visible through an arched front opening;
+# heavy shoulder plates, roll bar, rear power pack and dock. Form language taken from the project lead's
+# reference image (an armoured, hunched, piloted biped); the geometry is original and parametric.
+# Concept layout for review and alignment only. Every dimension is a placeholder (metres).
+id: CL-04
+title: "Biped armoured pod, seated cockpit, rear dock"
+locomotion: biped
+style: armored-pod
+leg:
+  hip_half_width: 0.58
+  thigh: 0.90
+  shank: 0.88
+  knee_forward: 0.30             # deeper knee bend: hunched stance
+  ankle_height: 0.34
+  radius: 0.15
+  joint_radius: 0.22
+  foot: [1.15, 0.60, 0.20]       # length, width, thickness (plantigrade)
+  armour: [0.42, 0.36]           # thigh/shin plate width (y) and depth (x)
+pod:
+  size: [1.45, 1.55, 1.65]       # depth (x), width (y), height (z) of the armoured hull
+  bottom_offset: 0.20            # hull bottom below the hip axis
+  x_front: 0.62                  # front face of the hull
+  wall: 0.07                     # hull plate thickness
+  edge_radius: 0.14
+  opening: [1.00, 0.95, 0.02]    # front opening width, height, and sill height above (cockpit floor + 0.5)
+  floor_offset: 0.12
+  seat_back_from_front: 0.96    # seat back to hull front: the pilot sits at the opening
+shoulder:
+  plate: [0.80, 0.55, 0.62]      # x, y, z of each shoulder plate
+  drop: 0.05                     # plate top below the hull top
+arm:
+  upper: 0.80
+  fore: 0.78
+  radius: 0.12
+  drop_angle_deg: 62             # upper arm hangs this far below horizontal
+power:
+  pack: [0.55, 1.25, 1.05]
+  vents: 3
+rollbar:
+  rise: 0.42                     # above the hull top
+  tube_radius: 0.05
+dock:
+  type: rear-backpack
+  platform: [0.75, 0.75, 0.06]
+  center: [-0.05, 0.0, 0.08]     # from the rear-top edge of the power pack: x forward, y, z above its top

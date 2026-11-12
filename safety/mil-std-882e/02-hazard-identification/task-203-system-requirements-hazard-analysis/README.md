@@ -98,6 +98,10 @@ package Task203_SRHA {
         expose SusanooRequirements::'SYS-014';
         expose SusanooRequirements::'SYS-015';
         expose SusanooRequirements::'SYS-016';
+        expose SusanooRequirements::'SYS-017';
+        expose SusanooRequirements::'SYS-018';
+        expose SusanooRequirements::'SYS-019';
+        expose SusanooRequirements::'SYS-020';
     }
     #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> SusanooRequirements::'SYS-010'; }
     #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> SusanooRequirements::'SYS-011'; }
