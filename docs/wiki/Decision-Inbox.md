@@ -4,7 +4,7 @@
 
 Questions only the project lead can decide, from `decisions/register.yaml`. Answer in chat or in a pull request; Claude copies the answer into the register and applies it. Rules: `CLAUDE.md`.
 
-Status: open 6, queued 0, answered 0, applied 2, withdrawn 0
+Status: open 6, queued 0, answered 0, applied 3, withdrawn 0
 
 ## What monetary thresholds should the tailored severity categories use?
 
@@ -105,3 +105,4 @@ Sources: sim/results/uav/summary.md, integrations/px4/interface-contract.md, saf
 |---|---|---|---|---|---|---|
 | DQ-001 | Which edition of MIL-STD-882E is the project baseline? | 2012 base edition | lead | 2026-11-11 | applied | `standards/mil-std-882e/model.yaml`, `framework/882e-conformance-review.md` |
 | DQ-007 | Which engine should the higher-fidelity legged-dynamics simulation use? | MuJoCo | lead | 2026-11-11 | applied | `sim/mujoco/model.py`, `sim/mujoco/l2.py`, `sim/results/l2-crosscheck.md` |
+| DQ-009 | How should the level-1 walker start each case, now that the level-2 cross-check disagrees with it on EC-07 and EC-08? | Start both models on level 1's periodic orbit | claude | 2026-11-12 | applied | `sim/plant/walker.py`, `sim/mujoco/l2.py`, `sim/results/search-SF-01.md`, `sim/results/l2-crosscheck.md`, `safety/hazards/HAZ-WLK-002.yaml` |

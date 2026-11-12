@@ -23,7 +23,7 @@ import mujoco
 import numpy as np
 
 from sim.mujoco.model import JOINTS, load_params, mjcf
-from sim.plant.walker import capacity, default_case
+from sim.plant.walker import capacity, default_case, initial_state
 
 LIMIT = {"hip": "hip_torque_max_nm", "knee": "knee_torque_max_nm", "ankle": "ankle_torque_max_nm"}
 STANCE0 = {"hip_s": -0.15, "knee_s": 0.3, "ankle_s": -0.15}
@@ -56,21 +56,55 @@ class L2:
     def sole_pos(self, s):
         return self.d.site_xpos[self.sole[s]].copy()
 
-    def _initial_pose(self):
-        """Stand upright on the slope (torso vertical, stance sole flat on the ground), as the level-1 plant assumes."""
+    def _hv(self, v):
+        th = math.radians(self.case["slope_deg"])
+        return v[0] * math.cos(th) + v[2] * math.sin(th), -v[0] * math.sin(th) + v[2] * math.cos(th)
+
+    def _pose(self, lean):
+        """Torso vertical, stance sole flat on the ground, stance leg leaned by `lean` (positive moves the CoM
+        downhill of the foot)."""
         d, m = self.d, self.m
-        self.pitch_ref = -math.radians(self.case["slope_deg"])      # torso vertical: lean uphill by the slope angle
+        d.qpos[:] = 0.0
         for n, v in {**STANCE0, **SWING0}.items():
             d.qpos[self.qadr[n]] = v
+        d.qpos[self.qadr["hip_s"]] += lean
         d.qpos[self.qadr["root_pitch"]] = self.pitch_ref
-        d.qpos[self.qadr["ankle_s"]] = -(self.pitch_ref + STANCE0["hip_s"] + STANCE0["knee_s"])
+        d.qpos[self.qadr["ankle_s"]] = -(self.pitch_ref + d.qpos[self.qadr["hip_s"]] + STANCE0["knee_s"])
         mujoco.mj_kinematics(m, d)
-        mujoco.mj_comPos(m, d)
-        sole = self.sole_pos("s")
-        d.qpos[self.qadr["root_z"]] -= sole[2]
+        d.qpos[self.qadr["root_z"]] -= self.sole_pos("s")[2]
         mujoco.mj_forward(m, d)
-        w = 2 * math.pi / self.p["sway_period_s"]
-        d.qvel[self.dof["root_x"]] = self.p["sway_amplitude_m"] * w
+        return self._hv(self.com()[0] - self.sole_pos("s"))
+
+    def _initial_pose(self):
+        """Start in the same state as the level-1 plant (assumption A8, walker.initial_state): the CoM at the
+        gait's periodic-orbit offset and velocity, torso vertical, stance foot flat and at rest."""
+        d, m = self.d, self.m
+        self.pitch_ref = -math.radians(self.case["slope_deg"])      # torso vertical: lean uphill by the slope angle
+        lean = 0.0
+        for _ in range(3):                                          # the CoM height moves a little with the lean
+            x0, v0 = initial_state(self.case, self.p, self._pose(lean)[1])
+            lo, hi = -0.6, 0.6                                      # bisection on the stance-leg lean
+            for _ in range(60):
+                mid = (lo + hi) / 2
+                if self._pose(mid)[0] < x0:
+                    lo = mid
+                else:
+                    hi = mid
+            lean = (lo + hi) / 2
+        self._pose(lean)
+        # velocities: torso translation and stance joints, with the stance foot still and the torso not pitching
+        cols = [self.dof[n] for n in ("root_x", "root_z", "hip_s", "knee_s", "ankle_s")]
+        jp, jr = np.zeros((3, m.nv)), np.zeros((3, m.nv))
+        mujoco.mj_jacBody(m, d, jp, jr, self.foot_body["s"])
+        jc = np.zeros((3, m.nv))
+        mujoco.mj_jacSubtreeCom(m, d, jc, self.torso)
+        th = math.radians(self.case["slope_deg"])
+        h = np.array([math.cos(th), 0.0, math.sin(th)])            # horizontal downhill, in the slope frame
+        v = np.array([-math.sin(th), 0.0, math.cos(th)])           # vertical up
+        a = np.array([jp[0, cols], jp[2, cols], jr[1, cols], h @ jc[:, cols], v @ jc[:, cols]])
+        qd = np.linalg.solve(a, np.array([0.0, 0.0, 0.0, v0, 0.0]))
+        d.qvel[:] = 0.0
+        d.qvel[cols] = qd
         mujoco.mj_forward(m, d)
 
     def x_ref_single(self, z, t):

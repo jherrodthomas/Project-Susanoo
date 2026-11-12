@@ -52,7 +52,7 @@ def run() -> dict:
                 rows.append({"fault": f["id"], "slope_deg": slope, "config": label, "outcome": r["outcome"],
                              "rho": r["rho"], "events": r["events"], "stop_reason": r["stop_reason"]})
     nominal = [{"slope_deg": s, **{k: v for k, v in walker.simulate({"slope_deg": s}, p).items() if k in ("outcome", "rho")}}
-               for s in (0, 4, 8, 10, 12, 15)]
+               for s in (0, 4, 8, 10, 12, 15, 20, 25, 30)]
     return {"about": ABOUT, "spec_digest": spec.digest(), "faults": faults["faults"], "runs": rows, "nominal": nominal}
 
 

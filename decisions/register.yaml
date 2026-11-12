@@ -161,3 +161,26 @@ decisions:
     status: open
     asked: 2026-11-11
     sources: [sim/results/uav/summary.md, integrations/px4/interface-contract.md, safety/hazards/HAZ-INT-001.yaml]
+
+  - id: DQ-009
+    question: How should the level-1 walker start each case, now that the level-2 cross-check disagrees with it on EC-07 and EC-08?
+    context: >-
+      Level 1 started every case on the gait reference with the reference sway velocity (0.52 m/s). **That put the
+      capture point at or beyond the foot edge at t = 0, a state its own balance loop never reaches** (its steady sway
+      velocity is about 0.08 m/s). The old EC-07 and EC-05 tipped with no fault, and EC-08 sat on the foot edge, so a
+      slow leak tipped it; level 2, starting near the foot centre, held all three. Started in the same state, the
+      two models agree on every SF-01 edge case, and the CF4 tips found by the new search are reproduced at both levels.
+    options:
+      - {key: periodic-orbit, title: Start both models on level 1's periodic orbit, detail: "Analytic, shared by both levels (walker.initial_state, assumption A8). Re-runs the search: the no-fault terrain limit moves from 12-15 to about 24 degrees (level 2), and the new edge cases change IDs."}
+      - {key: level-2-start, title: Start level 2 in level 1's old state, detail: "The models would agree by sharing an initial state the gait never reaches; the 12-15 degree finding would stay an artefact."}
+      - {key: keep, title: Keep both and document the disagreement, detail: "No re-run, but CF4 and the slope limit keep resting on a start-up transient."}
+    recommendation: periodic-orbit
+    reversibility: easy
+    blocks: [HAZ-WLK-002 CF4 simulation basis, CONOPS section 4 slope limit]
+    gate: G2
+    decider: claude
+    status: applied
+    asked: null
+    answer: {choice: periodic-orbit, by: claude, at: 2026-11-12, via: chat, note: "lead asked to resolve the EC-07 and EC-08 model disagreement; the slope limit itself stays with the lead (HAZ-WLK-002 open action)"}
+    applied_in: [sim/plant/walker.py, sim/mujoco/l2.py, sim/results/search-SF-01.md, sim/results/l2-crosscheck.md, safety/hazards/HAZ-WLK-002.yaml]
+    sources: [sim/results/l2-crosscheck.md, sim/results/plant-results.md]

@@ -35,6 +35,22 @@ class Model(unittest.TestCase):
         self.assertEqual(a["outcome"], "safe")
         self.assertEqual(json.dumps(a["trace"], default=float), json.dumps(b["trace"], default=float))
 
+    def test_starts_in_the_level_1_state(self):
+        """Both levels start in the same state (walker.initial_state, DQ-009), with the stance foot at rest."""
+        import numpy as np
+        from sim.plant.walker import initial_state
+        for case in ({"slope_deg": 9.0, "stride_offset_m": 0.28}, {"slope_deg": 13.0, "stride_offset_m": 0.27}):
+            sim = l2.L2(case)
+            com, vel = sim.com()
+            x, z = sim._hv(com - sim.sole_pos("s"))
+            x0, v0 = initial_state(sim.case, sim.p, z)
+            self.assertAlmostEqual(x, x0, delta=1e-3)
+            self.assertAlmostEqual(sim._hv(vel)[0], v0, delta=1e-3)
+            self.assertAlmostEqual(sim._hv(vel)[1], 0.0, delta=1e-3)
+            jp, jr = np.zeros((3, sim.m.nv)), np.zeros((3, sim.m.nv))
+            mujoco.mj_jacBody(sim.m, sim.d, jp, jr, sim.foot_body["s"])
+            self.assertLess(float(np.abs(jp @ sim.d.qvel).max() + np.abs(jr @ sim.d.qvel).max()), 1e-9)
+
     def test_locked_walker_holds_still_and_ignores_rounding(self):
         """Load holding is a solver constraint: once locked the walker stays put, so the outcome cannot hang on
         rounding (explicit lock springs at omega*dt ~ 1.9 made it rock and tip depending on the CPU)."""

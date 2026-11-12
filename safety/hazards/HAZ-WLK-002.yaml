@@ -32,8 +32,8 @@ causal_factors:
 - id: CF4
   type: hardware
   description: Loss of actuator supply (hydraulic pressure or bus voltage) shrinks the balance capacity before load
-    holding engages; a slow leak on a slope tips the walker, and a hold that engages with the CoM outside the foot
-    tips it too (simulation SF-01 EC-08, EC-04, EC-06; synthetic)
+    holding engages; a slow leak on a slope tips the walker, and a hold that engages with the capture point outside
+    the foot tips it too (simulation SF-01 EC-07 and EC-08, reproduced at levels 1 and 2; synthetic)
 effects:
 - Overturn or fall of the platform
 mishap: Pilot fatal or disabling injury in fall; crush of bystanders
@@ -128,11 +128,14 @@ source:
 hazmat: not-applicable
 assumptions:
 - Concept configuration SUS-I1-C001; no hardware design selected
+- 'Simulation basis for CF4 and the slope limit: level 1 starts each case on its balance loop''s periodic orbit
+  (walker assumption A8). The earlier start on the sway reference put the capture point at the foot edge at t = 0
+  and produced no-fault tips at 12-15 degrees that level 2 did not reproduce; with both models started in the same
+  state they agree on every SF-01 edge case (sim/results/l2-crosscheck.md)'
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
-- 'Set the CONOPS section 4 slope limit with margin: under SPEC-WLK-001 assumptions the no-fault gait tips between 12
-  and 15 degrees (failure search SF-01, edge cases EC-05 and EC-07)'
+- 'Set the CONOPS section 4 slope limit with margin: under SPEC-WLK-001 assumptions the no-fault gait holds to 20
+  degrees at both model levels and tips from about 24 degrees at level 2 (27 at level 1); the more pessimistic level 2
+  sets the basis (sim/results/l2-crosscheck.md, NOM-20 and NOM-25)'
 - Derive a safety requirement for margin-based load holding (M5) (Task 203)
-- 'Resolve the model disagreement before relying on CF4 or the slope limit: the level-2 MuJoCo cross-check
-  (sim/results/l2-crosscheck.md) does not reproduce the EC-07 and EC-08 tips or the no-fault tips at 12-15 degrees'
 
