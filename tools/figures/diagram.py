@@ -376,15 +376,19 @@ def _legend_entries(spec: dict) -> list[tuple[str, str, str]]:
     seen, out = [], []
     for n in spec["nodes"]:
         t = n.get("tone", "system")
-        if n.get("shape") in ("initial", "final") or t in seen or n.get("_container") and not n.get("dashed"):
+        # A leaf may name its own legend entry (e.g. a hazard drawn in a risk tone); it is listed separately from
+        # the tone's default meaning.
+        key = (t, n["legend"]) if n.get("legend") and not n.get("_container") else t
+        if n.get("shape") in ("initial", "final") or key in seen or n.get("_container") and not n.get("dashed"):
             continue
         if n.get("_container") and n.get("dashed"):
             out.append(("none", TONES[t][0] + " dashed", n.get("legend", "Boundary")))
             seen.append(t + "-frame")
             continue
-        seen.append(t)
+        seen.append(key)
         s, f = TONES[t]
-        out.append((f if t != "muted" else GREY_BG, s + (" dashed" if t == "muted" else ""), fk.LEGEND_LABELS[t]))
+        label = key[1] if isinstance(key, tuple) else fk.LEGEND_LABELS[t]
+        out.append((f if t != "muted" else GREY_BG, s + (" dashed" if t == "muted" else ""), label))
     return out + list(spec.get("legend", []))
 
 

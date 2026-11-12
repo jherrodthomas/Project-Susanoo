@@ -38,6 +38,8 @@ ENFORCED = {
     # Hand-authored READMEs; figures come from <folder>/figures.yaml.
     "concept": {"skip_dirs": {"figures"}, "generator": ["tools/figures/build_figures.py", "--check"]},
     "integrations/px4": {"skip_dirs": {"figures"}, "generator": ["tools/figures/build_figures.py", "--check"]},
+    # Generated README; figures and tables from requirements/SYS-*.yaml.
+    "requirements": {"skip_dirs": {"figures"}, "generator": ["tools/figures/requirements_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)
