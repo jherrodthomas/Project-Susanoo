@@ -390,26 +390,31 @@ def main() -> int:
     if README.exists() and END_MARKER in README.read_text():
         tail = README.read_text().split(END_MARKER, 1)[1]
     files[README] = readme(ctx, reqs, hazards, specs, tail)
+    return emit(files, FIGS, args.check, GEN)
+
+
+def emit(files: dict[Path, str], figs: Path, check: bool, gen: str) -> int:
+    """Write (or, with check, compare) generated files after adding their terms block or line; remove orphan
+    figures in figs. Shared by the folder README generators."""
     stale = []
     for path, content in files.items():
         content = decorate(path.relative_to(ROOT).as_posix(), content)
         if path.exists() and path.read_text() == content:
             continue
-        if args.check:
+        if check:
             stale.append(str(path.relative_to(ROOT)))
         else:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(content)
             print(f"wrote {path.relative_to(ROOT)}")
-    if FIGS.exists():
-        for old in FIGS.glob("*.svg"):
+    if figs.exists():
+        for old in figs.glob("*.svg"):
             if old not in files:
-                stale.append(str(old.relative_to(ROOT)) + " (orphan)") if args.check else old.unlink()
+                stale.append(str(old.relative_to(ROOT)) + " (orphan)") if check else old.unlink()
     if stale:
-        print(f"Stale (run python3 {GEN}):\n  " + "\n  ".join(stale))
+        print(f"Stale (run python3 {gen}):\n  " + "\n  ".join(stale))
         return 1
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())

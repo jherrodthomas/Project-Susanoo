@@ -35,6 +35,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   modes and the PX4 boundary
 - [Requirement register](Requirements-Register): every system safety requirement with its hazards, allocation,
   verification methods and SysML view
+- [Verification records](Verification-Records): what must be verified, the evidence chain to `verified`, and
+  the records that hold the evidence
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)
