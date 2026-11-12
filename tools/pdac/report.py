@@ -296,6 +296,64 @@ def decision_inbox(repo) -> str:
     return "".join(out)
 
 
+def trade_studies(repo) -> str:
+    trades = repo.objects.get("trade") or {}
+    out = [BANNER, "# Trade Studies\n\n",
+           "Architecture trade studies from `architecture/trades/`. The decision process is in "
+           "`concept/trade-studies.md`; the project lead is the decision authority for every study. Scores are 1 (worst) "
+           "to 5 (best) and rest on the evidence listed; a study shows no ranking until every criterion is scored and the "
+           "weights are confirmed by the lead.\n\n"]
+    out.append(_table(["ID", "Title", "Status", "Alternatives", "Criteria scored", "Weights", "Selected"],
+                      [[tid, t["title"], t["status"], len(t["alternatives"]),
+                        f"{len({s['criterion'] for s in t['scores'] if s['score'] is not None})} of {len(t['criteria'])}",
+                        t.get("weights_status", "draft"), (t.get("selection") or {}).get("alternative") or "—"]
+                       for tid, t in sorted(trades.items())]))
+    for tid, t in sorted(trades.items()):
+        alts = [a["id"] for a in t["alternatives"]]
+        score = {(s["alternative"], s["criterion"]): s for s in t["scores"]}
+        out.append(f"\n## {tid} · {t['title']}\n\n**Question.** {t['question']}\n\n")
+        out.append(f"Status **{t['status']}** · decision authority {t['decision_authority']} · weights "
+                   f"{t.get('weights_status', 'draft')}" + (f" ({t['weights_decision_id']})" if t.get("weights_decision_id") else "")
+                   + (f" · decisions {', '.join(t['decision_ids'])}" if t.get("decision_ids") else "") + "\n\n")
+        if t.get("scope"):
+            out.append(f"{' '.join(t['scope'].split())}\n\n")
+        out.append("### Alternatives\n\n")
+        out.append(_table(["ID", "Alternative", "Description", "Elements", "Specific hazards"],
+                          [[a["id"], a["title"], " ".join(a["description"].split()), ", ".join(a.get("elements") or []) or "—",
+                            ", ".join(a.get("hazard_ids") or []) or "—"] for a in t["alternatives"]]))
+        out.append("\n### Criteria and scores\n\n")
+        rows = []
+        for c in t["criteria"]:
+            cells = []
+            for a in alts:
+                s = score.get((a, c["id"]))
+                cells.append("—" if not s or s["score"] is None else f"{s['score']}{'*' if s.get('preliminary') else ''}")
+            rows.append([c["id"], c["title"] + (" (safety)" if c.get("safety") else ""), f"{c['weight']:g}", *cells])
+        out.append(_table(["ID", "Criterion", "Weight", *alts], rows))
+        out.append("\n\\* preliminary (AI draft, I0). — not yet scored.\n\n")
+        notes = [s for s in t["scores"] if s.get("note")]
+        if notes:
+            out.append(_table(["Alternative", "Criterion", "Score", "Basis", "Note"],
+                              [[s["alternative"], s["criterion"], s["score"] if s["score"] is not None else "—",
+                                ", ".join(s["basis"]), s["note"]] for s in notes]))
+        out.append("\n### Evidence\n\n")
+        out.append(_table(["ID", "Criteria", "Kind", "Status", "Source or need", "Summary"],
+                          [[e["id"], ", ".join(e["criteria"]), e["kind"], e["status"],
+                            f"`{e['source']}`" if e.get("source") else " ".join((e.get("needed") or "").split()),
+                            " ".join(e["summary"].split())] for e in t["evidence"]]))
+        if t.get("assumptions"):
+            out.append("\n### Assumptions\n\n" + "".join(f"- {' '.join(x.split())}\n" for x in t["assumptions"]))
+        if t.get("requirement_ids"):
+            out.append(f"\nRequirements waiting on this study: {', '.join(t['requirement_ids'])}.\n")
+        if t.get("open_actions"):
+            out.append("\n### Open actions\n\n" + "".join(f"- {' '.join(x.split())}\n" for x in t["open_actions"]))
+        a = t.get("author") or {}
+        if a:
+            out.append(f"\nDrafted by {a.get('name')} ({'human' if a.get('human') else 'AI'}, independence "
+                       f"{a.get('independence')}); no review recorded" + (f"; review {t['review_id']}" if t.get("review_id") else "") + ".\n")
+    return "".join(out)
+
+
 def hts_csv(repo, analysis) -> str:
     buf = io.StringIO()
     w = csv.writer(buf, lineterminator="\n")
@@ -324,6 +382,7 @@ def build(repo) -> dict:
         "docs/wiki/Gate-Readiness.md": gate_readiness(repo, findings),
         "docs/wiki/SUS-I1-Item-Definition.md": item_page(repo),
         "docs/wiki/Decision-Inbox.md": decision_inbox(repo),
+        "docs/wiki/Trade-Studies.md": trade_studies(repo),
         "safety/generated/hts.csv": hts_csv(repo, analysis),
     }
 

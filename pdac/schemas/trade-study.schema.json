@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "susanoo/trade-study/v0.1",
+  "title": "Architecture trade study (concept/trade-studies.md decision process; MIL-STD-882E 4.3.4 design order of precedence)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "title", "status", "question", "decision_authority", "alternatives", "criteria", "evidence", "scores"],
+  "properties": {
+    "schema": {"const": "susanoo/trade-study/v0.1"},
+    "id": {"type": "string", "pattern": "^TS-[0-9]{3}$"},
+    "title": {"type": "string"},
+    "status": {"enum": ["planned", "in-work", "ready-for-decision", "selected", "withdrawn"]},
+    "question": {"type": "string"},
+    "scope": {"type": "string"},
+    "decision_authority": {"enum": ["lead"]},
+    "decision_ids": {"type": "array", "items": {"type": "string"}, "description": "Decisions that frame or settle the study"},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "alternatives": {
+      "type": "array", "minItems": 2,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["id", "title", "description"],
+        "properties": {
+          "id": {"type": "string"},
+          "title": {"type": "string"},
+          "description": {"type": "string"},
+          "elements": {"type": "array", "items": {"type": "string"}, "description": "Item-definition elements this alternative brings"},
+          "hazard_ids": {"type": "array", "items": {"type": "string"}, "description": "Hazards specific to this alternative"}
+        }
+      }
+    },
+    "criteria": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["id", "title", "weight", "measure"],
+        "properties": {
+          "id": {"type": "string"},
+          "title": {"type": "string"},
+          "weight": {"type": "number", "minimum": 0},
+          "safety": {"type": "boolean", "description": "Safety-related criterion (its evidence feeds the hazard records)"},
+          "measure": {"type": "string", "description": "What is measured and how it is scored"}
+        }
+      }
+    },
+    "weights_status": {"enum": ["draft", "confirmed"], "description": "confirmed only with an applied lead decision (weights_decision_id)"},
+    "weights_decision_id": {"type": ["string", "null"], "description": "The lead decision that confirms the weights"},
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["id", "criteria", "kind", "status", "summary"],
+        "properties": {
+          "id": {"type": "string"},
+          "criteria": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "kind": {"enum": ["simulation", "analysis", "literature", "vendor-data", "test"]},
+          "status": {"enum": ["planned", "in-work", "done"]},
+          "source": {"type": "string", "description": "Repository path of the evidence (required unless planned)"},
+          "summary": {"type": "string"},
+          "needed": {"type": "string", "description": "For planned evidence: what is needed and from whom"}
+        }
+      }
+    },
+    "scores": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["alternative", "criterion", "score", "basis"],
+        "properties": {
+          "alternative": {"type": "string"},
+          "criterion": {"type": "string"},
+          "score": {"type": ["integer", "null"], "minimum": 1, "maximum": 5, "description": "1 worst to 5 best; null while pending"},
+          "basis": {"type": "array", "items": {"type": "string"}, "description": "Evidence IDs"},
+          "note": {"type": "string"},
+          "preliminary": {"type": "boolean"}
+        }
+      }
+    },
+    "requirement_ids": {"type": "array", "items": {"type": "string"}, "description": "Requirements whose values wait on this study"},
+    "selection": {
+      "type": ["object", "null"], "additionalProperties": false,
+      "properties": {
+        "alternative": {"type": "string"},
+        "decision_id": {"type": "string"},
+        "rationale": {"type": "string"}
+      }
+    },
+    "review_id": {"type": ["string", "null"]},
+    "author": {"type": "object", "additionalProperties": false, "properties": {"name": {"type": "string"}, "human": {"type": "boolean"}, "independence": {"type": "string"}}},
+    "open_actions": {"type": "array", "items": {"type": "string"}}
+  }
+}

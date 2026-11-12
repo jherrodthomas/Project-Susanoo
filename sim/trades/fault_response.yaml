@@ -1,0 +1,32 @@
+# Supply-loss response of each TS-001 actuation and power alternative, on the walker models (levels 1 and 2).
+# The alternatives differ, at this fidelity, only in how joint torque falls when supply is lost: the capacity curve in
+# sim/plant/walker.py (FLT-01 hydraulic pressure decay to zero; FLT-04 bus undervoltage to a residual floor). Every
+# mode runs over the operating envelope (CONOPS section 4: 20 degrees, CoM offset at most 0.12 m) with load holding
+# working and failed, on the adopted torques (sim/spec/walker_l2.yaml, DQ-012). Synthetic; no evidence credit.
+schema: susanoo/sim-trade-evidence/v0.1
+id: TS-001-E01
+title: Supply-loss response by actuation and power alternative
+trade: TS-001
+base: {fault_onset_s: 1.0, monitor: true}
+grid:
+  slope_deg: [0, 10, 16, 20]
+  stride_offset_m: [0.0, 0.06, 0.12]
+  tau_leak_s: [0.05, 0.3, 1.0, 3.0, 5.0]
+  pilot_reaction_s: [0.5, 1.5, 3.0]
+modes:
+  - id: A-LOSS
+    alternatives: [A]
+    title: Hydraulic supply lost (line burst to slow leak); torque falls to zero on every joint
+    case: {variant: hydraulic, fault: FLT-01}
+    params: {}
+  - id: B-SAG
+    alternatives: [B-EHA, B-EMA]
+    title: Bus undervoltage (generator lost, battery sags); torque falls to the residual floor
+    case: {variant: electric, fault: FLT-04}
+    params: {}
+  - id: B-ISOL
+    alternatives: [B-EHA, B-EMA]
+    title: Battery isolated (contactor opens, SYS-014) with the generator lost; torque falls to zero
+    case: {variant: electric, fault: FLT-04}
+    params: {electric_sag_floor: 0.0}
+holding: [works, fails]

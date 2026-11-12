@@ -21,6 +21,8 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | ASIL | Automotive Safety Integrity Level (ISO 26262 term in the LionDriver port plan) |
 | ASPICE | Automotive SPICE process assessment model (LionDriver port plan) |
 | AUTOSAR | AUTomotive Open System ARchitecture (LionDriver port plan) |
+| B-EHA | TS-001 alternative B with electrohydraulic joint actuators (series-hybrid power) |
+| B-EMA | TS-001 alternative B with electromechanical joint actuators (series-hybrid power) |
 | BMS | battery management system |
 | BSD | Berkeley Software Distribution (the BSD licence) |
 | CAD | computer-aided design |

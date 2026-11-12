@@ -1,0 +1,120 @@
+schema: susanoo/trade-study/v0.1
+id: TS-001
+title: Actuation and power architecture
+status: in-work
+question: Which actuation and power architecture should SUS-M1 baseline?
+scope: Joint actuation of the walker and the power source that goes with it. Two power alternatives are analysed side
+  by side until this study closes (decision DQ-006); alternative B is split by joint actuator type because the two
+  respond differently to faults local to one joint. The pilot station, locomotion and UAV dock are other studies
+  (TS-002 to TS-004).
+decision_authority: lead
+decision_ids:
+- DQ-006
+- DQ-016
+assumptions:
+- Concept stage; no hardware is selected and no vendor data has been obtained.
+- 'Joint torques as adopted in the level-2 spec (ankle 26.5 kN m, knee 22.5 kN m; DQ-012) apply to every alternative:
+  the actuators are sized to the walker, not the walker to the actuators.'
+- At simulation fidelity the alternatives differ only in how joint torque falls when supply is lost (the capacity curve
+  in sim/plant/walker.py); actuator dynamics and faults local to one joint are not modelled.
+alternatives:
+- id: A
+  title: Centralised hydraulic
+  description: An engine-driven hydraulic power unit with accumulators feeds valve-controlled cylinders at every joint
+    through a common pressure line; pilot-operated check valves hold the joints when pressure is lost.
+  elements: [SUS-M1-PWR-HPU, SUS-M1-PWR-DIST]
+  hazard_ids: [HAZ-PWR-001]
+- id: B-EHA
+  title: Series-hybrid with electrohydraulic joints
+  description: An engine-generator and a battery feed a DC bus; every joint has a self-contained electrohydraulic
+    actuator (motor, pump, local reservoir and cylinder) with its own holding valves.
+  elements: [SUS-M1-PWR-GEN, SUS-M1-PWR-BAT, SUS-M1-PWR-DIST]
+  hazard_ids: [HAZ-PWR-002, HAZ-PWR-003]
+- id: B-EMA
+  title: Series-hybrid with electromechanical joints
+  description: The same DC bus feeds electric motors with gearboxes or roller screws at every joint; spring-applied
+    brakes hold the joints when power is lost.
+  elements: [SUS-M1-PWR-GEN, SUS-M1-PWR-BAT, SUS-M1-PWR-DIST]
+  hazard_ids: [HAZ-PWR-002, HAZ-PWR-003]
+criteria:
+- {id: C01, title: Power density, weight: 10, measure: "Peak joint power and torque per kg of actuator and power source, for the SYS-016 torques"}
+- {id: C02, title: Controllability, weight: 10, safety: true, measure: "Torque bandwidth and accuracy available to the balance controller; stability margin of the level-2 walker with actuator dynamics"}
+- {id: C03, title: Leakage and fire risk, weight: 10, safety: true, measure: "Flammable fluid inventory and ignition sources near the pilot; residual risk of HAZ-PWR-001 to HAZ-PWR-003 after mitigation"}
+- {id: C04, title: Stored energy, weight: 10, safety: true, measure: "Energy stored in accumulators, batteries and fuel, and how fast it can be isolated and dissipated (SYS-007, SYS-014, SYS-015)"}
+- {id: C05, title: Maintainability, weight: 7, measure: "Service tasks, isolation steps before access and expected maintenance hours per operating hour"}
+- {id: C06, title: Mass, weight: 8, measure: "Actuation and power mass for the SYS-016 torques, as a fraction of the 3000 kg walker"}
+- {id: C07, title: Noise, weight: 4, measure: "Sound level at the pilot station and at 10 m"}
+- {id: C08, title: Heat, weight: 6, measure: "Heat to reject at continuous walking power, and hot surfaces near the pilot"}
+- {id: C09, title: Fault response, weight: 15, safety: true, measure: "Walker outcome after loss of supply over the operating envelope, with load holding working and failed: tips, cockpit drops and worst impact speed (TS-001-E01)"}
+- {id: C10, title: Supply chain, weight: 6, measure: "Availability of actuators in the SYS-016 torque class and of spares"}
+- {id: C11, title: Simulation fidelity, weight: 4, measure: "How well the alternative can be modelled in the level-2 simulation with available component data"}
+- {id: C12, title: Cost, weight: 10, measure: "Purchase and integration cost of actuation and power for one walker"}
+weights_status: draft
+weights_decision_id: DQ-016
+evidence:
+- id: TS-001-E01
+  criteria: [C09]
+  kind: simulation
+  status: done
+  source: sim/results/ts001-fault-response.md
+  summary: 'With load holding working, every supply-loss mode is safe across the envelope at level 2 (level 1 tips 14-19
+    of 180 cases through its unsized centre-of-pressure limit, A3). With load holding failed, a hydraulic supply loss (A)
+    and an isolated battery (B, SYS-014) are identical: torque goes to zero and the cockpit drops in 117 of 180 cases at
+    up to 4.1 m/s (level 2). A bus undervoltage that keeps 35% of torque (B, assumed floor) drops it in 27 cases at up to
+    2.3 m/s, still above the 1.0 m/s safe drop speed. The alternatives differ by the torque left after the fault, not
+    by the technology.'
+- id: TS-001-E02
+  criteria: [C01, C06, C09]
+  kind: analysis
+  status: done
+  source: sim/results/sizing-cf4.md
+  summary: Every alternative must deliver ankle 26.5 kN m and knee 22.5 kN m at full supply, and at least 0.6 m g L_foot at
+    the ankle when load holding engages (SYS-016); this sets the actuator class for C01 and C06 and the torque-supply
+    curve each alternative must show for C09.
+- id: TS-001-E03
+  criteria: [C01, C06, C10, C12]
+  kind: vendor-data
+  status: planned
+  summary: Mass, peak power, price and lead time of actuators and power sources in the SYS-016 torque class.
+  needed: Catalogue data for one hydraulic cylinder and valve set, one electrohydraulic actuator and one electromechanical
+    actuator per joint, an HPU, an engine-generator and a battery pack.
+- id: TS-001-E04
+  criteria: [C02, C11]
+  kind: simulation
+  status: planned
+  summary: Level-2 walker with actuator dynamics (bandwidth, backlash, compliance) per alternative.
+  needed: Actuator models from TS-001-E03 data; a level-2 actuator layer between the controller and the joint torques.
+- id: TS-001-E05
+  criteria: [C03, C04]
+  kind: analysis
+  status: planned
+  summary: Inventory of fluid, fuel and battery energy, ignition sources and isolation times per alternative, worked
+    through HAZ-PWR-001 to HAZ-PWR-003.
+  needed: Component sizes from TS-001-E03; the HPU, battery and fuel-system layout.
+- id: TS-001-E06
+  criteria: [C09]
+  kind: analysis
+  status: planned
+  summary: 'Fault modes local to one joint (electrohydraulic actuator leak, motor winding fault, brake failure) and the
+    reliability of the holding device of each alternative: pilot-operated check valves (A, B-EHA) against
+    spring-applied brakes (B-EMA).'
+  needed: Failure modes and rates of the holding devices (FMECA, Task 205 inputs) and a level-2 single-joint fault mode.
+- id: TS-001-E07
+  criteria: [C05, C07, C08]
+  kind: literature
+  status: planned
+  summary: Maintenance tasks, noise and heat rejection of comparable legged and construction machines.
+  needed: Sources for each alternative; the pilot-station noise limit from the HHA (Task 207).
+scores:
+- {alternative: A, criterion: C09, score: 2, basis: [TS-001-E01], preliminary: true, note: "Every supply loss takes torque to zero on all joints at once; with load holding failed the cockpit drops at up to 4.1 m/s."}
+- {alternative: B-EHA, criterion: C09, score: 3, basis: [TS-001-E01], preliminary: true, note: "A bus undervoltage keeps residual torque (assumed 35%) and halves the drop speed; battery isolation is as bad as A. Local actuator leaks pending TS-001-E06."}
+- {alternative: B-EMA, criterion: C09, score: 3, basis: [TS-001-E01], preliminary: true, note: "As B-EHA at simulation fidelity; spring-applied brakes against check valves pending TS-001-E06."}
+requirement_ids: [SYS-007, SYS-009, SYS-014, SYS-015, SYS-016]
+selection: null
+review_id: null
+author: {name: Claude, human: false, independence: I0}
+open_actions:
+- Confirm or change the criteria weights (decision DQ-016)
+- Obtain the vendor data for TS-001-E03; it unblocks TS-001-E04 and TS-001-E05
+- Test whether the residual bus floor (assumed 35% in sim/spec/walker.yaml) is credible for the series-hybrid bus; the C09 difference between A and B rests on it
+- Score the remaining criteria from evidence, then set the study to ready-for-decision for the lead
