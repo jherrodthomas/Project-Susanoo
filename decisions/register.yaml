@@ -184,3 +184,43 @@ decisions:
     answer: {choice: periodic-orbit, by: claude, at: 2026-11-12, via: chat, note: "lead asked to resolve the EC-07 and EC-08 model disagreement; the slope limit itself stays with the lead (HAZ-WLK-002 open action)"}
     applied_in: [sim/plant/walker.py, sim/mujoco/l2.py, sim/results/search-SF-01.md, sim/results/l2-crosscheck.md, safety/hazards/HAZ-WLK-002.yaml]
     sources: [sim/results/l2-crosscheck.md, sim/results/plant-results.md]
+
+  - id: DQ-010
+    question: What slope limit should CONOPS section 4 set for the walker?
+    context: >-
+      Under SPEC-WLK-001 assumptions the no-fault gait holds to 20 degrees at both model levels and **tips from about
+      24 degrees at level 2** (27 at level 1; sim/results/l2-crosscheck.md, NOM-20 and NOM-25). The failure search
+      covered only 0-15 degrees.
+    options:
+      - {key: "20", title: 20 degrees, detail: "About 4 degrees below the level-2 no-fault tip; the failure search is widened to 20 degrees."}
+      - {key: "15", title: 15 degrees, detail: "More margin; less terrain."}
+    recommendation: "20"
+    reversibility: easy
+    blocks: [HAZ-WLK-002 slope-limit action, SYS-008 envelope]
+    gate: G2
+    decider: lead
+    status: applied
+    asked: null
+    answer: {choice: "20", by: lead, at: 2026-11-12, via: chat, note: "set the slope limit to 20 degrees"}
+    applied_in: [concept/CONOPS.md, architecture/item-definition.yaml, requirements/SYS-008.yaml, safety/hazards/HAZ-WLK-002.yaml, sim/search/families.yaml]
+    sources: [sim/results/l2-crosscheck.md, sim/results/plant-results.md]
+
+  - id: DQ-011
+    question: How far may payload and gait move the walker's centre of mass ahead of the stance foot when it is on a 20 degree slope?
+    context: >-
+      With the 20 degree slope limit (DQ-010) the failure search now covers 0-20 degrees and finds the walker **tipping
+      with no fault at 19-20 degrees when the CoM sits 0.24-0.26 m ahead of the foot** (SF-01 EC-04, EC-05, EC-08).
+      The no-fault gait holds a CoM offset of up to 0.165 m at 20 degrees at level 2 (0.226 m at level 1), 0.20 m at
+      18 degrees and 0.25 m at 15 degrees; the nominal gait uses 0.10 m. The search samples offsets up to 0.30 m.
+    options:
+      - {key: offset-012, title: "Keep 20 degrees and limit the CoM offset to 0.12 m", detail: "0.045 m below the level-2 no-fault limit at 20 degrees; payload placement and gait must stay inside it (SYS-008, HAZ-WLK-002 M3). The search space is narrowed to 0-0.12 m."}
+      - {key: sliding, title: Limit the CoM offset by slope, detail: "0.20 m up to 15 degrees, 0.12 m at 20 degrees; more usable payload, but the limit becomes a table the envelope protection must enforce."}
+      - {key: slope-15, title: Lower the slope limit to 15 degrees, detail: "Keeps offsets up to 0.20 m usable with margin; less terrain. Reopens DQ-010."}
+    recommendation: offset-012
+    reversibility: easy
+    blocks: [SYS-008 envelope, HAZ-WLK-002 M3, failure-search space for SF-01]
+    gate: G2
+    decider: lead
+    status: open
+    asked: 2026-11-12
+    sources: [sim/results/search-SF-01.md, sim/results/l2-crosscheck.md, safety/hazards/HAZ-WLK-002.yaml]
