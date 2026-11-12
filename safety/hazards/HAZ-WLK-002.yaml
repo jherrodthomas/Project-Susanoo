@@ -33,8 +33,8 @@ causal_factors:
   type: hardware
   description: Loss of actuator supply (hydraulic pressure or bus voltage) shrinks the balance capacity before load
     holding engages; a slow leak on a slope tips the walker, and a hold that engages with the capture point outside
-    the foot tips it too (simulation SF-01 EC-06 at levels 1 and 2; EC-07 at level 1, and at level 2 when the ankle
-    torque is no more than m g L cos(slope); synthetic)
+    the foot tips it too (simulation SF-01 EC-07 and EC-08 inside the 20 degree, 0.12 m envelope, reproduced at
+    levels 1 and 2; synthetic)
 effects:
 - Overturn or fall of the platform
 mishap: Pilot fatal or disabling injury in fall; crush of bystanders
@@ -132,15 +132,13 @@ assumptions:
 - 'Simulation basis for CF4 and the slope limit: level 1 starts each case on its balance loop''s periodic orbit
   (walker assumption A8). The earlier start on the sway reference put the capture point at the foot edge at t = 0
   and produced no-fault tips at 12-15 degrees that level 2 did not reproduce; with both models started in the same
-  state they agree on the SF-01 edge cases except EC-07, which sits on the actuator-capacity boundary
-  (sim/results/l2-crosscheck.md)'
-- Slope limit 20 degrees (CONOPS section 4, lead decision DQ-010); the failure search covers 0-20 degrees
+  state they agree on every SF-01 edge case inside the envelope (sim/results/l2-crosscheck.md)'
+- 'Envelope: slope limit 20 degrees with the CoM no more than 0.12 m ahead of the stance foot (CONOPS section 4,
+  lead decisions DQ-010 and DQ-011); the failure search covers this envelope and finds no tip without a fault'
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
-- 'Set the CoM offset allowed at the 20 degree slope limit (decision DQ-011): the no-fault gait tips at 19-20 degrees
-  with the CoM 0.24-0.26 m ahead of the foot (failure search SF-01, EC-04, EC-05 and EC-08) and holds up to 0.165 m
-  at 20 degrees at level 2'
-- 'Size ankle torque and leg force against CF4: at 16 degrees a slow leak tips the walker at level 2 when the ankle
-  torque is no more than m g L cos(slope), and holds with 20 kN m (SF-01 EC-07, sim/results/l2-crosscheck.md)'
+- 'Size ankle torque and leg force against CF4: whether a slow leak tips the walker depends on the centre-of-pressure
+  authority left at reduced supply; with a 0.16 m CoM offset at 16 degrees level 2 tips with the ankle limited to
+  m g L cos(slope) and holds with 20 kN m (sim/results/l2-crosscheck.md, CAP-16)'
 - Derive a safety requirement for margin-based load holding (M5) (Task 203)
 
