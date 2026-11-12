@@ -93,10 +93,10 @@ def page(res: dict) -> str:
                        [("purpose", "draft sizing input to the actuation trade (TS-001, DQ-006); not a design value")]), "\n",
            f"Envelope grid: {res['grid_cases']} cases ({', '.join(f'`{k}` {v}' for k, v in res['grid'].items())}). "
            f"Corner grid: {res['corner_cases']} cases. A failure is any outcome other than safe. "
-           f"m g L_foot = {mgl:.0f} N m. Assumed in `sim/spec/walker_l2.yaml`: ankle {res['assumed']['ankle_torque_max_nm']:.0f}, "
+           f"m g L_foot = {mgl:.0f} N m. In `sim/spec/walker_l2.yaml`: ankle {res['assumed']['ankle_torque_max_nm']:.0f}, "
            f"knee {res['assumed']['knee_torque_max_nm']:.0f}, hip {res['assumed']['hip_torque_max_nm']:.0f} N m.\n\n"]
     for s in res["sweeps"]:
-        w = ", ".join(f"{k} {v}" for k, v in s["with"].items()) or "other joints as assumed"
+        w = ", ".join(f"{k} {v}" for k, v in s["with"].items()) or "other joints as in the spec"
         ankle = s["param"] == "ankle_torque_max_nm"
         out.append(f"## Sweep: {s['param']} ({w})\n\n| Value (N m) |" + (" Ratio to m g L_foot |" if ankle else "")
                    + " Failures | Failing cases (first 3) |\n|---|" + ("---|" if ankle else "") + "---|---|\n")
