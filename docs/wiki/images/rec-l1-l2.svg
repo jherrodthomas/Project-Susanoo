@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1117.1" viewBox="0 0 1080 1117.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · Level 1 against level 2</title>
+<desc>The level-1 walker plant and the level-2 MuJoCo multibody model, run on the same 26 cases: 21 agree on the outcome. Times are when the mishap occurs. Synthetic results: a design aid, never verification evidence.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1080" height="1019" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · Level 1 against level 2</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The level-1 walker plant and the level-2 MuJoCo multibody model, run on the same 26 cases: 21 agree on the outcome. Times are when the</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">mishap occurs. Synthetic results: a design aid, never verification evidence.</text>
+<text x="1040" y="44" font-size="11" fill="#475569" text-anchor="end">sim/results/l2-crosscheck.json</text>
+<line x1="40" y1="102" x2="1040" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(0 124)">
+<text x="48" y="14" font-size="10.5" fill="#475569" font-weight="700">Case</text>
+<text x="275" y="14" font-size="10.5" fill="#475569" font-weight="700" text-anchor="middle">Level 1 (plant)</text>
+<text x="425" y="14" font-size="10.5" fill="#475569" font-weight="700" text-anchor="middle">Level 2 (MuJoCo)</text>
+<text x="535" y="14" font-size="10.5" fill="#475569" font-weight="700" text-anchor="middle">Agree</text>
+<text x="578" y="14" font-size="10.5" fill="#475569" font-weight="700">Note</text>
+<line x1="40" y1="24" x2="1040" y2="24" stroke="#CBD5E1" stroke-width="1"/>
+<text x="48" y="46" font-size="11.5" fill="#0F172A" font-weight="700">NOM · No fault (capability by slope) (5 of 6 agree)</text>
+<rect x="40" y="54" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="48" y="70.5" font-size="11" fill="#0F172A">NOM-00</text>
+<rect x="258.8" y="58.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="275" y="70.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="408.8" y="58.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="70.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="520.6" y="58.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="70.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<text x="48" y="95.5" font-size="11" fill="#0F172A">NOM-08</text>
+<rect x="258.8" y="83.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="275" y="95.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="408.8" y="83.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="95.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="520.6" y="83.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="95.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<rect x="40" y="104" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="48" y="120.5" font-size="11" fill="#0F172A">NOM-12</text>
+<rect x="258.8" y="108.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="275" y="120.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="408.8" y="108.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="120.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="520.6" y="108.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="120.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<text x="48" y="145.5" font-size="11" fill="#0F172A">NOM-15</text>
+<rect x="258.8" y="133.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="275" y="145.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="408.8" y="133.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="145.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="520.6" y="133.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="145.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<rect x="40" y="154" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="48" y="170.5" font-size="11" fill="#0F172A">NOM-20</text>
+<rect x="258.8" y="158.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="275" y="170.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="408.8" y="158.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="170.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="520.6" y="158.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="170.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<text x="48" y="195.5" font-size="11" fill="#0F172A">NOM-25</text>
+<rect x="258.8" y="183.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="275" y="195.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="396.5" y="183.5" width="56.9" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="425" y="195.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 3.24 s</text>
+<rect x="523.4" y="183.5" width="23.2" height="17" rx="8.5" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="535" y="195.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">no</text>
+<text x="578" y="195.5" font-size="11" fill="#0F172A">Level 2 tips the no-fault gait from about 24 degrees, level 1 from about 27 (both hold a…</text>
+<text x="48" y="226" font-size="11.5" fill="#0F172A" font-weight="700">CAT · Fault catalogue (sim/faults.yaml) (8 of 9 agree)</text>
+<rect x="40" y="234" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="48" y="250.5" font-size="11" fill="#0F172A">CAT-STOP</text>
+<rect x="258.8" y="238.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="275" y="250.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="408.8" y="238.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="250.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="520.6" y="238.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="250.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<text x="48" y="275.5" font-size="11" fill="#0F172A">CAT-01-HOLD</text>
+<rect x="258.8" y="263.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="275" y="275.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="408.8" y="263.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="275.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="520.6" y="263.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="275.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<rect x="40" y="284" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="48" y="300.5" font-size="11" fill="#0F172A">CAT-01-NOHOLD</text>
+<rect x="230.3" y="288.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="275" y="300.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.57 s</text>
+<rect x="380.3" y="288.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="425" y="300.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.75 s</text>
+<rect x="520.6" y="288.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="300.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<text x="48" y="325.5" font-size="11" fill="#0F172A">CAT-01-SLOW-8</text>
+<rect x="258.8" y="313.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="275" y="325.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="408.8" y="313.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="325.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="520.6" y="313.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="325.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<rect x="40" y="334" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="48" y="350.5" font-size="11" fill="#0F172A">CAT-02-MON</text>
+<rect x="258.8" y="338.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="275" y="350.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="408.8" y="338.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="350.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="520.6" y="338.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="350.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<text x="48" y="375.5" font-size="11" fill="#0F172A">CAT-02-NOMON</text>
+<rect x="246.5" y="363.5" width="56.9" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="275" y="375.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 2.88 s</text>
+<rect x="396.5" y="363.5" width="56.9" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="425" y="375.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 3.79 s</text>
+<rect x="520.6" y="363.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="375.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<rect x="40" y="384" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="48" y="400.5" font-size="11" fill="#0F172A">CAT-03</text>
+<rect x="230.3" y="388.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="275" y="400.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.49 s</text>
+<rect x="380.3" y="388.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="425" y="400.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.62 s</text>
+<rect x="520.6" y="388.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="400.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<text x="48" y="425.5" font-size="11" fill="#0F172A">CAT-04-BRAKE</text>
+<rect x="258.8" y="413.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="275" y="425.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="408.8" y="413.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="425.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="520.6" y="413.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="425.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<rect x="40" y="434" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="48" y="450.5" font-size="11" fill="#0F172A">CAT-04-NOBRAKE</text>
+<rect x="230.3" y="438.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="275" y="450.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 2.59 s</text>
+<rect x="408.8" y="438.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="450.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="523.4" y="438.5" width="23.2" height="17" rx="8.5" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="535" y="450.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">no</text>
+<text x="578" y="450.5" font-size="11" fill="#0F172A">Level 1 scales leg support force linearly with capacity (assumption A4), so 35% capaci…</text>
+<text x="48" y="481" font-size="11.5" fill="#0F172A" font-weight="700">STOP · Protective stop on a slope (no fault) (2 of 2 agree)</text>
+<text x="48" y="505.5" font-size="11" fill="#0F172A">STOP-16</text>
+<rect x="258.8" y="493.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="275" y="505.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="408.8" y="493.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="505.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="520.6" y="493.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="505.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<rect x="40" y="514" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="48" y="530.5" font-size="11" fill="#0F172A">STOP-20</text>
+<rect x="258.8" y="518.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="275" y="530.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="408.8" y="518.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="530.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="520.6" y="518.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="530.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<text x="48" y="561" font-size="11.5" fill="#0F172A" font-weight="700">CAP · Actuator-capacity boundary (outside the operating envelope) (0 of 1 agree)</text>
+<text x="48" y="585.5" font-size="11" fill="#0F172A">CAP-16</text>
+<rect x="246.5" y="573.5" width="56.9" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="275" y="585.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 3.48 s</text>
+<rect x="408.8" y="573.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="585.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="523.4" y="573.5" width="23.2" height="17" rx="8.5" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="535" y="585.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">no</text>
+<text x="578" y="585.5" font-size="11" fill="#0F172A">A slow leak at 16 degrees with a 0.16 m CoM offset (above the 0.12 m limit, DQ-011) a…</text>
+<text x="48" y="616" font-size="11.5" fill="#0F172A" font-weight="700">SF-01 · Failure search SF-01: Hydraulic supply loss in mid-stride on a slope (edge cases) (6 of 8 agree)</text>
+<rect x="40" y="624" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="48" y="640.5" font-size="11" fill="#0F172A">SF-01/EC-01</text>
+<rect x="230.3" y="628.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="275" y="640.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.57 s</text>
+<rect x="380.3" y="628.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="425" y="640.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.74 s</text>
+<rect x="520.6" y="628.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="640.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<text x="48" y="665.5" font-size="11" fill="#0F172A">SF-01/EC-02</text>
+<rect x="230.3" y="653.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="275" y="665.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.59 s</text>
+<rect x="380.3" y="653.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="425" y="665.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.77 s</text>
+<rect x="520.6" y="653.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="665.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<rect x="40" y="674" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="48" y="690.5" font-size="11" fill="#0F172A">SF-01/EC-03</text>
+<rect x="230.3" y="678.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="275" y="690.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.57 s</text>
+<rect x="380.3" y="678.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="425" y="690.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.75 s</text>
+<rect x="520.6" y="678.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="690.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<text x="48" y="715.5" font-size="11" fill="#0F172A">SF-01/EC-04</text>
+<rect x="230.3" y="703.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="275" y="715.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.59 s</text>
+<rect x="380.3" y="703.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="425" y="715.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.78 s</text>
+<rect x="520.6" y="703.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="715.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<rect x="40" y="724" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="48" y="740.5" font-size="11" fill="#0F172A">SF-01/EC-05</text>
+<rect x="230.3" y="728.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="275" y="740.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.57 s</text>
+<rect x="380.3" y="728.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="425" y="740.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.73 s</text>
+<rect x="520.6" y="728.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="740.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<text x="48" y="765.5" font-size="11" fill="#0F172A">SF-01/EC-06</text>
+<rect x="230.3" y="753.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="275" y="765.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.59 s</text>
+<rect x="380.3" y="753.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="425" y="765.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.75 s</text>
+<rect x="520.6" y="753.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="765.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<rect x="40" y="774" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="48" y="790.5" font-size="11" fill="#0F172A">SF-01/EC-07</text>
+<rect x="246.5" y="778.5" width="56.9" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="275" y="790.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 3.09 s</text>
+<rect x="380.3" y="778.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="425" y="790.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 3.79 s</text>
+<rect x="523.4" y="778.5" width="23.2" height="17" rx="8.5" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="535" y="790.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">no</text>
+<text x="578" y="790.5" font-size="11" fill="#0F172A">Load holding fails during a slow leak at 18 degrees, so the walker is lost either way; t…</text>
+<text x="48" y="815.5" font-size="11" fill="#0F172A">SF-01/EC-08</text>
+<rect x="246.5" y="803.5" width="56.9" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="275" y="815.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 4.90 s</text>
+<rect x="408.8" y="803.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="815.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="523.4" y="803.5" width="23.2" height="17" rx="8.5" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="535" y="815.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">no</text>
+<text x="578" y="815.5" font-size="11" fill="#0F172A">A slow leak at 16.5 degrees with load holding working; the pilot's protective stop start…</text>
+<line x1="40" y1="824" x2="1040" y2="824" stroke="#E2E8F0" stroke-width="1"/>
+</g>
+<rect x="40" y="964" width="14" height="12" rx="3" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.2"/>
+<text x="62" y="974" font-size="11" fill="#475569">Safe</text>
+<rect x="97.8" y="964" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2"/>
+<text x="119.8" y="974" font-size="11" fill="#475569">Mishap (tip, fall or hard drop)</text>
+<rect x="281" y="964" width="14" height="12" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="303" y="974" font-size="11" fill="#475569">Disagreement</text>
+<text x="40" y="992" font-size="10.5" fill="#94A3B8">Generated by tools/previews/record_figures.py from sim/results/l2-crosscheck.json. Drafted at independence level I0; nothing shown here is reviewed, verified or accepted.</text>
+<g class="terms" data-base-h="1019">
+<rect x="0" y="1019" width="1080" height="98.1" fill="#FFFFFF"/>
+<line x1="40" y1="1023" x2="1040" y2="1023" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1038.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: A01–A04 = item-definition validator rule (A01–A04) · AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · CAP-nnn = level-1/level-2</text>
+<text x="40" y="1053.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">cross-check case at the actuator-capacity boundary · CAT-nnn = level-1/level-2 cross-check case from the fault catalogue · CoM = centre of mass · DQ-nnn = decision question for the</text>
+<text x="40" y="1067.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">project lead (decisions/register.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · MuJoCo = Multi-Joint dynamics with</text>
+<text x="40" y="1082.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Contact, the physics engine for the level-2 walker model · NOM-nnn = level-1/level-2 cross-check case, no fault (capability by slope) · SF-nnn = walker failure-search family</text>
+<text x="40" y="1096.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(sim/search) · STOP-nnn = level-1/level-2 cross-check case, protective stop on a slope with no fault</text>
+</g>
+</svg>

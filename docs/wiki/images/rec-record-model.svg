@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="992.7" height="1390.6" viewBox="0 0 992.7 1390.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · Record model</title>
+<desc>The record types the validator checks, one JSON schema each, and the fields by which they reference each other. Arrows point from the field's record to the record it names.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="992.7" height="1278" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · Record model</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The record types the validator checks, one JSON schema each, and the fields by which they reference each other. Arrows point from the</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">field's record to the record it names.</text>
+<text x="952.7" y="44" font-size="11" fill="#475569" text-anchor="end">pdac/schemas/</text>
+<line x1="40" y1="102" x2="952.7" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 126)">
+<path d="M353 317.1 L353 736" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M416 317.1 L416 347 Q416 354 423 354 L708 354 Q715 354 715 361 L715 839 Q715 846 708 846 L684 846 Q677 846 677 853 L677 958" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M432 317.1 L432 335 Q432 342 439 342 L828 342 Q835 342 835 349 L835 909 Q835 916 842 916 L853 916 Q860 916 860 923 L860 958" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M395 241.1 L395 193 Q395 186 402 186 L627 186 Q634 186 634 179 L634 82" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M385 317.1 L385 371 Q385 378 392 378 L453 378 Q460 378 460 385 L460 445 Q460 452 467 452 L530 452 Q537 452 537 459 L537 482" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M305 317.1 L305 335 Q305 342 298 342 L137 342 Q130 342 130 349 L130 492.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M390 736 L390 701 Q390 694 383 694 L375 694 Q368 694 368 687 L368 342 Q368 342 368 342 L368 342 Q368 342 368 342 L369 317.1" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M427 736 L427 701 Q427 694 434 694 L568 694 Q575 694 575 687 L575 619 Q575 612 582 612 L589 612 Q596 612 596 605 L596 590" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M427 812 L427 827 Q427 834 434 834 L807 834 Q814 834 814 841 L814 958" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M612 958 L612 853 Q612 846 605 846 L397 846 Q390 846 390 839 L390 812" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M700 82 L700 445 Q700 452 693 452 L663 452 Q656 452 656 459 L656 482" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M342 82 L342 241.1" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M176 492.7 L176 361 Q176 354 183 354 L314 354 Q321 354 321 347 L321 317.1" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M241 958 L241 373 Q241 366 248 366 L330 366 Q337 366 337 359 L337 317.1" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M292 958 L292 923 Q292 916 299 916 L346 916 Q353 916 353 909 L353 812" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M189 958 L189 923 Q189 916 182 916 L160 916 Q153 916 153 909 L153 568.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M616 482 L616 447 Q616 440 623 440 L658 440 Q665 440 665 433 L665 373 Q665 366 658 366 L581 366 Q574 366 574 359 L574 320" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M577 482 L577 447 Q577 440 570 440 L483 440 Q476 440 476 433 L476 373 Q476 366 469 366 L408 366 Q401 366 401 359 L401 317.1" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="274" y="6" width="136" height="76" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="286" y="18" width="26.2" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="299.1" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">CR</text>
+<text x="286" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Change request</text>
+<text x="286" y="69" font-size="10.5" fill="#475569">changes · 0 records</text>
+<rect x="475" y="228" width="198.7" height="92" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="487" y="240" width="26.2" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="500.1" y="251.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ</text>
+<text x="487" y="274" font-size="12.5" fill="#0F172A" font-weight="700">Decision register: questions</text>
+<text x="487" y="290" font-size="12.5" fill="#0F172A" font-weight="700">for the project lead</text>
+<text x="487" y="307" font-size="10.5" fill="#475569">decisions</text>
+<rect x="567" y="6" width="200.1" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="579" y="18" width="33.3" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="595.7" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">EVT</text>
+<text x="579" y="52" font-size="12.5" fill="#0F172A" font-weight="700">Test or demonstration event</text>
+<text x="579" y="69" font-size="10.5" fill="#475569">safety/events · 2 records</text>
+<rect x="289" y="241.1" width="159.3" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="301" y="253.1" width="33.3" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="317.7" y="264.5" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ</text>
+<text x="301" y="287.1" font-size="12.5" fill="#0F172A" font-weight="700">Hazard record</text>
+<text x="301" y="304.1" font-size="10.5" fill="#475569">safety/hazards · 15 records</text>
+<rect x="498" y="482" width="196.9" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="510" y="494" width="49.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="534.9" y="505.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-I1</text>
+<text x="510" y="528" font-size="12.5" fill="#0F172A" font-weight="700">Item definition: functions,</text>
+<text x="510" y="544" font-size="12.5" fill="#0F172A" font-weight="700">elements, external elements</text>
+<text x="510" y="560" font-size="12.5" fill="#0F172A" font-weight="700">and interfaces</text>
+<text x="510" y="577" font-size="10.5" fill="#475569">architecture</text>
+<rect x="316" y="736" width="148.5" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="328" y="748" width="33.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="344.7" y="759.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS</text>
+<text x="328" y="782" font-size="12.5" fill="#0F172A" font-weight="700">System requirement</text>
+<text x="328" y="799" font-size="10.5" fill="#475569">requirements · 20 records</text>
+<rect x="85" y="492.7" width="136" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="97" y="504.7" width="33.3" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="113.7" y="516.1" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">REV</text>
+<text x="97" y="538.7" font-size="12.5" fill="#0F172A" font-weight="700">Review record</text>
+<text x="97" y="555.7" font-size="10.5" fill="#475569">reviews · 0 records</text>
+<rect x="548" y="958" width="192.9" height="92" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="560" y="970" width="33.3" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="576.7" y="981.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SSF</text>
+<text x="560" y="1004" font-size="12.5" fill="#0F172A" font-weight="700">Safety-significant software</text>
+<text x="560" y="1020" font-size="12.5" fill="#0F172A" font-weight="700">function</text>
+<text x="560" y="1037" font-size="10.5" fill="#475569">safety/software · 8 records</text>
+<rect x="138" y="958" width="205.2" height="92" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="150" y="970" width="35.9" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="167.9" y="981.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task</text>
+<text x="150" y="1004" font-size="12.5" fill="#0F172A" font-weight="700">MIL-STD-882E task</text>
+<text x="150" y="1020" font-size="12.5" fill="#0F172A" font-weight="700">work-product record</text>
+<text x="150" y="1037" font-size="10.5" fill="#475569">safety/mil-std-882e/tasks · 5 records</text>
+<rect x="767" y="958" width="139.7" height="76" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="779" y="970" width="33.3" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="795.7" y="981.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">VER</text>
+<text x="779" y="1004" font-size="12.5" fill="#0F172A" font-weight="700">Verification record</text>
+<text x="779" y="1021" font-size="10.5" fill="#475569">verification · 0 records</text>
+<rect x="260" y="527" width="90.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="265" y="540" font-size="10.5" fill="#475569">requirement_ids</text>
+<rect x="588" y="654" width="124.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="593" y="667" font-size="10.5" fill="#475569">causal_factors.ssf_ids</text>
+<rect x="755" y="654" width="77.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="760" y="667" font-size="10.5" fill="#475569">evidence_ids</text>
+<rect x="517" y="146" width="115" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="522" y="159" font-size="10.5" fill="#475569">event_risks.event_id</text>
+<rect x="387" y="400" width="71.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="392" y="413" font-size="10.5" fill="#475569">subsystems</text>
+<rect x="4" y="400" width="124.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="9" y="413" font-size="10.5" fill="#475569">acceptances.review_id</text>
+<rect x="371" y="527" width="102.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="376" y="540" font-size="10.5" fill="#475569">source.hazard_ids</text>
+<rect x="499" y="654" width="73.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="504" y="667" font-size="10.5" fill="#475569">allocated_to</text>
+<rect x="734" y="876" width="77.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="739" y="889" font-size="10.5" fill="#475569">evidence_ids</text>
+<rect x="519" y="876" width="90.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="524" y="889" font-size="10.5" fill="#475569">requirement_ids</text>
+<rect x="703" y="265" width="71.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="708" y="278" font-size="10.5" fill="#475569">subsystems</text>
+<rect x="292" y="146" width="48.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="297" y="159" font-size="10.5" fill="#475569">affects</text>
+<rect x="179" y="400" width="42.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="184" y="413" font-size="10.5" fill="#475569">scope</text>
+<rect x="172" y="654" width="66.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="177" y="667" font-size="10.5" fill="#475569">hazard_ids</text>
+<rect x="260" y="876" width="90.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="265" y="889" font-size="10.5" fill="#475569">requirement_ids</text>
+<rect x="91" y="765" width="59.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="96" y="778" font-size="10.5" fill="#475569">review_id</text>
+<rect x="608" y="400" width="54.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="613" y="413" font-size="10.5" fill="#475569">decision</text>
+<rect x="479" y="400" width="118.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="484" y="413" font-size="10.5" fill="#475569">interfaces.hazard_ids</text>
+</g>
+<rect x="40" y="1202" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="62" y="1212" font-size="11" fill="#475569">Safety records</text>
+<rect x="149.9" y="1202" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="171.9" y="1212" font-size="11" fill="#475569">System definition and requirements</text>
+<rect x="363.9" y="1202" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="385.9" y="1212" font-size="11" fill="#475569">Software safety</text>
+<rect x="479.4" y="1202" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="501.4" y="1212" font-size="11" fill="#475569">Other records</text>
+<text x="40" y="1234" font-size="10.5" fill="#94A3B8">Generated by tools/previews/record_figures.py from pdac/schemas/*.schema.json and the records. Drafted at independence level I0; nothing shown here is reviewed, verified or</text>
+<text x="40" y="1249" font-size="10.5" fill="#94A3B8">accepted.</text>
+<g class="terms" data-base-h="1278">
+<rect x="0" y="1278" width="992.7" height="112.6" fill="#FFFFFF"/>
+<line x1="40" y1="1282" x2="952.7" y2="1282" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1297.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · CR-nnn = change request record (changes/) · DoD = US Department of</text>
+<text x="40" y="1312.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Defense · DQ-nnn = decision question for the project lead (decisions/register.yaml) · EVT-nnn = test or demonstration event record (safety/events/) · HAZ-nnn = hazard</text>
+<text x="40" y="1326.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">record (safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · JSON = JavaScript</text>
+<text x="40" y="1341.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Object Notation, a data file format · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base edition) · REV-nnn = review record (reviews/) ·</text>
+<text x="40" y="1355.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SSF-nnn = safety-significant software function record (safety/software/) · SUS-I1 = integrated mechanized walker and observation UAV · SYS-nnn = system safety</text>
+<text x="40" y="1370.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">requirement record (requirements/SYS-nnn.yaml) · UAV = uncrewed aerial vehicle (drone) · US = United States · VER-nnn = verification record or case</text>
+</g>
+</svg>
