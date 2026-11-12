@@ -82,4 +82,6 @@ HAZ-INT-001, HAZ-DCK-002 · uav · source SU-02 · outcome **landed-at-stale-hom
 |---|---|
 | HAZ-PIL-001 | Ingress and egress motion is not in the plant (no pilot or structure contact model) |
 | HAZ-PWR-001 | Stored-energy release during maintenance is not modelled |
+| HAZ-PWR-002 | Battery thermal behaviour is not in the plant (no cell or pack thermal model) |
+| HAZ-PWR-003 | Fuel system and fire are not in the plant |
 | HAZ-DCK-001 | Rotor start on the dock needs a dock and rotor model; SITL starts on the ground |

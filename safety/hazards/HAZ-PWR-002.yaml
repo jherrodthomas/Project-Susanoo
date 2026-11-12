@@ -1,0 +1,116 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-PWR-002
+title: Battery thermal runaway near the pilot station
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-PWR
+- SUS-M1-PIL
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware:
+  - SUS-M1-PWR-BAT
+  software: []
+hazardous_condition: A traction battery cell enters thermal runaway and propagates through the pack while the pilot is
+  seated or a maintainer is working on the walker.
+modes:
+- MOD-02
+- MOD-04
+- MOD-09
+- MOD-10
+causal_factors:
+- id: CF1
+  type: hardware
+  description: Internal cell short, over-charge or over-temperature not detected or not isolated by the BMS
+- id: CF2
+  type: environment
+  description: Mechanical damage to the pack in a fall or overturn (SCN-103)
+- id: CF3
+  type: human
+  description: Damaged or wet pack charged or returned to service without inspection
+effects:
+- Fire, toxic and flammable vent gas, and heat at or near the pilot station
+mishap: Burn or inhalation injury to the pilot or a maintainer; loss of the walker
+initial_risk:
+  severity: 1
+  probability: D
+  rac: 1D
+  risk_level: Serious
+  rationale: Preliminary qualitative judgement at concept stage (no design, no cell chemistry selected); a pack fire
+    beside an occupied cockpit can be fatal; runaway is remote for a managed pack.
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design); pack separated from the cockpit by a
+    fire barrier and vented away from it, independent BMS isolation, and emergency egress.
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Select a cell chemistry with low thermal-runaway energy (trade study TS-001)
+  precedence: a
+  state: identified
+  verification:
+    method:
+    - analysis
+    evidence_ids: []
+- id: M2
+  description: Locate the pack outside the cockpit behind a fire barrier, with vent gas directed away from people
+  precedence: b
+  state: identified
+  verification:
+    method:
+    - analysis
+    - inspection
+    evidence_ids: []
+- id: M3
+  description: Independent battery monitoring that opens the pack contactors on over-temperature, over-voltage or
+    over-current, with a cockpit warning
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-014
+  verification:
+    method:
+    - test
+    evidence_ids: []
+- id: M4
+  description: Post-fall pack inspection, charging procedure and pilot emergency-egress drill
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-014
+owner:
+  role: ROLE-WLK
+  person: null
+  org: Walker / mechanical
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 201
+  scenario_ids:
+  - SCN-103
+  - SCN-108
+  documents:
+  - concept/CONOPS.md
+  - concept/trade-studies.md
+hazmat:
+  materials:
+  - lithium-ion traction battery (chemistry TBD)
+  note: Track under Task 108 HMMP
+assumptions:
+- Concept configuration SUS-I1-C001; no hardware design selected
+- Applies to power alternative B (series-hybrid) only (decision DQ-006)
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- Derive a safety requirement for M2 (Task 203) if TS-001 keeps alternative B
+- Close as not applicable if TS-001 selects alternative A (decision DQ-006)

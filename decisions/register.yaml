@@ -40,8 +40,10 @@ decisions:
     blocks: [SUS-RISKDEF-001 approval, every hazard risk assessment]
     gate: G0
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-11
+    answer: {choice: scale-100, by: lead, at: 2026-11-12, via: chat, note: "go with your recommendations on all of them"}
+    applied_in: [standards/tailoring/mil-std-882e.yaml]
     sources: [standards/tailoring/mil-std-882e.yaml, "MIL-STD-882E Table I, 4.3.3d"]
 
   - id: DQ-003
@@ -59,8 +61,10 @@ decisions:
     blocks: [SUS-RISKDEF-001 approval]
     gate: G0
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-11
+    answer: {choice: proposed, by: lead, at: 2026-11-12, via: chat, note: "go with your recommendations on all of them"}
+    applied_in: [standards/tailoring/mil-std-882e.yaml]
     sources: [standards/tailoring/mil-std-882e.yaml, "MIL-STD-882E 4.3.3e, Appendix A Table A-II"]
 
   - id: DQ-004
@@ -79,8 +83,10 @@ decisions:
     blocks: [any risk acceptance, EVT-BENCH-001]
     gate: G4
     decider: lead
-    status: open
+    status: answered
     asked: 2026-11-11
+    answer: {choice: lead-all, by: lead, at: 2026-11-12, via: chat, note: "go with your recommendations on all of them"}
+    applied_in: [standards/tailoring/mil-std-882e.yaml]
     sources: [standards/tailoring/mil-std-882e.yaml, "MIL-STD-882E 4.3.7"]
 
   - id: DQ-005
@@ -96,8 +102,9 @@ decisions:
     blocks: []
     gate: G0
     decider: lead
-    status: open
+    status: answered
     asked: 2026-11-11
+    answer: {choice: required, by: lead, at: 2026-11-12, via: chat, note: "go with your recommendations on all of them"}
     sources: [.github/workflows/pdac-validate.yml]
 
   - id: DQ-006
@@ -117,8 +124,10 @@ decisions:
     blocks: [SUS-M1-PWR sub-elements, IF-002, IF-003, sim plant model]
     gate: G2
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-11
+    answer: {choice: open-both, by: lead, at: 2026-11-12, via: chat, note: "go with your recommendations on all of them"}
+    applied_in: [architecture/item-definition.yaml, models/sysml/model/Architecture.sysml, concept/trade-studies.md, safety/hazards/HAZ-PWR-001.yaml, safety/hazards/HAZ-PWR-002.yaml, safety/hazards/HAZ-PWR-003.yaml, requirements/SYS-014.yaml, requirements/SYS-015.yaml]
     sources: [README.md, docs/wiki/SUS-M1-Architecture-and-Boundaries.md, concept/trade-studies.md, framework/liondriver-port-plan.md]
 
   - id: DQ-007
@@ -158,8 +167,10 @@ decisions:
     blocks: [PX4 parameter baseline for SUS-A1, HAZ-INT-001 mitigation M4]
     gate: G2
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-11
+    answer: {choice: land, by: lead, at: 2026-11-12, via: chat, note: "go with your recommendations on all of them"}
+    applied_in: [safety/hazards/HAZ-INT-001.yaml, safety/software/SSF-008.yaml, requirements/SYS-013.yaml]
     sources: [sim/results/uav/summary.md, integrations/px4/interface-contract.md, safety/hazards/HAZ-INT-001.yaml]
 
   - id: DQ-009

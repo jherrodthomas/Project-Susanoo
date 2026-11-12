@@ -64,4 +64,19 @@ package SusanooRequirements {
         @Source { record = "requirements/SYS-012.yaml"; }
         @HazardRef { ids = ("HAZ-DCK-001"); }
     }
+    requirement <'SYS-013'> uavLinkLossContingencyLandsClearOfTheWalker : SystemRequirement {
+        doc /* On loss of the integration link the UAV shall hold for a set time and then land in place, and shall not return to the dock or descend within the pilot keep-out without a recovery permit from the integration manager. */
+        @Source { record = "requirements/SYS-013.yaml"; }
+        @HazardRef { ids = ("HAZ-INT-001"); }
+    }
+    requirement <'SYS-014'> independentTractionBatteryIsolation : SystemRequirement {
+        doc /* If the series-hybrid power alternative is retained, the walker shall isolate the traction battery on cell over-temperature, over-voltage or over-current independently of the motion controller, and warn the pilot. */
+        @Source { record = "requirements/SYS-014.yaml"; }
+        @HazardRef { ids = ("HAZ-PWR-002"); }
+    }
+    requirement <'SYS-015'> fuelShutOffOnProtectiveStop : SystemRequirement {
+        doc /* If the series-hybrid power alternative is retained, a protective stop or detected fall shall shut off fuel to the engine-generator and stop the engine. */
+        @Source { record = "requirements/SYS-015.yaml"; }
+        @HazardRef { ids = ("HAZ-PWR-003"); }
+    }
 }

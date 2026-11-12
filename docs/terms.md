@@ -243,8 +243,9 @@ From the item definition.
 | SUS-M1-MAN | manipulation arms and end effectors |
 | SUS-M1-PIL | pilot station, restraints, displays and controls |
 | SUS-M1-PWR | power generation, storage, distribution and thermal control |
-| SUS-M1-PWR-BAT | battery pack, BMS and contactors |
+| SUS-M1-PWR-BAT | battery pack, BMS and contactors (alternative B) |
 | SUS-M1-PWR-DIST | protected power distribution |
-| SUS-M1-PWR-GEN | engine-generator and governor |
+| SUS-M1-PWR-GEN | engine-generator and governor (alternative B) |
+| SUS-M1-PWR-HPU | hydraulic power unit, accumulators and isolation (alternative A) |
 | SUS-M1-SAF | independent safety monitor, protective stop and isolation |
 | SUS-M1-WLK | chassis, legs, joint actuators and stability sensing |

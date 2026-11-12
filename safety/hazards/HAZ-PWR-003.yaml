@@ -1,0 +1,107 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-PWR-003
+title: Fuel leak and fire at the engine-generator
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-PWR
+- SUS-GSE
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware:
+  - SUS-M1-PWR-GEN
+  software: []
+hazardous_condition: Fuel leaks onto a hot engine or exhaust surface, or is spilled during refuelling, and ignites
+  while people are on or near the walker.
+modes:
+- MOD-01
+- MOD-02
+- MOD-04
+- MOD-10
+causal_factors:
+- id: CF1
+  type: hardware
+  description: Fuel line, fitting or tank failure from vibration or a fall (SCN-103)
+- id: CF2
+  type: human
+  description: Refuelling with the engine hot or running, or near an ignition source
+- id: CF3
+  type: hardware
+  description: Exhaust or engine surface hotter than the fuel's autoignition temperature next to a leak path
+effects:
+- Fuel fire on the walker; burning fuel on the ground around it
+mishap: Burn injury to the pilot, a maintainer or ground crew
+initial_risk:
+  severity: 1
+  probability: D
+  rac: 1D
+  risk_level: Serious
+  rationale: Preliminary qualitative judgement at concept stage (no design, no fuel selected); a fuel fire beside an
+    occupied cockpit can be fatal; leaks are remote for a protected fuel system.
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design); separated and shielded fuel system,
+    fuel shut-off on protective stop, and a refuelling procedure.
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Separate the fuel system and exhaust from the cockpit and from each other, with drip and heat shields
+  precedence: b
+  state: identified
+  verification:
+    method:
+    - analysis
+    - inspection
+    evidence_ids: []
+- id: M2
+  description: Fuel shut-off and engine stop commanded by the protective stop and on fall detection
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-015
+  verification:
+    method:
+    - test
+    evidence_ids: []
+- id: M3
+  description: Refuelling only in MOD-01 with the engine cold, extinguisher at hand and a spill kit
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-015
+owner:
+  role: ROLE-WLK
+  person: null
+  org: Walker / mechanical
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 201
+  scenario_ids:
+  - SCN-103
+  - SCN-108
+  documents:
+  - concept/CONOPS.md
+  - concept/trade-studies.md
+hazmat:
+  materials:
+  - engine fuel (type TBD)
+  note: Track under Task 108 HMMP
+assumptions:
+- Concept configuration SUS-I1-C001; no hardware design selected
+- Applies to power alternative B (series-hybrid) only (decision DQ-006)
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- Derive a safety requirement for M1 (Task 203) if TS-001 keeps alternative B
+- Close as not applicable if TS-001 selects alternative A (decision DQ-006)
