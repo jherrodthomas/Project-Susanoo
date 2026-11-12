@@ -257,3 +257,64 @@ decisions:
     answer: {choice: adopt, by: lead, at: 2026-11-12, via: chat, note: "adopt the sized ankle and knee torques in the spec"}
     applied_in: [sim/spec/walker_l2.yaml, sim/results/l2-crosscheck.md, sim/results/sizing-cf4.md, safety/hazards/HAZ-WLK-002.yaml]
     sources: [sim/results/sizing-cf4.md, requirements/SYS-016.yaml]
+
+  - id: DQ-013
+    question: Which locomotion should the walker use?
+    context: >-
+      CONOPS section 10 still listed biped, quadruped and hybrid locomotion as open. The concept layouts
+      (cad/README.md) were being drawn when the lead answered, **after seeing a wheeled sketch: "its a bipedal, not a
+      wheeled"**. Recorded after the fact; the question was not put to the lead in this form.
+    options:
+      - {key: biped, title: Bipedal, detail: "Two legs; the walker simulation and every concept layout are bipeds."}
+      - {key: wheeled-or-hybrid, title: "Wheeled, quadruped or leg-wheel hybrid", detail: "Not pursued."}
+    recommendation: biped
+    reversibility: hard
+    blocks: [concept layouts, CONOPS section 10]
+    gate: G1
+    decider: lead
+    status: applied
+    asked: null
+    answer: {choice: biped, by: lead, at: 2026-11-11, via: chat, note: "its a bipedal, not a wheeled"}
+    applied_in: [concept/CONOPS.md, cad/README.md]
+    sources: [cad/README.md]
+
+  - id: DQ-014
+    question: Which concept layout is the reference for further development?
+    context: >-
+      Five concept layouts (CL-01 to CL-05) were drawn for review. **The lead chose CL-05**, the reverse-jointed pod with
+      claw arms taken from the lead's AI-generated Industrial Utility Walker, and asked for it to be authored in
+      build123d code. Recorded after the fact.
+    options:
+      - {key: CL-05, title: CL-05 reverse-jointed pod, detail: "Tallest layout; centre of gravity behind the hips; front and side windows."}
+      - {key: other, title: CL-01 to CL-04, detail: "Open-frame bipeds with different dock positions, or the armoured pod."}
+    recommendation: CL-05
+    reversibility: easy
+    blocks: [CAD findings in safety/hazards and requirements]
+    gate: G1
+    decider: lead
+    status: applied
+    asked: null
+    answer: {choice: CL-05, by: lead, at: 2026-11-11, via: chat, note: "CL-05 as the reference, go to build123d"}
+    applied_in: [cad/README.md, safety/hazards/HAZ-WLK-002.yaml]
+    sources: [cad/README.md]
+
+  - id: DQ-015
+    question: May the walker carry a payload while walking?
+    context: >-
+      An arm-stow interlock for walking (SYS-017) would rule out carrying while walking, and the scenarios keep travel
+      (SCN-002) and payload handling (SCN-003) apart. **One concept-art image shows CL-05 walking with a pallet in its
+      claws.** Carrying while walking adds load swing, stability under load and a load dropped on the move.
+    options:
+      - {key: no-carry, title: No carrying while walking, detail: "Arms stowed and locked to walk; loads handled only at a standstill. Simplest and safest; easy to relax later."}
+      - {key: conditional, title: Allow carrying while walking under conditions, detail: "Arms locked in a carry pose, payload limits and reduced speed; needs a new hazard, a loaded-walking requirement and a different interlock."}
+      - {key: open, title: Leave it open, detail: "Stays TBD until a trade study."}
+    recommendation: no-carry
+    reversibility: easy
+    blocks: [SYS-017 interlock, SYS-019, HAZ-MAN-002]
+    gate: G2
+    decider: lead
+    status: applied
+    asked: 2026-11-12
+    answer: {choice: conditional, by: lead, at: 2026-11-12, via: chat, note: "2"}
+    applied_in: [requirements/SYS-017.yaml, requirements/SYS-019.yaml, safety/hazards/HAZ-MAN-002.yaml, safety/hazards/HAZ-WLK-002.yaml, cad/README.md]
+    sources: [cad/README.md, cad/concept-art/README.md]

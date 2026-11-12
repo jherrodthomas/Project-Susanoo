@@ -1,0 +1,30 @@
+schema: susanoo/requirement/v0.1
+id: SYS-020
+title: Emergency egress without power or kneeling
+statement: The pilot shall be able to leave the walker from the standing posture without platform power and without
+  kneeling, through an exit other than the front opening, with a descent aid and handholds that keep three points
+  of contact to the ground.
+status: candidate
+source:
+  documents:
+  - cad/README.md
+  scenario_ids:
+  - SCN-104
+  - SCN-108
+  hazard_ids:
+  - HAZ-PIL-003
+allocated_to:
+- SUS-M1-PIL
+- SUS-M1-SAF
+safety_significant: true
+verification:
+  method:
+  - analysis
+  - demonstration
+  evidence_ids: []
+  disposition: open
+tbd:
+- Egress time
+- 'Clear opening for a pilot in protective equipment (concept CL-05: 0.62 x 0.72 m side hatch)'
+- Descent aid and fall protection from about 3.2 m
+- Release force and operation from inside and outside

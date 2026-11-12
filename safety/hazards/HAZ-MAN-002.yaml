@@ -1,0 +1,116 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-MAN-002
+title: Carried load swings, shifts or drops while walking
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-MAN
+- SUS-M1-WLK
+- SUS-M1-CTL
+- SUS-M1-SAF
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: A payload is carried in the arms while the walker walks (allowed under conditions, decision
+  DQ-015) and moves relative to the walker.
+modes:
+- MOD-04
+- MOD-05
+causal_factors:
+- id: CF1
+  type: environment
+  description: Inertial loads from the gait, slope or uneven ground act on the load
+- id: CF2
+  type: hardware
+  description: Grip or securing failure, or the arms leave the carry pose
+- id: CF3
+  type: human
+  description: Load mass, centre of gravity, speed, step height or slope beyond the loaded limits
+- id: CF4
+  type: software
+  description: Loaded walking enabled without confirmed securing, carry pose and load limits
+  ssf_ids:
+  - SSF-001
+effects:
+- Load falls on or strikes a person beside the walker
+- Load shift moves the centre of mass ahead of the stance foot and contributes to a fall (HAZ-WLK-002)
+mishap: Fatal or disabling injury to a person struck by the load, or to the pilot in a resulting fall
+initial_risk:
+  severity: 1
+  probability: C
+  rac: 1C
+  risk_level: High
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); a dropped or swinging load from a 4.5 m walker can strike people or upset the walker
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: D
+  rac: 1D
+  risk_level: Serious
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); loaded-walking limits and interlocks reduce but are not expected to remove load motion while walking
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Loaded walking only with the load confirmed secured, the arms locked in a defined carry pose and mass
+    and centre of gravity within limits; reduced speed, step height and slope
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-019
+  - SYS-008
+  verification:
+    method:
+    - analysis
+    - test
+    evidence_ids: []
+- id: M2
+  description: 'Carry pose keeps the load low and close to the body and below the pilot''s sight line (CL-05: load
+    centre 1.80 m up, 0.10 m ahead of the pod; nearest ground seen ahead unchanged at 3.98 m)'
+  precedence: b
+  state: identified
+  requirement_ids:
+  - SYS-019
+  verification:
+    method:
+    - analysis
+    evidence_ids: []
+- id: M3
+  description: Exclusion zone sized for a loaded walker
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-019
+- SYS-008
+owner:
+  role: ROLE-WLK
+  person: null
+  org: Walker / mechanical
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 201
+  scenario_ids:
+  - SCN-002
+  - SCN-003
+  documents:
+  - cad/README.md
+  - decisions/register.yaml
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; carry pose from the CL-05 reference layout (cad/README.md); load mass TBD
+- 'CL-05 standstill figures on placeholder mass are indicative, not limits: the 0.30 m static-margin review flag
+  is reached at about 2,580 kg and tip-over at about 5,910 kg'
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- Derive the payload limits for walking from the dynamic analysis against the CoM offset cap of SYS-008 (DQ-011),
+  not from the standstill figures

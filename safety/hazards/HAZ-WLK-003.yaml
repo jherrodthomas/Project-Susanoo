@@ -1,0 +1,105 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-WLK-003
+title: Crushing under the pod or legs while kneeling or rising
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-WLK
+- SUS-M1-CTL
+- SUS-M1-SAF
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: A person is beside or under the walker while it lowers to or rises from the kneel posture used
+  for ingress and egress.
+modes:
+- MOD-02
+- MOD-03
+causal_factors:
+- id: CF1
+  type: human
+  description: Crew member or bystander inside the folding zone of the pod and legs
+- id: CF2
+  type: software
+  description: Kneel or rise commanded without a confirmed clear zone
+  ssf_ids:
+  - SSF-001
+- id: CF3
+  type: hardware
+  description: Uncontrolled descent while lowering (loss of actuator supply or load holding)
+effects:
+- Person pinned by the descending pod or folding legs
+mishap: Fatal or disabling crush injury
+initial_risk:
+  severity: 1
+  probability: C
+  rac: 1C
+  risk_level: High
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); the CL-05 pod drops about 1.4 m (hip 2.34 m to 0.95 m) on every ingress and egress
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); clear-zone confirmation, controlled lowering speed and load holding
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Kneel and rise only while the area under and around the pod and legs is confirmed clear, at a controlled
+    speed
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-018
+  verification:
+    method:
+    - test
+    evidence_ids: []
+- id: M2
+  description: Load holding keeps the posture on loss of actuator supply during lowering
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-009
+  verification:
+    method:
+    - test
+    - analysis
+    evidence_ids: []
+- id: M3
+  description: Marked crush zone and observer during kneel and rise
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-018
+- SYS-009
+owner:
+  role: ROLE-WLK
+  person: null
+  org: Walker / mechanical
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 201
+  scenario_ids:
+  - SCN-001
+  - SCN-006
+  documents:
+  - cad/README.md
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; kneel posture from the CL-05 reference layout (cad/README.md)
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- Check the kneel posture's own stability (CL-05 static margin 0.35 m kneeling, standstill only)

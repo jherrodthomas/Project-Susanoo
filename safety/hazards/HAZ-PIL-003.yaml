@@ -1,0 +1,101 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-PIL-003
+title: Fall from height during emergency egress
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-PIL
+- SUS-M1-SAF
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: The pilot leaves the standing walker through a side hatch about 3.2 m above the ground without
+  power or kneeling.
+modes:
+- MOD-09
+causal_factors:
+- id: CF1
+  type: human
+  description: Hurried descent, darkness, smoke or injury during emergency egress
+- id: CF2
+  type: hardware
+  description: Descent aid not deployed, out of reach, or the step-to-ladder transfer is missed
+- id: CF3
+  type: environment
+  description: Walker leaning or on a slope, wet or icy surfaces
+effects:
+- Pilot falls from the hatch, the shoulder step or the escape ladder
+mishap: Fatal or disabling fall injury to the pilot
+initial_risk:
+  severity: 1
+  probability: D
+  rac: 1D
+  risk_level: Serious
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); emergency egress is rare, but a 3.2 m fall can be fatal
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); descent aid, shoulder step with handholds and fall-arrest provision
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Shoulder plate under each hatch is a step flush with the sill with non-slip strips, a toe lip and
+    grab rails (CL-05)
+  precedence: b
+  state: identified
+  requirement_ids:
+  - SYS-020
+  verification:
+    method:
+    - inspection
+    - analysis
+    evidence_ids: []
+- id: M2
+  description: 'Fold-out davit and escape ladder clear of the walker (CL-05: 0.25 m clearance, 0.18 m step-to-ladder
+    gap)'
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-020
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+- id: M3
+  description: Fall-arrest harness and anchor point, and egress training
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-020
+owner:
+  role: ROLE-WLK
+  person: null
+  org: Walker / mechanical
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 201
+  scenario_ids:
+  - SCN-104
+  - SCN-108
+  documents:
+  - cad/README.md
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; emergency exit from the CL-05 reference layout (cad/README.md)
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- Confirm the 0.62 x 0.72 m clear opening for a pilot in protective equipment
