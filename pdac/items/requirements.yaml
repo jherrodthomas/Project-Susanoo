@@ -182,17 +182,17 @@ items:
 
   - id: SYS-013
     kind: requirement
-    title: "Manipulation limits and exclusion-zone interlock"
-    text: "System shall limit manipulator force, speed and payload to defined values and inhibit manipulation while the exclusion zone is not confirmed clear."
+    title: "Manipulation limits, exclusion-zone and arm-stow interlocks"
+    text: "System shall limit manipulator force, speed and payload to defined values and inhibit manipulation while the exclusion zone is not confirmed clear. System shall inhibit walking until both manipulator arms are confirmed stowed and locked, and shall hold the arms stowed until walking has stopped."
     req_type: safety
     status: candidate
     applicability: [SUS-M1, SUS-I1]
     source: SUS-ARCH-001
-    sources: [SCN-003]
+    sources: [SCN-003, SCN-002]
     mitigates: [HAZ-009, HAZ-010]
     allocated_to: [SUS-M1-MAN, SUS-M1-SAF]
     verification: {methods: [simulation, test], cases: []}
-    tbd: ["force, speed and payload limits", "exclusion-zone confirmation means"]
+    tbd: ["force, speed and payload limits", "exclusion-zone confirmation means", "stowed arm position and tolerance (concept CL-05: upper arm 45 deg down, forearm 80 deg)", "stow detection and locking means", "response if an arm leaves the stowed position while walking", "whether any payload may be carried while walking"]
 
   - id: SYS-014
     kind: requirement
