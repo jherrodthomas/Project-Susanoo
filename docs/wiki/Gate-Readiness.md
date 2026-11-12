@@ -77,7 +77,7 @@ Current gate: **G0** · validator errors: **0**
 | 303 | Test and Evaluation Participation | no record |  |
 | 401 | Safety Verification | no record |  |
 
-**Blockers:** Task 303 no record; Task 401 no record; EVT-BENCH-001: 9 hazard(s) without accepted event risk
+**Blockers:** Task 303 no record; Task 401 no record; EVT-BENCH-001: 7 hazard(s) without accepted event risk
 
 ## G5 — Verification and assessment (EMD)
 | Task | Title | Record status | Artifacts |

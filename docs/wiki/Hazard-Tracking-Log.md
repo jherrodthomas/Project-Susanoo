@@ -78,8 +78,8 @@ Status: open 15 · total 15
 | HAZ-DCK-001 | Rotor start while UAV is retained or a person is at the dock | MOD-06, MOD-10 | 2C Serious | 2E Medium | — | (c identified) | SSF-003 | Serious | open | ROLE-UAV |
 | HAZ-DCK-002 | False retained state releases UAV under motion | MOD-03, MOD-04, MOD-06, MOD-08 | 2D Medium | 2E Medium | — | (b identified) | SSF-005 | Serious | open | ROLE-UAV |
 | HAZ-INT-001 | UAV launch or recovery outside the safe envelope | MOD-06, MOD-07, MOD-08 | 2C Serious | 2E Medium | — | (a identified) | SSF-006, SSF-008 | High | open | ROLE-UAV |
-| HAZ-MAN-001 | Person struck or pinned by the arms or claws | MOD-04, MOD-05 | 1C High | 1E Medium | EVT-BENCH-001: 1E Medium | (c identified) | SSF-001 | High | open | ROLE-WLK |
-| HAZ-MAN-002 | Carried load swings, shifts or drops while walking | MOD-04, MOD-05 | 1C High | 1D Serious | EVT-BENCH-001: 1E Medium | (b identified) | SSF-001 | High | open | ROLE-WLK |
+| HAZ-MAN-001 | Person struck or pinned by the arms or claws | MOD-04, MOD-05 | 1C High | 1E Medium | — | (c identified) | SSF-001 | High | open | ROLE-WLK |
+| HAZ-MAN-002 | Carried load swings, shifts or drops while walking | MOD-04, MOD-05 | 1C High | 1D Serious | — | (b identified) | SSF-001 | High | open | ROLE-WLK |
 | HAZ-PIL-001 | Unintended leg motion during pilot ingress or egress | MOD-02, MOD-03, MOD-10 | 1C High | 1E Medium | EVT-BENCH-001: 1D Serious | (b identified) | SSF-001 | High | open | ROLE-WLK |
 | HAZ-PIL-002 | Uncontrolled vertical drop of the cockpit on loss of leg support | MOD-04, MOD-05, MOD-09 | 2C Serious | 2E Medium | EVT-BENCH-001: 2E Medium | (a identified) | — | — | open | ROLE-WLK |
 | HAZ-PIL-003 | Fall from height during emergency egress | MOD-09 | 1D Serious | 1E Medium | — | (b identified) | — | — | open | ROLE-WLK |
@@ -108,7 +108,7 @@ Status: open 15 · total 15
 ## Test events and exposure (4.3.7, Task 303)
 | Event | Title | Status | Exposure | Applicable hazards | Event risk accepted |
 |---|---|---|---|---|---|
-| EVT-BENCH-001 | Supported single-leg hydraulic actuator bench rig | planned | people, equipment | 9 | 0/9 |
+| EVT-BENCH-001 | Supported single-leg hydraulic actuator bench rig | planned | people, equipment | 7 | 0/7 |
 | EVT-SIM-001 | Digital simulation and PX4 SITL campaign | planned | none | 14 | n/a |
 
 Hazard management log (106.2r): the git history of `safety/hazards/`.
