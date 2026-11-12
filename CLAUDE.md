@@ -37,7 +37,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 - The hand-written SysML files in `models/sysml/model/` are checked against those records. Files starting `// GENERATED` are not hand-written.
 - Built from the records: the README blocks marked `readme:` and `docs/readme/*.svg`, the folder READMEs, figures and
   `.sysml` views under `safety/mil-std-882e/` (from its `catalog.yaml`), `concept/figures/`, `integrations/px4/figures/`,
-  `framework/figures/`, pages under `docs/wiki/` marked `GENERATED`, `docs/wiki/images/sus-i1-*.svg` and `sysml-*.svg`, `safety/generated/`, `sim/results/` (the PX4 SITL JSON under `sim/results/uav/` is written by `sim/uav/harness.py`), `docs/wiki/images/sim-*.svg`, `sim/scenes3d/out/`, `docs/3d/`, `docs/wiki/images/3d-*.png`, and the generated `.sysml` files. **Never edit a generated file**; edit the record and regenerate.
+  `framework/figures/`, pages under `docs/wiki/` marked `GENERATED` (including the copies written by
+  `tools/wiki/build_wiki.py`, with `docs/wiki/assets.txt` and the `_Sidebar.md` block it maintains), `docs/wiki/images/sus-i1-*.svg` and `sysml-*.svg`, `safety/generated/`, `sim/results/` (the PX4 SITL JSON under `sim/results/uav/` is written by `sim/uav/harness.py`), `docs/wiki/images/sim-*.svg`, `sim/scenes3d/out/`, `docs/3d/`, `docs/wiki/images/3d-*.png`, and the generated `.sysml` files. **Never edit a generated file**; edit the record and regenerate.
 - Before handing over any change, run:
 
   ```bash
@@ -60,6 +61,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   python3 tools/check_readme_diagrams.py   # folder README standard (framework/documentation-standard.md)
   tools/validate_doc_sysml.sh              # documentation SysML views with the project model; OMG pilot
   python -m tools.readme.build_readme      # front-page README figures and numbers
+  python -m tools.wiki.build_wiki          # wiki copies of the repository pages (docs/wiki) and their figures
   python -m tools.terms.terms              # terms block on every page, terms line on every figure (docs/terms.yaml)
   ```
 
