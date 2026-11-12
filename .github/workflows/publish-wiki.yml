@@ -6,6 +6,11 @@ on:
     branches: [main]
     paths:
       - 'docs/wiki/**'
+      - 'docs/readme/**'
+      - 'safety/mil-std-882e/**'
+      - 'concept/figures/**'
+      - 'integrations/px4/figures/**'
+      - 'framework/figures/**'
       - '.github/workflows/publish-wiki.yml'
 
 permissions:
@@ -47,8 +52,14 @@ jobs:
           find docs/wiki -maxdepth 1 -type f -name '*.md' -exec cp '{}' wiki-publish/ \;
           mkdir -p wiki-publish/images
           cp docs/wiki/images/*.svg docs/wiki/images/*.png wiki-publish/images/
+          # Figures of the pages published from elsewhere in the repository (tools/wiki/build_wiki.py)
+          while IFS= read -r f; do
+            [ -n "$f" ] || continue
+            mkdir -p "wiki-publish/assets/$(dirname "$f")"
+            cp "$f" "wiki-publish/assets/$f"
+          done < docs/wiki/assets.txt
           cd wiki-publish
-          git add -- '*.md' images/
+          git add -- '*.md' images/ assets/
           if git diff --cached --quiet; then
             echo "Wiki already up to date"
             exit 0
