@@ -1,0 +1,27 @@
+schema: susanoo/requirement/v0.1
+id: SYS-015
+title: Fuel shut-off on protective stop
+statement: If the series-hybrid power alternative is retained, a protective stop or detected fall shall shut off fuel
+  to the engine-generator and stop the engine.
+status: candidate
+source:
+  documents:
+  - concept/trade-studies.md
+  - concept/CONOPS.md
+  scenario_ids:
+  - SCN-103
+  - SCN-108
+  hazard_ids:
+  - HAZ-PWR-003
+allocated_to:
+- SUS-M1-PWR-GEN
+- SUS-M1-SAF
+safety_significant: true
+verification:
+  method:
+  - test
+  evidence_ids: []
+  disposition: open
+tbd:
+- Fuel type and shut-off timing pending TS-001
+- Applies to power alternative B only (decision DQ-006)

@@ -110,10 +110,13 @@ mitigations:
     - test
     evidence_ids: []
 - id: M5
-  description: Link-loss and battery failsafes land in place or fly to a rally point outside the pilot keep-out; the
-    aircraft never returns to the dock without a permit (decision DQ-008)
+  description: On link loss the aircraft holds briefly, then lands in place (PX4 NAV_DLL_ACT = 3, Land) and never
+    returns to the dock without a permit (decision DQ-008, lead, 2026-11-12; SITL SU-03 stayed 48 m clear, synthetic).
+    The low-battery failsafe still needs a decision.
   precedence: c
   state: identified
+  requirement_ids:
+  - SYS-013
   ssf_ids:
   - SSF-008
   verification:
@@ -141,6 +144,7 @@ mitigations:
     evidence_ids: []
 requirement_ids:
 - SYS-006
+- SYS-013
 owner:
   role: ROLE-UAV
   person: null
@@ -168,4 +172,5 @@ assumptions:
 - Concept configuration SUS-I1-C001; no hardware design selected
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
-- Derive safety requirements for M5 to M7 once DQ-008 is decided (Task 203)
+- Derive safety requirements for M6 and M7 (Task 203); M5 link loss is covered by SYS-013 (decision DQ-008)
+- Decide the low-battery failsafe (COM_LOW_BAT_ACT); DQ-008 covers link loss only
