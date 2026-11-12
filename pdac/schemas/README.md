@@ -41,4 +41,5 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | [`review.schema.json`](review.schema.json) | Review record (the only way anything is accepted) |
 | [`ssf.schema.json`](ssf.schema.json) | Safety-significant software function (MIL-STD-882E 4.4, Appendix B) |
 | [`task-record.schema.json`](task-record.schema.json) | MIL-STD-882E task work-product record |
+| [`trade-study.schema.json`](trade-study.schema.json) | Architecture trade study (concept/trade-studies.md decision process; MIL-STD-882E 4.3.4 design order of precedence) |
 | [`verification.schema.json`](verification.schema.json) | Verification record (MIL-STD-882E 4.3.6, Task 401) |

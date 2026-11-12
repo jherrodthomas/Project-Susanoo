@@ -129,5 +129,7 @@ jobs:
         run: python -m sim.mujoco.crosscheck --compare
       - name: Actuator sizing against CF4 reproduces the committed failing cases
         run: python -m sim.mujoco.sizing --compare
+      - name: TS-001 supply-loss evidence reproduces the committed outcomes
+        run: python -m sim.trades.fault_response --compare
       - name: MuJoCo tests
         run: python -m unittest sim.tests.test_mujoco

@@ -19,6 +19,7 @@ COLLECTIONS = {
     "verification": ("verification", "verification.schema.json", "id"),
     "task": ("safety/mil-std-882e/tasks", "task-record.schema.json", "task_id"),
     "review": ("reviews", "review.schema.json", "id"),
+    "trade": ("architecture/trades", "trade-study.schema.json", "id"),
 }
 
 MODEL_PATH = "standards/mil-std-882e/model.yaml"

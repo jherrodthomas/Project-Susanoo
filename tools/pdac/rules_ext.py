@@ -249,5 +249,75 @@ def check_decisions(repo):
         yield Finding("D01", "warning", "decisions", f"{open_count} decisions open; keep about {MAX_OPEN} (batches of ten)")
 
 
+# ---------------------------------------------------------------- T01: trade studies
+
+def check_trades(repo):
+    """A trade study is AI-draftable; its weights are confirmed and its alternative selected only by the lead."""
+    decisions = {d["id"]: d for d in (repo.decisions or {}).get("decisions") or []}
+    elements = set(item_index(repo)["elements"])
+    hazards, reqs = repo.objects.get("hazard", {}), repo.objects.get("requirement", {})
+    for tid, t in (repo.objects.get("trade") or {}).items():
+        alts = {a["id"] for a in t.get("alternatives") or []}
+        crit = {c["id"]: c for c in t.get("criteria") or []}
+        evid = {e["id"]: e for e in t.get("evidence") or []}
+        total = sum(c["weight"] for c in crit.values())
+        if abs(total - 100) > 1e-9:
+            yield Finding("T01", "error", tid, f"criteria weights sum to {total:g}, not 100")
+        for did in t.get("decision_ids") or []:
+            if did not in decisions:
+                yield Finding("T01", "error", tid, f"decision {did} is not in decisions/register.yaml")
+        for a in t.get("alternatives") or []:
+            for e in a.get("elements") or []:
+                if e not in elements:
+                    yield Finding("T01", "error", tid, f"alternative {a['id']}: element {e} is not in the item definition")
+            for h in a.get("hazard_ids") or []:
+                if h not in hazards:
+                    yield Finding("T01", "error", tid, f"alternative {a['id']}: hazard {h} does not exist")
+        for r in t.get("requirement_ids") or []:
+            if r not in reqs:
+                yield Finding("T01", "error", tid, f"requirement {r} does not exist")
+        for e in evid.values():
+            for c in e["criteria"]:
+                if c not in crit:
+                    yield Finding("T01", "error", tid, f"evidence {e['id']}: unknown criterion {c}")
+            if e["status"] != "planned":
+                src = e.get("source")
+                if not src:
+                    yield Finding("T01", "error", tid, f"evidence {e['id']} is {e['status']} but names no source")
+                elif not (repo.root / src.split("#")[0]).exists():
+                    yield Finding("T01", "error", tid, f"evidence {e['id']}: source {src} does not exist")
+        seen = set()
+        for s in t.get("scores") or []:
+            key = (s["alternative"], s["criterion"])
+            if key in seen:
+                yield Finding("T01", "error", tid, f"score {key} given twice")
+            seen.add(key)
+            if s["alternative"] not in alts or s["criterion"] not in crit:
+                yield Finding("T01", "error", tid, f"score {key} names an unknown alternative or criterion")
+            for b in s["basis"]:
+                if b not in evid:
+                    yield Finding("T01", "error", tid, f"score {key}: unknown evidence {b}")
+                elif s["score"] is not None and evid[b]["status"] == "planned":
+                    yield Finding("T01", "error", tid, f"score {key} rests on planned evidence {b}")
+            if s["score"] is not None and not s["basis"]:
+                yield Finding("T01", "error", tid, f"score {key} has no evidence basis")
+        wd = decisions.get(t.get("weights_decision_id"))
+        if t.get("weights_decision_id") and not wd:
+            yield Finding("T01", "error", tid, f"weights decision {t['weights_decision_id']} is not in the register")
+        if t.get("weights_status") == "confirmed" and not (wd and wd.get("decider") == "lead" and wd.get("status") == "applied"):
+            yield Finding("T01", "error", tid, "weights are confirmed only by an applied lead decision (weights_decision_id)")
+        sel = t.get("selection")
+        if t.get("status") == "selected" or sel:
+            if not sel or sel.get("alternative") not in alts:
+                yield Finding("T01", "error", tid, "status selected needs selection.alternative from the alternatives")
+            else:
+                d = decisions.get(sel.get("decision_id"))
+                if not d or d.get("decider") != "lead" or d.get("status") != "applied":
+                    yield Finding("T01", "error", tid, "a selection needs an applied lead decision (selection.decision_id)")
+                ok, why = _accepting_review(repo, t.get("review_id"), tid)
+                if not ok:
+                    yield Finding("R13", "error", tid, f"selected trade study: {why}")
+
+
 EXT_CHECKS = [check_item_schema, check_interfaces, check_item_references, check_item_completeness,
-              check_reviews, check_decisions]
+              check_reviews, check_decisions, check_trades]

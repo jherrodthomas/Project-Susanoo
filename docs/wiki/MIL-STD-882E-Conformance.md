@@ -154,3 +154,4 @@ Event RACs (l) and acceptances (q) are expected to be empty until test events ar
 | A03 | Hazards, events and requirements name real elements and interfaces | 4.3.2, Task 106.2c | 0 | 0 |
 | A04 | Every element and external has an interface; functions have performers | 4.3.2 | 0 | 0 |
 | D01 | Decision register lifecycle | Project rule | 0 | 0 |
+| T01 | Trade study: weights, references, evidence and selection authority | 4.3.4; concept/trade-studies.md | 0 | 0 |
