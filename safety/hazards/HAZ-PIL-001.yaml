@@ -49,7 +49,19 @@ target_risk:
   rationale: Preliminary qualitative judgement at concept stage (no design); independent hardware enable chain plus
     supported posture make occurrence improbable.
   definitions: SUS-RISKDEF-001
-event_risks: []
+event_risks:
+- event_id: EVT-BENCH-001
+  configuration: SUS-I1-C001
+  severity: 1
+  probability: D
+  rac: 1D
+  risk_level: Serious
+  rationale: "Preliminary event risk (AI draft, I0), not accepted. EVT-BENCH-001 is one leg on a rigid support frame driven
+    by a hydraulic power unit, test crew in the room, no pilot, cockpit, arms, battery or engine. No pilot, but
+    crew work beside the leg during start-up and maintenance (MOD-02, MOD-10), and an unexpected leg movement
+    there can crush. Assumes the event conditions: a guarded leg envelope, crew outside it whenever the supply is
+    on, a hardware enable chain and a hold-to-run pendant. Without them, C."
+  definitions: SUS-RISKDEF-001
 mitigations:
 - id: M1
   description: Mechanical supports carry the chassis in OFF/SECURED and STARTUP so actuator motion cannot lower

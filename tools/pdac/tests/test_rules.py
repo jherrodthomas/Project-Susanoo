@@ -109,6 +109,24 @@ class Rules(unittest.TestCase):
         r.objects["event"]["EVT-SIM-001"]["status"] = "authorized"
         self.assertFalse(any(f.obj == "EVT-SIM-001" for f in errors(r, "R06")))
 
+    def test_r06_hardware_tag_limits_applicability(self):
+        from tools.pdac.rules import event_applies
+        r = fresh()
+        ev = dict(r.objects["event"]["EVT-BENCH-001"])
+        bat = r.objects["hazard"]["HAZ-PWR-002"]           # tagged SUS-M1-PWR-BAT; the rig has no battery
+        hpu = r.objects["hazard"]["HAZ-PWR-001"]           # tagged SUS-M1-PWR-HPU; the rig has one
+        self.assertFalse(event_applies(ev, bat))
+        self.assertTrue(event_applies(ev, hpu))
+        ev.pop("hardware")                                 # hardware not listed: conservative, everything applies
+        self.assertTrue(event_applies(ev, bat))
+        ev["hardware"] = ["SUS-M1-PWR-BAT"]
+        self.assertTrue(event_applies(ev, bat))
+
+    def test_a03_event_hardware_must_exist(self):
+        r = fresh()
+        r.objects["event"]["EVT-BENCH-001"]["hardware"] = ["SUS-M1-NOPE"]
+        self.assertTrue(any("hardware SUS-M1-NOPE" in f.message for f in errors(r, "A03")))
+
     def test_r07_swci_mismatch_and_lor_decision(self):
         r = fresh()
         r.objects["ssf"]["SSF-003"]["swci"] = 4

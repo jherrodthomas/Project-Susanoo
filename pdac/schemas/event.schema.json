@@ -4,21 +4,91 @@
   "title": "Test or demonstration event (event risk, MIL-STD-882E 3.2.8, 4.3.7, Task 303)",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema", "id", "title", "status", "configuration", "modes", "exposure", "gate"],
+  "required": [
+    "schema",
+    "id",
+    "title",
+    "status",
+    "configuration",
+    "modes",
+    "exposure",
+    "gate"
+  ],
   "properties": {
-    "schema": {"const": "susanoo/event/v0.1"},
-    "id": {"type": "string"},
-    "title": {"type": "string"},
-    "description": {"type": "string"},
-    "status": {"enum": ["planned", "authorized", "conducted", "cancelled"]},
-    "gate": {"type": "string"},
-    "configuration": {"type": "string"},
-    "modes": {"type": "array", "items": {"type": "string"}},
-    "subsystems": {"type": "array", "items": {"type": "string"},
-                   "description": "Physical subsystems present; empty means all subsystems in the configuration"},
-    "exposure": {"type": "object", "additionalProperties": false, "required": ["people", "equipment", "environment"],
-      "properties": {"people": {"type": "boolean"}, "equipment": {"type": "boolean"}, "environment": {"type": "boolean"},
-                     "notes": {"type": "string"}}},
-    "authorization": {"type": ["object", "null"]}
+    "schema": {
+      "const": "susanoo/event/v0.1"
+    },
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "planned",
+        "authorized",
+        "conducted",
+        "cancelled"
+      ]
+    },
+    "gate": {
+      "type": "string"
+    },
+    "configuration": {
+      "type": "string"
+    },
+    "modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "subsystems": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Physical subsystems present; empty means all subsystems in the configuration"
+    },
+    "hardware": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Hardware items present (item-definition element IDs). A hazard whose applicability.hardware is set applies only if one of its items is listed here. Omit when unknown: every such hazard then applies."
+    },
+    "exposure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "people",
+        "equipment",
+        "environment"
+      ],
+      "properties": {
+        "people": {
+          "type": "boolean"
+        },
+        "equipment": {
+          "type": "boolean"
+        },
+        "environment": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "authorization": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
   }
 }
