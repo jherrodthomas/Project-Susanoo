@@ -1,7 +1,8 @@
 # SUS-M1 / SUS-A1 Concept of Operations (CONOPS)
 
-**ID:** SUS-CONOPS-001 · **Revision:** 0.7-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CONOPS-001 · **Revision:** 0.8-draft · **Status:** Draft, not reviewed
 
+*Changes in 0.8:* carrying a payload while walking is allowed under conditions (decided by the project lead, 2026-11-12): new mode MOD-11 LOADED WALK and scenario SCN-007 Loaded travel; §9 trace gains HAZ-024 and SYS-020.
 *Changes in 0.7:* §9 trace gains HAZ-023 (fall from height during emergency egress through a side hatch).
 *Changes in 0.6:* §9 trace gains HAZ-022 and SYS-019 (kneel posture for ingress and egress, from the CL-05 reference layout).
 *Changes in 0.5:* locomotion is bipedal (TS-003 decided by the project lead); §10 updated.
@@ -32,6 +33,7 @@ Initial operation is digital simulation and supported bench rigs. Terrain slope,
 | MOD-08 | UAV RECOVERY | Approach, capture, retention | Collision and capture failure |
 | MOD-09 | DEGRADED/EMERGENCY | Mode-specific fault response | Avoid collapse or entrapment |
 | MOD-10 | MAINTENANCE | Supported, isolated service | Stored energy and egress |
+| MOD-11 | LOADED WALK | Reduced-speed locomotion with a secured payload in the carry pose | Load shift, swing or drop and stability under load |
 
 ## 6. Nominal scenarios
 **SCN-001 Ingress/startup:** Crew confirms supports, exclusion zone and pilot readiness; failed checks inhibit motion.
@@ -45,6 +47,8 @@ Initial operation is digital simulation and supported bench rigs. Terrain slope,
 **SCN-005 Recovery:** UAV approaches only with dock ready; capture and positive retention precede charging or rotor-inhibit state change.
 
 **SCN-006 Shutdown:** UAV accounted for; walker reaches a supported posture, isolates energy and allows pilot egress.
+
+**SCN-007 Loaded travel:** Pilot carries a bounded, secured nonhazardous payload while walking, arms locked in the carry pose, at reduced speed inside a loaded stability envelope, with load and exclusion-zone checks. Otherwise walking requires the arms stowed and locked (SYS-013).
 
 ## 7. Off-nominal scenarios
 **SCN-101:** Joint control disagreement or runaway movement. **SCN-102:** Hydraulic pressure loss, leak or stored pressure. **SCN-103:** Loss of balance, fall or overturn. **SCN-104:** Pilot incapacitation or blocked egress. **SCN-105:** UAV lost link, misleading imagery or pilot distraction. **SCN-106:** UAV approaches moving or unready dock. **SCN-107:** Unexpected rotor startup while retained. **SCN-108:** Thermal or electrical event near pilot.
@@ -61,14 +65,15 @@ Generated from [`pdac/items/`](../pdac/items/) by `tools/pdac/generate.py`; edit
 | Scenario | Type | Hazards | Candidate requirements |
 |---|---|---|---|
 | SCN-001 Ingress and startup | nominal | HAZ-002, HAZ-022 | SYS-001, SYS-019 |
-| SCN-002 Travel | nominal | HAZ-001, HAZ-006, HAZ-009 | SYS-002, SYS-004, SYS-009, SYS-010, SYS-013 |
-| SCN-003 Payload handling | nominal | HAZ-009, HAZ-010 | SYS-002, SYS-009, SYS-013 |
+| SCN-002 Travel | nominal | HAZ-001, HAZ-006, HAZ-009 | SYS-002, SYS-004, SYS-009, SYS-010, SYS-013, SYS-020 |
+| SCN-003 Payload handling | nominal | HAZ-009, HAZ-010 | SYS-002, SYS-009, SYS-013, SYS-020 |
 | SCN-004 UAV observation | nominal | HAZ-012, HAZ-016 | SYS-006, SYS-016 |
 | SCN-005 UAV recovery | nominal | HAZ-012, HAZ-013 | SYS-005, SYS-006 |
 | SCN-006 Shutdown | nominal | HAZ-004, HAZ-022 | SYS-007, SYS-012, SYS-019 |
+| SCN-007 Loaded travel | nominal | HAZ-006, HAZ-009, HAZ-010, HAZ-024 | SYS-002, SYS-004, SYS-009, SYS-010, SYS-013, SYS-020 |
 | SCN-101 Joint control disagreement or runaway movement | off-nominal | HAZ-001, HAZ-021 | SYS-002, SYS-004, SYS-008 |
 | SCN-102 Hydraulic pressure loss, leak or stored pressure | off-nominal | HAZ-003, HAZ-004, HAZ-005, HAZ-020 | SYS-007, SYS-008, SYS-018 |
-| SCN-103 Loss of balance, fall or overturn | off-nominal | HAZ-005, HAZ-006, HAZ-021 | SYS-002, SYS-004, SYS-008, SYS-009, SYS-010 |
+| SCN-103 Loss of balance, fall or overturn | off-nominal | HAZ-005, HAZ-006, HAZ-021 | SYS-002, SYS-004, SYS-008, SYS-009, SYS-010, SYS-020 |
 | SCN-104 Pilot incapacitation or blocked egress | off-nominal | HAZ-007, HAZ-008, HAZ-023 | SYS-002, SYS-011, SYS-012, SYS-019 |
 | SCN-105 UAV lost link, misleading imagery or pilot distraction | off-nominal | HAZ-014, HAZ-015, HAZ-016 | SYS-006, SYS-014, SYS-015, SYS-016 |
 | SCN-106 UAV approaches moving or unready dock | off-nominal | HAZ-012, HAZ-013 | SYS-005, SYS-006 |

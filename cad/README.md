@@ -1,6 +1,8 @@
 # Concept layouts (FreeCAD) — review and alignment
 
-**ID:** SUS-CAD-001 · **Revision:** 0.16-draft · **Status:** Draft, not reviewed
+**ID:** SUS-CAD-001 · **Revision:** 0.17-draft · **Status:** Draft, not reviewed
+
+*Changes in 0.17:* concept-art note on carrying while walking now points to SYS-020 (loaded walking allowed under conditions, decided by the project lead).
 
 *Changes in 0.16:* CL-05 finding on the stowed walking pose; SYS-013 now requires walking to be inhibited until the arms are stowed and locked.
 

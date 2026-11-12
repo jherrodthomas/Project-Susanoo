@@ -99,11 +99,11 @@ items:
     causes: ["terrain or slope beyond envelope", "payload shifts the center of gravity", "state-estimation or control error", "feedback loss", "actuator saturation"]
     energy_sources: [gravitational, kinetic]
     exposed: [ACT-PILOT, ACT-OBSERVER, ACT-BYSTANDER]
-    scenarios: [SCN-103, SCN-002]
-    modes: [MOD-04, MOD-05]
+    scenarios: [SCN-103, SCN-002, SCN-007]
+    modes: [MOD-04, MOD-05, MOD-11]
     components: [SUS-M1-WLK, SUS-M1-SAF, SUS-M1-PIL]
     risk: {initial: {severity: catastrophic, probability: probable, level: high}, rating_status: proposed}
-    mitigated_by: [SYS-004, SYS-009, SYS-010]
+    mitigated_by: [SYS-004, SYS-009, SYS-010, SYS-020]
     design_dependency: [TS-002, TS-003]
     status: open
     applicability: [SUS-M1, SUS-I1]
@@ -149,8 +149,8 @@ items:
     causes: ["exclusion-zone breach", "restricted pilot visibility", "unexpected motion"]
     energy_sources: [kinetic, gravitational]
     exposed: [ACT-OBSERVER, ACT-BYSTANDER, ACT-MAINTAINER]
-    scenarios: [SCN-002, SCN-003]
-    modes: [MOD-04, MOD-05]
+    scenarios: [SCN-002, SCN-003, SCN-007]
+    modes: [MOD-04, MOD-05, MOD-11]
     components: [SUS-M1-WLK, SUS-M1-MAN]
     risk: {initial: {severity: catastrophic, probability: occasional, level: high}, rating_status: proposed}
     mitigated_by: [SYS-002, SYS-013]
@@ -165,11 +165,11 @@ items:
     causes: ["overload", "grip failure", "payload center-of-gravity shift"]
     energy_sources: [gravitational]
     exposed: [ACT-OBSERVER, ACT-BYSTANDER, ACT-PILOT]
-    scenarios: [SCN-003]
-    modes: [MOD-05]
+    scenarios: [SCN-003, SCN-007]
+    modes: [MOD-05, MOD-11]
     components: [SUS-M1-MAN]
     risk: {initial: {severity: critical, probability: occasional, level: serious}, rating_status: proposed}
-    mitigated_by: [SYS-009, SYS-013]
+    mitigated_by: [SYS-009, SYS-013, SYS-020]
     status: open
     applicability: [SUS-M1, SUS-I1]
     source: SUS-CONOPS-001
@@ -388,3 +388,20 @@ items:
     status: open
     applicability: [SUS-M1, SUS-I1]
     source: SUS-CAD-001
+
+  - id: HAZ-024
+    kind: hazard
+    title: "Payload swing, shift or drop while walking"
+    mishap: "A payload carried while walking swings, shifts or falls, striking personnel beside the walker or upsetting the walker with the pilot aboard."
+    causes: ["inertial loads from the gait", "grip or securing failure", "payload centre of gravity shifts", "arms leave the carry pose", "speed, slope or step height beyond the loaded limits"]
+    energy_sources: [kinetic, gravitational]
+    exposed: [ACT-OBSERVER, ACT-BYSTANDER, ACT-PILOT]
+    scenarios: [SCN-007]
+    modes: [MOD-11]
+    components: [SUS-M1-MAN, SUS-M1-WLK, SUS-M1-SAF]
+    risk: {initial: {severity: catastrophic, probability: occasional, level: high}, rating_status: proposed}
+    mitigated_by: [SYS-009, SYS-013, SYS-020]
+    status: open
+    applicability: [SUS-M1, SUS-I1]
+    source: SUS-CONOPS-001
+    note: "Raised when the project lead allowed carrying while walking under conditions (2026-11-12). Rating proposed by AI drafting (I0) on the same basis as HAZ-009 (a person struck) and HAZ-006 (a fall with the pilot aboard); the lead or safety lead rates it."

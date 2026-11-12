@@ -39,6 +39,8 @@ items:
      description: "Mode-specific fault response.", transition_concern: "Avoid collapse or entrapment"}
   - {id: MOD-10, kind: mode, title: "MAINTENANCE", status: draft, applicability: [SUS-M1, SUS-A1, SUS-I1], source: SUS-CONOPS-001,
      description: "Supported, isolated service.", transition_concern: "Stored energy and egress"}
+  - {id: MOD-11, kind: mode, title: "LOADED WALK", status: draft, applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001,
+     description: "Reduced-speed locomotion with a secured payload held in the carry pose.", transition_concern: "Load shift, swing or drop and stability under load"}
 
   # --- Nominal scenarios (CONOPS §6) ----------------------------------------------------------
   - {id: SCN-001, kind: scenario, title: "Ingress and startup", scenario_type: nominal, status: draft,
@@ -59,6 +61,9 @@ items:
   - {id: SCN-006, kind: scenario, title: "Shutdown", scenario_type: nominal, status: draft,
      applicability: [SUS-M1, SUS-A1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-03, MOD-01],
      description: "UAV accounted for; walker reaches a supported posture, isolates energy and allows pilot egress."}
+  - {id: SCN-007, kind: scenario, title: "Loaded travel", scenario_type: nominal, status: draft,
+     applicability: [SUS-M1, SUS-I1], source: SUS-CONOPS-001, modes: [MOD-11],
+     description: "Pilot carries a bounded, secured nonhazardous payload while walking, arms locked in the carry pose, at reduced speed inside a loaded stability envelope, with load and exclusion-zone checks."}
 
   # --- Off-nominal scenarios (CONOPS §7) ------------------------------------------------------
   - {id: SCN-101, kind: scenario, title: "Joint control disagreement or runaway movement", scenario_type: off-nominal, status: draft,
