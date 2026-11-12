@@ -108,8 +108,21 @@ mitigations:
     - test
     - analysis
     evidence_ids: []
+- id: M6
+  description: Loaded walking only within mass, centre-of-gravity, speed, step-height and slope limits, with the
+    load secured and the arms locked in the carry pose
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-018
+  verification:
+    method:
+    - analysis
+    - test
+    evidence_ids: []
 requirement_ids:
 - SYS-008
+- SYS-018
 owner:
   role: ROLE-WLK
   person: null
@@ -135,10 +148,16 @@ assumptions:
   state they agree on every SF-01 edge case inside the envelope (sim/results/l2-crosscheck.md)'
 - 'Envelope: slope limit 20 degrees with the CoM no more than 0.12 m ahead of the stance foot (CONOPS section 4,
   lead decisions DQ-010 and DQ-011); the failure search covers this envelope and finds no tip without a fault'
+- 'Reference layout CL-05 (cad/README.md, decision DQ-013): reverse-jointed legs with the knees behind the hips and
+  the centre of gravity 0.33 m behind the ankles, so a backward fall puts the knees first; heel spurs give a standstill
+  static margin of 0.38 m standing and 0.35 m kneeling on placeholder mass'
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
 - 'Size ankle torque and leg force against CF4: whether a slow leak tips the walker depends on the centre-of-pressure
   authority left at reduced supply; with a 0.16 m CoM offset at 16 degrees level 2 tips with the ankle limited to
   m g L cos(slope) and holds with 20 kN m (sim/results/l2-crosscheck.md, CAP-16)'
 - Derive a safety requirement for margin-based load holding (M5) (Task 203)
+- 'Check carried loads against the 0.12 m CoM offset cap: on placeholder CL-05 mass (4,590 kg) and flat ground, a
+  load at the carry pose centre (1.15 m ahead of the ankles) brings the combined CoM 0.12 m ahead of the ankles at
+  about 2,000 kg; indicative only, to be replaced by the dynamic analysis on a 20 degree slope (SYS-018)'
 

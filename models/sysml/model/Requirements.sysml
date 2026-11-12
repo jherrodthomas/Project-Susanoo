@@ -79,4 +79,24 @@ package SusanooRequirements {
         @Source { record = "requirements/SYS-015.yaml"; }
         @HazardRef { ids = ("HAZ-PWR-003"); }
     }
+    requirement <'SYS-016'> armStowInterlockForWalking : SystemRequirement {
+        doc /* The walker shall inhibit walking until both manipulator arms are confirmed stowed and locked, or locked in the carry pose under the loaded-walking conditions of SYS-018, shall hold the arms in that pose until walking has stopped, and shall inhibit manipulation while the exclusion zone around the arms' reach is not confirmed clear. */
+        @Source { record = "requirements/SYS-016.yaml"; }
+        @HazardRef { ids = ("HAZ-MAN-001", "HAZ-MAN-002"); }
+    }
+    requirement <'SYS-017'> controlledLoweredPostureForIngressAndEgress : SystemRequirement {
+        doc /* The walker shall provide a controlled lowered posture for ingress and egress, with the cockpit floor at or below a defined height, entered and left at a controlled speed only while the area under and around the pod and legs is confirmed clear, and shall inhibit walking while an access ladder is deployed. */
+        @Source { record = "requirements/SYS-017.yaml"; }
+        @HazardRef { ids = ("HAZ-WLK-003", "HAZ-PIL-001"); }
+    }
+    requirement <'SYS-018'> loadedWalkingLimits : SystemRequirement {
+        doc /* The walker shall permit walking with a payload only while the payload is confirmed secured, both arms are locked in a defined carry pose and payload mass and centre of gravity are within defined limits, and shall then limit walking speed, step height and terrain slope to defined loaded values inside the stability envelope of SYS-008. */
+        @Source { record = "requirements/SYS-018.yaml"; }
+        @HazardRef { ids = ("HAZ-MAN-002", "HAZ-WLK-002"); }
+    }
+    requirement <'SYS-019'> emergencyEgressWithoutPowerOrKneeling : SystemRequirement {
+        doc /* The pilot shall be able to leave the walker from the standing posture without platform power and without kneeling, through an exit other than the front opening, with a descent aid and handholds that keep three points of contact to the ground. */
+        @Source { record = "requirements/SYS-019.yaml"; }
+        @HazardRef { ids = ("HAZ-PIL-003"); }
+    }
 }

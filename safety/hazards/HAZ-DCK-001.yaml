@@ -110,5 +110,8 @@ source:
 hazmat: not-applicable
 assumptions:
 - Concept configuration SUS-I1-C001; no hardware design selected
+- 'CL-05 reference layout (cad/README.md): the dock is raised 0.45 m on struts so the docked rotors are 1.09 m from
+  the seated pilot''s head (straight line, through the hull wall and roll bar); the clearance matters most while
+  the pilot is outside the pod, and the rotor inhibit remains the primary control'
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2

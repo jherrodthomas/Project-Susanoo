@@ -1,0 +1,35 @@
+schema: susanoo/requirement/v0.1
+id: SYS-017
+title: Controlled lowered posture for ingress and egress
+statement: The walker shall provide a controlled lowered posture for ingress and egress, with the cockpit floor at
+  or below a defined height, entered and left at a controlled speed only while the area under and around the pod
+  and legs is confirmed clear, and shall inhibit walking while an access ladder is deployed.
+status: candidate
+source:
+  documents:
+  - cad/README.md
+  scenario_ids:
+  - SCN-001
+  - SCN-006
+  - SCN-104
+  hazard_ids:
+  - HAZ-WLK-003
+  - HAZ-PIL-001
+allocated_to:
+- SUS-M1-WLK
+- SUS-M1-PIL
+- SUS-M1-SAF
+safety_significant: true
+verification:
+  method:
+  - analysis
+  - test
+  - demonstration
+  evidence_ids: []
+  disposition: open
+tbd:
+- 'Maximum sill and step heights when lowered (concept CL-05: cockpit floor about 1.0 m, largest ladder rise 0.33
+  m)'
+- Lowering and rising speed
+- Clear-zone confirmation means
+- Access-system standard (ISO 2867 candidate, applicability not decided)

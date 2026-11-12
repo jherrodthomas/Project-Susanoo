@@ -1,0 +1,37 @@
+schema: susanoo/requirement/v0.1
+id: SYS-018
+title: Loaded walking limits
+statement: The walker shall permit walking with a payload only while the payload is confirmed secured, both arms
+  are locked in a defined carry pose and payload mass and centre of gravity are within defined limits, and shall
+  then limit walking speed, step height and terrain slope to defined loaded values inside the stability envelope
+  of SYS-008.
+status: candidate
+source:
+  documents:
+  - cad/README.md
+  - decisions/register.yaml
+  scenario_ids:
+  - SCN-002
+  - SCN-003
+  hazard_ids:
+  - HAZ-MAN-002
+  - HAZ-WLK-002
+allocated_to:
+- SUS-M1-MAN
+- SUS-M1-WLK
+- SUS-M1-CTL
+- SUS-M1-SAF
+safety_significant: true
+verification:
+  method:
+  - analysis
+  - test
+  evidence_ids: []
+  disposition: open
+tbd:
+- 'Carry pose and tolerance (concept CL-05: load clamped between the hands, centre 1.80 m up, 0.10 m ahead of the
+  pod)'
+- Maximum payload mass and centre-of-gravity envelope while walking, from the dynamic analysis against the 0.12 m
+  CoM offset cap (DQ-011)
+- Loaded speed, step-height and slope limits
+- Payload securing and confirmation means

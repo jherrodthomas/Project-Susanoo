@@ -170,6 +170,9 @@ source:
 hazmat: not-applicable
 assumptions:
 - Concept configuration SUS-I1-C001; no hardware design selected
+- 'CL-05 reference layout (cad/README.md): the raised dock puts the docked rotors 0.29 m from the roll bar, the nearest
+  part of the walker''s own structure, which launch and recovery must clear; taller dock struts are also a longer
+  lever for dock loads while walking'
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
 - Derive safety requirements for M6 and M7 (Task 203); M5 link loss is covered by SYS-013 (decision DQ-008)
