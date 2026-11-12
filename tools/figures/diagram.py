@@ -9,7 +9,8 @@ A spec is a plain dict:
      "nodes": [{"id", "title", "sub", "tone", "shape", "code", "parent", "banner", "dashed",
                 "stereotype", "attrs", "text", "pills"}],
      "edges": [{"src", "dst", "label", "code", "tone", "dash", "arrow"}],
-     "legend": [(fill, stroke, label)]}                                          # optional extra legend rows
+     "legend": [(fill, stroke, label)],                                         # optional extra legend rows
+     "legend_only": True}                                                       # optional: no tone legend rows
 
 Shapes: card (default), class, requirement, state, action, initial, final, actor, usecase.
 A node that is another node's `parent` is drawn as a container. Layout is computed by the pinned ELK engine
@@ -371,7 +372,7 @@ def draw_edge(e: dict, le: dict, off: tuple[float, float]) -> tuple[list[str], l
 
 # ================================================================ figure assembly
 def _legend_entries(spec: dict) -> list[tuple[str, str, str]]:
-    if spec.get("frame"):
+    if spec.get("frame") or spec.get("legend_only"):
         return list(spec.get("legend", []))
     seen, out = [], []
     for n in spec["nodes"]:

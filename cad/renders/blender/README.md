@@ -27,7 +27,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 <tr><td width="33%" valign="top"><a href="CL-05-carry-military.jpg"><img src="CL-05-carry-military.jpg" alt="CL-05-carry-military.jpg" width="300"></a><br><sub>CL-05-carry-military.jpg</sub></td><td width="33%" valign="top"><a href="CL-05-carry.jpg"><img src="CL-05-carry.jpg" alt="CL-05-carry.jpg" width="300"></a><br><sub>CL-05-carry.jpg</sub></td><td width="33%" valign="top"><a href="CL-05-emergency-military.jpg"><img src="CL-05-emergency-military.jpg" alt="CL-05-emergency-military.jpg" width="300"></a><br><sub>CL-05-emergency-military.jpg</sub></td></tr>
 <tr><td width="33%" valign="top"><a href="CL-05-emergency.jpg"><img src="CL-05-emergency.jpg" alt="CL-05-emergency.jpg" width="300"></a><br><sub>CL-05-emergency.jpg</sub></td><td width="33%" valign="top"><a href="CL-05-hero-military.jpg"><img src="CL-05-hero-military.jpg" alt="CL-05-hero-military.jpg" width="300"></a><br><sub>CL-05-hero-military.jpg</sub></td><td width="33%" valign="top"><a href="CL-05-kneel-military.jpg"><img src="CL-05-kneel-military.jpg" alt="CL-05-kneel-military.jpg" width="300"></a><br><sub>CL-05-kneel-military.jpg</sub></td></tr>
 <tr><td width="33%" valign="top"><a href="CL-05-kneel.jpg"><img src="CL-05-kneel.jpg" alt="CL-05-kneel.jpg" width="300"></a><br><sub>CL-05-kneel.jpg</sub></td><td width="33%" valign="top"><a href="CL-05-rear-military.jpg"><img src="CL-05-rear-military.jpg" alt="CL-05-rear-military.jpg" width="300"></a><br><sub>CL-05-rear-military.jpg</sub></td><td width="33%" valign="top"><a href="CL-05-rear.jpg"><img src="CL-05-rear.jpg" alt="CL-05-rear.jpg" width="300"></a><br><sub>CL-05-rear.jpg</sub></td></tr>
-<tr><td width="33%" valign="top"><a href="CL-05-walk-military.gif"><img src="CL-05-walk-military.gif" alt="CL-05-walk-military.gif" width="300"></a><br><sub>CL-05-walk-military.gif</sub></td></tr>
+<tr><td width="33%" valign="top"><a href="CL-05-walk-loaded-military.gif"><img src="CL-05-walk-loaded-military.gif" alt="CL-05-walk-loaded-military.gif" width="300"></a><br><sub>CL-05-walk-loaded-military.gif</sub></td><td width="33%" valign="top"><a href="CL-05-walk-military.gif"><img src="CL-05-walk-military.gif" alt="CL-05-walk-military.gif" width="300"></a><br><sub>CL-05-walk-military.gif</sub></td></tr>
 </table>
 
 **Open:** [Walk cycle video](CL-05-walk-military.mp4)
@@ -48,5 +48,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | [`CL-05-kneel.jpg`](CL-05-kneel.jpg) |  |
 | [`CL-05-rear-military.jpg`](CL-05-rear-military.jpg) |  |
 | [`CL-05-rear.jpg`](CL-05-rear.jpg) |  |
+| [`CL-05-walk-loaded-military.gif`](CL-05-walk-loaded-military.gif) |  |
+| [`CL-05-walk-loaded-military.mp4`](CL-05-walk-loaded-military.mp4) |  |
 | [`CL-05-walk-military.gif`](CL-05-walk-military.gif) |  |
 | [`CL-05-walk-military.mp4`](CL-05-walk-military.mp4) |  |

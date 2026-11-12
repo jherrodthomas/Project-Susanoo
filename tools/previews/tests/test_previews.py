@@ -39,5 +39,15 @@ class Block(unittest.TestCase):
             bp.preview_block("sim", {"hero": {"img": "docs/nope.svg", "caption": "x"}})
 
 
+class RecordFigures(unittest.TestCase):
+    def test_figures_are_current_and_described(self):
+        from tools.previews import record_figures as rf
+        for p, svg in rf.build().items():
+            self.assertTrue(p.exists() and p.read_text(encoding="utf-8") == svg,
+                            f"stale {p.name}; run: python -m tools.previews.record_figures")
+            self.assertIn("<title>Figure", svg)
+            self.assertIn("Terms:", svg)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -10,7 +10,7 @@
 #   hero     the main figure: {img, caption, link?}
 #   gallery  thumbnails: [{img, caption, link?}]; link defaults to the image
 #   links    further pages to open: [{text, href}]
-#   planned  a figure that does not exist yet: say what it will show (phase 2 of the preview plan)
+#   planned  a figure that does not exist yet: say what it will show
 #
 # Paths are repository-relative. Captions use only terms defined in docs/terms.yaml.
 
@@ -107,7 +107,7 @@ folders:
     purpose: >-
       Every question for the project lead, with options, a recommendation, what it blocks and how it was answered.
       The Decision Inbox wiki page is generated from `register.yaml`.
-    planned: "Decision board: every decision by gate and status (open, answered, applied), drawn from register.yaml."
+    hero: {img: docs/wiki/images/rec-decision-board.svg, caption: "Decision board: every decision by gate and status"}
     links:
       - {text: Decision Inbox (wiki page), href: docs/wiki/Decision-Inbox.md}
 
@@ -243,26 +243,28 @@ folders:
     purpose: >-
       The Product Development as Code product record and the JSON schemas every record is validated against
       (`python -m tools.pdac.validate`).
-    planned: "Record model: how hazards, requirements, SSFs, events, changes, verifications and reviews reference each other, drawn from the schemas."
+    hero: {img: docs/wiki/images/rec-record-model.svg, caption: "Record model: how the record types reference each other", link: pdac/schemas/README.md}
 
   pdac/schemas:
     title: Record schemas
     purpose: One JSON schema per record type. The validator checks every record against its schema before the MIL-STD-882E rules run.
-    planned: "Record model: how hazards, requirements, SSFs, events, changes, verifications and reviews reference each other, drawn from these schemas."
+    hero: {img: docs/wiki/images/rec-record-model.svg, caption: "Record model: how the record types reference each other"}
 
   requirements:
     title: System safety requirements
     purpose: >-
       One `SYS-nnn.yaml` per system safety requirement, traced to hazards, allocated to elements and satisfied in the
       SysML model. AI-drafted requirements stay `candidate` until the lead baselines them.
-    hero: {img: docs/wiki/images/sysml-v07-satisfy.svg, caption: "Which element satisfies each requirement (SysML view V-07)"}
+    hero: {img: docs/wiki/images/rec-traceability.svg, caption: "Requirement traceability: hazards traced and elements allocated"}
     gallery:
+      - {img: docs/wiki/images/sysml-v07-satisfy.svg, caption: "Which element satisfies each requirement (SysML view V-07)"}
       - {img: safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-4-sysml-requirements.svg, caption: "Task 203: requirements with derive, satisfy and verify", link: safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/README.md}
       - {img: docs/wiki/images/analysis-dependencies.svg, caption: "Analysis dependencies (illustrative)"}
 
   reviews:
-    hero: {img: safety/mil-std-882e/07-risk-acceptance/figures/fig-4-sysml-state-machine.svg, caption: "Risk acceptance states (element 7)", link: safety/mil-std-882e/07-risk-acceptance/README.md}
+    hero: {img: docs/wiki/images/rec-acceptance.svg, caption: "How risk is accepted: only a named human in the right role (rule R13)"}
     gallery:
+      - {img: safety/mil-std-882e/07-risk-acceptance/figures/fig-4-sysml-state-machine.svg, caption: "Risk acceptance states (element 7)", link: safety/mil-std-882e/07-risk-acceptance/README.md}
       - {img: safety/mil-std-882e/07-risk-acceptance/acceptance-records/figures/fig-4-sysml-block-definition.svg, caption: "Acceptance record structure", link: safety/mil-std-882e/07-risk-acceptance/acceptance-records/README.md}
       - {img: docs/wiki/images/hazard-management.svg, caption: "Hazard management process map (illustrative)"}
 
@@ -284,8 +286,9 @@ folders:
     purpose: >-
       One `EVT-*.yaml` per bench, test or simulation event, with the event risk of each hazard that applies (Task 303).
       An event proceeds only with a human acceptance of its risk.
-    hero: {img: safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-4-sysml-state-machine.svg, caption: "Task 303: event lifecycle", link: safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/README.md}
+    hero: {img: docs/wiki/images/rec-event-risk.svg, caption: "Event risk: the hazards that apply to each event"}
     gallery:
+      - {img: safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-4-sysml-state-machine.svg, caption: "Task 303: event lifecycle", link: safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/README.md}
       - {img: docs/readme/risk-matrix.svg, caption: "Current hazard risk on the MIL-STD-882E matrix"}
 
   safety/generated:
@@ -302,6 +305,7 @@ folders:
       and nothing is accepted without a named human review.
     hero: {img: docs/readme/risk-matrix.svg, caption: "Current hazard risk on the MIL-STD-882E matrix"}
     gallery:
+      - {img: docs/wiki/images/rec-mitigations.svg, caption: "Mitigations by order of precedence"}
       - {img: safety/mil-std-882e/hazard-tracking-system/figures/fig-5-sysml-state-machine.svg, caption: "Hazard lifecycle", link: safety/mil-std-882e/hazard-tracking-system/README.md}
       - {img: safety/mil-std-882e/02-hazard-identification/task-201-preliminary-hazard-list/figures/fig-4-sysml-block-definition.svg, caption: "Task 201: preliminary hazard list structure", link: safety/mil-std-882e/02-hazard-identification/task-201-preliminary-hazard-list/README.md}
       - {img: docs/wiki/images/hazard-management.svg, caption: "Hazard management process map (illustrative)"}
@@ -313,8 +317,9 @@ folders:
     purpose: >-
       One `SSF-nnn.yaml` per safety-significant software function, with its software control category, criticality
       index and level-of-rigor status (MIL-STD-882E section 4.4).
-    hero: {img: docs/wiki/images/software-safety.svg, caption: "Software safety process map (illustrative)"}
+    hero: {img: docs/wiki/images/rec-ssf.svg, caption: "SCC, SwCI and level-of-rigor status of every SSF"}
     gallery:
+      - {img: docs/wiki/images/software-safety.svg, caption: "Software safety process map (illustrative)"}
       - {img: safety/mil-std-882e/software-safety/figures/fig-4-sysml-block-definition.svg, caption: "SSF record structure", link: safety/mil-std-882e/software-safety/README.md}
 
   sim:
@@ -329,7 +334,7 @@ folders:
     purpose: >-
       The level-2 walker model in MuJoCo and the cross-check that compares it case by case with the level-1 plant.
       Results are synthetic.
-    planned: "Level 1 against level 2: outcome and margin for every cross-check case, drawn from sim/results/l2-crosscheck.json."
+    hero: {img: docs/wiki/images/rec-l1-l2.svg, caption: "Level 1 against level 2, case by case (synthetic)"}
     links:
       - {text: Cross-check results, href: sim/results/l2-crosscheck.md}
 
@@ -351,6 +356,7 @@ folders:
       and are never verification evidence.
     hero: {img: docs/readme/simulation.svg, caption: "Simulation results summary (synthetic)"}
     gallery:
+      - {img: docs/wiki/images/rec-l1-l2.svg, caption: "Level 1 against level 2", link: sim/mujoco/README.md}
       - {img: docs/wiki/images/sim-sc-01.svg, caption: "SC-01"}
       - {img: docs/wiki/images/sim-sc-02.svg, caption: "SC-02"}
       - {img: docs/wiki/images/sim-sc-03.svg, caption: "SC-03"}
@@ -455,11 +461,12 @@ folders:
     purpose: >-
       How the project tailors MIL-STD-882E: risk definitions, roles and acceptance authority, task selection and ID
       conventions. Proposed until approved on a review record.
-    hero: {img: docs/wiki/images/responsibility-swimlanes.svg, caption: "Responsibility swimlanes (illustrative)"}
+    hero: {img: docs/wiki/images/rec-task-tailoring.svg, caption: "Task tailoring: every MIL-STD-882E task by gate and disposition"}
     gallery:
+      - {img: docs/wiki/images/rec-acceptance.svg, caption: "Who may accept which risk", link: reviews/README.md}
+      - {img: docs/wiki/images/responsibility-swimlanes.svg, caption: "Responsibility swimlanes (illustrative)"}
       - {img: safety/mil-std-882e/01-safety-approach/figures/fig-4-sysml-block-definition.svg, caption: "Safety approach records", link: safety/mil-std-882e/01-safety-approach/README.md}
       - {img: docs/readme/risk-matrix.svg, caption: "Risk matrix with the tailored definitions"}
-    planned: "Task tailoring: every MIL-STD-882E task by disposition and gate, drawn from mil-std-882e.yaml."
     links:
       - {text: Task Applicability (wiki page), href: docs/wiki/MIL-STD-882E-Applicability.md}
 
