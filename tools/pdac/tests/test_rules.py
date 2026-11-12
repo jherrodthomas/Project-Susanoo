@@ -253,3 +253,47 @@ class Decisions(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TradeStudies(unittest.TestCase):
+    """T01: a trade study is AI-draftable; weights are confirmed and an alternative selected only by the lead."""
+
+    def ts(self, r):
+        return r.objects["trade"]["TS-001"]
+
+    def test_committed_trade_study_is_clean(self):
+        self.assertFalse(errors(BASE, "T01"))
+
+    def test_weights_must_sum_to_100(self):
+        r = fresh()
+        self.ts(r)["criteria"][0]["weight"] += 5
+        self.assertTrue(any("sum to" in f.message for f in errors(r, "T01")))
+
+    def test_weights_confirmed_only_by_applied_lead_decision(self):
+        r = fresh()
+        self.ts(r)["weights_status"] = "confirmed"
+        self.assertTrue(any("weights are confirmed" in f.message for f in errors(r, "T01")))
+
+    def test_score_cannot_rest_on_planned_evidence(self):
+        r = fresh()
+        planned = next(e["id"] for e in self.ts(r)["evidence"] if e["status"] == "planned")
+        self.ts(r)["scores"][0]["basis"] = [planned]
+        self.assertTrue(any("planned evidence" in f.message for f in errors(r, "T01")))
+
+    def test_selection_needs_lead_decision_and_human_review(self):
+        r = fresh()
+        t = self.ts(r)
+        t["status"], t["selection"] = "selected", {"alternative": "A", "decision_id": "DQ-016"}
+        self.assertTrue(any("applied lead decision" in f.message for f in errors(r, "T01")))
+        self.assertTrue(any(f.obj == "TS-001" for f in errors(r, "R13")))
+
+    def test_selection_with_lead_decision_and_human_review_passes(self):
+        r = fresh()
+        t = self.ts(r)
+        d = next(d for d in r.decisions["decisions"] if d["id"] == "DQ-016")
+        d["status"], d["answer"], d["applied_in"] = "applied", {"choice": "draft", "by": "lead", "at": "2026-11-12", "via": "chat"}, ["architecture/trades/TS-001.yaml"]
+        t["status"], t["selection"], t["review_id"] = "selected", {"alternative": "A", "decision_id": "DQ-016"}, "REV-2026-009"
+        r.objects["review"]["REV-2026-009"] = review("REV-2026-009", ["TS-001"], [human("ROLE-SL")])
+        r.paths[("review", "REV-2026-009")] = "reviews/REV-2026-009.yaml"
+        self.assertFalse(errors(r, "T01"))
+        self.assertFalse([f for f in errors(r, "R13") if f.obj == "TS-001"])

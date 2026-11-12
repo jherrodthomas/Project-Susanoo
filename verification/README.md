@@ -80,6 +80,7 @@ Simulation result sets (synthetic, for finding problems early; none is verificat
 - [`sim/results/plant-results.md`](../sim/results/plant-results.md)
 - [`sim/results/search-SF-01.md`](../sim/results/search-SF-01.md)
 - [`sim/results/sizing-cf4.md`](../sim/results/sizing-cf4.md)
+- [`sim/results/ts001-fault-response.md`](../sim/results/ts001-fault-response.md)
 - [`sim/results/uav/README.md`](../sim/results/uav/README.md)
 - [`sim/results/uav/summary.md`](../sim/results/uav/summary.md)
 

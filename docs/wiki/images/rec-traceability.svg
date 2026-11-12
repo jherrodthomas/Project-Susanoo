@@ -1,0 +1,523 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="974.6" viewBox="0 0 1080 974.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · Requirement traceability</title>
+<desc>20 system safety requirements against 15 hazards: a dot marks a trace (coloured by the hazard's initial risk), and the right column shows the elements each requirement is allocated to.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1080" height="833" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · Requirement traceability</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">20 system safety requirements against 15 hazards: a dot marks a trace (coloured by the hazard's initial risk), and the right column shows</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">the elements each requirement is allocated to.</text>
+<text x="1040" y="44" font-size="11" fill="#475569" text-anchor="end">requirements/ · safety/hazards/</text>
+<line x1="40" y1="102" x2="1040" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(0 124)">
+<text x="348" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 348 112)">HAZ-DCK-001</text>
+<text x="376" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 376 112)">HAZ-DCK-002</text>
+<text x="404" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 404 112)">HAZ-INT-001</text>
+<text x="432" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 432 112)">HAZ-MAN-001</text>
+<text x="460" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 460 112)">HAZ-MAN-002</text>
+<text x="488" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 488 112)">HAZ-PIL-001</text>
+<text x="516" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 516 112)">HAZ-PIL-002</text>
+<text x="544" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 544 112)">HAZ-PIL-003</text>
+<text x="572" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 572 112)">HAZ-PWR-001</text>
+<text x="600" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 600 112)">HAZ-PWR-002</text>
+<text x="628" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 628 112)">HAZ-PWR-003</text>
+<text x="656" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 656 112)">HAZ-SAF-001</text>
+<text x="684" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 684 112)">HAZ-WLK-001</text>
+<text x="712" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 712 112)">HAZ-WLK-002</text>
+<text x="740" y="112" font-size="10" font-weight="700" fill="#475569" transform="rotate(-60 740 112)">HAZ-WLK-003</text>
+<text x="48" y="110" font-size="10.5" fill="#475569" font-weight="700">Requirement</text>
+<text x="760" y="110" font-size="10.5" fill="#475569" font-weight="700">Allocated to</text>
+<line x1="40" y1="118" x2="1040" y2="118" stroke="#CBD5E1" stroke-width="1"/>
+<rect x="40" y="118" width="1000" height="26" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="48" y="123" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="134.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-001</text>
+<text x="110.1" y="135" font-size="11" fill="#0F172A">Pilot-readiness actuation interlock</text>
+<line x1="344" y1="121" x2="344" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="121" x2="372" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="121" x2="400" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="121" x2="428" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="121" x2="456" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="121" x2="484" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="484" cy="131" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<line x1="512" y1="121" x2="512" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="121" x2="540" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="121" x2="568" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="121" x2="596" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="121" x2="624" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="121" x2="652" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="121" x2="680" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="121" x2="708" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="121" x2="736" y2="141" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="123" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="134.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<rect x="835.5" y="123" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="871.3" y="134.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<rect x="48" y="149" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="160.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-002</text>
+<text x="110.1" y="161" font-size="11" fill="#0F172A">Operator protective stop</text>
+<line x1="344" y1="147" x2="344" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="147" x2="372" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="147" x2="400" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="147" x2="428" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="147" x2="456" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="147" x2="484" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="147" x2="512" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="147" x2="540" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="147" x2="568" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="147" x2="596" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="147" x2="624" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="147" x2="652" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="652" cy="157" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<line x1="680" y1="147" x2="680" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="147" x2="708" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="147" x2="736" y2="167" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="149" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="160.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<rect x="40" y="170" width="1000" height="26" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="48" y="175" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="186.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-003</text>
+<text x="110.1" y="187" font-size="11" fill="#0F172A">Docked rotor inhibit</text>
+<line x1="344" y1="173" x2="344" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="344" cy="183" r="6" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<line x1="372" y1="173" x2="372" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="173" x2="400" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="173" x2="428" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="173" x2="456" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="173" x2="484" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="173" x2="512" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="173" x2="540" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="173" x2="568" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="173" x2="596" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="173" x2="624" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="173" x2="652" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="173" x2="680" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="173" x2="708" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="173" x2="736" y2="193" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="175" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="186.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<rect x="835.5" y="175" width="47.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="859.4" y="186.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-A1</text>
+<rect x="48" y="201" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="212.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-004</text>
+<text x="110.1" y="213" font-size="11" fill="#0F172A">Feedback fault detection</text>
+<line x1="344" y1="199" x2="344" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="199" x2="372" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="199" x2="400" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="199" x2="428" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="199" x2="456" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="199" x2="484" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="199" x2="512" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="199" x2="540" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="199" x2="568" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="199" x2="596" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="199" x2="624" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="199" x2="652" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="199" x2="680" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="680" cy="209" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<line x1="708" y1="199" x2="708" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="199" x2="736" y2="219" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="201" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="212.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<rect x="835.5" y="201" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="871.3" y="212.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<rect x="40" y="222" width="1000" height="26" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="48" y="227" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="238.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-005</text>
+<text x="110.1" y="239" font-size="11" fill="#0F172A">Positive docking retention state</text>
+<line x1="344" y1="225" x2="344" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="225" x2="372" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="372" cy="235" r="6" fill="#A16207" stroke="#A16207" stroke-width="1"/>
+<line x1="400" y1="225" x2="400" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="225" x2="428" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="225" x2="456" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="225" x2="484" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="225" x2="512" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="225" x2="540" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="225" x2="568" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="225" x2="596" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="225" x2="624" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="225" x2="652" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="225" x2="680" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="225" x2="708" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="225" x2="736" y2="245" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="227" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="238.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<rect x="48" y="253" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="264.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-006</text>
+<text x="110.1" y="265" font-size="11" fill="#0F172A">Launch and recovery envelope inhibit</text>
+<line x1="344" y1="251" x2="344" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="251" x2="372" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="251" x2="400" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="400" cy="261" r="6" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<line x1="428" y1="251" x2="428" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="251" x2="456" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="251" x2="484" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="251" x2="512" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="251" x2="540" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="251" x2="568" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="251" x2="596" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="251" x2="624" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="251" x2="652" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="251" x2="680" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="251" x2="708" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="251" x2="736" y2="271" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="253" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="264.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<rect x="835.5" y="253" width="47.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="859.4" y="264.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-A1</text>
+<rect x="40" y="274" width="1000" height="26" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="48" y="279" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="290.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-007</text>
+<text x="110.1" y="291" font-size="11" fill="#0F172A">Stored hydraulic energy isolation</text>
+<line x1="344" y1="277" x2="344" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="277" x2="372" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="277" x2="400" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="277" x2="428" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="277" x2="456" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="277" x2="484" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="277" x2="512" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="277" x2="540" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="277" x2="568" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="568" cy="287" r="6" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<line x1="596" y1="277" x2="596" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="277" x2="624" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="277" x2="652" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="277" x2="680" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="277" x2="708" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="277" x2="736" y2="297" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="279" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="290.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PWR</text>
+<rect x="835.5" y="279" width="55.9" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="863.5" y="290.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-GSE</text>
+<rect x="48" y="305" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="316.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-008</text>
+<text x="110.1" y="317" font-size="11" fill="#0F172A">Stability envelope protection</text>
+<line x1="344" y1="303" x2="344" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="303" x2="372" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="303" x2="400" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="303" x2="428" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="303" x2="456" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="456" cy="313" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<line x1="484" y1="303" x2="484" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="303" x2="512" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="303" x2="540" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="303" x2="568" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="303" x2="596" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="303" x2="624" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="303" x2="652" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="303" x2="680" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="303" x2="708" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="708" cy="313" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<line x1="736" y1="303" x2="736" y2="323" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="305" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="316.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<rect x="835.5" y="305" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="871.3" y="316.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<rect x="40" y="326" width="1000" height="26" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="48" y="331" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="342.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-009</text>
+<text x="110.1" y="343" font-size="11" fill="#0F172A">Fail-safe load holding</text>
+<line x1="344" y1="329" x2="344" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="329" x2="372" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="329" x2="400" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="329" x2="428" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="329" x2="456" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="329" x2="484" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="329" x2="512" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="512" cy="339" r="6" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<line x1="540" y1="329" x2="540" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="329" x2="568" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="329" x2="596" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="329" x2="624" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="329" x2="652" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="329" x2="680" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="329" x2="708" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="329" x2="736" y2="349" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="736" cy="339" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<rect x="760" y="331" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="342.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<rect x="835.5" y="331" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="871.3" y="342.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PWR</text>
+<rect x="48" y="357" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="368.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-010</text>
+<text x="110.1" y="369" font-size="11" fill="#0F172A">Protective stop independence</text>
+<line x1="344" y1="355" x2="344" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="355" x2="372" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="355" x2="400" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="355" x2="428" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="355" x2="456" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="355" x2="484" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="355" x2="512" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="355" x2="540" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="355" x2="568" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="355" x2="596" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="355" x2="624" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="355" x2="652" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="652" cy="365" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<line x1="680" y1="355" x2="680" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="355" x2="708" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="355" x2="736" y2="375" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="357" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="368.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<rect x="40" y="378" width="1000" height="26" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="48" y="383" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="394.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-011</text>
+<text x="110.1" y="395" font-size="11" fill="#0F172A">Protective stop reaction time</text>
+<line x1="344" y1="381" x2="344" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="381" x2="372" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="381" x2="400" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="381" x2="428" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="381" x2="456" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="381" x2="484" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="381" x2="512" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="381" x2="540" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="381" x2="568" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="381" x2="596" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="381" x2="624" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="381" x2="652" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="652" cy="391" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<line x1="680" y1="381" x2="680" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="381" x2="708" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="381" x2="736" y2="401" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="383" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="394.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<rect x="48" y="409" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="420.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-012</text>
+<text x="110.1" y="421" font-size="11" fill="#0F172A">Rotor arming requires confirmed release</text>
+<line x1="344" y1="407" x2="344" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="344" cy="417" r="6" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<line x1="372" y1="407" x2="372" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="407" x2="400" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="407" x2="428" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="407" x2="456" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="407" x2="484" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="407" x2="512" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="407" x2="540" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="407" x2="568" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="407" x2="596" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="407" x2="624" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="407" x2="652" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="407" x2="680" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="407" x2="708" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="407" x2="736" y2="427" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="409" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="420.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<rect x="835.5" y="409" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="871.3" y="420.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
+<rect x="40" y="430" width="1000" height="26" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="48" y="435" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="446.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-013</text>
+<text x="110.1" y="447" font-size="11" fill="#0F172A">UAV link-loss contingency lands clear…</text>
+<line x1="344" y1="433" x2="344" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="433" x2="372" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="433" x2="400" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="400" cy="443" r="6" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<line x1="428" y1="433" x2="428" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="433" x2="456" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="433" x2="484" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="433" x2="512" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="433" x2="540" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="433" x2="568" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="433" x2="596" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="433" x2="624" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="433" x2="652" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="433" x2="680" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="433" x2="708" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="433" x2="736" y2="453" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="435" width="47.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="783.9" y="446.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-A1</text>
+<rect x="811.8" y="435" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="847.6" y="446.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
+<rect x="48" y="461" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="472.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-014</text>
+<text x="110.1" y="473" font-size="11" fill="#0F172A">Independent traction battery isolation</text>
+<line x1="344" y1="459" x2="344" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="459" x2="372" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="459" x2="400" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="459" x2="428" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="459" x2="456" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="459" x2="484" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="459" x2="512" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="459" x2="540" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="459" x2="568" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="459" x2="596" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="596" cy="469" r="6" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<line x1="624" y1="459" x2="624" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="459" x2="652" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="459" x2="680" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="459" x2="708" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="459" x2="736" y2="479" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="461" width="95.2" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="807.6" y="472.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PWR-BAT</text>
+<rect x="859.2" y="461" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="895" y="472.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<rect x="40" y="482" width="1000" height="26" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="48" y="487" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="498.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-015</text>
+<text x="110.1" y="499" font-size="11" fill="#0F172A">Fuel shut-off on protective stop</text>
+<line x1="344" y1="485" x2="344" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="485" x2="372" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="485" x2="400" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="485" x2="428" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="485" x2="456" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="485" x2="484" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="485" x2="512" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="485" x2="540" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="485" x2="568" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="485" x2="596" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="485" x2="624" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="624" cy="495" r="6" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<line x1="652" y1="485" x2="652" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="485" x2="680" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="485" x2="708" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="485" x2="736" y2="505" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="487" width="95.2" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="807.6" y="498.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PWR-GEN</text>
+<rect x="859.2" y="487" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="895" y="498.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<rect x="48" y="513" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="524.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-016</text>
+<text x="110.1" y="525" font-size="11" fill="#0F172A">Actuator torque reserve against supply…</text>
+<line x1="344" y1="511" x2="344" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="511" x2="372" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="511" x2="400" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="511" x2="428" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="511" x2="456" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="511" x2="484" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="511" x2="512" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="511" x2="540" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="511" x2="568" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="511" x2="596" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="511" x2="624" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="511" x2="652" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="511" x2="680" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="511" x2="708" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="708" cy="521" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<line x1="736" y1="511" x2="736" y2="531" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="513" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="524.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<rect x="40" y="534" width="1000" height="26" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="48" y="539" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="550.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-017</text>
+<text x="110.1" y="551" font-size="11" fill="#0F172A">Arm stow interlock for walking</text>
+<line x1="344" y1="537" x2="344" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="537" x2="372" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="537" x2="400" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="537" x2="428" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="428" cy="547" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<line x1="456" y1="537" x2="456" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="456" cy="547" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<line x1="484" y1="537" x2="484" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="537" x2="512" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="537" x2="540" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="537" x2="568" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="537" x2="596" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="537" x2="624" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="537" x2="652" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="537" x2="680" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="537" x2="708" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="537" x2="736" y2="557" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="539" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="550.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-MAN</text>
+<rect x="835.5" y="539" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="871.3" y="550.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-CTL</text>
+<rect x="911" y="539" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="946.8" y="550.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<rect x="48" y="565" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="576.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-018</text>
+<text x="110.1" y="577" font-size="11" fill="#0F172A">Controlled lowered posture for ingress…</text>
+<line x1="344" y1="563" x2="344" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="563" x2="372" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="563" x2="400" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="563" x2="428" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="563" x2="456" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="563" x2="484" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="484" cy="573" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<line x1="512" y1="563" x2="512" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="563" x2="540" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="563" x2="568" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="563" x2="596" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="563" x2="624" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="563" x2="652" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="563" x2="680" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="563" x2="708" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="563" x2="736" y2="583" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="736" cy="573" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<rect x="760" y="565" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="576.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<rect x="835.5" y="565" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="871.3" y="576.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<rect x="911" y="565" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="946.8" y="576.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<rect x="40" y="586" width="1000" height="26" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<rect x="48" y="591" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="602.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-019</text>
+<text x="110.1" y="603" font-size="11" fill="#0F172A">Loaded walking limits</text>
+<line x1="344" y1="589" x2="344" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="589" x2="372" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="589" x2="400" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="589" x2="428" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="589" x2="456" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="456" cy="599" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<line x1="484" y1="589" x2="484" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="589" x2="512" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="589" x2="540" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="568" y1="589" x2="568" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="589" x2="596" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="589" x2="624" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="589" x2="652" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="589" x2="680" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="589" x2="708" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="708" cy="599" r="6" fill="#B91C1C" stroke="#B91C1C" stroke-width="1"/>
+<line x1="736" y1="589" x2="736" y2="609" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="591" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="602.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-MAN</text>
+<rect x="835.5" y="591" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="871.3" y="602.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<rect x="911" y="591" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="946.8" y="602.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-CTL</text>
+<text x="986.5" y="603" font-size="11" fill="#475569">…</text>
+<rect x="48" y="617" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="75" y="628.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-020</text>
+<text x="110.1" y="629" font-size="11" fill="#0F172A">Emergency egress without power or kn…</text>
+<line x1="344" y1="615" x2="344" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="372" y1="615" x2="372" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="400" y1="615" x2="400" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="428" y1="615" x2="428" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="456" y1="615" x2="456" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="484" y1="615" x2="484" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="512" y1="615" x2="512" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="540" y1="615" x2="540" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<circle cx="540" cy="625" r="6" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<line x1="568" y1="615" x2="568" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="596" y1="615" x2="596" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="624" y1="615" x2="624" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="652" y1="615" x2="652" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="680" y1="615" x2="680" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="708" y1="615" x2="708" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<line x1="736" y1="615" x2="736" y2="635" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="760" y="617" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="795.8" y="628.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<rect x="835.5" y="617" width="71.5" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="871.3" y="628.2" font-size="9" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<line x1="40" y1="638" x2="1040" y2="638" stroke="#E2E8F0" stroke-width="1"/>
+</g>
+<rect x="40" y="778" width="14" height="12" rx="3" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1.2"/>
+<text x="62" y="788" font-size="11" fill="#475569">Hazard initial risk High</text>
+<rect x="192.1" y="778" width="14" height="12" rx="3" fill="#FFEDD5" stroke="#C2410C" stroke-width="1.2"/>
+<text x="214.1" y="788" font-size="11" fill="#475569">Hazard initial risk Serious</text>
+<rect x="360.3" y="778" width="14" height="12" rx="3" fill="#FEF3C7" stroke="#A16207" stroke-width="1.2"/>
+<text x="382.3" y="788" font-size="11" fill="#475569">Hazard initial risk Medium</text>
+<text x="40" y="806" font-size="10.5" fill="#94A3B8">Generated by tools/previews/record_figures.py from requirements/SYS-*.yaml and safety/hazards/HAZ-*.yaml. Drafted at independence level I0; nothing shown here is reviewed, verified or accepted.</text>
+<g class="terms" data-base-h="833">
+<rect x="0" y="833" width="1080" height="141.6" fill="#FFFFFF"/>
+<line x1="40" y1="837" x2="1040" y2="837" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="852.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · BMS = battery management system · HAZ-nnn = hazard record</text>
+<text x="40" y="867.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · PX4 = PX4 Autopilot, the open-source</text>
+<text x="40" y="881.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">flight-control software candidate for SUS-A1 · SUS-A1 = dockable observation UAV · SUS-GSE = ground support, maintenance supports, charging and test equipment · SUS-I1-INT =</text>
+<text x="40" y="896.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">integration manager and PX4 command adapter · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK = UAV dock, retention, charging and release · SUS-M1-MAN = manipulation</text>
+<text x="40" y="910.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">arms and end effectors · SUS-M1-PIL = pilot station, restraints, displays and controls · SUS-M1-PWR = power generation, storage, distribution and thermal control · SUS-M1-PWR-BAT =</text>
+<text x="40" y="925.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">battery pack, BMS and contactors (alternative B) · SUS-M1-PWR-GEN = engine-generator and governor (alternative B) · SUS-M1-SAF = independent safety monitor, protective stop and</text>
+<text x="40" y="939.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">isolation · SUS-M1-WLK = chassis, legs, joint actuators and stability sensing · SYS-nnn = system safety requirement record (requirements/SYS-nnn.yaml) · UAV = uncrewed aerial vehicle</text>
+<text x="40" y="954.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(drone)</text>
+</g>
+</svg>

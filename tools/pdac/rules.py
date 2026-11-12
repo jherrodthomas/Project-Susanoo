@@ -33,6 +33,7 @@ RULES = {
     "A03": ("Hazards, events and requirements name real elements and interfaces", "4.3.2, Task 106.2c"),
     "A04": ("Every element and external has an interface; functions have performers", "4.3.2"),
     "D01": ("Decision register lifecycle", "Project rule"),
+    "T01": ("Trade study: weights, references, evidence and selection authority", "4.3.4; concept/trade-studies.md"),
 }
 
 LEVEL_RANK = {"Eliminated": 0, "Low": 1, "Medium": 2, "Serious": 3, "High": 4}

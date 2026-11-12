@@ -318,3 +318,24 @@ decisions:
     answer: {choice: conditional, by: lead, at: 2026-11-12, via: chat, note: "2"}
     applied_in: [requirements/SYS-017.yaml, requirements/SYS-019.yaml, safety/hazards/HAZ-MAN-002.yaml, safety/hazards/HAZ-WLK-002.yaml, cad/README.md]
     sources: [cad/README.md, cad/concept-art/README.md]
+
+  - id: DQ-016
+    question: How should the actuation trade study (TS-001) weigh its twelve criteria?
+    context: >-
+      TS-001 compares centralised hydraulic, series-hybrid with electrohydraulic joints, and series-hybrid with
+      electromechanical joints (architecture/trades/TS-001.yaml). **The weights decide the ranking once evidence is
+      scored**, and choosing them is a value judgement for the decision authority. The draft gives the four
+      safety-related criteria (controllability, leakage and fire, stored energy, fault response) 45 of 100 points,
+      with fault response highest at 15; cost and power density get 10 each.
+    options:
+      - {key: draft, title: Confirm the drafted weights, detail: "Safety-related criteria 45 points, fault response 15, cost 10. Scoring can start as evidence arrives."}
+      - {key: equal, title: Weigh every criterion equally (8.33 each), detail: "No judgement built in; safety criteria count for a third, and noise counts as much as fault response."}
+      - {key: lead, title: Give your own weights, detail: "Tell Claude the weights in chat; they replace the draft."}
+    recommendation: draft
+    reversibility: easy
+    blocks: [TS-001 scoring]
+    gate: G2
+    decider: lead
+    status: open
+    asked: 2026-11-12
+    sources: [architecture/trades/TS-001.yaml, concept/trade-studies.md]

@@ -82,6 +82,7 @@ Simulation result sets (synthetic, for finding problems early; none is verificat
 - [`sim/results/plant-results.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/plant-results.md)
 - [`sim/results/search-SF-01.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/search-SF-01.md)
 - [`sim/results/sizing-cf4.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/sizing-cf4.md)
+- [`sim/results/ts001-fault-response.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/ts001-fault-response.md)
 - [`sim/results/uav/README.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/uav/README.md)
 - [`sim/results/uav/summary.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/uav/summary.md)
 
