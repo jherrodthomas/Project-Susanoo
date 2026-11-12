@@ -2,7 +2,7 @@
 # Runs on level 2 (sim/mujoco/l2.py): level 1 has no joint torques (its centre-of-pressure limit A3 and leg force A4
 # stand in for them). Every value in a sweep is run on the whole envelope grid with load holding working; a failure
 # is any outcome other than safe. The proposal is an AI draft (I0). The lead adopted it in the level-2 spec (DQ-012);
-# it becomes a design value only through the actuation trade (TS-001, DQ-006) and a reviewed requirement (SYS-013).
+# it becomes a design value only through the actuation trade (TS-001, DQ-006) and a reviewed requirement (SYS-016).
 schema: susanoo/sim-sizing/v0.1
 id: SZ-01
 title: Ankle and knee torque against supply loss on a slope

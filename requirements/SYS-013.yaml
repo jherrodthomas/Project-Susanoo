@@ -1,27 +1,29 @@
 schema: susanoo/requirement/v0.1
 id: SYS-013
-title: Actuator torque reserve against supply loss
-statement: Each ankle actuator shall deliver at least 1.5 m g L_foot of torque at full actuator supply and at least
-  0.6 m g L_foot at the supply at which load holding engages, and each knee actuator at least 22.5 kN m at full
-  supply (SPEC-WLK-001 mass and geometry), so that a loss of supply inside the operating envelope does not tip the
-  walker before load holding engages.
+title: UAV link-loss contingency lands clear of the walker
+statement: On loss of the integration link the UAV shall hold for a set time and then land in place, and shall not return
+  to the dock or descend within the pilot keep-out without a recovery permit from the integration manager.
 status: candidate
 source:
   documents:
-  - sim/results/sizing-cf4.md
-  - sim/results/l2-crosscheck.md
+  - integrations/px4/interface-contract.md
+  - sim/results/uav/summary.md
+  - decisions/register.yaml
+  scenario_ids:
+  - SCN-105
+  - SCN-106
   hazard_ids:
-  - HAZ-WLK-002
+  - HAZ-INT-001
 allocated_to:
-- SUS-M1-WLK
+- SUS-A1
+- SUS-I1-INT
 safety_significant: true
 verification:
   method:
-  - analysis
   - test
+  - analysis
   evidence_ids: []
   disposition: open
 tbd:
-- Values are preliminary (sizing SZ-01, level 2 only, synthetic; adopted in the level-2 spec by DQ-012) and assume
-  torque falls in proportion to supply;
-  confirm with the selected actuator's torque-supply characteristic in the actuation trade (TS-001, DQ-006)
+- Hold time before landing (PX4 COM_DL_LOSS_T) pending hazard analysis
+- Low-battery and navigation-loss contingencies are not covered by decision DQ-008 and remain open

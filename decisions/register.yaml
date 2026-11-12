@@ -40,8 +40,10 @@ decisions:
     blocks: [SUS-RISKDEF-001 approval, every hazard risk assessment]
     gate: G0
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-11
+    answer: {choice: scale-100, by: lead, at: 2026-11-12, via: chat, note: "go with your recommendations on all of them"}
+    applied_in: [standards/tailoring/mil-std-882e.yaml]
     sources: [standards/tailoring/mil-std-882e.yaml, "MIL-STD-882E Table I, 4.3.3d"]
 
   - id: DQ-003
@@ -59,8 +61,10 @@ decisions:
     blocks: [SUS-RISKDEF-001 approval]
     gate: G0
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-11
+    answer: {choice: proposed, by: lead, at: 2026-11-12, via: chat, note: "go with your recommendations on all of them"}
+    applied_in: [standards/tailoring/mil-std-882e.yaml]
     sources: [standards/tailoring/mil-std-882e.yaml, "MIL-STD-882E 4.3.3e, Appendix A Table A-II"]
 
   - id: DQ-004
@@ -79,8 +83,10 @@ decisions:
     blocks: [any risk acceptance, EVT-BENCH-001]
     gate: G4
     decider: lead
-    status: open
+    status: answered
     asked: 2026-11-11
+    answer: {choice: lead-all, by: lead, at: 2026-11-12, via: chat, note: "go with your recommendations on all of them"}
+    applied_in: [standards/tailoring/mil-std-882e.yaml]
     sources: [standards/tailoring/mil-std-882e.yaml, "MIL-STD-882E 4.3.7"]
 
   - id: DQ-005
@@ -96,8 +102,9 @@ decisions:
     blocks: []
     gate: G0
     decider: lead
-    status: open
+    status: answered
     asked: 2026-11-11
+    answer: {choice: required, by: lead, at: 2026-11-12, via: chat, note: "go with your recommendations on all of them"}
     sources: [.github/workflows/pdac-validate.yml]
 
   - id: DQ-006
@@ -117,8 +124,10 @@ decisions:
     blocks: [SUS-M1-PWR sub-elements, IF-002, IF-003, sim plant model]
     gate: G2
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-11
+    answer: {choice: open-both, by: lead, at: 2026-11-12, via: chat, note: "go with your recommendations on all of them"}
+    applied_in: [architecture/item-definition.yaml, models/sysml/model/Architecture.sysml, concept/trade-studies.md, safety/hazards/HAZ-PWR-001.yaml, safety/hazards/HAZ-PWR-002.yaml, safety/hazards/HAZ-PWR-003.yaml, requirements/SYS-014.yaml, requirements/SYS-015.yaml]
     sources: [README.md, docs/wiki/SUS-M1-Architecture-and-Boundaries.md, concept/trade-studies.md, framework/liondriver-port-plan.md]
 
   - id: DQ-007
@@ -158,8 +167,10 @@ decisions:
     blocks: [PX4 parameter baseline for SUS-A1, HAZ-INT-001 mitigation M4]
     gate: G2
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-11
+    answer: {choice: land, by: lead, at: 2026-11-12, via: chat, note: "go with your recommendations on all of them"}
+    applied_in: [safety/hazards/HAZ-INT-001.yaml, safety/software/SSF-008.yaml, requirements/SYS-013.yaml]
     sources: [sim/results/uav/summary.md, integrations/px4/interface-contract.md, safety/hazards/HAZ-INT-001.yaml]
 
   - id: DQ-009
@@ -232,17 +243,17 @@ decisions:
     context: >-
       Sizing SZ-01 (sim/results/sizing-cf4.md) finds **the assumed 20 kN m ankle leaves four tips at the envelope corner
       (20 degrees, 0.12 m) under a slow supply leak; 24 kN m clears it**. The draft proposal is ankle 26.5 kN m
-      (1.5 m g L_foot) and knee 22.5 kN m (the assumed 60 kN m knee is far above what CF4 needs), drafted as SYS-013.
+      (1.5 m g L_foot) and knee 22.5 kN m (the assumed 60 kN m knee is far above what CF4 needs), drafted as SYS-016.
     options:
-      - {key: adopt, title: Adopt the sized values in sim/spec/walker_l2.yaml, detail: "Level 2 then models a walker that meets SYS-013; the cross-check and sizing are re-run. The actuation trade still has to confirm a real actuator."}
+      - {key: adopt, title: Adopt the sized values in sim/spec/walker_l2.yaml, detail: "Level 2 then models a walker that meets SYS-016; the cross-check and sizing are re-run. The actuation trade still has to confirm a real actuator."}
       - {key: keep, title: Keep the assumed values until the actuation trade closes, detail: "No change; the level-2 results keep showing the four corner tips."}
     recommendation: adopt
     reversibility: easy
-    blocks: [level-2 walker spec, SYS-013]
+    blocks: [level-2 walker spec, SYS-016]
     gate: G2
     decider: lead
     status: applied
     asked: null
     answer: {choice: adopt, by: lead, at: 2026-11-12, via: chat, note: "adopt the sized ankle and knee torques in the spec"}
     applied_in: [sim/spec/walker_l2.yaml, sim/results/l2-crosscheck.md, sim/results/sizing-cf4.md, safety/hazards/HAZ-WLK-002.yaml]
-    sources: [sim/results/sizing-cf4.md, requirements/SYS-013.yaml]
+    sources: [sim/results/sizing-cf4.md, requirements/SYS-016.yaml]

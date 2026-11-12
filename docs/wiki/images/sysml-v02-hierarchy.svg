@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="971.1" viewBox="0 0 1240 971.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1019.6" viewBox="0 0 1240 1019.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
 <title>V-02 SUS-I1 element hierarchy</title>
-<desc>Element hierarchy: SUS-I1 (system : IntegratedSystem) in context; SUS-M1 (walker : Walker) in SUS-I1; SUS-M1-PIL (pilotStation : PilotStation) in SUS-M1; SUS-M1-CTL (motionControl : MotionControl) in SUS-M1; SUS-M1-WLK (legs : LegsAndChassis) in SUS-M1; SUS-M1-MAN (manipulators : Manipulators) in SUS-M1; SUS-M1-SAF (safetyMonitor : SafetyMonitor) in SUS-M1; SUS-M1-DCK (dock : UavDock) in SUS-M1; SUS-M1-PWR (power : PowerSystem) in SUS-M1; SUS-M1-PWR-GEN (engineGenerator : EngineGenerator) in SUS-M1-PWR; SUS-M1-PWR-BAT (battery : BatteryPack) in SUS-M1-PWR; SUS-M1-PWR-DIST (distribution : PowerDistribution) in SUS-M1-PWR; SUS-A1 (uav : ObservationUav) in SUS-I1; SUS-A1-FC (flightController : FlightController) in SUS-A1; SUS-A1-NAV (navigation : NavigationAndTelemetry) in SUS-A1; SUS-A1-PWR (uavPower : UavPower) in SUS-A1; SUS-A1-PROP (propulsion : Propulsion) in SUS-A1; SUS-I1-INT (integrationManager : IntegrationManager) in SUS-I1; SUS-GSE (groundSupport : GroundSupport) in SUS-I1.</desc>
+<desc>Element hierarchy: SUS-I1 (system : IntegratedSystem) in context; SUS-M1 (walker : Walker) in SUS-I1; SUS-M1-PIL (pilotStation : PilotStation) in SUS-M1; SUS-M1-CTL (motionControl : MotionControl) in SUS-M1; SUS-M1-WLK (legs : LegsAndChassis) in SUS-M1; SUS-M1-MAN (manipulators : Manipulators) in SUS-M1; SUS-M1-SAF (safetyMonitor : SafetyMonitor) in SUS-M1; SUS-M1-DCK (dock : UavDock) in SUS-M1; SUS-M1-PWR (power : PowerSystem) in SUS-M1; SUS-M1-PWR-HPU (hydraulicPowerUnit : HydraulicPowerUnit) in SUS-M1-PWR; SUS-M1-PWR-GEN (engineGenerator : EngineGenerator) in SUS-M1-PWR; SUS-M1-PWR-BAT (battery : BatteryPack) in SUS-M1-PWR; SUS-M1-PWR-DIST (distribution : PowerDistribution) in SUS-M1-PWR; SUS-A1 (uav : ObservationUav) in SUS-I1; SUS-A1-FC (flightController : FlightController) in SUS-A1; SUS-A1-NAV (navigation : NavigationAndTelemetry) in SUS-A1; SUS-A1-PWR (uavPower : UavPower) in SUS-A1; SUS-A1-PROP (propulsion : Propulsion) in SUS-A1; SUS-I1-INT (integrationManager : IntegrationManager) in SUS-I1; SUS-GSE (groundSupport : GroundSupport) in SUS-I1.</desc>
 <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker></defs>
-<rect x="0" y="0" width="1240" height="844" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1240" height="878" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">V-02 · SUS-I1 element hierarchy</text>
 <text x="40" y="66" font-size="12.5" fill="#475569">Every part inside the SUS-I1 boundary, as composed in the model</text>
 <text x="1200" y="44" font-size="11" fill="#475569" text-anchor="end">V-02 · SusanooArchitecture (SysML v2)</text>
@@ -84,96 +84,105 @@
 <text x="870" y="417" font-size="10" fill="#0F172A">concept</text>
 <text x="990" y="417" font-size="10" fill="#0F172A">F-05, F-09</text>
 <rect x="118" y="434" width="482" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1" stroke-dasharray="4 3"/>
-<text x="126" y="451" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-PWR-GEN</text>
-<text x="233.6" y="451" font-size="10" fill="#0F172A">engineGenerator : EngineGenerator — Engine-generator and governor</text>
+<text x="126" y="451" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-PWR-HPU</text>
+<text x="233.6" y="451" font-size="10" fill="#0F172A">hydraulicPowerUnit : HydraulicPowerUnit — Hydraulic power unit …</text>
 <path d="M102,426 V447.0 H118" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
 <text x="640" y="451" font-size="10" fill="#0F172A">mechanical</text>
 <text x="760" y="451" font-size="10" fill="#0F172A">none</text>
 <text x="870" y="451" font-size="10" fill="#0F172A">candidate (DQ-006)</text>
 <text x="990" y="451" font-size="10" fill="#0F172A">—</text>
 <rect x="118" y="468" width="482" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1" stroke-dasharray="4 3"/>
-<text x="126" y="485" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-PWR-BAT</text>
-<text x="233.6" y="485" font-size="10" fill="#0F172A">battery : BatteryPack — Battery pack, BMS and contactors</text>
+<text x="126" y="485" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-PWR-GEN</text>
+<text x="233.6" y="485" font-size="10" fill="#0F172A">engineGenerator : EngineGenerator — Engine-generator and governor …</text>
 <path d="M102,426 V481.0 H118" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
-<text x="640" y="485" font-size="10" fill="#0F172A">electrical</text>
+<text x="640" y="485" font-size="10" fill="#0F172A">mechanical</text>
 <text x="760" y="485" font-size="10" fill="#0F172A">none</text>
 <text x="870" y="485" font-size="10" fill="#0F172A">candidate (DQ-006)</text>
 <text x="990" y="485" font-size="10" fill="#0F172A">—</text>
 <rect x="118" y="502" width="482" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1" stroke-dasharray="4 3"/>
-<text x="126" y="519" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-PWR-DIST</text>
-<text x="241" y="519" font-size="10" fill="#0F172A">distribution : PowerDistribution — Protected power distribution</text>
+<text x="126" y="519" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-PWR-BAT</text>
+<text x="233.6" y="519" font-size="10" fill="#0F172A">battery : BatteryPack — Battery pack, BMS and contactors (alternative B)</text>
 <path d="M102,426 V515.0 H118" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
 <text x="640" y="519" font-size="10" fill="#0F172A">electrical</text>
 <text x="760" y="519" font-size="10" fill="#0F172A">none</text>
 <text x="870" y="519" font-size="10" fill="#0F172A">candidate (DQ-006)</text>
 <text x="990" y="519" font-size="10" fill="#0F172A">—</text>
-<rect x="66" y="536" width="534" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
-<text x="74" y="553" font-size="10" fill="#4F46E5" font-weight="700">SUS-A1</text>
-<text x="129.4" y="553" font-size="10" fill="#0F172A">uav : ObservationUav — Dockable observation UAV</text>
-<path d="M50,154 V549.0 H66" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
-<text x="640" y="553" font-size="10" fill="#0F172A">system</text>
+<rect x="118" y="536" width="482" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1" stroke-dasharray="4 3"/>
+<text x="126" y="553" font-size="10" fill="#4F46E5" font-weight="700">SUS-M1-PWR-DIST</text>
+<text x="241" y="553" font-size="10" fill="#0F172A">distribution : PowerDistribution — Protected power distribution</text>
+<path d="M102,426 V549.0 H118" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="553" font-size="10" fill="#0F172A">electrical</text>
 <text x="760" y="553" font-size="10" fill="#0F172A">none</text>
-<text x="870" y="553" font-size="10" fill="#0F172A">concept</text>
+<text x="870" y="553" font-size="10" fill="#0F172A">candidate (DQ-006)</text>
 <text x="990" y="553" font-size="10" fill="#0F172A">—</text>
-<rect x="92" y="570" width="508" height="26" rx="6" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.1"/>
-<text x="100" y="587" font-size="10" fill="#0F766E" font-weight="700">SUS-A1-FC</text>
-<text x="174.1" y="587" font-size="10" fill="#0F172A">flightController : FlightController — PX4-based flight controller</text>
-<path d="M76,562 V583.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
-<text x="640" y="587" font-size="10" fill="#0F172A">computing</text>
+<rect x="66" y="570" width="534" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="74" y="587" font-size="10" fill="#4F46E5" font-weight="700">SUS-A1</text>
+<text x="129.4" y="587" font-size="10" fill="#0F172A">uav : ObservationUav — Dockable observation UAV</text>
+<path d="M50,154 V583.0 H66" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="587" font-size="10" fill="#0F172A">system</text>
 <text x="760" y="587" font-size="10" fill="#0F172A">none</text>
 <text x="870" y="587" font-size="10" fill="#0F172A">concept</text>
-<text x="990" y="587" font-size="10" fill="#0F172A">F-06, F-07</text>
-<rect x="92" y="604" width="508" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
-<text x="100" y="621" font-size="10" fill="#4F46E5" font-weight="700">SUS-A1-NAV</text>
-<text x="181.5" y="621" font-size="10" fill="#0F172A">navigation : NavigationAndTelemetry — Navigation sensors, camera and telemetry</text>
-<path d="M76,562 V617.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
-<text x="640" y="621" font-size="10" fill="#0F172A">electrical</text>
+<text x="990" y="587" font-size="10" fill="#0F172A">—</text>
+<rect x="92" y="604" width="508" height="26" rx="6" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.1"/>
+<text x="100" y="621" font-size="10" fill="#0F766E" font-weight="700">SUS-A1-FC</text>
+<text x="174.1" y="621" font-size="10" fill="#0F172A">flightController : FlightController — PX4-based flight controller</text>
+<path d="M76,596 V617.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="621" font-size="10" fill="#0F172A">computing</text>
 <text x="760" y="621" font-size="10" fill="#0F172A">none</text>
 <text x="870" y="621" font-size="10" fill="#0F172A">concept</text>
-<text x="990" y="621" font-size="10" fill="#0F172A">F-06</text>
+<text x="990" y="621" font-size="10" fill="#0F172A">F-06, F-07</text>
 <rect x="92" y="638" width="508" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
-<text x="100" y="655" font-size="10" fill="#4F46E5" font-weight="700">SUS-A1-PWR</text>
-<text x="181.5" y="655" font-size="10" fill="#0F172A">uavPower : UavPower — UAV battery and power management</text>
-<path d="M76,562 V651.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="100" y="655" font-size="10" fill="#4F46E5" font-weight="700">SUS-A1-NAV</text>
+<text x="181.5" y="655" font-size="10" fill="#0F172A">navigation : NavigationAndTelemetry — Navigation sensors, camera and telemetry</text>
+<path d="M76,596 V651.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
 <text x="640" y="655" font-size="10" fill="#0F172A">electrical</text>
 <text x="760" y="655" font-size="10" fill="#0F172A">none</text>
 <text x="870" y="655" font-size="10" fill="#0F172A">concept</text>
-<text x="990" y="655" font-size="10" fill="#0F172A">F-08</text>
+<text x="990" y="655" font-size="10" fill="#0F172A">F-06</text>
 <rect x="92" y="672" width="508" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
-<text x="100" y="689" font-size="10" fill="#4F46E5" font-weight="700">SUS-A1-PROP</text>
-<text x="188.9" y="689" font-size="10" fill="#0F172A">propulsion : Propulsion — Motors, ESCs and propellers</text>
-<path d="M76,562 V685.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
-<text x="640" y="689" font-size="10" fill="#0F172A">mechanical</text>
+<text x="100" y="689" font-size="10" fill="#4F46E5" font-weight="700">SUS-A1-PWR</text>
+<text x="181.5" y="689" font-size="10" fill="#0F172A">uavPower : UavPower — UAV battery and power management</text>
+<path d="M76,596 V685.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="689" font-size="10" fill="#0F172A">electrical</text>
 <text x="760" y="689" font-size="10" fill="#0F172A">none</text>
 <text x="870" y="689" font-size="10" fill="#0F172A">concept</text>
-<text x="990" y="689" font-size="10" fill="#0F172A">F-06</text>
-<rect x="66" y="706" width="534" height="26" rx="6" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.1"/>
-<text x="74" y="723" font-size="10" fill="#0F766E" font-weight="700">SUS-I1-INT</text>
-<text x="155.5" y="723" font-size="10" fill="#0F172A">integrationManager : IntegrationManager — Integration manager and PX4 command adapter</text>
-<path d="M50,154 V719.0 H66" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
-<text x="640" y="723" font-size="10" fill="#0F172A">computing</text>
+<text x="990" y="689" font-size="10" fill="#0F172A">F-08</text>
+<rect x="92" y="706" width="508" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="100" y="723" font-size="10" fill="#4F46E5" font-weight="700">SUS-A1-PROP</text>
+<text x="188.9" y="723" font-size="10" fill="#0F172A">propulsion : Propulsion — Motors, ESCs and propellers</text>
+<path d="M76,596 V719.0 H92" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="723" font-size="10" fill="#0F172A">mechanical</text>
 <text x="760" y="723" font-size="10" fill="#0F172A">none</text>
 <text x="870" y="723" font-size="10" fill="#0F172A">concept</text>
-<text x="990" y="723" font-size="10" fill="#0F172A">F-07</text>
-<rect x="66" y="740" width="534" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
-<text x="74" y="757" font-size="10" fill="#4F46E5" font-weight="700">SUS-GSE</text>
-<text x="138.3" y="757" font-size="10" fill="#0F172A">groundSupport : GroundSupport — Ground support, maintenance supports, charging and test …</text>
+<text x="990" y="723" font-size="10" fill="#0F172A">F-06</text>
+<rect x="66" y="740" width="534" height="26" rx="6" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.1"/>
+<text x="74" y="757" font-size="10" fill="#0F766E" font-weight="700">SUS-I1-INT</text>
+<text x="155.5" y="757" font-size="10" fill="#0F172A">integrationManager : IntegrationManager — Integration manager and PX4 command adapter</text>
 <path d="M50,154 V753.0 H66" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
-<text x="640" y="757" font-size="10" fill="#0F172A">mixed</text>
+<text x="640" y="757" font-size="10" fill="#0F172A">computing</text>
 <text x="760" y="757" font-size="10" fill="#0F172A">none</text>
 <text x="870" y="757" font-size="10" fill="#0F172A">concept</text>
-<text x="990" y="757" font-size="10" fill="#0F172A">F-09</text>
-<line x1="40" y1="810" x2="1200" y2="810" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="828" font-size="10.5" fill="#475569">Generated by tools/sysml/views.py from models/sysml/model (5 files) · digest f78640076ce5 · concept, not reviewed</text>
-<g class="terms" data-base-h="844">
-<rect x="0" y="844" width="1240" height="127.1" fill="#FFFFFF"/>
-<line x1="40" y1="848" x2="1200" y2="848" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="863.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: BMS = battery management system · DQ-nnn = decision question for the project lead (decisions/register.yaml) · ESC = electronic speed controller (drives a UAV motor) · F-nnn = system function in the item</text>
-<text x="40" y="878.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">definition · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SUS-A1 = dockable observation UAV · SUS-A1-FC = PX4-based flight controller · SUS-A1-NAV = navigation sensors,</text>
-<text x="40" y="892.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">camera and telemetry · SUS-A1-PROP = motors, ESCs and propellers · SUS-A1-PWR = UAV battery and power management · SUS-GSE = ground support, maintenance supports, charging and test equipment · SUS-I1 = integrated</text>
-<text x="40" y="907.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">mechanized walker and observation UAV · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1 = piloted walker · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK = UAV dock, retention,</text>
-<text x="40" y="921.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">charging and release · SUS-M1-MAN = manipulation arms and end effectors · SUS-M1-PIL = pilot station, restraints, displays and controls · SUS-M1-PWR = power generation, storage, distribution and thermal control ·</text>
-<text x="40" y="936.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SUS-M1-PWR-BAT = battery pack, BMS and contactors · SUS-M1-PWR-DIST = protected power distribution · SUS-M1-PWR-GEN = engine-generator and governor · SUS-M1-SAF = independent safety monitor, protective stop and</text>
-<text x="40" y="950.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">isolation · SUS-M1-WLK = chassis, legs, joint actuators and stability sensing · SysML = Systems Modeling Language (SysML v2) · UAV = uncrewed aerial vehicle (drone) · V-nnn = SysML view (tools/sysml/views.py)</text>
+<text x="990" y="757" font-size="10" fill="#0F172A">F-07</text>
+<rect x="66" y="774" width="534" height="26" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="74" y="791" font-size="10" fill="#4F46E5" font-weight="700">SUS-GSE</text>
+<text x="138.3" y="791" font-size="10" fill="#0F172A">groundSupport : GroundSupport — Ground support, maintenance supports, charging and test …</text>
+<path d="M50,154 V787.0 H66" fill="none" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="640" y="791" font-size="10" fill="#0F172A">mixed</text>
+<text x="760" y="791" font-size="10" fill="#0F172A">none</text>
+<text x="870" y="791" font-size="10" fill="#0F172A">concept</text>
+<text x="990" y="791" font-size="10" fill="#0F172A">F-09</text>
+<line x1="40" y1="844" x2="1200" y2="844" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="862" font-size="10.5" fill="#475569">Generated by tools/sysml/views.py from models/sysml/model (5 files) · digest 938af6dc0269 · concept, not reviewed</text>
+<g class="terms" data-base-h="878">
+<rect x="0" y="878" width="1240" height="141.6" fill="#FFFFFF"/>
+<line x1="40" y1="882" x2="1200" y2="882" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="897.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: BMS = battery management system · DQ-nnn = decision question for the project lead (decisions/register.yaml) · ESC = electronic speed controller (drives a UAV motor) · F-nnn = system function in the item</text>
+<text x="40" y="912.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">definition · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SUS-A1 = dockable observation UAV · SUS-A1-FC = PX4-based flight controller · SUS-A1-NAV = navigation sensors,</text>
+<text x="40" y="926.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">camera and telemetry · SUS-A1-PROP = motors, ESCs and propellers · SUS-A1-PWR = UAV battery and power management · SUS-GSE = ground support, maintenance supports, charging and test equipment · SUS-I1 = integrated</text>
+<text x="40" y="941.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">mechanized walker and observation UAV · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1 = piloted walker · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK = UAV dock, retention,</text>
+<text x="40" y="955.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">charging and release · SUS-M1-MAN = manipulation arms and end effectors · SUS-M1-PIL = pilot station, restraints, displays and controls · SUS-M1-PWR = power generation, storage, distribution and thermal control ·</text>
+<text x="40" y="970.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SUS-M1-PWR-BAT = battery pack, BMS and contactors (alternative B) · SUS-M1-PWR-DIST = protected power distribution · SUS-M1-PWR-GEN = engine-generator and governor (alternative B) · SUS-M1-PWR-HPU = hydraulic</text>
+<text x="40" y="984.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">power unit, accumulators and isolation (alternative A) · SUS-M1-SAF = independent safety monitor, protective stop and isolation · SUS-M1-WLK = chassis, legs, joint actuators and stability sensing · SysML =</text>
+<text x="40" y="999.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Systems Modeling Language (SysML v2) · UAV = uncrewed aerial vehicle (drone) · V-nnn = SysML view (tools/sysml/views.py)</text>
 </g>
 </svg>
