@@ -74,11 +74,13 @@ Requirement verification: 20 open; see the [requirement register](../requirement
 
 Simulation result sets (synthetic, for finding problems early; none is verification evidence):
 
+- [`sim/results/README.md`](../sim/results/README.md)
 - [`sim/results/edge-cases.md`](../sim/results/edge-cases.md)
 - [`sim/results/l2-crosscheck.md`](../sim/results/l2-crosscheck.md)
 - [`sim/results/plant-results.md`](../sim/results/plant-results.md)
 - [`sim/results/search-SF-01.md`](../sim/results/search-SF-01.md)
 - [`sim/results/sizing-cf4.md`](../sim/results/sizing-cf4.md)
+- [`sim/results/uav/README.md`](../sim/results/uav/README.md)
 - [`sim/results/uav/summary.md`](../sim/results/uav/summary.md)
 
 ## Block diagram

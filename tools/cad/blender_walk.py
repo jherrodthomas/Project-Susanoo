@@ -1,13 +1,13 @@
 # SPDX-License-Identifier: Apache-2.0
 """Walk animation of the CL-05 reference layout, rendered in Blender (Cycles) from the CAD walk frames.
 
-    /opt/b3d/bin/python tools/cad/b3d/cl05.py --walk 48          # per-frame meshes (build/cad-src/CL-05-walk)
+    /opt/b3d/bin/python tools/cad/b3d/cl05.py --walk 48 [--loaded]   # per-frame meshes (build/cad-src/CL-05-walk[-loaded])
     /opt/bpy/bin/python tools/cad/blender_walk.py [--livery military] [--cycles 2] [--samples 16]
 
 Every frame is the build123d model posed by the gait in cad/params/CL-05.yaml (walk:), with the knees solved
 for the reverse-jointed legs, so the legs are exactly the CAD's. The walker advances one stride per cycle
 while the camera tracks alongside; a 1.75 m person stands still for scale. Writes
-cad/renders/blender/CL-05-walk[-<livery>].mp4. Concept kinematics only: no dynamics, balance or load model.
+cad/renders/blender/CL-05-walk[-loaded][-<livery>].mp4 (--loaded: carrying the placeholder load in the carry pose). Concept kinematics only: no dynamics, balance or load model.
 """
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ import bpy  # noqa: E402
 from mathutils import Vector  # noqa: E402
 
 ROOT = br.ROOT
-SRC = ROOT / "build/cad-src/CL-05-walk"
+SRC_DIR = ROOT / "build/cad-src"
 REF = ROOT / "build/cad/CL-05/reference.stl"
 
 
@@ -36,7 +36,10 @@ def main() -> int:
     ap.add_argument("--samples", type=int, default=16)
     ap.add_argument("--fps", type=int, default=16)
     ap.add_argument("--size", default="1280x720")
+    ap.add_argument("--loaded", action="store_true", help="render the loaded walk (cl05.py --walk N --loaded)")
     args = ap.parse_args()
+    name = "CL-05-walk-loaded" if args.loaded else "CL-05-walk"
+    SRC = SRC_DIR / name
     meta = json.loads((SRC / "walk.json").read_text())
     n, stride = meta["frames"], meta["stride_m"]
     w, h = (int(v) for v in args.size.split("x"))
@@ -86,7 +89,7 @@ def main() -> int:
         print(f"rendered {k + 1}/{total}", flush=True)
 
     suffix = "" if args.livery == "industrial" else f"-{args.livery}"
-    out = ROOT / f"cad/renders/blender/CL-05-walk{suffix}.mp4"
+    out = ROOT / f"cad/renders/blender/{name}{suffix}.mp4"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-framerate", str(args.fps), "-i", str(frames_dir / "%04d.png"),
                     "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "24", "-preset", "slow", "-movflags", "+faststart",
                     str(out)], check=True)

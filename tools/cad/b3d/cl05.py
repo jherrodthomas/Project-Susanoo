@@ -282,12 +282,12 @@ def build(p: dict, common: dict, posture: str = "standing", gait: dict | None = 
     # Arms: low shoulders, long hanging forearms, three curved claws per hand
     S, A = p["shoulder"], p["arm"]
     sx, sy, sz = S["plate"]
-    ap_ = pose or (gait or {}).get("arms")  # a posture's arm pose, or the walk's stowed arms (SYS-013)
+    ap_ = pose or (gait or {}).get("arms")  # a posture's arm pose, or the walk's stowed arms (SYS-017)
     ang = math.radians(ap_.get("arm_drop_deg", A["drop_angle_deg"]) if ap_ else A["drop_angle_deg"])
     fa = math.radians(ap_.get("fore_angle_deg", A.get("fore_angle_deg", 12)) if ap_ else A.get("fore_angle_deg", 12))
     carry = None
     CA = (ap_ or {}).get("carry")
-    if CA:  # carry pose (SYS-020): solve the arm for a hand target that clamps the load just ahead of the pod
+    if CA:  # carry pose (SYS-019): solve the arm for a hand target that clamps the load just ahead of the pod
         sh0 = (x1 - sx / 2 - 0.05, z1 - S["drop"] - sz - 0.05)
         hx, hz_ = x1 + CA["gap"] + CA["length"] / 2, CA["hand_height"]
         d = math.hypot(hx - sh0[0], hz_ - sh0[1])
@@ -401,16 +401,20 @@ def build(p: dict, common: dict, posture: str = "standing", gait: dict | None = 
     return parts, info
 
 
-def walk_frames(p: dict, common: dict, out: Path, frames: int) -> None:
+def walk_frames(p: dict, common: dict, out: Path, frames: int, loaded: bool = False) -> None:
     """One walk cycle as per-frame STL meshes (mm) per part class, for tools/cad/blender_walk.py.
 
     Gait (cad/params/CL-05.yaml walk:): each foot is planted for the duty fraction of the cycle and swings
     forward in a lifted arc for the rest; the two legs are half a cycle apart. The body advances one stride
     per cycle at constant speed, so a planted foot stays fixed on the ground. The arms are held in the stowed
-    pose given by walk: arms (SYS-013: manipulation inhibited and arms stowed while walking). Concept kinematics only:
-    no dynamics, balance or load model."""
+    pose given by walk: arms (SYS-017: manipulation inhibited and arms stowed while walking). With loaded=True the
+    gait takes the walk: loaded: overrides (shorter, lower steps) and the arms hold the placeholder load in the carry
+    pose of postures: carry, the load riding with the body's crouch and bob (SYS-019; load mass and loaded limits TBD).
+    Concept kinematics only: no dynamics, balance or load model."""
     from build123d import export_stl
-    W = p["walk"]
+    W = dict(p["walk"])
+    if loaded:
+        W.update(W.get("loaded") or {})
     S, duty, h = W["stride"], W["duty"], W["lift"]
     L = p["leg"]
     ax = L.get("ankle_forward", 0.0)
@@ -430,7 +434,12 @@ def walk_frames(p: dict, common: dict, out: Path, frames: int) -> None:
                 rel, lift = ax + S * duty * (g - 0.5), h * math.sin(math.pi * g)
             legs[s] = (rel, lift)
         hip_z = hip0 - W["crouch"] - W["bob"] * math.cos(4 * math.pi * phase)
-        parts, _ = build(p, common, "standing", gait={"hip_z": hip_z, "legs": legs, "arms": W.get("arms")})
+        arms = W.get("arms")
+        if loaded:  # carry pose, with the hand target moving with the hip so the load rides with the body
+            carry = dict(p["postures"]["carry"]["carry"])
+            carry["hand_height"] += hip_z - hip0
+            arms = {"carry": carry}
+        parts, _ = build(p, common, "standing", gait={"hip_z": hip_z, "legs": legs, "arms": arms})
         d = out / f"f{i:03d}"
         d.mkdir(parents=True, exist_ok=True)
         for cls, shapes in parts.items():
@@ -445,11 +454,12 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", type=Path, default=ROOT / "build/cad-src")
     ap.add_argument("--walk", type=int, default=0, help="also write a walk cycle of this many frames")
+    ap.add_argument("--loaded", action="store_true", help="with --walk: carry the placeholder load (build/cad-src/CL-05-walk-loaded)")
     args = ap.parse_args()
     p = yaml.safe_load((ROOT / "cad/params/CL-05.yaml").read_text())
     common = yaml.safe_load((ROOT / "cad/params/common.yaml").read_text())
     if args.walk:
-        walk_frames(p, common, args.out / f"{p['id']}-walk", args.walk)
+        walk_frames(p, common, args.out / f"{p['id']}-walk{'-loaded' if args.loaded else ''}", args.walk, args.loaded)
         return 0
     for posture in ["standing", *(p.get("postures") or {})]:
         parts, info = build(p, common, posture)

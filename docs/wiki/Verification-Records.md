@@ -76,11 +76,13 @@ Requirement verification: 20 open; see the [requirement register](Requirements-R
 
 Simulation result sets (synthetic, for finding problems early; none is verification evidence):
 
+- [`sim/results/README.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/README.md)
 - [`sim/results/edge-cases.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/edge-cases.md)
 - [`sim/results/l2-crosscheck.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/l2-crosscheck.md)
 - [`sim/results/plant-results.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/plant-results.md)
 - [`sim/results/search-SF-01.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/search-SF-01.md)
 - [`sim/results/sizing-cf4.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/sizing-cf4.md)
+- [`sim/results/uav/README.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/uav/README.md)
 - [`sim/results/uav/summary.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/uav/summary.md)
 
 ## Block diagram
