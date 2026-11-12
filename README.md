@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/banner.png" width="100%" alt="Project Susanoo banner: the CL-05 reference layout, a human-piloted bipedal walker with a tall armoured pod, reverse-jointed legs and long claw arms, shown standing next to a 1.75 m person, kneeling with its egress ladder deployed, and in an unarmed military livery. Concept renders from the project CAD.">
+</p>
+
 # Project Susanoo
 
 **SUS-M1 — Human-Piloted Mechanized Platform with Integrated Observation UAV**
