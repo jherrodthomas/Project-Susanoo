@@ -39,6 +39,7 @@
 - [Requirement register](Requirements-Register)
 - [Verification records](Verification-Records)
 - [Change requests](Change-Requests)
+- [Review records](Review-Records)
 - [882E work products](882E-Work-Products)
   - [00 · System Definition and Analysis Baseline](882E-00-system-definition)
   - [01 · Document the System Safety Approach](882E-01-safety-approach)

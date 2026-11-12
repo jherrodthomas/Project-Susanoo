@@ -40,6 +40,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   the records that hold the evidence
 - [Change requests](Change-Requests): what a change would reopen, the change-control chain rule R10 checks, and
   the change records
+- [Review records](Review-Records): what is waiting on a named human review, who may accept what, and the
+  review records
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

@@ -229,7 +229,7 @@ system. Each folder README carries a generated flow position, block, boundary, S
 | [`standards/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/mil-std-882e/model.yaml) | MIL-STD-882E (2012) as data, plus project tailoring |
 | [`sim/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/README.md) | Walker plant model, failure search, PX4 SITL scenarios, 2D and 3D scenes |
 | [`integrations/px4/`](PX4-Integration-Model) | PX4 baseline, interface contract, fail-closed launch permit |
-| [`decisions/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) · [`reviews/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/reviews/README.md) | Questions for the lead; human review records |
+| [`decisions/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) · [`reviews/`](Review-Records) | Questions for the lead; human review records |
 | [`framework/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/README.md) | Lifecycle, process contracts, traceability, documentation standard |
 | [`tools/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools) | Validators, generators and the figure kit |
 
