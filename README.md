@@ -146,7 +146,7 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 | MIL-STD-882E tasks | **25** tailored: 19 selected, 2 conditional, 2 not selected, 2 n/a · gate **G0** | [`standards/tailoring/`](standards/tailoring/mil-std-882e.yaml) |
 | SysML v2 files passing the OMG pilot | **45** | [`models/sysml/`](models/sysml/model/) |
 | Work-product folders with generated figures | **39** | [`safety/mil-std-882e/`](safety/mil-std-882e/README.md) |
-| Decisions for the lead | **0** open of 11 | [`decisions/register.yaml`](decisions/register.yaml) |
+| Decisions for the lead | **0** open of 12 | [`decisions/register.yaml`](decisions/register.yaml) |
 | Simulation runs (synthetic) | **400** walker Monte Carlo + **6** PX4 SITL · **3** findings | [`sim/results/`](sim/results/) |
 <!-- readme:numbers:end -->
 
