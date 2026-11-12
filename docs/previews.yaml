@@ -28,6 +28,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - verification
   - changes
   - reviews
+  - decisions
 
 exempt:                  # tests, tooling internals, figure stores shown by the README above them
   - "**/figures"
@@ -110,15 +111,6 @@ folders:
     gallery_glob: cad/renders/blender/*.{jpg,gif}
     links:
       - {text: Walk cycle video, href: cad/renders/blender/CL-05-walk-military.mp4}
-
-  decisions:
-    title: Decision register
-    purpose: >-
-      Every question for the project lead, with options, a recommendation, what it blocks and how it was answered.
-      The Decision Inbox wiki page is generated from `register.yaml`.
-    hero: {img: docs/wiki/images/rec-decision-board.svg, caption: "Decision board: every decision by gate and status"}
-    links:
-      - {text: Decision Inbox (wiki page), href: docs/wiki/Decision-Inbox.md}
 
   docs:
     title: Documentation sources

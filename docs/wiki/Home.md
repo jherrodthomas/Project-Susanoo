@@ -42,6 +42,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   the change records
 - [Review records](Review-Records): what is waiting on a named human review, who may accept what, and the
   review records
+- [Decision register](Decision-Register): every question for the lead, its answer and where it was applied,
+  with the decision lifecycle in SysML
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

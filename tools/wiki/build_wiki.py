@@ -2,7 +2,7 @@
 """Publish the repository's documentation pages to the GitHub Wiki source folder (docs/wiki).
 
 The wiki is published from docs/wiki by .github/workflows/publish-wiki.yml. Pages written elsewhere in the
-repository (the front page, the MIL-STD-882E work-product tree, concept, PX4 integration, the requirement register, verification records, change requests, review records, the documentation standard
+repository (the front page, the MIL-STD-882E work-product tree, concept, PX4 integration, the requirement register, verification records, change requests, review records, the decision register, the documentation standard
 and the abbreviations page) are copied here as wiki pages, with every relative link rewritten for the wiki:
 
 - a link to another published page becomes a wiki link (`[text](Page-Name)`);
@@ -52,7 +52,8 @@ def sources() -> dict[Path, str]:
              ROOT / "requirements/README.md": "Requirements-Register",
              ROOT / "verification/README.md": "Verification-Records",
              ROOT / "changes/README.md": "Change-Requests",
-             ROOT / "reviews/README.md": "Review-Records"}
+             ROOT / "reviews/README.md": "Review-Records",
+             ROOT / "decisions/README.md": "Decision-Register"}
     for r in sorted(TREE_DIR.rglob("README.md")):
         if "figures" not in r.parts:
             pages[r] = tree_page(r)
@@ -125,6 +126,7 @@ def sidebar(current: str) -> str:
              "- [Verification records](Verification-Records)",
              "- [Change requests](Change-Requests)",
              "- [Review records](Review-Records)",
+             "- [Decision register](Decision-Register)",
              "- [882E work products](882E-Work-Products)"]
     for p, n in tree:
         depth = len(p.parent.relative_to(TREE_DIR).parts)
