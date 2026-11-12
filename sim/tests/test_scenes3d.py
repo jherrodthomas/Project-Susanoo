@@ -82,7 +82,7 @@ class Outputs(unittest.TestCase):
         for e in build_pages.entries(CFG):
             self.assertIn("sun", e["look"]["condition"])
 
-    def test_pages_carry_the_synthetic_stamp(self):
+    def test_pages_carry_the_synthetic_label(self):
         for p in (ROOT / "docs/3d").glob("S3-*.html"):
             self.assertIn("no evidence credit", p.read_text())
 
