@@ -35,11 +35,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 1 — Document the system safety approach |
-| Tasks | [Task 101 — Hazard Identification and Mitigation Effort](MIL-STD-882E-Task-101) |
+| Tasks | [Task 101 — Hazard Identification and Mitigation Effort](MIL-STD-882E-Task-101.md) |
 | Lifecycle gate | G0 onward |
 | Applicability | Selected |
 | Accountable role | Safety lead |
-| Parent folder | [01 · Document the System Safety Approach](882E-01-safety-approach) |
+| Parent folder | [01 · Document the System Safety Approach](882E-01-safety-approach.md) |
 
 ## Purpose
 
@@ -48,17 +48,17 @@ SUS-A1 and their interfaces, using the systems engineering process rather than a
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/01-safety-approach/task-101-hazard-identification-and-mitigation-effort/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/01-safety-approach/task-101-hazard-identification-and-mitigation-effort/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/01-safety-approach/task-101-hazard-identification-and-mitigation-effort/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/01-safety-approach/task-101-hazard-identification-and-mitigation-effort/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/01-safety-approach/task-101-hazard-identification-and-mitigation-effort/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/01-safety-approach/task-101-hazard-identification-and-mitigation-effort/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -71,7 +71,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task101_HazardEffort.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/01-safety-approach/task-101-hazard-identification-and-mitigation-effort/Task101_HazardEffort.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML activity — integrated effort loop](assets/safety/mil-std-882e/01-safety-approach/task-101-hazard-identification-and-mitigation-effort/figures/fig-4-sysml-activity.svg)
+![Figure 4 · SysML activity — integrated effort loop](../../safety/mil-std-882e/01-safety-approach/task-101-hazard-identification-and-mitigation-effort/figures/fig-4-sysml-activity.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -107,17 +107,17 @@ package Task101_HazardEffort {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/01-safety-approach/task-101-hazard-identification-and-mitigation-effort/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/01-safety-approach/task-101-hazard-identification-and-mitigation-effort/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Configuration baseline | [00 · System Definition and Analysis Baseline](882E-00-system-definition) |
-| Approved SSPP | [Task 102 · System Safety Program Plan (SSPP)](882E-task-102-system-safety-program-plan) |
+| Configuration baseline | [00 · System Definition and Analysis Baseline](882E-00-system-definition.md) |
+| Approved SSPP | [Task 102 · System Safety Program Plan (SSPP)](882E-task-102-system-safety-program-plan.md) |
 
 | Output | Destination |
 |---|---|
-| Analysis tasking | [02 · Identify and Document Hazards](882E-02-hazard-identification) |
-| Effort status | [Task 107 · Hazard Management Progress Report](882E-task-107-hazard-management-progress-report) |
+| Analysis tasking | [02 · Identify and Document Hazards](882E-02-hazard-identification.md) |
+| Effort status | [Task 107 · Hazard Management Progress Report](882E-task-107-hazard-management-progress-report.md) |
 
 ## Folder contents
 

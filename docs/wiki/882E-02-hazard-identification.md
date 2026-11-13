@@ -56,7 +56,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Lifecycle gate | G0–G5 |
 | Applicability | Selected progressively |
 | Accountable role | Safety lead |
-| Parent folder | [MIL-STD-882E System Safety Work Products](882E-Work-Products) |
+| Parent folder | [MIL-STD-882E System Safety Work Products](882E-Work-Products.md) |
 
 ## Purpose
 
@@ -66,17 +66,17 @@ recorded in the hazard tracking system.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/02-hazard-identification/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/02-hazard-identification/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/02-hazard-identification/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/02-hazard-identification/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/02-hazard-identification/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/02-hazard-identification/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -91,7 +91,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`HazardAnalyses.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/HazardAnalyses.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML activity — analysis information flow](assets/safety/mil-std-882e/02-hazard-identification/figures/fig-4-sysml-activity.svg)
+![Figure 4 · SysML activity — analysis information flow](../../safety/mil-std-882e/02-hazard-identification/figures/fig-4-sysml-activity.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -130,32 +130,32 @@ package HazardAnalyses {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/02-hazard-identification/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/02-hazard-identification/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| System baseline | [00 · System Definition and Analysis Baseline](882E-00-system-definition) |
-| Selected tasks | [01 · Document the System Safety Approach](882E-01-safety-approach) |
+| System baseline | [00 · System Definition and Analysis Baseline](882E-00-system-definition.md) |
+| Selected tasks | [01 · Document the System Safety Approach](882E-01-safety-approach.md) |
 
 | Output | Destination |
 |---|---|
-| Hazard records | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system) |
-| Hazards for risk assessment | [03 · Assess and Document Risk](882E-03-risk-assessment) |
+| Hazard records | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system.md) |
+| Hazards for risk assessment | [03 · Assess and Document Risk](882E-03-risk-assessment.md) |
 
 ## Folder contents
 
 | Item | Description | State |
 |---|---|---|
-| [`task-201-preliminary-hazard-list/`](882E-task-201-preliminary-hazard-list) | Task 201 · Preliminary Hazard List (PHL) | folder |
-| [`task-202-preliminary-hazard-analysis/`](882E-task-202-preliminary-hazard-analysis) | Task 202 · Preliminary Hazard Analysis (PHA) | folder |
-| [`task-203-system-requirements-hazard-analysis/`](882E-task-203-system-requirements-hazard-analysis) | Task 203 · System Requirements Hazard Analysis (SRHA) | folder |
-| [`task-204-subsystem-hazard-analysis/`](882E-task-204-subsystem-hazard-analysis) | Task 204 · Subsystem Hazard Analysis (SSHA) | folder |
-| [`task-205-system-hazard-analysis/`](882E-task-205-system-hazard-analysis) | Task 205 · System Hazard Analysis (SHA) | folder |
-| [`task-206-operating-and-support-hazard-analysis/`](882E-task-206-operating-and-support-hazard-analysis) | Task 206 · Operating and Support Hazard Analysis (O&SHA) | folder |
-| [`task-207-health-hazard-analysis/`](882E-task-207-health-hazard-analysis) | Task 207 · Health Hazard Analysis (HHA) | folder |
-| [`task-208-functional-hazard-analysis/`](882E-task-208-functional-hazard-analysis) | Task 208 · Functional Hazard Analysis (FHA) | folder |
-| [`task-209-system-of-systems-hazard-analysis/`](882E-task-209-system-of-systems-hazard-analysis) | Task 209 · System-of-Systems Hazard Analysis (SoSHA) | folder |
-| [`task-210-environmental-hazard-analysis/`](882E-task-210-environmental-hazard-analysis) | Task 210 · Environmental Hazard Analysis (EHA) | folder |
+| [`task-201-preliminary-hazard-list/`](882E-task-201-preliminary-hazard-list.md) | Task 201 · Preliminary Hazard List (PHL) | folder |
+| [`task-202-preliminary-hazard-analysis/`](882E-task-202-preliminary-hazard-analysis.md) | Task 202 · Preliminary Hazard Analysis (PHA) | folder |
+| [`task-203-system-requirements-hazard-analysis/`](882E-task-203-system-requirements-hazard-analysis.md) | Task 203 · System Requirements Hazard Analysis (SRHA) | folder |
+| [`task-204-subsystem-hazard-analysis/`](882E-task-204-subsystem-hazard-analysis.md) | Task 204 · Subsystem Hazard Analysis (SSHA) | folder |
+| [`task-205-system-hazard-analysis/`](882E-task-205-system-hazard-analysis.md) | Task 205 · System Hazard Analysis (SHA) | folder |
+| [`task-206-operating-and-support-hazard-analysis/`](882E-task-206-operating-and-support-hazard-analysis.md) | Task 206 · Operating and Support Hazard Analysis (O&SHA) | folder |
+| [`task-207-health-hazard-analysis/`](882E-task-207-health-hazard-analysis.md) | Task 207 · Health Hazard Analysis (HHA) | folder |
+| [`task-208-functional-hazard-analysis/`](882E-task-208-functional-hazard-analysis.md) | Task 208 · Functional Hazard Analysis (FHA) | folder |
+| [`task-209-system-of-systems-hazard-analysis/`](882E-task-209-system-of-systems-hazard-analysis.md) | Task 209 · System-of-Systems Hazard Analysis (SoSHA) | folder |
+| [`task-210-environmental-hazard-analysis/`](882E-task-210-environmental-hazard-analysis.md) | Task 210 · Environmental Hazard Analysis (EHA) | folder |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/mil-std-882e/02-hazard-identification/figures) | Generated SVG figures (do not edit) | generated |
 | [`HazardAnalyses.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/HazardAnalyses.sysml) | Generated SysML v2 view | generated |
 
