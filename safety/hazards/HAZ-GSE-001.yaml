@@ -50,16 +50,16 @@ event_risks:
 - event_id: EVT-BENCH-001
   configuration: SUS-I1-C001
   severity: 1
-  probability: C
-  rac: 1C
-  risk_level: High
+  probability: D
+  rac: 1D
+  risk_level: Serious
   rationale: 'Preliminary event risk (AI draft, I0), not accepted. EVT-BENCH-001 is one leg on a rigid support frame,
     test crew in the room, no pod, dock or roll bar. Applies in part: the rig is re-plumbed and its fittings changed
     often, and the hip actuator and the top of the frame sit about 2.3 m up if the rig uses the CL-05 reference leg
     (hip height 2.34 m, cad/metrics.json; rig scale TBD). A head-first fall from that height onto a hard floor or
-    the frame can be fatal, so the severity stays 1. None of the seven event conditions covers work at height, so
-    the probability is C. With a guarded platform or a stepladder with handrails for work above the frame base added
-    as an event condition, D.'
+    the frame can be fatal, so the severity stays 1. Assumes event condition (8), added by decision DQ-022: work
+    above the base of the support frame only from a guarded platform or a stepladder with handrails. Without it,
+    C.'
   definitions: SUS-RISKDEF-001
 mitigations:
 - id: M1
@@ -117,4 +117,3 @@ open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
 - List the maintenance tasks done at height and their access points
 - Confirm the rig scale and the working heights on EVT-BENCH-001 (event risk assumes the CL-05 reference leg)
-- Propose a work-at-height condition for EVT-BENCH-001 (guarded platform or stepladder with handrails) for the lead
