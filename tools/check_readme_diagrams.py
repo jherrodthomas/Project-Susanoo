@@ -86,6 +86,7 @@ ENFORCED = {
     "sim/search": {"skip_dirs": {"figures", "__pycache__"}, "generator": ["tools/figures/search_readme.py", "--check"]},
     "sim/mujoco": {"skip_dirs": {"figures", "__pycache__"}, "generator": ["tools/figures/mujoco_readme.py", "--check"]},
     "sim/trades": {"skip_dirs": {"figures", "__pycache__"}, "generator": ["tools/figures/trades_readme.py", "--check"]},
+    "sim/spec": {"skip_dirs": {"figures"}, "generator": ["tools/figures/spec_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

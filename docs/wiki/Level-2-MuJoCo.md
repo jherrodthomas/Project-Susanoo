@@ -138,7 +138,7 @@ Proposal rationale: Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_
 
 | Input | Source |
 |---|---|
-| Plant specs | [`sim/spec/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/spec) |
+| Plant specs | [`sim/spec/`](Plant-Specs) |
 | Cases | [`crosscheck.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/mujoco/crosscheck.yaml), [`sim/faults.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/faults.yaml), search edge cases |
 | MuJoCo | [`requirements.txt`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/mujoco/requirements.txt) |
 

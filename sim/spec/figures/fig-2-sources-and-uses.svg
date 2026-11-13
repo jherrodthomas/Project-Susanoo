@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1317.6" height="1055.1" viewBox="0 0 1317.6 1055.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 2 · Where the parameters come from and go</title>
+<desc>The records the parameter sources cite, the two specs, and the simulation code that loads each (read from the code). A change to a spec changes every result downstream.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1317.6" height="986" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 2 · Where the parameters come from and go</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The records the parameter sources cite, the two specs, and the simulation code that loads each (read from the code). A change to a spec changes every result downstream.</text>
+<text x="1277.6" y="44" font-size="11" fill="#475569" text-anchor="end">sim/spec/*.yaml · sim/**/*.py</text>
+<line x1="40" y1="85" x2="1277.6" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 109)">
+<rect x="6" y="6" width="277.3" height="784" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="373.3" y="316" width="595" height="232.9" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1058.3" y="161" width="173.3" height="624" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M265.3 470 L361.3 470 Q368.3 470 375.3 470 L391.3 469.9" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M265.3 374 L303.3 374 Q310.3 374 310.3 381 L310.3 437 Q310.3 444 317.3 444 L361.3 444 Q368.3 444 375.3 444 L743.3 443.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M265.3 734 L327.3 734 Q334.3 734 334.3 727 L334.3 522 Q334.3 515 341.3 515 L361.3 515 Q368.3 515 375.3 515 L391.3 515.5" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M265.3 270 L315.3 270 Q322.3 270 322.3 277 L322.3 424 Q322.3 431 329.3 431 L743.3 431" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M265.3 550 L303.3 550 Q310.3 550 310.3 543 L310.3 492 Q310.3 485 317.3 485 L361.3 485 Q368.3 485 375.3 485 L391.3 485.1" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M265.3 638 L315.3 638 Q322.3 638 322.3 631 L322.3 507 Q322.3 500 329.3 500 L361.3 500 Q368.3 500 375.3 500 L391.3 500.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M265.3 94 L339.3 94 Q346.3 94 346.3 101 L346.3 370 Q346.3 377 353.3 377 L726.3 377 Q733.3 377 733.3 384 L733.3 388 Q733.3 393 738.3 393 L743.3 393" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M265.3 182 L327.3 182 Q334.3 182 334.3 189 L334.3 381 Q334.3 388 341.3 388 L716.3 388 Q723.3 388 723.3 395 L723.3 398.7 Q723.3 405.7 730.3 405.7 L743.3 405.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M614.9 488.4 L623.6 488.4 Q624.9 488.4 624.9 487.2 L624.9 487.2 Q624.9 485.9 626.2 485.9 L966.3 485.9 Q973.3 485.9 980.3 485.9 L1024.3 485.9 Q1031.3 485.9 1031.3 478.9 L1031.3 424 Q1031.3 417 1038.3 417 L1076.3 417" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M614.9 505.3 L623.6 505.3 Q624.9 505.3 624.9 506.6 L624.9 506.6 Q624.9 507.9 626.2 507.9 L966.3 507.9 Q973.3 507.9 980.3 507.9 L1012.3 507.9 Q1019.3 507.9 1019.3 514.9 L1019.3 570 Q1019.3 577 1026.3 577 L1076.3 577" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M614.9 463.1 L619.9 463.1 Q624.9 463.1 624.9 458.1 L624.9 373 Q624.9 366 631.9 366 L988.3 366 Q995.3 366 995.3 359 L995.3 243 Q995.3 236 1002.3 236 L1046.3 236 Q1053.3 236 1060.3 236 L1076.3 236.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M614.9 496.9 L966.3 496.9 Q973.3 496.9 980.3 496.9 L1076.3 497" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M614.9 513.8 L632.3 513.8 Q634.9 513.8 634.9 516.3 L634.9 516.3 Q634.9 518.9 637.5 518.9 L966.3 518.9 Q973.3 518.9 980.3 518.9 L1000.3 518.9 Q1007.3 518.9 1007.3 525.9 L1007.3 650 Q1007.3 657 1014.3 657 L1076.3 657" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M614.9 480 L642.3 480 Q644.9 480 644.9 477.4 L644.9 477.4 Q644.9 474.9 647.5 474.9 L966.3 474.9 Q973.3 474.9 980.3 474.9 L1012.3 474.9 Q1019.3 474.9 1019.3 467.9 L1019.3 344 Q1019.3 337 1026.3 337 L1076.3 337" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M614.9 522.2 L621.1 522.2 Q624.9 522.2 624.9 526.1 L624.9 526.1 Q624.9 529.9 628.7 529.9 L966.3 529.9 Q973.3 529.9 980.3 529.9 L988.3 529.9 Q995.3 529.9 995.3 536.9 L995.3 730 Q995.3 737 1002.3 737 L1076.3 737" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M950.3 418.3 L966.3 418.3 Q973.3 418.3 980.3 418.3 L1000.3 418.3 Q1007.3 418.3 1007.3 411.3 L1007.3 269 Q1007.3 262 1014.3 262 L1046.3 262 Q1053.3 262 1060.3 262 L1076.3 261.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M614.9 471.6 L627.9 471.6 Q634.9 471.6 634.9 464.6 L634.9 406 Q634.9 399 641.9 399 L706.3 399 Q713.3 399 713.3 406 L713.3 411.3 Q713.3 418.3 720.3 418.3 L743.3 418.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="18" y="18" width="178.9" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="107.4" y="33" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">CITED IN THE SOURCES</text>
+<rect x="385.3" y="328" width="77.5" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="424" y="343" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">SPECS</text>
+<rect x="1070.3" y="173" width="103.8" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="1122.2" y="188" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">LOADED BY</text>
+<rect x="103.7" y="440" width="161.6" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="115.7" y="452" width="54.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="143" y="463.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">CONOPS</text>
+<text x="115.7" y="486" font-size="12.5" fill="#0F172A" font-weight="700">Concept of operations</text>
+<rect x="32.4" y="328" width="232.9" height="92" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="44.4" y="340" width="47" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="67.9" y="351.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-012</text>
+<text x="44.4" y="374" font-size="12.5" fill="#0F172A" font-weight="700">Should the level-2 walker spec</text>
+<text x="44.4" y="390" font-size="12.5" fill="#0F172A" font-weight="700">adopt the ankle and knee torques</text>
+<text x="44.4" y="406" font-size="12.5" fill="#0F172A" font-weight="700">sized against supply loss?</text>
+<rect x="35.5" y="696" width="229.8" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="47.5" y="708" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="87" y="719.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-SAF-001</text>
+<text x="47.5" y="742" font-size="12.5" fill="#0F172A" font-weight="700">Protective stop does not reach a</text>
+<text x="47.5" y="758" font-size="12.5" fill="#0F172A" font-weight="700">safe state</text>
+<rect x="45.5" y="232" width="219.8" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="57.5" y="244" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="97" y="255.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-WLK-002</text>
+<text x="57.5" y="278" font-size="12.5" fill="#0F172A" font-weight="700">Walker tip-over or fall with pilot</text>
+<text x="57.5" y="294" font-size="12.5" fill="#0F172A" font-weight="700">aboard</text>
+<rect x="44.3" y="520" width="221" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="56.3" y="532" width="48.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="80.5" y="543.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">MOD-03</text>
+<text x="56.3" y="566" font-size="12.5" fill="#0F172A" font-weight="700">Operating mode in the CONOPS</text>
+<rect x="66" y="600" width="199.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="78" y="612" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="105" y="623.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SSF-004</text>
+<text x="78" y="646" font-size="12.5" fill="#0F172A" font-weight="700">Feedback staleness monitor</text>
+<text x="78" y="662" font-size="12.5" fill="#0F172A" font-weight="700">(software function)</text>
+<rect x="42.8" y="56" width="222.5" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="54.8" y="68" width="54.1" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
+<text x="81.8" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-016</text>
+<text x="54.8" y="102" font-size="12.5" fill="#0F172A" font-weight="700">Actuator torque reserve against</text>
+<text x="54.8" y="118" font-size="12.5" fill="#0F172A" font-weight="700">supply loss</text>
+<rect x="24" y="152" width="241.3" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="36" y="164" width="41.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="56.6" y="175.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SZ-01</text>
+<text x="36" y="198" font-size="12.5" fill="#0F172A" font-weight="700">Actuator sizing study (sim/mujoco)</text>
+<rect x="391.3" y="454.7" width="223.6" height="76" rx="8" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
+<rect x="403.3" y="466.7" width="66.4" height="16" rx="8.0" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<text x="436.5" y="478.1" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">walker.yaml</text>
+<text x="403.3" y="500.7" font-size="12.5" fill="#FFFFFF" font-weight="700">SPEC-WLK-001</text>
+<text x="403.3" y="517.7" font-size="10.5" fill="#CBD5E1">24 parameters · 23 assumed, 1 published</text>
+<rect x="743.3" y="380.3" width="207" height="76" rx="8" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
+<rect x="755.3" y="392.3" width="80.5" height="16" rx="8.0" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<text x="795.6" y="403.8" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">walker_l2.yaml</text>
+<text x="755.3" y="426.3" font-size="12.5" fill="#FFFFFF" font-weight="700">SPEC-WLK-L2-001</text>
+<text x="755.3" y="443.3" font-size="10.5" fill="#CBD5E1">12 parameters · 9 assumed, 3 derived</text>
+<rect x="1076.3" y="387" width="136" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="1088.3" y="399" width="81.8" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="1129.2" y="410.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/common.py</text>
+<text x="1088.3" y="433" font-size="12.5" fill="#0F172A" font-weight="700">loads walker.yaml</text>
+<rect x="1076.3" y="547" width="136" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="1088.3" y="559" width="63.7" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="1120.2" y="570.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/figures</text>
+<text x="1088.3" y="593" font-size="12.5" fill="#0F172A" font-weight="700">loads walker.yaml</text>
+<rect x="1076.3" y="211" width="137.3" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="1088.3" y="223" width="64.3" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="1120.5" y="234.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/mujoco</text>
+<text x="1088.3" y="257" font-size="12.5" fill="#0F172A" font-weight="700">loads walker.yaml,</text>
+<text x="1088.3" y="273" font-size="12.5" fill="#0F172A" font-weight="700">walker_l2.yaml</text>
+<rect x="1076.3" y="467" width="136" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="1088.3" y="479" width="54.5" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="1115.5" y="490.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/plant</text>
+<text x="1088.3" y="513" font-size="12.5" fill="#0F172A" font-weight="700">loads walker.yaml</text>
+<rect x="1076.3" y="627" width="136" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="1088.3" y="639" width="76" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="1126.3" y="650.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/scenes3d</text>
+<text x="1088.3" y="673" font-size="12.5" fill="#0F172A" font-weight="700">loads walker.yaml</text>
+<rect x="1076.3" y="307" width="136" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="1088.3" y="319" width="62.8" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="1119.7" y="330.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/search</text>
+<text x="1088.3" y="353" font-size="12.5" fill="#0F172A" font-weight="700">loads walker.yaml</text>
+<rect x="1076.3" y="707" width="136" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="1088.3" y="719" width="60.9" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="1118.7" y="730.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/trades</text>
+<text x="1088.3" y="753" font-size="12.5" fill="#0F172A" font-weight="700">loads walker.yaml</text>
+<rect x="652.9" y="402" width="52.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="657.9" y="415" font-size="10.5" fill="#475569">extends</text>
+</g>
+<rect x="40" y="925" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="62" y="935" font-size="11" fill="#475569">Other source</text>
+<rect x="139.9" y="925" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="161.9" y="935" font-size="11" fill="#475569">Lead decision</text>
+<rect x="246.2" y="925" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="268.2" y="935" font-size="11" fill="#475569">Hazard</text>
+<rect x="316" y="925" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
+<text x="338" y="935" font-size="11" fill="#475569">Requirement</text>
+<rect x="412.7" y="925" width="14" height="12" rx="3" fill="#0F172A" stroke="#0F172A" stroke-width="1.2"/>
+<text x="434.7" y="935" font-size="11" fill="#475569">This folder</text>
+<rect x="502.7" y="925" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="524.7" y="935" font-size="11" fill="#475569">Simulation code</text>
+<line x1="617.7" y1="931" x2="633.7" y2="931" stroke="#475569" stroke-width="1.8"/>
+<text x="639.7" y="935" font-size="11" fill="#475569">Cited by a parameter source</text>
+<line x1="796.5" y1="931" x2="812.5" y2="931" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="818.5" y="935" font-size="11" fill="#475569">Loaded by</text>
+<text x="40" y="957" font-size="10.5" fill="#94A3B8">Generated by tools/figures/spec_readme.py from sim/spec/*.yaml, sim/plant/spec.py and the code that loads the specs. Concept assumptions, not design values; the simulations they feed are synthetic (sim/README.md, evidence gate).</text>
+<g class="terms" data-base-h="986">
+<rect x="0" y="986" width="1317.6" height="69.1" fill="#FFFFFF"/>
+<line x1="40" y1="990" x2="1277.6" y2="990" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1005.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CONOPS = concept of operations · DQ-nnn = decision question for the project lead (decisions/register.yaml) · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · MOD-nnn = operating mode from the CONOPS (MOD-01</text>
+<text x="40" y="1020.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">to MOD-10) · SPEC-nnn = simulation parameter spec record (sim/spec/) · SSF-nnn = safety-significant software function record (safety/software/) · SYS-nnn = system safety requirement record (requirements/SYS-nnn.yaml) · SZ-nnn</text>
+<text x="40" y="1034.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">= actuator sizing study at level 2 (sim/mujoco/sizing.yaml)</text>
+</g>
+</svg>

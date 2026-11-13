@@ -47,7 +47,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | Levels | 1 · reduced-order plant (`plant/`, `search/`) · 2 · MuJoCo (`mujoco/`) · PX4 SITL (`uav/`) |
-| Inputs | [`spec/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/spec/README.md), [`faults.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/faults.yaml) (4 faults), [`search/families.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/search/families.yaml), [`uav/scenarios.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/scenarios.yaml) (6 scenarios) |
+| Inputs | [`spec/`](Plant-Specs), [`faults.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/faults.yaml) (4 faults), [`search/families.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/search/families.yaml), [`uav/scenarios.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/scenarios.yaml) (6 scenarios) |
 | Hazards exercised | [HAZ-DCK-002](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-DCK-002.yaml), [HAZ-INT-001](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-INT-001.yaml), [HAZ-PIL-002](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-PIL-002.yaml), [HAZ-SAF-001](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-SAF-001.yaml), [HAZ-WLK-001](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-WLK-001.yaml), [HAZ-WLK-002](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-WLK-002.yaml) |
 | SysML model | [`SimulationEvidence.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/SimulationEvidence.sysml) (generated here) |
 | Wiki | [Simulation](Simulation), [UAV simulation](UAV-Simulation), [3D scenes](3D-Scenes) |
@@ -178,7 +178,7 @@ package SimulationEvidence {
 | [`results/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/README.md) | Simulation results | folder |
 | [`scenes3d/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/README.md) | 3D scene builder | folder |
 | [`search/`](Failure-Search) | Failure search | folder |
-| [`spec/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/spec/README.md) | Simulation specifications | folder |
+| [`spec/`](Plant-Specs) | Simulation specifications | folder |
 | [`trades/`](Trade-Study-Evidence) | Trade-study evidence | folder |
 | [`uav/`](UAV-SITL-Harness) | UAV simulation harness (PX4 SITL) | folder |
 | [`faults.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/faults.yaml) | Fault catalogue | present |

@@ -99,6 +99,8 @@ def group_of(path: str) -> str:
         return "Level-2 walker"
     if path.startswith("sim/trades/"):
         return "Supply-loss modes"
+    if path.startswith("sim/spec/"):
+        return "Plant spec structure"
     return {"concept": "Concept operations", "integrations": "PX4 integration", "decisions": "Decision register",
             "sim": "Simulation evidence gate", "framework": "Lifecycle gates", "tools": "Docs check (CI)", "docs": "Generated file states", "cad": "Concept layouts"}.get(path.split("/")[0], path.split("/")[0])
 

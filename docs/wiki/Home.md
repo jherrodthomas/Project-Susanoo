@@ -78,6 +78,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   joint torques sized against supply loss on a slope
 - [Trade-study evidence](Trade-Study-Evidence): how each actuation alternative's supply loss plays out on both
   walker models, and the trade-study scores that cite it
+- [Plant specs](Plant-Specs): every walker model parameter with its range, status and source, and the code that
+  loads it
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

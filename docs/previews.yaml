@@ -29,6 +29,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - sim/search             # generated README (tools/figures/search_readme.py)
   - sim/mujoco             # generated README (tools/figures/mujoco_readme.py)
   - sim/trades             # generated README (tools/figures/trades_readme.py)
+  - sim/spec               # generated README (tools/figures/spec_readme.py)
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -324,14 +325,6 @@ folders:
       - {img: docs/wiki/images/3d-s3-04.png, caption: "S3-04", link: docs/3d/S3-04.html}
 
 
-  sim/spec:
-    title: Simulation specifications
-    purpose: >-
-      Walker parameters for the level-1 and level-2 models, each with a unit, range, status and source. Assumed values
-      are marked as assumed.
-    hero: {img: docs/wiki/images/sim-sc-01.svg, caption: "SC-01, run with these parameters (synthetic)"}
-    gallery:
-      - {img: docs/readme/simulation.svg, caption: "Simulation results summary (synthetic)"}
 
 
   standards/mil-std-882e:
