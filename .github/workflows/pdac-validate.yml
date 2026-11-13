@@ -112,9 +112,9 @@ jobs:
         run: python -m sim.scenes3d.build_pages --check
       - name: Pages load in Chromium with the pinned three.js, show the synthetic label and the right outcome
         run: node sim/scenes3d/render.mjs package --check-only
-      - name: SUS-M1 and SUS-A1 general-arrangement sheets current (geometry docs/3d/assets/sus-m1.js is committed, from tools/cad/b3d/cl05_web.py)
+      - name: SUS-M1, SUS-A1 and terrain sheets current (geometry docs/3d/assets/sus-m1.js is committed, from tools/cad/b3d/cl05_web.py)
         run: python -m sim.scenes3d.build_sheet --check
-      - name: Sheets load, every posture settles, every PX4 run replays to its outcome, no console errors, synthetic label shown
+      - name: Sheets load, every posture settles, every PX4 run replays to its outcome, every terrain walks and climbs its rise, no console errors
         run: node sim/scenes3d/sheet_check.mjs package --check-only
 
   mujoco:
