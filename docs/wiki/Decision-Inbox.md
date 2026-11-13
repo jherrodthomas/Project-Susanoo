@@ -37,7 +37,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 </details>
 <!-- terms:end -->
 
-Status: open 0, queued 0, answered 2, applied 17, withdrawn 0
+Status: open 0, queued 0, answered 2, applied 18, withdrawn 0
 
 ## Decided
 
@@ -61,4 +61,5 @@ Status: open 0, queued 0, answered 2, applied 17, withdrawn 0
 | DQ-016 | How should the actuation trade study (TS-001) weigh its twelve criteria? | Confirm the drafted weights | lead | 2026-11-12 | applied | `architecture/trades/TS-001.yaml` |
 | DQ-017 | Should a hazard tied to specific hardware stop applying to test events that do not contain that hardware? | Honour the hardware tag | lead | 2026-11-12 | applied | `tools/pdac/rules.py`, `tools/pdac/rules_ext.py`, `pdac/schemas/event.schema.json`, `safety/events/EVT-BENCH-001.yaml`, `safety/hazards/HAZ-PWR-002.yaml`, `safety/hazards/HAZ-PWR-003.yaml`, `tools/pdac/README.md` |
 | DQ-018 | Should the manipulator-arm hazards be tied to the arms, so they stop applying to events without arms? | Tag both with SUS-M1-MAN | lead | 2026-11-12 | applied | `safety/hazards/HAZ-MAN-001.yaml`, `safety/hazards/HAZ-MAN-002.yaml` |
-| DQ-019 | How should the six hazards raised from the FHA gaps be rated? | Adopt the proposed ratings as the lead's rating | lead | 2026-11-13 | applied | `safety/hazards/HAZ-PIL-004.yaml`, `safety/hazards/HAZ-INT-002.yaml`, `safety/hazards/HAZ-INT-003.yaml`, `safety/hazards/HAZ-DCK-003.yaml`, `safety/hazards/HAZ-DCK-004.yaml`, `safety/hazards/HAZ-DCK-005.yaml` |
+| DQ-019 | How should the six hazards raised from the FHA gaps be rated? | Adopt the proposed ratings as the lead's rating | lead | 2026-11-13 | applied | `safety/hazards/HAZ-PIL-004.yaml`, `safety/hazards/HAZ-INT-002.yaml`, `safety/hazards/HAZ-DCK-003.yaml`, `safety/hazards/HAZ-DCK-004.yaml` |
+| DQ-020 | Should the two near-duplicate pairs among the FHA-gap hazards be merged? | Merge each pair | lead | 2026-11-13 | applied | `safety/hazards/HAZ-INT-002.yaml`, `safety/hazards/HAZ-DCK-004.yaml`, `requirements/SYS-021.yaml`, `requirements/SYS-022.yaml`, `safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml`, `sim/scenes3d/scenes.yaml` |

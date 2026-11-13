@@ -107,11 +107,11 @@ package SusanooRequirements {
     requirement <'SYS-021'> uavDataValidityAndStalenessAnnunciation : SystemRequirement {
         doc /* The pilot display shall mark UAV imagery, position and telemetry as not valid when they fail validity checks, and as not current when they have not updated within a defined time, so that they are never shown as current and valid when they are not. */
         @Source { record = "requirements/SYS-021.yaml"; }
-        @HazardRef { ids = ("HAZ-INT-002", "HAZ-INT-003"); }
+        @HazardRef { ids = ("HAZ-INT-002"); }
     }
     requirement <'SYS-022'> dockChargingProtectionAndIsolation : SystemRequirement {
         doc /* The dock shall charge the UAV battery only when the aircraft is seated and confirmed, shall stop charging on over-voltage, over-current or over-temperature independently of the charging software, and shall keep its charging contacts de-energised and shrouded whenever no UAV is seated or charging has been isolated for handling. */
         @Source { record = "requirements/SYS-022.yaml"; }
-        @HazardRef { ids = ("HAZ-DCK-003", "HAZ-DCK-005"); }
+        @HazardRef { ids = ("HAZ-DCK-003", "HAZ-DCK-004"); }
     }
 }

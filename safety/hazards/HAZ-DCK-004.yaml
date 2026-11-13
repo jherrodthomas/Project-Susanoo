@@ -1,6 +1,6 @@
 schema: susanoo/hazard/v0.2
 id: HAZ-DCK-004
-title: Charging connector energised at UAV release or launch
+title: Exposure to energised dock charging contacts
 status: open
 system: SUS-I1
 subsystems:
@@ -12,11 +12,12 @@ applicability:
   - SUS-I1-C001
   hardware: []
   software: []
-hazardous_condition: Charging is still active when the UAV is released or launched, so the dock-to-UAV connector
-  separates under load.
+hazardous_condition: 'The dock charging circuit is energised when it should not be: when the UAV is released or launched,
+  so the connector separates under load, or while a maintainer or the pilot handles the UAV or the dock.'
 modes:
 - MOD-06
 - MOD-08
+- MOD-10
 causal_factors:
 - id: CF1
   type: interface
@@ -24,9 +25,16 @@ causal_factors:
 - id: CF2
   type: hardware
   description: Charge contactor welded or slow to open
+- id: CF3
+  type: human
+  description: Maintainer handles the UAV or connector without isolating charging
+- id: CF4
+  type: hardware
+  description: Exposed or damaged contacts on the dock or UAV
 effects:
-- Arcing at the connector; damage to the dock or the UAV; possible ignition near the pod
-mishap: Minor burn or electrical injury to a crew member near the dock; equipment damage
+- Arcing at the connector on separation; damage to the dock or the UAV
+- Contact with energised charging contacts
+mishap: Electric shock or burn to a maintainer, the pilot or crew near the dock; equipment damage
 initial_risk:
   severity: 3
   probability: C
@@ -35,7 +43,7 @@ initial_risk:
   rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
     basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): hundreds of launches with
     only a procedure to stop charging first; arcing, minor injury and dock or UAV damage in the $1,000-$10,000 band
-    (DQ-002).'
+    (DQ-002); equally, frequent handling at the dock with contacts not yet designed (DQ-020).'
   definitions: SUS-RISKDEF-001
 target_risk:
   severity: 3
@@ -66,8 +74,28 @@ mitigations:
     method:
     - analysis
     evidence_ids: []
+- id: M3
+  description: Contacts shrouded and de-energised unless a UAV is seated and confirmed
+  precedence: b
+  state: identified
+  requirement_ids:
+  - SYS-022
+  verification:
+    method:
+    - inspection
+    - test
+    evidence_ids: []
+- id: M4
+  description: Charging isolated before any handling at the dock (maintenance procedure)
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
 requirement_ids:
 - SYS-006
+- SYS-022
 owner:
   role: ROLE-UAV
   person: null
@@ -84,8 +112,13 @@ source:
   - safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml
 hazmat: not-applicable
 assumptions:
-- Concept configuration SUS-I1-C001; raised from the FHA gap row F-08 untimely (AI-drafted, I0)
+- Concept configuration SUS-I1-C001; raised from the FHA gap rows F-08 untimely and F-08 unintended (AI-drafted,
+  I0)
 - Charging voltage and current are TBD until the UAV battery and dock are selected
+- 'Merged by the project lead''s decision DQ-020 (2026-11-13): HAZ-DCK-005 (electrical exposure while charging with
+  a person present) folded in. Both had initial 3C Medium (DQ-019); the merged target keeps the weaker of the two
+  targets, 3D (DCK-005 alone had 3E), so no rating is lowered'
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
+- Re-rate severity once the charging voltage is known
 - Confirm whether SYS-006 (launch and recovery envelope inhibit) should name charging state explicitly

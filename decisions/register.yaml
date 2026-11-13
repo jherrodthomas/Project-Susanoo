@@ -404,6 +404,26 @@ decisions:
     status: applied
     asked: 2026-11-13
     answer: {choice: adopt, by: lead, at: 2026-11-13, via: chat, note: "Adopt as my rating"}
-    applied_in: [safety/hazards/HAZ-PIL-004.yaml, safety/hazards/HAZ-INT-002.yaml, safety/hazards/HAZ-INT-003.yaml, safety/hazards/HAZ-DCK-003.yaml, safety/hazards/HAZ-DCK-004.yaml, safety/hazards/HAZ-DCK-005.yaml]
+    applied_in: [safety/hazards/HAZ-PIL-004.yaml, safety/hazards/HAZ-INT-002.yaml, safety/hazards/HAZ-DCK-003.yaml, safety/hazards/HAZ-DCK-004.yaml]
     sources: [safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml, standards/tailoring/mil-std-882e.yaml]
+
+  - id: DQ-020
+    question: Should the two near-duplicate pairs among the FHA-gap hazards be merged?
+    context: >-
+      **HAZ-INT-002 (misleading UAV data) and HAZ-INT-003 (stale UAV imagery) end in the same mishap, and so do HAZ-DCK-004
+      (connector energised at release) and HAZ-DCK-005 (exposure while charging with a person present).** Merging keeps
+      one record per mishap; each merged record takes the more severe rating of the pair, so nothing is lowered.
+    options:
+      - {key: merge, title: Merge each pair, detail: "INT-003 into INT-002 (both 1D to 1E); DCK-005 into DCK-004 at 3C to 3D, the weaker target of the pair."}
+      - {key: keep, title: Keep four separate records, detail: "Separate causes stay separately tracked; more records for the same mishap."}
+    recommendation: merge
+    reversibility: easy
+    blocks: [PHA rows for the UAV-data and dock-charging hazards]
+    gate: G2
+    decider: lead
+    status: applied
+    asked: 2026-11-13
+    answer: {choice: merge, by: lead, at: 2026-11-13, via: chat, note: "merge the two duplicate hazard pairs"}
+    applied_in: [safety/hazards/HAZ-INT-002.yaml, safety/hazards/HAZ-DCK-004.yaml, requirements/SYS-021.yaml, requirements/SYS-022.yaml, safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml, sim/scenes3d/scenes.yaml]
+    sources: [decisions/register.yaml]
 

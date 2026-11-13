@@ -11,8 +11,8 @@ HAZ-DCK-003,M2,"Dock separated from the pod by a fire barrier, with venting away
 HAZ-DCK-003,M3,Do not charge a battery after a hard landing until inspected,e Incorporate signage,identified,,,demonstration,0 items
 HAZ-DCK-004,M1,Launch and release permits require charging de-energised and confirmed off,c Incorporate engineered features or devices,identified,SYS-006,,test,0 items
 HAZ-DCK-004,M2,"Connector rated to break under load, or mechanically prevented from separating while energised",b Reduce risk through design alteration,identified,,,analysis,0 items
-HAZ-DCK-005,M1,Contacts shrouded and de-energised unless a UAV is seated and confirmed,b Reduce risk through design alteration,identified,SYS-022,,inspection test,0 items
-HAZ-DCK-005,M2,Charging isolated before any handling at the dock (maintenance procedure),e Incorporate signage,identified,,,demonstration,0 items
+HAZ-DCK-004,M3,Contacts shrouded and de-energised unless a UAV is seated and confirmed,b Reduce risk through design alteration,identified,SYS-022,,inspection test,0 items
+HAZ-DCK-004,M4,Charging isolated before any handling at the dock (maintenance procedure),e Incorporate signage,identified,,,demonstration,0 items
 HAZ-INT-001,M1,Locate the dock away from the pilot station so approach paths never cross it,a Eliminate hazard through design selection,identified,,,analysis inspection,0 items
 HAZ-INT-001,M2,"Envelope inhibit on posture, motion and dock-ready state",c Incorporate engineered features or devices,identified,SYS-006,SSF-006,test analysis,0 items
 HAZ-INT-001,M3,Independent hardware launch permit between integration manager and aircraft,c Incorporate engineered features or devices,identified,SYS-006,,test,0 items
@@ -21,9 +21,8 @@ HAZ-INT-001,M5,"On link loss the aircraft holds briefly, then lands in place (PX
 HAZ-INT-001,M6,The integration manager keeps PX4 home and rally points at the current dock position as the walker moves,c Incorporate engineered features or devices,identified,,,test,0 items
 HAZ-INT-001,M7,"Validity checks on IF-PX4-001 (estimator status, position accuracy, freshness) before any permit is granted",c Incorporate engineered features or devices,identified,,SSF-006,test analysis,0 items
 HAZ-INT-002,M1,UAV data shown with validity status; position and imagery checked against an independent source before use,c Incorporate engineered features or devices,identified,SYS-021,,test analysis,0 items
-HAZ-INT-002,M2,Procedure: UAV imagery is advisory; walking decisions rest on direct view and the safety observer,e Incorporate signage,identified,,,demonstration,0 items
-HAZ-INT-003,M1,Stale or frozen imagery detected within a defined time and shown as not current,c Incorporate engineered features or devices,identified,SYS-021,,test,0 items
-HAZ-INT-003,M2,Procedure: UAV imagery is advisory; walking decisions rest on direct view and the safety observer,e Incorporate signage,identified,,,demonstration,0 items
+HAZ-INT-002,M2,Stale or frozen imagery detected within a defined time and shown as not current,c Incorporate engineered features or devices,identified,SYS-021,,test,0 items
+HAZ-INT-002,M3,Procedure: UAV imagery is advisory; walking decisions rest on direct view and the safety observer,e Incorporate signage,identified,,,demonstration,0 items
 HAZ-MAN-001,M1,"Arms stowed and locked before walking is enabled, and held stowed until walking stops (CL-05 stowed pose lifts the claws to 2.43 m and pulls them back from 1.77 m to 1.49 m ahead of the hips)",c Incorporate engineered features or devices,identified,SYS-017,,test analysis,0 items
 HAZ-MAN-001,M2,Manipulation inhibited unless the exclusion zone around the arms' reach is confirmed clear,c Incorporate engineered features or devices,identified,SYS-017,,test,0 items
 HAZ-MAN-001,M3,Exclusion zone procedure with a safety observer holding an independent stop,e Incorporate signage,identified,,,demonstration,0 items

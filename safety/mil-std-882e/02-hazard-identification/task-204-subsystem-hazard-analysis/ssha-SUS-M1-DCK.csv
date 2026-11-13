@@ -8,10 +8,10 @@ CF3 Vibration during walking unseats a partially latched aircraft,environment,UA
 CF1 Charger or UAV battery management fault,hardware,"Battery venting, fire or smoke on the dock, close to the pod",HAZ-DCK-003,2 Critical,M1(c) M2(b) M3(e),SYS-022
 CF2 Wrong charge profile or cell data exchanged between dock and UAV,interface,"Battery venting, fire or smoke on the dock, close to the pod",HAZ-DCK-003,2 Critical,M1(c) M2(b) M3(e),SYS-022
 CF3 High ambient temperature or a battery damaged in a hard landing,environment,"Battery venting, fire or smoke on the dock, close to the pod",HAZ-DCK-003,2 Critical,M1(c) M2(b) M3(e),SYS-022
-CF1 Launch or release permit does not require charging to be off,interface,Arcing at the connector; damage to the dock or the UAV; possible ignition near the pod,HAZ-DCK-004,3 Marginal,M1(c) M2(b),SYS-006
-CF2 Charge contactor welded or slow to open,hardware,Arcing at the connector; damage to the dock or the UAV; possible ignition near the pod,HAZ-DCK-004,3 Marginal,M1(c) M2(b),SYS-006
-CF1 Maintainer handles the UAV or connector without isolating charging,human,Contact with energised charging contacts,HAZ-DCK-005,3 Marginal,M1(b) M2(e),SYS-022
-CF2 Exposed or damaged contacts on the dock or UAV,hardware,Contact with energised charging contacts,HAZ-DCK-005,3 Marginal,M1(b) M2(e),SYS-022
+CF1 Launch or release permit does not require charging to be off,interface,Arcing at the connector on separation; damage to the dock or the UAV; Contact with energised charging contacts,HAZ-DCK-004,3 Marginal,M1(c) M2(b) M3(b) M4(e),SYS-006 SYS-022
+CF2 Charge contactor welded or slow to open,hardware,Arcing at the connector on separation; damage to the dock or the UAV; Contact with energised charging contacts,HAZ-DCK-004,3 Marginal,M1(c) M2(b) M3(b) M4(e),SYS-006 SYS-022
+CF3 Maintainer handles the UAV or connector without isolating charging,human,Arcing at the connector on separation; damage to the dock or the UAV; Contact with energised charging contacts,HAZ-DCK-004,3 Marginal,M1(c) M2(b) M3(b) M4(e),SYS-006 SYS-022
+CF4 Exposed or damaged contacts on the dock or UAV,hardware,Arcing at the connector on separation; damage to the dock or the UAV; Contact with energised charging contacts,HAZ-DCK-004,3 Marginal,M1(c) M2(b) M3(b) M4(e),SYS-006 SYS-022
 CF1 Integration manager grants a launch/recovery permit on stale or inconsistent state,software,"UAV collides with walker, pilot station or crew",HAZ-INT-001,2 Critical,M1(a) M2(c) M3(c) M4(c) M5(c) M6(c) M7(c),SYS-006 SYS-013
 CF2 Lost integration link during approach (IF-PX4-006),interface,"UAV collides with walker, pilot station or crew",HAZ-INT-001,2 Critical,M1(a) M2(c) M3(c) M4(c) M5(c) M6(c) M7(c),SYS-006 SYS-013
 CF3 Gusts near the walker structure during recovery,environment,"UAV collides with walker, pilot station or crew",HAZ-INT-001,2 Critical,M1(a) M2(c) M3(c) M4(c) M5(c) M6(c) M7(c),SYS-006 SYS-013

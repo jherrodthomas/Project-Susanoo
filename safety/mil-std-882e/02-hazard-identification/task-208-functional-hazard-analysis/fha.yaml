@@ -4,7 +4,8 @@
 #
 # AI-drafted (I0), not reviewed. Rows link existing hazard records only where the failure leads to that
 # hazard; "gap" rows have no hazard record yet and need analysis (the six original gaps were raised as
-# HAZ-PIL-004, HAZ-INT-002, HAZ-INT-003, HAZ-DCK-003, HAZ-DCK-004 and HAZ-DCK-005). No severity or probability is assigned
+# HAZ-PIL-004, HAZ-INT-002, HAZ-INT-003, HAZ-DCK-003, HAZ-DCK-004 and HAZ-DCK-005; INT-003 was then merged into
+# INT-002 and DCK-005 into DCK-004 by decision DQ-020). No severity or probability is assigned
 # here: the worksheet shows the worst initial severity of the linked hazards, read from their records.
 # UAV flight functions (F-06) are classified separately in the ARP4761A aircraft FHA; this sheet only
 # records how a UAV functional failure reaches the walker and the people around it.
@@ -50,7 +51,7 @@ rows:
   # F-06 Aerial observation (aircraft-level classification: ARP4761A FHA, not here)
   - {function: F-06, failure: loss, condition: "UAV link or imagery lost", effect: "Lost-link contingency must keep the aircraft clear of the walker", hazards: [HAZ-INT-001], status: drafted}
   - {function: F-06, failure: erroneous, condition: "Misleading imagery or position shown to the pilot", effect: "Pilot decisions based on wrong information", hazards: [HAZ-INT-002], status: drafted, note: "Raised as HAZ-INT-002 from this row"}
-  - {function: F-06, failure: untimely, condition: "Stale or frozen imagery", effect: "Pilot acts on an out-of-date picture", hazards: [HAZ-INT-003], status: drafted, note: "Raised as HAZ-INT-003 from this row"}
+  - {function: F-06, failure: untimely, condition: "Stale or frozen imagery", effect: "Pilot acts on an out-of-date picture", hazards: [HAZ-INT-002], status: drafted, note: "Raised as HAZ-INT-003, merged into HAZ-INT-002 (DQ-020)"}
   - {function: F-06, failure: unintended, condition: "UAV flies into the pilot keep-out", effect: "Rotor or airframe strike on pilot or crew", hazards: [HAZ-INT-001], status: drafted}
   - {function: F-06, failure: degraded, condition: "Degraded navigation (GNSS loss)", effect: "Position error of the aircraft near people", hazards: [HAZ-INT-001], status: drafted}
   # F-07 UAV launch, recovery and retention
@@ -63,7 +64,7 @@ rows:
   - {function: F-08, failure: loss, condition: "UAV not charged", effect: "Reduced flight endurance; lost-link and low-battery contingencies more likely", hazards: [HAZ-INT-001], status: drafted}
   - {function: F-08, failure: erroneous, condition: "Overcharge or wrong charge profile", effect: "UAV battery thermal event at the dock", hazards: [HAZ-DCK-003], status: drafted, note: "Raised as HAZ-DCK-003 from this row"}
   - {function: F-08, failure: untimely, condition: "Charging continues during launch preparation", effect: "Energised connector at release", hazards: [HAZ-DCK-004], status: drafted, note: "Raised as HAZ-DCK-004 from this row"}
-  - {function: F-08, failure: unintended, condition: "Charging energised with a person at the dock", effect: "Electrical exposure during handling", hazards: [HAZ-DCK-005], status: drafted, note: "Raised as HAZ-DCK-005 from this row"}
+  - {function: F-08, failure: unintended, condition: "Charging energised with a person at the dock", effect: "Electrical exposure during handling", hazards: [HAZ-DCK-004], status: drafted, note: "Raised as HAZ-DCK-005, merged into HAZ-DCK-004 (DQ-020)"}
   - {function: F-08, failure: degraded, condition: "Partial charge reported as full", effect: "Flight starts with less endurance than shown", hazards: [HAZ-INT-001], status: drafted}
   # F-09 Maintenance support and energy isolation
   - {function: F-09, failure: loss, condition: "Isolation points unavailable", effect: "Maintenance with stored energy present", hazards: [HAZ-PWR-001], status: drafted}

@@ -26,7 +26,7 @@ F-05,Unintended Function provided when not demanded,System energised during main
 F-05,Degraded Function provided with reduced performance,Reduced pressure or bus voltage,Reduced balance authority (slow leak on a slope),HAZ-WLK-002,1 Catastrophic,drafted,
 F-06,Loss Function not provided when needed,UAV link or imagery lost,Lost-link contingency must keep the aircraft clear of the walker,HAZ-INT-001,2 Critical,drafted,
 F-06,Erroneous Function provided with a wrong output,Misleading imagery or position shown to the pilot,Pilot decisions based on wrong information,HAZ-INT-002,1 Catastrophic,drafted,Raised as HAZ-INT-002 from this row
-F-06,Untimely Function provided too early or too late,Stale or frozen imagery,Pilot acts on an out-of-date picture,HAZ-INT-003,1 Catastrophic,drafted,Raised as HAZ-INT-003 from this row
+F-06,Untimely Function provided too early or too late,Stale or frozen imagery,Pilot acts on an out-of-date picture,HAZ-INT-002,1 Catastrophic,drafted,"Raised as HAZ-INT-003, merged into HAZ-INT-002 (DQ-020)"
 F-06,Unintended Function provided when not demanded,UAV flies into the pilot keep-out,Rotor or airframe strike on pilot or crew,HAZ-INT-001,2 Critical,drafted,
 F-06,Degraded Function provided with reduced performance,Degraded navigation (GNSS loss),Position error of the aircraft near people,HAZ-INT-001,2 Critical,drafted,
 F-07,Loss Function not provided when needed,Retention lost on the dock,UAV released while the walker moves,HAZ-DCK-002,2 Critical,drafted,
@@ -37,7 +37,7 @@ F-07,Degraded Function provided with reduced performance,Recovery outside the sa
 F-08,Loss Function not provided when needed,UAV not charged,Reduced flight endurance; lost-link and low-battery contingencies more likely,HAZ-INT-001,2 Critical,drafted,
 F-08,Erroneous Function provided with a wrong output,Overcharge or wrong charge profile,UAV battery thermal event at the dock,HAZ-DCK-003,2 Critical,drafted,Raised as HAZ-DCK-003 from this row
 F-08,Untimely Function provided too early or too late,Charging continues during launch preparation,Energised connector at release,HAZ-DCK-004,3 Marginal,drafted,Raised as HAZ-DCK-004 from this row
-F-08,Unintended Function provided when not demanded,Charging energised with a person at the dock,Electrical exposure during handling,HAZ-DCK-005,3 Marginal,drafted,Raised as HAZ-DCK-005 from this row
+F-08,Unintended Function provided when not demanded,Charging energised with a person at the dock,Electrical exposure during handling,HAZ-DCK-004,3 Marginal,drafted,"Raised as HAZ-DCK-005, merged into HAZ-DCK-004 (DQ-020)"
 F-08,Degraded Function provided with reduced performance,Partial charge reported as full,Flight starts with less endurance than shown,HAZ-INT-001,2 Critical,drafted,
 F-09,Loss Function not provided when needed,Isolation points unavailable,Maintenance with stored energy present,HAZ-PWR-001,1 Catastrophic,drafted,
 F-09,Erroneous Function provided with a wrong output,Zero-energy check passes wrongly,Maintainer exposed to stored pressure,HAZ-PWR-001,1 Catastrophic,drafted,
