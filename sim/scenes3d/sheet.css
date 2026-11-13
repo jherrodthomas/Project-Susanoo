@@ -51,7 +51,10 @@ kbd{border:1px solid var(--line);padding:0 4px;font:inherit;font-size:9px;color:
 #banner{display:inline-block;margin-top:6px;font-size:10px;color:var(--haz);border:1px solid var(--haz);padding:2px 8px;background:var(--panel)}
 #views{position:fixed;left:50%;transform:translateX(-50%);bottom:198px;z-index:2;display:flex;gap:10px;align-items:center}
 #views .seg{margin:0;background:var(--panel)}
-#drive{display:none;background:var(--panel);border:1px solid var(--ink);padding:4px 8px;font-size:10px}
+#drive{display:none;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--ink);padding:3px 8px;font-size:10px}
+#drive .seg{margin:0}
+#drive .seg button{padding:4px 10px;touch-action:none;user-select:none}
+#drive span,#views .seg button{white-space:nowrap}
 #bottom{left:24px;bottom:24px;right:610px;height:164px}
 #rtitle{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:70%}
 #rinfo{padding:0 10px;font-size:10.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}

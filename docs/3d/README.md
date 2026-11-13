@@ -52,7 +52,7 @@ The pages a reader opens to see the simulation results and the concept geometry 
 | Page | Kind | Shows | Hazards | Outcome or contents | Size | Still | CI check |
 |---|---|---|---|---|---|---|---|
 | [`SUS-A1.html`](SUS-A1.html) | general-arrangement sheet | UAV on dock and in airspace, interactive (sheet 2 of 2, CL-05) | 6 hazards | 6 hazard callouts · replays SU-01, SU-02, SU-03, SU-04, SU-05, SU-06 | 76 KB | [`3d-sus-a1.png`](../wiki/images/3d-sus-a1.png), [`3d-sus-a1-air.png`](../wiki/images/3d-sus-a1-air.png) | `sim/scenes3d/sheet_check.mjs` |
-| [`SUS-M1.html`](SUS-M1.html) | general-arrangement sheet | General arrangement, interactive (sheet 1 of 2, CL-05) | 22 hazards | 5 postures · 19 hazard callouts · replays S3-01, S3-02, S3-03, S3-04 | 75 KB | [`3d-sus-m1.png`](../wiki/images/3d-sus-m1.png) | `sim/scenes3d/sheet_check.mjs` |
+| [`SUS-M1.html`](SUS-M1.html) | general-arrangement sheet | General arrangement, interactive (sheet 1 of 2, CL-05) | 22 hazards | 5 postures · 19 hazard callouts · replays S3-01, S3-02, S3-03, S3-04 | 77 KB | [`3d-sus-m1.png`](../wiki/images/3d-sus-m1.png) | `sim/scenes3d/sheet_check.mjs` |
 | [`S3-01.html`](S3-01.html) | scene replay | Slow supply leak on a slope; balance lost before the hold engages | HAZ-WLK-002 | tip | 19 KB | [`3d-s3-01.png`](../wiki/images/3d-s3-01.png) | `sim/scenes3d/render.mjs` |
 | [`S3-02.html`](S3-02.html) | scene replay | Protective stop removes leg force instead of crouching | HAZ-SAF-001 | hard-drop | 18 KB | [`3d-s3-02.png`](../wiki/images/3d-s3-02.png) | `sim/scenes3d/render.mjs` |
 | [`S3-03.html`](S3-03.html) | scene replay | Frozen posture feedback with no staleness monitor | HAZ-WLK-001 | tip | 18 KB | [`3d-s3-03.png`](../wiki/images/3d-s3-03.png) | `sim/scenes3d/render.mjs` |
