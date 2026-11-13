@@ -77,6 +77,7 @@ def load() -> dict:
         "vers": {v["id"]: v for v in (y(p) for p in sorted((ROOT / "verification").glob("VER-*.yaml")))},
         "item": y(ROOT / "architecture/item-definition.yaml"),
         "fha": y(TREE / "02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml"),
+        "osha": y(TREE / "02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.yaml"),
     }
 
 
@@ -278,12 +279,40 @@ def sheets(d: dict) -> list[Sheet]:
                        ("status", v.get("disposition", "open"), ""), ("status", r["status"], "")])
     out.append(s)
 
+    # Task 206 O&SHA (drafted source record): risk is the initial risk of the most severe linked hazard
+    by = {h["id"]: h for h in H}
+    rank = {"High": 0, "Serious": 1, "Medium": 2, "Low": 3, "Eliminated": 4}
+    oh = d["osha"]
+    g = "RISK — initial, from the most severe linked hazard"
+    s = Sheet("osha", "O&SHA", "02-hazard-identification/task-206-operating-and-support-hazard-analysis",
+              "Task 206 · Operating and Support Hazard Analysis", "osha.yaml (AI-drafted I0) + hazard records",
+              [Col("Task / step", 230, "title"), Col("Modes", 82, "pills"), Col("Personnel", 120, "pills"), Col("Hazards", 120, "pills"),
+               Col("Cause", 190), Col("Effect", 190), Col("Severity", 132, "sev", g), Col("Probability", 132, "prob", g),
+               Col("RAC → level", 118, "rac", g), Col("Controls", 210), Col("Requirements", 96, "pills"), Col("Status", 90, "status"),
+               Col("Note", 200)],
+              note="Severity, probability and RAC are read from the most severe linked hazard's initial rating, never assigned "
+                   "here. Gap rows expose people to a hazard with no record yet.")
+    last, n = None, 0
+    for r in oh["rows"]:
+        if r["task"] != last:
+            tk = oh["tasks"][r["task"]]
+            s.groups.append((f"{r['task']} · {tk['title']}" + (f" ({tk['scenario']})" if tk.get("scenario") else ""), len(s.rows)))
+            last, n = r["task"], 0
+        n += 1
+        hz = [by[i] for i in r["hazards"] if i in by]
+        top = min(hz, key=lambda h: (rank[h["initial_risk"]["risk_level"]], h["initial_risk"]["severity"])) if hz else None
+        ir = top["initial_risk"] if top else None
+        reqs = sorted({q for h in hz for q in h.get("requirement_ids", [])})
+        s.rows.append([("title", f"{r['task']}.{n}", r["step"]), ("pills", r["modes"]), ("pills", r["personnel"]),
+                       ("pills", r["hazards"]), r["cause"], r["effect"],
+                       ("sev", ir["severity"]) if ir else "—", ("prob", ir["probability"]) if ir else "—",
+                       ("rac", ir["severity"], ir["probability"]) if ir else "—",
+                       r["controls"], ("pills", reqs), ("status", r["status"], ""), r.get("note", "")])
+    out.append(s)
+
     # Analyses with no data yet: columns only, no CSV
     empty = "No rows yet: the analysis has not started. Add records, then regenerate."
     for key, tab, folder, title, cols in (
-            ("osha", "O&SHA", "02-hazard-identification/task-206-operating-and-support-hazard-analysis",
-             "Task 206 · Operating and Support Hazard Analysis",
-             ["Task / step", "Mode", "Personnel", "Hazard", "Cause", "Effect", "Severity", "Probability", "RAC", "Controls", "Requirement"]),
             ("hha", "HHA", "02-hazard-identification/task-207-health-hazard-analysis", "Task 207 · Health Hazard Analysis",
              ["Agent / exposure", "Source", "Personnel", "Route", "Duration", "Effect", "Severity", "Probability", "RAC", "Controls"]),
             ("sosha", "SoSHA", "02-hazard-identification/task-209-system-of-systems-hazard-analysis",
@@ -707,6 +736,12 @@ def workbook_sheet(d: dict, s: Sheet) -> str:
                 sev_col = ci
                 ci += 2
             elif c.kind == "sev":
+                cells += [xcell(ci, r, "—", 2), xcell(ci + 1, r, "", 2)]
+                ci += 2
+            elif c.kind == "prob" and not isinstance(v, tuple):
+                cells += [xcell(ci, r, "—", 2), xcell(ci + 1, r, "", 2)]
+                ci += 2
+            elif c.kind == "rac" and not isinstance(v, tuple):
                 cells += [xcell(ci, r, "—", 2), xcell(ci + 1, r, "", 2)]
                 ci += 2
             elif c.kind == "prob":
