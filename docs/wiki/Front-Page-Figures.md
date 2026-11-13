@@ -31,7 +31,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Field | Value |
 |---|---|
-| Shown on | [the repository front page](Project-Overview) · [Project overview (wiki)](Project-Overview) |
+| Shown on | [the repository front page](Project-Overview.md) · [Project overview (wiki)](Project-Overview.md) |
 | Built by | `python -m tools.readme.build_readme` (`--check` in CI), with `tools/readme/task_relations.py` |
 | SysML | [`FrontPage.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/readme/FrontPage.sysml) (generated) |
 
@@ -41,36 +41,36 @@ The figures on the repository front page: the banner rendered from the project C
 
 ## Figures and number blocks
 
-![Figure 1 · What the front page shows, and from which records](assets/docs/readme/figures/fig-1-figures.svg)
+![Figure 1 · What the front page shows, and from which records](../readme/figures/fig-1-figures.svg)
 
 | File | Title | Front-page section | Records read | Size |
 |---|---|---|---|---|
-| [`banner.svg`](assets/docs/readme/banner.svg) | Project Susanoo | Top of page | `cad/metrics.json`, `cad/renders/blender` | 416 KB |
-| [`at-a-glance.svg`](assets/docs/readme/at-a-glance.svg) | Figure 1 · Project at a glance | By the numbers | `architecture/item-definition.yaml`, `concept`, `integrations/px4`, `models/sysml/model`, `requirements`, `safety/hazards`, `safety/mil-std-882e`, `safety/software`, `sim/results/search-SF-01.json`, `sim/results/uav`, `sim/results/uav/summary.md`, `standards/tailoring/mil-std-882e.yaml` | 14 KB |
-| [`risk-matrix.svg`](assets/docs/readme/risk-matrix.svg) | Figure 2 · Where the hazards sit on the risk matrix | Where the risk is | `safety/hazards`, `standards/mil-std-882e/model.yaml` | 40 KB |
-| [`simulation.svg`](assets/docs/readme/simulation.svg) | Figure 3 · What the simulations found | What simulation found | `sim/results`, `sim/results/search-SF-01.json`, `sim/results/uav`, `sim/results/uav/summary.md` | 17 KB |
-| [`roadmap.svg`](assets/docs/readme/roadmap.svg) | Figure 4 · MIL-STD-882E task roadmap | The MIL-STD-882E workflow | `safety/mil-std-882e/catalog.yaml`, `safety/mil-std-882e/tasks`, `standards/mil-std-882e/model.yaml`, `standards/tailoring/mil-std-882e.yaml` | 30 KB |
-| [`task-flow.svg`](assets/docs/readme/task-flow.svg) | Figure 5 · How the tasks feed each other | How the tasks work together | `safety/mil-std-882e/catalog.yaml`, `standards/tailoring/mil-std-882e.yaml` | 29 KB |
-| [`task-thread.svg`](assets/docs/readme/task-thread.svg) | Figure 6 · The main thread: from first hazards to risk acceptance | How the tasks work together | `safety/mil-std-882e/catalog.yaml`, `standards/tailoring/mil-std-882e.yaml` | 18 KB |
-| [`task-matrix.svg`](assets/docs/readme/task-matrix.svg) | Figure 7 · Who feeds whom | How the tasks work together | `safety/mil-std-882e/catalog.yaml`, `standards/tailoring/mil-std-882e.yaml` | 38 KB |
-| [`task-hub.svg`](assets/docs/readme/task-hub.svg) | Figure 8 · Everything runs through the hazard tracking system | How the tasks work together | `safety/mil-std-882e/catalog.yaml`, `standards/tailoring/mil-std-882e.yaml` | 24 KB |
+| [`banner.svg`](../readme/banner.svg) | Project Susanoo | Top of page | `cad/metrics.json`, `cad/renders/blender` | 416 KB |
+| [`at-a-glance.svg`](../readme/at-a-glance.svg) | Figure 1 · Project at a glance | By the numbers | `architecture/item-definition.yaml`, `concept`, `integrations/px4`, `models/sysml/model`, `requirements`, `safety/hazards`, `safety/mil-std-882e`, `safety/software`, `sim/results/search-SF-01.json`, `sim/results/uav`, `sim/results/uav/summary.md`, `standards/tailoring/mil-std-882e.yaml` | 14 KB |
+| [`risk-matrix.svg`](../readme/risk-matrix.svg) | Figure 2 · Where the hazards sit on the risk matrix | Where the risk is | `safety/hazards`, `standards/mil-std-882e/model.yaml` | 40 KB |
+| [`simulation.svg`](../readme/simulation.svg) | Figure 3 · What the simulations found | What simulation found | `sim/results`, `sim/results/search-SF-01.json`, `sim/results/uav`, `sim/results/uav/summary.md` | 17 KB |
+| [`roadmap.svg`](../readme/roadmap.svg) | Figure 4 · MIL-STD-882E task roadmap | The MIL-STD-882E workflow | `safety/mil-std-882e/catalog.yaml`, `safety/mil-std-882e/tasks`, `standards/mil-std-882e/model.yaml`, `standards/tailoring/mil-std-882e.yaml` | 30 KB |
+| [`task-flow.svg`](../readme/task-flow.svg) | Figure 5 · How the tasks feed each other | How the tasks work together | `safety/mil-std-882e/catalog.yaml`, `standards/tailoring/mil-std-882e.yaml` | 29 KB |
+| [`task-thread.svg`](../readme/task-thread.svg) | Figure 6 · The main thread: from first hazards to risk acceptance | How the tasks work together | `safety/mil-std-882e/catalog.yaml`, `standards/tailoring/mil-std-882e.yaml` | 18 KB |
+| [`task-matrix.svg`](../readme/task-matrix.svg) | Figure 7 · Who feeds whom | How the tasks work together | `safety/mil-std-882e/catalog.yaml`, `standards/tailoring/mil-std-882e.yaml` | 38 KB |
+| [`task-hub.svg`](../readme/task-hub.svg) | Figure 8 · Everything runs through the hazard tracking system | How the tasks work together | `safety/mil-std-882e/catalog.yaml`, `standards/tailoring/mil-std-882e.yaml` | 24 KB |
 | `readme:numbers` | Numbers table, 10 rows | By the numbers | `architecture/item-definition.yaml`, `concept`, `decisions/register.yaml`, `integrations/px4`, `models/sysml/model`, `requirements`, `safety/hazards`, `safety/mil-std-882e`, `safety/software`, `sim/results/search-SF-01.json`, `sim/results/uav`, `sim/results/uav/summary.md`, `standards/tailoring/mil-std-882e.yaml` | — |
 | `readme:hazards` | Hazards table, 22 rows | Where the risk is | `safety/hazards` | — |
 | `readme:workflow` | Workflow table, 37 rows | The MIL-STD-882E workflow | `safety/mil-std-882e`, `safety/mil-std-882e/catalog.yaml`, `safety/mil-std-882e/tasks`, `standards/mil-std-882e/model.yaml`, `standards/tailoring/mil-std-882e.yaml` | — |
 
-![Figure 1 · Project at a glance](assets/docs/readme/at-a-glance.svg)
+![Figure 1 · Project at a glance](../readme/at-a-glance.svg)
 
 ## Record trace
 
-![Figure 2 · Which records feed which figure](assets/docs/readme/figures/fig-2-record-trace.svg)
+![Figure 2 · Which records feed which figure](../readme/figures/fig-2-record-trace.svg)
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/docs/readme/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../readme/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/docs/readme/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../readme/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -90,11 +90,11 @@ The figures on the repository front page: the banner rendered from the project C
 
 [`FrontPage.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/readme/FrontPage.sysml) is generated from the builder's code and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML activity — BuildFrontPage](assets/docs/readme/figures/fig-5-sysml-activity.svg)
+![Figure 5 · SysML activity — BuildFrontPage](../readme/figures/fig-5-sysml-activity.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/docs/readme/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../readme/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
@@ -120,9 +120,9 @@ The figures on the repository front page: the banner rendered from the project C
 
 | Output | Destination |
 |---|---|
-| Figures | [`README.md`](Project-Overview) |
-| Number blocks | the `readme:` blocks in [`README.md`](Project-Overview) |
-| Wiki copy | [`Project-Overview`](Project-Overview) |
+| Figures | [`README.md`](Project-Overview.md) |
+| Number blocks | the `readme:` blocks in [`README.md`](Project-Overview.md) |
+| Wiki copy | [`Project-Overview`](Project-Overview.md) |
 
 ## Changing a figure
 
@@ -134,15 +134,15 @@ The figures on the repository front page: the banner rendered from the project C
 
 | Item | Description | State |
 |---|---|---|
-| [`at-a-glance.svg`](assets/docs/readme/at-a-glance.svg) | Figure 1 · Project at a glance | generated |
-| [`banner.svg`](assets/docs/readme/banner.svg) | Project Susanoo | generated |
-| [`risk-matrix.svg`](assets/docs/readme/risk-matrix.svg) | Figure 2 · Where the hazards sit on the risk matrix | generated |
-| [`roadmap.svg`](assets/docs/readme/roadmap.svg) | Figure 4 · MIL-STD-882E task roadmap | generated |
-| [`simulation.svg`](assets/docs/readme/simulation.svg) | Figure 3 · What the simulations found | generated |
-| [`task-flow.svg`](assets/docs/readme/task-flow.svg) | Figure 5 · How the tasks feed each other | generated |
-| [`task-hub.svg`](assets/docs/readme/task-hub.svg) | Figure 8 · Everything runs through the hazard tracking system | generated |
-| [`task-matrix.svg`](assets/docs/readme/task-matrix.svg) | Figure 7 · Who feeds whom | generated |
-| [`task-thread.svg`](assets/docs/readme/task-thread.svg) | Figure 6 · The main thread: from first hazards to risk acceptance | generated |
+| [`at-a-glance.svg`](../readme/at-a-glance.svg) | Figure 1 · Project at a glance | generated |
+| [`banner.svg`](../readme/banner.svg) | Project Susanoo | generated |
+| [`risk-matrix.svg`](../readme/risk-matrix.svg) | Figure 2 · Where the hazards sit on the risk matrix | generated |
+| [`roadmap.svg`](../readme/roadmap.svg) | Figure 4 · MIL-STD-882E task roadmap | generated |
+| [`simulation.svg`](../readme/simulation.svg) | Figure 3 · What the simulations found | generated |
+| [`task-flow.svg`](../readme/task-flow.svg) | Figure 5 · How the tasks feed each other | generated |
+| [`task-hub.svg`](../readme/task-hub.svg) | Figure 8 · Everything runs through the hazard tracking system | generated |
+| [`task-matrix.svg`](../readme/task-matrix.svg) | Figure 7 · Who feeds whom | generated |
+| [`task-thread.svg`](../readme/task-thread.svg) | Figure 6 · The main thread: from first hazards to risk acceptance | generated |
 | [`FrontPage.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/readme/FrontPage.sysml) | The front-page build as a SysML activity | generated |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/docs/readme/figures) | Generated SVG figures for this page (do not edit) | generated |
 | `README.md` | This page | generated |

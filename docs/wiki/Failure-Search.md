@@ -41,7 +41,7 @@ Searches the level-1 walker plant for the failures the fault catalogue's fixed c
 
 ## Edge cases
 
-![Figure 1 · Edge cases and what would have saved them](assets/sim/search/figures/fig-1-edge-cases.svg)
+![Figure 1 · Edge cases and what would have saved them](../../sim/search/figures/fig-1-edge-cases.svg)
 
 | Case | Parameters | Outcome | Hazard | pilot reacts in 0.5 s | load holding works | flat ground | slow leak (tau 3 s) |
 |---|---|---|---|---|---|---|---|
@@ -58,7 +58,7 @@ New findings: none; every edge case maps to an existing hazard.
 
 ## Where failures happen
 
-![Figure 2 · Where SF-01 fails](assets/sim/search/figures/fig-2-failure-map.svg)
+![Figure 2 · Where SF-01 fails](../../sim/search/figures/fig-2-failure-map.svg)
 
 | Family | Fault | Space | Monte Carlo | Falsification | Rules |
 |---|---|---|---|---|---|
@@ -66,11 +66,11 @@ New findings: none; every edge case maps to an existing hazard.
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/sim/search/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../sim/search/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/sim/search/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../sim/search/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -89,7 +89,7 @@ New findings: none; every edge case maps to an existing hazard.
 
 [`FailureSearch.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/search/FailureSearch.sysml) is generated from the method in `search.py` and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML activity — SearchFamily](assets/sim/search/figures/fig-5-sysml-activity.svg)
+![Figure 5 · SysML activity — SearchFamily](../../sim/search/figures/fig-5-sysml-activity.svg)
 
 | Step | What it does |
 |---|---|
@@ -99,18 +99,18 @@ New findings: none; every edge case maps to an existing hazard.
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/sim/search/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../sim/search/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | Faults | [`sim/faults.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/faults.yaml) |
-| Walker plant | [`sim/plant/`](Walker-Plant) |
-| Parameter ranges | [Decision register](Decision-Register) (slope DQ-010, CoM offset DQ-011) |
+| Walker plant | [`sim/plant/`](Walker-Plant.md) |
+| Parameter ranges | [Decision register](Decision-Register.md) (slope DQ-010, CoM offset DQ-011) |
 
 | Output | Destination |
 |---|---|
-| Search results and edge cases | [`sim/results/`](Simulation-Results) |
-| Edge cases on hazards (HAZ-PIL-002, HAZ-SAF-001, HAZ-WLK-002) | [Safety records](Safety-Records), for the safety lead |
+| Search results and edge cases | [`sim/results/`](Simulation-Results.md) |
+| Edge cases on hazards (HAZ-PIL-002, HAZ-SAF-001, HAZ-WLK-002) | [Safety records](Safety-Records.md), for the safety lead |
 | Cases to replay | scenes and 3D pages, level-2 cross-check |
 
 ## Folder contents

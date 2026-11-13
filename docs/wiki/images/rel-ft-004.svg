@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 615.1" width="840" height="615.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+<rect width="840" height="546" fill="#ffffff"/>
+<text x="20" y="26" font-size="16" font-weight="700" fill="#152033">FT-004 · HAZ-DCK-001</text>
+<text x="20" y="46" font-size="12" fill="#566275">Rotor start while the UAV is retained. Probability over 2000 docking cycles; dormant failures checked every 4 h. Illustrative: inputs assumed.</text>
+<path d="M520.0 154 V170 H320.0 V220" fill="none" stroke="#cfd7e2" stroke-width="1.5"/>
+<path d="M520.0 154 V170 H720.0 V220" fill="none" stroke="#cfd7e2" stroke-width="1.5"/>
+<path d="M320.0 304 V320 H120.0 V370" fill="none" stroke="#cfd7e2" stroke-width="1.5"/>
+<path d="M320.0 304 V320 H320.0 V370" fill="none" stroke="#cfd7e2" stroke-width="1.5"/>
+<path d="M320.0 304 V320 H520.0 V370" fill="none" stroke="#cfd7e2" stroke-width="1.5"/>
+<rect x="28.0" y="370" width="184" height="50" rx="3" fill="#ffffff" stroke="#b54708" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="120.0" y="386" font-size="11.5" fill="#152033" text-anchor="middle">Arming check or dock interlock</text>
+<text x="120.0" y="400" font-size="11.5" fill="#152033" text-anchor="middle">logic permits arming</text>
+<text x="120.0" y="414" font-size="10.5" fill="#566275" text-anchor="middle">software · SSF-003 · not quantified</text>
+<path d="M120.0 424 L134.0 438 L120.0 452 L106.0 438 Z" fill="#ffffff" stroke="#b54708" stroke-width="1.6"/>
+<rect x="228.0" y="370" width="184" height="50" rx="3" fill="#ffffff" stroke="#b54708" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="320.0" y="386" font-size="11.5" fill="#152033" text-anchor="middle">Maintainer arms outside</text>
+<text x="320.0" y="400" font-size="11.5" fill="#152033" text-anchor="middle">procedure</text>
+<text x="320.0" y="414" font-size="10.5" fill="#566275" text-anchor="middle">human · not quantified</text>
+<path d="M320.0 424 L334.0 438 L320.0 452 L306.0 438 Z" fill="#ffffff" stroke="#b54708" stroke-width="1.6"/>
+<rect x="428.0" y="370" width="184" height="50" rx="3" fill="#ffffff" stroke="#b54708" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="520.0" y="386" font-size="11.5" fill="#152033" text-anchor="middle">Charging handshake energises</text>
+<text x="520.0" y="400" font-size="11.5" fill="#152033" text-anchor="middle">propulsion</text>
+<text x="520.0" y="414" font-size="10.5" fill="#566275" text-anchor="middle">interface · not quantified</text>
+<path d="M520.0 424 L534.0 438 L520.0 452 L506.0 438 Z" fill="#ffffff" stroke="#b54708" stroke-width="1.6"/>
+<rect x="228.0" y="220" width="184" height="50" rx="3" fill="#ffffff" stroke="#152033" stroke-width="1.2"/>
+<text x="320.0" y="236" font-size="11.5" fill="#152033" text-anchor="middle">Arming is attempted on the</text>
+<text x="320.0" y="250" font-size="11.5" fill="#152033" text-anchor="middle">dock</text>
+<text x="320.0" y="264" font-size="10.5" fill="#566275" text-anchor="middle">or · not quantified</text>
+<path d="M306.0 302 Q306.0 280 320.0 272 Q334.0 280 334.0 302 Q320.0 294 306.0 302 Z" fill="#ffffff" stroke="#2a55a8" stroke-width="1.6"/>
+<rect x="628.0" y="220" width="184" height="50" rx="3" fill="#ffffff" stroke="#152033" stroke-width="1.2"/>
+<text x="720.0" y="236" font-size="11.5" fill="#152033" text-anchor="middle">Propulsion-power interlock</text>
+<text x="720.0" y="250" font-size="11.5" fill="#152033" text-anchor="middle">already failed closed</text>
+<text x="720.0" y="264" font-size="10.5" fill="#566275" text-anchor="middle">PT-007-FM1 · p 2.0e-6</text>
+<circle cx="720.0" cy="288" r="13" fill="#ffffff" stroke="#152033" stroke-width="1.4"/>
+<rect x="428.0" y="70" width="184" height="50" rx="3" fill="#ffffff" stroke="#152033" stroke-width="1.2"/>
+<text x="520.0" y="86" font-size="11.5" fill="#152033" text-anchor="middle">Rotors start with the UAV</text>
+<text x="520.0" y="100" font-size="11.5" fill="#152033" text-anchor="middle">retained</text>
+<text x="520.0" y="114" font-size="10.5" fill="#566275" text-anchor="middle">and · not quantified</text>
+<path d="M507.0 152 V134 A13 13 0 0 1 533.0 134 V152 Z" fill="#ffffff" stroke="#2a55a8" stroke-width="1.6"/>
+<text x="20" y="524" font-size="11.5" fill="#566275">Dome: all inputs (and). Shield: any input (or). Circle: failure mode. Double circle: common-cause share. Diamond: undeveloped cause, not quantified. ×n: n identical copies.</text>
+<g class="terms" data-base-h="546">
+<rect x="0" y="546" width="840" height="69.1" fill="#FFFFFF"/>
+<line x1="40" y1="550" x2="800" y2="550" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="565.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: FT-nnn = fault tree in the reliability pilot (reliability/HAZ-*.yaml, one file per hazard) · HAZ-nnn = hazard record</text>
+<text x="40" y="580.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(safety/hazards/HAZ-xxx-nnn.yaml) · PT-nnn = part with its failure modes in the reliability pilot (reliability/parts.yaml; PT-nnn-FMn is a</text>
+<text x="40" y="594.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">failure mode) · SSF-nnn = safety-significant software function record (safety/software/) · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

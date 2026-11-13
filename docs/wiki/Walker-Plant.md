@@ -51,7 +51,7 @@ A reduced-order model of SUS-M1 in the sagittal plane: a point mass on a force-c
 
 ## Outcomes
 
-![Figure 1 · What each mitigation buys](assets/sim/plant/figures/fig-1-outcomes.svg)
+![Figure 1 · What each mitigation buys](../../sim/plant/figures/fig-1-outcomes.svg)
 
 | Fault | mitigated 0° | mitigated 8° | no load holding 0° | no load holding 8° | no monitor 0° | no monitor 8° | no hold, slow pilot 0° | no hold, slow pilot 8° |
 |---|---|---|---|---|---|---|---|---|
@@ -69,7 +69,7 @@ A reduced-order model of SUS-M1 in the sagittal plane: a point mass on a force-c
 
 ## What each fault realises
 
-![Figure 2 · What each fault realises](assets/sim/plant/figures/fig-2-fault-trace.svg)
+![Figure 2 · What each fault realises](../../sim/plant/figures/fig-2-fault-trace.svg)
 
 | Fault | Injection | Causal factors |
 |---|---|---|
@@ -95,11 +95,11 @@ Stated in [`walker.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/ma
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/sim/plant/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../sim/plant/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/sim/plant/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../sim/plant/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -119,7 +119,7 @@ Stated in [`walker.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/ma
 
 [`WalkerPlant.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/plant/WalkerPlant.sysml) is generated from the spec and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML block definition — WalkerPlant](assets/sim/plant/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — WalkerPlant](../../sim/plant/figures/fig-5-sysml-block-definition.svg)
 
 | Parameter | Value | Unit | Range | Status | Source |
 |---|---|---|---|---|---|
@@ -150,19 +150,19 @@ Stated in [`walker.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/ma
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/sim/plant/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../sim/plant/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | Plant parameters | [`sim/spec/walker.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/spec/walker.yaml) |
 | Fault catalogue | [`sim/faults.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/faults.yaml) |
-| Causal factors (HAZ-PIL-002, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002) | [Safety records](Safety-Records) |
+| Causal factors (HAZ-PIL-002, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002) | [Safety records](Safety-Records.md) |
 
 | Output | Destination |
 |---|---|
-| Plant results | [`sim/results/`](Simulation-Results) |
-| The model | failure search ([`sim/search`](Failure-Search)), level-2 cross-check ([`sim/mujoco`](Level-2-MuJoCo)) |
-| Traces | scenes (`sim/figures`), trade studies ([`sim/trades`](Trade-Study-Evidence)) |
+| Plant results | [`sim/results/`](Simulation-Results.md) |
+| The model | failure search ([`sim/search`](Failure-Search.md)), level-2 cross-check ([`sim/mujoco`](Level-2-MuJoCo.md)) |
+| Traces | scenes (`sim/figures`), trade studies ([`sim/trades`](Trade-Study-Evidence.md)) |
 
 ## Folder contents
 

@@ -69,8 +69,8 @@ ENFORCED = {
     "framework": {"skip_dirs": {"figures"}, "generator": ["tools/figures/framework_readme.py", "--check"],
                   "extra_generators": [["tools/figures/build_figures.py", "--check"]]},
     # Generated README of the tools; the packages are code (pdac/ keeps its own page).
-    "tools": {"skip_dirs": {"cad", "figures", "pdac", "previews", "readme", "sysml", "terms", "vcycle", "wiki", "worksheets",
-                            "__pycache__"},
+    "tools": {"skip_dirs": {"cad", "figures", "pdac", "previews", "readme", "reliability", "sysml", "terms", "vcycle",
+                            "wiki", "worksheets", "__pycache__"},
               "generator": ["tools/figures/tools_readme.py", "--check"]},
     # Generated README of the documentation sources; the subfolders keep their folder previews.
     "docs": {"skip_dirs": {"3d", "diagrams", "figures", "readme", "vcycle", "wiki"},

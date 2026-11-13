@@ -31,11 +31,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 7 — Accept risk and document |
-| Tasks | [Task 302 — Hazard Management Assessment Report](MIL-STD-882E-Task-302) |
+| Tasks | [Task 302 — Hazard Management Assessment Report](MIL-STD-882E-Task-302.md) |
 | Lifecycle gate | G5–G6 |
 | Applicability | Not selected — the SAR (Task 301) covers the assessment; one report |
 | Accountable role | Safety lead |
-| Parent folder | [07 · Accept Risk and Document](882E-07-risk-acceptance) |
+| Parent folder | [07 · Accept Risk and Document](882E-07-risk-acceptance.md) |
 
 ## Purpose
 
@@ -44,17 +44,17 @@ for a test or demonstration event.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/07-risk-acceptance/task-302-hazard-management-assessment-report/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/07-risk-acceptance/task-302-hazard-management-assessment-report/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/07-risk-acceptance/task-302-hazard-management-assessment-report/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/07-risk-acceptance/task-302-hazard-management-assessment-report/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/07-risk-acceptance/task-302-hazard-management-assessment-report/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/07-risk-acceptance/task-302-hazard-management-assessment-report/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -65,7 +65,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task302_HMAR.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/07-risk-acceptance/task-302-hazard-management-assessment-report/Task302_HMAR.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML block definition — HMAR structure](assets/safety/mil-std-882e/07-risk-acceptance/task-302-hazard-management-assessment-report/figures/fig-4-sysml-block-definition.svg)
+![Figure 4 · SysML block definition — HMAR structure](../../safety/mil-std-882e/07-risk-acceptance/task-302-hazard-management-assessment-report/figures/fig-4-sysml-block-definition.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -92,15 +92,15 @@ package Task302_HMAR {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/07-risk-acceptance/task-302-hazard-management-assessment-report/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/07-risk-acceptance/task-302-hazard-management-assessment-report/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Hazard status | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system) |
+| Hazard status | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system.md) |
 
 | Output | Destination |
 |---|---|
-| Milestone decision package | [Risk Acceptance Records](882E-acceptance-records) |
+| Milestone decision package | [Risk Acceptance Records](882E-acceptance-records.md) |
 
 ## Folder contents
 

@@ -36,7 +36,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Lifecycle gate | G6 |
 | Applicability | Selected |
 | Accountable role | Risk acceptance authority |
-| Parent folder | [07 · Accept Risk and Document](882E-07-risk-acceptance) |
+| Parent folder | [07 · Accept Risk and Document](882E-07-risk-acceptance.md) |
 
 ## Purpose
 
@@ -45,17 +45,17 @@ level, configuration, conditions and whether the approval is real or illustrativ
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/07-risk-acceptance/acceptance-records/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/07-risk-acceptance/acceptance-records/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/07-risk-acceptance/acceptance-records/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/07-risk-acceptance/acceptance-records/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/07-risk-acceptance/acceptance-records/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/07-risk-acceptance/acceptance-records/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -66,7 +66,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`AcceptanceRecords.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/07-risk-acceptance/acceptance-records/AcceptanceRecords.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML block definition — acceptance record](assets/safety/mil-std-882e/07-risk-acceptance/acceptance-records/figures/fig-4-sysml-block-definition.svg)
+![Figure 4 · SysML block definition — acceptance record](../../safety/mil-std-882e/07-risk-acceptance/acceptance-records/figures/fig-4-sysml-block-definition.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -94,16 +94,16 @@ package AcceptanceRecords {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/07-risk-acceptance/acceptance-records/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/07-risk-acceptance/acceptance-records/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Decision package | [Task 301 · Safety Assessment Report (SAR)](882E-task-301-safety-assessment-report) |
-| Milestone package | [Task 302 · Hazard Management Assessment Report (HMAR)](882E-task-302-hazard-management-assessment-report) |
+| Decision package | [Task 301 · Safety Assessment Report (SAR)](882E-task-301-safety-assessment-report.md) |
+| Milestone package | [Task 302 · Hazard Management Assessment Report (HMAR)](882E-task-302-hazard-management-assessment-report.md) |
 
 | Output | Destination |
 |---|---|
-| Acceptance status | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system) |
+| Acceptance status | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system.md) |
 | release.approvals | [`pdac/product.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/pdac/product.yaml) |
 
 ## Folder contents

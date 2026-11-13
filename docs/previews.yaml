@@ -156,6 +156,24 @@ folders:
     purpose: One JSON schema per record type. The validator checks every record against its schema before the MIL-STD-882E rules run.
     hero: {img: docs/wiki/images/rec-record-model.svg, caption: "Record model: how the record types reference each other"}
 
+  reliability:
+    title: Reliability pilot records
+    purpose: >-
+      Parts, failure modes, shared parameters and one fault-tree file per hazard for the reliability pilot
+      (`tools/reliability`). Hardware causes are quantified against the tailored probability bands; software, human
+      and environmental causes are undeveloped events, traced but not given a number. Every value is still assumed,
+      so every result is illustrative: not evidence and not a probability rating.
+    hero: {img: docs/wiki/images/rel-bands.svg, caption: "Quantified hardware paths against the bands (illustrative)"}
+    gallery:
+      - {img: docs/wiki/images/rel-ft-001.svg, caption: "FT-001: alternative A"}
+      - {img: docs/wiki/images/rel-ft-002.svg, caption: "FT-002: alternative B-EHA"}
+      - {img: docs/wiki/images/rel-ft-003.svg, caption: "FT-003: alternative B-EMA"}
+      - {img: docs/wiki/images/rel-ft-009.svg, caption: "FT-009: UAV launch or recovery outside the envelope"}
+      - {img: docs/wiki/images/rel-ft-021.svg, caption: "FT-021: protective stop not reaching a safe state"}
+    links:
+      - {text: Reliability Pilot (wiki page), href: docs/wiki/Reliability-Pilot.md}
+      - {text: Engine and record format, href: tools/reliability/README.md}
+
   safety/events:
     title: Test and simulation events
     purpose: >-

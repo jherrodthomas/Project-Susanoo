@@ -39,7 +39,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | Run | `python -m sim.figures.scenes`, `python -m sim.figures.uav_scenes` (`--check` in CI) |
-| Wiki | [Simulation](Simulation), [UAV simulation](UAV-Simulation) |
+| Wiki | [Simulation](Simulation.md), [UAV simulation](UAV-Simulation.md) |
 | SysML | [`HazardScenes.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/figures/HazardScenes.sysml) (generated) |
 
 ## Purpose
@@ -56,24 +56,24 @@ Scene conventions (from [`scenes.py`](https://github.com/jherrodthomas/Project-S
 
 ## Scenes
 
-![Figure 1 · The 2D hazard scenes](assets/sim/figures/readme/fig-1-scenes.svg)
+![Figure 1 · The 2D hazard scenes](../../sim/figures/readme/fig-1-scenes.svg)
 
 | Scene | View | Hazards | Replays | What happens | What should happen | Image |
 |---|---|---|---|---|---|---|
-| SC-01 | side view (walker) | HAZ-WLK-002 | edge case EC-08 (search SF-01) | tip | safe | [`sim-sc-01.svg`](assets/docs/wiki/images/sim-sc-01.svg) |
-| SC-02 | side view (walker) | HAZ-SAF-001 | fault FLT-03 | hard-drop | safe | [`sim-sc-02.svg`](assets/docs/wiki/images/sim-sc-02.svg) |
-| SC-03 | side view (walker) | HAZ-WLK-001 | fault FLT-02 | tip | safe | [`sim-sc-03.svg`](assets/docs/wiki/images/sim-sc-03.svg) |
-| SC-04 | side view (walker) | HAZ-PIL-002 | edge case EC-01 (search SF-01) | hard-drop | safe | [`sim-sc-04.svg`](assets/docs/wiki/images/sim-sc-04.svg) |
-| SU-01 | top down (UAV) | HAZ-INT-001 | PX4 SITL run SU-01 | keepout-breach | contract: Loss of the integration link must invoke a defined, analysed | [`sim-su-01.svg`](assets/docs/wiki/images/sim-su-01.svg) |
-| SU-02 | top down (UAV) | HAZ-INT-001, HAZ-DCK-002 | PX4 SITL run SU-02 | landed-at-stale-home | contract: PX4 home is the take-off point; the dock has moved with the  | [`sim-su-02.svg`](assets/docs/wiki/images/sim-su-02.svg) |
-| SU-03 | top down (UAV) | HAZ-INT-001 | PX4 SITL run SU-03 | landed-clear | contract: Alternative contingency: land away from the walker | [`sim-su-03.svg`](assets/docs/wiki/images/sim-su-03.svg) |
-| SU-04 | top down (UAV) | HAZ-INT-001 | PX4 SITL run SU-04 | landed-clear | contract: Battery contingency must not bring the aircraft into the pil | [`sim-su-04.svg`](assets/docs/wiki/images/sim-su-04.svg) |
-| SU-05 | top down (UAV) | HAZ-INT-001 | PX4 SITL run SU-05 | contained | contract: Operations stay inside the defined volume (EXT-AIRSPACE) | [`sim-su-05.svg`](assets/docs/wiki/images/sim-su-05.svg) |
-| SU-06 | top down (UAV) | HAZ-INT-001 | PX4 SITL run SU-06 | landed-clear | contract: Navigation loss contingency; drift towards people or the wal | [`sim-su-06.svg`](assets/docs/wiki/images/sim-su-06.svg) |
+| SC-01 | side view (walker) | HAZ-WLK-002 | edge case EC-08 (search SF-01) | tip | safe | [`sim-sc-01.svg`](images/sim-sc-01.svg) |
+| SC-02 | side view (walker) | HAZ-SAF-001 | fault FLT-03 | hard-drop | safe | [`sim-sc-02.svg`](images/sim-sc-02.svg) |
+| SC-03 | side view (walker) | HAZ-WLK-001 | fault FLT-02 | tip | safe | [`sim-sc-03.svg`](images/sim-sc-03.svg) |
+| SC-04 | side view (walker) | HAZ-PIL-002 | edge case EC-01 (search SF-01) | hard-drop | safe | [`sim-sc-04.svg`](images/sim-sc-04.svg) |
+| SU-01 | top down (UAV) | HAZ-INT-001 | PX4 SITL run SU-01 | keepout-breach | contract: Loss of the integration link must invoke a defined, analysed | [`sim-su-01.svg`](images/sim-su-01.svg) |
+| SU-02 | top down (UAV) | HAZ-INT-001, HAZ-DCK-002 | PX4 SITL run SU-02 | landed-at-stale-home | contract: PX4 home is the take-off point; the dock has moved with the  | [`sim-su-02.svg`](images/sim-su-02.svg) |
+| SU-03 | top down (UAV) | HAZ-INT-001 | PX4 SITL run SU-03 | landed-clear | contract: Alternative contingency: land away from the walker | [`sim-su-03.svg`](images/sim-su-03.svg) |
+| SU-04 | top down (UAV) | HAZ-INT-001 | PX4 SITL run SU-04 | landed-clear | contract: Battery contingency must not bring the aircraft into the pil | [`sim-su-04.svg`](images/sim-su-04.svg) |
+| SU-05 | top down (UAV) | HAZ-INT-001 | PX4 SITL run SU-05 | contained | contract: Operations stay inside the defined volume (EXT-AIRSPACE) | [`sim-su-05.svg`](images/sim-su-05.svg) |
+| SU-06 | top down (UAV) | HAZ-INT-001 | PX4 SITL run SU-06 | landed-clear | contract: Navigation loss contingency; drift towards people or the wal | [`sim-su-06.svg`](images/sim-su-06.svg) |
 
 ## What the scene code reads and writes
 
-![Figure 2 · What the scene code reads and writes](assets/sim/figures/readme/fig-2-outputs.svg)
+![Figure 2 · What the scene code reads and writes](../../sim/figures/readme/fig-2-outputs.svg)
 
 | Generator | Writes |
 |---|---|
@@ -82,11 +82,11 @@ Scene conventions (from [`scenes.py`](https://github.com/jherrodthomas/Project-S
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/sim/figures/readme/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../sim/figures/readme/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/sim/figures/readme/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../sim/figures/readme/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -98,27 +98,27 @@ Scene conventions (from [`scenes.py`](https://github.com/jherrodthomas/Project-S
 | 6 | Top-down scenes | UAV summary | sim/results/uav/summary.md |
 | 7 | CI | 2D scene code | --check: images and pages must reproduce |
 
-**Explicitly excluded:** the 3D scenes ([`sim/scenes3d`](3D-Scene-Builder)), any new analysis, and motion after a mishap (the scene freezes).
+**Explicitly excluded:** the 3D scenes ([`sim/scenes3d`](3D-Scene-Builder.md)), any new analysis, and motion after a mishap (the scene freezes).
 
 ## SysML model
 
 [`HazardScenes.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/figures/HazardScenes.sysml) is generated and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML block definition — HazardScenes](assets/sim/figures/readme/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — HazardScenes](../../sim/figures/readme/fig-5-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/sim/figures/readme/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../sim/figures/readme/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Walker plant | [`sim/plant/`](Walker-Plant) |
-| Search edge cases, SITL runs | [`sim/results/`](Simulation-Results) |
+| Walker plant | [`sim/plant/`](Walker-Plant.md) |
+| Search edge cases, SITL runs | [`sim/results/`](Simulation-Results.md) |
 
 | Output | Destination |
 |---|---|
 | Scene images | `docs/wiki/images/sim-*.svg` |
-| Wiki pages | [Simulation](Simulation), [UAV simulation](UAV-Simulation) |
+| Wiki pages | [Simulation](Simulation.md), [UAV simulation](UAV-Simulation.md) |
 | UAV summary | [`sim/results/uav/summary.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/uav/summary.md) |
 
 ## Folder contents
@@ -127,12 +127,12 @@ Scene conventions (from [`scenes.py`](https://github.com/jherrodthomas/Project-S
 |---|---|---|
 | [`scenes.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/figures/scenes.py) | Side-view walker scenes and the Simulation page | code |
 | [`uav_scenes.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/figures/uav_scenes.py) | Top-down UAV scenes, UAV summary and page | code |
-| [`fig-1-result-sets.svg`](assets/sim/figures/fig-1-result-sets.svg) | Simulation page figure (`tools/figures/sim_readme.py`) | generated |
-| [`fig-2-hazard-trace.svg`](assets/sim/figures/fig-2-hazard-trace.svg) | Simulation page figure (`tools/figures/sim_readme.py`) | generated |
-| [`fig-3-block-diagram.svg`](assets/sim/figures/fig-3-block-diagram.svg) | Simulation page figure (`tools/figures/sim_readme.py`) | generated |
-| [`fig-4-boundary-diagram.svg`](assets/sim/figures/fig-4-boundary-diagram.svg) | Simulation page figure (`tools/figures/sim_readme.py`) | generated |
-| [`fig-5-sysml-state-machine.svg`](assets/sim/figures/fig-5-sysml-state-machine.svg) | Simulation page figure (`tools/figures/sim_readme.py`) | generated |
-| [`fig-6-inputs-and-outputs.svg`](assets/sim/figures/fig-6-inputs-and-outputs.svg) | Simulation page figure (`tools/figures/sim_readme.py`) | generated |
+| [`fig-1-result-sets.svg`](../../sim/figures/fig-1-result-sets.svg) | Simulation page figure (`tools/figures/sim_readme.py`) | generated |
+| [`fig-2-hazard-trace.svg`](../../sim/figures/fig-2-hazard-trace.svg) | Simulation page figure (`tools/figures/sim_readme.py`) | generated |
+| [`fig-3-block-diagram.svg`](../../sim/figures/fig-3-block-diagram.svg) | Simulation page figure (`tools/figures/sim_readme.py`) | generated |
+| [`fig-4-boundary-diagram.svg`](../../sim/figures/fig-4-boundary-diagram.svg) | Simulation page figure (`tools/figures/sim_readme.py`) | generated |
+| [`fig-5-sysml-state-machine.svg`](../../sim/figures/fig-5-sysml-state-machine.svg) | Simulation page figure (`tools/figures/sim_readme.py`) | generated |
+| [`fig-6-inputs-and-outputs.svg`](../../sim/figures/fig-6-inputs-and-outputs.svg) | Simulation page figure (`tools/figures/sim_readme.py`) | generated |
 | [`HazardScenes.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/figures/HazardScenes.sysml) | The scenes as SysML | generated |
 | [`readme/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/figures/readme) | This page's figures (do not edit) | generated |
 | `README.md` | This page | generated |

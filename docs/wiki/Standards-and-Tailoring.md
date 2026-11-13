@@ -45,7 +45,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Tailoring | [`tailoring/mil-std-882e.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/tailoring/mil-std-882e.yaml): 2 conditional, 2 not-applicable, 2 not-selected, 19 selected tasks; 8 gates; 8 roles |
 | SysML vocabulary | [`SusanooLibrary.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/SusanooLibrary.sysml) |
 | Checked by | `python -m tools.pdac.validate` (rules R01–R13 and A01–A04) |
-| Generated views | [conformance](MIL-STD-882E-Conformance), [applicability](MIL-STD-882E-Applicability), [gate readiness](Gate-Readiness) |
+| Generated views | [conformance](MIL-STD-882E-Conformance.md), [applicability](MIL-STD-882E-Applicability.md), [gate readiness](Gate-Readiness.md) |
 
 ## Purpose
 
@@ -53,7 +53,7 @@ MIL-STD-882E is encoded here as data so it can be checked like code: its process
 
 ## Obligations and checks
 
-![Figure 1 · The standard as code](assets/standards/figures/fig-1-obligations.svg)
+![Figure 1 · The standard as code](../../standards/figures/fig-1-obligations.svg)
 
 | Element | Title | Clause | Obligations | Checked by rule | By review |
 |---|---|---|---|---|---|
@@ -69,7 +69,7 @@ MIL-STD-882E is encoded here as data so it can be checked like code: its process
 
 ## Tailored risk definitions
 
-![Figure 2 · Tailored risk matrix](assets/standards/figures/fig-2-risk-matrix.svg)
+![Figure 2 · Tailored risk matrix](../../standards/figures/fig-2-risk-matrix.svg)
 
 | Risk level | Accepted by | User concurrence |
 |---|---|---|
@@ -127,13 +127,13 @@ Probability: Table II qualitative definitions with Appendix A Table A-II quantit
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/standards/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../standards/figures/fig-3-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml).
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/standards/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../standards/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -150,25 +150,25 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 Model of record for the vocabulary: [`SusanooLibrary.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/SusanooLibrary.sysml) in the project model, validated by the OMG pilot in CI. The figure is read from that file.
 
-![Figure 5 · SysML block definition — the 882E vocabulary](assets/standards/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — the 882E vocabulary](../../standards/figures/fig-5-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/standards/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../standards/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | MIL-STD-882E | the published standard (not copied) |
-| Lead decisions | [Decision register](Decision-Register) |
-| Applicability and lifecycle | [`framework/`](Framework) |
+| Lead decisions | [Decision register](Decision-Register.md) |
+| Applicability and lifecycle | [`framework/`](Framework.md) |
 
 | Output | Destination |
 |---|---|
 | Rules on every record | [`tools/pdac`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/README.md) |
-| Conformance matrix | [MIL-STD-882E-Conformance](MIL-STD-882E-Conformance) |
-| Task applicability | [MIL-STD-882E-Applicability](MIL-STD-882E-Applicability) |
-| Gate readiness | [Gate-Readiness](Gate-Readiness) |
-| Risk definitions | [Safety records](Safety-Records) |
+| Conformance matrix | [MIL-STD-882E-Conformance](MIL-STD-882E-Conformance.md) |
+| Task applicability | [MIL-STD-882E-Applicability](MIL-STD-882E-Applicability.md) |
+| Gate readiness | [Gate-Readiness](Gate-Readiness.md) |
+| Risk definitions | [Safety records](Safety-Records.md) |
 
 ## Folder contents
 

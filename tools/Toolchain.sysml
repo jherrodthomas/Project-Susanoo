@@ -14,6 +14,8 @@ package Toolchain {
         action previewTests { doc /* Preview tests */ }
         action systemVCyclePageWikiPageAndStillAreCurre { doc /* System V cycle page, wiki page and still are current */ }
         action systemVCycleTests { doc /* System V cycle tests */ }
+        action reliabilityPilotPageFiguresAndNumbersAre { doc /* Reliability pilot page, figures and numbers are current */ }
+        action reliabilityTests { doc /* Reliability tests */ }
         action wikiCopiesOfTheRepositoryPagesAreCurrent { doc /* Wiki copies of the repository pages are current */ }
         action everyPageAndFigureExplainsItsAbbreviatio { doc /* Every page and figure explains its abbreviations and codes */ }
         action termsTests { doc /* Terms tests */ }
@@ -25,7 +27,9 @@ package Toolchain {
         first everyFolderHasAVisualPreviewDocsPreviews then previewTests;
         first previewTests then systemVCyclePageWikiPageAndStillAreCurre;
         first systemVCyclePageWikiPageAndStillAreCurre then systemVCycleTests;
-        first systemVCycleTests then wikiCopiesOfTheRepositoryPagesAreCurrent;
+        first systemVCycleTests then reliabilityPilotPageFiguresAndNumbersAre;
+        first reliabilityPilotPageFiguresAndNumbersAre then reliabilityTests;
+        first reliabilityTests then wikiCopiesOfTheRepositoryPagesAreCurrent;
         first wikiCopiesOfTheRepositoryPagesAreCurrent then everyPageAndFigureExplainsItsAbbreviatio;
         first everyPageAndFigureExplainsItsAbbreviatio then termsTests;
         first termsTests then done;

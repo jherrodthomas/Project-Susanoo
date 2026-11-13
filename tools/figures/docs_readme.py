@@ -62,6 +62,7 @@ PRODUCERS = [
     ("docs/wiki/images/3d-sus-*.png", "sim/scenes3d/sheet_check.mjs"),
     ("docs/wiki/images/3d-*.png", "sim/scenes3d/render.mjs"),
     ("docs/wiki/images/vcycle-*.svg", "tools/vcycle/build_vcycle.py"),
+    ("docs/wiki/images/rel-*.svg", "tools/reliability/build.py"),
     ("docs/wiki/assets.txt", "tools/wiki/build_wiki.py"),
     ("docs/readme/README.md", "tools/figures/frontpage_readme.py"),
     ("docs/wiki/README.md", "tools/figures/wiki_readme.py"),

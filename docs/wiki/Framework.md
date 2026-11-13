@@ -56,17 +56,17 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | Scope | SUS-M1 human-piloted mechanized walker and SUS-A1 unarmed observation UAV |
-| Current gate | G0 · Concept (phase MSA) · [Gate readiness](Gate-Readiness) |
+| Current gate | G0 · Concept (phase MSA) · [Gate readiness](Gate-Readiness.md) |
 | Tailoring | [`standards/tailoring/mil-std-882e.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/tailoring/mil-std-882e.yaml) |
 | SysML | [`Lifecycle.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/Lifecycle.sysml) (generated) |
 
 ## Purpose
 
-The method the project works by: which standards it uses and how, the lifecycle gates, the process contracts, the traceability model and the documentation standard. The pages here say what is intended; [`standards/`](Standards-and-Tailoring) encodes MIL-STD-882E and its tailoring as data, and [`tools/pdac`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/README.md) enforces them on the records.
+The method the project works by: which standards it uses and how, the lifecycle gates, the process contracts, the traceability model and the documentation standard. The pages here say what is intended; [`standards/`](Standards-and-Tailoring.md) encodes MIL-STD-882E and its tailoring as data, and [`tools/pdac`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/README.md) enforces them on the records.
 
 ## Standards applicability
 
-![Figure 1 · Standards applicability](assets/framework/figures/readme/fig-1-applicability.svg)
+![Figure 1 · Standards applicability](../../framework/figures/readme/fig-1-applicability.svg)
 
 | Status | Standards |
 |---|---|
@@ -80,7 +80,7 @@ Full table with scope: [standards applicability](https://github.com/jherrodthoma
 
 ## Lifecycle gates
 
-![Figure 2 · Lifecycle gates and the MIL-STD-882E tasks due at each](assets/framework/figures/readme/fig-2-lifecycle-gates.svg)
+![Figure 2 · Lifecycle gates and the MIL-STD-882E tasks due at each](../../framework/figures/readme/fig-2-lifecycle-gates.svg)
 
 | Gate | Title | Phase | MIL-STD-882E tasks due | Not yet approved |
 |---|---|---|---|---|
@@ -97,13 +97,13 @@ Exit evidence per gate: [lifecycle](https://github.com/jherrodthomas/Project-Sus
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/framework/figures/readme/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../framework/figures/readme/fig-3-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml).
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/framework/figures/readme/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../framework/figures/readme/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -122,24 +122,24 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 [`Lifecycle.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/Lifecycle.sysml) is generated from the tailoring gates and validated with the project model by the OMG pilot in CI. The documentation standard's own figure is built from [`figures.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/figures.yaml).
 
-![Figure 5 · SysML state machine — GateLifecycle](assets/framework/figures/readme/fig-5-sysml-state-machine.svg)
+![Figure 5 · SysML state machine — GateLifecycle](../../framework/figures/readme/fig-5-sysml-state-machine.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/framework/figures/readme/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../framework/figures/readme/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | Standards, by edition | published standards (text not copied) |
-| Authority and tailoring decisions | [Decision register](Decision-Register) |
-| CONOPS and system boundary | [Concept](Concept-Model) |
+| Authority and tailoring decisions | [Decision register](Decision-Register.md) |
+| CONOPS and system boundary | [Concept](Concept-Model.md) |
 
 | Output | Destination |
 |---|---|
-| Applicability and gates | [Standards and tailoring](Standards-and-Tailoring) |
+| Applicability and gates | [Standards and tailoring](Standards-and-Tailoring.md) |
 | Traceability rules | [`tools/pdac`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/README.md) |
-| README sections, figures, SysML | every folder README ([documentation standard](Documentation-Standard)) |
-| Task artifacts (Tasks 101, 105) | [882E work products](882E-Work-Products) |
+| README sections, figures, SysML | every folder README ([documentation standard](Documentation-Standard.md)) |
+| Task artifacts (Tasks 101, 105) | [882E work products](882E-Work-Products.md) |
 
 ## Folder contents
 
@@ -149,7 +149,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 | [`lifecycle.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/lifecycle.md) | Integrated lifecycle and gates — SUS-M1/SUS-A1 · Task 101 artifact | hand-written |
 | [`process-contracts.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/process-contracts.md) | Process contracts — v0.2 · Task 105 artifact | hand-written |
 | [`traceability.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/traceability.md) | PDaC as Product Development as Code | hand-written |
-| [`documentation-standard.md`](Documentation-Standard) | Documentation Standard — Folder READMEs, Figures and SysML Models | hand-written |
+| [`documentation-standard.md`](Documentation-Standard.md) | Documentation Standard — Folder READMEs, Figures and SysML Models | hand-written |
 | [`execution-plan.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/execution-plan.md) | Execution roadmap — SUS-M1/SUS-A1 | hand-written |
 | [`882e-conformance-review.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/882e-conformance-review.md) | Framework review against MIL-STD-882E, with build ideas | hand-written |
 | [`liondriver-port-plan.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/liondriver-port-plan.md) | Porting LionDriver's modeling, diagram and simulation approach to Susanoo | hand-written |
@@ -179,6 +179,6 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 - Copyrighted standards text must not be copied into this repository.
 
 ## Standard as code
-MIL-STD-882E (11 May 2012, base edition) is encoded as data ([model](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/mil-std-882e/model.yaml)), tailored per project ([tailoring](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/tailoring/mil-std-882e.yaml)) and enforced on the safety records by [`tools/pdac`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/README.md) in CI. Generated views: [hazard tracking log](Hazard-Tracking-Log), [conformance matrix](MIL-STD-882E-Conformance), [task applicability](MIL-STD-882E-Applicability), [gate readiness](Gate-Readiness). Review and build rationale: [882E conformance review](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/882e-conformance-review.md).
+MIL-STD-882E (11 May 2012, base edition) is encoded as data ([model](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/mil-std-882e/model.yaml)), tailored per project ([tailoring](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/tailoring/mil-std-882e.yaml)) and enforced on the safety records by [`tools/pdac`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/README.md) in CI. Generated views: [hazard tracking log](Hazard-Tracking-Log.md), [conformance matrix](MIL-STD-882E-Conformance.md), [task applicability](MIL-STD-882E-Applicability.md), [gate readiness](Gate-Readiness.md). Review and build rationale: [882E conformance review](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/882e-conformance-review.md).
 
-See [applicability](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/standards-applicability.md), [lifecycle](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/lifecycle.md), [process contracts](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/process-contracts.md), [traceability](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/traceability.md), [execution plan](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/execution-plan.md) and [documentation standard](Documentation-Standard).
+See [applicability](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/standards-applicability.md), [lifecycle](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/lifecycle.md), [process contracts](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/process-contracts.md), [traceability](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/traceability.md), [execution plan](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/execution-plan.md) and [documentation standard](Documentation-Standard.md).

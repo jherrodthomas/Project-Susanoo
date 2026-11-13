@@ -1,0 +1,19 @@
+# Fault tree for HAZ-PIL-006 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-PIL-006
+exposure: walker_operating_hours
+trees:
+  - id: FT-017
+    title: Delayed or unsafe extraction of an incapacitated pilot
+    top: delayed
+    gates:
+      - {id: delayed, type: and, title: "Extraction delayed or unsafe", inputs: [incapacitated, extraction-fails]}
+      - {id: extraction-fails, type: or, title: "Extraction does not go to plan", inputs: [release-jams, untrained, fire-smoke]}
+    events:
+      - {id: incapacitated, kind: undeveloped, nature: environment, causal_factor: CF1, title: "Pilot incapacitated"}
+      - {id: release-jams, mode: PT-027-FM1, causal_factor: CF1, title: "External hatch or restraint release jams"}
+      - {id: untrained, kind: undeveloped, nature: human, causal_factor: CF2, title: "Crew untrained; rescuers without fall protection"}
+      - {id: fire-smoke, kind: undeveloped, nature: environment, causal_factor: CF3, title: "Fire, smoke, stored energy or a walker on its side"}

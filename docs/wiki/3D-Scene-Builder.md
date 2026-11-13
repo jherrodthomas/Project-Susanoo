@@ -40,8 +40,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Field | Value |
 |---|---|
-| Pages | [`docs/3d/`](3D-Scene-Pages) · [3D scenes (wiki)](3D-Scenes) |
-| Run | `python -m sim.scenes3d.export_scene && python -m sim.scenes3d.build_pages` (`--check` in CI); stills with `node sim/scenes3d/render.mjs` (see [`sim/README.md`](Simulation-Track)) |
+| Pages | [`docs/3d/`](3D-Scene-Pages.md) · [3D scenes (wiki)](3D-Scenes.md) |
+| Run | `python -m sim.scenes3d.export_scene && python -m sim.scenes3d.build_pages` (`--check` in CI); stills with `node sim/scenes3d/render.mjs` (see [`sim/README.md`](Simulation-Track.md)) |
 | three.js | `0.170.0`, SHA-256 `08fd7545d13d…` pinned in [`scenes.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/scenes.yaml) |
 | Sheets | `python -m sim.scenes3d.build_sheet` (`--check` in CI); checked and stills rendered by `node sim/scenes3d/sheet_check.mjs` |
 | SysML | [`Scenes3D.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/Scenes3D.sysml) (generated) |
@@ -54,7 +54,7 @@ It also builds the interactive general-arrangement sheets: a live model of the C
 
 ## Scenes
 
-![Figure 1 · The 3D scenes](assets/sim/scenes3d/figures/fig-1-scenes.svg)
+![Figure 1 · The 3D scenes](../../sim/scenes3d/figures/fig-1-scenes.svg)
 
 | Scene | Hazards | Replays | Outcome | Look | Page |
 |---|---|---|---|---|---|
@@ -69,7 +69,7 @@ It also builds the interactive general-arrangement sheets: a live model of the C
 
 ## Hazard coverage
 
-![Figure 2 · Which hazards have a scene](assets/sim/scenes3d/figures/fig-2-hazard-coverage.svg)
+![Figure 2 · Which hazards have a scene](../../sim/scenes3d/figures/fig-2-hazard-coverage.svg)
 
 | Hazard | Why no scene yet |
 |---|---|
@@ -100,21 +100,21 @@ Built by [`build_sheet.py`](https://github.com/jherrodthomas/Project-Susanoo/blo
 | 2 of 3 | [`SUS-A1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-A1.html) | UAV on dock and in airspace, interactive | — | 6: HAZ-DCK-001, HAZ-DCK-002, HAZ-DCK-003, HAZ-DCK-004, HAZ-INT-001, HAZ-INT-002 | SU-01, SU-02, SU-03, SU-04, SU-05, SU-06 | [`sheet_uav.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet_uav.yaml) |
 | 3 of 3 | [`SUS-M1-terrain.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1-terrain.html) | CL-05 walk on the terrain course | walk on 11 terrains | 2: HAZ-WLK-002, SYS-008 | — | [`terrain.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/terrain.yaml) |
 
-![SUS-M1 sheet](assets/docs/wiki/images/3d-sus-m1.png)
+![SUS-M1 sheet](images/3d-sus-m1.png)
 
-![SUS-A1 sheet](assets/docs/wiki/images/3d-sus-a1.png)
+![SUS-A1 sheet](images/3d-sus-a1.png)
 
-![SUS-A1 in the air](assets/docs/wiki/images/3d-sus-a1-air.png)
+![SUS-A1 in the air](images/3d-sus-a1-air.png)
 
-![SUS-M1-terrain sheet](assets/docs/wiki/images/3d-sus-m1-terrain.png)
+![SUS-M1-terrain sheet](images/3d-sus-m1-terrain.png)
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/sim/scenes3d/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../sim/scenes3d/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/sim/scenes3d/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../sim/scenes3d/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -136,23 +136,23 @@ Built by [`build_sheet.py`](https://github.com/jherrodthomas/Project-Susanoo/blo
 
 [`Scenes3D.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/Scenes3D.sysml) is generated from the scene definitions and the exported analysis and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML block definition — Scenes3D](assets/sim/scenes3d/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — Scenes3D](../../sim/scenes3d/figures/fig-5-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/sim/scenes3d/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../sim/scenes3d/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Plant runs, edge cases, SITL runs | [`sim/plant`](Walker-Plant), [`sim/results/`](Simulation-Results) |
-| Hazards | [Safety records](Safety-Records) |
-| Environments and conditions | [`library/`](3D-Look-Library) |
-| CL-05 geometry and concept metrics | `docs/3d/assets/sus-m1.js` (from `tools/cad/b3d/cl05_web.py`), [`cad/`](Concept-Layouts) |
+| Plant runs, edge cases, SITL runs | [`sim/plant`](Walker-Plant.md), [`sim/results/`](Simulation-Results.md) |
+| Hazards | [Safety records](Safety-Records.md) |
+| Environments and conditions | [`library/`](3D-Look-Library.md) |
+| CL-05 geometry and concept metrics | `docs/3d/assets/sus-m1.js` (from `tools/cad/b3d/cl05_web.py`), [`cad/`](Concept-Layouts.md) |
 
 | Output | Destination |
 |---|---|
-| Scene analysis | [`out/`](3D-Scene-Exports) |
-| Interactive pages | [`docs/3d/`](3D-Scene-Pages) |
+| Scene analysis | [`out/`](3D-Scene-Exports.md) |
+| Interactive pages | [`docs/3d/`](3D-Scene-Pages.md) |
 | Wiki page and stills | `docs/wiki/3D-Scenes.md`, `docs/wiki/images/3d-*.png` |
 | General-arrangement sheets | [`docs/3d/SUS-M1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1.html), [`docs/3d/SUS-A1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-A1.html), [`docs/3d/SUS-M1-terrain.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1-terrain.html) |
 
@@ -167,14 +167,14 @@ Built by [`build_sheet.py`](https://github.com/jherrodthomas/Project-Susanoo/blo
 | Item | Description | State |
 |---|---|---|
 | [`scenes.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/scenes.yaml) | Scenes, variants, hazards with no scene, pinned three.js | hand-written |
-| [`library/`](3D-Look-Library) | Look-only environments and conditions | hand-written |
+| [`library/`](3D-Look-Library.md) | Look-only environments and conditions | hand-written |
 | [`export_scene.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/export_scene.py) | Exports each scene's analysis to `out/` | code |
 | [`build_pages.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/build_pages.py), [`viewer.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/viewer.js) | Builds the pages in `docs/3d/` | code |
 | [`render.mjs`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/render.mjs) | Renders and checks the stills in headless Chromium | code |
 | [`sheet.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet.yaml), [`sheet_uav.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet_uav.yaml), [`terrain.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/terrain.yaml) | What the sheets draw and where; the terrain course of sheet 3 | hand-written |
 | [`build_sheet.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/build_sheet.py), [`sheet.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet.js), [`sheet_uav.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet_uav.js), [`sheet_terrain.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet_terrain.js), [`sheet.css`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet.css), [`sheet.body.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet.body.html), [`sheet_uav.body.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet_uav.body.html), [`sheet_terrain.body.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet_terrain.body.html) | Builds the sheets in `docs/3d/` | code |
 | [`sheet_check.mjs`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet_check.mjs) | Checks the sheets and renders their stills | code |
-| [`out/`](3D-Scene-Exports) | Exported analysis, one JSON per scene | generated |
+| [`out/`](3D-Scene-Exports.md) | Exported analysis, one JSON per scene | generated |
 | [`Scenes3D.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/Scenes3D.sysml) | Scenes as SysML | generated |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/scenes3d/figures) | Generated SVG figures (do not edit) | generated |
 | `README.md` | This page | generated |

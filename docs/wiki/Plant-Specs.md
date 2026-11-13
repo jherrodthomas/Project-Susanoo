@@ -53,7 +53,7 @@ The one place the walker models take their numbers from. Every parameter carries
 
 ## Parameters
 
-![Figure 1 · Every plant parameter inside its allowed range](assets/sim/spec/figures/fig-1-parameters.svg)
+![Figure 1 · Every plant parameter inside its allowed range](../../sim/spec/figures/fig-1-parameters.svg)
 
 ### walker.yaml · SPEC-WLK-001
 
@@ -103,7 +103,7 @@ The one place the walker models take their numbers from. Every parameter carries
 
 ## Where the parameters come from and go
 
-![Figure 2 · Where the parameters come from and go](assets/sim/spec/figures/fig-2-sources-and-uses.svg)
+![Figure 2 · Where the parameters come from and go](../../sim/spec/figures/fig-2-sources-and-uses.svg)
 
 | Spec | Loaded by |
 |---|---|
@@ -114,11 +114,11 @@ Cited in parameter sources: CONOPS (walker.yaml), DQ-012 (walker_l2.yaml), HAZ-S
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/sim/spec/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../sim/spec/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/sim/spec/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../sim/spec/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -136,17 +136,17 @@ Cited in parameter sources: CONOPS (walker.yaml), DQ-012 (walker_l2.yaml), HAZ-S
 
 [`PlantSpecs.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/spec/PlantSpecs.sysml) is generated and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML block definition — PlantSpecs](assets/sim/spec/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — PlantSpecs](../../sim/spec/figures/fig-5-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/sim/spec/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../sim/spec/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Limits and adopted values | [Decision register](Decision-Register) |
-| Hazard and requirement basis | [Safety records](Safety-Records), [requirement register](Requirements-Register) |
-| Sized torques | [`sim/mujoco/`](Level-2-MuJoCo) (SZ-01) |
+| Limits and adopted values | [Decision register](Decision-Register.md) |
+| Hazard and requirement basis | [Safety records](Safety-Records.md), [requirement register](Requirements-Register.md) |
+| Sized torques | [`sim/mujoco/`](Level-2-MuJoCo.md) (SZ-01) |
 
 | Output | Destination |
 |---|---|

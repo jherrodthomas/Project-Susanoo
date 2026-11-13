@@ -56,6 +56,12 @@ jobs:
       - name: System V cycle tests
         run: python -m unittest discover -s tools/vcycle/tests -t .
 
+      - name: Reliability pilot page, figures and numbers are current (tools/reliability)
+        run: python -m tools.reliability.build --check
+
+      - name: Reliability tests
+        run: python -m unittest discover -s tools/reliability/tests -t .
+
       - name: Wiki copies of the repository pages are current (docs/wiki, assets.txt)
         run: python -m tools.wiki.build_wiki --check
 

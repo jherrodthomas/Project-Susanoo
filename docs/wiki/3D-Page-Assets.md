@@ -40,7 +40,7 @@ The CL-05 reference layout as one script file the general-arrangement sheets loa
 
 ## Contents
 
-![Figure 1 · What is in the geometry file](assets/docs/3d/assets/figures/fig-1-contents.svg)
+![Figure 1 · What is in the geometry file](../3d/assets/figures/fig-1-contents.svg)
 
 | Part class | Meshes | In the standing pose | Vertices | Triangles |
 |---|---|---|---|---|
@@ -63,7 +63,7 @@ The CL-05 reference layout as one script file the general-arrangement sheets loa
 
 ## Clips
 
-![Figure 2 · Every frame of every clip](assets/docs/3d/assets/figures/fig-2-clips.svg)
+![Figure 2 · Every frame of every clip](../3d/assets/figures/fig-2-clips.svg)
 
 | Clip | Frames | First frame | Last frame | Meshes of their own |
 |---|---|---|---|---|
@@ -92,11 +92,11 @@ The CL-05 reference layout as one script file the general-arrangement sheets loa
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/docs/3d/assets/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../3d/assets/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/docs/3d/assets/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../3d/assets/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -115,15 +115,15 @@ The CL-05 reference layout as one script file the general-arrangement sheets loa
 
 [`CL05Geometry.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/assets/CL05Geometry.sysml) is generated from the file's mesh table and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML block definition — CL05Geometry](assets/docs/3d/assets/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — CL05Geometry](../3d/assets/figures/fig-5-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/docs/3d/assets/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../3d/assets/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| CL-05 parameters | [`cad/params/`](Concept-Layouts) |
+| CL-05 parameters | [`cad/params/`](Concept-Layouts.md) |
 | Model and export | `tools/cad/b3d/cl05.py`, `tools/cad/b3d/cl05_web.py` |
 | Terrain course and poses | `sim/scenes3d/terrain.yaml`, `tools/cad/b3d/cl05_terrain.py` |
 

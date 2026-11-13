@@ -64,7 +64,7 @@ Every question for the project lead lives here, with the context, two to four op
 
 ## Decision register
 
-![Figure 1 · Decision register](assets/decisions/figures/fig-1-register.svg)
+![Figure 1 · Decision register](../../decisions/figures/fig-1-register.svg)
 
 | ID | Question | Gate | Decider | Status | Answer | Applied in |
 |---|---|---|---|---|---|---|
@@ -80,9 +80,9 @@ Every question for the project lead lives here, with the context, two to four op
 | DQ-010 | What slope limit should CONOPS section 4 set for the walker? | G2 | lead | applied | 20 degrees (lead, 2026-11-12) | [`concept/CONOPS.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md), [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml), [`requirements/SYS-008.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/requirements/SYS-008.yaml), [`safety/hazards/HAZ-WLK-002.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-WLK-002.yaml), [`sim/search/families.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/search/families.yaml) |
 | DQ-011 | How far may payload and gait move the walker's centre of mass ahead of the stance foot when it is on a 20 degree slope? | G2 | lead | applied | Keep 20 degrees and limit the CoM offset to 0.12 m (lead, 2026-11-12) | [`concept/CONOPS.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md), [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml), [`models/sysml/model/Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml), [`requirements/SYS-008.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/requirements/SYS-008.yaml), [`safety/hazards/HAZ-WLK-002.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-WLK-002.yaml), [`sim/search/families.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/search/families.yaml) |
 | DQ-012 | Should the level-2 walker spec adopt the ankle and knee torques sized against supply loss? | G2 | lead | applied | Adopt the sized values in sim/spec/walker_l2.yaml (lead, 2026-11-12) | [`sim/spec/walker_l2.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/spec/walker_l2.yaml), [`sim/results/l2-crosscheck.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/l2-crosscheck.md), [`sim/results/sizing-cf4.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/sizing-cf4.md), [`safety/hazards/HAZ-WLK-002.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-WLK-002.yaml) |
-| DQ-013 | Which locomotion should the walker use? | G1 | lead | applied | Bipedal (lead, 2026-11-11) | [`concept/CONOPS.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md), [`cad/README.md`](Concept-Layouts) |
-| DQ-014 | Which concept layout is the reference for further development? | G1 | lead | applied | CL-05 reverse-jointed pod (lead, 2026-11-11) | [`cad/README.md`](Concept-Layouts), [`safety/hazards/HAZ-WLK-002.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-WLK-002.yaml) |
-| DQ-015 | May the walker carry a payload while walking? | G2 | lead | applied | Allow carrying while walking under conditions (lead, 2026-11-12) | [`requirements/SYS-017.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/requirements/SYS-017.yaml), [`requirements/SYS-019.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/requirements/SYS-019.yaml), [`safety/hazards/HAZ-MAN-002.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-MAN-002.yaml), [`safety/hazards/HAZ-WLK-002.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-WLK-002.yaml), [`cad/README.md`](Concept-Layouts) |
+| DQ-013 | Which locomotion should the walker use? | G1 | lead | applied | Bipedal (lead, 2026-11-11) | [`concept/CONOPS.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md), [`cad/README.md`](Concept-Layouts.md) |
+| DQ-014 | Which concept layout is the reference for further development? | G1 | lead | applied | CL-05 reverse-jointed pod (lead, 2026-11-11) | [`cad/README.md`](Concept-Layouts.md), [`safety/hazards/HAZ-WLK-002.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-WLK-002.yaml) |
+| DQ-015 | May the walker carry a payload while walking? | G2 | lead | applied | Allow carrying while walking under conditions (lead, 2026-11-12) | [`requirements/SYS-017.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/requirements/SYS-017.yaml), [`requirements/SYS-019.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/requirements/SYS-019.yaml), [`safety/hazards/HAZ-MAN-002.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-MAN-002.yaml), [`safety/hazards/HAZ-WLK-002.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-WLK-002.yaml), [`cad/README.md`](Concept-Layouts.md) |
 | DQ-016 | How should the actuation trade study (TS-001) weigh its twelve criteria? | G2 | lead | applied | Confirm the drafted weights (lead, 2026-11-12) | [`architecture/trades/TS-001.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/trades/TS-001.yaml) |
 | DQ-017 | Should a hazard tied to specific hardware stop applying to test events that do not contain that hardware? | G4 | lead | applied | Honour the hardware tag (lead, 2026-11-12) | [`tools/pdac/rules.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/rules.py), [`tools/pdac/rules_ext.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/rules_ext.py), [`pdac/schemas/event.schema.json`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/pdac/schemas/event.schema.json), [`safety/events/EVT-BENCH-001.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/events/EVT-BENCH-001.yaml), [`safety/hazards/HAZ-PWR-002.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-PWR-002.yaml), [`safety/hazards/HAZ-PWR-003.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-PWR-003.yaml), [`tools/pdac/README.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/README.md) |
 | DQ-018 | Should the manipulator-arm hazards be tied to the arms, so they stop applying to events without arms? | G4 | lead | applied | Tag both with SUS-M1-MAN (lead, 2026-11-12) | [`safety/hazards/HAZ-MAN-001.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-MAN-001.yaml), [`safety/hazards/HAZ-MAN-002.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/hazards/HAZ-MAN-002.yaml) |
@@ -93,17 +93,17 @@ Every question for the project lead lives here, with the context, two to four op
 
 ## Where the answers were applied
 
-![Figure 2 · Where the answers were applied](assets/decisions/figures/fig-2-where-applied.svg)
+![Figure 2 · Where the answers were applied](../../decisions/figures/fig-2-where-applied.svg)
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/decisions/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../decisions/figures/fig-3-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml).
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/decisions/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../decisions/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -118,7 +118,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 Model of record for the lifecycle: [`DecisionRegister.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/DecisionRegister.sysml), generated by `python3 tools/figures/decisions_readme.py` and validated by the OMG pilot in CI (`tools/validate_doc_sysml.sh`).
 
-![Figure 5 · SysML state machine — DecisionLifecycle](assets/decisions/figures/fig-5-sysml-state-machine.svg)
+![Figure 5 · SysML state machine — DecisionLifecycle](../../decisions/figures/fig-5-sysml-state-machine.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -156,17 +156,17 @@ package DecisionRegister {
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/decisions/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../decisions/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | How to sort and ask | [`CLAUDE.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/CLAUDE.md#decisions-for-the-lead) |
-| Questions raised by work | [`concept/trade-studies.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/trade-studies.md), [`sim/`](Simulation-Track), [`safety/`](Safety-Records) |
+| Questions raised by work | [`concept/trade-studies.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/trade-studies.md), [`sim/`](Simulation-Track.md), [`safety/`](Safety-Records.md) |
 | Answers | the project lead (chat, inbox, review or pull request) |
 
 | Output | Destination |
 |---|---|
-| Open questions | [Decision Inbox](Decision-Inbox) |
+| Open questions | [Decision Inbox](Decision-Inbox.md) |
 | Applied answers | the files listed under *Applied in* above |
 
 ## Folder contents

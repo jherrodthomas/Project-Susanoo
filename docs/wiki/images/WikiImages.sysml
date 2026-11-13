@@ -161,6 +161,156 @@ package WikiImages {
         attribute :>> shownOn = 0;
         attribute :>> generator = "tools/previews/record_figures.py";
     }
+    part imgRelBands : GeneratedFigure {
+        attribute :>> file = "rel-bands.svg";
+        attribute :>> kilobytes = 10;
+        attribute :>> shownOn = 2;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt001 : GeneratedFigure {
+        attribute :>> file = "rel-ft-001.svg";
+        attribute :>> kilobytes = 6;
+        attribute :>> shownOn = 2;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt002 : GeneratedFigure {
+        attribute :>> file = "rel-ft-002.svg";
+        attribute :>> kilobytes = 9;
+        attribute :>> shownOn = 2;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt003 : GeneratedFigure {
+        attribute :>> file = "rel-ft-003.svg";
+        attribute :>> kilobytes = 9;
+        attribute :>> shownOn = 2;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt004 : GeneratedFigure {
+        attribute :>> file = "rel-ft-004.svg";
+        attribute :>> kilobytes = 5;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt005 : GeneratedFigure {
+        attribute :>> file = "rel-ft-005.svg";
+        attribute :>> kilobytes = 7;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt006 : GeneratedFigure {
+        attribute :>> file = "rel-ft-006.svg";
+        attribute :>> kilobytes = 6;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt007 : GeneratedFigure {
+        attribute :>> file = "rel-ft-007.svg";
+        attribute :>> kilobytes = 6;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt008 : GeneratedFigure {
+        attribute :>> file = "rel-ft-008.svg";
+        attribute :>> kilobytes = 4;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt009 : GeneratedFigure {
+        attribute :>> file = "rel-ft-009.svg";
+        attribute :>> kilobytes = 9;
+        attribute :>> shownOn = 2;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt010 : GeneratedFigure {
+        attribute :>> file = "rel-ft-010.svg";
+        attribute :>> kilobytes = 6;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt011 : GeneratedFigure {
+        attribute :>> file = "rel-ft-011.svg";
+        attribute :>> kilobytes = 4;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt012 : GeneratedFigure {
+        attribute :>> file = "rel-ft-012.svg";
+        attribute :>> kilobytes = 4;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt013 : GeneratedFigure {
+        attribute :>> file = "rel-ft-013.svg";
+        attribute :>> kilobytes = 8;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt014 : GeneratedFigure {
+        attribute :>> file = "rel-ft-014.svg";
+        attribute :>> kilobytes = 5;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt015 : GeneratedFigure {
+        attribute :>> file = "rel-ft-015.svg";
+        attribute :>> kilobytes = 5;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt016 : GeneratedFigure {
+        attribute :>> file = "rel-ft-016.svg";
+        attribute :>> kilobytes = 4;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt017 : GeneratedFigure {
+        attribute :>> file = "rel-ft-017.svg";
+        attribute :>> kilobytes = 5;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt018 : GeneratedFigure {
+        attribute :>> file = "rel-ft-018.svg";
+        attribute :>> kilobytes = 5;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt019 : GeneratedFigure {
+        attribute :>> file = "rel-ft-019.svg";
+        attribute :>> kilobytes = 5;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt020 : GeneratedFigure {
+        attribute :>> file = "rel-ft-020.svg";
+        attribute :>> kilobytes = 4;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt021 : GeneratedFigure {
+        attribute :>> file = "rel-ft-021.svg";
+        attribute :>> kilobytes = 8;
+        attribute :>> shownOn = 2;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt022 : GeneratedFigure {
+        attribute :>> file = "rel-ft-022.svg";
+        attribute :>> kilobytes = 6;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt023 : GeneratedFigure {
+        attribute :>> file = "rel-ft-023.svg";
+        attribute :>> kilobytes = 6;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
+    part imgRelFt024 : GeneratedFigure {
+        attribute :>> file = "rel-ft-024.svg";
+        attribute :>> kilobytes = 7;
+        attribute :>> shownOn = 1;
+        attribute :>> generator = "tools/reliability/build.py";
+    }
     part imgResponsibilitySwimlanes : HandExport {
         attribute :>> file = "responsibility-swimlanes.svg";
         attribute :>> kilobytes = 5;
@@ -307,7 +457,7 @@ package WikiImages {
     }
     part imgWikiFig5SysmlActivity : GeneratedFigure {
         attribute :>> file = "wiki-fig-5-sysml-activity.svg";
-        attribute :>> kilobytes = 13;
+        attribute :>> kilobytes = 12;
         attribute :>> shownOn = 1;
         attribute :>> generator = "tools/figures/wiki_readme.py";
     }

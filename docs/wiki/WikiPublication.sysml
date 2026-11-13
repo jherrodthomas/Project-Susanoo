@@ -9,18 +9,12 @@ package WikiPublication {
         action checkOutTheHandbookSource { doc /* Check out the handbook source */ }
         action checkTheWikiDeployCredential { doc /* Check the wiki deploy credential */ }
         action cloneTheWikiRepository { doc /* Clone the wiki repository */ }
-        action copyThePageSourcesToTheWikiRoot { doc /* Copy the page sources to the wiki root */ }
-        action copyImages { doc /* Copy images/ */ }
-        action copyTheRepositoryFiguresListedInAssetsTxt { doc /* Copy the repository figures listed in assets.txt */ }
         action commitIfAnythingChanged { doc /* Commit, if anything changed */ }
         action pushToTheWikiRepository { doc /* Push to the wiki repository */ }
         first start then checkOutTheHandbookSource;
         first checkOutTheHandbookSource then checkTheWikiDeployCredential;
         first checkTheWikiDeployCredential then cloneTheWikiRepository;
-        first cloneTheWikiRepository then copyThePageSourcesToTheWikiRoot;
-        first copyThePageSourcesToTheWikiRoot then copyImages;
-        first copyImages then copyTheRepositoryFiguresListedInAssetsTxt;
-        first copyTheRepositoryFiguresListedInAssetsTxt then commitIfAnythingChanged;
+        first cloneTheWikiRepository then commitIfAnythingChanged;
         first commitIfAnythingChanged then pushToTheWikiRepository;
         first pushToTheWikiRepository then done;
     }

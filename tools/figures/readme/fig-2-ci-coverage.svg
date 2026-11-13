@@ -1,319 +1,325 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1298.9" height="3533.6" viewBox="0 0 1298.9 3533.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1320.9" height="3533.6" viewBox="0 0 1320.9 3533.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
 <title>Figure 2 · What CI runs on every push and pull request</title>
 <desc>Each CI job that runs a tool, and the tools it runs. The README check runs every folder generator with --check and fails on stale output. Simulation jobs are on the simulation page.</desc>
 <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="1298.9" height="3450" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1320.9" height="3450" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 2 · What CI runs on every push and pull request</text>
 <text x="40" y="66" font-size="12.5" fill="#475569">Each CI job that runs a tool, and the tools it runs. The README check runs every folder generator with --check and fails on stale output. Simulation jobs are on the simulation page.</text>
-<text x="1258.9" y="44" font-size="11" fill="#475569" text-anchor="end">.github/workflows</text>
-<line x1="40" y1="85" x2="1258.9" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1280.9" y="44" font-size="11" fill="#475569" text-anchor="end">.github/workflows</text>
+<line x1="40" y1="85" x2="1280.9" y2="85" stroke="#E2E8F0" stroke-width="1"/>
 <g transform="translate(40 109)">
-<rect x="6" y="1199" width="285.5" height="528" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="441.5" y="670" width="295.4" height="1792" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="980.4" y="6" width="232.5" height="3248" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<path d="M193.5 1689 L311.5 1689 Q318.5 1689 318.5 1696 L318.5 2399 Q318.5 2406 325.5 2406 L459.5 2406" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1669 L323.5 1669 Q330.5 1669 330.5 1676 L330.5 2303 Q330.5 2310 337.5 2310 L459.5 2310" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1522.3 L226.8 1522.3 Q233.5 1522.3 233.5 1529 L233.5 1529 Q233.5 1535.7 240.2 1535.7 L289.5 1535.7 Q296.5 1535.7 303.5 1535.7 L407.5 1535.7 Q414.5 1535.7 414.5 1542.7 L414.5 1623 Q414.5 1630 421.5 1630 L459.5 1630" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1515.7 L238.5 1515.7 Q243.5 1515.7 243.5 1520.7 L243.5 1520.7 Q243.5 1525.7 248.5 1525.7 L289.5 1525.7 Q296.5 1525.7 303.5 1525.7 L459.5 1526" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1529 L216.5 1529 Q223.5 1529 223.5 1536 L223.5 1538.7 Q223.5 1545.7 230.5 1545.7 L289.5 1545.7 Q296.5 1545.7 303.5 1545.7 L395.5 1545.7 Q402.5 1545.7 402.5 1552.7 L402.5 1727 Q402.5 1734 409.5 1734 L459.5 1734" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1542.3 L198.5 1542.3 Q203.5 1542.3 203.5 1547.3 L203.5 1558.7 Q203.5 1565.7 210.5 1565.7 L289.5 1565.7 Q296.5 1565.7 303.5 1565.7 L371.5 1565.7 Q378.5 1565.7 378.5 1572.7 L378.5 1919 Q378.5 1926 385.5 1926 L459.5 1926" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1535.7 L206.5 1535.7 Q213.5 1535.7 213.5 1542.7 L213.5 1548.7 Q213.5 1555.7 220.5 1555.7 L289.5 1555.7 Q296.5 1555.7 303.5 1555.7 L383.5 1555.7 Q390.5 1555.7 390.5 1562.7 L390.5 1823 Q390.5 1830 397.5 1830 L459.5 1830" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1502.3 L261.8 1502.3 Q263.5 1502.3 263.5 1504 L263.5 1504 Q263.5 1505.7 265.2 1505.7 L289.5 1505.7 Q296.5 1505.7 303.5 1505.7 L395.5 1505.7 Q402.5 1505.7 402.5 1498.7 L402.5 1341 Q402.5 1334 409.5 1334 L459.5 1334" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1495.7 L289.5 1495.7 Q296.5 1495.7 303.5 1495.7 L383.5 1495.7 Q390.5 1495.7 390.5 1488.7 L390.5 1258 Q390.5 1251 397.5 1251 L429.5 1251 Q436.5 1251 443.5 1251 L459.5 1250.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1509 L250.2 1509 Q253.5 1509 253.5 1512.3 L253.5 1512.3 Q253.5 1515.7 256.8 1515.7 L289.5 1515.7 Q296.5 1515.7 303.5 1515.7 L407.5 1515.7 Q414.5 1515.7 414.5 1508.7 L414.5 1437 Q414.5 1430 421.5 1430 L459.5 1430" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1279 L311.5 1279 Q318.5 1279 318.5 1272 L318.5 765 Q318.5 758 325.5 758 L459.5 758" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1584 L359.5 1584 Q366.5 1584 366.5 1591 L366.5 2015 Q366.5 2022 373.5 2022 L459.5 2022" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1599 L347.5 1599 Q354.5 1599 354.5 1606 L354.5 2111 Q354.5 2118 361.5 2118 L459.5 2118" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1614 L335.5 1614 Q342.5 1614 342.5 1621 L342.5 2207 Q342.5 2214 349.5 2214 L459.5 2214" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1365 L347.5 1365 Q354.5 1365 354.5 1358 L354.5 1053 Q354.5 1046 361.5 1046 L459.5 1046" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1341 L323.5 1341 Q330.5 1341 330.5 1334 L330.5 861 Q330.5 854 337.5 854 L459.5 854" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1377 L359.5 1377 Q366.5 1377 366.5 1370 L366.5 1149 Q366.5 1142 373.5 1142 L459.5 1142" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1353 L335.5 1353 Q342.5 1353 342.5 1346 L342.5 957 Q342.5 950 349.5 950 L459.5 950" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M193.5 1439 L371.5 1439 Q378.5 1439 378.5 1432 L378.5 1232 Q378.5 1225 385.5 1225 L429.5 1225 Q436.5 1225 443.5 1225 L459.5 1225.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M718.9 1630 L980.4 1630" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<rect x="18" y="1211" width="88.8" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
-<text x="62.4" y="1226" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">CI JOBS</text>
-<rect x="453.5" y="682" width="137.6" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
-<text x="522.3" y="697" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">TOOLS THEY RUN</text>
-<rect x="992.4" y="18" width="208.5" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
-<text x="1096.7" y="33" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">FOLDER README GENERATORS</text>
-<rect x="57.5" y="1649" width="136" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
-<rect x="69.5" y="1661" width="61.4" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
-<text x="100.2" y="1672.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad · build</text>
-<text x="69.5" y="1695" font-size="12.5" fill="#0F172A" font-weight="700">cad.yml</text>
-<rect x="24" y="1489" width="169.5" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
-<rect x="36" y="1501" width="145.5" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
-<text x="108.7" y="1512.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">docs-check · readme-figures</text>
-<text x="36" y="1535" font-size="12.5" fill="#0F172A" font-weight="700">docs-check.yml</text>
-<rect x="46.2" y="1249" width="147.3" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
-<rect x="58.2" y="1261" width="123.3" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
-<text x="119.9" y="1272.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">docs-check · doc-sysml</text>
-<text x="58.2" y="1295" font-size="12.5" fill="#0F172A" font-weight="700">docs-check.yml</text>
-<rect x="46.7" y="1569" width="146.8" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
-<rect x="58.7" y="1581" width="122.8" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
-<text x="120.1" y="1592.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac-validate · validate</text>
-<text x="58.7" y="1615" font-size="12.5" fill="#0F172A" font-weight="700">pdac-validate.yml</text>
-<rect x="57.3" y="1329" width="136.2" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
-<rect x="69.3" y="1341" width="112.2" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
-<text x="125.4" y="1352.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac-validate · sysml</text>
-<text x="69.3" y="1375" font-size="12.5" fill="#0F172A" font-weight="700">pdac-validate.yml</text>
-<rect x="57.5" y="1409" width="136" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
-<rect x="69.5" y="1421" width="111.5" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
-<text x="125.3" y="1432.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">publish-wiki · publish</text>
-<text x="69.5" y="1455" font-size="12.5" fill="#0F172A" font-weight="700">publish-wiki.yml</text>
-<rect x="459.5" y="2368" width="258.1" height="76" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="471.5" y="2380" width="117.3" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="530.2" y="2391.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad/build_concepts.py</text>
-<text x="471.5" y="2414" font-size="12.5" fill="#0F172A" font-weight="700">Build the Susanoo concept layouts in</text>
-<text x="471.5" y="2430" font-size="12.5" fill="#0F172A" font-weight="700">FreeCAD from …</text>
-<rect x="459.5" y="2272" width="238.9" height="76" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="471.5" y="2284" width="88" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="515.5" y="2295.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad/drawings.py</text>
-<text x="471.5" y="2318" font-size="12.5" fill="#0F172A" font-weight="700">Dimensioned A3 drawing sheets of</text>
-<text x="471.5" y="2334" font-size="12.5" fill="#0F172A" font-weight="700">the concept layouts …</text>
-<rect x="459.5" y="1584" width="259.4" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="471.5" y="1596" width="139.9" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="541.4" y="1607.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">check_readme_diagrams.py</text>
-<text x="471.5" y="1630" font-size="12.5" fill="#0F172A" font-weight="700">Enforce</text>
-<text x="471.5" y="1646" font-size="12.5" fill="#0F172A" font-weight="700">framework/documentation-standard.md</text>
-<text x="471.5" y="1662" font-size="12.5" fill="#0F172A" font-weight="700">on folder …</text>
-<rect x="459.5" y="1488" width="257.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="471.5" y="1500" width="105.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="524.4" y="1511.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">worksheets/build.py</text>
-<text x="471.5" y="1534" font-size="12.5" fill="#0F172A" font-weight="700">Spreadsheet-style analysis</text>
-<text x="471.5" y="1550" font-size="12.5" fill="#0F172A" font-weight="700">worksheets for the MIL-STD-882E …</text>
-<rect x="459.5" y="1696" width="237.9" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="471.5" y="1708" width="124" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="533.5" y="1719.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">readme/build_readme.py</text>
-<text x="471.5" y="1742" font-size="12.5" fill="#0F172A" font-weight="700">Build the repository README's</text>
-<text x="471.5" y="1758" font-size="12.5" fill="#0F172A" font-weight="700">figures and data tables from the …</text>
-<rect x="459.5" y="1888" width="254.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="471.5" y="1900" width="139.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="541" y="1911.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">previews/record_figures.py</text>
-<text x="471.5" y="1934" font-size="12.5" fill="#0F172A" font-weight="700">Record figures: one figure per record</text>
-<text x="471.5" y="1950" font-size="12.5" fill="#0F172A" font-weight="700">folder that had no visual …</text>
-<rect x="459.5" y="1792" width="237.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="471.5" y="1804" width="140.9" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="541.9" y="1815.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">previews/build_previews.py</text>
-<text x="471.5" y="1838" font-size="12.5" fill="#0F172A" font-weight="700">Give every folder a visual preview</text>
-<text x="471.5" y="1854" font-size="12.5" fill="#0F172A" font-weight="700">(docs/previews.yaml).</text>
-<rect x="459.5" y="1296" width="241.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="471.5" y="1308" width="119.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="531.2" y="1319.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">vcycle/build_vcycle.py</text>
-<text x="471.5" y="1342" font-size="12.5" fill="#0F172A" font-weight="700">Build the System V cycle page, its</text>
-<text x="471.5" y="1358" font-size="12.5" fill="#0F172A" font-weight="700">wiki page and its still from …</text>
-<rect x="459.5" y="1200" width="256.9" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="471.5" y="1212" width="94.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="518.8" y="1223.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">wiki/build_wiki.py</text>
-<text x="471.5" y="1246" font-size="12.5" fill="#0F172A" font-weight="700">Publish the repository's</text>
-<text x="471.5" y="1262" font-size="12.5" fill="#0F172A" font-weight="700">documentation pages to the GitHub …</text>
-<rect x="459.5" y="1392" width="247" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="471.5" y="1404" width="80.9" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="512" y="1415.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">terms/terms.py</text>
-<text x="471.5" y="1438" font-size="12.5" fill="#0F172A" font-weight="700">Abbreviations, acronyms and record</text>
-<text x="471.5" y="1454" font-size="12.5" fill="#0F172A" font-weight="700">codes: defined once …</text>
-<rect x="459.5" y="720" width="239.9" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
-<rect x="471.5" y="732" width="118" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
-<text x="530.5" y="743.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">validate_doc_sysml.sh</text>
-<text x="471.5" y="766" font-size="12.5" fill="#0F172A" font-weight="700">Validate the SysML v2 files of the</text>
-<text x="471.5" y="782" font-size="12.5" fill="#0F172A" font-weight="700">documentation tree (concept …</text>
-<rect x="459.5" y="1984" width="220.2" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="471.5" y="1996" width="89.4" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="516.2" y="2007.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac/validate.py</text>
-<text x="471.5" y="2030" font-size="12.5" fill="#0F172A" font-weight="700">Validate PDaC records against</text>
-<text x="471.5" y="2046" font-size="12.5" fill="#0F172A" font-weight="700">MIL-STD-882E (2012) model …</text>
-<rect x="459.5" y="2080" width="222.4" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="471.5" y="2092" width="79.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="511.4" y="2103.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac/report.py</text>
-<text x="471.5" y="2126" font-size="12.5" fill="#0F172A" font-weight="700">Generate HTS log, conformance</text>
-<text x="471.5" y="2142" font-size="12.5" fill="#0F172A" font-weight="700">matrix, applicability and gate …</text>
-<rect x="459.5" y="2176" width="236.8" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="471.5" y="2188" width="99.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="521.1" y="2199.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/fig_item.py</text>
-<text x="471.5" y="2222" font-size="12.5" fill="#0F172A" font-weight="700">Generate the SUS-I1 context and</text>
-<text x="471.5" y="2238" font-size="12.5" fill="#0F172A" font-weight="700">boundary figures from …</text>
-<rect x="459.5" y="1008" width="234" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="471.5" y="1020" width="138.9" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="540.9" y="1031.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sysml/gen_requirements.py</text>
-<text x="471.5" y="1054" font-size="12.5" fill="#0F172A" font-weight="700">Generate Requirements.sysml and</text>
-<text x="471.5" y="1070" font-size="12.5" fill="#0F172A" font-weight="700">Satisfaction.sysml from …</text>
-<rect x="459.5" y="816" width="249.2" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="471.5" y="828" width="84.4" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="513.7" y="839.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sysml/check.py</text>
-<text x="471.5" y="862" font-size="12.5" fill="#0F172A" font-weight="700">Check the SysML model against the</text>
-<text x="471.5" y="878" font-size="12.5" fill="#0F172A" font-weight="700">records.</text>
-<rect x="459.5" y="1104" width="254.5" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="471.5" y="1116" width="83.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="513.1" y="1127.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sysml/views.py</text>
-<text x="471.5" y="1150" font-size="12.5" fill="#0F172A" font-weight="700">Render SysML views from the model,</text>
-<text x="471.5" y="1166" font-size="12.5" fill="#0F172A" font-weight="700">and the SysML-Model wiki …</text>
-<rect x="459.5" y="912" width="225" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
-<rect x="471.5" y="924" width="117.9" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
-<text x="530.5" y="935.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sysml/pilot/validate.sh</text>
-<text x="471.5" y="958" font-size="12.5" fill="#0F172A" font-weight="700">Validate the Susanoo SysML v2</text>
-<text x="471.5" y="974" font-size="12.5" fill="#0F172A" font-weight="700">model with the OMG pilot …</text>
-<rect x="1022.9" y="536" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1034.9" y="548" width="106" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1087.9" y="559.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">gen_safety_docs.py</text>
-<text x="1034.9" y="582" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1017.5" y="1496" width="146.8" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1029.5" y="1508" width="122.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="1519.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/build_figures.py</text>
-<text x="1029.5" y="1542" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1009.9" y="296" width="162.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1021.9" y="308" width="138.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="319.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/concept_readme.py</text>
-<text x="1021.9" y="342" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="998.4" y="2296" width="185" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1010.4" y="2308" width="161" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="2319.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/requirements_readme.py</text>
-<text x="1010.4" y="2342" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1001.9" y="2536" width="178" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1013.9" y="2548" width="154" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="2559.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/verification_readme.py</text>
-<text x="1013.9" y="2582" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1008.9" y="776" width="164.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1020.9" y="788" width="140.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="799.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/changes_readme.py</text>
-<text x="1020.9" y="822" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1010.4" y="936" width="160.9" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1022.4" y="948" width="136.9" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="959.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/reviews_readme.py</text>
-<text x="1022.4" y="982" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1006" y="1976" width="169.8" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1018" y="1988" width="145.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="1999.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/decisions_readme.py</text>
-<text x="1018" y="2022" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1000.1" y="3016" width="181.6" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1012.1" y="3028" width="157.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="3039.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/architecture_readme.py</text>
-<text x="1012.1" y="3062" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1013.6" y="1736" width="154.6" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1025.6" y="1748" width="130.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="1759.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/safety_readme.py</text>
-<text x="1025.6" y="1782" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1020.6" y="3096" width="140.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1032.7" y="3108" width="116.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="3119.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/sim_readme.py</text>
-<text x="1032.7" y="3142" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1005.2" y="856" width="171.4" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1017.2" y="868" width="147.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="879.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/standards_readme.py</text>
-<text x="1017.2" y="902" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1012.2" y="1336" width="157.3" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1024.2" y="1348" width="133.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="1359.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/models_readme.py</text>
-<text x="1024.2" y="1382" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1000.5" y="2856" width="180.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1012.5" y="2868" width="156.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="2879.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/integrations_readme.py</text>
-<text x="1012.5" y="2902" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1004.6" y="1896" width="172.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1016.6" y="1908" width="148.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="1919.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/framework_readme.py</text>
-<text x="1016.6" y="1942" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1016.8" y="2056" width="148.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1028.8" y="2068" width="124.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="2079.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/tools_readme.py</text>
-<text x="1028.8" y="2102" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1017.2" y="376" width="147.3" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1029.2" y="388" width="123.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="399.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/docs_readme.py</text>
-<text x="1029.2" y="422" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1011.9" y="2616" width="158.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1023.9" y="2628" width="134.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="2639.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/params_readme.py</text>
-<text x="1023.9" y="2662" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1020" y="2216" width="141.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1032" y="2228" width="117.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="2239.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/cad_readme.py</text>
-<text x="1032" y="2262" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1022.9" y="2936" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1034.9" y="2948" width="79.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1074.7" y="2959.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad/readme.py</text>
-<text x="1034.9" y="2982" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1020" y="1576" width="141.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1032" y="1588" width="117.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="1599.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/uav_readme.py</text>
-<text x="1032" y="1622" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1016.8" y="136" width="148.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1028.8" y="148" width="124.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="159.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/plant_readme.py</text>
-<text x="1028.8" y="182" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1012.6" y="2776" width="156.6" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1024.6" y="2788" width="132.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="2799.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/search_readme.py</text>
-<text x="1024.6" y="2822" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1011.9" y="216" width="158.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1023.9" y="228" width="134.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="239.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/mujoco_readme.py</text>
-<text x="1023.9" y="262" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1013.6" y="2456" width="154.6" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1025.6" y="2468" width="130.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="2479.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/trades_readme.py</text>
-<text x="1025.6" y="2502" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1017.2" y="1256" width="147.3" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1029.2" y="1268" width="123.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="1279.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/spec_readme.py</text>
-<text x="1029.2" y="1302" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1012.1" y="456" width="157.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1024.2" y="468" width="133.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="479.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/results_readme.py</text>
-<text x="1024.2" y="502" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1003.8" y="2136" width="174.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1015.8" y="2148" width="150.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="2159.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/uavresults_readme.py</text>
-<text x="1015.8" y="2182" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1010.2" y="3176" width="161.4" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1022.2" y="3188" width="137.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="3199.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/lookslib_readme.py</text>
-<text x="1022.2" y="3222" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1007" y="1176" width="167.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1019" y="1188" width="143.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="1199.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/sceneout_readme.py</text>
-<text x="1019" y="1222" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1011.8" y="1016" width="158.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1023.8" y="1028" width="134.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="1039.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/simfigs_readme.py</text>
-<text x="1023.8" y="1062" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1008.8" y="56" width="164.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1020.8" y="68" width="140.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/pages3d_readme.py</text>
-<text x="1020.8" y="102" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1013" y="2376" width="155.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1025" y="2388" width="131.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="2399.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/vcycle_readme.py</text>
-<text x="1025" y="2422" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1007.6" y="1656" width="166.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1019.6" y="1668" width="142.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="1679.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/diagrams_readme.py</text>
-<text x="1019.6" y="1702" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1006.1" y="1816" width="169.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1018.1" y="1828" width="145.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="1839.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/frontpage_readme.py</text>
-<text x="1018.1" y="1862" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1019.2" y="616" width="143.3" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1031.2" y="628" width="119.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="639.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/wiki_readme.py</text>
-<text x="1031.2" y="662" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1003" y="696" width="175.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1015" y="708" width="151.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="719.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/wikiimages_readme.py</text>
-<text x="1015" y="742" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1007" y="1096" width="167.8" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1019" y="1108" width="143.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="1119.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/assets3d_readme.py</text>
-<text x="1019" y="1142" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1005.1" y="2696" width="171.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1017.1" y="2708" width="147.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="2719.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/maps882e_readme.py</text>
-<text x="1017.1" y="2742" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="1006" y="1416" width="169.8" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1018" y="1428" width="145.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1090.9" y="1439.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/scenes3d_readme.py</text>
-<text x="1018" y="1462" font-size="12.5" fill="#0F172A" font-weight="700"></text>
-<rect x="803.9" y="1635" width="114.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="808.9" y="1648" font-size="10.5" fill="#475569">runs 40 with --check</text>
+<rect x="6" y="922" width="295.5" height="528" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="463.5" y="190" width="295.4" height="1888" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1002.4" y="6" width="232.5" height="3248" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M193.5 1412 L321.5 1412 Q328.5 1412 328.5 1419 L328.5 2015 Q328.5 2022 335.5 2022 L481.5 2022" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1392 L333.5 1392 Q340.5 1392 340.5 1399 L340.5 1919 Q340.5 1926 347.5 1926 L481.5 1926" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1254 L216.5 1254 Q223.5 1254 223.5 1261 L223.5 1271 Q223.5 1278 230.5 1278 L381.5 1278 Q388.5 1278 388.5 1285 L388.5 1623 Q388.5 1630 395.5 1630 L481.5 1630" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1248 L226.5 1248 Q233.5 1248 233.5 1255 L233.5 1261 Q233.5 1268 240.5 1268 L393.5 1268 Q400.5 1268 400.5 1275 L400.5 1519 Q400.5 1526 407.5 1526 L481.5 1526" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1260 L206.5 1260 Q213.5 1260 213.5 1267 L213.5 1281 Q213.5 1288 220.5 1288 L369.5 1288 Q376.5 1288 376.5 1295 L376.5 1727 Q376.5 1734 383.5 1734 L481.5 1734" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1230 L259.5 1230 Q263.5 1230 263.5 1234 L263.5 1234 Q263.5 1238 267.5 1238 L481.5 1238" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1242 L236.5 1242 Q243.5 1242 243.5 1249 L243.5 1251 Q243.5 1258 250.5 1258 L405.5 1258 Q412.5 1258 412.5 1265 L412.5 1423 Q412.5 1430 419.5 1430 L481.5 1430" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1236 L247.5 1236 Q253.5 1236 253.5 1242 L253.5 1242 Q253.5 1248 259.5 1248 L417.5 1248 Q424.5 1248 424.5 1255 L424.5 1327 Q424.5 1334 431.5 1334 L481.5 1334" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1224 L271.5 1224 Q273.5 1224 273.5 1226 L273.5 1226 Q273.5 1228 275.5 1228 L429.5 1228 Q436.5 1228 436.5 1221 L436.5 1149 Q436.5 1142 443.5 1142 L481.5 1142" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1266 L198.5 1266 Q203.5 1266 203.5 1271 L203.5 1291 Q203.5 1298 210.5 1298 L357.5 1298 Q364.5 1298 364.5 1305 L364.5 1810 Q364.5 1817 371.5 1817 L451.5 1817 Q458.5 1817 465.5 1817 L481.5 1817.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1218 L417.5 1218 Q424.5 1218 424.5 1211 L424.5 1053 Q424.5 1046 431.5 1046 L481.5 1046" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1082 L357.5 1082 Q364.5 1082 364.5 1075 L364.5 573 Q364.5 566 371.5 566 L481.5 566" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1002 L333.5 1002 Q340.5 1002 340.5 995 L340.5 381 Q340.5 374 347.5 374 L481.5 374" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 987 L321.5 987 Q328.5 987 328.5 980 L328.5 285 Q328.5 278 335.5 278 L481.5 278" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1017 L345.5 1017 Q352.5 1017 352.5 1010 L352.5 477 Q352.5 470 359.5 470 L481.5 470" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1168 L393.5 1168 Q400.5 1168 400.5 1161 L400.5 861 Q400.5 854 407.5 854 L481.5 854" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1156 L381.5 1156 Q388.5 1156 388.5 1149 L388.5 765 Q388.5 758 395.5 758 L481.5 758" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1180 L405.5 1180 Q412.5 1180 412.5 1173 L412.5 957 Q412.5 950 419.5 950 L481.5 950" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1144 L369.5 1144 Q376.5 1144 376.5 1137 L376.5 669 Q376.5 662 383.5 662 L481.5 662" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M193.5 1322 L345.5 1322 Q352.5 1322 352.5 1329 L352.5 1836 Q352.5 1843 359.5 1843 L451.5 1843 Q458.5 1843 465.5 1843 L481.5 1842.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M740.9 1630 L1002.4 1630" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="18" y="934" width="88.8" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="62.4" y="949" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">CI JOBS</text>
+<rect x="475.5" y="202" width="137.6" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="544.3" y="217" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">TOOLS THEY RUN</text>
+<rect x="1014.4" y="18" width="208.5" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="1118.7" y="33" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">FOLDER README GENERATORS</text>
+<rect x="57.5" y="1372" width="136" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="69.5" y="1384" width="61.4" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="100.2" y="1395.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad · build</text>
+<text x="69.5" y="1418" font-size="12.5" fill="#0F172A" font-weight="700">cad.yml</text>
+<rect x="24" y="1212" width="169.5" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="36" y="1224" width="145.5" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="108.7" y="1235.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">docs-check · readme-figures</text>
+<text x="36" y="1258" font-size="12.5" fill="#0F172A" font-weight="700">docs-check.yml</text>
+<rect x="46.2" y="1052" width="147.3" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="58.2" y="1064" width="123.3" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="119.9" y="1075.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">docs-check · doc-sysml</text>
+<text x="58.2" y="1098" font-size="12.5" fill="#0F172A" font-weight="700">docs-check.yml</text>
+<rect x="46.7" y="972" width="146.8" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="58.7" y="984" width="122.8" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="120.1" y="995.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac-validate · validate</text>
+<text x="58.7" y="1018" font-size="12.5" fill="#0F172A" font-weight="700">pdac-validate.yml</text>
+<rect x="57.3" y="1132" width="136.2" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="69.3" y="1144" width="112.2" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="125.4" y="1155.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac-validate · sysml</text>
+<text x="69.3" y="1178" font-size="12.5" fill="#0F172A" font-weight="700">pdac-validate.yml</text>
+<rect x="57.5" y="1292" width="136" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="69.5" y="1304" width="111.5" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="125.3" y="1315.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">publish-wiki · publish</text>
+<text x="69.5" y="1338" font-size="12.5" fill="#0F172A" font-weight="700">publish-wiki.yml</text>
+<rect x="481.5" y="1984" width="258.1" height="76" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="493.5" y="1996" width="117.3" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="552.2" y="2007.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad/build_concepts.py</text>
+<text x="493.5" y="2030" font-size="12.5" fill="#0F172A" font-weight="700">Build the Susanoo concept layouts in</text>
+<text x="493.5" y="2046" font-size="12.5" fill="#0F172A" font-weight="700">FreeCAD from …</text>
+<rect x="481.5" y="1888" width="238.9" height="76" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="493.5" y="1900" width="88" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="537.5" y="1911.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad/drawings.py</text>
+<text x="493.5" y="1934" font-size="12.5" fill="#0F172A" font-weight="700">Dimensioned A3 drawing sheets of</text>
+<text x="493.5" y="1950" font-size="12.5" fill="#0F172A" font-weight="700">the concept layouts …</text>
+<rect x="481.5" y="1584" width="259.4" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="493.5" y="1596" width="139.9" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="563.4" y="1607.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">check_readme_diagrams.py</text>
+<text x="493.5" y="1630" font-size="12.5" fill="#0F172A" font-weight="700">Enforce</text>
+<text x="493.5" y="1646" font-size="12.5" fill="#0F172A" font-weight="700">framework/documentation-standard.md</text>
+<text x="493.5" y="1662" font-size="12.5" fill="#0F172A" font-weight="700">on folder …</text>
+<rect x="481.5" y="1488" width="257.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="493.5" y="1500" width="105.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="546.4" y="1511.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">worksheets/build.py</text>
+<text x="493.5" y="1534" font-size="12.5" fill="#0F172A" font-weight="700">Spreadsheet-style analysis</text>
+<text x="493.5" y="1550" font-size="12.5" fill="#0F172A" font-weight="700">worksheets for the MIL-STD-882E …</text>
+<rect x="481.5" y="1696" width="237.9" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="493.5" y="1708" width="124" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="555.5" y="1719.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">readme/build_readme.py</text>
+<text x="493.5" y="1742" font-size="12.5" fill="#0F172A" font-weight="700">Build the repository README's</text>
+<text x="493.5" y="1758" font-size="12.5" fill="#0F172A" font-weight="700">figures and data tables from the …</text>
+<rect x="481.5" y="1200" width="254.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="493.5" y="1212" width="139.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="563" y="1223.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">previews/record_figures.py</text>
+<text x="493.5" y="1246" font-size="12.5" fill="#0F172A" font-weight="700">Record figures: one figure per record</text>
+<text x="493.5" y="1262" font-size="12.5" fill="#0F172A" font-weight="700">folder that had no visual …</text>
+<rect x="481.5" y="1392" width="237.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="493.5" y="1404" width="140.9" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="563.9" y="1415.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">previews/build_previews.py</text>
+<text x="493.5" y="1438" font-size="12.5" fill="#0F172A" font-weight="700">Give every folder a visual preview</text>
+<text x="493.5" y="1454" font-size="12.5" fill="#0F172A" font-weight="700">(docs/previews.yaml).</text>
+<rect x="481.5" y="1296" width="241.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="493.5" y="1308" width="119.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="553.2" y="1319.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">vcycle/build_vcycle.py</text>
+<text x="493.5" y="1342" font-size="12.5" fill="#0F172A" font-weight="700">Build the System V cycle page, its</text>
+<text x="493.5" y="1358" font-size="12.5" fill="#0F172A" font-weight="700">wiki page and its still from …</text>
+<rect x="481.5" y="1104" width="256.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="493.5" y="1116" width="96.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="541.5" y="1127.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">reliability/build.py</text>
+<text x="493.5" y="1150" font-size="12.5" fill="#0F172A" font-weight="700">Build the reliability pilot outputs from</text>
+<text x="493.5" y="1166" font-size="12.5" fill="#0F172A" font-weight="700">reliability/ and the …</text>
+<rect x="481.5" y="1792" width="256.9" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="493.5" y="1804" width="94.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="540.8" y="1815.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">wiki/build_wiki.py</text>
+<text x="493.5" y="1838" font-size="12.5" fill="#0F172A" font-weight="700">Publish the repository's</text>
+<text x="493.5" y="1854" font-size="12.5" fill="#0F172A" font-weight="700">documentation pages to the GitHub …</text>
+<rect x="481.5" y="1008" width="247" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="493.5" y="1020" width="80.9" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="534" y="1031.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">terms/terms.py</text>
+<text x="493.5" y="1054" font-size="12.5" fill="#0F172A" font-weight="700">Abbreviations, acronyms and record</text>
+<text x="493.5" y="1070" font-size="12.5" fill="#0F172A" font-weight="700">codes: defined once …</text>
+<rect x="481.5" y="528" width="239.9" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="493.5" y="540" width="118" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
+<text x="552.5" y="551.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">validate_doc_sysml.sh</text>
+<text x="493.5" y="574" font-size="12.5" fill="#0F172A" font-weight="700">Validate the SysML v2 files of the</text>
+<text x="493.5" y="590" font-size="12.5" fill="#0F172A" font-weight="700">documentation tree (concept …</text>
+<rect x="481.5" y="336" width="220.2" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="493.5" y="348" width="89.4" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="538.2" y="359.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac/validate.py</text>
+<text x="493.5" y="382" font-size="12.5" fill="#0F172A" font-weight="700">Validate PDaC records against</text>
+<text x="493.5" y="398" font-size="12.5" fill="#0F172A" font-weight="700">MIL-STD-882E (2012) model …</text>
+<rect x="481.5" y="240" width="222.4" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="493.5" y="252" width="79.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="533.4" y="263.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac/report.py</text>
+<text x="493.5" y="286" font-size="12.5" fill="#0F172A" font-weight="700">Generate HTS log, conformance</text>
+<text x="493.5" y="302" font-size="12.5" fill="#0F172A" font-weight="700">matrix, applicability and gate …</text>
+<rect x="481.5" y="432" width="236.8" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="493.5" y="444" width="99.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="543.1" y="455.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/fig_item.py</text>
+<text x="493.5" y="478" font-size="12.5" fill="#0F172A" font-weight="700">Generate the SUS-I1 context and</text>
+<text x="493.5" y="494" font-size="12.5" fill="#0F172A" font-weight="700">boundary figures from …</text>
+<rect x="481.5" y="816" width="234" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="493.5" y="828" width="138.9" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="562.9" y="839.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sysml/gen_requirements.py</text>
+<text x="493.5" y="862" font-size="12.5" fill="#0F172A" font-weight="700">Generate Requirements.sysml and</text>
+<text x="493.5" y="878" font-size="12.5" fill="#0F172A" font-weight="700">Satisfaction.sysml from …</text>
+<rect x="481.5" y="720" width="249.2" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="493.5" y="732" width="84.4" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="535.7" y="743.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sysml/check.py</text>
+<text x="493.5" y="766" font-size="12.5" fill="#0F172A" font-weight="700">Check the SysML model against the</text>
+<text x="493.5" y="782" font-size="12.5" fill="#0F172A" font-weight="700">records.</text>
+<rect x="481.5" y="912" width="254.5" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="493.5" y="924" width="83.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="535.1" y="935.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sysml/views.py</text>
+<text x="493.5" y="958" font-size="12.5" fill="#0F172A" font-weight="700">Render SysML views from the model,</text>
+<text x="493.5" y="974" font-size="12.5" fill="#0F172A" font-weight="700">and the SysML-Model wiki …</text>
+<rect x="481.5" y="624" width="225" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="493.5" y="636" width="117.9" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
+<text x="552.5" y="647.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sysml/pilot/validate.sh</text>
+<text x="493.5" y="670" font-size="12.5" fill="#0F172A" font-weight="700">Validate the Susanoo SysML v2</text>
+<text x="493.5" y="686" font-size="12.5" fill="#0F172A" font-weight="700">model with the OMG pilot …</text>
+<rect x="1044.9" y="536" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1056.9" y="548" width="106" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1109.9" y="559.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">gen_safety_docs.py</text>
+<text x="1056.9" y="582" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1039.5" y="1496" width="146.8" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1051.5" y="1508" width="122.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="1519.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/build_figures.py</text>
+<text x="1051.5" y="1542" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1031.8" y="296" width="162.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1043.8" y="308" width="138.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="319.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/concept_readme.py</text>
+<text x="1043.8" y="342" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1020.4" y="2296" width="185" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1032.4" y="2308" width="161" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="2319.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/requirements_readme.py</text>
+<text x="1032.4" y="2342" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1023.9" y="2536" width="178" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1035.9" y="2548" width="154" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="2559.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/verification_readme.py</text>
+<text x="1035.9" y="2582" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1030.8" y="776" width="164.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1042.8" y="788" width="140.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="799.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/changes_readme.py</text>
+<text x="1042.8" y="822" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1032.5" y="936" width="160.9" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1044.5" y="948" width="136.9" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="959.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/reviews_readme.py</text>
+<text x="1044.5" y="982" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1028" y="1976" width="169.8" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1040" y="1988" width="145.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="1999.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/decisions_readme.py</text>
+<text x="1040" y="2022" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1022.1" y="3016" width="181.6" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1034.1" y="3028" width="157.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="3039.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/architecture_readme.py</text>
+<text x="1034.1" y="3062" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1035.6" y="1736" width="154.6" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1047.6" y="1748" width="130.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="1759.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/safety_readme.py</text>
+<text x="1047.6" y="1782" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1042.7" y="3096" width="140.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1054.7" y="3108" width="116.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="3119.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/sim_readme.py</text>
+<text x="1054.7" y="3142" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1027.2" y="856" width="171.4" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1039.2" y="868" width="147.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="879.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/standards_readme.py</text>
+<text x="1039.2" y="902" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1034.2" y="1336" width="157.3" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1046.2" y="1348" width="133.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="1359.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/models_readme.py</text>
+<text x="1046.2" y="1382" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1022.5" y="2856" width="180.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1034.5" y="2868" width="156.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="2879.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/integrations_readme.py</text>
+<text x="1034.5" y="2902" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1026.7" y="1896" width="172.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1038.7" y="1908" width="148.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="1919.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/framework_readme.py</text>
+<text x="1038.7" y="1942" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1038.8" y="2056" width="148.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1050.8" y="2068" width="124.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="2079.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/tools_readme.py</text>
+<text x="1050.8" y="2102" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1039.2" y="376" width="147.3" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1051.2" y="388" width="123.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="399.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/docs_readme.py</text>
+<text x="1051.2" y="422" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1033.8" y="2616" width="158.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1045.8" y="2628" width="134.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="2639.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/params_readme.py</text>
+<text x="1045.8" y="2662" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1042" y="2216" width="141.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1054" y="2228" width="117.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="2239.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/cad_readme.py</text>
+<text x="1054" y="2262" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1044.9" y="2936" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1056.9" y="2948" width="79.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1096.7" y="2959.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad/readme.py</text>
+<text x="1056.9" y="2982" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1042" y="1576" width="141.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1054" y="1588" width="117.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="1599.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/uav_readme.py</text>
+<text x="1054" y="1622" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1038.8" y="136" width="148.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1050.8" y="148" width="124.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="159.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/plant_readme.py</text>
+<text x="1050.8" y="182" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1034.6" y="2776" width="156.6" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1046.6" y="2788" width="132.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="2799.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/search_readme.py</text>
+<text x="1046.6" y="2822" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1033.8" y="216" width="158.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1045.8" y="228" width="134.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="239.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/mujoco_readme.py</text>
+<text x="1045.8" y="262" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1035.6" y="2456" width="154.6" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1047.6" y="2468" width="130.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="2479.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/trades_readme.py</text>
+<text x="1047.6" y="2502" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1039.2" y="1256" width="147.3" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1051.2" y="1268" width="123.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="1279.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/spec_readme.py</text>
+<text x="1051.2" y="1302" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1034.2" y="456" width="157.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1046.2" y="468" width="133.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="479.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/results_readme.py</text>
+<text x="1046.2" y="502" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1025.8" y="2136" width="174.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1037.8" y="2148" width="150.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="2159.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/uavresults_readme.py</text>
+<text x="1037.8" y="2182" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1032.2" y="3176" width="161.4" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1044.2" y="3188" width="137.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="3199.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/lookslib_readme.py</text>
+<text x="1044.2" y="3222" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1029" y="1176" width="167.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1041" y="1188" width="143.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="1199.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/sceneout_readme.py</text>
+<text x="1041" y="1222" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1033.8" y="1016" width="158.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1045.8" y="1028" width="134.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="1039.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/simfigs_readme.py</text>
+<text x="1045.8" y="1062" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1030.8" y="56" width="164.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1042.8" y="68" width="140.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/pages3d_readme.py</text>
+<text x="1042.8" y="102" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1035" y="2376" width="155.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1047" y="2388" width="131.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="2399.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/vcycle_readme.py</text>
+<text x="1047" y="2422" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1029.7" y="1656" width="166.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1041.7" y="1668" width="142.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="1679.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/diagrams_readme.py</text>
+<text x="1041.7" y="1702" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1028.2" y="1816" width="169.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1040.2" y="1828" width="145.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="1839.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/frontpage_readme.py</text>
+<text x="1040.2" y="1862" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1041.2" y="616" width="143.3" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1053.2" y="628" width="119.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="639.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/wiki_readme.py</text>
+<text x="1053.2" y="662" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1025" y="696" width="175.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1037" y="708" width="151.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="719.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/wikiimages_readme.py</text>
+<text x="1037" y="742" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1029" y="1096" width="167.8" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1041" y="1108" width="143.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="1119.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/assets3d_readme.py</text>
+<text x="1041" y="1142" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1027.2" y="2696" width="171.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1039.2" y="2708" width="147.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="2719.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/maps882e_readme.py</text>
+<text x="1039.2" y="2742" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="1028" y="1416" width="169.8" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1040" y="1428" width="145.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1112.9" y="1439.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/scenes3d_readme.py</text>
+<text x="1040" y="1462" font-size="12.5" fill="#0F172A" font-weight="700"></text>
+<rect x="825.9" y="1635" width="114.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="830.9" y="1648" font-size="10.5" fill="#475569">runs 40 with --check</text>
 </g>
 <rect x="40" y="3389" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
 <text x="62" y="3399" font-size="11" fill="#475569">CI job (workflow · job)</text>
@@ -329,11 +335,11 @@
 <text x="666.5" y="3399" font-size="11" fill="#475569">Runs</text>
 <text x="40" y="3421" font-size="10.5" fill="#94A3B8">Generated by tools/figures/tools_readme.py from the tools' docstrings and imports and the CI workflows. Tools check links, schemas and staleness; passing them is not a review and accepts nothing (rule R13).</text>
 <g class="terms" data-base-h="3450">
-<rect x="0" y="3450" width="1298.9" height="83.6" fill="#FFFFFF"/>
-<line x1="40" y1="3454" x2="1258.9" y2="3454" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="3469.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: A01–A04 = item-definition validator rule (A01–A04) · CAD = computer-aided design · CI = continuous integration (the automated checks GitHub runs on every change) · DoD = US Department of Defense · FreeCAD =</text>
-<text x="40" y="3484.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">open-source parametric CAD program used for the concept layouts · HTS = hazard tracking system (MIL-STD-882E Task 106; here safety/hazards/) · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base</text>
-<text x="40" y="3498.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">edition) · OMG = Object Management Group, publisher of SysML · PDaC = Product Development as Code · R01 … = validator rule in tools/pdac (R13 = only a named human review accepts anything) · SUS-I1 = integrated mechanized</text>
-<text x="40" y="3513.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">walker and observation UAV · SysML = Systems Modeling Language (SysML v2) · UAV = uncrewed aerial vehicle (drone) · US = United States</text>
+<rect x="0" y="3450" width="1320.9" height="83.6" fill="#FFFFFF"/>
+<line x1="40" y1="3454" x2="1280.9" y2="3454" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="3469.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: A01–A04 = item-definition validator rule (A01–A04) · CAD = computer-aided design · CI = continuous integration (the automated checks GitHub runs on every change) · DoD = US Department of Defense · FreeCAD = open-source</text>
+<text x="40" y="3484.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">parametric CAD program used for the concept layouts · HTS = hazard tracking system (MIL-STD-882E Task 106; here safety/hazards/) · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base edition) · OMG =</text>
+<text x="40" y="3498.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Object Management Group, publisher of SysML · PDaC = Product Development as Code · R01 … = validator rule in tools/pdac (R13 = only a named human review accepts anything) · SUS-I1 = integrated mechanized walker and observation</text>
+<text x="40" y="3513.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">UAV · SysML = Systems Modeling Language (SysML v2) · UAV = uncrewed aerial vehicle (drone) · US = United States</text>
 </g>
 </svg>

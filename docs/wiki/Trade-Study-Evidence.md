@@ -45,7 +45,7 @@ Runs the simulations the architecture trade studies need. For TS-001 (actuation 
 
 ## Outcomes
 
-![Figure 1 · Supply-loss outcome by alternative](assets/sim/trades/figures/fig-1-outcomes.svg)
+![Figure 1 · Supply-loss outcome by alternative](../../sim/trades/figures/fig-1-outcomes.svg)
 
 | Mode | Alternatives | Load holding | Level 1 (safe / tip / drop) | Level 2 (safe / tip / drop) | Worst impact L2 | Agree |
 |---|---|---|---|---|---|---|
@@ -60,7 +60,7 @@ Summary recorded in TS-001: With load holding working, every supply-loss mode is
 
 ## Where the evidence goes
 
-![Figure 2 · From alternatives to TS-001 scores](assets/sim/trades/figures/fig-2-evidence-trace.svg)
+![Figure 2 · From alternatives to TS-001 scores](../../sim/trades/figures/fig-2-evidence-trace.svg)
 
 | Alternative | Criterion | Score | Note |
 |---|---|---|---|
@@ -70,11 +70,11 @@ Summary recorded in TS-001: With load holding working, every supply-loss mode is
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/sim/trades/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../sim/trades/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/sim/trades/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../sim/trades/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -93,21 +93,21 @@ Summary recorded in TS-001: With load holding working, every supply-loss mode is
 
 [`SupplyLossModes.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/trades/SupplyLossModes.sysml) is generated from the evidence definition and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML block definition — SupplyLossModes](assets/sim/trades/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — SupplyLossModes](../../sim/trades/figures/fig-5-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/sim/trades/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../sim/trades/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | Alternatives and criteria | [`TS-001`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/trades/TS-001.yaml) |
-| Walker models | [`sim/plant/`](Walker-Plant), [`sim/mujoco/`](Level-2-MuJoCo) |
+| Walker models | [`sim/plant/`](Walker-Plant.md), [`sim/mujoco/`](Level-2-MuJoCo.md) |
 | Adopted torques | [`sim/spec/walker_l2.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/spec/walker_l2.yaml) |
 
 | Output | Destination |
 |---|---|
-| Results | [`sim/results/`](Simulation-Results) |
+| Results | [`sim/results/`](Simulation-Results.md) |
 | Evidence TS-001-E01 | [`TS-001`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/trades/TS-001.yaml) criterion C09; the lead decides the trade |
 
 ## Folder contents

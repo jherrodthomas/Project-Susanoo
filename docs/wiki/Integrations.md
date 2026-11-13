@@ -45,10 +45,10 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Field | Value |
 |---|---|
-| PX4 | [`px4/`](PX4-Integration-Model) · upstream tag `v1.16.2`, pinned in [`sim/uav/fetch_px4.sh`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/fetch_px4.sh) |
+| PX4 | [`px4/`](PX4-Integration-Model.md) · upstream tag `v1.16.2`, pinned in [`sim/uav/fetch_px4.sh`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/fetch_px4.sh) |
 | Interface contract | [`px4/interface-contract.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/integrations/px4/interface-contract.md) |
 | SysML model | [`PX4Integration.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/integrations/px4/PX4Integration.sysml) |
-| SITL | [UAV simulation](UAV-Simulation), [`sim/results/uav/`](UAV-SITL-Results) |
+| SITL | [UAV simulation](UAV-Simulation.md), [`sim/results/uav/`](UAV-SITL-Results.md) |
 
 ## Purpose
 
@@ -56,7 +56,7 @@ Third-party software integrated into SUS-I1, each behind its own assurance bound
 
 ## PX4 interfaces
 
-![Figure 1 · PX4 interface register](assets/integrations/figures/fig-1-interfaces.svg)
+![Figure 1 · PX4 interface register](../../integrations/figures/fig-1-interfaces.svg)
 
 | Interface | Name | From | To | Direction | Exchange | Hazards | In SysML |
 |---|---|---|---|---|---|---|---|
@@ -72,7 +72,7 @@ Third-party software integrated into SUS-I1, each behind its own assurance bound
 
 ## What bears on each hazard
 
-![Figure 2 · What bears on each integration hazard](assets/integrations/figures/fig-2-evidence-map.svg)
+![Figure 2 · What bears on each integration hazard](../../integrations/figures/fig-2-evidence-map.svg)
 
 | Integration requirement | Statement |
 |---|---|
@@ -90,17 +90,17 @@ Third-party software integrated into SUS-I1, each behind its own assurance bound
 | SU-05 | Commanded beyond the geofence | HAZ-INT-001 | contained |
 | SU-06 | GPS lost during observation (emulated) | HAZ-INT-001 | landed-clear |
 
-SITL outcomes are synthetic findings for the safety lead, not verification evidence (see the [simulation evidence gate](Simulation-Track#evidence-gate)).
+SITL outcomes are synthetic findings for the safety lead, not verification evidence (see the [simulation evidence gate](Simulation-Track.md#evidence-gate)).
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/integrations/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../integrations/figures/fig-3-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml).
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/integrations/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../integrations/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -114,37 +114,37 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 | 8 | `SUS-I1-INT` | `SUS-A1-FC` | IF-PX4-008 Fault and contingency notification: time-stamped, prioritised fault notifications |
 | 9 | `SUS-M1-DCK` | `SUS-A1-PWR` | IF-PX4-009 Power and charging handshake: charging handshake, rotor inhibit, energy isolation |
 
-**Explicitly excluded:** PX4 controlling walker joints; PX4 as a pilot-safety controller for SUS-M1; QGroundControl as an operations procedure; weapons or autonomous targeting. (from the [PX4 page](PX4-Integration-Model#boundary-diagram))
+**Explicitly excluded:** PX4 controlling walker joints; PX4 as a pilot-safety controller for SUS-M1; QGroundControl as an operations procedure; weapons or autonomous targeting. (from the [PX4 page](PX4-Integration-Model.md#boundary-diagram))
 
 ## SysML model
 
-Model of record: [`PX4Integration.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/integrations/px4/PX4Integration.sysml), hand-written, importing `SusanooArchitecture` and validated by the OMG pilot in CI. Its internal block, state machine and requirement views are on the [PX4 page](PX4-Integration-Model).
+Model of record: [`PX4Integration.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/integrations/px4/PX4Integration.sysml), hand-written, importing `SusanooArchitecture` and validated by the OMG pilot in CI. Its internal block, state machine and requirement views are on the [PX4 page](PX4-Integration-Model.md).
 
-![Figure 5 · SysML block definition — PX4Integration](assets/integrations/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — PX4Integration](../../integrations/figures/fig-5-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/integrations/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../integrations/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | PX4 flight stack | upstream PX4, tag `v1.16.2` |
-| IF-PX4 interfaces | [Architecture records](Architecture-Records) |
-| DQ-008: What should the UAV do when it loses the link to the integration manager? (applied) | [Decision register](Decision-Register) |
-| UAV and dock hazards | [Safety records](Safety-Records) |
+| IF-PX4 interfaces | [Architecture records](Architecture-Records.md) |
+| DQ-008: What should the UAV do when it loses the link to the integration manager? (applied) | [Decision register](Decision-Register.md) |
+| UAV and dock hazards | [Safety records](Safety-Records.md) |
 
 | Output | Destination |
 |---|---|
-| SITL scenarios | [Simulation track](Simulation-Track) |
+| SITL scenarios | [Simulation track](Simulation-Track.md) |
 | Software functions | [`safety/software/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/software/README.md) |
-| Allocated requirements SYS-003, SYS-006, SYS-012, SYS-013, SYS-021, SYS-022 | [Requirement register](Requirements-Register) |
-| Interfaces and version | [882E work products](882E-Work-Products) |
+| Allocated requirements SYS-003, SYS-006, SYS-012, SYS-013, SYS-021, SYS-022 | [Requirement register](Requirements-Register.md) |
+| Interfaces and version | [882E work products](882E-Work-Products.md) |
 
 ## Folder contents
 
 | Item | Description | State |
 |---|---|---|
-| [`px4/`](PX4-Integration-Model) | PX4 integration: contract, SysML view, figures (hand-written page) | folder |
+| [`px4/`](PX4-Integration-Model.md) | PX4 integration: contract, SysML view, figures (hand-written page) | folder |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/integrations/figures) | Generated SVG figures (do not edit) | generated |
 | `README.md` | This page, generated above the END marker | generated |
 

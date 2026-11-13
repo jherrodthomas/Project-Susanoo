@@ -39,11 +39,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 2 — Identify and document hazards |
-| Tasks | [Task 208 — Functional Hazard Analysis](MIL-STD-882E-Task-208) |
+| Tasks | [Task 208 — Functional Hazard Analysis](MIL-STD-882E-Task-208.md) |
 | Lifecycle gate | G1–G2 |
 | Applicability | Selected |
 | Accountable role | Safety lead with software safety lead |
-| Parent folder | [02 · Identify and Document Hazards](882E-02-hazard-identification) |
+| Parent folder | [02 · Identify and Document Hazards](882E-02-hazard-identification.md) |
 
 ## Purpose
 
@@ -53,17 +53,17 @@ ARP4761A is a separate artifact with a separate classification scale.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -77,9 +77,9 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task208_FHA.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/Task208_FHA.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML activity — functional chain under analysis](assets/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/figures/fig-4-sysml-activity.svg)
+![Figure 4 · SysML activity — functional chain under analysis](../../safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/figures/fig-4-sysml-activity.svg)
 
-![Figure 5 · SysML block definition — functional failure condition](assets/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — functional failure condition](../../safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/figures/fig-5-sysml-block-definition.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -127,24 +127,24 @@ package Task208_FHA {
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Function list | [00 · System Definition and Analysis Baseline](882E-00-system-definition) |
-| PHL | [Task 201 · Preliminary Hazard List (PHL)](882E-task-201-preliminary-hazard-list) |
+| Function list | [00 · System Definition and Analysis Baseline](882E-00-system-definition.md) |
+| PHL | [Task 201 · Preliminary Hazard List (PHL)](882E-task-201-preliminary-hazard-list.md) |
 
 | Output | Destination |
 |---|---|
-| Safety-significant functions | [Software Contribution to System Risk (Section 4.4)](882E-software-safety) |
-| Functional safety requirements | [Task 203 · System Requirements Hazard Analysis (SRHA)](882E-task-203-system-requirements-hazard-analysis) |
+| Safety-significant functions | [Software Contribution to System Risk (Section 4.4)](882E-software-safety.md) |
+| Functional safety requirements | [Task 203 · System Requirements Hazard Analysis (SRHA)](882E-task-203-system-requirements-hazard-analysis.md) |
 
 ## Folder contents
 
 | Item | Description | State |
 |---|---|---|
 | [`fha.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml) | FHA worksheet source: function x failure type rows (AI-drafted, I0) | present |
-| [`fha.svg`](assets/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.svg) | Spreadsheet view of the worksheet (generated by tools/worksheets/build.py) | present |
+| [`fha.svg`](../../safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.svg) | Spreadsheet view of the worksheet (generated by tools/worksheets/build.py) | present |
 | [`fha.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.csv) | Function x failure-type worksheet | present |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/figures) | Generated SVG figures (do not edit) | generated |
 | [`Task208_FHA.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/Task208_FHA.sysml) | Generated SysML v2 view | generated |
@@ -156,7 +156,7 @@ package Task208_FHA {
 <!-- worksheet:start (generated by tools/worksheets/build.py; do not edit) -->
 ### Worksheet
 
-![Task 208 · Functional Hazard Analysis worksheet](assets/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.svg)
+![Task 208 · Functional Hazard Analysis worksheet](../../safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.svg)
 
 Data: [`fha.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.csv) · Excel: [`worksheets.xlsx`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/generated/worksheets.xlsx), tab **FHA** (risk levels are live Table III formulas). Generated from `fha.yaml (AI-drafted I0) + hazard records` by `tools/worksheets/build.py`; edit the records, not the sheet. AI-drafted (I0), not reviewed.
 <!-- worksheet:end -->

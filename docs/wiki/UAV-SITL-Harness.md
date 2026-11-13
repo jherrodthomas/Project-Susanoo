@@ -40,8 +40,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | PX4 | `v1.16.2`, SITL SIH quadrotor, headless lockstep ([`fetch_px4.sh`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/fetch_px4.sh)) |
-| Run | `python -m sim.uav.harness --px4 PX4_DIR` ([`harness.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/harness.py)); re-running: [`sim/README.md`](Simulation-Track) |
-| Results | [`sim/results/uav/`](UAV-SITL-Results) · [UAV simulation (wiki)](UAV-Simulation) |
+| Run | `python -m sim.uav.harness --px4 PX4_DIR` ([`harness.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/harness.py)); re-running: [`sim/README.md`](Simulation-Track.md) |
+| Results | [`sim/results/uav/`](UAV-SITL-Results.md) · [UAV simulation (wiki)](UAV-Simulation.md) |
 | SysML | [`ObservedModes.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/ObservedModes.sysml) (generated) |
 
 ## Purpose
@@ -50,7 +50,7 @@ Runs the SUS-A1 failsafe scenarios on PX4's own software-in-the-loop simulator a
 
 ## Scenarios
 
-![Figure 1 · PX4 SITL failsafe scenarios](assets/sim/uav/figures/fig-1-scenarios.svg)
+![Figure 1 · PX4 SITL failsafe scenarios](../../sim/uav/figures/fig-1-scenarios.svg)
 
 | Run | Scenario | Parameters | Injection | Outcome | To pilot (low) | Contract |
 |---|---|---|---|---|---|---|
@@ -71,7 +71,7 @@ Findings (from the outcome and metric rules in [`scenarios.yaml`](https://github
 
 ## Ground tracks
 
-![Figure 2 · Ground tracks of the runs](assets/sim/uav/figures/fig-2-flight-paths.svg)
+![Figure 2 · Ground tracks of the runs](../../sim/uav/figures/fig-2-flight-paths.svg)
 
 | Assumption (SPEC-UAV-001) | Value |
 |---|---|
@@ -89,11 +89,11 @@ Findings (from the outcome and metric rules in [`scenarios.yaml`](https://github
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/sim/uav/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../sim/uav/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/sim/uav/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../sim/uav/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -113,23 +113,23 @@ Findings (from the outcome and metric rules in [`scenarios.yaml`](https://github
 
 [`ObservedModes.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/ObservedModes.sysml) is generated from the committed runs and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML state machine — Px4FailsafeModes](assets/sim/uav/figures/fig-5-sysml-state-machine.svg)
+![Figure 5 · SysML state machine — Px4FailsafeModes](../../sim/uav/figures/fig-5-sysml-state-machine.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/sim/uav/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../sim/uav/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | PX4 flight stack | upstream PX4, tag `v1.16.2` (built locally, not committed) |
-| Hazards (HAZ-DCK-002, HAZ-INT-001) | [Safety records](Safety-Records) |
+| Hazards (HAZ-DCK-002, HAZ-INT-001) | [Safety records](Safety-Records.md) |
 | Interface contract | [`integrations/px4/interface-contract.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/integrations/px4/interface-contract.md) |
 
 | Output | Destination |
 |---|---|
-| Runs | [`sim/results/uav/`](UAV-SITL-Results) |
+| Runs | [`sim/results/uav/`](UAV-SITL-Results.md) |
 | Findings | hazard causal factors and mitigations (for review by the safety lead) |
-| Scenes and wiki page | `sim/figures/uav_scenes.py`, [Integrations](Integrations) |
+| Scenes and wiki page | `sim/figures/uav_scenes.py`, [Integrations](Integrations.md) |
 
 ## Folder contents
 

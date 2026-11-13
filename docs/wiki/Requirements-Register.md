@@ -55,7 +55,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Records | 24 (`SYS-nnn.yaml`, schema `susanoo/requirement/v0.1`) |
 | Hazards traced | 22 of 22 hazard records |
 | Elements allocated | 12 |
-| MIL-STD-882E | element 5 · [Safety Requirements Register](882E-safety-requirements) |
+| MIL-STD-882E | element 5 · [Safety Requirements Register](882E-safety-requirements.md) |
 | SysML model | [`Requirements.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Requirements.sysml) (generated), [`Satisfaction.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Satisfaction.sysml) |
 | Validated by | `python -m tools.pdac.validate` (traceability rules), `python -m tools.sysml.check` |
 
@@ -65,7 +65,7 @@ This folder holds the system safety requirements of SUS-I1 as typed records, one
 
 ## Requirement register
 
-![Figure 1 · Requirement register](assets/requirements/figures/fig-1-register.svg)
+![Figure 1 · Requirement register](../../requirements/figures/fig-1-register.svg)
 
 | ID | Title | Hazards | Scenarios | Allocated to | Verification | Status |
 |---|---|---|---|---|---|---|
@@ -125,19 +125,19 @@ This folder holds the system safety requirements of SUS-I1 as typed records, one
 
 ## Traceability
 
-![Figure 2 · Traceability — hazard to requirement to element](assets/requirements/figures/fig-2-traceability.svg)
+![Figure 2 · Traceability — hazard to requirement to element](../../requirements/figures/fig-2-traceability.svg)
 
-The same links are checked by `tools/pdac` (a safety-significant requirement must trace to a hazard and to an element) and listed per hazard in the [hazard tracking log](Hazard-Tracking-Log).
+The same links are checked by `tools/pdac` (a safety-significant requirement must trace to a hazard and to an element) and listed per hazard in the [hazard tracking log](Hazard-Tracking-Log.md).
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/requirements/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../requirements/figures/fig-3-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml).
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/requirements/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../requirements/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -155,26 +155,26 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 Model of record: [`Requirements.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Requirements.sysml), generated from these records by `python -m tools.sysml.gen_requirements`; allocation is modelled as «satisfy» in [`Satisfaction.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Satisfaction.sysml). Both are part of the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model) and pass the OMG pilot in CI.
 
-![Figure 5 · SysML requirements — SusanooRequirements](assets/requirements/figures/fig-5-sysml-requirements.svg)
+![Figure 5 · SysML requirements — SusanooRequirements](../../requirements/figures/fig-5-sysml-requirements.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/requirements/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../requirements/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | Hazards and preliminary risk | [`safety/hazards/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/hazards) |
 | Operating scenarios | [`concept/CONOPS.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md) |
 | Elements to allocate to | [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml) |
-| Derived requirements | [Task 203 SRHA](882E-task-203-system-requirements-hazard-analysis) |
+| Derived requirements | [Task 203 SRHA](882E-task-203-system-requirements-hazard-analysis.md) |
 
 | Output | Destination |
 |---|---|
 | SysML requirement definitions | [`Requirements.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Requirements.sysml) |
-| Safety requirements register | [element 5](882E-safety-requirements) |
-| Requirements to verify | [Task 401](882E-task-401-safety-verification) |
-| Requirement IDs per hazard | [Hazard tracking log](Hazard-Tracking-Log) |
-| Counts and status | [front-page README](Project-Overview) |
+| Safety requirements register | [element 5](882E-safety-requirements.md) |
+| Requirements to verify | [Task 401](882E-task-401-safety-verification.md) |
+| Requirement IDs per hazard | [Hazard tracking log](Hazard-Tracking-Log.md) |
+| Counts and status | [front-page README](Project-Overview.md) |
 
 ## Folder contents
 
@@ -212,6 +212,6 @@ Model of record: [`Requirements.sysml`](https://github.com/jherrodthomas/Project
 1. Add or edit `SYS-nnn.yaml` with status `candidate` or `draft`; name its hazards, scenarios, allocation and verification methods.
 2. Add a matching «satisfy» line per allocated element to [`Satisfaction.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Satisfaction.sysml).
 3. Regenerate: `python -m tools.sysml.gen_requirements`, `python3 tools/figures/requirements_readme.py`, then run the full check list in [`CLAUDE.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/CLAUDE.md).
-4. Baselining (`baselined`) and verification closure are human decisions; see the [Decision Inbox](Decision-Inbox).
+4. Baselining (`baselined`) and verification closure are human decisions; see the [Decision Inbox](Decision-Inbox.md).
 
 <!-- END GENERATED: content below this line is human-authored and preserved -->

@@ -37,8 +37,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Field | Value |
 |---|---|
-| Open | [`index.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/index.html) from a local checkout, or a page below · [3D scenes (wiki)](3D-Scenes) |
-| Built by | [`sim/scenes3d`](3D-Scene-Builder): `build_pages.py` (scenes, index), `build_sheet.py` (sheets) |
+| Open | [`index.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/index.html) from a local checkout, or a page below · [3D scenes (wiki)](3D-Scenes.md) |
+| Built by | [`sim/scenes3d`](3D-Scene-Builder.md): `build_pages.py` (scenes, index), `build_sheet.py` (sheets) |
 | Checked by | `sim/scenes3d/render.mjs` (scene pages), `sim/scenes3d/sheet_check.mjs` (sheets), both `--check-only` in CI |
 | three.js | `0.170.0` from jsDelivr, pinned by SHA-256 in [`sim/scenes3d/scenes.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/scenes.yaml) |
 | SysML | [`Pages3D.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/Pages3D.sysml) (generated) |
@@ -49,26 +49,26 @@ The pages a reader opens to see the simulation results and the concept geometry 
 
 ## Pages
 
-![Figure 1 · The 3D pages](assets/docs/3d/figures/fig-1-pages.svg)
+![Figure 1 · The 3D pages](../3d/figures/fig-1-pages.svg)
 
 | Page | Kind | Shows | Hazards | Outcome or contents | Size | Still | CI check |
 |---|---|---|---|---|---|---|---|
-| [`SUS-A1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-A1.html) | general-arrangement sheet | UAV on dock and in airspace, interactive (sheet 2 of 3, CL-05) | 6 hazards | 6 hazard callouts · replays SU-01, SU-02, SU-03, SU-04, SU-05, SU-06 | 77 KB | [`3d-sus-a1.png`](assets/docs/wiki/images/3d-sus-a1.png), [`3d-sus-a1-air.png`](assets/docs/wiki/images/3d-sus-a1-air.png) | `sim/scenes3d/build_sheet.py --check` |
-| [`SUS-M1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1.html) | general-arrangement sheet | General arrangement, interactive (sheet 1 of 3, CL-05) | 22 hazards | 5 postures · 19 hazard callouts · replays S3-01, S3-02, S3-03, S3-04 | 77 KB | [`3d-sus-m1.png`](assets/docs/wiki/images/3d-sus-m1.png), [`3d-sus-m1-terrain.png`](assets/docs/wiki/images/3d-sus-m1-terrain.png) | `sim/scenes3d/sheet_check.mjs` |
-| [`SUS-M1-terrain.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1-terrain.html) | general-arrangement sheet | Terrain course, interactive (sheet 3 of 3, CL-05) | HAZ-WLK-002 | 0 hazard callouts | 38 KB | [`3d-sus-m1-terrain.png`](assets/docs/wiki/images/3d-sus-m1-terrain.png) | `sim/scenes3d/build_sheet.py --check` |
-| [`S3-01.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-01.html) | scene replay | Slow supply leak on a slope; balance lost before the hold engages | HAZ-WLK-002 | tip | 19 KB | [`3d-s3-01.png`](assets/docs/wiki/images/3d-s3-01.png) | `sim/scenes3d/render.mjs` |
-| [`S3-02.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-02.html) | scene replay | Protective stop removes leg force instead of crouching | HAZ-SAF-001 | hard-drop | 18 KB | [`3d-s3-02.png`](assets/docs/wiki/images/3d-s3-02.png) | `sim/scenes3d/render.mjs` |
-| [`S3-03.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-03.html) | scene replay | Frozen posture feedback with no staleness monitor | HAZ-WLK-001 | tip | 18 KB | [`3d-s3-03.png`](assets/docs/wiki/images/3d-s3-03.png) | `sim/scenes3d/render.mjs` |
-| [`S3-04.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-04.html) | scene replay | Burst supply loss with failed load holding; the cockpit drops | HAZ-PIL-002 | hard-drop | 18 KB | [`3d-s3-04.png`](assets/docs/wiki/images/3d-s3-04.png) | `sim/scenes3d/render.mjs` |
-| [`S3-05.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-05.html) | scene replay | Link loss with return-to-launch; the UAV descends into the pilot keep-out | HAZ-INT-001 | keepout-breach | 18 KB | [`3d-s3-05.png`](assets/docs/wiki/images/3d-s3-05.png) | `sim/scenes3d/render.mjs` |
-| [`S3-06.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-06.html) | scene replay | Link loss after the walker moved; the UAV lands at the stale home | HAZ-INT-001, HAZ-DCK-002 | landed-at-stale-home | 18 KB | [`3d-s3-06.png`](assets/docs/wiki/images/3d-s3-06.png) | `sim/scenes3d/render.mjs` |
-| [`S3-01-dusk.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-01-dusk.html) | look variant | Slow supply leak on a slope; balance lost before the hold engages | HAZ-WLK-002 | tip | 19 KB | [`3d-s3-01-dusk.png`](assets/docs/wiki/images/3d-s3-01-dusk.png) | `sim/scenes3d/render.mjs` |
-| [`S3-05-fog.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-05-fog.html) | look variant | Link loss with return-to-launch; the UAV descends into the pilot keep-out | HAZ-INT-001 | keepout-breach | 18 KB | [`3d-s3-05-fog.png`](assets/docs/wiki/images/3d-s3-05-fog.png) | `sim/scenes3d/render.mjs` |
+| [`SUS-A1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-A1.html) | general-arrangement sheet | UAV on dock and in airspace, interactive (sheet 2 of 3, CL-05) | 6 hazards | 6 hazard callouts · replays SU-01, SU-02, SU-03, SU-04, SU-05, SU-06 | 77 KB | [`3d-sus-a1.png`](images/3d-sus-a1.png), [`3d-sus-a1-air.png`](images/3d-sus-a1-air.png) | `sim/scenes3d/build_sheet.py --check` |
+| [`SUS-M1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1.html) | general-arrangement sheet | General arrangement, interactive (sheet 1 of 3, CL-05) | 22 hazards | 5 postures · 19 hazard callouts · replays S3-01, S3-02, S3-03, S3-04 | 77 KB | [`3d-sus-m1.png`](images/3d-sus-m1.png), [`3d-sus-m1-terrain.png`](images/3d-sus-m1-terrain.png) | `sim/scenes3d/sheet_check.mjs` |
+| [`SUS-M1-terrain.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1-terrain.html) | general-arrangement sheet | Terrain course, interactive (sheet 3 of 3, CL-05) | HAZ-WLK-002 | 0 hazard callouts | 38 KB | [`3d-sus-m1-terrain.png`](images/3d-sus-m1-terrain.png) | `sim/scenes3d/build_sheet.py --check` |
+| [`S3-01.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-01.html) | scene replay | Slow supply leak on a slope; balance lost before the hold engages | HAZ-WLK-002 | tip | 19 KB | [`3d-s3-01.png`](images/3d-s3-01.png) | `sim/scenes3d/render.mjs` |
+| [`S3-02.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-02.html) | scene replay | Protective stop removes leg force instead of crouching | HAZ-SAF-001 | hard-drop | 18 KB | [`3d-s3-02.png`](images/3d-s3-02.png) | `sim/scenes3d/render.mjs` |
+| [`S3-03.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-03.html) | scene replay | Frozen posture feedback with no staleness monitor | HAZ-WLK-001 | tip | 18 KB | [`3d-s3-03.png`](images/3d-s3-03.png) | `sim/scenes3d/render.mjs` |
+| [`S3-04.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-04.html) | scene replay | Burst supply loss with failed load holding; the cockpit drops | HAZ-PIL-002 | hard-drop | 18 KB | [`3d-s3-04.png`](images/3d-s3-04.png) | `sim/scenes3d/render.mjs` |
+| [`S3-05.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-05.html) | scene replay | Link loss with return-to-launch; the UAV descends into the pilot keep-out | HAZ-INT-001 | keepout-breach | 18 KB | [`3d-s3-05.png`](images/3d-s3-05.png) | `sim/scenes3d/render.mjs` |
+| [`S3-06.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-06.html) | scene replay | Link loss after the walker moved; the UAV lands at the stale home | HAZ-INT-001, HAZ-DCK-002 | landed-at-stale-home | 18 KB | [`3d-s3-06.png`](images/3d-s3-06.png) | `sim/scenes3d/render.mjs` |
+| [`S3-01-dusk.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-01-dusk.html) | look variant | Slow supply leak on a slope; balance lost before the hold engages | HAZ-WLK-002 | tip | 19 KB | [`3d-s3-01-dusk.png`](images/3d-s3-01-dusk.png) | `sim/scenes3d/render.mjs` |
+| [`S3-05-fog.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/S3-05-fog.html) | look variant | Link loss with return-to-launch; the UAV descends into the pilot keep-out | HAZ-INT-001 | keepout-breach | 18 KB | [`3d-s3-05-fog.png`](images/3d-s3-05-fog.png) | `sim/scenes3d/render.mjs` |
 | [`index.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/index.html) | index | links to 11 pages | — | plain HTML, no 3D | 2 KB | — | `sim/scenes3d/build_pages.py --check` |
 
 ## What each page is built from
 
-![Figure 2 · What each page is built from](assets/docs/3d/figures/fig-2-composition.svg)
+![Figure 2 · What each page is built from](../3d/figures/fig-2-composition.svg)
 
 | Page | Built by | From |
 |---|---|---|
@@ -90,19 +90,19 @@ The pages a reader opens to see the simulation results and the concept geometry 
 | [`assets/sus-m1-terrain.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/assets/sus-m1-terrain.js) | 7619 KB | SUS-M1-terrain.html |
 | [`assets/sus-m1.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/assets/sus-m1.js) | 4017 KB | SUS-A1.html, SUS-M1.html, SUS-M1-terrain.html |
 
-![SUS-A1 sheet](assets/docs/wiki/images/3d-sus-a1.png)
+![SUS-A1 sheet](images/3d-sus-a1.png)
 
-![SUS-M1 sheet](assets/docs/wiki/images/3d-sus-m1.png)
+![SUS-M1 sheet](images/3d-sus-m1.png)
 
-![SUS-M1-terrain sheet](assets/docs/wiki/images/3d-sus-m1-terrain.png)
+![SUS-M1-terrain sheet](images/3d-sus-m1-terrain.png)
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/docs/3d/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../3d/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/docs/3d/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../3d/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -122,28 +122,28 @@ The pages a reader opens to see the simulation results and the concept geometry 
 
 [`Pages3D.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/Pages3D.sysml) is generated from the pages and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML block definition — Pages3D](assets/docs/3d/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — Pages3D](../3d/figures/fig-5-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/docs/3d/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../3d/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Scene analysis and looks | [`sim/scenes3d`](3D-Scene-Builder) (`out/`, `scenes.yaml`, `library/`) |
-| Sheet data | `sim/scenes3d/sheet.yaml`, `sheet_uav.yaml`, [`cad/metrics.json`](Concept-Layouts), [hazard records](Safety-Records), [PX4 SITL results](Simulation-Results) |
+| Scene analysis and looks | [`sim/scenes3d`](3D-Scene-Builder.md) (`out/`, `scenes.yaml`, `library/`) |
+| Sheet data | `sim/scenes3d/sheet.yaml`, `sheet_uav.yaml`, [`cad/metrics.json`](Concept-Layouts.md), [hazard records](Safety-Records.md), [PX4 SITL results](Simulation-Results.md) |
 | CL-05 geometry | `tools/cad/b3d/cl05_web.py` → `assets/sus-m1.js` |
 
 | Output | Destination |
 |---|---|
 | Pages to open | a browser, from a local checkout |
 | Stills | `docs/wiki/images/3d-*.png` (rendered by the checks) |
-| Wiki | [`3D-Scenes`](3D-Scenes), and this page as `3D-Scene-Pages` |
+| Wiki | [`3D-Scenes`](3D-Scenes.md), and this page as `3D-Scene-Pages` |
 
 ## Adding or changing a page
 
-1. Change the scene or sheet in [`sim/scenes3d`](3D-Scene-Builder), never a page here.
-2. Rebuild: `python -m sim.scenes3d.export_scene && python -m sim.scenes3d.build_pages` and `python -m sim.scenes3d.build_sheet`; render the stills with `render.mjs` and `sheet_check.mjs` (see [`sim/README.md`](Simulation-Track)).
+1. Change the scene or sheet in [`sim/scenes3d`](3D-Scene-Builder.md), never a page here.
+2. Rebuild: `python -m sim.scenes3d.export_scene && python -m sim.scenes3d.build_pages` and `python -m sim.scenes3d.build_sheet`; render the stills with `render.mjs` and `sheet_check.mjs` (see [`sim/README.md`](Simulation-Track.md)).
 3. Regenerate this page and run the full check list in [`CLAUDE.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/CLAUDE.md).
 
 ## Folder contents
@@ -162,7 +162,7 @@ The pages a reader opens to see the simulation results and the concept geometry 
 | [`SUS-M1-terrain.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1-terrain.html) | SUS-M1 terrain course | generated |
 | [`SUS-M1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1.html) | SUS-M1 general arrangement | generated |
 | [`index.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/index.html) | Susanoo 3D scenes | generated |
-| [`assets/`](3D-Page-Assets) | Geometry loaded by the sheets | generated |
+| [`assets/`](3D-Page-Assets.md) | Geometry loaded by the sheets | generated |
 | [`Pages3D.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/Pages3D.sysml) | Pages as SysML | generated |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/docs/3d/figures) | Generated SVG figures (do not edit) | generated |
 | `README.md` | This page | generated |

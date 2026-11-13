@@ -36,7 +36,7 @@ The environments (ground, sky and grid colours, how far the ground is drawn) and
 
 ## Environments and conditions
 
-![Figure 1 · The environments and conditions](assets/sim/scenes3d/library/figures/fig-1-palette.svg)
+![Figure 1 · The environments and conditions](../../sim/scenes3d/library/figures/fig-1-palette.svg)
 
 | Environment | Ground | Sky | Grid | Extent |
 |---|---|---|---|---|
@@ -53,7 +53,7 @@ The environments (ground, sky and grid colours, how far the ground is drawn) and
 
 ## Every look
 
-![Figure 2 · Every look the library can make](assets/sim/scenes3d/library/figures/fig-2-look-matrix.svg)
+![Figure 2 · Every look the library can make](../../sim/scenes3d/library/figures/fig-2-look-matrix.svg)
 
 | Environment | Condition | Used by |
 |---|---|---|
@@ -66,11 +66,11 @@ The environments (ground, sky and grid colours, how far the ground is drawn) and
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/sim/scenes3d/library/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../sim/scenes3d/library/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/sim/scenes3d/library/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../sim/scenes3d/library/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -86,11 +86,11 @@ The environments (ground, sky and grid colours, how far the ground is drawn) and
 
 [`LookLibrary.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/library/LookLibrary.sysml) is generated from the library and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML block definition — LookLibrary](assets/sim/scenes3d/library/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — LookLibrary](../../sim/scenes3d/library/figures/fig-5-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/sim/scenes3d/library/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../sim/scenes3d/library/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
@@ -98,12 +98,12 @@ The environments (ground, sky and grid colours, how far the ground is drawn) and
 
 | Output | Destination |
 |---|---|
-| Looks | the 3D scene pages in [`docs/3d/`](3D-Scene-Pages) and their stills |
+| Looks | the 3D scene pages in [`docs/3d/`](3D-Scene-Pages.md) and their stills |
 
 ## Adding a look
 
 1. Add an environment or condition to its file; keep it picture only.
-2. Name it in a scene's `look` or a variant in [`scenes.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/scenes.yaml), rebuild the pages and render the stills (see [`sim/scenes3d`](3D-Scene-Builder)).
+2. Name it in a scene's `look` or a variant in [`scenes.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/scenes.yaml), rebuild the pages and render the stills (see [`sim/scenes3d`](3D-Scene-Builder.md)).
 3. Regenerate this page and run the full check list in [`CLAUDE.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/CLAUDE.md).
 
 ## Folder contents

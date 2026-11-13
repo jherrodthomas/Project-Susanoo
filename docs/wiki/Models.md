@@ -31,7 +31,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 |---|---|
 | Model | [`sysml/model/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model) — see [`sysml/README.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/README.md) |
 | Checks | `python -m tools.sysml.check` (M1 M2 M4 M9 R1 R2 R3), `tools/sysml/pilot/validate.sh`, `tools/validate_doc_sysml.sh` |
-| Views | [SysML model wiki page](SysML-Model) (V-02, V-07, V-08) |
+| Views | [SysML model wiki page](SysML-Model.md) (V-02, V-07, V-08) |
 
 ## Purpose
 
@@ -39,7 +39,7 @@ System models of record. Today this is the textual SysML v2 model in `sysml/`: t
 
 ## Model inventory
 
-![Figure 1 · Model inventory](assets/models/figures/fig-1-model-inventory.svg)
+![Figure 1 · Model inventory](../../models/figures/fig-1-model-inventory.svg)
 
 | File | Package | Written | Lines | Defines |
 |---|---|---|---|---|
@@ -125,7 +125,7 @@ System models of record. Today this is the textual SysML v2 model in `sysml/`: t
 
 ## How the model is checked
 
-![Figure 2 · How the model is checked against the records](assets/models/figures/fig-2-checks.svg)
+![Figure 2 · How the model is checked against the records](../../models/figures/fig-2-checks.svg)
 
 | Rule | Compares | With | Check |
 |---|---|---|---|
@@ -137,17 +137,17 @@ System models of record. Today this is the textual SysML v2 model in `sysml/`: t
 | R2 | Requirement records | `Satisfaction.sysml` | satisfy ends inside SUS-I1, matches allocated_to |
 | R3 | Hazard records | `Requirements.sysml` | safety-significant requirements name existing hazards |
 
-Views drawn from the checked model: [V-02 Element hierarchy](assets/docs/wiki/images/sysml-v02-hierarchy.svg), [V-07 Requirement satisfaction](assets/docs/wiki/images/sysml-v07-satisfy.svg), [V-08 N2 interface chart](assets/docs/wiki/images/sysml-v08-n2.svg).
+Views drawn from the checked model: [V-02 Element hierarchy](images/sysml-v02-hierarchy.svg), [V-07 Requirement satisfaction](images/sysml-v07-satisfy.svg), [V-08 N2 interface chart](images/sysml-v08-n2.svg).
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/models/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../models/figures/fig-3-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml).
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/models/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../models/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -163,23 +163,23 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 Model of record: the five files in [`sysml/model/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model), starting with [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml). The package diagram is read from every `.sysml` file the OMG pilot validates.
 
-![Figure 5 · SysML packages and imports](assets/models/figures/fig-5-sysml-packages.svg)
+![Figure 5 · SysML packages and imports](../../models/figures/fig-5-sysml-packages.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/models/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../models/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Elements, externals, interfaces, functions | [Architecture records](Architecture-Records) |
-| Requirements | [Requirement register](Requirements-Register) |
-| Hazards | [Safety records](Safety-Records) |
+| Elements, externals, interfaces, functions | [Architecture records](Architecture-Records.md) |
+| Requirements | [Requirement register](Requirements-Register.md) |
+| Hazards | [Safety records](Safety-Records.md) |
 | SysML v2 conformance | OMG pilot implementation, pinned in `tools/sysml/pilot` |
 
 | Output | Destination |
 |---|---|
-| V-02, V-07, V-08 | [SysML model wiki page](SysML-Model) |
-| Imported by every work-product view | [882E work products](882E-Work-Products) |
+| V-02, V-07, V-08 | [SysML model wiki page](SysML-Model.md) |
+| Imported by every work-product view | [882E work products](882E-Work-Products.md) |
 | Read by folder figures | requirements, architecture, standards pages |
 
 ## Folder contents

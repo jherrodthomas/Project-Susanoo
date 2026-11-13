@@ -50,7 +50,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 > **Concept mockups, not designs.** Every layout is built from solids placed by placeholder parameters. Dimensions, masses and every metric are properties of that placeholder geometry. They exist so the team can look at the same picture, compare alternatives side by side and see early where an option makes a hazard worse. They select nothing, and no rendering establishes feasibility. AI-drafted (independence I0), not reviewed.
 
-![Concept line-up: open-frame bipeds with the UAV docked on the back (CL-01), on the shoulder (CL-02) and on a separate ground station (CL-03), the armoured pod (CL-04) and the reverse-jointed pod (CL-05), each with a 1.75 m person for scale](assets/cad/renders/lineup.png)
+![Concept line-up: open-frame bipeds with the UAV docked on the back (CL-01), on the shoulder (CL-02) and on a separate ground station (CL-03), the armoured pod (CL-04) and the reverse-jointed pod (CL-05), each with a 1.75 m person for scale](../../cad/renders/lineup.png)
 
 ## 1. What the layouts compare
 
@@ -73,27 +73,27 @@ Rendered with Blender 5.3 (Cycles) by [`tools/cad/blender_render.py`](https://gi
 
 | | |
 |---|---|
-| ![CL-05 standing, front three-quarter view from eye height, with a 1.75 m person for scale](assets/cad/renders/blender/CL-05-hero.jpg) | ![CL-05 from the rear: power pack, raised UAV dock and roll bar](assets/cad/renders/blender/CL-05-rear.jpg) |
-| ![CL-05 kneeling for egress with the fold-down ladder deployed and the claws stowed](assets/cad/renders/blender/CL-05-kneel.jpg) | ![CL-05 emergency exit: side hatch open, shoulder step and rope ladder deployed](assets/cad/renders/blender/CL-05-emergency.jpg) |
+| ![CL-05 standing, front three-quarter view from eye height, with a 1.75 m person for scale](../../cad/renders/blender/CL-05-hero.jpg) | ![CL-05 from the rear: power pack, raised UAV dock and roll bar](../../cad/renders/blender/CL-05-rear.jpg) |
+| ![CL-05 kneeling for egress with the fold-down ladder deployed and the claws stowed](../../cad/renders/blender/CL-05-kneel.jpg) | ![CL-05 emergency exit: side hatch open, shoulder step and rope ladder deployed](../../cad/renders/blender/CL-05-emergency.jpg) |
 
 **Military livery** (same geometry, unarmed; `blender_render.py --livery military`):
 
 | | |
 |---|---|
-| ![CL-05 standing in olive-drab military livery, with a 1.75 m person for scale](assets/cad/renders/blender/CL-05-hero-military.jpg) | ![CL-05 kneeling in military livery with the ladder deployed](assets/cad/renders/blender/CL-05-kneel-military.jpg) |
-| ![CL-05 from the rear in military livery: power pack, raised dock and roll bar](assets/cad/renders/blender/CL-05-rear-military.jpg) | ![CL-05 emergency exit in military livery: hatch open, shoulder step and rope ladder](assets/cad/renders/blender/CL-05-emergency-military.jpg) |
+| ![CL-05 standing in olive-drab military livery, with a 1.75 m person for scale](../../cad/renders/blender/CL-05-hero-military.jpg) | ![CL-05 kneeling in military livery with the ladder deployed](../../cad/renders/blender/CL-05-kneel-military.jpg) |
+| ![CL-05 from the rear in military livery: power pack, raised dock and roll bar](../../cad/renders/blender/CL-05-rear-military.jpg) | ![CL-05 emergency exit in military livery: hatch open, shoulder step and rope ladder](../../cad/renders/blender/CL-05-emergency-military.jpg) |
 
 **Carrying a load** (placeholder load, mass TBD). Carrying while walking is allowed under conditions (decided by the project lead on 2026-11-12, DQ-015; SYS-019, HAZ-MAN-002): a secured load, the arms locked in a carry pose, and mass, centre-of-gravity, speed, step-height and slope limits that are all still TBD.
 
 | | |
 |---|---|
-| ![CL-05 carrying a placeholder load clamped between its hands ahead of the pod, with a 1.75 m person for scale](assets/cad/renders/blender/CL-05-carry.jpg) | ![CL-05 carrying a placeholder load in military livery](assets/cad/renders/blender/CL-05-carry-military.jpg) |
+| ![CL-05 carrying a placeholder load clamped between its hands ahead of the pod, with a 1.75 m person for scale](../../cad/renders/blender/CL-05-carry.jpg) | ![CL-05 carrying a placeholder load in military livery](../../cad/renders/blender/CL-05-carry-military.jpg) |
 
-**Walk cycle** (military livery; `cl05.py --walk 48`, then `blender_walk.py`): [![CL-05 walking in military livery with the arms stowed, side view tracking alongside, with a 1.75 m person standing still for scale](assets/cad/renders/blender/CL-05-walk-military.gif)](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/renders/blender/CL-05-walk-military.mp4)
+**Walk cycle** (military livery; `cl05.py --walk 48`, then `blender_walk.py`): [![CL-05 walking in military livery with the arms stowed, side view tracking alongside, with a 1.75 m person standing still for scale](../../cad/renders/blender/CL-05-walk-military.gif)](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/renders/blender/CL-05-walk-military.mp4)
 
 Every frame is the build123d model re-posed by the gait in [`params/CL-05.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/params/CL-05.yaml) (`walk:`): stride 1.0 m, each foot planted for 60 % of the cycle and swung on a 0.22 m arc for the rest, with a small crouch and body bob. The knees are solved from hip and ankle positions, so they always bend backward exactly as in the CAD. The arms are stowed while walking: upper arm 45° down beside the hull and forearm folded nearly upright, which lifts the lowest claw from 0.85 m to 2.43 m and pulls the claw tips back from 1.77 m to 1.49 m ahead of the hips. This is concept kinematics for communication only: there is no dynamics, balance, actuator or load model behind it, and it says nothing about whether the walker can walk this way.
 
-**Loaded walk** (military livery; `cl05.py --walk 48 --loaded`, then `blender_walk.py --loaded`): [![CL-05 walking in military livery with the placeholder load clamped between its hands, side view tracking alongside, with a 1.75 m person standing still for scale](assets/cad/renders/blender/CL-05-walk-loaded-military.gif)](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/renders/blender/CL-05-walk-loaded-military.mp4)
+**Loaded walk** (military livery; `cl05.py --walk 48 --loaded`, then `blender_walk.py --loaded`): [![CL-05 walking in military livery with the placeholder load clamped between its hands, side view tracking alongside, with a 1.75 m person standing still for scale](../../cad/renders/blender/CL-05-walk-loaded-military.gif)](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/renders/blender/CL-05-walk-loaded-military.mp4)
 
 The same gait with the arms locked in the carry pose and shorter, lower steps (`walk: loaded:` stride 0.70 m instead of 1.0 m, foot lift 0.16 m instead of 0.22 m): concept values standing in for the loaded speed and step-height limits of SYS-019, which are TBD. The load rides with the body's crouch and bob, keeps at least 0.89 m from the legs through the cycle and never drops below 1.42 m. As with the unloaded clip there is no dynamics, balance or load model behind it: it shows the pose and the motion, not that the walker can carry a load this way (HAZ-MAN-002, HAZ-WLK-002).
 
@@ -131,51 +131,51 @@ The same gait with the arms locked in the carry pose and shorter, lower steps (`
 
 ### CL-01 · Biped, seated protected cockpit, rear backpack dock
 
-Drawing sheet: [SUS-CAD-001-CL-01](assets/cad/drawings/CL-01.svg) (420 × 297 mm, 1:50, dimensioned side, plan and front views).
+Drawing sheet: [SUS-CAD-001-CL-01](../../cad/drawings/CL-01.svg) (420 × 297 mm, 1:50, dimensioned side, plan and front views).
 
-![CL-01 front view from eye height](assets/cad/renders/CL-01-hero.png)
+![CL-01 front view from eye height](../../cad/renders/CL-01-hero.png)
 
 | | |
 |---|---|
-| ![CL-01 three-quarter view](assets/cad/renders/CL-01-iso.png) | ![CL-01 side elevation](assets/cad/renders/CL-01-side.png) |
-| ![CL-01 plan view with support polygon and centre of gravity](assets/cad/renders/CL-01-top.png) | ![CL-01 UAV dock and rotor clearance to the pilot](assets/cad/renders/CL-01-dock.png) |
+| ![CL-01 three-quarter view](../../cad/renders/CL-01-iso.png) | ![CL-01 side elevation](../../cad/renders/CL-01-side.png) |
+| ![CL-01 plan view with support polygon and centre of gravity](../../cad/renders/CL-01-top.png) | ![CL-01 UAV dock and rotor clearance to the pilot](../../cad/renders/CL-01-dock.png) |
 
 ### CL-02 · Biped, seated protected cockpit, shoulder-mounted dock
 
-Drawing sheet: [SUS-CAD-001-CL-02](assets/cad/drawings/CL-02.svg) (420 × 297 mm, 1:50, dimensioned side, plan and front views).
+Drawing sheet: [SUS-CAD-001-CL-02](../../cad/drawings/CL-02.svg) (420 × 297 mm, 1:50, dimensioned side, plan and front views).
 
-![CL-02 front view from eye height](assets/cad/renders/CL-02-hero.png)
+![CL-02 front view from eye height](../../cad/renders/CL-02-hero.png)
 
 | | |
 |---|---|
-| ![CL-02 three-quarter view](assets/cad/renders/CL-02-iso.png) | ![CL-02 side elevation](assets/cad/renders/CL-02-side.png) |
-| ![CL-02 plan view with support polygon and centre of gravity](assets/cad/renders/CL-02-top.png) | ![CL-02 UAV dock and rotor clearance to the pilot](assets/cad/renders/CL-02-dock.png) |
+| ![CL-02 three-quarter view](../../cad/renders/CL-02-iso.png) | ![CL-02 side elevation](../../cad/renders/CL-02-side.png) |
+| ![CL-02 plan view with support polygon and centre of gravity](../../cad/renders/CL-02-top.png) | ![CL-02 UAV dock and rotor clearance to the pilot](../../cad/renders/CL-02-dock.png) |
 
 ### CL-03 · Biped, seated protected cockpit, separate portable station
 
-Drawing sheet: [SUS-CAD-001-CL-03](assets/cad/drawings/CL-03.svg) (420 × 297 mm, 1:50, dimensioned side, plan and front views).
+Drawing sheet: [SUS-CAD-001-CL-03](../../cad/drawings/CL-03.svg) (420 × 297 mm, 1:50, dimensioned side, plan and front views).
 
-![CL-03 front view from eye height](assets/cad/renders/CL-03-hero.png)
+![CL-03 front view from eye height](../../cad/renders/CL-03-hero.png)
 
 | | |
 |---|---|
-| ![CL-03 three-quarter view](assets/cad/renders/CL-03-iso.png) | ![CL-03 side elevation](assets/cad/renders/CL-03-side.png) |
-| ![CL-03 plan view with support polygon and centre of gravity](assets/cad/renders/CL-03-top.png) | ![CL-03 UAV dock and rotor clearance to the pilot](assets/cad/renders/CL-03-dock.png) |
+| ![CL-03 three-quarter view](../../cad/renders/CL-03-iso.png) | ![CL-03 side elevation](../../cad/renders/CL-03-side.png) |
+| ![CL-03 plan view with support polygon and centre of gravity](../../cad/renders/CL-03-top.png) | ![CL-03 UAV dock and rotor clearance to the pilot](../../cad/renders/CL-03-dock.png) |
 
 ### CL-04 · Biped armoured pod, seated cockpit, rear dock
 
-Drawing sheet: [SUS-CAD-001-CL-04](assets/cad/drawings/CL-04.svg) (420 × 297 mm, 1:50, dimensioned side, plan and front views).
+Drawing sheet: [SUS-CAD-001-CL-04](../../cad/drawings/CL-04.svg) (420 × 297 mm, 1:50, dimensioned side, plan and front views).
 
-![CL-04 front view from eye height](assets/cad/renders/CL-04-hero.png)
+![CL-04 front view from eye height](../../cad/renders/CL-04-hero.png)
 
 | | |
 |---|---|
-| ![CL-04 three-quarter view](assets/cad/renders/CL-04-iso.png) | ![CL-04 side elevation](assets/cad/renders/CL-04-side.png) |
-| ![CL-04 plan view with support polygon and centre of gravity](assets/cad/renders/CL-04-top.png) | ![CL-04 UAV dock and rotor clearance to the pilot](assets/cad/renders/CL-04-dock.png) |
+| ![CL-04 three-quarter view](../../cad/renders/CL-04-iso.png) | ![CL-04 side elevation](../../cad/renders/CL-04-side.png) |
+| ![CL-04 plan view with support polygon and centre of gravity](../../cad/renders/CL-04-top.png) | ![CL-04 UAV dock and rotor clearance to the pilot](../../cad/renders/CL-04-dock.png) |
 
 ### CL-05 · Reverse-jointed pod biped, claw arms, rear dock
 
-Drawing sheet: [SUS-CAD-001-CL-05](assets/cad/drawings/CL-05.svg) (420 × 297 mm, 1:50, dimensioned side, plan and front views).
+Drawing sheet: [SUS-CAD-001-CL-05](../../cad/drawings/CL-05.svg) (420 × 297 mm, 1:50, dimensioned side, plan and front views).
 
 **Carry posture** (carrying a load).
 
@@ -205,9 +205,9 @@ Drawing sheet: [SUS-CAD-001-CL-05](assets/cad/drawings/CL-05.svg) (420 × 297 mm
 
 | | |
 |---|---|
-| ![CL-05 carry, front view](assets/cad/renders/CL-05-carry-hero.png) | ![CL-05 carry, side elevation](assets/cad/renders/CL-05-carry-side.png) |
+| ![CL-05 carry, front view](../../cad/renders/CL-05-carry-hero.png) | ![CL-05 carry, side elevation](../../cad/renders/CL-05-carry-side.png) |
 
-Drawing sheet: [SUS-CAD-001-CL-05-carry](assets/cad/drawings/CL-05-carry.svg).
+Drawing sheet: [SUS-CAD-001-CL-05-carry](../../cad/drawings/CL-05-carry.svg).
 
 **Emergency posture** (emergency exit).
 
@@ -231,9 +231,9 @@ Drawing sheet: [SUS-CAD-001-CL-05-carry](assets/cad/drawings/CL-05-carry.svg).
 
 | | |
 |---|---|
-| ![CL-05 emergency, front view](assets/cad/renders/CL-05-emergency-hero.png) | ![CL-05 emergency, side elevation](assets/cad/renders/CL-05-emergency-side.png) |
+| ![CL-05 emergency, front view](../../cad/renders/CL-05-emergency-hero.png) | ![CL-05 emergency, side elevation](../../cad/renders/CL-05-emergency-side.png) |
 
-Drawing sheet: [SUS-CAD-001-CL-05-emergency](assets/cad/drawings/CL-05-emergency.svg).
+Drawing sheet: [SUS-CAD-001-CL-05-emergency](../../cad/drawings/CL-05-emergency.svg).
 
 **Kneel posture** (kneeling for egress).
 
@@ -256,23 +256,23 @@ Drawing sheet: [SUS-CAD-001-CL-05-emergency](assets/cad/drawings/CL-05-emergency
 
 | | |
 |---|---|
-| ![CL-05 kneel, front view](assets/cad/renders/CL-05-kneel-hero.png) | ![CL-05 kneel, side elevation](assets/cad/renders/CL-05-kneel-side.png) |
+| ![CL-05 kneel, front view](../../cad/renders/CL-05-kneel-hero.png) | ![CL-05 kneel, side elevation](../../cad/renders/CL-05-kneel-side.png) |
 
-Drawing sheet: [SUS-CAD-001-CL-05-kneel](assets/cad/drawings/CL-05-kneel.svg).
+Drawing sheet: [SUS-CAD-001-CL-05-kneel](../../cad/drawings/CL-05-kneel.svg).
 
-![CL-05 front view from eye height](assets/cad/renders/CL-05-hero.png)
+![CL-05 front view from eye height](../../cad/renders/CL-05-hero.png)
 
 | | |
 |---|---|
-| ![CL-05 three-quarter view](assets/cad/renders/CL-05-iso.png) | ![CL-05 side elevation](assets/cad/renders/CL-05-side.png) |
-| ![CL-05 plan view with support polygon and centre of gravity](assets/cad/renders/CL-05-top.png) | ![CL-05 UAV dock and rotor clearance to the pilot](assets/cad/renders/CL-05-dock.png) |
+| ![CL-05 three-quarter view](../../cad/renders/CL-05-iso.png) | ![CL-05 side elevation](../../cad/renders/CL-05-side.png) |
+| ![CL-05 plan view with support polygon and centre of gravity](../../cad/renders/CL-05-top.png) | ![CL-05 UAV dock and rotor clearance to the pilot](../../cad/renders/CL-05-dock.png) |
 <!-- cad:layouts:end -->
 
 ## 4. How the layouts are made
 
 | Step | Tool | Output |
 |---|---|---|
-| Parameters | [`params/CL-nn.yaml`](Layout-Parameters), [`params/common.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/params/common.yaml) | One file per layout; placeholders, metres |
+| Parameters | [`params/CL-nn.yaml`](Layout-Parameters.md), [`params/common.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/params/common.yaml) | One file per layout; placeholders, metres |
 | Reference layout geometry (CL-05) | [`tools/cad/b3d/cl05.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/b3d/cl05.py) in build123d 0.9 ([`environment.yml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/b3d/environment.yml)) | `build/cad-src/CL-05*/`: one STEP file per part class and `info.json`, per posture; `--walk N` writes walk-cycle frames |
 | Geometry and metrics | [`tools/cad/build_concepts.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/build_concepts.py) under FreeCAD 1.1 | `build/cad/CL-nn/`: `.FCStd`, `.step`, STL per part class; [`metrics.json`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/metrics.json) (committed) |
 | Drawing sheets | [`tools/cad/drawings.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/drawings.py) (FreeCAD TechDraw hidden-line projection) | [`drawings/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/cad/drawings) SVG and [`concept-layouts.pdf`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/drawings/concept-layouts.pdf) (committed): 420 × 297 mm 1:50, third-angle side, plan and front views; the revision in the title block is read from this page's header |
@@ -297,7 +297,7 @@ This folder holds the concept layouts of SUS-M1 (SUS-CAD-001): parameters, the m
 
 ## Layouts against the review flags
 
-![Figure 1 · Layouts against the review flags](assets/cad/figures/fig-1-layout-metrics.svg)
+![Figure 1 · Layouts against the review flags](../../cad/figures/fig-1-layout-metrics.svg)
 
 | Layout | Posture | Height (m) | Cockpit floor (m) | Mass (placeholder) (kg) | Static margin (m) | Tip angle (°) | Rotor to pilot (m) |
 |---|---|---|---|---|---|---|---|
@@ -312,7 +312,7 @@ This folder holds the concept layouts of SUS-M1 (SUS-CAD-001): parameters, the m
 
 ## Where the findings went
 
-![Figure 2 · Where the CL-05 findings went](assets/cad/figures/fig-2-findings.svg)
+![Figure 2 · Where the CL-05 findings went](../../cad/figures/fig-2-findings.svg)
 
 | Finding | Records |
 |---|---|
@@ -328,11 +328,11 @@ Records that cite the CAD: 12 hazards (HAZ-DCK-001, HAZ-GSE-001, HAZ-INT-001, HA
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/cad/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../cad/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/cad/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../cad/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -351,28 +351,28 @@ Records that cite the CAD: 12 hazards (HAZ-DCK-001, HAZ-GSE-001, HAZ-INT-001, HA
 
 [`ConceptLayouts.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/ConceptLayouts.sysml) is generated from `metrics.json` and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML block definition — ConceptLayouts](assets/cad/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — ConceptLayouts](../../cad/figures/fig-5-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/cad/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../cad/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Lead's decisions (DQ-013, DQ-014, DQ-015, DQ-022) | [Decision register](Decision-Register) |
-| Layout parameters | [`params/`](Layout-Parameters) |
+| Lead's decisions (DQ-013, DQ-014, DQ-015, DQ-022) | [Decision register](Decision-Register.md) |
+| Layout parameters | [`params/`](Layout-Parameters.md) |
 | CAD and render tools | FreeCAD, build123d, Blender ([`tools/cad/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools/cad)) |
 
 | Output | Destination |
 |---|---|
-| Findings | [Safety records](Safety-Records), [requirement register](Requirements-Register) |
+| Findings | [Safety records](Safety-Records.md), [requirement register](Requirements-Register.md) |
 | Renders | front-page banner, [`concept-art/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/concept-art/README.md) |
 
 ## Folder contents
 
 | Item | Description | State |
 |---|---|---|
-| [`params/`](Layout-Parameters) | Layout parameters (6 YAML files) | hand-written; README generated |
+| [`params/`](Layout-Parameters.md) | Layout parameters (6 YAML files) | hand-written; README generated |
 | [`drawings/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/drawings/README.md) | Drawing sheets (10 files) | generated (CAD) |
 | [`renders/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/cad/renders) | Review images and Blender renders (57 files) | generated (CAD) |
 | [`concept-art/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/concept-art/README.md) | AI concept art from the renders (15 files) | AI-made, labelled |

@@ -1,0 +1,24 @@
+# Fault tree for HAZ-SAF-001 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-SAF-001
+exposure: walker_operating_hours
+trees:
+  - id: FT-021
+    title: Protective stop does not reach a safe state
+    top: unsafe-stop
+    gates:
+      - {id: unsafe-stop, type: or, title: "Stop ends in an unsafe state", inputs: [unsafe-command, power-path, link-path]}
+      - {id: power-path, type: and, title: "Power lost and the posture not held", inputs: [supply-lost, holding-fails]}
+      - {id: holding-fails, type: or, title: "A holding device does not hold", inputs: [hold-dormant, hold-demand]}
+      - {id: link-path, type: and, title: "Stop needed, the link drops it and the hardwired stop fails", inputs: [stop-needed, link-lost, hardwired-fails]}
+    events:
+      - {id: unsafe-command, kind: undeveloped, nature: software, causal_factor: CF1, ssf: SSF-002, title: "Stop supervisor commands an unsafe trajectory"}
+      - {id: supply-lost, mode: PT-028-FM1, causal_factor: CF2, title: "Leg actuator supply lost"}
+      - {id: hold-dormant, mode: PT-029-FM1, count: joints, causal_factor: CF2, title: "A holding device already failed"}
+      - {id: hold-demand, mode: PT-029-FM2, count: joints, causal_factor: CF2, title: "A holding device fails on demand"}
+      - {id: stop-needed, kind: undeveloped, nature: environment, causal_factor: CF3, title: "A stop is needed at that moment"}
+      - {id: link-lost, mode: PT-030-FM1, causal_factor: CF3, title: "Stop link lost"}
+      - {id: hardwired-fails, mode: PT-024-FM1, causal_factor: CF3, title: "Hardwired observer stop already failed"}

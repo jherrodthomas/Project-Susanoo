@@ -3,7 +3,7 @@
 > Published from [`README.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/README.md) in the repository.
 
 <p align="center">
-  <img src="assets/docs/readme/banner.svg" alt="Project Susanoo: the CL-05 reference layout of the human-piloted bipedal walker, rendered from the project CAD standing, kneeling for egress and in unarmed military livery" width="100%">
+  <img src="../readme/banner.svg" alt="Project Susanoo: the CL-05 reference layout of the human-piloted bipedal walker, rendered from the project CAD standing, kneeling for egress and in unarmed military livery" width="100%">
 </p>
 
 <p align="center">
@@ -15,11 +15,11 @@
 <p align="center">
   <a href="https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md"><b>CONOPS</b></a> ·
   <a href="https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml"><b>Item definition</b></a> ·
-  <a href="882E-Work-Products"><b>882E work products</b></a> ·
-  <a href="Hazard-Tracking-Log"><b>Hazard log</b></a> ·
+  <a href="882E-Work-Products.md"><b>882E work products</b></a> ·
+  <a href="Hazard-Tracking-Log.md"><b>Hazard log</b></a> ·
   <a href="https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/README.md"><b>SysML model</b></a> ·
-  <a href="Simulation-Track"><b>Simulation</b></a> ·
-  <a href="Decision-Inbox"><b>Decision inbox</b></a>
+  <a href="Simulation-Track.md"><b>Simulation</b></a> ·
+  <a href="Decision-Inbox.md"><b>Decision inbox</b></a>
 </p>
 
 **Susanoo** is an open, simulation-first engineering demonstrator: a **human-piloted mechanized walker (SUS-M1)** for
@@ -114,12 +114,12 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 
 | Pain point | What usually happens | What Susanoo does | See it |
 |---|---|---|---|
-| Diagrams go stale | Hand-drawn, out of date by the next review | Every figure is generated from records; CI regenerates and diffs it | [882E tree](882E-Work-Products) · [standard](Documentation-Standard) |
+| Diagrams go stale | Hand-drawn, out of date by the next review | Every figure is generated from records; CI regenerates and diffs it | [882E tree](882E-Work-Products.md) · [standard](Documentation-Standard.md) |
 | Hazard log nobody trusts | A spreadsheet with free-text risk | One YAML record per hazard, validated against MIL-STD-882E modelled as data (20 rules) | [`safety/hazards/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/hazards) · [`tools/pdac`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/README.md) |
 | Models and documents disagree | Element names and IDs drift between tools | One item definition; the SysML v2 model is checked against it and passes the OMG pilot | [`architecture/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml) · [`models/sysml/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/README.md) |
-| Simulation quietly becomes "evidence" | Plots pasted into reports | Every result is stamped *synthetic, no evidence credit* until a fidelity case is approved | [`sim/`](Simulation-Track) |
+| Simulation quietly becomes "evidence" | Plots pasted into reports | Every result is stamped *synthetic, no evidence credit* until a fidelity case is approved | [`sim/`](Simulation-Track.md) |
 | Automation "approves" things | Green CI read as sign-off | AI drafts at independence level I0; only a recorded human review accepts anything (rule R13) | [`CLAUDE.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/CLAUDE.md) |
-| Questions for the lead get lost | Buried in chat threads | A decision register with options, a recommendation and a generated inbox | [`decisions/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) · [inbox](Decision-Inbox) |
+| Questions for the lead get lost | Buried in chat threads | A decision register with options, a recommendation and a generated inbox | [`decisions/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) · [inbox](Decision-Inbox.md) |
 | The standard is quoted, not applied | Copied clauses, vague tailoring | 882E (2012) encoded as data, tailored per task with rationale, no copied text | [`standards/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/mil-std-882e/model.yaml) |
 
 ---
@@ -127,7 +127,7 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 ## The system
 
 <p align="center">
-  <img src="assets/docs/wiki/images/sus-i1-context.svg" alt="SUS-I1 system context: walker, UAV, integration manager and ground support inside the boundary; pilot, observer, crew, bystanders, terrain, airspace, GNSS/RF and weather outside, joined by numbered interfaces" width="100%">
+  <img src="images/sus-i1-context.svg" alt="SUS-I1 system context: walker, UAV, integration manager and ground support inside the boundary; pilot, observer, crew, bystanders, terrain, airspace, GNSS/RF and weather outside, joined by numbered interfaces" width="100%">
 </p>
 
 | SUS-M1 · Piloted walker | SUS-A1 · Observation UAV | SUS-I1 · Integration |
@@ -136,8 +136,8 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 
 <table>
   <tr>
-    <td width="55%"><img src="assets/docs/wiki/images/3d-s3-01-dusk.png" alt="3D replay of hazard scene S3-01: the walker tips on a slope after a slow supply leak; synthetic, no evidence credit"></td>
-    <td width="45%"><img src="assets/docs/wiki/images/sim-sc-01.svg" alt="Scenario SC-01: slow supply leak on a slope, intended safe stop versus performed tip"></td>
+    <td width="55%"><img src="images/3d-s3-01-dusk.png" alt="3D replay of hazard scene S3-01: the walker tips on a slope after a slow supply leak; synthetic, no evidence credit"></td>
+    <td width="45%"><img src="images/sim-sc-01.svg" alt="Scenario SC-01: slow supply leak on a slope, intended safe stop versus performed tip"></td>
   </tr>
   <tr>
     <td colspan="2" align="center"><sub>Hazard scene S3-01 and scenario SC-01: a slow supply leak on a 9° slope tips the walker before load holding engages. Synthetic; this finding fed back into HAZ-WLK-002. <a href="https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/index.html">All 3D scenes</a></sub></td>
@@ -148,26 +148,26 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 
 ## By the numbers
 
-<p align="center"><img src="assets/docs/readme/at-a-glance.svg" alt="Figure 1: project at a glance, counts of hazards, target risk, requirements, 882E tasks, architecture and simulation runs" width="100%"></p>
+<p align="center"><img src="../readme/at-a-glance.svg" alt="Figure 1: project at a glance, counts of hazards, target risk, requirements, 882E tasks, architecture and simulation runs" width="100%"></p>
 
 <!-- readme:numbers:start (generated by tools/readme/build_readme.py; do not edit) -->
 | What | Count | Source |
 |---|---|---|
 | Hazards tracked (Task 106) | **22** (22 open) · initial 8 High, 12 Serious, 2 Medium → target 1 Serious, 21 Medium | [`safety/hazards/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/hazards) |
 | Mitigations planned | **81** | hazard records |
-| Safety requirements | **24** (24 candidate, 24 with verification open) | [`requirements/`](Requirements-Register) |
+| Safety requirements | **24** (24 candidate, 24 with verification open) | [`requirements/`](Requirements-Register.md) |
 | Safety-significant software functions | **8** | [`safety/software/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/software) |
 | Architecture | **19** elements, **8** externals, **31** interfaces, **9** functions | [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml) |
 | MIL-STD-882E tasks | **25** tailored: 19 selected, 2 conditional, 2 not selected, 2 n/a · gate **G0** | [`standards/tailoring/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/tailoring/mil-std-882e.yaml) |
 | SysML v2 files passing the OMG pilot | **45** | [`models/sysml/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model) |
-| Work-product folders with generated figures | **39** | [`safety/mil-std-882e/`](882E-Work-Products) |
+| Work-product folders with generated figures | **39** | [`safety/mil-std-882e/`](882E-Work-Products.md) |
 | Decisions for the lead | **0** open of 22 | [`decisions/register.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) |
-| Simulation runs (synthetic) | **400** walker Monte Carlo + **6** PX4 SITL · **3** findings | [`sim/results/`](Simulation-Results) |
+| Simulation runs (synthetic) | **400** walker Monte Carlo + **6** PX4 SITL · **3** findings | [`sim/results/`](Simulation-Results.md) |
 <!-- readme:numbers:end -->
 
 ## Where the risk is
 
-<p align="center"><img src="assets/docs/readme/risk-matrix.svg" alt="Figure 2: hazards on the MIL-STD-882E risk matrix, initial and target risk" width="100%"></p>
+<p align="center"><img src="../readme/risk-matrix.svg" alt="Figure 2: hazards on the MIL-STD-882E risk matrix, initial and target risk" width="100%"></p>
 
 <!-- readme:hazards:start (generated by tools/readme/build_readme.py; do not edit) -->
 | Hazard | What could go wrong | Initial | Target | Mitigations |
@@ -197,11 +197,11 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 <!-- readme:hazards:end -->
 
 The full log, with causal factors, mitigations in design order of precedence, and software contributions, is generated
-from the records as the [Hazard Tracking Log](Hazard-Tracking-Log).
+from the records as the [Hazard Tracking Log](Hazard-Tracking-Log.md).
 
 ## What simulation found
 
-<p align="center"><img src="assets/docs/readme/simulation.svg" alt="Figure 3: walker failure search SF-01 outcomes and PX4 SITL failsafe scenario outcomes, synthetic" width="100%"></p>
+<p align="center"><img src="../readme/simulation.svg" alt="Figure 3: walker failure search SF-01 outcomes and PX4 SITL failsafe scenario outcomes, synthetic" width="100%"></p>
 
 Two results changed the design intent:
 - **Load holding must hold.** In failure search SF-01, every sample in which load holding failed ended in a tip or a
@@ -222,19 +222,19 @@ gate by gate, and where it stands today. The panels below it say, for every task
 Susanoo delivers for it, who does it and when, with a preview of the work product. Every row is generated from the
 tailoring record and the work-product catalog, so it changes when they do.
 
-<p align="center"><img src="assets/docs/readme/roadmap.svg" alt="Figure 4: every MIL-STD-882E task, grouped by process element, drawn across project gates G0 to G7 with its status" width="100%"></p>
+<p align="center"><img src="../readme/roadmap.svg" alt="Figure 4: every MIL-STD-882E task, grouped by process element, drawn across project gates G0 to G7 with its status" width="100%"></p>
 
 <!-- readme:workflow:start (generated by tools/readme/build_readme.py; do not edit) -->
 <details><summary><b>1 · Document the system safety approach</b> · 6 tasks</summary>
 
 | Task | What MIL-STD-882E requires | What Susanoo delivers | When · who | Status | Preview |
 |---|---|---|---|---|---|
-| **[Task 101](882E-task-101-hazard-identification-and-mitigation-effort)** Hazard Identification and Mitigation Effort Using the System Safety Methodology | Establishes the integrated, iterative effort that runs the eight elements across SUS-M1, SUS-A1 and their interfaces, using the systems engineering process rather than a parallel one. | `effort-record.yaml` | G0 onward · Safety Lead | 🟨 in work | <a href="882E-task-101-hazard-identification-and-mitigation-effort"><img src="assets/safety/mil-std-882e/01-safety-approach/task-101-hazard-identification-and-mitigation-effort/figures/fig-5-inputs-and-outputs.svg" alt="Task 101 · Hazard Identification and Mitigation Effort" width="98" height="110"></a> |
-| **[Task 102](882E-task-102-system-safety-program-plan)** System Safety Program Plan | The SSPP: scope, organisation, authority, selected tasks, methods, risk matrix, hazard tracking, software approach, verification and acceptance. | `sspp.md` (DI-SAFT-81626) | G0, revised at G2 and G6 · Safety Lead | 🟨 in work | <a href="882E-task-102-system-safety-program-plan"><img src="assets/safety/mil-std-882e/01-safety-approach/task-102-system-safety-program-plan/figures/fig-5-inputs-and-outputs.svg" alt="Task 102 · System Safety Program Plan (SSPP)" width="100" height="110"></a> |
-| **[Task 103](882E-task-103-hazard-management-plan)** Hazard Management Plan | Defines how hazards move through their lifecycle, closure criteria, who may change status, and how the hazard tracking system is operated. | Not performed: HMP is an alternative to the SSPP (Task 102) with overlapping content; one plan avoids divergence | G0–G1 · Safety Lead | ⬜ not selected | <a href="882E-task-103-hazard-management-plan"><img src="assets/safety/mil-std-882e/01-safety-approach/task-103-hazard-management-plan/figures/fig-5-inputs-and-outputs.svg" alt="Task 103 · Hazard Management Plan (HMP)" width="100" height="110"></a> |
-| **[Task 104](882E-task-104-government-reviews-and-audits)** Support of Government Reviews/Audits | Supports external safety reviews and audits. | Not performed: No government reviews exist for this project | As scheduled · Safety Lead | 🟧 conditional | <a href="882E-task-104-government-reviews-and-audits"><img src="assets/safety/mil-std-882e/01-safety-approach/task-104-government-reviews-and-audits/figures/fig-5-inputs-and-outputs.svg" alt="Task 104 · Government Reviews and Audits" width="96" height="110"></a> |
-| **[Task 105](882E-task-105-integrated-product-team-support)** Integrated Product Team/Working Group Support | Embeds safety in the walker, UAV, controls, human factors and test teams so hazards and controls are worked inside design decisions, not after them. | `ipt-charter.md` | G0 onward · Safety Lead | 🟨 in work | <a href="882E-task-105-integrated-product-team-support"><img src="assets/safety/mil-std-882e/01-safety-approach/task-105-integrated-product-team-support/figures/fig-5-inputs-and-outputs.svg" alt="Task 105 · Integrated Product Team (IPT) Support" width="101" height="110"></a> |
-| **[Task 108](882E-task-108-hazardous-materials-management-plan)** Hazardous Materials Management Plan | Inventories and manages hazardous materials: engine fuel, hydraulic fluid (if electrohydraulic actuation is chosen), lithium-ion cells in SUS-M1 and SUS-A1, coolants and lubricants. | `hazmat-inventory.csv` | G1–G3 · Walker Lead | 🟦 planned | <a href="882E-task-108-hazardous-materials-management-plan"><img src="assets/safety/mil-std-882e/01-safety-approach/task-108-hazardous-materials-management-plan/figures/fig-5-inputs-and-outputs.svg" alt="Task 108 · Hazardous Materials Management Plan (HMMP)" width="100" height="110"></a> |
+| **[Task 101](882E-task-101-hazard-identification-and-mitigation-effort.md)** Hazard Identification and Mitigation Effort Using the System Safety Methodology | Establishes the integrated, iterative effort that runs the eight elements across SUS-M1, SUS-A1 and their interfaces, using the systems engineering process rather than a parallel one. | `effort-record.yaml` | G0 onward · Safety Lead | 🟨 in work | <a href="882E-task-101-hazard-identification-and-mitigation-effort.md"><img src="../../safety/mil-std-882e/01-safety-approach/task-101-hazard-identification-and-mitigation-effort/figures/fig-5-inputs-and-outputs.svg" alt="Task 101 · Hazard Identification and Mitigation Effort" width="98" height="110"></a> |
+| **[Task 102](882E-task-102-system-safety-program-plan.md)** System Safety Program Plan | The SSPP: scope, organisation, authority, selected tasks, methods, risk matrix, hazard tracking, software approach, verification and acceptance. | `sspp.md` (DI-SAFT-81626) | G0, revised at G2 and G6 · Safety Lead | 🟨 in work | <a href="882E-task-102-system-safety-program-plan.md"><img src="../../safety/mil-std-882e/01-safety-approach/task-102-system-safety-program-plan/figures/fig-5-inputs-and-outputs.svg" alt="Task 102 · System Safety Program Plan (SSPP)" width="100" height="110"></a> |
+| **[Task 103](882E-task-103-hazard-management-plan.md)** Hazard Management Plan | Defines how hazards move through their lifecycle, closure criteria, who may change status, and how the hazard tracking system is operated. | Not performed: HMP is an alternative to the SSPP (Task 102) with overlapping content; one plan avoids divergence | G0–G1 · Safety Lead | ⬜ not selected | <a href="882E-task-103-hazard-management-plan.md"><img src="../../safety/mil-std-882e/01-safety-approach/task-103-hazard-management-plan/figures/fig-5-inputs-and-outputs.svg" alt="Task 103 · Hazard Management Plan (HMP)" width="100" height="110"></a> |
+| **[Task 104](882E-task-104-government-reviews-and-audits.md)** Support of Government Reviews/Audits | Supports external safety reviews and audits. | Not performed: No government reviews exist for this project | As scheduled · Safety Lead | 🟧 conditional | <a href="882E-task-104-government-reviews-and-audits.md"><img src="../../safety/mil-std-882e/01-safety-approach/task-104-government-reviews-and-audits/figures/fig-5-inputs-and-outputs.svg" alt="Task 104 · Government Reviews and Audits" width="96" height="110"></a> |
+| **[Task 105](882E-task-105-integrated-product-team-support.md)** Integrated Product Team/Working Group Support | Embeds safety in the walker, UAV, controls, human factors and test teams so hazards and controls are worked inside design decisions, not after them. | `ipt-charter.md` | G0 onward · Safety Lead | 🟨 in work | <a href="882E-task-105-integrated-product-team-support.md"><img src="../../safety/mil-std-882e/01-safety-approach/task-105-integrated-product-team-support/figures/fig-5-inputs-and-outputs.svg" alt="Task 105 · Integrated Product Team (IPT) Support" width="101" height="110"></a> |
+| **[Task 108](882E-task-108-hazardous-materials-management-plan.md)** Hazardous Materials Management Plan | Inventories and manages hazardous materials: engine fuel, hydraulic fluid (if electrohydraulic actuation is chosen), lithium-ion cells in SUS-M1 and SUS-A1, coolants and lubricants. | `hazmat-inventory.csv` | G1–G3 · Walker Lead | 🟦 planned | <a href="882E-task-108-hazardous-materials-management-plan.md"><img src="../../safety/mil-std-882e/01-safety-approach/task-108-hazardous-materials-management-plan/figures/fig-5-inputs-and-outputs.svg" alt="Task 108 · Hazardous Materials Management Plan (HMMP)" width="100" height="110"></a> |
 
 </details>
 
@@ -242,16 +242,16 @@ tailoring record and the work-product catalog, so it changes when they do.
 
 | Task | What MIL-STD-882E requires | What Susanoo delivers | When · who | Status | Preview |
 |---|---|---|---|---|---|
-| **[Task 201](882E-task-201-preliminary-hazard-list)** Preliminary Hazard List | First list of potential hazards for the concept: walker instability and fall, unintended motion, crush and entrapment, stored energy, fire, rotor strike, docking retention failure, link loss. | `phl.svg`, `phl.csv` (DI-SAFT-80101) | G0 · Safety Lead | 🟨 in work | <a href="882E-task-201-preliminary-hazard-list"><img src="assets/safety/mil-std-882e/02-hazard-identification/task-201-preliminary-hazard-list/phl.svg" alt="Task 201 · Preliminary Hazard List (PHL)" width="66" height="110"></a> |
-| **[Task 202](882E-task-202-preliminary-hazard-analysis)** Preliminary Hazard Analysis | Develops PHL entries into scenarios with causes, effects, initial risk and candidate controls at subsystem level. | `pha.svg`, `pha.csv` (DI-SAFT-80101) | G1–G2 · Safety Lead | 🟦 planned | <a href="882E-task-202-preliminary-hazard-analysis"><img src="assets/safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/pha.svg" alt="Task 202 · Preliminary Hazard Analysis (PHA)" width="75" height="110"></a> |
-| **[Task 203](882E-task-203-system-requirements-hazard-analysis)** System Requirements Hazard Analysis | Converts hazards and controls into verifiable system safety requirements and checks that the requirements set, standards and design criteria cover identified hazards. | `srha.md` (DI-SAFT-80101) | G1–G2 · Chief Engineer | 🟦 planned | <a href="882E-task-203-system-requirements-hazard-analysis"><img src="assets/safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-5-inputs-and-outputs.svg" alt="Task 203 · System Requirements Hazard Analysis (SRHA)" width="98" height="110"></a> |
-| **[Task 204](882E-task-204-subsystem-hazard-analysis)** Subsystem Hazard Analysis | Analyses each subsystem's design for failure modes, faults and hazardous conditions, including software and human errors within the subsystem. | `ssha.svg`, `ssha-<subsystem-id>.csv` (DI-SAFT-80101) | G3 · Safety Lead | 🟦 planned | <a href="882E-task-204-subsystem-hazard-analysis"><img src="assets/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/figures/fig-5-inputs-and-outputs.svg" alt="Task 204 · Subsystem Hazard Analysis (SSHA)" width="98" height="110"></a> |
-| **[Task 205](882E-task-205-system-hazard-analysis)** System Hazard Analysis | Analyses interfaces and interactions between subsystems and with the pilot: common-cause, propagation, walker-UAV dock interactions, power and protective-stop interactions. | `sha.svg`, `sha.csv` (DI-SAFT-80101) | G3–G5 · Safety Lead | 🟦 planned | <a href="882E-task-205-system-hazard-analysis"><img src="assets/safety/mil-std-882e/02-hazard-identification/task-205-system-hazard-analysis/sha.svg" alt="Task 205 · System Hazard Analysis (SHA)" width="65" height="110"></a> |
-| **[Task 206](882E-task-206-operating-and-support-hazard-analysis)** Operating and Support Hazard Analysis | Analyses hazards in operation, maintenance, ingress/egress, transport, testing, UAV launch and recovery, and procedures. | `osha.yaml`, `osha.svg`, `osha.csv` (DI-SAFT-80101) | G3–G5 · Safety Lead | 🟦 planned | <a href="882E-task-206-operating-and-support-hazard-analysis"><img src="assets/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.svg" alt="Task 206 · Operating and Support Hazard Analysis (O&SHA)" width="89" height="110"></a> |
-| **[Task 207](882E-task-207-health-hazard-analysis)** Health Hazard Analysis | Analyses exposure of pilot, crew and bystanders to noise, whole-body vibration, exhaust, heat, chemicals, battery off-gas, ergonomic load and rotor noise. | `hha.svg`, `hha.csv` (DI-SAFT-80106) | G2–G5 · Safety Lead | 🟦 planned | <a href="882E-task-207-health-hazard-analysis"><img src="assets/safety/mil-std-882e/02-hazard-identification/task-207-health-hazard-analysis/hha.svg" alt="Task 207 · Health Hazard Analysis (HHA)" width="160" height="27"></a> |
-| **[Task 208](882E-task-208-functional-hazard-analysis)** Functional Hazard Analysis | Analyses system functions for loss, erroneous, untimely and unintended operation, and identifies safety-significant functions and their software allocation. | `fha.yaml`, `fha.svg`, `fha.csv` (DI-SAFT-80101) | G1–G2 · Software Safety Lead | 🟦 planned | <a href="882E-task-208-functional-hazard-analysis"><img src="assets/safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.svg" alt="Task 208 · Functional Hazard Analysis (FHA)" width="47" height="110"></a> |
-| **[Task 209](882E-task-209-system-of-systems-hazard-analysis)** System-of-Systems Hazard Analysis | Analyses hazards from SUS-I1 interacting with external systems: GNSS, RF spectrum, airspace users, site power and logistics, other vehicles and remote observers. | Not performed: No external system-of-systems defined | G2–G5 · Safety Lead | 🟧 conditional | <a href="882E-task-209-system-of-systems-hazard-analysis"><img src="assets/safety/mil-std-882e/02-hazard-identification/task-209-system-of-systems-hazard-analysis/sosha.svg" alt="Task 209 · System-of-Systems Hazard Analysis (SoSHA)" width="160" height="30"></a> |
-| **[Task 210](882E-task-210-environmental-hazard-analysis)** Environmental Hazard Analysis | Analyses environmental impacts across the lifecycle: emissions, spills, noise, battery end-of-life, ground disturbance and disposal. | `eha.svg`, `eha.csv` (DI-SAFT-80101) | G2–G5 · Safety Lead | 🟦 planned | <a href="882E-task-210-environmental-hazard-analysis"><img src="assets/safety/mil-std-882e/02-hazard-identification/task-210-environmental-hazard-analysis/eha.svg" alt="Task 210 · Environmental Hazard Analysis (EHA)" width="160" height="30"></a> |
+| **[Task 201](882E-task-201-preliminary-hazard-list.md)** Preliminary Hazard List | First list of potential hazards for the concept: walker instability and fall, unintended motion, crush and entrapment, stored energy, fire, rotor strike, docking retention failure, link loss. | `phl.svg`, `phl.csv` (DI-SAFT-80101) | G0 · Safety Lead | 🟨 in work | <a href="882E-task-201-preliminary-hazard-list.md"><img src="../../safety/mil-std-882e/02-hazard-identification/task-201-preliminary-hazard-list/phl.svg" alt="Task 201 · Preliminary Hazard List (PHL)" width="66" height="110"></a> |
+| **[Task 202](882E-task-202-preliminary-hazard-analysis.md)** Preliminary Hazard Analysis | Develops PHL entries into scenarios with causes, effects, initial risk and candidate controls at subsystem level. | `pha.svg`, `pha.csv` (DI-SAFT-80101) | G1–G2 · Safety Lead | 🟦 planned | <a href="882E-task-202-preliminary-hazard-analysis.md"><img src="../../safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/pha.svg" alt="Task 202 · Preliminary Hazard Analysis (PHA)" width="75" height="110"></a> |
+| **[Task 203](882E-task-203-system-requirements-hazard-analysis.md)** System Requirements Hazard Analysis | Converts hazards and controls into verifiable system safety requirements and checks that the requirements set, standards and design criteria cover identified hazards. | `srha.md` (DI-SAFT-80101) | G1–G2 · Chief Engineer | 🟦 planned | <a href="882E-task-203-system-requirements-hazard-analysis.md"><img src="../../safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-5-inputs-and-outputs.svg" alt="Task 203 · System Requirements Hazard Analysis (SRHA)" width="98" height="110"></a> |
+| **[Task 204](882E-task-204-subsystem-hazard-analysis.md)** Subsystem Hazard Analysis | Analyses each subsystem's design for failure modes, faults and hazardous conditions, including software and human errors within the subsystem. | `ssha.svg`, `ssha-<subsystem-id>.csv` (DI-SAFT-80101) | G3 · Safety Lead | 🟦 planned | <a href="882E-task-204-subsystem-hazard-analysis.md"><img src="../../safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/figures/fig-5-inputs-and-outputs.svg" alt="Task 204 · Subsystem Hazard Analysis (SSHA)" width="98" height="110"></a> |
+| **[Task 205](882E-task-205-system-hazard-analysis.md)** System Hazard Analysis | Analyses interfaces and interactions between subsystems and with the pilot: common-cause, propagation, walker-UAV dock interactions, power and protective-stop interactions. | `sha.svg`, `sha.csv` (DI-SAFT-80101) | G3–G5 · Safety Lead | 🟦 planned | <a href="882E-task-205-system-hazard-analysis.md"><img src="../../safety/mil-std-882e/02-hazard-identification/task-205-system-hazard-analysis/sha.svg" alt="Task 205 · System Hazard Analysis (SHA)" width="65" height="110"></a> |
+| **[Task 206](882E-task-206-operating-and-support-hazard-analysis.md)** Operating and Support Hazard Analysis | Analyses hazards in operation, maintenance, ingress/egress, transport, testing, UAV launch and recovery, and procedures. | `osha.yaml`, `osha.svg`, `osha.csv` (DI-SAFT-80101) | G3–G5 · Safety Lead | 🟦 planned | <a href="882E-task-206-operating-and-support-hazard-analysis.md"><img src="../../safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.svg" alt="Task 206 · Operating and Support Hazard Analysis (O&SHA)" width="89" height="110"></a> |
+| **[Task 207](882E-task-207-health-hazard-analysis.md)** Health Hazard Analysis | Analyses exposure of pilot, crew and bystanders to noise, whole-body vibration, exhaust, heat, chemicals, battery off-gas, ergonomic load and rotor noise. | `hha.svg`, `hha.csv` (DI-SAFT-80106) | G2–G5 · Safety Lead | 🟦 planned | <a href="882E-task-207-health-hazard-analysis.md"><img src="../../safety/mil-std-882e/02-hazard-identification/task-207-health-hazard-analysis/hha.svg" alt="Task 207 · Health Hazard Analysis (HHA)" width="160" height="27"></a> |
+| **[Task 208](882E-task-208-functional-hazard-analysis.md)** Functional Hazard Analysis | Analyses system functions for loss, erroneous, untimely and unintended operation, and identifies safety-significant functions and their software allocation. | `fha.yaml`, `fha.svg`, `fha.csv` (DI-SAFT-80101) | G1–G2 · Software Safety Lead | 🟦 planned | <a href="882E-task-208-functional-hazard-analysis.md"><img src="../../safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.svg" alt="Task 208 · Functional Hazard Analysis (FHA)" width="47" height="110"></a> |
+| **[Task 209](882E-task-209-system-of-systems-hazard-analysis.md)** System-of-Systems Hazard Analysis | Analyses hazards from SUS-I1 interacting with external systems: GNSS, RF spectrum, airspace users, site power and logistics, other vehicles and remote observers. | Not performed: No external system-of-systems defined | G2–G5 · Safety Lead | 🟧 conditional | <a href="882E-task-209-system-of-systems-hazard-analysis.md"><img src="../../safety/mil-std-882e/02-hazard-identification/task-209-system-of-systems-hazard-analysis/sosha.svg" alt="Task 209 · System-of-Systems Hazard Analysis (SoSHA)" width="160" height="30"></a> |
+| **[Task 210](882E-task-210-environmental-hazard-analysis.md)** Environmental Hazard Analysis | Analyses environmental impacts across the lifecycle: emissions, spills, noise, battery end-of-life, ground disturbance and disposal. | `eha.svg`, `eha.csv` (DI-SAFT-80101) | G2–G5 · Safety Lead | 🟦 planned | <a href="882E-task-210-environmental-hazard-analysis.md"><img src="../../safety/mil-std-882e/02-hazard-identification/task-210-environmental-hazard-analysis/eha.svg" alt="Task 210 · Environmental Hazard Analysis (EHA)" width="160" height="30"></a> |
 
 </details>
 
@@ -259,7 +259,7 @@ tailoring record and the work-product catalog, so it changes when they do.
 
 | Task | What MIL-STD-882E requires | What Susanoo delivers | When · who | Status | Preview |
 |---|---|---|---|---|---|
-| **[E3](882E-03-risk-assessment)** Assess and Document Risk | Holds the program risk assessment definitions: severity categories, probability levels, the risk assessment matrix and risk levels, plus quantitative probability bands for SUS-I1 once exposure is defined. | `risk-register.csv`, `risk-register.svg`, `risk-matrix.yaml` | G1 onward · Safety lead | 🟦 planned | <a href="882E-03-risk-assessment"><img src="assets/safety/mil-std-882e/03-risk-assessment/risk-register.svg" alt="03 · Assess and Document Risk" width="82" height="110"></a> |
+| **[E3](882E-03-risk-assessment.md)** Assess and Document Risk | Holds the program risk assessment definitions: severity categories, probability levels, the risk assessment matrix and risk levels, plus quantitative probability bands for SUS-I1 once exposure is defined. | `risk-register.csv`, `risk-register.svg`, `risk-matrix.yaml` | G1 onward · Safety lead | 🟦 planned | <a href="882E-03-risk-assessment.md"><img src="../../safety/mil-std-882e/03-risk-assessment/risk-register.svg" alt="03 · Assess and Document Risk" width="82" height="110"></a> |
 
 </details>
 
@@ -267,7 +267,7 @@ tailoring record and the work-product catalog, so it changes when they do.
 
 | Task | What MIL-STD-882E requires | What Susanoo delivers | When · who | Status | Preview |
 |---|---|---|---|---|---|
-| **[E4](882E-04-mitigation-identification)** Identify and Document Risk Mitigation Measures | Records candidate mitigations for each hazard, ordered by the system safety design order of precedence, and the rationale when a lower-precedence measure is chosen. | `mitigations.svg`, `mitigations.csv` | G2–G3 · Safety lead with design owners | 🟦 planned | <a href="882E-04-mitigation-identification"><img src="assets/safety/mil-std-882e/04-mitigation-identification/figures/fig-5-inputs-and-outputs.svg" alt="04 · Identify and Document Risk Mitigation Measures" width="160" height="56"></a> |
+| **[E4](882E-04-mitigation-identification.md)** Identify and Document Risk Mitigation Measures | Records candidate mitigations for each hazard, ordered by the system safety design order of precedence, and the rationale when a lower-precedence measure is chosen. | `mitigations.svg`, `mitigations.csv` | G2–G3 · Safety lead with design owners | 🟦 planned | <a href="882E-04-mitigation-identification.md"><img src="../../safety/mil-std-882e/04-mitigation-identification/figures/fig-5-inputs-and-outputs.svg" alt="04 · Identify and Document Risk Mitigation Measures" width="160" height="56"></a> |
 
 </details>
 
@@ -275,7 +275,7 @@ tailoring record and the work-product catalog, so it changes when they do.
 
 | Task | What MIL-STD-882E requires | What Susanoo delivers | When · who | Status | Preview |
 |---|---|---|---|---|---|
-| **[E5](882E-05-risk-reduction)** Reduce Risk | Tracks implementation of selected mitigations into requirements, design, software, procedures and training, with allocation to SUS-I1 elements. | `implementation-status.csv` | G3–G4 · Systems lead with safety lead | 🟦 planned | <a href="882E-05-risk-reduction"><img src="assets/safety/mil-std-882e/05-risk-reduction/figures/fig-5-inputs-and-outputs.svg" alt="05 · Reduce Risk" width="160" height="39"></a> |
+| **[E5](882E-05-risk-reduction.md)** Reduce Risk | Tracks implementation of selected mitigations into requirements, design, software, procedures and training, with allocation to SUS-I1 elements. | `implementation-status.csv` | G3–G4 · Systems lead with safety lead | 🟦 planned | <a href="882E-05-risk-reduction.md"><img src="../../safety/mil-std-882e/05-risk-reduction/figures/fig-5-inputs-and-outputs.svg" alt="05 · Reduce Risk" width="160" height="39"></a> |
 
 </details>
 
@@ -283,10 +283,10 @@ tailoring record and the work-product catalog, so it changes when they do.
 
 | Task | What MIL-STD-882E requires | What Susanoo delivers | When · who | Status | Preview |
 |---|---|---|---|---|---|
-| **[Task 303](882E-task-303-test-and-evaluation-participation)** Test and Evaluation Participation | Safety participation in test planning and execution: test hazard analysis, safety releases for rig and human-in-the-loop tests, and use of test data to update hazards. | `test-safety-releases/` | G4–G5 · Safety Lead | 🟦 planned | <a href="882E-task-303-test-and-evaluation-participation"><img src="assets/safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-5-inputs-and-outputs.svg" alt="Task 303 · Test and Evaluation Participation" width="94" height="110"></a> |
-| **[Task 401](882E-task-401-safety-verification)** Safety Verification | Verifies each safety requirement and the effectiveness of each mitigation. | `verification-matrix.svg`, `verification-matrix.csv` | G4–G5 · Safety Lead | 🟦 planned | <a href="882E-task-401-safety-verification"><img src="assets/safety/mil-std-882e/06-verification/task-401-safety-verification/verification-matrix.svg" alt="Task 401 · Safety Verification" width="83" height="110"></a> |
-| **[Task 402](882E-task-402-explosives-hazard-classification-data)** Explosives Hazard Classification Data | Placeholder that records the not-applicable decision and its re-evaluation trigger. | Not performed: No explosives or energetics in the concept | Re-evaluate at each gate · Safety Lead | ⬜ not applicable | <a href="882E-task-402-explosives-hazard-classification-data"><img src="assets/safety/mil-std-882e/06-verification/task-402-explosives-hazard-classification-data/figures/fig-5-inputs-and-outputs.svg" alt="Task 402 · Explosives Hazard Classification Data" width="160" height="68"></a> |
-| **[Task 403](882E-task-403-explosive-ordnance-disposal-data)** Explosive Ordnance Disposal Data | Placeholder that records the not-applicable decision. | Not performed: No explosive ordnance in the concept | Re-evaluate at each gate · Safety Lead | ⬜ not applicable | <a href="882E-task-403-explosive-ordnance-disposal-data"><img src="assets/safety/mil-std-882e/06-verification/task-403-explosive-ordnance-disposal-data/figures/fig-5-inputs-and-outputs.svg" alt="Task 403 · Explosive Ordnance Disposal Data" width="160" height="68"></a> |
+| **[Task 303](882E-task-303-test-and-evaluation-participation.md)** Test and Evaluation Participation | Safety participation in test planning and execution: test hazard analysis, safety releases for rig and human-in-the-loop tests, and use of test data to update hazards. | `test-safety-releases/` | G4–G5 · Safety Lead | 🟦 planned | <a href="882E-task-303-test-and-evaluation-participation.md"><img src="../../safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-5-inputs-and-outputs.svg" alt="Task 303 · Test and Evaluation Participation" width="94" height="110"></a> |
+| **[Task 401](882E-task-401-safety-verification.md)** Safety Verification | Verifies each safety requirement and the effectiveness of each mitigation. | `verification-matrix.svg`, `verification-matrix.csv` | G4–G5 · Safety Lead | 🟦 planned | <a href="882E-task-401-safety-verification.md"><img src="../../safety/mil-std-882e/06-verification/task-401-safety-verification/verification-matrix.svg" alt="Task 401 · Safety Verification" width="83" height="110"></a> |
+| **[Task 402](882E-task-402-explosives-hazard-classification-data.md)** Explosives Hazard Classification Data | Placeholder that records the not-applicable decision and its re-evaluation trigger. | Not performed: No explosives or energetics in the concept | Re-evaluate at each gate · Safety Lead | ⬜ not applicable | <a href="882E-task-402-explosives-hazard-classification-data.md"><img src="../../safety/mil-std-882e/06-verification/task-402-explosives-hazard-classification-data/figures/fig-5-inputs-and-outputs.svg" alt="Task 402 · Explosives Hazard Classification Data" width="160" height="68"></a> |
+| **[Task 403](882E-task-403-explosive-ordnance-disposal-data.md)** Explosive Ordnance Disposal Data | Placeholder that records the not-applicable decision. | Not performed: No explosive ordnance in the concept | Re-evaluate at each gate · Safety Lead | ⬜ not applicable | <a href="882E-task-403-explosive-ordnance-disposal-data.md"><img src="../../safety/mil-std-882e/06-verification/task-403-explosive-ordnance-disposal-data/figures/fig-5-inputs-and-outputs.svg" alt="Task 403 · Explosive Ordnance Disposal Data" width="160" height="68"></a> |
 
 </details>
 
@@ -294,8 +294,8 @@ tailoring record and the work-product catalog, so it changes when they do.
 
 | Task | What MIL-STD-882E requires | What Susanoo delivers | When · who | Status | Preview |
 |---|---|---|---|---|---|
-| **[Task 301](882E-task-301-safety-assessment-report)** Safety Assessment Report | Comprehensive assessment of residual mishap risk for a specific configuration, prepared to support acceptance decisions and release. | `sar-<configuration-id>.md` (DI-SAFT-80102) | G5–G6 · Safety Lead | 🟦 planned | <a href="882E-task-301-safety-assessment-report"><img src="assets/safety/mil-std-882e/07-risk-acceptance/task-301-safety-assessment-report/figures/fig-5-inputs-and-outputs.svg" alt="Task 301 · Safety Assessment Report (SAR)" width="101" height="110"></a> |
-| **[Task 302](882E-task-302-hazard-management-assessment-report)** Hazard Management Assessment Report | Assesses hazard management status and residual risk for a configuration or milestone, typically for a test or demonstration event. | Not performed: HMAR overlaps the SAR (Task 301); one assessment report | G5–G6 · Safety Lead | ⬜ not selected | <a href="882E-task-302-hazard-management-assessment-report"><img src="assets/safety/mil-std-882e/07-risk-acceptance/task-302-hazard-management-assessment-report/figures/fig-5-inputs-and-outputs.svg" alt="Task 302 · Hazard Management Assessment Report (HMAR)" width="105" height="110"></a> |
+| **[Task 301](882E-task-301-safety-assessment-report.md)** Safety Assessment Report | Comprehensive assessment of residual mishap risk for a specific configuration, prepared to support acceptance decisions and release. | `sar-<configuration-id>.md` (DI-SAFT-80102) | G5–G6 · Safety Lead | 🟦 planned | <a href="882E-task-301-safety-assessment-report.md"><img src="../../safety/mil-std-882e/07-risk-acceptance/task-301-safety-assessment-report/figures/fig-5-inputs-and-outputs.svg" alt="Task 301 · Safety Assessment Report (SAR)" width="101" height="110"></a> |
+| **[Task 302](882E-task-302-hazard-management-assessment-report.md)** Hazard Management Assessment Report | Assesses hazard management status and residual risk for a configuration or milestone, typically for a test or demonstration event. | Not performed: HMAR overlaps the SAR (Task 301); one assessment report | G5–G6 · Safety Lead | ⬜ not selected | <a href="882E-task-302-hazard-management-assessment-report.md"><img src="../../safety/mil-std-882e/07-risk-acceptance/task-302-hazard-management-assessment-report/figures/fig-5-inputs-and-outputs.svg" alt="Task 302 · Hazard Management Assessment Report (HMAR)" width="105" height="110"></a> |
 
 </details>
 
@@ -303,8 +303,8 @@ tailoring record and the work-product catalog, so it changes when they do.
 
 | Task | What MIL-STD-882E requires | What Susanoo delivers | When · who | Status | Preview |
 |---|---|---|---|---|---|
-| **[Task 107](882E-task-107-hazard-management-progress-report)** Hazard Management Progress Report | Periodic report of hazard counts by status and risk level, overdue actions, and changes since the last report — generated from the hazard tracking system where possible. | `reports/` (DI-SAFT-80105) | Periodic · Safety Lead | 🟦 planned | <a href="882E-task-107-hazard-management-progress-report"><img src="assets/safety/mil-std-882e/08-lifecycle-risk-management/task-107-hazard-management-progress-report/figures/fig-5-inputs-and-outputs.svg" alt="Task 107 · Hazard Management Progress Report" width="160" height="42"></a> |
-| **[Task 304](882E-task-304-review-changes-deficiencies-mishaps-deviations)** Review of ECPs, Change Notices, Deficiency Reports, Mishaps, and Requests for Deviation/Waiver | Safety review of engineering changes, deficiency reports, mishaps, near-misses and deviations; records the impact decision and links to reopened hazards. | `reviews/` (DI-SAFT-80103) | G7 (and any change) · Safety Lead | 🟦 planned | <a href="882E-task-304-review-changes-deficiencies-mishaps-deviations"><img src="assets/safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/figures/fig-5-inputs-and-outputs.svg" alt="Task 304 · Review of Changes, Deficiencies, Mishaps and Deviations" width="106" height="110"></a> |
+| **[Task 107](882E-task-107-hazard-management-progress-report.md)** Hazard Management Progress Report | Periodic report of hazard counts by status and risk level, overdue actions, and changes since the last report — generated from the hazard tracking system where possible. | `reports/` (DI-SAFT-80105) | Periodic · Safety Lead | 🟦 planned | <a href="882E-task-107-hazard-management-progress-report.md"><img src="../../safety/mil-std-882e/08-lifecycle-risk-management/task-107-hazard-management-progress-report/figures/fig-5-inputs-and-outputs.svg" alt="Task 107 · Hazard Management Progress Report" width="160" height="42"></a> |
+| **[Task 304](882E-task-304-review-changes-deficiencies-mishaps-deviations.md)** Review of ECPs, Change Notices, Deficiency Reports, Mishaps, and Requests for Deviation/Waiver | Safety review of engineering changes, deficiency reports, mishaps, near-misses and deviations; records the impact decision and links to reopened hazards. | `reviews/` (DI-SAFT-80103) | G7 (and any change) · Safety Lead | 🟦 planned | <a href="882E-task-304-review-changes-deficiencies-mishaps-deviations.md"><img src="../../safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/figures/fig-5-inputs-and-outputs.svg" alt="Task 304 · Review of Changes, Deficiencies, Mishaps and Deviations" width="106" height="110"></a> |
 
 </details>
 
@@ -312,8 +312,8 @@ tailoring record and the work-product catalog, so it changes when they do.
 
 | Task | What MIL-STD-882E requires | What Susanoo delivers | When · who | Status | Preview |
 |---|---|---|---|---|---|
-| **[Task 106](882E-hazard-tracking-system)** Hazard Tracking System | Closed-loop hazard log used by every element. | — | G0 onward · Safety Lead | 🟨 in work | <a href="882E-hazard-tracking-system"><img src="assets/safety/mil-std-882e/hazard-tracking-system/figures/fig-6-inputs-and-outputs.svg" alt="Task 106 · Hazard Tracking System (Hazard Log)" width="140" height="110"></a> |
-| **[Section 4.4](882E-software-safety)** Software Contribution to System Risk (Section 4.4) | Software control category, software safety criticality and level-of-rigor assignments for walker motion control, protective stop, pilot HMI, dock interlocks and PX4. | `swci-assessment.svg`, `swci-assessment.csv` | G1–G5 · Software safety lead | 🟦 planned | <a href="882E-software-safety"><img src="assets/safety/mil-std-882e/software-safety/swci-assessment.svg" alt="Software Contribution to System Risk (Section 4.4)" width="160" height="87"></a> |
+| **[Task 106](882E-hazard-tracking-system.md)** Hazard Tracking System | Closed-loop hazard log used by every element. | — | G0 onward · Safety Lead | 🟨 in work | <a href="882E-hazard-tracking-system.md"><img src="../../safety/mil-std-882e/hazard-tracking-system/figures/fig-6-inputs-and-outputs.svg" alt="Task 106 · Hazard Tracking System (Hazard Log)" width="140" height="110"></a> |
+| **[Section 4.4](882E-software-safety.md)** Software Contribution to System Risk (Section 4.4) | Software control category, software safety criticality and level-of-rigor assignments for walker motion control, protective stop, pilot HMI, dock interlocks and PX4. | `swci-assessment.svg`, `swci-assessment.csv` | G1–G5 · Software safety lead | 🟦 planned | <a href="882E-software-safety.md"><img src="../../safety/mil-std-882e/software-safety/swci-assessment.svg" alt="Software Contribution to System Risk (Section 4.4)" width="160" height="87"></a> |
 
 </details>
 <!-- readme:workflow:end -->
@@ -323,18 +323,18 @@ tailoring record and the work-product catalog, so it changes when they do.
 No task stands alone: each one takes work products from others and hands its own on. The catalog records every
 input and output, and these figures are drawn from it.
 
-<p align="center"><img src="assets/docs/readme/task-flow.svg" alt="Figure 5: every task-to-task flow, grouped by MIL-STD-882E process element" width="100%"></p>
+<p align="center"><img src="../readme/task-flow.svg" alt="Figure 5: every task-to-task flow, grouped by MIL-STD-882E process element" width="100%"></p>
 
 The hand-offs that matter most run from the first hazard analyses to risk acceptance:
 
-<p align="center"><img src="assets/docs/readme/task-thread.svg" alt="Figure 6: the chains of hand-offs from the preliminary hazard list, functional hazard analysis and operating and support analysis to risk acceptance" width="80%"></p>
+<p align="center"><img src="../readme/task-thread.svg" alt="Figure 6: the chains of hand-offs from the preliminary hazard list, functional hazard analysis and operating and support analysis to risk acceptance" width="80%"></p>
 
 <details>
 <summary><b>Two more views: who feeds whom, and the hazard tracking system as the hub</b></summary>
 
-<p align="center"><img src="assets/docs/readme/task-matrix.svg" alt="Figure 7: design structure matrix of which task feeds which, with feedback below the diagonal" width="100%"></p>
+<p align="center"><img src="../readme/task-matrix.svg" alt="Figure 7: design structure matrix of which task feeds which, with feedback below the diagonal" width="100%"></p>
 
-<p align="center"><img src="assets/docs/readme/task-hub.svg" alt="Figure 8: the work that writes into and reads from the hazard tracking system" width="100%"></p>
+<p align="center"><img src="../readme/task-hub.svg" alt="Figure 8: the work that writes into and reads from the hazard tracking system" width="100%"></p>
 
 </details>
 
@@ -342,13 +342,13 @@ The hand-offs that matter most run from the first hazard analyses to risk accept
 
 ## How it works
 
-<p align="center"><img src="assets/safety/mil-std-882e/figures/fig-1-position-in-the-mil-std-882e-flow.svg" alt="The eight MIL-STD-882E process elements with the hazard tracking system beneath them" width="100%"></p>
+<p align="center"><img src="../../safety/mil-std-882e/figures/fig-1-position-in-the-mil-std-882e-flow.svg" alt="The eight MIL-STD-882E process elements with the hazard tracking system beneath them" width="100%"></p>
 
 The work-product tree follows the **eight MIL-STD-882E process elements**, from documenting the approach through
 managing life-cycle risk. Every hazard, mitigation, piece of evidence and decision lands in one hazard tracking
 system. Each folder README carries a generated flow position, block, boundary, SysML, and inputs/outputs figure.
 
-<p align="center"><img src="assets/framework/figures/fig-1-documentation-pipeline.svg" alt="Records and SysML models drive generators, which publish READMEs, figures and SysML views that CI rebuilds and diffs" width="90%"></p>
+<p align="center"><img src="../../framework/figures/fig-1-documentation-pipeline.svg" alt="Records and SysML models drive generators, which publish READMEs, figures and SysML views that CI rebuilds and diffs" width="90%"></p>
 
 1. **Records are the source of truth:** YAML under `standards/`, `architecture/`, `safety/`, `requirements/`,
    `decisions/` and `sim/spec/`.
@@ -364,17 +364,17 @@ system. Each folder README carries a generated flow position, block, boundary, S
 
 | Folder | What lives there |
 |---|---|
-| [`concept/`](Concept-Model) | CONOPS, modes MOD-01..10, scenarios, preliminary architecture, trade studies |
+| [`concept/`](Concept-Model.md) | CONOPS, modes MOD-01..10, scenarios, preliminary architecture, trade studies |
 | [`architecture/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml) | Item definition: elements, externals, interfaces IF-nnn, functions |
 | [`models/sysml/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/README.md) | SysML v2 model, checked against the records and the OMG pilot |
-| [`requirements/`](Requirements-Register) | System safety requirements SYS-nnn with allocation and verification |
-| [`safety/`](882E-Work-Products) | Hazard records, software safety functions, events, and the 882E work-product tree |
+| [`requirements/`](Requirements-Register.md) | System safety requirements SYS-nnn with allocation and verification |
+| [`safety/`](882E-Work-Products.md) | Hazard records, software safety functions, events, and the 882E work-product tree |
 | [`standards/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/mil-std-882e/model.yaml) | MIL-STD-882E (2012) as data, plus project tailoring |
-| [`sim/`](Simulation-Track) | Walker plant model, failure search, PX4 SITL scenarios, 2D and 3D scenes |
-| [`integrations/px4/`](PX4-Integration-Model) | PX4 baseline, interface contract, fail-closed launch permit |
-| [`decisions/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) · [`reviews/`](Review-Records) | Questions for the lead; human review records |
-| [`framework/`](Framework) | Lifecycle, process contracts, traceability, documentation standard |
-| [`tools/`](Tools) | Validators, generators and the figure kit |
+| [`sim/`](Simulation-Track.md) | Walker plant model, failure search, PX4 SITL scenarios, 2D and 3D scenes |
+| [`integrations/px4/`](PX4-Integration-Model.md) | PX4 baseline, interface contract, fail-closed launch permit |
+| [`decisions/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) · [`reviews/`](Review-Records.md) | Questions for the lead; human review records |
+| [`framework/`](Framework.md) | Lifecycle, process contracts, traceability, documentation standard |
+| [`tools/`](Tools.md) | Validators, generators and the figure kit |
 
 ## Run it
 
@@ -420,11 +420,11 @@ operation, and authorized human-occupied testing (which requires separate review
 <summary><b>All documentation</b></summary>
 
 - [Concept and CONOPS](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md) · [System architecture](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/architecture.md) · [Trade studies](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/trade-studies.md)
-- [Integrated standards framework](Framework) · [Standards applicability](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/standards-applicability.md)
+- [Integrated standards framework](Framework.md) · [Standards applicability](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/standards-applicability.md)
 - [Lifecycle and review gates](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/lifecycle.md) · [Process contracts](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/process-contracts.md) · [PDaC traceability](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/traceability.md)
 - [Execution plan](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/execution-plan.md) · [MIL-STD-882E conformance review and build plan](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/882e-conformance-review.md)
-- [LionDriver port plan](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/liondriver-port-plan.md) · [Documentation standard](Documentation-Standard)
-- [MIL-STD-882E work-product tree](882E-Work-Products) · [Hazard tracking log](Hazard-Tracking-Log) · [PDaC validator](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/README.md)
+- [LionDriver port plan](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/liondriver-port-plan.md) · [Documentation standard](Documentation-Standard.md)
+- [MIL-STD-882E work-product tree](882E-Work-Products.md) · [Hazard tracking log](Hazard-Tracking-Log.md) · [PDaC validator](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/README.md)
 - [Product manifest](https://github.com/jherrodthomas/Project-Susanoo/blob/main/pdac/product.yaml)
 
 </details>

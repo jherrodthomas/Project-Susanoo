@@ -86,7 +86,7 @@ The item definition of SUS-I1 is the single source for every element, external e
 
 ## Element register
 
-![Figure 1 · Element register](assets/architecture/figures/fig-1-element-register.svg)
+![Figure 1 · Element register](../../architecture/figures/fig-1-element-register.svg)
 
 | Element | Name | Kind | Safety role | Status | Hazards | Requirements |
 |---|---|---|---|---|---|---|
@@ -123,7 +123,7 @@ The item definition of SUS-I1 is the single source for every element, external e
 
 ## Functions
 
-![Figure 2 · Functions and the elements that perform them](assets/architecture/figures/fig-2-functions.svg)
+![Figure 2 · Functions and the elements that perform them](../../architecture/figures/fig-2-functions.svg)
 
 | Function | Name | Performed by | Modes | Scenarios |
 |---|---|---|---|---|
@@ -139,13 +139,13 @@ The item definition of SUS-I1 is the single source for every element, external e
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/architecture/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../architecture/figures/fig-3-block-diagram.svg)
 
-More views of the same record: [context](assets/docs/wiki/images/sus-i1-context.svg), [hand-placed boundary](assets/docs/wiki/images/sus-i1-boundary.svg), [N2 interface chart](assets/docs/wiki/images/sysml-v08-n2.svg) and the [item-definition wiki page](SUS-I1-Item-Definition).
+More views of the same record: [context](images/sus-i1-context.svg), [hand-placed boundary](images/sus-i1-boundary.svg), [N2 interface chart](images/sysml-v08-n2.svg) and the [item-definition wiki page](SUS-I1-Item-Definition.md).
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/architecture/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../architecture/figures/fig-4-boundary-diagram.svg)
 
 | # | Interface | From | To | Direction | Exchange | Hazards |
 |---|---|---|---|---|---|---|
@@ -203,25 +203,25 @@ More views of the same record: [context](assets/docs/wiki/images/sus-i1-context.
 
 Model of record: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml) in the project model [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model), checked against this record (`python -m tools.sysml.check`) and validated by the OMG pilot in CI.
 
-![Figure 5 · SysML block definition — SUS-I1 system breakdown](assets/architecture/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — SUS-I1 system breakdown](../../architecture/figures/fig-5-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/architecture/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../architecture/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | Modes and scenarios | [`concept/CONOPS.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md) |
 | Concept architecture | [`concept/architecture.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/architecture.md) |
 | Candidate sub-elements | [`trades/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/architecture/trades) |
-| Applied decisions | [Decision register](Decision-Register) |
+| Applied decisions | [Decision register](Decision-Register.md) |
 
 | Output | Destination |
 |---|---|
 | Part definitions (checked) | [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml) |
-| Element and interface IDs | [hazards](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/hazards), [requirements](Requirements-Register) |
-| Scope and boundaries | [882E work products](882E-Work-Products) |
-| Item-definition figures | [wiki page](SUS-I1-Item-Definition) |
+| Element and interface IDs | [hazards](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/hazards), [requirements](Requirements-Register.md) |
+| Scope and boundaries | [882E work products](882E-Work-Products.md) |
+| Item-definition figures | [wiki page](SUS-I1-Item-Definition.md) |
 
 ## Folder contents
 

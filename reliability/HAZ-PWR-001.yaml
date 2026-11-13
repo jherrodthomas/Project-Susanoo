@@ -1,0 +1,19 @@
+# Fault tree for HAZ-PWR-001 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-PWR-001
+exposure: walker_operating_hours
+trees:
+  - id: FT-018
+    title: Residual hydraulic pressure during maintenance
+    alternative: A
+    top: residual
+    gates:
+      - {id: residual, type: and, title: "Maintainer exposed to stored pressure", inputs: [pressure-trapped, not-verified]}
+      - {id: pressure-trapped, type: or, title: "Pressure remains after isolation", inputs: [bleed-fails, trapped-volume]}
+    events:
+      - {id: bleed-fails, mode: PT-020-FM1, causal_factor: CF1, title: "Automatic bleed valve already failed"}
+      - {id: trapped-volume, kind: undeveloped, nature: systematic, causal_factor: CF1, title: "Trapped volume not vented by the isolation design"}
+      - {id: not-verified, kind: undeveloped, nature: human, causal_factor: CF2, title: "Isolation or zero-energy check skipped"}

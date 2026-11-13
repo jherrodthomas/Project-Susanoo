@@ -46,7 +46,7 @@ One JSON file per 3D scene: the analysis the page replays. `export_scene.py` rea
 
 ## The exports
 
-![Figure 1 · The exported scenes](assets/sim/scenes3d/out/figures/fig-1-export-register.svg)
+![Figure 1 · The exported scenes](../../sim/scenes3d/out/figures/fig-1-export-register.svg)
 
 | File | Kind · source | Reference | Hazards | Outcome → intended | Frames · span | Current | Replayed by |
 |---|---|---|---|---|---|---|---|
@@ -59,7 +59,7 @@ One JSON file per 3D scene: the analysis the page replays. `export_scene.py` rea
 
 ## What each export holds
 
-![Figure 2 · What each export holds](assets/sim/scenes3d/out/figures/fig-2-timelines.svg)
+![Figure 2 · What each export holds](../../sim/scenes3d/out/figures/fig-2-timelines.svg)
 
 | Field | Walker | UAV | Read by |
 |---|---|---|---|
@@ -72,11 +72,11 @@ One JSON file per 3D scene: the analysis the page replays. `export_scene.py` rea
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/sim/scenes3d/out/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../sim/scenes3d/out/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/sim/scenes3d/out/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../sim/scenes3d/out/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -87,32 +87,32 @@ One JSON file per 3D scene: the analysis the page replays. `export_scene.py` rea
 | 5 | Scene exports | Sheet builder | the walker exports the SUS-M1 sheet replays |
 | 6 | CI | Scene exports | export_scene --check and test_scenes3d.py |
 
-**Explicitly excluded:** the look (environment, condition, camera; [`library/`](3D-Look-Library)), the pages and stills themselves ([`docs/3d/`](3D-Scene-Pages)), and the UAV sheet, which reads the SITL results directly.
+**Explicitly excluded:** the look (environment, condition, camera; [`library/`](3D-Look-Library.md)), the pages and stills themselves ([`docs/3d/`](3D-Scene-Pages.md)), and the UAV sheet, which reads the SITL results directly.
 
 ## SysML model
 
 [`SceneExports.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/out/SceneExports.sysml) is generated from the exports and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML block definition — SceneExports](assets/sim/scenes3d/out/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — SceneExports](../../sim/scenes3d/out/figures/fig-5-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/sim/scenes3d/out/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../sim/scenes3d/out/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | Scene motion blocks | [`scenes.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/scenes.yaml) |
-| Walker runs | [`sim/plant/walker.py`](Walker-Plant) with the plant spec |
-| PX4 SITL runs | [`sim/results/uav/`](UAV-SITL-Results) |
+| Walker runs | [`sim/plant/walker.py`](Walker-Plant.md) with the plant spec |
+| PX4 SITL runs | [`sim/results/uav/`](UAV-SITL-Results.md) |
 
 | Output | Destination |
 |---|---|
-| Scene analysis | the 3D pages in [`docs/3d/`](3D-Scene-Pages) and the SUS-M1 sheet |
+| Scene analysis | the 3D pages in [`docs/3d/`](3D-Scene-Pages.md) and the SUS-M1 sheet |
 
 ## Changing an export
 
 1. Never edit a JSON file here: change the scene's `motion` block in [`scenes.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/scenes.yaml), the plant spec or the SITL results.
-2. Run `python -m sim.scenes3d.export_scene && python -m sim.scenes3d.build_pages`, then `python -m sim.scenes3d.build_sheet`, and render the stills (see [`sim/scenes3d`](3D-Scene-Builder)).
+2. Run `python -m sim.scenes3d.export_scene && python -m sim.scenes3d.build_pages`, then `python -m sim.scenes3d.build_sheet`, and render the stills (see [`sim/scenes3d`](3D-Scene-Builder.md)).
 3. Regenerate this page and run the full check list in [`CLAUDE.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/CLAUDE.md).
 
 ## Folder contents

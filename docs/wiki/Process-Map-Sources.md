@@ -39,8 +39,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Field | Value |
 |---|---|
-| Maps | [`mil-std-882e/`](882E-Map-Sources) |
-| Shown on | [MIL-STD-882E process maps (wiki)](MIL-STD-882E-Process-Maps) |
+| Maps | [`mil-std-882e/`](882E-Map-Sources.md) |
+| Shown on | [MIL-STD-882E process maps (wiki)](MIL-STD-882E-Process-Maps.md) |
 | Edit with | draw.io (diagrams.net); export SVG to `docs/wiki/images/<name>.svg` |
 | SysML | [`ProcessMaps.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/ProcessMaps.sysml) (generated from the lifecycle map) |
 
@@ -50,22 +50,22 @@ Editable sources for the hand-drawn MIL-STD-882E process maps: who does what, in
 
 ## The maps
 
-![Figure 1 · The process maps](assets/docs/diagrams/figures/fig-1-maps.svg)
+![Figure 1 · The process maps](../diagrams/figures/fig-1-maps.svg)
 
 | Map | Source | Lanes | Steps | Export | Shown on |
 |---|---|---|---|---|---|
-| Hazard analysis relationships | [`analysis-dependencies.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/analysis-dependencies.drawio) | Concept → Requirements → Subsystems → Integration | 8 | [`analysis-dependencies.svg`](assets/docs/wiki/images/analysis-dependencies.svg), in step | `docs/README.md`, `docs/wiki/882E-Map-Sources.md`, `docs/wiki/Documentation-Sources.md`, `docs/wiki/MIL-STD-882E-Process-Maps.md`, `docs/wiki/Process-Map-Sources.md`, `docs/wiki/Wiki-Images.md`, `standards/mil-std-882e/README.md` |
-| Hazard management and risk acceptance | [`hazard-management.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/hazard-management.drawio) | Safety analyst → Systems & design → Verification → Risk authority | 8 | [`hazard-management.svg`](assets/docs/wiki/images/hazard-management.svg), in step | `docs/README.md`, `docs/wiki/882E-Map-Sources.md`, `docs/wiki/Documentation-Sources.md`, `docs/wiki/MIL-STD-882E-Process-Maps.md`, `docs/wiki/Process-Map-Sources.md`, `docs/wiki/Wiki-Images.md`, `safety/hazards/README.md` |
-| Safety responsibility swimlanes | [`responsibility-swimlanes.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/responsibility-swimlanes.drawio) | Safety lead → Systems / design → Test lead → Risk authority | 8 | [`responsibility-swimlanes.svg`](assets/docs/wiki/images/responsibility-swimlanes.svg), in step | `docs/README.md`, `docs/wiki/882E-Map-Sources.md`, `docs/wiki/Documentation-Sources.md`, `docs/wiki/MIL-STD-882E-Process-Maps.md`, `docs/wiki/Process-Map-Sources.md`, `docs/wiki/Wiki-Images.md`, `standards/tailoring/README.md` |
-| System safety lifecycle | [`safety-lifecycle.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/safety-lifecycle.drawio) | Concept & scope → Analysis → Design & controls → Evidence & release → Sustainment | 10 | [`safety-lifecycle.svg`](assets/docs/wiki/images/safety-lifecycle.svg), in step | `docs/README.md`, `docs/wiki/882E-Map-Sources.md`, `docs/wiki/Documentation-Sources.md`, `docs/wiki/MIL-STD-882E-Process-Maps.md`, `docs/wiki/Process-Map-Sources.md`, `docs/wiki/Wiki-Images.md`, `standards/mil-std-882e/README.md` |
-| Software contribution to system risk | [`software-safety.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/software-safety.drawio) | System safety → Software engineering → Integration & test → Configuration | 8 | [`software-safety.svg`](assets/docs/wiki/images/software-safety.svg), in step | `docs/README.md`, `docs/wiki/882E-Map-Sources.md`, `docs/wiki/Documentation-Sources.md`, `docs/wiki/MIL-STD-882E-Process-Maps.md`, `docs/wiki/Process-Map-Sources.md`, `docs/wiki/Wiki-Images.md`, `safety/software/README.md` |
-| Safety verification and change control | [`verification-change.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/verification-change.drawio) | Requirement & hazard → Verification → Review → Change control | 8 | [`verification-change.svg`](assets/docs/wiki/images/verification-change.svg), in step | `docs/README.md`, `docs/wiki/882E-Map-Sources.md`, `docs/wiki/Documentation-Sources.md`, `docs/wiki/MIL-STD-882E-Process-Maps.md`, `docs/wiki/Process-Map-Sources.md`, `docs/wiki/Wiki-Images.md` |
+| Hazard analysis relationships | [`analysis-dependencies.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/analysis-dependencies.drawio) | Concept → Requirements → Subsystems → Integration | 8 | [`analysis-dependencies.svg`](images/analysis-dependencies.svg), in step | `docs/README.md`, `docs/wiki/882E-Map-Sources.md`, `docs/wiki/Documentation-Sources.md`, `docs/wiki/MIL-STD-882E-Process-Maps.md`, `docs/wiki/Process-Map-Sources.md`, `docs/wiki/Wiki-Images.md`, `standards/mil-std-882e/README.md` |
+| Hazard management and risk acceptance | [`hazard-management.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/hazard-management.drawio) | Safety analyst → Systems & design → Verification → Risk authority | 8 | [`hazard-management.svg`](images/hazard-management.svg), in step | `docs/README.md`, `docs/wiki/882E-Map-Sources.md`, `docs/wiki/Documentation-Sources.md`, `docs/wiki/MIL-STD-882E-Process-Maps.md`, `docs/wiki/Process-Map-Sources.md`, `docs/wiki/Wiki-Images.md`, `safety/hazards/README.md` |
+| Safety responsibility swimlanes | [`responsibility-swimlanes.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/responsibility-swimlanes.drawio) | Safety lead → Systems / design → Test lead → Risk authority | 8 | [`responsibility-swimlanes.svg`](images/responsibility-swimlanes.svg), in step | `docs/README.md`, `docs/wiki/882E-Map-Sources.md`, `docs/wiki/Documentation-Sources.md`, `docs/wiki/MIL-STD-882E-Process-Maps.md`, `docs/wiki/Process-Map-Sources.md`, `docs/wiki/Wiki-Images.md`, `standards/tailoring/README.md` |
+| System safety lifecycle | [`safety-lifecycle.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/safety-lifecycle.drawio) | Concept & scope → Analysis → Design & controls → Evidence & release → Sustainment | 10 | [`safety-lifecycle.svg`](images/safety-lifecycle.svg), in step | `docs/README.md`, `docs/wiki/882E-Map-Sources.md`, `docs/wiki/Documentation-Sources.md`, `docs/wiki/MIL-STD-882E-Process-Maps.md`, `docs/wiki/Process-Map-Sources.md`, `docs/wiki/Wiki-Images.md`, `standards/mil-std-882e/README.md` |
+| Software contribution to system risk | [`software-safety.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/software-safety.drawio) | System safety → Software engineering → Integration & test → Configuration | 8 | [`software-safety.svg`](images/software-safety.svg), in step | `docs/README.md`, `docs/wiki/882E-Map-Sources.md`, `docs/wiki/Documentation-Sources.md`, `docs/wiki/MIL-STD-882E-Process-Maps.md`, `docs/wiki/Process-Map-Sources.md`, `docs/wiki/Wiki-Images.md`, `safety/software/README.md` |
+| Safety verification and change control | [`verification-change.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/verification-change.drawio) | Requirement & hazard → Verification → Review → Change control | 8 | [`verification-change.svg`](images/verification-change.svg), in step | `docs/README.md`, `docs/wiki/882E-Map-Sources.md`, `docs/wiki/Documentation-Sources.md`, `docs/wiki/MIL-STD-882E-Process-Maps.md`, `docs/wiki/Process-Map-Sources.md`, `docs/wiki/Wiki-Images.md` |
 
-![System safety lifecycle](assets/docs/wiki/images/safety-lifecycle.svg)
+![System safety lifecycle](images/safety-lifecycle.svg)
 
 ## MIL-STD-882E tasks the maps name
 
-![Figure 2 · The MIL-STD-882E tasks the maps name](assets/docs/diagrams/figures/fig-2-task-coverage.svg)
+![Figure 2 · The MIL-STD-882E tasks the maps name](../diagrams/figures/fig-2-task-coverage.svg)
 
 | Task | Abbreviation | Title | Tailoring | Gate | Named on |
 |---|---|---|---|---|---|
@@ -82,11 +82,11 @@ Editable sources for the hand-drawn MIL-STD-882E process maps: who does what, in
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/docs/diagrams/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../diagrams/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/docs/diagrams/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../diagrams/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -103,21 +103,21 @@ Editable sources for the hand-drawn MIL-STD-882E process maps: who does what, in
 
 [`ProcessMaps.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/ProcessMaps.sysml) is generated from the lifecycle map and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML activity — SafetyLifecycle](assets/docs/diagrams/figures/fig-5-sysml-activity.svg)
+![Figure 5 · SysML activity — SafetyLifecycle](../diagrams/figures/fig-5-sysml-activity.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/docs/diagrams/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../diagrams/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| MIL-STD-882E process and tailoring | [`standards/`](Standards-and-Tailoring) |
-| Roles | [reviews](Review-Records) (authority ladder), [framework](Framework) |
+| MIL-STD-882E process and tailoring | [`standards/`](Standards-and-Tailoring.md) |
+| Roles | [reviews](Review-Records.md) (authority ladder), [framework](Framework.md) |
 
 | Output | Destination |
 |---|---|
 | SVG exports | `docs/wiki/images/<name>.svg` |
-| Process-map wiki page | [`MIL-STD-882E-Process-Maps`](MIL-STD-882E-Process-Maps) |
+| Process-map wiki page | [`MIL-STD-882E-Process-Maps`](MIL-STD-882E-Process-Maps.md) |
 
 ## Changing a map
 
@@ -129,7 +129,7 @@ Editable sources for the hand-drawn MIL-STD-882E process maps: who does what, in
 
 | Item | Description | State |
 |---|---|---|
-| [`mil-std-882e/`](882E-Map-Sources) | The MIL-STD-882E process-map sources | hand-drawn |
+| [`mil-std-882e/`](882E-Map-Sources.md) | The MIL-STD-882E process-map sources | hand-drawn |
 | [`ProcessMaps.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/ProcessMaps.sysml) | The lifecycle map as a SysML activity | generated |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/docs/diagrams/figures) | Generated SVG figures (do not edit) | generated |
 | `README.md` | This page | generated |

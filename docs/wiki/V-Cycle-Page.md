@@ -55,7 +55,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Field | Value |
 |---|---|
-| Open | [`index.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/vcycle/index.html) from a local checkout · [System V cycle (wiki)](System-V-Cycle) |
+| Open | [`index.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/vcycle/index.html) from a local checkout · [System V cycle (wiki)](System-V-Cycle.md) |
 | Built by | [`tools/vcycle/build_vcycle.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/vcycle/README.md) from `page.html` (`--check` in CI) |
 | Views | Maturity, Gate scrubber, Trace a requirement, Change ripple, Evidence clock |
 | SysML | [`MaturityLadder.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/vcycle/MaturityLadder.sysml) (generated) |
@@ -66,7 +66,7 @@ One interactive page that draws the whole system on a V: the left side defines (
 
 ## The system-level V
 
-![Figure 1 · The system-level V, block by block](assets/docs/vcycle/figures/fig-1-system-blocks.svg)
+![Figure 1 · The system-level V, block by block](../vcycle/figures/fig-1-system-blocks.svg)
 
 | Block | Side | Due by | Records | Lowest rung |
 |---|---|---|---|---|
@@ -82,11 +82,11 @@ One interactive page that draws the whole system on a V: the left side defines (
 | System verification | Prove (right) | G5 | 24 requirements, 2 with evidence | Not started |
 | Operational validation | Prove (right) | G6 | 14 CONOPS scenarios | Not started |
 
-![System V cycle of SUS-I1](assets/docs/wiki/images/vcycle-system.svg)
+![System V cycle of SUS-I1](images/vcycle-system.svg)
 
 ## Gate scrubber
 
-![Figure 2 · What the gate scrubber shows](assets/docs/vcycle/figures/fig-2-gate-scrubber.svg)
+![Figure 2 · What the gate scrubber shows](../vcycle/figures/fig-2-gate-scrubber.svg)
 
 | Block | Needs | G0 | G1 | G2 | G3 | G4 | G5 | G6 | G7 |
 |---|---|---|---|---|---|---|---|---|---|
@@ -115,11 +115,11 @@ One interactive page that draws the whole system on a V: the left side defines (
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/docs/vcycle/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../vcycle/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/docs/vcycle/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../vcycle/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -140,7 +140,7 @@ One interactive page that draws the whole system on a V: the left side defines (
 
 [`MaturityLadder.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/vcycle/MaturityLadder.sysml) is generated from the generator's ladder and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML state machine — MaturityLadder](assets/docs/vcycle/figures/fig-5-sysml-state-machine.svg)
+![Figure 5 · SysML state machine — MaturityLadder](../vcycle/figures/fig-5-sysml-state-machine.svg)
 
 | Rung | What it means | Who may move a record to it | Records now |
 |---|---|---|---|
@@ -154,13 +154,13 @@ One interactive page that draws the whole system on a V: the left side defines (
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/docs/vcycle/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../vcycle/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Requirements, hazards, SSFs, events | [requirements](Requirements-Register), [safety records](Safety-Records) |
-| Item definition, trade studies | [architecture](Architecture-Records) |
-| Change requests | [changes](Change-Requests) |
+| Requirements, hazards, SSFs, events | [requirements](Requirements-Register.md), [safety records](Safety-Records.md) |
+| Item definition, trade studies | [architecture](Architecture-Records.md) |
+| Change requests | [changes](Change-Requests.md) |
 | Gates and exit evidence | `standards/tailoring/mil-std-882e.yaml`, `framework/lifecycle.md` |
 | Page source | `tools/vcycle/page.html` |
 

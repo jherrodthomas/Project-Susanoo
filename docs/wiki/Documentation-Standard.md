@@ -58,7 +58,7 @@ anything else, **what part of the system it covers, where its boundary is, how i
 and out**. Prose alone is not enough, and neither is a sketch: figures are generated, styled consistently, and
 checked in CI like code.
 
-![Figure 1 · How folder documentation is produced and enforced](assets/framework/figures/fig-1-documentation-pipeline.svg)
+![Figure 1 · How folder documentation is produced and enforced](../../framework/figures/fig-1-documentation-pipeline.svg)
 
 ## Required README sections
 
@@ -94,7 +94,7 @@ the start.
 ## Abbreviations, acronyms and record codes
 
 Readers should never meet an unexplained abbreviation. Every term is defined once, in
-[`docs/terms.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/terms.yaml), and listed on the generated [terms page](Abbreviations-and-Codes); element IDs such
+[`docs/terms.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/terms.yaml), and listed on the generated [terms page](Abbreviations-and-Codes.md); element IDs such
 as `SUS-M1-SAF` are defined from the item definition.
 
 - **Pages:** a folded *Terms on this page* block near the opening lists only the terms that page uses.

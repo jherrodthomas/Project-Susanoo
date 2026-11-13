@@ -37,7 +37,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | Simulator | PX4 SITL SIH sihsim_quadx (headless, lockstep), 4.0× speed |
-| Written by | `sim/uav/harness.py` (run by hand against a PX4 checkout; see [`sim/uav`](UAV-SITL-Harness)) |
+| Written by | `sim/uav/harness.py` (run by hand against a PX4 checkout; see [`sim/uav`](UAV-SITL-Harness.md)) |
 | Scenarios | [`sim/uav/scenarios.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/scenarios.yaml), geometry in [`sim/uav/spec.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/spec.yaml) |
 | Summary | [`summary.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/uav/summary.md) (3.7 KB) |
 | SysML | [`SitlResults.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/uav/SitlResults.sysml) (generated) |
@@ -48,7 +48,7 @@ The committed results of the PX4 SITL failsafe runs: one JSON per scenario with 
 
 ## The result files
 
-![Figure 1 · The result files](assets/sim/results/uav/figures/fig-1-runs.svg)
+![Figure 1 · The result files](../../sim/results/uav/figures/fig-1-runs.svg)
 
 | Run | Scenario | Injection | First failsafe | Outcome | Closest to pilot below keep-out | Samples | Findings |
 |---|---|---|---|---|---|---|---|
@@ -67,15 +67,15 @@ The committed results of the PX4 SITL failsafe runs: one JSON per scenario with 
 
 ## Every run over time
 
-![Figure 2 · Every run over time](assets/sim/results/uav/figures/fig-2-timelines.svg)
+![Figure 2 · Every run over time](../../sim/results/uav/figures/fig-2-timelines.svg)
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/sim/results/uav/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../sim/results/uav/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/sim/results/uav/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../sim/results/uav/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -92,7 +92,7 @@ The committed results of the PX4 SITL failsafe runs: one JSON per scenario with 
 
 [`SitlResults.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/uav/SitlResults.sysml) is generated from the harness's `score()` and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML activity — ClassifyOutcome](assets/sim/results/uav/figures/fig-5-sysml-activity.svg)
+![Figure 5 · SysML activity — ClassifyOutcome](../../sim/results/uav/figures/fig-5-sysml-activity.svg)
 
 | Order | Outcome | Decided when |
 |---|---|---|
@@ -105,12 +105,12 @@ The committed results of the PX4 SITL failsafe runs: one JSON per scenario with 
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/sim/results/uav/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../sim/results/uav/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | PX4 SITL telemetry | a PX4 checkout pinned by the harness |
-| Scenarios, geometry | [`sim/uav/`](UAV-SITL-Harness) |
+| Scenarios, geometry | [`sim/uav/`](UAV-SITL-Harness.md) |
 
 | Output | Destination |
 |---|---|
@@ -119,7 +119,7 @@ The committed results of the PX4 SITL failsafe runs: one JSON per scenario with 
 
 ## Re-running
 
-1. Follow [`sim/uav`](UAV-SITL-Harness) to run `python -m sim.uav.harness --px4 <checkout>` against the pinned PX4 version; `--compare` reports what changed.
+1. Follow [`sim/uav`](UAV-SITL-Harness.md) to run `python -m sim.uav.harness --px4 <checkout>` against the pinned PX4 version; `--compare` reports what changed.
 2. Rebuild the pages that read the results, regenerate this page and run the full check list in [`CLAUDE.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/CLAUDE.md).
 
 ## Folder contents

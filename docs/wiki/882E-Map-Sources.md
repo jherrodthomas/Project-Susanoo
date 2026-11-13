@@ -31,8 +31,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Field | Value |
 |---|---|
-| Overview | [Diagram sources](Process-Map-Sources) (the maps side by side and the 882E tasks they name) |
-| Shown on | [MIL-STD-882E process maps (wiki)](MIL-STD-882E-Process-Maps) |
+| Overview | [Diagram sources](Process-Map-Sources.md) (the maps side by side and the 882E tasks they name) |
+| Shown on | [MIL-STD-882E process maps (wiki)](MIL-STD-882E-Process-Maps.md) |
 | Edit with | draw.io (diagrams.net); export SVG to `docs/wiki/images/<name>.svg` |
 | SysML | [`MapActivities.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/MapActivities.sysml) (generated) |
 
@@ -42,44 +42,44 @@ The editable draw.io sources of the six MIL-STD-882E process maps. This page che
 
 ## Sources and exports
 
-![Figure 1 · Every source against its export](assets/docs/diagrams/mil-std-882e/figures/fig-1-sources.svg)
+![Figure 1 · Every source against its export](../diagrams/mil-std-882e/figures/fig-1-sources.svg)
 
 | Map | Source | Page | Cells | Export | Labels in export |
 |---|---|---|---|---|---|
-| Hazard analysis relationships | [`analysis-dependencies.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/analysis-dependencies.drawio) | 1120 × 480 | 14 | [`analysis-dependencies.svg`](assets/docs/wiki/images/analysis-dependencies.svg), 6.3 KB | 14 of 14 |
-| Hazard management and risk acceptance | [`hazard-management.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/hazard-management.drawio) | 1120 × 480 | 14 | [`hazard-management.svg`](assets/docs/wiki/images/hazard-management.svg), 5.2 KB | 14 of 14 |
-| Safety responsibility swimlanes | [`responsibility-swimlanes.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/responsibility-swimlanes.drawio) | 1120 × 480 | 14 | [`responsibility-swimlanes.svg`](assets/docs/wiki/images/responsibility-swimlanes.svg), 5.2 KB | 14 of 14 |
-| System safety lifecycle | [`safety-lifecycle.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/safety-lifecycle.drawio) | 1120 × 480 | 17 | [`safety-lifecycle.svg`](assets/docs/wiki/images/safety-lifecycle.svg), 7.4 KB | 17 of 17 |
-| Software contribution to system risk | [`software-safety.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/software-safety.drawio) | 1120 × 480 | 14 | [`software-safety.svg`](assets/docs/wiki/images/software-safety.svg), 5.6 KB | 14 of 14 |
-| Safety verification and change control | [`verification-change.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/verification-change.drawio) | 1120 × 480 | 14 | [`verification-change.svg`](assets/docs/wiki/images/verification-change.svg), 5.2 KB | 14 of 14 |
+| Hazard analysis relationships | [`analysis-dependencies.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/analysis-dependencies.drawio) | 1120 × 480 | 14 | [`analysis-dependencies.svg`](images/analysis-dependencies.svg), 6.3 KB | 14 of 14 |
+| Hazard management and risk acceptance | [`hazard-management.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/hazard-management.drawio) | 1120 × 480 | 14 | [`hazard-management.svg`](images/hazard-management.svg), 5.2 KB | 14 of 14 |
+| Safety responsibility swimlanes | [`responsibility-swimlanes.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/responsibility-swimlanes.drawio) | 1120 × 480 | 14 | [`responsibility-swimlanes.svg`](images/responsibility-swimlanes.svg), 5.2 KB | 14 of 14 |
+| System safety lifecycle | [`safety-lifecycle.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/safety-lifecycle.drawio) | 1120 × 480 | 17 | [`safety-lifecycle.svg`](images/safety-lifecycle.svg), 7.4 KB | 17 of 17 |
+| Software contribution to system risk | [`software-safety.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/software-safety.drawio) | 1120 × 480 | 14 | [`software-safety.svg`](images/software-safety.svg), 5.6 KB | 14 of 14 |
+| Safety verification and change control | [`verification-change.drawio`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/verification-change.drawio) | 1120 × 480 | 14 | [`verification-change.svg`](images/verification-change.svg), 5.2 KB | 14 of 14 |
 
 ## Where each step's records live
 
-![Figure 2 · Where each step's records live](assets/docs/diagrams/mil-std-882e/figures/fig-2-record-homes.svg)
+![Figure 2 · Where each step's records live](../diagrams/mil-std-882e/figures/fig-2-record-homes.svg)
 
 | Home | Folder | Records now | Steps |
 |---|---|---|---|
 | Hazard records | [`safety/hazards/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/hazards) | 22 | 14 |
-| Requirements | [`requirements/`](Requirements-Register) | 24 | 4 |
+| Requirements | [`requirements/`](Requirements-Register.md) | 24 | 4 |
 | Software safety functions | [`safety/software/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/software) | 8 | 6 |
-| Verification records | [`verification/`](Verification-Records) | 6 | 8 |
-| Review records | [`reviews/`](Review-Records) | 0 | 8 |
-| Change requests | [`changes/`](Change-Requests) | 0 | 3 |
+| Verification records | [`verification/`](Verification-Records.md) | 6 | 8 |
+| Review records | [`reviews/`](Review-Records.md) | 0 | 8 |
+| Change requests | [`changes/`](Change-Requests.md) | 0 | 3 |
 | Tailoring and plan | [`standards/tailoring/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/standards/tailoring) | 1 | 1 |
-| Concept and CONOPS | [`concept/`](Concept-Model) | 1 | 2 |
+| Concept and CONOPS | [`concept/`](Concept-Model.md) | 1 | 2 |
 | Mitigations (in hazard records) | [`safety/hazards/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/hazards) | 22 | 5 |
 | Events | [`safety/events/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/events) | 2 | 2 |
-| PX4 integration | [`integrations/px4/`](PX4-Integration-Model) | 1 | 1 |
+| PX4 integration | [`integrations/px4/`](PX4-Integration-Model.md) | 1 | 1 |
 
 **Steps with no record folder:** Hazard management and risk acceptance: Validate risk reduction.
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/docs/diagrams/mil-std-882e/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../diagrams/mil-std-882e/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/docs/diagrams/mil-std-882e/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../diagrams/mil-std-882e/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -96,27 +96,27 @@ The editable draw.io sources of the six MIL-STD-882E process maps. This page che
 
 [`MapActivities.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/diagrams/mil-std-882e/MapActivities.sysml) holds all 6 maps as activities, generated from the sources and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML activity — HazardManagement](assets/docs/diagrams/mil-std-882e/figures/fig-5-sysml-activity.svg)
+![Figure 5 · SysML activity — HazardManagement](../diagrams/mil-std-882e/figures/fig-5-sysml-activity.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/docs/diagrams/mil-std-882e/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../diagrams/mil-std-882e/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| MIL-STD-882E process and tailoring | [`standards/`](Standards-and-Tailoring) |
+| MIL-STD-882E process and tailoring | [`standards/`](Standards-and-Tailoring.md) |
 | Roles and records | the folders in the table above |
 
 | Output | Destination |
 |---|---|
 | SVG exports | `docs/wiki/images/<name>.svg` |
-| Process-map pages | [`MIL-STD-882E-Process-Maps`](MIL-STD-882E-Process-Maps) and the standards and safety READMEs |
+| Process-map pages | [`MIL-STD-882E-Process-Maps`](MIL-STD-882E-Process-Maps.md) and the standards and safety READMEs |
 
 ## Changing a map
 
 1. Edit the `.drawio` source in draw.io (diagrams.net).
 2. Export it to SVG as `docs/wiki/images/<name>.svg`, with the same labels.
-3. Regenerate this page and the [diagram sources](Process-Map-Sources) page; Figure 1 shows an export that has fallen behind, Figure 2 a step with no record folder. Then run the full check list in [`CLAUDE.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/CLAUDE.md).
+3. Regenerate this page and the [diagram sources](Process-Map-Sources.md) page; Figure 1 shows an export that has fallen behind, Figure 2 a step with no record folder. Then run the full check list in [`CLAUDE.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/CLAUDE.md).
 
 ## Folder contents
 

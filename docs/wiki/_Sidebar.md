@@ -24,6 +24,7 @@
 - [UAV Simulation](UAV-Simulation)
 - [3D Scenes](3D-Scenes)
 - [System V Cycle](System-V-Cycle)
+- [Reliability Pilot](Reliability-Pilot)
 - [Decision Inbox](Decision-Inbox)
 
 - [SUS-M1 Architecture & Boundaries](SUS-M1-Architecture-and-Boundaries)

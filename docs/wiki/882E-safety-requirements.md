@@ -40,28 +40,28 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Lifecycle gate | G2–G4 |
 | Applicability | Selected |
 | Accountable role | Systems lead |
-| Parent folder | [05 · Reduce Risk](882E-05-risk-reduction) |
+| Parent folder | [05 · Reduce Risk](882E-05-risk-reduction.md) |
 
 ## Purpose
 
 Safety requirements derived from SRHA, SHA, O&SHA, HHA and EHA, each allocated to a system element and
-assigned a verification method. The records live in [`requirements/`](Requirements-Register); derived
+assigned a verification method. The records live in [`requirements/`](Requirements-Register.md); derived
 requirements name their parent in `derived_from`. Released requirements need a verification
 disposition (traceability rule 2).
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/05-risk-reduction/safety-requirements/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/05-risk-reduction/safety-requirements/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/05-risk-reduction/safety-requirements/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/05-risk-reduction/safety-requirements/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/05-risk-reduction/safety-requirements/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/05-risk-reduction/safety-requirements/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -73,7 +73,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`SafetyRequirements.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/05-risk-reduction/safety-requirements/SafetyRequirements.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML requirements — allocation and derivation](assets/safety/mil-std-882e/05-risk-reduction/safety-requirements/figures/fig-4-sysml-requirements.svg)
+![Figure 4 · SysML requirements — allocation and derivation](../../safety/mil-std-882e/05-risk-reduction/safety-requirements/figures/fig-4-sysml-requirements.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -106,18 +106,18 @@ package SafetyRequirements {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/05-risk-reduction/safety-requirements/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/05-risk-reduction/safety-requirements/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| System safety requirements | [Task 203 · System Requirements Hazard Analysis (SRHA)](882E-task-203-system-requirements-hazard-analysis) |
-| Interface requirements | [Task 205 · System Hazard Analysis (SHA)](882E-task-205-system-hazard-analysis) |
-| Procedural requirements | [Task 206 · Operating and Support Hazard Analysis (O&SHA)](882E-task-206-operating-and-support-hazard-analysis) |
+| System safety requirements | [Task 203 · System Requirements Hazard Analysis (SRHA)](882E-task-203-system-requirements-hazard-analysis.md) |
+| Interface requirements | [Task 205 · System Hazard Analysis (SHA)](882E-task-205-system-hazard-analysis.md) |
+| Procedural requirements | [Task 206 · Operating and Support Hazard Analysis (O&SHA)](882E-task-206-operating-and-support-hazard-analysis.md) |
 
 | Output | Destination |
 |---|---|
-| Requirements to verify | [Task 401 · Safety Verification](882E-task-401-safety-verification) |
-| requirement_ids | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system) |
+| Requirements to verify | [Task 401 · Safety Verification](882E-task-401-safety-verification.md) |
+| requirement_ids | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system.md) |
 
 ## Folder contents
 

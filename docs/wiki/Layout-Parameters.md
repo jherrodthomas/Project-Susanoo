@@ -32,7 +32,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 |---|---|
 | Files | [`CL-01.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/params/CL-01.yaml), [`CL-02.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/params/CL-02.yaml), [`CL-03.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/params/CL-03.yaml), [`CL-04.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/params/CL-04.yaml), [`CL-05.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/params/CL-05.yaml), [`common.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/params/common.yaml) |
 | Read by | [`build_concepts.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/build_concepts.py), [`cl05.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/b3d/cl05.py), [`cl05_web.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/b3d/cl05_web.py), [`cl05_terrain.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/b3d/cl05_terrain.py), [`blender_walk.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/blender_walk.py), [`drawings.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/drawings.py), [`readme.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/readme.py) |
-| Review | [`cad/README.md`](Concept-Layouts) (concept layouts review) |
+| Review | [`cad/README.md`](Concept-Layouts.md) (concept layouts review) |
 | SysML | [`LayoutParameters.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/params/LayoutParameters.sysml) (generated) |
 
 ## Purpose
@@ -41,7 +41,7 @@ The parameters of each concept layout (`CL-nn.yaml`) and those they share (`comm
 
 ## Parameter blocks
 
-![Figure 1 · Every parameter block](assets/cad/params/figures/fig-1-parameter-blocks.svg)
+![Figure 1 · Every parameter block](../../cad/params/figures/fig-1-parameter-blocks.svg)
 
 | File | Title | Style → builder | Values | Blocks |
 |---|---|---|---|---|
@@ -54,7 +54,7 @@ The parameters of each concept layout (`CL-nn.yaml`) and those they share (`comm
 
 ## Records the parameters cite
 
-![Figure 2 · The records the parameters cite](assets/cad/params/figures/fig-2-cited-records.svg)
+![Figure 2 · The records the parameters cite](../../cad/params/figures/fig-2-cited-records.svg)
 
 | Parameter | Cites |
 |---|---|
@@ -72,11 +72,11 @@ The parameters of each concept layout (`CL-nn.yaml`) and those they share (`comm
 
 ## Block diagram
 
-![Figure 3 · Block diagram](assets/cad/params/figures/fig-3-block-diagram.svg)
+![Figure 3 · Block diagram](../../cad/params/figures/fig-3-block-diagram.svg)
 
 ## Boundary diagram
 
-![Figure 4 · Boundary diagram](assets/cad/params/figures/fig-4-boundary-diagram.svg)
+![Figure 4 · Boundary diagram](../../cad/params/figures/fig-4-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction |
 |---|---|---|---|
@@ -87,17 +87,17 @@ The parameters of each concept layout (`CL-nn.yaml`) and those they share (`comm
 | 5 | Layout parameters | Web export | CL-05 geometry and clips for the 3D sheets |
 | 6 | CI | Layout parameters | the layout tables in cad/README.md (readme.py --check) |
 
-**Explicitly excluded:** the models, metrics, drawings and renders built from the parameters (see [`cad/`](Concept-Layouts)), and any design data: no value here is a requirement.
+**Explicitly excluded:** the models, metrics, drawings and renders built from the parameters (see [`cad/`](Concept-Layouts.md)), and any design data: no value here is a requirement.
 
 ## SysML model
 
 [`LayoutParameters.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/params/LayoutParameters.sysml) is generated from the parameter files and validated with the project model by the OMG pilot in CI.
 
-![Figure 5 · SysML block definition — LayoutParameters](assets/cad/params/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — LayoutParameters](../../cad/params/figures/fig-5-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/cad/params/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../cad/params/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
@@ -106,14 +106,14 @@ The parameters of each concept layout (`CL-nn.yaml`) and those they share (`comm
 
 | Output | Destination |
 |---|---|
-| Models, metrics, renders | [`cad/`](Concept-Layouts) (`build_concepts.py`) |
+| Models, metrics, renders | [`cad/`](Concept-Layouts.md) (`build_concepts.py`) |
 | Drawing sheets | [`cad/drawings/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/drawings/README.md) |
-| CL-05 web geometry | [`docs/3d/assets/`](3D-Page-Assets) (`cl05_web.py`) |
+| CL-05 web geometry | [`docs/3d/assets/`](3D-Page-Assets.md) (`cl05_web.py`) |
 
 ## Changing a parameter
 
 1. Change the value in its file and say why in the comment; cite the requirement or hazard it serves.
-2. Rebuild the layouts (`tools/cad/make.sh`, see [`cad/README.md`](Concept-Layouts)) and, for CL-05, the web geometry; review the metrics against the provisional flags.
+2. Rebuild the layouts (`tools/cad/make.sh`, see [`cad/README.md`](Concept-Layouts.md)) and, for CL-05, the web geometry; review the metrics against the provisional flags.
 3. Regenerate this page and run the full check list in [`CLAUDE.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/CLAUDE.md).
 
 ## Folder contents
