@@ -133,8 +133,11 @@ def outputs() -> dict:
           "`sim/scenes3d/terrain.yaml` (slopes up to the 20° limit of SYS-008, cross-slopes, ledges, rubble), each foot placed on the "
           "ground and the knees solved by `tools/cad/b3d/cl05_terrain.py`. For each terrain it shows whether the legs reach, how far "
           "the hip must drop, the lowest body clearance, and the static tip margin of the standing layout with the joints frozen and "
-          "with the gait's lean compensation (`sim/spec/walker.yaml`). Concept kinematics only: no dynamics, balance or foot slip.\n\n"
-          "![SUS-M1 terrain course](images/3d-sus-m1-terrain.png)\n\n## Hazard scenes\n\n"]
+          "with the gait's lean compensation (`sim/spec/walker.yaml`). Concept kinematics only: no dynamics, balance or foot slip. "
+          "Its loaded mode walks the loaded gait (`walk: loaded:`, shorter and lower steps) with the arms holding the placeholder "
+          "load in the carry pose, and sets the load mass with a slider (mass TBD, SYS-019): the carry posture's margin with that "
+          "load, the CAD's margin-peak, 0.30 m flag and tip-over masses marked.\n\n"
+          "![SUS-M1 terrain course](images/3d-sus-m1-terrain.png)\n\n![SUS-M1 loaded carry walk on the terrain course](images/3d-sus-m1-terrain-loaded.png)\n\n## Hazard scenes\n\n"]
     for r in rows:
         md.append(f"### {r['id']} · {r['title']}\n\n{', '.join(r['hazards'])} · {r['kind']} · source {r['reference']} · outcome "
                   f"**{r['outcome']}** · {r['look']['names']['environment']}, {r['look']['names']['condition']}\n\n"

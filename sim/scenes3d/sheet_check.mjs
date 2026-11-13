@@ -5,7 +5,8 @@
 //   the render modes and the replay, and fails on a console error, a missing synthetic label or a posture that does
 //   not settle; on sheet 2, that every PX4 SITL run replays to its own outcome. Unless --check-only, writes
 //   docs/wiki/images/3d-sus-m1.png, 3d-sus-a1.png, 3d-sus-a1-air.png and 3d-sus-m1-terrain.png (1600x900); --all also
-//   3d-sus-m1-<posture>.png. On sheet 3, every terrain must advance one stride and rise its own rise per cycle.
+//   3d-sus-m1-<posture>.png, and 3d-sus-m1-terrain-loaded.png. On sheet 3, every terrain must advance one stride and rise its
+//   own rise per cycle, unloaded and loaded, and the page's load-mass margins must match the records' figures.
 import { createRequire } from 'node:module';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
@@ -119,6 +120,32 @@ for (const t of T3.terrains) {
     await page.screenshot({ path: join(out, '3d-sus-m1-terrain.png') }); }
   console.log(`ok   terrain ${t.key} (rise ${t.rise} m per cycle)`);
 }
+// loaded mode: every posed terrain walks the loaded stride and rises its own rise per cycle; a terrain not posed loaded
+// is shown as such; the page's live load-mass margins reproduce the generator's (Python) figures
+const TL = JSON.parse(readFileSync(join(root, 'docs/3d/assets/sus-m1-terrain-loaded.js'), 'utf8').match(/meta: (\{.*?\}),\nbin:/s)[1]);
+const SH3 = JSON.parse(readFileSync(join(root, 'docs/3d/SUS-M1-terrain.html'), 'utf8').match(/window\.SHEET = (.*);<\/script>/)[1]);
+for (const t of TL.terrains) {
+  if (t.skipped) {
+    await page.goto(url3('?mode=loaded&paused=1')); await page.waitForFunction(() => window.__ready === true);
+    if (!(await page.locator(`#tlist button[data-k="${t.key}"]`).isDisabled())) problems.push(`loaded ${t.key}: not posed but selectable`);
+    console.log(`ok   loaded ${t.key}: ${t.skipped}`); continue;
+  }
+  const at = async (u) => { await page.goto(url3(`?mode=loaded&terrain=${t.key}&paused=1&t=${u}`)); await page.waitForFunction(() => window.__ready === true, null, { timeout: 60000 });
+    return page.evaluate(() => window.__state); };
+  const a0 = await at(0), a2 = await at(2);
+  if (a2.mode !== 'loaded' || a2.terrain !== t.key || Math.abs(a2.x - a0.x - 2 * TL.stride_m) > 1e-3 || Math.abs(a2.z - a0.z - 2 * t.rise) > 1e-3)
+    problems.push(`loaded ${t.key}: two cycles moved ${(a2.x - a0.x).toFixed(3)} m, rose ${(a2.z - a0.z).toFixed(3)} m`);
+  console.log(`ok   loaded ${t.key} (stride ${TL.stride_m} m, rise ${t.rise} m per cycle)`);
+}
+const ck = SH3.carry.check;
+for (const [terrain, field, want] of [['flat', 'level', ck.level_margin_m], ['up20', 'lean', ck.up20_lean_margin_m]]) {
+  await page.goto(url3(`?mode=loaded&terrain=${terrain}&mass=${ck.mass_kg}&paused=1`)); await page.waitForFunction(() => window.__ready === true);
+  const got = await page.evaluate((f) => window.__state.margins && window.__state.margins[f], field);
+  if (got == null || Math.abs(got - want) > 1e-3) problems.push(`loaded margin ${terrain}/${field} at ${ck.mass_kg} kg: page ${got}, records ${want}`);
+  else console.log(`ok   loaded margin ${terrain}/${field} at ${ck.mass_kg} kg = ${got} m (records ${want} m)`);
+}
+if (!checkOnly) { await page.goto(url3(`?mode=loaded&terrain=up10&mass=${ck.mass_kg}&t=0.4&paused=1`)); await page.waitForFunction(() => window.__ready === true);
+  await page.waitForTimeout(400); await page.screenshot({ path: join(out, '3d-sus-m1-terrain-loaded.png') }); }
 await page.goto(url3('?terrain=rubble')); await page.waitForFunction(() => window.__ready === true);
 const r0 = await page.evaluate(() => window.__state.x);
 await page.waitForFunction((x) => window.__state.x > x + 0.2, r0, { timeout: 30000 }).catch(() => problems.push('terrain sheet: the walker does not walk on its own'));

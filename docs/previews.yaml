@@ -146,12 +146,14 @@ folders:
       arrangement: sheet 1 `SUS-M1.html` (the CL-05 concept geometry animated through its postures and walk, with
       hazard callouts and the static tip check) and sheet 2 `SUS-A1.html` (the UAV on its dock, and the PX4 SITL
       flights replayed with the geofence and the pilot keep-out) and sheet 3 `SUS-M1-terrain.html` (the CL-05 walk
-      posed on slopes, cross-slopes, ledges and rubble, with the leg kinematics and static tip margin on each). Open a page in a browser; each still below links to its page.
+      posed on slopes, cross-slopes, ledges and rubble, unloaded or carrying the placeholder load, with the leg
+      kinematics and static tip margin on each). Open a page in a browser; each still below links to its page.
       Concept geometry and simulation results are design aids, not verification evidence.
     hero: {img: docs/wiki/images/3d-sus-m1.png, caption: "SUS-M1 general arrangement", link: docs/3d/SUS-M1.html}
     gallery:
       - {img: docs/wiki/images/3d-sus-a1.png, caption: "SUS-A1 on the dock (sheet 2)", link: docs/3d/SUS-A1.html}
       - {img: docs/wiki/images/3d-sus-m1-terrain.png, caption: "CL-05 on the terrain course, 20° uphill (sheet 3)", link: docs/3d/SUS-M1-terrain.html}
+      - {img: docs/wiki/images/3d-sus-m1-terrain-loaded.png, caption: "Loaded carry walk, 10° uphill (sheet 3)", link: docs/3d/SUS-M1-terrain.html}
       - {img: docs/wiki/images/3d-sus-a1-air.png, caption: "SUS-A1 PX4 SITL replay, SU-01 (sheet 2)", link: docs/3d/SUS-A1.html}
       - {img: docs/wiki/images/3d-s3-01.png, caption: "S3-01", link: docs/3d/S3-01.html}
       - {img: docs/wiki/images/3d-s3-01-dusk.png, caption: "S3-01 at dusk", link: docs/3d/S3-01-dusk.html}
@@ -181,8 +183,8 @@ folders:
     title: 3D page assets
     purpose: >-
       Geometry loaded by the sheets in `docs/3d`: `sus-m1.js`, the CL-05 concept meshes and their pose clips
-      (`tools/cad/b3d/cl05_web.py`), and `sus-m1-terrain.js`, the walk posed on each terrain of the course
-      (`tools/cad/b3d/cl05_terrain.py`), both from the build123d CAD. Generated; concept geometry, not a design.
+      (`tools/cad/b3d/cl05_web.py`), and `sus-m1-terrain.js` and `sus-m1-terrain-loaded.js`, the walk and the loaded
+      carry walk posed on each terrain of the course (`tools/cad/b3d/cl05_terrain.py`), all from the build123d CAD. Generated; concept geometry, not a design.
     hero: {img: docs/wiki/images/3d-sus-m1.png, caption: "SUS-M1 general arrangement", link: docs/3d/SUS-M1.html}
 
   docs/diagrams:
