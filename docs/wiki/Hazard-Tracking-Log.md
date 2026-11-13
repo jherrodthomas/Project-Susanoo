@@ -78,7 +78,7 @@ Status: open 22 · total 22
 | HAZ-DCK-002 | False retained state releases UAV under motion | MOD-03, MOD-04, MOD-06, MOD-08 | 2D Medium | 2E Medium | — | (b identified) | SSF-005 | Serious | open | ROLE-UAV |
 | HAZ-DCK-003 | UAV battery thermal event while charging on the dock | MOD-03, MOD-06 | 2C Serious | 2D Medium | — | (b identified) | — | — | open | ROLE-UAV |
 | HAZ-DCK-004 | Exposure to energised dock charging contacts | MOD-06, MOD-08, MOD-10 | 3C Medium | 3D Medium | — | (b identified) | — | — | open | ROLE-UAV |
-| HAZ-GSE-001 | Fall from height during maintenance on the walker | MOD-10 | 1C High | 1E Medium | — | (b identified) | — | — | open | ROLE-WLK |
+| HAZ-GSE-001 | Fall from height during maintenance on the walker | MOD-10 | 1C High | 1E Medium | EVT-BENCH-001: 1C High | (b identified) | — | — | open | ROLE-WLK |
 | HAZ-INT-001 | UAV launch or recovery outside the safe envelope | MOD-06, MOD-07, MOD-08 | 2C Serious | 2E Medium | — | (a identified) | SSF-006, SSF-008 | High | open | ROLE-UAV |
 | HAZ-INT-002 | Pilot acts on misleading or stale UAV information | MOD-04, MOD-07 | 1D Serious | 1E Medium | — | (c identified) | — | — | open | ROLE-UAV |
 | HAZ-MAN-001 | Person struck or pinned by the arms or claws | MOD-04, MOD-05 | 1C High | 1E Medium | — | (c identified) | SSF-001 | High | open | ROLE-WLK |
