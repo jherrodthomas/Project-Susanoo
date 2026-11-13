@@ -186,7 +186,7 @@ def fig_uses(d: dict) -> dict:
                       "tone": tone, "maxw": 250,
                       "legend": {"safety": "Hazard", "interface": "Requirement", "external": "Lead decision",
                                  "system": "Other source"}[tone]})
-        for f in files:
+        for f in sorted(files):
             edges.append({"src": "c_" + mid(c), "dst": "s_" + mid(f), "label": ""})
     for s in d["specs"]:
         st = Counter(p["status"] for p in s["params"].values())
