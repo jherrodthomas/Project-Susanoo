@@ -147,7 +147,7 @@ The code that keeps the repository honest: validators that check the records aga
 | figures | (top level) (24), pdac (6), sysml (1), terms (3), wiki (1) |
 | pdac | terms (1) |
 | previews | figures (2), pdac (2), terms (2) |
-| readme | figures (1), terms (1) |
+| readme | figures (3), terms (1) |
 | sysml | figures (1), pdac (3), terms (1) |
 | terms | — |
 | vcycle | pdac (1), terms (1) |
@@ -211,7 +211,7 @@ The code that keeps the repository honest: validators that check the records aga
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools/figures) | 28 modules | code |
 | [`pdac/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools/pdac) | 5 modules · has its own README | code |
 | [`previews/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools/previews) | 2 modules | code |
-| [`readme/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools/readme) | 1 module | code |
+| [`readme/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools/readme) | 2 modules | code |
 | [`sysml/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools/sysml) | 6 modules | code |
 | [`terms/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools/terms) | 1 module | code |
 | [`vcycle/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools/vcycle) | 1 module · has its own README | code |

@@ -1,0 +1,343 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1033" height="911" viewBox="0 0 1033 911" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 7 · Who feeds whom</title>
+<desc>Design structure matrix of the MIL-STD-882E tasks</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1033" height="911" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 7 · Who feeds whom</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Design structure matrix: a row feeds a column. Read across a row for what a task sends, down a column for what it needs. Marks</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">below the diagonal feed back to earlier work.</text>
+<text x="993" y="44" font-size="11" fill="#475569" text-anchor="end">safety/mil-std-882e/catalog.yaml</text>
+<line x1="40" y1="102" x2="993" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="351.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 351.5 208)">Baseline</text>
+<text x="368.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 368.5 208)">Element 1</text>
+<text x="385.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 385.5 208)">Task 101</text>
+<text x="402.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 402.5 208)">Task 102</text>
+<text x="419.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 419.5 208)">Task 103</text>
+<text x="436.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 436.5 208)">Task 104</text>
+<text x="453.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 453.5 208)">Task 105</text>
+<text x="470.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 470.5 208)">Task 108</text>
+<text x="487.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 487.5 208)">Element 2</text>
+<text x="504.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 504.5 208)">Task 201</text>
+<text x="521.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 521.5 208)">Task 202</text>
+<text x="538.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 538.5 208)">Task 203</text>
+<text x="555.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 555.5 208)">Task 204</text>
+<text x="572.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 572.5 208)">Task 205</text>
+<text x="589.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 589.5 208)">Task 206</text>
+<text x="606.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 606.5 208)">Task 207</text>
+<text x="623.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 623.5 208)">Task 208</text>
+<text x="640.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 640.5 208)">Task 209</text>
+<text x="657.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 657.5 208)">Task 210</text>
+<text x="674.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 674.5 208)">Element 3</text>
+<text x="691.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 691.5 208)">Element 4</text>
+<text x="708.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 708.5 208)">Element 5</text>
+<text x="725.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 725.5 208)">Element 6</text>
+<text x="742.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 742.5 208)">Task 303</text>
+<text x="759.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 759.5 208)">Task 401</text>
+<text x="776.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 776.5 208)">Task 402</text>
+<text x="793.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 793.5 208)">Task 403</text>
+<text x="810.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 810.5 208)">Element 7</text>
+<text x="827.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 827.5 208)">Task 301</text>
+<text x="844.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 844.5 208)">Task 302</text>
+<text x="861.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 861.5 208)">Element 8</text>
+<text x="878.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 878.5 208)">Task 107</text>
+<text x="895.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 895.5 208)">Task 304</text>
+<text x="912.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 912.5 208)">Requirements</text>
+<text x="929.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 929.5 208)">Acceptance</text>
+<text x="946.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 946.5 208)">Task 106</text>
+<text x="963.5" y="208" font-size="9.5" fill="#475569" font-weight="700" transform="rotate(-60 963.5 208)">Section 4.4</text>
+<rect x="40" y="214" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="226" font-size="10" fill="#0F172A">Baseline  System Definition and Analysis Baseline</text>
+<rect x="340" y="214" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="243" font-size="10" fill="#0F172A">Element 1  Document the System Safety Approach</text>
+<rect x="357" y="231" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="248" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="260" font-size="10" fill="#0F172A">Task 101  Hazard Identification and Mitigation Effort</text>
+<rect x="374" y="248" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="277" font-size="10" fill="#0F172A">Task 102  System Safety Program Plan</text>
+<rect x="391" y="265" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="282" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="294" font-size="10" fill="#0F172A">Task 103  Hazard Management Plan</text>
+<rect x="408" y="282" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="311" font-size="10" fill="#0F172A">Task 104  Government Reviews and Audits</text>
+<rect x="425" y="299" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="316" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="328" font-size="10" fill="#0F172A">Task 105  Integrated Product Team</text>
+<rect x="442" y="316" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="345" font-size="10" fill="#0F172A">Task 108  Hazardous Materials Management Plan</text>
+<rect x="459" y="333" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="350" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="362" font-size="10" fill="#0F172A">Element 2  Identify and Document Hazards</text>
+<rect x="476" y="350" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="379" font-size="10" fill="#0F172A">Task 201  Preliminary Hazard List</text>
+<rect x="493" y="367" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="384" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="396" font-size="10" fill="#0F172A">Task 202  Preliminary Hazard Analysis</text>
+<rect x="510" y="384" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="413" font-size="10" fill="#0F172A">Task 203  System Requirements Hazard Analysis</text>
+<rect x="527" y="401" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="418" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="430" font-size="10" fill="#0F172A">Task 204  Subsystem Hazard Analysis</text>
+<rect x="544" y="418" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="447" font-size="10" fill="#0F172A">Task 205  System Hazard Analysis</text>
+<rect x="561" y="435" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="452" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="464" font-size="10" fill="#0F172A">Task 206  Operating and Support Hazard Analysis</text>
+<rect x="578" y="452" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="481" font-size="10" fill="#0F172A">Task 207  Health Hazard Analysis</text>
+<rect x="595" y="469" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="486" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="498" font-size="10" fill="#0F172A">Task 208  Functional Hazard Analysis</text>
+<rect x="612" y="486" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="515" font-size="10" fill="#0F172A">Task 209  System-of-Systems Hazard Analysis</text>
+<rect x="629" y="503" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="520" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="532" font-size="10" fill="#0F172A">Task 210  Environmental Hazard Analysis</text>
+<rect x="646" y="520" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="549" font-size="10" fill="#0F172A">Element 3  Assess and Document Risk</text>
+<rect x="663" y="537" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="554" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="566" font-size="10" fill="#0F172A">Element 4  Identify and Document Risk Mitigation Measures</text>
+<rect x="680" y="554" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="583" font-size="10" fill="#0F172A">Element 5  Reduce Risk</text>
+<rect x="697" y="571" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="588" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="600" font-size="10" fill="#0F172A">Element 6  Verify, Validate and Document Risk Reduction</text>
+<rect x="714" y="588" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="617" font-size="10" fill="#0F172A">Task 303  Test and Evaluation Participation</text>
+<rect x="731" y="605" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="622" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="634" font-size="10" fill="#0F172A">Task 401  Safety Verification</text>
+<rect x="748" y="622" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="651" font-size="10" fill="#0F172A">Task 402  Explosives Hazard Classification Data</text>
+<rect x="765" y="639" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="656" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="668" font-size="10" fill="#0F172A">Task 403  Explosive Ordnance Disposal Data</text>
+<rect x="782" y="656" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="685" font-size="10" fill="#0F172A">Element 7  Accept Risk and Document</text>
+<rect x="799" y="673" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="690" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="702" font-size="10" fill="#0F172A">Task 301  Safety Assessment Report</text>
+<rect x="816" y="690" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="719" font-size="10" fill="#0F172A">Task 302  Hazard Management Assessment Report</text>
+<rect x="833" y="707" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="724" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="736" font-size="10" fill="#0F172A">Element 8  Manage Life-Cycle Risk</text>
+<rect x="850" y="724" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="753" font-size="10" fill="#0F172A">Task 107  Hazard Management Progress Report</text>
+<rect x="867" y="741" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="758" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="770" font-size="10" fill="#0F172A">Task 304  Review of Changes, Deficiencies, Mishaps and D…</text>
+<rect x="884" y="758" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="787" font-size="10" fill="#0F172A">Requirements  Safety Requirements Register</text>
+<rect x="901" y="775" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="792" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="804" font-size="10" fill="#0F172A">Acceptance  Risk Acceptance Records</text>
+<rect x="918" y="792" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<text x="44" y="821" font-size="10" fill="#0F172A">Task 106  Hazard Tracking System</text>
+<rect x="935" y="809" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<rect x="40" y="826" width="929" height="17" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="838" font-size="10" fill="#0F172A">Section 4.4  Software Contribution to System Risk</text>
+<rect x="952" y="826" width="17" height="17" rx="0" fill="#CBD5E1" stroke="none" stroke-width="0"/>
+<circle cx="943.5" cy="800.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="800.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="484.5" cy="239.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="484.5" cy="239.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="671.5" cy="239.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="807.5" cy="239.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="807.5" cy="239.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="399.5" cy="239.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="637.5" cy="239.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="773.5" cy="239.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="790.5" cy="239.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="671.5" cy="358.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="671.5" cy="358.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="358.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="358.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="688.5" cy="545.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="688.5" cy="545.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="807.5" cy="545.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="545.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="416.5" cy="545.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="518.5" cy="545.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="705.5" cy="562.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="562.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="722.5" cy="579.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="722.5" cy="579.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="807.5" cy="596.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="596.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="858.5" cy="681.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="858.5" cy="681.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="681.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="484.5" cy="732.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="943.5" cy="732.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="688.5" cy="817.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="433.5" cy="817.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="875.5" cy="817.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="875.5" cy="817.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="824.5" cy="817.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="841.5" cy="817.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="722.5" cy="783.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="943.5" cy="783.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="783.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="739.5" cy="783.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="756.5" cy="783.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="756.5" cy="783.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="909.5" cy="834.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="756.5" cy="834.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="365.5" cy="222.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="484.5" cy="222.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="484.5" cy="222.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="222.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="960.5" cy="222.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="382.5" cy="222.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="467.5" cy="222.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="501.5" cy="222.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="552.5" cy="222.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="569.5" cy="222.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="620.5" cy="222.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="484.5" cy="256.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="875.5" cy="256.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="671.5" cy="273.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="671.5" cy="273.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="960.5" cy="273.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="382.5" cy="273.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="416.5" cy="273.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="416.5" cy="273.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="450.5" cy="273.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="807.5" cy="290.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="290.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="892.5" cy="307.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="484.5" cy="324.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="603.5" cy="341.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="603.5" cy="341.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="654.5" cy="341.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="654.5" cy="341.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="375.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="518.5" cy="375.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="620.5" cy="375.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="392.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="535.5" cy="392.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="535.5" cy="392.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="552.5" cy="392.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="552.5" cy="392.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="586.5" cy="392.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="909.5" cy="409.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="909.5" cy="409.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="756.5" cy="409.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="426.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="960.5" cy="426.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="569.5" cy="426.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="569.5" cy="426.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="443.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="909.5" cy="443.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="909.5" cy="443.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="637.5" cy="443.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="460.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="909.5" cy="460.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="909.5" cy="460.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="603.5" cy="460.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="739.5" cy="460.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="739.5" cy="460.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="477.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="909.5" cy="477.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="960.5" cy="494.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="535.5" cy="494.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="943.5" cy="511.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="528.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="909.5" cy="528.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="926.5" cy="698.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="433.5" cy="698.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="433.5" cy="698.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="926.5" cy="715.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="926.5" cy="715.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="892.5" cy="613.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="756.5" cy="613.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="484.5" cy="766.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="943.5" cy="766.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="630.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="943.5" cy="630.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="824.5" cy="630.5" r="5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1"/>
+<circle cx="365.5" cy="647.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<circle cx="365.5" cy="664.5" r="5" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+<line x1="340" y1="214" x2="340" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="214" x2="969" y2="214" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="357" y1="214" x2="357" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="231" x2="969" y2="231" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="374" y1="214" x2="374" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="248" x2="969" y2="248" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="391" y1="214" x2="391" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="265" x2="969" y2="265" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="408" y1="214" x2="408" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="282" x2="969" y2="282" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="425" y1="214" x2="425" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="299" x2="969" y2="299" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="442" y1="214" x2="442" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="316" x2="969" y2="316" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="459" y1="214" x2="459" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="333" x2="969" y2="333" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="476" y1="214" x2="476" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="350" x2="969" y2="350" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="493" y1="214" x2="493" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="367" x2="969" y2="367" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="510" y1="214" x2="510" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="384" x2="969" y2="384" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="527" y1="214" x2="527" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="401" x2="969" y2="401" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="544" y1="214" x2="544" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="418" x2="969" y2="418" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="561" y1="214" x2="561" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="435" x2="969" y2="435" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="578" y1="214" x2="578" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="452" x2="969" y2="452" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="595" y1="214" x2="595" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="469" x2="969" y2="469" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="612" y1="214" x2="612" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="486" x2="969" y2="486" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="629" y1="214" x2="629" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="503" x2="969" y2="503" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="646" y1="214" x2="646" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="520" x2="969" y2="520" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="663" y1="214" x2="663" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="537" x2="969" y2="537" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="680" y1="214" x2="680" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="554" x2="969" y2="554" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="697" y1="214" x2="697" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="571" x2="969" y2="571" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="714" y1="214" x2="714" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="588" x2="969" y2="588" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="731" y1="214" x2="731" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="605" x2="969" y2="605" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="748" y1="214" x2="748" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="622" x2="969" y2="622" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="765" y1="214" x2="765" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="639" x2="969" y2="639" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="782" y1="214" x2="782" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="656" x2="969" y2="656" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="799" y1="214" x2="799" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="673" x2="969" y2="673" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="816" y1="214" x2="816" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="690" x2="969" y2="690" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="833" y1="214" x2="833" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="707" x2="969" y2="707" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="850" y1="214" x2="850" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="724" x2="969" y2="724" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="867" y1="214" x2="867" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="741" x2="969" y2="741" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="884" y1="214" x2="884" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="758" x2="969" y2="758" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="901" y1="214" x2="901" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="775" x2="969" y2="775" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="918" y1="214" x2="918" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="792" x2="969" y2="792" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="935" y1="214" x2="935" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="809" x2="969" y2="809" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="952" y1="214" x2="952" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="826" x2="969" y2="826" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="969" y1="214" x2="969" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<line x1="340" y1="843" x2="969" y2="843" stroke="#E2E8F0" stroke-width="0.5"/>
+<rect x="40" y="859" width="14" height="12" rx="3" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="62" y="869" font-size="11" fill="#475569">Feeds later work, above the diagonal (99)</text>
+<rect x="288.6" y="859" width="14" height="12" rx="3" fill="#C2410C" stroke="#C2410C" stroke-width="1.2"/>
+<text x="310.6" y="869" font-size="11" fill="#475569">Feeds back to earlier work, below the diagonal (22)</text>
+<text x="40" y="891" font-size="10.5" fill="#94A3B8">Generated by tools/readme/build_readme.py from safety/mil-std-882e/catalog.yaml (inputs and outputs of every work-product folder). </text>
+</svg>

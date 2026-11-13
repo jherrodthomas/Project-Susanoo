@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1498" height="1754.3" viewBox="0 0 1498 1754.3" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 5 · How the tasks feed each other</title>
+<desc>Every task-to-task flow in the work-product catalog, grouped by process element. The hazard tracking system and the element-level hubs are left out here; Figure 8 shows them.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1498" height="1754.3" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 5 · How the tasks feed each other</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Every task-to-task flow in the work-product catalog, grouped by process element. The hazard tracking system and the element-level hubs are left out here; Figure 8 shows them.</text>
+<text x="1458" y="44" font-size="11" fill="#475569" text-anchor="end">safety/mil-std-882e/catalog.yaml</text>
+<line x1="40" y1="85" x2="1458" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 109)">
+<rect x="6" y="45" width="796.7" height="260" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="537" y="383" width="838.9" height="536" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="536" y="993" width="577.2" height="226.7" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="981" y="1293.7" width="394.3" height="144" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="207" y="1293.7" width="450.2" height="160" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M320.3 287 L320.3 303 Q320.3 310 320.3 317 L320.3 327.6 Q320.3 332 324.6 332 L324.6 332 Q329 332 329 336.4 L329 1343.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M156.4 171 L156.4 194 Q156.4 201 163.4 201 L315.3 201 Q320.3 201 320.3 206 L320.3 211" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M197.1 171 L197.1 184 Q197.1 191 204.1 191 L486.2 191 Q493.2 191 493.2 198 L493.2 211" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M237.7 171 L237.7 176 Q237.7 181 242.7 181 L546.3 181 Q553.3 181 553.3 188 L553.3 211" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M115.7 171 L115.7 211" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M623.3 171 L623.3 303 Q623.3 310 623.3 317 L623.3 325 Q623.3 332 616.3 332 L522 332 Q515 332 515 339 L515 1281.7 Q515 1288.7 515 1295.7 L515.1 1343.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M754.6 287 L754.6 303 Q754.6 310 754.6 317 L754.6 325 Q754.6 332 747.6 332 L743 332 Q736 332 736 339 L736 371 Q736 378 736 385 L735.8 745" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M724.5 287 L724.5 303 Q724.5 310 724.5 317 L724.5 371 Q724.5 378 724.5 385 L724.5 728 Q724.5 735 717.5 735 L698.1 735 Q693.1 735 693.1 740 L693.1 745" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M694.5 287 L694.5 303 Q694.5 310 694.5 317 L694.5 349 Q694.5 356 687.5 356 L669 356 Q662 356 662 363 L662 371 Q662 378 662 385 L661.5 433" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M664.4 287 L664.4 303 Q664.4 310 664.4 317 L664.4 337 Q664.4 344 657.4 344 L615 344 Q608 344 608 351 L608 371 Q608 378 608 385 L608.3 433" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M897.9 509 L897.9 529" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M955 509 L955 514 Q955 519 960 519 L1111.2 519 Q1116.2 519 1116.2 524 L1116.2 529" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M964.5 589 L964.5 602 Q964.5 609 971.5 609 L1247.8 609 Q1254.8 609 1254.8 616 L1254.8 649" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M931.2 589 L931.2 612 Q931.2 619 938.2 619 L1196.2 619 Q1203.2 619 1203.2 626 L1203.2 649" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M897.9 589 L897.9 622 Q897.9 629 904.9 629 L1058.4 629 Q1065.4 629 1065.4 636 L1065.4 657" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M864.6 589 L864.6 632 Q864.6 639 871.6 639 L992.2 639 Q999.2 639 999.2 646 L999.2 657" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M831.2 589 L831.2 649" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1254.8 725 L1254.8 917 Q1254.8 924 1254.8 931 L1254.8 939 Q1254.8 946 1247.8 946 L948 946 Q941 946 941 953 L941 1139" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1065.4 717 L1065.4 731.3 Q1065.4 735 1061.7 735 L1061.7 735 Q1058 735 1058 738.7 L1058 745" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M999.2 717 L999.2 745" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1028.6 805 L1028.6 825" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M790.4 725 L790.4 730 Q790.4 735 785.4 735 L783.5 735 Q778.5 735 778.5 740 L778.5 745" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M872.1 725 L872.1 917 Q872.1 924 872.1 931 L872.1 941.6 Q872.1 946 876.6 946 L876.6 946 Q881 946 881 950.4 L881 981 Q881 988 881 995 L880.9 1043" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M831.2 725 L831.2 917 Q831.2 924 831.2 931 L831.2 981 Q831.2 988 831.2 995 L830.7 1043" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1116.2 589 L1116.2 594 Q1116.2 599 1121.2 599 L1299.3 599 Q1306.3 599 1306.3 606 L1306.3 649" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1126.2 1414.4 L1126.2 1447.1 Q1126.2 1454.1 1126.2 1461.1 L1126.2 1539.3 Q1126.2 1546.3 1133.2 1546.3 L1389 1546.3 Q1396 1546.3 1396 1539.3 L1396 25 Q1396 18 1389 18 L660 18 Q653 18 653 25 L653 33 Q653 40 653 47 L653.3 95" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1062.6 1414.4 L1062.6 1447.1 Q1062.6 1454.1 1062.6 1461.1 L1062.6 1551.3 Q1062.6 1558.3 1069.6 1558.3 L1404 1558.3 Q1411 1558.3 1411 1551.3 L1411 13 Q1411 6 1404 6 L600 6 Q593 6 593 13 L593 33 Q593 40 593 47 L593.3 95" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M830.7 1119 L830.7 1217.7 Q830.7 1224.7 830.7 1231.7 L830.7 1239.7 Q830.7 1246.7 823.7 1246.7 L584 1246.7 Q577 1246.7 577 1253.7 L577 1281.7 Q577 1288.7 577 1295.7 L577.1 1343.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M880.9 1119 L880.9 1124 Q880.9 1129 885.9 1129 L888.8 1129 Q893.8 1129 893.8 1134 L893.8 1139" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M917.4 1199 L917.4 1217.7 Q917.4 1224.7 917.4 1231.7 L917.4 1239.7 Q917.4 1246.7 924.4 1246.7 L1087 1246.7 Q1094 1246.7 1094 1253.7 L1094 1281.7 Q1094 1288.7 1094 1295.7 L1094.4 1354.4" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="18" y="57" width="180.4" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="108.2" y="72" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">1 · DOCUMENT APPROACH</text>
+<rect x="549" y="395" width="172.9" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="635.4" y="410" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">2 · IDENTIFY HAZARDS</text>
+<rect x="548" y="1005" width="206.7" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="651.4" y="1020" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">6 · VERIFY RISK REDUCTION</text>
+<rect x="993" y="1305.7" width="135.4" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="1060.7" y="1320.7" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">7 · ACCEPT RISK</text>
+<rect x="219" y="1305.7" width="210.6" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="324.3" y="1320.7" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">8 · MANAGE LIFE-CYCLE RISK</text>
+<rect x="227.4" y="211" width="185.8" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="239.4" y="223" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="267.7" y="234.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 101</text>
+<text x="239.4" y="257" font-size="12.5" fill="#0F172A" font-weight="700">Hazard Identification and</text>
+<text x="239.4" y="273" font-size="12.5" fill="#0F172A" font-weight="700">Mitigation Effort</text>
+<rect x="75" y="111" width="203.4" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="87" y="123" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="115.3" y="134.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 102</text>
+<text x="87" y="157" font-size="12.5" fill="#0F172A" font-weight="700">System Safety Program Plan</text>
+<rect x="433.2" y="211" width="180.1" height="60" rx="8" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1.3" stroke-dasharray="4 3"/>
+<rect x="445.2" y="223" width="56.6" height="16" rx="8.0" fill="#94A3B8" stroke="none" stroke-width="1"/>
+<text x="473.5" y="234.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 103</text>
+<text x="445.2" y="257" font-size="12.5" fill="#94A3B8" font-weight="700">Hazard Management Plan</text>
+<rect x="533.2" y="95" width="180.1" height="76" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.3"/>
+<rect x="545.2" y="107" width="56.6" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
+<text x="573.6" y="118.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 104</text>
+<text x="545.2" y="141" font-size="12.5" fill="#0F172A" font-weight="700">Government Reviews and</text>
+<text x="545.2" y="157" font-size="12.5" fill="#0F172A" font-weight="700">Audits</text>
+<rect x="24" y="211" width="183.4" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="36" y="223" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="64.3" y="234.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 105</text>
+<text x="36" y="257" font-size="12.5" fill="#0F172A" font-weight="700">Integrated Product Team</text>
+<rect x="634.3" y="211" width="150.4" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="646.3" y="223" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="674.6" y="234.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 108</text>
+<text x="646.3" y="257" font-size="12.5" fill="#0F172A" font-weight="700">Hazardous Materials</text>
+<text x="646.3" y="273" font-size="12.5" fill="#0F172A" font-weight="700">Management Plan</text>
+<rect x="840.7" y="449" width="171.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="852.7" y="461" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="881" y="472.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 201</text>
+<text x="852.7" y="495" font-size="12.5" fill="#0F172A" font-weight="700">Preliminary Hazard List</text>
+<rect x="797.9" y="529" width="199.9" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="809.9" y="541" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="838.2" y="552.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 202</text>
+<text x="809.9" y="575" font-size="12.5" fill="#0F172A" font-weight="700">Preliminary Hazard Analysis</text>
+<rect x="1151.5" y="649" width="206.4" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1163.5" y="661" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1191.9" y="672.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 203</text>
+<text x="1163.5" y="695" font-size="12.5" fill="#0F172A" font-weight="700">System Requirements Hazard</text>
+<text x="1163.5" y="711" font-size="12.5" fill="#0F172A" font-weight="700">Analysis</text>
+<rect x="933" y="657" width="198.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="945" y="669" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="973.4" y="680.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 204</text>
+<text x="945" y="703" font-size="12.5" fill="#0F172A" font-weight="700">Subsystem Hazard Analysis</text>
+<rect x="940.4" y="745" width="176.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="952.4" y="757" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="980.7" y="768.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 205</text>
+<text x="952.4" y="791" font-size="12.5" fill="#0F172A" font-weight="700">System Hazard Analysis</text>
+<rect x="749.5" y="649" width="163.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="761.5" y="661" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="789.8" y="672.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 206</text>
+<text x="761.5" y="695" font-size="12.5" fill="#0F172A" font-weight="700">Operating and Support</text>
+<text x="761.5" y="711" font-size="12.5" fill="#0F172A" font-weight="700">Hazard Analysis</text>
+<rect x="650.4" y="745" width="170.9" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="662.4" y="757" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="690.7" y="768.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 207</text>
+<text x="662.4" y="791" font-size="12.5" fill="#0F172A" font-weight="700">Health Hazard Analysis</text>
+<rect x="1017.8" y="529" width="196.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1029.8" y="541" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1058.1" y="552.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 208</text>
+<text x="1029.8" y="575" font-size="12.5" fill="#0F172A" font-weight="700">Functional Hazard Analysis</text>
+<rect x="932.2" y="825" width="192.8" height="76" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.3"/>
+<rect x="944.2" y="837" width="56.6" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
+<text x="972.5" y="848.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 209</text>
+<text x="944.2" y="871" font-size="12.5" fill="#0F172A" font-weight="700">System-of-Systems Hazard</text>
+<text x="944.2" y="887" font-size="12.5" fill="#0F172A" font-weight="700">Analysis</text>
+<rect x="555" y="433" width="159.8" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="567" y="445" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="595.3" y="456.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 210</text>
+<text x="567" y="479" font-size="12.5" fill="#0F172A" font-weight="700">Environmental Hazard</text>
+<text x="567" y="495" font-size="12.5" fill="#0F172A" font-weight="700">Analysis</text>
+<rect x="780.6" y="1043" width="150.4" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="792.6" y="1055" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="820.9" y="1066.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 303</text>
+<text x="792.6" y="1089" font-size="12.5" fill="#0F172A" font-weight="700">Test and Evaluation</text>
+<text x="792.6" y="1105" font-size="12.5" fill="#0F172A" font-weight="700">Participation</text>
+<rect x="846.5" y="1139" width="141.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="858.5" y="1151" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="886.8" y="1162.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 401</text>
+<text x="858.5" y="1185" font-size="12.5" fill="#0F172A" font-weight="700">Safety Verification</text>
+<rect x="952" y="1043" width="143.2" height="76" rx="8" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1.3" stroke-dasharray="4 3"/>
+<rect x="964" y="1055" width="56.6" height="16" rx="8.0" fill="#94A3B8" stroke="none" stroke-width="1"/>
+<text x="992.3" y="1066.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 402</text>
+<text x="964" y="1089" font-size="12.5" fill="#94A3B8" font-weight="700">Explosives Hazard</text>
+<text x="964" y="1105" font-size="12.5" fill="#94A3B8" font-weight="700">Classification Data</text>
+<rect x="554" y="1043" width="206.6" height="76" rx="8" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1.3" stroke-dasharray="4 3"/>
+<rect x="566" y="1055" width="56.6" height="16" rx="8.0" fill="#94A3B8" stroke="none" stroke-width="1"/>
+<text x="594.3" y="1066.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 403</text>
+<text x="566" y="1089" font-size="12.5" fill="#94A3B8" font-weight="700">Explosive Ordnance Disposal</text>
+<text x="566" y="1105" font-size="12.5" fill="#94A3B8" font-weight="700">Data</text>
+<rect x="999" y="1354.4" width="190.8" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1011" y="1366.4" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1039.3" y="1377.8" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 301</text>
+<text x="1011" y="1400.4" font-size="12.5" fill="#0F172A" font-weight="700">Safety Assessment Report</text>
+<rect x="1209.8" y="1343.7" width="147.5" height="76" rx="8" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1.3" stroke-dasharray="4 3"/>
+<rect x="1221.8" y="1355.7" width="56.6" height="16" rx="8.0" fill="#94A3B8" stroke="none" stroke-width="1"/>
+<text x="1250.1" y="1367.1" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 302</text>
+<text x="1221.8" y="1389.7" font-size="12.5" fill="#94A3B8" font-weight="700">Hazard Management</text>
+<text x="1221.8" y="1405.7" font-size="12.5" fill="#94A3B8" font-weight="700">Assessment Report</text>
+<rect x="225" y="1343.7" width="208" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="237" y="1355.7" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="265.3" y="1367.1" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 107</text>
+<text x="237" y="1389.7" font-size="12.5" fill="#0F172A" font-weight="700">Hazard Management Progress</text>
+<text x="237" y="1405.7" font-size="12.5" fill="#0F172A" font-weight="700">Report</text>
+<rect x="453" y="1343.7" width="186.2" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="465" y="1355.7" width="56.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="493.3" y="1367.1" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 304</text>
+<text x="465" y="1389.7" font-size="12.5" fill="#0F172A" font-weight="700">Review of Changes,</text>
+<text x="465" y="1405.7" font-size="12.5" fill="#0F172A" font-weight="700">Deficiencies, Mishaps and</text>
+<text x="465" y="1421.7" font-size="12.5" fill="#0F172A" font-weight="700">Deviations</text>
+</g>
+<rect x="40" y="1693.3" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="62" y="1703.3" font-size="11" fill="#475569">Selected task</text>
+<rect x="145.1" y="1693.3" width="14" height="12" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="167.1" y="1703.3" font-size="11" fill="#475569">Conditional</text>
+<rect x="236.3" y="1693.3" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="258.3" y="1703.3" font-size="11" fill="#475569">Not selected or not applicable</text>
+<text x="40" y="1725.3" font-size="10.5" fill="#94A3B8">Generated by tools/readme/build_readme.py from safety/mil-std-882e/catalog.yaml (inputs and outputs of every work-product folder). Planned flows, not completed work.</text>
+</svg>
