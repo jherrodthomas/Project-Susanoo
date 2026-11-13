@@ -33,7 +33,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 ![System V cycle of SUS-I1](images/vcycle-system.svg)
 
-**Now:** 20 requirements, 15 hazards and 8 SSFs; 0 of 20 requirements have verification evidence. Current gate G0.
+**Now:** 22 requirements, 21 hazards and 8 SSFs; 0 of 22 requirements have verification evidence. Current gate G0.
 
 ## Open the interactive page
 
@@ -49,16 +49,16 @@ GitHub does not run scripts in wiki pages or repository files, so this page show
 
 | Block | Side | Exit gate | Records | Lowest maturity |
 |---|---|---|---|---|
-| Stakeholder needs & hazards | left (define) | G0 | 15 hazards | Draft |
-| System requirements | left (define) | G1 | 20 requirements | Draft |
+| Stakeholder needs & hazards | left (define) | G0 | 21 hazards | Draft |
+| System requirements | left (define) | G1 | 22 requirements | Draft |
 | Architecture | left (define) | G2 | 5 trade studies and top-level elements | Draft |
-| Subsystem requirements | left (define) | G2 | 4 top-level elements, SUS-M1 19, SUS-A1 3, SUS-I1-INT 2, SUS-GSE 1 requirements allocated, none derived | Not started |
+| Subsystem requirements | left (define) | G2 | 4 top-level elements, SUS-M1 21, SUS-A1 4, SUS-I1-INT 3, SUS-GSE 1 requirements allocated, none derived | Not started |
 | Detailed design | left (define) | G3 | 8 SSF design analyses | Not started |
 | Implementation | bottom | G4 | 11 SSF software items | Not started |
 | Unit test | right (prove) | G4 | 8 SSF code analyses | Not started |
 | Subsystem verification | right (prove) | G5 | 8 SSF safety-specific testing | Not started |
 | Integration test | right (prove) | G5 | 2 events | Not started |
-| System verification | right (prove) | G5 | 20 requirements, 0 with evidence | Not started |
+| System verification | right (prove) | G5 | 22 requirements, 0 with evidence | Not started |
 | Operational validation | right (prove) | G6 | 14 CONOPS scenarios | Not started |
 
 ## Maturity ladder
