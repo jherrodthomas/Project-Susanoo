@@ -87,6 +87,8 @@ ENFORCED = {
     "sim/mujoco": {"skip_dirs": {"figures", "__pycache__"}, "generator": ["tools/figures/mujoco_readme.py", "--check"]},
     "sim/trades": {"skip_dirs": {"figures", "__pycache__"}, "generator": ["tools/figures/trades_readme.py", "--check"]},
     "sim/spec": {"skip_dirs": {"figures"}, "generator": ["tools/figures/spec_readme.py", "--check"]},
+    # Committed results; uav/ keeps its folder preview.
+    "sim/results": {"skip_dirs": {"figures", "uav"}, "generator": ["tools/figures/results_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

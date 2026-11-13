@@ -30,6 +30,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - sim/mujoco             # generated README (tools/figures/mujoco_readme.py)
   - sim/trades             # generated README (tools/figures/trades_readme.py)
   - sim/spec               # generated README (tools/figures/spec_readme.py)
+  - sim/results            # generated README (tools/figures/results_readme.py); uav/ keeps its preview
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -274,20 +275,6 @@ folders:
 
 
 
-  sim/results:
-    title: Simulation results
-    purpose: >-
-      Results written by the simulation track and checked in CI. They are synthetic: they inform the hazard analysis
-      and are never verification evidence.
-    hero: {img: docs/readme/simulation.svg, caption: "Simulation results summary (synthetic)"}
-    gallery:
-      - {img: docs/wiki/images/rec-l1-l2.svg, caption: "Level 1 against level 2", link: sim/mujoco/README.md}
-      - {img: docs/wiki/images/sim-sc-01.svg, caption: "SC-01"}
-      - {img: docs/wiki/images/sim-sc-02.svg, caption: "SC-02"}
-      - {img: docs/wiki/images/sim-sc-03.svg, caption: "SC-03"}
-      - {img: docs/wiki/images/sim-sc-04.svg, caption: "SC-04"}
-    links:
-      - {text: UAV results, href: sim/results/uav/README.md}
 
   sim/results/uav:
     title: UAV simulation results (PX4 SITL)

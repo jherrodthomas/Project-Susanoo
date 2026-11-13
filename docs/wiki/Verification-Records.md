@@ -80,7 +80,7 @@ Requirement verification: 22 open; see the [requirement register](Requirements-R
 
 Simulation result sets (synthetic, for finding problems early; none is verification evidence):
 
-- [`sim/results/README.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/README.md)
+- [`sim/results/README.md`](Simulation-Results)
 - [`sim/results/edge-cases.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/edge-cases.md)
 - [`sim/results/l2-crosscheck.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/l2-crosscheck.md)
 - [`sim/results/plant-results.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/plant-results.md)
@@ -127,7 +127,7 @@ Model of record for the activity: [`SafetyVerification.sysml`](https://github.co
 | Mitigations and planned methods | [`safety/hazards/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/hazards) |
 | Requirements and planned methods | [Requirement register](Requirements-Register) |
 | Verification activity | [Element 6](882E-06-verification) |
-| Simulation results (no credit) | [`sim/results/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/results) |
+| Simulation results (no credit) | [`sim/results/`](Simulation-Results) |
 
 | Output | Destination |
 |---|---|

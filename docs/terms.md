@@ -98,6 +98,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | IPT | integrated product team |
 | JDK | Java Development Kit |
 | JSON | JavaScript Object Notation, a data file format |
+| KB | kilobyte, a file size of 1,024 bytes |
 | LOR | level of rigor (software safety tasks, MIL-STD-882E 4.4) |
 | MAVLink | Micro Air Vehicle Link, the PX4 telemetry and command protocol |
 | MAVSDK | MAVLink software development kit |

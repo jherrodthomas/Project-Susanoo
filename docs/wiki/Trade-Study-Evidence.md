@@ -107,7 +107,7 @@ Summary recorded in TS-001: With load holding working, every supply-loss mode is
 
 | Output | Destination |
 |---|---|
-| Results | [`sim/results/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/results) |
+| Results | [`sim/results/`](Simulation-Results) |
 | Evidence TS-001-E01 | [`TS-001`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/trades/TS-001.yaml) criterion C09; the lead decides the trade |
 
 ## Folder contents

@@ -109,7 +109,7 @@ New findings: none; every edge case maps to an existing hazard.
 
 | Output | Destination |
 |---|---|
-| Search results and edge cases | [`sim/results/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/results) |
+| Search results and edge cases | [`sim/results/`](Simulation-Results) |
 | Edge cases on hazards (HAZ-PIL-002, HAZ-SAF-001, HAZ-WLK-002) | [Safety records](Safety-Records), for the safety lead |
 | Cases to replay | scenes and 3D pages, level-2 cross-check |
 

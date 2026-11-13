@@ -80,6 +80,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   walker models, and the trade-study scores that cite it
 - [Plant specs](Plant-Specs): every walker model parameter with its range, status and source, and the code that
   loads it
+- [Simulation results](Simulation-Results): every committed result, the code that writes and reads it, and how CI
+  keeps it reproducible
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

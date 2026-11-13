@@ -162,7 +162,7 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 | SysML v2 files passing the OMG pilot | **45** | [`models/sysml/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model) |
 | Work-product folders with generated figures | **39** | [`safety/mil-std-882e/`](882E-Work-Products) |
 | Decisions for the lead | **0** open of 20 | [`decisions/register.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) |
-| Simulation runs (synthetic) | **400** walker Monte Carlo + **6** PX4 SITL · **3** findings | [`sim/results/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/results) |
+| Simulation runs (synthetic) | **400** walker Monte Carlo + **6** PX4 SITL · **3** findings | [`sim/results/`](Simulation-Results) |
 <!-- readme:numbers:end -->
 
 ## Where the risk is

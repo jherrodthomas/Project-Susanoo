@@ -144,7 +144,7 @@ Proposal rationale: Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_
 
 | Output | Destination |
 |---|---|
-| Cross-check and sizing results | [`sim/results/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/results) |
+| Cross-check and sizing results | [`sim/results/`](Simulation-Results) |
 | Draft torque values | [Requirement register](Requirements-Register) (SYS-016), actuation trade TS-001 |
 
 ## Folder contents
