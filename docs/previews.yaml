@@ -32,8 +32,9 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - sim/spec               # generated README (tools/figures/spec_readme.py)
   - sim/results            # generated README (tools/figures/results_readme.py)
   - sim/results/uav        # generated README (tools/figures/uavresults_readme.py)
-  - sim/scenes3d           # generated README (tools/figures/scenes3d_readme.py); out/ keeps its preview
+  - sim/scenes3d           # generated README (tools/figures/scenes3d_readme.py)
   - sim/scenes3d/library   # generated README (tools/figures/lookslib_readme.py)
+  - sim/scenes3d/out       # generated README (tools/figures/sceneout_readme.py)
   - sim/figures            # generated README (tools/figures/simfigs_readme.py)
   - docs/3d                # generated README (tools/figures/pages3d_readme.py)
   - docs/3d/assets         # generated README (tools/figures/assets3d_readme.py)
@@ -215,12 +216,6 @@ folders:
 
 
 
-  sim/scenes3d/out:
-    title: Exported 3D scene data
-    purpose: Scene data exported by `export_scene.py`, one JSON per scene, read by the pages in `docs/3d`. Generated.
-    hero: {img: docs/wiki/images/3d-s3-02.png, caption: "S3-02", link: docs/3d/S3-02.html}
-    gallery:
-      - {img: docs/wiki/images/3d-s3-04.png, caption: "S3-04", link: docs/3d/S3-04.html}
 
 
 

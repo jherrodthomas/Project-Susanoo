@@ -91,6 +91,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 - [3D scene builder](3D-Scene-Builder): the 3D hazard scenes, what each replays, and which hazards have no scene
   yet and why
 - [3D look library](3D-Look-Library): the environments and conditions the 3D scenes are dressed in, and every look
+- [3D scene exports](3D-Scene-Exports): the analysis every 3D scene replays, each run over time, and what no page reads
   they make
 - [2D hazard scenes](2D-Hazard-Scenes): the animated walker and UAV scenes, what each replays, and what happens
   against what should

@@ -147,7 +147,7 @@ Built by [`build_sheet.py`](https://github.com/jherrodthomas/Project-Susanoo/blo
 
 | Output | Destination |
 |---|---|
-| Scene analysis | [`out/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/out/README.md) |
+| Scene analysis | [`out/`](3D-Scene-Exports) |
 | Interactive pages | [`docs/3d/`](3D-Scene-Pages) |
 | Wiki page and stills | `docs/wiki/3D-Scenes.md`, `docs/wiki/images/3d-*.png` |
 | General-arrangement sheets | [`docs/3d/SUS-M1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1.html), [`docs/3d/SUS-A1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-A1.html) |
@@ -170,7 +170,7 @@ Built by [`build_sheet.py`](https://github.com/jherrodthomas/Project-Susanoo/blo
 | [`sheet.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet.yaml), [`sheet_uav.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet_uav.yaml) | What the two sheets draw and where | hand-written |
 | [`build_sheet.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/build_sheet.py), [`sheet.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet.js), [`sheet_uav.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet_uav.js), [`sheet.css`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet.css), [`sheet.body.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet.body.html), [`sheet_uav.body.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet_uav.body.html) | Builds the sheets in `docs/3d/` | code |
 | [`sheet_check.mjs`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet_check.mjs) | Checks both sheets and renders their stills | code |
-| [`out/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/out/README.md) | Exported analysis, one JSON per scene | generated |
+| [`out/`](3D-Scene-Exports) | Exported analysis, one JSON per scene | generated |
 | [`Scenes3D.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/Scenes3D.sysml) | Scenes as SysML | generated |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/scenes3d/figures) | Generated SVG figures (do not edit) | generated |
 | `README.md` | This page | generated |

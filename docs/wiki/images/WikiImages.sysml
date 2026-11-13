@@ -38,7 +38,7 @@ package WikiImages {
     part img3DS302 : RenderedStill {
         attribute :>> file = "3d-s3-02.png";
         attribute :>> kilobytes = 83;
-        attribute :>> shownOn = 4;
+        attribute :>> shownOn = 3;
         attribute :>> page = "sim/scenes3d/render.mjs";
     }
     part img3DS303 : RenderedStill {
@@ -50,7 +50,7 @@ package WikiImages {
     part img3DS304 : RenderedStill {
         attribute :>> file = "3d-s3-04.png";
         attribute :>> kilobytes = 111;
-        attribute :>> shownOn = 4;
+        attribute :>> shownOn = 3;
         attribute :>> page = "sim/scenes3d/render.mjs";
     }
     part img3DS305Fog : RenderedStill {
@@ -277,7 +277,7 @@ package WikiImages {
     }
     part imgWikiFig1Pages : GeneratedFigure {
         attribute :>> file = "wiki-fig-1-pages.svg";
-        attribute :>> kilobytes = 55;
+        attribute :>> kilobytes = 56;
         attribute :>> shownOn = 1;
         attribute :>> generator = "tools/figures/wiki_readme.py";
     }

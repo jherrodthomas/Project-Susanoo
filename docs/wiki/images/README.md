@@ -39,9 +39,9 @@ The figures the wiki shows directly: item-definition and SysML views, record fig
 |---|---|---|---|
 | [`3d-s3-01-dusk.png`](3d-s3-01-dusk.png) | `sim/scenes3d/render.mjs` | 108 KB | 3 wiki pages, 1 repository page, 1 front page |
 | [`3d-s3-01.png`](3d-s3-01.png) | `sim/scenes3d/render.mjs` | 118 KB | 2 wiki pages, 1 repository page |
-| [`3d-s3-02.png`](3d-s3-02.png) | `sim/scenes3d/render.mjs` | 83 KB | 2 wiki pages, 2 repository pages |
+| [`3d-s3-02.png`](3d-s3-02.png) | `sim/scenes3d/render.mjs` | 83 KB | 2 wiki pages, 1 repository page |
 | [`3d-s3-03.png`](3d-s3-03.png) | `sim/scenes3d/render.mjs` | 82 KB | 2 wiki pages, 1 repository page |
-| [`3d-s3-04.png`](3d-s3-04.png) | `sim/scenes3d/render.mjs` | 111 KB | 2 wiki pages, 2 repository pages |
+| [`3d-s3-04.png`](3d-s3-04.png) | `sim/scenes3d/render.mjs` | 111 KB | 2 wiki pages, 1 repository page |
 | [`3d-s3-05-fog.png`](3d-s3-05-fog.png) | `sim/scenes3d/render.mjs` | 57 KB | 2 wiki pages, 1 repository page |
 | [`3d-s3-05.png`](3d-s3-05.png) | `sim/scenes3d/render.mjs` | 61 KB | 2 wiki pages, 1 repository page |
 | [`3d-s3-06.png`](3d-s3-06.png) | `sim/scenes3d/render.mjs` | 70 KB | 2 wiki pages, 1 repository page |
@@ -79,7 +79,7 @@ The figures the wiki shows directly: item-definition and SysML views, record fig
 | [`sysml-v08-n2.svg`](sysml-v08-n2.svg) | `tools/sysml/views.py` | 93 KB | 3 wiki pages, 4 repository pages |
 | [`vcycle-system.svg`](vcycle-system.svg) | `tools/vcycle/build_vcycle.py` | 9 KB | 2 wiki pages, 2 repository pages |
 | [`verification-change.svg`](verification-change.svg) | `docs/diagrams/mil-std-882e/verification-change.drawio` | 5 KB | 4 wiki pages, 3 repository pages |
-| [`wiki-fig-1-pages.svg`](wiki-fig-1-pages.svg) | `tools/figures/wiki_readme.py` | 55 KB | 1 wiki page |
+| [`wiki-fig-1-pages.svg`](wiki-fig-1-pages.svg) | `tools/figures/wiki_readme.py` | 56 KB | 1 wiki page |
 | [`wiki-fig-2-links.svg`](wiki-fig-2-links.svg) | `tools/figures/wiki_readme.py` | 13 KB | 1 wiki page |
 | [`wiki-fig-3-block-diagram.svg`](wiki-fig-3-block-diagram.svg) | `tools/figures/wiki_readme.py` | 27 KB | 1 wiki page |
 | [`wiki-fig-4-boundary-diagram.svg`](wiki-fig-4-boundary-diagram.svg) | `tools/figures/wiki_readme.py` | 17 KB | 1 wiki page |
