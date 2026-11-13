@@ -26,6 +26,7 @@ Figures (house style of framework/documentation-standard.md):
 from __future__ import annotations
 
 import argparse
+import re
 import json
 import sys
 from collections import defaultdict
@@ -101,6 +102,16 @@ def load_sheets() -> list[dict]:
                     "callouts": sorted(cfg.get("anchors") or {}), "replay": cfg.get("replay") or [],
                     "built": (ROOT / "docs" / "3d" / f"{page}.html").exists(),
                     "stills": [x for x in stills if (ROOT / "docs" / "wiki" / "images" / x).exists()]})
+    terrain = FOLDER / "terrain.yaml"
+    if terrain.exists():
+        cfg = yaml.safe_load(terrain.read_text())
+        src = (FOLDER / "build_sheet.py").read_text()
+        callouts = sorted(set(re.findall(r"\b(HAZ-[A-Z]{3}-\d{3}|SYS-\d{3})\b", src.split("def sheet3", 1)[1].split("\ndef ", 1)[0])))
+        out.append({"file": terrain.name, "page": "SUS-M1-terrain", "id": cfg["id"], "sheet": "3 of 3",
+                    "title": "CL-05 walk on the terrain course", "layout": "CL-05",
+                    "postures": [f"walk on {len(cfg['terrains'])} terrains"], "callouts": callouts, "replay": [],
+                    "built": (ROOT / "docs" / "3d" / "SUS-M1-terrain.html").exists(),
+                    "stills": [x for x in ["3d-sus-m1-terrain.png"] if (ROOT / "docs" / "wiki" / "images" / x).exists()]})
     return out
 
 
@@ -388,7 +399,7 @@ def readme(d: dict, specs: list[dict]) -> str:
         *[f"| {h} | {why} |" for h, why in sorted(d["reasons"].items())], "",
         "## General-arrangement sheets\n",
         "Built by [`build_sheet.py`](build_sheet.py) from the sheet files below; the geometry is the CL-05 model "
-        "exported by `tools/cad/b3d/cl05_web.py`.\n",
+        "exported by `tools/cad/b3d/cl05_web.py` (sheet 3 adds its terrain poses from `cl05_terrain.py`).\n",
         "| Sheet | Page | Title | Postures | Hazard callouts | Runs replayed | Defined in |",
         "|---|---|---|---|---|---|---|",
         *[f"| {x['sheet']} | " + (f"[`{x['page']}.html`](../../docs/3d/{x['page']}.html)" if x["built"] else "—")
@@ -419,8 +430,8 @@ def readme(d: dict, specs: list[dict]) -> str:
         "| Scene analysis | [`out/`](out/README.md) |",
         "| Interactive pages | [`docs/3d/`](../../docs/3d/README.md) |",
         "| Wiki page and stills | `docs/wiki/3D-Scenes.md`, `docs/wiki/images/3d-*.png` |",
-        "| General-arrangement sheets | [`docs/3d/SUS-M1.html`](../../docs/3d/SUS-M1.html), "
-        "[`docs/3d/SUS-A1.html`](../../docs/3d/SUS-A1.html) |", "",
+        "| General-arrangement sheets | " + ", ".join(f"[`docs/3d/{x['page']}.html`](../../docs/3d/{x['page']}.html)"
+                                                    for x in d["sheets"]) + " |", "",
         "## Adding a scene\n",
         "1. Add it to [`scenes.yaml`](scenes.yaml) with its hazards and a `motion` block that names a committed result; "
         "take the hazard off `not_modelled`.",
@@ -434,12 +445,13 @@ def readme(d: dict, specs: list[dict]) -> str:
         "| [`export_scene.py`](export_scene.py) | Exports each scene's analysis to `out/` | code |",
         "| [`build_pages.py`](build_pages.py), [`viewer.js`](viewer.js) | Builds the pages in `docs/3d/` | code |",
         "| [`render.mjs`](render.mjs) | Renders and checks the stills in headless Chromium | code |",
-        "| [`sheet.yaml`](sheet.yaml), [`sheet_uav.yaml`](sheet_uav.yaml) | What the two sheets draw and where | "
-        "hand-written |",
+        "| [`sheet.yaml`](sheet.yaml), [`sheet_uav.yaml`](sheet_uav.yaml), [`terrain.yaml`](terrain.yaml) | What the "
+        "sheets draw and where; the terrain course of sheet 3 | hand-written |",
         "| [`build_sheet.py`](build_sheet.py), [`sheet.js`](sheet.js), [`sheet_uav.js`](sheet_uav.js), "
-        "[`sheet.css`](sheet.css), [`sheet.body.html`](sheet.body.html), [`sheet_uav.body.html`](sheet_uav.body.html) "
+        "[`sheet_terrain.js`](sheet_terrain.js), [`sheet.css`](sheet.css), [`sheet.body.html`](sheet.body.html), "
+        "[`sheet_uav.body.html`](sheet_uav.body.html), [`sheet_terrain.body.html`](sheet_terrain.body.html) "
         "| Builds the sheets in `docs/3d/` | code |",
-        "| [`sheet_check.mjs`](sheet_check.mjs) | Checks both sheets and renders their stills | code |",
+        "| [`sheet_check.mjs`](sheet_check.mjs) | Checks the sheets and renders their stills | code |",
         "| [`out/`](out/README.md) | Exported analysis, one JSON per scene | generated |",
         "| [`Scenes3D.sysml`](Scenes3D.sysml) | Scenes as SysML | generated |",
         "| [`figures/`](figures/) | Generated SVG figures (do not edit) | generated |",

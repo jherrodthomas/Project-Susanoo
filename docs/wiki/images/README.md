@@ -47,7 +47,7 @@ The figures the wiki shows directly: item-definition and SysML views, record fig
 | [`3d-s3-06.png`](3d-s3-06.png) | `sim/scenes3d/render.mjs` | 70 KB | 2 wiki pages, 1 repository page |
 | [`3d-sus-a1-air.png`](3d-sus-a1-air.png) | `sim/scenes3d/sheet_check.mjs` | 286 KB | 3 wiki pages, 2 repository pages |
 | [`3d-sus-a1.png`](3d-sus-a1.png) | `sim/scenes3d/sheet_check.mjs` | 465 KB | 3 wiki pages, 2 repository pages |
-| [`3d-sus-m1-terrain.png`](3d-sus-m1-terrain.png) | `sim/scenes3d/sheet_check.mjs` | 307 KB | 2 wiki pages, 1 repository page |
+| [`3d-sus-m1-terrain.png`](3d-sus-m1-terrain.png) | `sim/scenes3d/sheet_check.mjs` | 307 KB | 3 wiki pages, 2 repository pages |
 | [`3d-sus-m1.png`](3d-sus-m1.png) | `sim/scenes3d/sheet_check.mjs` | 386 KB | 3 wiki pages, 2 repository pages |
 | [`analysis-dependencies.svg`](analysis-dependencies.svg) | `docs/diagrams/mil-std-882e/analysis-dependencies.drawio` | 6 KB | 4 wiki pages, 4 repository pages |
 | [`hazard-management.svg`](hazard-management.svg) | `docs/diagrams/mil-std-882e/hazard-management.drawio` | 5 KB | 4 wiki pages, 4 repository pages |
