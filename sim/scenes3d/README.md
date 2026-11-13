@@ -93,8 +93,8 @@ Built by [`build_sheet.py`](build_sheet.py) from the sheet files below; the geom
 
 | Sheet | Page | Title | Postures | Hazard callouts | Runs replayed | Defined in |
 |---|---|---|---|---|---|---|
-| 1 of 2 | [`SUS-M1.html`](../../docs/3d/SUS-M1.html) | General arrangement, interactive | Stand, Kneel, Carry, Egress, Walk | 19: HAZ-DCK-001, HAZ-DCK-002, HAZ-DCK-003, HAZ-DCK-004, HAZ-INT-001, HAZ-INT-002, HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-001, HAZ-PIL-002, HAZ-PIL-003, HAZ-PIL-004, HAZ-PWR-001, HAZ-PWR-002, HAZ-PWR-003, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002, HAZ-WLK-003 | S3-01, S3-02, S3-03, S3-04 | [`sheet.yaml`](sheet.yaml) |
-| 2 of 2 | [`SUS-A1.html`](../../docs/3d/SUS-A1.html) | UAV on dock and in airspace, interactive | — | 6: HAZ-DCK-001, HAZ-DCK-002, HAZ-DCK-003, HAZ-DCK-004, HAZ-INT-001, HAZ-INT-002 | SU-01, SU-02, SU-03, SU-04, SU-05, SU-06 | [`sheet_uav.yaml`](sheet_uav.yaml) |
+| 1 of 3 | [`SUS-M1.html`](../../docs/3d/SUS-M1.html) | General arrangement, interactive | Stand, Kneel, Carry, Egress, Walk | 19: HAZ-DCK-001, HAZ-DCK-002, HAZ-DCK-003, HAZ-DCK-004, HAZ-INT-001, HAZ-INT-002, HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-001, HAZ-PIL-002, HAZ-PIL-003, HAZ-PIL-004, HAZ-PWR-001, HAZ-PWR-002, HAZ-PWR-003, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002, HAZ-WLK-003 | S3-01, S3-02, S3-03, S3-04 | [`sheet.yaml`](sheet.yaml) |
+| 2 of 3 | [`SUS-A1.html`](../../docs/3d/SUS-A1.html) | UAV on dock and in airspace, interactive | — | 6: HAZ-DCK-001, HAZ-DCK-002, HAZ-DCK-003, HAZ-DCK-004, HAZ-INT-001, HAZ-INT-002 | SU-01, SU-02, SU-03, SU-04, SU-05, SU-06 | [`sheet_uav.yaml`](sheet_uav.yaml) |
 
 ![SUS-M1 sheet](../../docs/wiki/images/3d-sus-m1.png)
 

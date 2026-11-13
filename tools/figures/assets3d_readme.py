@@ -4,7 +4,10 @@ the general-arrangement sheets load.
 
 Everything is read from the geometry file itself and from the pages that load it:
 
-  docs/3d/assets/*.js            the mesh table embedded in each file (window.SUS_M1_GEOMETRY): every mesh with its
+  docs/3d/assets/sus-m1-terrain.js  the terrain poses of sheet 3 (window.SUS_M1_TERRAIN): every terrain's walk cycle,
+                                 ground rise, meshes of its own and kinematic findings (tools/cad/b3d/cl05_terrain.py)
+  sim/scenes3d/terrain.yaml      the terrain labels
+  docs/3d/assets/sus-m1.js       the mesh table embedded in the geometry file (window.SUS_M1_GEOMETRY): every mesh with its
                                  part class, vertex and index ranges; the standing pose; the clips and every frame's
                                  meshes, each either a transform of a standing mesh or its own mesh; the buffer layout,
                                  units, quantum and origin; the fit statistics; the layout's key heights
@@ -67,11 +70,33 @@ def read_asset(p: Path) -> dict:
             "source": (re.search(r"from (\S+?);", head) or [None, ""])[1]}
 
 
+def read_terrain(a: dict, p: Path) -> dict:
+    """The terrain poses: every terrain's walk cycle posed on its ground, with the exporter's own findings."""
+    import yaml
+    meta = a["meta"]
+    labels = {t["key"]: t for t in yaml.safe_load((ROOT / "sim/scenes3d/terrain.yaml").read_text())["terrains"]}
+    rows = []
+    for t in meta["terrains"]:
+        f = t["findings"]
+        rows.append({"key": t["key"], "label": labels.get(t["key"], {}).get("label", t["key"]),
+                     "note": labels.get(t["key"], {}).get("note", ""), "rise": t["rise"], "frames": len(t["frames"]),
+                     "own": sum(len(fr["extras"]) for fr in t["frames"]), "drop": f["max_hip_drop_m"],
+                     "clear": f["min_body_clearance_m"], "unsolved": len(f["unsolved_frames"])})
+    a.update(rows=rows, pages=sorted(h.name for h in PAGES.glob("*.html")
+                                     if f"assets/{p.name}" in h.read_text(encoding="utf-8")),
+             tris=sum(m["i"][1] // 3 for m in meta["meshes"]))
+    return a
+
+
 def load() -> dict:
     ctx, _, _ = load_reqs()
     assets = []
+    terrain = None
     for p in sorted(FOLDER.glob("*.js")):
         a = read_asset(p)
+        if "terrains" in a["meta"]:
+            terrain = read_terrain(a, p)
+            continue
         meta = a["meta"]
         per = defaultdict(lambda: {"meshes": 0, "base": 0, "verts": 0, "tris": 0})
         base = set(meta["base"])
@@ -87,7 +112,7 @@ def load() -> dict:
                       for name, frames in meta["clips"].items()}
         a["pages"] = sorted(h.name for h in PAGES.glob("*.html") if f"assets/{p.name}" in h.read_text(encoding="utf-8"))
         assets.append(a)
-    return {"ctx": ctx, "assets": assets, "colours": class_colours(),
+    return {"ctx": ctx, "assets": assets, "terrain": terrain, "colours": class_colours(),
             "root": next(k for k, v in ctx.nodes.items() if not v.get("parent") and v.get("kind") != "external")}
 
 
@@ -264,7 +289,9 @@ def fig_sysml(d: dict) -> tuple[dict, str]:
 
 FLOWS = [["CL-05 parameters", "CAD export", "cad/params/CL-05.yaml, common.yaml"],
          ["CAD export", "Geometry file", "tessellated meshes, clips, buffer (cl05_web.py)"],
+         ["Terrain course", "Terrain poses", "sim/scenes3d/terrain.yaml, posed by cl05_terrain.py"],
          ["Geometry file", "Sheet pages", "loaded with a <script> tag"],
+         ["Terrain poses", "Sheet pages", "sheet 3 loads it beside the geometry"],
          ["Part-class colours", "Sheet pages", "from tools/cad/build_concepts.py"],
          ["CI", "Sheet pages", "sheet_check.mjs: every posture settles"],
          ["Sheet pages", "Reader", "opened from a local checkout"]]
@@ -277,26 +304,32 @@ def figure_specs(d: dict) -> tuple[list[dict], str]:
                  subtitle=f"The system the geometry is a concept of ({d['root']}, as in the item definition): the walker, "
                           "its dock and the docked UAV.")
     boundary = fig_boundary(ctx, {"path": "docs/3d/assets", "boundary": {
-        "name": "3D page assets", "inside": ["Geometry file"],
-        "outside": ["CL-05 parameters", "CAD export", "Part-class colours", "Sheet pages", "CI", "Reader"],
+        "name": "3D page assets", "inside": ["Geometry file", "Terrain poses"],
+        "outside": ["CL-05 parameters", "CAD export", "Terrain course", "Part-class colours", "Sheet pages", "CI",
+                    "Reader"],
         "flows": FLOWS}})
     boundary.update(file="fig-4-boundary-diagram.svg", number="4", ref="docs/3d/assets/README.md",
                     subtitle="The folder holds the exported geometry only; the CAD that writes it and the sheets that "
                              "load it are outside. Crossings are numbered as in the table.")
     sysml_spec, sysml = fig_sysml(d)
-    a = d["assets"][0]
+    a, t = d["assets"][0], d["terrain"]
     io = {"file": "fig-6-inputs-and-outputs.svg", "number": "6", "title": "Inputs and outputs",
           "ref": "docs/3d/assets/README.md", "direction": "RIGHT",
-          "subtitle": "What the geometry file is built from (left) and what loads it (right).",
+          "subtitle": "What the geometry files are built from (left) and what loads them (right).",
           "nodes": [
               {"id": "I1", "title": "CL-05 parameters", "sub": "cad/params/CL-05.yaml", "tone": "work"},
               {"id": "I2", "title": "build123d model", "sub": "tools/cad/b3d/cl05.py", "tone": "software"},
-              {"id": "X", "code": "docs/3d/assets/", "title": "Geometry file", "sub": f"{a['file']}, {a['kb']:,} KB",
+              *([{"id": "I3", "title": "Terrain course", "sub": "sim/scenes3d/terrain.yaml", "tone": "work"}] if t else []),
+              {"id": "X", "code": "docs/3d/assets/", "title": "Geometry files" if t else "Geometry file",
+               "sub": f"{a['file']}, {a['kb']:,} KB" + (f"; {t['file']}, {t['kb']:,} KB" if t else ""),
                "tone": "current"},
               *[{"id": f"O{i}", "title": pg, "sub": "general-arrangement sheet", "tone": "work"}
-                for i, pg in enumerate(a["pages"], 1)]],
+                for i, pg in enumerate(sorted(set(a["pages"]) | set(t["pages"] if t else [])), 1)],
+              ],
           "edges": [{"src": "I1", "dst": "X", "label": "parameters"}, {"src": "I2", "dst": "X", "label": "cl05_web.py"},
-                    *[{"src": "X", "dst": f"O{i}", "label": "loads"} for i in range(1, len(a["pages"]) + 1)]]}
+                    *([{"src": "I3", "dst": "X", "label": "cl05_terrain.py"}] if t else []),
+                    *[{"src": "X", "dst": f"O{i}", "label": "loads"}
+                      for i in range(1, len(set(a["pages"]) | set(t["pages"] if t else [])) + 1)]]}
     specs = [block, boundary, sysml_spec, io]
     for sp in specs:
         sp.setdefault("footer", FOOTER)
@@ -306,6 +339,26 @@ def figure_specs(d: dict) -> tuple[list[dict], str]:
 
 
 # ================================================================ README
+def terrain_section(d: dict) -> list[str]:
+    t = d["terrain"]
+    if not t:
+        return []
+    m = t["meta"]
+    return [
+        "## Terrain poses\n",
+        f"`{t['file']}` ({t['kb']:,} KB, `window.{t['var']}`) holds the CL-05 walk cycle posed on every terrain of "
+        f"[`sim/scenes3d/terrain.yaml`](../../../sim/scenes3d/terrain.yaml), {m['frames_per_cycle']} frames a cycle over a "
+        f"{m['stride_m']:g} m stride, for sheet 3. Each frame reuses the standing meshes of `sus-m1.js` by transform or "
+        f"adds {plural(len(m['meshes']), 'mesh')} of its own ({fmt(t['tris'])} triangles); each terrain carries its "
+        f"ground height map ({m['sample_m']:g} m grid, {m['width_m']:g} m wide) and the exporter's kinematic findings. "
+        "Concept kinematics only: no dynamics, balance, foot slip or ground model.\n",
+        "| Terrain | Rise per cycle | Frames | Meshes of their own | Largest hip drop | Lowest body clearance | "
+        "Unsolved frames |", "|---|---|---|---|---|---|---|",
+        *[f"| {r['label']}{' (' + r['note'] + ')' if r['note'] else ''} | {round(r['rise'], 3) + 0.0:+.3f} m | {r['frames']} | {r['own']} | "
+          f"{r['drop']:.3f} m | {('%.3f m' % r['clear']) if r['clear'] is not None else '—'} | {r['unsolved']} |"
+          for r in t["rows"]], ""]
+
+
 def img(file: str, number: str, title: str) -> str:
     return f"![Figure {number} · {title}](figures/{file})\n"
 
@@ -318,7 +371,10 @@ def readme(d: dict, specs: list[dict]) -> str:
     out = [
         f"<!-- GENERATED by {GEN} from the mesh table in docs/3d/assets; re-export the geometry and regenerate. -->\n",
         "# 3D page assets\n",
-        f"> **Status:** {plural(len(d['assets']), 'geometry file')}, loaded by {', '.join(f'`{p}`' for p in a['pages'])}. "
+        f"> **Status:** the CL-05 geometry, loaded by {', '.join(f'`{p}`' for p in a['pages'])}"
+        + (f", and its terrain poses ({len(d['terrain']['rows'])} terrains, "
+           f"{sum(r['unsolved'] for r in d['terrain']['rows'])} unsolved frames), loaded by "
+           f"{', '.join(f'`{p}`' for p in d['terrain']['pages'])}" if d["terrain"] else "") + ". "
         "CL-05 **concept geometry for review, not a design**; the clips are concept kinematics with no dynamics, "
         "balance or load model.\n",
         "| Field | Value |", "|---|---|",
@@ -341,6 +397,7 @@ def readme(d: dict, specs: list[dict]) -> str:
         "| Clip | Frames | First frame | Last frame | Meshes of their own |", "|---|---|---|---|---|",
         *[f"| {n} | {len(fr)} | {fr[0]['label']} | {fr[-1]['label']} | {sum(f['own'] for f in fr)} |"
           for n, fr in a["clips"].items()], "",
+        *terrain_section(d),
         "## Block diagram\n", img("fig-3-block-diagram.svg", "3", "Block diagram"),
         "## Boundary diagram\n", img("fig-4-boundary-diagram.svg", "4", "Boundary diagram"),
         "| # | From | To | Crossing / interaction |", "|---|---|---|---|",
@@ -354,17 +411,20 @@ def readme(d: dict, specs: list[dict]) -> str:
         "## Inputs and outputs\n", img("fig-6-inputs-and-outputs.svg", "6", "Inputs and outputs"),
         "| Input | Source |", "|---|---|",
         "| CL-05 parameters | [`cad/params/`](../../../cad/README.md) |",
-        "| Model and export | `tools/cad/b3d/cl05.py`, `tools/cad/b3d/cl05_web.py` |", "",
+        "| Model and export | `tools/cad/b3d/cl05.py`, `tools/cad/b3d/cl05_web.py` |",
+        *(["| Terrain course and poses | `sim/scenes3d/terrain.yaml`, `tools/cad/b3d/cl05_terrain.py` |"]
+          if d["terrain"] else []), "",
         "| Output | Destination |", "|---|---|",
-        *[f"| Geometry | [`{p}`](../{p}) |" for p in a["pages"]], "",
+        *[f"| Geometry | [`{p}`](../{p}) |" for p in a["pages"]],
+        *([f"| Terrain poses | [`{p}`](../{p}) |" for p in d["terrain"]["pages"]] if d["terrain"] else []), "",
         "## Changing the geometry\n",
         "1. Change the layout in `cad/params/CL-05.yaml` (or the model in `tools/cad/b3d/cl05.py`), never the file here.",
-        "2. Re-export with `/opt/b3d/bin/python tools/cad/b3d/cl05_web.py` and rebuild the sheets "
-        "(`python -m sim.scenes3d.build_sheet`).",
+        "2. Re-export with `/opt/b3d/bin/python tools/cad/b3d/cl05_web.py` (and, for the terrain poses, "
+        "`tools/cad/b3d/cl05_terrain.py`) and rebuild the sheets (`python -m sim.scenes3d.build_sheet`).",
         "3. Regenerate this page and run the full check list in [`CLAUDE.md`](../../../CLAUDE.md).", "",
         "## Folder contents\n",
         "| Item | Description | State |", "|---|---|---|",
-        *[f"| `{x['file']}` | {x['meta']['about']} | generated |" for x in d["assets"]],
+        *[f"| `{x['file']}` | {x['meta']['about']} | generated |" for x in d["assets"] + ([d["terrain"]] if d["terrain"] else [])],
         "| [`CL05Geometry.sysml`](CL05Geometry.sysml) | The geometry file's structure as SysML | generated |",
         "| [`figures/`](figures/) | Generated SVG figures (do not edit) | generated |",
         "| `README.md` | This page | generated |", "",

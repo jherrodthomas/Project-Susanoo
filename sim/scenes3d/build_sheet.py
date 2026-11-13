@@ -1,10 +1,14 @@
-"""Build the interactive general-arrangement sheets: docs/3d/SUS-M1.html (sheet 1) and docs/3d/SUS-A1.html (sheet 2).
+"""Build the interactive general-arrangement sheets: docs/3d/SUS-M1.html (1), SUS-A1.html (2) and SUS-M1-terrain.html (3).
 
 Usage: python -m sim.scenes3d.build_sheet [--check]
 
 Sheet 2 (sim/scenes3d/sheet_uav.yaml, viewer sheet_uav.js) shows SUS-A1 on the CL-05 dock, with the dock and UAV
 figures of cad/params and cad/metrics.json, the UAV hazards and interfaces, and the PX4 SITL results of
 sim/results/uav/ replayed in an airspace view with the geofence and pilot keep-out of sim/uav/spec.yaml.
+
+Sheet 3 (sim/scenes3d/terrain.yaml, viewer sheet_terrain.js) walks the CL-05 gait over the terrain course posed by
+tools/cad/b3d/cl05_terrain.py, with that export's kinematic findings, the static tip margin of cad/metrics.json on each
+slope (frozen posture, and with the gait's lean compensation of sim/spec/walker.yaml) and the SYS-008 slope limit.
 
 Sheet 1:
 
@@ -32,6 +36,8 @@ from tools.terms.terms import expand, find, label, load as load_terms
 CDN = "https://cdn.jsdelivr.net/npm/three@{v}/"
 OUT = "docs/3d/SUS-M1.html"
 OUT_UAV = "docs/3d/SUS-A1.html"
+OUT_TERRAIN = "docs/3d/SUS-M1-terrain.html"
+TERRAIN = ROOT / "docs/3d/assets/sus-m1-terrain.js"
 GEOMETRY = ROOT / "docs/3d/assets/sus-m1.js"
 
 
@@ -147,7 +153,87 @@ def uav_data(cfg: dict, layout: str) -> dict:
 
 
 def outputs() -> dict:
-    return {**sheet1(), **sheet2()}
+    return {**sheet1(), **sheet2(), **sheet3()}
+
+
+def _inside(pt, poly) -> bool:
+    c = False
+    for i in range(len(poly)):
+        (xi, yi), (xj, yj) = poly[i], poly[i - 1]
+        if (yi > pt[1]) != (yj > pt[1]) and pt[0] < (xj - xi) * (pt[1] - yi) / (yj - yi) + xi:
+            c = not c
+    return c
+
+
+def _edge(pt, poly) -> float:
+    d = 1e9
+    for i in range(len(poly)):
+        (ax, ay), (bx, by) = poly[i - 1], poly[i]
+        dx, dy = bx - ax, by - ay
+        t = max(0.0, min(1.0, ((pt[0] - ax) * dx + (pt[1] - ay) * dy) / (dx * dx + dy * dy)))
+        d = min(d, ((pt[0] - ax - t * dx) ** 2 + (pt[1] - ay - t * dy) ** 2) ** 0.5)
+    return d
+
+
+def static_margin(m: dict, pitch: float, roll: float, lean: float = 1.0) -> float:
+    """Signed distance (m) from the support polygon's edge to the centre of gravity projected along gravity, for the
+    standing CL-05 on ground pitched `pitch` (uphill +) and rolled `roll` (right side down +) degrees; `lean` is the
+    share of the slope-induced shift left uncompensated. Inside > 0. Same geometry as cad/metrics.json."""
+    import math
+    cx, cy, cz = m["cg_m"]
+    pt = (cx - lean * cz * math.tan(math.radians(pitch)), cy + lean * cz * math.tan(math.radians(roll)))
+    d = _edge(pt, m["support_polygon_m"])
+    return d if _inside(pt, m["support_polygon_m"]) else -d
+
+
+def tip_angle(m: dict, sp: float, sr: float, lean: float = 1.0) -> float:
+    """Slope angle (degrees) in the direction (sp, sr) at which the static margin reaches zero."""
+    lo, hi = 0.0, 89.0
+    for _ in range(60):
+        mid = (lo + hi) / 2
+        if static_margin(m, sp * mid, sr * mid, lean) > 0:
+            lo = mid
+        else:
+            hi = mid
+    return lo
+
+
+def sheet3() -> dict:
+    """Sheet 3: the CL-05 walk posed on the terrain course (sim/scenes3d/terrain.yaml, docs/3d/assets/sus-m1-terrain.js)."""
+    import math
+    course = _read_yaml(SIM / "scenes3d" / "terrain.yaml")
+    mt = metrics("CL-05")["postures"]["standing"]
+    walker = _read_yaml(SIM / "spec" / "walker.yaml")["params"]
+    lean = walker["slope_lean"]
+    req = _read_yaml(ROOT / "requirements/SYS-008.yaml")
+    haz = next(h for h in hazards() if h["id"] == "HAZ-WLK-002")
+    rows = []
+    for t in course["terrains"]:
+        r = {k: t[k] for k in ("key", "label", "kind")} | {k: t[k] for k in ("note", "pitch_deg", "roll_deg", "run_m", "rise_m", "amp_m") if k in t}
+        if t["kind"] == "plane":
+            pitch, roll = t.get("pitch_deg", 0), t.get("roll_deg", 0)
+            slope = math.hypot(pitch, roll)
+            sp, sr = (pitch / slope, roll / slope) if slope else (1.0, 0.0)
+            r["slope_deg"] = round(slope, 1)
+            r["frozen_margin_m"] = round(static_margin(mt, pitch, roll), 3)
+            r["frozen_tip_deg"] = round(tip_angle(mt, sp, sr), 1)
+            r["lean_margin_m"] = round(static_margin(mt, pitch, roll, lean["value"]), 3)
+            r["lean_tip_deg"] = round(tip_angle(mt, sp, sr, lean["value"]), 1)
+        elif t["kind"] == "ledges":
+            r["slope_deg"] = round(math.degrees(math.atan2(t["rise_m"], t["run_m"])), 1)   # average incline of the flight
+        rows.append(r)
+    data = {
+        "sheet": {"id": course["id"], "document": "SUS-CAD-001-CL-05 · " + course["id"], "layout": "CL-05",
+                  "title": "Terrain course, interactive", "sheet": "3 of 3", "revision": cad_revision()},
+        "about": ABOUT, "classes": class_colours(), "terrains": rows, "standing": mt,
+        "lean": {"value": lean["value"], "source": lean["source"]},
+        "sys008": {"id": req["id"], "title": req["title"], "status": req["status"], "statement": " ".join(req["statement"].split()), "limit_deg": 20},
+        "hazard": haz, "replay": [], "hazards": [haz],
+    }
+    extra = ["SYS-008 HAZ-WLK-002 CG", course["id"]]
+    return {OUT_TERRAIN: page_html(data, "SUS-M1 terrain course", "sheet_terrain.body.html", "sheet_terrain.js",
+                                   terms_line(data, extra)).replace('<script src="assets/sus-m1.js"></script>',
+                                                                   '<script src="assets/sus-m1.js"></script>\n<script src="assets/sus-m1-terrain.js"></script>')}
 
 
 def page_html(data: dict, title: str, body: str, viewer: str, terms: str) -> str:
@@ -199,8 +285,9 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--check", action="store_true")
     a = ap.parse_args(argv)
-    if not GEOMETRY.exists():
-        print(f"missing {GEOMETRY.relative_to(ROOT)}: run tools/cad/b3d/cl05_web.py (build123d environment)", file=sys.stderr)
+    if not GEOMETRY.exists() or not TERRAIN.exists():
+        print("missing docs/3d/assets/sus-m1.js or sus-m1-terrain.js: run tools/cad/b3d/cl05_web.py and cl05_terrain.py "
+              "(build123d environment)", file=sys.stderr)
         return 1
     return write_or_check(outputs(), a.check, "python -m sim.scenes3d.build_sheet")
 

@@ -35,8 +35,8 @@ package Pages3D {
         attribute :>> file = "SUS-A1.html";
         attribute :>> threeVersion = "0.170.0";
         attribute :>> syntheticLabel = true;
-        attribute :>> ciCheck = "sim/scenes3d/sheet_check.mjs";
-        attribute :>> sheetNumber = "2 of 2";
+        attribute :>> ciCheck = "sim/scenes3d/build_sheet.py --check";
+        attribute :>> sheetNumber = "2 of 3";
         attribute :>> geometry = "assets/sus-m1.js";
         attribute :>> hazardCount = 6;
         attribute :>> replays = "SU-01, SU-02, SU-03, SU-04, SU-05, SU-06";
@@ -47,10 +47,21 @@ package Pages3D {
         attribute :>> threeVersion = "0.170.0";
         attribute :>> syntheticLabel = true;
         attribute :>> ciCheck = "sim/scenes3d/sheet_check.mjs";
-        attribute :>> sheetNumber = "1 of 2";
+        attribute :>> sheetNumber = "1 of 3";
         attribute :>> geometry = "assets/sus-m1.js";
         attribute :>> hazardCount = 22;
         attribute :>> replays = "S3-01, S3-02, S3-03, S3-04";
+    }
+    part pSusM1Terrain : SheetPage {
+        doc /* SUS-M1 terrain course */
+        attribute :>> file = "SUS-M1-terrain.html";
+        attribute :>> threeVersion = "0.170.0";
+        attribute :>> syntheticLabel = true;
+        attribute :>> ciCheck = "sim/scenes3d/build_sheet.py --check";
+        attribute :>> sheetNumber = "3 of 3";
+        attribute :>> geometry = "assets/sus-m1.js, assets/sus-m1-terrain.js";
+        attribute :>> hazardCount = 1;
+        attribute :>> replays = "";
     }
     part pS301 : ScenePage {
         doc /* S3-01 Slow supply leak on a slope; balance lost before the hold engages */
@@ -146,6 +157,6 @@ package Pages3D {
         attribute :>> threeVersion = "";
         attribute :>> syntheticLabel = true;
         attribute :>> ciCheck = "sim/scenes3d/build_pages.py --check";
-        attribute :>> links = 10;
+        attribute :>> links = 11;
     }
 }
