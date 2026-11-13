@@ -118,7 +118,7 @@ Status key: *no errors* = automated rule found no errors in current records (thi
 | 106.2i | Mishap | `mishap` | 22/22 |
 | 106.2j | Initial RAC | `initial_risk` | 22/22 |
 | 106.2k | Target RAC | `target_risk` | 22/22 |
-| 106.2l | Event RAC(s) | `event_risks` | 7/22 |
+| 106.2l | Event RAC(s) | `event_risks` | 8/22 |
 | 106.2m | Mitigation measures (identified and selected, version traced) | `mitigations` | 22/22 |
 | 106.2n | Hazard status | `status` | 22/22 |
 | 106.2o | Verification and validation method | `mitigations[].verification.method` | 22/22 |
