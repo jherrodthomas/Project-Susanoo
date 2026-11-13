@@ -163,6 +163,7 @@ def sidebar(current: str) -> str:
              "- [Plant specs](Plant-Specs)",
              "- [Simulation results](Simulation-Results)",
              "- [3D scene builder](3D-Scene-Builder)",
+             "- [882E workflow](Project-Overview#the-mil-std-882e-workflow)",
              "- [882E work products](882E-Work-Products)"]
     for p, n in tree:
         depth = len(p.parent.relative_to(TREE_DIR).parts)

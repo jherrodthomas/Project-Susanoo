@@ -60,6 +60,7 @@
 - [Plant specs](Plant-Specs)
 - [Simulation results](Simulation-Results)
 - [3D scene builder](3D-Scene-Builder)
+- [882E workflow](Project-Overview#the-mil-std-882e-workflow)
 - [882E work products](882E-Work-Products)
   - [00 · System Definition and Analysis Baseline](882E-00-system-definition)
   - [01 · Document the System Safety Approach](882E-01-safety-approach)
