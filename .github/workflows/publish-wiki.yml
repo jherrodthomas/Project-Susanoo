@@ -29,6 +29,13 @@ jobs:
         with:
           persist-credentials: false
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install pyyaml==6.0.2
+
       - name: Check Wiki deploy credential
         env:
           WIKI_TOKEN: ${{ secrets.WIKI_DEPLOY_TOKEN }}
@@ -48,16 +55,9 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           AUTH="$(printf 'x-access-token:%s' "$WIKI_TOKEN" | base64 -w0)"
           git -c http.extraheader="AUTHORIZATION: basic $AUTH" clone "https://github.com/${REPO}.wiki.git" wiki-publish
-          # Copy source pages into the wiki root. Do not delete pages maintained separately.
-          find docs/wiki -maxdepth 1 -type f -name '*.md' -exec cp '{}' wiki-publish/ \;
-          mkdir -p wiki-publish/images
-          cp docs/wiki/images/*.svg docs/wiki/images/*.png wiki-publish/images/
-          # Figures of the pages published from elsewhere in the repository (tools/wiki/build_wiki.py)
-          while IFS= read -r f; do
-            [ -n "$f" ] || continue
-            mkdir -p "wiki-publish/assets/$(dirname "$f")"
-            cp "$f" "wiki-publish/assets/$f"
-          done < docs/wiki/assets.txt
+          # Copy the pages, images and figures in wiki form (figure paths to assets/, page links without .md).
+          # Pages maintained separately in the wiki are not deleted.
+          python -m tools.wiki.build_wiki --publish wiki-publish
           cd wiki-publish
           git add -- '*.md' images/ assets/
           if git diff --cached --quiet; then

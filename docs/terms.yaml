@@ -22,12 +22,14 @@ abbreviations:
   B-ISOL: TS-001 supply-loss mode, battery isolated and torque to zero (sim/trades)
   DC: direct current
   FMECA: failure modes, effects and criticality analysis
+  FASTER: Failure Analysis, Simulation, Testing, and Evaluation Report, an open-source reliability tool for LTspice circuits (github.com/Gueni/FASTER)
   HPU: hydraulic power unit
   B-EHA: TS-001 alternative B with electrohydraulic joint actuators (series-hybrid power)
   B-EMA: TS-001 alternative B with electromechanical joint actuators (series-hybrid power)
   CONOPS: concept of operations
   COTS: commercial off-the-shelf
   CPU: central processing unit
+  GPL: General Public License, a copyleft open-source software licence
   CSCI: computer software configuration item
   DAL: development assurance level (DO-178C / DO-254)
   DDS: Data Distribution Service, the middleware ROS 2 uses
@@ -157,6 +159,9 @@ standards:
   MIL-STD-810H: US DoD environmental engineering test methods
   MIL-STD-461: US DoD electromagnetic interference requirements
   MIL-HDBK-516: US DoD airworthiness certification criteria handbook
+  MIL-HDBK-217F: US DoD reliability prediction handbook for electronic equipment (Notice 2, 1995)
+  MIL-HDBK-338B: US DoD electronic reliability design handbook
+  NSWC-11: US Navy handbook of reliability prediction procedures for mechanical equipment (2011)
   ARP4754B: SAE guidelines for development of civil aircraft and systems
   ARP4761A: SAE guidelines for the safety assessment process on civil aircraft
   DO-178C: RTCA software considerations in airborne systems
@@ -177,6 +182,8 @@ codes:
   VER-: verification record or case
   REV-: review record (reviews/)
   CR-: change request record (changes/)
+  FT-: fault tree in the reliability pilot (reliability/HAZ-*.yaml, one file per hazard)
+  PT-: part with its failure modes in the reliability pilot (reliability/parts.yaml; PT-nnn-FMn is a failure mode)
   DQ-: decision question for the project lead (decisions/register.yaml)
   ROLE-: project role in the tailoring record (simulated until the lead says otherwise)
   MOD-: operating mode from the CONOPS (MOD-01 to MOD-10)

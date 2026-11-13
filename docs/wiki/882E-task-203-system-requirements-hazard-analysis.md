@@ -32,11 +32,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 2 — Identify and document hazards |
-| Tasks | [Task 203 — System Requirements Hazard Analysis](MIL-STD-882E-Task-203) |
+| Tasks | [Task 203 — System Requirements Hazard Analysis](MIL-STD-882E-Task-203.md) |
 | Lifecycle gate | G1–G2 |
 | Applicability | Selected |
 | Accountable role | Safety lead with systems lead |
-| Parent folder | [02 · Identify and Document Hazards](882E-02-hazard-identification) |
+| Parent folder | [02 · Identify and Document Hazards](882E-02-hazard-identification.md) |
 
 ## Purpose
 
@@ -47,17 +47,17 @@ analysis.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -69,7 +69,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task203_SRHA.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/Task203_SRHA.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML requirements — system safety requirements and allocation](assets/safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-4-sysml-requirements.svg)
+![Figure 4 · SysML requirements — system safety requirements and allocation](../../safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-4-sysml-requirements.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -121,17 +121,17 @@ package Task203_SRHA {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Hazards and candidate controls | [Task 202 · Preliminary Hazard Analysis (PHA)](882E-task-202-preliminary-hazard-analysis) |
+| Hazards and candidate controls | [Task 202 · Preliminary Hazard Analysis (PHA)](882E-task-202-preliminary-hazard-analysis.md) |
 | Requirement records (requirements/) | [`requirements/SYS-001.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/requirements/SYS-001.yaml) |
 
 | Output | Destination |
 |---|---|
-| Requirements to derive and allocate | [Safety Requirements Register](882E-safety-requirements) |
-| Verification methods | [Task 401 · Safety Verification](882E-task-401-safety-verification) |
+| Requirements to derive and allocate | [Safety Requirements Register](882E-safety-requirements.md) |
+| Verification methods | [Task 401 · Safety Verification](882E-task-401-safety-verification.md) |
 
 ## Folder contents
 

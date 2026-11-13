@@ -31,11 +31,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 8 — Manage life-cycle risk |
-| Tasks | [Task 304 — Review of Changes, Deficiencies, Mishaps and Deviations](MIL-STD-882E-Task-304) |
+| Tasks | [Task 304 — Review of Changes, Deficiencies, Mishaps and Deviations](MIL-STD-882E-Task-304.md) |
 | Lifecycle gate | G7 (and any change) |
 | Applicability | Selected |
 | Accountable role | Safety lead with configuration manager |
-| Parent folder | [08 · Manage Life-Cycle Risk](882E-08-lifecycle-risk-management) |
+| Parent folder | [08 · Manage Life-Cycle Risk](882E-08-lifecycle-risk-management.md) |
 
 ## Purpose
 
@@ -44,17 +44,17 @@ records the impact decision and links to reopened hazards.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -66,7 +66,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task304_ChangeReview.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/Task304_ChangeReview.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML activity — ChangeSafetyReview](assets/safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/figures/fig-4-sysml-activity.svg)
+![Figure 4 · SysML activity — ChangeSafetyReview](../../safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/figures/fig-4-sysml-activity.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -98,17 +98,17 @@ package Task304_ChangeReview {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Test anomalies | [Task 303 · Test and Evaluation Participation](882E-task-303-test-and-evaluation-participation) |
-| Audit findings | [Task 104 · Government Reviews and Audits](882E-task-104-government-reviews-and-audits) |
+| Test anomalies | [Task 303 · Test and Evaluation Participation](882E-task-303-test-and-evaluation-participation.md) |
+| Audit findings | [Task 104 · Government Reviews and Audits](882E-task-104-government-reviews-and-audits.md) |
 
 | Output | Destination |
 |---|---|
-| Reopened hazards | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system) |
-| Reanalysis requests | [02 · Identify and Document Hazards](882E-02-hazard-identification) |
+| Reopened hazards | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system.md) |
+| Reanalysis requests | [02 · Identify and Document Hazards](882E-02-hazard-identification.md) |
 
 ## Folder contents
 

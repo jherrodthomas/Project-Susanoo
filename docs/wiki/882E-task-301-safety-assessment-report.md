@@ -31,11 +31,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 7 — Accept risk and document |
-| Tasks | [Task 301 — Safety Assessment Report](MIL-STD-882E-Task-301) |
+| Tasks | [Task 301 — Safety Assessment Report](MIL-STD-882E-Task-301.md) |
 | Lifecycle gate | G5–G6 |
 | Applicability | Selected |
 | Accountable role | Safety lead |
-| Parent folder | [07 · Accept Risk and Document](882E-07-risk-acceptance) |
+| Parent folder | [07 · Accept Risk and Document](882E-07-risk-acceptance.md) |
 
 ## Purpose
 
@@ -44,17 +44,17 @@ support acceptance decisions and release.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/07-risk-acceptance/task-301-safety-assessment-report/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/07-risk-acceptance/task-301-safety-assessment-report/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/07-risk-acceptance/task-301-safety-assessment-report/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/07-risk-acceptance/task-301-safety-assessment-report/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/07-risk-acceptance/task-301-safety-assessment-report/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/07-risk-acceptance/task-301-safety-assessment-report/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -65,7 +65,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task301_SAR.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/07-risk-acceptance/task-301-safety-assessment-report/Task301_SAR.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML block definition — SAR structure](assets/safety/mil-std-882e/07-risk-acceptance/task-301-safety-assessment-report/figures/fig-4-sysml-block-definition.svg)
+![Figure 4 · SysML block definition — SAR structure](../../safety/mil-std-882e/07-risk-acceptance/task-301-safety-assessment-report/figures/fig-4-sysml-block-definition.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -96,17 +96,17 @@ package Task301_SAR {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/07-risk-acceptance/task-301-safety-assessment-report/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/07-risk-acceptance/task-301-safety-assessment-report/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Hazard log | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system) |
-| Verification summary | [Task 401 · Safety Verification](882E-task-401-safety-verification) |
+| Hazard log | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system.md) |
+| Verification summary | [Task 401 · Safety Verification](882E-task-401-safety-verification.md) |
 
 | Output | Destination |
 |---|---|
-| Decision package | [Risk Acceptance Records](882E-acceptance-records) |
-| Review package | [Task 104 · Government Reviews and Audits](882E-task-104-government-reviews-and-audits) |
+| Decision package | [Risk Acceptance Records](882E-acceptance-records.md) |
+| Review package | [Task 104 · Government Reviews and Audits](882E-task-104-government-reviews-and-audits.md) |
 
 ## Folder contents
 

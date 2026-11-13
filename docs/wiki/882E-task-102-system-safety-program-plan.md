@@ -34,11 +34,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 1 — Document the system safety approach |
-| Tasks | [Task 102 — System Safety Program Plan](MIL-STD-882E-Task-102) |
+| Tasks | [Task 102 — System Safety Program Plan](MIL-STD-882E-Task-102.md) |
 | Lifecycle gate | G0, revised at G2 and G6 |
 | Applicability | Selected |
 | Accountable role | Safety lead; approval by program authority |
-| Parent folder | [01 · Document the System Safety Approach](882E-01-safety-approach) |
+| Parent folder | [01 · Document the System Safety Approach](882E-01-safety-approach.md) |
 
 ## Purpose
 
@@ -47,17 +47,17 @@ software approach, verification and acceptance. Start from `templates/sspp-outli
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/01-safety-approach/task-102-system-safety-program-plan/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/01-safety-approach/task-102-system-safety-program-plan/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/01-safety-approach/task-102-system-safety-program-plan/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/01-safety-approach/task-102-system-safety-program-plan/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/01-safety-approach/task-102-system-safety-program-plan/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/01-safety-approach/task-102-system-safety-program-plan/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -69,7 +69,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task102_SSPP.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/01-safety-approach/task-102-system-safety-program-plan/Task102_SSPP.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML requirements — plan-level requirements](assets/safety/mil-std-882e/01-safety-approach/task-102-system-safety-program-plan/figures/fig-4-sysml-requirements.svg)
+![Figure 4 · SysML requirements — plan-level requirements](../../safety/mil-std-882e/01-safety-approach/task-102-system-safety-program-plan/figures/fig-4-sysml-requirements.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -113,18 +113,18 @@ package Task102_SSPP {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/01-safety-approach/task-102-system-safety-program-plan/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/01-safety-approach/task-102-system-safety-program-plan/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | SSPP outline | [`safety/mil-std-882e/templates/sspp-outline.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/templates/sspp-outline.md) |
-| Task applicability | [01 · Document the System Safety Approach](882E-01-safety-approach) |
+| Task applicability | [01 · Document the System Safety Approach](882E-01-safety-approach.md) |
 
 | Output | Destination |
 |---|---|
-| Plan baseline | [Task 103 · Hazard Management Plan (HMP)](882E-task-103-hazard-management-plan) |
-| Risk matrix definition | [03 · Assess and Document Risk](882E-03-risk-assessment) |
-| Software safety approach | [Software Contribution to System Risk (Section 4.4)](882E-software-safety) |
+| Plan baseline | [Task 103 · Hazard Management Plan (HMP)](882E-task-103-hazard-management-plan.md) |
+| Risk matrix definition | [03 · Assess and Document Risk](882E-03-risk-assessment.md) |
+| Software safety approach | [Software Contribution to System Risk (Section 4.4)](882E-software-safety.md) |
 
 ## Folder contents
 

@@ -61,7 +61,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Lifecycle gate | G2 (architecture) through G4 (simulation readiness) |
 | Accountable role | UAV lead with software safety lead |
 | Interface contract | [`interface-contract.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/integrations/px4/interface-contract.md) |
-| Documentation standard | [`framework/documentation-standard.md`](Documentation-Standard) |
+| Documentation standard | [`framework/documentation-standard.md`](Documentation-Standard.md) |
 
 ## Purpose
 
@@ -85,14 +85,14 @@ Adopt [PX4 Autopilot](https://github.com/PX4/PX4-Autopilot) as the **candidate**
 ## Block diagram
 
 
-![Figure 1 · Block diagram](assets/integrations/px4/figures/fig-1-block-diagram.svg)
+![Figure 1 · Block diagram](../../integrations/px4/figures/fig-1-block-diagram.svg)
 
 ## Boundary diagram
 
 Dashed frame = the **PX4 flight-control assurance boundary**. It is distinct from the walker
 motion-control boundary; every crossing is an IF-PX4 contract item.
 
-![Figure 2 · Boundary diagram — PX4 assurance boundary](assets/integrations/px4/figures/fig-2-boundary-diagram.svg)
+![Figure 2 · Boundary diagram — PX4 assurance boundary](../../integrations/px4/figures/fig-2-boundary-diagram.svg)
 
 | Crossing | Interface | Control / safety concern |
 |---|---|---|
@@ -114,28 +114,28 @@ from the contract's acceptance tests. It imports
 the project model's [`SusanooArchitecture`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml); `PX4Autopilot`
 specialises `SusanooArchitecture::FlightController`.
 
-![Figure 3 · SysML internal block — PX4IntegrationContext](assets/integrations/px4/figures/fig-3-sysml-internal-block.svg)
+![Figure 3 · SysML internal block — PX4IntegrationContext](../../integrations/px4/figures/fig-3-sysml-internal-block.svg)
 
-![Figure 4 · SysML state machine — fail-closed launch permit](assets/integrations/px4/figures/fig-4-sysml-state-machine.svg)
+![Figure 4 · SysML state machine — fail-closed launch permit](../../integrations/px4/figures/fig-4-sysml-state-machine.svg)
 
-![Figure 5 · SysML requirements — integration requirements](assets/integrations/px4/figures/fig-5-sysml-requirements.svg)
+![Figure 5 · SysML requirements — integration requirements](../../integrations/px4/figures/fig-5-sysml-requirements.svg)
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/integrations/px4/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../integrations/px4/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | Source, license, documentation | [PX4 Autopilot](https://github.com/PX4/PX4-Autopilot) (pinned tag + SHA, TBD) |
 | Observation and recovery scenarios, UAV modes | [`concept/CONOPS.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md) |
-| SYS-003, SYS-005, SYS-006 | [Task 203 SRHA](882E-task-203-system-requirements-hazard-analysis) |
-| Safety-significant functions | [Task 208 FHA](882E-task-208-functional-hazard-analysis) |
+| SYS-003, SYS-005, SYS-006 | [Task 203 SRHA](882E-task-203-system-requirements-hazard-analysis.md) |
+| Safety-significant functions | [Task 208 FHA](882E-task-208-functional-hazard-analysis.md) |
 
 | Output | Destination |
 |---|---|
-| PX4 version, parameters, software functions | [Software safety](882E-software-safety) |
-| IF-PX4 interface hazards | [Task 205 SHA](882E-task-205-system-hazard-analysis) |
-| SITL / HIL evidence | [Task 401 Safety verification](882E-task-401-safety-verification) |
+| PX4 version, parameters, software functions | [Software safety](882E-software-safety.md) |
+| IF-PX4 interface hazards | [Task 205 SHA](882E-task-205-system-hazard-analysis.md) |
+| SITL / HIL evidence | [Task 401 Safety verification](882E-task-401-safety-verification.md) |
 | Aircraft FHA / PSSA inputs | ARP4761A assessment (separate scale; not yet created) |
 
 ## Folder contents

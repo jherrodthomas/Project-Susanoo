@@ -41,11 +41,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 1 — Document the system safety approach |
-| Tasks | [Task 108 — Hazardous Materials Management Plan](MIL-STD-882E-Task-108) |
+| Tasks | [Task 108 — Hazardous Materials Management Plan](MIL-STD-882E-Task-108.md) |
 | Lifecycle gate | G1–G3 |
 | Applicability | Selected |
 | Accountable role | Environmental / HSE lead |
-| Parent folder | [01 · Document the System Safety Approach](882E-01-safety-approach) |
+| Parent folder | [01 · Document the System Safety Approach](882E-01-safety-approach.md) |
 
 ## Purpose
 
@@ -54,17 +54,17 @@ actuation is chosen), lithium-ion cells in SUS-M1 and SUS-A1, coolants and lubri
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/01-safety-approach/task-108-hazardous-materials-management-plan/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/01-safety-approach/task-108-hazardous-materials-management-plan/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/01-safety-approach/task-108-hazardous-materials-management-plan/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/01-safety-approach/task-108-hazardous-materials-management-plan/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/01-safety-approach/task-108-hazardous-materials-management-plan/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/01-safety-approach/task-108-hazardous-materials-management-plan/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -77,7 +77,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task108_HMMP.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/01-safety-approach/task-108-hazardous-materials-management-plan/Task108_HMMP.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML block definition — hazardous material inventory](assets/safety/mil-std-882e/01-safety-approach/task-108-hazardous-materials-management-plan/figures/fig-4-sysml-block-definition.svg)
+![Figure 4 · SysML block definition — hazardous material inventory](../../safety/mil-std-882e/01-safety-approach/task-108-hazardous-materials-management-plan/figures/fig-4-sysml-block-definition.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -114,16 +114,16 @@ package Task108_HMMP {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/01-safety-approach/task-108-hazardous-materials-management-plan/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/01-safety-approach/task-108-hazardous-materials-management-plan/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Bill of materials (when available) | [00 · System Definition and Analysis Baseline](882E-00-system-definition) |
+| Bill of materials (when available) | [00 · System Definition and Analysis Baseline](882E-00-system-definition.md) |
 
 | Output | Destination |
 |---|---|
-| Exposure sources | [Task 207 · Health Hazard Analysis (HHA)](882E-task-207-health-hazard-analysis) |
-| Environmental releases | [Task 210 · Environmental Hazard Analysis (EHA)](882E-task-210-environmental-hazard-analysis) |
+| Exposure sources | [Task 207 · Health Hazard Analysis (HHA)](882E-task-207-health-hazard-analysis.md) |
+| Environmental releases | [Task 210 · Environmental Hazard Analysis (EHA)](882E-task-210-environmental-hazard-analysis.md) |
 
 ## Folder contents
 

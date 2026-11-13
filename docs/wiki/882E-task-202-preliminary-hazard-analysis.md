@@ -48,11 +48,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 2 — Identify and document hazards |
-| Tasks | [Task 202 — Preliminary Hazard Analysis](MIL-STD-882E-Task-202) |
+| Tasks | [Task 202 — Preliminary Hazard Analysis](MIL-STD-882E-Task-202.md) |
 | Lifecycle gate | G1–G2 |
 | Applicability | Selected |
 | Accountable role | Safety lead with systems lead |
-| Parent folder | [02 · Identify and Document Hazards](882E-02-hazard-identification) |
+| Parent folder | [02 · Identify and Document Hazards](882E-02-hazard-identification.md) |
 
 ## Purpose
 
@@ -61,17 +61,17 @@ subsystem level. Use `templates/pha-table.csv`.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -86,7 +86,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task202_PHA.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/Task202_PHA.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML block definition — PHA worksheet row](assets/safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/figures/fig-4-sysml-block-definition.svg)
+![Figure 4 · SysML block definition — PHA worksheet row](../../safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/figures/fig-4-sysml-block-definition.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -115,25 +115,25 @@ package Task202_PHA {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| PHL | [Task 201 · Preliminary Hazard List (PHL)](882E-task-201-preliminary-hazard-list) |
-| Risk matrix | [03 · Assess and Document Risk](882E-03-risk-assessment) |
+| PHL | [Task 201 · Preliminary Hazard List (PHL)](882E-task-201-preliminary-hazard-list.md) |
+| Risk matrix | [03 · Assess and Document Risk](882E-03-risk-assessment.md) |
 | Preliminary architecture | [`concept/architecture.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/architecture.md) |
 
 | Output | Destination |
 |---|---|
-| Candidate safety requirements | [Task 203 · System Requirements Hazard Analysis (SRHA)](882E-task-203-system-requirements-hazard-analysis) |
-| Subsystem focus areas | [Task 204 · Subsystem Hazard Analysis (SSHA)](882E-task-204-subsystem-hazard-analysis) |
-| Updated hazard records | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system) |
+| Candidate safety requirements | [Task 203 · System Requirements Hazard Analysis (SRHA)](882E-task-203-system-requirements-hazard-analysis.md) |
+| Subsystem focus areas | [Task 204 · Subsystem Hazard Analysis (SSHA)](882E-task-204-subsystem-hazard-analysis.md) |
+| Updated hazard records | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system.md) |
 
 ## Folder contents
 
 | Item | Description | State |
 |---|---|---|
-| [`pha.svg`](assets/safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/pha.svg) | Spreadsheet view of the worksheet (generated by tools/worksheets/build.py) | present |
+| [`pha.svg`](../../safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/pha.svg) | Spreadsheet view of the worksheet (generated by tools/worksheets/build.py) | present |
 | [`pha.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/pha.csv) | PHA worksheet based on templates/pha-table.csv | present |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/figures) | Generated SVG figures (do not edit) | generated |
 | [`Task202_PHA.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/Task202_PHA.sysml) | Generated SysML v2 view | generated |
@@ -145,7 +145,7 @@ package Task202_PHA {
 <!-- worksheet:start (generated by tools/worksheets/build.py; do not edit) -->
 ### Worksheet
 
-![Task 202 · Preliminary Hazard Analysis worksheet](assets/safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/pha.svg)
+![Task 202 · Preliminary Hazard Analysis worksheet](../../safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/pha.svg)
 
 Data: [`pha.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-202-preliminary-hazard-analysis/pha.csv) · Excel: [`worksheets.xlsx`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/generated/worksheets.xlsx), tab **PHA** (risk levels are live Table III formulas). Generated from `safety/hazards/*.yaml` by `tools/worksheets/build.py`; edit the records, not the sheet. AI-drafted (I0), not reviewed.
 <!-- worksheet:end -->
