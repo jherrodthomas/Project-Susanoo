@@ -117,6 +117,7 @@ def sidebar(current: str) -> str:
              "- [Documentation standard](Documentation-Standard)",
              "- [Concept model & figures](Concept-Model)",
              "- [PX4 integration model](PX4-Integration-Model)",
+             "- [882E workflow](Project-Overview#the-mil-std-882e-workflow)",
              "- [882E work products](882E-Work-Products)"]
     for p, n in tree:
         depth = len(p.parent.relative_to(TREE_DIR).parts)

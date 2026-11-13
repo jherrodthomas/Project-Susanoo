@@ -31,7 +31,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 <tr><td width="33%" valign="top"><a href="images/sus-i1-boundary.svg"><img src="images/sus-i1-boundary.svg" alt="SUS-I1 boundary and interfaces" width="300"></a><br><sub>SUS-I1 boundary and interfaces</sub></td><td width="33%" valign="top"><a href="images/sim-su-01.svg"><img src="images/sim-su-01.svg" alt="UAV simulation SU-01 (synthetic)" width="300"></a><br><sub>UAV simulation SU-01 (synthetic)</sub></td><td width="33%" valign="top"><a href="images/3d-s3-01.png"><img src="images/3d-s3-01.png" alt="3D scene S3-01" width="300"></a><br><sub>3D scene S3-01</sub></td></tr>
 </table>
 
-**Open:** [Wiki home page source](Home.md) · [All wiki images](images/README.md)
+**Open:** [Wiki home page source](Home.md)
 
 <!-- preview:end -->
 
