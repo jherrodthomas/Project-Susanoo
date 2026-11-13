@@ -98,6 +98,7 @@ ENFORCED = {
     "docs/readme": {"skip_dirs": {"figures"}, "generator": ["tools/figures/frontpage_readme.py", "--check"]},
     "docs/wiki": {"skip_dirs": {"images"}, "generator": ["tools/figures/wiki_readme.py", "--check"]},
     "docs/wiki/images": {"skip_dirs": {"readme"}, "generator": ["tools/figures/wikiimages_readme.py", "--check"]},
+    "docs/3d/assets": {"skip_dirs": {"figures"}, "generator": ["tools/figures/assets3d_readme.py", "--check"]},
     "sim/scenes3d": {"skip_dirs": {"figures", "library", "out", "__pycache__"},
                      "generator": ["tools/figures/scenes3d_readme.py", "--check"]},
 }

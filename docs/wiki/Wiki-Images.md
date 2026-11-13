@@ -49,7 +49,7 @@ The figures the wiki shows directly: item-definition and SysML views, record fig
 | [`3d-s3-06.png`](assets/docs/wiki/images/3d-s3-06.png) | `sim/scenes3d/render.mjs` | 70 KB | 2 wiki pages, 1 repository page |
 | [`3d-sus-a1-air.png`](assets/docs/wiki/images/3d-sus-a1-air.png) | `sim/scenes3d/sheet_check.mjs` | 287 KB | 3 wiki pages, 2 repository pages |
 | [`3d-sus-a1.png`](assets/docs/wiki/images/3d-sus-a1.png) | `sim/scenes3d/sheet_check.mjs` | 465 KB | 3 wiki pages, 2 repository pages |
-| [`3d-sus-m1.png`](assets/docs/wiki/images/3d-sus-m1.png) | `sim/scenes3d/sheet_check.mjs` | 386 KB | 3 wiki pages, 3 repository pages |
+| [`3d-sus-m1.png`](assets/docs/wiki/images/3d-sus-m1.png) | `sim/scenes3d/sheet_check.mjs` | 386 KB | 3 wiki pages, 2 repository pages |
 | [`analysis-dependencies.svg`](assets/docs/wiki/images/analysis-dependencies.svg) | `docs/diagrams/mil-std-882e/analysis-dependencies.drawio` | 6 KB | 3 wiki pages, 4 repository pages |
 | [`hazard-management.svg`](assets/docs/wiki/images/hazard-management.svg) | `docs/diagrams/mil-std-882e/hazard-management.drawio` | 5 KB | 3 wiki pages, 4 repository pages |
 | [`rec-acceptance.svg`](assets/docs/wiki/images/rec-acceptance.svg) | `tools/previews/record_figures.py` | 18 KB | 1 repository page |

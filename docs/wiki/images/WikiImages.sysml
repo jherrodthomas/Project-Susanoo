@@ -86,7 +86,7 @@ package WikiImages {
     part img3DSusM1 : RenderedStill {
         attribute :>> file = "3d-sus-m1.png";
         attribute :>> kilobytes = 386;
-        attribute :>> shownOn = 6;
+        attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/sheet_check.mjs";
     }
     part imgAnalysisDependencies : HandExport {

@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="697.1" viewBox="0 0 1260 697.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · What is in the geometry file</title>
+<desc>Meshes, vertices and triangles per part class, and the buffer layout</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1260" height="657" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · What is in the geometry file</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">sus-m1.js: 514 meshes (209 in the standing pose, the rest a frame's own shape), 160,649 vertices and 254,878 triangles in 16 part classes; positions are int16 on a 0.3 mm</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">grid about [0.0, 0.0, 2.3] m. Read from the file's own mesh table.</text>
+<text x="1220" y="44" font-size="11" fill="#475569" text-anchor="end">docs/3d/assets/sus-m1.js</text>
+<line x1="40" y1="102" x2="1220" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="132" font-size="10.5" fill="#475569" font-weight="700">Part class</text>
+<text x="210" y="132" font-size="10.5" fill="#475569" font-weight="700">Meshes</text>
+<text x="290" y="132" font-size="10.5" fill="#475569" font-weight="700">Standing</text>
+<text x="370" y="132" font-size="10.5" fill="#475569" font-weight="700">Vertices</text>
+<text x="460" y="132" font-size="10.5" fill="#475569" font-weight="700">Triangles</text>
+<text x="560" y="132" font-size="10.5" fill="#475569" font-weight="700">Share of the triangles</text>
+<line x1="40" y1="144" x2="1220" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="151" width="11" height="11" rx="2" fill="#2e343d" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="160" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">hose</text>
+<text x="210" y="160" font-size="10.5" fill="#0F172A">80</text>
+<text x="290" y="160" font-size="10.5" fill="#0F172A">2</text>
+<text x="370" y="160" font-size="10.5" fill="#0F172A">74,068</text>
+<text x="460" y="160" font-size="10.5" fill="#0F172A">133,006</text>
+<rect x="560" y="150" width="600" height="12" rx="2" fill="#2e343d" stroke="#475569" stroke-width="0.5"/>
+<text x="1166" y="160" font-size="9.5" fill="#475569">52%</text>
+<rect x="40" y="169" width="1180" height="22" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="175" width="11" height="11" rx="2" fill="#7b8797" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="184" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">arm</text>
+<text x="210" y="184" font-size="10.5" fill="#0F172A">100</text>
+<text x="290" y="184" font-size="10.5" fill="#0F172A">18</text>
+<text x="370" y="184" font-size="10.5" fill="#0F172A">17,369</text>
+<text x="460" y="184" font-size="10.5" fill="#0F172A">27,720</text>
+<rect x="560" y="174" width="125" height="12" rx="2" fill="#7b8797" stroke="#475569" stroke-width="0.5"/>
+<text x="691" y="184" font-size="9.5" fill="#475569">11%</text>
+<rect x="40" y="199" width="11" height="11" rx="2" fill="#5b6676" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="208" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">structure</text>
+<text x="210" y="208" font-size="10.5" fill="#0F172A">25</text>
+<text x="290" y="208" font-size="10.5" fill="#0F172A">25</text>
+<text x="370" y="208" font-size="10.5" fill="#0F172A">17,009</text>
+<text x="460" y="208" font-size="10.5" fill="#0F172A">25,462</text>
+<rect x="560" y="198" width="114.9" height="12" rx="2" fill="#5b6676" stroke="#475569" stroke-width="0.5"/>
+<text x="680.9" y="208" font-size="9.5" fill="#475569">10%</text>
+<rect x="40" y="217" width="1180" height="22" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="223" width="11" height="11" rx="2" fill="#8d97a5" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="232" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">armor</text>
+<text x="210" y="232" font-size="10.5" fill="#0F172A">133</text>
+<text x="290" y="232" font-size="10.5" fill="#0F172A">18</text>
+<text x="370" y="232" font-size="10.5" fill="#0F172A">17,044</text>
+<text x="460" y="232" font-size="10.5" fill="#0F172A">23,938</text>
+<rect x="560" y="222" width="108" height="12" rx="2" fill="#8d97a5" stroke="#475569" stroke-width="0.5"/>
+<text x="674" y="232" font-size="9.5" fill="#475569">9%</text>
+<rect x="40" y="247" width="11" height="11" rx="2" fill="#e0b100" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="256" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">access</text>
+<text x="210" y="256" font-size="10.5" fill="#0F172A">59</text>
+<text x="290" y="256" font-size="10.5" fill="#0F172A">49</text>
+<text x="370" y="256" font-size="10.5" fill="#0F172A">6,886</text>
+<text x="460" y="256" font-size="10.5" fill="#0F172A">7,940</text>
+<rect x="560" y="246" width="35.8" height="12" rx="2" fill="#e0b100" stroke="#475569" stroke-width="0.5"/>
+<text x="601.8" y="256" font-size="9.5" fill="#475569">3%</text>
+<rect x="40" y="265" width="1180" height="22" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="271" width="11" height="11" rx="2" fill="#c9a33a" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="280" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">actuator</text>
+<text x="210" y="280" font-size="10.5" fill="#0F172A">42</text>
+<text x="290" y="280" font-size="10.5" fill="#0F172A">36</text>
+<text x="370" y="280" font-size="10.5" fill="#0F172A">6,812</text>
+<text x="460" y="280" font-size="10.5" fill="#0F172A">6,560</text>
+<rect x="560" y="270" width="29.6" height="12" rx="2" fill="#c9a33a" stroke="#475569" stroke-width="0.5"/>
+<text x="595.6" y="280" font-size="9.5" fill="#475569">3%</text>
+<rect x="40" y="295" width="11" height="11" rx="2" fill="#2b313b" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="304" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">seat</text>
+<text x="210" y="304" font-size="10.5" fill="#0F172A">5</text>
+<text x="290" y="304" font-size="10.5" fill="#0F172A">5</text>
+<text x="370" y="304" font-size="10.5" fill="#0F172A">4,138</text>
+<text x="460" y="304" font-size="10.5" fill="#0F172A">6,484</text>
+<rect x="560" y="294" width="29.2" height="12" rx="2" fill="#2b313b" stroke="#475569" stroke-width="0.5"/>
+<text x="595.2" y="304" font-size="9.5" fill="#475569">3%</text>
+<rect x="40" y="313" width="1180" height="22" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="319" width="11" height="11" rx="2" fill="#1597c9" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="328" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">uav</text>
+<text x="210" y="328" font-size="10.5" fill="#0F172A">12</text>
+<text x="290" y="328" font-size="10.5" fill="#0F172A">12</text>
+<text x="370" y="328" font-size="10.5" fill="#0F172A">4,221</text>
+<text x="460" y="328" font-size="10.5" fill="#0F172A">6,200</text>
+<rect x="560" y="318" width="28" height="12" rx="2" fill="#1597c9" stroke="#475569" stroke-width="0.5"/>
+<text x="594" y="328" font-size="9.5" fill="#475569">2%</text>
+<rect x="40" y="343" width="11" height="11" rx="2" fill="#3a78d6" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="352" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">occupant</text>
+<text x="210" y="352" font-size="10.5" fill="#0F172A">9</text>
+<text x="290" y="352" font-size="10.5" fill="#0F172A">9</text>
+<text x="370" y="352" font-size="10.5" fill="#0F172A">3,536</text>
+<text x="460" y="352" font-size="10.5" fill="#0F172A">5,996</text>
+<rect x="560" y="342" width="27" height="12" rx="2" fill="#3a78d6" stroke="#475569" stroke-width="0.5"/>
+<text x="593" y="352" font-size="9.5" fill="#475569">2%</text>
+<rect x="40" y="361" width="1180" height="22" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="367" width="11" height="11" rx="2" fill="#2f8a5b" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="376" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">power</text>
+<text x="210" y="376" font-size="10.5" fill="#0F172A">11</text>
+<text x="290" y="376" font-size="10.5" fill="#0F172A">11</text>
+<text x="370" y="376" font-size="10.5" fill="#0F172A">2,102</text>
+<text x="460" y="376" font-size="10.5" fill="#0F172A">2,788</text>
+<rect x="560" y="366" width="12.6" height="12" rx="2" fill="#2f8a5b" stroke="#475569" stroke-width="0.5"/>
+<text x="578.6" y="376" font-size="9.5" fill="#475569">1%</text>
+<rect x="40" y="391" width="11" height="11" rx="2" fill="#e2701f" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="400" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">cage</text>
+<text x="210" y="400" font-size="10.5" fill="#0F172A">4</text>
+<text x="290" y="400" font-size="10.5" fill="#0F172A">4</text>
+<text x="370" y="400" font-size="10.5" fill="#0F172A">1,906</text>
+<text x="460" y="400" font-size="10.5" fill="#0F172A">2,672</text>
+<rect x="560" y="390" width="12.1" height="12" rx="2" fill="#e2701f" stroke="#475569" stroke-width="0.5"/>
+<text x="578.1" y="400" font-size="9.5" fill="#475569">1%</text>
+<rect x="40" y="409" width="1180" height="22" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="415" width="11" height="11" rx="2" fill="#7d55c7" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="424" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">dock</text>
+<text x="210" y="424" font-size="10.5" fill="#0F172A">7</text>
+<text x="290" y="424" font-size="10.5" fill="#0F172A">7</text>
+<text x="370" y="424" font-size="10.5" fill="#0F172A">1,896</text>
+<text x="460" y="424" font-size="10.5" fill="#0F172A">2,636</text>
+<rect x="560" y="414" width="11.9" height="12" rx="2" fill="#7d55c7" stroke="#475569" stroke-width="0.5"/>
+<text x="577.9" y="424" font-size="9.5" fill="#475569">1%</text>
+<rect x="40" y="439" width="11" height="11" rx="2" fill="#d9480f" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="448" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">escape</text>
+<text x="210" y="448" font-size="10.5" fill="#0F172A">13</text>
+<text x="290" y="448" font-size="10.5" fill="#0F172A">0</text>
+<text x="370" y="448" font-size="10.5" fill="#0F172A">1,690</text>
+<text x="460" y="448" font-size="10.5" fill="#0F172A">1,612</text>
+<rect x="560" y="438" width="7.3" height="12" rx="2" fill="#d9480f" stroke="#475569" stroke-width="0.5"/>
+<text x="573.3" y="448" font-size="9.5" fill="#475569">1%</text>
+<rect x="40" y="457" width="1180" height="22" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="463" width="11" height="11" rx="2" fill="#d42a2a" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="472" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">safety</text>
+<text x="210" y="472" font-size="10.5" fill="#0F172A">9</text>
+<text x="290" y="472" font-size="10.5" fill="#0F172A">9</text>
+<text x="370" y="472" font-size="10.5" fill="#0F172A">1,140</text>
+<text x="460" y="472" font-size="10.5" fill="#0F172A">1,068</text>
+<rect x="560" y="462" width="4.8" height="12" rx="2" fill="#d42a2a" stroke="#475569" stroke-width="0.5"/>
+<text x="570.8" y="472" font-size="9.5" fill="#475569">0%</text>
+<rect x="40" y="487" width="11" height="11" rx="2" fill="#1597c9" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="496" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">rotor</text>
+<text x="210" y="496" font-size="10.5" fill="#0F172A">4</text>
+<text x="290" y="496" font-size="10.5" fill="#0F172A">4</text>
+<text x="370" y="496" font-size="10.5" fill="#0F172A">808</text>
+<text x="460" y="496" font-size="10.5" fill="#0F172A">784</text>
+<rect x="560" y="486" width="3.5" height="12" rx="2" fill="#1597c9" stroke="#475569" stroke-width="0.5"/>
+<text x="569.5" y="496" font-size="9.5" fill="#475569">0%</text>
+<rect x="40" y="505" width="1180" height="22" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="511" width="11" height="11" rx="2" fill="#b08850" stroke="#475569" stroke-width="0.6"/>
+<text x="58" y="520" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">payload</text>
+<text x="210" y="520" font-size="10.5" fill="#0F172A">1</text>
+<text x="290" y="520" font-size="10.5" fill="#0F172A">0</text>
+<text x="370" y="520" font-size="10.5" fill="#0F172A">24</text>
+<text x="460" y="520" font-size="10.5" fill="#0F172A">12</text>
+<rect x="560" y="510" width="0.1" height="12" rx="2" fill="#b08850" stroke="#475569" stroke-width="0.5"/>
+<text x="566.1" y="520" font-size="9.5" fill="#475569">0%</text>
+<text x="40" y="548" font-size="11.5" fill="#0F172A" font-weight="700">The file</text>
+<rect x="40" y="560" width="381.5" height="26" rx="3" fill="#86b6ea" stroke="#FFFFFF" stroke-width="1"/>
+<text x="48" y="577" font-size="10" fill="#FFFFFF" font-weight="700">positions (int16 x, y, z) · 941 KB</text>
+<rect x="421.5" y="560" width="605.3" height="26" rx="3" fill="#c9a33a" stroke="#FFFFFF" stroke-width="1"/>
+<text x="429.5" y="577" font-size="10" fill="#FFFFFF" font-weight="700">indices (uint16) · 1,493 KB</text>
+<rect x="1026.8" y="560" width="193.2" height="26" rx="3" fill="#8a5cd1" stroke="#FFFFFF" stroke-width="1"/>
+<text x="1034.8" y="577" font-size="10" fill="#FFFFFF" font-weight="700">transforms (float32 3 × 4) · 477 KB</text>
+<text x="40" y="602" font-size="10" fill="#475569">Binary buffer 2,911 KB, carried as base64 (3,882 KB) after the 135 KB mesh table: 4,017 KB in all, one &lt;script&gt; file so a page opened from a local checkout can load it.</text>
+<text x="40" y="628" font-size="10.5" fill="#94A3B8">Generated by tools/figures/assets3d_readme.py from the mesh table in the geometry file. CL-05 concept geometry for review, not a design: posed by concept kinematics, with no dynamics, balance or load model.</text>
+<g class="terms" data-base-h="657">
+<rect x="0" y="657" width="1260" height="40.1" fill="#FFFFFF"/>
+<line x1="40" y1="661" x2="1220" y2="661" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="676.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CL-nnn = concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout) · KB = kilobyte, a file size of 1,024 bytes</text>
+</g>
+</svg>

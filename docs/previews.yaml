@@ -33,7 +33,8 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - sim/results            # generated README (tools/figures/results_readme.py); uav/ keeps its preview
   - sim/scenes3d           # generated README (tools/figures/scenes3d_readme.py); library/ and out/ keep previews
   - sim/figures            # generated README (tools/figures/simfigs_readme.py)
-  - docs/3d                # generated README (tools/figures/pages3d_readme.py); assets/ keeps its preview
+  - docs/3d                # generated README (tools/figures/pages3d_readme.py)
+  - docs/3d/assets         # generated README (tools/figures/assets3d_readme.py)
   - docs/vcycle            # generated README (tools/figures/vcycle_readme.py)
   - docs/diagrams          # generated README (tools/figures/diagrams_readme.py); mil-std-882e/ keeps its preview
   - docs/readme            # generated README (tools/figures/frontpage_readme.py)
@@ -126,12 +127,6 @@ folders:
 
 
 
-  docs/3d/assets:
-    title: 3D page assets
-    purpose: >-
-      Geometry loaded by `docs/3d/SUS-M1.html` and `docs/3d/SUS-A1.html`: `sus-m1.js`, the CL-05 concept meshes and their pose clips, exported
-      from the build123d CAD by `tools/cad/b3d/cl05_web.py`. Generated; concept geometry, not a design.
-    hero: {img: docs/wiki/images/3d-sus-m1.png, caption: "SUS-M1 general arrangement", link: docs/3d/SUS-M1.html}
 
 
   docs/diagrams/mil-std-882e:

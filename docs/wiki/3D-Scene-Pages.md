@@ -156,7 +156,7 @@ The pages a reader opens to see the simulation results and the concept geometry 
 | [`SUS-A1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-A1.html) | SUS-A1 on dock and in airspace | generated |
 | [`SUS-M1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1.html) | SUS-M1 general arrangement | generated |
 | [`index.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/index.html) | Susanoo 3D scenes | generated |
-| [`assets/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/assets/README.md) | Geometry loaded by the sheets | generated |
+| [`assets/`](3D-Page-Assets) | Geometry loaded by the sheets | generated |
 | [`Pages3D.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/Pages3D.sysml) | Pages as SysML | generated |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/docs/3d/figures) | Generated SVG figures (do not edit) | generated |
 | `README.md` | This page | generated |

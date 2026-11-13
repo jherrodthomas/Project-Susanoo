@@ -1,117 +1,122 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1488.6" viewBox="0 0 760 1488.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1584.6" viewBox="0 0 760 1584.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
 <title>Figure 3 · Block diagram</title>
 <desc>The docs subfolders, how many of their files are generated and by which tools, and how they refer to each other.</desc>
 <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="760" height="1434" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="760" height="1530" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 3 · Block diagram</text>
 <text x="40" y="66" font-size="12.5" fill="#475569">The docs subfolders, how many of their files are generated and by which tools, and how they refer to each</text>
 <text x="40" y="83" font-size="12.5" fill="#475569">other.</text>
 <text x="720" y="44" font-size="11" fill="#475569" text-anchor="end">docs/</text>
 <line x1="40" y1="102" x2="720" y2="102" stroke="#E2E8F0" stroke-width="1"/>
 <g transform="translate(40 126)">
-<rect x="6" y="6" width="572.6" height="1200" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<path d="M208.4 670 L353.3 670 Q360.3 670 360.3 663 L360.3 572.7 Q360.3 567.7 365.3 567.7 L370.3 567.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M208.4 401 L213.4 401 Q218.4 401 218.4 406 L218.4 535.3 Q218.4 542.3 225.4 542.3 L370.3 542.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M208.4 382 L221.4 382 Q228.4 382 228.4 389 L228.4 452 Q228.4 459 235.4 459 L370.3 459" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M208.4 363 L370.3 363" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="6" y="6" width="572.6" height="1296" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M208.4 766 L353.3 766 Q360.3 766 360.3 759 L360.3 668.7 Q360.3 663.7 365.3 663.7 L370.3 663.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M208.4 497 L213.4 497 Q218.4 497 218.4 502 L218.4 631.3 Q218.4 638.3 225.4 638.3 L370.3 638.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M208.4 478 L221.4 478 Q228.4 478 228.4 485 L228.4 548 Q228.4 555 235.4 555 L370.3 555" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M208.4 459 L370.3 459" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
 <rect x="18" y="18" width="73.8" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
 <text x="54.9" y="33" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">DOCS/</text>
-<rect x="24" y="56" width="184.4" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
-<rect x="36" y="68" width="63.8" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
-<text x="67.9" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">docs/ (top)</text>
-<text x="36" y="102" font-size="12.5" fill="#0F172A" font-weight="700">5 files, 3 generated</text>
-<text x="36" y="119" font-size="10.5" fill="#475569">2 generators · some hand-written</text>
-<rect x="370.3" y="421" width="160.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="382.3" y="433" width="26.9" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="395.8" y="444.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3d/</text>
-<text x="382.3" y="467" font-size="12.5" fill="#0F172A" font-weight="700">13 files, 13 generated</text>
-<text x="382.3" y="484" font-size="10.5" fill="#475569">3 generators</text>
+<rect x="24" y="152" width="184.4" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="36" y="164" width="63.8" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
+<text x="67.9" y="175.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">docs/ (top)</text>
+<text x="36" y="198" font-size="12.5" fill="#0F172A" font-weight="700">5 files, 3 generated</text>
+<text x="36" y="215" font-size="10.5" fill="#475569">2 generators · some hand-written</text>
+<rect x="370.3" y="517" width="160.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="382.3" y="529" width="26.9" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="395.8" y="540.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3d/</text>
+<text x="382.3" y="563" font-size="12.5" fill="#0F172A" font-weight="700">13 files, 13 generated</text>
+<text x="382.3" y="580" font-size="10.5" fill="#475569">3 generators</text>
+<rect x="43.5" y="1112" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="55.5" y="1124" width="62.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="86.7" y="1135.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3d/assets/</text>
+<text x="55.5" y="1158" font-size="12.5" fill="#0F172A" font-weight="700">3 files, 3 generated</text>
+<text x="55.5" y="1175" font-size="10.5" fill="#475569">2 generators</text>
+<rect x="43.5" y="632" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="55.5" y="644" width="98.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="104.8" y="655.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3d/assets/figures/</text>
+<text x="55.5" y="678" font-size="12.5" fill="#0F172A" font-weight="700">6 files, 6 generated</text>
+<text x="55.5" y="695" font-size="10.5" fill="#475569">1 generator</text>
+<rect x="43.5" y="1208" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="55.5" y="1220" width="63.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="87.1" y="1231.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3d/figures/</text>
+<text x="55.5" y="1254" font-size="12.5" fill="#0F172A" font-weight="700">6 files, 6 generated</text>
+<text x="55.5" y="1271" font-size="10.5" fill="#475569">1 generator</text>
+<rect x="43.5" y="824" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="55.5" y="836" width="57.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="84.2" y="847.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">diagrams/</text>
+<text x="55.5" y="870" font-size="12.5" fill="#0F172A" font-weight="700">2 files, 2 generated</text>
+<text x="55.5" y="887" font-size="10.5" fill="#475569">1 generator</text>
 <rect x="43.5" y="1016" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="55.5" y="1028" width="62.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="86.7" y="1039.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3d/assets/</text>
-<text x="55.5" y="1062" font-size="12.5" fill="#0F172A" font-weight="700">2 files, 2 generated</text>
-<text x="55.5" y="1079" font-size="10.5" fill="#475569">2 generators</text>
+<rect x="55.5" y="1028" width="93.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="102.3" y="1039.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">diagrams/figures/</text>
+<text x="55.5" y="1062" font-size="12.5" fill="#0F172A" font-weight="700">6 files, 6 generated</text>
+<text x="55.5" y="1079" font-size="10.5" fill="#475569">1 generator</text>
+<rect x="29.7" y="728" width="178.7" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="41.7" y="740" width="118.5" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
+<text x="101" y="751.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">diagrams/mil-std-882e/</text>
+<text x="41.7" y="774" font-size="12.5" fill="#0F172A" font-weight="700">7 files, 1 generated</text>
+<text x="41.7" y="791" font-size="10.5" fill="#475569">1 generator · some hand-written</text>
 <rect x="43.5" y="536" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="55.5" y="548" width="63.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="87.1" y="559.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3d/figures/</text>
+<rect x="55.5" y="548" width="48.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="79.6" y="559.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/</text>
 <text x="55.5" y="582" font-size="12.5" fill="#0F172A" font-weight="700">6 files, 6 generated</text>
 <text x="55.5" y="599" font-size="10.5" fill="#475569">1 generator</text>
-<rect x="43.5" y="1112" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="55.5" y="1124" width="57.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="84.2" y="1135.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">diagrams/</text>
-<text x="55.5" y="1158" font-size="12.5" fill="#0F172A" font-weight="700">2 files, 2 generated</text>
-<text x="55.5" y="1175" font-size="10.5" fill="#475569">1 generator</text>
-<rect x="43.5" y="728" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="55.5" y="740" width="93.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="102.3" y="751.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">diagrams/figures/</text>
-<text x="55.5" y="774" font-size="12.5" fill="#0F172A" font-weight="700">6 files, 6 generated</text>
-<text x="55.5" y="791" font-size="10.5" fill="#475569">1 generator</text>
-<rect x="29.7" y="632" width="178.7" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
-<rect x="41.7" y="644" width="118.5" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
-<text x="101" y="655.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">diagrams/mil-std-882e/</text>
-<text x="41.7" y="678" font-size="12.5" fill="#0F172A" font-weight="700">7 files, 1 generated</text>
-<text x="41.7" y="695" font-size="10.5" fill="#475569">1 generator · some hand-written</text>
+<rect x="36" y="344" width="160.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="48" y="356" width="48.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="72.4" y="367.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">readme/</text>
+<text x="48" y="390" font-size="12.5" fill="#0F172A" font-weight="700">11 files, 11 generated</text>
+<text x="48" y="407" font-size="10.5" fill="#475569">2 generators</text>
 <rect x="43.5" y="920" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="55.5" y="932" width="48.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="79.6" y="943.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/</text>
+<rect x="55.5" y="932" width="85" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="98" y="943.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">readme/figures/</text>
 <text x="55.5" y="966" font-size="12.5" fill="#0F172A" font-weight="700">6 files, 6 generated</text>
 <text x="55.5" y="983" font-size="10.5" fill="#475569">1 generator</text>
-<rect x="36" y="440" width="160.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="48" y="452" width="48.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="72.4" y="463.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">readme/</text>
-<text x="48" y="486" font-size="12.5" fill="#0F172A" font-weight="700">11 files, 11 generated</text>
-<text x="48" y="503" font-size="10.5" fill="#475569">2 generators</text>
+<rect x="370.3" y="421" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="382.3" y="433" width="46.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="405.5" y="444.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">vcycle/</text>
+<text x="382.3" y="467" font-size="12.5" fill="#0F172A" font-weight="700">3 files, 3 generated</text>
+<text x="382.3" y="484" font-size="10.5" fill="#475569">2 generators</text>
 <rect x="43.5" y="248" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="55.5" y="260" width="85" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="98" y="271.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">readme/figures/</text>
+<rect x="55.5" y="260" width="82.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="96.9" y="271.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">vcycle/figures/</text>
 <text x="55.5" y="294" font-size="12.5" fill="#0F172A" font-weight="700">6 files, 6 generated</text>
 <text x="55.5" y="311" font-size="10.5" fill="#475569">1 generator</text>
-<rect x="370.3" y="325" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="382.3" y="337" width="46.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="405.5" y="348.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">vcycle/</text>
-<text x="382.3" y="371" font-size="12.5" fill="#0F172A" font-weight="700">3 files, 3 generated</text>
-<text x="382.3" y="388" font-size="10.5" fill="#475569">2 generators</text>
-<rect x="43.5" y="824" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="55.5" y="836" width="82.6" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="96.9" y="847.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">vcycle/figures/</text>
-<text x="55.5" y="870" font-size="12.5" fill="#0F172A" font-weight="700">6 files, 6 generated</text>
-<text x="55.5" y="887" font-size="10.5" fill="#475569">1 generator</text>
-<rect x="24" y="344" width="184.4" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
-<rect x="36" y="356" width="34.1" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
-<text x="53" y="367.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">wiki/</text>
-<text x="36" y="390" font-size="12.5" fill="#0F172A" font-weight="700">128 files, 89 generated</text>
-<text x="36" y="407" font-size="10.5" fill="#475569">8 generators · some hand-written</text>
-<rect x="370.3" y="517" width="190.3" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
-<rect x="382.3" y="529" width="70" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
-<text x="417.3" y="540.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">wiki/images/</text>
-<text x="382.3" y="563" font-size="12.5" fill="#0F172A" font-weight="700">50 files, 44 generated</text>
-<text x="382.3" y="580" font-size="10.5" fill="#475569">10 generators · some hand-written</text>
-<rect x="43.5" y="152" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="55.5" y="164" width="106.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="109" y="175.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">wiki/images/readme/</text>
-<text x="55.5" y="198" font-size="12.5" fill="#0F172A" font-weight="700">6 files, 6 generated</text>
-<text x="55.5" y="215" font-size="10.5" fill="#475569">1 generator</text>
-<rect x="256.2" y="673" width="76.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="261.2" y="686" font-size="10.5" fill="#475569">SVG exports</text>
-<rect x="261.5" y="545.3" width="65.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="266.5" y="558.3" font-size="10.5" fill="#475569">41 embeds</text>
-<rect x="236.4" y="462" width="115.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="241.4" y="475" font-size="10.5" fill="#475569">links to scene pages</text>
-<rect x="239.1" y="366" width="110.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="244.1" y="379" font-size="10.5" fill="#475569">links to the V cycle</text>
+<rect x="24" y="440" width="184.4" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="36" y="452" width="34.1" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
+<text x="53" y="463.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">wiki/</text>
+<text x="36" y="486" font-size="12.5" fill="#0F172A" font-weight="700">129 files, 90 generated</text>
+<text x="36" y="503" font-size="10.5" fill="#475569">8 generators · some hand-written</text>
+<rect x="370.3" y="613" width="190.3" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="382.3" y="625" width="70" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
+<text x="417.3" y="636.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">wiki/images/</text>
+<text x="382.3" y="659" font-size="12.5" fill="#0F172A" font-weight="700">50 files, 44 generated</text>
+<text x="382.3" y="676" font-size="10.5" fill="#475569">10 generators · some hand-written</text>
+<rect x="43.5" y="56" width="145.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="55.5" y="68" width="106.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="109" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">wiki/images/readme/</text>
+<text x="55.5" y="102" font-size="12.5" fill="#0F172A" font-weight="700">6 files, 6 generated</text>
+<text x="55.5" y="119" font-size="10.5" fill="#475569">1 generator</text>
+<rect x="256.2" y="769" width="76.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="261.2" y="782" font-size="10.5" fill="#475569">SVG exports</text>
+<rect x="261.5" y="641.3" width="65.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="266.5" y="654.3" font-size="10.5" fill="#475569">41 embeds</text>
+<rect x="236.4" y="558" width="115.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="241.4" y="571" font-size="10.5" fill="#475569">links to scene pages</text>
+<rect x="239.1" y="462" width="110.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="244.1" y="475" font-size="10.5" fill="#475569">links to the V cycle</text>
 </g>
-<rect x="40" y="1358" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
-<text x="62" y="1368" font-size="11" fill="#475569">Mixed</text>
-<rect x="102.9" y="1358" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
-<text x="124.9" y="1368" font-size="11" fill="#475569">All generated</text>
-<line x1="205" y1="1364" x2="221" y2="1364" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
-<text x="227" y="1368" font-size="11" fill="#475569">Embeds or links</text>
-<text x="40" y="1390" font-size="10.5" fill="#94A3B8">Generated by tools/figures/docs_readme.py from the files in docs/ and their GENERATED markers. A generated file is never edited by</text>
-<text x="40" y="1405" font-size="10.5" fill="#94A3B8">hand; it is rebuilt from the records and checked in CI.</text>
-<g class="terms" data-base-h="1434">
-<rect x="0" y="1434" width="760" height="54.6" fill="#FFFFFF"/>
-<line x1="40" y1="1438" x2="720" y2="1438" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="1453.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CI = continuous integration (the automated checks GitHub runs on every change) · SVG = Scalable Vector Graphics, the</text>
-<text x="40" y="1468.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">figure file format</text>
+<rect x="40" y="1454" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
+<text x="62" y="1464" font-size="11" fill="#475569">Mixed</text>
+<rect x="102.9" y="1454" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="124.9" y="1464" font-size="11" fill="#475569">All generated</text>
+<line x1="205" y1="1460" x2="221" y2="1460" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="227" y="1464" font-size="11" fill="#475569">Embeds or links</text>
+<text x="40" y="1486" font-size="10.5" fill="#94A3B8">Generated by tools/figures/docs_readme.py from the files in docs/ and their GENERATED markers. A generated file is never edited by</text>
+<text x="40" y="1501" font-size="10.5" fill="#94A3B8">hand; it is rebuilt from the records and checked in CI.</text>
+<g class="terms" data-base-h="1530">
+<rect x="0" y="1530" width="760" height="54.6" fill="#FFFFFF"/>
+<line x1="40" y1="1534" x2="720" y2="1534" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1549.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CI = continuous integration (the automated checks GitHub runs on every change) · SVG = Scalable Vector Graphics, the</text>
+<text x="40" y="1564.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">figure file format</text>
 </g>
 </svg>

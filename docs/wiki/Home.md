@@ -101,6 +101,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 - [Wiki source](README): every page of this wiki by where it comes from, every link checked, and how the wiki is
   published
 - [Wiki images](Wiki-Images): every figure the wiki shows directly, what writes it and which pages show it
+- [3D page assets](3D-Page-Assets): the CL-05 geometry the general-arrangement sheets load, by part class and clip
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

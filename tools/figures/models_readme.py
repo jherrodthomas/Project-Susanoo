@@ -107,6 +107,8 @@ def group_of(path: str) -> str:
         return "3D scenes"
     if path.startswith("sim/figures/"):
         return "2D hazard scenes"
+    if path.startswith("docs/3d/assets/"):
+        return "CL-05 geometry"
     if path.startswith("docs/3d/"):
         return "3D pages"
     if path.startswith("docs/vcycle/"):
