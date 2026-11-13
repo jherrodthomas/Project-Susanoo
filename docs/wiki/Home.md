@@ -100,6 +100,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   reads
 - [Wiki source](README): every page of this wiki by where it comes from, every link checked, and how the wiki is
   published
+- [Wiki images](Wiki-Images): every figure the wiki shows directly, what writes it and which pages show it
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

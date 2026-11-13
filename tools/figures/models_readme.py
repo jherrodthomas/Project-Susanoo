@@ -115,6 +115,8 @@ def group_of(path: str) -> str:
         return "Process maps"
     if path.startswith("docs/readme/"):
         return "Front-page build"
+    if path.startswith("docs/wiki/images/"):
+        return "Wiki images"
     if path.startswith("docs/wiki/"):
         return "Wiki publication"
     return {"concept": "Concept operations", "integrations": "PX4 integration", "decisions": "Decision register",
