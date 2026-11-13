@@ -57,7 +57,10 @@ kbd{border:1px solid var(--line);padding:0 4px;font:inherit;font-size:9px;color:
 #banner{display:inline-block;margin-top:6px;font-size:10px;color:var(--haz);border:1px solid var(--haz);padding:2px 8px;background:var(--panel)}
 #views{position:fixed;left:50%;transform:translateX(-50%);bottom:198px;z-index:2;display:flex;gap:10px;align-items:center}
 #views .seg{margin:0;background:var(--panel)}
-#drive{display:none;background:var(--panel);border:1px solid var(--ink);padding:4px 8px;font-size:10px}
+#drive{display:none;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--ink);padding:3px 8px;font-size:10px}
+#drive .seg{margin:0}
+#drive .seg button{padding:4px 10px;touch-action:none;user-select:none}
+#drive span,#views .seg button{white-space:nowrap}
 #bottom{left:24px;bottom:24px;right:610px;height:164px}
 #rtitle{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:70%}
 #rinfo{padding:0 10px;font-size:10.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -146,7 +149,7 @@ kbd{border:1px solid var(--line);padding:0 4px;font:inherit;font-size:9px;color:
 
 <div id="views">
   <div class="seg" id="view"><button data-v="iso">ISO</button><button data-v="front">Front</button><button data-v="side">Side</button><button data-v="top">Top</button><button data-v="rear">Rear</button></div>
-  <div id="drive">W/S walk · A/D turn · concept gait, no dynamics</div>
+  <div id="drive"><div class="seg"><button data-k="a" title="turn left (A)">◀</button><button data-k="w" title="walk forward (W)">▲</button><button data-k="s" title="walk back (S)">▼</button><button data-k="d" title="turn right (D)">▶</button><button id="dauto" title="walk a loop on its own, or stop">❚❚ Pause</button></div><span title="W/S/A/D or hold an arrow to steer">concept gait · no dynamics</span></div>
   <div class="seg"><button id="helpbtn">? Help</button></div>
 </div>
 
@@ -172,7 +175,7 @@ kbd{border:1px solid var(--line);padding:0 4px;font:inherit;font-size:9px;color:
   <table>
     <tr><td>Drag · wheel · right-drag</td><td>orbit · zoom · pan</td></tr>
     <tr><td>1 2 3 4 5</td><td>stand · kneel · carry · egress · walk</td></tr>
-    <tr><td>W / S · A / D</td><td>walk forward or back · turn (walk posture)</td></tr>
+    <tr><td>W / S · A / D · the arrows under the view</td><td>walk forward or back · turn (walk posture; it walks a loop on its own until you steer or pause)</td></tr>
     <tr><td>H · M · X</td><td>hazard callouts · dimensions · explode</td></tr>
     <tr><td>G · P · U</td><td>centre of gravity and support polygon · 1.75 m person · UAV lifted off the dock</td></tr>
     <tr><td>V</td><td>shaded · line · X-ray</td></tr>
@@ -270,7 +273,7 @@ const S = {
   posture: 'stand', target: 'stand', clipPos: 0,  // position along the current clip (0 = standing)
   show: { hazards: true, dims: false, explode: false, cg: true, person: true, uav: false },
   render: 'shaded', hazard: null, explode: 0, uavLift: 0,
-  walk: { phase: 0, heading: 0, x: 0, y: 0, key: 0, turn: 0 },
+  walk: { phase: 0, heading: 0, x: 0, y: 0, auto: true },   // auto: walks a slow loop until the viewer steers or pauses
   pitch: 0, roll: 0,
 };
 // ------------------------------------------------------------------ meshes: standing base set, per-frame extras on demand
@@ -454,17 +457,26 @@ for (const p of D.postures) {
   const b = document.createElement('button'); b.textContent = p.label; b.dataset.p = p.key;
   b.title = `key ${D.postures.indexOf(p) + 1}`; b.onclick = () => goPosture(p.key); pbar.appendChild(b);
 }
-function goPosture(k) { S.target = k; refreshButtons(); }
+function goPosture(k) { if (k === 'walk' && S.target !== 'walk') S.walk.auto = !q.has('auto') || q.get('auto') !== '0'; S.target = k; refreshButtons(); }
 function refreshButtons() {
   pbar.querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.p === S.target));
   document.querySelectorAll('[data-t]').forEach((b) => b.classList.toggle('on', !!S.show[b.dataset.t]));
   document.querySelectorAll('#render button').forEach((b) => b.classList.toggle('on', b.dataset.r === S.render));
-  $('drive').style.display = S.target === 'walk' ? 'block' : 'none';
+  $('drive').style.display = S.target === 'walk' ? 'flex' : 'none';
+  $('dauto').textContent = S.walk.auto ? '❚❚ Pause' : '▶ Auto';
+  $('dauto').classList.toggle('on', S.walk.auto);
 }
 document.querySelectorAll('[data-t]').forEach((b) => { b.onclick = () => { S.show[b.dataset.t] = !S.show[b.dataset.t]; refreshButtons(); }; });
 document.querySelectorAll('#render button').forEach((b) => { b.onclick = () => { S.render = b.dataset.r; applyMaterials(); refreshButtons(); }; });
 document.querySelectorAll('#view button').forEach((b) => { b.onclick = () => setView(b.dataset.v); });
 $('helpbtn').onclick = () => $('help').classList.toggle('open');
+// on-screen pad (mouse and touch): hold an arrow to walk or turn, like the keys; Pause stops the auto loop
+document.querySelectorAll('#drive [data-k]').forEach((b) => {
+  const k = b.dataset.k, on = (e) => { e.preventDefault(); keys.add(k); b.classList.add('on'); }, off = () => { keys.delete(k); b.classList.remove('on'); };
+  b.addEventListener('pointerdown', on); for (const ev of ['pointerup', 'pointerleave', 'pointercancel']) b.addEventListener(ev, off);
+});
+$('dauto').onclick = () => { S.walk.auto = !S.walk.auto; refreshButtons(); };
+canvas.addEventListener('pointerdown', () => { try { window.focus(); } catch (e) { /* framed page */ } });   // keys reach the page inside a frame
 $('help').onclick = (e) => { if (e.target.id === 'help') $('help').classList.remove('open'); };
 $('terms').onclick = () => $('terms').classList.toggle('open');
 
@@ -575,6 +587,7 @@ addEventListener('keydown', (e) => {
   if (k === 'v') { S.render = MODES[(MODES.indexOf(S.render) + 1) % 3]; applyMaterials(); refreshButtons(); }
   if (k === '?' || (k === '/' && e.shiftKey)) $('help').classList.toggle('open');
   if (k === 'escape') $('help').classList.remove('open');
+  if (k === 'w' || k === 's' || k.startsWith('arrow')) e.preventDefault();
   if (k === ' ') { e.preventDefault(); $('rplay').click(); }
 });
 addEventListener('keyup', (e) => keys.delete(e.key.toLowerCase()));
@@ -594,34 +607,43 @@ addEventListener('resize', layout);
 // ------------------------------------------------------------------ per-frame update
 let last = performance.now();
 const settle = q.has('settle');
+// Concept pace for viewing (not a design speed): walk cycles per second, turn rate, and the auto loop's turn.
+const WALK_RATE = 0.55, TURN_RATE = 0.6, STRIDE = walkFrames[walkFrames.length - 1].body_x * cycleN / (cycleN - 1);
+const AUTO_TURN = (WALK_RATE * STRIDE / 5.0) / TURN_RATE;   // a loop of about 5 m radius
+function advance(dp) {   // move the body by the stride share of a phase step, along the heading; stay on the 60 m grid
+  const adv = dp * STRIDE, nx = S.walk.x + Math.cos(S.walk.heading) * adv, ny = S.walk.y + Math.sin(S.walk.heading) * adv;
+  if (Math.hypot(nx, ny) < 25) { S.walk.x = nx; S.walk.y = ny; }
+}
 function step(dt) {
   // posture transitions: leave the current clip back to standing, then play the target clip forward
   const speed = 7.5; // clip frames per second
   if (S.posture !== S.target) {
     if (S.posture === 'stand' || S.clipPos <= 0) { S.posture = S.target; S.clipPos = 0; }
-    else if (S.posture === 'walk' && S.clipPos >= cycle0) { S.clipPos = cycle0 - 1; } // step out of the cycle into the stance
+    else if (S.posture === 'walk' && S.clipPos >= cycle0) {   // finish the current step to phase 0, the stance the stow ends in
+      const np = S.walk.phase + WALK_RATE * dt;
+      if (settle || np >= 1) { S.walk.phase = 0; S.clipPos = cycle0 - 1e-6; } else { advance(np - S.walk.phase); S.walk.phase = np; S.clipPos = cycle0 + np * cycleN; }
+    }
     else S.clipPos = settle ? 0 : Math.max(0, S.clipPos - speed * dt);
   } else if (S.posture !== 'stand') {
     const frames = CLIPS[clipOf(S.posture)];
     if (S.posture === 'walk') {
       if (S.clipPos < cycle0) S.clipPos = settle ? cycle0 : Math.min(cycle0, S.clipPos + speed * dt);
       else {
-        const dir = (keys.has('w') || keys.has('arrowup')) - (keys.has('s') || keys.has('arrowdown'));
-        const turn = (keys.has('a') || keys.has('arrowleft')) - (keys.has('d') || keys.has('arrowright'));
-        const rate = 0.55; // walk cycles per second: concept pace for viewing
-        if (dir) {
-          const dp = dir * rate * dt; S.walk.phase = (S.walk.phase + dp + cycleN * 10) % cycleN;
-          S.walk.phase = ((S.walk.phase % 1) + 1) % 1;
-          const adv = dp * walkFrames[walkFrames.length - 1].body_x * cycleN / (cycleN - 1);
-          S.walk.x += Math.cos(S.walk.heading) * adv; S.walk.y += Math.sin(S.walk.heading) * adv;
-          if (Math.hypot(S.walk.x, S.walk.y) > 14) { S.walk.x = 0; S.walk.y = 0; }
+        // keys and the on-screen pad steer; without them the walker loops on its own (auto) unless paused
+        let dir = (keys.has('w') || keys.has('arrowup')) - (keys.has('s') || keys.has('arrowdown'));
+        let turn = (keys.has('a') || keys.has('arrowleft')) - (keys.has('d') || keys.has('arrowright'));
+        if (!dir && !turn && S.walk.auto) { dir = 1; turn = AUTO_TURN; }
+        if (dir || turn) {
+          const dp = (dir || 1) * WALK_RATE * dt;          // turning on the spot still steps the legs
+          S.walk.phase = (((S.walk.phase + dp) % 1) + 1) % 1;
+          if (dir) advance(dp);
+          S.walk.heading += turn * TURN_RATE * dt;
         }
-        if (turn) S.walk.heading += turn * 0.6 * dt;
         S.clipPos = cycle0 + S.walk.phase * cycleN;
       }
     } else S.clipPos = settle ? frames.length - 1 : Math.min(frames.length - 1, S.clipPos + speed * dt);
   }
-  if (S.posture !== 'walk' && S.posture === S.target) { S.walk.x *= Math.max(0, 1 - 2 * dt); S.walk.y *= Math.max(0, 1 - 2 * dt); }
+  // the walker stays where it stopped (it does not glide back); the camera follows it in every posture
 
   // pose
   if (S.posture === 'stand') applyPose(CLIPS.kneel[0], CLIPS.kneel[0], 0);
@@ -711,8 +733,8 @@ function frame(now) {
   if (R.playing) { R.t += dt; if (R.t > R.tEnd) R.t = 0; drawReplay(); }
   if (camTween) { camTween.t = Math.min(1, camTween.t + dt * 2.2); const e = 0.5 - 0.5 * Math.cos(Math.PI * camTween.t);
     cam.position.lerpVectors(camTween.from, camTween.to, e); if (camTween.t >= 1) camTween = null; }
-  if (S.posture === 'walk') { const wp = new THREE.Vector3(S.walk.x, S.walk.y, 2.1); controls.target.lerp(wp, Math.min(1, 3 * dt)); }
-  else controls.target.lerp(new THREE.Vector3(0, 0, 2.1), Math.min(1, 3 * dt));
+  { const wp = new THREE.Vector3(S.walk.x, S.walk.y, 2.1); const d = wp.clone().sub(controls.target).multiplyScalar(Math.min(1, 3 * dt));
+    controls.target.add(d); cam.position.add(d); }   // follow the walker, keeping the viewer's angle
   sun.target.position.copy(controls.target); sun.position.copy(controls.target).add(new THREE.Vector3(7, -9, 13));
   controls.update();
   renderSpec(); renderTip();
@@ -728,7 +750,8 @@ function frame(now) {
   const az = (THREE.MathUtils.radToDeg(Math.atan2(cam.position.y - controls.target.y, cam.position.x - controls.target.x)) + 360) % 360;
   const el = THREE.MathUtils.radToDeg(Math.asin((cam.position.z - controls.target.z) / cam.position.distanceTo(controls.target)));
   $('cam').textContent = `AZ ${az.toFixed(0)}° · EL ${el.toFixed(0)}° · R ${s.radius.toFixed(1)} M · ${S.render.toUpperCase()} · CL-05 PLACEHOLDER GEOMETRY`;
-  window.__state = { posture: S.posture, target: S.target, clipPos: S.clipPos, hazard: S.hazard, settled: S.posture === S.target };
+  window.__state = { posture: S.posture, target: S.target, clipPos: S.clipPos, hazard: S.hazard, settled: S.posture === S.target,
+    walk: { x: +S.walk.x.toFixed(3), y: +S.walk.y.toFixed(3), heading: +S.walk.heading.toFixed(3), phase: +S.walk.phase.toFixed(3), auto: S.walk.auto } };
   window.__ready = true;
   requestAnimationFrame(frame);
 }
@@ -738,6 +761,7 @@ $('banner').textContent = 'CONCEPT GEOMETRY & SYNTHETIC SIMULATION · DESIGN AID
 $('tbdoc').textContent = D.sheet.document; $('tbsheet').textContent = D.sheet.sheet; $('tbrev').textContent = D.sheet.revision;
 $('tbtitle').textContent = D.sheet.title;
 if (q.get('posture') && postureDef[q.get('posture')]) S.target = q.get('posture');
+if (q.get('auto') === '0') S.walk.auto = false;
 if (MODES.includes(q.get('render'))) S.render = q.get('render');
 for (const t of Object.keys(S.show)) if (q.has(t)) S.show[t] = q.get(t) !== '0';
 if (q.get('pitch')) S.pitch = +q.get('pitch');

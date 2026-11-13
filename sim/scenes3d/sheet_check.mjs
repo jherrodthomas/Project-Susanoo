@@ -55,7 +55,28 @@ for (const [suffix, posture, qs] of shots) {
 await page.goto(url('?'));
 await page.waitForFunction(() => window.__ready === true, null, { timeout: 60000 });
 for (const k of ['2', '5']) { await page.keyboard.press(k); await settled(k === '2' ? 'kneel' : 'walk'); }
-await page.keyboard.down('w'); await page.waitForTimeout(1200); await page.keyboard.up('w');
+// walking without a keyboard: choosing Walk with the mouse must make it walk on its own, the pad must steer it,
+// Pause must stop it, and leaving the walk must return it to standing (regression: it used to stand still until W was held)
+const walkState = () => page.evaluate(() => window.__state.walk);
+await page.keyboard.press('1'); await settled('stand');
+await page.click('#posture button:nth-child(5)');
+await page.waitForFunction(() => window.__state.posture === 'walk' && window.__state.clipPos >= 6, null, { timeout: 60000 });
+const w0 = await walkState();
+await page.waitForFunction((a) => Math.hypot(window.__state.walk.x - a.x, window.__state.walk.y - a.y) > 0.3, w0, { timeout: 30000 })
+  .catch(() => problems.push('Walk chosen with the mouse: the walker does not walk on its own'));
+const h0 = (await walkState()).heading;
+const pad = page.locator('#drive [data-k="a"]'); await pad.hover(); await page.mouse.down();
+await page.waitForFunction((h) => window.__state.walk.heading > h + 0.05, h0, { timeout: 30000 })
+  .catch(() => problems.push('the on-screen turn arrow does not turn the walker'));
+await page.mouse.up();
+await page.click('#dauto');
+await page.waitForTimeout(300); const w1 = await walkState(); await page.waitForTimeout(1500); const w2 = await walkState();
+if (w2.auto || Math.hypot(w2.x - w1.x, w2.y - w1.y) > 0.01) problems.push('Pause does not stop the walker');
+// hold W until the walker has moved (a fixed wait fails on a slow software renderer: motion is per rendered frame)
+await page.keyboard.down('w');
+await page.waitForFunction((a) => Math.hypot(window.__state.walk.x - a.x, window.__state.walk.y - a.y) > 0.3, w2, { timeout: 30000 })
+  .catch(() => problems.push('holding W does not walk'));
+await page.keyboard.up('w');
 await page.keyboard.press('1'); await settled('stand');
 await page.keyboard.press(' '); await page.waitForTimeout(500);
 // sheet 2 (SUS-A1): the dock close-up, then every PX4 SITL run at its end in the airspace view shows that run's outcome
