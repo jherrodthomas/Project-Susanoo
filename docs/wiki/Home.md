@@ -27,6 +27,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 ## Start here
 - [Project overview](Project-Overview): the problem, the system, data and figures (the repository front page)
+- [MIL-STD-882E workflow](Project-Overview#the-mil-std-882e-workflow): every task across the gates, what each requires
+  and delivers, and how the tasks feed each other (roadmap, flow network, main thread, matrix, hub)
 - [MIL-STD-882E work products](882E-Work-Products): the eight-element work-product tree, every folder with its block,
   boundary, SysML and inputs/outputs figures
 - [Abbreviations and codes](Abbreviations-and-Codes): every term used on these pages
@@ -38,6 +40,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 - [Program and CONOPS](Program-and-CONOPS)
 - [Integrated lifecycle](Integrated-Lifecycle)
 - [Standards applicability](Standards-Applicability)
+- [Trade studies](Trade-Studies)
 - [Systems engineering procedure](Systems-Engineering-Procedure)
 - [System safety procedure](System-Safety-Procedure)
 - [UAV assurance procedure](UAV-Assurance-Procedure)
