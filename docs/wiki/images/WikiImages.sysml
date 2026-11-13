@@ -26,7 +26,7 @@ package WikiImages {
     part img3DS301Dusk : RenderedStill {
         attribute :>> file = "3d-s3-01-dusk.png";
         attribute :>> kilobytes = 108;
-        attribute :>> shownOn = 6;
+        attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/render.mjs";
     }
     part img3DS301 : RenderedStill {
@@ -56,7 +56,7 @@ package WikiImages {
     part img3DS305Fog : RenderedStill {
         attribute :>> file = "3d-s3-05-fog.png";
         attribute :>> kilobytes = 57;
-        attribute :>> shownOn = 4;
+        attribute :>> shownOn = 3;
         attribute :>> page = "sim/scenes3d/render.mjs";
     }
     part img3DS305 : RenderedStill {

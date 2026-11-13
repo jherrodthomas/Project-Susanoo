@@ -80,7 +80,8 @@ def sources() -> dict[Path, str]:
              ROOT / "docs/wiki/images/README.md": "Wiki-Images",
              ROOT / "docs/3d/assets/README.md": "3D-Page-Assets",
              ROOT / "docs/diagrams/mil-std-882e/README.md": "882E-Map-Sources",
-             ROOT / "sim/results/uav/README.md": "UAV-SITL-Results"}
+             ROOT / "sim/results/uav/README.md": "UAV-SITL-Results",
+             ROOT / "sim/scenes3d/library/README.md": "3D-Look-Library"}
     for r in sorted(TREE_DIR.rglob("README.md")):
         if "figures" not in r.parts:
             pages[r] = tree_page(r)
@@ -173,6 +174,7 @@ def sidebar(current: str) -> str:
              "- [Simulation results](Simulation-Results)",
              "- [UAV SITL results](UAV-SITL-Results)",
              "- [3D scene builder](3D-Scene-Builder)",
+             "- [3D look library](3D-Look-Library)",
              "- [2D hazard scenes](2D-Hazard-Scenes)",
              "- [3D scene pages](3D-Scene-Pages)",
              "- [V cycle page](V-Cycle-Page)",

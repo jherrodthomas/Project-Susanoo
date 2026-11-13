@@ -39,12 +39,12 @@ The figures the wiki shows directly: item-definition and SysML views, record fig
 
 | Image | Written by | Size | Shown on |
 |---|---|---|---|
-| [`3d-s3-01-dusk.png`](assets/docs/wiki/images/3d-s3-01-dusk.png) | `sim/scenes3d/render.mjs` | 108 KB | 3 wiki pages, 2 repository pages, 1 front page |
+| [`3d-s3-01-dusk.png`](assets/docs/wiki/images/3d-s3-01-dusk.png) | `sim/scenes3d/render.mjs` | 108 KB | 3 wiki pages, 1 repository page, 1 front page |
 | [`3d-s3-01.png`](assets/docs/wiki/images/3d-s3-01.png) | `sim/scenes3d/render.mjs` | 118 KB | 2 wiki pages, 1 repository page |
 | [`3d-s3-02.png`](assets/docs/wiki/images/3d-s3-02.png) | `sim/scenes3d/render.mjs` | 83 KB | 2 wiki pages, 2 repository pages |
 | [`3d-s3-03.png`](assets/docs/wiki/images/3d-s3-03.png) | `sim/scenes3d/render.mjs` | 82 KB | 2 wiki pages, 1 repository page |
 | [`3d-s3-04.png`](assets/docs/wiki/images/3d-s3-04.png) | `sim/scenes3d/render.mjs` | 111 KB | 2 wiki pages, 2 repository pages |
-| [`3d-s3-05-fog.png`](assets/docs/wiki/images/3d-s3-05-fog.png) | `sim/scenes3d/render.mjs` | 57 KB | 2 wiki pages, 2 repository pages |
+| [`3d-s3-05-fog.png`](assets/docs/wiki/images/3d-s3-05-fog.png) | `sim/scenes3d/render.mjs` | 57 KB | 2 wiki pages, 1 repository page |
 | [`3d-s3-05.png`](assets/docs/wiki/images/3d-s3-05.png) | `sim/scenes3d/render.mjs` | 61 KB | 2 wiki pages, 1 repository page |
 | [`3d-s3-06.png`](assets/docs/wiki/images/3d-s3-06.png) | `sim/scenes3d/render.mjs` | 70 KB | 2 wiki pages, 1 repository page |
 | [`3d-sus-a1-air.png`](assets/docs/wiki/images/3d-sus-a1-air.png) | `sim/scenes3d/sheet_check.mjs` | 287 KB | 3 wiki pages, 2 repository pages |

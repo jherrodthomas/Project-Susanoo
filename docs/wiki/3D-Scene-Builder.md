@@ -142,7 +142,7 @@ Built by [`build_sheet.py`](https://github.com/jherrodthomas/Project-Susanoo/blo
 |---|---|
 | Plant runs, edge cases, SITL runs | [`sim/plant`](Walker-Plant), [`sim/results/`](Simulation-Results) |
 | Hazards | [Safety records](Safety-Records) |
-| Environments and conditions | [`library/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/library/README.md) |
+| Environments and conditions | [`library/`](3D-Look-Library) |
 | CL-05 geometry and concept metrics | `docs/3d/assets/sus-m1.js` (from `tools/cad/b3d/cl05_web.py`), [`cad/`](Concept-Layouts) |
 
 | Output | Destination |
@@ -163,7 +163,7 @@ Built by [`build_sheet.py`](https://github.com/jherrodthomas/Project-Susanoo/blo
 | Item | Description | State |
 |---|---|---|
 | [`scenes.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/scenes.yaml) | Scenes, variants, hazards with no scene, pinned three.js | hand-written |
-| [`library/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/library/README.md) | Look-only environments and conditions | hand-written |
+| [`library/`](3D-Look-Library) | Look-only environments and conditions | hand-written |
 | [`export_scene.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/export_scene.py) | Exports each scene's analysis to `out/` | code |
 | [`build_pages.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/build_pages.py), [`viewer.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/viewer.js) | Builds the pages in `docs/3d/` | code |
 | [`render.mjs`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/render.mjs) | Renders and checks the stills in headless Chromium | code |

@@ -105,6 +105,8 @@ def group_of(path: str) -> str:
         return "SITL outcome rules"
     if path.startswith("sim/results/"):
         return "Result sets"
+    if path.startswith("sim/scenes3d/library/"):
+        return "3D look library"
     if path.startswith("sim/scenes3d/"):
         return "3D scenes"
     if path.startswith("sim/figures/"):

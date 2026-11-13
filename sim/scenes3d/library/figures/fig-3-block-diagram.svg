@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1588.8" height="1669.1" viewBox="0 0 1588.8 1669.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 3 · Block diagram</title>
+<desc>The subsystems named by the hazards the scenes show (HAZ-DCK-002, HAZ-INT-001, HAZ-PIL-002, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002) are coloured; the looks only dress those scenes.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1588.8" height="1542" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 3 · Block diagram</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The subsystems named by the hazards the scenes show (HAZ-DCK-002, HAZ-INT-001, HAZ-PIL-002, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002) are coloured; the looks only dress those scenes.</text>
+<text x="1548.8" y="44" font-size="11" fill="#475569" text-anchor="end">architecture/item-definition.yaml</text>
+<line x1="40" y1="85" x2="1548.8" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 109)">
+<rect x="6" y="6" width="1496.8" height="1340" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="24" y="462" width="1316.6" height="732" rx="12" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="761.6" y="56" width="420.4" height="348" rx="12" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="215.7" y="796" width="624.5" height="380" rx="12" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<path d="M901.8 404 L901.8 462" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)" marker-start="url(#arr-safety)"/>
+<path d="M1041.9 404 L1041.9 409 Q1041.9 414 1046.9 414 L1353.6 414 Q1360.6 414 1360.6 421 L1360.6 1235 Q1360.6 1242 1353.6 1242 L746.7 1242 Q741.7 1242 741.7 1247 L741.7 1252" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)" marker-start="url(#arr-ink)"/>
+<path d="M682.3 1194 L682.3 1252" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M462.9 404 L462.9 462" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1178.4 722.7 L1178.4 731 Q1178.4 738 1171.4 738 L1080.1 738 Q1073.1 738 1073.1 745 L1073.1 796" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M632.7 728 L632.7 733 Q632.7 738 627.7 738 L535 738 Q528 738 528 745 L528 796" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M718.4 728 L718.4 733 Q718.4 738 713.4 738 L693.6 738 Q686.6 738 686.6 745 L686.6 769 Q686.6 776 693.6 776 L1024.9 776 Q1031.9 776 1031.9 783 L1031.9 796" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M1203.4 578 L1203.4 646.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1228.4 722.7 L1228.4 796" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M990.8 796 L990.8 791 Q990.8 786 985.8 786 L682.6 786 Q675.6 786 675.6 779 L675.6 728" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M603.2 1024 L603.2 1065 Q603.2 1072 596.2 1072 L459.6 1072 Q454.6 1072 454.6 1077 L454.6 1082" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M404.6 1024 L404.6 1082" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M922.2 252 L922.2 310" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="18" y="18" width="431.8" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="233.9" y="33" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-I1 · INTEGRATED MECHANIZED WALKER AND OBSERVATION UAV</text>
+<text x="40" y="488" font-size="13" fill="#0F172A" font-weight="700">SUS-M1 · Piloted walker</text>
+<text x="777.6" y="82" font-size="13" fill="#0F172A" font-weight="700">SUS-A1 · Dockable observation UAV</text>
+<text x="231.7" y="822" font-size="13" fill="#0F172A" font-weight="700">SUS-M1-PWR · Power generation, storage, distribution and thermal control</text>
+<rect x="1117.1" y="502" width="172.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1129.1" y="514" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1166.5" y="525.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<text x="1129.1" y="548" font-size="12.5" fill="#0F172A" font-weight="700">Pilot station, restraints,</text>
+<text x="1129.1" y="564" font-size="12.5" fill="#0F172A" font-weight="700">displays and controls</text>
+<rect x="1128.4" y="646.7" width="150" height="76" rx="8" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1.3" stroke-dasharray="4 3"/>
+<rect x="1140.4" y="658.7" width="74.8" height="16" rx="8.0" fill="#94A3B8" stroke="none" stroke-width="1"/>
+<text x="1177.8" y="670.1" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-CTL</text>
+<text x="1140.4" y="692.7" font-size="12.5" fill="#94A3B8" font-weight="700">Mission, motion and</text>
+<text x="1140.4" y="708.7" font-size="12.5" fill="#94A3B8" font-weight="700">balance control</text>
+<rect x="949.6" y="796" width="164.6" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="961.6" y="808" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="999" y="819.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<text x="961.6" y="842" font-size="12.5" fill="#0F172A" font-weight="700">Chassis, legs, joint</text>
+<text x="961.6" y="858" font-size="12.5" fill="#0F172A" font-weight="700">actuators and stability</text>
+<text x="961.6" y="874" font-size="12.5" fill="#0F172A" font-weight="700">sensing</text>
+<rect x="1134.2" y="796" width="188.4" height="76" rx="8" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1.3" stroke-dasharray="4 3"/>
+<rect x="1146.2" y="808" width="74.8" height="16" rx="8.0" fill="#94A3B8" stroke="none" stroke-width="1"/>
+<text x="1183.6" y="819.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-MAN</text>
+<text x="1146.2" y="842" font-size="12.5" fill="#94A3B8" font-weight="700">Manipulation arms and end</text>
+<text x="1146.2" y="858" font-size="12.5" fill="#94A3B8" font-weight="700">effectors</text>
+<rect x="589.9" y="636" width="171.4" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="601.9" y="648" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="639.3" y="659.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<text x="601.9" y="682" font-size="12.5" fill="#0F172A" font-weight="700">Independent safety</text>
+<text x="601.9" y="698" font-size="12.5" fill="#0F172A" font-weight="700">monitor, protective stop</text>
+<text x="601.9" y="714" font-size="12.5" fill="#0F172A" font-weight="700">and isolation</text>
+<rect x="42" y="502" width="153.7" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="54" y="514" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="91.4" y="525.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<text x="54" y="548" font-size="12.5" fill="#0F172A" font-weight="700">UAV dock, retention,</text>
+<text x="54" y="564" font-size="12.5" fill="#0F172A" font-weight="700">charging and release</text>
+<rect x="233.7" y="836" width="190.1" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="245.7" y="848" width="99.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="295.6" y="859.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR-HPU</text>
+<text x="245.7" y="882" font-size="12.5" fill="#0F172A" font-weight="700">Hydraulic power unit,</text>
+<text x="245.7" y="898" font-size="12.5" fill="#0F172A" font-weight="700">accumulators and isolation</text>
+<text x="245.7" y="914" font-size="12.5" fill="#0F172A" font-weight="700">(alternative A)</text>
+<rect x="516.9" y="948" width="172.5" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="528.9" y="960" width="99.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="578.8" y="971.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR-GEN</text>
+<text x="528.9" y="994" font-size="12.5" fill="#0F172A" font-weight="700">Engine-generator and</text>
+<text x="528.9" y="1010" font-size="12.5" fill="#0F172A" font-weight="700">governor (alternative B)</text>
+<rect x="312.3" y="948" width="184.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="324.3" y="960" width="99.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="374.2" y="971.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR-BAT</text>
+<text x="324.3" y="994" font-size="12.5" fill="#0F172A" font-weight="700">Battery pack, BMS and</text>
+<text x="324.3" y="1010" font-size="12.5" fill="#0F172A" font-weight="700">contactors (alternative B)</text>
+<rect x="354.6" y="1082" width="150" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="366.6" y="1094" width="106.9" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="420.1" y="1105.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR-DIST</text>
+<text x="366.6" y="1128" font-size="12.5" fill="#0F172A" font-weight="700">Protected power</text>
+<text x="366.6" y="1144" font-size="12.5" fill="#0F172A" font-weight="700">distribution</text>
+<rect x="826.2" y="192" width="192" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="838.2" y="204" width="67.7" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="872.1" y="215.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1-FC</text>
+<text x="838.2" y="238" font-size="12.5" fill="#0F172A" font-weight="700">PX4-based flight controller</text>
+<rect x="968.3" y="96" width="195.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="980.3" y="108" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1017.7" y="119.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1-NAV</text>
+<text x="980.3" y="142" font-size="12.5" fill="#0F172A" font-weight="700">Navigation sensors, camera</text>
+<text x="980.3" y="158" font-size="12.5" fill="#0F172A" font-weight="700">and telemetry</text>
+<rect x="779.6" y="96" width="168.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="791.6" y="108" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="829" y="119.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1-PWR</text>
+<text x="791.6" y="142" font-size="12.5" fill="#0F172A" font-weight="700">UAV battery and power</text>
+<text x="791.6" y="158" font-size="12.5" fill="#0F172A" font-weight="700">management</text>
+<rect x="847.2" y="310" width="150" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="859.2" y="322" width="81.9" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="900.2" y="333.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1-PROP</text>
+<text x="859.2" y="356" font-size="12.5" fill="#0F172A" font-weight="700">Motors, ESCs and</text>
+<text x="859.2" y="372" font-size="12.5" fill="#0F172A" font-weight="700">propellers</text>
+<rect x="622.9" y="1252" width="178.3" height="76" rx="8" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1.3" stroke-dasharray="4 3"/>
+<rect x="634.9" y="1264" width="74.8" height="16" rx="8.0" fill="#94A3B8" stroke="none" stroke-width="1"/>
+<text x="672.3" y="1275.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
+<text x="634.9" y="1298" font-size="12.5" fill="#94A3B8" font-weight="700">Integration manager and</text>
+<text x="634.9" y="1314" font-size="12.5" fill="#94A3B8" font-weight="700">PX4 command adapter</text>
+<rect x="381.3" y="296" width="163.1" height="108" rx="8" fill="url(#hatch)" stroke="#94A3B8" stroke-width="1.3" stroke-dasharray="4 3"/>
+<rect x="393.3" y="308" width="58.4" height="16" rx="8.0" fill="#94A3B8" stroke="none" stroke-width="1"/>
+<text x="422.5" y="319.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-GSE</text>
+<text x="393.3" y="342" font-size="12.5" fill="#94A3B8" font-weight="700">Ground support,</text>
+<text x="393.3" y="358" font-size="12.5" fill="#94A3B8" font-weight="700">maintenance supports,</text>
+<text x="393.3" y="374" font-size="12.5" fill="#94A3B8" font-weight="700">charging and test</text>
+<text x="393.3" y="390" font-size="12.5" fill="#94A3B8" font-weight="700">equipment</text>
+<rect x="801" y="424" width="100.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="804" y="425" width="35.6" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="821.7" y="436.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3 IF</text>
+<text x="843.5" y="437" font-size="10.5" fill="#475569">IF-006 …</text>
+<rect x="1361.6" y="819" width="125.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="1364.6" y="820" width="35.6" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1382.4" y="831.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">5 IF</text>
+<text x="1404.2" y="832" font-size="10.5" fill="#475569">IF-PX4-001 …</text>
+<rect x="581.5" y="1214" width="100.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="584.5" y="1215" width="35.6" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="602.3" y="1226.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3 IF</text>
+<text x="624.1" y="1227" font-size="10.5" fill="#475569">IF-020 …</text>
+<rect x="373.2" y="424" width="89.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="376.2" y="425" width="35.6" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="394" y="436.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1 IF</text>
+<text x="415.8" y="437" font-size="10.5" fill="#475569">IF-019</text>
+<rect x="884" y="748" width="189.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="887" y="749" width="47" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="910.5" y="760.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">IF-004</text>
+<text x="937.9" y="761" font-size="10.5" fill="#475569">Control to joint actuators</text>
+<rect x="346.3" y="748" width="181.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="349.3" y="749" width="47" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="372.8" y="760.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">IF-005</text>
+<text x="400.2" y="761" font-size="10.5" fill="#475569">Safety monitor to power</text>
+<rect x="687.6" y="748" width="190.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="690.6" y="749" width="47" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="714.1" y="760.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">IF-016</text>
+<text x="741.5" y="761" font-size="10.5" fill="#475569">Torque inhibit and brakes</text>
+<rect x="1040.3" y="598" width="163.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="1043.3" y="599" width="47" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1066.8" y="610.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">IF-017</text>
+<text x="1094.3" y="611" font-size="10.5" fill="#475569">Pilot motion request</text>
+<rect x="1091.8" y="748" width="136.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="1094.8" y="749" width="47" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1118.3" y="760.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">IF-018</text>
+<text x="1145.8" y="761" font-size="10.5" fill="#475569">Arm commands</text>
+<rect x="537" y="748" width="138.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="540" y="749" width="47" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="563.5" y="760.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">IF-022</text>
+<text x="590.9" y="761" font-size="10.5" fill="#475569">Safety sensing</text>
+<rect x="22" y="462" width="232" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="25" y="463" width="47" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="48.5" y="474.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">IF-023</text>
+<text x="76" y="475" font-size="10.5" fill="#475569">Hydraulic power to joint actuators</text>
+<rect x="604.2" y="1044" width="220.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="607.2" y="1045" width="47" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="630.6" y="1056.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">IF-002</text>
+<text x="658.1" y="1057" font-size="10.5" fill="#475569">Engine-generator to distribution</text>
+<rect x="231.7" y="1044" width="172.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="234.7" y="1045" width="47" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="258.2" y="1056.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">IF-003</text>
+<text x="285.7" y="1057" font-size="10.5" fill="#475569">Battery to distribution</text>
+<rect x="777.6" y="272" width="144.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="780.6" y="273" width="47" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="804.1" y="284.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">IF-021</text>
+<text x="831.6" y="285" font-size="10.5" fill="#475569">Motor commands</text>
+</g>
+<rect x="40" y="1481" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="62" y="1491" font-size="11" fill="#475569">System element</text>
+<rect x="154.4" y="1481" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="176.4" y="1491" font-size="11" fill="#475569">Out of scope</text>
+<rect x="254.3" y="1481" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="276.3" y="1491" font-size="11" fill="#475569">Safety function</text>
+<rect x="367.3" y="1481" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="389.3" y="1491" font-size="11" fill="#475569">Software-intensive element</text>
+<line x1="540" y1="1487" x2="556" y2="1487" stroke="#475569" stroke-width="1.8"/>
+<text x="562" y="1491" font-size="11" fill="#475569">Interface inside a subsystem (IF-nnn)</text>
+<line x1="775.5" y1="1487" x2="791.5" y2="1487" stroke="#C2410C" stroke-width="1.8"/>
+<text x="797.5" y="1491" font-size="11" fill="#475569">Protective interface</text>
+<line x1="911.6" y1="1487" x2="927.6" y2="1487" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="933.6" y="1491" font-size="11" fill="#475569">Interfaces between subsystems (count; see N2 view)</text>
+<text x="40" y="1513" font-size="10.5" fill="#94A3B8">Generated by tools/figures/lookslib_readme.py from the look library, the scenes that use it and the viewer that reads it. Looks are picture only: a condition such as fog never changes a run (test_scenes3d.py).</text>
+<g class="terms" data-base-h="1542">
+<rect x="0" y="1542" width="1588.8" height="127.1" fill="#FFFFFF"/>
+<line x1="40" y1="1546" x2="1548.8" y2="1546" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1561.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: BMS = battery management system · ESC = electronic speed controller (drives a UAV motor) · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · IF = interface (a count of interfaces in block diagrams, or an IF-nnn record) · IF-nnn = interface in the item</text>
+<text x="40" y="1576.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">definition (architecture/item-definition.yaml) · IF-PX4-nnn = PX4 integration interface (integrations/px4/interface-contract.md) · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SUS-A1 = dockable observation UAV · SUS-A1-FC = PX4-based</text>
+<text x="40" y="1590.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">flight controller · SUS-A1-NAV = navigation sensors, camera and telemetry · SUS-A1-PROP = motors, ESCs and propellers · SUS-A1-PWR = UAV battery and power management · SUS-GSE = ground support, maintenance supports, charging and test equipment · SUS-I1 = integrated mechanized</text>
+<text x="40" y="1605.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">walker and observation UAV · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1 = piloted walker · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK = UAV dock, retention, charging and release · SUS-M1-MAN = manipulation arms and end effectors ·</text>
+<text x="40" y="1619.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SUS-M1-PIL = pilot station, restraints, displays and controls · SUS-M1-PWR = power generation, storage, distribution and thermal control · SUS-M1-PWR-BAT = battery pack, BMS and contactors (alternative B) · SUS-M1-PWR-DIST = protected power distribution · SUS-M1-PWR-GEN =</text>
+<text x="40" y="1634.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">engine-generator and governor (alternative B) · SUS-M1-PWR-HPU = hydraulic power unit, accumulators and isolation (alternative A) · SUS-M1-SAF = independent safety monitor, protective stop and isolation · SUS-M1-WLK = chassis, legs, joint actuators and stability sensing · UAV</text>
+<text x="40" y="1648.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">= uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>
