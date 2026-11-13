@@ -41,7 +41,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 |---|---|
 | PX4 | `v1.16.2`, SITL SIH quadrotor, headless lockstep ([`fetch_px4.sh`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/fetch_px4.sh)) |
 | Run | `python -m sim.uav.harness --px4 PX4_DIR` ([`harness.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/harness.py)); re-running: [`sim/README.md`](Simulation-Track) |
-| Results | [`sim/results/uav/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/results/uav) · [UAV simulation (wiki)](UAV-Simulation) |
+| Results | [`sim/results/uav/`](UAV-SITL-Results) · [UAV simulation (wiki)](UAV-Simulation) |
 | SysML | [`ObservedModes.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/ObservedModes.sysml) (generated) |
 
 ## Purpose
@@ -127,7 +127,7 @@ Findings (from the outcome and metric rules in [`scenarios.yaml`](https://github
 
 | Output | Destination |
 |---|---|
-| Runs | [`sim/results/uav/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/results/uav) |
+| Runs | [`sim/results/uav/`](UAV-SITL-Results) |
 | Findings | hazard causal factors and mitigations (for review by the safety lead) |
 | Scenes and wiki page | `sim/figures/uav_scenes.py`, [Integrations](Integrations) |
 

@@ -89,6 +89,7 @@ ENFORCED = {
     "sim/spec": {"skip_dirs": {"figures"}, "generator": ["tools/figures/spec_readme.py", "--check"]},
     # Committed results; uav/ keeps its folder preview.
     "sim/results": {"skip_dirs": {"figures", "uav"}, "generator": ["tools/figures/results_readme.py", "--check"]},
+    "sim/results/uav": {"skip_dirs": {"figures"}, "generator": ["tools/figures/uavresults_readme.py", "--check"]},
     # 3D scene builder; library/ and out/ keep their folder previews.
     # 2D scene code; its *.svg are the sim page's figures, its own figures sit in readme/.
     "sim/figures": {"skip_dirs": {"readme", "__pycache__"}, "generator": ["tools/figures/simfigs_readme.py", "--check"]},

@@ -86,6 +86,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   loads it
 - [Simulation results](Simulation-Results): every committed result, the code that writes and reads it, and how CI
   keeps it reproducible
+- [UAV SITL results](UAV-SITL-Results): every PX4 SITL result file, each run over time, and how its outcome is
+  decided
 - [3D scene builder](3D-Scene-Builder): the 3D hazard scenes, what each replays, and which hazards have no scene
   yet and why
 - [2D hazard scenes](2D-Hazard-Scenes): the animated walker and UAV scenes, what each replays, and what happens

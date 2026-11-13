@@ -101,6 +101,8 @@ def group_of(path: str) -> str:
         return "Supply-loss modes"
     if path.startswith("sim/spec/"):
         return "Plant spec structure"
+    if path.startswith("sim/results/uav/"):
+        return "SITL outcome rules"
     if path.startswith("sim/results/"):
         return "Result sets"
     if path.startswith("sim/scenes3d/"):

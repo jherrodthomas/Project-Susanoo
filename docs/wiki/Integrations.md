@@ -48,7 +48,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | PX4 | [`px4/`](PX4-Integration-Model) · upstream tag `v1.16.2`, pinned in [`sim/uav/fetch_px4.sh`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/fetch_px4.sh) |
 | Interface contract | [`px4/interface-contract.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/integrations/px4/interface-contract.md) |
 | SysML model | [`PX4Integration.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/integrations/px4/PX4Integration.sysml) |
-| SITL | [UAV simulation](UAV-Simulation), [`sim/results/uav/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/results/uav) |
+| SITL | [UAV simulation](UAV-Simulation), [`sim/results/uav/`](UAV-SITL-Results) |
 
 ## Purpose
 

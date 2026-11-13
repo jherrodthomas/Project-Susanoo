@@ -194,37 +194,37 @@ package WikiImages {
     part imgSimSu01 : GeneratedFigure {
         attribute :>> file = "sim-su-01.svg";
         attribute :>> kilobytes = 9;
-        attribute :>> shownOn = 4;
+        attribute :>> shownOn = 3;
         attribute :>> generator = "sim/figures/uav_scenes.py";
     }
     part imgSimSu02 : GeneratedFigure {
         attribute :>> file = "sim-su-02.svg";
         attribute :>> kilobytes = 9;
-        attribute :>> shownOn = 4;
+        attribute :>> shownOn = 3;
         attribute :>> generator = "sim/figures/uav_scenes.py";
     }
     part imgSimSu03 : GeneratedFigure {
         attribute :>> file = "sim-su-03.svg";
         attribute :>> kilobytes = 7;
-        attribute :>> shownOn = 4;
+        attribute :>> shownOn = 3;
         attribute :>> generator = "sim/figures/uav_scenes.py";
     }
     part imgSimSu04 : GeneratedFigure {
         attribute :>> file = "sim-su-04.svg";
         attribute :>> kilobytes = 7;
-        attribute :>> shownOn = 4;
+        attribute :>> shownOn = 3;
         attribute :>> generator = "sim/figures/uav_scenes.py";
     }
     part imgSimSu05 : GeneratedFigure {
         attribute :>> file = "sim-su-05.svg";
         attribute :>> kilobytes = 12;
-        attribute :>> shownOn = 4;
+        attribute :>> shownOn = 3;
         attribute :>> generator = "sim/figures/uav_scenes.py";
     }
     part imgSimSu06 : GeneratedFigure {
         attribute :>> file = "sim-su-06.svg";
         attribute :>> kilobytes = 8;
-        attribute :>> shownOn = 4;
+        attribute :>> shownOn = 3;
         attribute :>> generator = "sim/figures/uav_scenes.py";
     }
     part imgSoftwareSafety : HandExport {

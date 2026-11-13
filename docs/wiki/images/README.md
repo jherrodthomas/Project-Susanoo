@@ -65,12 +65,12 @@ The figures the wiki shows directly: item-definition and SysML views, record fig
 | [`sim-sc-02.svg`](sim-sc-02.svg) | `sim/figures/scenes.py` | 17 KB | 2 wiki pages, 1 repository page |
 | [`sim-sc-03.svg`](sim-sc-03.svg) | `sim/figures/scenes.py` | 17 KB | 2 wiki pages, 1 repository page |
 | [`sim-sc-04.svg`](sim-sc-04.svg) | `sim/figures/scenes.py` | 18 KB | 2 wiki pages, 1 repository page |
-| [`sim-su-01.svg`](sim-su-01.svg) | `sim/figures/uav_scenes.py` | 9 KB | 2 wiki pages, 2 repository pages |
-| [`sim-su-02.svg`](sim-su-02.svg) | `sim/figures/uav_scenes.py` | 9 KB | 2 wiki pages, 2 repository pages |
-| [`sim-su-03.svg`](sim-su-03.svg) | `sim/figures/uav_scenes.py` | 7 KB | 2 wiki pages, 2 repository pages |
-| [`sim-su-04.svg`](sim-su-04.svg) | `sim/figures/uav_scenes.py` | 7 KB | 2 wiki pages, 2 repository pages |
-| [`sim-su-05.svg`](sim-su-05.svg) | `sim/figures/uav_scenes.py` | 12 KB | 2 wiki pages, 2 repository pages |
-| [`sim-su-06.svg`](sim-su-06.svg) | `sim/figures/uav_scenes.py` | 8 KB | 2 wiki pages, 2 repository pages |
+| [`sim-su-01.svg`](sim-su-01.svg) | `sim/figures/uav_scenes.py` | 9 KB | 2 wiki pages, 1 repository page |
+| [`sim-su-02.svg`](sim-su-02.svg) | `sim/figures/uav_scenes.py` | 9 KB | 2 wiki pages, 1 repository page |
+| [`sim-su-03.svg`](sim-su-03.svg) | `sim/figures/uav_scenes.py` | 7 KB | 2 wiki pages, 1 repository page |
+| [`sim-su-04.svg`](sim-su-04.svg) | `sim/figures/uav_scenes.py` | 7 KB | 2 wiki pages, 1 repository page |
+| [`sim-su-05.svg`](sim-su-05.svg) | `sim/figures/uav_scenes.py` | 12 KB | 2 wiki pages, 1 repository page |
+| [`sim-su-06.svg`](sim-su-06.svg) | `sim/figures/uav_scenes.py` | 8 KB | 2 wiki pages, 1 repository page |
 | [`software-safety.svg`](software-safety.svg) | `docs/diagrams/mil-std-882e/software-safety.drawio` | 6 KB | 4 wiki pages, 4 repository pages |
 | [`sus-i1-boundary.svg`](sus-i1-boundary.svg) | `tools/figures/fig_item.py` | 28 KB | 3 wiki pages, 1 repository page |
 | [`sus-i1-context.svg`](sus-i1-context.svg) | `tools/figures/fig_item.py` | 17 KB | 4 wiki pages, 2 repository pages, 1 front page |

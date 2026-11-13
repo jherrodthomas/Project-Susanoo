@@ -30,7 +30,8 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - sim/mujoco             # generated README (tools/figures/mujoco_readme.py)
   - sim/trades             # generated README (tools/figures/trades_readme.py)
   - sim/spec               # generated README (tools/figures/spec_readme.py)
-  - sim/results            # generated README (tools/figures/results_readme.py); uav/ keeps its preview
+  - sim/results            # generated README (tools/figures/results_readme.py)
+  - sim/results/uav        # generated README (tools/figures/uavresults_readme.py)
   - sim/scenes3d           # generated README (tools/figures/scenes3d_readme.py); library/ and out/ keep previews
   - sim/figures            # generated README (tools/figures/simfigs_readme.py)
   - docs/3d                # generated README (tools/figures/pages3d_readme.py)
@@ -210,20 +211,6 @@ folders:
 
 
 
-  sim/results/uav:
-    title: UAV simulation results (PX4 SITL)
-    purpose: >-
-      PX4 SITL failsafe runs written by `sim/uav/harness.py`, one JSON per scenario plus the summary. Synthetic; never
-      verification evidence.
-    hero: {img: docs/wiki/images/sim-su-01.svg, caption: "SU-01"}
-    gallery:
-      - {img: docs/wiki/images/sim-su-02.svg, caption: "SU-02"}
-      - {img: docs/wiki/images/sim-su-03.svg, caption: "SU-03"}
-      - {img: docs/wiki/images/sim-su-04.svg, caption: "SU-04"}
-      - {img: docs/wiki/images/sim-su-05.svg, caption: "SU-05"}
-      - {img: docs/wiki/images/sim-su-06.svg, caption: "SU-06"}
-    links:
-      - {text: UAV Simulation (wiki page), href: docs/wiki/UAV-Simulation.md}
 
 
   sim/scenes3d/library:
