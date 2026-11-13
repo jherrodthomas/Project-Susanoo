@@ -84,7 +84,9 @@ mitigations:
     method:
     - inspection
     - test
-    evidence_ids: []
+    evidence_ids:
+    - VER-005
+    - VER-006
 - id: M4
   description: Charging isolated before any handling at the dock (maintenance procedure)
   precedence: e

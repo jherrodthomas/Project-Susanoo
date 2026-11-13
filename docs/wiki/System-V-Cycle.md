@@ -33,7 +33,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 ![System V cycle of SUS-I1](images/vcycle-system.svg)
 
-**Now:** 22 requirements, 19 hazards and 8 SSFs; 0 of 22 requirements have verification evidence. Current gate G0.
+**Now:** 22 requirements, 19 hazards and 8 SSFs; 2 of 22 requirements have verification evidence. Current gate G0.
 
 ## Open the interactive page
 
@@ -58,7 +58,7 @@ GitHub does not run scripts in wiki pages or repository files, so this page show
 | Unit test | right (prove) | G4 | 8 SSF code analyses | Not started |
 | Subsystem verification | right (prove) | G5 | 8 SSF safety-specific testing | Not started |
 | Integration test | right (prove) | G5 | 2 events | Not started |
-| System verification | right (prove) | G5 | 22 requirements, 0 with evidence | Not started |
+| System verification | right (prove) | G5 | 22 requirements, 2 with evidence | Not started |
 | Operational validation | right (prove) | G6 | 14 CONOPS scenarios | Not started |
 
 ## Maturity ladder

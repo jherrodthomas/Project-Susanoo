@@ -1,73 +1,73 @@
-Hazard,Mitigation,Description,Precedence (4.3.4),State,Requirements,Software functions,Verification method,Evidence
-HAZ-DCK-001,M1,Hardware interlock removes propulsion power while the retention latch is closed,c Incorporate engineered features or devices,identified,SYS-003,,test inspection,0 items
-HAZ-DCK-001,M2,PX4 arming check requires dock-released state,c Incorporate engineered features or devices,identified,SYS-003 SYS-012,SSF-003,test,0 items
-HAZ-DCK-001,M3,Rotor guards on the dock enclosure,c Incorporate engineered features or devices,identified,,,inspection,0 items
-HAZ-DCK-001,M4,Maintenance procedure with propeller removal for powered checks,e Incorporate signage,identified,,,demonstration,0 items
-HAZ-DCK-002,M1,Fail-closed mechanical latch requiring powered actuation to open,b Reduce risk through design alteration,identified,SYS-005,,inspection test,0 items
-HAZ-DCK-002,M2,Independent dual sensing of latch position fused into the retained state,c Incorporate engineered features or devices,identified,SYS-005,SSF-005,test,0 items
-HAZ-DCK-002,M3,Walker motion inhibited while retention state is unknown,c Incorporate engineered features or devices,identified,SYS-005,,test,0 items
-HAZ-DCK-003,M1,"Charger with independent over-voltage, over-current and over-temperature cut-off",c Incorporate engineered features or devices,identified,SYS-022,,test,0 items
-HAZ-DCK-003,M2,"Dock separated from the pod by a fire barrier, with venting away from the pilot",b Reduce risk through design alteration,identified,,,analysis inspection,0 items
-HAZ-DCK-003,M3,Do not charge a battery after a hard landing until inspected,e Incorporate signage,identified,,,demonstration,0 items
-HAZ-DCK-004,M1,Launch and release permits require charging de-energised and confirmed off,c Incorporate engineered features or devices,identified,SYS-006,,test,0 items
-HAZ-DCK-004,M2,"Connector rated to break under load, or mechanically prevented from separating while energised",b Reduce risk through design alteration,identified,,,analysis,0 items
-HAZ-DCK-004,M3,Contacts shrouded and de-energised unless a UAV is seated and confirmed,b Reduce risk through design alteration,identified,SYS-022,,inspection test,0 items
-HAZ-DCK-004,M4,Charging isolated before any handling at the dock (maintenance procedure),e Incorporate signage,identified,,,demonstration,0 items
-HAZ-INT-001,M1,Locate the dock away from the pilot station so approach paths never cross it,a Eliminate hazard through design selection,identified,,,analysis inspection,0 items
-HAZ-INT-001,M2,"Envelope inhibit on posture, motion and dock-ready state",c Incorporate engineered features or devices,identified,SYS-006,SSF-006,test analysis,0 items
-HAZ-INT-001,M3,Independent hardware launch permit between integration manager and aircraft,c Incorporate engineered features or devices,identified,SYS-006,,test,0 items
-HAZ-INT-001,M4,Verified PX4 lost-link abort behaviour for recovery (SITL),c Incorporate engineered features or devices,identified,SYS-006,,test,0 items
-HAZ-INT-001,M5,"On link loss the aircraft holds briefly, then lands in place (PX4 NAV_DLL_ACT = 3, Land) and never returns to the dock without a permit (decision DQ-008, lead, 2026-11-12; SITL SU-03 stayed 48 m clear, synthetic). The low-battery failsafe still needs a decision.",c Incorporate engineered features or devices,identified,SYS-013,SSF-008,test,0 items
-HAZ-INT-001,M6,The integration manager keeps PX4 home and rally points at the current dock position as the walker moves,c Incorporate engineered features or devices,identified,,,test,0 items
-HAZ-INT-001,M7,"Validity checks on IF-PX4-001 (estimator status, position accuracy, freshness) before any permit is granted",c Incorporate engineered features or devices,identified,,SSF-006,test analysis,0 items
-HAZ-INT-002,M1,UAV data shown with validity status; position and imagery checked against an independent source before use,c Incorporate engineered features or devices,identified,SYS-021,,test analysis,0 items
-HAZ-INT-002,M2,Stale or frozen imagery detected within a defined time and shown as not current,c Incorporate engineered features or devices,identified,SYS-021,,test,0 items
-HAZ-INT-002,M3,Procedure: UAV imagery is advisory; walking decisions rest on direct view and the safety observer,e Incorporate signage,identified,,,demonstration,0 items
-HAZ-MAN-001,M1,"Arms stowed and locked before walking is enabled, and held stowed until walking stops (CL-05 stowed pose lifts the claws to 2.43 m and pulls them back from 1.77 m to 1.49 m ahead of the hips)",c Incorporate engineered features or devices,identified,SYS-017,,test analysis,0 items
-HAZ-MAN-001,M2,Manipulation inhibited unless the exclusion zone around the arms' reach is confirmed clear,c Incorporate engineered features or devices,identified,SYS-017,,test,0 items
-HAZ-MAN-001,M3,Exclusion zone procedure with a safety observer holding an independent stop,e Incorporate signage,identified,,,demonstration,0 items
-HAZ-MAN-002,M1,"Loaded walking only with the load confirmed secured, the arms locked in a defined carry pose and mass and centre of gravity within limits; reduced speed, step height and slope",c Incorporate engineered features or devices,identified,SYS-019 SYS-008,,analysis test,0 items
-HAZ-MAN-002,M2,"Carry pose keeps the load low and close to the body and below the pilot's sight line (CL-05: load centre 1.80 m up, 0.10 m ahead of the pod; nearest ground seen ahead unchanged at 3.98 m)",b Reduce risk through design alteration,identified,SYS-019,,analysis,0 items
-HAZ-MAN-002,M3,Exclusion zone sized for a loaded walker,e Incorporate signage,identified,,,demonstration,0 items
-HAZ-PIL-001,M1,Mechanical supports carry the chassis in OFF/SECURED and STARTUP so actuator motion cannot lower the structure,b Reduce risk through design alteration,identified,,,inspection demonstration,0 items
-HAZ-PIL-001,M2,"Readiness interlock: actuation enabled only with restraint, hatch, neutral controls and exclusion-zone confirmation",c Incorporate engineered features or devices,identified,SYS-001,SSF-001,test,0 items
-HAZ-PIL-001,M3,Independent hardware enable chain in series with the software interlock,c Incorporate engineered features or devices,identified,SYS-001,,test analysis,0 items
-HAZ-PIL-001,M4,Ingress procedure with observer and exclusion zone,e Incorporate signage,identified,,,demonstration,0 items
-HAZ-PIL-001,M5,"Ingress and egress from a controlled lowered (kneel) posture with a fold-down ladder and grab handles, the ladder interlocked against walking (CL-05: cockpit floor from 2.41 m to about 1.0 m, four treads, largest rise 0.33 m)",b Reduce risk through design alteration,identified,SYS-018,,analysis demonstration,0 items
-HAZ-PIL-002,M1,"Select self-locking (non-backdrivable) joint actuation in the actuation trade, so loss of supply cannot lower the structure (TS-001, decision DQ-006)",a Eliminate hazard through design selection,identified,,,analysis test,0 items
-HAZ-PIL-002,M2,"Normally-engaged load holding (spring-applied, supply-released valves or brakes), so loss of supply engages it without any signal",b Reduce risk through design alteration,identified,SYS-009,,test inspection,0 items
-HAZ-PIL-002,M3,Load-holding engagement time verified shorter than the free-fall time from the highest operating posture,c Incorporate engineered features or devices,identified,SYS-009,,test analysis,0 items
-HAZ-PIL-002,M4,Energy-absorbing seat and cockpit suspension sized for the residual drop,c Incorporate engineered features or devices,identified,,,analysis test,0 items
-HAZ-PIL-003,M1,"Shoulder plate under each hatch is a step flush with the sill with non-slip strips, a toe lip and grab rails (CL-05)",b Reduce risk through design alteration,identified,SYS-020,,inspection analysis,0 items
-HAZ-PIL-003,M2,"Fold-out davit and escape ladder clear of the walker (CL-05: 0.25 m clearance, 0.18 m step-to-ladder gap)",c Incorporate engineered features or devices,identified,SYS-020,,demonstration,0 items
-HAZ-PIL-003,M3,"Fall-arrest harness and anchor point, and egress training",e Incorporate signage,identified,,,demonstration,0 items
-HAZ-PIL-004,M1,Emergency exit through a side hatch that needs neither platform power nor the kneel posture (CL-05 side hatches),b Reduce risk through design alteration,identified,SYS-020,,analysis demonstration,0 items
-HAZ-PIL-004,M2,Lowered posture with defined lowering limits and a confirmed clear zone,c Incorporate engineered features or devices,identified,SYS-018,,test,0 items
-HAZ-PIL-004,M3,Egress procedure and training for the case where the walker cannot lower,e Incorporate signage,identified,,,demonstration,0 items
-HAZ-PWR-001,M1,Evaluate electromechanical actuation (trade study) to eliminate stored hydraulic energy,a Eliminate hazard through design selection,identified,,,analysis,0 items
-HAZ-PWR-001,M2,Lockable isolation and automatic accumulator bleed with pressure gauges at each zone,c Incorporate engineered features or devices,identified,SYS-007,,inspection demonstration,0 items
-HAZ-PWR-001,M3,Mechanical supports required before maintenance access,c Incorporate engineered features or devices,identified,SYS-007,,inspection,0 items
-HAZ-PWR-001,M4,Lockout/tagout and zero-energy verification procedure; PPE,e Incorporate signage,identified,,,demonstration,0 items
-HAZ-PWR-002,M1,Select a cell chemistry with low thermal-runaway energy (trade study TS-001),a Eliminate hazard through design selection,identified,,,analysis,0 items
-HAZ-PWR-002,M2,"Locate the pack outside the cockpit behind a fire barrier, with vent gas directed away from people",b Reduce risk through design alteration,identified,,,analysis inspection,0 items
-HAZ-PWR-002,M3,"Independent battery monitoring that opens the pack contactors on over-temperature, over-voltage or over-current, with a cockpit warning",c Incorporate engineered features or devices,identified,SYS-014,,test,0 items
-HAZ-PWR-002,M4,"Post-fall pack inspection, charging procedure and pilot emergency-egress drill",e Incorporate signage,identified,,,demonstration,0 items
-HAZ-PWR-003,M1,"Separate the fuel system and exhaust from the cockpit and from each other, with drip and heat shields",b Reduce risk through design alteration,identified,,,analysis inspection,0 items
-HAZ-PWR-003,M2,Fuel shut-off and engine stop commanded by the protective stop and on fall detection,c Incorporate engineered features or devices,identified,SYS-015,,test,0 items
-HAZ-PWR-003,M3,"Refuelling only in MOD-01 with the engine cold, extinguisher at hand and a spill kit",e Incorporate signage,identified,,,demonstration,0 items
-HAZ-SAF-001,M1,Load-holding valves / brakes hold posture on loss of power,b Reduce risk through design alteration,identified,,,test analysis,0 items
-HAZ-SAF-001,M2,Mode-specific protective stop behaviour that never commands instant zero torque in a loaded pose,c Incorporate engineered features or devices,identified,SYS-002 SYS-011,SSF-002,test analysis,0 items
-HAZ-SAF-001,M3,Independent hardwired observer stop path,c Incorporate engineered features or devices,identified,SYS-002 SYS-010,,test,0 items
-HAZ-WLK-001,M1,Mechanical joint end-stops and pressure relief limit runaway travel and force,b Reduce risk through design alteration,identified,,,inspection analysis,0 items
-HAZ-WLK-001,M2,Feedback staleness and plausibility monitor commanding the degraded state,c Incorporate engineered features or devices,identified,SYS-004,SSF-004,test analysis,0 items
-HAZ-WLK-001,M3,Redundant posture sensing,c Incorporate engineered features or devices,identified,SYS-004,,analysis,0 items
-HAZ-WLK-002,M1,Low centre of gravity and wide stance selected in the architecture trade,b Reduce risk through design alteration,identified,,,analysis,0 items
-HAZ-WLK-002,M2,Rollover/fall protective structure and restraint at the pilot station,c Incorporate engineered features or devices,identified,SYS-008,,analysis test,0 items
-HAZ-WLK-002,M3,Command and payload limiting to a verified stability envelope,c Incorporate engineered features or devices,identified,SYS-008,SSF-007,test analysis,0 items
-HAZ-WLK-002,M4,Stability margin warning to the pilot,d Provide warning devices,identified,SYS-008,,test,0 items
-HAZ-WLK-002,M5,"Start the protective crouch and engage load holding on falling balance margin (capture point against the support still available), not only on a supply-pressure threshold, and only in a statically stable posture",c Incorporate engineered features or devices,identified,,,test analysis,0 items
-HAZ-WLK-002,M6,"Size ankle and knee torque so that the balance capacity left as supply falls holds the walker until load holding engages, anywhere in the operating envelope (sizing SZ-01)",b Reduce risk through design alteration,identified,SYS-016,,analysis test,0 items
-HAZ-WLK-002,M7,"Loaded walking only within mass, centre-of-gravity, speed, step-height and slope limits, with the load secured and the arms locked in the carry pose",c Incorporate engineered features or devices,identified,SYS-019,,analysis test,0 items
-HAZ-WLK-003,M1,"Kneel and rise only while the area under and around the pod and legs is confirmed clear, at a controlled speed",c Incorporate engineered features or devices,identified,SYS-018,,test,0 items
-HAZ-WLK-003,M2,Load holding keeps the posture on loss of actuator supply during lowering,c Incorporate engineered features or devices,identified,SYS-009,,test analysis,0 items
-HAZ-WLK-003,M3,Marked crush zone and observer during kneel and rise,e Incorporate signage,identified,,,demonstration,0 items
+Hazard,Mitigation,Description,Precedence (4.3.4),State,Requirements,Software functions,Verification method,Evidence (by result)
+HAZ-DCK-001,M1,Hardware interlock removes propulsion power while the retention latch is closed,c Incorporate engineered features or devices,identified,SYS-003,,test inspection,none
+HAZ-DCK-001,M2,PX4 arming check requires dock-released state,c Incorporate engineered features or devices,identified,SYS-003 SYS-012,SSF-003,test,none
+HAZ-DCK-001,M3,Rotor guards on the dock enclosure,c Incorporate engineered features or devices,identified,,,inspection,none
+HAZ-DCK-001,M4,Maintenance procedure with propeller removal for powered checks,e Incorporate signage,identified,,,demonstration,none
+HAZ-DCK-002,M1,Fail-closed mechanical latch requiring powered actuation to open,b Reduce risk through design alteration,identified,SYS-005,,inspection test,none
+HAZ-DCK-002,M2,Independent dual sensing of latch position fused into the retained state,c Incorporate engineered features or devices,identified,SYS-005,SSF-005,test,none
+HAZ-DCK-002,M3,Walker motion inhibited while retention state is unknown,c Incorporate engineered features or devices,identified,SYS-005,,test,none
+HAZ-DCK-003,M1,"Charger with independent over-voltage, over-current and over-temperature cut-off",c Incorporate engineered features or devices,identified,SYS-022,,test,1 planned · 0 passed (VER-004)
+HAZ-DCK-003,M2,"Dock separated from the pod by a fire barrier, with venting away from the pilot",b Reduce risk through design alteration,identified,,,analysis inspection,none
+HAZ-DCK-003,M3,Do not charge a battery after a hard landing until inspected,e Incorporate signage,identified,,,demonstration,none
+HAZ-DCK-004,M1,Launch and release permits require charging de-energised and confirmed off,c Incorporate engineered features or devices,identified,SYS-006,,test,none
+HAZ-DCK-004,M2,"Connector rated to break under load, or mechanically prevented from separating while energised",b Reduce risk through design alteration,identified,,,analysis,none
+HAZ-DCK-004,M3,Contacts shrouded and de-energised unless a UAV is seated and confirmed,b Reduce risk through design alteration,identified,SYS-022,,inspection test,"2 planned · 0 passed (VER-005, VER-006)"
+HAZ-DCK-004,M4,Charging isolated before any handling at the dock (maintenance procedure),e Incorporate signage,identified,,,demonstration,none
+HAZ-INT-001,M1,Locate the dock away from the pilot station so approach paths never cross it,a Eliminate hazard through design selection,identified,,,analysis inspection,none
+HAZ-INT-001,M2,"Envelope inhibit on posture, motion and dock-ready state",c Incorporate engineered features or devices,identified,SYS-006,SSF-006,test analysis,none
+HAZ-INT-001,M3,Independent hardware launch permit between integration manager and aircraft,c Incorporate engineered features or devices,identified,SYS-006,,test,none
+HAZ-INT-001,M4,Verified PX4 lost-link abort behaviour for recovery (SITL),c Incorporate engineered features or devices,identified,SYS-006,,test,none
+HAZ-INT-001,M5,"On link loss the aircraft holds briefly, then lands in place (PX4 NAV_DLL_ACT = 3, Land) and never returns to the dock without a permit (decision DQ-008, lead, 2026-11-12; SITL SU-03 stayed 48 m clear, synthetic). The low-battery failsafe still needs a decision.",c Incorporate engineered features or devices,identified,SYS-013,SSF-008,test,none
+HAZ-INT-001,M6,The integration manager keeps PX4 home and rally points at the current dock position as the walker moves,c Incorporate engineered features or devices,identified,,,test,none
+HAZ-INT-001,M7,"Validity checks on IF-PX4-001 (estimator status, position accuracy, freshness) before any permit is granted",c Incorporate engineered features or devices,identified,,SSF-006,test analysis,none
+HAZ-INT-002,M1,UAV data shown with validity status; position and imagery checked against an independent source before use,c Incorporate engineered features or devices,identified,SYS-021,,test analysis,"2 planned · 0 passed (VER-002, VER-003)"
+HAZ-INT-002,M2,Stale or frozen imagery detected within a defined time and shown as not current,c Incorporate engineered features or devices,identified,SYS-021,,test,1 planned · 0 passed (VER-001)
+HAZ-INT-002,M3,Procedure: UAV imagery is advisory; walking decisions rest on direct view and the safety observer,e Incorporate signage,identified,,,demonstration,none
+HAZ-MAN-001,M1,"Arms stowed and locked before walking is enabled, and held stowed until walking stops (CL-05 stowed pose lifts the claws to 2.43 m and pulls them back from 1.77 m to 1.49 m ahead of the hips)",c Incorporate engineered features or devices,identified,SYS-017,,test analysis,none
+HAZ-MAN-001,M2,Manipulation inhibited unless the exclusion zone around the arms' reach is confirmed clear,c Incorporate engineered features or devices,identified,SYS-017,,test,none
+HAZ-MAN-001,M3,Exclusion zone procedure with a safety observer holding an independent stop,e Incorporate signage,identified,,,demonstration,none
+HAZ-MAN-002,M1,"Loaded walking only with the load confirmed secured, the arms locked in a defined carry pose and mass and centre of gravity within limits; reduced speed, step height and slope",c Incorporate engineered features or devices,identified,SYS-019 SYS-008,,analysis test,none
+HAZ-MAN-002,M2,"Carry pose keeps the load low and close to the body and below the pilot's sight line (CL-05: load centre 1.80 m up, 0.10 m ahead of the pod; nearest ground seen ahead unchanged at 3.98 m)",b Reduce risk through design alteration,identified,SYS-019,,analysis,none
+HAZ-MAN-002,M3,Exclusion zone sized for a loaded walker,e Incorporate signage,identified,,,demonstration,none
+HAZ-PIL-001,M1,Mechanical supports carry the chassis in OFF/SECURED and STARTUP so actuator motion cannot lower the structure,b Reduce risk through design alteration,identified,,,inspection demonstration,none
+HAZ-PIL-001,M2,"Readiness interlock: actuation enabled only with restraint, hatch, neutral controls and exclusion-zone confirmation",c Incorporate engineered features or devices,identified,SYS-001,SSF-001,test,none
+HAZ-PIL-001,M3,Independent hardware enable chain in series with the software interlock,c Incorporate engineered features or devices,identified,SYS-001,,test analysis,none
+HAZ-PIL-001,M4,Ingress procedure with observer and exclusion zone,e Incorporate signage,identified,,,demonstration,none
+HAZ-PIL-001,M5,"Ingress and egress from a controlled lowered (kneel) posture with a fold-down ladder and grab handles, the ladder interlocked against walking (CL-05: cockpit floor from 2.41 m to about 1.0 m, four treads, largest rise 0.33 m)",b Reduce risk through design alteration,identified,SYS-018,,analysis demonstration,none
+HAZ-PIL-002,M1,"Select self-locking (non-backdrivable) joint actuation in the actuation trade, so loss of supply cannot lower the structure (TS-001, decision DQ-006)",a Eliminate hazard through design selection,identified,,,analysis test,none
+HAZ-PIL-002,M2,"Normally-engaged load holding (spring-applied, supply-released valves or brakes), so loss of supply engages it without any signal",b Reduce risk through design alteration,identified,SYS-009,,test inspection,none
+HAZ-PIL-002,M3,Load-holding engagement time verified shorter than the free-fall time from the highest operating posture,c Incorporate engineered features or devices,identified,SYS-009,,test analysis,none
+HAZ-PIL-002,M4,Energy-absorbing seat and cockpit suspension sized for the residual drop,c Incorporate engineered features or devices,identified,,,analysis test,none
+HAZ-PIL-003,M1,"Shoulder plate under each hatch is a step flush with the sill with non-slip strips, a toe lip and grab rails (CL-05)",b Reduce risk through design alteration,identified,SYS-020,,inspection analysis,none
+HAZ-PIL-003,M2,"Fold-out davit and escape ladder clear of the walker (CL-05: 0.25 m clearance, 0.18 m step-to-ladder gap)",c Incorporate engineered features or devices,identified,SYS-020,,demonstration,none
+HAZ-PIL-003,M3,"Fall-arrest harness and anchor point, and egress training",e Incorporate signage,identified,,,demonstration,none
+HAZ-PIL-004,M1,Emergency exit through a side hatch that needs neither platform power nor the kneel posture (CL-05 side hatches),b Reduce risk through design alteration,identified,SYS-020,,analysis demonstration,none
+HAZ-PIL-004,M2,Lowered posture with defined lowering limits and a confirmed clear zone,c Incorporate engineered features or devices,identified,SYS-018,,test,none
+HAZ-PIL-004,M3,Egress procedure and training for the case where the walker cannot lower,e Incorporate signage,identified,,,demonstration,none
+HAZ-PWR-001,M1,Evaluate electromechanical actuation (trade study) to eliminate stored hydraulic energy,a Eliminate hazard through design selection,identified,,,analysis,none
+HAZ-PWR-001,M2,Lockable isolation and automatic accumulator bleed with pressure gauges at each zone,c Incorporate engineered features or devices,identified,SYS-007,,inspection demonstration,none
+HAZ-PWR-001,M3,Mechanical supports required before maintenance access,c Incorporate engineered features or devices,identified,SYS-007,,inspection,none
+HAZ-PWR-001,M4,Lockout/tagout and zero-energy verification procedure; PPE,e Incorporate signage,identified,,,demonstration,none
+HAZ-PWR-002,M1,Select a cell chemistry with low thermal-runaway energy (trade study TS-001),a Eliminate hazard through design selection,identified,,,analysis,none
+HAZ-PWR-002,M2,"Locate the pack outside the cockpit behind a fire barrier, with vent gas directed away from people",b Reduce risk through design alteration,identified,,,analysis inspection,none
+HAZ-PWR-002,M3,"Independent battery monitoring that opens the pack contactors on over-temperature, over-voltage or over-current, with a cockpit warning",c Incorporate engineered features or devices,identified,SYS-014,,test,none
+HAZ-PWR-002,M4,"Post-fall pack inspection, charging procedure and pilot emergency-egress drill",e Incorporate signage,identified,,,demonstration,none
+HAZ-PWR-003,M1,"Separate the fuel system and exhaust from the cockpit and from each other, with drip and heat shields",b Reduce risk through design alteration,identified,,,analysis inspection,none
+HAZ-PWR-003,M2,Fuel shut-off and engine stop commanded by the protective stop and on fall detection,c Incorporate engineered features or devices,identified,SYS-015,,test,none
+HAZ-PWR-003,M3,"Refuelling only in MOD-01 with the engine cold, extinguisher at hand and a spill kit",e Incorporate signage,identified,,,demonstration,none
+HAZ-SAF-001,M1,Load-holding valves / brakes hold posture on loss of power,b Reduce risk through design alteration,identified,,,test analysis,none
+HAZ-SAF-001,M2,Mode-specific protective stop behaviour that never commands instant zero torque in a loaded pose,c Incorporate engineered features or devices,identified,SYS-002 SYS-011,SSF-002,test analysis,none
+HAZ-SAF-001,M3,Independent hardwired observer stop path,c Incorporate engineered features or devices,identified,SYS-002 SYS-010,,test,none
+HAZ-WLK-001,M1,Mechanical joint end-stops and pressure relief limit runaway travel and force,b Reduce risk through design alteration,identified,,,inspection analysis,none
+HAZ-WLK-001,M2,Feedback staleness and plausibility monitor commanding the degraded state,c Incorporate engineered features or devices,identified,SYS-004,SSF-004,test analysis,none
+HAZ-WLK-001,M3,Redundant posture sensing,c Incorporate engineered features or devices,identified,SYS-004,,analysis,none
+HAZ-WLK-002,M1,Low centre of gravity and wide stance selected in the architecture trade,b Reduce risk through design alteration,identified,,,analysis,none
+HAZ-WLK-002,M2,Rollover/fall protective structure and restraint at the pilot station,c Incorporate engineered features or devices,identified,SYS-008,,analysis test,none
+HAZ-WLK-002,M3,Command and payload limiting to a verified stability envelope,c Incorporate engineered features or devices,identified,SYS-008,SSF-007,test analysis,none
+HAZ-WLK-002,M4,Stability margin warning to the pilot,d Provide warning devices,identified,SYS-008,,test,none
+HAZ-WLK-002,M5,"Start the protective crouch and engage load holding on falling balance margin (capture point against the support still available), not only on a supply-pressure threshold, and only in a statically stable posture",c Incorporate engineered features or devices,identified,,,test analysis,none
+HAZ-WLK-002,M6,"Size ankle and knee torque so that the balance capacity left as supply falls holds the walker until load holding engages, anywhere in the operating envelope (sizing SZ-01)",b Reduce risk through design alteration,identified,SYS-016,,analysis test,none
+HAZ-WLK-002,M7,"Loaded walking only within mass, centre-of-gravity, speed, step-height and slope limits, with the load secured and the arms locked in the carry pose",c Incorporate engineered features or devices,identified,SYS-019,,analysis test,none
+HAZ-WLK-003,M1,"Kneel and rise only while the area under and around the pod and legs is confirmed clear, at a controlled speed",c Incorporate engineered features or devices,identified,SYS-018,,test,none
+HAZ-WLK-003,M2,Load holding keeps the posture on loss of actuator supply during lowering,c Incorporate engineered features or devices,identified,SYS-009,,test analysis,none
+HAZ-WLK-003,M3,Marked crush zone and observer during kneel and rise,e Incorporate signage,identified,,,demonstration,none

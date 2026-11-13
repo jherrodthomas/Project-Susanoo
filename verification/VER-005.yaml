@@ -1,0 +1,18 @@
+schema: susanoo/verification/v0.1
+id: VER-005
+title: SYS-022 charge enable and contact de-energisation
+method: test
+result: planned
+configuration: SUS-I1-C001
+simulated: false
+procedure: 'Purpose: show that charging runs only with a UAV seated and confirmed, and that the contacts are de-energised
+  otherwise and after isolation.
+
+  Setup: dock with the retention sensing of SYS-005; voltmeter on the charging contacts.
+
+  Steps: (1) no UAV seated; (2) UAV seated but not confirmed; (3) UAV seated and confirmed; (4) isolate charging
+  for handling; (5) release the UAV while charging is commanded.
+
+  Pass: contact voltage is at the de-energised level (TBD) in steps 1, 2, 4 and 5, and charging runs only in step
+  3.'
+evidence: []

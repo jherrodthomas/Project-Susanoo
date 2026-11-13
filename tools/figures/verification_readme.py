@@ -102,7 +102,7 @@ def fig_obligations(d: dict, s: dict) -> str:
         f"{plural(s['mits'], 'mitigation')} on {plural(len(hazards), 'hazard')} and {plural(s['reqs'], 'requirement')} "
         f"name a verification method. Each cell counts the mitigations planning that method. "
         f"{plural(s['vers'], 'verification record')} exist; {s['mit_ev']} mitigations and {s['req_ev']} requirements "
-        "cite evidence.", "safety/hazards · requirements/ · verification/")
+        "cite one; " + (", ".join(f"{v} {k}" for k, v in sorted(s["ver_result"].items())) or "none") + ".", "safety/hazards · requirements/ · verification/")
     out = list(head)
     cx = {"id": M, "title": M + 118}
     mx0, mw = M + 400, 80
@@ -151,17 +151,25 @@ def fig_obligations(d: dict, s: dict) -> str:
         rq = h.get("requirement_ids") or []
         out.append(fk.text(cx["reqs"], cy, ", ".join(rq) if len(rq) <= 1 else f"{rq[0]} +{len(rq) - 1}", size=11,
                            fill=MUTED))
-        ev = sum(len((x.get("verification") or {}).get("evidence_ids") or []) for x in ms)
-        etone = TONES["ok" if ev else "amber"]
-        p, _ = fk.pill(cx["ev"], cy - 12, f"{ev} record{'' if ev == 1 else 's'}", etone[1], color=etone[0],
-                       stroke=etone[0])
+        ids = list(dict.fromkeys(i for x in ms for i in (x.get("verification") or {}).get("evidence_ids") or []))
+        res = [d["vers"][i].get("result", "") for i in ids if i in d["vers"]]
+        passed = sum(1 for r in res if r in ("pass", "passed"))
+        etone = TONES["ok" if ids and passed == len(ids) else "amber"]
+        if not ids:
+            lab = "0 records"
+        elif passed == len(ids):
+            lab = f"{passed} passed"
+        else:
+            other = count(r for r in res if r not in ("pass", "passed"))
+            lab = ", ".join(f"{v} {k}" for k, v in sorted(other.items())) + (f", {passed} passed" if passed else "")
+        p, _ = fk.pill(cx["ev"], cy - 12, lab, etone[1], color=etone[0], stroke=etone[0])
         out += p
     y += len(hazards) * rh + 8
     out.append(fk.line(M, y, W - M, y, stroke=HAIR, sw=1))
     y += 24
     leg = [(accent[1], accent[0], "Mitigations planning this method (count)"),
-           (TONES["amber"][1], TONES["amber"][0], "No evidence cited yet"),
-           (TONES["ok"][1], TONES["ok"][0], "Evidence cited"),
+           (TONES["amber"][1], TONES["amber"][0], "No passed verification record yet"),
+           (TONES["ok"][1], TONES["ok"][0], "Every cited record passed"),
            (TONES["red"][1], TONES["red"][0], "Hazard, High initial risk"),
            (TONES["safety"][1], TONES["safety"][0], "Serious"), (TONES["amber"][1], TONES["amber"][0], "Medium")]
     lg, y = fk.legend(M, y, leg, W - M)
@@ -284,7 +292,7 @@ def readme(d: dict, s: dict, specs: list[dict], tail: str) -> str:
         "# Verification records (MIL-STD-882E 4.3.6, Task 401)\n",
         f"> **Status:** {plural(s['vers'], 'verification record')} "
         + (f"({summary(s['ver_result'])}, {s['ver_sim']} simulated)" if s["vers"] else "yet")
-        + f". {s['mit_ev']} of {s['mits']} mitigations and {s['req_ev']} of {s['reqs']} requirements cite evidence; "
+        + f". {s['mit_ev']} of {s['mits']} mitigations and {s['req_ev']} of {s['reqs']} requirements cite a verification record; "
         f"{s['verified']} hazards are verified. Simulation results in `sim/results/` carry no verification credit.\n",
         "| Field | Value |", "|---|---|",
         f"| Records | {s['vers']} (`VER-nnn.yaml`, schema [`verification.schema.json`](../{SCHEMA})) |",
@@ -311,7 +319,7 @@ def readme(d: dict, s: dict, specs: list[dict], tail: str) -> str:
                   for k, v in vers.items()], ""]
     else:
         out.append("_No verification records yet._ Nothing on this page is evidence; it lists what will need it.\n")
-    out += ["| Hazard | Mitigations (state) | Planned methods | Requirements | Evidence cited |", "|---|---|---|---|---|"]
+    out += ["| Hazard | Mitigations (state) | Planned methods | Requirements | Verification records cited |", "|---|---|---|---|---|"]
     for hid, h in hazards.items():
         ms = h.get("mitigations") or []
         meth = count(x for m in ms for x in (m.get("verification") or {}).get("method", []))

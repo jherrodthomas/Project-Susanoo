@@ -1,0 +1,18 @@
+schema: susanoo/verification/v0.1
+id: VER-004
+title: 'SYS-022 independent charge cut-offs: over-voltage, over-current, over-temperature'
+method: test
+result: planned
+configuration: SUS-I1-C001
+simulated: false
+procedure: 'Purpose: show that the dock stops charging on over-voltage, over-current and over-temperature independently
+  of the charging software.
+
+  Setup: dock charger on a bench with a battery emulator and a heated test fixture; charging software disabled or
+  held faulted; limits are TBD (SYS-022).
+
+  Steps: drive each quantity past its limit in turn with the software unable to stop charging.
+
+  Pass: charging stops within the response time (TBD) for every case with the software faulted. Record trip values
+  and times.'
+evidence: []
