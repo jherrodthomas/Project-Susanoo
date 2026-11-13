@@ -179,7 +179,7 @@ package SimulationEvidence {
 | [`scenes3d/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/README.md) | 3D scene builder | folder |
 | [`search/`](Failure-Search) | Failure search | folder |
 | [`spec/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/spec/README.md) | Simulation specifications | folder |
-| [`trades/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/trades/README.md) | Trade-study evidence | folder |
+| [`trades/`](Trade-Study-Evidence) | Trade-study evidence | folder |
 | [`uav/`](UAV-SITL-Harness) | UAV simulation harness (PX4 SITL) | folder |
 | [`faults.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/faults.yaml) | Fault catalogue | present |
 | [`SimulationEvidence.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/SimulationEvidence.sysml) | Generated SysML v2 evidence gate | generated |

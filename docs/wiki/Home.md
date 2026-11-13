@@ -76,6 +76,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   which assumption would have saved each one
 - [Level-2 MuJoCo model](Level-2-MuJoCo): where the level-1 and level-2 models agree and why they differ, and the
   joint torques sized against supply loss on a slope
+- [Trade-study evidence](Trade-Study-Evidence): how each actuation alternative's supply loss plays out on both
+  walker models, and the trade-study scores that cite it
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

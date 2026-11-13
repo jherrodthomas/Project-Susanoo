@@ -28,6 +28,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - sim/plant              # generated README (tools/figures/plant_readme.py)
   - sim/search             # generated README (tools/figures/search_readme.py)
   - sim/mujoco             # generated README (tools/figures/mujoco_readme.py)
+  - sim/trades             # generated README (tools/figures/trades_readme.py)
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -265,15 +266,6 @@ folders:
       - {img: safety/mil-std-882e/software-safety/figures/fig-4-sysml-block-definition.svg, caption: "SSF record structure", link: safety/mil-std-882e/software-safety/README.md}
 
 
-  sim/trades:
-    title: Trade-study evidence
-    purpose: >-
-      Simulations run as evidence for the architecture trade studies (`fault_response.yaml`, `fault_response.py` for
-      TS-001). Results are synthetic and carry no evidence credit.
-    planned: "Supply-loss outcome for each TS-001 alternative with load holding working and failed, drawn from sim/results/ts001-fault-response.json."
-    links:
-      - {text: TS-001 supply-loss evidence, href: sim/results/ts001-fault-response.md}
-      - {text: Trade Studies (wiki page), href: docs/wiki/Trade-Studies.md}
 
 
   sim/results:
