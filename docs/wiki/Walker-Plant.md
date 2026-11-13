@@ -161,7 +161,7 @@ Stated in [`walker.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/ma
 | Output | Destination |
 |---|---|
 | Plant results | [`sim/results/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/results) |
-| The model | failure search ([`sim/search`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/search)), level-2 cross-check ([`sim/mujoco`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/mujoco)) |
+| The model | failure search ([`sim/search`](Failure-Search)), level-2 cross-check ([`sim/mujoco`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/mujoco)) |
 | Traces | scenes (`sim/figures`), trade studies ([`sim/trades`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/trades)) |
 
 ## Folder contents

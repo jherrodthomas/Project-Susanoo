@@ -71,6 +71,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   findings they raise for the safety lead
 - [Walker plant (level 1)](Walker-Plant): what each mitigation buys against each fault, the slope limit, and
   the assumptions every result rests on
+- [Failure search](Failure-Search): where the walker fails across the parameter space, the worst cases found, and
+  which assumption would have saved each one
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

@@ -83,6 +83,7 @@ ENFORCED = {
     # Generated README of the PX4 SITL harness (sim/ skips its subfolders; this one has its own page).
     "sim/uav": {"skip_dirs": {"figures", "__pycache__"}, "generator": ["tools/figures/uav_readme.py", "--check"]},
     "sim/plant": {"skip_dirs": {"figures", "__pycache__"}, "generator": ["tools/figures/plant_readme.py", "--check"]},
+    "sim/search": {"skip_dirs": {"figures", "__pycache__"}, "generator": ["tools/figures/search_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

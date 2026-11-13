@@ -26,6 +26,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - docs                   # generated README (tools/figures/docs_readme.py); subfolders keep their previews
   - sim/uav                # generated README (tools/figures/uav_readme.py)
   - sim/plant              # generated README (tools/figures/plant_readme.py)
+  - sim/search             # generated README (tools/figures/search_readme.py)
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -337,17 +338,6 @@ folders:
     gallery:
       - {img: docs/wiki/images/3d-s3-04.png, caption: "S3-04", link: docs/3d/S3-04.html}
 
-  sim/search:
-    title: Failure search
-    purpose: >-
-      The fault families and the search that samples them for edge cases (`families.yaml`, `search.py`). Results are
-      synthetic.
-    hero: {img: docs/wiki/images/sim-sc-01.svg, caption: "SC-01, a case the search covers (synthetic)"}
-    gallery:
-      - {img: docs/wiki/images/sim-sc-02.svg, caption: "SC-02 (synthetic)"}
-    links:
-      - {text: Search results for SF-01, href: sim/results/search-SF-01.md}
-      - {text: Edge cases, href: sim/results/edge-cases.md}
 
   sim/spec:
     title: Simulation specifications
