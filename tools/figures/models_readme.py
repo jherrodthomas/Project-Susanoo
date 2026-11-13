@@ -109,6 +109,8 @@ def group_of(path: str) -> str:
         return "2D hazard scenes"
     if path.startswith("docs/3d/"):
         return "3D pages"
+    if path.startswith("docs/vcycle/"):
+        return "V cycle maturity"
     return {"concept": "Concept operations", "integrations": "PX4 integration", "decisions": "Decision register",
             "sim": "Simulation evidence gate", "framework": "Lifecycle gates", "tools": "Docs check (CI)", "docs": "Generated file states", "cad": "Concept layouts"}.get(path.split("/")[0], path.split("/")[0])
 

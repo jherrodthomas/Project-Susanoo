@@ -34,6 +34,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - sim/scenes3d           # generated README (tools/figures/scenes3d_readme.py); library/ and out/ keep previews
   - sim/figures            # generated README (tools/figures/simfigs_readme.py)
   - docs/3d                # generated README (tools/figures/pages3d_readme.py); assets/ keeps its preview
+  - docs/vcycle            # generated README (tools/figures/vcycle_readme.py)
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -119,17 +120,6 @@ folders:
       - {text: Walk cycle video, href: cad/renders/blender/CL-05-walk-military.mp4}
 
 
-  docs/vcycle:
-    title: System V cycle page
-    purpose: >-
-      The interactive System V cycle of SUS-I1, generated from the records by `tools/vcycle/build_vcycle.py`. Open
-      `index.html` from a local checkout in a browser. Maturity colours come from record status and are not review,
-      verification or acceptance.
-    hero: {img: docs/wiki/images/vcycle-system.svg, caption: "System V cycle of SUS-I1", link: docs/vcycle/index.html}
-    links:
-      - {text: Interactive page, href: docs/vcycle/index.html}
-      - {text: System V cycle (wiki page), href: docs/wiki/System-V-Cycle.md}
-      - {text: Generator, href: tools/vcycle/build_vcycle.py}
 
   docs/3d/assets:
     title: 3D page assets

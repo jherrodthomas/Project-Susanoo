@@ -73,7 +73,8 @@ def sources() -> dict[Path, str]:
              ROOT / "sim/results/README.md": "Simulation-Results",
              ROOT / "sim/scenes3d/README.md": "3D-Scene-Builder",
              ROOT / "sim/figures/README.md": "2D-Hazard-Scenes",
-             ROOT / "docs/3d/README.md": "3D-Scene-Pages"}
+             ROOT / "docs/3d/README.md": "3D-Scene-Pages",
+             ROOT / "docs/vcycle/README.md": "V-Cycle-Page"}
     for r in sorted(TREE_DIR.rglob("README.md")):
         if "figures" not in r.parts:
             pages[r] = tree_page(r)
@@ -167,6 +168,7 @@ def sidebar(current: str) -> str:
              "- [3D scene builder](3D-Scene-Builder)",
              "- [2D hazard scenes](2D-Hazard-Scenes)",
              "- [3D scene pages](3D-Scene-Pages)",
+             "- [V cycle page](V-Cycle-Page)",
              "- [882E workflow](Project-Overview#the-mil-std-882e-workflow)",
              "- [882E work products](882E-Work-Products)"]
     for p, n in tree:
