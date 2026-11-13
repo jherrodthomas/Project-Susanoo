@@ -1,4 +1,9 @@
 Failure mode / cause,Type,Effect,Hazard,Severity (initial),Mitigations,Requirements
+"CF1 Wrong georeferencing, camera pointing or position estimate passed to the pilot display (IF-PX4-001)",interface,"Walker steered toward a hazard or a person the imagery did not show, or that moved after the picture froze",HAZ-INT-002,1 Catastrophic,M1(c) M2(c) M3(e),SYS-021
+CF2 GNSS degradation or spoofing gives a plausible but wrong position,environment,"Walker steered toward a hazard or a person the imagery did not show, or that moved after the picture froze",HAZ-INT-002,1 Catastrophic,M1(c) M2(c) M3(e),SYS-021
+"CF3 Link latency, dropped frames or a frozen video stream on the integration link",interface,"Walker steered toward a hazard or a person the imagery did not show, or that moved after the picture froze",HAZ-INT-002,1 Catastrophic,M1(c) M2(c) M3(e),SYS-021
+CF4 Pilot does not notice that the picture is wrong or not updating,human,"Walker steered toward a hazard or a person the imagery did not show, or that moved after the picture froze",HAZ-INT-002,1 Catastrophic,M1(c) M2(c) M3(e),SYS-021
+CF5 Pilot relies on the UAV picture over direct view and the observer,human,"Walker steered toward a hazard or a person the imagery did not show, or that moved after the picture froze",HAZ-INT-002,1 Catastrophic,M1(c) M2(c) M3(e),SYS-021
 CF1 Motion-enable logic enables actuation before readiness conditions are met,software,Pilot or crew caught between moving leg/chassis structure,HAZ-PIL-001,1 Catastrophic,M1(b) M2(c) M3(c) M4(e) M5(b),SYS-001 SYS-018
 CF2 Valve or drive fault produces motion with enable removed,hardware,Pilot or crew caught between moving leg/chassis structure,HAZ-PIL-001,1 Catastrophic,M1(b) M2(c) M3(c) M4(e) M5(b),SYS-001 SYS-018
 CF3 Pilot inadvertently deflects a control while entering,human,Pilot or crew caught between moving leg/chassis structure,HAZ-PIL-001,1 Catastrophic,M1(b) M2(c) M3(c) M4(e) M5(b),SYS-001 SYS-018
@@ -7,6 +12,9 @@ CF1 Loss of actuator supply (hydraulic line burst or bus loss) together with loa
 "CF1 Hurried descent, darkness, smoke or injury during emergency egress",human,"Pilot falls from the hatch, the shoulder step or the escape ladder",HAZ-PIL-003,1 Catastrophic,M1(b) M2(c) M3(e),SYS-020
 "CF2 Descent aid not deployed, out of reach, or the step-to-ladder transfer is missed",hardware,"Pilot falls from the hatch, the shoulder step or the escape ladder",HAZ-PIL-003,1 Catastrophic,M1(b) M2(c) M3(e),SYS-020
 "CF3 Walker leaning or on a slope, wet or icy surfaces",environment,"Pilot falls from the hatch, the shoulder step or the escape ladder",HAZ-PIL-003,1 Catastrophic,M1(b) M2(c) M3(e),SYS-020
+"CF1 Leg actuator, supply or load-holding fault prevents lowering",hardware,Pilot remains at height; leaving needs the side-hatch emergency exit,HAZ-PIL-004,1 Catastrophic,M1(b) M2(c) M3(e),SYS-018 SYS-020
+CF2 Lowering inhibited by a fault response or a stuck interlock,software,Pilot remains at height; leaving needs the side-hatch emergency exit,HAZ-PIL-004,1 Catastrophic,M1(b) M2(c) M3(e),SYS-018 SYS-020
+CF3 Terrain or slope does not allow the kneel posture,environment,Pilot remains at height; leaving needs the side-hatch emergency exit,HAZ-PIL-004,1 Catastrophic,M1(b) M2(c) M3(e),SYS-018 SYS-020
 "CF1 Internal cell short, over-charge or over-temperature not detected or not isolated by the BMS",hardware,"Fire, toxic and flammable vent gas, and heat at or near the pilot station",HAZ-PWR-002,1 Catastrophic,M1(a) M2(b) M3(c) M4(e),SYS-014
 CF2 Mechanical damage to the pack in a fall or overturn (SCN-103),environment,"Fire, toxic and flammable vent gas, and heat at or near the pilot station",HAZ-PWR-002,1 Catastrophic,M1(a) M2(b) M3(c) M4(e),SYS-014
 CF3 Damaged or wet pack charged or returned to service without inspection,human,"Fire, toxic and flammable vent gas, and heat at or near the pilot station",HAZ-PWR-002,1 Catastrophic,M1(a) M2(b) M3(c) M4(e),SYS-014
