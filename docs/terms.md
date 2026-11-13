@@ -141,6 +141,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | SHA-256 | a cryptographic hash used to pin a downloaded file |
 | SIH | simulation-in-hardware, PX4's built-in headless simulator |
 | SITL | software-in-the-loop simulation |
+| SMIL | Synchronized Multimedia Integration Language, the SVG animation markup the 2D scenes loop with |
 | SoS | system of systems |
 | SoSHA | system-of-systems hazard analysis (MIL-STD-882E Task 209) |
 | SP | Special Publication (NIST) |

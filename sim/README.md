@@ -171,6 +171,7 @@ package SimulationEvidence {
 
 | Item | Description | State |
 |---|---|---|
+| [`figures/`](figures/README.md) | 2D hazard scenes | folder |
 | [`mujoco/`](mujoco/README.md) | Level-2 multibody simulation (MuJoCo) | folder |
 | [`plant/`](plant/README.md) | Level-1 walker plant | folder |
 | [`results/`](results/README.md) | Simulation results | folder |

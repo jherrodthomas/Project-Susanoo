@@ -60,7 +60,7 @@ Also here: [`edge-cases.md`](https://github.com/jherrodthomas/Project-Susanoo/bl
 |---|---|
 | l2-crosscheck | `tools.figures.mujoco_readme`, `tools.figures.sim_readme`, `tools.previews.record_figures` |
 | plant-results | `sim.figures.scenes`, `tools.figures.plant_readme`, `tools.figures.sim_readme` |
-| search-SF-01 | `sim.figures.scenes`, `sim.mujoco.crosscheck`, `sim.scenes3d.export_scene`, `tools.figures.search_readme`, `tools.figures.sim_readme`, `tools.readme.build_readme` |
+| search-SF-01 | `sim.figures.scenes`, `sim.mujoco.crosscheck`, `sim.scenes3d.export_scene`, `tools.figures.search_readme`, `tools.figures.sim_readme`, `tools.figures.simfigs_readme`, `tools.readme.build_readme` |
 | sizing-cf4 | `tools.figures.mujoco_readme`, `tools.figures.sim_readme` |
 | ts001-fault-response | `tools.figures.sim_readme`, `tools.figures.trades_readme` |
 

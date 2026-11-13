@@ -173,6 +173,7 @@ package SimulationEvidence {
 
 | Item | Description | State |
 |---|---|---|
+| [`figures/`](2D-Hazard-Scenes) | 2D hazard scenes | folder |
 | [`mujoco/`](Level-2-MuJoCo) | Level-2 multibody simulation (MuJoCo) | folder |
 | [`plant/`](Walker-Plant) | Level-1 walker plant | folder |
 | [`results/`](Simulation-Results) | Simulation results | folder |
@@ -183,7 +184,7 @@ package SimulationEvidence {
 | [`uav/`](UAV-SITL-Harness) | UAV simulation harness (PX4 SITL) | folder |
 | [`faults.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/faults.yaml) | Fault catalogue | present |
 | [`SimulationEvidence.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/SimulationEvidence.sysml) | Generated SysML v2 evidence gate | generated |
-| [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/figures) | Generated SVG figures (do not edit) | generated |
+| [`figures/`](2D-Hazard-Scenes) | Generated SVG figures (do not edit) | generated |
 | `README.md` | This page: generated above the END marker, hand-written below | generated + hand |
 
 <!-- END GENERATED: content below this line is human-authored and preserved -->
