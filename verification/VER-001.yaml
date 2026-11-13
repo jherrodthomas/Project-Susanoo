@@ -1,0 +1,18 @@
+schema: susanoo/verification/v0.1
+id: VER-001
+title: 'SYS-021 staleness annunciation: frozen imagery and telemetry'
+method: test
+result: planned
+configuration: SUS-I1-C001
+simulated: true
+procedure: 'Purpose: show that UAV data that stops updating is marked not current within the staleness time and is
+  never shown as current.
+
+  Setup: PX4 SITL with the integration manager and the pilot display harness; the staleness time T is TBD (SYS-021).
+
+  Steps: (1) fly a nominal observation profile; (2) freeze the video stream; (3) stop telemetry updates; (4) delay
+  frames by more than T; (5) restore each source.
+
+  Pass: for every injection the not-current indication appears within T, no frozen frame is shown as current, and
+  the indication clears only after fresh data resumes. Record the measured detection time for each case.'
+evidence: []
