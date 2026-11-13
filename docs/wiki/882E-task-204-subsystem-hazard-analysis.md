@@ -44,11 +44,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 2 — Identify and document hazards |
-| Tasks | [Task 204 — Subsystem Hazard Analysis](MIL-STD-882E-Task-204) |
+| Tasks | [Task 204 — Subsystem Hazard Analysis](MIL-STD-882E-Task-204.md) |
 | Lifecycle gate | G3 |
 | Applicability | Selected |
 | Accountable role | Safety lead with subsystem owners |
-| Parent folder | [02 · Identify and Document Hazards](882E-02-hazard-identification) |
+| Parent folder | [02 · Identify and Document Hazards](882E-02-hazard-identification.md) |
 
 ## Purpose
 
@@ -57,17 +57,17 @@ software and human errors within the subsystem. One subfolder or file per subsys
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -81,7 +81,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task204_SSHA.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/Task204_SSHA.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML block definition — SSHA record per subsystem](assets/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/figures/fig-4-sysml-block-definition.svg)
+![Figure 4 · SysML block definition — SSHA record per subsystem](../../safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/figures/fig-4-sysml-block-definition.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -114,24 +114,24 @@ package Task204_SSHA {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| PHA focus areas | [Task 202 · Preliminary Hazard Analysis (PHA)](882E-task-202-preliminary-hazard-analysis) |
-| Detailed subsystem design | [00 · System Definition and Analysis Baseline](882E-00-system-definition) |
+| PHA focus areas | [Task 202 · Preliminary Hazard Analysis (PHA)](882E-task-202-preliminary-hazard-analysis.md) |
+| Detailed subsystem design | [00 · System Definition and Analysis Baseline](882E-00-system-definition.md) |
 
 | Output | Destination |
 |---|---|
-| Interface effects | [Task 205 · System Hazard Analysis (SHA)](882E-task-205-system-hazard-analysis) |
-| Software causal factors | [Software Contribution to System Risk (Section 4.4)](882E-software-safety) |
-| Subsystem hazards | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system) |
+| Interface effects | [Task 205 · System Hazard Analysis (SHA)](882E-task-205-system-hazard-analysis.md) |
+| Software causal factors | [Software Contribution to System Risk (Section 4.4)](882E-software-safety.md) |
+| Subsystem hazards | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system.md) |
 
 ## Folder contents
 
 | Item | Description | State |
 |---|---|---|
-| [`ssha.svg`](assets/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha.svg) | Spreadsheet view of the worksheet (generated by tools/worksheets/build.py) | present |
+| [`ssha.svg`](../../safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha.svg) | Spreadsheet view of the worksheet (generated by tools/worksheets/build.py) | present |
 | `ssha-<subsystem-id>.csv` | One worksheet per subsystem (e.g. ssha-SUS-M1-PWR.csv) | planned |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/figures) | Generated SVG figures (do not edit) | generated |
 | [`Task204_SSHA.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/Task204_SSHA.sysml) | Generated SysML v2 view | generated |
@@ -143,7 +143,7 @@ package Task204_SSHA {
 <!-- worksheet:start (generated by tools/worksheets/build.py; do not edit) -->
 ### Worksheet
 
-![Task 204 · Subsystem Hazard Analysis (FMEA-style) worksheet](assets/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha.svg)
+![Task 204 · Subsystem Hazard Analysis (FMEA-style) worksheet](../../safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha.svg)
 
 Data: [`ssha-SUS-A1.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha-SUS-A1.csv), [`ssha-SUS-GSE.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha-SUS-GSE.csv), [`ssha-SUS-I1-INT.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha-SUS-I1-INT.csv), [`ssha-SUS-M1-CTL.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha-SUS-M1-CTL.csv), [`ssha-SUS-M1-DCK.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha-SUS-M1-DCK.csv), [`ssha-SUS-M1-MAN.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha-SUS-M1-MAN.csv), [`ssha-SUS-M1-PIL.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha-SUS-M1-PIL.csv), [`ssha-SUS-M1-PWR.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha-SUS-M1-PWR.csv), [`ssha-SUS-M1-SAF.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha-SUS-M1-SAF.csv), [`ssha-SUS-M1-WLK.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-204-subsystem-hazard-analysis/ssha-SUS-M1-WLK.csv) · Excel: [`worksheets.xlsx`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/generated/worksheets.xlsx), tab **SSHA-FMEA** (risk levels are live Table III formulas). Generated from `safety/hazards/*.yaml (subsystems, causal_factors)` by `tools/worksheets/build.py`; edit the records, not the sheet. AI-drafted (I0), not reviewed.
 <!-- worksheet:end -->

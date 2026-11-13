@@ -48,8 +48,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 |---|---|
 | Lifecycle gate | G0 (Concept) feeding G1–G2 |
 | Accountable role | Systems lead |
-| Documentation standard | [`framework/documentation-standard.md`](Documentation-Standard) |
-| Analysis baseline | [`safety/mil-std-882e/00-system-definition`](882E-00-system-definition) |
+| Documentation standard | [`framework/documentation-standard.md`](Documentation-Standard.md) |
+| Analysis baseline | [`safety/mil-std-882e/00-system-definition`](882E-00-system-definition.md) |
 
 ## Purpose
 
@@ -64,13 +64,13 @@ to the PHL, PHA and FHA in the MIL-STD-882E tree.
 Preliminary decomposition from [`architecture.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/architecture.md). Dashed outline = subject of an open
 trade study (TS-xxx).
 
-![Figure 1 · Block diagram](assets/concept/figures/fig-1-block-diagram.svg)
+![Figure 1 · Block diagram](../../concept/figures/fig-1-block-diagram.svg)
 
 ## Boundary diagram
 
 System boundary per CONOPS section 2. Numbered crossings match the table.
 
-![Figure 2 · Boundary diagram](assets/concept/figures/fig-2-boundary-diagram.svg)
+![Figure 2 · Boundary diagram](../../concept/figures/fig-2-boundary-diagram.svg)
 
 | # | From | To | Crossing |
 |---|---|---|---|
@@ -93,16 +93,16 @@ SysML v2 textual model: [`ConceptOperations.sysml`](https://github.com/jherrodth
 modes as a state machine and the nominal scenarios as use cases. It imports
 the project model's [`SusanooArchitecture`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml). The `.sysml`
 file is the model of record; Figure 3 is drawn directly from it, so the figure cannot drift from the model.
-[Task 206 (O&SHA)](882E-task-206-operating-and-support-hazard-analysis)
+[Task 206 (O&SHA)](882E-task-206-operating-and-support-hazard-analysis.md)
 analyses the same state machine.
 
-![Figure 3 · SysML state machine — operating modes](assets/concept/figures/fig-3-sysml-state-machine.svg)
+![Figure 3 · SysML state machine — operating modes](../../concept/figures/fig-3-sysml-state-machine.svg)
 
-![Figure 4 · SysML use cases — nominal scenarios](assets/concept/figures/fig-4-sysml-use-cases.svg)
+![Figure 4 · SysML use cases — nominal scenarios](../../concept/figures/fig-4-sysml-use-cases.svg)
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/concept/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../concept/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
@@ -111,11 +111,11 @@ analyses the same state machine.
 
 | Output | Destination |
 |---|---|
-| Modes and scenarios | [Task 201 PHL](882E-task-201-preliminary-hazard-list), [Task 206 O&SHA](882E-task-206-operating-and-support-hazard-analysis) |
-| Decomposition and interfaces | [00 System definition](882E-00-system-definition) |
-| System functions | [Task 208 FHA](882E-task-208-functional-hazard-analysis) |
-| Candidate requirements SYS-001..006 | [Task 203 SRHA](882E-task-203-system-requirements-hazard-analysis) |
-| Flight-control candidate | [`integrations/px4`](PX4-Integration-Model) |
+| Modes and scenarios | [Task 201 PHL](882E-task-201-preliminary-hazard-list.md), [Task 206 O&SHA](882E-task-206-operating-and-support-hazard-analysis.md) |
+| Decomposition and interfaces | [00 System definition](882E-00-system-definition.md) |
+| System functions | [Task 208 FHA](882E-task-208-functional-hazard-analysis.md) |
+| Candidate requirements SYS-001..006 | [Task 203 SRHA](882E-task-203-system-requirements-hazard-analysis.md) |
+| Flight-control candidate | [`integrations/px4`](PX4-Integration-Model.md) |
 
 ## Folder contents
 

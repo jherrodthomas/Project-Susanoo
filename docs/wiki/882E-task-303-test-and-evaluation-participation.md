@@ -33,11 +33,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 6 — Verify, validate and document risk reduction |
-| Tasks | [Task 303 — Test and Evaluation Participation](MIL-STD-882E-Task-303) |
+| Tasks | [Task 303 — Test and Evaluation Participation](MIL-STD-882E-Task-303.md) |
 | Lifecycle gate | G4–G5 |
 | Applicability | Selected |
 | Accountable role | Safety lead with test lead |
-| Parent folder | [06 · Verify, Validate and Document Risk Reduction](882E-06-verification) |
+| Parent folder | [06 · Verify, Validate and Document Risk Reduction](882E-06-verification.md) |
 
 ## Purpose
 
@@ -46,17 +46,17 @@ rig and human-in-the-loop tests, and use of test data to update hazards.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -68,7 +68,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task303_TestParticipation.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/Task303_TestParticipation.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML state machine — TestSafetyRelease](assets/safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-4-sysml-state-machine.svg)
+![Figure 4 · SysML state machine — TestSafetyRelease](../../safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-4-sysml-state-machine.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -106,17 +106,17 @@ package Task303_TestParticipation {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/06-verification/task-303-test-and-evaluation-participation/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Operating hazards | [Task 206 · Operating and Support Hazard Analysis (O&SHA)](882E-task-206-operating-and-support-hazard-analysis) |
-| Requirements under test | [Safety Requirements Register](882E-safety-requirements) |
+| Operating hazards | [Task 206 · Operating and Support Hazard Analysis (O&SHA)](882E-task-206-operating-and-support-hazard-analysis.md) |
+| Requirements under test | [Safety Requirements Register](882E-safety-requirements.md) |
 
 | Output | Destination |
 |---|---|
-| Test results | [Task 401 · Safety Verification](882E-task-401-safety-verification) |
-| Test anomalies | [Task 304 · Review of Changes, Deficiencies, Mishaps and Deviations](882E-task-304-review-changes-deficiencies-mishaps-deviations) |
+| Test results | [Task 401 · Safety Verification](882E-task-401-safety-verification.md) |
+| Test anomalies | [Task 304 · Review of Changes, Deficiencies, Mishaps and Deviations](882E-task-304-review-changes-deficiencies-mishaps-deviations.md) |
 
 ## Folder contents
 

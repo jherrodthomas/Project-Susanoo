@@ -29,11 +29,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 8 — Manage life-cycle risk |
-| Tasks | [Task 107 — Hazard Management Progress Report](MIL-STD-882E-Task-107) |
+| Tasks | [Task 107 — Hazard Management Progress Report](MIL-STD-882E-Task-107.md) |
 | Lifecycle gate | Periodic |
 | Applicability | Selected |
 | Accountable role | Safety lead |
-| Parent folder | [08 · Manage Life-Cycle Risk](882E-08-lifecycle-risk-management) |
+| Parent folder | [08 · Manage Life-Cycle Risk](882E-08-lifecycle-risk-management.md) |
 
 ## Purpose
 
@@ -42,17 +42,17 @@ the last report — generated from the hazard tracking system where possible.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/08-lifecycle-risk-management/task-107-hazard-management-progress-report/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/08-lifecycle-risk-management/task-107-hazard-management-progress-report/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/08-lifecycle-risk-management/task-107-hazard-management-progress-report/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/08-lifecycle-risk-management/task-107-hazard-management-progress-report/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/08-lifecycle-risk-management/task-107-hazard-management-progress-report/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/08-lifecycle-risk-management/task-107-hazard-management-progress-report/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -63,7 +63,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task107_ProgressReport.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/08-lifecycle-risk-management/task-107-hazard-management-progress-report/Task107_ProgressReport.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML block definition — progress report metrics](assets/safety/mil-std-882e/08-lifecycle-risk-management/task-107-hazard-management-progress-report/figures/fig-4-sysml-block-definition.svg)
+![Figure 4 · SysML block definition — progress report metrics](../../safety/mil-std-882e/08-lifecycle-risk-management/task-107-hazard-management-progress-report/figures/fig-4-sysml-block-definition.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -90,11 +90,11 @@ package Task107_ProgressReport {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/08-lifecycle-risk-management/task-107-hazard-management-progress-report/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/08-lifecycle-risk-management/task-107-hazard-management-progress-report/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Hazard log snapshot | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system) |
+| Hazard log snapshot | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system.md) |
 
 | Output | Destination |
 |---|---|

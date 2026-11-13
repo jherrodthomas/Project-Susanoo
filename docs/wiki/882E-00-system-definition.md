@@ -50,7 +50,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 |---|---|
 | Lifecycle gate | G0 (refreshed at every gate) |
 | Accountable role | Systems lead with safety lead |
-| Parent folder | [MIL-STD-882E System Safety Work Products](882E-Work-Products) |
+| Parent folder | [MIL-STD-882E System Safety Work Products](882E-Work-Products.md) |
 
 ## Purpose
 
@@ -63,17 +63,17 @@ that model, and every figure reads its elements and interfaces from the record.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/00-system-definition/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/00-system-definition/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/00-system-definition/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/00-system-definition/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/00-system-definition/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/00-system-definition/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -93,25 +93,25 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 Project SysML v2 model (model of record for every folder in this tree, validated by the OMG pilot in CI): [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml), [`SusanooLibrary.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/SusanooLibrary.sysml), [`Requirements.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Requirements.sysml).
 
-![Figure 4 · SysML block definition — SUS-I1 system breakdown](assets/safety/mil-std-882e/00-system-definition/figures/fig-4-sysml-block-definition.svg)
+![Figure 4 · SysML block definition — SUS-I1 system breakdown](../../safety/mil-std-882e/00-system-definition/figures/fig-4-sysml-block-definition.svg)
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/00-system-definition/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/00-system-definition/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | Missions, phases, users | [`concept/CONOPS.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md) |
 | Elements and interfaces (record) | [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml) |
 | SysML context and usage paths | [`models/sysml/model/Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml) |
-| Power, control and dock diagrams | [`docs/wiki/SUS-M1-Architecture-and-Boundaries.md`](SUS-M1-Architecture-and-Boundaries) |
+| Power, control and dock diagrams | [`docs/wiki/SUS-M1-Architecture-and-Boundaries.md`](SUS-M1-Architecture-and-Boundaries.md) |
 | Configuration ID SUS-I1-C001 | [`pdac/product.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/pdac/product.yaml) |
 
 | Output | Destination |
 |---|---|
-| Analysis baseline | [02 · Identify and Document Hazards](882E-02-hazard-identification) |
-| Software-controlled functions | [Software Contribution to System Risk (Section 4.4)](882E-software-safety) |
-| Subsystem IDs for hazard records | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system) |
+| Analysis baseline | [02 · Identify and Document Hazards](882E-02-hazard-identification.md) |
+| Software-controlled functions | [Software Contribution to System Risk (Section 4.4)](882E-software-safety.md) |
+| Subsystem IDs for hazard records | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system.md) |
 
 ## Folder contents
 

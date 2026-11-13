@@ -37,7 +37,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Lifecycle gate | G0–G1, updated at each gate |
 | Applicability | Selected |
 | Accountable role | Safety lead |
-| Parent folder | [MIL-STD-882E System Safety Work Products](882E-Work-Products) |
+| Parent folder | [MIL-STD-882E System Safety Work Products](882E-Work-Products.md) |
 
 ## Purpose
 
@@ -47,17 +47,17 @@ Management tasks 101–105 and 108 live here.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/01-safety-approach/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/01-safety-approach/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/01-safety-approach/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/01-safety-approach/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/01-safety-approach/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/01-safety-approach/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -70,7 +70,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`SafetyApproach.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/01-safety-approach/SafetyApproach.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML block definition — safety program plan set](assets/safety/mil-std-882e/01-safety-approach/figures/fig-4-sysml-block-definition.svg)
+![Figure 4 · SysML block definition — safety program plan set](../../safety/mil-std-882e/01-safety-approach/figures/fig-4-sysml-block-definition.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -113,30 +113,30 @@ package SafetyApproach {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/01-safety-approach/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/01-safety-approach/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| System baseline | [00 · System Definition and Analysis Baseline](882E-00-system-definition) |
+| System baseline | [00 · System Definition and Analysis Baseline](882E-00-system-definition.md) |
 | Standards and tailoring | [`framework/standards-applicability.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/standards-applicability.md) |
 | Gates G0–G7 | [`framework/lifecycle.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/lifecycle.md) |
 
 | Output | Destination |
 |---|---|
-| Selected analysis tasks and methods | [02 · Identify and Document Hazards](882E-02-hazard-identification) |
-| Approved risk matrix reference | [03 · Assess and Document Risk](882E-03-risk-assessment) |
-| Acceptance authority matrix | [07 · Accept Risk and Document](882E-07-risk-acceptance) |
+| Selected analysis tasks and methods | [02 · Identify and Document Hazards](882E-02-hazard-identification.md) |
+| Approved risk matrix reference | [03 · Assess and Document Risk](882E-03-risk-assessment.md) |
+| Acceptance authority matrix | [07 · Accept Risk and Document](882E-07-risk-acceptance.md) |
 
 ## Folder contents
 
 | Item | Description | State |
 |---|---|---|
-| [`task-101-hazard-identification-and-mitigation-effort/`](882E-task-101-hazard-identification-and-mitigation-effort) | Task 101 · Hazard Identification and Mitigation Effort | folder |
-| [`task-102-system-safety-program-plan/`](882E-task-102-system-safety-program-plan) | Task 102 · System Safety Program Plan (SSPP) | folder |
-| [`task-103-hazard-management-plan/`](882E-task-103-hazard-management-plan) | Task 103 · Hazard Management Plan (HMP) | folder |
-| [`task-104-government-reviews-and-audits/`](882E-task-104-government-reviews-and-audits) | Task 104 · Government Reviews and Audits | folder |
-| [`task-105-integrated-product-team-support/`](882E-task-105-integrated-product-team-support) | Task 105 · Integrated Product Team (IPT) Support | folder |
-| [`task-108-hazardous-materials-management-plan/`](882E-task-108-hazardous-materials-management-plan) | Task 108 · Hazardous Materials Management Plan (HMMP) | folder |
+| [`task-101-hazard-identification-and-mitigation-effort/`](882E-task-101-hazard-identification-and-mitigation-effort.md) | Task 101 · Hazard Identification and Mitigation Effort | folder |
+| [`task-102-system-safety-program-plan/`](882E-task-102-system-safety-program-plan.md) | Task 102 · System Safety Program Plan (SSPP) | folder |
+| [`task-103-hazard-management-plan/`](882E-task-103-hazard-management-plan.md) | Task 103 · Hazard Management Plan (HMP) | folder |
+| [`task-104-government-reviews-and-audits/`](882E-task-104-government-reviews-and-audits.md) | Task 104 · Government Reviews and Audits | folder |
+| [`task-105-integrated-product-team-support/`](882E-task-105-integrated-product-team-support.md) | Task 105 · Integrated Product Team (IPT) Support | folder |
+| [`task-108-hazardous-materials-management-plan/`](882E-task-108-hazardous-materials-management-plan.md) | Task 108 · Hazardous Materials Management Plan (HMMP) | folder |
 | `task-applicability.yaml` | Task selection and tailoring decisions (see Wiki applicability page) | planned |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/mil-std-882e/01-safety-approach/figures) | Generated SVG figures (do not edit) | generated |
 | [`SafetyApproach.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/01-safety-approach/SafetyApproach.sysml) | Generated SysML v2 view | generated |

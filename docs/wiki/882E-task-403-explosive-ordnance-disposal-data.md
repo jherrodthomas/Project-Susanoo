@@ -30,11 +30,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 6 — Verify, validate and document risk reduction |
-| Tasks | [Task 403 — Explosive Ordnance Disposal Data](MIL-STD-882E-Task-403) |
+| Tasks | [Task 403 — Explosive Ordnance Disposal Data](MIL-STD-882E-Task-403.md) |
 | Lifecycle gate | Re-evaluate at each gate |
 | Applicability | Not applicable — unarmed platform, no ordnance |
 | Accountable role | Safety lead |
-| Parent folder | [06 · Verify, Validate and Document Risk Reduction](882E-06-verification) |
+| Parent folder | [06 · Verify, Validate and Document Risk Reduction](882E-06-verification.md) |
 
 ## Purpose
 
@@ -43,17 +43,17 @@ ordnance is outside the project charter and must be escalated, not analysed here
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/06-verification/task-403-explosive-ordnance-disposal-data/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/06-verification/task-403-explosive-ordnance-disposal-data/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/06-verification/task-403-explosive-ordnance-disposal-data/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/06-verification/task-403-explosive-ordnance-disposal-data/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/06-verification/task-403-explosive-ordnance-disposal-data/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/06-verification/task-403-explosive-ordnance-disposal-data/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -64,7 +64,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task403_Applicability.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/06-verification/task-403-explosive-ordnance-disposal-data/Task403_Applicability.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML state machine — Task403Applicability](assets/safety/mil-std-882e/06-verification/task-403-explosive-ordnance-disposal-data/figures/fig-4-sysml-state-machine.svg)
+![Figure 4 · SysML state machine — Task403Applicability](../../safety/mil-std-882e/06-verification/task-403-explosive-ordnance-disposal-data/figures/fig-4-sysml-state-machine.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -93,15 +93,15 @@ package Task403_Applicability {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/06-verification/task-403-explosive-ordnance-disposal-data/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/06-verification/task-403-explosive-ordnance-disposal-data/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Applicability decision | [01 · Document the System Safety Approach](882E-01-safety-approach) |
+| Applicability decision | [01 · Document the System Safety Approach](882E-01-safety-approach.md) |
 
 | Output | Destination |
 |---|---|
-| Re-evaluation record | [01 · Document the System Safety Approach](882E-01-safety-approach) |
+| Re-evaluation record | [01 · Document the System Safety Approach](882E-01-safety-approach.md) |
 
 ## Folder contents
 
