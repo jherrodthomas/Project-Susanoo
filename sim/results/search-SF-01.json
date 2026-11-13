@@ -5,9 +5,9 @@
    "cause_gap": null,
    "events": {
     "alarm_t": 1.02,
-    "impact_speed": 4.835,
+    "impact_speed": 4.884,
     "lock_t": null,
-    "mishap_t": 1.575,
+    "mishap_t": 1.58,
     "stop_t": null
    },
    "family": "SF-01",
@@ -18,43 +18,43 @@
    "outcome": "hard-drop",
    "params": {
     "load_holding": "fails",
-    "pilot_reaction_s": 2.1,
-    "slope_deg": 15.5,
-    "stride_offset_m": 0.08,
+    "pilot_reaction_s": 3.0,
+    "slope_deg": 12.0,
+    "stride_offset_m": 0.09,
     "tau_leak_s": 0.05
    },
    "probes": [
     {
      "name": "pilot reacts in 0.5 s",
      "outcome": "hard-drop",
-     "rho": -3.835
+     "rho": -3.884
     },
     {
      "name": "load holding works",
      "outcome": "safe",
-     "rho": -0.4083
+     "rho": -0.2962
     },
     {
      "name": "flat ground",
      "outcome": "hard-drop",
-     "rho": -3.835
+     "rho": -3.884
     },
     {
      "name": "slow leak (tau 3 s)",
      "outcome": "hard-drop",
-     "rho": -2.0079
+     "rho": -1.608
     }
    ],
-   "rho": -3.835,
+   "rho": -3.884,
    "stop_active": false
   },
   {
    "cause_gap": null,
    "events": {
     "alarm_t": 1.025,
-    "impact_speed": 4.816,
+    "impact_speed": 4.865,
     "lock_t": null,
-    "mishap_t": 1.59,
+    "mishap_t": 1.595,
     "stop_t": null
    },
    "family": "SF-01",
@@ -65,43 +65,43 @@
    "outcome": "hard-drop",
    "params": {
     "load_holding": "fails",
-    "pilot_reaction_s": 0.6,
-    "slope_deg": 16.0,
-    "stride_offset_m": 0.01,
+    "pilot_reaction_s": 2.0,
+    "slope_deg": 13.5,
+    "stride_offset_m": 0.04,
     "tau_leak_s": 0.06
    },
    "probes": [
     {
      "name": "pilot reacts in 0.5 s",
      "outcome": "hard-drop",
-     "rho": -3.816
+     "rho": -3.865
     },
     {
      "name": "load holding works",
      "outcome": "safe",
-     "rho": -0.249
+     "rho": -0.2022
     },
     {
      "name": "flat ground",
      "outcome": "hard-drop",
-     "rho": -3.816
+     "rho": -3.865
     },
     {
      "name": "slow leak (tau 3 s)",
      "outcome": "hard-drop",
-     "rho": -1.572
+     "rho": -1.608
     }
    ],
-   "rho": -3.816,
+   "rho": -3.865,
    "stop_active": false
   },
   {
    "cause_gap": null,
    "events": {
-    "alarm_t": 1.02,
-    "impact_speed": 4.835,
+    "alarm_t": 1.025,
+    "impact_speed": 4.865,
     "lock_t": null,
-    "mishap_t": 1.575,
+    "mishap_t": 1.595,
     "stop_t": null
    },
    "family": "SF-01",
@@ -113,42 +113,42 @@
    "params": {
     "load_holding": "fails",
     "pilot_reaction_s": 0.9,
-    "slope_deg": 8.5,
-    "stride_offset_m": 0.1,
-    "tau_leak_s": 0.05
+    "slope_deg": 12.0,
+    "stride_offset_m": 0.09,
+    "tau_leak_s": 0.06
    },
    "probes": [
     {
      "name": "pilot reacts in 0.5 s",
      "outcome": "hard-drop",
-     "rho": -3.835
+     "rho": -3.865
     },
     {
      "name": "load holding works",
      "outcome": "safe",
-     "rho": -0.2531
+     "rho": -0.2632
     },
     {
      "name": "flat ground",
      "outcome": "hard-drop",
-     "rho": -3.835
+     "rho": -3.865
     },
     {
      "name": "slow leak (tau 3 s)",
      "outcome": "hard-drop",
-     "rho": -1.572
+     "rho": -1.608
     }
    ],
-   "rho": -3.835,
+   "rho": -3.865,
    "stop_active": false
   },
   {
    "cause_gap": null,
    "events": {
     "alarm_t": 1.025,
-    "impact_speed": 4.816,
+    "impact_speed": 4.846,
     "lock_t": null,
-    "mishap_t": 1.59,
+    "mishap_t": 1.61,
     "stop_t": null
    },
    "family": "SF-01",
@@ -159,43 +159,43 @@
    "outcome": "hard-drop",
    "params": {
     "load_holding": "fails",
-    "pilot_reaction_s": 1.8,
-    "slope_deg": 12.0,
-    "stride_offset_m": 0.02,
-    "tau_leak_s": 0.06
+    "pilot_reaction_s": 2.2,
+    "slope_deg": 20.0,
+    "stride_offset_m": 0.09,
+    "tau_leak_s": 0.07
    },
    "probes": [
     {
      "name": "pilot reacts in 0.5 s",
      "outcome": "hard-drop",
-     "rho": -3.816
+     "rho": -3.846
     },
     {
      "name": "load holding works",
      "outcome": "safe",
-     "rho": -0.1589
+     "rho": -0.4579
     },
     {
      "name": "flat ground",
      "outcome": "hard-drop",
-     "rho": -3.816
+     "rho": -3.846
     },
     {
      "name": "slow leak (tau 3 s)",
-     "outcome": "hard-drop",
-     "rho": -1.572
+     "outcome": "tip",
+     "rho": -2.5323
     }
    ],
-   "rho": -3.816,
+   "rho": -3.846,
    "stop_active": false
   },
   {
    "cause_gap": null,
    "events": {
     "alarm_t": 1.02,
-    "impact_speed": 4.835,
+    "impact_speed": 4.884,
     "lock_t": null,
-    "mishap_t": 1.575,
+    "mishap_t": 1.58,
     "stop_t": null
    },
    "family": "SF-01",
@@ -215,34 +215,34 @@
     {
      "name": "pilot reacts in 0.5 s",
      "outcome": "hard-drop",
-     "rho": -3.835
+     "rho": -3.884
     },
     {
      "name": "load holding works",
      "outcome": "safe",
-     "rho": 0.0419
+     "rho": 0.0444
     },
     {
      "name": "flat ground",
      "outcome": "hard-drop",
-     "rho": -3.835
+     "rho": -3.884
     },
     {
      "name": "slow leak (tau 3 s)",
      "outcome": "hard-drop",
-     "rho": -1.572
+     "rho": -1.608
     }
    ],
-   "rho": -3.835,
+   "rho": -3.884,
    "stop_active": false
   },
   {
    "cause_gap": null,
    "events": {
     "alarm_t": 1.025,
-    "impact_speed": 4.816,
+    "impact_speed": 4.865,
     "lock_t": null,
-    "mishap_t": 1.59,
+    "mishap_t": 1.595,
     "stop_t": null
    },
    "family": "SF-01",
@@ -262,34 +262,34 @@
     {
      "name": "pilot reacts in 0.5 s",
      "outcome": "hard-drop",
-     "rho": -3.816
+     "rho": -3.865
     },
     {
      "name": "load holding works",
      "outcome": "safe",
-     "rho": 0.0511
+     "rho": 0.0567
     },
     {
      "name": "flat ground",
      "outcome": "hard-drop",
-     "rho": -3.816
+     "rho": -3.865
     },
     {
      "name": "slow leak (tau 3 s)",
      "outcome": "hard-drop",
-     "rho": -1.572
+     "rho": -1.608
     }
    ],
-   "rho": -3.816,
+   "rho": -3.865,
    "stop_active": false
   },
   {
    "cause_gap": null,
    "events": {
-    "alarm_t": 1.535,
+    "alarm_t": 2.025,
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 3.09,
+    "mishap_t": 4.295,
     "stop_t": null
    },
    "family": "SF-01",
@@ -301,43 +301,43 @@
    "params": {
     "load_holding": "fails",
     "pilot_reaction_s": 2.3,
-    "slope_deg": 18.0,
-    "stride_offset_m": 0.1,
-    "tau_leak_s": 1.49
+    "slope_deg": 20.0,
+    "stride_offset_m": 0.05,
+    "tau_leak_s": 2.87
    },
    "probes": [
     {
      "name": "pilot reacts in 0.5 s",
      "outcome": "hard-drop",
-     "rho": -2.108
+     "rho": -1.654
     },
     {
      "name": "load holding works",
      "outcome": "tip",
-     "rho": -1.4834
+     "rho": -1.5105
     },
     {
      "name": "flat ground",
      "outcome": "hard-drop",
-     "rho": -2.108
+     "rho": -1.654
     },
     {
      "name": "slow leak (tau 3 s)",
      "outcome": "tip",
-     "rho": -2.5189
+     "rho": -2.5319
     }
    ],
-   "rho": -2.6318,
+   "rho": -2.5357,
    "stop_active": false
   },
   {
    "cause_gap": null,
    "events": {
-    "alarm_t": 2.46,
+    "alarm_t": 1.695,
     "impact_speed": 0.0,
-    "lock_t": 4.855,
-    "mishap_t": 4.9,
-    "stop_t": 3.865
+    "lock_t": 2.885,
+    "mishap_t": 3.56,
+    "stop_t": null
    },
    "family": "SF-01",
    "finding": null,
@@ -347,40 +347,40 @@
    "outcome": "tip",
    "params": {
     "load_holding": "works",
-    "pilot_reaction_s": 1.4,
-    "slope_deg": 16.5,
-    "stride_offset_m": 0.1,
-    "tau_leak_s": 4.09
+    "pilot_reaction_s": 2.4,
+    "slope_deg": 19.5,
+    "stride_offset_m": 0.09,
+    "tau_leak_s": 1.94
    },
    "probes": [
     {
      "name": "pilot reacts in 0.5 s",
      "outcome": "safe",
-     "rho": -0.1692
+     "rho": -0.6828
     },
     {
      "name": "load holding works",
      "outcome": "tip",
-     "rho": -1.532
+     "rho": -1.5734
     },
     {
      "name": "flat ground",
      "outcome": "safe",
-     "rho": 0.3075
+     "rho": 0.1502
     },
     {
      "name": "slow leak (tau 3 s)",
-     "outcome": "safe",
-     "rho": -1.0483
+     "outcome": "tip",
+     "rho": -1.6702
     }
    ],
-   "rho": -1.532,
-   "stop_active": true
+   "rho": -1.5734,
+   "stop_active": false
   }
  ],
  "falsification": {
   "evaluations": 480,
-  "worst_rho": -3.849
+  "worst_rho": -3.903
  },
  "family": {
   "base": {
@@ -594,7 +594,7 @@
   [
    18.0,
    1.49,
-   "tip"
+   "hard-drop"
   ],
   [
    7.04,
@@ -744,7 +744,7 @@
   [
    13.73,
    3.396,
-   "tip"
+   "hard-drop"
   ],
   [
    18.91,
@@ -1289,7 +1289,7 @@
   [
    17.12,
    2.443,
-   "tip"
+   "safe"
   ],
   [
    5.81,
@@ -2419,7 +2419,7 @@
   [
    16.71,
    4.094,
-   "tip"
+   "safe"
   ],
   [
    14.06,
@@ -2429,9 +2429,9 @@
  ],
  "monte_carlo": {
   "by_outcome": {
-   "hard-drop": 196,
-   "safe": 194,
-   "tip": 10
+   "hard-drop": 198,
+   "safe": 196,
+   "tip": 6
   },
   "n": 400,
   "split": {
@@ -2440,10 +2440,10 @@
     "n": 201
    },
    "load_holding=works": {
-    "failures": 5,
+    "failures": 3,
     "n": 199
    }
   }
  },
- "spec_digest": "48e1754c83f1"
+ "spec_digest": "ce8f2beafd0f"
 }

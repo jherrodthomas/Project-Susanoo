@@ -13,6 +13,23 @@ from tools.terms.terms import decorate
 P = spec.load()
 
 
+class ReferenceLayout(unittest.TestCase):
+    """The simulated walker is the reference layout (CL-05, DQ-014): mass, centre of mass and heights come from the
+    CAD metrics (DQ-023), so a change to the layout that the simulation has not followed fails here."""
+
+    def test_spec_matches_cl05_metrics(self):
+        import json
+        from sim.mujoco.model import L2_SPEC
+        m = json.loads((ROOT / "cad" / "metrics.json").read_text())["concepts"]["CL-05"]
+        p = spec.load()
+        l2 = _read_yaml(L2_SPEC)["params"]
+        self.assertAlmostEqual(p["mass_kg"], m["placeholder_mass_kg"], delta=5)
+        self.assertAlmostEqual(p["com_height_m"], m["cg_m"][2], delta=0.01)
+        self.assertAlmostEqual(p["crouch_height_m"], m["postures"]["kneel"]["cg_m"][2], delta=0.01)
+        self.assertAlmostEqual(l2["hip_height_m"]["value"], m["hip_height_m"], delta=0.01)
+        self.assertAlmostEqual(l2["torso_mass_kg"]["value"] + 2 * l2["leg_mass_kg"]["value"], p["mass_kg"], delta=1)
+
+
 class Spec(unittest.TestCase):
     def raw(self):
         return _read_yaml(spec.SPEC)

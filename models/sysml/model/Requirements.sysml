@@ -80,7 +80,7 @@ package SusanooRequirements {
         @HazardRef { ids = ("HAZ-PWR-003"); }
     }
     requirement <'SYS-016'> actuatorTorqueReserveAgainstSupplyLoss : SystemRequirement {
-        doc /* Each ankle actuator shall deliver at least 1.5 m g L_foot of torque at full actuator supply and at least 0.6 m g L_foot at the supply at which load holding engages, and each knee actuator at least 22.5 kN m at full supply (SPEC-WLK-001 mass and geometry), so that a loss of supply inside the operating envelope does not tip the walker before load holding engages. */
+        doc /* Each ankle actuator shall deliver at least 1.5 m g L_foot of torque at full actuator supply and at least 0.6 m g L_foot at the supply at which load holding engages, and each knee actuator at least 26.5 kN m at full supply (SPEC-WLK-001 mass and geometry, the reference layout CL-05), so that a loss of supply inside the operating envelope does not tip the walker before load holding engages. */
         @Source { record = "requirements/SYS-016.yaml"; }
         @HazardRef { ids = ("HAZ-WLK-002"); }
     }

@@ -15,7 +15,7 @@
 <text x="535" y="14" font-size="10.5" fill="#475569" font-weight="700" text-anchor="middle">Agree</text>
 <text x="578" y="14" font-size="10.5" fill="#475569" font-weight="700">Note</text>
 <line x1="40" y1="24" x2="1040" y2="24" stroke="#CBD5E1" stroke-width="1"/>
-<text x="48" y="46" font-size="11.5" fill="#0F172A" font-weight="700">NOM · No fault (capability by slope) (5 of 6 agree)</text>
+<text x="48" y="46" font-size="11.5" fill="#0F172A" font-weight="700">NOM · No fault (capability by slope) (6 of 6 agree)</text>
 <rect x="40" y="54" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <text x="48" y="70.5" font-size="11" fill="#0F172A">NOM-00</text>
 <rect x="258.8" y="58.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
@@ -57,12 +57,11 @@
 <text x="48" y="195.5" font-size="11" fill="#0F172A">NOM-25</text>
 <rect x="258.8" y="183.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="275" y="195.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
-<rect x="396.5" y="183.5" width="56.9" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="425" y="195.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 3.24 s</text>
-<rect x="523.4" y="183.5" width="23.2" height="17" rx="8.5" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
-<text x="535" y="195.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">no</text>
-<text x="578" y="195.5" font-size="11" fill="#0F172A">Level 2 tips the no-fault gait from about 24 degrees, level 1 from about 27 (both hold a…</text>
-<text x="48" y="226" font-size="11.5" fill="#0F172A" font-weight="700">CAT · Fault catalogue (sim/faults.yaml) (8 of 9 agree)</text>
+<rect x="408.8" y="183.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="195.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="520.6" y="183.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="535" y="195.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<text x="48" y="226" font-size="11.5" fill="#0F172A" font-weight="700">CAT · Fault catalogue (sim/faults.yaml) (7 of 9 agree)</text>
 <rect x="40" y="234" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <text x="48" y="250.5" font-size="11" fill="#0F172A">CAT-STOP</text>
 <rect x="258.8" y="238.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
@@ -81,9 +80,9 @@
 <rect x="40" y="284" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <text x="48" y="300.5" font-size="11" fill="#0F172A">CAT-01-NOHOLD</text>
 <rect x="230.3" y="288.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="275" y="300.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.57 s</text>
+<text x="275" y="300.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.58 s</text>
 <rect x="380.3" y="288.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="425" y="300.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.75 s</text>
+<text x="425" y="300.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.74 s</text>
 <rect x="520.6" y="288.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="535" y="300.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
 <text x="48" y="325.5" font-size="11" fill="#0F172A">CAT-01-SLOW-8</text>
@@ -103,17 +102,18 @@
 <text x="535" y="350.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
 <text x="48" y="375.5" font-size="11" fill="#0F172A">CAT-02-NOMON</text>
 <rect x="246.5" y="363.5" width="56.9" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="275" y="375.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 2.88 s</text>
-<rect x="396.5" y="363.5" width="56.9" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="425" y="375.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 3.79 s</text>
-<rect x="520.6" y="363.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
-<text x="535" y="375.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
+<text x="275" y="375.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 2.77 s</text>
+<rect x="408.8" y="363.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="425" y="375.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="523.4" y="363.5" width="23.2" height="17" rx="8.5" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="535" y="375.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">no</text>
+<text x="578" y="375.5" font-size="11" fill="#0F172A">Frozen posture feedback with no staleness monitor: the walker is lost at both levels.…</text>
 <rect x="40" y="384" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <text x="48" y="400.5" font-size="11" fill="#0F172A">CAT-03</text>
 <rect x="230.3" y="388.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="275" y="400.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.49 s</text>
+<text x="275" y="400.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.50 s</text>
 <rect x="380.3" y="388.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="425" y="400.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.62 s</text>
+<text x="425" y="400.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.61 s</text>
 <rect x="520.6" y="388.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="535" y="400.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
 <text x="48" y="425.5" font-size="11" fill="#0F172A">CAT-04-BRAKE</text>
@@ -126,12 +126,12 @@
 <rect x="40" y="434" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <text x="48" y="450.5" font-size="11" fill="#0F172A">CAT-04-NOBRAKE</text>
 <rect x="230.3" y="438.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="275" y="450.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 2.59 s</text>
-<rect x="408.8" y="438.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
-<text x="425" y="450.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<text x="275" y="450.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 2.60 s</text>
+<rect x="396.5" y="438.5" width="56.9" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="425" y="450.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 5.83 s</text>
 <rect x="523.4" y="438.5" width="23.2" height="17" rx="8.5" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
 <text x="535" y="450.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">no</text>
-<text x="578" y="450.5" font-size="11" fill="#0F172A">Level 1 scales leg support force linearly with capacity (assumption A4), so 35% capaci…</text>
+<text x="578" y="450.5" font-size="11" fill="#0F172A">A bus undervoltage to 35% capacity with no brakes: the walker is lost at both levels. L…</text>
 <text x="48" y="481" font-size="11.5" fill="#0F172A" font-weight="700">STOP · Protective stop on a slope (no fault) (2 of 2 agree)</text>
 <text x="48" y="505.5" font-size="11" fill="#0F172A">STOP-16</text>
 <rect x="258.8" y="493.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
@@ -151,7 +151,7 @@
 <text x="48" y="561" font-size="11.5" fill="#0F172A" font-weight="700">CAP · Actuator-capacity boundary (outside the operating envelope) (0 of 1 agree)</text>
 <text x="48" y="585.5" font-size="11" fill="#0F172A">CAP-16</text>
 <rect x="246.5" y="573.5" width="56.9" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="275" y="585.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 3.48 s</text>
+<text x="275" y="585.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 3.63 s</text>
 <rect x="408.8" y="573.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="425" y="585.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
 <rect x="523.4" y="573.5" width="23.2" height="17" rx="8.5" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
@@ -161,7 +161,7 @@
 <rect x="40" y="624" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <text x="48" y="640.5" font-size="11" fill="#0F172A">SF-01/EC-01</text>
 <rect x="230.3" y="628.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="275" y="640.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.57 s</text>
+<text x="275" y="640.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.58 s</text>
 <rect x="380.3" y="628.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
 <text x="425" y="640.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.74 s</text>
 <rect x="520.6" y="628.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
@@ -176,22 +176,22 @@
 <rect x="40" y="674" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <text x="48" y="690.5" font-size="11" fill="#0F172A">SF-01/EC-03</text>
 <rect x="230.3" y="678.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="275" y="690.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.57 s</text>
+<text x="275" y="690.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.59 s</text>
 <rect x="380.3" y="678.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="425" y="690.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.75 s</text>
+<text x="425" y="690.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.76 s</text>
 <rect x="520.6" y="678.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="535" y="690.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
 <text x="48" y="715.5" font-size="11" fill="#0F172A">SF-01/EC-04</text>
 <rect x="230.3" y="703.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="275" y="715.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.59 s</text>
+<text x="275" y="715.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.61 s</text>
 <rect x="380.3" y="703.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="425" y="715.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.78 s</text>
+<text x="425" y="715.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.74 s</text>
 <rect x="520.6" y="703.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="535" y="715.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">yes</text>
 <rect x="40" y="724" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <text x="48" y="740.5" font-size="11" fill="#0F172A">SF-01/EC-05</text>
 <rect x="230.3" y="728.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="275" y="740.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.57 s</text>
+<text x="275" y="740.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.58 s</text>
 <rect x="380.3" y="728.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
 <text x="425" y="740.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 1.73 s</text>
 <rect x="520.6" y="728.5" width="28.8" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
@@ -206,20 +206,20 @@
 <rect x="40" y="774" width="1000" height="25" rx="4" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <text x="48" y="790.5" font-size="11" fill="#0F172A">SF-01/EC-07</text>
 <rect x="246.5" y="778.5" width="56.9" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="275" y="790.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 3.09 s</text>
+<text x="275" y="790.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 4.29 s</text>
 <rect x="380.3" y="778.5" width="89.4" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="425" y="790.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 3.79 s</text>
+<text x="425" y="790.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop 4.15 s</text>
 <rect x="523.4" y="778.5" width="23.2" height="17" rx="8.5" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
 <text x="535" y="790.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">no</text>
-<text x="578" y="790.5" font-size="11" fill="#0F172A">Load holding fails during a slow leak at 18 degrees, so the walker is lost either way; t…</text>
+<text x="578" y="790.5" font-size="11" fill="#0F172A">Load holding fails during a slow leak at 20 degrees, so the walker is lost either way; t…</text>
 <text x="48" y="815.5" font-size="11" fill="#0F172A">SF-01/EC-08</text>
 <rect x="246.5" y="803.5" width="56.9" height="17" rx="8.5" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
-<text x="275" y="815.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 4.90 s</text>
+<text x="275" y="815.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip 3.56 s</text>
 <rect x="408.8" y="803.5" width="32.4" height="17" rx="8.5" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="425" y="815.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
 <rect x="523.4" y="803.5" width="23.2" height="17" rx="8.5" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
 <text x="535" y="815.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">no</text>
-<text x="578" y="815.5" font-size="11" fill="#0F172A">A slow leak at 16.5 degrees with load holding working; the pilot's protective stop start…</text>
+<text x="578" y="815.5" font-size="11" fill="#0F172A">A slow leak at 19.5 degrees with load holding working; both levels lock at about 2.9 s.…</text>
 <line x1="40" y1="824" x2="1040" y2="824" stroke="#E2E8F0" stroke-width="1"/>
 </g>
 <rect x="40" y="964" width="14" height="12" rx="3" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.2"/>
@@ -232,10 +232,10 @@
 <g class="terms" data-base-h="1019">
 <rect x="0" y="1019" width="1080" height="98.1" fill="#FFFFFF"/>
 <line x1="40" y1="1023" x2="1040" y2="1023" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="1038.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: A01–A04 = item-definition validator rule (A01–A04) · AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · CAP-nnn = level-1/level-2</text>
-<text x="40" y="1053.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">cross-check case at the actuator-capacity boundary · CAT-nnn = level-1/level-2 cross-check case from the fault catalogue · CoM = centre of mass · DQ-nnn = decision question for the</text>
-<text x="40" y="1067.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">project lead (decisions/register.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · MuJoCo = Multi-Joint dynamics with</text>
-<text x="40" y="1082.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Contact, the physics engine for the level-2 walker model · NOM-nnn = level-1/level-2 cross-check case, no fault (capability by slope) · SF-nnn = walker failure-search family</text>
-<text x="40" y="1096.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(sim/search) · STOP-nnn = level-1/level-2 cross-check case, protective stop on a slope with no fault</text>
+<text x="40" y="1038.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · CAP-nnn = level-1/level-2 cross-check case at the actuator-capacity boundary · CAT-nnn</text>
+<text x="40" y="1053.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">= level-1/level-2 cross-check case from the fault catalogue · CoM = centre of mass · DQ-nnn = decision question for the project lead (decisions/register.yaml) · I0–I3 = review</text>
+<text x="40" y="1067.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · MuJoCo = Multi-Joint dynamics with Contact, the physics engine for the level-2 walker model ·</text>
+<text x="40" y="1082.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">NOM-nnn = level-1/level-2 cross-check case, no fault (capability by slope) · SF-nnn = walker failure-search family (sim/search) · STOP-nnn = level-1/level-2 cross-check case,</text>
+<text x="40" y="1096.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">protective stop on a slope with no fault</text>
 </g>
 </svg>

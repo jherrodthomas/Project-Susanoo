@@ -7,12 +7,12 @@
    "title": "Actuator-capacity boundary (outside the operating envelope)"
   },
   "CAT": {
-   "agree": 8,
+   "agree": 7,
    "cases": 9,
    "title": "Fault catalogue (sim/faults.yaml)"
   },
   "NOM": {
-   "agree": 5,
+   "agree": 6,
    "cases": 6,
    "title": "No fault (capability by slope)"
   },
@@ -136,7 +136,7 @@
    "note": null
   },
   {
-   "agree": false,
+   "agree": true,
    "case": {
     "slope_deg": 25
    },
@@ -151,10 +151,10 @@
    "l2": {
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 3.236,
-    "outcome": "tip"
+    "mishap_t": null,
+    "outcome": "safe"
    },
-   "note": "Level 2 tips the no-fault gait from about 24 degrees, level 1 from about 27 (both hold at 20). The level-2 controller keeps the commanded centre of pressure within 90% of the foot, a margin the level-1 limit (A3) does not have: with the full foot, level 2 holds 25 and tips at 26. The ankle stays below its torque limit (15.5 of 20 kN m at 25 degrees). Level 2 is the more pessimistic; the slope limit should rest on it."
+   "note": null
   },
   {
    "agree": true,
@@ -210,15 +210,15 @@
    "family": "CAT",
    "id": "CAT-01-NOHOLD",
    "l1": {
-    "impact_speed": 4.835,
+    "impact_speed": 4.884,
     "lock_t": null,
-    "mishap_t": 1.575,
+    "mishap_t": 1.58,
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.108,
+    "impact_speed": 3.864,
     "lock_t": null,
-    "mishap_t": 1.75,
+    "mishap_t": 1.744,
     "outcome": "hard-drop"
    },
    "note": null
@@ -270,7 +270,7 @@
    "note": null
   },
   {
-   "agree": true,
+   "agree": false,
    "case": {
     "fault": "FLT-02",
     "monitor": false
@@ -280,16 +280,16 @@
    "l1": {
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 2.875,
+    "mishap_t": 2.77,
     "outcome": "tip"
    },
    "l2": {
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 3.788,
-    "outcome": "tip"
+    "mishap_t": null,
+    "outcome": "safe"
    },
-   "note": null
+   "note": "Frozen posture feedback with no staleness monitor: the walker is lost at both levels. Level 1's CoM runs ahead and tips at 2.8 s. Level 2's runs ahead too, then the walker sinks about 0.7 m and staggers, which meets neither outcome definition (tip, or a drop below the kneeling height) within the 6 s horizon; run longer, it ends in a hard drop at 6.9 s. The difference is in when the run crosses an outcome threshold, not in whether control is lost (HAZ-WLK-001)."
   },
   {
    "agree": true,
@@ -299,15 +299,15 @@
    "family": "CAT",
    "id": "CAT-03",
    "l1": {
-    "impact_speed": 4.856,
+    "impact_speed": 4.905,
     "lock_t": null,
-    "mishap_t": 1.49,
+    "mishap_t": 1.495,
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.101,
+    "impact_speed": 3.795,
     "lock_t": null,
-    "mishap_t": 1.616,
+    "mishap_t": 1.614,
     "outcome": "hard-drop"
    },
    "note": null
@@ -345,18 +345,18 @@
    "family": "CAT",
    "id": "CAT-04-NOBRAKE",
    "l1": {
-    "impact_speed": 2.528,
+    "impact_speed": 2.571,
     "lock_t": null,
-    "mishap_t": 2.59,
+    "mishap_t": 2.605,
     "outcome": "hard-drop"
    },
    "l2": {
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": null,
-    "outcome": "safe"
+    "mishap_t": 5.83,
+    "outcome": "tip"
    },
-   "note": "Level 1 scales leg support force linearly with capacity (assumption A4), so 35% capacity cannot hold the body. In level 2 nearly straight legs need little knee torque, so 35% of the knee torque still holds. A4 is pessimistic for straight-legged stance and optimistic for a deep crouch."
+   "note": "A bus undervoltage to 35% capacity with no brakes: the walker is lost at both levels. Level 1 scales leg force with capacity (A4), so its legs cannot carry the 4,590 kg walker and it drops at 2.6 s. Level 2's nearly straight legs carry it, but during the protective stop the CoM drifts behind the foot until it tips at 5.8 s with the adopted ankle (26.5 kN m), or drops at 5.6 s with the re-sized ankle (40.5 kN m)."
   },
   {
    "agree": true,
@@ -419,7 +419,7 @@
    "l1": {
     "impact_speed": 0.0,
     "lock_t": 3.455,
-    "mishap_t": 3.485,
+    "mishap_t": 3.63,
     "outcome": "tip"
    },
    "l2": {
@@ -428,7 +428,7 @@
     "mishap_t": null,
     "outcome": "safe"
    },
-   "note": "A slow leak at 16 degrees with a 0.16 m CoM offset (above the 0.12 m limit, DQ-011) and load holding working. Level 1 loses balance as its centre-of-pressure limit (L cos(slope) x capacity, A3) shrinks and its legs sink 0.2 m (A4), and tips 30 ms after the hold engages. Level 2's ankle (26.5 kN m adopted, DQ-012; 20 kN m also held) gives more centre-of-pressure authority than A3 as capacity falls, and it holds; with the ankle limited to m g L cos(slope) it tips as level 1 does. Ankle torque is sized against CF4 in SZ-01 (HAZ-WLK-002, SYS-016)."
+   "note": "A slow leak at 16 degrees with a 0.16 m CoM offset (above the 0.12 m limit, DQ-011) and load holding working. Level 1 loses balance as its centre-of-pressure limit (L cos(slope) x capacity, A3) shrinks and its legs sink (A4), and tips after the hold engages. Level 2 holds it with the ankle at 26 kN m or more, drops the cockpit at 20 kN m and tips at 15 kN m: the actuator-capacity boundary now lies below the adopted ankle torque (sim/results/sizing-cf4.md)."
   },
   {
    "agree": true,
@@ -437,24 +437,24 @@
     "fault_onset_s": 1.0,
     "load_holding": "fails",
     "monitor": true,
-    "pilot_reaction_s": 2.1,
-    "slope_deg": 15.5,
-    "stride_offset_m": 0.08,
+    "pilot_reaction_s": 3.0,
+    "slope_deg": 12.0,
+    "stride_offset_m": 0.09,
     "tau_leak_s": 0.05,
     "variant": "hydraulic"
    },
    "family": "SF-01",
    "id": "SF-01/EC-01",
    "l1": {
-    "impact_speed": 4.835,
+    "impact_speed": 4.884,
     "lock_t": null,
-    "mishap_t": 1.575,
+    "mishap_t": 1.58,
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.128,
+    "impact_speed": 4.091,
     "lock_t": null,
-    "mishap_t": 1.738,
+    "mishap_t": 1.736,
     "outcome": "hard-drop"
    },
    "note": null
@@ -466,24 +466,24 @@
     "fault_onset_s": 1.0,
     "load_holding": "fails",
     "monitor": true,
-    "pilot_reaction_s": 0.6,
-    "slope_deg": 16.0,
-    "stride_offset_m": 0.01,
+    "pilot_reaction_s": 2.0,
+    "slope_deg": 13.5,
+    "stride_offset_m": 0.04,
     "tau_leak_s": 0.06,
     "variant": "hydraulic"
    },
    "family": "SF-01",
    "id": "SF-01/EC-02",
    "l1": {
-    "impact_speed": 4.816,
+    "impact_speed": 4.865,
     "lock_t": null,
-    "mishap_t": 1.59,
+    "mishap_t": 1.595,
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.123,
+    "impact_speed": 4.225,
     "lock_t": null,
-    "mishap_t": 1.774,
+    "mishap_t": 1.77,
     "outcome": "hard-drop"
    },
    "note": null
@@ -496,23 +496,23 @@
     "load_holding": "fails",
     "monitor": true,
     "pilot_reaction_s": 0.9,
-    "slope_deg": 8.5,
-    "stride_offset_m": 0.1,
-    "tau_leak_s": 0.05,
+    "slope_deg": 12.0,
+    "stride_offset_m": 0.09,
+    "tau_leak_s": 0.06,
     "variant": "hydraulic"
    },
    "family": "SF-01",
    "id": "SF-01/EC-03",
    "l1": {
-    "impact_speed": 4.835,
+    "impact_speed": 4.865,
     "lock_t": null,
-    "mishap_t": 1.575,
+    "mishap_t": 1.595,
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.128,
+    "impact_speed": 4.107,
     "lock_t": null,
-    "mishap_t": 1.75,
+    "mishap_t": 1.76,
     "outcome": "hard-drop"
    },
    "note": null
@@ -524,24 +524,24 @@
     "fault_onset_s": 1.0,
     "load_holding": "fails",
     "monitor": true,
-    "pilot_reaction_s": 1.8,
-    "slope_deg": 12.0,
-    "stride_offset_m": 0.02,
-    "tau_leak_s": 0.06,
+    "pilot_reaction_s": 2.2,
+    "slope_deg": 20.0,
+    "stride_offset_m": 0.09,
+    "tau_leak_s": 0.07,
     "variant": "hydraulic"
    },
    "family": "SF-01",
    "id": "SF-01/EC-04",
    "l1": {
-    "impact_speed": 4.816,
+    "impact_speed": 4.846,
     "lock_t": null,
-    "mishap_t": 1.59,
+    "mishap_t": 1.61,
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.121,
+    "impact_speed": 4.191,
     "lock_t": null,
-    "mishap_t": 1.776,
+    "mishap_t": 1.744,
     "outcome": "hard-drop"
    },
    "note": null
@@ -562,15 +562,15 @@
    "family": "SF-01",
    "id": "SF-01/EC-05",
    "l1": {
-    "impact_speed": 4.835,
+    "impact_speed": 4.884,
     "lock_t": null,
-    "mishap_t": 1.575,
+    "mishap_t": 1.58,
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.097,
+    "impact_speed": 3.953,
     "lock_t": null,
-    "mishap_t": 1.734,
+    "mishap_t": 1.732,
     "outcome": "hard-drop"
    },
    "note": null
@@ -591,15 +591,15 @@
    "family": "SF-01",
    "id": "SF-01/EC-06",
    "l1": {
-    "impact_speed": 4.816,
+    "impact_speed": 4.865,
     "lock_t": null,
-    "mishap_t": 1.59,
+    "mishap_t": 1.595,
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.106,
+    "impact_speed": 4.129,
     "lock_t": null,
-    "mishap_t": 1.754,
+    "mishap_t": 1.75,
     "outcome": "hard-drop"
    },
    "note": null
@@ -612,9 +612,9 @@
     "load_holding": "fails",
     "monitor": true,
     "pilot_reaction_s": 2.3,
-    "slope_deg": 18.0,
-    "stride_offset_m": 0.1,
-    "tau_leak_s": 1.49,
+    "slope_deg": 20.0,
+    "stride_offset_m": 0.05,
+    "tau_leak_s": 2.87,
     "variant": "hydraulic"
    },
    "family": "SF-01",
@@ -622,16 +622,16 @@
    "l1": {
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 3.09,
+    "mishap_t": 4.295,
     "outcome": "tip"
    },
    "l2": {
-    "impact_speed": 2.833,
+    "impact_speed": 1.963,
     "lock_t": null,
-    "mishap_t": 3.788,
+    "mishap_t": 4.148,
     "outcome": "hard-drop"
    },
-   "note": "Load holding fails during a slow leak at 18 degrees, so the walker is lost either way; the models differ in which comes first. Level 1 ties leg force and centre-of-pressure authority to the same capacity (A3, A4) and tips. Level 2 tipped with the earlier assumed torques (ankle 20, knee 60 kN m); with the adopted ankle 26.5 kN m or knee 22.5 kN m (DQ-012), either change alone, the ankle outlasts the knees, the legs fold and the cockpit drops at about 2.8 m/s (the HAZ-PIL-002 mechanism, against 4.1 m/s after a burst)."
+   "note": "Load holding fails during a slow leak at 20 degrees, so the walker is lost either way; the models differ in which actuator gives out first. Level 1 ties leg force and centre-of-pressure authority to the same capacity (A3, A4) and tips. Level 2 tips with ankle 20 and knee 60 kN m, holds through the run with ankle 26.5 and knee 60 kN m, and drops the cockpit with the adopted torques (26.5 and 22.5 kN m, 2.0 m/s) and with the re-sized ones (40.5 and 26.5 kN m, 2.7 m/s): weaker knees turn the tip into a drop (HAZ-PIL-002)."
   },
   {
    "agree": false,
@@ -640,29 +640,29 @@
     "fault_onset_s": 1.0,
     "load_holding": "works",
     "monitor": true,
-    "pilot_reaction_s": 1.4,
-    "slope_deg": 16.5,
-    "stride_offset_m": 0.1,
-    "tau_leak_s": 4.09,
+    "pilot_reaction_s": 2.4,
+    "slope_deg": 19.5,
+    "stride_offset_m": 0.09,
+    "tau_leak_s": 1.94,
     "variant": "hydraulic"
    },
    "family": "SF-01",
    "id": "SF-01/EC-08",
    "l1": {
     "impact_speed": 0.0,
-    "lock_t": 4.855,
-    "mishap_t": 4.9,
+    "lock_t": 2.885,
+    "mishap_t": 3.56,
     "outcome": "tip"
    },
    "l2": {
     "impact_speed": 0.0,
-    "lock_t": 4.85,
+    "lock_t": 2.88,
     "mishap_t": null,
     "outcome": "safe"
    },
-   "note": "A slow leak at 16.5 degrees with load holding working; the pilot's protective stop starts at 3.9 s with 49% capacity. Level 1 plants the second foot, crouches and loses balance as its centre-of-pressure limit shrinks (A3), tipping 45 ms after the hold engages. Level 2 does not complete the stop step at that capacity, stays on the stance foot and holds it with the ankle until the hold engages; with the adopted torques it tips only with the ankle at or below about 12 kN m. The case sits on the actuator-capacity boundary (sim/results/sizing-cf4.md)."
+   "note": "A slow leak at 19.5 degrees with load holding working; both levels lock at about 2.9 s. Before the lock, level 1's centre-of-pressure limit (A3) and leg sag (A4, 0.12 m) let its CoM drift to the foot edge, so the locked body tips (A5) at 3.6 s. Level 2 keeps its CoM 0.32 m ahead of the foot until the lock and holds, with the ankle at any torque from 15 kN m up: here level 1's assumptions, not the actuators, decide."
   }
  ],
- "spec_digest": "48e1754c83f1",
+ "spec_digest": "ce8f2beafd0f",
  "unexplained": []
 }

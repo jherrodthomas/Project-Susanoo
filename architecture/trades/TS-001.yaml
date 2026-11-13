@@ -42,7 +42,7 @@ criteria:
 - {id: C03, title: Leakage and fire risk, weight: 10, safety: true, measure: "Flammable fluid inventory and ignition sources near the pilot; residual risk of HAZ-PWR-001 to HAZ-PWR-003 after mitigation"}
 - {id: C04, title: Stored energy, weight: 10, safety: true, measure: "Energy stored in accumulators, batteries and fuel, and how fast it can be isolated and dissipated (SYS-007, SYS-014, SYS-015)"}
 - {id: C05, title: Maintainability, weight: 7, measure: "Service tasks, isolation steps before access and expected maintenance hours per operating hour"}
-- {id: C06, title: Mass, weight: 8, measure: "Actuation and power mass for the SYS-016 torques, as a fraction of the 3000 kg walker"}
+- {id: C06, title: Mass, weight: 8, measure: "Actuation and power mass for the SYS-016 torques, as a fraction of the 4,590 kg reference layout (CL-05)"}
 - {id: C07, title: Noise, weight: 4, measure: "Sound level at the pilot station and at 10 m"}
 - {id: C08, title: Heat, weight: 6, measure: "Heat to reject at continuous walking power, and hot surfaces near the pilot"}
 - {id: C09, title: Fault response, weight: 15, safety: true, measure: "Walker outcome after loss of supply over the operating envelope, with load holding working and failed: tips, cockpit drops and worst impact speed (TS-001-E01)"}
@@ -57,18 +57,20 @@ evidence:
   kind: simulation
   status: done
   source: sim/results/ts001-fault-response.md
-  summary: 'With load holding working, every supply-loss mode is safe across the envelope at level 2 (level 1 tips 14-19
-    of 180 cases through its unsized centre-of-pressure limit, A3). With load holding failed, a hydraulic supply loss (A)
-    and an isolated battery (B, SYS-014) are identical: torque goes to zero and the cockpit drops in 117 of 180 cases at
-    up to 4.1 m/s (level 2). A bus undervoltage that keeps 35% of torque (B, assumed floor) drops it in 27 cases at up to
-    2.3 m/s, still above the 1.0 m/s safe drop speed. The alternatives differ by the torque left after the fault, not
-    by the technology.'
+  summary: 'On the 4,590 kg reference layout (DQ-023) with the torques still adopted from the 3,000 kg sizing (DQ-012),
+    level 2 tips or drops the walker in 4 or 5 of 180 envelope cases even with load holding working, for every
+    alternative (level 1 tips 9-13 through its unsized centre-of-pressure limit, A3); the re-sized torques (DQ-024)
+    clear them in the sizing. With load holding failed, a hydraulic supply loss (A) and an isolated battery (B, SYS-014)
+    are identical: torque goes to zero and the cockpit drops in 145 of 180 cases at up to 4.2 m/s (level 2). A bus
+    undervoltage that keeps 35% of torque (B, assumed floor) drops it in 97 cases at up to 3.1 m/s, still above the
+    1.0 m/s safe drop speed. The alternatives differ by the torque left after the fault, not by the technology.'
 - id: TS-001-E02
   criteria: [C01, C06, C09]
   kind: analysis
   status: done
   source: sim/results/sizing-cf4.md
-  summary: Every alternative must deliver ankle 26.5 kN m and knee 22.5 kN m at full supply, and at least 0.6 m g L_foot at
+  summary: Every alternative must deliver ankle 40.5 kN m and knee 26.5 kN m at full supply on the 4,590 kg reference
+    layout (SYS-016, re-sized after DQ-023), and at least 0.6 m g L_foot at
     the ankle when load holding engages (SYS-016); this sets the actuator class for C01 and C06 and the torque-supply
     curve each alternative must show for C09.
 - id: TS-001-E03
@@ -106,8 +108,8 @@ evidence:
   summary: Maintenance tasks, noise and heat rejection of comparable legged and construction machines.
   needed: Sources for each alternative; the pilot-station noise limit from the HHA (Task 207).
 scores:
-- {alternative: A, criterion: C09, score: 2, basis: [TS-001-E01], preliminary: true, note: "Every supply loss takes torque to zero on all joints at once; with load holding failed the cockpit drops at up to 4.1 m/s."}
-- {alternative: B-EHA, criterion: C09, score: 3, basis: [TS-001-E01], preliminary: true, note: "A bus undervoltage keeps residual torque (assumed 35%) and halves the drop speed; battery isolation is as bad as A. Local actuator leaks pending TS-001-E06."}
+- {alternative: A, criterion: C09, score: 2, basis: [TS-001-E01], preliminary: true, note: "Every supply loss takes torque to zero on all joints at once; with load holding failed the cockpit drops at up to 4.2 m/s."}
+- {alternative: B-EHA, criterion: C09, score: 3, basis: [TS-001-E01], preliminary: true, note: "A bus undervoltage keeps residual torque (assumed 35%): fewer drops (97 against 145 of 180) at up to 3.1 against 4.2 m/s; battery isolation is as bad as A. Local actuator leaks pending TS-001-E06."}
 - {alternative: B-EMA, criterion: C09, score: 3, basis: [TS-001-E01], preliminary: true, note: "As B-EHA at simulation fidelity; spring-applied brakes against check valves pending TS-001-E06."}
 requirement_ids: [SYS-007, SYS-009, SYS-014, SYS-015, SYS-016]
 selection: null

@@ -25,7 +25,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | data_kind | synthetic |
 | evidence credit | none (no approved fidelity case) |
 | simulator | sim/plant/walker.py (level 1) and sim/mujoco/l2.py (level 2, MuJoCo 3.3.5); sim/spec/walker_l2.yaml |
-| plant spec | sim/spec/walker.yaml digest `48e1754c83f1` |
+| plant spec | sim/spec/walker.yaml digest `ce8f2beafd0f` |
 | scenario | Trade study TS-001: supply loss for each actuation and power alternative |
 | purpose | trade-study input; not verification evidence |
 
@@ -33,12 +33,12 @@ Each row runs 180 cases over the operating envelope (`pilot_reaction_s` [0.5, 1.
 
 | Mode | Alternatives | Load holding | Level 1: safe / tip / drop | Level 2: safe / tip / drop | Worst impact L1 / L2 (m/s) | Same outcome |
 |---|---|---|---|---|---|---|
-| A-LOSS | A | works | 166 / 14 / 0 | 180 / 0 / 0 | 0.0 / 0.0 | 166 of 180 |
-| A-LOSS | A | fails | 17 / 15 / 148 | 60 / 3 / 117 | 4.835 / 4.143 | 128 of 180 |
-| B-SAG | B-EHA, B-EMA | works | 161 / 19 / 0 | 180 / 0 / 0 | 0.0 / 0.0 | 161 of 180 |
-| B-SAG | B-EHA, B-EMA | fails | 63 / 16 / 101 | 150 / 3 / 27 | 2.646 / 2.256 | 92 of 180 |
-| B-ISOL | B-EHA, B-EMA | works | 166 / 14 / 0 | 180 / 0 / 0 | 0.0 / 0.0 | 166 of 180 |
-| B-ISOL | B-EHA, B-EMA | fails | 17 / 15 / 148 | 60 / 3 / 117 | 4.835 / 4.143 | 128 of 180 |
+| A-LOSS | A | works | 171 / 9 / 0 | 175 / 1 / 4 | 0.0 / 2.079 | 171 of 180 |
+| A-LOSS | A | fails | 20 / 11 / 149 | 35 / 0 / 145 | 4.884 / 4.221 | 153 of 180 |
+| B-SAG | B-EHA, B-EMA | works | 167 / 13 / 0 | 176 / 2 / 2 | 0.0 / 1.584 | 165 of 180 |
+| B-SAG | B-EHA, B-EMA | fails | 66 / 13 / 101 | 82 / 1 / 97 | 2.69 / 3.119 | 156 of 180 |
+| B-ISOL | B-EHA, B-EMA | works | 171 / 9 / 0 | 175 / 1 / 4 | 0.0 / 2.079 | 171 of 180 |
+| B-ISOL | B-EHA, B-EMA | fails | 20 / 11 / 149 | 35 / 0 / 145 | 4.884 / 4.221 | 153 of 180 |
 
 ## Modes
 
