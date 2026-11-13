@@ -69,6 +69,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   layout and where its findings went in the records
 - [UAV SITL harness](UAV-SITL-Harness): the PX4 failsafe scenarios, their outcomes and ground tracks, and the
   findings they raise for the safety lead
+- [Walker plant (level 1)](Walker-Plant): what each mitigation buys against each fault, the slope limit, and
+  the assumptions every result rests on
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

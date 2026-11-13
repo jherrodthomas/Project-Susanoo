@@ -25,6 +25,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - tools                  # generated README (tools/figures/tools_readme.py)
   - docs                   # generated README (tools/figures/docs_readme.py); subfolders keep their previews
   - sim/uav                # generated README (tools/figures/uav_readme.py)
+  - sim/plant              # generated README (tools/figures/plant_readme.py)
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -280,16 +281,6 @@ folders:
       - {text: TS-001 supply-loss evidence, href: sim/results/ts001-fault-response.md}
       - {text: Trade Studies (wiki page), href: docs/wiki/Trade-Studies.md}
 
-  sim/plant:
-    title: Level-1 walker plant
-    purpose: The level-1 walker plant model and the scenario report it writes. Results are synthetic.
-    hero: {img: docs/wiki/images/sim-sc-01.svg, caption: "SC-01 (synthetic)"}
-    gallery:
-      - {img: docs/wiki/images/sim-sc-02.svg, caption: "SC-02 (synthetic)"}
-      - {img: docs/wiki/images/sim-sc-03.svg, caption: "SC-03 (synthetic)"}
-      - {img: docs/wiki/images/sim-sc-04.svg, caption: "SC-04 (synthetic)"}
-    links:
-      - {text: Plant results, href: sim/results/plant-results.md}
 
   sim/results:
     title: Simulation results

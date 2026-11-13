@@ -53,6 +53,7 @@
 - [Documentation sources](Documentation-Sources)
 - [Concept layouts (CAD)](Concept-Layouts)
 - [UAV SITL harness](UAV-SITL-Harness)
+- [Walker plant (level 1)](Walker-Plant)
 - [882E work products](882E-Work-Products)
   - [00 · System Definition and Analysis Baseline](882E-00-system-definition)
   - [01 · Document the System Safety Approach](882E-01-safety-approach)
