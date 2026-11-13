@@ -8,7 +8,10 @@ sim/results/uav/ replayed in an airspace view with the geofence and pilot keep-o
 
 Sheet 3 (sim/scenes3d/terrain.yaml, viewer sheet_terrain.js) walks the CL-05 gait over the terrain course posed by
 tools/cad/b3d/cl05_terrain.py, with that export's kinematic findings, the static tip margin of cad/metrics.json on each
-slope (frozen posture, and with the gait's lean compensation of sim/spec/walker.yaml) and the SYS-008 slope limit.
+slope (frozen posture, and with the gait's lean compensation of sim/spec/walker.yaml) and the SYS-008 slope limit. Its
+loaded mode walks the loaded gait carrying the placeholder load (cl05_terrain.py --loaded), with the carry posture's
+margin for a load mass the viewer sets (the CAD's margin-peak, 0.30 m flag and tip-over masses marked), SYS-019 and
+HAZ-MAN-002.
 
 Sheet 1:
 
@@ -38,6 +41,7 @@ OUT = "docs/3d/SUS-M1.html"
 OUT_UAV = "docs/3d/SUS-A1.html"
 OUT_TERRAIN = "docs/3d/SUS-M1-terrain.html"
 TERRAIN = ROOT / "docs/3d/assets/sus-m1-terrain.js"
+TERRAIN_LOADED = ROOT / "docs/3d/assets/sus-m1-terrain-loaded.js"
 GEOMETRY = ROOT / "docs/3d/assets/sus-m1.js"
 
 
@@ -49,6 +53,15 @@ def class_colours() -> dict:
         if isinstance(node, ast.Assign) and any(getattr(t, "id", None) == "CLASSES" for t in node.targets):
             return {k: [v[0], v[1]] for k, v in ast.literal_eval(node.value).items()}
     raise ValueError("CLASSES not found in tools/cad/build_concepts.py")
+
+
+def cad_constant(name: str):
+    """A module-level literal of tools/cad/build_concepts.py (read, not imported: that module needs FreeCAD)."""
+    tree = ast.parse((ROOT / "tools/cad/build_concepts.py").read_text(encoding="utf-8"))
+    for node in tree.body:
+        if isinstance(node, ast.Assign) and any(getattr(t, "id", None) == name for t in node.targets):
+            return ast.literal_eval(node.value)
+    raise ValueError(f"{name} not found in tools/cad/build_concepts.py")
 
 
 def cad_revision() -> str:
@@ -206,7 +219,23 @@ def sheet3() -> dict:
     walker = _read_yaml(SIM / "spec" / "walker.yaml")["params"]
     lean = walker["slope_lean"]
     req = _read_yaml(ROOT / "requirements/SYS-008.yaml")
-    haz = next(h for h in hazards() if h["id"] == "HAZ-WLK-002")
+    req19 = _read_yaml(ROOT / "requirements/SYS-019.yaml")
+    allh = hazards()
+    haz = next(h for h in allh if h["id"] == "HAZ-WLK-002")
+    haz_load = next(h for h in allh if h["id"] == "HAZ-MAN-002")
+    cm = json.loads((ROOT / "cad/metrics.json").read_text())["concepts"]["CL-05"]["postures"]["carry"]
+    mc = metrics("CL-05")["postures"]["carry"]
+    carry = {"cg_m": mc["cg_m"], "support_polygon_m": mc["support_polygon_m"], "mass_kg": cm["placeholder_mass_kg"],
+             "load_centre_m": cm["carry_load_centre_m"], "load_envelope_m": cm["carry_load_envelope_m"],
+             "peak": cm["carry_margin_peak"], "flag_kg": cm["carry_load_at_margin_flag_kg"], "tipover_kg": cm["carry_load_at_tipover_kg"],
+             "flag_margin_m": cad_constant("FLAG_MARGIN")}
+
+    def with_load(kg: float) -> dict:   # the carry posture's centre of gravity with a load of kg at the load centre
+        M = carry["mass_kg"]
+        return dict(mc, cg_m=[(M * c + kg * l) / (M + kg) for c, l in zip(mc["cg_m"], carry["load_centre_m"])])
+    # reference values the page must reproduce (sheet_check.mjs): level ground with the CAD's margin-peak load
+    carry["check"] = {"mass_kg": carry["peak"]["load_kg"], "level_margin_m": round(static_margin(with_load(carry["peak"]["load_kg"]), 0, 0), 4),
+                      "up20_lean_margin_m": round(static_margin(with_load(carry["peak"]["load_kg"]), 20, 0, lean["value"]), 4)}
     rows = []
     for t in course["terrains"]:
         r = {k: t[k] for k in ("key", "label", "kind")} | {k: t[k] for k in ("note", "pitch_deg", "roll_deg", "run_m", "rise_m", "amp_m") if k in t}
@@ -228,12 +257,15 @@ def sheet3() -> dict:
         "about": ABOUT, "classes": class_colours(), "terrains": rows, "standing": mt,
         "lean": {"value": lean["value"], "source": lean["source"]},
         "sys008": {"id": req["id"], "title": req["title"], "status": req["status"], "statement": " ".join(req["statement"].split()), "limit_deg": 20},
-        "hazard": haz, "replay": [], "hazards": [haz],
+        "sys019": {"id": req19["id"], "title": req19["title"], "status": req19["status"], "statement": " ".join(req19["statement"].split()),
+                   "tbd": req19.get("tbd") or []},
+        "hazard": haz, "hazard_load": haz_load, "carry": carry, "replay": [], "hazards": [haz, haz_load],
     }
-    extra = ["SYS-008 HAZ-WLK-002 CG", course["id"]]
+    extra = ["SYS-008 SYS-019 HAZ-WLK-002 HAZ-MAN-002 CG TBD", course["id"]]
     return {OUT_TERRAIN: page_html(data, "SUS-M1 terrain course", "sheet_terrain.body.html", "sheet_terrain.js",
                                    terms_line(data, extra)).replace('<script src="assets/sus-m1.js"></script>',
-                                                                   '<script src="assets/sus-m1.js"></script>\n<script src="assets/sus-m1-terrain.js"></script>')}
+                                                                   '<script src="assets/sus-m1.js"></script>\n<script src="assets/sus-m1-terrain.js"></script>\n'
+                                                                   '<script src="assets/sus-m1-terrain-loaded.js"></script>')}
 
 
 def page_html(data: dict, title: str, body: str, viewer: str, terms: str) -> str:
@@ -285,8 +317,8 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--check", action="store_true")
     a = ap.parse_args(argv)
-    if not GEOMETRY.exists() or not TERRAIN.exists():
-        print("missing docs/3d/assets/sus-m1.js or sus-m1-terrain.js: run tools/cad/b3d/cl05_web.py and cl05_terrain.py "
+    if not GEOMETRY.exists() or not TERRAIN.exists() or not TERRAIN_LOADED.exists():
+        print("missing docs/3d/assets/sus-m1.js or sus-m1-terrain[-loaded].js: run tools/cad/b3d/cl05_web.py and cl05_terrain.py [--loaded] "
               "(build123d environment)", file=sys.stderr)
         return 1
     return write_or_check(outputs(), a.check, "python -m sim.scenes3d.build_sheet")

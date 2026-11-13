@@ -1,0 +1,25 @@
+# Fault tree for HAZ-PIL-001 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-PIL-001
+exposure: walker_operating_hours
+note: >-
+  Rates apply over the whole item life, not only ingress and egress (conservative).
+trees:
+  - id: FT-013
+    title: Unintended leg motion during ingress or egress
+    top: motion
+    gates:
+      - {id: motion, type: or, title: "Leg moves during ingress or egress", inputs: [sw-enable, deflection, drive-fault]}
+      - {id: sw-enable, type: and, title: "Logic enables early and the hardware chain does not stop it", inputs: [enable-logic, chain-fails]}
+      - {id: deflection, type: and, title: "Control deflected and the hardware chain does not stop it", inputs: [pilot-deflects, chain-fails-b]}
+      - {id: drive-fault, type: and, title: "Uncommanded motion with the supports not fitted", inputs: [uncommanded, supports-absent]}
+    events:
+      - {id: enable-logic, kind: undeveloped, nature: software, causal_factor: CF1, ssf: SSF-001, title: "Motion-enable logic enables before readiness"}
+      - {id: chain-fails, mode: PT-017-FM1, causal_factor: CF1, title: "Hardware enable chain already failed"}
+      - {id: pilot-deflects, kind: undeveloped, nature: human, causal_factor: CF3, title: "Pilot deflects a control while entering"}
+      - {id: chain-fails-b, mode: PT-017-FM1, causal_factor: CF3, title: "Hardware enable chain already failed"}
+      - {id: uncommanded, mode: PT-018-FM1, count: joints, causal_factor: CF2, title: "Valve or drive moves a leg with the enable removed"}
+      - {id: supports-absent, kind: undeveloped, nature: human, causal_factor: CF2, title: "Mechanical supports not fitted"}

@@ -116,6 +116,7 @@ kbd{border:1px solid var(--line);padding:0 4px;font:inherit;font-size:9px;color:
   <div class="ph">Terrain <span>T-01</span></div>
   <div id="tlist"></div>
   <div class="ph" style="border-top:1px solid var(--ink)">Walk <span>W-02</span></div>
+  <div class="seg" id="mode"><button data-mode="unloaded">Unloaded</button><button data-mode="loaded">Loaded carry</button></div>
   <div class="seg" id="play"><button id="bplay">❚❚ Pause</button><button data-sp="0.5">½×</button><button data-sp="1">1×</button><button data-sp="2">2×</button></div>
   <div class="seg tog"><button data-t="plumb">CG plumb<kbd>G</kbd></button><button data-t="stripes">1 m bands<kbd>B</kbd></button><button data-t="person">Person<kbd>P</kbd></button></div>
   <div class="seg" id="render"><button data-r="shaded">Shaded</button><button data-r="line">Line</button><button data-r="xray">X-ray</button></div>
@@ -130,6 +131,10 @@ kbd{border:1px solid var(--line);padding:0 4px;font:inherit;font-size:9px;color:
     <div class="ph" style="border-top:1px solid var(--ink)">Leg kinematics · CAD <span>tools/cad/b3d</span></div>
     <div id="kin"></div>
     <div class="ph" style="border-top:1px solid var(--ink)">Static tip margin <span>cad/metrics.json</span></div>
+    <div id="loadrow" style="display:none">
+      <div class="sl"><span class="k">LOAD</span><input id="mass" type="range" min="0" max="6000" step="10" value="0"><span id="massv">0 kg</span></div>
+      <div class="note" id="massnote" style="border-top:0"></div>
+    </div>
     <div id="stat"></div>
     <div class="note" id="statnote"></div>
     <div class="ph" style="border-top:1px solid var(--ink)">Requirement · hazard <span>records</span></div>
@@ -159,16 +164,18 @@ kbd{border:1px solid var(--line);padding:0 4px;font:inherit;font-size:9px;color:
   <table>
     <tr><td>Drag · wheel · right-drag</td><td>orbit · zoom · pan (the camera follows the walker)</td></tr>
     <tr><td>Click a terrain · ← →</td><td>walk the CL-05 gait over that ground</td></tr>
+    <tr><td>Unloaded · Loaded carry · L</td><td>the walk with the arms stowed, or the loaded walk carrying the placeholder load (load mass slider: mass TBD, SYS-019)</td></tr>
     <tr><td>Space · ½× 1× 2×</td><td>pause or play · walking pace (a viewing pace, not a design speed)</td></tr>
     <tr><td>G · B · P</td><td>centre of gravity plumb line · 1 m bands on the ground · 1.75 m person</td></tr>
     <tr><td>V</td><td>shaded · line · X-ray</td></tr>
   </table>
   <div class="note">The gait is the CL-05 walk of cad/params/CL-05.yaml with each foot placed on the ground under it (tools/cad/b3d/cl05_terrain.py). The static tip margin is the standing walker's centre of gravity over its support polygon, as in cad/metrics.json: with the joints frozen, and with the share of the slope lean the simulation assumes the gait leaves uncompensated (sim/spec/walker.yaml slope_lean).</div>
 </div></div>
-<div id="terms">Terms: 1A–4F = risk assessment code, severity 1–4 plus probability A–F (e.g. 1C) · AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · CAD = computer-aided design · CG = centre of gravity · F-nnn = system function in the item definition · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · RAC = risk assessment code, severity category plus probability level (e.g. 1C) · SUS-A1 = dockable observation UAV · SUS-CAD-001 = the concept layouts document (cad/README.md); its drawing sheets are SUS-CAD-001-CL-nn · SUS-M1 = piloted walker · SYS-nnn = system safety requirement record (requirements/SYS-nnn.yaml) · UAV = uncrewed aerial vehicle (drone)</div>
-<script>window.SHEET = {"about":"Synthetic simulation output; design aid only, no evidence credit (sim/README.md, evidence gate).","classes":{"access":["#e0b100",1.0],"actuator":["#c9a33a",1.0],"arm":["#7b8797",1.0],"armor":["#8d97a5",1.0],"cage":["#e2701f",1.0],"dock":["#7d55c7",1.0],"escape":["#d9480f",1.0],"hose":["#2e343d",1.0],"occupant":["#3a78d6",1.0],"payload":["#b08850",1.0],"power":["#2f8a5b",1.0],"reference":["#a3acb9",1.0],"rotor":["#1597c9",0.35],"safety":["#d42a2a",1.0],"seat":["#2b313b",1.0],"structure":["#5b6676",1.0],"uav":["#1597c9",1.0]},"hazard":{"id":"HAZ-WLK-002","level":"High","rac":"1C","status":"open","subsystems":["SUS-M1-WLK","SUS-M1-PIL"],"title":"Walker tip-over or fall with pilot aboard"},"hazards":[{"id":"HAZ-WLK-002","level":"High","rac":"1C","status":"open","subsystems":["SUS-M1-WLK","SUS-M1-PIL"],"title":"Walker tip-over or fall with pilot aboard"}],"lean":{"source":"Fraction of the slope-induced CoM lean (z tan slope) the gait does not compensate","value":0.25},"replay":[],"sheet":{"document":"SUS-CAD-001-CL-05 \u00b7 TERRAIN-001","id":"TERRAIN-001","layout":"CL-05","revision":"0.21-draft","sheet":"3 of 3","title":"Terrain course, interactive"},"standing":{"arm_ground_clearance_m":0.93,"cg_m":[-0.202,-0.001,2.723],"cockpit_floor_m":2.41,"egress_sill_m":3.03,"envelope_m":[3.29,2.29,4.48],"height_m":4.48,"hip_height_m":2.34,"pilot_eye_m":3.62,"placeholder_mass_kg":4590,"rotor_to_pilot_m":1.09,"static_margin_m":0.378,"static_tip_angle_deg":7.9,"support_polygon_m":[[-0.58,-0.7],[-0.07,-0.75],[0.204,-0.76],[0.604,-0.76],[0.604,0.76],[0.204,0.76],[-0.07,0.75],[-0.58,0.7]]},"sys008":{"id":"SYS-008","limit_deg":20,"statement":"The walker shall limit commanded motion and payload to a verified static and dynamic stability envelope, including a terrain slope limit of 20 degrees with the centre of mass no more than 0.12 m ahead of the stance foot, and provide pilot protection in a fall or overturn.","status":"candidate","title":"Stability envelope protection"},"terrains":[{"frozen_margin_m":0.378,"frozen_tip_deg":7.9,"key":"flat","kind":"plane","label":"Flat","lean_margin_m":0.378,"lean_tip_deg":29.0,"pitch_deg":0,"slope_deg":0.0},{"frozen_margin_m":0.14,"frozen_tip_deg":7.9,"key":"up5","kind":"plane","label":"Uphill 5\u00b0","lean_margin_m":0.318,"lean_tip_deg":29.0,"pitch_deg":5,"slope_deg":5.0},{"frozen_margin_m":-0.102,"frozen_tip_deg":7.9,"key":"up10","kind":"plane","label":"Uphill 10\u00b0","lean_margin_m":0.258,"lean_tip_deg":29.0,"pitch_deg":10,"slope_deg":10.0},{"frozen_margin_m":-0.352,"frozen_tip_deg":7.9,"key":"up15","kind":"plane","label":"Uphill 15\u00b0","lean_margin_m":0.196,"lean_tip_deg":29.0,"pitch_deg":15,"slope_deg":15.0},{"frozen_margin_m":-0.613,"frozen_tip_deg":7.9,"key":"up20","kind":"plane","label":"Uphill 20\u00b0","lean_margin_m":0.13,"lean_tip_deg":29.0,"note":"SYS-008 terrain slope limit","pitch_deg":20,"slope_deg":20.0},{"frozen_margin_m":0.326,"frozen_tip_deg":16.5,"key":"down10","kind":"plane","label":"Downhill 10\u00b0","lean_margin_m":0.498,"lean_tip_deg":49.8,"pitch_deg":-10,"slope_deg":10.0},{"frozen_margin_m":-0.185,"frozen_tip_deg":16.5,"key":"down20","kind":"plane","label":"Downhill 20\u00b0","lean_margin_m":0.558,"lean_tip_deg":49.8,"note":"SYS-008 terrain slope limit","pitch_deg":-20,"slope_deg":20.0},{"frozen_margin_m":0.257,"frozen_tip_deg":15.2,"key":"cross10","kind":"plane","label":"Cross-slope 10\u00b0","lean_margin_m":0.378,"lean_tip_deg":47.3,"roll_deg":10,"slope_deg":10.0},{"frozen_margin_m":-0.252,"frozen_tip_deg":15.2,"key":"cross20","kind":"plane","label":"Cross-slope 20\u00b0","lean_margin_m":0.378,"lean_tip_deg":47.3,"note":"SYS-008 terrain slope limit, across the track","roll_deg":20,"slope_deg":20.0},{"key":"ledges","kind":"ledges","label":"Ledges 0.2 m","rise_m":0.2,"run_m":1.0,"slope_deg":11.3},{"amp_m":0.12,"key":"rubble","kind":"rubble","label":"Rubble \u00b10.12 m"}]};</script>
+<div id="terms">Terms: 1A–4F = risk assessment code, severity 1–4 plus probability A–F (e.g. 1C) · AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · CAD = computer-aided design · CG = centre of gravity · F-nnn = system function in the item definition · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · RAC = risk assessment code, severity category plus probability level (e.g. 1C) · SUS-A1 = dockable observation UAV · SUS-CAD-001 = the concept layouts document (cad/README.md); its drawing sheets are SUS-CAD-001-CL-nn · SUS-M1 = piloted walker · SYS-nnn = system safety requirement record (requirements/SYS-nnn.yaml) · TBD = to be determined · UAV = uncrewed aerial vehicle (drone)</div>
+<script>window.SHEET = {"about":"Synthetic simulation output; design aid only, no evidence credit (sim/README.md, evidence gate).","carry":{"cg_m":[-0.23,-0.001,2.715],"check":{"level_margin_m":0.5904,"mass_kg":890,"up20_lean_margin_m":0.3568},"flag_kg":2580,"flag_margin_m":0.3,"load_centre_m":[1.25,0.0,1.8],"load_envelope_m":[0.8,1.53,0.6],"mass_kg":4590,"peak":{"load_kg":890,"static_margin_m":0.591},"support_polygon_m":[[-0.58,-0.7],[-0.07,-0.75],[0.204,-0.76],[0.604,-0.76],[0.604,0.76],[0.204,0.76],[-0.07,0.75],[-0.58,0.7]],"tipover_kg":5910},"classes":{"access":["#e0b100",1.0],"actuator":["#c9a33a",1.0],"arm":["#7b8797",1.0],"armor":["#8d97a5",1.0],"cage":["#e2701f",1.0],"dock":["#7d55c7",1.0],"escape":["#d9480f",1.0],"hose":["#2e343d",1.0],"occupant":["#3a78d6",1.0],"payload":["#b08850",1.0],"power":["#2f8a5b",1.0],"reference":["#a3acb9",1.0],"rotor":["#1597c9",0.35],"safety":["#d42a2a",1.0],"seat":["#2b313b",1.0],"structure":["#5b6676",1.0],"uav":["#1597c9",1.0]},"hazard":{"id":"HAZ-WLK-002","level":"High","rac":"1C","status":"open","subsystems":["SUS-M1-WLK","SUS-M1-PIL"],"title":"Walker tip-over or fall with pilot aboard"},"hazard_load":{"id":"HAZ-MAN-002","level":"High","rac":"1C","status":"open","subsystems":["SUS-M1-MAN","SUS-M1-WLK","SUS-M1-CTL","SUS-M1-SAF"],"title":"Carried load swings, shifts or drops while walking"},"hazards":[{"id":"HAZ-WLK-002","level":"High","rac":"1C","status":"open","subsystems":["SUS-M1-WLK","SUS-M1-PIL"],"title":"Walker tip-over or fall with pilot aboard"},{"id":"HAZ-MAN-002","level":"High","rac":"1C","status":"open","subsystems":["SUS-M1-MAN","SUS-M1-WLK","SUS-M1-CTL","SUS-M1-SAF"],"title":"Carried load swings, shifts or drops while walking"}],"lean":{"source":"Fraction of the slope-induced CoM lean (z tan slope) the gait does not compensate","value":0.25},"replay":[],"sheet":{"document":"SUS-CAD-001-CL-05 \u00b7 TERRAIN-001","id":"TERRAIN-001","layout":"CL-05","revision":"0.21-draft","sheet":"3 of 3","title":"Terrain course, interactive"},"standing":{"arm_ground_clearance_m":0.93,"cg_m":[-0.202,-0.001,2.723],"cockpit_floor_m":2.41,"egress_sill_m":3.03,"envelope_m":[3.29,2.29,4.48],"height_m":4.48,"hip_height_m":2.34,"pilot_eye_m":3.62,"placeholder_mass_kg":4590,"rotor_to_pilot_m":1.09,"static_margin_m":0.378,"static_tip_angle_deg":7.9,"support_polygon_m":[[-0.58,-0.7],[-0.07,-0.75],[0.204,-0.76],[0.604,-0.76],[0.604,0.76],[0.204,0.76],[-0.07,0.75],[-0.58,0.7]]},"sys008":{"id":"SYS-008","limit_deg":20,"statement":"The walker shall limit commanded motion and payload to a verified static and dynamic stability envelope, including a terrain slope limit of 20 degrees with the centre of mass no more than 0.12 m ahead of the stance foot, and provide pilot protection in a fall or overturn.","status":"candidate","title":"Stability envelope protection"},"sys019":{"id":"SYS-019","statement":"The walker shall permit walking with a payload only while the payload is confirmed secured, both arms are locked in a defined carry pose and payload mass and centre of gravity are within defined limits, and shall then limit walking speed, step height and terrain slope to defined loaded values inside the stability envelope of SYS-008.","status":"candidate","tbd":["Carry pose and tolerance (concept CL-05: load clamped between the hands, centre 1.80 m up, 0.10 m ahead of the pod)","Maximum payload mass and centre-of-gravity envelope while walking, from the dynamic analysis against the 0.12 m CoM offset cap (DQ-011)","Loaded speed, step-height and slope limits","Payload securing and confirmation means"],"title":"Loaded walking limits"},"terrains":[{"frozen_margin_m":0.378,"frozen_tip_deg":7.9,"key":"flat","kind":"plane","label":"Flat","lean_margin_m":0.378,"lean_tip_deg":29.0,"pitch_deg":0,"slope_deg":0.0},{"frozen_margin_m":0.14,"frozen_tip_deg":7.9,"key":"up5","kind":"plane","label":"Uphill 5\u00b0","lean_margin_m":0.318,"lean_tip_deg":29.0,"pitch_deg":5,"slope_deg":5.0},{"frozen_margin_m":-0.102,"frozen_tip_deg":7.9,"key":"up10","kind":"plane","label":"Uphill 10\u00b0","lean_margin_m":0.258,"lean_tip_deg":29.0,"pitch_deg":10,"slope_deg":10.0},{"frozen_margin_m":-0.352,"frozen_tip_deg":7.9,"key":"up15","kind":"plane","label":"Uphill 15\u00b0","lean_margin_m":0.196,"lean_tip_deg":29.0,"pitch_deg":15,"slope_deg":15.0},{"frozen_margin_m":-0.613,"frozen_tip_deg":7.9,"key":"up20","kind":"plane","label":"Uphill 20\u00b0","lean_margin_m":0.13,"lean_tip_deg":29.0,"note":"SYS-008 terrain slope limit","pitch_deg":20,"slope_deg":20.0},{"frozen_margin_m":0.326,"frozen_tip_deg":16.5,"key":"down10","kind":"plane","label":"Downhill 10\u00b0","lean_margin_m":0.498,"lean_tip_deg":49.8,"pitch_deg":-10,"slope_deg":10.0},{"frozen_margin_m":-0.185,"frozen_tip_deg":16.5,"key":"down20","kind":"plane","label":"Downhill 20\u00b0","lean_margin_m":0.558,"lean_tip_deg":49.8,"note":"SYS-008 terrain slope limit","pitch_deg":-20,"slope_deg":20.0},{"frozen_margin_m":0.257,"frozen_tip_deg":15.2,"key":"cross10","kind":"plane","label":"Cross-slope 10\u00b0","lean_margin_m":0.378,"lean_tip_deg":47.3,"roll_deg":10,"slope_deg":10.0},{"frozen_margin_m":-0.252,"frozen_tip_deg":15.2,"key":"cross20","kind":"plane","label":"Cross-slope 20\u00b0","lean_margin_m":0.378,"lean_tip_deg":47.3,"note":"SYS-008 terrain slope limit, across the track","roll_deg":20,"slope_deg":20.0},{"key":"ledges","kind":"ledges","label":"Ledges 0.2 m","rise_m":0.2,"run_m":1.0,"slope_deg":11.3},{"amp_m":0.12,"key":"rubble","kind":"rubble","label":"Rubble \u00b10.12 m"}]};</script>
 <script src="assets/sus-m1.js"></script>
 <script src="assets/sus-m1-terrain.js"></script>
+<script src="assets/sus-m1-terrain-loaded.js"></script>
 <script type="module">
 // Susanoo sheet 3: the CL-05 walk on the terrain course (three.js r170). Embedded in docs/3d/SUS-M1-terrain.html by build_sheet.py.
 // window.SHEET: terrains with the static figures computed from the records (cad/metrics.json, sim/spec/walker.yaml,
@@ -180,7 +187,9 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 THREE.Object3D.DEFAULT_UP.set(0, 0, 1);
-const D = window.SHEET, G = window.SUS_M1_GEOMETRY.meta, T = window.SUS_M1_TERRAIN.meta;
+const D = window.SHEET, G = window.SUS_M1_GEOMETRY.meta;
+// two posed courses: the walk (stowed arms) and the loaded walk (carry pose, placeholder load)
+const COURSE = { unloaded: window.SUS_M1_TERRAIN, loaded: window.SUS_M1_TERRAIN_LOADED };
 const q = new URLSearchParams(location.search);
 const $ = (id) => document.getElementById(id);
 const C = { ink: '#1e293b', mute: '#64748b', line: '#c3ccd7', haz: '#ea580c', sel: '#4f46e5', ok: '#0d9488', warn: '#d97706', bad: '#dc2626', bg: '#e4e9ef' };
@@ -191,7 +200,9 @@ function decode(src, meta) {
   const raw = Uint8Array.from(atob(src.bin), (c) => c.charCodeAt(0)).buffer, sl = ([o, n]) => raw.slice(o, o + n);
   return { P: new Int16Array(sl(meta.layout.positions)), I: new Uint16Array(sl(meta.layout.indices)), M: new Float32Array(sl(meta.layout.matrices)) };
 }
-const GB = decode(window.SUS_M1_GEOMETRY, G), TB = decode(window.SUS_M1_TERRAIN, T);
+const GB = decode(window.SUS_M1_GEOMETRY, G);
+const BUF = { unloaded: decode(COURSE.unloaded, COURSE.unloaded.meta), loaded: decode(COURSE.loaded, COURSE.loaded.meta) };
+const PFX = { t: 'unloaded', l: 'loaded' };
 function geom(meta, buf, i) {
   const m = meta.meshes[i], [vo, vn] = m.v, [io, inn] = m.i, s = meta.quantum_m, o = meta.origin_m;
   const pos = new Float32Array(vn * 3);
@@ -214,9 +225,11 @@ const fill = new THREE.DirectionalLight('#dfe7ff', 0.5); fill.position.set(-8, 6
 const walker = new THREE.Group(); scene.add(walker);
 
 // ------------------------------------------------------------------ state
-const S = { key: 'flat', u: 0, playing: !q.has('paused'), speed: 1, render: 'shaded', show: { plumb: true, stripes: true, person: true } };
-const terr = () => T.terrains.find((t) => t.key === S.key), info = () => D.terrains.find((t) => t.key === S.key);
-const STRIDE = T.stride_m, N = T.frames_per_cycle, RATE = 0.55;   // walk cycles per second at 1x (viewing pace)
+const S = { key: 'flat', mode: 'unloaded', mass: 0, u: 0, playing: !q.has('paused'), speed: 1, render: 'shaded', show: { plumb: true, stripes: true, person: true } };
+const T = () => COURSE[S.mode].meta;
+const terr = () => T().terrains.find((t) => t.key === S.key), info = () => D.terrains.find((t) => t.key === S.key);
+const posed = (mode, key) => { const t = COURSE[mode].meta.terrains.find((x) => x.key === key); return t && !t.skipped ? t : null; };
+const STRIDE = () => T().stride_m, N = () => T().frames_per_cycle, RATE = 0.55;   // walk cycles per second at 1x (viewing pace)
 
 // ------------------------------------------------------------------ materials and meshes
 const MODES = ['shaded', 'line', 'xray'], mats = {};
@@ -226,11 +239,11 @@ for (const [cls, [color, op]] of Object.entries(D.classes)) mats[cls] = {
   xray: new THREE.MeshStandardMaterial({ color, roughness: 0.5, transparent: true, opacity: 0.16, depthWrite: false, side: THREE.DoubleSide }) };
 const edgeMat = { shaded: new THREE.LineBasicMaterial({ color: C.ink, transparent: true, opacity: 0.22 }), line: new THREE.LineBasicMaterial({ color: C.ink }),
   xray: new THREE.LineBasicMaterial({ color: '#334155', transparent: true, opacity: 0.35 }) };
-const objs = new Map();   // 'b<id>' standing mesh of sus-m1.js, 't<k>' terrain mesh
+const objs = new Map();   // 'b<id>' standing mesh of sus-m1.js, 't<k>' / 'l<k>' mesh of the unloaded / loaded course
 function obj(key) {
   if (objs.has(key)) return objs.get(key);
-  const isB = key[0] === 'b', id = +key.slice(1), meta = isB ? G : T, cls = meta.meshes[id].cls;
-  const m = new THREE.Mesh(geom(meta, isB ? GB : TB, id), mats[cls][S.render]);
+  const isB = key[0] === 'b', id = +key.slice(1), meta = isB ? G : COURSE[PFX[key[0]]].meta, cls = meta.meshes[id].cls;
+  const m = new THREE.Mesh(geom(meta, isB ? GB : BUF[PFX[key[0]]], id), mats[cls][S.render]);
   m.matrixAutoUpdate = false; m.castShadow = D.classes[cls][1] >= 1; m.receiveShadow = true; m.userData = { cls };
   const e = new THREE.LineSegments(new THREE.EdgesGeometry(m.geometry, 35), edgeMat[S.render]); m.add(e); m.userData.edges = e;
   walker.add(m); objs.set(key, m); return m;
@@ -238,32 +251,33 @@ function obj(key) {
 G.base.forEach((b) => obj('b' + b));
 function applyMaterials() { for (const m of objs.values()) { m.material = mats[m.userData.cls][S.render]; m.userData.edges.material = edgeMat[S.render]; } }
 const tA = new THREE.Matrix4(), tB = new THREE.Matrix4();
-const setMat = (m, k) => { const a = TB.M.subarray(k * 12, k * 12 + 12); return m.set(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10], a[11], 0, 0, 0, 1); };
+const setMat = (m, k) => { const a = BUF[S.mode].M.subarray(k * 12, k * 12 + 12); return m.set(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10], a[11], 0, 0, 0, 1); };
 
 // pose at u (walk cycles, continuous): frames i and i+1 of the cycle, the body moved by whole cycles and the cycle's rise
 function pose(u) {
-  const t = terr(), k = Math.floor(u), f = (u - k) * N, i = Math.floor(f) % N, j = (i + 1) % N, fr = f - Math.floor(f);
+  const t = terr(), n = N(), st = STRIDE(), k = Math.floor(u), f = (u - k) * n, i = Math.floor(f) % n, j = (i + 1) % n, fr = f - Math.floor(f);
   const A = t.frames[i], B = t.frames[j], wrap = j === 0 ? 1 : 0;
   const ma = new Map(A.map), mb = new Map(B.map), near = fr < 0.5 ? A : B;
   for (const [key, m] of objs) {
-    if (key[0] === 't') { m.visible = false; continue; }
+    if (key[0] !== 'b') { m.visible = false; continue; }
     const id = +key.slice(1), ka = ma.get(id), kb = mb.get(id);
     if (ka !== undefined && kb !== undefined) { const ea = setMat(tA, ka).elements, eb = setMat(tB, kb).elements; for (let n = 0; n < 16; n++) m.matrix.elements[n] = ea[n] + (eb[n] - ea[n]) * fr; m.visible = true; }
     else if ((fr < 0.5 ? ma : mb).has(id)) { setMat(m.matrix, (fr < 0.5 ? ma : mb).get(id)); m.visible = true; }
     else m.visible = false;
     m.matrixWorldNeedsUpdate = true;
   }
-  for (const e of near.extras) { const m = obj('t' + e); m.matrix.identity(); m.visible = true; }
-  const xb = A.xb + ((B.xb + wrap * STRIDE) - A.xb) * fr, gz = A.gref + ((B.gref + wrap * t.rise) - A.gref) * fr;
-  walker.position.set(k * STRIDE + xb, 0, k * t.rise + gz);
-  return { k, i, x: k * STRIDE + xb };
+  const pf = S.mode === 'loaded' ? 'l' : 't';
+  for (const e of near.extras) { const m = obj(pf + e); m.matrix.identity(); m.visible = true; }
+  const xb = A.xb + ((B.xb + wrap * st) - A.xb) * fr, gz = A.gref + ((B.gref + wrap * t.rise) - A.gref) * fr;
+  walker.position.set(k * st + xb, 0, k * t.rise + gz);
+  return { k, i, x: k * st + xb };
 }
 
 // ------------------------------------------------------------------ ground: the exported height map of one period, tiled with the cycle's rise
 function groundAt(x, y) {
-  const t = terr(), dx = T.sample_m, H = t.hmap, nx = H.length, ny = H[0].length;
-  const c = Math.floor(x / STRIDE), xr = (x - c * STRIDE) / dx, i0 = Math.floor(xr) % nx, i1 = (i0 + 1) % nx, fx = xr - Math.floor(xr);
-  const yr = Math.min(ny - 1.001, Math.max(0, (y + T.width_m / 2) / dx)), j0 = Math.floor(yr), fy = yr - j0;
+  const t = terr(), dx = T().sample_m, H = t.hmap, nx = H.length, ny = H[0].length, st = STRIDE();
+  const c = Math.floor(x / st), xr = (x - c * st) / dx, i0 = Math.floor(xr) % nx, i1 = (i0 + 1) % nx, fx = xr - Math.floor(xr);
+  const yr = Math.min(ny - 1.001, Math.max(0, (y + T().width_m / 2) / dx)), j0 = Math.floor(yr), fy = yr - j0;
   const h = (i, j) => H[i][j];
   const top = i1 === 0 ? t.rise : 0;   // the next sample after the period's end belongs to the next cycle
   const a = h(i0, j0) * (1 - fy) + h(i0, j0 + 1) * fy, b = (h(i1, j0) * (1 - fy) + h(i1, j0 + 1) * fy) + top;
@@ -272,13 +286,13 @@ function groundAt(x, y) {
 const groundMat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.95, side: THREE.DoubleSide });
 let ground = null, groundC = null, groundKey = null;
 function buildGround(c0) {
-  const t = terr(), dx = T.sample_m, nx = t.hmap.length, ny = t.hmap[0].length, cyc = 14, X = cyc * nx + 1;
+  const t = terr(), dx = T().sample_m, nx = t.hmap.length, ny = t.hmap[0].length, cyc = Math.ceil(12 / STRIDE()), X = cyc * nx + 1, st = STRIDE(), W = T().width_m;
   const pos = new Float32Array(X * ny * 3), col = new Float32Array(X * ny * 3), idx = [];
   const ca = new THREE.Color('#d6dccd'), cb = new THREE.Color('#c5ccbb'), cw = new THREE.Color('#e3e7dc');
   for (let gi = 0; gi < X; gi++) {
-    const c = c0 + Math.floor(gi / nx), i = gi % nx, x = c * STRIDE + i * dx;
+    const c = c0 + Math.floor(gi / nx), i = gi % nx, x = c * st + i * dx;
     for (let j = 0; j < ny; j++) {
-      const n = (gi * ny + j) * 3, y = -T.width_m / 2 + j * dx, edge = Math.abs(y) > T.width_m / 2 - 0.4;
+      const n = (gi * ny + j) * 3, y = -W / 2 + j * dx, edge = Math.abs(y) > W / 2 - 0.4;
       pos[n] = x; pos[n + 1] = y; pos[n + 2] = t.hmap[i][j] + c * t.rise;
       const k = edge ? cw : (S.show.stripes && ((Math.floor(x + 1e-6) % 2) + 2) % 2 ? cb : ca); col[n] = k.r; col[n + 1] = k.g; col[n + 2] = k.b;
     }
@@ -287,7 +301,7 @@ function buildGround(c0) {
   const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.BufferAttribute(pos, 3)); g.setAttribute('color', new THREE.BufferAttribute(col, 3));
   g.setIndex(idx); g.computeVertexNormals();
   if (ground) { scene.remove(ground); ground.geometry.dispose(); }
-  ground = new THREE.Mesh(g, groundMat); ground.receiveShadow = true; scene.add(ground); groundC = c0; groundKey = S.key + S.show.stripes;
+  ground = new THREE.Mesh(g, groundMat); ground.receiveShadow = true; scene.add(ground); groundC = c0; groundKey = S.mode + S.key + S.show.stripes;
 }
 
 // ------------------------------------------------------------------ person, CG plumb
@@ -322,7 +336,22 @@ tlist.innerHTML = `<div class="seg tg">${D.terrains.map((t) => `<button data-k="
 tlist.querySelectorAll('button').forEach((b) => { b.onclick = () => setTerrain(b.dataset.k); });
 const status = (ok, warn) => ok ? `<span style="color:${C.ok}">✓</span>` : `<span style="color:${warn ? C.warn : C.bad}">${warn ? '!' : '✗'}</span>`;
 const row = (k, v) => `<div class="row"><span class="k">${k}</span><span>${v}</span></div>`;
+// Static margin, the same geometry as sim/scenes3d/build_sheet.py static_margin(): signed distance from the support
+// polygon's edge to the centre of gravity projected along gravity on ground pitched/rolled by the given degrees, with
+// `lean` the share of the slope-induced shift left uncompensated. Used live for the load-mass slider.
+function inPoly(p, poly) { let c = false; for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) { const [xi, yi] = poly[i], [xj, yj] = poly[j];
+  if ((yi > p[1]) !== (yj > p[1]) && p[0] < (xj - xi) * (p[1] - yi) / (yj - yi) + xi) c = !c; } return c; }
+function edge(p, poly) { let d = 1e9; for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) { const [ax, ay] = poly[j], [bx, by] = poly[i], dx = bx - ax, dy = by - ay;
+  const t = Math.max(0, Math.min(1, ((p[0] - ax) * dx + (p[1] - ay) * dy) / (dx * dx + dy * dy))); d = Math.min(d, Math.hypot(p[0] - ax - t * dx, p[1] - ay - t * dy)); } return d; }
+function margin(cg, poly, pitch, roll, lean = 1) { const tp = Math.tan(pitch * Math.PI / 180), tr = Math.tan(roll * Math.PI / 180);
+  const p = [cg[0] - lean * cg[2] * tp, cg[1] + lean * cg[2] * tr], d = edge(p, poly); return inPoly(p, poly) ? d : -d; }
+function tipAt(cg, poly, sp, sr, lean = 1) { let lo = 0, hi = 89; for (let n = 0; n < 60; n++) { const mid = (lo + hi) / 2; if (margin(cg, poly, sp * mid, sr * mid, lean) > 0) lo = mid; else hi = mid; } return lo; }
+function loadedCg(kg) { const c = D.carry, M = c.mass_kg; return c.cg_m.map((v, i) => (M * v + kg * c.load_centre_m[i]) / (M + kg)); }
+const info2 = (k) => D.terrains.find((t) => t.key === k);
+let lastMargins = null;
 function renderPanels() {
+  if (S.mode === 'loaded') return renderLoaded();
+  $('loadrow').style.display = 'none';
   const t = terr(), d = info(), fnd = t.findings, slope = d.slope_deg;
   $('tname').textContent = d.label.toUpperCase();
   $('tsub').textContent = d.kind === 'plane' ? `${d.pitch_deg ? 'pitch ' + d.pitch_deg + '°' : ''}${d.roll_deg ? 'roll ' + d.roll_deg + '° (right side down)' : ''}${!d.pitch_deg && !d.roll_deg ? 'level ground' : ''} · rise ${f2(t.rise)} m per cycle`
@@ -347,6 +376,46 @@ function renderPanels() {
   $('req').innerHTML = `<div class="row" style="display:block"><b>${D.sys008.id}</b> ${D.sys008.title} · ${D.sys008.status}<br><span class="k">${D.sys008.statement}</span></div>` +
     `<div class="row" style="display:block"><b>${D.hazard.id}</b> ${D.hazard.title} · ${D.hazard.status} · initial risk ${D.hazard.rac}</div>`;
   tlist.querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.k === S.key));
+  lastMargins = d.kind === 'plane' ? { frozen: d.frozen_margin_m, lean: d.lean_margin_m } : null;
+}
+function kinRows(t) {
+  const fnd = t.findings, solved = fnd.unsolved_frames.length === 0, clr = fnd.min_body_clearance_m;
+  return row('Leg reach', `${status(solved)} ${solved ? 'every frame solved' : fnd.unsolved_frames.length + ' frames unsolved'}`) +
+    row('Hip lowered', `${status(fnd.max_hip_drop_m < 0.005, true)} ${fnd.max_hip_drop_m < 0.005 ? 'not needed' : f2(fnd.max_hip_drop_m) + ' m to reach'}`) +
+    row('Lowest body/arm/load clearance', `${status(clr > 0.3, clr > 0)} ${clr == null ? '—' : f2(clr) + ' m'}`);
+}
+function renderLoaded() {
+  const t = terr(), d = info(), c = D.carry, kg = S.mass, cg = loadedCg(kg), poly = c.support_polygon_m, T0 = T();
+  $('tname').textContent = d.label.toUpperCase() + ' · LOADED';
+  $('tsub').textContent = `loaded walk: stride ${T0.stride_m} m, foot lift ${T0.lift_m} m · rise ${f2(t.rise)} m per cycle` + (d.kind === 'rubble' ? ` · bumps repeat every ${T0.stride_m} m` : '');
+  $('kin').innerHTML = kinRows(t);
+  $('loadrow').style.display = 'block';
+  $('massv').textContent = `${kg.toLocaleString('en')} kg`;
+  $('massnote').innerHTML = `Placeholder load ${c.load_envelope_m.map(f2).join('×')} m, centre ${f2(c.load_centre_m[0])} m ahead and ${f2(c.load_centre_m[2])} m up · mass TBD (SYS-019). ` +
+    `CAD marks: margin peak ${c.peak.load_kg} kg · ${c.flag_margin_m} m flag ${c.flag_kg} kg · tips on level ground ${c.tipover_kg} kg.`;
+  const lvl = margin(cg, poly, 0, 0), col = (m) => m >= c.flag_margin_m ? C.ok : m > 0 ? C.warn : C.bad;
+  let html = row('Level ground: margin', `<b style="color:${col(lvl)}">${lvl > 0 ? f2(lvl) + ' m' : 'tips'}</b>${lvl > 0 && lvl < c.flag_margin_m ? ` · under the ${c.flag_margin_m} m flag` : ''}`);
+  const out = { level: +lvl.toFixed(4) };
+  if (d.kind === 'plane') {
+    const pi = d.pitch_deg || 0, ro = d.roll_deg || 0, s = Math.hypot(pi, ro), sp = s ? pi / s : 1, sr = s ? ro / s : 0;
+    const fz = margin(cg, poly, pi, ro), ln = margin(cg, poly, pi, ro, D.lean.value);
+    out.frozen = +fz.toFixed(4); out.lean = +ln.toFixed(4);
+    html += row('Frozen joints: margin', `<b style="color:${col(fz)}">${fz > 0 ? f2(fz) + ' m' : 'tips (' + f2(fz) + ' m)'}</b>`) +
+      row('Frozen joints: tips at', `${f1(tipAt(cg, poly, sp, sr))}° this way`) +
+      row(`Gait lean (${Math.round((1 - D.lean.value) * 100)}% compensated)`, `<b style="color:${col(ln)}">${ln > 0 ? f2(ln) + ' m' : 'tips'}</b>`) +
+      row('With that lean: tips at', `${f1(tipAt(cg, poly, sp, sr, D.lean.value))}° this way`) +
+      row(`SYS-008 limit ${D.sys008.limit_deg}°`, s === 0 ? 'level' : `${status(s <= D.sys008.limit_deg, false)} ${f1(s)}°`) +
+      row('SYS-019 loaded slope limit', '<span style="color:' + C.warn + '">TBD</span>');
+  } else html += row('On this ground', 'uneven: only the level margin and the leg kinematics are checked') + row('SYS-019 loaded step-height limit', '<span style="color:' + C.warn + '">TBD</span>');
+  $('stat').innerHTML = html;
+  $('statnote').textContent = `Carry posture of CL-05 (cad/metrics.json, ${c.mass_kg.toLocaleString('en')} kg placeholder) with the load's mass added at its centre: the same static check as the CAD's carry figures. ` +
+    `A load ahead of the walker moves the centre of gravity forward: more margin uphill (rear edge), less downhill (front edge). Single-support phases and load dynamics are not checked.`;
+  $('req').innerHTML = `<div class="row" style="display:block"><b>${D.sys019.id}</b> ${D.sys019.title} · ${D.sys019.status}<br><span class="k">${D.sys019.statement}</span></div>` +
+    `<div class="row" style="display:block"><b>${D.sys008.id}</b> ${D.sys008.title} · ${D.sys008.status}</div>` +
+    `<div class="row" style="display:block"><b>${D.hazard_load.id}</b> ${D.hazard_load.title} · ${D.hazard_load.status} · initial risk ${D.hazard_load.rac}</div>` +
+    `<div class="row" style="display:block"><b>${D.hazard.id}</b> ${D.hazard.title} · ${D.hazard.status} · initial risk ${D.hazard.rac}</div>`;
+  tlist.querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.k === S.key));
+  lastMargins = out;
 }
 function drawProfile(x0) {
   const W = 1000, H = 110, a = x0 - 4, b = x0 + 8, X = (x) => (x - a) / (b - a) * W;
@@ -360,15 +429,27 @@ function drawProfile(x0) {
     `<text x="${X(b) - 190}" y="${Math.max(24, Z(g0 + (b - x0) * r) + 14)}" font-size="10" fill="${C.mute}">SYS-008 20° from here</text>` +
     `<line x1="${X(x0)}" y1="4" x2="${X(x0)}" y2="${H}" stroke="${C.ink}" stroke-width="2"/><text x="${X(x0) + 4}" y="12" font-size="10" fill="${C.ink}">hip</text>` +
     `<text x="6" y="${H - 2}" font-size="10" fill="${C.mute}"><tspan fill="${C.sel}">— left foot track</tspan>  <tspan fill="${C.haz}">— right foot track</tspan>  · vertical exaggerated · 12 m window</text>`;
-  $('ptitle').textContent = `${info().label} · ground at the hip ${f2(g0)} m`;
+  $('ptitle').textContent = `${info().label}${S.mode === 'loaded' ? ' · loaded' : ''} · ground at the hip ${f2(g0)} m`;
 }
 
 // ------------------------------------------------------------------ controls
-function setTerrain(k) { if (!T.terrains.find((t) => t.key === k)) return; S.key = k; S.u = 0; groundKey = null; renderPanels(); }
+function setTerrain(k) { if (!posed(S.mode, k)) return; S.key = k; S.u = 0; groundKey = null; renderPanels(); }
+function setMode(m) {
+  if (!COURSE[m]) return;
+  S.mode = m; S.u = 0; groundKey = null;
+  if (!posed(m, S.key)) S.key = 'flat';
+  renderPanels(); refresh();
+}
+document.querySelectorAll('#mode button').forEach((b) => { b.onclick = () => setMode(b.dataset.mode); });
+$('mass').max = D.carry.tipover_kg;
+$('mass').oninput = (e) => { S.mass = +e.target.value; renderPanels(); };
 function refresh() {
   document.querySelectorAll('[data-t]').forEach((b) => b.classList.toggle('on', !!S.show[b.dataset.t]));
   document.querySelectorAll('#render button').forEach((b) => b.classList.toggle('on', b.dataset.r === S.render));
   document.querySelectorAll('[data-sp]').forEach((b) => b.classList.toggle('on', +b.dataset.sp === S.speed));
+  document.querySelectorAll('#mode button').forEach((b) => b.classList.toggle('on', b.dataset.mode === S.mode));
+  tlist.querySelectorAll('button').forEach((b) => { const ok = !!posed(S.mode, b.dataset.k); b.disabled = !ok;
+    const sk = COURSE[S.mode].meta.terrains.find((x) => x.key === b.dataset.k); b.title = ok ? (info2(b.dataset.k).note || info2(b.dataset.k).label) : (sk && sk.skipped) || 'not posed'; });
   $('bplay').textContent = S.playing ? '❚❚ Pause' : '▶ Play'; $('bplay').classList.toggle('on', S.playing);
 }
 document.querySelectorAll('[data-t]').forEach((b) => { b.onclick = () => { S.show[b.dataset.t] = !S.show[b.dataset.t]; groundKey = null; refresh(); }; });
@@ -382,7 +463,9 @@ $('terms').onclick = () => $('terms').classList.toggle('open');
 canvas.addEventListener('pointerdown', () => { try { window.focus(); } catch (e) { /* framed page */ } });
 addEventListener('keydown', (e) => {
   const k = e.key.toLowerCase(), keys = D.terrains.map((t) => t.key), i = keys.indexOf(S.key);
-  if (k === 'arrowright') setTerrain(keys[(i + 1) % keys.length]); if (k === 'arrowleft') setTerrain(keys[(i - 1 + keys.length) % keys.length]);
+  const next = (dir) => { for (let n = 1; n <= keys.length; n++) { const kk = keys[(i + dir * n + keys.length * 2) % keys.length]; if (posed(S.mode, kk)) return setTerrain(kk); } };
+  if (k === 'arrowright') next(1); if (k === 'arrowleft') next(-1);
+  if (k === 'l') setMode(S.mode === 'loaded' ? 'unloaded' : 'loaded');
   if (k === ' ') { e.preventDefault(); S.playing = !S.playing; refresh(); }
   const tg = { g: 'plumb', b: 'stripes', p: 'person' }[k]; if (tg) { S.show[tg] = !S.show[tg]; groundKey = null; refresh(); }
   if (k === 'v') { S.render = MODES[(MODES.indexOf(S.render) + 1) % 3]; applyMaterials(); refresh(); }
@@ -402,10 +485,10 @@ let last = performance.now(), profT = 0;
 function frame(now) {
   const dt = Math.min(0.1, (now - last) / 1000); last = now;
   if (S.playing) S.u += dt * RATE * S.speed;
-  const p = pose(S.u), c0 = p.k - 4;
-  if (groundKey !== S.key + S.show.stripes || c0 !== groundC) buildGround(c0);
-  // CG of the standing layout carried with the body (approximate while walking), its plumb line to the ground
-  const cgw = walker.localToWorld(new THREE.Vector3(...D.standing.cg_m)), gz = groundAt(cgw.x, cgw.y);
+  const p = pose(S.u), c0 = p.k - Math.ceil(4 / STRIDE());
+  if (groundKey !== S.mode + S.key + S.show.stripes || c0 !== groundC) buildGround(c0);
+  // CG of the standing layout, or of the carry posture with the slider's load, carried with the body (approximate while walking), and its plumb line
+  const cgw = walker.localToWorld(new THREE.Vector3(...(S.mode === 'loaded' ? loadedCg(S.mass) : D.standing.cg_m))), gz = groundAt(cgw.x, cgw.y);
   cg.position.copy(cgw); plumb.geometry.setFromPoints([cgw, new THREE.Vector3(cgw.x, cgw.y, gz)]); plumb.computeLineDistances();
   hit.position.set(cgw.x, cgw.y, gz + 0.02); cg.visible = plumb.visible = hit.visible = S.show.plumb;
   person.visible = S.show.person; person.position.set(p.x - 1.2, -3.0, groundAt(p.x - 1.2, -3.0));
@@ -416,17 +499,20 @@ function frame(now) {
   sun.target.position.copy(controls.target); sun.position.copy(controls.target).add(new THREE.Vector3(6, -9, 14));
   controls.update();
   if ((profT += dt) > 0.1) { drawProfile(p.x); profT = 0; }
-  $('pnote').textContent = `${S.playing ? 'walking' : 'paused'} · ${S.speed}× viewing pace`; $('pframe').textContent = `cycle ${p.k + 1} · frame ${p.i + 1}/${N}`;
+  $('pnote').textContent = `${S.playing ? 'walking' : 'paused'} · ${S.speed}× viewing pace`; $('pframe').textContent = `cycle ${p.k + 1} · frame ${p.i + 1}/${N()}`;
   renderer.setClearColor(C.bg, 1); renderer.render(scene, cam);
   const az = (THREE.MathUtils.radToDeg(Math.atan2(cam.position.y - controls.target.y, cam.position.x - controls.target.x)) + 360) % 360;
   const dist = cam.position.distanceTo(controls.target), el = THREE.MathUtils.radToDeg(Math.asin((cam.position.z - controls.target.z) / dist));
-  $('cam').textContent = `AZ ${az.toFixed(0)}° · EL ${el.toFixed(0)}° · R ${dist.toFixed(1)} M · ${S.render.toUpperCase()} · CL-05 ON ${info().label.toUpperCase()}`;
-  window.__state = { terrain: S.key, u: +S.u.toFixed(3), x: +p.x.toFixed(3), z: +walker.position.z.toFixed(3), playing: S.playing };
+  $('cam').textContent = `AZ ${az.toFixed(0)}° · EL ${el.toFixed(0)}° · R ${dist.toFixed(1)} M · ${S.render.toUpperCase()} · CL-05 ${S.mode === 'loaded' ? 'LOADED ' : ''}ON ${info().label.toUpperCase()}`;
+  window.__state = { terrain: S.key, mode: S.mode, mass: S.mass, u: +S.u.toFixed(3), x: +p.x.toFixed(3), z: +walker.position.z.toFixed(3), playing: S.playing,
+    margins: lastMargins };
   window.__ready = true;
   requestAnimationFrame(frame);
 }
 
 // ------------------------------------------------------------------ start
+if (q.get('mode') === 'loaded') S.mode = 'loaded';
+if (q.get('mass')) { S.mass = +q.get('mass'); $('mass').value = S.mass; }
 if (q.get('terrain')) setTerrain(q.get('terrain'));
 if (q.get('t')) S.u = +q.get('t');
 if (MODES.includes(q.get('render'))) S.render = q.get('render');
