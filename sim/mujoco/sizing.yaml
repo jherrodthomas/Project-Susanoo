@@ -30,5 +30,5 @@ proposal:
   knee_torque_max_nm: 26500
   rationale: >-
     Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), a third
-    above the lowest value that clears the grid; knee 1.5 times the lowest value that clears it with that ankle.
+    above the lowest value that clears the grid; knee 1.5 times the lowest value that cleared it with that ankle when it was sized (17.5 kN m, DQ-024); with the CL-05 link masses and inertias (cad/links.json) the lowest clear knee is 20 kN m, so 26.5 kN m is 1.33 times it.
     Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).

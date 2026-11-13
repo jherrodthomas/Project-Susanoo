@@ -4,13 +4,22 @@ schema: susanoo/sim-spec/v0.1
 id: SPEC-WLK-L2-001
 revision: 0.1-draft
 params:
-  torso_mass_kg:      {value: 3672, unit: kg,  range: [1000, 5000], status: derived, source: "80% of mass_kg above the hips (assumed split; the CAD gives no mass per part), DQ-023"}
-  leg_mass_kg:        {value: 459, unit: kg,  range: [100, 1000], status: derived, source: "10% of mass_kg per leg (thigh + shank + foot, split 50/40/10), DQ-023"}
+  torso_mass_kg:      {value: 3473.8, unit: kg,  range: [1000, 5000], status: derived, source: "mass_kg less both legs; CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) gives 3,470 kg (the 3 kg difference is the rounding of cad/metrics.json)"}
+  torso_pitch_inertia_kgm2: {value: 2452, unit: kg m^2, range: [200, 10000], status: derived, source: "Torso pitch inertia about its centre of mass, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py)"}
+  thigh_mass_kg:      {value: 339.3, unit: kg, range: [20, 1000], status: derived, source: "CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py)"}
+  shank_mass_kg:      {value: 167.8, unit: kg, range: [20, 1000], status: derived, source: "CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py)"}
+  foot_mass_kg:       {value: 51.0, unit: kg,  range: [5, 500],   status: derived, source: "CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py)"}
+  thigh_com_fraction: {value: 0.175, unit: "-", range: [0.0, 1.0], status: derived, source: "Thigh centre of mass along hip-knee, from the hip; CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py)"}
+  shank_com_fraction: {value: 0.424, unit: "-", range: [0.0, 1.0], status: derived, source: "Shank centre of mass along knee-ankle, from the knee; CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py)"}
+  thigh_pitch_inertia_kgm2: {value: 153, unit: kg m^2, range: [1, 2000], status: derived, source: "About the thigh centre of mass, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py)"}
+  shank_pitch_inertia_kgm2: {value: 39, unit: kg m^2, range: [1, 2000], status: derived, source: "About the shank centre of mass, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py)"}
+  foot_pitch_inertia_kgm2:  {value: 5, unit: kg m^2, range: [0.5, 500], status: derived, source: "About the foot centre of mass, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py)"}
+  foot_com_above_sole_m: {value: 0.067, unit: m, range: [0.0, 0.4], status: derived, source: "CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py)"}
   hip_height_m:       {value: 2.34, unit: m,   range: [1.5, 4.0], status: derived, source: "Reference layout CL-05 (cad/metrics.json, hip_height_m), decision DQ-023; placeholder geometry, not a design"}
   thigh_length_m:     {value: 1.107, unit: m,   range: [0.8, 2.5], status: derived, source: "Hip to knee: puts the hip at hip_height_m in the stance pose (knee bent 0.3 rad), DQ-023"}
   shank_length_m:     {value: 1.107, unit: m,   range: [0.8, 2.5], status: derived, source: "Knee to ankle: as thigh_length_m, DQ-023"}
   ankle_height_m:     {value: 0.15, unit: m,   range: [0.05, 0.4],  status: assumed, source: "Ankle joint above the sole"}
-  torso_com_above_hip_m: {value: 0.745, unit: m, range: [0.0, 1.5], status: derived, source: "Puts the whole-body CoM at com_height_m (CL-05, cad/metrics.json) with the masses above, DQ-023"}
+  torso_com_above_hip_m: {value: 0.748, unit: m, range: [0.0, 1.5], status: derived, source: "Torso centre of mass above the hip joint, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py); placed over the hip (the CAD has it 0.265 m behind, not modelled)"}
   knee_torque_max_nm: {value: 26500, unit: N m, range: [10000, 200000], status: derived, source: "Knee actuator peak torque at full supply, re-sized against HAZ-WLK-002 CF4 for the 4,590 kg reference layout (SZ-01, sim/results/sizing-cf4.md; SYS-016); adopted by lead decision DQ-024"}
   hip_torque_max_nm:  {value: 40000, unit: N m, range: [10000, 200000], status: assumed, source: "Hip actuator peak torque at full supply"}
   ankle_torque_max_nm: {value: 40500, unit: N m, range: [5000, 100000], status: derived, source: "Ankle actuator peak torque at full supply, 1.5 m g L_foot, re-sized against HAZ-WLK-002 CF4 for the 4,590 kg reference layout (SZ-01, sim/results/sizing-cf4.md; SYS-016); adopted by lead decision DQ-024"}

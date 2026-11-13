@@ -1,0 +1,238 @@
+{
+ "generator": "tools/cad/b3d/cl05_links.py",
+ "layout": "CL-05",
+ "posture": "standing",
+ "note": "Properties of placeholder concept geometry, not of a design. Inertia about each link's centre of mass, layout frame (x forward, y left, z up); along_segment: the centre of mass projected on hip-knee (thigh) or knee-ankle (shank), 0 at the upper joint.",
+ "joints_m": {
+  "left": {
+   "hip": [
+    0.0,
+    0.55,
+    2.337
+   ],
+   "knee": [
+    -0.45,
+    0.55,
+    1.444
+   ],
+   "ankle": [
+    0.1,
+    0.55,
+    0.55
+   ]
+  },
+  "right": {
+   "hip": [
+    0.0,
+    -0.55,
+    2.337
+   ],
+   "knee": [
+    -0.45,
+    -0.55,
+    1.444
+   ],
+   "ankle": [
+    0.1,
+    -0.55,
+    0.55
+   ]
+  }
+ },
+ "total": {
+  "mass_kg": 4586.5,
+  "com_m": [
+   -0.202,
+   -0.002,
+   2.723
+  ]
+ },
+ "links": {
+  "foot_left": {
+   "mass_kg": 51.0,
+   "com_m": [
+    0.059,
+    0.55,
+    0.067
+   ],
+   "inertia_kgm2": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     5,
+     0
+    ],
+    [
+     0,
+     0,
+     5
+    ]
+   ],
+   "solids": 4
+  },
+  "foot_right": {
+   "mass_kg": 51.0,
+   "com_m": [
+    0.059,
+    -0.55,
+    0.067
+   ],
+   "inertia_kgm2": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     5,
+     0
+    ],
+    [
+     0,
+     0,
+     5
+    ]
+   ],
+   "solids": 4
+  },
+  "shank_left": {
+   "mass_kg": 167.8,
+   "com_m": [
+    -0.227,
+    0.553,
+    1.058
+   ],
+   "inertia_kgm2": [
+    [
+     30,
+     0,
+     16
+    ],
+    [
+     0,
+     39,
+     0
+    ],
+    [
+     16,
+     0,
+     12
+    ]
+   ],
+   "solids": 8,
+   "along_segment": 0.424
+  },
+  "shank_right": {
+   "mass_kg": 167.8,
+   "com_m": [
+    -0.227,
+    -0.553,
+    1.058
+   ],
+   "inertia_kgm2": [
+    [
+     30,
+     0,
+     16
+    ],
+    [
+     0,
+     39,
+     0
+    ],
+    [
+     16,
+     0,
+     12
+    ]
+   ],
+   "solids": 8,
+   "along_segment": 0.424
+  },
+  "thigh_left": {
+   "mass_kg": 339.3,
+   "com_m": [
+    0.092,
+    0.636,
+    2.095
+   ],
+   "inertia_kgm2": [
+    [
+     52,
+     -21,
+     -17
+    ],
+    [
+     -21,
+     153,
+     1
+    ],
+    [
+     -17,
+     1,
+     119
+    ]
+   ],
+   "solids": 14,
+   "along_segment": 0.175
+  },
+  "thigh_right": {
+   "mass_kg": 339.3,
+   "com_m": [
+    0.092,
+    -0.636,
+    2.095
+   ],
+   "inertia_kgm2": [
+    [
+     52,
+     21,
+     -17
+    ],
+    [
+     21,
+     153,
+     -1
+    ],
+    [
+     -17,
+     -1,
+     119
+    ]
+   ],
+   "solids": 14,
+   "along_segment": 0.175
+  },
+  "torso": {
+   "mass_kg": 3470.3,
+   "com_m": [
+    -0.265,
+    -0.002,
+    3.085
+   ],
+   "inertia_kgm2": [
+    [
+     1913,
+     0,
+     334
+    ],
+    [
+     0,
+     2452,
+     -2
+    ],
+    [
+     334,
+     -2,
+     2263
+    ]
+   ],
+   "solids": 157
+  }
+ }
+}
