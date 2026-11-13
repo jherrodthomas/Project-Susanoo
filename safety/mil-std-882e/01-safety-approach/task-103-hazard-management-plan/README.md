@@ -28,7 +28,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | MIL-STD-882E element | 1 — Document the system safety approach |
 | Tasks | [Task 103 — Hazard Management Plan](../../../../docs/wiki/MIL-STD-882E-Task-103.md) |
 | Lifecycle gate | G0–G1 |
-| Applicability | Selected |
+| Applicability | Not selected — the SSPP (Task 102) covers hazard management; one plan avoids divergence |
 | Accountable role | Safety lead |
 | Parent folder | [01 · Document the System Safety Approach](../README.md) |
 
