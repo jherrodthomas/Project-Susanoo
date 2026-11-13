@@ -447,3 +447,24 @@ decisions:
     answer: {choice: adopt, by: lead, at: 2026-11-13, via: chat, note: "Adopt 2C to 2D, 1C to 1E and 1D to 1E (recommended)"}
     applied_in: [safety/hazards/HAZ-PIL-005.yaml, safety/hazards/HAZ-GSE-001.yaml, safety/hazards/HAZ-PIL-006.yaml]
     sources: [safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.yaml, standards/tailoring/mil-std-882e.yaml]
+  - id: DQ-022
+    question: How should work at height on the single-leg bench rig (EVT-BENCH-001) be controlled?
+    context: >-
+      The drafted event risk of HAZ-GSE-001 on EVT-BENCH-001 is 1C High: if the rig uses the CL-05 reference leg, the
+      hip actuator and the top of the frame are about 2.3 m up (rig scale TBD), and none of the seven event conditions
+      covers work at height. An added condition lowers the probability to D (1D Serious). This sets a test condition;
+      it is not a risk acceptance.
+    options:
+      - {key: condition, title: Add a work-at-height event condition, detail: "Work above the frame base only from a guarded platform or a stepladder with handrails; event risk 1D Serious."}
+      - {key: keep, title: Keep 1C High, detail: "No added condition; a High event risk must be accepted at the matching authority before authorization."}
+      - {key: smaller, title: Rate for a smaller rig, detail: "Re-rate the severity once the rig height is set."}
+    recommendation: condition
+    reversibility: easy
+    blocks: [EVT-BENCH-001 authorization]
+    gate: G4
+    decider: lead
+    status: applied
+    asked: 2026-11-13
+    answer: {choice: condition, by: lead, at: 2026-11-13, via: chat, note: "add the work-at-height condition"}
+    applied_in: [safety/events/EVT-BENCH-001.yaml, safety/hazards/HAZ-GSE-001.yaml]
+    sources: [safety/hazards/HAZ-GSE-001.yaml, safety/events/EVT-BENCH-001.yaml]
