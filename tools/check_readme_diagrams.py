@@ -94,6 +94,7 @@ ENFORCED = {
     "sim/figures": {"skip_dirs": {"readme", "__pycache__"}, "generator": ["tools/figures/simfigs_readme.py", "--check"]},
     "docs/3d": {"skip_dirs": {"assets", "figures"}, "generator": ["tools/figures/pages3d_readme.py", "--check"]},
     "docs/vcycle": {"skip_dirs": {"figures"}, "generator": ["tools/figures/vcycle_readme.py", "--check"]},
+    "docs/diagrams": {"skip_dirs": {"figures", "mil-std-882e"}, "generator": ["tools/figures/diagrams_readme.py", "--check"]},
     "sim/scenes3d": {"skip_dirs": {"figures", "library", "out", "__pycache__"},
                      "generator": ["tools/figures/scenes3d_readme.py", "--check"]},
 }

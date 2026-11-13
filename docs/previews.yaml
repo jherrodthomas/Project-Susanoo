@@ -35,6 +35,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - sim/figures            # generated README (tools/figures/simfigs_readme.py)
   - docs/3d                # generated README (tools/figures/pages3d_readme.py); assets/ keeps its preview
   - docs/vcycle            # generated README (tools/figures/vcycle_readme.py)
+  - docs/diagrams          # generated README (tools/figures/diagrams_readme.py); mil-std-882e/ keeps its preview
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -128,10 +129,6 @@ folders:
       from the build123d CAD by `tools/cad/b3d/cl05_web.py`. Generated; concept geometry, not a design.
     hero: {img: docs/wiki/images/3d-sus-m1.png, caption: "SUS-M1 general arrangement", link: docs/3d/SUS-M1.html}
 
-  docs/diagrams:
-    title: Diagram sources
-    purpose: Editable sources for the hand-drawn process maps.
-    hero: {img: docs/wiki/images/safety-lifecycle.svg, caption: "Safety lifecycle process map (illustrative)", link: docs/diagrams/mil-std-882e/README.md}
 
   docs/diagrams/mil-std-882e:
     title: MIL-STD-882E process-map sources

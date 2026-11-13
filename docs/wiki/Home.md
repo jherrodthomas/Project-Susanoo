@@ -94,6 +94,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   check that opens it
 - [V cycle page](V-Cycle-Page): the system-level V block by block, what the gate scrubber shows at every gate, and the
   maturity ladder
+- [Process-map sources](Process-Map-Sources): the hand-drawn MIL-STD-882E process maps, whether each export is in step
+  with its source, and the tasks each map names
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)
