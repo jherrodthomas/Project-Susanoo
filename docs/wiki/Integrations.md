@@ -137,7 +137,7 @@ Model of record: [`PX4Integration.sysml`](https://github.com/jherrodthomas/Proje
 |---|---|
 | SITL scenarios | [Simulation track](Simulation-Track) |
 | Software functions | [`safety/software/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/software/README.md) |
-| Allocated requirements SYS-003, SYS-006, SYS-012, SYS-013 | [Requirement register](Requirements-Register) |
+| Allocated requirements SYS-003, SYS-006, SYS-012, SYS-013, SYS-021, SYS-022 | [Requirement register](Requirements-Register) |
 | Interfaces and version | [882E work products](882E-Work-Products) |
 
 ## Folder contents

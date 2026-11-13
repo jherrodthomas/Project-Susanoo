@@ -135,7 +135,7 @@ Model of record: [`PX4Integration.sysml`](px4/PX4Integration.sysml), hand-writte
 |---|---|
 | SITL scenarios | [Simulation track](../sim/README.md) |
 | Software functions | [`safety/software/`](../safety/software/README.md) |
-| Allocated requirements SYS-003, SYS-006, SYS-012, SYS-013 | [Requirement register](../requirements/README.md) |
+| Allocated requirements SYS-003, SYS-006, SYS-012, SYS-013, SYS-021, SYS-022 | [Requirement register](../requirements/README.md) |
 | Interfaces and version | [882E work products](../safety/mil-std-882e/README.md) |
 
 ## Folder contents

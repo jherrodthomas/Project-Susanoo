@@ -1,0 +1,30 @@
+schema: susanoo/requirement/v0.1
+id: SYS-022
+title: Dock charging protection and isolation
+statement: The dock shall charge the UAV battery only when the aircraft is seated and confirmed, shall stop charging
+  on over-voltage, over-current or over-temperature independently of the charging software, and shall keep its charging
+  contacts de-energised and shrouded whenever no UAV is seated or charging has been isolated for handling.
+status: candidate
+source:
+  documents:
+  - safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml
+  scenario_ids:
+  - SCN-005
+  - SCN-108
+  hazard_ids:
+  - HAZ-DCK-003
+  - HAZ-DCK-004
+allocated_to:
+- SUS-M1-DCK
+- SUS-A1
+safety_significant: true
+verification:
+  method:
+  - test
+  - inspection
+  evidence_ids: []
+  disposition: open
+tbd:
+- Charging voltage and current
+- Over-voltage, over-current and temperature limits
+- Isolation means for handling

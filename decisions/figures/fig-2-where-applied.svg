@@ -1,260 +1,287 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1088.2" height="2381.6" viewBox="0 0 1088.2 2381.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1252.2" height="2636.1" viewBox="0 0 1252.2 2636.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
 <title>Figure 2 · Where the answers were applied</title>
 <desc>Each decision with an applied_in list, linked to the folders it names. Nothing applied yet: DQ-005.</desc>
 <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="1088.2" height="2298" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1252.2" height="2538" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 2 · Where the answers were applied</text>
 <text x="40" y="66" font-size="12.5" fill="#475569">Each decision with an applied_in list, linked to the folders it names. Nothing applied yet: DQ-005.</text>
-<text x="1048.2" y="44" font-size="11" fill="#475569" text-anchor="end">decisions/register.yaml</text>
-<line x1="40" y1="85" x2="1048.2" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1212.2" y="44" font-size="11" fill="#475569" text-anchor="end">decisions/register.yaml</text>
+<line x1="40" y1="85" x2="1212.2" y2="85" stroke="#E2E8F0" stroke-width="1"/>
 <g transform="translate(40 109)">
-<rect x="6" y="6" width="302.2" height="2096" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="626.2" y="491" width="376" height="1408" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<path d="M270.4 342.7 L306.2 342.7 Q313.2 342.7 320.2 342.7 L532.2 342.7 Q539.2 342.7 539.2 349.7 L539.2 724 Q539.2 731 546.2 731 L834.2 731" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 373.3 L306.2 373.3 Q313.2 373.3 320.2 373.3 L520.2 373.3 Q527.2 373.3 527.2 380.3 L527.2 794 Q527.2 801 534.2 801 L787.2 801 Q794.2 801 794.2 808 L794.2 1186 Q794.2 1193 801.2 1193 L834.2 1193" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1326 L328.2 1326 Q335.2 1326 335.2 1319 L335.2 1318 Q335.2 1311 342.2 1311 L807.2 1311 Q814.2 1311 814.2 1304 L814.2 1236 Q814.2 1229 821.2 1229 L834.2 1229" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1206 L328.2 1206 Q335.2 1206 335.2 1213 L335.2 1294 Q335.2 1301 342.2 1301 L647.2 1301 Q654.2 1301 654.2 1294 L654.2 1224 Q654.2 1217 661.2 1217 L834.2 1217" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 846 L400.2 846 Q407.2 846 407.2 853 L407.2 1198 Q407.2 1205 414.2 1205 L834.2 1205" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1454 L352.2 1454 Q359.2 1454 359.2 1447 L359.2 1371 Q359.2 1364 366.2 1364 L614.2 1364 Q621.2 1364 628.2 1364 L687.2 1364 Q694.2 1364 694.2 1371 L694.2 1438 Q694.2 1445 701.2 1445 L834.2 1445" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1418 L328.2 1418 Q335.2 1418 335.2 1411 L335.2 1351 Q335.2 1344 342.2 1344 L614.2 1344 Q621.2 1344 628.2 1344 L707.2 1344 Q714.2 1344 714.2 1351 L714.2 1746 Q714.2 1753 721.2 1753 L834.2 1753" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1490 L376.2 1490 Q383.2 1490 383.2 1483 L383.2 1391 Q383.2 1384 390.2 1384 L614.2 1384 Q621.2 1384 628.2 1384 L677.2 1384 Q684.2 1384 684.2 1391 L684.2 1594 Q684.2 1601 691.2 1601 L834.2 1601" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1436 L340.2 1436 Q347.2 1436 347.2 1429 L347.2 1361 Q347.2 1354 354.2 1354 L614.2 1354 Q621.2 1354 628.2 1354 L697.2 1354 Q704.2 1354 704.2 1361 L704.2 1514 Q704.2 1521 711.2 1521 L834.2 1521" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1472 L364.2 1472 Q371.2 1472 371.2 1465 L371.2 1381 Q371.2 1374 378.2 1374 L614.2 1374 Q621.2 1374 628.2 1374 L834.2 1373.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 220 L556.2 220 Q563.2 220 563.2 227 L563.2 634 Q563.2 641 570.2 641 L817.2 641 Q824.2 641 824.2 648 L824.2 796 Q824.2 801 829.2 801 L834.2 801" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 256 L544.2 256 Q551.2 256 551.2 263 L551.2 644 Q551.2 651 558.2 651 L834.2 651" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1059 L364.2 1059 Q371.2 1059 371.2 1066 L371.2 1264 Q371.2 1271 378.2 1271 L727.2 1271 Q734.2 1271 734.2 1278 L734.2 1504 Q734.2 1511 741.2 1511 L834.2 1511" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1086 L352.2 1086 Q359.2 1086 359.2 1093 L359.2 1274 Q359.2 1281 366.2 1281 L717.2 1281 Q724.2 1281 724.2 1288 L724.2 1361.3 Q724.2 1368.3 731.2 1368.3 L834.2 1368.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1113 L340.2 1113 Q347.2 1113 347.2 1120 L347.2 1284 Q347.2 1291 354.2 1291 L834.2 1291" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 607.2 L306.2 607.2 Q313.2 607.2 320.2 607.2 L472.2 607.2 Q479.2 607.2 479.2 614.2 L479.2 874 Q479.2 881 486.2 881 L767.2 881 Q774.2 881 774.2 888 L774.2 1344.9 Q774.2 1351.9 781.2 1351.9 L834.2 1351.9" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 570.4 L306.2 570.4 Q313.2 570.4 320.2 570.4 L496.2 570.4 Q503.2 570.4 503.2 577.4 L503.2 814 Q503.2 821 510.2 821 L834.2 821" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 625.6 L306.2 625.6 Q313.2 625.6 320.2 625.6 L460.2 625.6 Q467.2 625.6 467.2 632.6 L467.2 884 Q467.2 891 474.2 891 L834.2 891" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 588.8 L306.2 588.8 Q313.2 588.8 320.2 588.8 L484.2 588.8 Q491.2 588.8 491.2 595.8 L491.2 824 Q491.2 831 498.2 831 L807.2 831 Q814.2 831 814.2 824 L814.2 673 Q814.2 666 821.2 666 L834.2 666" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 2053.3 L306.2 2053.3 Q313.2 2053.3 320.2 2053.3 L436.2 2053.3 Q443.2 2053.3 443.2 2046.3 L443.2 1878 Q443.2 1871 450.2 1871 L797.2 1871 Q804.2 1871 804.2 1864 L804.2 1476 Q804.2 1469 811.2 1469 L834.2 1469" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 2007.3 L306.2 2007.3 Q313.2 2007.3 320.2 2007.3 L400.2 2007.3 Q407.2 2007.3 407.2 2000.3 L407.2 1804 Q407.2 1797 414.2 1797 L820.2 1797 Q824.2 1797 824.2 1793 L824.2 1793 Q824.2 1789 828.2 1789 L834.2 1789" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 2022.7 L306.2 2022.7 Q313.2 2022.7 320.2 2022.7 L412.2 2022.7 Q419.2 2022.7 419.2 2015.7 L419.2 1814 Q419.2 1807 426.2 1807 L807.2 1807 Q814.2 1807 814.2 1800 L814.2 1558 Q814.2 1551 821.2 1551 L834.2 1551" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 2068.7 L306.2 2068.7 Q313.2 2068.7 320.2 2068.7 L448.2 2068.7 Q455.2 2068.7 455.2 2061.7 L455.2 1888 Q455.2 1881 462.2 1881 L787.2 1881 Q794.2 1881 794.2 1874 L794.2 1402.5 Q794.2 1395.5 801.2 1395.5 L834.2 1395.5" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 2038 L424.2 2038 Q431.2 2038 431.2 2031 L431.2 1868 Q431.2 1861 438.2 1861 L834.2 1861" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1589.7 L306.2 1589.7 Q313.2 1589.7 320.2 1589.7 L424.2 1589.7 Q431.2 1589.7 431.2 1582.7 L431.2 1464 Q431.2 1457 438.2 1457 L834.2 1457" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1543.4 L306.2 1543.4 Q313.2 1543.4 320.2 1543.4 L388.2 1543.4 Q395.2 1543.4 395.2 1536.4 L395.2 1401 Q395.2 1394 402.2 1394 L614.2 1394 Q621.2 1394 628.2 1394 L657.2 1394 Q664.2 1394 664.2 1401 L664.2 1758 Q664.2 1765 671.2 1765 L834.2 1765" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1620.6 L306.2 1620.6 Q313.2 1620.6 320.2 1620.6 L834.2 1621" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1558.9 L306.2 1558.9 Q313.2 1558.9 320.2 1558.9 L400.2 1558.9 Q407.2 1558.9 407.2 1551.9 L407.2 1411 Q407.2 1404 414.2 1404 L614.2 1404 Q621.2 1404 628.2 1404 L667.2 1404 Q674.2 1404 674.2 1411 L674.2 1524 Q674.2 1531 681.2 1531 L834.2 1531" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1605.1 L306.2 1605.1 Q313.2 1605.1 320.2 1605.1 L436.2 1605.1 Q443.2 1605.1 443.2 1598.1 L443.2 1474 Q443.2 1467 450.2 1467 L737.2 1467 Q744.2 1467 744.2 1460 L744.2 1386.2 Q744.2 1379.2 751.2 1379.2 L834.2 1379.2" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1574.3 L306.2 1574.3 Q313.2 1574.3 320.2 1574.3 L412.2 1574.3 Q419.2 1574.3 419.2 1567.3 L419.2 1454 Q419.2 1447 426.2 1447 L647.2 1447 Q654.2 1447 654.2 1454 L654.2 1834 Q654.2 1841 661.2 1841 L834.2 1841" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 137 L568.2 137 Q575.2 137 575.2 144 L575.2 624 Q575.2 631 582.2 631 L797.2 631 Q804.2 631 804.2 638 L804.2 1339.5 Q804.2 1346.5 811.2 1346.5 L834.2 1346.5" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 110 L580.2 110 Q587.2 110 587.2 117 L587.2 614 Q587.2 621 594.2 621 L807.2 621 Q814.2 621 814.2 628 L814.2 629 Q814.2 636 821.2 636 L834.2 636" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 83 L592.2 83 Q599.2 83 599.2 90 L599.2 564 Q599.2 571 606.2 571 L834.2 571" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1941.3 L306.2 1941.3 Q313.2 1941.3 320.2 1941.3 L388.2 1941.3 Q395.2 1941.3 395.2 1934.3 L395.2 1794 Q395.2 1787 402.2 1787 L777.2 1787 Q784.2 1787 784.2 1780 L784.2 1713 Q784.2 1706 791.2 1706 L834.2 1706" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1910.7 L306.2 1910.7 Q313.2 1910.7 320.2 1910.7 L376.2 1910.7 Q383.2 1910.7 383.2 1903.7 L383.2 1784 Q383.2 1777 390.2 1777 L834.2 1777" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 950.7 L306.2 950.7 Q313.2 950.7 320.2 950.7 L388.2 950.7 Q395.2 950.7 395.2 957.7 L395.2 1244 Q395.2 1251 402.2 1251 L747.2 1251 Q754.2 1251 754.2 1258 L754.2 1669 Q754.2 1676 761.2 1676 L834.2 1676" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 981.3 L306.2 981.3 Q313.2 981.3 320.2 981.3 L376.2 981.3 Q383.2 981.3 383.2 988.3 L383.2 1254 Q383.2 1261 390.2 1261 L737.2 1261 Q744.2 1261 744.2 1268 L744.2 1355.8 Q744.2 1362.8 751.2 1362.8 L834.2 1362.8" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1791 L340.2 1791 Q347.2 1791 347.2 1784 L347.2 1698 Q347.2 1691 354.2 1691 L834.2 1691" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1814 L352.2 1814 Q359.2 1814 359.2 1807 L359.2 1708 Q359.2 1701 366.2 1701 L777.2 1701 Q784.2 1701 784.2 1694 L784.2 1548 Q784.2 1541 791.2 1541 L834.2 1541" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1837 L364.2 1837 Q371.2 1837 371.2 1830 L371.2 1718 Q371.2 1711 378.2 1711 L767.2 1711 Q774.2 1711 774.2 1704 L774.2 1397.1 Q774.2 1390.1 781.2 1390.1 L834.2 1390.1" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 478 L508.2 478 Q515.2 478 515.2 485 L515.2 804 Q515.2 811 522.2 811 L777.2 811 Q784.2 811 784.2 818 L784.2 1426 Q784.2 1433 791.2 1433 L834.2 1433" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 707.2 L306.2 707.2 Q313.2 707.2 320.2 707.2 L436.2 707.2 Q443.2 707.2 443.2 714.2 L443.2 1044 Q443.2 1051 450.2 1051 L834.2 1051" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 685.6 L306.2 685.6 Q313.2 685.6 320.2 685.6 L448.2 685.6 Q455.2 685.6 455.2 692.6 L455.2 964 Q455.2 971 462.2 971 L834.2 971" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 728.8 L306.2 728.8 Q313.2 728.8 320.2 728.8 L424.2 728.8 Q431.2 728.8 431.2 735.8 L431.2 1114 Q431.2 1121 438.2 1121 L757.2 1121 Q764.2 1121 764.2 1128 L764.2 1350.4 Q764.2 1357.4 771.2 1357.4 L834.2 1357.4" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 750.4 L306.2 750.4 Q313.2 750.4 320.2 750.4 L412.2 750.4 Q419.2 750.4 419.2 757.4 L419.2 1124 Q419.2 1131 426.2 1131 L834.2 1131" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M270.4 1702 L328.2 1702 Q335.2 1702 335.2 1695 L335.2 1638 Q335.2 1631 342.2 1631 L757.2 1631 Q764.2 1631 764.2 1624 L764.2 1391.6 Q764.2 1384.6 771.2 1384.6 L834.2 1384.6" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="6" y="6" width="302.2" height="2336" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="650.2" y="712" width="516" height="1568" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M270.4 117.3 L306.2 117.3 Q313.2 117.3 320.2 117.3 L604.2 117.3 Q611.2 117.3 611.2 124.3 L611.2 785 Q611.2 792 618.2 792 L998.2 792" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 86.7 L306.2 86.7 Q313.2 86.7 320.2 86.7 L616.2 86.7 Q623.2 86.7 623.2 93.7 L623.2 775 Q623.2 782 630.2 782 L981.2 782 Q988.2 782 988.2 789 L988.2 929 Q988.2 934 993.2 934 L998.2 934" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 350 L580.2 350 Q587.2 350 587.2 357 L587.2 805 Q587.2 812 594.2 812 L961.2 812 Q968.2 812 968.2 819 L968.2 951 Q968.2 958 975.2 958 L998.2 958" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1222 L352.2 1222 Q359.2 1222 359.2 1229 L359.2 1305 Q359.2 1312 366.2 1312 L961.2 1312 Q968.2 1312 968.2 1305 L968.2 977 Q968.2 970 975.2 970 L998.2 970" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 222 L592.2 222 Q599.2 222 599.2 229 L599.2 795 Q599.2 802 606.2 802 L971.2 802 Q978.2 802 978.2 809 L978.2 939 Q978.2 946 985.2 946 L998.2 946" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1306 L340.2 1306 Q347.2 1306 347.2 1313 L347.2 1315 Q347.2 1322 354.2 1322 L891.2 1322 Q898.2 1322 898.2 1329 L898.2 1511 Q898.2 1518 905.2 1518 L998.2 1518" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1342 L801.2 1342 Q808.2 1342 808.2 1349 L808.2 1739 Q808.2 1746 815.2 1746 L998.2 1746" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1378 L340.2 1378 Q347.2 1378 347.2 1371 L347.2 1369 Q347.2 1362 354.2 1362 L998.2 1362" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1360 L331.2 1360 Q335.2 1360 335.2 1356 L335.2 1356 Q335.2 1352 339.2 1352 L781.2 1352 Q788.2 1352 788.2 1359 L788.2 1900.7 Q788.2 1907.7 795.2 1907.7 L998.2 1907.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1324 L331.2 1324 Q335.2 1324 335.2 1328 L335.2 1328 Q335.2 1332 339.2 1332 L821.2 1332 Q828.2 1332 828.2 1339 L828.2 1582.7 Q828.2 1589.7 835.2 1589.7 L998.2 1589.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1712 L412.2 1712 Q419.2 1712 419.2 1705 L419.2 1489 Q419.2 1482 426.2 1482 L711.2 1482 Q718.2 1482 718.2 1489 L718.2 1995 Q718.2 2002 725.2 2002 L998.2 2002" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1676 L400.2 1676 Q407.2 1676 407.2 1669 L407.2 1479 Q407.2 1472 414.2 1472 L951.2 1472 Q958.2 1472 958.2 1465 L958.2 1454 Q958.2 1447 965.2 1447 L998.2 1447" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1001 L376.2 1001 Q383.2 1001 383.2 1008 L383.2 1285 Q383.2 1292 390.2 1292 L811.2 1292 Q818.2 1292 818.2 1299 L818.2 1892.1 Q818.2 1899.1 825.2 1899.1 L998.2 1899.1" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 974 L388.2 974 Q395.2 974 395.2 981 L395.2 1275 Q395.2 1282 402.2 1282 L841.2 1282 Q848.2 1282 848.2 1289 L848.2 1578.1 Q848.2 1585.1 855.2 1585.1 L998.2 1585.1" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 947 L400.2 947 Q407.2 947 407.2 954 L407.2 1265 Q407.2 1272 414.2 1272 L998.2 1272" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1583.2 L306.2 1583.2 Q313.2 1583.2 320.2 1583.2 L376.2 1583.2 Q383.2 1583.2 383.2 1576.2 L383.2 1459 Q383.2 1452 390.2 1452 L761.2 1452 Q768.2 1452 768.2 1459 L768.2 1591.9 Q768.2 1598.9 775.2 1598.9 L998.2 1598.9" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1601.6 L306.2 1601.6 Q313.2 1601.6 320.2 1601.6 L388.2 1601.6 Q395.2 1601.6 395.2 1594.6 L395.2 1469 Q395.2 1462 402.2 1462 L741.2 1462 Q748.2 1462 748.2 1469 L748.2 1975 Q748.2 1982 755.2 1982 L998.2 1982" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1564.8 L306.2 1564.8 Q313.2 1564.8 320.2 1564.8 L364.2 1564.8 Q371.2 1564.8 371.2 1557.8 L371.2 1449 Q371.2 1442 378.2 1442 L771.2 1442 Q778.2 1442 778.2 1449 L778.2 1825 Q778.2 1832 785.2 1832 L998.2 1832" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1546.4 L306.2 1546.4 Q313.2 1546.4 320.2 1546.4 L352.2 1546.4 Q359.2 1546.4 359.2 1539.4 L359.2 1439 Q359.2 1432 366.2 1432 L998.2 1432" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 2007.3 L306.2 2007.3 Q313.2 2007.3 320.2 2007.3 L460.2 2007.3 Q467.2 2007.3 467.2 2000.3 L467.2 1529 Q467.2 1522 474.2 1522 L874.2 1522 Q878.2 1522 878.2 1526 L878.2 1526 Q878.2 1530 882.2 1530 L998.2 1530" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 2038 L484.2 2038 Q491.2 2038 491.2 2031 L491.2 1549 Q491.2 1542 498.2 1542 L671.2 1542 Q678.2 1542 678.2 1549 L678.2 1763 Q678.2 1770 685.2 1770 L998.2 1770" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 2068.7 L306.2 2068.7 Q313.2 2068.7 320.2 2068.7 L508.2 2068.7 Q515.2 2068.7 515.2 2061.7 L515.2 1923 Q515.2 1916 522.2 1916 L638.2 1916 Q645.2 1916 652.2 1916 L998.2 1916.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 2022.7 L306.2 2022.7 Q313.2 2022.7 320.2 2022.7 L472.2 2022.7 Q479.2 2022.7 479.2 2015.7 L479.2 1539 Q479.2 1532 486.2 1532 L701.2 1532 Q708.2 1532 708.2 1539 L708.2 1601.2 Q708.2 1608.2 715.2 1608.2 L998.2 1608.2" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 2053.3 L306.2 2053.3 Q313.2 2053.3 320.2 2053.3 L496.2 2053.3 Q503.2 2053.3 503.2 2046.3 L503.2 1689 Q503.2 1682 510.2 1682 L998.2 1682" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 807.4 L306.2 807.4 Q313.2 807.4 320.2 807.4 L472.2 807.4 Q479.2 807.4 479.2 814.4 L479.2 1205 Q479.2 1212 486.2 1212 L931.2 1212 Q938.2 1212 938.2 1219 L938.2 1487 Q938.2 1494 945.2 1494 L998.2 1494" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 838.3 L306.2 838.3 Q313.2 838.3 320.2 838.3 L448.2 838.3 Q455.2 838.3 455.2 845.3 L455.2 1225 Q455.2 1232 462.2 1232 L861.2 1232 Q868.2 1232 868.2 1239 L868.2 1727 Q868.2 1734 875.2 1734 L998.2 1734" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 884.6 L306.2 884.6 Q313.2 884.6 320.2 884.6 L412.2 884.6 Q419.2 884.6 419.2 891.6 L419.2 1255 Q419.2 1262 426.2 1262 L971.2 1262 Q978.2 1262 978.2 1269 L978.2 1335 Q978.2 1342 985.2 1342 L998.2 1342" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 869.1 L306.2 869.1 Q313.2 869.1 320.2 869.1 L424.2 869.1 Q431.2 869.1 431.2 876.1 L431.2 1245 Q431.2 1252 438.2 1252 L831.2 1252 Q838.2 1252 838.2 1259 L838.2 1883.6 Q838.2 1890.6 845.2 1890.6 L998.2 1890.6" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 822.9 L306.2 822.9 Q313.2 822.9 320.2 822.9 L460.2 822.9 Q467.2 822.9 467.2 829.9 L467.2 1215 Q467.2 1222 474.2 1222 L881.2 1222 Q888.2 1222 888.2 1229 L888.2 1573.5 Q888.2 1580.5 895.2 1580.5 L998.2 1580.5" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 853.7 L306.2 853.7 Q313.2 853.7 320.2 853.7 L436.2 853.7 Q443.2 853.7 443.2 860.7 L443.2 1235 Q443.2 1242 450.2 1242 L851.2 1242 Q858.2 1242 858.2 1249 L858.2 1655 Q858.2 1662 865.2 1662 L998.2 1662" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 478 L556.2 478 Q563.2 478 563.2 485 L563.2 855 Q563.2 862 570.2 862 L941.2 862 Q948.2 862 948.2 869 L948.2 1559.6 Q948.2 1566.6 955.2 1566.6 L998.2 1566.6" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 451 L568.2 451 Q575.2 451 575.2 458 L575.2 845 Q575.2 852 582.2 852 L951.2 852 Q958.2 852 958.2 859 L958.2 1410 Q958.2 1417 965.2 1417 L998.2 1417" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 505 L544.2 505 Q551.2 505 551.2 512 L551.2 865 Q551.2 872 558.2 872 L998.2 872" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1829.3 L306.2 1829.3 Q313.2 1829.3 320.2 1829.3 L436.2 1829.3 Q443.2 1829.3 443.2 1822.3 L443.2 1509 Q443.2 1502 450.2 1502 L691.2 1502 Q698.2 1502 698.2 1509 L698.2 2065 Q698.2 2072 705.2 2072 L998.2 2072" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1798.7 L306.2 1798.7 Q313.2 1798.7 320.2 1798.7 L424.2 1798.7 Q431.2 1798.7 431.2 1791.7 L431.2 1499 Q431.2 1492 438.2 1492 L731.2 1492 Q738.2 1492 738.2 1499 L738.2 1751 Q738.2 1758 745.2 1758 L998.2 1758" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1477.3 L306.2 1477.3 Q313.2 1477.3 320.2 1477.3 L340.2 1477.3 Q347.2 1477.3 347.2 1470.3 L347.2 1429 Q347.2 1422 354.2 1422 L751.2 1422 Q758.2 1422 758.2 1429 L758.2 2050 Q758.2 2057 765.2 2057 L998.2 2057" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1446.7 L306.2 1446.7 Q313.2 1446.7 320.2 1446.7 L328.2 1446.7 Q335.2 1446.7 335.2 1439.7 L335.2 1419 Q335.2 1412 342.2 1412 L791.2 1412 Q798.2 1412 798.2 1419 L798.2 1587.3 Q798.2 1594.3 805.2 1594.3 L998.2 1594.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 2173 L544.2 2173 Q551.2 2173 551.2 2166 L551.2 1953 Q551.2 1946 558.2 1946 L638.2 1946 Q645.2 1946 652.2 1946 L671.2 1946 Q678.2 1946 678.2 1953 L678.2 2080 Q678.2 2087 685.2 2087 L998.2 2087" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 2150 L532.2 2150 Q539.2 2150 539.2 2143 L539.2 1943 Q539.2 1936 546.2 1936 L638.2 1936 Q645.2 1936 652.2 1936 L882.6 1936 Q888.2 1936 888.2 1930.4 L888.2 1930.4 Q888.2 1924.9 893.8 1924.9 L998.2 1924.9" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 2127 L520.2 2127 Q527.2 2127 527.2 2120 L527.2 1933 Q527.2 1926 534.2 1926 L638.2 1926 Q645.2 1926 652.2 1926 L681.2 1926 Q688.2 1926 688.2 1919 L688.2 1619.8 Q688.2 1612.8 695.2 1612.8 L998.2 1612.8" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1102 L364.2 1102 Q371.2 1102 371.2 1109 L371.2 1295 Q371.2 1302 378.2 1302 L911.2 1302 Q918.2 1302 918.2 1309 L918.2 1499 Q918.2 1506 925.2 1506 L998.2 1506" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 595.2 L306.2 595.2 Q313.2 595.2 320.2 595.2 L520.2 595.2 Q527.2 595.2 527.2 602.2 L527.2 1105 Q527.2 1112 534.2 1112 L998.2 1112" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 638.4 L306.2 638.4 Q313.2 638.4 320.2 638.4 L496.2 638.4 Q503.2 638.4 503.2 645.4 L503.2 1185 Q503.2 1192 510.2 1192 L998.2 1192" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 616.8 L306.2 616.8 Q313.2 616.8 320.2 616.8 L508.2 616.8 Q515.2 616.8 515.2 623.8 L515.2 1175 Q515.2 1182 522.2 1182 L921.2 1182 Q928.2 1182 928.2 1189 L928.2 1564.2 Q928.2 1571.2 935.2 1571.2 L998.2 1571.2" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 573.6 L306.2 573.6 Q313.2 573.6 320.2 573.6 L532.2 573.6 Q539.2 573.6 539.2 580.6 L539.2 1025 Q539.2 1032 546.2 1032 L998.2 1032" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 1926 L448.2 1926 Q455.2 1926 455.2 1919 L455.2 1519 Q455.2 1512 462.2 1512 L721.2 1512 Q728.2 1512 728.2 1519 L728.2 1596.5 Q728.2 1603.5 735.2 1603.5 L998.2 1603.5" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 726 L484.2 726 Q491.2 726 491.2 733 L491.2 1195 Q491.2 1202 498.2 1202 L901.2 1202 Q908.2 1202 908.2 1209 L908.2 1568.8 Q908.2 1575.8 915.2 1575.8 L998.2 1575.8" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 2302.4 L306.2 2302.4 Q313.2 2302.4 320.2 2302.4 L592.2 2302.4 Q599.2 2302.4 599.2 2295.4 L599.2 2249 Q599.2 2242 606.2 2242 L891.2 2242 Q898.2 2242 898.2 2235 L898.2 1940.4 Q898.2 1933.4 905.2 1933.4 L998.2 1933.4" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 2237.6 L306.2 2237.6 Q313.2 2237.6 320.2 2237.6 L556.2 2237.6 Q563.2 2237.6 563.2 2230.6 L563.2 1963 Q563.2 1956 570.2 1956 L638.2 1956 Q645.2 1956 652.2 1956 L871.2 1956 Q878.2 1956 878.2 1949 L878.2 1624.4 Q878.2 1617.4 885.2 1617.4 L998.2 1617.4" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 2259.2 L306.2 2259.2 Q313.2 2259.2 320.2 2259.2 L568.2 2259.2 Q575.2 2259.2 575.2 2252.2 L575.2 2159 Q575.2 2152 582.2 2152 L998.2 2152" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M270.4 2280.8 L306.2 2280.8 Q313.2 2280.8 320.2 2280.8 L580.2 2280.8 Q587.2 2280.8 587.2 2273.8 L587.2 2239 Q587.2 2232 594.2 2232 L998.2 2232" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
 <rect x="18" y="18" width="278.2" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
 <text x="157.1" y="33" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">DECISIONS · DECISIONS/REGISTER.YAML</text>
-<rect x="638.2" y="503" width="270.4" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
-<text x="773.4" y="518" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">CHANGED BY THE ANSWER · APPLIED_IN</text>
-<rect x="29.3" y="312" width="241.1" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="41.3" y="324" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="64.8" y="335.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-001</text>
-<text x="41.3" y="358" font-size="12.5" fill="#0F172A" font-weight="700">Which edition of MIL-STD-882E is</text>
-<text x="41.3" y="374" font-size="12.5" fill="#0F172A" font-weight="700">the project baseline?</text>
-<text x="41.3" y="391" font-size="10.5" fill="#475569">G0 · lead · applied</text>
-<rect x="41.9" y="1272" width="228.5" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="53.9" y="1284" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="77.4" y="1295.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-002</text>
-<text x="53.9" y="1318" font-size="12.5" fill="#0F172A" font-weight="700">What monetary thresholds should</text>
-<text x="53.9" y="1334" font-size="12.5" fill="#0F172A" font-weight="700">the tailored severity categories</text>
-<text x="53.9" y="1350" font-size="12.5" fill="#0F172A" font-weight="700">use?</text>
-<text x="53.9" y="1367" font-size="10.5" fill="#475569">G0 · lead · applied</text>
-<rect x="48.7" y="1160" width="221.7" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="60.7" y="1172" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="84.2" y="1183.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-003</text>
-<text x="60.7" y="1206" font-size="12.5" fill="#0F172A" font-weight="700">What exposure basis should the</text>
-<text x="60.7" y="1222" font-size="12.5" fill="#0F172A" font-weight="700">probability levels use?</text>
-<text x="60.7" y="1239" font-size="10.5" fill="#475569">G0 · lead · applied</text>
-<rect x="31.3" y="792" width="239.1" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="43.3" y="804" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="66.8" y="815.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-004</text>
-<text x="43.3" y="838" font-size="12.5" fill="#0F172A" font-weight="700">Who holds each risk-acceptance</text>
-<text x="43.3" y="854" font-size="12.5" fill="#0F172A" font-weight="700">role, and is the proposed authority</text>
-<text x="43.3" y="870" font-size="12.5" fill="#0F172A" font-weight="700">ma…</text>
-<text x="43.3" y="887" font-size="10.5" fill="#475569">G4 · lead · answered</text>
-<rect x="53.4" y="1400" width="217" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="65.4" y="1412" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="88.9" y="1423.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-006</text>
-<text x="65.4" y="1446" font-size="12.5" fill="#0F172A" font-weight="700">What power and actuation</text>
-<text x="65.4" y="1462" font-size="12.5" fill="#0F172A" font-weight="700">architecture is the baseline for</text>
-<text x="65.4" y="1478" font-size="12.5" fill="#0F172A" font-weight="700">analysis?</text>
-<text x="65.4" y="1495" font-size="10.5" fill="#475569">G2 · lead · applied</text>
-<rect x="53.3" y="184" width="217.1" height="108" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
-<rect x="65.3" y="196" width="47" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
-<text x="88.8" y="207.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-007</text>
-<text x="65.3" y="230" font-size="12.5" fill="#0F172A" font-weight="700">Which engine should the</text>
-<text x="65.3" y="246" font-size="12.5" fill="#0F172A" font-weight="700">higher-fidelity legged-dynamics</text>
-<text x="65.3" y="262" font-size="12.5" fill="#0F172A" font-weight="700">simulation us…</text>
-<text x="65.3" y="279" font-size="10.5" fill="#475569">G3 · claude · applied</text>
-<rect x="45.8" y="1032" width="224.6" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="57.8" y="1044" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="81.3" y="1055.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-008</text>
-<text x="57.8" y="1078" font-size="12.5" fill="#0F172A" font-weight="700">What should the UAV do when it</text>
-<text x="57.8" y="1094" font-size="12.5" fill="#0F172A" font-weight="700">loses the link to the integration</text>
-<text x="57.8" y="1110" font-size="12.5" fill="#0F172A" font-weight="700">mana…</text>
-<text x="57.8" y="1127" font-size="10.5" fill="#475569">G2 · lead · applied</text>
-<rect x="25.2" y="552" width="245.2" height="92" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
-<rect x="37.2" y="564" width="47" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
-<text x="60.7" y="575.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-009</text>
-<text x="37.2" y="598" font-size="12.5" fill="#0F172A" font-weight="700">How should the level-1 walker start</text>
-<text x="37.2" y="614" font-size="12.5" fill="#0F172A" font-weight="700">each case, now that the level-2 c…</text>
-<text x="37.2" y="631" font-size="10.5" fill="#475569">G2 · claude · applied</text>
+<rect x="662.2" y="724" width="270.4" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="797.4" y="739" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">CHANGED BY THE ANSWER · APPLIED_IN</text>
+<rect x="29.3" y="56" width="241.1" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="41.3" y="68" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="64.8" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-001</text>
+<text x="41.3" y="102" font-size="12.5" fill="#0F172A" font-weight="700">Which edition of MIL-STD-882E is</text>
+<text x="41.3" y="118" font-size="12.5" fill="#0F172A" font-weight="700">the project baseline?</text>
+<text x="41.3" y="135" font-size="10.5" fill="#475569">G0 · lead · applied</text>
+<rect x="41.9" y="296" width="228.5" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="53.9" y="308" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="77.4" y="319.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-002</text>
+<text x="53.9" y="342" font-size="12.5" fill="#0F172A" font-weight="700">What monetary thresholds should</text>
+<text x="53.9" y="358" font-size="12.5" fill="#0F172A" font-weight="700">the tailored severity categories</text>
+<text x="53.9" y="374" font-size="12.5" fill="#0F172A" font-weight="700">use?</text>
+<text x="53.9" y="391" font-size="10.5" fill="#475569">G0 · lead · applied</text>
+<rect x="48.7" y="1176" width="221.7" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="60.7" y="1188" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="84.2" y="1199.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-003</text>
+<text x="60.7" y="1222" font-size="12.5" fill="#0F172A" font-weight="700">What exposure basis should the</text>
+<text x="60.7" y="1238" font-size="12.5" fill="#0F172A" font-weight="700">probability levels use?</text>
+<text x="60.7" y="1255" font-size="10.5" fill="#475569">G0 · lead · applied</text>
+<rect x="31.3" y="168" width="239.1" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="43.3" y="180" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="66.8" y="191.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-004</text>
+<text x="43.3" y="214" font-size="12.5" fill="#0F172A" font-weight="700">Who holds each risk-acceptance</text>
+<text x="43.3" y="230" font-size="12.5" fill="#0F172A" font-weight="700">role, and is the proposed authority</text>
+<text x="43.3" y="246" font-size="12.5" fill="#0F172A" font-weight="700">ma…</text>
+<text x="43.3" y="263" font-size="10.5" fill="#475569">G4 · lead · answered</text>
+<rect x="53.4" y="1288" width="217" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="65.4" y="1300" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="88.9" y="1311.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-006</text>
+<text x="65.4" y="1334" font-size="12.5" fill="#0F172A" font-weight="700">What power and actuation</text>
+<text x="65.4" y="1350" font-size="12.5" fill="#0F172A" font-weight="700">architecture is the baseline for</text>
+<text x="65.4" y="1366" font-size="12.5" fill="#0F172A" font-weight="700">analysis?</text>
+<text x="65.4" y="1383" font-size="10.5" fill="#475569">G2 · lead · applied</text>
+<rect x="53.3" y="1640" width="217.1" height="108" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="65.3" y="1652" width="47" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="88.8" y="1663.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-007</text>
+<text x="65.3" y="1686" font-size="12.5" fill="#0F172A" font-weight="700">Which engine should the</text>
+<text x="65.3" y="1702" font-size="12.5" fill="#0F172A" font-weight="700">higher-fidelity legged-dynamics</text>
+<text x="65.3" y="1718" font-size="12.5" fill="#0F172A" font-weight="700">simulation us…</text>
+<text x="65.3" y="1735" font-size="10.5" fill="#475569">G3 · claude · applied</text>
+<rect x="45.8" y="920" width="224.6" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="57.8" y="932" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="81.3" y="943.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-008</text>
+<text x="57.8" y="966" font-size="12.5" fill="#0F172A" font-weight="700">What should the UAV do when it</text>
+<text x="57.8" y="982" font-size="12.5" fill="#0F172A" font-weight="700">loses the link to the integration</text>
+<text x="57.8" y="998" font-size="12.5" fill="#0F172A" font-weight="700">mana…</text>
+<text x="57.8" y="1015" font-size="10.5" fill="#475569">G2 · lead · applied</text>
+<rect x="25.2" y="1528" width="245.2" height="92" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="37.2" y="1540" width="47" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="60.7" y="1551.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-009</text>
+<text x="37.2" y="1574" font-size="12.5" fill="#0F172A" font-weight="700">How should the level-1 walker start</text>
+<text x="37.2" y="1590" font-size="12.5" fill="#0F172A" font-weight="700">each case, now that the level-2 c…</text>
+<text x="37.2" y="1607" font-size="10.5" fill="#475569">G2 · claude · applied</text>
 <rect x="43" y="1992" width="227.4" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
 <rect x="55" y="2004" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
 <text x="78.5" y="2015.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-010</text>
 <text x="55" y="2038" font-size="12.5" fill="#0F172A" font-weight="700">What slope limit should CONOPS</text>
 <text x="55" y="2054" font-size="12.5" fill="#0F172A" font-weight="700">section 4 set for the walker?</text>
 <text x="55" y="2071" font-size="10.5" fill="#475569">G2 · lead · applied</text>
-<rect x="25.7" y="1528" width="244.7" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="37.7" y="1540" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="61.2" y="1551.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-011</text>
-<text x="37.7" y="1574" font-size="12.5" fill="#0F172A" font-weight="700">How far may payload and gait move</text>
-<text x="37.7" y="1590" font-size="12.5" fill="#0F172A" font-weight="700">the walker's centre of mass ahead</text>
-<text x="37.7" y="1606" font-size="12.5" fill="#0F172A" font-weight="700">o…</text>
-<text x="37.7" y="1623" font-size="10.5" fill="#475569">G2 · lead · applied</text>
-<rect x="37.5" y="56" width="232.9" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="49.5" y="68" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="73" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-012</text>
-<text x="49.5" y="102" font-size="12.5" fill="#0F172A" font-weight="700">Should the level-2 walker spec</text>
-<text x="49.5" y="118" font-size="12.5" fill="#0F172A" font-weight="700">adopt the ankle and knee torques</text>
-<text x="49.5" y="134" font-size="12.5" fill="#0F172A" font-weight="700">sized…</text>
-<text x="49.5" y="151" font-size="10.5" fill="#475569">G2 · lead · applied</text>
-<rect x="26.1" y="1880" width="244.3" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="38.1" y="1892" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="61.6" y="1903.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-013</text>
-<text x="38.1" y="1926" font-size="12.5" fill="#0F172A" font-weight="700">Which locomotion should the walker</text>
-<text x="38.1" y="1942" font-size="12.5" fill="#0F172A" font-weight="700">use?</text>
-<text x="38.1" y="1959" font-size="10.5" fill="#475569">G1 · lead · applied</text>
-<rect x="30.9" y="920" width="239.5" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="42.9" y="932" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="66.4" y="943.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-014</text>
-<text x="42.9" y="966" font-size="12.5" fill="#0F172A" font-weight="700">Which concept layout is the</text>
-<text x="42.9" y="982" font-size="12.5" fill="#0F172A" font-weight="700">reference for further development?</text>
-<text x="42.9" y="999" font-size="10.5" fill="#475569">G1 · lead · applied</text>
-<rect x="51.8" y="1768" width="218.6" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="63.8" y="1780" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="87.3" y="1791.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-015</text>
-<text x="63.8" y="1814" font-size="12.5" fill="#0F172A" font-weight="700">May the walker carry a payload</text>
-<text x="63.8" y="1830" font-size="12.5" fill="#0F172A" font-weight="700">while walking?</text>
-<text x="63.8" y="1847" font-size="10.5" fill="#475569">G2 · lead · applied</text>
-<rect x="46.2" y="424" width="224.2" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="58.2" y="436" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="81.7" y="447.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-016</text>
-<text x="58.2" y="470" font-size="12.5" fill="#0F172A" font-weight="700">How should the actuation trade</text>
-<text x="58.2" y="486" font-size="12.5" fill="#0F172A" font-weight="700">study (TS-001) weigh its twelve</text>
-<text x="58.2" y="502" font-size="12.5" fill="#0F172A" font-weight="700">criter…</text>
-<text x="58.2" y="519" font-size="10.5" fill="#475569">G2 · lead · applied</text>
-<rect x="46.3" y="664" width="224.1" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="58.3" y="676" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="81.8" y="687.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-017</text>
-<text x="58.3" y="710" font-size="12.5" fill="#0F172A" font-weight="700">Should a hazard tied to specific</text>
-<text x="58.3" y="726" font-size="12.5" fill="#0F172A" font-weight="700">hardware stop applying to test</text>
-<text x="58.3" y="742" font-size="12.5" fill="#0F172A" font-weight="700">event…</text>
-<text x="58.3" y="759" font-size="10.5" fill="#475569">G4 · lead · applied</text>
-<rect x="24" y="1656" width="246.4" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="36" y="1668" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="59.5" y="1679.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-018</text>
-<text x="36" y="1702" font-size="12.5" fill="#0F172A" font-weight="700">Should the manipulator-arm hazards</text>
-<text x="36" y="1718" font-size="12.5" fill="#0F172A" font-weight="700">be tied to the arms, so they stop…</text>
-<text x="36" y="1735" font-size="10.5" fill="#475569">G4 · lead · applied</text>
-<rect x="834.2" y="1421" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="1433" width="72.3" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="882.3" y="1444.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">architecture/</text>
-<text x="846.2" y="1467" font-size="12.5" fill="#0F172A" font-weight="700">4 decisions</text>
-<rect x="834.2" y="1661" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="1673" width="32.4" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="862.4" y="1684.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad/</text>
-<text x="846.2" y="1707" font-size="12.5" fill="#0F172A" font-weight="700">3 decisions</text>
-<rect x="834.2" y="1741" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="1753" width="52.9" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="872.6" y="1764.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">concept/</text>
-<text x="846.2" y="1787" font-size="12.5" fill="#0F172A" font-weight="700">4 decisions</text>
-<rect x="834.2" y="701" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="713" width="63.2" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="877.8" y="724.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">framework/</text>
-<text x="846.2" y="747" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
-<rect x="834.2" y="1581" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="1593" width="78.4" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="885.4" y="1604.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">models/sysml/</text>
-<text x="846.2" y="1627" font-size="12.5" fill="#0F172A" font-weight="700">2 decisions</text>
-<rect x="834.2" y="1021" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="1033" width="38" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="865.2" y="1044.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac/</text>
-<text x="846.2" y="1067" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
-<rect x="834.2" y="1501" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="1513" width="75.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="884.1" y="1524.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">requirements/</text>
-<text x="846.2" y="1547" font-size="12.5" fill="#0F172A" font-weight="700">5 decisions</text>
-<rect x="834.2" y="941" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="953" width="80.6" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="886.5" y="964.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety/events/</text>
-<text x="846.2" y="987" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
-<rect x="834.2" y="1341" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="1353" width="86.2" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="889.3" y="1364.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety/hazards/</text>
-<text x="846.2" y="1387" font-size="12.5" fill="#0F172A" font-weight="700">10 decisions</text>
-<rect x="834.2" y="1261" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="1273" width="89.5" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="890.9" y="1284.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety/software/</text>
-<text x="846.2" y="1307" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
-<rect x="834.2" y="781" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="793" width="68" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="880.2" y="804.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/mujoco/</text>
-<text x="846.2" y="827" font-size="12.5" fill="#0F172A" font-weight="700">2 decisions</text>
-<rect x="834.2" y="861" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="873" width="58.1" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="875.3" y="884.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/plant/</text>
-<text x="846.2" y="907" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
-<rect x="834.2" y="621" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="633" width="67.4" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="879.9" y="644.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/results/</text>
-<text x="846.2" y="667" font-size="12.5" fill="#0F172A" font-weight="700">3 decisions</text>
-<rect x="834.2" y="1821" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="1833" width="66.5" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="879.4" y="1844.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/search/</text>
-<text x="846.2" y="1867" font-size="12.5" fill="#0F172A" font-weight="700">2 decisions</text>
-<rect x="834.2" y="541" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="553" width="57.2" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="874.8" y="564.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/spec/</text>
-<text x="846.2" y="587" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
-<rect x="834.2" y="1181" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="1193" width="62.1" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="877.3" y="1204.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">standards/</text>
-<text x="846.2" y="1227" font-size="12.5" fill="#0F172A" font-weight="700">4 decisions</text>
-<rect x="834.2" y="1101" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="846.2" y="1113" width="38.9" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="865.7" y="1124.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">tools/</text>
-<text x="846.2" y="1147" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
+<rect x="25.7" y="792" width="244.7" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="37.7" y="804" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="61.2" y="815.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-011</text>
+<text x="37.7" y="838" font-size="12.5" fill="#0F172A" font-weight="700">How far may payload and gait move</text>
+<text x="37.7" y="854" font-size="12.5" fill="#0F172A" font-weight="700">the walker's centre of mass ahead</text>
+<text x="37.7" y="870" font-size="12.5" fill="#0F172A" font-weight="700">o…</text>
+<text x="37.7" y="887" font-size="10.5" fill="#475569">G2 · lead · applied</text>
+<rect x="37.5" y="424" width="232.9" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="49.5" y="436" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="73" y="447.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-012</text>
+<text x="49.5" y="470" font-size="12.5" fill="#0F172A" font-weight="700">Should the level-2 walker spec</text>
+<text x="49.5" y="486" font-size="12.5" fill="#0F172A" font-weight="700">adopt the ankle and knee torques</text>
+<text x="49.5" y="502" font-size="12.5" fill="#0F172A" font-weight="700">sized…</text>
+<text x="49.5" y="519" font-size="10.5" fill="#475569">G2 · lead · applied</text>
+<rect x="26.1" y="1768" width="244.3" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="38.1" y="1780" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="61.6" y="1791.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-013</text>
+<text x="38.1" y="1814" font-size="12.5" fill="#0F172A" font-weight="700">Which locomotion should the walker</text>
+<text x="38.1" y="1830" font-size="12.5" fill="#0F172A" font-weight="700">use?</text>
+<text x="38.1" y="1847" font-size="10.5" fill="#475569">G1 · lead · applied</text>
+<rect x="30.9" y="1416" width="239.5" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="42.9" y="1428" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="66.4" y="1439.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-014</text>
+<text x="42.9" y="1462" font-size="12.5" fill="#0F172A" font-weight="700">Which concept layout is the</text>
+<text x="42.9" y="1478" font-size="12.5" fill="#0F172A" font-weight="700">reference for further development?</text>
+<text x="42.9" y="1495" font-size="10.5" fill="#475569">G1 · lead · applied</text>
+<rect x="51.8" y="2104" width="218.6" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="63.8" y="2116" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="87.3" y="2127.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-015</text>
+<text x="63.8" y="2150" font-size="12.5" fill="#0F172A" font-weight="700">May the walker carry a payload</text>
+<text x="63.8" y="2166" font-size="12.5" fill="#0F172A" font-weight="700">while walking?</text>
+<text x="63.8" y="2183" font-size="10.5" fill="#475569">G2 · lead · applied</text>
+<rect x="46.2" y="1048" width="224.2" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="58.2" y="1060" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="81.7" y="1071.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-016</text>
+<text x="58.2" y="1094" font-size="12.5" fill="#0F172A" font-weight="700">How should the actuation trade</text>
+<text x="58.2" y="1110" font-size="12.5" fill="#0F172A" font-weight="700">study (TS-001) weigh its twelve</text>
+<text x="58.2" y="1126" font-size="12.5" fill="#0F172A" font-weight="700">criter…</text>
+<text x="58.2" y="1143" font-size="10.5" fill="#475569">G2 · lead · applied</text>
+<rect x="46.3" y="552" width="224.1" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="58.3" y="564" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="81.8" y="575.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-017</text>
+<text x="58.3" y="598" font-size="12.5" fill="#0F172A" font-weight="700">Should a hazard tied to specific</text>
+<text x="58.3" y="614" font-size="12.5" fill="#0F172A" font-weight="700">hardware stop applying to test</text>
+<text x="58.3" y="630" font-size="12.5" fill="#0F172A" font-weight="700">event…</text>
+<text x="58.3" y="647" font-size="10.5" fill="#475569">G4 · lead · applied</text>
+<rect x="24" y="1880" width="246.4" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="36" y="1892" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="59.5" y="1903.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-018</text>
+<text x="36" y="1926" font-size="12.5" fill="#0F172A" font-weight="700">Should the manipulator-arm hazards</text>
+<text x="36" y="1942" font-size="12.5" fill="#0F172A" font-weight="700">be tied to the arms, so they stop…</text>
+<text x="36" y="1959" font-size="10.5" fill="#475569">G4 · lead · applied</text>
+<rect x="30.8" y="680" width="239.6" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="42.8" y="692" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="66.3" y="703.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-019</text>
+<text x="42.8" y="726" font-size="12.5" fill="#0F172A" font-weight="700">How should the six hazards raised</text>
+<text x="42.8" y="742" font-size="12.5" fill="#0F172A" font-weight="700">from the FHA gaps be rated?</text>
+<text x="42.8" y="759" font-size="10.5" fill="#475569">G2 · lead · applied</text>
+<rect x="24.8" y="2216" width="245.6" height="108" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="36.8" y="2228" width="47" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="60.3" y="2239.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">DQ-020</text>
+<text x="36.8" y="2262" font-size="12.5" fill="#0F172A" font-weight="700">Should the two near-duplicate pairs</text>
+<text x="36.8" y="2278" font-size="12.5" fill="#0F172A" font-weight="700">among the FHA-gap hazards be</text>
+<text x="36.8" y="2294" font-size="12.5" fill="#0F172A" font-weight="700">merg…</text>
+<text x="36.8" y="2311" font-size="10.5" fill="#475569">G2 · lead · applied</text>
+<rect x="998.2" y="1482" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="1494" width="72.3" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1046.3" y="1505.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">architecture/</text>
+<text x="1010.2" y="1528" font-size="12.5" fill="#0F172A" font-weight="700">4 decisions</text>
+<rect x="998.2" y="2042" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="2054" width="32.4" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1026.4" y="2065.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad/</text>
+<text x="1010.2" y="2088" font-size="12.5" fill="#0F172A" font-weight="700">3 decisions</text>
+<rect x="998.2" y="1722" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="1734" width="52.9" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1036.6" y="1745.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">concept/</text>
+<text x="1010.2" y="1768" font-size="12.5" fill="#0F172A" font-weight="700">4 decisions</text>
+<rect x="998.2" y="762" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="774" width="63.2" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1041.8" y="785.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">framework/</text>
+<text x="1010.2" y="808" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
+<rect x="998.2" y="1322" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="1334" width="78.4" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1049.4" y="1345.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">models/sysml/</text>
+<text x="1010.2" y="1368" font-size="12.5" fill="#0F172A" font-weight="700">2 decisions</text>
+<rect x="998.2" y="1082" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="1094" width="38" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1029.2" y="1105.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac/</text>
+<text x="1010.2" y="1128" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
+<rect x="998.2" y="1882" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="1894" width="75.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1048.1" y="1905.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">requirements/</text>
+<text x="1010.2" y="1928" font-size="12.5" fill="#0F172A" font-weight="700">6 decisions</text>
+<rect x="998.2" y="1162" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="1174" width="80.6" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1050.5" y="1185.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety/events/</text>
+<text x="1010.2" y="1208" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
+<rect x="998.2" y="1562" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="1574" width="86.2" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1053.3" y="1585.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety/hazards/</text>
+<text x="1010.2" y="1608" font-size="12.5" fill="#0F172A" font-weight="700">12 decisions</text>
+<rect x="998.2" y="2122" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="2134" width="106.6" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1063.5" y="2145.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety/mil-std-882e/</text>
+<text x="1010.2" y="2168" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
+<rect x="998.2" y="1242" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="1254" width="89.5" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1054.9" y="1265.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety/software/</text>
+<text x="1010.2" y="1288" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
+<rect x="998.2" y="1962" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="1974" width="68" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1044.2" y="1985.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/mujoco/</text>
+<text x="1010.2" y="2008" font-size="12.5" fill="#0F172A" font-weight="700">2 decisions</text>
+<rect x="998.2" y="1802" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="1814" width="58.1" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1039.3" y="1825.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/plant/</text>
+<text x="1010.2" y="1848" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
+<rect x="998.2" y="1402" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="1414" width="67.4" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1043.9" y="1425.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/results/</text>
+<text x="1010.2" y="1448" font-size="12.5" fill="#0F172A" font-weight="700">3 decisions</text>
+<rect x="998.2" y="2202" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="2214" width="79.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1050" y="2225.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/scenes3d/</text>
+<text x="1010.2" y="2248" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
+<rect x="998.2" y="1642" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="1654" width="66.5" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1043.4" y="1665.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/search/</text>
+<text x="1010.2" y="1688" font-size="12.5" fill="#0F172A" font-weight="700">2 decisions</text>
+<rect x="998.2" y="842" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="854" width="57.2" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1038.8" y="865.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/spec/</text>
+<text x="1010.2" y="888" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
+<rect x="998.2" y="922" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="934" width="62.1" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1041.3" y="945.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">standards/</text>
+<text x="1010.2" y="968" font-size="12.5" fill="#0F172A" font-weight="700">4 decisions</text>
+<rect x="998.2" y="1002" width="150" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1010.2" y="1014" width="38.9" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1029.7" y="1025.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">tools/</text>
+<text x="1010.2" y="1048" font-size="12.5" fill="#0F172A" font-weight="700">1 decision</text>
 </g>
-<rect x="40" y="2237" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
-<text x="62" y="2247" font-size="11" fill="#475569">Lead decision</text>
-<rect x="146.3" y="2237" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
-<text x="168.3" y="2247" font-size="11" fill="#475569">AI decision (reversible)</text>
-<rect x="304.3" y="2237" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
-<text x="326.3" y="2247" font-size="11" fill="#475569">Work product</text>
-<line x1="404.2" y1="2243" x2="420.2" y2="2243" stroke="#475569" stroke-width="1.8"/>
-<text x="426.2" y="2247" font-size="11" fill="#475569">applied_in</text>
-<text x="40" y="2269" font-size="10.5" fill="#94A3B8">Generated by tools/figures/decisions_readme.py from decisions/register.yaml. Answers are the lead's words as recorded; the AI decides only decider: claude questions (reversible technical choices).</text>
-<g class="terms" data-base-h="2298">
-<rect x="0" y="2298" width="1088.2" height="83.6" fill="#FFFFFF"/>
-<line x1="40" y1="2302" x2="1048.2" y2="2302" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="2317.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · CONOPS = concept of operations · DoD = US Department of Defense · DQ-nnn = decision</text>
-<text x="40" y="2332.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">question for the project lead (decisions/register.yaml) · G0–G7 = lifecycle gate (G0 concept to G7 change and sustainment) · I0–I3 = review independence level (I0 none, e.g. the author</text>
-<text x="40" y="2346.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">or an AI, to I3 independent organisation) · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base edition) · TS-nnn = architecture trade study · UAV = uncrewed</text>
-<text x="40" y="2361.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">aerial vehicle (drone) · US = United States</text>
+<rect x="40" y="2477" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="62" y="2487" font-size="11" fill="#475569">Lead decision</text>
+<rect x="146.3" y="2477" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="168.3" y="2487" font-size="11" fill="#475569">AI decision (reversible)</text>
+<rect x="304.3" y="2477" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="326.3" y="2487" font-size="11" fill="#475569">Work product</text>
+<line x1="404.2" y1="2483" x2="420.2" y2="2483" stroke="#475569" stroke-width="1.8"/>
+<text x="426.2" y="2487" font-size="11" fill="#475569">applied_in</text>
+<text x="40" y="2509" font-size="10.5" fill="#94A3B8">Generated by tools/figures/decisions_readme.py from decisions/register.yaml. Answers are the lead's words as recorded; the AI decides only decider: claude questions (reversible technical choices).</text>
+<g class="terms" data-base-h="2538">
+<rect x="0" y="2538" width="1252.2" height="98.1" fill="#FFFFFF"/>
+<line x1="40" y1="2542" x2="1212.2" y2="2542" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="2557.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · ARP4754B = SAE guidelines for development of civil aircraft and systems · ARP4761A = SAE guidelines for the safety</text>
+<text x="40" y="2572.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">assessment process on civil aircraft · CONOPS = concept of operations · DoD = US Department of Defense · DQ-nnn = decision question for the project lead (decisions/register.yaml) · FHA = functional hazard analysis</text>
+<text x="40" y="2586.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(MIL-STD-882E Task 208; also ARP4761A aircraft FHA) · G0–G7 = lifecycle gate (G0 concept to G7 change and sustainment) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent</text>
+<text x="40" y="2601.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">organisation) · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base edition) · SAE = SAE International, publisher of ARP4754B and ARP4761A · TS-nnn = architecture trade study · UAV =</text>
+<text x="40" y="2615.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">uncrewed aerial vehicle (drone) · US = United States</text>
 </g>
 </svg>
