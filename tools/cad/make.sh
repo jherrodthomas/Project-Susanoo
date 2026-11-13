@@ -6,7 +6,7 @@ set -euo pipefail
 cd "$(dirname "$0")/../.."
 PY="${FREECAD_PYTHON:-/opt/freecad/bin/python}"
 B3D="${B3D_PYTHON:-/opt/b3d/bin/python}"
-for script in tools/cad/b3d/cl*.py; do "$B3D" "$script"; done   # code-CAD layouts first: FreeCAD imports their STEP
+for script in tools/cad/b3d/cl??.py; do "$B3D" "$script"; done   # code-CAD layouts first: FreeCAD imports their STEP
 "$PY" tools/cad/build_concepts.py
 if [[ "${1:-}" != "--no-render" ]]; then
   [[ -d tools/cad/node_modules/three ]] || (cd tools/cad && npm ci --no-audit --no-fund)

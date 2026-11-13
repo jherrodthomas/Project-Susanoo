@@ -1,0 +1,25 @@
+# Terrain course of sheet 3 (docs/3d/SUS-M1-terrain.html). Each terrain is periodic along the walk (period = one
+# walk cycle, the stride of cad/params/CL-05.yaml walk:), so one walk cycle posed on it by tools/cad/b3d/cl05_terrain.py
+# loops seamlessly, rising `rise per cycle` each time. The exporter samples the ground height under every foot from
+# these definitions and writes the same height map into the page, so the drawn ground is the ground the feet were
+# posed on. Display and kinematic-check inputs only: drafted by the AI assistant (I0), not reviewed.
+#
+# kinds:  plane   ground = x tan(pitch) + y tan(roll)                 (pitch > 0 uphill, roll > 0 right side down)
+#         ledges  flat treads of `run` m rising `rise` m each (a kerb or terrace flight); run = stride/n so it repeats
+#         rubble  smooth bumps of `amp` m, two bump trains across the track, repeating every stride
+schema: susanoo/terrain-course/v0.1
+id: TERRAIN-001
+width_m: 6.0            # height map across the track, centred on the walker
+sample_m: 0.05          # height map resolution
+terrains:
+  - {key: flat,     label: "Flat",            kind: plane, pitch_deg: 0}
+  - {key: up5,      label: "Uphill 5°",       kind: plane, pitch_deg: 5}
+  - {key: up10,     label: "Uphill 10°",      kind: plane, pitch_deg: 10}
+  - {key: up15,     label: "Uphill 15°",      kind: plane, pitch_deg: 15}
+  - {key: up20,     label: "Uphill 20°",      kind: plane, pitch_deg: 20, note: "SYS-008 terrain slope limit"}
+  - {key: down10,   label: "Downhill 10°",    kind: plane, pitch_deg: -10}
+  - {key: down20,   label: "Downhill 20°",    kind: plane, pitch_deg: -20, note: "SYS-008 terrain slope limit"}
+  - {key: cross10,  label: "Cross-slope 10°", kind: plane, roll_deg: 10}
+  - {key: cross20,  label: "Cross-slope 20°", kind: plane, roll_deg: 20, note: "SYS-008 terrain slope limit, across the track"}
+  - {key: ledges,   label: "Ledges 0.2 m",    kind: ledges, run_m: 1.0, rise_m: 0.20}
+  - {key: rubble,   label: "Rubble ±0.12 m",  kind: rubble, amp_m: 0.12}

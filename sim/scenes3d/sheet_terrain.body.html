@@ -1,0 +1,58 @@
+<canvas id="gl"></canvas>
+<div id="frame"></div>
+<div id="load">Loading CL-05 geometry and terrain poses…</div>
+<div id="hud"><div id="cam">AZ — · EL — · R —</div><div id="banner"></div></div>
+
+<div class="panel" id="left">
+  <div class="ph">Terrain <span>T-01</span></div>
+  <div id="tlist"></div>
+  <div class="ph" style="border-top:1px solid var(--ink)">Walk <span>W-02</span></div>
+  <div class="seg" id="play"><button id="bplay">❚❚ Pause</button><button data-sp="0.5">½×</button><button data-sp="1">1×</button><button data-sp="2">2×</button></div>
+  <div class="seg tog"><button data-t="plumb">CG plumb<kbd>G</kbd></button><button data-t="stripes">1 m bands<kbd>B</kbd></button><button data-t="person">Person<kbd>P</kbd></button></div>
+  <div class="seg" id="render"><button data-r="shaded">Shaded</button><button data-r="line">Line</button><button data-r="xray">X-ray</button></div>
+  <div class="row"><span class="k" id="pnote"></span><span id="pframe"></span></div>
+</div>
+
+<div class="panel" id="right">
+  <div class="ph">On this ground <span>K-03</span></div>
+  <div class="scroll">
+    <div class="name" id="tname">—</div>
+    <div class="sub" id="tsub"></div>
+    <div class="ph" style="border-top:1px solid var(--ink)">Leg kinematics · CAD <span>tools/cad/b3d</span></div>
+    <div id="kin"></div>
+    <div class="ph" style="border-top:1px solid var(--ink)">Static tip margin <span>cad/metrics.json</span></div>
+    <div id="stat"></div>
+    <div class="note" id="statnote"></div>
+    <div class="ph" style="border-top:1px solid var(--ink)">Requirement · hazard <span>records</span></div>
+    <div id="req"></div>
+    <div class="note">Concept kinematics only: each foot is placed on the ground and the knees solved by the CAD, with no dynamics, balance, foot slip or ground model. The pod stays level and the arms stowed. Nothing here is verification evidence.</div>
+  </div>
+</div>
+
+<div id="views">
+  <div class="seg" id="view"><button data-v="iso">ISO</button><button data-v="side">Side</button><button data-v="front">Front</button><button data-v="rear">Rear</button><button data-v="top">Top</button></div>
+  <div class="seg"><button id="helpbtn">? Help</button></div>
+</div>
+
+<div class="panel" id="bottom">
+  <div class="ph">Ground profile under the feet <span id="ptitle"></span></div>
+  <svg id="prof" viewBox="0 0 1000 110" preserveAspectRatio="none"></svg>
+</div>
+
+<div id="tb">
+  <div class="big"><small>Project Susanoo</small>SUS-M1</div><div><small>Document</small><span id="tbdoc"></span></div><div><small>Sheet</small><span id="tbsheet"></span> · <a href="SUS-M1.html">1 ↗</a> · <a href="SUS-A1.html">2 ↗</a></div>
+  <div><small>Revision</small><span id="tbrev"></span></div><div><small>Scale</small>NTS · screen</div>
+  <div class="last"><small>Title</small><span id="tbtitle"></span></div><div class="last"><small>Status</small>Draft · not reviewed</div><div class="last ai"><small>Drafted by</small>AI assistant · I0</div>
+</div>
+
+<div id="help"><div class="panel">
+  <div class="ph">Every control <span>? to close</span></div>
+  <table>
+    <tr><td>Drag · wheel · right-drag</td><td>orbit · zoom · pan (the camera follows the walker)</td></tr>
+    <tr><td>Click a terrain · ← →</td><td>walk the CL-05 gait over that ground</td></tr>
+    <tr><td>Space · ½× 1× 2×</td><td>pause or play · walking pace (a viewing pace, not a design speed)</td></tr>
+    <tr><td>G · B · P</td><td>centre of gravity plumb line · 1 m bands on the ground · 1.75 m person</td></tr>
+    <tr><td>V</td><td>shaded · line · X-ray</td></tr>
+  </table>
+  <div class="note">The gait is the CL-05 walk of cad/params/CL-05.yaml with each foot placed on the ground under it (tools/cad/b3d/cl05_terrain.py). The static tip margin is the standing walker's centre of gravity over its support polygon, as in cad/metrics.json: with the joints frozen, and with the share of the slope lean the simulation assumes the gait leaves uncompensated (sim/spec/walker.yaml slope_lean).</div>
+</div></div>

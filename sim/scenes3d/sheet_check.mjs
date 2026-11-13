@@ -1,10 +1,11 @@
-// Check the general-arrangement sheets (docs/3d/SUS-M1.html, docs/3d/SUS-A1.html) and render their stills.
+// Check the general-arrangement sheets (docs/3d/SUS-M1.html, SUS-A1.html, SUS-M1-terrain.html) and render their stills.
 // Usage: node sim/scenes3d/sheet_check.mjs THREE_DIR [--check-only] [--all] [--out DIR]
 //   THREE_DIR: an unpacked npm package of three matching the SHA-256 pinned in sim/scenes3d/scenes.yaml; requests to the
 //   pinned jsDelivr URLs are served from it. Loads the page in Chromium, goes through every posture, a hazard selection,
 //   the render modes and the replay, and fails on a console error, a missing synthetic label or a posture that does
 //   not settle; on sheet 2, that every PX4 SITL run replays to its own outcome. Unless --check-only, writes
-//   docs/wiki/images/3d-sus-m1.png, 3d-sus-a1.png and 3d-sus-a1-air.png (1600x900); --all also 3d-sus-m1-<posture>.png.
+//   docs/wiki/images/3d-sus-m1.png, 3d-sus-a1.png, 3d-sus-a1-air.png and 3d-sus-m1-terrain.png (1600x900); --all also
+//   3d-sus-m1-<posture>.png. On sheet 3, every terrain must advance one stride and rise its own rise per cycle.
 import { createRequire } from 'node:module';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
@@ -101,7 +102,27 @@ for (const r of runs) {
   console.log(`ok   SUS-A1 ${r.id} (${r.outcome})`);
 }
 await page.keyboard.press('1'); await page.keyboard.press(' '); await page.waitForTimeout(600);
+// sheet 3 (terrain): every terrain loads and walks forward, climbing by its own rise per cycle
+const T3 = JSON.parse(readFileSync(join(root, 'docs/3d/assets/sus-m1-terrain.js'), 'utf8').match(/meta: (\{.*?\}),\nbin:/s)[1]);
+const url3 = (qs) => 'file://' + join(root, 'docs/3d/SUS-M1-terrain.html') + qs;
+for (const t of T3.terrains) {
+  await page.goto(url3(`?terrain=${t.key}&paused=1&t=0`));
+  await page.waitForFunction(() => window.__ready === true, null, { timeout: 60000 });
+  if (!/no evidence credit/i.test(await page.textContent('#banner'))) problems.push('terrain sheet: missing synthetic label');
+  const a0 = await page.evaluate(() => window.__state);
+  await page.goto(url3(`?terrain=${t.key}&paused=1&t=2`));
+  await page.waitForFunction(() => window.__ready === true, null, { timeout: 60000 });
+  const a2 = await page.evaluate(() => window.__state);
+  const dx = a2.x - a0.x, dz = a2.z - a0.z;
+  if (a2.terrain !== t.key || Math.abs(dx - 2 * T3.stride_m) > 1e-3 || Math.abs(dz - 2 * t.rise) > 1e-3) problems.push(`terrain ${t.key}: two cycles moved ${dx.toFixed(3)} m, rose ${dz.toFixed(3)} m`);
+  if (!checkOnly && t.key === 'up20') { await page.goto(url3('?terrain=up20&t=0.4&paused=1')); await page.waitForFunction(() => window.__ready === true); await page.waitForTimeout(400);
+    await page.screenshot({ path: join(out, '3d-sus-m1-terrain.png') }); }
+  console.log(`ok   terrain ${t.key} (rise ${t.rise} m per cycle)`);
+}
+await page.goto(url3('?terrain=rubble')); await page.waitForFunction(() => window.__ready === true);
+const r0 = await page.evaluate(() => window.__state.x);
+await page.waitForFunction((x) => window.__state.x > x + 0.2, r0, { timeout: 30000 }).catch(() => problems.push('terrain sheet: the walker does not walk on its own'));
 await browser.close();
 problems.push(...errors);
 if (problems.length) { console.log('FAIL ' + problems.join('; ')); process.exit(1); }
-console.log('ok   SUS-M1 and SUS-A1 sheets');
+console.log('ok   SUS-M1, SUS-A1 and terrain sheets');
