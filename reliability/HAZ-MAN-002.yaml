@@ -12,9 +12,9 @@ trees:
     title: Carried load swings, shifts or drops
     top: load
     gates:
-      - {id: load, type: or, title: Load swings, shifts or drops, inputs: [grip-slips, inertial, beyond-limits, enabled-unsecured]}
+      - {id: load, type: or, title: "Load swings, shifts or drops", inputs: [grip-slips, inertial, beyond-limits, enabled-unsecured]}
     events:
-      - {id: grip-slips, mode: PT-016-FM1, causal_factor: CF2, title: Grip or securing slips}
-      - {id: inertial, kind: undeveloped, nature: environment, causal_factor: CF1, title: Gait, slope or ground loads on the load}
-      - {id: beyond-limits, kind: undeveloped, nature: human, causal_factor: CF3, title: Load or manoeuvre beyond the loaded limits}
-      - {id: enabled-unsecured, kind: undeveloped, nature: software, causal_factor: CF4, ssf: SSF-001, title: Loaded walking enabled without confirmed securing}
+      - {id: grip-slips, mode: PT-016-FM1, causal_factor: CF2, title: "Grip or securing slips"}
+      - {id: inertial, kind: undeveloped, nature: environment, causal_factor: CF1, title: "Gait, slope or ground loads on the load"}
+      - {id: beyond-limits, kind: undeveloped, nature: human, causal_factor: CF3, title: "Load or manoeuvre beyond the loaded limits"}
+      - {id: enabled-unsecured, kind: undeveloped, nature: software, causal_factor: CF4, ssf: SSF-001, title: "Loaded walking enabled without confirmed securing"}

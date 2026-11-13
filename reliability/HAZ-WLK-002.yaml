@@ -10,11 +10,11 @@ trees:
     title: Walker tip-over or fall with the pilot aboard
     top: tip
     gates:
-      - {id: tip, type: or, title: Walker tips or falls, inputs: [balance, terrain, pilot, supply-path]}
-      - {id: supply-path, type: and, title: Supply decays and the balance capacity is short, inputs: [supply-decays, capacity-short]}
+      - {id: tip, type: or, title: "Walker tips or falls", inputs: [balance, terrain, pilot, supply-path]}
+      - {id: supply-path, type: and, title: "Supply decays and the balance capacity is short", inputs: [supply-decays, capacity-short]}
     events:
-      - {id: balance, kind: undeveloped, nature: software, causal_factor: CF1, ssf: SSF-007, title: Balance controller fails to recover}
-      - {id: terrain, kind: undeveloped, nature: environment, causal_factor: CF2, title: Terrain gives way or slope beyond the envelope}
-      - {id: pilot, kind: undeveloped, nature: human, causal_factor: CF3, title: Pilot commands beyond the limits}
-      - {id: supply-decays, mode: PT-028-FM1, causal_factor: CF4, title: Leg actuator supply lost}
-      - {id: capacity-short, kind: undeveloped, nature: systematic, causal_factor: CF4, title: Torque left too small before holding engages (sizing)}
+      - {id: balance, kind: undeveloped, nature: software, causal_factor: CF1, ssf: SSF-007, title: "Balance controller fails to recover"}
+      - {id: terrain, kind: undeveloped, nature: environment, causal_factor: CF2, title: "Terrain gives way or slope beyond the envelope"}
+      - {id: pilot, kind: undeveloped, nature: human, causal_factor: CF3, title: "Pilot commands beyond the limits"}
+      - {id: supply-decays, mode: PT-028-FM1, causal_factor: CF4, title: "Leg actuator supply lost"}
+      - {id: capacity-short, kind: undeveloped, nature: systematic, causal_factor: CF4, title: "Torque left too small before holding engages (sizing)"}

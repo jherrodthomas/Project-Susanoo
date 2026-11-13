@@ -160,6 +160,14 @@ def _check_tree(t, modes, params, item_life, ssfs, cfs, covered) -> list[str]:
     if t.get("top") not in nodes or t.get("top") not in {g["id"] for g in t.get("gates") or []}:
         errors.append(f"{tid}: top {t.get('top')} is not a gate")
         return errors
+    gate_keys = {"id", "type", "count", "title", "inputs"}
+    event_keys = {"id", "title", "mode", "count", "kind", "nature", "causal_factor", "ssf", "modes", "beta", "exposure"}
+    for g in t["gates"]:
+        if set(g) - gate_keys:
+            errors.append(f"{tid}/{g['id']}: unknown keys {sorted(set(g) - gate_keys)} (an unquoted comma in a title?)")
+    for e in t["events"]:
+        if set(e) - event_keys:
+            errors.append(f"{tid}/{e['id']}: unknown keys {sorted(set(e) - event_keys)} (an unquoted comma in a title?)")
     for g in t["gates"]:
         if g.get("type") not in ("and", "or"):
             errors.append(f"{tid}/{g['id']}: type must be and or or")

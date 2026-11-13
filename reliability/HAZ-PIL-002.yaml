@@ -21,14 +21,14 @@ trees:
     causal_factors: [CF1]
     top: drop
     gates:
-      - {id: drop,          type: and, title: Cockpit drops with the pilot aboard, inputs: [supply-lost, holding-fails]}
-      - {id: supply-lost,   type: or,  title: Common pressure line lost suddenly, inputs: [hose-burst]}
-      - {id: holding-fails, type: or,  title: A holding valve does not hold, inputs: [valve-dormant, valve-demand, valve-common]}
+      - {id: drop,          type: and, title: "Cockpit drops with the pilot aboard", inputs: [supply-lost, holding-fails]}
+      - {id: supply-lost,   type: or,  title: "Common pressure line lost suddenly", inputs: [hose-burst]}
+      - {id: holding-fails, type: or,  title: "A holding valve does not hold", inputs: [valve-dormant, valve-demand, valve-common]}
     events:
-      - {id: hose-burst,    mode: PT-001-FM1, count: hoses,  title: A hose or fitting bursts}
-      - {id: valve-dormant, mode: PT-002-FM1, count: joints, title: A valve already failed open}
-      - {id: valve-demand,  mode: PT-002-FM2, count: joints, title: A valve fails to close on demand}
-      - {id: valve-common,  kind: common_cause, modes: [PT-002-FM1, PT-002-FM2], beta: beta, title: Every valve fails together}
+      - {id: hose-burst,    mode: PT-001-FM1, count: hoses,  title: "A hose or fitting bursts"}
+      - {id: valve-dormant, mode: PT-002-FM1, count: joints, title: "A valve already failed open"}
+      - {id: valve-demand,  mode: PT-002-FM2, count: joints, title: "A valve fails to close on demand"}
+      - {id: valve-common,  kind: common_cause, modes: [PT-002-FM1, PT-002-FM2], beta: beta, title: "Every valve fails together"}
 
   - id: FT-002
     title: Cockpit drop on loss of leg support, alternative B-EHA (series-hybrid, electrohydraulic joints)
@@ -36,19 +36,19 @@ trees:
     causal_factors: [CF1]
     top: drop
     gates:
-      - {id: drop,              type: or,  title: Cockpit drops with the pilot aboard, inputs: [bus-and-holding, joint-and-holding]}
-      - {id: bus-and-holding,   type: and, title: Bus lost and a holding valve does not hold, inputs: [bus-lost, holding-fails]}
-      - {id: holding-fails,     type: or,  title: A holding valve does not hold, inputs: [valve-dormant, valve-demand, valve-common]}
-      - {id: joint-and-holding, type: and, count: joints, title: One joint's drive lost and its own valve does not hold, inputs: [drive-lost, own-valve-fails]}
-      - {id: own-valve-fails,   type: or,  title: That joint's valve does not hold, inputs: [own-valve-dormant, own-valve-demand]}
+      - {id: drop,              type: or,  title: "Cockpit drops with the pilot aboard", inputs: [bus-and-holding, joint-and-holding]}
+      - {id: bus-and-holding,   type: and, title: "Bus lost and a holding valve does not hold", inputs: [bus-lost, holding-fails]}
+      - {id: holding-fails,     type: or,  title: "A holding valve does not hold", inputs: [valve-dormant, valve-demand, valve-common]}
+      - {id: joint-and-holding, type: and, count: joints, title: "One joint's drive lost and its own valve does not hold", inputs: [drive-lost, own-valve-fails]}
+      - {id: own-valve-fails,   type: or,  title: "That joint's valve does not hold", inputs: [own-valve-dormant, own-valve-demand]}
     events:
-      - {id: bus-lost,          mode: PT-003-FM1, title: The DC bus is lost}
-      - {id: valve-dormant,     mode: PT-002-FM1, count: joints, title: A valve already failed open}
-      - {id: valve-demand,      mode: PT-002-FM2, count: joints, title: A valve fails to close on demand}
-      - {id: valve-common,      kind: common_cause, modes: [PT-002-FM1, PT-002-FM2], beta: beta, title: Every valve fails together}
-      - {id: drive-lost,        mode: PT-004-FM1, title: The joint's drive is lost}
-      - {id: own-valve-dormant, mode: PT-002-FM1, title: Its valve already failed open}
-      - {id: own-valve-demand,  mode: PT-002-FM2, title: Its valve fails to close on demand}
+      - {id: bus-lost,          mode: PT-003-FM1, title: "The DC bus is lost"}
+      - {id: valve-dormant,     mode: PT-002-FM1, count: joints, title: "A valve already failed open"}
+      - {id: valve-demand,      mode: PT-002-FM2, count: joints, title: "A valve fails to close on demand"}
+      - {id: valve-common,      kind: common_cause, modes: [PT-002-FM1, PT-002-FM2], beta: beta, title: "Every valve fails together"}
+      - {id: drive-lost,        mode: PT-004-FM1, title: "The joint's drive is lost"}
+      - {id: own-valve-dormant, mode: PT-002-FM1, title: "Its valve already failed open"}
+      - {id: own-valve-demand,  mode: PT-002-FM2, title: "Its valve fails to close on demand"}
 
   - id: FT-003
     title: Cockpit drop on loss of leg support, alternative B-EMA (series-hybrid, electromechanical joints)
@@ -56,16 +56,16 @@ trees:
     causal_factors: [CF1]
     top: drop
     gates:
-      - {id: drop,              type: or,  title: Cockpit drops with the pilot aboard, inputs: [bus-and-holding, joint-and-holding]}
-      - {id: bus-and-holding,   type: and, title: Bus lost and a brake does not hold, inputs: [bus-lost, holding-fails]}
-      - {id: holding-fails,     type: or,  title: A brake does not hold, inputs: [brake-dormant, brake-demand, brake-common]}
-      - {id: joint-and-holding, type: and, count: joints, title: One joint's drive lost and its own brake does not hold, inputs: [drive-lost, own-brake-fails]}
-      - {id: own-brake-fails,   type: or,  title: That joint's brake does not hold, inputs: [own-brake-dormant, own-brake-demand]}
+      - {id: drop,              type: or,  title: "Cockpit drops with the pilot aboard", inputs: [bus-and-holding, joint-and-holding]}
+      - {id: bus-and-holding,   type: and, title: "Bus lost and a brake does not hold", inputs: [bus-lost, holding-fails]}
+      - {id: holding-fails,     type: or,  title: "A brake does not hold", inputs: [brake-dormant, brake-demand, brake-common]}
+      - {id: joint-and-holding, type: and, count: joints, title: "One joint's drive lost and its own brake does not hold", inputs: [drive-lost, own-brake-fails]}
+      - {id: own-brake-fails,   type: or,  title: "That joint's brake does not hold", inputs: [own-brake-dormant, own-brake-demand]}
     events:
-      - {id: bus-lost,          mode: PT-003-FM1, title: The DC bus is lost}
-      - {id: brake-dormant,     mode: PT-006-FM1, count: joints, title: A brake already failed}
-      - {id: brake-demand,      mode: PT-006-FM2, count: joints, title: A brake fails to engage on demand}
-      - {id: brake-common,      kind: common_cause, modes: [PT-006-FM1, PT-006-FM2], beta: beta, title: Every brake fails together}
-      - {id: drive-lost,        mode: PT-005-FM1, title: The joint's drive is lost}
-      - {id: own-brake-dormant, mode: PT-006-FM1, title: Its brake already failed}
-      - {id: own-brake-demand,  mode: PT-006-FM2, title: Its brake fails to engage on demand}
+      - {id: bus-lost,          mode: PT-003-FM1, title: "The DC bus is lost"}
+      - {id: brake-dormant,     mode: PT-006-FM1, count: joints, title: "A brake already failed"}
+      - {id: brake-demand,      mode: PT-006-FM2, count: joints, title: "A brake fails to engage on demand"}
+      - {id: brake-common,      kind: common_cause, modes: [PT-006-FM1, PT-006-FM2], beta: beta, title: "Every brake fails together"}
+      - {id: drive-lost,        mode: PT-005-FM1, title: "The joint's drive is lost"}
+      - {id: own-brake-dormant, mode: PT-006-FM1, title: "Its brake already failed"}
+      - {id: own-brake-demand,  mode: PT-006-FM2, title: "Its brake fails to engage on demand"}

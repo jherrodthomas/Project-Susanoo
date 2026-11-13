@@ -143,6 +143,12 @@ class TestRecords(unittest.TestCase):
     def test_never_touches_a_hazard_record(self):
         self.assertFalse([k for k in self.outs if k.startswith("safety/hazards/")])
 
+    def test_unknown_node_keys_are_errors(self):
+        bad = copy.deepcopy(MIXED)
+        bad["gates"][1]["the rest of a title"] = None    # what an unquoted comma in a flow mapping produces
+        errors = engine._check_tree({**bad}, toy_model().modes, {}, {"h_hours": 1.0}, set(), {"CF1", "CF2"}, set())
+        self.assertTrue(any("unknown keys" in e for e in errors))
+
     def test_uncovered_causal_factor_is_an_error(self):
         tmp = Path(tempfile.mkdtemp())
         try:

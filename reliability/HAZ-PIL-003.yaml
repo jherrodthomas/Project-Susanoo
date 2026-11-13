@@ -10,10 +10,10 @@ trees:
     title: Fall from height during emergency egress
     top: fall
     gates:
-      - {id: fall, type: and, title: Pilot falls during emergency egress, inputs: [emergency, egress-fails]}
-      - {id: egress-fails, type: or, title: Descent fails, inputs: [hurried, aid-fails, slope-wet]}
+      - {id: fall, type: and, title: "Pilot falls during emergency egress", inputs: [emergency, egress-fails]}
+      - {id: egress-fails, type: or, title: "Descent fails", inputs: [hurried, aid-fails, slope-wet]}
     events:
-      - {id: emergency, kind: undeveloped, nature: environment, causal_factor: CF1, title: Emergency egress needed}
-      - {id: hurried, kind: undeveloped, nature: human, causal_factor: CF1, title: Hurried descent, darkness, smoke or injury}
-      - {id: aid-fails, mode: PT-026-FM1, causal_factor: CF2, title: Davit or ladder fails to deploy}
-      - {id: slope-wet, kind: undeveloped, nature: environment, causal_factor: CF3, title: Walker leaning; wet or icy surfaces}
+      - {id: emergency, kind: undeveloped, nature: environment, causal_factor: CF1, title: "Emergency egress needed"}
+      - {id: hurried, kind: undeveloped, nature: human, causal_factor: CF1, title: "Hurried descent, darkness, smoke or injury"}
+      - {id: aid-fails, mode: PT-026-FM1, causal_factor: CF2, title: "Davit or ladder fails to deploy"}
+      - {id: slope-wet, kind: undeveloped, nature: environment, causal_factor: CF3, title: "Walker leaning; wet or icy surfaces"}

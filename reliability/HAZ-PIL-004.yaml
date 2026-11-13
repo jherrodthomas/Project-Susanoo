@@ -10,10 +10,10 @@ trees:
     title: Normal egress blocked and the side exit fails
     top: blocked
     gates:
-      - {id: blocked, type: and, title: Pilot cannot get out, inputs: [cannot-lower, side-exit-fails]}
-      - {id: cannot-lower, type: or, title: Walker cannot lower, inputs: [supply-fault, lowering-inhibited, terrain]}
+      - {id: blocked, type: and, title: "Pilot cannot get out", inputs: [cannot-lower, side-exit-fails]}
+      - {id: cannot-lower, type: or, title: "Walker cannot lower", inputs: [supply-fault, lowering-inhibited, terrain]}
     events:
-      - {id: supply-fault, mode: PT-028-FM1, causal_factor: CF1, title: Leg actuator supply lost}
-      - {id: lowering-inhibited, kind: undeveloped, nature: software, causal_factor: CF2, ssf: SSF-002, title: Lowering inhibited by a fault response or stuck interlock}
-      - {id: terrain, kind: undeveloped, nature: environment, causal_factor: CF3, title: Terrain does not allow the kneel posture}
-      - {id: side-exit-fails, mode: PT-019-FM1, causal_factor: CF1, title: Side hatch emergency release jams}
+      - {id: supply-fault, mode: PT-028-FM1, causal_factor: CF1, title: "Leg actuator supply lost"}
+      - {id: lowering-inhibited, kind: undeveloped, nature: software, causal_factor: CF2, ssf: SSF-002, title: "Lowering inhibited by a fault response or stuck interlock"}
+      - {id: terrain, kind: undeveloped, nature: environment, causal_factor: CF3, title: "Terrain does not allow the kneel posture"}
+      - {id: side-exit-fails, mode: PT-019-FM1, causal_factor: CF1, title: "Side hatch emergency release jams"}

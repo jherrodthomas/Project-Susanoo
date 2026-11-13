@@ -10,9 +10,9 @@ trees:
     title: Person struck or pinned by an arm
     top: struck
     gates:
-      - {id: struck, type: and, title: Person struck or pinned, inputs: [person-in-reach, arm-moves]}
-      - {id: arm-moves, type: or, title: An arm moves into the person, inputs: [stow-lock-fails, not-inhibited]}
+      - {id: struck, type: and, title: "Person struck or pinned", inputs: [person-in-reach, arm-moves]}
+      - {id: arm-moves, type: or, title: "An arm moves into the person", inputs: [stow-lock-fails, not-inhibited]}
     events:
-      - {id: person-in-reach, kind: undeveloped, nature: human, causal_factor: CF1, title: Person inside the arms' reach}
-      - {id: stow-lock-fails, mode: PT-015-FM1, count: 2, causal_factor: CF2, title: Stow lock already failed}
-      - {id: not-inhibited, kind: undeveloped, nature: software, causal_factor: CF3, ssf: SSF-001, title: Manipulation not inhibited}
+      - {id: person-in-reach, kind: undeveloped, nature: human, causal_factor: CF1, title: "Person inside the arms' reach"}
+      - {id: stow-lock-fails, mode: PT-015-FM1, count: 2, causal_factor: CF2, title: "Stow lock already failed"}
+      - {id: not-inhibited, kind: undeveloped, nature: software, causal_factor: CF3, ssf: SSF-001, title: "Manipulation not inhibited"}

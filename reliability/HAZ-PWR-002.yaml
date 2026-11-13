@@ -11,10 +11,10 @@ trees:
     alternative: B-EHA, B-EMA
     top: runaway
     gates:
-      - {id: runaway, type: or, title: Pack thermal runaway, inputs: [cell-path, damage, charged-damaged]}
-      - {id: cell-path, type: and, title: Cell fault not isolated, inputs: [cell-short, monitor-fails]}
+      - {id: runaway, type: or, title: "Pack thermal runaway", inputs: [cell-path, damage, charged-damaged]}
+      - {id: cell-path, type: and, title: "Cell fault not isolated", inputs: [cell-short, monitor-fails]}
     events:
-      - {id: cell-short, mode: PT-021-FM1, count: cells, causal_factor: CF1, title: A cell shorts internally}
-      - {id: monitor-fails, mode: PT-022-FM1, causal_factor: CF1, title: Independent monitor and contactors already failed}
-      - {id: damage, kind: undeveloped, nature: environment, causal_factor: CF2, title: Pack damaged in a fall or overturn}
-      - {id: charged-damaged, kind: undeveloped, nature: human, causal_factor: CF3, title: Damaged or wet pack charged without inspection}
+      - {id: cell-short, mode: PT-021-FM1, count: cells, causal_factor: CF1, title: "A cell shorts internally"}
+      - {id: monitor-fails, mode: PT-022-FM1, causal_factor: CF1, title: "Independent monitor and contactors already failed"}
+      - {id: damage, kind: undeveloped, nature: environment, causal_factor: CF2, title: "Pack damaged in a fall or overturn"}
+      - {id: charged-damaged, kind: undeveloped, nature: human, causal_factor: CF3, title: "Damaged or wet pack charged without inspection"}

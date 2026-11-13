@@ -10,9 +10,9 @@ trees:
     title: Fuel leak and fire at the engine
     top: fire
     gates:
-      - {id: fire, type: and, title: Fuel fire, inputs: [fuel-release, ignition]}
-      - {id: fuel-release, type: or, title: Fuel released, inputs: [leak, refuel-hot]}
+      - {id: fire, type: and, title: "Fuel fire", inputs: [fuel-release, ignition]}
+      - {id: fuel-release, type: or, title: "Fuel released", inputs: [leak, refuel-hot]}
     events:
-      - {id: leak, mode: PT-023-FM1, causal_factor: CF1, title: Fuel line, fitting or tank leaks}
-      - {id: refuel-hot, kind: undeveloped, nature: human, causal_factor: CF2, title: Refuelling hot, running or near ignition}
-      - {id: ignition, kind: undeveloped, nature: systematic, causal_factor: CF3, title: Surface above autoignition next to a leak path}
+      - {id: leak, mode: PT-023-FM1, causal_factor: CF1, title: "Fuel line, fitting or tank leaks"}
+      - {id: refuel-hot, kind: undeveloped, nature: human, causal_factor: CF2, title: "Refuelling hot, running or near ignition"}
+      - {id: ignition, kind: undeveloped, nature: systematic, causal_factor: CF3, title: "Surface above autoignition next to a leak path"}

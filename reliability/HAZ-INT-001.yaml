@@ -10,16 +10,16 @@ trees:
     title: UAV launch or recovery outside the safe envelope
     top: outside
     gates:
-      - {id: outside, type: or, title: Launch or recovery outside the envelope, inputs: [wrong-permit, bad-position, link-path, home-stale, gust]}
-      - {id: wrong-permit, type: and, title: Wrong permit not blocked by hardware, inputs: [permit-wrong, hw-permit-fails]}
-      - {id: bad-position, type: and, title: Bad position accepted and not blocked, inputs: [position-wrong, hw-permit-fails-b]}
-      - {id: link-path, type: and, title: Link lost and the failsafe flies to the dock, inputs: [link-lost, failsafe-to-dock]}
+      - {id: outside, type: or, title: "Launch or recovery outside the envelope", inputs: [wrong-permit, bad-position, link-path, home-stale, gust]}
+      - {id: wrong-permit, type: and, title: "Wrong permit not blocked by hardware", inputs: [permit-wrong, hw-permit-fails]}
+      - {id: bad-position, type: and, title: "Bad position accepted and not blocked", inputs: [position-wrong, hw-permit-fails-b]}
+      - {id: link-path, type: and, title: "Link lost and the failsafe flies to the dock", inputs: [link-lost, failsafe-to-dock]}
     events:
-      - {id: permit-wrong, kind: undeveloped, nature: software, causal_factor: CF1, ssf: SSF-006, title: Permit granted on stale or inconsistent state}
-      - {id: hw-permit-fails, mode: PT-013-FM1, causal_factor: CF1, title: Hardware launch permit already failed permissive}
-      - {id: position-wrong, kind: undeveloped, nature: software, causal_factor: CF6, ssf: SSF-006, title: Reported position trusted without validity checks}
-      - {id: hw-permit-fails-b, mode: PT-013-FM1, causal_factor: CF6, title: Hardware launch permit already failed permissive}
-      - {id: link-lost, mode: PT-014-FM1, causal_factor: CF2, title: Integration link lost in flight}
-      - {id: failsafe-to-dock, kind: undeveloped, nature: software, causal_factor: CF4, ssf: SSF-008, title: PX4 failsafe returns to the dock without a permit}
-      - {id: home-stale, kind: undeveloped, nature: interface, causal_factor: CF5, title: PX4 home left at the take-off point}
-      - {id: gust, kind: undeveloped, nature: environment, causal_factor: CF3, title: Gusts near the walker structure}
+      - {id: permit-wrong, kind: undeveloped, nature: software, causal_factor: CF1, ssf: SSF-006, title: "Permit granted on stale or inconsistent state"}
+      - {id: hw-permit-fails, mode: PT-013-FM1, causal_factor: CF1, title: "Hardware launch permit already failed permissive"}
+      - {id: position-wrong, kind: undeveloped, nature: software, causal_factor: CF6, ssf: SSF-006, title: "Reported position trusted without validity checks"}
+      - {id: hw-permit-fails-b, mode: PT-013-FM1, causal_factor: CF6, title: "Hardware launch permit already failed permissive"}
+      - {id: link-lost, mode: PT-014-FM1, causal_factor: CF2, title: "Integration link lost in flight"}
+      - {id: failsafe-to-dock, kind: undeveloped, nature: software, causal_factor: CF4, ssf: SSF-008, title: "PX4 failsafe returns to the dock without a permit"}
+      - {id: home-stale, kind: undeveloped, nature: interface, causal_factor: CF5, title: "PX4 home left at the take-off point"}
+      - {id: gust, kind: undeveloped, nature: environment, causal_factor: CF3, title: "Gusts near the walker structure"}

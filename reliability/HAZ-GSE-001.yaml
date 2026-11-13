@@ -10,8 +10,8 @@ trees:
     title: Fall from height during maintenance
     top: fall
     gates:
-      - {id: fall, type: or, title: Maintainer falls from the walker, inputs: [balance, unsecured-access, surface]}
+      - {id: fall, type: or, title: "Maintainer falls from the walker", inputs: [balance, unsecured-access, surface]}
     events:
-      - {id: balance, kind: undeveloped, nature: human, causal_factor: CF1, title: Loss of balance while reaching or carrying}
-      - {id: unsecured-access, kind: undeveloped, nature: systematic, causal_factor: CF2, title: No platform or anchor; stand not secured}
-      - {id: surface, kind: undeveloped, nature: environment, causal_factor: CF3, title: Wet, oily or icy surfaces, wind, poor light}
+      - {id: balance, kind: undeveloped, nature: human, causal_factor: CF1, title: "Loss of balance while reaching or carrying"}
+      - {id: unsecured-access, kind: undeveloped, nature: systematic, causal_factor: CF2, title: "No platform or anchor; stand not secured"}
+      - {id: surface, kind: undeveloped, nature: environment, causal_factor: CF3, title: "Wet, oily or icy surfaces, wind, poor light"}

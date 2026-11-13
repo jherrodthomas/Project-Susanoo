@@ -11,9 +11,9 @@ trees:
     alternative: A
     top: residual
     gates:
-      - {id: residual, type: and, title: Maintainer exposed to stored pressure, inputs: [pressure-trapped, not-verified]}
-      - {id: pressure-trapped, type: or, title: Pressure remains after isolation, inputs: [bleed-fails, trapped-volume]}
+      - {id: residual, type: and, title: "Maintainer exposed to stored pressure", inputs: [pressure-trapped, not-verified]}
+      - {id: pressure-trapped, type: or, title: "Pressure remains after isolation", inputs: [bleed-fails, trapped-volume]}
     events:
-      - {id: bleed-fails, mode: PT-020-FM1, causal_factor: CF1, title: Automatic bleed valve already failed}
-      - {id: trapped-volume, kind: undeveloped, nature: systematic, causal_factor: CF1, title: Trapped volume not vented by the isolation design}
-      - {id: not-verified, kind: undeveloped, nature: human, causal_factor: CF2, title: Isolation or zero-energy check skipped}
+      - {id: bleed-fails, mode: PT-020-FM1, causal_factor: CF1, title: "Automatic bleed valve already failed"}
+      - {id: trapped-volume, kind: undeveloped, nature: systematic, causal_factor: CF1, title: "Trapped volume not vented by the isolation design"}
+      - {id: not-verified, kind: undeveloped, nature: human, causal_factor: CF2, title: "Isolation or zero-energy check skipped"}
