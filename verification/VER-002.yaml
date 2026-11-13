@@ -1,0 +1,18 @@
+schema: susanoo/verification/v0.1
+id: VER-002
+title: 'SYS-021 validity annunciation: misleading position and imagery'
+method: test
+result: planned
+configuration: SUS-I1-C001
+simulated: true
+procedure: 'Purpose: show that UAV position or imagery that fails its validity checks is marked not valid.
+
+  Setup: PX4 SITL with GNSS fault injection (degradation, jump, spoofed drift) and the pilot display harness; validity
+  checks and the independent reference are TBD (SYS-021).
+
+  Steps: (1) inject each GNSS fault during observation; (2) inject a camera-pointing or georeferencing error; (3)
+  return to nominal.
+
+  Pass: every faulted datum is marked not valid before it is used on the display, and no datum failing a check is
+  shown as valid. Record which check caught each fault.'
+evidence: []

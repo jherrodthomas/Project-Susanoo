@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1298" height="3849.1" viewBox="0 0 1298 3849.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1378" height="3849.1" viewBox="0 0 1378 3849.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
 <title>Mitigation register worksheet</title>
 <desc>Spreadsheet view of Mitigation register, generated from safety/hazards/*.yaml (mitigations).</desc>
 <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="1298" height="3722" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
-<rect x="0" y="0" width="1298" height="48" rx="0" fill="#0F172A" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1378" height="3722" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1378" height="48" rx="0" fill="#0F172A" stroke="none" stroke-width="0"/>
 <text x="16" y="30" font-size="16" fill="#FFFFFF" font-weight="700">Mitigation register — worksheet</text>
 <text x="278.6" y="30" font-size="11" fill="#94A3B8">mitigations.csv · generated from safety/hazards/*.yaml (mitigations)</text>
-<rect x="1182.8" y="14" width="103.2" height="20" rx="10" fill="#334155" stroke="none" stroke-width="0"/>
-<text x="1191.8" y="28" font-size="10.5" fill="#FFFFFF">Nothing accepted</text>
-<rect x="1014.4" y="14" width="160.5" height="20" rx="10" fill="#B45309" stroke="none" stroke-width="0"/>
-<text x="1023.4" y="28" font-size="10.5" fill="#FFFFFF">AI-drafted I0 · not reviewed</text>
-<rect x="0" y="48" width="1298" height="18" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="1262.8" y="14" width="103.2" height="20" rx="10" fill="#334155" stroke="none" stroke-width="0"/>
+<text x="1271.8" y="28" font-size="10.5" fill="#FFFFFF">Nothing accepted</text>
+<rect x="1094.4" y="14" width="160.5" height="20" rx="10" fill="#B45309" stroke="none" stroke-width="0"/>
+<text x="1103.4" y="28" font-size="10.5" fill="#FFFFFF">AI-drafted I0 · not reviewed</text>
+<rect x="0" y="48" width="1378" height="18" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="94" y="61" font-size="10" fill="#64748B" text-anchor="middle">A</text>
 <line x1="34" y1="48" x2="34" y2="66" stroke="#E2E8F0" stroke-width="1"/>
 <text x="186" y="61" font-size="10" fill="#64748B" text-anchor="middle">B</text>
@@ -27,9 +27,9 @@
 <line x1="980" y1="48" x2="980" y2="66" stroke="#E2E8F0" stroke-width="1"/>
 <text x="1141" y="61" font-size="10" fill="#64748B" text-anchor="middle">H</text>
 <line x1="1076" y1="48" x2="1076" y2="66" stroke="#E2E8F0" stroke-width="1"/>
-<text x="1251" y="61" font-size="10" fill="#64748B" text-anchor="middle">I</text>
+<text x="1291" y="61" font-size="10" fill="#64748B" text-anchor="middle">I</text>
 <line x1="1206" y1="48" x2="1206" y2="66" stroke="#E2E8F0" stroke-width="1"/>
-<rect x="0" y="66" width="1298" height="34" rx="0" fill="#1E293B" stroke="none" stroke-width="0"/>
+<rect x="0" y="66" width="1378" height="34" rx="0" fill="#1E293B" stroke="none" stroke-width="0"/>
 <text x="17" y="87" font-size="10" fill="#94A3B8" text-anchor="middle">1</text>
 <text x="42" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Hazard</text>
 <line x1="34" y1="66" x2="34" y2="100" stroke="#334155" stroke-width="1"/>
@@ -48,9 +48,9 @@
 <line x1="980" y1="66" x2="980" y2="100" stroke="#334155" stroke-width="1"/>
 <text x="1084" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Verification method</text>
 <line x1="1076" y1="66" x2="1076" y2="100" stroke="#334155" stroke-width="1"/>
-<text x="1214" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Evidence</text>
+<text x="1214" y="81" font-size="11" fill="#F8FAFC" font-weight="700">Evidence (by result)</text>
 <line x1="1206" y1="66" x2="1206" y2="100" stroke="#334155" stroke-width="1"/>
-<rect x="0" y="100" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="100" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="100" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="117" font-size="10" fill="#64748B" text-anchor="middle">2</text>
 <line x1="34" y1="100" x2="34" y2="148" stroke="#E2E8F0" stroke-width="1"/>
@@ -62,7 +62,7 @@
 <line x1="980" y1="100" x2="980" y2="148" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="100" x2="1076" y2="148" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="100" x2="1206" y2="148" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="148" x2="1298" y2="148" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="148" x2="1378" y2="148" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="100" x2="154" y2="148" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="115" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-001</text>
 <text x="162" y="115" font-size="11.5" fill="#0F172A">M1</text>
@@ -80,8 +80,8 @@
 <text x="1089" y="118" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="106" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="118" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
-<text x="1214" y="115" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="148" width="1298" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="115" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="148" width="1378" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="148" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="165" font-size="10" fill="#64748B" text-anchor="middle">3</text>
 <line x1="34" y1="148" x2="34" y2="203" stroke="#E2E8F0" stroke-width="1"/>
@@ -93,7 +93,7 @@
 <line x1="980" y1="148" x2="980" y2="203" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="148" x2="1076" y2="203" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="148" x2="1206" y2="203" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="203" x2="1298" y2="203" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="203" x2="1378" y2="203" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="148" x2="154" y2="203" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="163" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-001</text>
 <text x="162" y="163" font-size="11.5" fill="#0F172A">M2</text>
@@ -112,8 +112,8 @@
 <text x="993" y="166" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SSF-003</text>
 <rect x="1084" y="154" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="166" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="163" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="203" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="163" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="203" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="203" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="220" font-size="10" fill="#64748B" text-anchor="middle">4</text>
 <line x1="34" y1="203" x2="34" y2="251" stroke="#E2E8F0" stroke-width="1"/>
@@ -125,7 +125,7 @@
 <line x1="980" y1="203" x2="980" y2="251" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="203" x2="1076" y2="251" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="203" x2="1206" y2="251" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="251" x2="1298" y2="251" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="251" x2="1378" y2="251" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="203" x2="154" y2="251" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="218" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-001</text>
 <text x="162" y="218" font-size="11.5" fill="#0F172A">M3</text>
@@ -138,8 +138,8 @@
 <text x="804" y="220.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="209" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="221" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
-<text x="1214" y="218" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="251" width="1298" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="218" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="251" width="1378" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="251" width="34" height="36" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="268" font-size="10" fill="#64748B" text-anchor="middle">5</text>
 <line x1="34" y1="251" x2="34" y2="287" stroke="#E2E8F0" stroke-width="1"/>
@@ -151,7 +151,7 @@
 <line x1="980" y1="251" x2="980" y2="287" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="251" x2="1076" y2="287" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="251" x2="1206" y2="287" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="287" x2="1298" y2="287" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="287" x2="1378" y2="287" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="251" x2="154" y2="287" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="266" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-001</text>
 <text x="162" y="266" font-size="11.5" fill="#0F172A">M4</text>
@@ -163,8 +163,8 @@
 <text x="804" y="268.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="257" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="269" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="266" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="287" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="266" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="287" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="287" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="304" font-size="10" fill="#64748B" text-anchor="middle">6</text>
 <line x1="34" y1="287" x2="34" y2="335" stroke="#E2E8F0" stroke-width="1"/>
@@ -176,7 +176,7 @@
 <line x1="980" y1="287" x2="980" y2="335" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="287" x2="1076" y2="335" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="287" x2="1206" y2="335" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="335" x2="1298" y2="335" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="335" x2="1378" y2="335" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="287" x2="154" y2="335" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="302" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-002</text>
 <text x="162" y="302" font-size="11.5" fill="#0F172A">M1</text>
@@ -193,8 +193,8 @@
 <text x="1089" y="305" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
 <rect x="1158" y="293" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1163" y="305" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="302" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="335" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="302" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="335" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="335" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="352" font-size="10" fill="#64748B" text-anchor="middle">7</text>
 <line x1="34" y1="335" x2="34" y2="383" stroke="#E2E8F0" stroke-width="1"/>
@@ -206,7 +206,7 @@
 <line x1="980" y1="335" x2="980" y2="383" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="335" x2="1076" y2="383" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="335" x2="1206" y2="383" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="383" x2="1298" y2="383" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="383" x2="1378" y2="383" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="335" x2="154" y2="383" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="350" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-002</text>
 <text x="162" y="350" font-size="11.5" fill="#0F172A">M2</text>
@@ -224,8 +224,8 @@
 <text x="993" y="353" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SSF-005</text>
 <rect x="1084" y="341" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="353" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="350" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="383" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="350" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="383" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="383" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="400" font-size="10" fill="#64748B" text-anchor="middle">8</text>
 <line x1="34" y1="383" x2="34" y2="431" stroke="#E2E8F0" stroke-width="1"/>
@@ -237,7 +237,7 @@
 <line x1="980" y1="383" x2="980" y2="431" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="383" x2="1076" y2="431" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="383" x2="1206" y2="431" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="431" x2="1298" y2="431" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="431" x2="1378" y2="431" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="383" x2="154" y2="431" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="398" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-002</text>
 <text x="162" y="398" font-size="11.5" fill="#0F172A">M3</text>
@@ -252,8 +252,8 @@
 <text x="897" y="401" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-005</text>
 <rect x="1084" y="389" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="401" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="398" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="431" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="398" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="431" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="431" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="448" font-size="10" fill="#64748B" text-anchor="middle">9</text>
 <line x1="34" y1="431" x2="34" y2="479" stroke="#E2E8F0" stroke-width="1"/>
@@ -265,7 +265,7 @@
 <line x1="980" y1="431" x2="980" y2="479" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="431" x2="1076" y2="479" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="431" x2="1206" y2="479" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="479" x2="1298" y2="479" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="479" x2="1378" y2="479" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="431" x2="154" y2="479" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="446" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-003</text>
 <text x="162" y="446" font-size="11.5" fill="#0F172A">M1</text>
@@ -281,8 +281,9 @@
 <text x="897" y="449" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-022</text>
 <rect x="1084" y="437" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="449" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="446" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="479" width="1298" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="446" font-size="11.5" fill="#0F172A">1 planned · 0 passed</text>
+<text x="1214" y="461" font-size="11.5" fill="#0F172A">(VER-004)</text>
+<rect x="0" y="479" width="1378" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="479" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="496" font-size="10" fill="#64748B" text-anchor="middle">10</text>
 <line x1="34" y1="479" x2="34" y2="534" stroke="#E2E8F0" stroke-width="1"/>
@@ -294,7 +295,7 @@
 <line x1="980" y1="479" x2="980" y2="534" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="479" x2="1076" y2="534" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="479" x2="1206" y2="534" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="534" x2="1298" y2="534" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="534" x2="1378" y2="534" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="479" x2="154" y2="534" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="494" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-003</text>
 <text x="162" y="494" font-size="11.5" fill="#0F172A">M2</text>
@@ -310,8 +311,8 @@
 <text x="1089" y="497" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
 <rect x="1084" y="504" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="516" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
-<text x="1214" y="494" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="534" width="1298" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="494" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="534" width="1378" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="534" width="34" height="36" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="551" font-size="10" fill="#64748B" text-anchor="middle">11</text>
 <line x1="34" y1="534" x2="34" y2="570" stroke="#E2E8F0" stroke-width="1"/>
@@ -323,7 +324,7 @@
 <line x1="980" y1="534" x2="980" y2="570" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="534" x2="1076" y2="570" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="534" x2="1206" y2="570" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="570" x2="1298" y2="570" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="570" x2="1378" y2="570" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="534" x2="154" y2="570" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="549" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-003</text>
 <text x="162" y="549" font-size="11.5" fill="#0F172A">M3</text>
@@ -335,8 +336,8 @@
 <text x="804" y="551.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="540" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="552" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="549" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="570" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="549" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="570" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="570" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="587" font-size="10" fill="#64748B" text-anchor="middle">12</text>
 <line x1="34" y1="570" x2="34" y2="618" stroke="#E2E8F0" stroke-width="1"/>
@@ -348,7 +349,7 @@
 <line x1="980" y1="570" x2="980" y2="618" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="570" x2="1076" y2="618" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="570" x2="1206" y2="618" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="618" x2="1298" y2="618" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="618" x2="1378" y2="618" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="570" x2="154" y2="618" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="585" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-004</text>
 <text x="162" y="585" font-size="11.5" fill="#0F172A">M1</text>
@@ -364,8 +365,8 @@
 <text x="897" y="588" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-006</text>
 <rect x="1084" y="576" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="588" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="585" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="618" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="585" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="618" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="618" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="635" font-size="10" fill="#64748B" text-anchor="middle">13</text>
 <line x1="34" y1="618" x2="34" y2="666" stroke="#E2E8F0" stroke-width="1"/>
@@ -377,7 +378,7 @@
 <line x1="980" y1="618" x2="980" y2="666" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="618" x2="1076" y2="666" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="618" x2="1206" y2="666" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="666" x2="1298" y2="666" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="666" x2="1378" y2="666" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="618" x2="154" y2="666" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="633" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-004</text>
 <text x="162" y="633" font-size="11.5" fill="#0F172A">M2</text>
@@ -391,8 +392,8 @@
 <text x="804" y="635.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="624" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="636" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="633" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="666" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="633" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="666" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="666" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="683" font-size="10" fill="#64748B" text-anchor="middle">14</text>
 <line x1="34" y1="666" x2="34" y2="714" stroke="#E2E8F0" stroke-width="1"/>
@@ -404,7 +405,7 @@
 <line x1="980" y1="666" x2="980" y2="714" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="666" x2="1076" y2="714" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="666" x2="1206" y2="714" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="714" x2="1298" y2="714" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="714" x2="1378" y2="714" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="666" x2="154" y2="714" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="681" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-004</text>
 <text x="162" y="681" font-size="11.5" fill="#0F172A">M3</text>
@@ -422,8 +423,9 @@
 <text x="1089" y="684" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
 <rect x="1158" y="672" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1163" y="684" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="681" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="714" width="1298" height="44" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="681" font-size="11.5" fill="#0F172A">2 planned · 0 passed</text>
+<text x="1214" y="696" font-size="11.5" fill="#0F172A">(VER-005, VER-006)</text>
+<rect x="0" y="714" width="1378" height="44" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="714" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="731" font-size="10" fill="#64748B" text-anchor="middle">15</text>
 <line x1="34" y1="714" x2="34" y2="758" stroke="#E2E8F0" stroke-width="1"/>
@@ -435,7 +437,7 @@
 <line x1="980" y1="714" x2="980" y2="758" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="714" x2="1076" y2="758" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="714" x2="1206" y2="758" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="758" x2="1298" y2="758" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="758" x2="1378" y2="758" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="714" x2="154" y2="758" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="729" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-DCK-004</text>
 <text x="162" y="729" font-size="11.5" fill="#0F172A">M4</text>
@@ -448,8 +450,8 @@
 <text x="804" y="731.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="720" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="732" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="729" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="758" width="1298" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="729" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="758" width="1378" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="758" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="775" font-size="10" fill="#64748B" text-anchor="middle">16</text>
 <line x1="34" y1="758" x2="34" y2="813" stroke="#E2E8F0" stroke-width="1"/>
@@ -461,7 +463,7 @@
 <line x1="980" y1="758" x2="980" y2="813" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="758" x2="1076" y2="813" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="758" x2="1206" y2="813" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="813" x2="1298" y2="813" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="813" x2="1378" y2="813" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="758" x2="154" y2="813" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="773" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-INT-001</text>
 <text x="162" y="773" font-size="11.5" fill="#0F172A">M1</text>
@@ -477,8 +479,8 @@
 <text x="1089" y="776" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
 <rect x="1084" y="783" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="795" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
-<text x="1214" y="773" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="813" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="773" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="813" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="813" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="830" font-size="10" fill="#64748B" text-anchor="middle">17</text>
 <line x1="34" y1="813" x2="34" y2="861" stroke="#E2E8F0" stroke-width="1"/>
@@ -490,7 +492,7 @@
 <line x1="980" y1="813" x2="980" y2="861" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="813" x2="1076" y2="861" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="813" x2="1206" y2="861" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="861" x2="1298" y2="861" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="861" x2="1378" y2="861" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="813" x2="154" y2="861" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="828" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-INT-001</text>
 <text x="162" y="828" font-size="11.5" fill="#0F172A">M2</text>
@@ -509,8 +511,8 @@
 <text x="1089" y="831" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="819" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="831" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="828" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="861" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="828" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="861" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="861" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="878" font-size="10" fill="#64748B" text-anchor="middle">18</text>
 <line x1="34" y1="861" x2="34" y2="909" stroke="#E2E8F0" stroke-width="1"/>
@@ -522,7 +524,7 @@
 <line x1="980" y1="861" x2="980" y2="909" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="861" x2="1076" y2="909" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="861" x2="1206" y2="909" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="909" x2="1298" y2="909" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="909" x2="1378" y2="909" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="861" x2="154" y2="909" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="876" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-INT-001</text>
 <text x="162" y="876" font-size="11.5" fill="#0F172A">M3</text>
@@ -538,8 +540,8 @@
 <text x="897" y="879" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-006</text>
 <rect x="1084" y="867" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="879" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="876" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="909" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="876" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="909" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="909" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="926" font-size="10" fill="#64748B" text-anchor="middle">19</text>
 <line x1="34" y1="909" x2="34" y2="957" stroke="#E2E8F0" stroke-width="1"/>
@@ -551,7 +553,7 @@
 <line x1="980" y1="909" x2="980" y2="957" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="909" x2="1076" y2="957" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="909" x2="1206" y2="957" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="957" x2="1298" y2="957" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="957" x2="1378" y2="957" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="909" x2="154" y2="957" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="924" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-INT-001</text>
 <text x="162" y="924" font-size="11.5" fill="#0F172A">M4</text>
@@ -566,8 +568,8 @@
 <text x="897" y="927" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-006</text>
 <rect x="1084" y="915" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="927" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="924" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="957" width="1298" height="74" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="924" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="957" width="1378" height="74" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="957" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="974" font-size="10" fill="#64748B" text-anchor="middle">20</text>
 <line x1="34" y1="957" x2="34" y2="1031" stroke="#E2E8F0" stroke-width="1"/>
@@ -579,7 +581,7 @@
 <line x1="980" y1="957" x2="980" y2="1031" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="957" x2="1076" y2="1031" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="957" x2="1206" y2="1031" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1031" x2="1298" y2="1031" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1031" x2="1378" y2="1031" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="957" x2="154" y2="1031" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="972" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-INT-001</text>
 <text x="162" y="972" font-size="11.5" fill="#0F172A">M5</text>
@@ -599,8 +601,8 @@
 <text x="993" y="975" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SSF-008</text>
 <rect x="1084" y="963" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="975" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="972" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1031" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="972" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1031" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="1031" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1048" font-size="10" fill="#64748B" text-anchor="middle">21</text>
 <line x1="34" y1="1031" x2="34" y2="1079" stroke="#E2E8F0" stroke-width="1"/>
@@ -612,7 +614,7 @@
 <line x1="980" y1="1031" x2="980" y2="1079" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1031" x2="1076" y2="1079" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1031" x2="1206" y2="1079" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1079" x2="1298" y2="1079" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1079" x2="1378" y2="1079" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1031" x2="154" y2="1079" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1046" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-INT-001</text>
 <text x="162" y="1046" font-size="11.5" fill="#0F172A">M6</text>
@@ -626,8 +628,8 @@
 <text x="804" y="1048.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="1037" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="1049" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="1046" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1079" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="1046" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1079" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="1079" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1096" font-size="10" fill="#64748B" text-anchor="middle">22</text>
 <line x1="34" y1="1079" x2="34" y2="1127" stroke="#E2E8F0" stroke-width="1"/>
@@ -639,7 +641,7 @@
 <line x1="980" y1="1079" x2="980" y2="1127" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1079" x2="1076" y2="1127" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1079" x2="1206" y2="1127" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1127" x2="1298" y2="1127" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1127" x2="1378" y2="1127" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1079" x2="154" y2="1127" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1094" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-INT-001</text>
 <text x="162" y="1094" font-size="11.5" fill="#0F172A">M7</text>
@@ -657,8 +659,8 @@
 <text x="1089" y="1097" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="1085" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="1097" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="1094" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1127" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="1094" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1127" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="1127" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1144" font-size="10" fill="#64748B" text-anchor="middle">23</text>
 <line x1="34" y1="1127" x2="34" y2="1175" stroke="#E2E8F0" stroke-width="1"/>
@@ -670,7 +672,7 @@
 <line x1="980" y1="1127" x2="980" y2="1175" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1127" x2="1076" y2="1175" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1127" x2="1206" y2="1175" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1175" x2="1298" y2="1175" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1175" x2="1378" y2="1175" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1127" x2="154" y2="1175" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1142" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-INT-002</text>
 <text x="162" y="1142" font-size="11.5" fill="#0F172A">M1</text>
@@ -688,8 +690,9 @@
 <text x="1089" y="1145" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="1133" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="1145" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="1142" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1175" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="1142" font-size="11.5" fill="#0F172A">2 planned · 0 passed</text>
+<text x="1214" y="1157" font-size="11.5" fill="#0F172A">(VER-002, VER-003)</text>
+<rect x="0" y="1175" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="1175" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1192" font-size="10" fill="#64748B" text-anchor="middle">24</text>
 <line x1="34" y1="1175" x2="34" y2="1223" stroke="#E2E8F0" stroke-width="1"/>
@@ -701,7 +704,7 @@
 <line x1="980" y1="1175" x2="980" y2="1223" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1175" x2="1076" y2="1223" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1175" x2="1206" y2="1223" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1223" x2="1298" y2="1223" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1223" x2="1378" y2="1223" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1175" x2="154" y2="1223" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1190" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-INT-002</text>
 <text x="162" y="1190" font-size="11.5" fill="#0F172A">M2</text>
@@ -717,8 +720,9 @@
 <text x="897" y="1193" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-021</text>
 <rect x="1084" y="1181" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="1193" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="1190" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1223" width="1298" height="44" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="1190" font-size="11.5" fill="#0F172A">1 planned · 0 passed</text>
+<text x="1214" y="1205" font-size="11.5" fill="#0F172A">(VER-001)</text>
+<rect x="0" y="1223" width="1378" height="44" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="1223" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1240" font-size="10" fill="#64748B" text-anchor="middle">25</text>
 <line x1="34" y1="1223" x2="34" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
@@ -730,7 +734,7 @@
 <line x1="980" y1="1223" x2="980" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1223" x2="1076" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1223" x2="1206" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1267" x2="1298" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1267" x2="1378" y2="1267" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1223" x2="154" y2="1267" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1238" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-INT-002</text>
 <text x="162" y="1238" font-size="11.5" fill="#0F172A">M3</text>
@@ -743,8 +747,8 @@
 <text x="804" y="1240.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="1229" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="1241" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="1238" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1267" width="1298" height="74" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="1238" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1267" width="1378" height="74" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="1267" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1284" font-size="10" fill="#64748B" text-anchor="middle">26</text>
 <line x1="34" y1="1267" x2="34" y2="1341" stroke="#E2E8F0" stroke-width="1"/>
@@ -756,7 +760,7 @@
 <line x1="980" y1="1267" x2="980" y2="1341" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1267" x2="1076" y2="1341" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1267" x2="1206" y2="1341" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1341" x2="1298" y2="1341" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1341" x2="1378" y2="1341" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1267" x2="154" y2="1341" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1282" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-MAN-001</text>
 <text x="162" y="1282" font-size="11.5" fill="#0F172A">M1</text>
@@ -776,8 +780,8 @@
 <text x="1089" y="1285" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="1273" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="1285" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="1282" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1341" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="1282" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1341" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="1341" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1358" font-size="10" fill="#64748B" text-anchor="middle">27</text>
 <line x1="34" y1="1341" x2="34" y2="1389" stroke="#E2E8F0" stroke-width="1"/>
@@ -789,7 +793,7 @@
 <line x1="980" y1="1341" x2="980" y2="1389" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1341" x2="1076" y2="1389" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1341" x2="1206" y2="1389" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1389" x2="1298" y2="1389" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1389" x2="1378" y2="1389" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1341" x2="154" y2="1389" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1356" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-MAN-001</text>
 <text x="162" y="1356" font-size="11.5" fill="#0F172A">M2</text>
@@ -805,8 +809,8 @@
 <text x="897" y="1359" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-017</text>
 <rect x="1084" y="1347" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="1359" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="1356" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1389" width="1298" height="44" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="1356" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1389" width="1378" height="44" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="1389" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1406" font-size="10" fill="#64748B" text-anchor="middle">28</text>
 <line x1="34" y1="1389" x2="34" y2="1433" stroke="#E2E8F0" stroke-width="1"/>
@@ -818,7 +822,7 @@
 <line x1="980" y1="1389" x2="980" y2="1433" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1389" x2="1076" y2="1433" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1389" x2="1206" y2="1433" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1433" x2="1298" y2="1433" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1433" x2="1378" y2="1433" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1389" x2="154" y2="1433" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1404" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-MAN-001</text>
 <text x="162" y="1404" font-size="11.5" fill="#0F172A">M3</text>
@@ -831,8 +835,8 @@
 <text x="804" y="1406.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="1395" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="1407" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="1404" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1433" width="1298" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="1404" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1433" width="1378" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="1433" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1450" font-size="10" fill="#64748B" text-anchor="middle">29</text>
 <line x1="34" y1="1433" x2="34" y2="1492" stroke="#E2E8F0" stroke-width="1"/>
@@ -844,7 +848,7 @@
 <line x1="980" y1="1433" x2="980" y2="1492" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1433" x2="1076" y2="1492" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1433" x2="1206" y2="1492" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1492" x2="1298" y2="1492" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1492" x2="1378" y2="1492" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1433" x2="154" y2="1492" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1448" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-MAN-002</text>
 <text x="162" y="1448" font-size="11.5" fill="#0F172A">M1</text>
@@ -865,8 +869,8 @@
 <text x="1089" y="1451" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
 <rect x="1146" y="1439" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1151" y="1451" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="1448" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1492" width="1298" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="1448" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1492" width="1378" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="1492" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1509" font-size="10" fill="#64748B" text-anchor="middle">30</text>
 <line x1="34" y1="1492" x2="34" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
@@ -878,7 +882,7 @@
 <line x1="980" y1="1492" x2="980" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1492" x2="1076" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1492" x2="1206" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1551" x2="1298" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1551" x2="1378" y2="1551" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1492" x2="154" y2="1551" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1507" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-MAN-002</text>
 <text x="162" y="1507" font-size="11.5" fill="#0F172A">M2</text>
@@ -895,8 +899,8 @@
 <text x="897" y="1510" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-019</text>
 <rect x="1084" y="1498" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="1510" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="1507" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1551" width="1298" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="1507" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1551" width="1378" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="1551" width="34" height="36" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1568" font-size="10" fill="#64748B" text-anchor="middle">31</text>
 <line x1="34" y1="1551" x2="34" y2="1587" stroke="#E2E8F0" stroke-width="1"/>
@@ -908,7 +912,7 @@
 <line x1="980" y1="1551" x2="980" y2="1587" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1551" x2="1076" y2="1587" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1551" x2="1206" y2="1587" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1587" x2="1298" y2="1587" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1587" x2="1378" y2="1587" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1551" x2="154" y2="1587" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1566" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-MAN-002</text>
 <text x="162" y="1566" font-size="11.5" fill="#0F172A">M3</text>
@@ -920,8 +924,8 @@
 <text x="804" y="1568.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="1557" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="1569" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="1566" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1587" width="1298" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="1566" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1587" width="1378" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="1587" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1604" font-size="10" fill="#64748B" text-anchor="middle">32</text>
 <line x1="34" y1="1587" x2="34" y2="1642" stroke="#E2E8F0" stroke-width="1"/>
@@ -933,7 +937,7 @@
 <line x1="980" y1="1587" x2="980" y2="1642" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1587" x2="1076" y2="1642" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1587" x2="1206" y2="1642" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1642" x2="1298" y2="1642" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1642" x2="1378" y2="1642" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1587" x2="154" y2="1642" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1602" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-001</text>
 <text x="162" y="1602" font-size="11.5" fill="#0F172A">M1</text>
@@ -949,8 +953,8 @@
 <text x="1089" y="1605" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
 <rect x="1084" y="1612" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="1624" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="1602" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1642" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="1602" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1642" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="1642" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1659" font-size="10" fill="#64748B" text-anchor="middle">33</text>
 <line x1="34" y1="1642" x2="34" y2="1690" stroke="#E2E8F0" stroke-width="1"/>
@@ -962,7 +966,7 @@
 <line x1="980" y1="1642" x2="980" y2="1690" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1642" x2="1076" y2="1690" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1642" x2="1206" y2="1690" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1690" x2="1298" y2="1690" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1690" x2="1378" y2="1690" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1642" x2="154" y2="1690" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1657" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-001</text>
 <text x="162" y="1657" font-size="11.5" fill="#0F172A">M2</text>
@@ -980,8 +984,8 @@
 <text x="993" y="1660" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SSF-001</text>
 <rect x="1084" y="1648" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="1660" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="1657" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1690" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="1657" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1690" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="1690" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1707" font-size="10" fill="#64748B" text-anchor="middle">34</text>
 <line x1="34" y1="1690" x2="34" y2="1738" stroke="#E2E8F0" stroke-width="1"/>
@@ -993,7 +997,7 @@
 <line x1="980" y1="1690" x2="980" y2="1738" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1690" x2="1076" y2="1738" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1690" x2="1206" y2="1738" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1738" x2="1298" y2="1738" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1738" x2="1378" y2="1738" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1690" x2="154" y2="1738" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1705" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-001</text>
 <text x="162" y="1705" font-size="11.5" fill="#0F172A">M3</text>
@@ -1011,8 +1015,8 @@
 <text x="1089" y="1708" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="1696" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="1708" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="1705" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1738" width="1298" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="1705" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1738" width="1378" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="1738" width="34" height="36" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1755" font-size="10" fill="#64748B" text-anchor="middle">35</text>
 <line x1="34" y1="1738" x2="34" y2="1774" stroke="#E2E8F0" stroke-width="1"/>
@@ -1024,7 +1028,7 @@
 <line x1="980" y1="1738" x2="980" y2="1774" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1738" x2="1076" y2="1774" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1738" x2="1206" y2="1774" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1774" x2="1298" y2="1774" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1774" x2="1378" y2="1774" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1738" x2="154" y2="1774" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1753" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-001</text>
 <text x="162" y="1753" font-size="11.5" fill="#0F172A">M4</text>
@@ -1036,8 +1040,8 @@
 <text x="804" y="1755.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="1744" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="1756" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="1753" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1774" width="1298" height="74" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="1753" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1774" width="1378" height="74" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="1774" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1791" font-size="10" fill="#64748B" text-anchor="middle">36</text>
 <line x1="34" y1="1774" x2="34" y2="1848" stroke="#E2E8F0" stroke-width="1"/>
@@ -1049,7 +1053,7 @@
 <line x1="980" y1="1774" x2="980" y2="1848" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1774" x2="1076" y2="1848" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1774" x2="1206" y2="1848" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1848" x2="1298" y2="1848" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1848" x2="1378" y2="1848" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1774" x2="154" y2="1848" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1789" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-001</text>
 <text x="162" y="1789" font-size="11.5" fill="#0F172A">M5</text>
@@ -1069,8 +1073,8 @@
 <text x="1089" y="1792" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
 <rect x="1084" y="1799" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="1811" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="1789" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1848" width="1298" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="1789" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1848" width="1378" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="1848" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1865" font-size="10" fill="#64748B" text-anchor="middle">37</text>
 <line x1="34" y1="1848" x2="34" y2="1907" stroke="#E2E8F0" stroke-width="1"/>
@@ -1082,7 +1086,7 @@
 <line x1="980" y1="1848" x2="980" y2="1907" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1848" x2="1076" y2="1907" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1848" x2="1206" y2="1907" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1907" x2="1298" y2="1907" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1907" x2="1378" y2="1907" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1848" x2="154" y2="1907" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1863" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-002</text>
 <text x="162" y="1863" font-size="11.5" fill="#0F172A">M1</text>
@@ -1099,8 +1103,8 @@
 <text x="1089" y="1866" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
 <rect x="1146" y="1854" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1151" y="1866" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="1863" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1907" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="1863" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1907" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="1907" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1924" font-size="10" fill="#64748B" text-anchor="middle">38</text>
 <line x1="34" y1="1907" x2="34" y2="1955" stroke="#E2E8F0" stroke-width="1"/>
@@ -1112,7 +1116,7 @@
 <line x1="980" y1="1907" x2="980" y2="1955" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1907" x2="1076" y2="1955" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1907" x2="1206" y2="1955" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="1955" x2="1298" y2="1955" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="1955" x2="1378" y2="1955" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1907" x2="154" y2="1955" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1922" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-002</text>
 <text x="162" y="1922" font-size="11.5" fill="#0F172A">M2</text>
@@ -1130,8 +1134,8 @@
 <text x="1089" y="1925" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="1913" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="1925" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
-<text x="1214" y="1922" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="1955" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="1922" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="1955" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="1955" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="1972" font-size="10" fill="#64748B" text-anchor="middle">39</text>
 <line x1="34" y1="1955" x2="34" y2="2003" stroke="#E2E8F0" stroke-width="1"/>
@@ -1143,7 +1147,7 @@
 <line x1="980" y1="1955" x2="980" y2="2003" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="1955" x2="1076" y2="2003" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="1955" x2="1206" y2="2003" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2003" x2="1298" y2="2003" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2003" x2="1378" y2="2003" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="1955" x2="154" y2="2003" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="1970" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-002</text>
 <text x="162" y="1970" font-size="11.5" fill="#0F172A">M3</text>
@@ -1161,8 +1165,8 @@
 <text x="1089" y="1973" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="1961" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="1973" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="1970" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2003" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="1970" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2003" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="2003" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2020" font-size="10" fill="#64748B" text-anchor="middle">40</text>
 <line x1="34" y1="2003" x2="34" y2="2051" stroke="#E2E8F0" stroke-width="1"/>
@@ -1174,7 +1178,7 @@
 <line x1="980" y1="2003" x2="980" y2="2051" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2003" x2="1076" y2="2051" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2003" x2="1206" y2="2051" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2051" x2="1298" y2="2051" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2051" x2="1378" y2="2051" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2003" x2="154" y2="2051" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2018" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-002</text>
 <text x="162" y="2018" font-size="11.5" fill="#0F172A">M4</text>
@@ -1190,8 +1194,8 @@
 <text x="1089" y="2021" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
 <rect x="1146" y="2009" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1151" y="2021" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="2018" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2051" width="1298" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="2018" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2051" width="1378" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="2051" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2068" font-size="10" fill="#64748B" text-anchor="middle">41</text>
 <line x1="34" y1="2051" x2="34" y2="2106" stroke="#E2E8F0" stroke-width="1"/>
@@ -1203,7 +1207,7 @@
 <line x1="980" y1="2051" x2="980" y2="2106" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2051" x2="1076" y2="2106" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2051" x2="1206" y2="2106" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2106" x2="1298" y2="2106" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2106" x2="1378" y2="2106" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2051" x2="154" y2="2106" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2066" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-003</text>
 <text x="162" y="2066" font-size="11.5" fill="#0F172A">M1</text>
@@ -1221,8 +1225,8 @@
 <text x="1089" y="2069" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
 <rect x="1084" y="2076" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2088" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="2066" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2106" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="2066" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2106" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="2106" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2123" font-size="10" fill="#64748B" text-anchor="middle">42</text>
 <line x1="34" y1="2106" x2="34" y2="2154" stroke="#E2E8F0" stroke-width="1"/>
@@ -1234,7 +1238,7 @@
 <line x1="980" y1="2106" x2="980" y2="2154" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2106" x2="1076" y2="2154" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2106" x2="1206" y2="2154" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2154" x2="1298" y2="2154" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2154" x2="1378" y2="2154" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2106" x2="154" y2="2154" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2121" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-003</text>
 <text x="162" y="2121" font-size="11.5" fill="#0F172A">M2</text>
@@ -1250,8 +1254,8 @@
 <text x="897" y="2124" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-020</text>
 <rect x="1084" y="2112" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2124" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="2121" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2154" width="1298" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="2121" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2154" width="1378" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="2154" width="34" height="36" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2171" font-size="10" fill="#64748B" text-anchor="middle">43</text>
 <line x1="34" y1="2154" x2="34" y2="2190" stroke="#E2E8F0" stroke-width="1"/>
@@ -1263,7 +1267,7 @@
 <line x1="980" y1="2154" x2="980" y2="2190" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2154" x2="1076" y2="2190" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2154" x2="1206" y2="2190" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2190" x2="1298" y2="2190" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2190" x2="1378" y2="2190" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2154" x2="154" y2="2190" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2169" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-003</text>
 <text x="162" y="2169" font-size="11.5" fill="#0F172A">M3</text>
@@ -1275,8 +1279,8 @@
 <text x="804" y="2171.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="2160" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2172" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="2169" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2190" width="1298" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="2169" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2190" width="1378" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="2190" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2207" font-size="10" fill="#64748B" text-anchor="middle">44</text>
 <line x1="34" y1="2190" x2="34" y2="2245" stroke="#E2E8F0" stroke-width="1"/>
@@ -1288,7 +1292,7 @@
 <line x1="980" y1="2190" x2="980" y2="2245" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2190" x2="1076" y2="2245" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2190" x2="1206" y2="2245" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2245" x2="1298" y2="2245" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2245" x2="1378" y2="2245" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2190" x2="154" y2="2245" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2205" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-004</text>
 <text x="162" y="2205" font-size="11.5" fill="#0F172A">M1</text>
@@ -1306,8 +1310,8 @@
 <text x="1089" y="2208" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
 <rect x="1084" y="2215" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2227" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="2205" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2245" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="2205" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2245" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="2245" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2262" font-size="10" fill="#64748B" text-anchor="middle">45</text>
 <line x1="34" y1="2245" x2="34" y2="2293" stroke="#E2E8F0" stroke-width="1"/>
@@ -1319,7 +1323,7 @@
 <line x1="980" y1="2245" x2="980" y2="2293" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2245" x2="1076" y2="2293" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2245" x2="1206" y2="2293" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2293" x2="1298" y2="2293" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2293" x2="1378" y2="2293" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2245" x2="154" y2="2293" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2260" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-004</text>
 <text x="162" y="2260" font-size="11.5" fill="#0F172A">M2</text>
@@ -1335,8 +1339,8 @@
 <text x="897" y="2263" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-018</text>
 <rect x="1084" y="2251" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2263" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="2260" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2293" width="1298" height="44" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="2260" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2293" width="1378" height="44" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="2293" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2310" font-size="10" fill="#64748B" text-anchor="middle">46</text>
 <line x1="34" y1="2293" x2="34" y2="2337" stroke="#E2E8F0" stroke-width="1"/>
@@ -1348,7 +1352,7 @@
 <line x1="980" y1="2293" x2="980" y2="2337" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2293" x2="1076" y2="2337" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2293" x2="1206" y2="2337" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2337" x2="1298" y2="2337" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2337" x2="1378" y2="2337" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2293" x2="154" y2="2337" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2308" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PIL-004</text>
 <text x="162" y="2308" font-size="11.5" fill="#0F172A">M3</text>
@@ -1361,8 +1365,8 @@
 <text x="804" y="2310.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="2299" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2311" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="2308" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2337" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="2308" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2337" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="2337" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2354" font-size="10" fill="#64748B" text-anchor="middle">47</text>
 <line x1="34" y1="2337" x2="34" y2="2385" stroke="#E2E8F0" stroke-width="1"/>
@@ -1374,7 +1378,7 @@
 <line x1="980" y1="2337" x2="980" y2="2385" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2337" x2="1076" y2="2385" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2337" x2="1206" y2="2385" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2385" x2="1298" y2="2385" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2385" x2="1378" y2="2385" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2337" x2="154" y2="2385" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2352" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-001</text>
 <text x="162" y="2352" font-size="11.5" fill="#0F172A">M1</text>
@@ -1388,8 +1392,8 @@
 <text x="804" y="2354.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="2343" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2355" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="2352" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2385" width="1298" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="2352" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2385" width="1378" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="2385" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2402" font-size="10" fill="#64748B" text-anchor="middle">48</text>
 <line x1="34" y1="2385" x2="34" y2="2440" stroke="#E2E8F0" stroke-width="1"/>
@@ -1401,7 +1405,7 @@
 <line x1="980" y1="2385" x2="980" y2="2440" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2385" x2="1076" y2="2440" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2385" x2="1206" y2="2440" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2440" x2="1298" y2="2440" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2440" x2="1378" y2="2440" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2385" x2="154" y2="2440" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2400" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-001</text>
 <text x="162" y="2400" font-size="11.5" fill="#0F172A">M2</text>
@@ -1419,8 +1423,8 @@
 <text x="1089" y="2403" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
 <rect x="1084" y="2410" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2422" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="2400" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2440" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="2400" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2440" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="2440" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2457" font-size="10" fill="#64748B" text-anchor="middle">49</text>
 <line x1="34" y1="2440" x2="34" y2="2488" stroke="#E2E8F0" stroke-width="1"/>
@@ -1432,7 +1436,7 @@
 <line x1="980" y1="2440" x2="980" y2="2488" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2440" x2="1076" y2="2488" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2440" x2="1206" y2="2488" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2488" x2="1298" y2="2488" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2488" x2="1378" y2="2488" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2440" x2="154" y2="2488" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2455" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-001</text>
 <text x="162" y="2455" font-size="11.5" fill="#0F172A">M3</text>
@@ -1447,8 +1451,8 @@
 <text x="897" y="2458" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-007</text>
 <rect x="1084" y="2446" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2458" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
-<text x="1214" y="2455" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2488" width="1298" height="36" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="2455" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2488" width="1378" height="36" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="2488" width="34" height="36" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2505" font-size="10" fill="#64748B" text-anchor="middle">50</text>
 <line x1="34" y1="2488" x2="34" y2="2524" stroke="#E2E8F0" stroke-width="1"/>
@@ -1460,7 +1464,7 @@
 <line x1="980" y1="2488" x2="980" y2="2524" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2488" x2="1076" y2="2524" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2488" x2="1206" y2="2524" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2524" x2="1298" y2="2524" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2524" x2="1378" y2="2524" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2488" x2="154" y2="2524" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2503" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-001</text>
 <text x="162" y="2503" font-size="11.5" fill="#0F172A">M4</text>
@@ -1472,8 +1476,8 @@
 <text x="804" y="2505.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="2494" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2506" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="2503" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2524" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="2503" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2524" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="2524" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2541" font-size="10" fill="#64748B" text-anchor="middle">51</text>
 <line x1="34" y1="2524" x2="34" y2="2572" stroke="#E2E8F0" stroke-width="1"/>
@@ -1485,7 +1489,7 @@
 <line x1="980" y1="2524" x2="980" y2="2572" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2524" x2="1076" y2="2572" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2524" x2="1206" y2="2572" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2572" x2="1298" y2="2572" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2572" x2="1378" y2="2572" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2524" x2="154" y2="2572" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2539" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-002</text>
 <text x="162" y="2539" font-size="11.5" fill="#0F172A">M1</text>
@@ -1499,8 +1503,8 @@
 <text x="804" y="2541.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="2530" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2542" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="2539" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2572" width="1298" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="2539" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2572" width="1378" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="2572" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2589" font-size="10" fill="#64748B" text-anchor="middle">52</text>
 <line x1="34" y1="2572" x2="34" y2="2627" stroke="#E2E8F0" stroke-width="1"/>
@@ -1512,7 +1516,7 @@
 <line x1="980" y1="2572" x2="980" y2="2627" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2572" x2="1076" y2="2627" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2572" x2="1206" y2="2627" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2627" x2="1298" y2="2627" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2627" x2="1378" y2="2627" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2572" x2="154" y2="2627" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2587" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-002</text>
 <text x="162" y="2587" font-size="11.5" fill="#0F172A">M2</text>
@@ -1528,8 +1532,8 @@
 <text x="1089" y="2590" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
 <rect x="1084" y="2597" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2609" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
-<text x="1214" y="2587" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2627" width="1298" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="2587" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2627" width="1378" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="2627" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2644" font-size="10" fill="#64748B" text-anchor="middle">53</text>
 <line x1="34" y1="2627" x2="34" y2="2686" stroke="#E2E8F0" stroke-width="1"/>
@@ -1541,7 +1545,7 @@
 <line x1="980" y1="2627" x2="980" y2="2686" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2627" x2="1076" y2="2686" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2627" x2="1206" y2="2686" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2686" x2="1298" y2="2686" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2686" x2="1378" y2="2686" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2627" x2="154" y2="2686" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2642" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-002</text>
 <text x="162" y="2642" font-size="11.5" fill="#0F172A">M3</text>
@@ -1558,8 +1562,8 @@
 <text x="897" y="2645" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-014</text>
 <rect x="1084" y="2633" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2645" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="2642" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2686" width="1298" height="44" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="2642" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2686" width="1378" height="44" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="2686" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2703" font-size="10" fill="#64748B" text-anchor="middle">54</text>
 <line x1="34" y1="2686" x2="34" y2="2730" stroke="#E2E8F0" stroke-width="1"/>
@@ -1571,7 +1575,7 @@
 <line x1="980" y1="2686" x2="980" y2="2730" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2686" x2="1076" y2="2730" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2686" x2="1206" y2="2730" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2730" x2="1298" y2="2730" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2730" x2="1378" y2="2730" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2686" x2="154" y2="2730" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2701" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-002</text>
 <text x="162" y="2701" font-size="11.5" fill="#0F172A">M4</text>
@@ -1584,8 +1588,8 @@
 <text x="804" y="2703.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="2692" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2704" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="2701" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2730" width="1298" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="2701" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2730" width="1378" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="2730" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2747" font-size="10" fill="#64748B" text-anchor="middle">55</text>
 <line x1="34" y1="2730" x2="34" y2="2785" stroke="#E2E8F0" stroke-width="1"/>
@@ -1597,7 +1601,7 @@
 <line x1="980" y1="2730" x2="980" y2="2785" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2730" x2="1076" y2="2785" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2730" x2="1206" y2="2785" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2785" x2="1298" y2="2785" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2785" x2="1378" y2="2785" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2730" x2="154" y2="2785" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2745" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-003</text>
 <text x="162" y="2745" font-size="11.5" fill="#0F172A">M1</text>
@@ -1613,8 +1617,8 @@
 <text x="1089" y="2748" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
 <rect x="1084" y="2755" width="70" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2767" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
-<text x="1214" y="2745" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2785" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="2745" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2785" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="2785" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2802" font-size="10" fill="#64748B" text-anchor="middle">56</text>
 <line x1="34" y1="2785" x2="34" y2="2833" stroke="#E2E8F0" stroke-width="1"/>
@@ -1626,7 +1630,7 @@
 <line x1="980" y1="2785" x2="980" y2="2833" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2785" x2="1076" y2="2833" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2785" x2="1206" y2="2833" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2833" x2="1298" y2="2833" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2833" x2="1378" y2="2833" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2785" x2="154" y2="2833" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2800" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-003</text>
 <text x="162" y="2800" font-size="11.5" fill="#0F172A">M2</text>
@@ -1642,8 +1646,8 @@
 <text x="897" y="2803" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-015</text>
 <rect x="1084" y="2791" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2803" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="2800" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2833" width="1298" height="44" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="2800" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2833" width="1378" height="44" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="2833" width="34" height="44" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2850" font-size="10" fill="#64748B" text-anchor="middle">57</text>
 <line x1="34" y1="2833" x2="34" y2="2877" stroke="#E2E8F0" stroke-width="1"/>
@@ -1655,7 +1659,7 @@
 <line x1="980" y1="2833" x2="980" y2="2877" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2833" x2="1076" y2="2877" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2833" x2="1206" y2="2877" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2877" x2="1298" y2="2877" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2877" x2="1378" y2="2877" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2833" x2="154" y2="2877" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2848" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-PWR-003</text>
 <text x="162" y="2848" font-size="11.5" fill="#0F172A">M3</text>
@@ -1668,8 +1672,8 @@
 <text x="804" y="2850.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="2839" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2851" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="2848" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2877" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="2848" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2877" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="2877" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2894" font-size="10" fill="#64748B" text-anchor="middle">58</text>
 <line x1="34" y1="2877" x2="34" y2="2925" stroke="#E2E8F0" stroke-width="1"/>
@@ -1681,7 +1685,7 @@
 <line x1="980" y1="2877" x2="980" y2="2925" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2877" x2="1076" y2="2925" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2877" x2="1206" y2="2925" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2925" x2="1298" y2="2925" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2925" x2="1378" y2="2925" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2877" x2="154" y2="2925" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2892" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-SAF-001</text>
 <text x="162" y="2892" font-size="11.5" fill="#0F172A">M1</text>
@@ -1696,8 +1700,8 @@
 <text x="1089" y="2895" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="2883" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="2895" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="2892" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2925" width="1298" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="2892" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2925" width="1378" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="2925" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2942" font-size="10" fill="#64748B" text-anchor="middle">59</text>
 <line x1="34" y1="2925" x2="34" y2="2980" stroke="#E2E8F0" stroke-width="1"/>
@@ -1709,7 +1713,7 @@
 <line x1="980" y1="2925" x2="980" y2="2980" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2925" x2="1076" y2="2980" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2925" x2="1206" y2="2980" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="2980" x2="1298" y2="2980" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="2980" x2="1378" y2="2980" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2925" x2="154" y2="2980" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2940" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-SAF-001</text>
 <text x="162" y="2940" font-size="11.5" fill="#0F172A">M2</text>
@@ -1731,8 +1735,8 @@
 <text x="1089" y="2943" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="2931" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="2943" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="2940" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="2980" width="1298" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="2940" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="2980" width="1378" height="55" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="2980" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="2997" font-size="10" fill="#64748B" text-anchor="middle">60</text>
 <line x1="34" y1="2980" x2="34" y2="3035" stroke="#E2E8F0" stroke-width="1"/>
@@ -1744,7 +1748,7 @@
 <line x1="980" y1="2980" x2="980" y2="3035" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="2980" x2="1076" y2="3035" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="2980" x2="1206" y2="3035" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3035" x2="1298" y2="3035" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3035" x2="1378" y2="3035" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="2980" x2="154" y2="3035" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="2995" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-SAF-001</text>
 <text x="162" y="2995" font-size="11.5" fill="#0F172A">M3</text>
@@ -1761,8 +1765,8 @@
 <text x="897" y="3017" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-010</text>
 <rect x="1084" y="2986" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="2998" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="2995" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="3035" width="1298" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="2995" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="3035" width="1378" height="55" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="3035" width="34" height="55" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="3052" font-size="10" fill="#64748B" text-anchor="middle">61</text>
 <line x1="34" y1="3035" x2="34" y2="3090" stroke="#E2E8F0" stroke-width="1"/>
@@ -1774,7 +1778,7 @@
 <line x1="980" y1="3035" x2="980" y2="3090" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="3035" x2="1076" y2="3090" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="3035" x2="1206" y2="3090" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3090" x2="1298" y2="3090" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3090" x2="1378" y2="3090" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="3035" x2="154" y2="3090" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="3050" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-001</text>
 <text x="162" y="3050" font-size="11.5" fill="#0F172A">M1</text>
@@ -1790,8 +1794,8 @@
 <text x="1089" y="3053" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">inspection</text>
 <rect x="1084" y="3060" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="3072" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="3050" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="3090" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="3050" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="3090" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="3090" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="3107" font-size="10" fill="#64748B" text-anchor="middle">62</text>
 <line x1="34" y1="3090" x2="34" y2="3138" stroke="#E2E8F0" stroke-width="1"/>
@@ -1803,7 +1807,7 @@
 <line x1="980" y1="3090" x2="980" y2="3138" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="3090" x2="1076" y2="3138" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="3090" x2="1206" y2="3138" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3138" x2="1298" y2="3138" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3138" x2="1378" y2="3138" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="3090" x2="154" y2="3138" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="3105" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-001</text>
 <text x="162" y="3105" font-size="11.5" fill="#0F172A">M2</text>
@@ -1823,8 +1827,8 @@
 <text x="1089" y="3108" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="3096" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="3108" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="3105" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="3138" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="3105" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="3138" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="3138" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="3155" font-size="10" fill="#64748B" text-anchor="middle">63</text>
 <line x1="34" y1="3138" x2="34" y2="3186" stroke="#E2E8F0" stroke-width="1"/>
@@ -1836,7 +1840,7 @@
 <line x1="980" y1="3138" x2="980" y2="3186" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="3138" x2="1076" y2="3186" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="3138" x2="1206" y2="3186" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3186" x2="1298" y2="3186" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3186" x2="1378" y2="3186" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="3138" x2="154" y2="3186" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="3153" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-001</text>
 <text x="162" y="3153" font-size="11.5" fill="#0F172A">M3</text>
@@ -1851,8 +1855,8 @@
 <text x="897" y="3156" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-004</text>
 <rect x="1084" y="3144" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="3156" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="3153" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="3186" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="3153" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="3186" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="3186" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="3203" font-size="10" fill="#64748B" text-anchor="middle">64</text>
 <line x1="34" y1="3186" x2="34" y2="3234" stroke="#E2E8F0" stroke-width="1"/>
@@ -1864,7 +1868,7 @@
 <line x1="980" y1="3186" x2="980" y2="3234" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="3186" x2="1076" y2="3234" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="3186" x2="1206" y2="3234" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3234" x2="1298" y2="3234" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3234" x2="1378" y2="3234" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="3186" x2="154" y2="3234" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="3201" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-002</text>
 <text x="162" y="3201" font-size="11.5" fill="#0F172A">M1</text>
@@ -1878,8 +1882,8 @@
 <text x="804" y="3203.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="3192" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="3204" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="3201" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="3234" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="3201" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="3234" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="3234" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="3251" font-size="10" fill="#64748B" text-anchor="middle">65</text>
 <line x1="34" y1="3234" x2="34" y2="3282" stroke="#E2E8F0" stroke-width="1"/>
@@ -1891,7 +1895,7 @@
 <line x1="980" y1="3234" x2="980" y2="3282" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="3234" x2="1076" y2="3282" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="3234" x2="1206" y2="3282" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3282" x2="1298" y2="3282" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3282" x2="1378" y2="3282" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="3234" x2="154" y2="3282" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="3249" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-002</text>
 <text x="162" y="3249" font-size="11.5" fill="#0F172A">M2</text>
@@ -1908,8 +1912,8 @@
 <text x="1089" y="3252" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
 <rect x="1146" y="3240" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1151" y="3252" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="3249" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="3282" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="3249" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="3282" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="3282" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="3299" font-size="10" fill="#64748B" text-anchor="middle">66</text>
 <line x1="34" y1="3282" x2="34" y2="3330" stroke="#E2E8F0" stroke-width="1"/>
@@ -1921,7 +1925,7 @@
 <line x1="980" y1="3282" x2="980" y2="3330" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="3282" x2="1076" y2="3330" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="3282" x2="1206" y2="3330" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3330" x2="1298" y2="3330" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3330" x2="1378" y2="3330" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="3282" x2="154" y2="3330" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="3297" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-002</text>
 <text x="162" y="3297" font-size="11.5" fill="#0F172A">M3</text>
@@ -1940,8 +1944,8 @@
 <text x="1089" y="3300" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="3288" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="3300" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="3297" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="3330" width="1298" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="3297" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="3330" width="1378" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="3330" width="34" height="36" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="3347" font-size="10" fill="#64748B" text-anchor="middle">67</text>
 <line x1="34" y1="3330" x2="34" y2="3366" stroke="#E2E8F0" stroke-width="1"/>
@@ -1953,7 +1957,7 @@
 <line x1="980" y1="3330" x2="980" y2="3366" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="3330" x2="1076" y2="3366" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="3330" x2="1206" y2="3366" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3366" x2="1298" y2="3366" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3366" x2="1378" y2="3366" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="3330" x2="154" y2="3366" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="3345" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-002</text>
 <text x="162" y="3345" font-size="11.5" fill="#0F172A">M4</text>
@@ -1967,8 +1971,8 @@
 <text x="897" y="3348" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-008</text>
 <rect x="1084" y="3336" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="3348" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="3345" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="3366" width="1298" height="74" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="3345" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="3366" width="1378" height="74" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="3366" width="34" height="74" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="3383" font-size="10" fill="#64748B" text-anchor="middle">68</text>
 <line x1="34" y1="3366" x2="34" y2="3440" stroke="#E2E8F0" stroke-width="1"/>
@@ -1980,7 +1984,7 @@
 <line x1="980" y1="3366" x2="980" y2="3440" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="3366" x2="1076" y2="3440" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="3366" x2="1206" y2="3440" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3440" x2="1298" y2="3440" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3440" x2="1378" y2="3440" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="3366" x2="154" y2="3440" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="3381" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-002</text>
 <text x="162" y="3381" font-size="11.5" fill="#0F172A">M5</text>
@@ -1998,8 +2002,8 @@
 <text x="1089" y="3384" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="3372" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="3384" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="3381" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="3440" width="1298" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="3381" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="3440" width="1378" height="59" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="3440" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="3457" font-size="10" fill="#64748B" text-anchor="middle">69</text>
 <line x1="34" y1="3440" x2="34" y2="3499" stroke="#E2E8F0" stroke-width="1"/>
@@ -2011,7 +2015,7 @@
 <line x1="980" y1="3440" x2="980" y2="3499" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="3440" x2="1076" y2="3499" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="3440" x2="1206" y2="3499" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3499" x2="1298" y2="3499" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3499" x2="1378" y2="3499" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="3440" x2="154" y2="3499" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="3455" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-002</text>
 <text x="162" y="3455" font-size="11.5" fill="#0F172A">M6</text>
@@ -2030,8 +2034,8 @@
 <text x="1089" y="3458" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
 <rect x="1146" y="3446" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1151" y="3458" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="3455" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="3499" width="1298" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="3455" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="3499" width="1378" height="59" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="3499" width="34" height="59" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="3516" font-size="10" fill="#64748B" text-anchor="middle">70</text>
 <line x1="34" y1="3499" x2="34" y2="3558" stroke="#E2E8F0" stroke-width="1"/>
@@ -2043,7 +2047,7 @@
 <line x1="980" y1="3499" x2="980" y2="3558" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="3499" x2="1076" y2="3558" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="3499" x2="1206" y2="3558" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3558" x2="1298" y2="3558" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3558" x2="1378" y2="3558" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="3499" x2="154" y2="3558" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="3514" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-002</text>
 <text x="162" y="3514" font-size="11.5" fill="#0F172A">M7</text>
@@ -2062,8 +2066,8 @@
 <text x="1089" y="3517" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
 <rect x="1146" y="3505" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1151" y="3517" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="3514" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="3558" width="1298" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="3514" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="3558" width="1378" height="48" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="3558" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="3575" font-size="10" fill="#64748B" text-anchor="middle">71</text>
 <line x1="34" y1="3558" x2="34" y2="3606" stroke="#E2E8F0" stroke-width="1"/>
@@ -2075,7 +2079,7 @@
 <line x1="980" y1="3558" x2="980" y2="3606" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="3558" x2="1076" y2="3606" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="3558" x2="1206" y2="3606" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3606" x2="1298" y2="3606" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3606" x2="1378" y2="3606" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="3558" x2="154" y2="3606" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="3573" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-003</text>
 <text x="162" y="3573" font-size="11.5" fill="#0F172A">M1</text>
@@ -2091,8 +2095,8 @@
 <text x="897" y="3576" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SYS-018</text>
 <rect x="1084" y="3564" width="34" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="3576" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
-<text x="1214" y="3573" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="3606" width="1298" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="1214" y="3573" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="3606" width="1378" height="48" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <rect x="0" y="3606" width="34" height="48" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="3623" font-size="10" fill="#64748B" text-anchor="middle">72</text>
 <line x1="34" y1="3606" x2="34" y2="3654" stroke="#E2E8F0" stroke-width="1"/>
@@ -2104,7 +2108,7 @@
 <line x1="980" y1="3606" x2="980" y2="3654" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="3606" x2="1076" y2="3654" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="3606" x2="1206" y2="3654" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3654" x2="1298" y2="3654" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3654" x2="1378" y2="3654" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="3606" x2="154" y2="3654" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="3621" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-003</text>
 <text x="162" y="3621" font-size="11.5" fill="#0F172A">M2</text>
@@ -2122,8 +2126,8 @@
 <text x="1089" y="3624" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">test</text>
 <rect x="1122" y="3612" width="58" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1127" y="3624" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis</text>
-<text x="1214" y="3621" font-size="11.5" fill="#0F172A">0 items</text>
-<rect x="0" y="3654" width="1298" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="1214" y="3621" font-size="11.5" fill="#0F172A">none</text>
+<rect x="0" y="3654" width="1378" height="36" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
 <rect x="0" y="3654" width="34" height="36" rx="0" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="17" y="3671" font-size="10" fill="#64748B" text-anchor="middle">73</text>
 <line x1="34" y1="3654" x2="34" y2="3690" stroke="#E2E8F0" stroke-width="1"/>
@@ -2135,7 +2139,7 @@
 <line x1="980" y1="3654" x2="980" y2="3690" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1076" y1="3654" x2="1076" y2="3690" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="1206" y1="3654" x2="1206" y2="3690" stroke="#E2E8F0" stroke-width="1"/>
-<line x1="0" y1="3690" x2="1298" y2="3690" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="0" y1="3690" x2="1378" y2="3690" stroke="#E2E8F0" stroke-width="1"/>
 <line x1="154" y1="3654" x2="154" y2="3690" stroke="#94A3B8" stroke-width="2"/>
 <text x="42" y="3669" font-size="11.5" fill="#1D4ED8" font-weight="700">HAZ-WLK-003</text>
 <text x="162" y="3669" font-size="11.5" fill="#0F172A">M3</text>
@@ -2147,18 +2151,18 @@
 <text x="804" y="3671.5" font-size="10.5" fill="#334155">identified</text>
 <rect x="1084" y="3660" width="88" height="16" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
 <text x="1089" y="3672" font-size="10" fill="#3730A3" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">demonstration</text>
-<text x="1214" y="3669" font-size="11.5" fill="#0F172A">0 items</text>
+<text x="1214" y="3669" font-size="11.5" fill="#0F172A">none</text>
 <text x="16" y="3712" font-size="10.5" fill="#64748B">72 rows · precedence a–e per MIL-STD-882E 4.3.4</text>
-<rect x="0.5" y="0.5" width="1297" height="3721" rx="0" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+<rect x="0.5" y="0.5" width="1377" height="3721" rx="0" fill="none" stroke="#CBD5E1" stroke-width="1"/>
 <g class="terms" data-base-h="3722">
-<rect x="0" y="3722" width="1298" height="127.1" fill="#FFFFFF"/>
-<line x1="40" y1="3726" x2="1258" y2="3726" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="3741.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · CL-nnn = concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout) · CONOPS = concept of operations ·</text>
-<text x="40" y="3756.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">DoD = US Department of Defense · DQ-nnn = decision question for the project lead (decisions/register.yaml) · F-nnn = system function in the item definition · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3</text>
-<text x="40" y="3770.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">= review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · IF-PX4-nnn = PX4 integration interface (integrations/px4/interface-contract.md) · M1, M2 … = mitigation in a hazard record</text>
-<text x="40" y="3785.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(M1, M2 …), or a SysML model check rule in tools/sysml · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base edition) · MOD-nnn = operating mode from the CONOPS (MOD-01 to MOD-10) · PPE = personal</text>
-<text x="40" y="3799.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">protective equipment · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SITL = software-in-the-loop simulation · SSF-nnn = safety-significant software function record (safety/software/) ·</text>
-<text x="40" y="3814.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SU-nnn = UAV PX4 SITL scenario · SUS-A1 = dockable observation UAV · SYS-nnn = system safety requirement record (requirements/SYS-nnn.yaml) · SysML = Systems Modeling Language (SysML v2) · SZ-nnn = actuator sizing study at</text>
-<text x="40" y="3828.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">level 2 (sim/mujoco/sizing.yaml) · TS-nnn = architecture trade study · UAV = uncrewed aerial vehicle (drone) · US = United States</text>
+<rect x="0" y="3722" width="1378" height="127.1" fill="#FFFFFF"/>
+<line x1="40" y1="3726" x2="1338" y2="3726" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="3741.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · CL-nnn = concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout) · CONOPS = concept of operations · DoD = US</text>
+<text x="40" y="3756.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Department of Defense · DQ-nnn = decision question for the project lead (decisions/register.yaml) · F-nnn = system function in the item definition · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3 = review independence</text>
+<text x="40" y="3770.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">level (I0 none, e.g. the author or an AI, to I3 independent organisation) · IF-PX4-nnn = PX4 integration interface (integrations/px4/interface-contract.md) · M1, M2 … = mitigation in a hazard record (M1, M2 …), or a SysML model check</text>
+<text x="40" y="3785.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">rule in tools/sysml · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base edition) · MOD-nnn = operating mode from the CONOPS (MOD-01 to MOD-10) · PPE = personal protective equipment · PX4 = PX4 Autopilot, the</text>
+<text x="40" y="3799.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">open-source flight-control software candidate for SUS-A1 · SITL = software-in-the-loop simulation · SSF-nnn = safety-significant software function record (safety/software/) · SU-nnn = UAV PX4 SITL scenario · SUS-A1 = dockable observation</text>
+<text x="40" y="3814.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">UAV · SYS-nnn = system safety requirement record (requirements/SYS-nnn.yaml) · SysML = Systems Modeling Language (SysML v2) · SZ-nnn = actuator sizing study at level 2 (sim/mujoco/sizing.yaml) · TS-nnn = architecture trade study · UAV =</text>
+<text x="40" y="3828.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">uncrewed aerial vehicle (drone) · US = United States · VER-nnn = verification record or case</text>
 </g>
 </svg>

@@ -69,7 +69,9 @@ mitigations:
     method:
     - test
     - analysis
-    evidence_ids: []
+    evidence_ids:
+    - VER-002
+    - VER-003
 - id: M2
   description: Stale or frozen imagery detected within a defined time and shown as not current
   precedence: c
@@ -79,7 +81,8 @@ mitigations:
   verification:
     method:
     - test
-    evidence_ids: []
+    evidence_ids:
+    - VER-001
 - id: M3
   description: 'Procedure: UAV imagery is advisory; walking decisions rest on direct view and the safety observer'
   precedence: e

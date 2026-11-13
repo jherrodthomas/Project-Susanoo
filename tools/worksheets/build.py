@@ -74,6 +74,7 @@ def load() -> dict:
         "hazards": [y(p) for p in sorted((ROOT / "safety/hazards").glob("HAZ-*.yaml"))],
         "reqs": [y(p) for p in sorted((ROOT / "requirements").glob("SYS-*.yaml"))],
         "ssfs": [y(p) for p in sorted((ROOT / "safety/software").glob("SSF-*.yaml"))],
+        "vers": {v["id"]: v for v in (y(p) for p in sorted((ROOT / "verification").glob("VER-*.yaml")))},
         "item": y(ROOT / "architecture/item-definition.yaml"),
         "fha": y(TREE / "02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml"),
     }
@@ -108,6 +109,17 @@ class Sheet:
 def risk_cells(d: dict, r: dict) -> list:
     s, p = r["severity"], r["probability"]
     return [("sev", s), ("prob", p), ("rac", s, p), ("why", r.get("rationale", ""))]
+
+
+def evidence(d: dict, ids: list[str]) -> str:
+    """Evidence by result, so a planned activity never reads as evidence: '3 planned · 0 passed'."""
+    if not ids:
+        return "none"
+    res = [d["vers"].get(i, {}).get("result", "unknown") for i in ids]
+    parts = [f"{res.count(k)} {k}" for k in ("planned", "passed", "failed", "inconclusive", "unknown") if res.count(k)]
+    if "passed" not in res:
+        parts.append("0 passed")
+    return " · ".join(parts) + f" ({', '.join(ids)})"
 
 
 def worst(d: dict, hids: list[str]) -> int | None:
@@ -172,13 +184,13 @@ def sheets(d: dict) -> list[Sheet]:
               "safety/hazards/*.yaml (mitigations)",
               [Col("Hazard", 120, "title"), Col("Mitigation", 64), Col("Description", 380), Col("Precedence (4.3.4)", 190, "prec"),
                Col("State", 96, "status"), Col("Requirements", 96, "pills"), Col("Software functions", 96, "pills"),
-               Col("Verification method", 130, "pills"), Col("Evidence", 90)])
+               Col("Verification method", 130, "pills"), Col("Evidence (by result)", 170)])
     for h in H:
         for m in h.get("mitigations", []):
             v = m.get("verification", {})
             s.rows.append([("title", h["id"], ""), m["id"], m["description"], ("prec", m["precedence"]), ("status", m["state"], ""),
                            ("pills", m.get("requirement_ids", [])), ("pills", m.get("ssf_ids", [])), ("pills", v.get("method", [])),
-                           f"{len(v.get('evidence_ids', []))} items"])
+                           evidence(d, v.get('evidence_ids', []))])
     out.append(s)
 
     # Task 204 SSHA (FMEA-style, per subsystem)
@@ -258,11 +270,11 @@ def sheets(d: dict) -> list[Sheet]:
     s = Sheet("verification-matrix", "Verification", "06-verification/task-401-safety-verification",
               "Task 401 · Safety verification matrix", "requirements/SYS-*.yaml",
               [Col("Requirement", 210, "title"), Col("Statement", 420), Col("Hazards", 130, "pills"), Col("Allocated to", 130, "pills"),
-               Col("Method", 110, "pills"), Col("Evidence", 80), Col("Disposition", 96, "status"), Col("Status", 96, "status")])
+               Col("Method", 110, "pills"), Col("Evidence (by result)", 170), Col("Disposition", 96, "status"), Col("Status", 96, "status")])
     for r in d["reqs"]:
         v = r.get("verification", {})
         s.rows.append([("title", r["id"], r["title"]), r["statement"], ("pills", r["source"].get("hazard_ids", [])),
-                       ("pills", r.get("allocated_to", [])), ("pills", v.get("method", [])), f"{len(v.get('evidence_ids', []))} items",
+                       ("pills", r.get("allocated_to", [])), ("pills", v.get("method", [])), evidence(d, v.get('evidence_ids', [])),
                        ("status", v.get("disposition", "open"), ""), ("status", r["status"], "")])
     out.append(s)
 
