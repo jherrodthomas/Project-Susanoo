@@ -7,6 +7,7 @@ Every number on the front page is read from a record, so the README cannot drift
   docs/readme/at-a-glance.svg   status tiles: hazards, requirements, 882E tasks, interfaces, decisions, simulation
   docs/readme/risk-matrix.svg   hazards on the MIL-STD-882E Table III matrix, initial -> target
   docs/readme/simulation.svg    synthetic walker failure search and PX4 SITL failsafe outcomes
+  docs/readme/roadmap.svg       every MIL-STD-882E task across the project gates, with its status
   README.md                     the blocks between <!-- readme:NAME:start --> and <!-- readme:NAME:end -->
 
     python -m tools.readme.build_readme            # write
@@ -60,6 +61,9 @@ def load() -> dict:
         "doc_sysml": sorted([*(ROOT / "safety/mil-std-882e").rglob("*.sysml"), *(ROOT / "concept").glob("*.sysml"),
                              *(ROOT / "integrations/px4").glob("*.sysml")]),
         "folders": len(list((ROOT / "safety/mil-std-882e").rglob("README.md"))),
+        "catalog": y("safety/mil-std-882e/catalog.yaml"),
+        "task_records": {int(p.stem[1:]): yaml.safe_load(p.read_text())
+                         for p in sorted((ROOT / "safety/mil-std-882e/tasks").glob("T*.yaml"))},
     }
     uav_md = (ROOT / "sim/results/uav/summary.md").read_text()
     d["uav_findings"] = re.findall(r"^- \*\*(FND-UAV-\d+)\*\*", uav_md, re.M)
@@ -364,6 +368,197 @@ def simulation(d: dict, s: dict) -> str:
     return fk.svg(W, yb + 34, "Figure 3 · What the simulations found", "Synthetic simulation results", out)
 
 
+# ================================================================ MIL-STD-882E workflow
+TREE = "safety/mil-std-882e"
+M = 40
+GATES = [f"G{i}" for i in range(8)]
+STATUS_TONE = {"in-work": ("amber", "in work"), "approved": ("ok", "approved"), "planned": ("system", "planned"),
+               "conditional": ("amber", "conditional"), "not-selected": ("muted", "not selected"),
+               "not-applicable": ("muted", "not applicable"), "element": ("work", "element activity")}
+STATUS_MARK = {"in-work": "🟨 in work", "approved": "🟩 approved", "planned": "🟦 planned",
+               "conditional": "🟧 conditional", "not-selected": "⬜ not selected",
+               "not-applicable": "⬜ not applicable", "element": "🟦 planned"}
+
+
+def gate_span(s: str | None):
+    """Catalog gate text -> (first, last, revision gates), or None when the task has no fixed gate."""
+    s = s or ""
+    n = [int(x) for x in re.findall(r"G(\d)", s)]
+    if not n:
+        return (0, 7, []) if "Periodic" in s else None
+    if "onward" in s:
+        return (n[0], 7, [])
+    if "revised" in s:
+        return (n[0], n[0], n[1:])
+    if "–" in s and len(n) >= 2:
+        return (n[0], n[1], [])
+    return (min(n), max(n), [])
+
+
+def workflow_rows(d: dict) -> list[tuple]:
+    """(element, folder, task id or None, status) in element order; HTS and software safety last."""
+    cat, tl, recs = d["catalog"], d["tailor"], d["task_records"]
+
+    def status(tid):
+        if tid is None:
+            return "element"
+        disp = tl["tasks"][tid]["disposition"]
+        if disp != "selected":
+            return disp
+        return {"in-work": "in-work", "approved": "approved"}.get((recs.get(tid) or {}).get("status"), "planned")
+    rows = []
+    for e in cat["elements"]:
+        tasks = [f for f in cat["folders"] if f.get("element") == e["n"] and f["id"].startswith("T")]
+        if not tasks:
+            tasks = [f for f in cat["folders"] if f["id"] == f"E{e['n']}"]
+        for f in tasks:
+            tid = (f.get("tasks") or [{}])[0].get("id")
+            rows.append((e, f, tid, status(tid)))
+    cross = {"n": 0, "name": "Across all elements"}
+    for fid in ("HTS", "SWS"):
+        f = next(x for x in cat["folders"] if x["id"] == fid)
+        tid = (f.get("tasks") or [{}])[0].get("id")
+        rows.append((cross, f, tid, status(tid)))
+    return rows
+
+
+FOLDER_CODE = {"SWS": "Section 4.4"}     # catalog IDs that are not terms: show the clause instead
+
+
+def row_code(f: dict, tid) -> str:
+    return f"Task {tid}" if tid is not None else FOLDER_CODE.get(f["id"], f["id"])
+
+
+def task_title(d: dict, f: dict, tid) -> str:
+    if tid is not None:
+        return next(t["title"] for t in d["std"]["tasks"] if t["id"] == tid)
+    return f["title"].split("·")[-1].strip()
+
+
+def roadmap(d: dict) -> str:
+    tl = d["tailor"]
+    cur = int(tl["current_gate"][1:])
+    W, LW = 1180, 400
+    cw = (W - 2 * M - LW) / 8
+    x0 = M + LW
+    out, y_line = fk.header(W, "4", "MIL-STD-882E task roadmap",
+                            "Every task by process element, drawn across the project gates when it is performed. "
+                            "Status comes from the tailoring and the task records; the shaded column is the current "
+                            "gate.", "standards/tailoring · safety/mil-std-882e/catalog.yaml")
+    y = y_line + 20
+    rows = workflow_rows(d)
+    body_h = 44 + 26 * len(rows) + 26 * len({r[0]["n"] for r in rows})
+    out.append(fk.rect(x0 + cur * cw + 1, y, cw - 2, body_h, fill="#EEF2FF", stroke="none", rx=6, sw=0))
+    for i, g in enumerate(GATES):
+        cx = x0 + i * cw
+        out.append(fk.rect(cx + 1, y, cw - 2, 34, fill="#F8FAFC" if i != cur else "#E0E7FF", stroke=HAIR, rx=6))
+        out.append(fk.text(cx + cw / 2, y + 15, g + (" · now" if i == cur else ""), size=11.5, weight=700,
+                           anchor="middle"))
+        out.append(fk.text(cx + cw / 2, y + 28, fk.wrap(tl["gates"][g]["title"], cw - 8, 9)[0], size=9, fill=MUTED,
+                           anchor="middle"))
+    y += 44
+    last = None
+    for e, f, tid, st in rows:
+        if e["n"] != last:
+            label = f"{e['n']} · {e['name']}" if e["n"] else e["name"]
+            out.append(fk.text(M, y + 18, label, size=12, weight=700))
+            y += 26
+            last = e["n"]
+        tone, txt = STATUS_TONE[st]
+        s, fl = TONES[tone]
+        code = row_code(f, tid)
+        pill_fill = "#94A3B8" if tone == "muted" else s
+        p, pw = fk.pill(M, y + 4, code, fill=pill_fill, color="#FFFFFF", h=16, size=9)
+        out += p
+        name = task_title(d, f, tid)
+        while fk.text_w(name, 10.5) > LW - pw - 24 and len(name) > 6:
+            name = name[:-2].rstrip() + "…"
+        out.append(fk.text(M + pw + 8, y + 16, name, size=10.5))
+        sp = gate_span(f.get("gate"))
+        dash = "4 3" if tone == "muted" or st == "conditional" else ""
+        fill = "#F1F5F9" if tone == "muted" else fl
+        if sp:
+            a, b, extra = sp
+            bx, bw = x0 + a * cw + 4, (b - a + 1) * cw - 8
+            out.append(fk.rect(bx, y + 3, bw, 18, fill=fill, stroke=s, rx=9, sw=1.2, dash=dash))
+            out.append(fk.text(bx + 8, y + 16, txt, size=9.5, fill=s if tone != "muted" else MUTED, weight=700))
+            for g in extra:
+                out.append(fk.circle(x0 + g * cw + cw / 2, y + 12, 5, fill=s, stroke=s, sw=1))
+        else:
+            out.append(fk.rect(x0 + 4, y + 3, 8 * cw - 8, 18, fill=fill, stroke="#94A3B8", rx=9, sw=1, dash="4 3"))
+            out.append(fk.text(x0 + 12, y + 16, f"{txt} · {f.get('gate')}", size=9.5, fill=MUTED, weight=700))
+        out.append(fk.line(M, y + 24, W - M, y + 24, stroke=HAIR, sw=0.6))
+        y += 26
+    leg, y = fk.legend(M, y + 26, [
+        (TONES["system"][1], TONES["system"][0], "Planned (selected)"),
+        (TONES["amber"][1], TONES["amber"][0], "In work, or conditional (dashed)"),
+        (TONES["ok"][1], TONES["ok"][0], "Approved"),
+        ("#F1F5F9", "#94A3B8 dashed", "Not selected or not applicable"),
+        (TONES["work"][1], TONES["work"][0], "Element activity (no numbered task)"),
+        (TONES["system"][0], TONES["system"][0], "Revision at a later gate (dot)")], W - M)
+    out += leg
+    out.append(fk.text(M, y + 14, f"Generated by {GEN} from the tailoring, the work-product catalog and the task "
+                       "records. Planned work, not completed work; no gate has been passed.", size=10.5, fill=FAINT))
+    return fk.svg(W, y + 34, "Figure 4 · MIL-STD-882E task roadmap",
+                  "Every MIL-STD-882E task across the project gates, with its status", out)
+
+
+def _plain(s: str) -> str:
+    s = re.sub(r"\[`?([^\]`]+)`?\]\([^)]*\)", r"\1", " ".join((s or "").split()))
+    return re.split(r"(?<=\.)\s", s)[0].replace("|", "\\|")
+
+
+def workflow_block(d: dict) -> str:
+    tl = d["tailor"]
+    role = {k: v["title"].replace(" (simulated)", "") for k, v in tl["roles"].items()}
+    out, last = [], None
+    rows = workflow_rows(d)
+    for i, (e, f, tid, st) in enumerate(rows):
+        if e["n"] != last:
+            if last is not None:
+                out += ["", "</details>", ""]
+            n_tasks = sum(1 for r in rows if r[0]["n"] == e["n"] and r[2] is not None)
+            label = f"{e['n']} · {e['name']}" if e["n"] else e["name"]
+            what = f"{n_tasks} task{'s' if n_tasks != 1 else ''}" if n_tasks else "no numbered task"
+            out += [f"<details{' open' if e['n'] == 2 else ''}><summary><b>{label}</b> · {what}</summary>", "",
+                    "| Task | What MIL-STD-882E requires | What Susanoo delivers | When · who | Status | Preview |",
+                    "|---|---|---|---|---|---|"]
+            last = e["n"]
+        folder = f"{TREE}/{f['path']}"
+        sheets = sorted(p for p in (ROOT / folder).glob("*.svg"))
+        figs = [*sorted((ROOT / folder / "figures").glob("fig-*-inputs-and-outputs.svg")),
+                *sorted((ROOT / folder / "figures").glob("fig-4-*.svg"))]
+
+        def size(path):
+            vb = re.search(r'viewBox="[\d.\s-]*?([\d.]+)\s+([\d.]+)"', path.read_text(encoding="utf-8"))
+            return (float(vb.group(1)), float(vb.group(2))) if vb else (4.0, 3.0)
+        # the work product's own sheet if it reads as a thumbnail, else what feeds the task and what it feeds
+        cands = [c for c in [*sheets, *figs] if size(c)[1] / size(c)[0] <= 2.5] or [*sheets, *figs]
+        img = cands[0] if cands else None
+        thumb = ""
+        if img:
+            w0, h0 = size(img)
+            k = min(160 / w0, 110 / h0)                    # fit a 160 x 110 box, keeping proportions
+            thumb = (f'<a href="{folder}/README.md"><img src="{img.relative_to(ROOT).as_posix()}" '
+                     f'alt="{f["title"]}" width="{round(w0 * k)}" height="{round(h0 * k)}"></a>')
+        deliv = ", ".join(f"`{c['name']}`" for c in (f.get("contents") or [])[:3]) or "—"
+        did = tl["tasks"].get(tid, {}).get("did") if tid is not None else None
+        if did:
+            deliv += f" ({did})"
+        if tid is not None:
+            name = f"**[Task {tid}]({folder}/README.md)** {task_title(d, f, tid)}"
+            who = role.get(tl["tasks"][tid].get("owner"), "")
+            if tl["tasks"][tid]["disposition"] != "selected":
+                deliv = "Not performed: " + tl["tasks"][tid].get("rationale", tl["tasks"][tid].get("trigger", ""))
+        else:
+            name = f"**[{row_code(f, tid)}]({folder}/README.md)** {task_title(d, f, tid)}"
+            who = f.get("role", "")
+        out.append(f"| {name} | {_plain(f.get('purpose'))} | {deliv} | {f.get('gate')} · {who} | "
+                   f"{STATUS_MARK[st]} | {thumb} |")
+    out += ["", "</details>"]
+    return "\n".join(out)
+
+
 # ================================================================ README blocks
 def blocks(d: dict, s: dict) -> dict[str, str]:
     lv = lambda c: ", ".join(f"{c[k]} {k}" for k in ["High", "Serious", "Medium", "Low"] if c[k])  # noqa: E731
@@ -394,7 +589,7 @@ def blocks(d: dict, s: dict) -> dict[str, str]:
         i_l, t_l = h["initial_risk"], h["target_risk"]
         hz_rows.append(f"| [`{h['id']}`](safety/hazards/{h['id']}.yaml) | {h['title']} | {i_l['rac']} {i_l['risk_level']} | "
                        f"{t_l['rac']} {t_l['risk_level']} | {len(h.get('mitigations', []))} |")
-    return {"numbers": numbers, "hazards": "\n".join(hz_rows)}
+    return {"numbers": numbers, "hazards": "\n".join(hz_rows), "workflow": workflow_block(d)}
 
 
 def apply_blocks(text: str, bl: dict[str, str]) -> str:
@@ -415,6 +610,7 @@ def main() -> int:
     s = stats(d)
     files = {OUT / "banner.svg": banner(s), OUT / "at-a-glance.svg": glance(s),
              OUT / "risk-matrix.svg": risk_matrix(d), OUT / "simulation.svg": simulation(d, s),
+             OUT / "roadmap.svg": roadmap(d),
              README: apply_blocks(README.read_text(), blocks(d, s))}
     stale = []
     for p, content in files.items():
