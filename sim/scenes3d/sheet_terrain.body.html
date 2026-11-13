@@ -7,6 +7,7 @@
   <div class="ph">Terrain <span>T-01</span></div>
   <div id="tlist"></div>
   <div class="ph" style="border-top:1px solid var(--ink)">Walk <span>W-02</span></div>
+  <div class="seg" id="mode"><button data-mode="unloaded">Unloaded</button><button data-mode="loaded">Loaded carry</button></div>
   <div class="seg" id="play"><button id="bplay">❚❚ Pause</button><button data-sp="0.5">½×</button><button data-sp="1">1×</button><button data-sp="2">2×</button></div>
   <div class="seg tog"><button data-t="plumb">CG plumb<kbd>G</kbd></button><button data-t="stripes">1 m bands<kbd>B</kbd></button><button data-t="person">Person<kbd>P</kbd></button></div>
   <div class="seg" id="render"><button data-r="shaded">Shaded</button><button data-r="line">Line</button><button data-r="xray">X-ray</button></div>
@@ -21,6 +22,10 @@
     <div class="ph" style="border-top:1px solid var(--ink)">Leg kinematics · CAD <span>tools/cad/b3d</span></div>
     <div id="kin"></div>
     <div class="ph" style="border-top:1px solid var(--ink)">Static tip margin <span>cad/metrics.json</span></div>
+    <div id="loadrow" style="display:none">
+      <div class="sl"><span class="k">LOAD</span><input id="mass" type="range" min="0" max="6000" step="10" value="0"><span id="massv">0 kg</span></div>
+      <div class="note" id="massnote" style="border-top:0"></div>
+    </div>
     <div id="stat"></div>
     <div class="note" id="statnote"></div>
     <div class="ph" style="border-top:1px solid var(--ink)">Requirement · hazard <span>records</span></div>
@@ -50,6 +55,7 @@
   <table>
     <tr><td>Drag · wheel · right-drag</td><td>orbit · zoom · pan (the camera follows the walker)</td></tr>
     <tr><td>Click a terrain · ← →</td><td>walk the CL-05 gait over that ground</td></tr>
+    <tr><td>Unloaded · Loaded carry · L</td><td>the walk with the arms stowed, or the loaded walk carrying the placeholder load (load mass slider: mass TBD, SYS-019)</td></tr>
     <tr><td>Space · ½× 1× 2×</td><td>pause or play · walking pace (a viewing pace, not a design speed)</td></tr>
     <tr><td>G · B · P</td><td>centre of gravity plumb line · 1 m bands on the ground · 1.75 m person</td></tr>
     <tr><td>V</td><td>shaded · line · X-ray</td></tr>
