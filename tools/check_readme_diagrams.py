@@ -96,6 +96,7 @@ ENFORCED = {
     "docs/vcycle": {"skip_dirs": {"figures"}, "generator": ["tools/figures/vcycle_readme.py", "--check"]},
     "docs/diagrams": {"skip_dirs": {"figures", "mil-std-882e"}, "generator": ["tools/figures/diagrams_readme.py", "--check"]},
     "docs/readme": {"skip_dirs": {"figures"}, "generator": ["tools/figures/frontpage_readme.py", "--check"]},
+    "docs/wiki": {"skip_dirs": {"images"}, "generator": ["tools/figures/wiki_readme.py", "--check"]},
     "sim/scenes3d": {"skip_dirs": {"figures", "library", "out", "__pycache__"},
                      "generator": ["tools/figures/scenes3d_readme.py", "--check"]},
 }

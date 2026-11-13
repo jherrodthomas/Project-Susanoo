@@ -37,6 +37,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - docs/vcycle            # generated README (tools/figures/vcycle_readme.py)
   - docs/diagrams          # generated README (tools/figures/diagrams_readme.py); mil-std-882e/ keeps its preview
   - docs/readme            # generated README (tools/figures/frontpage_readme.py)
+  - docs/wiki              # generated README top (tools/figures/wiki_readme.py); images/ keeps its preview
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -148,14 +149,6 @@ folders:
       - {text: MIL-STD-882E Process Maps (wiki page), href: docs/wiki/MIL-STD-882E-Process-Maps.md}
 
 
-  docs/wiki:
-    hero: {img: docs/wiki/images/safety-lifecycle.svg, caption: "Safety lifecycle process map (illustrative)"}
-    gallery:
-      - {img: docs/wiki/images/sus-i1-boundary.svg, caption: "SUS-I1 boundary and interfaces"}
-      - {img: docs/wiki/images/sim-su-01.svg, caption: "UAV simulation SU-01 (synthetic)"}
-      - {img: docs/wiki/images/3d-s3-01.png, caption: "3D scene S3-01"}
-    links:
-      - {text: Wiki home page source, href: docs/wiki/Home.md}
 
   docs/wiki/images:
     title: Wiki images

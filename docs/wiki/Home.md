@@ -98,6 +98,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   with its source, and the tasks each map names
 - [Front-page figures](Front-Page-Figures): every figure and number block on the front page, and the records each one
   reads
+- [Wiki source](README): every page of this wiki by where it comes from, every link checked, and how the wiki is
+  published
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)
