@@ -58,3 +58,5 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | [`SYS-020.yaml`](SYS-020.yaml) | Emergency egress without power or kneeling |
 | [`SYS-021.yaml`](SYS-021.yaml) | UAV data validity and staleness annunciation |
 | [`SYS-022.yaml`](SYS-022.yaml) | Dock charging protection and isolation |
+| [`SYS-023.yaml`](SYS-023.yaml) | Maintenance access at height |
+| [`SYS-024.yaml`](SYS-024.yaml) | External extraction of an incapacitated pilot |

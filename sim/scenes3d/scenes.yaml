@@ -53,3 +53,6 @@ not_modelled:
   - {hazard: HAZ-INT-002, reason: "Misleading or stale UAV data needs a display and pilot model; SITL does not model the pilot"}
   - {hazard: HAZ-DCK-003, reason: "Battery thermal behaviour on the dock is not modelled"}
   - {hazard: HAZ-DCK-004, reason: "Dock charging and connector electrics are not modelled"}
+  - {hazard: HAZ-PIL-005, reason: "Climbing the ladder and sill is a human task; no person model in the 3D scenes"}
+  - {hazard: HAZ-GSE-001, reason: "Maintenance access equipment and maintainers are not modelled"}
+  - {hazard: HAZ-PIL-006, reason: "Crew extraction of a pilot is a human task; no person model in the 3D scenes"}

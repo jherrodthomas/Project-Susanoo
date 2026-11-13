@@ -1,0 +1,105 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-PIL-005
+title: Fall during normal ingress or egress
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-PIL
+- SUS-M1-WLK
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: The pilot or a crew member climbs the fold-down ladder or the front-opening sill of the kneeling
+  walker, about 1 to 1.6 m above the ground, with the walker still.
+modes:
+- MOD-03
+causal_factors:
+- id: CF1
+  type: human
+  description: Misstep, hurry, or hands full while climbing; protective equipment limits grip or view
+- id: CF2
+  type: hardware
+  description: Uneven tread rise, a high sill step or missing handholds at the transfer from ladder to cockpit
+- id: CF3
+  type: environment
+  description: Wet, icy or muddy treads; darkness; walker kneeling on uneven or sloping ground
+effects:
+- Person falls from the ladder or the sill to the ground
+mishap: Fracture or head injury to the pilot or a crew member
+initial_risk:
+  severity: 2
+  probability: C
+  rac: 2C
+  risk_level: Serious
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); normal ingress and egress happen on every sortie, so a slip is likely to occur several times over the
+    exposure basis (DQ-003); a fall of 1 to 1.6 m onto hard ground can cause a fracture or head injury
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 2
+  probability: D
+  rac: 2D
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); handholds for three points of contact, non-slip treads with an even rise and a trained climbing method
+    make a fall remote
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Grab handles at the ladder, the sill and the cockpit opening so the climber keeps three points of
+    contact throughout
+  precedence: b
+  state: identified
+  requirement_ids:
+  - SYS-018
+  verification:
+    method:
+    - inspection
+    - demonstration
+    evidence_ids: []
+- id: M2
+  description: Non-slip treads with an even rise from the ground to the cockpit floor, including the sill step
+  precedence: b
+  state: identified
+  requirement_ids:
+  - SYS-018
+  verification:
+    method:
+    - inspection
+    - analysis
+    evidence_ids: []
+- id: M3
+  description: 'Ingress and egress procedure: face the ladder, hands free, footwear and lighting checks'
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-018
+owner:
+  role: ROLE-WLK
+  person: null
+  org: Walker / mechanical
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 206
+  scenario_ids:
+  - SCN-001
+  - SCN-006
+  documents:
+  - safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.yaml
+  - cad/README.md
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; ladder and sill heights from the CL-05 reference layout (cad/README.md)
+- Normal ingress and egress take place only with the walker kneeling and still (SYS-018)
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- Set the maximum tread rise and the handhold positions (SYS-018 TBD)
