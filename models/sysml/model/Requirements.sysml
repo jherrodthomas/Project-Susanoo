@@ -92,7 +92,7 @@ package SusanooRequirements {
     requirement <'SYS-018'> controlledLoweredPostureForIngressAndEgress : SystemRequirement {
         doc /* The walker shall provide a controlled lowered posture for ingress and egress, with the cockpit floor at or below a defined height, entered and left at a controlled speed only while the area under and around the pod and legs is confirmed clear, and shall inhibit walking while an access ladder is deployed. */
         @Source { record = "requirements/SYS-018.yaml"; }
-        @HazardRef { ids = ("HAZ-WLK-003", "HAZ-PIL-001", "HAZ-PIL-004"); }
+        @HazardRef { ids = ("HAZ-WLK-003", "HAZ-PIL-001", "HAZ-PIL-004", "HAZ-PIL-005"); }
     }
     requirement <'SYS-019'> loadedWalkingLimits : SystemRequirement {
         doc /* The walker shall permit walking with a payload only while the payload is confirmed secured, both arms are locked in a defined carry pose and payload mass and centre of gravity are within defined limits, and shall then limit walking speed, step height and terrain slope to defined loaded values inside the stability envelope of SYS-008. */
@@ -113,5 +113,15 @@ package SusanooRequirements {
         doc /* The dock shall charge the UAV battery only when the aircraft is seated and confirmed, shall stop charging on over-voltage, over-current or over-temperature independently of the charging software, and shall keep its charging contacts de-energised and shrouded whenever no UAV is seated or charging has been isolated for handling. */
         @Source { record = "requirements/SYS-022.yaml"; }
         @HazardRef { ids = ("HAZ-DCK-003", "HAZ-DCK-004"); }
+    }
+    requirement <'SYS-023'> maintenanceAccessAtHeight : SystemRequirement {
+        doc /* Maintenance tasks on the walker above a defined working height shall be done from a guarded access platform or stand, or, where no platform can reach, with fall arrest attached to rated anchor points provided on the walker. */
+        @Source { record = "requirements/SYS-023.yaml"; }
+        @HazardRef { ids = ("HAZ-GSE-001"); }
+    }
+    requirement <'SYS-024'> externalExtractionOfAnIncapacitatedPilot : SystemRequirement {
+        doc /* Trained crew shall be able to release the hatch and the pilot restraint from outside the walker without platform power, and to remove an incapacitated pilot from a standing, kneeling or fallen walker within a defined time, with fall protection for the rescuers. */
+        @Source { record = "requirements/SYS-024.yaml"; }
+        @HazardRef { ids = ("HAZ-PIL-006"); }
     }
 }

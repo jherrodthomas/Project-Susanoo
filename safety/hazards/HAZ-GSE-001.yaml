@@ -1,0 +1,104 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-GSE-001
+title: Fall from height during maintenance on the walker
+status: open
+system: SUS-I1
+subsystems:
+- SUS-GSE
+- SUS-M1-WLK
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: A maintainer works on the pod, the dock or the roll bar of the supported walker, about 3 to
+  4.5 m above the ground.
+modes:
+- MOD-10
+causal_factors:
+- id: CF1
+  type: human
+  description: Loss of balance while reaching, carrying tools or parts, or working on a curved surface
+- id: CF2
+  type: hardware
+  description: No access platform or anchor point; ladder or stand not secured to the walker or the ground
+- id: CF3
+  type: environment
+  description: Wet, oily or icy surfaces; wind; poor lighting in the maintenance area
+effects:
+- Maintainer falls from the walker or the access equipment
+mishap: Fatal or disabling fall injury to a maintainer
+initial_risk:
+  severity: 1
+  probability: C
+  rac: 1C
+  risk_level: High
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); maintenance at height is routine over the exposure basis (DQ-003), and a fall from 3 to 4.5 m can be fatal
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); a guarded access platform for routine tasks and anchor points with fall arrest where a platform cannot
+    reach make a fall improbable
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: Guarded access platform or stand for routine work on the pod, the dock and the roll bar
+  precedence: b
+  state: identified
+  requirement_ids:
+  - SYS-023
+  verification:
+    method:
+    - inspection
+    - demonstration
+    evidence_ids: []
+- id: M2
+  description: Rated anchor points on the walker for fall arrest where a platform cannot reach
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-023
+  verification:
+    method:
+    - analysis
+    - inspection
+    evidence_ids: []
+- id: M3
+  description: Work-at-height procedure and training; tool tethers
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-023
+owner:
+  role: ROLE-WLK
+  person: null
+  org: Walker / mechanical
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 206
+  scenario_ids:
+  - SCN-102
+  - SCN-006
+  documents:
+  - safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.yaml
+  - cad/README.md
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; heights of the pod, dock and roll bar from the CL-05 reference layout (cad/README.md)
+- Maintenance takes place with the walker on its mechanical supports and energy isolated (HAZ-PWR-001)
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- List the maintenance tasks done at height and their access points
+- Assess work at height on the single-leg bench rig (EVT-BENCH-001, MOD-10) in its event risk before authorization

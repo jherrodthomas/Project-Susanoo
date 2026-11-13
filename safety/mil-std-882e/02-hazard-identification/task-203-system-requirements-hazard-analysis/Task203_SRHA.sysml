@@ -32,6 +32,8 @@ package Task203_SRHA {
         expose SusanooRequirements::'SYS-020';
         expose SusanooRequirements::'SYS-021';
         expose SusanooRequirements::'SYS-022';
+        expose SusanooRequirements::'SYS-023';
+        expose SusanooRequirements::'SYS-024';
     }
     #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> SusanooRequirements::'SYS-010'; }
     #derivation connection { end #original ::> SusanooRequirements::'SYS-002'; end #derive ::> SusanooRequirements::'SYS-011'; }

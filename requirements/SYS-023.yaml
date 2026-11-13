@@ -1,0 +1,29 @@
+schema: susanoo/requirement/v0.1
+id: SYS-023
+title: Maintenance access at height
+statement: Maintenance tasks on the walker above a defined working height shall be done from a guarded access platform
+  or stand, or, where no platform can reach, with fall arrest attached to rated anchor points provided on the walker.
+status: candidate
+source:
+  documents:
+  - safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.yaml
+  scenario_ids:
+  - SCN-102
+  - SCN-006
+  hazard_ids:
+  - HAZ-GSE-001
+allocated_to:
+- SUS-GSE
+- SUS-M1-WLK
+safety_significant: true
+verification:
+  method:
+  - analysis
+  - inspection
+  - demonstration
+  evidence_ids: []
+  disposition: open
+tbd:
+- Working height above which access equipment or fall arrest is required
+- Anchor point locations and rating
+- Tasks that cannot be reached from a platform
