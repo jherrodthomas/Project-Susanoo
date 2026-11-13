@@ -61,6 +61,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 - [Framework](Framework): the standards the project uses and how, the lifecycle gates with the MIL-STD-882E
   tasks due at each, and the method pages
 - [Tools](Tools): every validator and generator, what CI runs on each push, and how the tool packages fit together
+- [Documentation sources](Documentation-Sources): what writes each documentation file, where the wiki pages come
+  from, and the few files a person edits
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

@@ -72,6 +72,9 @@ ENFORCED = {
     "tools": {"skip_dirs": {"cad", "figures", "pdac", "previews", "readme", "sysml", "terms", "vcycle", "wiki", "worksheets",
                             "__pycache__"},
               "generator": ["tools/figures/tools_readme.py", "--check"]},
+    # Generated README of the documentation sources; the subfolders keep their folder previews.
+    "docs": {"skip_dirs": {"3d", "diagrams", "figures", "readme", "vcycle", "wiki"},
+             "generator": ["tools/figures/docs_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

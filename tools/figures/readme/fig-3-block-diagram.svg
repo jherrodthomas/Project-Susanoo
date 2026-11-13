@@ -1,152 +1,155 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1167.3" height="1083.6" viewBox="0 0 1167.3 1083.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1174.5" height="1093.6" viewBox="0 0 1174.5 1093.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
 <title>Figure 3 · Block diagram</title>
 <desc>The tool packages and top-level scripts, with how many modules of each import another package. Every package imports terms/: each page and figure is decorated with its terms before it is written.</desc>
 <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="1167.3" height="1029" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1174.5" height="1039" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 3 · Block diagram</text>
-<text x="40" y="66" font-size="12.5" fill="#475569">The tool packages and top-level scripts, with how many modules of each import another package. Every package imports terms/: each page and figure is decorated with its</text>
-<text x="40" y="83" font-size="12.5" fill="#475569">terms before it is written.</text>
-<text x="1127.3" y="44" font-size="11" fill="#475569" text-anchor="end">tools/</text>
-<line x1="40" y1="102" x2="1127.3" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="66" font-size="12.5" fill="#475569">The tool packages and top-level scripts, with how many modules of each import another package. Every package imports terms/: each page and figure is decorated with its terms</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">before it is written.</text>
+<text x="1134.5" y="44" font-size="11" fill="#475569" text-anchor="end">tools/</text>
+<line x1="40" y1="102" x2="1134.5" y2="102" stroke="#E2E8F0" stroke-width="1"/>
 <g transform="translate(40 126)">
-<rect x="6" y="6" width="1075.3" height="810" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<path d="M466 132 L466 193 Q466 200 459 200 L433.6 200 Q426.6 200 426.6 207 L426.6 220" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M531.2 132 L531.2 155 Q531.2 162 538.2 162 L673.6 162 Q680.6 162 680.6 169 L680.6 337 Q680.6 344 673.6 344 L586.5 344 Q581.5 344 581.5 349 L581.5 354" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M433.5 132 L433.5 137 Q433.5 142 428.5 142 L144.2 142 Q137.2 142 137.2 149 L137.2 625 Q137.2 632 130.2 632 L95.2 632 Q88.2 632 88.2 639 L88.2 722" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M229.6 584 L229.6 635 Q229.6 642 222.6 642 L108.3 642 Q101.3 642 101.3 649 L101.3 722" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M455 220 L455 215 Q455 210 460 210 L470 210 Q477 210 477 203 L477 149 Q477 142 484 142 L493.6 142 Q498.6 142 498.6 137 L498.6 132" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M438 296 L438 508" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M506.1 296 L506.1 301 Q506.1 306 511.1 306 L533.8 306 Q540.8 306 540.8 313 L540.8 354" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M403.9 296 L403.9 301 Q403.9 306 398.9 306 L328 306 Q321 306 321 313 L321 645 Q321 652 314 652 L121.4 652 Q114.4 652 114.4 659 L114.4 722" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M488.8 584 L488.8 665 Q488.8 672 481.8 672 L147.6 672 Q140.6 672 140.6 679 L140.6 722" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M710.5 132 L710.5 137 Q710.5 142 705.5 142 L614.5 142 Q607.5 142 607.5 149 L607.5 193 Q607.5 200 600.5 200 L490.4 200 Q483.4 200 483.4 207 L483.4 220" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M748.4 132 L748.4 481 Q748.4 488 741.4 488 L512.7 488 Q505.7 488 505.7 495 L505.7 508" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M786.3 132 L786.3 155 Q786.3 162 793.3 162 L993.2 162 Q1000.2 162 1000.2 169 L1000.2 695 Q1000.2 702 993.2 702 L187 702 Q180 702 180 709 L180 722" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M963.1 132 L963.1 145 Q963.1 152 956.1 152 L676.6 152 Q669.6 152 669.6 159 L669.6 203 Q669.6 210 662.6 210 L516.8 210 Q511.8 210 511.8 215 L511.8 220" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1011.2 132 L1011.2 705 Q1011.2 712 1004.2 712 L198.1 712 Q193.1 712 193.1 717 L193.1 722" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M500.1 354 L500.1 313 Q500.1 306 493.1 306 L477 306 Q472 306 472 301 L472 296" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M567.9 430 L567.9 471 Q567.9 478 560.9 478 L478.9 478 Q471.9 478 471.9 485 L471.9 508" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M513.6 430 L513.6 435 Q513.6 440 508.6 440 L339 440 Q332 440 332 447 L332 655 Q332 662 325 662 L134.5 662 Q127.5 662 127.5 669 L127.5 722" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M814 430 L814 491 Q814 498 807 498 L544.6 498 Q539.6 498 539.6 503 L539.6 508" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M868.5 430 L868.5 435 Q868.5 440 863.5 440 L832 440 Q825 440 825 447 L825 675 Q825 682 818 682 L160.8 682 Q153.8 682 153.8 689 L153.8 722" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M918.1 584 L918.1 685 Q918.1 692 911.1 692 L173.9 692 Q166.9 692 166.9 699 L166.9 722" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M123.2 132 L123.2 145 Q123.2 152 130.2 152 L391.2 152 Q398.2 152 398.2 159 L398.2 220" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M75.1 132 L75.1 722" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="6" y="6" width="1082.5" height="820" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M279.6 132 L279.6 175 Q279.6 182 286.6 182 L375.7 182 Q382.7 182 382.7 189 L382.7 223 Q382.7 230 389.7 230 L421.4 230 Q428.4 230 428.4 237 L428.4 250" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M247.1 132 L247.1 329 Q247.1 336 254.1 336 L404 336 Q411 336 411 343 L411 397 Q411 404 418 404 L456.7 404 Q461.7 404 461.7 409 L461.7 414" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M344.7 132 L344.7 155 Q344.7 162 351.7 162 L816.6 162 Q823.6 162 823.6 169 L823.6 685 Q823.6 692 816.6 692 L630.6 692 Q623.6 692 623.6 699 L623.6 732" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M978.1 634 L978.1 705 Q978.1 712 971.1 712 L656.8 712 Q649.8 712 649.8 719 L649.8 732" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M456.8 250 L456.8 179 Q456.8 172 449.8 172 L319.2 172 Q312.2 172 312.2 165 L312.2 132" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M400 326 L400 531 Q400 538 393 538 L309.5 538 Q302.5 538 302.5 545 L302.5 558" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M456.8 326 L456.8 349 Q456.8 356 463.8 356 L506.4 356 Q513.4 356 513.4 363 L513.4 397 Q513.4 404 520.4 404 L538.1 404 Q543.1 404 543.1 409 L543.1 414" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M485.2 326 L485.2 339 Q485.2 346 492.2 346 L590.3 346 Q597.3 346 597.3 353 L597.3 732" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M513.5 326 L513.5 331 Q513.5 336 518.5 336 L673.4 336 Q680.4 336 680.4 343 L680.4 414" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M285.6 634 L285.6 685 Q285.6 692 292.6 692 L564.1 692 Q571.1 692 571.1 699 L571.1 732" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M156.6 132 L156.6 185 Q156.6 192 163.6 192 L307.9 192 Q314.9 192 314.9 199 L314.9 233 Q314.9 240 321.9 240 L395 240 Q400 240 400 245 L400 250" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M118.7 132 L118.7 137 Q118.7 142 123.7 142 L141.6 142 Q148.6 142 148.6 149 L148.6 531 Q148.6 538 155.6 538 L227.8 538 Q234.8 538 234.8 545 L234.8 558" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M80.8 132 L80.8 705 Q80.8 712 87.8 712 L537.9 712 Q544.9 712 544.9 719 L544.9 732" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M745.8 132 L745.8 233 Q745.8 240 738.8 240 L518.5 240 Q513.5 240 513.5 245 L513.5 250" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M793.8 132 L793.8 137 Q793.8 142 798.8 142 L1062.5 142 Q1069.5 142 1069.5 149 L1069.5 715 Q1069.5 722 1062.5 722 L667.9 722 Q662.9 722 662.9 727 L662.9 732" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M502.4 414 L502.4 373 Q502.4 366 495.4 366 L435.4 366 Q428.4 366 428.4 359 L428.4 326" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M475.3 490 L475.3 541 Q475.3 548 468.3 548 L341.4 548 Q336.4 548 336.4 553 L336.4 558" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M529.5 490 L529.5 675 Q529.5 682 536.5 682 L577.2 682 Q584.2 682 584.2 689 L584.2 732" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M268.7 490 L268.7 558" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M214.1 490 L214.1 495 Q214.1 500 209.1 500 L135.8 500 Q128.8 500 128.8 507 L128.8 695 Q128.8 702 135.8 702 L551 702 Q558 702 558 709 L558 732" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M680.4 490 L680.4 675 Q680.4 682 673.4 682 L617.4 682 Q610.4 682 610.4 689 L610.4 732" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M581.6 132 L581.6 223 Q581.6 230 574.6 230 L492.2 230 Q485.2 230 485.2 237 L485.2 250" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M629.6 132 L629.6 145 Q629.6 152 636.6 152 L878.7 152 Q885.7 152 885.7 159 L885.7 695 Q885.7 702 878.7 702 L643.7 702 Q636.7 702 636.7 709 L636.7 732" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
 <rect x="18" y="18" width="81.3" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
 <text x="58.7" y="33" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">TOOLS/</text>
-<rect x="148.2" y="508" width="162.8" height="76" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="160.2" y="520" width="32.4" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
-<text x="176.4" y="531.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad/</text>
-<text x="160.2" y="554" font-size="12.5" fill="#0F172A" font-weight="700">7 modules, 1,924 lines</text>
-<text x="160.2" y="571" font-size="10.5" fill="#475569">7 entry points</text>
-<rect x="369.9" y="220" width="170.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="381.9" y="232" width="48.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="406" y="243.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/</text>
-<text x="381.9" y="266" font-size="12.5" fill="#0F172A" font-weight="700">20 modules, 7,129 lines</text>
-<text x="381.9" y="283" font-size="10.5" fill="#475569">16 entry points</text>
-<rect x="404.1" y="508" width="169.4" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="416.1" y="520" width="38" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="435.1" y="531.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac/</text>
-<text x="416.1" y="554" font-size="12.5" fill="#0F172A" font-weight="700">5 modules, 1,382 lines</text>
-<text x="416.1" y="571" font-size="10.5" fill="#475569">2 entry points · own README</text>
-<rect x="672.6" y="56" width="151.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="684.6" y="68" width="57.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="713.3" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">previews/</text>
-<text x="684.6" y="102" font-size="12.5" fill="#0F172A" font-weight="700">2 modules, 865 lines</text>
-<text x="684.6" y="119" font-size="10.5" fill="#475569">2 entry points</text>
-<rect x="915" y="56" width="144.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="927" y="68" width="48.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="951.4" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">readme/</text>
-<text x="927" y="102" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 437 lines</text>
-<text x="927" y="119" font-size="10.5" fill="#475569">1 entry point</text>
-<rect x="459.4" y="354" width="162.8" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="471.4" y="366" width="42.4" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="492.6" y="377.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sysml/</text>
-<text x="471.4" y="400" font-size="12.5" fill="#0F172A" font-weight="700">6 modules, 1,041 lines</text>
-<text x="471.4" y="417" font-size="10.5" fill="#475569">5 entry points</text>
-<rect x="62" y="722" width="144.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="74" y="734" width="41.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="94.6" y="745.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">terms/</text>
-<text x="74" y="768" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 399 lines</text>
-<text x="74" y="785" font-size="10.5" fill="#475569">1 entry point</text>
-<rect x="759.4" y="354" width="163.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="771.4" y="366" width="46.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="794.7" y="377.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">vcycle/</text>
-<text x="771.4" y="400" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 369 lines</text>
-<text x="771.4" y="417" font-size="10.5" fill="#475569">1 entry point · own README</text>
-<rect x="846" y="508" width="144.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="858" y="520" width="34.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="875" y="531.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">wiki/</text>
-<text x="858" y="554" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 188 lines</text>
-<text x="858" y="571" font-size="10.5" fill="#475569">1 entry point</text>
-<rect x="27" y="56" width="144.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="39" y="68" width="69.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="73.6" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">worksheets/</text>
-<text x="39" y="102" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 851 lines</text>
-<text x="39" y="119" font-size="10.5" fill="#475569">1 entry point</text>
-<rect x="400.9" y="56" width="162.8" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="412.9" y="68" width="53" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="439.4" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">top level</text>
-<text x="412.9" y="102" font-size="12.5" fill="#0F172A" font-weight="700">3 modules, 1,056 lines</text>
-<text x="412.9" y="119" font-size="10.5" fill="#475569">3 entry points</text>
-<rect x="407.2" y="172" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="412.2" y="185" font-size="10.5" fill="#475569">3 imports</text>
-<rect x="627.5" y="249" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="632.5" y="262" font-size="10.5" fill="#475569">1 import</text>
-<rect x="84.1" y="383" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="89.1" y="396" font-size="10.5" fill="#475569">1 import</text>
-<rect x="170.8" y="604" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="175.8" y="617" font-size="10.5" fill="#475569">2 imports</text>
-<rect x="478" y="172" width="64.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="483" y="185" font-size="10.5" fill="#475569">16 imports</text>
-<rect x="379.2" y="383" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="384.2" y="396" font-size="10.5" fill="#475569">6 imports</text>
-<rect x="541.8" y="316" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="546.8" y="329" font-size="10.5" fill="#475569">1 import</text>
-<rect x="262.2" y="450" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="267.2" y="463" font-size="10.5" fill="#475569">3 imports</text>
-<rect x="435.7" y="604" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="440.7" y="617" font-size="10.5" fill="#475569">1 import</text>
-<rect x="548.7" y="172" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="553.7" y="185" font-size="10.5" fill="#475569">2 imports</text>
-<rect x="689.6" y="316" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="694.6" y="329" font-size="10.5" fill="#475569">2 imports</text>
-<rect x="941.4" y="383" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="946.4" y="396" font-size="10.5" fill="#475569">2 imports</text>
-<rect x="616.5" y="172" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="621.5" y="185" font-size="10.5" fill="#475569">1 import</text>
-<rect x="1012.2" y="383" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="1017.2" y="396" font-size="10.5" fill="#475569">1 import</text>
-<rect x="447" y="316" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="452" y="329" font-size="10.5" fill="#475569">1 import</text>
-<rect x="509.1" y="450" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="514.1" y="463" font-size="10.5" fill="#475569">3 imports</text>
-<rect x="333" y="537" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="338" y="550" font-size="10.5" fill="#475569">1 import</text>
-<rect x="760.9" y="450" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="765.9" y="463" font-size="10.5" fill="#475569">1 import</text>
-<rect x="771.9" y="537" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="776.9" y="550" font-size="10.5" fill="#475569">1 import</text>
-<rect x="865" y="604" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="870" y="617" font-size="10.5" fill="#475569">1 import</text>
-<rect x="345.1" y="172" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="350.1" y="185" font-size="10.5" fill="#475569">1 import</text>
-<rect x="22" y="383" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="27" y="396" font-size="10.5" fill="#475569">1 import</text>
+<rect x="896.7" y="558" width="162.8" height="76" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="908.7" y="570" width="32.4" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="924.9" y="581.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad/</text>
+<text x="908.7" y="604" font-size="12.5" fill="#0F172A" font-weight="700">7 modules, 1,924 lines</text>
+<text x="908.7" y="621" font-size="10.5" fill="#475569">7 entry points</text>
+<rect x="371.6" y="250" width="170.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="383.6" y="262" width="48.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="407.7" y="273.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">figures/</text>
+<text x="383.6" y="296" font-size="12.5" fill="#0F172A" font-weight="700">21 modules, 7,551 lines</text>
+<text x="383.6" y="313" font-size="10.5" fill="#475569">17 entry points</text>
+<rect x="200.9" y="558" width="169.4" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="212.9" y="570" width="38" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="231.9" y="581.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac/</text>
+<text x="212.9" y="604" font-size="12.5" fill="#0F172A" font-weight="700">5 modules, 1,382 lines</text>
+<text x="212.9" y="621" font-size="10.5" fill="#475569">2 entry points · own README</text>
+<rect x="42.9" y="56" width="151.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="54.9" y="68" width="57.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="83.5" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">previews/</text>
+<text x="54.9" y="102" font-size="12.5" fill="#0F172A" font-weight="700">2 modules, 865 lines</text>
+<text x="54.9" y="119" font-size="10.5" fill="#475569">2 entry points</text>
+<rect x="697.7" y="56" width="144.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="709.7" y="68" width="48.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="734.1" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">readme/</text>
+<text x="709.7" y="102" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 437 lines</text>
+<text x="709.7" y="119" font-size="10.5" fill="#475569">1 entry point</text>
+<rect x="421" y="414" width="162.8" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="433" y="426" width="42.4" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="454.2" y="437.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sysml/</text>
+<text x="433" y="460" font-size="12.5" fill="#0F172A" font-weight="700">6 modules, 1,041 lines</text>
+<text x="433" y="477" font-size="10.5" fill="#475569">5 entry points</text>
+<rect x="531.8" y="732" width="144.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="543.8" y="744" width="41.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="564.4" y="755.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">terms/</text>
+<text x="543.8" y="778" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 399 lines</text>
+<text x="543.8" y="795" font-size="10.5" fill="#475569">1 entry point</text>
+<rect x="159.6" y="414" width="163.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="171.6" y="426" width="46.5" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="194.8" y="437.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">vcycle/</text>
+<text x="171.6" y="460" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 369 lines</text>
+<text x="171.6" y="477" font-size="10.5" fill="#475569">1 entry point · own README</text>
+<rect x="608.3" y="414" width="144.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="620.3" y="426" width="34.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="637.4" y="437.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">wiki/</text>
+<text x="620.3" y="460" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 190 lines</text>
+<text x="620.3" y="477" font-size="10.5" fill="#475569">1 entry point</text>
+<rect x="533.5" y="56" width="144.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="545.5" y="68" width="69.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="580.1" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">worksheets/</text>
+<text x="545.5" y="102" font-size="12.5" fill="#0F172A" font-weight="700">1 module, 851 lines</text>
+<text x="545.5" y="119" font-size="10.5" fill="#475569">1 entry point</text>
+<rect x="214.5" y="56" width="162.8" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="226.5" y="68" width="53" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="253" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">top level</text>
+<text x="226.5" y="102" font-size="12.5" fill="#0F172A" font-weight="700">3 modules, 1,059 lines</text>
+<text x="226.5" y="119" font-size="10.5" fill="#475569">3 entry points</text>
+<rect x="323.9" y="202" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="328.9" y="215" font-size="10.5" fill="#475569">3 imports</text>
+<rect x="194" y="279" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="199" y="292" font-size="10.5" fill="#475569">1 import</text>
+<rect x="770.5" y="443" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="775.5" y="456" font-size="10.5" fill="#475569">1 import</text>
+<rect x="919.3" y="654" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="924.3" y="667" font-size="10.5" fill="#475569">2 imports</text>
+<rect x="457.8" y="202" width="64.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="462.8" y="215" font-size="10.5" fill="#475569">17 imports</text>
+<rect x="341.2" y="443" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="346.2" y="456" font-size="10.5" fill="#475569">6 imports</text>
+<rect x="514.4" y="376" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="519.4" y="389" font-size="10.5" fill="#475569">1 import</text>
+<rect x="538.5" y="510" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="543.5" y="523" font-size="10.5" fill="#475569">3 imports</text>
+<rect x="627.3" y="376" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="632.3" y="389" font-size="10.5" fill="#475569">1 import</text>
+<rect x="232.5" y="654" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="237.5" y="667" font-size="10.5" fill="#475569">1 import</text>
+<rect x="256.1" y="202" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="261.1" y="215" font-size="10.5" fill="#475569">2 imports</text>
+<rect x="89.8" y="376" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="94.8" y="389" font-size="10.5" fill="#475569">2 imports</text>
+<rect x="22" y="443" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="27" y="456" font-size="10.5" fill="#475569">2 imports</text>
+<rect x="692.7" y="202" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="697.7" y="215" font-size="10.5" fill="#475569">1 import</text>
+<rect x="1016.4" y="443" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="1021.4" y="456" font-size="10.5" fill="#475569">1 import</text>
+<rect x="449.3" y="376" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="454.3" y="389" font-size="10.5" fill="#475569">1 import</text>
+<rect x="416.5" y="510" width="58.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="421.5" y="523" font-size="10.5" fill="#475569">3 imports</text>
+<rect x="476.4" y="587" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="481.4" y="600" font-size="10.5" fill="#475569">1 import</text>
+<rect x="215.6" y="510" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="220.6" y="523" font-size="10.5" fill="#475569">1 import</text>
+<rect x="129.8" y="587" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="134.8" y="600" font-size="10.5" fill="#475569">1 import</text>
+<rect x="627.3" y="587" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="632.3" y="600" font-size="10.5" fill="#475569">1 import</text>
+<rect x="528.5" y="202" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="533.5" y="215" font-size="10.5" fill="#475569">1 import</text>
+<rect x="832.6" y="443" width="53.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="837.6" y="456" font-size="10.5" fill="#475569">1 import</text>
 </g>
-<rect x="40" y="968" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
-<text x="62" y="978" font-size="11" fill="#475569">CAD pipeline</text>
-<rect x="140.6" y="968" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
-<text x="162.6" y="978" font-size="11" fill="#475569">Package</text>
-<rect x="218.6" y="968" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
-<text x="240.6" y="978" font-size="11" fill="#475569">Package with a validator</text>
-<line x1="379.6" y1="974" x2="395.6" y2="974" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
-<text x="401.6" y="978" font-size="11" fill="#475569">Imports (count of modules)</text>
-<text x="40" y="1000" font-size="10.5" fill="#94A3B8">Generated by tools/figures/tools_readme.py from the tools' docstrings and imports and the CI workflows. Tools check links, schemas and staleness; passing them is not a review and accepts nothing (rule R13).</text>
-<g class="terms" data-base-h="1029">
-<rect x="0" y="1029" width="1167.3" height="54.6" fill="#FFFFFF"/>
-<line x1="40" y1="1033" x2="1127.3" y2="1033" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="1048.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CAD = computer-aided design · CI = continuous integration (the automated checks GitHub runs on every change) · R01 … = validator rule in tools/pdac (R13 = only a named human review accepts</text>
-<text x="40" y="1063.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">anything)</text>
+<rect x="40" y="978" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="62" y="988" font-size="11" fill="#475569">CAD pipeline</text>
+<rect x="140.6" y="978" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="162.6" y="988" font-size="11" fill="#475569">Package</text>
+<rect x="218.6" y="978" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="240.6" y="988" font-size="11" fill="#475569">Package with a validator</text>
+<line x1="379.6" y1="984" x2="395.6" y2="984" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="401.6" y="988" font-size="11" fill="#475569">Imports (count of modules)</text>
+<text x="40" y="1010" font-size="10.5" fill="#94A3B8">Generated by tools/figures/tools_readme.py from the tools' docstrings and imports and the CI workflows. Tools check links, schemas and staleness; passing them is not a review and accepts nothing (rule R13).</text>
+<g class="terms" data-base-h="1039">
+<rect x="0" y="1039" width="1174.5" height="54.6" fill="#FFFFFF"/>
+<line x1="40" y1="1043" x2="1134.5" y2="1043" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1058.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CAD = computer-aided design · CI = continuous integration (the automated checks GitHub runs on every change) · R01 … = validator rule in tools/pdac (R13 = only a named human review accepts</text>
+<text x="40" y="1073.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">anything)</text>
 </g>
 </svg>

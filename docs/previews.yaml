@@ -23,6 +23,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - integrations           # generated README (tools/figures/integrations_readme.py)
   - framework              # generated README top (tools/figures/framework_readme.py)
   - tools                  # generated README (tools/figures/tools_readme.py)
+  - docs                   # generated README (tools/figures/docs_readme.py); subfolders keep their previews
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -106,24 +107,6 @@ folders:
     gallery_glob: cad/renders/blender/*.{jpg,gif}
     links:
       - {text: Walk cycle video, href: cad/renders/blender/CL-05-walk-military.mp4}
-
-  docs:
-    title: Documentation sources
-    purpose: >-
-      The abbreviations list, the front-page figures, the 3D scene pages, the editable process-map sources and the
-      wiki source. Open a subfolder for its gallery.
-    hero: {img: docs/readme/at-a-glance.svg, caption: "Project at a glance (front-page figure)"}
-    gallery:
-      - {img: docs/readme/risk-matrix.svg, caption: "Current hazard risk on the MIL-STD-882E matrix"}
-      - {img: docs/readme/simulation.svg, caption: "Simulation results summary (synthetic)"}
-      - {img: docs/wiki/images/3d-s3-01.png, caption: "3D scene still", link: docs/3d/README.md}
-    links:
-      - {text: Abbreviations and codes, href: docs/terms.md}
-      - {text: Front-page figures, href: docs/readme/README.md}
-      - {text: 3D scene pages, href: docs/3d/README.md}
-      - {text: System V cycle page, href: docs/vcycle/README.md}
-      - {text: Process-map sources, href: docs/diagrams/mil-std-882e/README.md}
-      - {text: Wiki images, href: docs/wiki/images/README.md}
 
   docs/3d:
     title: 3D scene pages
