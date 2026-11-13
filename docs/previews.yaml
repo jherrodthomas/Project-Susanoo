@@ -36,6 +36,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - sim/scenes3d/library   # generated README (tools/figures/lookslib_readme.py)
   - sim/scenes3d/out       # generated README (tools/figures/sceneout_readme.py)
   - cad/params             # generated README (tools/figures/params_readme.py)
+  - cad/drawings           # generated README (tools/figures/drawings_readme.py)
   - sim/figures            # generated README (tools/figures/simfigs_readme.py)
   - docs/3d                # generated README (tools/figures/pages3d_readme.py)
   - docs/3d/assets         # generated README (tools/figures/assets3d_readme.py)
@@ -84,17 +85,6 @@ folders:
     links:
       - {text: Trade Studies (wiki page), href: docs/wiki/Trade-Studies.md}
       - {text: Trade-study decision process, href: concept/trade-studies.md}
-
-  cad/drawings:
-    title: Concept layout drawing sheets
-    purpose: >-
-      One drawing sheet per concept layout (SUS-CAD-001-CL-nn), built from the FreeCAD models, plus all sheets in one
-      PDF (`concept-layouts.pdf`). Concept layouts, not a design.
-    hero: {img: cad/drawings/CL-05.svg, caption: "CL-05, the reference layout"}
-    gallery_glob: cad/drawings/*.svg
-    links:
-      - {text: All sheets (PDF), href: cad/drawings/concept-layouts.pdf}
-      - {text: Concept layouts review, href: cad/README.md}
 
   cad/renders:
     title: Concept layout renders

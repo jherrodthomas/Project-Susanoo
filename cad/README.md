@@ -369,7 +369,7 @@ Records that cite the CAD: 12 hazards (HAZ-DCK-001, HAZ-GSE-001, HAZ-INT-001, HA
 | Item | Description | State |
 |---|---|---|
 | [`params/`](params/README.md) | Layout parameters (6 YAML files) | hand-written; README generated |
-| [`drawings/`](drawings/README.md) | Drawing sheets (10 files) | generated (CAD) |
+| [`drawings/`](drawings/README.md) | Drawing sheets (8 sheets and their PDF) | generated (CAD); README generated |
 | [`renders/`](renders/) | Review images and Blender renders (57 files) | generated (CAD) |
 | [`concept-art/`](concept-art/README.md) | AI concept art from the renders (15 files) | AI-made, labelled |
 | [`metrics.json`](metrics.json) | Metrics of the placeholder geometry (tools/cad/build_concepts.py, FreeCAD 1.1.3) | generated (CAD) |

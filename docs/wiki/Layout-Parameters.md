@@ -107,7 +107,7 @@ The parameters of each concept layout (`CL-nn.yaml`) and those they share (`comm
 | Output | Destination |
 |---|---|
 | Models, metrics, renders | [`cad/`](Concept-Layouts.md) (`build_concepts.py`) |
-| Drawing sheets | [`cad/drawings/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/drawings/README.md) |
+| Drawing sheets | [`cad/drawings/`](Drawing-Sheets.md) |
 | CL-05 web geometry | [`docs/3d/assets/`](3D-Page-Assets.md) (`cl05_web.py`) |
 
 ## Changing a parameter

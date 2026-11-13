@@ -83,7 +83,8 @@ def load() -> dict:
              "decisions": sorted(d["id"] for d in reg if cites(d))}
     subs = sorted({s for h in cited["hazards"] for s in hazards[h].get("subsystems") or []})
     params = {p.stem: yaml.safe_load(p.read_text()) for p in sorted((FOLDER / "params").glob("CL-*.yaml"))}
-    files = {k: len([p for p in (FOLDER / k).rglob("*") if p.is_file()]) for k in ("drawings", "renders", "concept-art")}
+    files = {k: len([p for p in (FOLDER / k).rglob("*") if p.is_file()]) for k in ("renders", "concept-art")}
+    files["drawings"] = len(list((FOLDER / "drawings").glob("CL-*.svg")))
     files["params"] = len(list((FOLDER / "params").glob("*.yaml")))
     return {"ctx": ctx, "reqs": reqs, "hazards": hazards, "rows": rows, "concepts": m["concepts"], "meta": m,
             "findings": findings, "dqs": dqs, "cited": cited, "subs": subs, "params": params, "files": files}
@@ -368,7 +369,8 @@ def section(d: dict, specs: list[dict]) -> str:
            "| Item | Description | State |", "|---|---|---|",
            f"| [`params/`](params/README.md) | Layout parameters ({d['files']['params']} YAML files) | hand-written; README "
            "generated |",
-           f"| [`drawings/`](drawings/README.md) | Drawing sheets ({d['files']['drawings']} files) | generated (CAD) |",
+           f"| [`drawings/`](drawings/README.md) | Drawing sheets ({d['files']['drawings']} sheets and their PDF) | generated "
+           "(CAD); README generated |",
            f"| [`renders/`](renders/) | Review images and Blender renders ({d['files']['renders']} files) | generated (CAD) |",
            f"| [`concept-art/`](concept-art/README.md) | AI concept art from the renders ({d['files']['concept-art']} files) "
            "| AI-made, labelled |",
