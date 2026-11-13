@@ -147,7 +147,7 @@ const dimLab = css('dim', `rotor ↔ pilot ${f2(D.dock.rotor_to_pilot_m)} m`); d
 
 // ------------------------------------------------------------------ hazard callouts (screen space, as on sheet 1)
 const coLayer = $('co'), coSvg = $('cosvg'), co = {};
-for (const h of D.hazards) { const el = document.createElement('div'); el.className = 'co'; el.textContent = h.id; el.title = h.title;
+for (const h of D.hazards) { if (!D.anchors[h.id]) continue; const el = document.createElement('div'); el.className = 'co'; el.textContent = h.id; el.title = h.title;
   el.onclick = () => selectHazard(h.id); coLayer.appendChild(el); co[h.id] = { el, p: null }; }
 function updateAnchors() {
   for (const [id, c] of Object.entries(co)) {
@@ -156,7 +156,7 @@ function updateAnchors() {
     if (S.mode === 'air') { if (a.air === 'keepout' && S.show.keepout) c.p = keep.localToWorld(new THREE.Vector3(koR, 0, koH)); continue; }
     const b = box3((m) => m.userData.cls === a.cls && m.parent === walker, walker); if (b.isEmpty()) continue;
     const ce = b.getCenter(new THREE.Vector3());
-    c.p = new THREE.Vector3(...({ top: [ce.x, ce.y, b.max.z], rear: [b.min.x, ce.y, ce.z], front: [b.max.x, ce.y, ce.z] })[a.at] || ce.toArray());
+    c.p = new THREE.Vector3(...(({ top: [ce.x, ce.y, b.max.z], rear: [b.min.x, ce.y, ce.z], front: [b.max.x, ce.y, ce.z] })[a.at] || ce.toArray()));
   }
 }
 function drawCallouts() {
@@ -232,7 +232,7 @@ $('spec').innerHTML = [['Body', U.body.map(f2).join('×')], ['Span*', `${f2(span
 $('specnote').innerHTML = `* placeholder geometry in m, cad/params/common.yaml · dock clearances cad/metrics.json · flight figures ${D.spec_id} (assumed) · ` +
   `${D.runs[0].simulator}, PX4 ${D.runs[0].px4}<br>Elements: ${D.elements.filter((e) => e.id !== 'SUS-A1').map((e) => `${e.id.replace('SUS-A1-', '')} ${e.name.toLowerCase()}`).join(' · ')}`;
 $('hzcount').textContent = `${D.hazards.length} · ${D.hazards.every((h) => h.status === 'open') ? 'all open' : ''}`;
-$('hzlist').innerHTML = D.hazards.map((h) => `<div class="hz" tabindex="0" data-h="${h.id}" title="${h.title}"><b>${h.id}</b><span>${h.title}</span>` +
+$('hzlist').innerHTML = D.hazards.map((h) => `<div class="hz${D.anchors[h.id] ? '' : ' off'}" tabindex="0" data-h="${h.id}" title="${h.title}"><b>${h.id}</b><span>${h.title}</span>` +
   `<span class="tag r${(h.rac || ' ')[0]}" title="initial risk ${h.rac} ${h.level}">${h.rac || '—'}</span></div>`).join('');
 document.querySelectorAll('.hz').forEach((el) => { el.onclick = () => selectHazard(el.dataset.h); el.onkeydown = (e) => { if (e.key === 'Enter') selectHazard(el.dataset.h); }; });
 $('ifcount').textContent = `${D.interfaces.length}`;

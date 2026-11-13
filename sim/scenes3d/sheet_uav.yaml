@@ -9,12 +9,16 @@ layout: CL-05
 title: UAV on dock and in airspace, interactive
 sheet: "2 of 2"
 
-# Hazards whose callouts show in the dock close-up: the part class the leader starts at and where on its bounding box.
-# In the airspace view HAZ-INT-001 points at the pilot keep-out instead (`air: keepout`).
+# The sheet lists every hazard whose record names SUS-A1 among its subsystems. Callouts in the dock close-up: the part
+# class the leader starts at and where on its bounding box. In the airspace view HAZ-INT-001 points at the pilot
+# keep-out instead (`air: keepout`). A listed hazard without an entry here has no callout.
 anchors:
   HAZ-DCK-001: {cls: rotor, at: top}
   HAZ-DCK-002: {cls: dock, at: rear}
+  HAZ-DCK-003: {cls: uav, at: centre}
+  HAZ-DCK-004: {cls: dock, at: top}
   HAZ-INT-001: {cls: uav, at: front, air: keepout}
+  HAZ-INT-002: {cls: occupant, at: top}
 
 # PX4 SITL scenarios replayed in the airspace view (sim/results/uav/<id>.json)
 replay: [SU-01, SU-02, SU-03, SU-04, SU-05, SU-06]

@@ -161,9 +161,10 @@ def page_html(data: dict, title: str, body: str, viewer: str, terms: str) -> str
 
 def sheet2() -> dict:
     cfg = _read_yaml(SIM / "scenes3d" / "sheet_uav.yaml")
-    hz = [h for h in hazards() if h["id"] in cfg["anchors"]]
-    if len(hz) != len(cfg["anchors"]):
-        raise ValueError("sheet_uav.yaml anchors name unknown hazards")
+    allh = hazards()
+    if set(cfg["anchors"]) - {h["id"] for h in allh}:
+        raise ValueError(f"sheet_uav.yaml anchors name unknown hazards: {sorted(set(cfg['anchors']) - {h['id'] for h in allh})}")
+    hz = [h for h in allh if "SUS-A1" in h["subsystems"] or h["id"] in cfg["anchors"]]
     data = {
         "sheet": {k: cfg[k] for k in ("id", "document", "layout", "title", "sheet")} | {"revision": cad_revision()},
         "about": ABOUT, "anchors": cfg["anchors"], "uav_scale_air": cfg["uav_scale_air"],
