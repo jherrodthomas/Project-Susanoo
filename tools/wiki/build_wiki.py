@@ -66,7 +66,8 @@ def sources() -> dict[Path, str]:
              ROOT / "cad/README.md": "Concept-Layouts",
              ROOT / "sim/uav/README.md": "UAV-SITL-Harness",
              ROOT / "sim/plant/README.md": "Walker-Plant",
-             ROOT / "sim/search/README.md": "Failure-Search"}
+             ROOT / "sim/search/README.md": "Failure-Search",
+             ROOT / "sim/mujoco/README.md": "Level-2-MuJoCo"}
     for r in sorted(TREE_DIR.rglob("README.md")):
         if "figures" not in r.parts:
             pages[r] = tree_page(r)
@@ -153,6 +154,7 @@ def sidebar(current: str) -> str:
              "- [UAV SITL harness](UAV-SITL-Harness)",
              "- [Walker plant (level 1)](Walker-Plant)",
              "- [Failure search](Failure-Search)",
+             "- [Level-2 MuJoCo model](Level-2-MuJoCo)",
              "- [882E work products](882E-Work-Products)"]
     for p, n in tree:
         depth = len(p.parent.relative_to(TREE_DIR).parts)

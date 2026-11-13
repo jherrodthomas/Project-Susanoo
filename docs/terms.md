@@ -104,6 +104,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | MBSE | model-based systems engineering |
 | MCP | Model Context Protocol, how the AI assistant connects to external tools |
 | MGT | management (MIL-STD-882E task type) |
+| MJCF | the MuJoCo model file format, a text file MuJoCo loads a model from |
 | MSA | materiel solution analysis (acquisition phase) |
 | MuJoCo | Multi-Joint dynamics with Contact, the physics engine for the level-2 walker model |
 | NA | not applicable (MIL-STD-882E Table A-I) |

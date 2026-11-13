@@ -27,6 +27,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - sim/uav                # generated README (tools/figures/uav_readme.py)
   - sim/plant              # generated README (tools/figures/plant_readme.py)
   - sim/search             # generated README (tools/figures/search_readme.py)
+  - sim/mujoco             # generated README (tools/figures/mujoco_readme.py)
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -263,14 +264,6 @@ folders:
       - {img: docs/wiki/images/software-safety.svg, caption: "Software safety process map (illustrative)"}
       - {img: safety/mil-std-882e/software-safety/figures/fig-4-sysml-block-definition.svg, caption: "SSF record structure", link: safety/mil-std-882e/software-safety/README.md}
 
-  sim/mujoco:
-    title: Level-2 multibody simulation (MuJoCo)
-    purpose: >-
-      The level-2 walker model in MuJoCo and the cross-check that compares it case by case with the level-1 plant.
-      Results are synthetic.
-    hero: {img: docs/wiki/images/rec-l1-l2.svg, caption: "Level 1 against level 2, case by case (synthetic)"}
-    links:
-      - {text: Cross-check results, href: sim/results/l2-crosscheck.md}
 
   sim/trades:
     title: Trade-study evidence
