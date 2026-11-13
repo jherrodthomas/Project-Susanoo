@@ -180,7 +180,7 @@ package SimulationEvidence {
 | [`search/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/search/README.md) | Failure search | folder |
 | [`spec/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/spec/README.md) | Simulation specifications | folder |
 | [`trades/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/trades/README.md) | Trade-study evidence | folder |
-| [`uav/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/uav/README.md) | UAV simulation harness (PX4 SITL) | folder |
+| [`uav/`](UAV-SITL-Harness) | UAV simulation harness (PX4 SITL) | folder |
 | [`faults.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/faults.yaml) | Fault catalogue | present |
 | [`SimulationEvidence.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/SimulationEvidence.sysml) | Generated SysML v2 evidence gate | generated |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/figures) | Generated SVG figures (do not edit) | generated |

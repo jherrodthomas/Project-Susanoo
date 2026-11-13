@@ -80,6 +80,8 @@ ENFORCED = {
     "cad": {"skip_dirs": {"concept-art", "drawings", "figures", "params", "renders"},
             "generator": ["tools/figures/cad_readme.py", "--check"],
             "extra_generators": [["tools/cad/readme.py", "--check"]]},
+    # Generated README of the PX4 SITL harness (sim/ skips its subfolders; this one has its own page).
+    "sim/uav": {"skip_dirs": {"figures", "__pycache__"}, "generator": ["tools/figures/uav_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

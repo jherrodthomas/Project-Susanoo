@@ -24,6 +24,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - framework              # generated README top (tools/figures/framework_readme.py)
   - tools                  # generated README (tools/figures/tools_readme.py)
   - docs                   # generated README (tools/figures/docs_readme.py); subfolders keep their previews
+  - sim/uav                # generated README (tools/figures/uav_readme.py)
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -366,15 +367,6 @@ folders:
     gallery:
       - {img: docs/readme/simulation.svg, caption: "Simulation results summary (synthetic)"}
 
-  sim/uav:
-    title: UAV simulation harness (PX4 SITL)
-    purpose: >-
-      Runs the PX4 SITL failsafe scenarios in `scenarios.yaml` and writes `sim/results/uav`. Re-running needs a PX4
-      build; see `sim/README.md`.
-    hero: {img: docs/wiki/images/sim-su-01.svg, caption: "SU-01 (synthetic)"}
-    gallery:
-      - {img: docs/wiki/images/sim-su-02.svg, caption: "SU-02 (synthetic)"}
-      - {img: docs/wiki/images/sim-su-03.svg, caption: "SU-03 (synthetic)"}
 
   standards/mil-std-882e:
     title: MIL-STD-882E model

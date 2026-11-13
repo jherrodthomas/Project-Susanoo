@@ -1,72 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1125.8" height="1011.1" viewBox="0 0 1125.8 1011.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1113.3" height="1011.1" viewBox="0 0 1113.3 1011.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
 <title>Figure 2 · Where the wiki pages come from</title>
 <desc>Each wiki page is a copy of a repository page, written by a generator, or written by hand for the wiki. The publish-wiki workflow copies docs/wiki to the GitHub Wiki on main.</desc>
 <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="1125.8" height="971" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1113.3" height="971" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 2 · Where the wiki pages come from</text>
 <text x="40" y="66" font-size="12.5" fill="#475569">Each wiki page is a copy of a repository page, written by a generator, or written by hand for the wiki. The publish-wiki workflow copies</text>
 <text x="40" y="83" font-size="12.5" fill="#475569">docs/wiki to the GitHub Wiki on main.</text>
-<text x="1085.8" y="44" font-size="11" fill="#475569" text-anchor="end">docs/wiki · tools/wiki/build_wiki.py</text>
-<line x1="40" y1="102" x2="1085.8" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1073.3" y="44" font-size="11" fill="#475569" text-anchor="end">docs/wiki · tools/wiki/build_wiki.py</text>
+<line x1="40" y1="102" x2="1073.3" y2="102" stroke="#E2E8F0" stroke-width="1"/>
 <g transform="translate(40 126)">
-<rect x="93.4" y="150" width="209.7" height="528" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<path d="M303.1 65 L498.8 65 Q505.8 65 505.8 72 L505.8 388 Q505.8 395 512.8 395 L547.8 395" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M303.1 414 L547.8 414" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M303.1 731 L498.8 731 Q505.8 731 505.8 724 L505.8 440 Q505.8 433 512.8 433 L547.8 433" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M683.8 414 L868.1 414" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<rect x="105.4" y="162" width="148.7" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
-<text x="179.8" y="177" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">GENERATED PAGES</text>
-<rect x="6" y="6" width="297.1" height="118" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="80.9" y="150" width="209.7" height="528" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M290.6 65 L486.3 65 Q493.3 65 493.3 72 L493.3 388 Q493.3 395 500.3 395 L535.3 395" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M290.6 414 L535.3 414" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M290.6 731 L486.3 731 Q493.3 731 493.3 724 L493.3 440 Q493.3 433 500.3 433 L535.3 433" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M671.3 414 L855.6 414" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="92.9" y="162" width="148.7" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="167.3" y="177" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">GENERATED PAGES</text>
+<rect x="6" y="6" width="284.6" height="118" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
 <rect x="18" y="18" width="121.5" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
 <text x="78.7" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">tools/wiki/build_wiki.py</text>
-<text x="18" y="52" font-size="12.5" fill="#0F172A" font-weight="700">59 repository pages copied</text>
-<text x="18" y="69" font-size="10.5" fill="#475569">safety 40, docs 2, framework 2, integrations 2, (front</text>
-<text x="18" y="83" font-size="10.5" fill="#475569">page) 1, architecture 1, cad 1, changes 1, concept 1,</text>
-<text x="18" y="97" font-size="10.5" fill="#475569">decisions 1, models 1, requirements 1, reviews 1, sim 1,</text>
-<text x="18" y="111" font-size="10.5" fill="#475569">standards 1, tools 1, verification 1</text>
-<rect x="128.8" y="280" width="139" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="140.8" y="292" width="115" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="198.2" y="303.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/figures/scenes.py</text>
-<text x="140.8" y="326" font-size="12.5" fill="#0F172A" font-weight="700">1 page</text>
-<rect x="117.6" y="440" width="161.3" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="129.6" y="452" width="137.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="198.3" y="463.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/figures/uav_scenes.py</text>
-<text x="129.6" y="486" font-size="12.5" fill="#0F172A" font-weight="700">1 page</text>
-<rect x="111.4" y="200" width="173.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="123.4" y="212" width="149.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="198.3" y="223.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/scenes3d/build_pages.py</text>
-<text x="123.4" y="246" font-size="12.5" fill="#0F172A" font-weight="700">1 page</text>
-<rect x="130.3" y="520" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="142.3" y="532" width="79.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="182.2" y="543.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac/report.py</text>
-<text x="142.3" y="566" font-size="12.5" fill="#0F172A" font-weight="700">7 pages</text>
-<rect x="130.3" y="600" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="142.3" y="612" width="83.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="183.8" y="623.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sysml/views.py</text>
-<text x="142.3" y="646" font-size="12.5" fill="#0F172A" font-weight="700">1 page</text>
-<rect x="126.6" y="360" width="143.3" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="138.6" y="372" width="119.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="198.3" y="383.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">vcycle/build_vcycle.py</text>
-<text x="138.6" y="406" font-size="12.5" fill="#0F172A" font-weight="700">1 page</text>
-<rect x="167.1" y="704" width="136" height="54" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<text x="179.1" y="728" font-size="12.5" fill="#0F172A" font-weight="700">Wiki-only pages</text>
-<text x="179.1" y="745" font-size="10.5" fill="#475569">40 pages, hand-written</text>
-<rect x="547.8" y="376" width="136" height="76" rx="8" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
-<rect x="559.8" y="388" width="60.1" height="16" rx="8.0" fill="#FFFFFF" stroke="none" stroke-width="1"/>
-<text x="589.8" y="399.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">docs/wiki/</text>
-<text x="559.8" y="422" font-size="12.5" fill="#FFFFFF" font-weight="700">112 wiki pages</text>
-<text x="559.8" y="439" font-size="10.5" fill="#CBD5E1">35 image embeds</text>
-<rect x="868.1" y="387" width="171.7" height="54" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
-<text x="880.1" y="411" font-size="12.5" fill="#0F172A" font-weight="700">GitHub Wiki</text>
-<text x="880.1" y="428" font-size="10.5" fill="#475569">publish-wiki workflow, on main</text>
-<rect x="365.1" y="70" width="120.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="370.1" y="83" font-size="10.5" fill="#475569">59 copies (build_wiki)</text>
-<rect x="378.2" y="419" width="94.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="383.2" y="432" font-size="10.5" fill="#475569">generated pages</text>
-<rect x="372.9" y="736" width="105.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="377.9" y="749" font-size="10.5" fill="#475569">edited by a person</text>
-<rect x="745.8" y="419" width="60.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="750.8" y="432" font-size="10.5" fill="#475569">published</text>
+<text x="18" y="52" font-size="12.5" fill="#0F172A" font-weight="700">60 repository pages copied</text>
+<text x="18" y="69" font-size="10.5" fill="#475569">safety 40, docs 2, framework 2, integrations 2, sim 2,</text>
+<text x="18" y="83" font-size="10.5" fill="#475569">(front page) 1, architecture 1, cad 1, changes 1,</text>
+<text x="18" y="97" font-size="10.5" fill="#475569">concept 1, decisions 1, models 1, requirements 1,</text>
+<text x="18" y="111" font-size="10.5" fill="#475569">reviews 1, standards 1, tools 1, verification 1</text>
+<rect x="116.3" y="280" width="139" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="128.3" y="292" width="115" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="185.7" y="303.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/figures/scenes.py</text>
+<text x="128.3" y="326" font-size="12.5" fill="#0F172A" font-weight="700">1 page</text>
+<rect x="105.1" y="440" width="161.3" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="117.1" y="452" width="137.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="185.8" y="463.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/figures/uav_scenes.py</text>
+<text x="117.1" y="486" font-size="12.5" fill="#0F172A" font-weight="700">1 page</text>
+<rect x="98.9" y="200" width="173.7" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="110.9" y="212" width="149.7" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="185.8" y="223.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/scenes3d/build_pages.py</text>
+<text x="110.9" y="246" font-size="12.5" fill="#0F172A" font-weight="700">1 page</text>
+<rect x="117.8" y="520" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="129.8" y="532" width="79.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="169.7" y="543.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">pdac/report.py</text>
+<text x="129.8" y="566" font-size="12.5" fill="#0F172A" font-weight="700">7 pages</text>
+<rect x="117.8" y="600" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="129.8" y="612" width="83.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="171.3" y="623.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sysml/views.py</text>
+<text x="129.8" y="646" font-size="12.5" fill="#0F172A" font-weight="700">1 page</text>
+<rect x="114.1" y="360" width="143.3" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="126.1" y="372" width="119.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="185.8" y="383.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">vcycle/build_vcycle.py</text>
+<text x="126.1" y="406" font-size="12.5" fill="#0F172A" font-weight="700">1 page</text>
+<rect x="154.6" y="704" width="136" height="54" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<text x="166.6" y="728" font-size="12.5" fill="#0F172A" font-weight="700">Wiki-only pages</text>
+<text x="166.6" y="745" font-size="10.5" fill="#475569">40 pages, hand-written</text>
+<rect x="535.3" y="376" width="136" height="76" rx="8" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
+<rect x="547.3" y="388" width="60.1" height="16" rx="8.0" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<text x="577.3" y="399.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">docs/wiki/</text>
+<text x="547.3" y="422" font-size="12.5" fill="#FFFFFF" font-weight="700">113 wiki pages</text>
+<text x="547.3" y="439" font-size="10.5" fill="#CBD5E1">35 image embeds</text>
+<rect x="855.6" y="387" width="171.7" height="54" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="867.6" y="411" font-size="12.5" fill="#0F172A" font-weight="700">GitHub Wiki</text>
+<text x="867.6" y="428" font-size="10.5" fill="#475569">publish-wiki workflow, on main</text>
+<rect x="352.6" y="70" width="120.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="357.6" y="83" font-size="10.5" fill="#475569">60 copies (build_wiki)</text>
+<rect x="365.7" y="419" width="94.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="370.7" y="432" font-size="10.5" fill="#475569">generated pages</text>
+<rect x="360.4" y="736" width="105.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="365.4" y="749" font-size="10.5" fill="#475569">edited by a person</text>
+<rect x="733.3" y="419" width="60.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="738.3" y="432" font-size="10.5" fill="#475569">published</text>
 </g>
 <rect x="40" y="910" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
 <text x="62" y="920" font-size="11" fill="#475569">Repository pages (copied)</text>
@@ -82,8 +82,8 @@
 <text x="579.7" y="920" font-size="11" fill="#475569">Feeds</text>
 <text x="40" y="942" font-size="10.5" fill="#94A3B8">Generated by tools/figures/docs_readme.py from the files in docs/ and their GENERATED markers. A generated file is never edited by hand; it is rebuilt from the records and checked in CI.</text>
 <g class="terms" data-base-h="971">
-<rect x="0" y="971" width="1125.8" height="40.1" fill="#FFFFFF"/>
-<line x1="40" y1="975" x2="1085.8" y2="975" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="0" y="971" width="1113.3" height="40.1" fill="#FFFFFF"/>
+<line x1="40" y1="975" x2="1073.3" y2="975" stroke="#E2E8F0" stroke-width="1"/>
 <text x="40" y="990.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CI = continuous integration (the automated checks GitHub runs on every change)</text>
 </g>
 </svg>
