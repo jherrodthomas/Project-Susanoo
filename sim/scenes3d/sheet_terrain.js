@@ -308,8 +308,8 @@ function frame(now) {
   if (S.playing) S.u += dt * RATE * S.speed;
   const p = pose(S.u), c0 = p.k - Math.ceil(4 / STRIDE());
   if (groundKey !== S.mode + S.key + S.show.stripes || c0 !== groundC) buildGround(c0);
-  // CG of the standing layout carried with the body (approximate while walking), its plumb line to the ground
-  const cgw = walker.localToWorld(new THREE.Vector3(...D.standing.cg_m)), gz = groundAt(cgw.x, cgw.y);
+  // CG of the standing layout, or of the carry posture with the slider's load, carried with the body (approximate while walking), and its plumb line
+  const cgw = walker.localToWorld(new THREE.Vector3(...(S.mode === 'loaded' ? loadedCg(S.mass) : D.standing.cg_m))), gz = groundAt(cgw.x, cgw.y);
   cg.position.copy(cgw); plumb.geometry.setFromPoints([cgw, new THREE.Vector3(cgw.x, cgw.y, gz)]); plumb.computeLineDistances();
   hit.position.set(cgw.x, cgw.y, gz + 0.02); cg.visible = plumb.visible = hit.visible = S.show.plumb;
   person.visible = S.show.person; person.position.set(p.x - 1.2, -3.0, groundAt(p.x - 1.2, -3.0));
