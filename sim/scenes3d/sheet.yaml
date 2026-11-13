@@ -1,0 +1,41 @@
+# Interactive general-arrangement sheet of SUS-M1 (docs/3d/SUS-M1.html), built by sim/scenes3d/build_sheet.py.
+# Geometry: docs/3d/assets/sus-m1.js from tools/cad/b3d/cl05_web.py (CL-05 reference layout, concept only).
+# Figures on the sheet come from cad/metrics.json, safety/hazards/ and sim/scenes3d/out/; this file only says
+# where things are drawn. Display choices, no analysis: drafted by the AI assistant (I0), not reviewed.
+id: SUS-M1-SHEET
+document: SUS-CAD-001-CL-05
+layout: CL-05
+title: General arrangement, interactive
+sheet: "1 of 1"
+
+# Postures offered on the sheet: clip in the geometry, posture in cad/metrics.json whose figures are shown
+# (null: an animation only, not an analysed pose).
+postures:
+  - {key: stand,  label: Stand,  clip: null,   metrics: null}
+  - {key: kneel,  label: Kneel,  clip: kneel,  metrics: kneel}
+  - {key: carry,  label: Carry,  clip: carry,  metrics: carry}
+  - {key: egress, label: Egress, clip: egress, metrics: emergency}
+  - {key: walk,   label: Walk,   clip: walk,   metrics: null}
+
+# Which part of the model each hazard concerns, for the callout only: the part class whose meshes are highlighted
+# and where on their bounding box the leader starts (top, bottom, centre, front, rear, side). `when` limits a
+# callout to postures where that part shows. Hazards not listed here are listed on the sheet without a callout.
+anchors:
+  HAZ-WLK-002: {cls: cg}
+  HAZ-WLK-003: {cls: structure, at: bottom}
+  HAZ-WLK-001: {cls: actuator, at: side}
+  HAZ-PIL-001: {cls: access, at: front}
+  HAZ-PIL-002: {cls: seat, at: bottom}
+  HAZ-PIL-003: {cls: escape, at: centre, when: [egress]}
+  HAZ-MAN-001: {cls: arm, at: bottom}
+  HAZ-MAN-002: {cls: payload, at: front, when: [carry]}
+  HAZ-DCK-001: {cls: rotor, at: top}
+  HAZ-DCK-002: {cls: dock, at: rear}
+  HAZ-INT-001: {cls: uav, at: top}
+  HAZ-PWR-001: {cls: hose, at: centre}
+  HAZ-PWR-002: {cls: power, at: rear}
+  HAZ-PWR-003: {cls: power, at: bottom}
+  HAZ-SAF-001: {cls: safety, at: front}
+
+# Walker scenes replayed in the bottom panel (sim/scenes3d/out/<id>.json); each links to its own 3D page.
+replay: [S3-01, S3-02, S3-03, S3-04]
