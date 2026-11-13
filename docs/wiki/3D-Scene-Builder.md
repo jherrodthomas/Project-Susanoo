@@ -39,7 +39,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Field | Value |
 |---|---|
-| Pages | [`docs/3d/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/README.md) · [3D scenes (wiki)](3D-Scenes) |
+| Pages | [`docs/3d/`](3D-Scene-Pages) · [3D scenes (wiki)](3D-Scenes) |
 | Run | `python -m sim.scenes3d.export_scene && python -m sim.scenes3d.build_pages` (`--check` in CI); stills with `node sim/scenes3d/render.mjs` (see [`sim/README.md`](Simulation-Track)) |
 | three.js | `0.170.0`, SHA-256 `08fd7545d13d…` pinned in [`scenes.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/scenes.yaml) |
 | Sheets | `python -m sim.scenes3d.build_sheet` (`--check` in CI); checked and stills rendered by `node sim/scenes3d/sheet_check.mjs` |
@@ -145,7 +145,7 @@ Built by [`build_sheet.py`](https://github.com/jherrodthomas/Project-Susanoo/blo
 | Output | Destination |
 |---|---|
 | Scene analysis | [`out/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/out/README.md) |
-| Interactive pages | [`docs/3d/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/README.md) |
+| Interactive pages | [`docs/3d/`](3D-Scene-Pages) |
 | Wiki page and stills | `docs/wiki/3D-Scenes.md`, `docs/wiki/images/3d-*.png` |
 | General-arrangement sheets | [`docs/3d/SUS-M1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1.html), [`docs/3d/SUS-A1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-A1.html) |
 

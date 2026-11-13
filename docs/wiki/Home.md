@@ -90,6 +90,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   yet and why
 - [2D hazard scenes](2D-Hazard-Scenes): the animated walker and UAV scenes, what each replays, and what happens
   against what should
+- [3D scene pages](3D-Scene-Pages): every interactive 3D page and sheet, what each is built from and loads, and the
+  check that opens it
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

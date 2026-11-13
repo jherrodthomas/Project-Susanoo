@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1290.2" height="846.1" viewBox="0 0 1290.2 846.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 2 · What each page is built from</title>
+<desc>The records and results embedded in each kind of page, what it loads when opened, and the CI check that opens it in headless Chromium and renders its still (read from the pages and the checks' page filters).</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1290.2" height="777" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 2 · What each page is built from</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The records and results embedded in each kind of page, what it loads when opened, and the CI check that opens it in headless Chromium and renders its still (read from the pages</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">and the checks' page filters).</text>
+<text x="1250.2" y="44" font-size="11" fill="#475569" text-anchor="end">docs/3d · sim/scenes3d</text>
+<line x1="40" y1="102" x2="1250.2" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 126)">
+<rect x="6" y="6" width="337.4" height="528" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="421.4" y="84" width="281.2" height="480" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="776.6" y="170" width="427.6" height="288" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M225.4 476 L363.4 476 Q370.4 476 370.4 469 L370.4 454 Q370.4 447 377.4 447 L439.4 447" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M225.4 496 L230.4 496 Q235.4 496 235.4 501 L235.4 501 Q235.4 506 240.4 506 L363.4 506 Q370.4 506 370.4 513 L370.4 524 Q370.4 531 377.4 531 L459.6 531" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M225.4 396 L363.4 396 Q370.4 396 370.4 403 L370.4 421 Q370.4 428 377.4 428 L439.4 428" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M225.4 416 L238.4 416 Q245.4 416 245.4 423 L245.4 489 Q245.4 496 252.4 496 L375.4 496 Q382.4 496 382.4 503 L382.4 509 Q382.4 516 389.4 516 L459.6 516" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M225.4 236 L298.4 236 Q305.4 236 305.4 243 L305.4 311 Q305.4 318 312.4 318 L375.4 318 Q382.4 318 382.4 311 L382.4 282 Q382.4 275 389.4 275 L409.4 275 Q416.4 275 423.4 275 L446.5 274.8" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M225.4 256 L278.4 256 Q285.4 256 285.4 263 L285.4 351 Q285.4 358 292.4 358 L443.2 358" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M225.4 156 L363.4 156 Q370.4 156 370.4 163 L370.4 237 Q370.4 244 377.4 244 L409.4 244 Q416.4 244 423.4 244 L446.5 244.4" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M225.4 176 L288.4 176 Q295.4 176 295.4 183 L295.4 331 Q295.4 338 302.4 338 L368.4 338 Q370.4 338 370.4 336 L370.4 336 Q370.4 334 372.4 334 L443.2 334" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M225.4 76 L375.4 76 Q382.4 76 382.4 83 L382.4 222 Q382.4 229 389.4 229 L409.4 229 Q416.4 229 423.4 229 L446.5 229.2" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M225.4 96 L308.4 96 Q315.4 96 315.4 103 L315.4 321 Q315.4 328 322.4 328 L391.4 328 Q394.4 328 394.4 325 L394.4 325 Q394.4 322 397.4 322 L443.2 322" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M225.4 308 L363.4 308 Q370.4 308 370.4 301 L370.4 267 Q370.4 260 377.4 260 L409.4 260 Q416.4 260 423.4 260 L446.5 259.6" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M225.4 320 L268.4 320 Q275.4 320 275.4 327 L275.4 341 Q275.4 348 282.4 348 L369.4 348 Q370.4 348 370.4 347 L370.4 347 Q370.4 346 371.4 346 L443.2 346" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M225.4 332 L258.4 332 Q265.4 332 265.4 339 L265.4 361 Q265.4 368 272.4 368 L375.4 368 Q382.4 368 382.4 375 L382.4 402 Q382.4 409 389.4 409 L439.4 409" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M225.4 344 L248.4 344 Q255.4 344 255.4 351 L255.4 479 Q255.4 486 262.4 486 L387.4 486 Q394.4 486 394.4 493 L394.4 494 Q394.4 501 401.4 501 L459.6 501" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M684.6 164 L734.6 164 Q741.6 164 741.6 171 L741.6 243 Q741.6 250 748.6 250 L794.6 250" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M684.6 428 L722.6 428 Q729.6 428 729.6 421 L729.6 407 Q729.6 400 736.6 400 L797.6 400" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M624 516 L734.6 516 Q741.6 516 741.6 509 L741.6 427 Q741.6 420 748.6 420 L797.6 420" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M656.4 252 L722.6 252 Q729.6 252 729.6 259 L729.6 313 Q729.6 320 736.6 320 L797.6 320" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M669.3 340 L797.6 340" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M933.6 410 L1009 410 Q1016 410 1016 403 L1016 355 Q1016 350 1021 350 L1026 350" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M933.6 330 L1026 330" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="18" y="18" width="111.3" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="73.6" y="33" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">BUILT FROM</text>
+<rect x="433.4" y="96" width="77.5" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="472.1" y="111" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">PAGES</text>
+<rect x="788.6" y="182" width="160.1" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="868.6" y="197" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">CHECKED AND DRAWN</text>
+<rect x="49.6" y="456" width="175.8" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="61.6" y="468" width="127.1" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="125.1" y="479.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/scenes3d/out/*.json</text>
+<text x="61.6" y="502" font-size="12.5" fill="#0F172A" font-weight="700">exported scene analysis</text>
+<rect x="27.9" y="376" width="197.5" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="39.9" y="388" width="173.5" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="126.7" y="399.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sim/scenes3d/library, scenes.yaml</text>
+<text x="39.9" y="422" font-size="12.5" fill="#0F172A" font-weight="700">look, variants</text>
+<rect x="58.2" y="216" width="167.2" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="70.2" y="228" width="140.9" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="140.6" y="239.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">sheet.yaml, sheet_uav.yaml</text>
+<text x="70.2" y="262" font-size="12.5" fill="#0F172A" font-weight="700">what each sheet draws</text>
+<rect x="34.6" y="136" width="190.8" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="46.6" y="148" width="166.8" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="130" y="159.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">cad/metrics.json, safety/hazards</text>
+<text x="46.6" y="182" font-size="12.5" fill="#0F172A" font-weight="700">concept metrics, hazards</text>
+<rect x="40.2" y="56" width="185.2" height="60" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="52.2" y="68" width="92.6" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="98.5" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">assets/sus-m1.js</text>
+<text x="52.2" y="102" font-size="12.5" fill="#0F172A" font-weight="700">CL-05 geometry, 4017 KB</text>
+<rect x="24" y="296" width="201.4" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="36" y="308" width="86" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="79" y="319.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">three.js 0.170.0</text>
+<text x="36" y="342" font-size="12.5" fill="#0F172A" font-weight="700">jsDelivr, pinned by SHA-256</text>
+<rect x="446.5" y="214" width="209.9" height="76" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="458.5" y="226" width="71.9" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
+<text x="494.4" y="237.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1.html</text>
+<text x="458.5" y="260" font-size="12.5" fill="#0F172A" font-weight="700">UAV on dock and in airspace,</text>
+<text x="458.5" y="276" font-size="12.5" fill="#0F172A" font-weight="700">interactive</text>
+<rect x="443.2" y="310" width="226.1" height="60" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="455.2" y="322" width="71.9" height="16" rx="8.0" fill="#7C3AED" stroke="none" stroke-width="1"/>
+<text x="491.2" y="333.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1.html</text>
+<text x="455.2" y="356" font-size="12.5" fill="#0F172A" font-weight="700">General arrangement, interactive</text>
+<rect x="439.4" y="390" width="245.2" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="451.4" y="402" width="87.4" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="495.1" y="413.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">6 scene replays</text>
+<text x="451.4" y="436" font-size="12.5" fill="#0F172A" font-weight="700">S3-01, S3-02, S3-03, S3-04, S3-05,</text>
+<text x="451.4" y="452" font-size="12.5" fill="#0F172A" font-weight="700">S3-06</text>
+<rect x="459.6" y="486" width="164.4" height="60" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<rect x="471.6" y="498" width="82.7" height="16" rx="8.0" fill="#64748B" stroke="none" stroke-width="1"/>
+<text x="513" y="509.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2 look variants</text>
+<text x="471.6" y="532" font-size="12.5" fill="#0F172A" font-weight="700">S3-01-dusk, S3-05-fog</text>
+<rect x="548.6" y="134" width="136" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="560.6" y="146" width="59.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="590.2" y="157.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">index.html</text>
+<text x="560.6" y="180" font-size="12.5" fill="#0F172A" font-weight="700">links to 10 pages</text>
+<rect x="794.6" y="220" width="145" height="60" rx="8" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
+<rect x="806.6" y="232" width="121" height="16" rx="8.0" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<text x="867.1" y="243.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">build_pages.py --check</text>
+<text x="806.6" y="266" font-size="12.5" fill="#FFFFFF" font-weight="700">CI check</text>
+<rect x="797.6" y="380" width="136" height="60" rx="8" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
+<rect x="809.6" y="392" width="60.9" height="16" rx="8.0" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<text x="840" y="403.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">render.mjs</text>
+<text x="809.6" y="426" font-size="12.5" fill="#FFFFFF" font-weight="700">CI check</text>
+<rect x="797.6" y="300" width="136" height="60" rx="8" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
+<rect x="809.6" y="312" width="90.8" height="16" rx="8.0" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<text x="855" y="323.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">sheet_check.mjs</text>
+<text x="809.6" y="346" font-size="12.5" fill="#FFFFFF" font-weight="700">CI check</text>
+<rect x="1026" y="310" width="160.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1038" y="322" width="136.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1106.1" y="333.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">docs/wiki/images/3d-*.png</text>
+<text x="1038" y="356" font-size="12.5" fill="#0F172A" font-weight="700">11 stills</text>
+<rect x="957.6" y="413" width="50.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="962.6" y="426" font-size="10.5" fill="#475569">renders</text>
+<rect x="957.6" y="309" width="50.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="962.6" y="322" font-size="10.5" fill="#475569">renders</text>
+</g>
+<rect x="40" y="716" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
+<text x="62" y="726" font-size="11" fill="#475569">General-arrangement sheet</text>
+<rect x="211" y="716" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="233" y="726" font-size="11" fill="#475569">Scene replay</text>
+<rect x="312.1" y="716" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="334.1" y="726" font-size="11" fill="#475569">Look variant</text>
+<rect x="411.1" y="716" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="433.1" y="726" font-size="11" fill="#475569">Index</text>
+<rect x="477" y="716" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="499" y="726" font-size="11" fill="#475569">Record or result</text>
+<rect x="593.9" y="716" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="615.9" y="726" font-size="11" fill="#475569">External</text>
+<rect x="670.8" y="716" width="14" height="12" rx="3" fill="#0F172A" stroke="#0F172A" stroke-width="1.2"/>
+<text x="692.8" y="726" font-size="11" fill="#475569">CI check</text>
+<rect x="754.4" y="716" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="776.4" y="726" font-size="11" fill="#475569">Generated (checked in CI)</text>
+<line x1="927" y1="722" x2="943" y2="722" stroke="#475569" stroke-width="1.8"/>
+<text x="949" y="726" font-size="11" fill="#475569">Embedded at build</text>
+<line x1="1055" y1="722" x2="1071" y2="722" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="1077" y="726" font-size="11" fill="#475569">Loaded when opened</text>
+<text x="40" y="748" font-size="10.5" fill="#94A3B8">Generated by tools/figures/pages3d_readme.py from the pages in docs/3d and the checks that open them. The pages show concept geometry and synthetic results: design aids with no evidence credit (sim/README.md, evidence gate).</text>
+<g class="terms" data-base-h="777">
+<rect x="0" y="777" width="1290.2" height="69.1" fill="#FFFFFF"/>
+<line x1="40" y1="781" x2="1250.2" y2="781" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="796.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: 3D = three-dimensional · CI = continuous integration (the automated checks GitHub runs on every change) · CL-nnn = concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout) · KB = kilobyte,</text>
+<text x="40" y="811.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">a file size of 1,024 bytes · S3-nnn = 3D hazard scene (sim/scenes3d) · SHA-256 = a cryptographic hash used to pin a downloaded file · SUS-A1 = dockable observation UAV · SUS-M1 = piloted walker · UAV = uncrewed aerial</text>
+<text x="40" y="825.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">vehicle (drone)</text>
+</g>
+</svg>

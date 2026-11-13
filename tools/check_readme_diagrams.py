@@ -92,6 +92,7 @@ ENFORCED = {
     # 3D scene builder; library/ and out/ keep their folder previews.
     # 2D scene code; its *.svg are the sim page's figures, its own figures sit in readme/.
     "sim/figures": {"skip_dirs": {"readme", "__pycache__"}, "generator": ["tools/figures/simfigs_readme.py", "--check"]},
+    "docs/3d": {"skip_dirs": {"assets", "figures"}, "generator": ["tools/figures/pages3d_readme.py", "--check"]},
     "sim/scenes3d": {"skip_dirs": {"figures", "library", "out", "__pycache__"},
                      "generator": ["tools/figures/scenes3d_readme.py", "--check"]},
 }
