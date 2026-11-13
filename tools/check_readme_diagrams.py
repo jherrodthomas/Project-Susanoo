@@ -75,6 +75,11 @@ ENFORCED = {
     # Generated README of the documentation sources; the subfolders keep their folder previews.
     "docs": {"skip_dirs": {"3d", "diagrams", "figures", "readme", "vcycle", "wiki"},
              "generator": ["tools/figures/docs_readme.py", "--check"]},
+    # Hand-written layout review (SUS-CAD-001) with two generated parts: the layout tables (tools/cad/readme.py)
+    # and the cad-records section with the documentation-standard figures.
+    "cad": {"skip_dirs": {"concept-art", "drawings", "figures", "params", "renders"},
+            "generator": ["tools/figures/cad_readme.py", "--check"],
+            "extra_generators": [["tools/cad/readme.py", "--check"]]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)
