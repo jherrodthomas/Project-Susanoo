@@ -1,0 +1,16 @@
+schema: susanoo/verification/v0.1
+id: VER-003
+title: 'SYS-021 data-path analysis: every displayed UAV datum carries validity and age'
+method: analysis
+result: planned
+configuration: SUS-I1-C001
+simulated: false
+procedure: 'Purpose: show that no path from the UAV to the pilot display bypasses the validity and staleness checks.
+
+  Inputs: integration interface definitions (IF-PX4-*), display software design (TBD).
+
+  Method: trace every UAV datum shown to the pilot from source to display and confirm it carries a validity flag
+  and an age, and that the display logic uses both.
+
+  Pass: every displayed datum is traced; any path without validity and age is raised as a finding against SYS-021.'
+evidence: []
