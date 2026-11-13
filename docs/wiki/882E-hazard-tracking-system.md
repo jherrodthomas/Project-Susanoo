@@ -30,11 +30,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Field | Value |
 |---|---|
-| Tasks | [Task 106 — Hazard Tracking System](MIL-STD-882E-Task-106) |
+| Tasks | [Task 106 — Hazard Tracking System](MIL-STD-882E-Task-106.md) |
 | Lifecycle gate | G0 onward |
 | Applicability | Selected |
 | Accountable role | Safety lead |
-| Parent folder | [MIL-STD-882E System Safety Work Products](882E-Work-Products) |
+| Parent folder | [MIL-STD-882E System Safety Work Products](882E-Work-Products.md) |
 
 ## Purpose
 
@@ -45,17 +45,17 @@ describes the system; it holds no records of its own.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/hazard-tracking-system/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/hazard-tracking-system/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/hazard-tracking-system/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/hazard-tracking-system/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/hazard-tracking-system/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/hazard-tracking-system/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -68,9 +68,9 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`HazardTrackingSystem.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/hazard-tracking-system/HazardTrackingSystem.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML block definition — hazard record links](assets/safety/mil-std-882e/hazard-tracking-system/figures/fig-4-sysml-block-definition.svg)
+![Figure 4 · SysML block definition — hazard record links](../../safety/mil-std-882e/hazard-tracking-system/figures/fig-4-sysml-block-definition.svg)
 
-![Figure 5 · SysML state machine — record status](assets/safety/mil-std-882e/hazard-tracking-system/figures/fig-5-sysml-state-machine.svg)
+![Figure 5 · SysML state machine — record status](../../safety/mil-std-882e/hazard-tracking-system/figures/fig-5-sysml-state-machine.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -113,19 +113,19 @@ package HazardTrackingSystem {
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/safety/mil-std-882e/hazard-tracking-system/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../safety/mil-std-882e/hazard-tracking-system/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Hazards | [02 · Identify and Document Hazards](882E-02-hazard-identification) |
-| Requirement links | [Safety Requirements Register](882E-safety-requirements) |
-| Evidence links | [Task 401 · Safety Verification](882E-task-401-safety-verification) |
-| Acceptance links | [Risk Acceptance Records](882E-acceptance-records) |
+| Hazards | [02 · Identify and Document Hazards](882E-02-hazard-identification.md) |
+| Requirement links | [Safety Requirements Register](882E-safety-requirements.md) |
+| Evidence links | [Task 401 · Safety Verification](882E-task-401-safety-verification.md) |
+| Acceptance links | [Risk Acceptance Records](882E-acceptance-records.md) |
 
 | Output | Destination |
 |---|---|
-| Status snapshot | [Task 107 · Hazard Management Progress Report](882E-task-107-hazard-management-progress-report) |
-| Hazard log | [Task 301 · Safety Assessment Report (SAR)](882E-task-301-safety-assessment-report) |
+| Status snapshot | [Task 107 · Hazard Management Progress Report](882E-task-107-hazard-management-progress-report.md) |
+| Hazard log | [Task 301 · Safety Assessment Report (SAR)](882E-task-301-safety-assessment-report.md) |
 
 ## Folder contents
 

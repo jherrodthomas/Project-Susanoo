@@ -5,20 +5,27 @@ The wiki is published from docs/wiki by .github/workflows/publish-wiki.yml. Page
 repository (the front page, the MIL-STD-882E work-product tree, concept, PX4 integration, the documentation standard
 and the abbreviations page) are copied here as wiki pages, with every relative link rewritten for the wiki:
 
-- a link to another published page becomes a wiki link (`[text](Page-Name)`);
-- a figure becomes `assets/<repo path>`; docs/wiki/assets.txt lists every such file, and the publish workflow
-  copies them into the wiki, so figures render without duplicating them in this repository;
+- a link to another published page becomes a link to its copy here (`[text](Page-Name.md)`);
+- a figure keeps a path relative to docs/wiki (`../../safety/.../fig-1.svg`); docs/wiki/assets.txt lists every
+  such file;
 - any other repository file or folder becomes a link to it on github.com.
+
+So the pages render when browsed in this repository. Publishing (`--publish DIR`, run by the publish workflow)
+copies every docs/wiki page into the wiki checkout DIR and rewrites those two forms for the wiki: page links lose
+`.md`, and each figure becomes `assets/<repo path>`, with the figure copied there and docs/wiki/images copied too.
 
     python -m tools.wiki.build_wiki            # write the wiki pages, _Sidebar section and assets.txt
     python -m tools.wiki.build_wiki --check    # fail if any of them is stale
+    python -m tools.wiki.build_wiki --publish wiki-checkout   # copy pages, images and figures for the wiki
 
 Standard library + PyYAML (through tools.terms). Output is deterministic.
 """
 from __future__ import annotations
 
 import argparse
+import os
 import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -71,12 +78,12 @@ def rewrite(text: str, src: Path, names: dict[Path, str], assets: set[str]) -> s
         except ValueError:
             return link
         if p in names:
-            return names[p] + (f"#{frag}" if frag else "")
+            return names[p] + ".md" + (f"#{frag}" if frag else "")
         if p.is_dir() and (p / "README.md") in names:
-            return names[p / "README.md"]
+            return names[p / "README.md"] + ".md"
         if IMAGE.search(rel) and p.is_file():
             assets.add(rel)
-            return f"assets/{rel}"
+            return os.path.relpath(p, WIKI).replace(os.sep, "/")
         if not p.exists():
             return link                                   # leave unresolved links visible rather than invent one
         return (TREE if p.is_dir() else BLOB) + rel + (f"#{frag}" if frag else "")
@@ -132,10 +139,42 @@ def sidebar(current: str) -> str:
     return current.rstrip("\n") + "\n\n" + block + "\n"
 
 
+def for_wiki(text: str, pages: set[str], assets: list[str]) -> str:
+    """The published form of a docs/wiki page: figure paths to assets/<repo path>, page links without .md."""
+    for a in assets:
+        r = os.path.relpath(ROOT / a, WIKI).replace(os.sep, "/")
+        if not r.startswith("../"):                       # already inside docs/wiki (images/): same path in the wiki
+            continue
+        text = text.replace(f"]({r}", f"](assets/{a}").replace(f'="{r}"', f'="assets/{a}"')
+    names = "|".join(re.escape(n) for n in sorted(pages, key=len, reverse=True))
+    text = re.sub(rf"(\]\(|href=\")({names})\.md(?=[#)\"])", r"\1\2", text)
+    return text
+
+
+def publish(dest: Path) -> int:
+    """Copy every docs/wiki page, image and listed figure into the wiki checkout dest, in wiki form."""
+    assets = [a for a in (WIKI / "assets.txt").read_text(encoding="utf-8").splitlines() if a]
+    pages = {p.stem for p in WIKI.glob("*.md")}
+    for p in sorted(WIKI.glob("*.md")):
+        (dest / p.name).write_text(for_wiki(p.read_text(encoding="utf-8"), pages, assets), encoding="utf-8")
+    (dest / "images").mkdir(parents=True, exist_ok=True)
+    for img in sorted(WIKI.glob("images/*")):
+        if img.suffix.lower() in (".svg", ".png"):
+            shutil.copy2(img, dest / "images" / img.name)
+    for a in assets:
+        (dest / "assets" / a).parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(ROOT / a, dest / "assets" / a)
+    print(f"published {len(pages)} pages and {len(assets)} figures to {dest}")
+    return 0
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--publish", metavar="DIR", help="copy pages, images and figures into a wiki checkout")
     a = ap.parse_args(argv)
+    if a.publish:
+        return publish(Path(a.publish))
     stale = []
     pages = build()
     for p, text in pages.items():
