@@ -1,0 +1,17 @@
+# Fault tree for HAZ-PIL-005 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-PIL-005
+exposure: walker_operating_hours
+trees:
+  - id: FT-016
+    title: Fall during normal ingress or egress
+    top: fall
+    gates:
+      - {id: fall, type: or, title: "Fall while climbing in or out", inputs: [misstep, tread-design, surface]}
+    events:
+      - {id: misstep, kind: undeveloped, nature: human, causal_factor: CF1, title: "Misstep, hurry or hands full"}
+      - {id: tread-design, kind: undeveloped, nature: systematic, causal_factor: CF2, title: "Uneven rise, high sill step or missing handholds"}
+      - {id: surface, kind: undeveloped, nature: environment, causal_factor: CF3, title: "Wet, icy or muddy treads; darkness; uneven ground"}

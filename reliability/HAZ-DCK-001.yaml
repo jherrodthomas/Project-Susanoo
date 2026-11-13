@@ -1,0 +1,19 @@
+# Fault tree for HAZ-DCK-001 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-DCK-001
+exposure: docking_cycles
+trees:
+  - id: FT-004
+    title: Rotor start while the UAV is retained
+    top: start
+    gates:
+      - {id: start, type: and, title: "Rotors start with the UAV retained", inputs: [arming-attempt, interlock-fails]}
+      - {id: arming-attempt, type: or, title: "Arming is attempted on the dock", inputs: [arm-check, maintainer-arms, handshake]}
+    events:
+      - {id: arm-check, kind: undeveloped, nature: software, causal_factor: CF1, ssf: SSF-003, title: "Arming check or dock interlock logic permits arming"}
+      - {id: maintainer-arms, kind: undeveloped, nature: human, causal_factor: CF2, title: "Maintainer arms outside procedure"}
+      - {id: handshake, kind: undeveloped, nature: interface, causal_factor: CF3, title: "Charging handshake energises propulsion"}
+      - {id: interlock-fails, mode: PT-007-FM1, causal_factor: CF1, title: "Propulsion-power interlock already failed closed"}
