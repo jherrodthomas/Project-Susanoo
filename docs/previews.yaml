@@ -290,6 +290,21 @@ folders:
     purpose: One JSON schema per record type. The validator checks every record against its schema before the MIL-STD-882E rules run.
     hero: {img: docs/wiki/images/rec-record-model.svg, caption: "Record model: how the record types reference each other"}
 
+  reliability:
+    title: Reliability pilot records
+    purpose: >-
+      Parts, failure modes and fault trees for the reliability pilot (`tools/reliability`). The pilot rates the
+      HAZ-PIL-002 cockpit drop for each TS-001 actuation alternative against the tailored probability bands. Every
+      value is still assumed, so every result is illustrative: not evidence and not a probability rating.
+    hero: {img: docs/wiki/images/rel-bands.svg, caption: "Cockpit drop probability by actuation alternative (illustrative)"}
+    gallery:
+      - {img: docs/wiki/images/rel-ft-001.svg, caption: "FT-001: alternative A"}
+      - {img: docs/wiki/images/rel-ft-002.svg, caption: "FT-002: alternative B-EHA"}
+      - {img: docs/wiki/images/rel-ft-003.svg, caption: "FT-003: alternative B-EMA"}
+    links:
+      - {text: Reliability Pilot (wiki page), href: docs/wiki/Reliability-Pilot.md}
+      - {text: Engine and record format, href: tools/reliability/README.md}
+
   requirements:
     title: System safety requirements
     purpose: >-

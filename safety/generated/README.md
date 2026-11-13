@@ -35,4 +35,5 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Item | Title |
 |---|---|
 | [`hts.csv`](hts.csv) |  |
+| [`reliability.json`](reliability.json) |  |
 | [`worksheets.xlsx`](worksheets.xlsx) |  |

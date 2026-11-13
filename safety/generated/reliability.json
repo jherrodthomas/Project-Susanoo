@@ -1,0 +1,328 @@
+{
+ "assumed_inputs": [
+  "PT-001-FM1",
+  "PT-002-FM1",
+  "PT-002-FM2",
+  "PT-003-FM1",
+  "PT-004-FM1",
+  "PT-005-FM1",
+  "PT-006-FM1",
+  "PT-006-FM2",
+  "joints",
+  "hoses",
+  "test_interval_h",
+  "beta"
+ ],
+ "bands": {
+  "A": 0.1,
+  "B": 0.01,
+  "C": 0.001,
+  "D": 1e-06,
+  "E": 0.0
+ },
+ "causal_factor": "CF1",
+ "exposure": {
+  "walker_operating_hours": 500.0
+ },
+ "hazard": "HAZ-PIL-002",
+ "illustrative": true,
+ "results": [
+  {
+   "alternative": "A",
+   "band": "D",
+   "cut_sets": [
+    {
+     "events": [
+      "hose-burst",
+      "valve-demand"
+     ],
+     "multiplicity": 1.0,
+     "p": 7.155e-06,
+     "share": 0.9723
+    },
+    {
+     "events": [
+      "hose-burst",
+      "valve-dormant"
+     ],
+     "multiplicity": 1.0,
+     "p": 1.431e-07,
+     "share": 0.01945
+    },
+    {
+     "events": [
+      "hose-burst",
+      "valve-common"
+     ],
+     "multiplicity": 1.0,
+     "p": 6.083e-08,
+     "share": 0.008266
+    }
+   ],
+   "drivers": [
+    {
+     "factor": 9.801,
+     "mode": "PT-002-FM2"
+    },
+    {
+     "factor": 9.48,
+     "mode": "PT-001-FM1"
+    },
+    {
+     "factor": 1.176,
+     "mode": "PT-002-FM1"
+    }
+   ],
+   "mc": {
+    "band_share": {
+     "A": 0.0,
+     "B": 0.0,
+     "C": 0.0035,
+     "D": 0.8602,
+     "E": 0.1363
+    },
+    "n": 4000,
+    "p05": 3.397e-07,
+    "p50": 7.753e-06,
+    "p95": 0.0001862,
+    "seed": 1
+   },
+   "no_test": 2.523e-05,
+   "no_test_band": "D",
+   "nodes": {
+    "drop": 7.359e-06,
+    "holding-fails": 0.0006169,
+    "hose-burst": 0.01193,
+    "supply-lost": 0.01193,
+    "valve-common": 5.1e-06,
+    "valve-demand": 0.0005999,
+    "valve-dormant": 1.2e-05
+   },
+   "reach_e": {
+    "factor": 0.1186,
+    "mode": "PT-002-FM2",
+    "value": 1.186e-05
+   },
+   "tau_h": 4.0,
+   "title": "Cockpit drop on loss of leg support, alternative A (centralised hydraulic)",
+   "top": 7.359e-06,
+   "tree": "FT-001"
+  },
+  {
+   "alternative": "B-EHA",
+   "band": "D",
+   "cut_sets": [
+    {
+     "events": [
+      "drive-lost",
+      "own-valve-demand"
+     ],
+     "multiplicity": 6.0,
+     "p": 8.933e-06,
+     "share": 0.7329
+    },
+    {
+     "events": [
+      "bus-lost",
+      "valve-demand"
+     ],
+     "multiplicity": 1.0,
+     "p": 2.992e-06,
+     "share": 0.2455
+    },
+    {
+     "events": [
+      "drive-lost",
+      "own-valve-dormant"
+     ],
+     "multiplicity": 6.0,
+     "p": 1.787e-07,
+     "share": 0.01466
+    },
+    {
+     "events": [
+      "bus-lost",
+      "valve-dormant"
+     ],
+     "multiplicity": 1.0,
+     "p": 5.985e-08,
+     "share": 0.00491
+    },
+    {
+     "events": [
+      "bus-lost",
+      "valve-common"
+     ],
+     "multiplicity": 1.0,
+     "p": 2.544e-08,
+     "share": 0.002087
+    }
+   ],
+   "drivers": [
+    {
+     "factor": 9.817,
+     "mode": "PT-002-FM2"
+    },
+    {
+     "factor": 7.246,
+     "mode": "PT-004-FM1"
+    },
+    {
+     "factor": 3.216,
+     "mode": "PT-003-FM1"
+    },
+    {
+     "factor": 1.176,
+     "mode": "PT-002-FM1"
+    }
+   ],
+   "mc": {
+    "band_share": {
+     "A": 0.0,
+     "B": 0.00025,
+     "C": 0.0095,
+     "D": 0.9513,
+     "E": 0.039
+    },
+    "n": 4000,
+    "p05": 1.187e-06,
+    "p50": 1.727e-05,
+    "p95": 0.0002927,
+    "seed": 1
+   },
+   "no_test": 4.181e-05,
+   "no_test_band": "D",
+   "nodes": {
+    "bus-and-holding": 3.077e-06,
+    "bus-lost": 0.004988,
+    "drive-lost": 0.01489,
+    "drop": 1.219e-05,
+    "holding-fails": 0.0006169,
+    "joint-and-holding": 9.111e-06,
+    "own-valve-demand": 0.0001,
+    "own-valve-dormant": 2e-06,
+    "own-valve-fails": 0.000102,
+    "valve-common": 5.1e-06,
+    "valve-demand": 0.0005999,
+    "valve-dormant": 1.2e-05
+   },
+   "reach_e": {
+    "factor": 0.06368,
+    "mode": "PT-002-FM2",
+    "value": 6.368e-06
+   },
+   "tau_h": 4.0,
+   "title": "Cockpit drop on loss of leg support, alternative B-EHA (series-hybrid, electrohydraulic joints)",
+   "top": 1.219e-05,
+   "tree": "FT-002"
+  },
+  {
+   "alternative": "B-EMA",
+   "band": "D",
+   "cut_sets": [
+    {
+     "events": [
+      "drive-lost",
+      "own-brake-demand"
+     ],
+     "multiplicity": 6.0,
+     "p": 8.933e-06,
+     "share": 0.7188
+    },
+    {
+     "events": [
+      "brake-demand",
+      "bus-lost"
+     ],
+     "multiplicity": 1.0,
+     "p": 2.992e-06,
+     "share": 0.2407
+    },
+    {
+     "events": [
+      "drive-lost",
+      "own-brake-dormant"
+     ],
+     "multiplicity": 6.0,
+     "p": 3.573e-07,
+     "share": 0.02875
+    },
+    {
+     "events": [
+      "brake-dormant",
+      "bus-lost"
+     ],
+     "multiplicity": 1.0,
+     "p": 1.197e-07,
+     "share": 0.009632
+    },
+    {
+     "events": [
+      "brake-common",
+      "bus-lost"
+     ],
+     "multiplicity": 1.0,
+     "p": 2.594e-08,
+     "share": 0.002087
+    }
+   ],
+   "drivers": [
+    {
+     "factor": 9.648,
+     "mode": "PT-006-FM2"
+    },
+    {
+     "factor": 7.246,
+     "mode": "PT-005-FM1"
+    },
+    {
+     "factor": 3.216,
+     "mode": "PT-003-FM1"
+    },
+    {
+     "factor": 1.346,
+     "mode": "PT-006-FM1"
+    }
+   ],
+   "mc": {
+    "band_share": {
+     "A": 0.0,
+     "B": 0.00025,
+     "C": 0.00875,
+     "D": 0.9567,
+     "E": 0.03425
+    },
+    "n": 4000,
+    "p05": 1.33e-06,
+    "p50": 1.85e-05,
+    "p95": 0.0002873,
+    "seed": 1
+   },
+   "no_test": 7.167e-05,
+   "no_test_band": "D",
+   "nodes": {
+    "brake-common": 5.2e-06,
+    "brake-demand": 0.0005999,
+    "brake-dormant": 2.4e-05,
+    "bus-and-holding": 3.137e-06,
+    "bus-lost": 0.004988,
+    "drive-lost": 0.01489,
+    "drop": 1.243e-05,
+    "holding-fails": 0.000629,
+    "joint-and-holding": 9.29e-06,
+    "own-brake-demand": 0.0001,
+    "own-brake-dormant": 4e-06,
+    "own-brake-fails": 0.000104
+   },
+   "reach_e": {
+    "factor": 0.04368,
+    "mode": "PT-006-FM2",
+    "value": 4.368e-06
+   },
+   "tau_h": 4.0,
+   "title": "Cockpit drop on loss of leg support, alternative B-EMA (series-hybrid, electromechanical joints)",
+   "top": 1.243e-05,
+   "tree": "FT-003"
+  }
+ ]
+}

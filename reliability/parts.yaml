@@ -1,0 +1,120 @@
+# Parts and failure modes for the reliability pilot (tools/reliability).
+# Every value is an ASSUMED order-of-magnitude placeholder (status: assumed), drafted by an AI at independence I0.
+# None is taken from a handbook yet: `to_source` names where a sourced value should come from. Results built from
+# assumed values are illustrative only: they are not evidence and not a probability rating (tools/reliability/README.md).
+#
+# kind:
+#   rate    failure rate per operating hour of one part; over an exposure T it gives 1 - exp(-rate * T)
+#   latent  failure rate per hour of a standby function that is only found by a test or a demand;
+#           its probability of being failed when demanded is rate * tau / 2, tau = test interval
+#   demand  probability of failing on one demand, independent of time
+# error_factor: ratio of the 95th percentile to the median of a lognormal uncertainty (Monte Carlo).
+schema: susanoo/reliability-parts/v0.1
+parts:
+  - id: PT-001
+    title: High-pressure hydraulic hose or tube assembly with end fittings
+    element: SUS-M1-PWR-HPU
+    alternatives: [A]
+    failure_modes:
+      - id: PT-001-FM1
+        mode: Burst, rupture or fitting blow-off
+        effect: Sudden loss of pressure in the common supply line; every joint loses actuator force at once
+        kind: rate
+        value: 2.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 (fluid conductors) or supplier data for the selected hose class
+
+  - id: PT-002
+    title: Pilot-operated check valve holding a joint cylinder (load-holding valve)
+    element: SUS-M1-WLK
+    alternatives: [A, B-EHA]
+    failure_modes:
+      - id: PT-002-FM1
+        mode: Fails to close (poppet stuck open, contamination on the seat), dormant until demanded
+        effect: The joint is not held when supply is lost; the leg yields under load
+        kind: latent
+        value: 1.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 valves chapter, or supplier data for the selected valve
+      - id: PT-002-FM2
+        mode: Fails to close on the demand itself (pilot line holds it open, slow reseat)
+        effect: The joint is not held when supply is lost; the leg yields under load
+        kind: demand
+        value: 1.0e-4
+        unit: per demand
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 valves chapter, or supplier test data
+
+  - id: PT-003
+    title: DC bus feeder, contactor and main cabling (series-hybrid bus)
+    element: SUS-M1-PWR-DIST
+    alternatives: [B-EHA, B-EMA]
+    failure_modes:
+      - id: PT-003-FM1
+        mode: Sudden loss of the DC bus (contactor drops out, cable or connector open circuit)
+        effect: Every joint loses actuator power at once
+        kind: rate
+        value: 1.0e-5
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (relays, connectors) with the mission profile, or supplier data
+
+  - id: PT-004
+    title: Electrohydraulic joint actuator drive (motor, inverter and pump of one joint)
+    element: SUS-M1-WLK
+    alternatives: [B-EHA]
+    failure_modes:
+      - id: PT-004-FM1
+        mode: Sudden loss of drive at one joint (inverter trip, motor winding open, pump shaft failure)
+        effect: That joint loses actuator force; its holding valve must hold it
+        kind: rate
+        value: 3.0e-5
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (inverter electronics) and NSWC-11 (motor, pump), or supplier data
+
+  - id: PT-005
+    title: Electromechanical joint actuator drive (motor, inverter and gearbox or roller screw of one joint)
+    element: SUS-M1-WLK
+    alternatives: [B-EMA]
+    failure_modes:
+      - id: PT-005-FM1
+        mode: Sudden loss of drive at one joint (inverter trip, motor winding open, coupling failure)
+        effect: That joint loses actuator torque; its brake must hold it
+        kind: rate
+        value: 3.0e-5
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (inverter electronics) and NSWC-11 (motor, gears), or supplier data
+
+  - id: PT-006
+    title: Spring-applied, power-released joint brake
+    element: SUS-M1-WLK
+    alternatives: [B-EMA]
+    failure_modes:
+      - id: PT-006-FM1
+        mode: Fails to engage or slips (armature stuck, lining glazed or worn below holding torque), dormant until demanded
+        effect: The joint is not held when power is lost; the leg yields under load
+        kind: latent
+        value: 2.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 brakes and clutches chapter, or supplier data
+      - id: PT-006-FM2
+        mode: Fails to engage on the demand itself (armature sticks released)
+        effect: The joint is not held when power is lost; the leg yields under load
+        kind: demand
+        value: 1.0e-4
+        unit: per demand
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 brakes and clutches chapter, or supplier test data

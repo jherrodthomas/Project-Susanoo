@@ -60,6 +60,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | EOD | explosive ordnance disposal |
 | EPS | electric power steering (automotive example in the LionDriver port plan) |
 | ESC | electronic speed controller (drives a UAV motor) |
+| FASTER | Failure Analysis, Simulation, Testing, and Evaluation Report, an open-source reliability tool for LTspice circuits (github.com/Gueni/FASTER) |
 | FCStd | FreeCAD document file |
 | FFI | freedom from interference (ISO 26262 term in the LionDriver port plan) |
 | FHA | functional hazard analysis (MIL-STD-882E Task 208; also ARP4761A aircraft FHA) |
@@ -74,6 +75,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | GC | generally applicable to design change (MIL-STD-882E Table A-I) |
 | GCS | ground control station |
 | GNSS | global navigation satellite system (GPS and similar) |
+| GPL | General Public License, a copyleft open-source software licence |
 | GPS | Global Positioning System |
 | GSE | ground support equipment |
 | GSN | Goal Structuring Notation, for safety-case arguments |
@@ -175,11 +177,14 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | EIA-649 | SAE / EIA configuration management standard |
 | IEC | International Electrotechnical Commission (IEC 61508 functional safety) |
 | ISO | International Organization for Standardization (ISO 12100 machinery risk, ISO 13849 control safety, ISO 26262 road vehicles) |
+| MIL-HDBK-217F | US DoD reliability prediction handbook for electronic equipment (Notice 2, 1995) |
+| MIL-HDBK-338B | US DoD electronic reliability design handbook |
 | MIL-HDBK-516 | US DoD airworthiness certification criteria handbook |
 | MIL-STD-1472 | US DoD design criteria for human engineering |
 | MIL-STD-461 | US DoD electromagnetic interference requirements |
 | MIL-STD-810H | US DoD environmental engineering test methods |
 | MIL-STD-882E | US DoD Standard Practice for System Safety (11 May 2012, base edition) |
+| NSWC-11 | US Navy handbook of reliability prediction procedures for mechanical equipment (2011) |
 
 ## Record codes
 
@@ -198,11 +203,13 @@ A record code is a prefix and a number, for example `HAZ-WLK-002` or `SYS-010`.
 | F-nnn | system function in the item definition |
 | FLT-nnn | walker fault in sim/faults.yaml |
 | FND-UAV-nnn | finding from the UAV simulations, for the safety lead |
+| FT-nnn | fault tree in the reliability pilot (reliability/fault-trees.yaml) |
 | HAZ-nnn | hazard record (safety/hazards/HAZ-xxx-nnn.yaml) |
 | IF-nnn | interface in the item definition (architecture/item-definition.yaml) |
 | IF-PX4-nnn | PX4 integration interface (integrations/px4/interface-contract.md) |
 | MOD-nnn | operating mode from the CONOPS (MOD-01 to MOD-10) |
 | NOM-nnn | level-1/level-2 cross-check case, no fault (capability by slope) |
+| PT-nnn | part with its failure modes in the reliability pilot (reliability/parts.yaml; PT-nnn-FMn is a failure mode) |
 | PX4-R-nnn | PX4 integration requirement (integrations/px4/PX4Integration.sysml) |
 | R01-R12 | the first twelve validator rules in tools/pdac |
 | REV-nnn | review record (reviews/) |
