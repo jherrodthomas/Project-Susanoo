@@ -30,11 +30,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 1 — Document the system safety approach |
-| Tasks | [Task 103 — Hazard Management Plan](MIL-STD-882E-Task-103) |
+| Tasks | [Task 103 — Hazard Management Plan](MIL-STD-882E-Task-103.md) |
 | Lifecycle gate | G0–G1 |
 | Applicability | Not selected — the SSPP (Task 102) covers hazard management; one plan avoids divergence |
 | Accountable role | Safety lead |
-| Parent folder | [01 · Document the System Safety Approach](882E-01-safety-approach) |
+| Parent folder | [01 · Document the System Safety Approach](882E-01-safety-approach.md) |
 
 ## Purpose
 
@@ -43,17 +43,17 @@ and how the hazard tracking system is operated.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/01-safety-approach/task-103-hazard-management-plan/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/01-safety-approach/task-103-hazard-management-plan/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/01-safety-approach/task-103-hazard-management-plan/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/01-safety-approach/task-103-hazard-management-plan/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/01-safety-approach/task-103-hazard-management-plan/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/01-safety-approach/task-103-hazard-management-plan/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -65,7 +65,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task103_HMP.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/01-safety-approach/task-103-hazard-management-plan/Task103_HMP.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML state machine — hazard status lifecycle](assets/safety/mil-std-882e/01-safety-approach/task-103-hazard-management-plan/figures/fig-4-sysml-state-machine.svg)
+![Figure 4 · SysML state machine — hazard status lifecycle](../../safety/mil-std-882e/01-safety-approach/task-103-hazard-management-plan/figures/fig-4-sysml-state-machine.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -114,17 +114,17 @@ package Task103_HMP {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/01-safety-approach/task-103-hazard-management-plan/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/01-safety-approach/task-103-hazard-management-plan/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| SSPP | [Task 102 · System Safety Program Plan (SSPP)](882E-task-102-system-safety-program-plan) |
-| Risk matrix | [03 · Assess and Document Risk](882E-03-risk-assessment) |
+| SSPP | [Task 102 · System Safety Program Plan (SSPP)](882E-task-102-system-safety-program-plan.md) |
+| Risk matrix | [03 · Assess and Document Risk](882E-03-risk-assessment.md) |
 
 | Output | Destination |
 |---|---|
-| Hazard workflow rules | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system) |
-| Closure criteria | [07 · Accept Risk and Document](882E-07-risk-acceptance) |
+| Hazard workflow rules | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system.md) |
+| Closure criteria | [07 · Accept Risk and Document](882E-07-risk-acceptance.md) |
 
 ## Folder contents
 

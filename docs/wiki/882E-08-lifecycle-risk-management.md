@@ -34,7 +34,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Lifecycle gate | G7 |
 | Applicability | Selected |
 | Accountable role | Safety lead with configuration manager |
-| Parent folder | [MIL-STD-882E System Safety Work Products](882E-Work-Products) |
+| Parent folder | [MIL-STD-882E System Safety Work Products](882E-Work-Products.md) |
 
 ## Purpose
 
@@ -43,17 +43,17 @@ near-misses, deviations and periodic progress reporting. Any change reopens affe
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/08-lifecycle-risk-management/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/08-lifecycle-risk-management/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/08-lifecycle-risk-management/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/08-lifecycle-risk-management/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/08-lifecycle-risk-management/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/08-lifecycle-risk-management/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -65,7 +65,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`LifecycleRisk.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/08-lifecycle-risk-management/LifecycleRisk.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML activity — ManageLifecycleRisk](assets/safety/mil-std-882e/08-lifecycle-risk-management/figures/fig-4-sysml-activity.svg)
+![Figure 4 · SysML activity — ManageLifecycleRisk](../../safety/mil-std-882e/08-lifecycle-risk-management/figures/fig-4-sysml-activity.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -98,23 +98,23 @@ package LifecycleRisk {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/08-lifecycle-risk-management/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/08-lifecycle-risk-management/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Accepted baseline | [07 · Accept Risk and Document](882E-07-risk-acceptance) |
+| Accepted baseline | [07 · Accept Risk and Document](882E-07-risk-acceptance.md) |
 
 | Output | Destination |
 |---|---|
-| Reanalysis triggers | [02 · Identify and Document Hazards](882E-02-hazard-identification) |
-| Reopened hazards | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system) |
+| Reanalysis triggers | [02 · Identify and Document Hazards](882E-02-hazard-identification.md) |
+| Reopened hazards | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system.md) |
 
 ## Folder contents
 
 | Item | Description | State |
 |---|---|---|
-| [`task-107-hazard-management-progress-report/`](882E-task-107-hazard-management-progress-report) | Task 107 · Hazard Management Progress Report | folder |
-| [`task-304-review-changes-deficiencies-mishaps-deviations/`](882E-task-304-review-changes-deficiencies-mishaps-deviations) | Task 304 · Review of Changes, Deficiencies, Mishaps and Deviations | folder |
+| [`task-107-hazard-management-progress-report/`](882E-task-107-hazard-management-progress-report.md) | Task 107 · Hazard Management Progress Report | folder |
+| [`task-304-review-changes-deficiencies-mishaps-deviations/`](882E-task-304-review-changes-deficiencies-mishaps-deviations.md) | Task 304 · Review of Changes, Deficiencies, Mishaps and Deviations | folder |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/mil-std-882e/08-lifecycle-risk-management/figures) | Generated SVG figures (do not edit) | generated |
 | [`LifecycleRisk.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/08-lifecycle-risk-management/LifecycleRisk.sysml) | Generated SysML v2 view | generated |
 

@@ -40,11 +40,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 2 — Identify and document hazards |
-| Tasks | [Task 206 — Operating and Support Hazard Analysis](MIL-STD-882E-Task-206) |
+| Tasks | [Task 206 — Operating and Support Hazard Analysis](MIL-STD-882E-Task-206.md) |
 | Lifecycle gate | G3–G5 |
 | Applicability | Selected |
 | Accountable role | Safety lead with human factors lead |
-| Parent folder | [02 · Identify and Document Hazards](882E-02-hazard-identification) |
+| Parent folder | [02 · Identify and Document Hazards](882E-02-hazard-identification.md) |
 
 ## Purpose
 
@@ -53,17 +53,17 @@ recovery, and procedures. Human-occupied testing requires its own authorization.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -76,9 +76,9 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task206_OSHA.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/Task206_OSHA.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML state machine — CONOPS operating modes under analysis](assets/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/figures/fig-4-sysml-state-machine.svg)
+![Figure 4 · SysML state machine — CONOPS operating modes under analysis](../../safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/figures/fig-4-sysml-state-machine.svg)
 
-![Figure 5 · SysML block definition — O&SHA worksheet row](assets/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/figures/fig-5-sysml-block-definition.svg)
+![Figure 5 · SysML block definition — O&SHA worksheet row](../../safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/figures/fig-5-sysml-block-definition.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -114,26 +114,26 @@ package Task206_OSHA {
 
 ## Inputs and outputs
 
-![Figure 6 · Inputs and outputs](assets/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/figures/fig-6-inputs-and-outputs.svg)
+![Figure 6 · Inputs and outputs](../../safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/figures/fig-6-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
 | Operating scenarios | [`concept/CONOPS.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md) |
 | Operating modes MOD-01..MOD-10 | [`concept/ConceptOperations.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/ConceptOperations.sysml) |
-| PHA | [Task 202 · Preliminary Hazard Analysis (PHA)](882E-task-202-preliminary-hazard-analysis) |
+| PHA | [Task 202 · Preliminary Hazard Analysis (PHA)](882E-task-202-preliminary-hazard-analysis.md) |
 
 | Output | Destination |
 |---|---|
-| Procedural and design requirements | [Safety Requirements Register](882E-safety-requirements) |
-| Test hazard controls | [Task 303 · Test and Evaluation Participation](882E-task-303-test-and-evaluation-participation) |
-| Operating hazards | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system) |
+| Procedural and design requirements | [Safety Requirements Register](882E-safety-requirements.md) |
+| Test hazard controls | [Task 303 · Test and Evaluation Participation](882E-task-303-test-and-evaluation-participation.md) |
+| Operating hazards | [Task 106 · Hazard Tracking System (Hazard Log)](882E-hazard-tracking-system.md) |
 
 ## Folder contents
 
 | Item | Description | State |
 |---|---|---|
 | [`osha.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.yaml) | O&SHA worksheet source: operating and support task steps (AI-drafted, I0) | present |
-| [`osha.svg`](assets/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.svg) | Spreadsheet view of the worksheet (generated by tools/worksheets/build.py) | present |
+| [`osha.svg`](../../safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.svg) | Spreadsheet view of the worksheet (generated by tools/worksheets/build.py) | present |
 | [`osha.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.csv) | Task-step hazard worksheet | present |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/figures) | Generated SVG figures (do not edit) | generated |
 | [`Task206_OSHA.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/Task206_OSHA.sysml) | Generated SysML v2 view | generated |
@@ -145,7 +145,7 @@ package Task206_OSHA {
 <!-- worksheet:start (generated by tools/worksheets/build.py; do not edit) -->
 ### Worksheet
 
-![Task 206 · Operating and Support Hazard Analysis worksheet](assets/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.svg)
+![Task 206 · Operating and Support Hazard Analysis worksheet](../../safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.svg)
 
 Data: [`osha.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.csv) · Excel: [`worksheets.xlsx`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/generated/worksheets.xlsx), tab **O&SHA** (risk levels are live Table III formulas). Generated from `osha.yaml (AI-drafted I0) + hazard records` by `tools/worksheets/build.py`; edit the records, not the sheet. AI-drafted (I0), not reviewed.
 <!-- worksheet:end -->

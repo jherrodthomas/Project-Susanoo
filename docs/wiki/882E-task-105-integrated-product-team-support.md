@@ -32,11 +32,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | MIL-STD-882E element | 1 — Document the system safety approach |
-| Tasks | [Task 105 — Integrated Product Team Support](MIL-STD-882E-Task-105) |
+| Tasks | [Task 105 — Integrated Product Team Support](MIL-STD-882E-Task-105.md) |
 | Lifecycle gate | G0 onward |
 | Applicability | Selected |
 | Accountable role | Safety lead |
-| Parent folder | [01 · Document the System Safety Approach](882E-01-safety-approach) |
+| Parent folder | [01 · Document the System Safety Approach](882E-01-safety-approach.md) |
 
 ## Purpose
 
@@ -45,17 +45,17 @@ are worked inside design decisions, not after them.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/01-safety-approach/task-105-integrated-product-team-support/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/01-safety-approach/task-105-integrated-product-team-support/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/01-safety-approach/task-105-integrated-product-team-support/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/01-safety-approach/task-105-integrated-product-team-support/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/01-safety-approach/task-105-integrated-product-team-support/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/01-safety-approach/task-105-integrated-product-team-support/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -68,7 +68,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`Task105_IPT.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/01-safety-approach/task-105-integrated-product-team-support/Task105_IPT.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML block definition — IPT composition](assets/safety/mil-std-882e/01-safety-approach/task-105-integrated-product-team-support/figures/fig-4-sysml-block-definition.svg)
+![Figure 4 · SysML block definition — IPT composition](../../safety/mil-std-882e/01-safety-approach/task-105-integrated-product-team-support/figures/fig-4-sysml-block-definition.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -100,15 +100,15 @@ package Task105_IPT {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/01-safety-approach/task-105-integrated-product-team-support/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/01-safety-approach/task-105-integrated-product-team-support/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
-| Organisation and authority | [Task 102 · System Safety Program Plan (SSPP)](882E-task-102-system-safety-program-plan) |
+| Organisation and authority | [Task 102 · System Safety Program Plan (SSPP)](882E-task-102-system-safety-program-plan.md) |
 
 | Output | Destination |
 |---|---|
-| Analysis participation | [02 · Identify and Document Hazards](882E-02-hazard-identification) |
+| Analysis participation | [02 · Identify and Document Hazards](882E-02-hazard-identification.md) |
 
 ## Folder contents
 

@@ -47,7 +47,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | Accountable role | Safety lead |
-| Procedure | [`docs/wiki/MIL-STD-882E-Handbook.md`](MIL-STD-882E-Handbook) |
+| Procedure | [`docs/wiki/MIL-STD-882E-Handbook.md`](MIL-STD-882E-Handbook.md) |
 
 ## Purpose
 
@@ -59,22 +59,22 @@ Controlled work-product tree for the SUS-I1 system safety program, organised by 
 eight MIL-STD-882E process elements (folders `01`–`08`) with the 25 tasks nested under the
 element they primarily serve. `00-system-definition` holds the analysis baseline and canonical
 SysML models; `hazard-tracking-system` (Task 106) and `software-safety` (Section 4.4) cut
-across all elements. Procedures live in the [Wiki handbook](MIL-STD-882E-Handbook);
+across all elements. Procedures live in the [Wiki handbook](MIL-STD-882E-Handbook.md);
 this tree holds the actual records and evidence.
 
 ## Position in the MIL-STD-882E flow
 
-![Figure 1 · Position in the MIL-STD-882E flow](assets/safety/mil-std-882e/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
+![Figure 1 · Position in the MIL-STD-882E flow](../../safety/mil-std-882e/figures/fig-1-position-in-the-mil-std-882e-flow.svg)
 
 ## Block diagram
 
-![Figure 2 · Block diagram](assets/safety/mil-std-882e/figures/fig-2-block-diagram.svg)
+![Figure 2 · Block diagram](../../safety/mil-std-882e/figures/fig-2-block-diagram.svg)
 
 Elements and interfaces: [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml); SysML: [`Architecture.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/model/Architecture.sysml).
 
 ## Boundary diagram
 
-![Figure 3 · Boundary diagram](assets/safety/mil-std-882e/figures/fig-3-boundary-diagram.svg)
+![Figure 3 · Boundary diagram](../../safety/mil-std-882e/figures/fig-3-boundary-diagram.svg)
 
 | # | From | To | Crossing / interaction | Interface (item definition) |
 |---|---|---|---|---|
@@ -91,7 +91,7 @@ Elements and interfaces: [`architecture/item-definition.yaml`](https://github.co
 
 SysML v2 textual view: [`SafetyProgramFlow.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/SafetyProgramFlow.sysml), generated from the catalog. It imports the project model in [`models/sysml/model`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model): `SusanooArchitecture` (elements and usage paths) and `SusanooLibrary` (882E vocabulary). The figures are drawn from the same data; the `.sysml` file is the model of record.
 
-![Figure 4 · SysML activity — eight-element iterative process](assets/safety/mil-std-882e/figures/fig-4-sysml-activity.svg)
+![Figure 4 · SysML activity — eight-element iterative process](../../safety/mil-std-882e/figures/fig-4-sysml-activity.svg)
 
 <details><summary>SysML v2 source</summary>
 
@@ -133,7 +133,7 @@ package SafetyProgramFlow {
 
 ## Inputs and outputs
 
-![Figure 5 · Inputs and outputs](assets/safety/mil-std-882e/figures/fig-5-inputs-and-outputs.svg)
+![Figure 5 · Inputs and outputs](../../safety/mil-std-882e/figures/fig-5-inputs-and-outputs.svg)
 
 | Input | Source |
 |---|---|
@@ -150,18 +150,18 @@ package SafetyProgramFlow {
 
 | Item | Description | State |
 |---|---|---|
-| [`00-system-definition/`](882E-00-system-definition) | 00 · System Definition and Analysis Baseline | folder |
-| [`01-safety-approach/`](882E-01-safety-approach) | 01 · Document the System Safety Approach | folder |
-| [`02-hazard-identification/`](882E-02-hazard-identification) | 02 · Identify and Document Hazards | folder |
-| [`03-risk-assessment/`](882E-03-risk-assessment) | 03 · Assess and Document Risk | folder |
-| [`04-mitigation-identification/`](882E-04-mitigation-identification) | 04 · Identify and Document Risk Mitigation Measures | folder |
-| [`05-risk-reduction/`](882E-05-risk-reduction) | 05 · Reduce Risk | folder |
-| [`06-verification/`](882E-06-verification) | 06 · Verify, Validate and Document Risk Reduction | folder |
-| [`07-risk-acceptance/`](882E-07-risk-acceptance) | 07 · Accept Risk and Document | folder |
-| [`08-lifecycle-risk-management/`](882E-08-lifecycle-risk-management) | 08 · Manage Life-Cycle Risk | folder |
-| [`hazard-tracking-system/`](882E-hazard-tracking-system) | Task 106 · Hazard Tracking System (Hazard Log) | folder |
-| [`software-safety/`](882E-software-safety) | Software Contribution to System Risk (Section 4.4) | folder |
-| [`templates/`](882E-templates) | Work-Product Templates | folder |
+| [`00-system-definition/`](882E-00-system-definition.md) | 00 · System Definition and Analysis Baseline | folder |
+| [`01-safety-approach/`](882E-01-safety-approach.md) | 01 · Document the System Safety Approach | folder |
+| [`02-hazard-identification/`](882E-02-hazard-identification.md) | 02 · Identify and Document Hazards | folder |
+| [`03-risk-assessment/`](882E-03-risk-assessment.md) | 03 · Assess and Document Risk | folder |
+| [`04-mitigation-identification/`](882E-04-mitigation-identification.md) | 04 · Identify and Document Risk Mitigation Measures | folder |
+| [`05-risk-reduction/`](882E-05-risk-reduction.md) | 05 · Reduce Risk | folder |
+| [`06-verification/`](882E-06-verification.md) | 06 · Verify, Validate and Document Risk Reduction | folder |
+| [`07-risk-acceptance/`](882E-07-risk-acceptance.md) | 07 · Accept Risk and Document | folder |
+| [`08-lifecycle-risk-management/`](882E-08-lifecycle-risk-management.md) | 08 · Manage Life-Cycle Risk | folder |
+| [`hazard-tracking-system/`](882E-hazard-tracking-system.md) | Task 106 · Hazard Tracking System (Hazard Log) | folder |
+| [`software-safety/`](882E-software-safety.md) | Software Contribution to System Risk (Section 4.4) | folder |
+| [`templates/`](882E-templates.md) | Work-Product Templates | folder |
 | [`catalog.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/catalog.yaml) | Source of truth for this tree; regenerate READMEs after editing | present |
 | [`tasks/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/mil-std-882e/tasks) | Task work-product records (T101.yaml ...) | present |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/mil-std-882e/figures) | Generated SVG figures (do not edit) | generated |
@@ -175,9 +175,9 @@ package SafetyProgramFlow {
 | Safety-significant software functions (4.4) | [`safety/software/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/software) |
 | Test and demonstration events (event risk, Task 303) | [`safety/events/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/events) |
 | Task work-product records | [`tasks/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/mil-std-882e/tasks) |
-| Templates | [`templates/`](882E-templates) |
+| Templates | [`templates/`](882E-templates.md) |
 | Generated HTS export | [`safety/generated/hts.csv`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/generated/hts.csv) |
-| Procedures | [Wiki task handbook](MIL-STD-882E-Handbook) |
+| Procedures | [Wiki task handbook](MIL-STD-882E-Handbook.md) |
 
 Run `python -m tools.pdac.validate` and `python -m tools.pdac.report` (see
 [`tools/pdac/README.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/README.md)).
@@ -206,7 +206,7 @@ approval or certification is claimed. All authorities are simulated.
 ## Documentation rule
 
 Every folder README in this tree must carry the diagram set defined in
-[`framework/documentation-standard.md`](Documentation-Standard). Generate with
+[`framework/documentation-standard.md`](Documentation-Standard.md). Generate with
 `python3 tools/gen_safety_docs.py`; CI runs `python3 tools/check_readme_diagrams.py`.
 
 <!-- END GENERATED: content below this line is human-authored and preserved -->
@@ -216,13 +216,13 @@ Every folder README in this tree must carry the diagram set defined in
 These figures are generated from this tree's [`catalog.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/catalog.yaml) inputs and outputs by
 `tools/readme/build_readme.py`; the repository front page shows the same set with the task roadmap.
 
-![Figure 5 · How the tasks feed each other](assets/docs/readme/task-flow.svg)
+![Figure 5 · How the tasks feed each other](../readme/task-flow.svg)
 
-![Figure 6 · The main thread: from first hazards to risk acceptance](assets/docs/readme/task-thread.svg)
+![Figure 6 · The main thread: from first hazards to risk acceptance](../readme/task-thread.svg)
 
-![Figure 7 · Who feeds whom](assets/docs/readme/task-matrix.svg)
+![Figure 7 · Who feeds whom](../readme/task-matrix.svg)
 
-![Figure 8 · Everything runs through the hazard tracking system](assets/docs/readme/task-hub.svg)
+![Figure 8 · Everything runs through the hazard tracking system](../readme/task-hub.svg)
 
 ## Working content
 
