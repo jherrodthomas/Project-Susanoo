@@ -29,7 +29,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 <tr><td width="33%" valign="top"><a href="readme/risk-matrix.svg"><img src="readme/risk-matrix.svg" alt="Current hazard risk on the MIL-STD-882E matrix" width="300"></a><br><sub>Current hazard risk on the MIL-STD-882E matrix</sub></td><td width="33%" valign="top"><a href="readme/simulation.svg"><img src="readme/simulation.svg" alt="Simulation results summary (synthetic)" width="300"></a><br><sub>Simulation results summary (synthetic)</sub></td><td width="33%" valign="top"><a href="3d/README.md"><img src="wiki/images/3d-s3-01.png" alt="3D scene still" width="300"></a><br><sub>3D scene still</sub></td></tr>
 </table>
 
-**Open:** [Abbreviations and codes](terms.md) · [Front-page figures](readme/README.md) · [3D scene pages](3d/README.md) · [Process-map sources](diagrams/mil-std-882e/README.md) · [Wiki images](wiki/images/README.md)
+**Open:** [Abbreviations and codes](terms.md) · [Front-page figures](readme/README.md) · [3D scene pages](3d/README.md) · [System V cycle page](vcycle/README.md) · [Process-map sources](diagrams/mil-std-882e/README.md) · [Wiki images](wiki/images/README.md)
 
 <!-- preview:end -->
 
@@ -40,6 +40,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | [`3d/`](3d/) | 3D scene pages |
 | [`diagrams/`](diagrams/) | Diagram sources |
 | [`readme/`](readme/) | Front-page figures |
+| [`vcycle/`](vcycle/) | System V cycle page |
 | [`wiki/`](wiki/) | Wiki source and publication |
 | [`previews.yaml`](previews.yaml) | Folder previews: what every folder shows a reader before they open anything. |
 | [`terms.md`](terms.md) | Abbreviations, acronyms and record codes |
