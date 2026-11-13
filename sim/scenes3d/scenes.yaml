@@ -49,3 +49,7 @@ not_modelled:
   - {hazard: HAZ-MAN-002, reason: "A carried load is not in the plant (no payload, grip or load-swing model); CL-05 carry pose is CAD only (cad/README.md)"}
   - {hazard: HAZ-WLK-003, reason: "Kneel and rise are not in the plant (no lowered posture or person contact model); CL-05 kneel is CAD only (cad/README.md)"}
   - {hazard: HAZ-PIL-003, reason: "Emergency egress through the side hatch is not in the plant (no pilot or descent model)"}
+  - {hazard: HAZ-PIL-004, reason: "Blocked egress needs a pilot and egress model; the plant does not model the kneel"}
+  - {hazard: HAZ-INT-002, reason: "Misleading or stale UAV data needs a display and pilot model; SITL does not model the pilot"}
+  - {hazard: HAZ-DCK-003, reason: "Battery thermal behaviour on the dock is not modelled"}
+  - {hazard: HAZ-DCK-004, reason: "Dock charging and connector electrics are not modelled"}

@@ -211,6 +211,19 @@ Every folder README in this tree must carry the diagram set defined in
 
 <!-- END GENERATED: content below this line is human-authored and preserved -->
 
+## How the tasks work together
+
+These figures are generated from this tree's [`catalog.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/safety/mil-std-882e/catalog.yaml) inputs and outputs by
+`tools/readme/build_readme.py`; the repository front page shows the same set with the task roadmap.
+
+![Figure 5 · How the tasks feed each other](assets/docs/readme/task-flow.svg)
+
+![Figure 6 · The main thread: from first hazards to risk acceptance](assets/docs/readme/task-thread.svg)
+
+![Figure 7 · Who feeds whom](assets/docs/readme/task-matrix.svg)
+
+![Figure 8 · Everything runs through the hazard tracking system](assets/docs/readme/task-hub.svg)
+
 ## Working content
 
 _No analysis content yet. Add authored material below this heading._

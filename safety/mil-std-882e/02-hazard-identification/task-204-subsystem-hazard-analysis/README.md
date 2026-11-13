@@ -141,6 +141,6 @@ package Task204_SSHA {
 
 ![Task 204 · Subsystem Hazard Analysis (FMEA-style) worksheet](ssha.svg)
 
-Data: [`ssha-SUS-A1.csv`](ssha-SUS-A1.csv), [`ssha-SUS-GSE.csv`](ssha-SUS-GSE.csv), [`ssha-SUS-M1-CTL.csv`](ssha-SUS-M1-CTL.csv), [`ssha-SUS-M1-DCK.csv`](ssha-SUS-M1-DCK.csv), [`ssha-SUS-M1-MAN.csv`](ssha-SUS-M1-MAN.csv), [`ssha-SUS-M1-PIL.csv`](ssha-SUS-M1-PIL.csv), [`ssha-SUS-M1-PWR.csv`](ssha-SUS-M1-PWR.csv), [`ssha-SUS-M1-SAF.csv`](ssha-SUS-M1-SAF.csv), [`ssha-SUS-M1-WLK.csv`](ssha-SUS-M1-WLK.csv) · Excel: [`worksheets.xlsx`](../../../generated/worksheets.xlsx), tab **SSHA-FMEA** (risk levels are live Table III formulas). Generated from `safety/hazards/*.yaml (subsystems, causal_factors)` by `tools/worksheets/build.py`; edit the records, not the sheet. AI-drafted (I0), not reviewed.
+Data: [`ssha-SUS-A1.csv`](ssha-SUS-A1.csv), [`ssha-SUS-GSE.csv`](ssha-SUS-GSE.csv), [`ssha-SUS-I1-INT.csv`](ssha-SUS-I1-INT.csv), [`ssha-SUS-M1-CTL.csv`](ssha-SUS-M1-CTL.csv), [`ssha-SUS-M1-DCK.csv`](ssha-SUS-M1-DCK.csv), [`ssha-SUS-M1-MAN.csv`](ssha-SUS-M1-MAN.csv), [`ssha-SUS-M1-PIL.csv`](ssha-SUS-M1-PIL.csv), [`ssha-SUS-M1-PWR.csv`](ssha-SUS-M1-PWR.csv), [`ssha-SUS-M1-SAF.csv`](ssha-SUS-M1-SAF.csv), [`ssha-SUS-M1-WLK.csv`](ssha-SUS-M1-WLK.csv) · Excel: [`worksheets.xlsx`](../../../generated/worksheets.xlsx), tab **SSHA-FMEA** (risk levels are live Table III formulas). Generated from `safety/hazards/*.yaml (subsystems, causal_factors)` by `tools/worksheets/build.py`; edit the records, not the sheet. AI-drafted (I0), not reviewed.
 <!-- worksheet:end -->
 

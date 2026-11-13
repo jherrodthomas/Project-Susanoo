@@ -234,6 +234,15 @@ class_labels:
 # Words written in capitals that are ordinary words (figure banners, emphasis), names, roman numerals and code
 # identifiers: not abbreviations.
 not_terms:
+  # element banners in the task-relation figures (tools/readme/task_relations.py)
+  - IDENTIFY
+  - LIFE-CYCLE
+  - MANAGE
+  - REDUCTION
+  - VERIFY
+  - DOCUMENT
+  - ACCEPT
+  - APPROACH
   # worksheet group bands (tools/worksheets/build.py)
   - INITIAL
   - ACTIVITIES

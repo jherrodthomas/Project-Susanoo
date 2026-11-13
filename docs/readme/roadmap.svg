@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="1276.6" viewBox="0 0 1180 1276.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 4 · MIL-STD-882E task roadmap</title>
+<desc>Every MIL-STD-882E task across the project gates, with its status</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1180" height="1222" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 4 · MIL-STD-882E task roadmap</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Every task by process element, drawn across the project gates when it is performed. Status comes from the tailoring and the task</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">records; the shaded column is the current gate.</text>
+<text x="1140" y="44" font-size="11" fill="#475569" text-anchor="end">standards/tailoring · safety/mil-std-882e/catalog.yaml</text>
+<line x1="40" y1="102" x2="1140" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="441" y="122" width="85.5" height="1032" rx="6" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<rect x="441" y="122" width="85.5" height="34" rx="6" fill="#E0E7FF" stroke="#E2E8F0" stroke-width="1.2"/>
+<text x="483.8" y="137" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">G0 · now</text>
+<text x="483.8" y="150" font-size="9" fill="#475569" text-anchor="middle">Concept</text>
+<rect x="528.5" y="122" width="85.5" height="34" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+<text x="571.2" y="137" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">G1</text>
+<text x="571.2" y="150" font-size="9" fill="#475569" text-anchor="middle">Requirements</text>
+<rect x="616" y="122" width="85.5" height="34" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+<text x="658.8" y="137" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">G2</text>
+<text x="658.8" y="150" font-size="9" fill="#475569" text-anchor="middle">Preliminary</text>
+<rect x="703.5" y="122" width="85.5" height="34" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+<text x="746.2" y="137" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">G3</text>
+<text x="746.2" y="150" font-size="9" fill="#475569" text-anchor="middle">Detailed design</text>
+<rect x="791" y="122" width="85.5" height="34" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+<text x="833.8" y="137" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">G4</text>
+<text x="833.8" y="150" font-size="9" fill="#475569" text-anchor="middle">Bench and</text>
+<rect x="878.5" y="122" width="85.5" height="34" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+<text x="921.2" y="137" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">G5</text>
+<text x="921.2" y="150" font-size="9" fill="#475569" text-anchor="middle">Verification and</text>
+<rect x="966" y="122" width="85.5" height="34" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+<text x="1008.8" y="137" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">G6</text>
+<text x="1008.8" y="150" font-size="9" fill="#475569" text-anchor="middle">Release</text>
+<rect x="1053.5" y="122" width="85.5" height="34" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+<text x="1096.2" y="137" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">G7</text>
+<text x="1096.2" y="150" font-size="9" fill="#475569" text-anchor="middle">Change and</text>
+<text x="40" y="184" font-size="12" fill="#0F172A" font-weight="700">1 · Document the system safety approach</text>
+<rect x="40" y="196" width="54.3" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
+<text x="67.1" y="207.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 101</text>
+<text x="102.3" y="208" font-size="10.5" fill="#0F172A">Hazard Identification and Mitigation Effort Using the System S…</text>
+<rect x="444" y="195" width="692" height="18" rx="9" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="452" y="208" font-size="9.5" fill="#D97706" font-weight="700">in work</text>
+<line x1="40" y1="216" x2="1140" y2="216" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="222" width="54.3" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
+<text x="67.1" y="233.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 102</text>
+<text x="102.3" y="234" font-size="10.5" fill="#0F172A">System Safety Program Plan</text>
+<rect x="444" y="221" width="79.5" height="18" rx="9" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="452" y="234" font-size="9.5" fill="#D97706" font-weight="700">in work</text>
+<circle cx="658.8" cy="230" r="5" fill="#D97706" stroke="#D97706" stroke-width="1"/>
+<circle cx="1008.8" cy="230" r="5" fill="#D97706" stroke="#D97706" stroke-width="1"/>
+<line x1="40" y1="242" x2="1140" y2="242" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="248" width="54.3" height="16" rx="8.0" fill="#94A3B8" stroke="none" stroke-width="1"/>
+<text x="67.1" y="259.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 103</text>
+<text x="102.3" y="260" font-size="10.5" fill="#0F172A">Hazard Management Plan</text>
+<rect x="444" y="247" width="167" height="18" rx="9" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="452" y="260" font-size="9.5" fill="#475569" font-weight="700">not selected</text>
+<line x1="40" y1="268" x2="1140" y2="268" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="274" width="54.3" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
+<text x="67.1" y="285.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 104</text>
+<text x="102.3" y="286" font-size="10.5" fill="#0F172A">Support of Government Reviews/Audits</text>
+<rect x="444" y="273" width="692" height="18" rx="9" fill="#FFFBEB" stroke="#94A3B8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="452" y="286" font-size="9.5" fill="#475569" font-weight="700">conditional · As scheduled</text>
+<line x1="40" y1="294" x2="1140" y2="294" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="300" width="54.3" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
+<text x="67.1" y="311.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 105</text>
+<text x="102.3" y="312" font-size="10.5" fill="#0F172A">Integrated Product Team/Working Group Support</text>
+<rect x="444" y="299" width="692" height="18" rx="9" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="452" y="312" font-size="9.5" fill="#D97706" font-weight="700">in work</text>
+<line x1="40" y1="320" x2="1140" y2="320" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="326" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="337.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 108</text>
+<text x="102.3" y="338" font-size="10.5" fill="#0F172A">Hazardous Materials Management Plan</text>
+<rect x="531.5" y="325" width="254.5" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="539.5" y="338" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="346" x2="1140" y2="346" stroke="#E2E8F0" stroke-width="0.6"/>
+<text x="40" y="366" font-size="12" fill="#0F172A" font-weight="700">2 · Identify and document hazards</text>
+<rect x="40" y="378" width="54.3" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
+<text x="67.1" y="389.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 201</text>
+<text x="102.3" y="390" font-size="10.5" fill="#0F172A">Preliminary Hazard List</text>
+<rect x="444" y="377" width="79.5" height="18" rx="9" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="452" y="390" font-size="9.5" fill="#D97706" font-weight="700">in work</text>
+<line x1="40" y1="398" x2="1140" y2="398" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="404" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="415.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 202</text>
+<text x="102.3" y="416" font-size="10.5" fill="#0F172A">Preliminary Hazard Analysis</text>
+<rect x="531.5" y="403" width="167" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="539.5" y="416" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="424" x2="1140" y2="424" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="430" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="441.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 203</text>
+<text x="102.3" y="442" font-size="10.5" fill="#0F172A">System Requirements Hazard Analysis</text>
+<rect x="531.5" y="429" width="167" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="539.5" y="442" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="450" x2="1140" y2="450" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="456" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="467.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 204</text>
+<text x="102.3" y="468" font-size="10.5" fill="#0F172A">Subsystem Hazard Analysis</text>
+<rect x="706.5" y="455" width="79.5" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="714.5" y="468" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="476" x2="1140" y2="476" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="482" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="493.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 205</text>
+<text x="102.3" y="494" font-size="10.5" fill="#0F172A">System Hazard Analysis</text>
+<rect x="706.5" y="481" width="254.5" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="714.5" y="494" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="502" x2="1140" y2="502" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="508" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="519.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 206</text>
+<text x="102.3" y="520" font-size="10.5" fill="#0F172A">Operating and Support Hazard Analysis</text>
+<rect x="706.5" y="507" width="254.5" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="714.5" y="520" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="528" x2="1140" y2="528" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="534" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="545.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 207</text>
+<text x="102.3" y="546" font-size="10.5" fill="#0F172A">Health Hazard Analysis</text>
+<rect x="619" y="533" width="342" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="627" y="546" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="554" x2="1140" y2="554" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="560" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="571.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 208</text>
+<text x="102.3" y="572" font-size="10.5" fill="#0F172A">Functional Hazard Analysis</text>
+<rect x="531.5" y="559" width="167" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="539.5" y="572" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="580" x2="1140" y2="580" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="586" width="54.3" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
+<text x="67.1" y="597.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 209</text>
+<text x="102.3" y="598" font-size="10.5" fill="#0F172A">System-of-Systems Hazard Analysis</text>
+<rect x="619" y="585" width="342" height="18" rx="9" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="627" y="598" font-size="9.5" fill="#D97706" font-weight="700">conditional</text>
+<line x1="40" y1="606" x2="1140" y2="606" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="612" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="623.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 210</text>
+<text x="102.3" y="624" font-size="10.5" fill="#0F172A">Environmental Hazard Analysis</text>
+<rect x="619" y="611" width="342" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="627" y="624" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="632" x2="1140" y2="632" stroke="#E2E8F0" stroke-width="0.6"/>
+<text x="40" y="652" font-size="12" fill="#0F172A" font-weight="700">3 · Assess and document risk</text>
+<rect x="40" y="664" width="24.1" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="52.1" y="675.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">E3</text>
+<text x="72.1" y="676" font-size="10.5" fill="#0F172A">Assess and Document Risk</text>
+<rect x="531.5" y="663" width="604.5" height="18" rx="9" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="539.5" y="676" font-size="9.5" fill="#475569" font-weight="700">element activity</text>
+<line x1="40" y1="684" x2="1140" y2="684" stroke="#E2E8F0" stroke-width="0.6"/>
+<text x="40" y="704" font-size="12" fill="#0F172A" font-weight="700">4 · Identify and document risk mitigation measures</text>
+<rect x="40" y="716" width="24.1" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="52.1" y="727.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">E4</text>
+<text x="72.1" y="728" font-size="10.5" fill="#0F172A">Identify and Document Risk Mitigation Measures</text>
+<rect x="619" y="715" width="167" height="18" rx="9" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="627" y="728" font-size="9.5" fill="#475569" font-weight="700">element activity</text>
+<line x1="40" y1="736" x2="1140" y2="736" stroke="#E2E8F0" stroke-width="0.6"/>
+<text x="40" y="756" font-size="12" fill="#0F172A" font-weight="700">5 · Reduce risk</text>
+<rect x="40" y="768" width="24.1" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="52.1" y="779.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">E5</text>
+<text x="72.1" y="780" font-size="10.5" fill="#0F172A">Reduce Risk</text>
+<rect x="706.5" y="767" width="167" height="18" rx="9" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="714.5" y="780" font-size="9.5" fill="#475569" font-weight="700">element activity</text>
+<line x1="40" y1="788" x2="1140" y2="788" stroke="#E2E8F0" stroke-width="0.6"/>
+<text x="40" y="808" font-size="12" fill="#0F172A" font-weight="700">6 · Verify, validate and document risk reduction</text>
+<rect x="40" y="820" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="831.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 303</text>
+<text x="102.3" y="832" font-size="10.5" fill="#0F172A">Test and Evaluation Participation</text>
+<rect x="794" y="819" width="167" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="802" y="832" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="840" x2="1140" y2="840" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="846" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="857.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 401</text>
+<text x="102.3" y="858" font-size="10.5" fill="#0F172A">Safety Verification</text>
+<rect x="794" y="845" width="167" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="802" y="858" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="866" x2="1140" y2="866" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="872" width="54.3" height="16" rx="8.0" fill="#94A3B8" stroke="none" stroke-width="1"/>
+<text x="67.1" y="883.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 402</text>
+<text x="102.3" y="884" font-size="10.5" fill="#0F172A">Explosives Hazard Classification Data</text>
+<rect x="444" y="871" width="692" height="18" rx="9" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="452" y="884" font-size="9.5" fill="#475569" font-weight="700">not applicable · Re-evaluate at each gate</text>
+<line x1="40" y1="892" x2="1140" y2="892" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="898" width="54.3" height="16" rx="8.0" fill="#94A3B8" stroke="none" stroke-width="1"/>
+<text x="67.1" y="909.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 403</text>
+<text x="102.3" y="910" font-size="10.5" fill="#0F172A">Explosive Ordnance Disposal Data</text>
+<rect x="444" y="897" width="692" height="18" rx="9" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="452" y="910" font-size="9.5" fill="#475569" font-weight="700">not applicable · Re-evaluate at each gate</text>
+<line x1="40" y1="918" x2="1140" y2="918" stroke="#E2E8F0" stroke-width="0.6"/>
+<text x="40" y="938" font-size="12" fill="#0F172A" font-weight="700">7 · Accept risk and document</text>
+<rect x="40" y="950" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="961.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 301</text>
+<text x="102.3" y="962" font-size="10.5" fill="#0F172A">Safety Assessment Report</text>
+<rect x="881.5" y="949" width="167" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="889.5" y="962" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="970" x2="1140" y2="970" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="976" width="54.3" height="16" rx="8.0" fill="#94A3B8" stroke="none" stroke-width="1"/>
+<text x="67.1" y="987.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 302</text>
+<text x="102.3" y="988" font-size="10.5" fill="#0F172A">Hazard Management Assessment Report</text>
+<rect x="881.5" y="975" width="167" height="18" rx="9" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="889.5" y="988" font-size="9.5" fill="#475569" font-weight="700">not selected</text>
+<line x1="40" y1="996" x2="1140" y2="996" stroke="#E2E8F0" stroke-width="0.6"/>
+<text x="40" y="1016" font-size="12" fill="#0F172A" font-weight="700">8 · Manage life-cycle risk</text>
+<rect x="40" y="1028" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="1039.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 107</text>
+<text x="102.3" y="1040" font-size="10.5" fill="#0F172A">Hazard Management Progress Report</text>
+<rect x="444" y="1027" width="692" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="452" y="1040" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="1048" x2="1140" y2="1048" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="1054" width="54.3" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="67.1" y="1065.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 304</text>
+<text x="102.3" y="1066" font-size="10.5" fill="#0F172A">Review of ECPs, Change Notices, Deficiency Reports, Mishaps,…</text>
+<rect x="1056.5" y="1053" width="79.5" height="18" rx="9" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="1064.5" y="1066" font-size="9.5" fill="#4F46E5" font-weight="700">planned</text>
+<line x1="40" y1="1074" x2="1140" y2="1074" stroke="#E2E8F0" stroke-width="0.6"/>
+<text x="40" y="1094" font-size="12" fill="#0F172A" font-weight="700">Across all elements</text>
+<rect x="40" y="1106" width="54.3" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
+<text x="67.1" y="1117.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Task 106</text>
+<text x="102.3" y="1118" font-size="10.5" fill="#0F172A">Hazard Tracking System</text>
+<rect x="444" y="1105" width="692" height="18" rx="9" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="452" y="1118" font-size="9.5" fill="#D97706" font-weight="700">in work</text>
+<line x1="40" y1="1126" x2="1140" y2="1126" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="1132" width="63" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="71.5" y="1143.2" font-size="9" fill="#FFFFFF" font-weight="700" text-anchor="middle">Section 4.4</text>
+<text x="111" y="1144" font-size="10.5" fill="#0F172A">Software Contribution to System Risk (Section 4.4)</text>
+<rect x="531.5" y="1131" width="429.5" height="18" rx="9" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="539.5" y="1144" font-size="9.5" fill="#475569" font-weight="700">element activity</text>
+<line x1="40" y1="1152" x2="1140" y2="1152" stroke="#E2E8F0" stroke-width="0.6"/>
+<rect x="40" y="1170" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="62" y="1180" font-size="11" fill="#475569">Planned (selected)</text>
+<rect x="170.2" y="1170" width="14" height="12" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="192.2" y="1180" font-size="11" fill="#475569">In work, or conditional (dashed)</text>
+<rect x="370.5" y="1170" width="14" height="12" rx="3" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.2"/>
+<text x="392.5" y="1180" font-size="11" fill="#475569">Approved</text>
+<rect x="452.4" y="1170" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="474.4" y="1180" font-size="11" fill="#475569">Not selected or not applicable</text>
+<rect x="641" y="1170" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="663" y="1180" font-size="11" fill="#475569">Element activity (no numbered task)</text>
+<rect x="859.8" y="1170" width="14" height="12" rx="3" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="881.8" y="1180" font-size="11" fill="#475569">Revision at a later gate (dot)</text>
+<text x="40" y="1202" font-size="10.5" fill="#94A3B8">Generated by tools/readme/build_readme.py from the tailoring, the work-product catalog and the task records. Planned work, not completed work; no gate has been passed.</text>
+<g class="terms" data-base-h="1222">
+<rect x="0" y="1222" width="1180" height="54.6" fill="#FFFFFF"/>
+<line x1="40" y1="1226" x2="1140" y2="1226" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1241.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: DoD = US Department of Defense · ECP = engineering change proposal · G0–G7 = lifecycle gate (G0 concept to G7 change and sustainment) · MIL-STD-882E = US DoD Standard Practice for System Safety</text>
+<text x="40" y="1256.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(11 May 2012, base edition) · US = United States</text>
+</g>
+</svg>

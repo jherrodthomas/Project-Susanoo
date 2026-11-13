@@ -1,0 +1,115 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-INT-002
+title: Pilot acts on misleading or stale UAV information
+status: open
+system: SUS-I1
+subsystems:
+- SUS-A1
+- SUS-I1-INT
+- SUS-M1-PIL
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: UAV imagery, telemetry or position shown to the pilot is wrong, or has stopped updating, but
+  is shown as valid and current, and the pilot uses it to choose where the walker goes or where people are.
+modes:
+- MOD-04
+- MOD-07
+causal_factors:
+- id: CF1
+  type: interface
+  description: Wrong georeferencing, camera pointing or position estimate passed to the pilot display (IF-PX4-001)
+- id: CF2
+  type: environment
+  description: GNSS degradation or spoofing gives a plausible but wrong position
+- id: CF3
+  type: interface
+  description: Link latency, dropped frames or a frozen video stream on the integration link
+- id: CF4
+  type: human
+  description: Pilot does not notice that the picture is wrong or not updating
+- id: CF5
+  type: human
+  description: Pilot relies on the UAV picture over direct view and the observer
+effects:
+- Walker steered toward a hazard or a person the imagery did not show, or that moved after the picture froze
+mishap: Person struck or stepped on, or the walker driven onto unsafe ground, on the strength of wrong or out-of-date
+  information
+initial_risk:
+  severity: 1
+  probability: D
+  rac: 1D
+  risk_level: Serious
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): the walker can kill a person
+    it walks into; the chain needs wrong-but-plausible UAV data, the pilot relying on it over direct view, and the
+    observer missing the person; applies to stale or frozen information as well (DQ-020).'
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): validity checks and annunciation
+    on UAV data, with direct view and the observer kept primary; applies to stale or frozen information as well (DQ-020).'
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: UAV data shown with validity status; position and imagery checked against an independent source before
+    use
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-021
+  verification:
+    method:
+    - test
+    - analysis
+    evidence_ids: []
+- id: M2
+  description: Stale or frozen imagery detected within a defined time and shown as not current
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-021
+  verification:
+    method:
+    - test
+    evidence_ids: []
+- id: M3
+  description: 'Procedure: UAV imagery is advisory; walking decisions rest on direct view and the safety observer'
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-021
+owner:
+  role: ROLE-UAV
+  person: null
+  org: Air vehicle
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 208
+  scenario_ids:
+  - SCN-105
+  documents:
+  - safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; raised from the FHA gap rows F-06 erroneous and F-06 untimely (AI-drafted, I0)
+- UAV flight functions are classified in the ARP4761A aircraft FHA; this record covers the walker-side consequence
+  only
+- 'Merged by the project lead''s decision DQ-020 (2026-11-13): HAZ-INT-003 (stale or frozen imagery) folded in; both
+  carried the lead''s rating 1D to 1E (DQ-019)'
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- Decide whether UAV data validity and staleness annunciation is a safety-significant software function (new SSF)
