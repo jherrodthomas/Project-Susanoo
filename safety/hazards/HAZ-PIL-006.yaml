@@ -35,18 +35,19 @@ initial_risk:
   probability: D
   rac: 1D
   risk_level: Serious
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); an incapacitated pilot needs an earlier mishap, so extraction is remote over the exposure basis (DQ-003),
-    but delay can be fatal
+  rationale: 'Preliminary; rated by the project lead (DQ-021, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): an incapacitated pilot needs
+    an earlier mishap, so extraction is remote, but delay can be fatal'
   definitions: SUS-RISKDEF-001
 target_risk:
   severity: 1
   probability: E
   rac: 1E
   risk_level: Medium
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); external hatch and restraint release, extraction access to a standing or fallen walker without power,
-    and trained crew with equipment make an unsafe or late extraction improbable
+  rationale: 'Preliminary; rated by the project lead (DQ-021, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): external hatch and restraint
+    release, extraction access to a standing or fallen walker without power, and trained crew with equipment make
+    an unsafe or late extraction improbable'
   definitions: SUS-RISKDEF-001
 event_risks: []
 mitigations:
