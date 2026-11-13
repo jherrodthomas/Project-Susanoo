@@ -1,9 +1,10 @@
-// Check the SUS-M1 sheet (docs/3d/SUS-M1.html) and render its stills.
+// Check the general-arrangement sheets (docs/3d/SUS-M1.html, docs/3d/SUS-A1.html) and render their stills.
 // Usage: node sim/scenes3d/sheet_check.mjs THREE_DIR [--check-only] [--all] [--out DIR]
 //   THREE_DIR: an unpacked npm package of three matching the SHA-256 pinned in sim/scenes3d/scenes.yaml; requests to the
 //   pinned jsDelivr URLs are served from it. Loads the page in Chromium, goes through every posture, a hazard selection,
 //   the render modes and the replay, and fails on a console error, a missing synthetic label or a posture that does
-//   not settle. Unless --check-only, writes docs/wiki/images/3d-sus-m1.png (1600x900); --all also 3d-sus-m1-<posture>.png.
+//   not settle; on sheet 2, that every PX4 SITL run replays to its own outcome. Unless --check-only, writes
+//   docs/wiki/images/3d-sus-m1.png, 3d-sus-a1.png and 3d-sus-a1-air.png (1600x900); --all also 3d-sus-m1-<posture>.png.
 import { createRequire } from 'node:module';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
@@ -57,7 +58,29 @@ for (const k of ['2', '5']) { await page.keyboard.press(k); await settled(k === 
 await page.keyboard.down('w'); await page.waitForTimeout(1200); await page.keyboard.up('w');
 await page.keyboard.press('1'); await settled('stand');
 await page.keyboard.press(' '); await page.waitForTimeout(500);
+// sheet 2 (SUS-A1): the dock close-up, then every PX4 SITL run at its end in the airspace view shows that run's outcome
+const runs = JSON.parse(readFileSync(join(root, 'docs/3d/SUS-A1.html'), 'utf8').match(/window\.SHEET = (.*);<\/script>/)[1]).runs;
+const url2 = (qs) => 'file://' + join(root, 'docs/3d/SUS-A1.html') + qs;
+await page.goto(url2('?hazard=HAZ-DCK-001'));
+await page.waitForFunction(() => window.__ready === true && window.__state.mode === 'dock', null, { timeout: 60000 });
+await page.waitForTimeout(400);
+if (!/no evidence credit/i.test(await page.textContent('#banner'))) problems.push('SUS-A1: missing synthetic label');
+if (!checkOnly) await page.screenshot({ path: join(out, '3d-sus-a1.png') });
+console.log('ok   SUS-A1 dock');
+for (const r of runs) {
+  await page.goto(url2(`?mode=air&run=${r.id}&t=end`));
+  await page.waitForFunction(() => window.__ready === true, null, { timeout: 60000 });
+  await page.waitForTimeout(300);
+  const st = await page.evaluate(() => ({ ...window.__state, info: document.getElementById('rinfo').textContent }));
+  if (st.mode !== 'air' || st.run !== r.id || st.outcome !== r.outcome || !st.info.includes(r.outcome)) problems.push(`SUS-A1 ${r.id}: shows ${st.run} ${st.outcome}`);
+  if (!checkOnly && r.id === 'SU-01') {   // still: on the way back, before it enters the keep-out
+    await page.goto(url2('?mode=air&run=SU-01&t=40')); await page.waitForFunction(() => window.__ready === true); await page.waitForTimeout(300);
+    await page.screenshot({ path: join(out, '3d-sus-a1-air.png') });
+  }
+  console.log(`ok   SUS-A1 ${r.id} (${r.outcome})`);
+}
+await page.keyboard.press('1'); await page.keyboard.press(' '); await page.waitForTimeout(600);
 await browser.close();
 problems.push(...errors);
 if (problems.length) { console.log('FAIL ' + problems.join('; ')); process.exit(1); }
-console.log('ok   SUS-M1 sheet');
+console.log('ok   SUS-M1 and SUS-A1 sheets');

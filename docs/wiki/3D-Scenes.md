@@ -37,6 +37,14 @@ Interactive three.js scenes replaying plant, failure-search and PX4 SITL results
 
 ![SUS-M1 general arrangement](images/3d-sus-m1.png)
 
+## SUS-A1 on dock and in airspace
+
+`docs/3d/SUS-A1.html` is sheet 2: the quadrotor on the CL-05 rear dock with its rotor-to-pilot clearance and the dock hazards, the UAV interfaces, and an airspace view replaying the six PX4 SITL runs (`sim/results/uav/`) with the geofence and pilot keep-out of `sim/uav/spec.yaml`. The quadrotor is drawn enlarged in that view; SITL flies over flat ground at the dock's level.
+
+![SUS-A1 on the dock](images/3d-sus-a1.png)
+
+![SUS-A1 PX4 SITL replay](images/3d-sus-a1-air.png)
+
 ## Hazard scenes
 
 ### S3-01 · Slow supply leak on a slope; balance lost before the hold engages

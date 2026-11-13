@@ -143,11 +143,14 @@ folders:
     title: 3D scene pages
     purpose: >-
       Interactive 3D replays of the simulation scenarios, built by `sim/scenes3d`, and the interactive general
-      arrangement of SUS-M1 (`SUS-M1.html`: the CL-05 concept geometry animated through its postures and walk, with
-      hazard callouts and the static tip check). Open a page in a browser; each still below links to its page.
+      arrangement: sheet 1 `SUS-M1.html` (the CL-05 concept geometry animated through its postures and walk, with
+      hazard callouts and the static tip check) and sheet 2 `SUS-A1.html` (the UAV on its dock, and the PX4 SITL
+      flights replayed with the geofence and the pilot keep-out). Open a page in a browser; each still below links to its page.
       Concept geometry and simulation results are design aids, not verification evidence.
     hero: {img: docs/wiki/images/3d-sus-m1.png, caption: "SUS-M1 general arrangement", link: docs/3d/SUS-M1.html}
     gallery:
+      - {img: docs/wiki/images/3d-sus-a1.png, caption: "SUS-A1 on the dock (sheet 2)", link: docs/3d/SUS-A1.html}
+      - {img: docs/wiki/images/3d-sus-a1-air.png, caption: "SUS-A1 PX4 SITL replay, SU-01 (sheet 2)", link: docs/3d/SUS-A1.html}
       - {img: docs/wiki/images/3d-s3-01.png, caption: "S3-01", link: docs/3d/S3-01.html}
       - {img: docs/wiki/images/3d-s3-01-dusk.png, caption: "S3-01 at dusk", link: docs/3d/S3-01-dusk.html}
       - {img: docs/wiki/images/3d-s3-02.png, caption: "S3-02", link: docs/3d/S3-02.html}
@@ -175,7 +178,7 @@ folders:
   docs/3d/assets:
     title: 3D page assets
     purpose: >-
-      Geometry loaded by `docs/3d/SUS-M1.html`: `sus-m1.js`, the CL-05 concept meshes and their pose clips, exported
+      Geometry loaded by `docs/3d/SUS-M1.html` and `docs/3d/SUS-A1.html`: `sus-m1.js`, the CL-05 concept meshes and their pose clips, exported
       from the build123d CAD by `tools/cad/b3d/cl05_web.py`. Generated; concept geometry, not a design.
     hero: {img: docs/wiki/images/3d-sus-m1.png, caption: "SUS-M1 general arrangement", link: docs/3d/SUS-M1.html}
 
@@ -426,9 +429,9 @@ folders:
     title: 3D scene builder
     purpose: >-
       Builds the 3D scene pages in `docs/3d` from the simulation results (`export_scene.py`, `build_pages.py`) and
-      renders the stills (`render.mjs`). Also builds the interactive SUS-M1 general arrangement (`build_sheet.py` from
-      `sheet.yaml`, viewer `sheet.js`, check and still `sheet_check.mjs`) on the CL-05 geometry exported by
-      `tools/cad/b3d/cl05_web.py`.
+      renders the stills (`render.mjs`). Also builds the interactive general-arrangement sheets (`build_sheet.py`):
+      SUS-M1 from `sheet.yaml` (viewer `sheet.js`) and SUS-A1 from `sheet_uav.yaml` (viewer `sheet_uav.js`), on the
+      CL-05 geometry exported by `tools/cad/b3d/cl05_web.py`; `sheet_check.mjs` checks both and renders their stills.
     hero: {img: docs/wiki/images/3d-sus-m1.png, caption: "SUS-M1 general arrangement", link: docs/3d/SUS-M1.html}
     gallery:
       - {img: docs/wiki/images/3d-s3-01.png, caption: "S3-01", link: docs/3d/S3-01.html}

@@ -87,3 +87,7 @@ kbd{border:1px solid var(--line);padding:0 4px;font:inherit;font-size:9px;color:
   #terms{position:static;white-space:normal;margin:10px 16px}
   #hud{position:absolute;left:16px;top:8px;margin:0}
 }
+#tb a,#rtitle a{color:var(--sel)}
+.ifr{display:grid;grid-template-columns:78px 1fr;gap:6px;padding:3px 10px;border-bottom:1px dashed var(--line);font-size:10.5px}
+.ifr .k{grid-column:2}
+.seg button:disabled{color:var(--line);cursor:default}

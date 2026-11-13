@@ -55,7 +55,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   python -m sim.plant.report && python -m sim.search.search && python -m sim.figures.scenes
   python -m sim.figures.uav_scenes     # from committed PX4 SITL results; re-running SITL: sim/README.md
   python -m sim.scenes3d.export_scene && python -m sim.scenes3d.build_pages   # 3D; stills: sim/README.md
-  python -m sim.scenes3d.build_sheet   # SUS-M1 sheet; geometry: tools/cad/b3d/cl05_web.py; check: sim/scenes3d/sheet_check.mjs
+  python -m sim.scenes3d.build_sheet   # SUS-M1 and SUS-A1 sheets; geometry: tools/cad/b3d/cl05_web.py; check: sim/scenes3d/sheet_check.mjs
   python -m sim.mujoco.crosscheck      # level 1 vs level 2; needs sim/mujoco/requirements.txt
   python -m sim.mujoco.sizing          # actuator sizing against CF4 at level 2 (about 4 minutes)
   python -m sim.trades.fault_response  # TS-001 supply-loss evidence on both levels (about 1 minute)

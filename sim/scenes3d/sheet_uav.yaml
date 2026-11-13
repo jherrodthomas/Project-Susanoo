@@ -1,0 +1,23 @@
+# Interactive sheet 2 of the general arrangement: SUS-A1 on its dock and in the air (docs/3d/SUS-A1.html), built by
+# sim/scenes3d/build_sheet.py. Geometry: the CL-05 model of docs/3d/assets/sus-m1.js (walker, dock and the docked
+# quadrotor, cad/params/common.yaml uav:). Figures come from cad/params, cad/metrics.json, sim/uav/spec.yaml,
+# architecture/item-definition.yaml, safety/hazards/ and the PX4 SITL results in sim/results/uav/; this file only
+# says what is drawn and where. Display choices, no analysis: drafted by the AI assistant (I0), not reviewed.
+id: SUS-A1-SHEET
+document: SUS-CAD-001-CL-05 · SPEC-UAV-001
+layout: CL-05
+title: UAV on dock and in airspace, interactive
+sheet: "2 of 2"
+
+# Hazards whose callouts show in the dock close-up: the part class the leader starts at and where on its bounding box.
+# In the airspace view HAZ-INT-001 points at the pilot keep-out instead (`air: keepout`).
+anchors:
+  HAZ-DCK-001: {cls: rotor, at: top}
+  HAZ-DCK-002: {cls: dock, at: rear}
+  HAZ-INT-001: {cls: uav, at: front, air: keepout}
+
+# PX4 SITL scenarios replayed in the airspace view (sim/results/uav/<id>.json)
+replay: [SU-01, SU-02, SU-03, SU-04, SU-05, SU-06]
+
+# The quadrotor is under a metre across in an airspace of 120 m: it is drawn enlarged in that view (labelled on the page).
+uav_scale_air: 6
