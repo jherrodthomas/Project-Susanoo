@@ -426,4 +426,24 @@ decisions:
     answer: {choice: merge, by: lead, at: 2026-11-13, via: chat, note: "merge the two duplicate hazard pairs"}
     applied_in: [safety/hazards/HAZ-INT-002.yaml, safety/hazards/HAZ-DCK-004.yaml, requirements/SYS-021.yaml, requirements/SYS-022.yaml, safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml, sim/scenes3d/scenes.yaml]
     sources: [decisions/register.yaml]
-
+  - id: DQ-021
+    question: How should the three hazards raised from the O&SHA gaps be rated?
+    context: >-
+      HAZ-PIL-005 (fall during normal ingress or egress), HAZ-GSE-001 (fall from height during maintenance) and
+      HAZ-PIL-006 (extraction of an incapacitated pilot) came from the O&SHA (Task 206) with AI-drafted ratings on
+      SUS-RISKDEF-001 and the DQ-003 exposure basis. Ratings stay preliminary until the PHA (Task 202) at G2; this is
+      not a risk acceptance.
+    options:
+      - {key: adopt, title: Adopt the proposed ratings as the lead's rating, detail: "PIL-005 2C Serious to 2D Medium; GSE-001 1C High to 1E Medium; PIL-006 1D Serious to 1E Medium."}
+      - {key: change, title: Change some first, detail: "Adjust named values, then record."}
+      - {key: proposals, title: Keep them as AI proposals, detail: "Same values, left for the PHA at G2."}
+    recommendation: adopt
+    reversibility: easy
+    blocks: [PHA rows for the three hazards, risk register]
+    gate: G2
+    decider: lead
+    status: applied
+    asked: 2026-11-13
+    answer: {choice: adopt, by: lead, at: 2026-11-13, via: chat, note: "Adopt 2C to 2D, 1C to 1E and 1D to 1E (recommended)"}
+    applied_in: [safety/hazards/HAZ-PIL-005.yaml, safety/hazards/HAZ-GSE-001.yaml, safety/hazards/HAZ-PIL-006.yaml]
+    sources: [safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.yaml, standards/tailoring/mil-std-882e.yaml]
