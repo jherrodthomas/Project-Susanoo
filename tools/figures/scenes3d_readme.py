@@ -9,6 +9,7 @@ Everything on the page is read from the scene definitions, the exported analysis
   sim/scenes3d/out/<id>.json        the exported analysis of every scene: source, reference, outcome
   docs/3d/*.html, docs/wiki/images/3d-*.png   the pages and stills built from them
   safety/hazards                    every hazard and its subsystems
+  sim/scenes3d/sheet*.yaml          the general-arrangement sheets: postures, hazard callouts, PX4 runs replayed
 
 Figures (house style of framework/documentation-standard.md):
 
@@ -85,7 +86,22 @@ def load() -> dict:
     subs = sorted({x for h in with_scene for x in hazards.get(h, {}).get("subsystems") or []})
     return {"ctx": ctx, "hazards": hazards, "cfg": cfg, "envs": envs, "conds": conds, "rows": rows,
             "covered": dict(covered), "reasons": reasons, "with_scene": with_scene, "subs": subs,
-            "three": cfg.get("three", {})}
+            "three": cfg.get("three", {}), "sheets": load_sheets()}
+
+
+def load_sheets() -> list[dict]:
+    """The interactive general-arrangement sheets built by build_sheet.py, from sheet.yaml and sheet_uav.yaml."""
+    out = []
+    for name, page, stills in [("sheet.yaml", "SUS-M1", ["3d-sus-m1.png"]),
+                               ("sheet_uav.yaml", "SUS-A1", ["3d-sus-a1.png", "3d-sus-a1-air.png"])]:
+        cfg = yaml.safe_load((FOLDER / name).read_text())
+        out.append({"file": name, "page": page, "id": cfg["id"], "sheet": cfg.get("sheet", ""),
+                    "title": cfg["title"], "layout": cfg.get("layout", ""),
+                    "postures": [x["label"] for x in cfg.get("postures") or []],
+                    "callouts": sorted(cfg.get("anchors") or {}), "replay": cfg.get("replay") or [],
+                    "built": (ROOT / "docs" / "3d" / f"{page}.html").exists(),
+                    "stills": [x for x in stills if (ROOT / "docs" / "wiki" / "images" / x).exists()]})
+    return out
 
 
 def plural(n: int, word: str) -> str:
@@ -273,7 +289,9 @@ FLOWS = [["Simulation results", "Scene analysis export", "plant runs, edge cases
          ["Page builder", "3D pages and wiki", "docs/3d/*.html, 3D-Scenes page"],
          ["three.js (pinned)", "Page builder", "version and SHA-256"],
          ["3D pages and wiki", "Still renderer", "pages in headless Chromium"],
-         ["CI", "@boundary", "--check, pages load with the synthetic label"]]
+         ["CAD geometry", "Sheet builder", "CL-05 model docs/3d/assets/sus-m1.js"],
+         ["Sheet builder", "3D pages and wiki", "docs/3d/SUS-M1.html, SUS-A1.html"],
+         ["CI", "@boundary", "--check, pages and sheets load with the synthetic label"]]
 
 
 def figure_specs(d: dict) -> tuple[list[dict], str]:
@@ -290,12 +308,13 @@ def figure_specs(d: dict) -> tuple[list[dict], str]:
                  subtitle=f"SUS-I1 decomposition. The {len(d['subs'])} subsystems named by the hazards that have a scene are "
                           "coloured, with those hazards under each.")
     boundary = fig_boundary(ctx, {"path": "sim/scenes3d", "boundary": {
-        "name": "3D scene builder", "inside": ["Scene definitions", "Scene analysis export", "Page builder", "Still renderer"],
-        "outside": ["Simulation results", "Hazard records", "3D pages and wiki", "three.js (pinned)", "CI"],
+        "name": "3D scene builder", "inside": ["Scene definitions", "Scene analysis export", "Page builder", "Still renderer", "Sheet builder"],
+        "outside": ["Simulation results", "Hazard records", "CAD geometry", "3D pages and wiki", "three.js (pinned)",
+                    "CI"],
         "flows": FLOWS}})
     boundary.update(file="fig-4-boundary-diagram.svg", number="4", ref="sim/scenes3d/README.md",
-                    subtitle="The builder owns the scene definitions, the analysis export, the page builder and the still "
-                             "renderer; the results it replays and the pages it writes live elsewhere. Crossings are "
+                    subtitle="The builder owns the scene definitions, the analysis export, the page builder, the still "
+                             "renderer and the sheet builder; the results it replays and the pages it writes live elsewhere. Crossings are "
                              "numbered as in the table.")
     sysml_spec, sysml = fig_sysml(d)
     srcs = sorted({r["source"] for r in d["rows"]})
@@ -305,16 +324,19 @@ def figure_specs(d: dict) -> tuple[list[dict], str]:
           "nodes": [
               {"id": "I1", "title": "Simulation results", "sub": ", ".join(SRC_LABEL[s] for s in srcs), "tone": "work"},
               {"id": "I2", "title": "Hazard records", "sub": f"{len(d['hazards'])} hazards", "tone": "work"},
+              {"id": "I4", "title": "CL-05 geometry", "sub": "docs/3d/assets/sus-m1.js", "tone": "work"},
               {"id": "I3", "title": f"three.js {d['three'].get('version', '?')}", "sub": "pinned by SHA-256",
                "tone": "external"},
               {"id": "X", "code": "sim/scenes3d/", "title": "3D scene builder", "tone": "current"},
               {"id": "O1", "title": "Scene analysis", "sub": "sim/scenes3d/out/", "tone": "work"},
               {"id": "O2", "title": "3D pages", "sub": "docs/3d/", "tone": "work"},
-              {"id": "O3", "title": "Wiki page and stills", "sub": "3D-Scenes, 3d-*.png", "tone": "work"}],
+              {"id": "O3", "title": "Wiki page and stills", "sub": "3D-Scenes, 3d-*.png", "tone": "work"},
+              {"id": "O4", "title": "General-arrangement sheets",
+               "sub": ", ".join(f"{x['page']}.html" for x in d["sheets"]), "tone": "work"}],
           "edges": [{"src": "I1", "dst": "X", "label": "motion"}, {"src": "I2", "dst": "X", "label": "hazards"},
-                    {"src": "I3", "dst": "X", "label": "renderer"},
+                    {"src": "I3", "dst": "X", "label": "renderer"}, {"src": "I4", "dst": "X", "label": "geometry"},
                     {"src": "X", "dst": "O1", "label": "export"}, {"src": "X", "dst": "O2", "label": "pages"},
-                    {"src": "X", "dst": "O3", "label": "stills"}]}
+                    {"src": "X", "dst": "O3", "label": "stills"}, {"src": "X", "dst": "O4", "label": "sheets"}]}
     specs = [block, boundary, sysml_spec, io]
     for sp in specs:
         sp.setdefault("footer", FOOTER)
@@ -345,12 +367,17 @@ def readme(d: dict, specs: list[dict]) -> str:
         "with `node sim/scenes3d/render.mjs` (see [`sim/README.md`](../README.md)) |",
         f"| three.js | `{d['three'].get('version', '?')}`, SHA-256 `{d['three'].get('sha256', '')[:12]}…` pinned in "
         "[`scenes.yaml`](scenes.yaml) |",
+        "| Sheets | `python -m sim.scenes3d.build_sheet` (`--check` in CI); checked and stills rendered by "
+        "`node sim/scenes3d/sheet_check.mjs` |",
         "| SysML | [`Scenes3D.sysml`](Scenes3D.sysml) (generated) |", "",
         "## Purpose\n",
         "Turns simulation results into interactive 3D replays a reader can orbit, one scene per hazard that has a "
         "motion source. Each scene keeps two things apart: the analysis, exported from the plant run, search edge case "
         "or SITL run it names, and the look (environment, lighting, camera), which is picture only and can never "
         "change the analysis. CI checks that the pages load, show the synthetic label and show the right outcome.\n",
+        "It also builds the interactive general-arrangement sheets: a live model of the CL-05 reference layout with "
+        "its concept metrics and hazard callouts, and SUS-A1 on its dock and in the air with the PX4 SITL runs "
+        "replayed. They are concept geometry and synthetic output, a design aid with no evidence credit.\n",
         "## Scenes\n", img("fig-1-scenes.svg", "1", "The 3D scenes"),
         "| Scene | Hazards | Replays | Outcome | Look | Page |", "|---|---|---|---|---|---|",
         *[f"| {r['id']} | {', '.join(r['hazards'])} | {SRC_LABEL.get(r['source'], r['source'])} {r['reference']} | "
@@ -359,6 +386,16 @@ def readme(d: dict, specs: list[dict]) -> str:
         "## Hazard coverage\n", img("fig-2-hazard-coverage.svg", "2", "Which hazards have a scene"),
         "| Hazard | Why no scene yet |", "|---|---|",
         *[f"| {h} | {why} |" for h, why in sorted(d["reasons"].items())], "",
+        "## General-arrangement sheets\n",
+        "Built by [`build_sheet.py`](build_sheet.py) from the sheet files below; the geometry is the CL-05 model "
+        "exported by `tools/cad/b3d/cl05_web.py`.\n",
+        "| Sheet | Page | Title | Postures | Hazard callouts | Runs replayed | Defined in |",
+        "|---|---|---|---|---|---|---|",
+        *[f"| {x['sheet']} | " + (f"[`{x['page']}.html`](../../docs/3d/{x['page']}.html)" if x["built"] else "—")
+          + f" | {x['title']} | {', '.join(x['postures']) or '—'} | {len(x['callouts'])}: {', '.join(x['callouts'])} | "
+          f"{', '.join(x['replay']) or '—'} | [`{x['file']}`]({x['file']}) |" for x in d["sheets"]], "",
+        *[f"![{x['page']} {'sheet' if i == 0 else 'in the air'}](../../docs/wiki/images/{st})\n"
+          for x in d["sheets"] for i, st in enumerate(x["stills"])],
         "## Block diagram\n", img("fig-3-block-diagram.svg", "3", "Block diagram"),
         "## Boundary diagram\n", img("fig-4-boundary-diagram.svg", "4", "Boundary diagram"),
         "| # | From | To | Crossing / interaction |", "|---|---|---|---|",
@@ -375,11 +412,15 @@ def readme(d: dict, specs: list[dict]) -> str:
         "| Plant runs, edge cases, SITL runs | [`sim/plant`](../plant/README.md), "
         "[`sim/results/`](../results/README.md) |",
         "| Hazards | [Safety records](../../safety/README.md) |",
-        "| Environments and conditions | [`library/`](library/README.md) |", "",
+        "| Environments and conditions | [`library/`](library/README.md) |",
+        "| CL-05 geometry and concept metrics | `docs/3d/assets/sus-m1.js` (from `tools/cad/b3d/cl05_web.py`), "
+        "[`cad/`](../../cad/README.md) |", "",
         "| Output | Destination |", "|---|---|",
         "| Scene analysis | [`out/`](out/README.md) |",
         "| Interactive pages | [`docs/3d/`](../../docs/3d/README.md) |",
-        "| Wiki page and stills | `docs/wiki/3D-Scenes.md`, `docs/wiki/images/3d-*.png` |", "",
+        "| Wiki page and stills | `docs/wiki/3D-Scenes.md`, `docs/wiki/images/3d-*.png` |",
+        "| General-arrangement sheets | [`docs/3d/SUS-M1.html`](../../docs/3d/SUS-M1.html), "
+        "[`docs/3d/SUS-A1.html`](../../docs/3d/SUS-A1.html) |", "",
         "## Adding a scene\n",
         "1. Add it to [`scenes.yaml`](scenes.yaml) with its hazards and a `motion` block that names a committed result; "
         "take the hazard off `not_modelled`.",
@@ -393,6 +434,12 @@ def readme(d: dict, specs: list[dict]) -> str:
         "| [`export_scene.py`](export_scene.py) | Exports each scene's analysis to `out/` | code |",
         "| [`build_pages.py`](build_pages.py), [`viewer.js`](viewer.js) | Builds the pages in `docs/3d/` | code |",
         "| [`render.mjs`](render.mjs) | Renders and checks the stills in headless Chromium | code |",
+        "| [`sheet.yaml`](sheet.yaml), [`sheet_uav.yaml`](sheet_uav.yaml) | What the two sheets draw and where | "
+        "hand-written |",
+        "| [`build_sheet.py`](build_sheet.py), [`sheet.js`](sheet.js), [`sheet_uav.js`](sheet_uav.js), "
+        "[`sheet.css`](sheet.css), [`sheet.body.html`](sheet.body.html), [`sheet_uav.body.html`](sheet_uav.body.html) "
+        "| Builds the sheets in `docs/3d/` | code |",
+        "| [`sheet_check.mjs`](sheet_check.mjs) | Checks both sheets and renders their stills | code |",
         "| [`out/`](out/README.md) | Exported analysis, one JSON per scene | generated |",
         "| [`Scenes3D.sysml`](Scenes3D.sysml) | Scenes as SysML | generated |",
         "| [`figures/`](figures/) | Generated SVG figures (do not edit) | generated |",

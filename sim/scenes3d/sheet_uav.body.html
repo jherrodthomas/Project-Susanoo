@@ -1,0 +1,74 @@
+<canvas id="gl"></canvas>
+<div id="frame"></div>
+<div id="load">Loading CL-05 geometry…</div>
+<div id="hud"><div id="cam">AZ — · EL — · R —</div><div id="banner"></div></div>
+<svg id="cosvg"></svg><div id="co"></div>
+
+<div class="panel" id="left">
+  <div class="ph">View <span>V-01</span></div>
+  <div class="seg" id="mode"><button data-m="dock">Dock<kbd>1</kbd></button><button data-m="air">Airspace<kbd>2</kbd></button></div>
+  <div class="row"><span class="k" id="mnote"></span></div>
+  <div class="ph" style="border-top:1px solid var(--ink)">Show <span>S-02</span></div>
+  <div class="seg tog">
+    <button data-t="hazards">Hazards<kbd>H</kbd></button><button data-t="keepout">Keep-out<kbd>K</kbd></button><button data-t="fence">Geofence<kbd>F</kbd></button>
+  </div>
+  <div class="seg tog">
+    <button data-t="trail">Track<kbd>T</kbd></button><button data-t="walker">Walker<kbd>W</kbd></button><button data-t="dims">Dims<kbd>M</kbd></button>
+  </div>
+  <div class="seg" id="render"><button data-r="shaded">Shaded</button><button data-r="line">Line</button><button data-r="xray">X-ray</button></div>
+</div>
+<div class="panel" id="ovp">
+  <div class="ph">Orthographic · live <span>O-03</span></div>
+  <div id="ov"><div id="ov-front"><span>FRONT</span></div><div id="ov-side"><span>SIDE</span></div><div id="ov-top"><span>TOP</span></div></div>
+</div>
+
+<div class="panel" id="right">
+  <div class="ph">SUS-A1 // dock <span>T-01</span></div>
+  <div class="scroll">
+    <div class="name">OBSERVATION UAV</div>
+    <div class="sub">DOCKABLE QUADROTOR · PX4 · REAR BACKPACK DOCK ON CL-05</div>
+    <div id="spec" style="border-top:1px solid var(--ink)"></div>
+    <div class="note" id="specnote"></div>
+    <div class="ph" style="border-top:1px solid var(--ink)">Hazards <span id="hzcount"></span></div>
+    <div id="hzlist"></div>
+    <div id="hzsel"></div>
+    <div class="ph" style="border-top:1px solid var(--ink)">Interfaces <span id="ifcount"></span></div>
+    <div id="iflist"></div>
+  </div>
+</div>
+
+<div id="views">
+  <div class="seg" id="view"><button data-v="iso">ISO</button><button data-v="front">Front</button><button data-v="side">Side</button><button data-v="top">Top</button><button data-v="rear">Rear</button></div>
+  <div class="seg"><button id="helpbtn">? Help</button></div>
+</div>
+
+<div class="panel" id="bottom">
+  <div class="ph">Replay // PX4 SITL <span id="rtitle"></span></div>
+  <div id="rp">
+    <div class="seg" id="rtabs"></div>
+    <div class="seg"><button id="rplay">Play</button></div>
+    <span id="rt">t 0.00 s</span>
+  </div>
+  <div class="k" id="rinfo"></div>
+  <svg id="rplot" viewBox="0 0 1000 84" preserveAspectRatio="none"></svg>
+</div>
+
+<div id="tb">
+  <div class="big"><small>Project Susanoo</small>SUS-A1</div><div><small>Document</small><span id="tbdoc"></span></div><div><small>Sheet</small><span id="tbsheet"></span> · <a href="SUS-M1.html">sheet 1 ↗</a></div>
+  <div><small>Revision</small><span id="tbrev"></span></div><div><small>Scale</small>NTS · screen</div>
+  <div class="last"><small>Title</small><span id="tbtitle"></span></div><div class="last"><small>Status</small>Draft · not reviewed</div><div class="last ai"><small>Drafted by</small>AI assistant · I0</div>
+</div>
+
+<div id="help"><div class="panel">
+  <div class="ph">Every control <span>? to close</span></div>
+  <table>
+    <tr><td>Drag · wheel · right-drag</td><td>orbit · zoom · pan</td></tr>
+    <tr><td>1 · 2</td><td>dock close-up · airspace</td></tr>
+    <tr><td>H · K · F</td><td>hazard callouts · pilot keep-out · geofence</td></tr>
+    <tr><td>T · W · M</td><td>flight track · walker · dimensions</td></tr>
+    <tr><td>V</td><td>shaded · line · X-ray</td></tr>
+    <tr><td>Space · click the plot</td><td>play or pause the replay · jump to a time (switches to the airspace)</td></tr>
+    <tr><td>Click a hazard</td><td>highlight the parts it concerns</td></tr>
+  </table>
+  <div class="note">The quadrotor and dock are CL-05 concept geometry (cad/params/common.yaml uav:). Flights are PX4 SITL output (SIH quadrotor over flat ground at the dock's level): synthetic, no evidence credit.</div>
+</div></div>

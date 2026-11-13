@@ -19,7 +19,7 @@ const lib = readFileSync(join(threeDir, 'build/three.module.min.js'));
 if (createHash('sha256').update(lib).digest('hex') !== pinned) { console.error('three.module.min.js does not match the pinned SHA-256'); process.exit(1); }
 const prefix = `https://cdn.jsdelivr.net/npm/three@${version}/`;
 
-const pages = readdirSync(join(root, 'docs/3d')).filter(f => f.endsWith('.html') && f !== 'index.html').sort();
+const pages = readdirSync(join(root, 'docs/3d')).filter(f => /^S3-.*\.html$/.test(f)).sort();   // the SUS-M1 sheet: sheet_check.mjs
 const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader'] });
 const page = await browser.newPage({ viewport: { width: 1200, height: 675 }, deviceScaleFactor: 1 });
 await page.route(prefix + '**', route => {
