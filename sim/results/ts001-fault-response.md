@@ -29,16 +29,16 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | scenario | Trade study TS-001: supply loss for each actuation and power alternative |
 | purpose | trade-study input; not verification evidence |
 
-Each row runs 180 cases over the operating envelope (`pilot_reaction_s` [0.5, 1.5, 3.0], `slope_deg` [0, 10, 16, 20], `stride_offset_m` [0.0, 0.06, 0.12], `tau_leak_s` [0.05, 0.3, 1.0, 3.0, 5.0]) on both models. Torques as adopted in the level-2 spec: ankle 26500, knee 22500, hip 40000 N m. Residual bus floor (B-SAG) 0.35 of full torque (assumed). A cockpit arriving faster than 1.0 m/s is a hard drop.
+Each row runs 180 cases over the operating envelope (`pilot_reaction_s` [0.5, 1.5, 3.0], `slope_deg` [0, 10, 16, 20], `stride_offset_m` [0.0, 0.06, 0.12], `tau_leak_s` [0.05, 0.3, 1.0, 3.0, 5.0]) on both models. Torques as adopted in the level-2 spec: ankle 40500, knee 26500, hip 40000 N m. Residual bus floor (B-SAG) 0.35 of full torque (assumed). A cockpit arriving faster than 1.0 m/s is a hard drop.
 
 | Mode | Alternatives | Load holding | Level 1: safe / tip / drop | Level 2: safe / tip / drop | Worst impact L1 / L2 (m/s) | Same outcome |
 |---|---|---|---|---|---|---|
-| A-LOSS | A | works | 171 / 9 / 0 | 175 / 1 / 4 | 0.0 / 2.079 | 171 of 180 |
-| A-LOSS | A | fails | 20 / 11 / 149 | 35 / 0 / 145 | 4.884 / 4.221 | 153 of 180 |
-| B-SAG | B-EHA, B-EMA | works | 167 / 13 / 0 | 176 / 2 / 2 | 0.0 / 1.584 | 165 of 180 |
-| B-SAG | B-EHA, B-EMA | fails | 66 / 13 / 101 | 82 / 1 / 97 | 2.69 / 3.119 | 156 of 180 |
-| B-ISOL | B-EHA, B-EMA | works | 171 / 9 / 0 | 175 / 1 / 4 | 0.0 / 2.079 | 171 of 180 |
-| B-ISOL | B-EHA, B-EMA | fails | 20 / 11 / 149 | 35 / 0 / 145 | 4.884 / 4.221 | 153 of 180 |
+| A-LOSS | A | works | 171 / 9 / 0 | 180 / 0 / 0 | 0.0 / 0.0 | 171 of 180 |
+| A-LOSS | A | fails | 20 / 11 / 149 | 53 / 0 / 127 | 4.884 / 4.222 | 140 of 180 |
+| B-SAG | B-EHA, B-EMA | works | 167 / 13 / 0 | 180 / 0 / 0 | 0.0 / 0.0 | 167 of 180 |
+| B-SAG | B-EHA, B-EMA | fails | 66 / 13 / 101 | 129 / 10 / 41 | 2.69 / 2.701 | 108 of 180 |
+| B-ISOL | B-EHA, B-EMA | works | 171 / 9 / 0 | 180 / 0 / 0 | 0.0 / 0.0 | 171 of 180 |
+| B-ISOL | B-EHA, B-EMA | fails | 20 / 11 / 149 | 53 / 0 / 127 | 4.884 / 4.222 | 140 of 180 |
 
 ## Modes
 

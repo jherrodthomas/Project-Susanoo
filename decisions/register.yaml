@@ -505,6 +505,8 @@ decisions:
     blocks: [level-2 walker spec, SYS-016, TS-001 C01 and C06]
     gate: G2
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-13
+    answer: {choice: adopt, by: lead, at: 2026-11-13, via: chat, note: "adopt the re-sized torques"}
+    applied_in: [sim/spec/walker_l2.yaml, requirements/SYS-016.yaml, safety/hazards/HAZ-WLK-002.yaml, architecture/trades/TS-001.yaml]
     sources: [sim/results/sizing-cf4.md, requirements/SYS-016.yaml, decisions/register.yaml]

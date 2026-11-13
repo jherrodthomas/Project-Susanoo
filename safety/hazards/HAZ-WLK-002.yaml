@@ -34,8 +34,8 @@ causal_factors:
   description: Loss of actuator supply (hydraulic pressure or bus voltage) shrinks the balance capacity before load
     holding engages; a slow leak on a slope tips the walker, and a hold that engages with the capture point outside
     the foot tips it too (simulation SF-01 EC-07 and EC-08 at level 1; at level 2 EC-07 drops the cockpit instead and
-    EC-08 holds; on the 4,590 kg reference layout the torques adopted in DQ-012 also tip or drop the walker in a few
-    envelope-corner cases with load holding working, TS-001-E01; sizing SZ-01; synthetic)
+    EC-08 holds; with the torques re-sized for the 4,590 kg reference layout (DQ-024) level 2 keeps every envelope case
+    safe while load holding works, TS-001-E01; sizing SZ-01; synthetic)
 effects:
 - Overturn or fall of the platform
 mishap: Pilot fatal or disabling injury in fall; crush of bystanders
@@ -182,9 +182,8 @@ assumptions:
   static margin of 0.38 m standing and 0.35 m kneeling on placeholder mass'
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
-- 'Confirm the SYS-016 torque reserve in the actuation trade (TS-001, DQ-006): the level-2 spec holds ankle 26.5 and
-  knee 22.5 kN m (DQ-012), sized for 3,000 kg; re-sized for the 4,590 kg reference layout to ankle 40.5 and knee
-  26.5 kN m, adoption pending decision DQ-024; a real actuator must show that torque falls no faster than supply down
+- 'Confirm the SYS-016 torque reserve in the actuation trade (TS-001, DQ-006): the level-2 spec holds ankle 40.5 and
+  knee 26.5 kN m, re-sized for the 4,590 kg reference layout (DQ-023) and adopted by the lead (DQ-024); a real actuator must show that torque falls no faster than supply down
   to the load-holding threshold (sim/results/sizing-cf4.md)'
 - Derive a safety requirement for margin-based load holding (M5) (Task 203)
 - 'Check carried loads against the 0.12 m CoM offset cap: on placeholder CL-05 mass (4,590 kg) and flat ground, a

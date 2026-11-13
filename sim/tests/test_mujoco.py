@@ -70,17 +70,17 @@ class Model(unittest.TestCase):
 
     def test_ts001_evidence_matches_the_trade_record(self):
         """TS-001-E01 claims a hydraulic loss and an isolated battery behave identically (torque to zero), and that on
-        the 4,590 kg reference layout with the torques adopted in DQ-012 level 2 loses the walker in 4 or 5 of the
-        envelope cases of each mode even with load holding working (re-sizing: DQ-024)."""
+        the 4,590 kg reference layout with the re-sized torques (DQ-024) level 2 keeps every mode safe while load
+        holding works."""
         res = json.loads((ROOT / "sim" / "results" / "ts001-fault-response.json").read_text())
         rows = {(r["mode"], r["load_holding"]): r for r in res["rows"]}
         self.assertEqual(rows[("A-LOSS", "fails")]["l2"]["outcomes"], rows[("B-ISOL", "fails")]["l2"]["outcomes"])
         for mode in ("A-LOSS", "B-SAG", "B-ISOL"):
-            self.assertIn(res["cases"] - rows[(mode, "works")]["l2"]["counts"]["safe"], (4, 5), mode)
+            self.assertEqual(rows[(mode, "works")]["l2"]["counts"]["safe"], res["cases"], mode)
         trade = _read_yaml(ROOT / "architecture" / "trades" / "TS-001.yaml")
         e01 = next(e for e in trade["evidence"] if e["id"] == "TS-001-E01")
         self.assertEqual(e01["source"], "sim/results/ts001-fault-response.md")
-        self.assertIn("4 or 5 of 180", " ".join(e01["summary"].split()))
+        self.assertIn("every supply-loss mode is safe", " ".join(e01["summary"].split()))
 
     def test_locked_walker_holds_still_and_ignores_rounding(self):
         """Load holding is a solver constraint: once locked the walker stays put, so the outcome cannot hang on

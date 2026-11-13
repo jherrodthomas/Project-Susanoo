@@ -30,14 +30,14 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | scenario | HAZ-WLK-002 CF4: FLT-01 supply loss with load holding working |
 | purpose | draft sizing input to the actuation trade (TS-001, DQ-006); not a design value |
 
-Envelope grid: 378 cases (`pilot_reaction_s` [0.5, 1.5, 3.0], `slope_deg` [0, 10, 14, 16, 18, 20], `stride_offset_m` [0.0, 0.06, 0.12], `tau_leak_s` [0.05, 0.5, 1.0, 1.5, 2.0, 3.0, 5.0]). Corner grid: 504 cases. A failure is any outcome other than safe. m g L_foot = 27017 N m. In `sim/spec/walker_l2.yaml`: ankle 26500, knee 22500, hip 40000 N m.
+Envelope grid: 378 cases (`pilot_reaction_s` [0.5, 1.5, 3.0], `slope_deg` [0, 10, 14, 16, 18, 20], `stride_offset_m` [0.0, 0.06, 0.12], `tau_leak_s` [0.05, 0.5, 1.0, 1.5, 2.0, 3.0, 5.0]). Corner grid: 504 cases. A failure is any outcome other than safe. m g L_foot = 27017 N m. In `sim/spec/walker_l2.yaml`: ankle 40500, knee 26500, hip 40000 N m.
 
 ## Sweep: ankle_torque_max_nm (other joints as in the spec)
 
 | Value (N m) | Ratio to m g L_foot | Failures | Failing cases (first 3) |
 |---|---|---|---|
-| 23000 | 0.85 | 13 | 10°, offset 0.12 m, leak τ 5.0 s, pilot 3.0 s → hard-drop; 14°, offset 0.12 m, leak τ 5.0 s, pilot 0.5 s → hard-drop; 14°, offset 0.12 m, leak τ 5.0 s, pilot 3.0 s → hard-drop |
-| 26500 | 0.98 | 8 | 14°, offset 0.12 m, leak τ 5.0 s, pilot 3.0 s → hard-drop; 16°, offset 0.12 m, leak τ 5.0 s, pilot 0.5 s → hard-drop; 16°, offset 0.12 m, leak τ 5.0 s, pilot 3.0 s → hard-drop |
+| 23000 | 0.85 | 14 | 14°, offset 0.12 m, leak τ 5.0 s, pilot 3.0 s → hard-drop; 16°, offset 0.12 m, leak τ 5.0 s, pilot 3.0 s → hard-drop; 18°, offset 0.06 m, leak τ 5.0 s, pilot 3.0 s → hard-drop |
+| 26500 | 0.98 | 1 | 20°, offset 0.12 m, leak τ 3.0 s, pilot 3.0 s → tip |
 | 30500 | 1.13 | 0 | — |
 | 34000 | 1.26 | 0 | — |
 | 37000 | 1.37 | 0 | — |

@@ -1,9 +1,9 @@
 {
  "about": "Synthetic simulation output; design aid only, no evidence credit (sim/README.md, evidence gate).",
  "assumed": {
-  "ankle_torque_max_nm": 26500.0,
+  "ankle_torque_max_nm": 40500.0,
   "hip_torque_max_nm": 40000.0,
-  "knee_torque_max_nm": 22500.0
+  "knee_torque_max_nm": 26500.0
  },
  "base": {
   "fault": "FLT-01",
@@ -100,20 +100,6 @@
       {
        "outcome": "hard-drop",
        "pilot_reaction_s": 3.0,
-       "slope_deg": 10,
-       "stride_offset_m": 0.12,
-       "tau_leak_s": 5.0
-      },
-      {
-       "outcome": "hard-drop",
-       "pilot_reaction_s": 0.5,
-       "slope_deg": 14,
-       "stride_offset_m": 0.12,
-       "tau_leak_s": 5.0
-      },
-      {
-       "outcome": "hard-drop",
-       "pilot_reaction_s": 3.0,
        "slope_deg": 14,
        "stride_offset_m": 0.12,
        "tau_leak_s": 5.0
@@ -122,42 +108,42 @@
        "outcome": "hard-drop",
        "pilot_reaction_s": 3.0,
        "slope_deg": 16,
-       "stride_offset_m": 0.06,
-       "tau_leak_s": 5.0
-      },
-      {
-       "outcome": "hard-drop",
-       "pilot_reaction_s": 3.0,
-       "slope_deg": 16,
        "stride_offset_m": 0.12,
        "tau_leak_s": 5.0
       },
       {
        "outcome": "hard-drop",
-       "pilot_reaction_s": 0.5,
-       "slope_deg": 18,
-       "stride_offset_m": 0.06,
-       "tau_leak_s": 5.0
-      },
-      {
-       "outcome": "hard-drop",
        "pilot_reaction_s": 3.0,
        "slope_deg": 18,
        "stride_offset_m": 0.06,
        "tau_leak_s": 5.0
       },
       {
-       "outcome": "hard-drop",
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
        "pilot_reaction_s": 3.0,
        "slope_deg": 18,
        "stride_offset_m": 0.12,
-       "tau_leak_s": 5.0
+       "tau_leak_s": 2.0
       },
       {
-       "outcome": "hard-drop",
-       "pilot_reaction_s": 0.5,
-       "slope_deg": 20,
-       "stride_offset_m": 0.06,
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
        "tau_leak_s": 5.0
       },
       {
@@ -182,59 +168,18 @@
        "tau_leak_s": 1.5
       },
       {
-       "outcome": "hard-drop",
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
        "pilot_reaction_s": 3.0,
        "slope_deg": 20,
        "stride_offset_m": 0.12,
-       "tau_leak_s": 5.0
-      }
-     ],
-     "failures": 13,
-     "value": 23000
-    },
-    {
-     "cases": [
-      {
-       "outcome": "hard-drop",
-       "pilot_reaction_s": 3.0,
-       "slope_deg": 14,
-       "stride_offset_m": 0.12,
-       "tau_leak_s": 5.0
-      },
-      {
-       "outcome": "hard-drop",
-       "pilot_reaction_s": 0.5,
-       "slope_deg": 16,
-       "stride_offset_m": 0.12,
-       "tau_leak_s": 5.0
-      },
-      {
-       "outcome": "hard-drop",
-       "pilot_reaction_s": 3.0,
-       "slope_deg": 16,
-       "stride_offset_m": 0.12,
-       "tau_leak_s": 5.0
-      },
-      {
-       "outcome": "hard-drop",
-       "pilot_reaction_s": 0.5,
-       "slope_deg": 18,
-       "stride_offset_m": 0.12,
-       "tau_leak_s": 5.0
-      },
-      {
-       "outcome": "hard-drop",
-       "pilot_reaction_s": 3.0,
-       "slope_deg": 18,
-       "stride_offset_m": 0.12,
-       "tau_leak_s": 5.0
-      },
-      {
-       "outcome": "hard-drop",
-       "pilot_reaction_s": 3.0,
-       "slope_deg": 20,
-       "stride_offset_m": 0.06,
-       "tau_leak_s": 5.0
+       "tau_leak_s": 2.0
       },
       {
        "outcome": "tip",
@@ -244,14 +189,27 @@
        "tau_leak_s": 3.0
       },
       {
-       "outcome": "hard-drop",
+       "outcome": "tip",
        "pilot_reaction_s": 3.0,
        "slope_deg": 20,
        "stride_offset_m": 0.12,
        "tau_leak_s": 5.0
       }
      ],
-     "failures": 8,
+     "failures": 14,
+     "value": 23000
+    },
+    {
+     "cases": [
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      }
+     ],
+     "failures": 1,
      "value": 26500
     },
     {
