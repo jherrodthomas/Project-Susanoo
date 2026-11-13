@@ -1,0 +1,81 @@
+<canvas id="gl"></canvas>
+<div id="frame"></div>
+<div id="load">Loading CL-05 geometry…</div>
+<div id="hud"><div id="cam">AZ — · EL — · R —</div><div id="banner"></div></div>
+
+<div class="panel" id="left">
+  <div class="ph">Posture <span>M-01</span></div>
+  <div class="seg" id="posture"></div>
+  <div class="row"><span class="k" id="pnote">standing · analysed</span><span id="pframe"></span></div>
+  <div class="ph" style="border-top:1px solid var(--ink)">Show <span>S-02</span></div>
+  <div class="seg tog" id="show1">
+    <button data-t="hazards">Hazards<kbd>H</kbd></button><button data-t="dims">Dims<kbd>M</kbd></button><button data-t="explode">Explode<kbd>X</kbd></button>
+  </div>
+  <div class="seg tog" id="show2">
+    <button data-t="cg">CG + polygon<kbd>G</kbd></button><button data-t="person">Person<kbd>P</kbd></button><button data-t="uav">UAV up<kbd>U</kbd></button>
+  </div>
+  <div class="seg" id="render"><button data-r="shaded">Shaded</button><button data-r="line">Line</button><button data-r="xray">X-ray</button></div>
+</div>
+<div class="panel" id="ovp">
+  <div class="ph">Orthographic · live <span>O-03</span></div>
+  <div id="ov"><div id="ov-front"><span>FRONT</span></div><div id="ov-side"><span>SIDE</span></div><div id="ov-top"><span>TOP</span></div></div>
+</div>
+<svg id="cosvg"></svg><div id="co"></div>
+
+<div class="panel" id="right">
+  <div class="ph">SUS-M1 // CL-05 <span>T-01</span></div>
+  <div class="scroll">
+    <div class="name">PILOTED WALKER</div>
+    <div class="sub" id="ltitle"></div>
+    <div id="spec" style="border-top:1px solid var(--ink)"></div>
+    <div class="note" id="specnote"></div>
+    <div class="ph" style="border-top:1px solid var(--ink)">Hazards <span id="hzcount"></span></div>
+    <div id="hzlist"></div>
+    <div id="hzsel"></div>
+    <div class="ph" style="border-top:1px solid var(--ink)">Tip margin // static <span>K-04</span></div>
+    <div id="tip">
+      <svg id="tipsvg" viewBox="0 0 350 120" width="100%" height="120"></svg>
+      <div class="sl"><span class="k">PITCH</span><input id="pitch" type="range" min="-15" max="15" step="0.5" value="0"><span id="pitchv">0.0°</span></div>
+      <div class="sl"><span class="k">ROLL</span><input id="roll" type="range" min="-15" max="15" step="0.5" value="0"><span id="rollv">0.0°</span></div>
+      <div class="note">Static geometry only (centre of gravity over the support polygon, as cad/metrics.json): no dynamics, ground or control.</div>
+    </div>
+  </div>
+</div>
+
+<div id="views">
+  <div class="seg" id="view"><button data-v="iso">ISO</button><button data-v="front">Front</button><button data-v="side">Side</button><button data-v="top">Top</button><button data-v="rear">Rear</button></div>
+  <div id="drive">W/S walk · A/D turn · concept gait, no dynamics</div>
+  <div class="seg"><button id="helpbtn">? Help</button></div>
+</div>
+
+<div class="panel" id="bottom">
+  <div class="ph">Replay // simulation <span id="rtitle"></span></div>
+  <div id="rp">
+    <div class="seg" id="rtabs"></div>
+    <div class="seg"><button id="rplay">Play</button></div>
+    <span id="rt">t 0.00 s</span>
+  </div>
+  <div class="k" id="rinfo"></div>
+  <svg id="rplot" viewBox="0 0 1000 84" preserveAspectRatio="none"></svg>
+</div>
+
+<div id="tb">
+  <div class="big"><small>Project Susanoo</small>SUS-M1</div><div><small>Document</small><span id="tbdoc"></span></div><div><small>Sheet</small><span id="tbsheet"></span> · <a href="SUS-A1.html">sheet 2 ↗</a></div>
+  <div><small>Revision</small><span id="tbrev"></span></div><div><small>Scale</small>NTS · screen</div>
+  <div class="last"><small>Title</small><span id="tbtitle"></span></div><div class="last"><small>Status</small>Draft · not reviewed</div><div class="last ai"><small>Drafted by</small>AI assistant · I0</div>
+</div>
+
+<div id="help"><div class="panel">
+  <div class="ph">Every control <span>? to close</span></div>
+  <table>
+    <tr><td>Drag · wheel · right-drag</td><td>orbit · zoom · pan</td></tr>
+    <tr><td>1 2 3 4 5</td><td>stand · kneel · carry · egress · walk</td></tr>
+    <tr><td>W / S · A / D</td><td>walk forward or back · turn (walk posture)</td></tr>
+    <tr><td>H · M · X</td><td>hazard callouts · dimensions · explode</td></tr>
+    <tr><td>G · P · U</td><td>centre of gravity and support polygon · 1.75 m person · UAV lifted off the dock</td></tr>
+    <tr><td>V</td><td>shaded · line · X-ray</td></tr>
+    <tr><td>Click a hazard</td><td>highlight the parts it concerns</td></tr>
+    <tr><td>Space</td><td>play or pause the replay</td></tr>
+  </table>
+  <div class="note">Concept geometry of CL-05 (tools/cad/b3d/cl05.py). Postures between the analysed ones and the walk are concept kinematics: no dynamics, balance or load model.</div>
+</div></div>
