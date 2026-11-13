@@ -307,6 +307,26 @@ tailoring record and the work-product catalog, so it changes when they do.
 </details>
 <!-- readme:workflow:end -->
 
+### How the tasks work together
+
+No task stands alone: each one takes work products from others and hands its own on. The catalog records every
+input and output, and these figures are drawn from it.
+
+<p align="center"><img src="docs/readme/task-flow.svg" alt="Figure 5: every task-to-task flow, grouped by MIL-STD-882E process element" width="100%"></p>
+
+The hand-offs that matter most run from the first hazard analyses to risk acceptance:
+
+<p align="center"><img src="docs/readme/task-thread.svg" alt="Figure 6: the chains of hand-offs from the preliminary hazard list, functional hazard analysis and operating and support analysis to risk acceptance" width="80%"></p>
+
+<details>
+<summary><b>Two more views: who feeds whom, and the hazard tracking system as the hub</b></summary>
+
+<p align="center"><img src="docs/readme/task-matrix.svg" alt="Figure 7: design structure matrix of which task feeds which, with feedback below the diagonal" width="100%"></p>
+
+<p align="center"><img src="docs/readme/task-hub.svg" alt="Figure 8: the work that writes into and reads from the hazard tracking system" width="100%"></p>
+
+</details>
+
 ---
 
 ## How it works

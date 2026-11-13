@@ -27,7 +27,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 <table>
 <tr><td width="33%" valign="top"><a href="at-a-glance.svg"><img src="at-a-glance.svg" alt="At a glance" width="300"></a><br><sub>At a glance</sub></td><td width="33%" valign="top"><a href="risk-matrix.svg"><img src="risk-matrix.svg" alt="Risk matrix" width="300"></a><br><sub>Risk matrix</sub></td><td width="33%" valign="top"><a href="simulation.svg"><img src="simulation.svg" alt="Simulation summary (synthetic)" width="300"></a><br><sub>Simulation summary (synthetic)</sub></td></tr>
-<tr><td width="33%" valign="top"><a href="roadmap.svg"><img src="roadmap.svg" alt="MIL-STD-882E task roadmap" width="300"></a><br><sub>MIL-STD-882E task roadmap</sub></td></tr>
+<tr><td width="33%" valign="top"><a href="roadmap.svg"><img src="roadmap.svg" alt="MIL-STD-882E task roadmap" width="300"></a><br><sub>MIL-STD-882E task roadmap</sub></td><td width="33%" valign="top"><a href="task-flow.svg"><img src="task-flow.svg" alt="How the tasks feed each other" width="300"></a><br><sub>How the tasks feed each other</sub></td><td width="33%" valign="top"><a href="task-thread.svg"><img src="task-thread.svg" alt="The main thread to risk acceptance" width="300"></a><br><sub>The main thread to risk acceptance</sub></td></tr>
+<tr><td width="33%" valign="top"><a href="task-matrix.svg"><img src="task-matrix.svg" alt="Who feeds whom" width="300"></a><br><sub>Who feeds whom</sub></td><td width="33%" valign="top"><a href="task-hub.svg"><img src="task-hub.svg" alt="The hazard tracking system as hub" width="300"></a><br><sub>The hazard tracking system as hub</sub></td></tr>
 </table>
 
 <!-- preview:end -->
@@ -41,3 +42,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | [`risk-matrix.svg`](risk-matrix.svg) | Figure 2 · Where the hazards sit on the risk matrix |
 | [`roadmap.svg`](roadmap.svg) | Figure 4 · MIL-STD-882E task roadmap |
 | [`simulation.svg`](simulation.svg) | Figure 3 · What the simulations found |
+| [`task-flow.svg`](task-flow.svg) | Figure 5 · How the tasks feed each other |
+| [`task-hub.svg`](task-hub.svg) | Figure 8 · Everything runs through the hazard tracking system |
+| [`task-matrix.svg`](task-matrix.svg) | Figure 7 · Who feeds whom |
+| [`task-thread.svg`](task-thread.svg) | Figure 6 · The main thread: from first hazards to risk acceptance |

@@ -8,6 +8,8 @@ Every number on the front page is read from a record, so the README cannot drift
   docs/readme/risk-matrix.svg   hazards on the MIL-STD-882E Table III matrix, initial -> target
   docs/readme/simulation.svg    synthetic walker failure search and PX4 SITL failsafe outcomes
   docs/readme/roadmap.svg       every MIL-STD-882E task across the project gates, with its status
+  docs/readme/task-*.svg        how the tasks relate: flow network, hand-off thread, matrix, hazard-tracking hub
+                                (tools/readme/task_relations.py)
   README.md                     the blocks between <!-- readme:NAME:start --> and <!-- readme:NAME:end -->
 
     python -m tools.readme.build_readme            # write
@@ -31,6 +33,7 @@ sys.path.insert(0, str(ROOT / "tools" / "figures"))
 import layoutkit as fk  # noqa: E402
 sys.path.insert(0, str(ROOT))
 from tools.terms.terms import decorate  # noqa: E402
+from tools.readme.task_relations import figures as task_figures  # noqa: E402
 from layoutkit import INK, MUTED, FAINT, LINE, HAIR, CHIP, GREY_BG, TONES  # noqa: E402
 
 OUT = ROOT / "docs" / "readme"
@@ -611,6 +614,7 @@ def main() -> int:
     files = {OUT / "banner.svg": banner(s), OUT / "at-a-glance.svg": glance(s),
              OUT / "risk-matrix.svg": risk_matrix(d), OUT / "simulation.svg": simulation(d, s),
              OUT / "roadmap.svg": roadmap(d),
+             **{OUT / name: svg for name, svg in task_figures(d["catalog"], d["tailor"]).items()},
              README: apply_blocks(README.read_text(), blocks(d, s))}
     stale = []
     for p, content in files.items():
