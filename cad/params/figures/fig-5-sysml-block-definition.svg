@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850.1" height="784.1" viewBox="0 0 850.1 784.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 5 · SysML block definition — LayoutParameters</title>
+<desc>A layout has a leg, an arm and a dock and uses the common parameters; LayoutParameters.sysml holds the 5 layouts as parts with their leg, arm and dock values.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="850.1" height="744" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 5 · SysML block definition — LayoutParameters</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">A layout has a leg, an arm and a dock and uses the common parameters;</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">LayoutParameters.sysml holds the 5 layouts as parts with their leg, arm and dock values.</text>
+<text x="810.1" y="44" font-size="11" fill="#475569" text-anchor="end">cad/params/LayoutParameters.sysml</text>
+<line x1="40" y1="102" x2="810.1" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="126" width="770.1" height="522" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<path d="M40 126 L255.9 126 L255.9 140 L245.9 150 L40 150 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="143" font-size="11.5" fill="#0F172A" font-weight="700">bdd [package] LayoutParameters</text>
+<g transform="translate(56 166)">
+<path d="M227 175 L227 190 Q227 197 220 197 L88 197 Q81 197 81 204 L81 321" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M257 175 L257 321" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M287 175 L287 190 Q287 197 294 197 L302 197 Q309 197 309 204 L309 272 Q309 279 316 279 L426 279 Q433 279 433 286 L433 321" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M317 175 L317 190 Q317 197 324 197 L626 197 Q633 197 633 204 L633 321" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="197" y="6" width="150" height="169" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="197" y="6" width="150" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="197" y1="52" x2="347" y2="52" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="272" y="23" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="272" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">Layout</text>
+<text x="209" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">layoutId : String</text>
+<text x="209" y="85" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">title : String</text>
+<text x="209" y="100" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">locomotion : String</text>
+<text x="209" y="115" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">style : String</text>
+<text x="209" y="130" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">part leg : Leg</text>
+<text x="209" y="145" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">part arm : Arm</text>
+<text x="209" y="160" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">part dock : Dock</text>
+<rect x="6" y="321" width="150" height="139" rx="4" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="6" y="321" width="150" height="46" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<line x1="6" y1="367" x2="156" y2="367" stroke="#475569" stroke-width="1.1"/>
+<text x="81" y="338" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="81" y="355" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">Leg</text>
+<text x="18" y="385" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">hipHalfWidth : Real</text>
+<text x="18" y="400" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">thigh : Real</text>
+<text x="18" y="415" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">shank : Real</text>
+<text x="18" y="430" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">kneeForward : Real</text>
+<text x="18" y="445" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">ankleHeight : Real</text>
+<rect x="182" y="321" width="150" height="109" rx="4" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="182" y="321" width="150" height="46" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<line x1="182" y1="367" x2="332" y2="367" stroke="#475569" stroke-width="1.1"/>
+<text x="257" y="338" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="257" y="355" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">Arm</text>
+<text x="194" y="385" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">upper : Real</text>
+<text x="194" y="400" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">fore : Real</text>
+<text x="194" y="415" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">radius : Real</text>
+<rect x="358" y="321" width="150" height="79" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="358" y="321" width="150" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="358" y1="367" x2="508" y2="367" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="433" y="338" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="433" y="355" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">Dock</text>
+<text x="370" y="385" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">dockType : String</text>
+<rect x="534" y="321" width="198.1" height="109" rx="4" fill="#FFFFFF" stroke="#64748B" stroke-width="1.3"/>
+<rect x="534" y="321" width="198.1" height="46" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<line x1="534" y1="367" x2="732.1" y2="367" stroke="#64748B" stroke-width="1.1"/>
+<text x="633" y="338" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="633" y="355" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">CommonParameters</text>
+<text x="546" y="385" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">referenceHumanHeight : Real</text>
+<text x="546" y="400" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">uavRotorRadius : Real</text>
+<text x="546" y="415" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">uavArmReach : Real</text>
+<rect x="50" y="239" width="28.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="55" y="252" font-size="10.5" fill="#475569">leg</text>
+<rect x="224" y="239" width="30.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="229" y="252" font-size="10.5" fill="#475569">arm</text>
+<rect x="270" y="239" width="37.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="275" y="252" font-size="10.5" fill="#475569">dock</text>
+<rect x="594" y="239" width="37.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="599" y="252" font-size="10.5" fill="#475569">uses</text>
+</g>
+<line x1="40" y1="674" x2="56" y2="674" stroke="#475569" stroke-width="1.8"/>
+<text x="62" y="678" font-size="11" fill="#475569">Composition (diamond at owner)</text>
+<line x1="236.5" y1="674" x2="252.5" y2="674" stroke="#475569" stroke-width="1.8"/>
+<text x="258.5" y="678" font-size="11" fill="#475569">Uses</text>
+<rect x="296.3" y="668" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="318.3" y="678" font-size="11" fill="#475569">Layout</text>
+<rect x="366.2" y="668" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="388.2" y="678" font-size="11" fill="#475569">Block</text>
+<rect x="429.1" y="668" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
+<text x="451.1" y="678" font-size="11" fill="#475569">Dock</text>
+<rect x="489" y="668" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#475569" stroke-width="1.2"/>
+<text x="511" y="678" font-size="11" fill="#475569">Common parameters</text>
+<text x="40" y="700" font-size="10.5" fill="#94A3B8">Generated by tools/figures/params_readme.py from cad/params and the code that reads it. Every value is a placeholder for review and alignment, not design</text>
+<text x="40" y="715" font-size="10.5" fill="#94A3B8">data.</text>
+<g class="terms" data-base-h="744">
+<rect x="0" y="744" width="850.1" height="40.1" fill="#FFFFFF"/>
+<line x1="40" y1="748" x2="810.1" y2="748" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="763.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: SysML = Systems Modeling Language (SysML v2)</text>
+</g>
+</svg>

@@ -83,8 +83,8 @@ def load() -> dict:
              "decisions": sorted(d["id"] for d in reg if cites(d))}
     subs = sorted({s for h in cited["hazards"] for s in hazards[h].get("subsystems") or []})
     params = {p.stem: yaml.safe_load(p.read_text()) for p in sorted((FOLDER / "params").glob("CL-*.yaml"))}
-    files = {k: len([p for p in (FOLDER / k).rglob("*") if p.is_file()]) for k in
-             ("params", "drawings", "renders", "concept-art")}
+    files = {k: len([p for p in (FOLDER / k).rglob("*") if p.is_file()]) for k in ("drawings", "renders", "concept-art")}
+    files["params"] = len(list((FOLDER / "params").glob("*.yaml")))
     return {"ctx": ctx, "reqs": reqs, "hazards": hazards, "rows": rows, "concepts": m["concepts"], "meta": m,
             "findings": findings, "dqs": dqs, "cited": cited, "subs": subs, "params": params, "files": files}
 
@@ -359,14 +359,15 @@ def section(d: dict, specs: list[dict]) -> str:
            "## Inputs and outputs\n", img("fig-6-inputs-and-outputs.svg", "6", "Inputs and outputs"),
            "| Input | Source |", "|---|---|",
            f"| Lead's decisions ({', '.join(c['decisions'])}) | [Decision register](../decisions/README.md) |",
-           "| Layout parameters | [`params/`](params/) |",
+           "| Layout parameters | [`params/`](params/README.md) |",
            "| CAD and render tools | FreeCAD, build123d, Blender ([`tools/cad/`](../tools/cad/)) |", "",
            "| Output | Destination |", "|---|---|",
            "| Findings | [Safety records](../safety/README.md), [requirement register](../requirements/README.md) |",
            "| Renders | front-page banner, [`concept-art/`](concept-art/README.md) |", "",
            "## Folder contents\n",
            "| Item | Description | State |", "|---|---|---|",
-           f"| [`params/`](params/README.md) | Layout parameters ({d['files']['params']} files) | hand-written |",
+           f"| [`params/`](params/README.md) | Layout parameters ({d['files']['params']} YAML files) | hand-written; README "
+           "generated |",
            f"| [`drawings/`](drawings/README.md) | Drawing sheets ({d['files']['drawings']} files) | generated (CAD) |",
            f"| [`renders/`](renders/) | Review images and Blender renders ({d['files']['renders']} files) | generated (CAD) |",
            f"| [`concept-art/`](concept-art/README.md) | AI concept art from the renders ({d['files']['concept-art']} files) "

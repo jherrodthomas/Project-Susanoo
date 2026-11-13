@@ -71,6 +71,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 - [Documentation sources](Documentation-Sources): what writes each documentation file, where the wiki pages come
   from, and the few files a person edits
 - [Concept layouts (CAD)](Concept-Layouts): the walker layouts against the review flags, the CL-05 reference
+- [Layout parameters](Layout-Parameters): the parameter blocks of every concept layout, the values no tool reads, and the records they cite
   layout and where its findings went in the records
 - [UAV SITL harness](UAV-SITL-Harness): the PX4 failsafe scenarios, their outcomes and ground tracks, and the
   findings they raise for the safety lead

@@ -52,6 +52,7 @@
 - [Tools](Tools)
 - [Documentation sources](Documentation-Sources)
 - [Concept layouts (CAD)](Concept-Layouts)
+- [Layout parameters](Layout-Parameters)
 - [UAV SITL harness](UAV-SITL-Harness)
 - [Walker plant (level 1)](Walker-Plant)
 - [Failure search](Failure-Search)
