@@ -29,19 +29,22 @@ effects:
 mishap: Minor burn or electrical injury to a crew member near the dock; equipment damage
 initial_risk:
   severity: 3
-  probability: D
-  rac: 3D
+  probability: C
+  rac: 3C
   risk_level: Medium
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); dock charging voltage is TBD; at low voltage the main consequences are arcing, damage and minor injury
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): hundreds of launches with
+    only a procedure to stop charging first; arcing, minor injury and dock or UAV damage in the $1,000-$10,000 band
+    (DQ-002).'
   definitions: SUS-RISKDEF-001
 target_risk:
   severity: 3
-  probability: E
-  rac: 3E
+  probability: D
+  rac: 3D
   risk_level: Medium
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); charging de-energised and confirmed off as a condition of the launch and release permits
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): launch and release permits
+    that require charging confirmed off.'
   definitions: SUS-RISKDEF-001
 event_risks: []
 mitigations:

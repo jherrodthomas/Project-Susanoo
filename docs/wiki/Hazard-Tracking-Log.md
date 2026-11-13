@@ -44,8 +44,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Risk level | Initial | Target |
 |---|---|---|
 | High | 7 | 0 |
-| Serious | 10 | 1 |
-| Medium | 4 | 20 |
+| Serious | 11 | 1 |
+| Medium | 3 | 20 |
 | Low | 0 | 0 |
 | Eliminated | 0 | 0 |
 
@@ -56,8 +56,8 @@ Status: open 21 · total 21
 |---|---|---|---|---|
 | Frequent (A) |  |  |  |  |
 | Probable (B) |  |  |  |  |
-| Occasional (C) | **High**: HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-001, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002, HAZ-WLK-003 | **Serious**: HAZ-DCK-001, HAZ-INT-001, HAZ-PIL-002 |  |  |
-| Remote (D) | **Serious**: HAZ-INT-002, HAZ-INT-003, HAZ-PIL-003, HAZ-PIL-004, HAZ-PWR-001, HAZ-PWR-002, HAZ-PWR-003 | **Medium**: HAZ-DCK-002, HAZ-DCK-003 | **Medium**: HAZ-DCK-004, HAZ-DCK-005 |  |
+| Occasional (C) | **High**: HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-001, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002, HAZ-WLK-003 | **Serious**: HAZ-DCK-001, HAZ-DCK-003, HAZ-INT-001, HAZ-PIL-002 | **Medium**: HAZ-DCK-004, HAZ-DCK-005 |  |
+| Remote (D) | **Serious**: HAZ-INT-002, HAZ-INT-003, HAZ-PIL-003, HAZ-PIL-004, HAZ-PWR-001, HAZ-PWR-002, HAZ-PWR-003 | **Medium**: HAZ-DCK-002 |  |  |
 | Improbable (E) |  |  |  |  |
 | Eliminated (F) |  |  |  |  |
 
@@ -67,8 +67,8 @@ Status: open 21 · total 21
 | Frequent (A) |  |  |  |  |
 | Probable (B) |  |  |  |  |
 | Occasional (C) |  |  |  |  |
-| Remote (D) | **Serious**: HAZ-MAN-002 |  |  |  |
-| Improbable (E) | **Medium**: HAZ-INT-002, HAZ-INT-003, HAZ-MAN-001, HAZ-PIL-001, HAZ-PIL-003, HAZ-PIL-004, HAZ-PWR-001, HAZ-PWR-002, HAZ-PWR-003, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002, HAZ-WLK-003 | **Medium**: HAZ-DCK-001, HAZ-DCK-002, HAZ-DCK-003, HAZ-INT-001, HAZ-PIL-002 | **Medium**: HAZ-DCK-004, HAZ-DCK-005 |  |
+| Remote (D) | **Serious**: HAZ-MAN-002 | **Medium**: HAZ-DCK-003 | **Medium**: HAZ-DCK-004 |  |
+| Improbable (E) | **Medium**: HAZ-INT-002, HAZ-INT-003, HAZ-MAN-001, HAZ-PIL-001, HAZ-PIL-003, HAZ-PIL-004, HAZ-PWR-001, HAZ-PWR-002, HAZ-PWR-003, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002, HAZ-WLK-003 | **Medium**: HAZ-DCK-001, HAZ-DCK-002, HAZ-INT-001, HAZ-PIL-002 | **Medium**: HAZ-DCK-005 |  |
 | Eliminated (F) |  |  |  |  |
 
 ## Hazards
@@ -76,9 +76,9 @@ Status: open 21 · total 21
 |---|---|---|---|---|---|---|---|---|---|---|
 | HAZ-DCK-001 | Rotor start while UAV is retained or a person is at the dock | MOD-06, MOD-10 | 2C Serious | 2E Medium | — | (c identified) | SSF-003 | Serious | open | ROLE-UAV |
 | HAZ-DCK-002 | False retained state releases UAV under motion | MOD-03, MOD-04, MOD-06, MOD-08 | 2D Medium | 2E Medium | — | (b identified) | SSF-005 | Serious | open | ROLE-UAV |
-| HAZ-DCK-003 | UAV battery thermal event while charging on the dock | MOD-03, MOD-06 | 2D Medium | 2E Medium | — | (b identified) | — | — | open | ROLE-UAV |
-| HAZ-DCK-004 | Charging connector energised at UAV release or launch | MOD-06, MOD-08 | 3D Medium | 3E Medium | — | (b identified) | — | — | open | ROLE-UAV |
-| HAZ-DCK-005 | Electrical exposure at the dock while charging with a person present | MOD-06, MOD-10 | 3D Medium | 3E Medium | — | (b identified) | — | — | open | ROLE-UAV |
+| HAZ-DCK-003 | UAV battery thermal event while charging on the dock | MOD-03, MOD-06 | 2C Serious | 2D Medium | — | (b identified) | — | — | open | ROLE-UAV |
+| HAZ-DCK-004 | Charging connector energised at UAV release or launch | MOD-06, MOD-08 | 3C Medium | 3D Medium | — | (b identified) | — | — | open | ROLE-UAV |
+| HAZ-DCK-005 | Electrical exposure at the dock while charging with a person present | MOD-06, MOD-10 | 3C Medium | 3E Medium | — | (b identified) | — | — | open | ROLE-UAV |
 | HAZ-INT-001 | UAV launch or recovery outside the safe envelope | MOD-06, MOD-07, MOD-08 | 2C Serious | 2E Medium | — | (a identified) | SSF-006, SSF-008 | High | open | ROLE-UAV |
 | HAZ-INT-002 | Pilot acts on misleading UAV imagery or position | MOD-04, MOD-07 | 1D Serious | 1E Medium | — | (c identified) | — | — | open | ROLE-UAV |
 | HAZ-INT-003 | Pilot acts on stale or frozen UAV imagery | MOD-04, MOD-07 | 1D Serious | 1E Medium | — | (c identified) | — | — | open | ROLE-UAV |

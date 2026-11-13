@@ -35,16 +35,19 @@ initial_risk:
   probability: D
   rac: 1D
   risk_level: Serious
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); the walker can kill a person it walks into; imagery is a secondary source behind direct view and the observer
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): the walker can kill a person
+    it walks into; the chain needs wrong-but-plausible UAV data, the pilot relying on it over direct view, and the
+    observer missing the person.'
   definitions: SUS-RISKDEF-001
 target_risk:
   severity: 1
   probability: E
   rac: 1E
   risk_level: Medium
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); validity checks and annunciation on UAV data, and procedures that keep direct view and the observer primary
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): validity checks and annunciation
+    on UAV data, with direct view and the observer kept primary.'
   definitions: SUS-RISKDEF-001
 event_risks: []
 mitigations:

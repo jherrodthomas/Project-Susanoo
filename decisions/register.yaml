@@ -383,3 +383,27 @@ decisions:
     answer: {choice: tag, by: lead, at: 2026-11-12, via: chat, note: "yes, tag the arm hazards with SUS-M1-MAN"}
     applied_in: [safety/hazards/HAZ-MAN-001.yaml, safety/hazards/HAZ-MAN-002.yaml]
     sources: [safety/events/EVT-BENCH-001.yaml, decisions/register.yaml]
+
+  - id: DQ-019
+    question: How should the six hazards raised from the FHA gaps be rated?
+    context: >-
+      HAZ-PIL-004, HAZ-INT-002, HAZ-INT-003, HAZ-DCK-003, HAZ-DCK-004 and HAZ-DCK-005 came from the FHA with AI-drafted
+      ratings. Rated against SUS-RISKDEF-001 with the DQ-003 exposure basis (500 walker hours, 2,000 docking cycles,
+      200 UAV flight hours), **three dock hazards are more likely than drafted: HAZ-DCK-003 rises to 2C Serious, and the
+      dock targets are D, not E**. No rating is lowered. Ratings stay preliminary until the PHA (Task 202) at G2; this
+      is not a risk acceptance.
+    options:
+      - {key: adopt, title: Adopt the proposed ratings as the lead's rating, detail: "PIL-004, INT-002, INT-003 1D Serious to 1E Medium; DCK-003 2C Serious to 2D Medium; DCK-004 3C Medium to 3D Medium; DCK-005 3C Medium to 3E Medium."}
+      - {key: proposals, title: Keep them as AI proposals, detail: "Same values, left for the safety lead to rate."}
+      - {key: change, title: Change some first, detail: "Adjust named values, then record."}
+    recommendation: adopt
+    reversibility: easy
+    blocks: [PHA rows for the six hazards, risk register]
+    gate: G2
+    decider: lead
+    status: applied
+    asked: 2026-11-13
+    answer: {choice: adopt, by: lead, at: 2026-11-13, via: chat, note: "Adopt as my rating"}
+    applied_in: [safety/hazards/HAZ-PIL-004.yaml, safety/hazards/HAZ-INT-002.yaml, safety/hazards/HAZ-INT-003.yaml, safety/hazards/HAZ-DCK-003.yaml, safety/hazards/HAZ-DCK-004.yaml, safety/hazards/HAZ-DCK-005.yaml]
+    sources: [safety/mil-std-882e/02-hazard-identification/task-208-functional-hazard-analysis/fha.yaml, standards/tailoring/mil-std-882e.yaml]
+

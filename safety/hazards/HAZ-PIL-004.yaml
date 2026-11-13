@@ -38,16 +38,18 @@ initial_risk:
   probability: D
   rac: 1D
   risk_level: Serious
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); being trapped is only harmful together with another emergency, but then it can be fatal
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): being trapped is fatal only
+    together with another emergency such as a fire, so the mishap needs a lowering failure and an emergency at once.'
   definitions: SUS-RISKDEF-001
 target_risk:
   severity: 1
   probability: E
   rac: 1E
   risk_level: Medium
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); an emergency exit that needs neither power nor kneeling, and lowering faults detected and annunciated
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): an emergency exit that needs
+    neither power nor kneeling, plus annunciated lowering faults, adds an independent way out.'
   definitions: SUS-RISKDEF-001
 event_risks: []
 mitigations:

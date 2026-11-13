@@ -28,20 +28,22 @@ effects:
 mishap: Electric shock or burn to a maintainer or the pilot
 initial_risk:
   severity: 3
-  probability: D
-  rac: 3D
+  probability: C
+  rac: 3C
   risk_level: Medium
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); dock charging voltage is TBD; at low voltage the injury is minor, a higher-voltage charger would raise
-    the severity
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): frequent handling at the
+    dock with contacts not yet designed; marginal only if the charging voltage is low, to be re-rated once it is
+    known.'
   definitions: SUS-RISKDEF-001
 target_risk:
   severity: 3
   probability: E
   rac: 3E
   risk_level: Medium
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); shrouded contacts, charging isolated before handling and a person-at-dock interlock
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): shrouded contacts de-energised
+    unless a UAV is seated, plus isolation before handling.'
   definitions: SUS-RISKDEF-001
 event_risks: []
 mitigations:

@@ -31,19 +31,22 @@ effects:
 mishap: Burns or smoke inhalation for the pilot or crew; fire spreading to the walker
 initial_risk:
   severity: 2
-  probability: D
-  rac: 2D
-  risk_level: Medium
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); a small UAV battery fire close to the pod can seriously injure, but the cell energy is limited
+  probability: C
+  rac: 2C
+  risk_level: Serious
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): over 2,000 charge cycles
+    a charge-induced lithium-polymer thermal event is plausible; a fire on the dock behind the pod can seriously
+    burn the pilot or crew.'
   definitions: SUS-RISKDEF-001
 target_risk:
   severity: 2
-  probability: E
-  rac: 2E
+  probability: D
+  rac: 2D
   risk_level: Medium
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); charger protections, cell monitoring, thermal cut-off and a fire-separated dock
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): independent charger cut-offs
+    and a fire-separated dock reduce, but over 2,000 cycles do not make improbable, a thermal event.'
   definitions: SUS-RISKDEF-001
 event_risks: []
 mitigations:

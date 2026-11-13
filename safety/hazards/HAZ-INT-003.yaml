@@ -32,17 +32,18 @@ initial_risk:
   probability: D
   rac: 1D
   risk_level: Serious
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); people near the walker move faster than a frozen picture reveals; imagery is secondary to direct view
-    and the observer
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): same mishap as HAZ-INT-002;
+    frozen video is common, but the chain still needs reliance on it and an observer miss.'
   definitions: SUS-RISKDEF-001
 target_risk:
   severity: 1
   probability: E
   rac: 1E
   risk_level: Medium
-  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
-    rate); staleness detection with a clear stale-data indication, and procedures that keep direct view primary
+  rationale: 'Preliminary; rated by the project lead (DQ-019, 2026-11-13) on SUS-RISKDEF-001 with the DQ-003 exposure
+    basis (per item over 500 walker hours, 2,000 docking cycles, 200 UAV flight hours): staleness detection with
+    a clear not-current indication, with direct view and the observer kept primary.'
   definitions: SUS-RISKDEF-001
 event_risks: []
 mitigations:
