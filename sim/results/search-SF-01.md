@@ -21,20 +21,20 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | data_kind | synthetic |
 | evidence credit | none (no approved fidelity case) |
 | simulator | sim/search/search.py over sim/plant/walker.py |
-| plant spec | sim/spec/walker.yaml digest `48e1754c83f1` |
+| plant spec | sim/spec/walker.yaml digest `ce8f2beafd0f` |
 | scenario | SF-01 (FLT-01) |
 | method | seeded Monte Carlo + cross-entropy falsification |
 
 ## Monte Carlo
 
-400 uniform samples: safe 194 (48.5%), tip 10 (2.5%), hard-drop 196 (49.0%).
+400 uniform samples: safe 196 (49.0%), tip 6 (1.5%), hard-drop 198 (49.5%).
 
 | Subset | Samples | Failures |
 |---|---|---|
-| load_holding=works | 199 | 5 (2.5%) |
+| load_holding=works | 199 | 3 (1.5%) |
 | load_holding=fails | 201 | 201 (100.0%) |
 
-Cross-entropy falsification: 480 evaluations, worst rho -3.849.
+Cross-entropy falsification: 480 evaluations, worst rho -3.903.
 
 Parameter space: `slope_deg` {'uniform': [0, 20]}; `tau_leak_s` {'loguniform': [0.05, 5.0]}; `pilot_reaction_s` {'uniform': [0.5, 3.0]}; `stride_offset_m` {'uniform': [0.0, 0.12]}; `load_holding` {'choice': ['works', 'fails']}.
 
@@ -42,14 +42,14 @@ Parameter space: `slope_deg` {'uniform': [0, 20]}; `tau_leak_s` {'loguniform': [
 
 | ID | Parameters (rounded) | Outcome | rho | No fault | Hazard | Probes that change the outcome |
 |---|---|---|---|---|---|---|
-| EC-01 | slope_deg=15.5, tau_leak_s=0.05, pilot_reaction_s=2.1, stride_offset_m=0.08, load_holding=fails | **hard-drop** | -3.835 | safe | HAZ-PIL-002 | load holding works → safe |
-| EC-02 | slope_deg=16, tau_leak_s=0.06, pilot_reaction_s=0.6, stride_offset_m=0.01, load_holding=fails | **hard-drop** | -3.816 | safe | HAZ-PIL-002 | load holding works → safe |
-| EC-03 | slope_deg=8.5, tau_leak_s=0.05, pilot_reaction_s=0.9, stride_offset_m=0.1, load_holding=fails | **hard-drop** | -3.835 | safe | HAZ-PIL-002 | load holding works → safe |
-| EC-04 | slope_deg=12, tau_leak_s=0.06, pilot_reaction_s=1.8, stride_offset_m=0.02, load_holding=fails | **hard-drop** | -3.816 | safe | HAZ-PIL-002 | load holding works → safe |
-| EC-05 | slope_deg=0, tau_leak_s=0.05, pilot_reaction_s=3, stride_offset_m=0.05, load_holding=fails | **hard-drop** | -3.835 | safe | HAZ-PIL-002 | load holding works → safe |
-| EC-06 | slope_deg=1.5, tau_leak_s=0.06, pilot_reaction_s=1.3, stride_offset_m=0.04, load_holding=fails | **hard-drop** | -3.816 | safe | HAZ-PIL-002 | load holding works → safe |
-| EC-07 | slope_deg=18, tau_leak_s=1.49, pilot_reaction_s=2.3, stride_offset_m=0.1, load_holding=fails | **tip** | -2.6318 | safe | HAZ-WLK-002 | pilot reacts in 0.5 s → hard-drop; flat ground → hard-drop |
-| EC-08 | slope_deg=16.5, tau_leak_s=4.09, pilot_reaction_s=1.4, stride_offset_m=0.1, load_holding=works | **tip** | -1.532 | safe | HAZ-WLK-002 | pilot reacts in 0.5 s → safe; flat ground → safe; slow leak (tau 3 s) → safe |
+| EC-01 | slope_deg=12, tau_leak_s=0.05, pilot_reaction_s=3, stride_offset_m=0.09, load_holding=fails | **hard-drop** | -3.884 | safe | HAZ-PIL-002 | load holding works → safe |
+| EC-02 | slope_deg=13.5, tau_leak_s=0.06, pilot_reaction_s=2, stride_offset_m=0.04, load_holding=fails | **hard-drop** | -3.865 | safe | HAZ-PIL-002 | load holding works → safe |
+| EC-03 | slope_deg=12, tau_leak_s=0.06, pilot_reaction_s=0.9, stride_offset_m=0.09, load_holding=fails | **hard-drop** | -3.865 | safe | HAZ-PIL-002 | load holding works → safe |
+| EC-04 | slope_deg=20, tau_leak_s=0.07, pilot_reaction_s=2.2, stride_offset_m=0.09, load_holding=fails | **hard-drop** | -3.846 | safe | HAZ-PIL-002 | load holding works → safe; slow leak (tau 3 s) → tip |
+| EC-05 | slope_deg=0, tau_leak_s=0.05, pilot_reaction_s=3, stride_offset_m=0.05, load_holding=fails | **hard-drop** | -3.884 | safe | HAZ-PIL-002 | load holding works → safe |
+| EC-06 | slope_deg=1.5, tau_leak_s=0.06, pilot_reaction_s=1.3, stride_offset_m=0.04, load_holding=fails | **hard-drop** | -3.865 | safe | HAZ-PIL-002 | load holding works → safe |
+| EC-07 | slope_deg=20, tau_leak_s=2.87, pilot_reaction_s=2.3, stride_offset_m=0.05, load_holding=fails | **tip** | -2.5357 | safe | HAZ-WLK-002 | pilot reacts in 0.5 s → hard-drop; flat ground → hard-drop |
+| EC-08 | slope_deg=19.5, tau_leak_s=1.94, pilot_reaction_s=2.4, stride_offset_m=0.09, load_holding=works | **tip** | -1.5734 | safe | HAZ-WLK-002 | pilot reacts in 0.5 s → safe; flat ground → safe |
 
 ## Findings for review
 

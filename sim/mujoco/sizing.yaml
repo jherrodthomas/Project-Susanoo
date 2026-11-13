@@ -23,12 +23,12 @@ corner_grid:
   tau_leak_s: [1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 5.0]
   pilot_reaction_s: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
 sweeps:
-  - {id: ankle, param: ankle_torque_max_nm, values: [15000, 20000, 22000, 24000, 26500], with: {}}
-  - {id: knee, param: knee_torque_max_nm, values: [10000, 15000, 20000, 30000], with: {ankle_torque_max_nm: 26500}}
+  - {id: ankle, param: ankle_torque_max_nm, values: [23000, 26500, 30500, 34000, 37000, 40500], with: {}}
+  - {id: knee, param: knee_torque_max_nm, values: [15000, 17500, 20000, 22500, 30000, 40000], with: {ankle_torque_max_nm: 40500}}
 proposal:
-  ankle_torque_max_nm: 26500
-  knee_torque_max_nm: 22500
+  ankle_torque_max_nm: 40500
+  knee_torque_max_nm: 26500
   rationale: >-
-    Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), about 10%
+    Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), a third
     above the lowest value that clears the grid; knee 1.5 times the lowest value that clears it with that ankle.
     Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).

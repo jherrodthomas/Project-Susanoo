@@ -468,3 +468,45 @@ decisions:
     answer: {choice: condition, by: lead, at: 2026-11-13, via: chat, note: "add the work-at-height condition"}
     applied_in: [safety/events/EVT-BENCH-001.yaml, safety/hazards/HAZ-GSE-001.yaml]
     sources: [safety/hazards/HAZ-GSE-001.yaml, safety/events/EVT-BENCH-001.yaml]
+
+  - id: DQ-023
+    question: Which source should set the simulated walker's mass, centre of mass and heights?
+    context: >-
+      The simulation spec assumed 3,000 kg with the centre of mass at 3.0 m and the hips at 2.9 m. **The reference
+      layout CL-05 (DQ-014) measures 4,590 kg, centre of gravity 2.72 m, hips 2.34 m and 1.49 m kneeling**
+      (cad/metrics.json). The actuator sizing (SYS-016) and every walker result rested on the 3,000 kg walker.
+    options:
+      - {key: cl05, title: Take them from the CL-05 CAD metrics, detail: "The simulation follows the reference layout; a test fails when the two drift apart. Every walker result is re-run and the sizing changes with the mass."}
+      - {key: keep, title: Keep the spec's own assumptions, detail: "No re-run; the simulations and the sizing describe a walker 35% lighter than the reference layout."}
+    recommendation: cl05
+    reversibility: easy
+    blocks: [actuator sizing SZ-01, TS-001 evidence]
+    gate: G2
+    decider: claude
+    status: applied
+    asked: null
+    answer: {choice: cl05, by: claude, at: 2026-11-13, via: chat, note: "lead asked to close the mass mismatch between the simulations and the reference layout"}
+    applied_in: [sim/spec/walker.yaml, sim/spec/walker_l2.yaml, sim/tests/test_sim.py, sim/results/sizing-cf4.md, sim/results/l2-crosscheck.md, sim/results/ts001-fault-response.md]
+    sources: [cad/metrics.json, sim/spec/walker.yaml]
+
+  - id: DQ-024
+    question: Should the level-2 walker spec adopt the ankle and knee torques re-sized for the 4,590 kg reference layout?
+    context: >-
+      The torques adopted in DQ-012 (ankle 26.5, knee 22.5 kN m) were sized for a 3,000 kg walker. Re-run on the
+      CL-05 mass (DQ-023), **26.5 kN m of ankle leaves cockpit drops and tips at the envelope corner even with load
+      holding working; 30.5 kN m clears it.** The same rule as before gives ankle 40.5 kN m (1.5 m g L_foot) and knee
+      26.5 kN m (1.5 times the lowest clearing value, 17.5 kN m), drafted into SYS-016 (sim/results/sizing-cf4.md).
+    options:
+      - {key: adopt, title: Adopt ankle 40.5 and knee 26.5 kN m in the spec, detail: "The simulations model a walker that meets SYS-016 again and the envelope clears; the trade study's actuator class grows about 50%."}
+      - {key: minimum, title: Adopt only the lowest clearing values (ankle 30.5 and knee 17.5 kN m), detail: "Smaller actuators, no margin: the next mass or geometry change re-opens it."}
+      - {key: keep, title: Keep 26.5 and 22.5 kN m until the actuation trade closes, detail: "No change; the results keep showing the envelope-corner failures."}
+    recommendation: adopt
+    reversibility: easy
+    blocks: [level-2 walker spec, SYS-016, TS-001 C01 and C06]
+    gate: G2
+    decider: lead
+    status: applied
+    asked: 2026-11-13
+    answer: {choice: adopt, by: lead, at: 2026-11-13, via: chat, note: "adopt the re-sized torques"}
+    applied_in: [sim/spec/walker_l2.yaml, requirements/SYS-016.yaml, safety/hazards/HAZ-WLK-002.yaml, architecture/trades/TS-001.yaml]
+    sources: [sim/results/sizing-cf4.md, requirements/SYS-016.yaml, decisions/register.yaml]
