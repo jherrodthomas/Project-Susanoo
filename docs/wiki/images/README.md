@@ -44,6 +44,13 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 <tr><td width="33%" valign="top"><a href="rec-mitigations.svg"><img src="rec-mitigations.svg" alt="rec-mitigations.svg" width="300"></a><br><sub>rec-mitigations.svg</sub></td><td width="33%" valign="top"><a href="rec-record-model.svg"><img src="rec-record-model.svg" alt="rec-record-model.svg" width="300"></a><br><sub>rec-record-model.svg</sub></td><td width="33%" valign="top"><a href="rec-ssf.svg"><img src="rec-ssf.svg" alt="rec-ssf.svg" width="300"></a><br><sub>rec-ssf.svg</sub></td></tr>
 <tr><td width="33%" valign="top"><a href="rec-task-tailoring.svg"><img src="rec-task-tailoring.svg" alt="rec-task-tailoring.svg" width="300"></a><br><sub>rec-task-tailoring.svg</sub></td><td width="33%" valign="top"><a href="rec-traceability.svg"><img src="rec-traceability.svg" alt="rec-traceability.svg" width="300"></a><br><sub>rec-traceability.svg</sub></td><td width="33%" valign="top"><a href="rel-bands.svg"><img src="rel-bands.svg" alt="rel-bands.svg" width="300"></a><br><sub>rel-bands.svg</sub></td></tr>
 <tr><td width="33%" valign="top"><a href="rel-ft-001.svg"><img src="rel-ft-001.svg" alt="rel-ft-001.svg" width="300"></a><br><sub>rel-ft-001.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-002.svg"><img src="rel-ft-002.svg" alt="rel-ft-002.svg" width="300"></a><br><sub>rel-ft-002.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-003.svg"><img src="rel-ft-003.svg" alt="rel-ft-003.svg" width="300"></a><br><sub>rel-ft-003.svg</sub></td></tr>
+<tr><td width="33%" valign="top"><a href="rel-ft-004.svg"><img src="rel-ft-004.svg" alt="rel-ft-004.svg" width="300"></a><br><sub>rel-ft-004.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-005.svg"><img src="rel-ft-005.svg" alt="rel-ft-005.svg" width="300"></a><br><sub>rel-ft-005.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-006.svg"><img src="rel-ft-006.svg" alt="rel-ft-006.svg" width="300"></a><br><sub>rel-ft-006.svg</sub></td></tr>
+<tr><td width="33%" valign="top"><a href="rel-ft-007.svg"><img src="rel-ft-007.svg" alt="rel-ft-007.svg" width="300"></a><br><sub>rel-ft-007.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-008.svg"><img src="rel-ft-008.svg" alt="rel-ft-008.svg" width="300"></a><br><sub>rel-ft-008.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-009.svg"><img src="rel-ft-009.svg" alt="rel-ft-009.svg" width="300"></a><br><sub>rel-ft-009.svg</sub></td></tr>
+<tr><td width="33%" valign="top"><a href="rel-ft-010.svg"><img src="rel-ft-010.svg" alt="rel-ft-010.svg" width="300"></a><br><sub>rel-ft-010.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-011.svg"><img src="rel-ft-011.svg" alt="rel-ft-011.svg" width="300"></a><br><sub>rel-ft-011.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-012.svg"><img src="rel-ft-012.svg" alt="rel-ft-012.svg" width="300"></a><br><sub>rel-ft-012.svg</sub></td></tr>
+<tr><td width="33%" valign="top"><a href="rel-ft-013.svg"><img src="rel-ft-013.svg" alt="rel-ft-013.svg" width="300"></a><br><sub>rel-ft-013.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-014.svg"><img src="rel-ft-014.svg" alt="rel-ft-014.svg" width="300"></a><br><sub>rel-ft-014.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-015.svg"><img src="rel-ft-015.svg" alt="rel-ft-015.svg" width="300"></a><br><sub>rel-ft-015.svg</sub></td></tr>
+<tr><td width="33%" valign="top"><a href="rel-ft-016.svg"><img src="rel-ft-016.svg" alt="rel-ft-016.svg" width="300"></a><br><sub>rel-ft-016.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-017.svg"><img src="rel-ft-017.svg" alt="rel-ft-017.svg" width="300"></a><br><sub>rel-ft-017.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-018.svg"><img src="rel-ft-018.svg" alt="rel-ft-018.svg" width="300"></a><br><sub>rel-ft-018.svg</sub></td></tr>
+<tr><td width="33%" valign="top"><a href="rel-ft-019.svg"><img src="rel-ft-019.svg" alt="rel-ft-019.svg" width="300"></a><br><sub>rel-ft-019.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-020.svg"><img src="rel-ft-020.svg" alt="rel-ft-020.svg" width="300"></a><br><sub>rel-ft-020.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-021.svg"><img src="rel-ft-021.svg" alt="rel-ft-021.svg" width="300"></a><br><sub>rel-ft-021.svg</sub></td></tr>
+<tr><td width="33%" valign="top"><a href="rel-ft-022.svg"><img src="rel-ft-022.svg" alt="rel-ft-022.svg" width="300"></a><br><sub>rel-ft-022.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-023.svg"><img src="rel-ft-023.svg" alt="rel-ft-023.svg" width="300"></a><br><sub>rel-ft-023.svg</sub></td><td width="33%" valign="top"><a href="rel-ft-024.svg"><img src="rel-ft-024.svg" alt="rel-ft-024.svg" width="300"></a><br><sub>rel-ft-024.svg</sub></td></tr>
 <tr><td width="33%" valign="top"><a href="responsibility-swimlanes.svg"><img src="responsibility-swimlanes.svg" alt="responsibility-swimlanes.svg" width="300"></a><br><sub>responsibility-swimlanes.svg</sub></td><td width="33%" valign="top"><a href="safety-lifecycle.svg"><img src="safety-lifecycle.svg" alt="safety-lifecycle.svg" width="300"></a><br><sub>safety-lifecycle.svg</sub></td><td width="33%" valign="top"><a href="sim-sc-01.svg"><img src="sim-sc-01.svg" alt="sim-sc-01.svg" width="300"></a><br><sub>sim-sc-01.svg</sub></td></tr>
 <tr><td width="33%" valign="top"><a href="sim-sc-02.svg"><img src="sim-sc-02.svg" alt="sim-sc-02.svg" width="300"></a><br><sub>sim-sc-02.svg</sub></td><td width="33%" valign="top"><a href="sim-sc-03.svg"><img src="sim-sc-03.svg" alt="sim-sc-03.svg" width="300"></a><br><sub>sim-sc-03.svg</sub></td><td width="33%" valign="top"><a href="sim-sc-04.svg"><img src="sim-sc-04.svg" alt="sim-sc-04.svg" width="300"></a><br><sub>sim-sc-04.svg</sub></td></tr>
 <tr><td width="33%" valign="top"><a href="sim-su-01.svg"><img src="sim-su-01.svg" alt="sim-su-01.svg" width="300"></a><br><sub>sim-su-01.svg</sub></td><td width="33%" valign="top"><a href="sim-su-02.svg"><img src="sim-su-02.svg" alt="sim-su-02.svg" width="300"></a><br><sub>sim-su-02.svg</sub></td><td width="33%" valign="top"><a href="sim-su-03.svg"><img src="sim-su-03.svg" alt="sim-su-03.svg" width="300"></a><br><sub>sim-su-03.svg</sub></td></tr>
@@ -86,6 +93,27 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | [`rel-ft-001.svg`](rel-ft-001.svg) |  |
 | [`rel-ft-002.svg`](rel-ft-002.svg) |  |
 | [`rel-ft-003.svg`](rel-ft-003.svg) |  |
+| [`rel-ft-004.svg`](rel-ft-004.svg) |  |
+| [`rel-ft-005.svg`](rel-ft-005.svg) |  |
+| [`rel-ft-006.svg`](rel-ft-006.svg) |  |
+| [`rel-ft-007.svg`](rel-ft-007.svg) |  |
+| [`rel-ft-008.svg`](rel-ft-008.svg) |  |
+| [`rel-ft-009.svg`](rel-ft-009.svg) |  |
+| [`rel-ft-010.svg`](rel-ft-010.svg) |  |
+| [`rel-ft-011.svg`](rel-ft-011.svg) |  |
+| [`rel-ft-012.svg`](rel-ft-012.svg) |  |
+| [`rel-ft-013.svg`](rel-ft-013.svg) |  |
+| [`rel-ft-014.svg`](rel-ft-014.svg) |  |
+| [`rel-ft-015.svg`](rel-ft-015.svg) |  |
+| [`rel-ft-016.svg`](rel-ft-016.svg) |  |
+| [`rel-ft-017.svg`](rel-ft-017.svg) |  |
+| [`rel-ft-018.svg`](rel-ft-018.svg) |  |
+| [`rel-ft-019.svg`](rel-ft-019.svg) |  |
+| [`rel-ft-020.svg`](rel-ft-020.svg) |  |
+| [`rel-ft-021.svg`](rel-ft-021.svg) |  |
+| [`rel-ft-022.svg`](rel-ft-022.svg) |  |
+| [`rel-ft-023.svg`](rel-ft-023.svg) |  |
+| [`rel-ft-024.svg`](rel-ft-024.svg) |  |
 | [`responsibility-swimlanes.svg`](responsibility-swimlanes.svg) |  |
 | [`safety-lifecycle.svg`](safety-lifecycle.svg) |  |
 | [`sim-sc-01.svg`](sim-sc-01.svg) | SC-01 Slow supply leak on a slope: balance lost before the hold engages |

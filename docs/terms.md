@@ -203,7 +203,7 @@ A record code is a prefix and a number, for example `HAZ-WLK-002` or `SYS-010`.
 | F-nnn | system function in the item definition |
 | FLT-nnn | walker fault in sim/faults.yaml |
 | FND-UAV-nnn | finding from the UAV simulations, for the safety lead |
-| FT-nnn | fault tree in the reliability pilot (reliability/fault-trees.yaml) |
+| FT-nnn | fault tree in the reliability pilot (reliability/HAZ-*.yaml, one file per hazard) |
 | HAZ-nnn | hazard record (safety/hazards/HAZ-xxx-nnn.yaml) |
 | IF-nnn | interface in the item definition (architecture/item-definition.yaml) |
 | IF-PX4-nnn | PX4 integration interface (integrations/px4/interface-contract.md) |

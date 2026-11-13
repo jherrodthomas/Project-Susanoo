@@ -1,0 +1,20 @@
+# Fault tree for HAZ-WLK-001 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-WLK-001
+exposure: walker_operating_hours
+trees:
+  - id: FT-022
+    title: Stale or lost feedback causes runaway motion
+    top: runaway
+    gates:
+      - {id: runaway, type: or, title: Runaway motion, inputs: [missed-fault, both-sensors]}
+      - {id: missed-fault, type: and, title: Sensor fault not caught, inputs: [sensor-fails, not-caught]}
+      - {id: not-caught, type: or, title: Software does not catch it, inputs: [monitor-misses, acts-on-stale]}
+    events:
+      - {id: sensor-fails, mode: PT-025-FM1, count: joints, causal_factor: CF1, title: A joint sensor freezes or drops out}
+      - {id: monitor-misses, kind: undeveloped, nature: software, causal_factor: CF2, ssf: SSF-004, title: Staleness monitor misses it or is too slow}
+      - {id: acts-on-stale, kind: undeveloped, nature: software, causal_factor: CF3, ssf: SSF-007, title: Locomotion controller acts on stale state}
+      - {id: both-sensors, kind: common_cause, modes: [PT-025-FM1], beta: beta, causal_factor: CF1, title: Both sensors of a joint freeze together}

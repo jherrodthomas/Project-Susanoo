@@ -1,0 +1,22 @@
+# Fault tree for HAZ-WLK-003 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-WLK-003
+exposure: walker_operating_hours
+trees:
+  - id: FT-024
+    title: Crushing under the pod or legs while kneeling or rising
+    top: crush
+    gates:
+      - {id: crush, type: and, title: Person crushed, inputs: [person-in-zone, descent]}
+      - {id: descent, type: or, title: Pod or legs come down, inputs: [kneel-uncleared, uncontrolled]}
+      - {id: uncontrolled, type: and, title: Uncontrolled descent while lowering, inputs: [supply-lost, holding-fails]}
+      - {id: holding-fails, type: or, title: A holding device does not hold, inputs: [hold-dormant, hold-demand]}
+    events:
+      - {id: person-in-zone, kind: undeveloped, nature: human, causal_factor: CF1, title: Person in the folding zone}
+      - {id: kneel-uncleared, kind: undeveloped, nature: software, causal_factor: CF2, ssf: SSF-001, title: Kneel or rise without a confirmed clear zone}
+      - {id: supply-lost, mode: PT-028-FM1, causal_factor: CF3, title: Leg actuator supply lost}
+      - {id: hold-dormant, mode: PT-029-FM1, count: joints, causal_factor: CF3, title: A holding device already failed}
+      - {id: hold-demand, mode: PT-029-FM2, count: joints, causal_factor: CF3, title: A holding device fails on demand}

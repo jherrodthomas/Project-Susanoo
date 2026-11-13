@@ -1,0 +1,23 @@
+# Fault tree for HAZ-DCK-002 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-DCK-002
+exposure: walker_operating_hours
+trees:
+  - id: FT-005
+    title: UAV free on the dock while the walker moves
+    top: release
+    gates:
+      - {id: release, type: and, title: UAV released under motion, inputs: [latch-open, state-wrong]}
+      - {id: latch-open, type: or, title: Latch not holding, inputs: [latch-fails, partial-latch]}
+      - {id: state-wrong, type: or, title: Retained state still reads latched, inputs: [both-sensors, sensors-common, fusion]}
+      - {id: both-sensors, type: and, title: Both latch sensors already stuck latched, inputs: [sensor-a, sensor-b]}
+    events:
+      - {id: latch-fails, mode: PT-008-FM1, causal_factor: CF2, title: Latch works loose without command}
+      - {id: partial-latch, kind: undeveloped, nature: environment, causal_factor: CF3, title: Vibration unseats a partially latched aircraft}
+      - {id: sensor-a, mode: PT-009-FM1, causal_factor: CF2, title: Sensor A stuck latched}
+      - {id: sensor-b, mode: PT-009-FM1, causal_factor: CF2, title: Sensor B stuck latched}
+      - {id: sensors-common, kind: common_cause, modes: [PT-009-FM1], beta: beta, causal_factor: CF2, title: Both sensors stuck together}
+      - {id: fusion, kind: undeveloped, nature: software, causal_factor: CF1, ssf: SSF-005, title: State fusion reports latched with the latch open}

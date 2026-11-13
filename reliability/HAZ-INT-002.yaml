@@ -1,0 +1,21 @@
+# Fault tree for HAZ-INT-002 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-INT-002
+exposure: uav_flight_hours
+trees:
+  - id: FT-010
+    title: Pilot acts on misleading or stale UAV information
+    top: acts
+    gates:
+      - {id: acts, type: and, title: Pilot acts on a wrong picture, inputs: [wrong-picture, pilot-acts]}
+      - {id: wrong-picture, type: or, title: UAV picture wrong or stale, inputs: [georef, gnss, frozen]}
+      - {id: pilot-acts, type: or, title: Pilot does not catch it, inputs: [not-noticed, over-reliance]}
+    events:
+      - {id: georef, kind: undeveloped, nature: interface, causal_factor: CF1, title: Wrong georeferencing or pointing}
+      - {id: gnss, kind: undeveloped, nature: environment, causal_factor: CF2, title: GNSS degraded or spoofed}
+      - {id: frozen, kind: undeveloped, nature: interface, causal_factor: CF3, title: Latency, dropped frames or frozen video}
+      - {id: not-noticed, kind: undeveloped, nature: human, causal_factor: CF4, title: Pilot does not notice}
+      - {id: over-reliance, kind: undeveloped, nature: human, causal_factor: CF5, title: Pilot relies on the UAV over direct view}

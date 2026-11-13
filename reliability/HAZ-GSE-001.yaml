@@ -1,0 +1,17 @@
+# Fault tree for HAZ-GSE-001 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-GSE-001
+exposure: walker_operating_hours
+trees:
+  - id: FT-008
+    title: Fall from height during maintenance
+    top: fall
+    gates:
+      - {id: fall, type: or, title: Maintainer falls from the walker, inputs: [balance, unsecured-access, surface]}
+    events:
+      - {id: balance, kind: undeveloped, nature: human, causal_factor: CF1, title: Loss of balance while reaching or carrying}
+      - {id: unsecured-access, kind: undeveloped, nature: systematic, causal_factor: CF2, title: No platform or anchor; stand not secured}
+      - {id: surface, kind: undeveloped, nature: environment, causal_factor: CF3, title: Wet, oily or icy surfaces, wind, poor light}

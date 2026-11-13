@@ -8,10 +8,36 @@
   "PT-005-FM1",
   "PT-006-FM1",
   "PT-006-FM2",
+  "PT-007-FM1",
+  "PT-008-FM1",
+  "PT-009-FM1",
+  "PT-010-FM1",
+  "PT-011-FM1",
+  "PT-012-FM1",
+  "PT-013-FM1",
+  "PT-014-FM1",
+  "PT-015-FM1",
+  "PT-016-FM1",
+  "PT-017-FM1",
+  "PT-018-FM1",
+  "PT-019-FM1",
+  "PT-020-FM1",
+  "PT-021-FM1",
+  "PT-022-FM1",
+  "PT-023-FM1",
+  "PT-024-FM1",
+  "PT-025-FM1",
+  "PT-026-FM1",
+  "PT-027-FM1",
+  "PT-028-FM1",
+  "PT-029-FM1",
+  "PT-029-FM2",
+  "PT-030-FM1",
   "joints",
   "hoses",
   "test_interval_h",
-  "beta"
+  "beta",
+  "cells"
  ],
  "bands": {
   "A": 0.1,
@@ -20,43 +46,1111 @@
   "D": 1e-06,
   "E": 0.0
  },
- "causal_factor": "CF1",
- "exposure": {
+ "illustrative": true,
+ "item_life": {
+  "docking_cycles": 2000.0,
+  "uav_flight_hours": 200.0,
   "walker_operating_hours": 500.0
  },
- "hazard": "HAZ-PIL-002",
- "illustrative": true,
  "results": [
+  {
+   "alternative": null,
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": 2e-06,
+     "events": [
+      "arm-check",
+      "interlock-fails"
+     ],
+     "hardware": [
+      "interlock-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "arm-check"
+     ]
+    },
+    {
+     "defence_p": 2e-06,
+     "events": [
+      "handshake",
+      "interlock-fails"
+     ],
+     "hardware": [
+      "interlock-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "handshake"
+     ]
+    },
+    {
+     "defence_p": 2e-06,
+     "events": [
+      "interlock-fails",
+      "maintainer-arms"
+     ],
+     "hardware": [
+      "interlock-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "maintainer-arms"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "docking_cycles",
+   "exposure_value": 2000.0,
+   "hazard": "HAZ-DCK-001",
+   "mc": null,
+   "no_test": 0.0,
+   "no_test_band": null,
+   "nodes": {
+    "arm-check": 0.0,
+    "arming-attempt": 0.0,
+    "handshake": 0.0,
+    "interlock-fails": 2e-06,
+    "maintainer-arms": 0.0,
+    "start": 0.0
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [],
+   "tau_h": 4.0,
+   "title": "Rotor start while the UAV is retained",
+   "top": 0.0,
+   "tree": "FT-004",
+   "undeveloped": {
+    "human": 1,
+    "interface": 1,
+    "software": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": "E",
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "fusion",
+      "partial-latch"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "fusion",
+      "partial-latch"
+     ]
+    },
+    {
+     "defence_p": 0.002497,
+     "events": [
+      "fusion",
+      "latch-fails"
+     ],
+     "hardware": [
+      "latch-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "fusion"
+     ]
+    },
+    {
+     "defence_p": 2e-07,
+     "events": [
+      "partial-latch",
+      "sensors-common"
+     ],
+     "hardware": [
+      "sensors-common"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "partial-latch"
+     ]
+    },
+    {
+     "defence_p": 1.6e-11,
+     "events": [
+      "partial-latch",
+      "sensor-a",
+      "sensor-b"
+     ],
+     "hardware": [
+      "sensor-a",
+      "sensor-b"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "partial-latch"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "latch-fails",
+      "sensors-common"
+     ],
+     "hardware": [
+      "latch-fails",
+      "sensors-common"
+     ],
+     "kind": "quantified",
+     "multiplicity": 1.0,
+     "p": 4.994e-10,
+     "share": 0.9999,
+     "undeveloped": []
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "latch-fails",
+      "sensor-a",
+      "sensor-b"
+     ],
+     "hardware": [
+      "latch-fails",
+      "sensor-a",
+      "sensor-b"
+     ],
+     "kind": "quantified",
+     "multiplicity": 1.0,
+     "p": 3.995e-14,
+     "share": 7.999e-05,
+     "undeveloped": []
+    }
+   ],
+   "drivers": [
+    {
+     "factor": 10.01,
+     "mode": "PT-009-FM1"
+    },
+    {
+     "factor": 9.888,
+     "mode": "PT-008-FM1"
+    }
+   ],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-DCK-002",
+   "mc": {
+    "band_share": {
+     "A": 0.0,
+     "B": 0.0,
+     "C": 0.0,
+     "D": 0.0,
+     "E": 1.0
+    },
+    "n": 4000,
+    "p05": 1.87e-11,
+    "p50": 5.018e-10,
+    "p95": 1.262e-08,
+    "seed": 1
+   },
+   "no_test": 6.305e-08,
+   "no_test_band": "E",
+   "nodes": {
+    "both-sensors": 1.6e-11,
+    "fusion": 0.0,
+    "latch-fails": 0.002497,
+    "latch-open": 0.002497,
+    "partial-latch": 0.0,
+    "release": 4.994e-10,
+    "sensor-a": 4e-06,
+    "sensor-b": 4e-06,
+    "sensors-common": 2e-07,
+    "state-wrong": 2e-07
+   },
+   "quantified": true,
+   "reach_e": null,
+   "single_points": [],
+   "tau_h": 4.0,
+   "title": "UAV free on the dock while the walker moves",
+   "top": 4.994e-10,
+   "tree": "FT-005",
+   "undeveloped": {
+    "environment": 1,
+    "software": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": "E",
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "damaged"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "damaged"
+     ]
+    },
+    {
+     "defence_p": 4e-06,
+     "events": [
+      "bms-fault",
+      "cutoff-fails"
+     ],
+     "hardware": [
+      "cutoff-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "bms-fault"
+     ]
+    },
+    {
+     "defence_p": 4e-06,
+     "events": [
+      "cutoff-fails",
+      "wrong-profile"
+     ],
+     "hardware": [
+      "cutoff-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "wrong-profile"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "charger-fails",
+      "cutoff-fails"
+     ],
+     "hardware": [
+      "charger-fails",
+      "cutoff-fails"
+     ],
+     "kind": "quantified",
+     "multiplicity": 1.0,
+     "p": 7.921e-08,
+     "share": 1.0,
+     "undeveloped": []
+    }
+   ],
+   "drivers": [
+    {
+     "factor": 10.0,
+     "mode": "PT-011-FM1"
+    },
+    {
+     "factor": 9.155,
+     "mode": "PT-010-FM1"
+    }
+   ],
+   "exposure": "docking_cycles",
+   "exposure_value": 2000.0,
+   "hazard": "HAZ-DCK-003",
+   "mc": {
+    "band_share": {
+     "A": 0.0,
+     "B": 0.0,
+     "C": 0.0,
+     "D": 0.08975,
+     "E": 0.9103
+    },
+    "n": 4000,
+    "p05": 2.988e-09,
+    "p50": 7.909e-08,
+    "p95": 1.869e-06,
+    "seed": 1
+   },
+   "no_test": 3.96e-05,
+   "no_test_band": "D",
+   "nodes": {
+    "bms-fault": 0.0,
+    "charge-fault": 0.0198,
+    "charge-path": 7.921e-08,
+    "charger-fails": 0.0198,
+    "cutoff-fails": 4e-06,
+    "damaged": 0.0,
+    "thermal": 7.921e-08,
+    "wrong-profile": 0.0
+   },
+   "quantified": true,
+   "reach_e": null,
+   "single_points": [
+    "damaged"
+   ],
+   "tau_h": 4.0,
+   "title": "UAV battery thermal event while charging",
+   "top": 7.921e-08,
+   "tree": "FT-006",
+   "undeveloped": {
+    "environment": 1,
+    "hardware": 1,
+    "interface": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "handled-live"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "handled-live"
+     ]
+    },
+    {
+     "defence_p": 2e-06,
+     "events": [
+      "contactor-stuck",
+      "permit-ignores-charging"
+     ],
+     "hardware": [
+      "contactor-stuck"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "permit-ignores-charging"
+     ]
+    },
+    {
+     "defence_p": 2e-06,
+     "events": [
+      "contactor-stuck-b",
+      "damaged-contacts"
+     ],
+     "hardware": [
+      "contactor-stuck-b"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "damaged-contacts"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "docking_cycles",
+   "exposure_value": 2000.0,
+   "hazard": "HAZ-DCK-004",
+   "mc": null,
+   "no_test": 0.0,
+   "no_test_band": null,
+   "nodes": {
+    "contactor-stuck": 2e-06,
+    "contactor-stuck-b": 2e-06,
+    "damaged-contacts": 0.0,
+    "damaged-live": 0.0,
+    "handled-live": 0.0,
+    "permit-ignores-charging": 0.0,
+    "released-live": 0.0,
+    "shock": 0.0
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [
+    "handled-live"
+   ],
+   "tau_h": 4.0,
+   "title": "Person touches energised charging contacts",
+   "top": 0.0,
+   "tree": "FT-007",
+   "undeveloped": {
+    "hardware": 1,
+    "human": 1,
+    "interface": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "balance"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "balance"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "surface"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "surface"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "unsecured-access"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "unsecured-access"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-GSE-001",
+   "mc": null,
+   "no_test": null,
+   "no_test_band": null,
+   "nodes": {
+    "balance": 0.0,
+    "fall": 0.0,
+    "surface": 0.0,
+    "unsecured-access": 0.0
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [
+    "balance",
+    "surface",
+    "unsecured-access"
+   ],
+   "tau_h": 4.0,
+   "title": "Fall from height during maintenance",
+   "top": 0.0,
+   "tree": "FT-008",
+   "undeveloped": {
+    "environment": 1,
+    "human": 1,
+    "systematic": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "gust"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "gust"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "home-stale"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "home-stale"
+     ]
+    },
+    {
+     "defence_p": 0.1813,
+     "events": [
+      "failsafe-to-dock",
+      "link-lost"
+     ],
+     "hardware": [
+      "link-lost"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "failsafe-to-dock"
+     ]
+    },
+    {
+     "defence_p": 2e-06,
+     "events": [
+      "hw-permit-fails",
+      "permit-wrong"
+     ],
+     "hardware": [
+      "hw-permit-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "permit-wrong"
+     ]
+    },
+    {
+     "defence_p": 2e-06,
+     "events": [
+      "hw-permit-fails-b",
+      "position-wrong"
+     ],
+     "hardware": [
+      "hw-permit-fails-b"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "position-wrong"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "uav_flight_hours",
+   "exposure_value": 200.0,
+   "hazard": "HAZ-INT-001",
+   "mc": null,
+   "no_test": 0.0,
+   "no_test_band": null,
+   "nodes": {
+    "bad-position": 0.0,
+    "failsafe-to-dock": 0.0,
+    "gust": 0.0,
+    "home-stale": 0.0,
+    "hw-permit-fails": 2e-06,
+    "hw-permit-fails-b": 2e-06,
+    "link-lost": 0.1813,
+    "link-path": 0.0,
+    "outside": 0.0,
+    "permit-wrong": 0.0,
+    "position-wrong": 0.0,
+    "wrong-permit": 0.0
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [
+    "gust",
+    "home-stale"
+   ],
+   "tau_h": 4.0,
+   "title": "UAV launch or recovery outside the safe envelope",
+   "top": 0.0,
+   "tree": "FT-009",
+   "undeveloped": {
+    "environment": 1,
+    "interface": 1,
+    "software": 3
+   }
+  },
+  {
+   "alternative": null,
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "frozen",
+      "not-noticed"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "frozen",
+      "not-noticed"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "frozen",
+      "over-reliance"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "frozen",
+      "over-reliance"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "georef",
+      "not-noticed"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "georef",
+      "not-noticed"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "georef",
+      "over-reliance"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "georef",
+      "over-reliance"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "gnss",
+      "not-noticed"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "gnss",
+      "not-noticed"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "gnss",
+      "over-reliance"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "gnss",
+      "over-reliance"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "uav_flight_hours",
+   "exposure_value": 200.0,
+   "hazard": "HAZ-INT-002",
+   "mc": null,
+   "no_test": null,
+   "no_test_band": null,
+   "nodes": {
+    "acts": 0.0,
+    "frozen": 0.0,
+    "georef": 0.0,
+    "gnss": 0.0,
+    "not-noticed": 0.0,
+    "over-reliance": 0.0,
+    "pilot-acts": 0.0,
+    "wrong-picture": 0.0
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [],
+   "tau_h": 4.0,
+   "title": "Pilot acts on misleading or stale UAV information",
+   "top": 0.0,
+   "tree": "FT-010",
+   "undeveloped": {
+    "environment": 1,
+    "human": 2,
+    "interface": 2
+   }
+  },
+  {
+   "alternative": null,
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "not-inhibited",
+      "person-in-reach"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "not-inhibited",
+      "person-in-reach"
+     ]
+    },
+    {
+     "defence_p": 8e-06,
+     "events": [
+      "person-in-reach",
+      "stow-lock-fails"
+     ],
+     "hardware": [
+      "stow-lock-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "person-in-reach"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-MAN-001",
+   "mc": null,
+   "no_test": 0.0,
+   "no_test_band": null,
+   "nodes": {
+    "arm-moves": 8e-06,
+    "not-inhibited": 0.0,
+    "person-in-reach": 0.0,
+    "stow-lock-fails": 8e-06,
+    "struck": 0.0
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [],
+   "tau_h": 4.0,
+   "title": "Person struck or pinned by an arm",
+   "top": 0.0,
+   "tree": "FT-011",
+   "undeveloped": {
+    "human": 1,
+    "software": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": "C",
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "beyond-limits"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "beyond-limits"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "enabled-unsecured"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "enabled-unsecured"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "inertial"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "inertial"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "grip-slips"
+     ],
+     "hardware": [
+      "grip-slips"
+     ],
+     "kind": "quantified",
+     "multiplicity": 1.0,
+     "p": 0.004988,
+     "share": 1.0,
+     "undeveloped": []
+    }
+   ],
+   "drivers": [
+    {
+     "factor": 9.779,
+     "mode": "PT-016-FM1"
+    }
+   ],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-MAN-002",
+   "mc": {
+    "band_share": {
+     "A": 0.01375,
+     "B": 0.2988,
+     "C": 0.5657,
+     "D": 0.1217,
+     "E": 0.0
+    },
+    "n": 4000,
+    "p05": 0.000494,
+    "p50": 0.004946,
+    "p95": 0.04957,
+    "seed": 1
+   },
+   "no_test": null,
+   "no_test_band": null,
+   "nodes": {
+    "beyond-limits": 0.0,
+    "enabled-unsecured": 0.0,
+    "grip-slips": 0.004988,
+    "inertial": 0.0,
+    "load": 0.004988
+   },
+   "quantified": true,
+   "reach_e": {
+    "factor": 0.0002,
+    "mode": "PT-016-FM1",
+    "value": 2e-09
+   },
+   "single_points": [
+    "beyond-limits",
+    "enabled-unsecured",
+    "inertial"
+   ],
+   "tau_h": 4.0,
+   "title": "Carried load swings, shifts or drops",
+   "top": 0.004988,
+   "tree": "FT-012",
+   "undeveloped": {
+    "environment": 1,
+    "human": 1,
+    "software": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": 0.002996,
+     "events": [
+      "supports-absent",
+      "uncommanded"
+     ],
+     "hardware": [
+      "uncommanded"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "supports-absent"
+     ]
+    },
+    {
+     "defence_p": 2e-06,
+     "events": [
+      "chain-fails",
+      "enable-logic"
+     ],
+     "hardware": [
+      "chain-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "enable-logic"
+     ]
+    },
+    {
+     "defence_p": 2e-06,
+     "events": [
+      "chain-fails-b",
+      "pilot-deflects"
+     ],
+     "hardware": [
+      "chain-fails-b"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "pilot-deflects"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-PIL-001",
+   "mc": null,
+   "no_test": 0.0,
+   "no_test_band": null,
+   "nodes": {
+    "chain-fails": 2e-06,
+    "chain-fails-b": 2e-06,
+    "deflection": 0.0,
+    "drive-fault": 0.0,
+    "enable-logic": 0.0,
+    "motion": 0.0,
+    "pilot-deflects": 0.0,
+    "supports-absent": 0.0,
+    "sw-enable": 0.0,
+    "uncommanded": 0.002996
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [],
+   "tau_h": 4.0,
+   "title": "Unintended leg motion during ingress or egress",
+   "top": 0.0,
+   "tree": "FT-013",
+   "undeveloped": {
+    "human": 2,
+    "software": 1
+   }
+  },
   {
    "alternative": "A",
    "band": "D",
    "cut_sets": [
     {
+     "defence_p": null,
      "events": [
       "hose-burst",
       "valve-demand"
      ],
+     "hardware": [
+      "hose-burst",
+      "valve-demand"
+     ],
+     "kind": "quantified",
      "multiplicity": 1.0,
      "p": 7.155e-06,
-     "share": 0.9723
+     "share": 0.9723,
+     "undeveloped": []
     },
     {
+     "defence_p": null,
      "events": [
       "hose-burst",
       "valve-dormant"
      ],
+     "hardware": [
+      "hose-burst",
+      "valve-dormant"
+     ],
+     "kind": "quantified",
      "multiplicity": 1.0,
      "p": 1.431e-07,
-     "share": 0.01945
+     "share": 0.01945,
+     "undeveloped": []
     },
     {
+     "defence_p": null,
      "events": [
       "hose-burst",
       "valve-common"
      ],
+     "hardware": [
+      "hose-burst",
+      "valve-common"
+     ],
+     "kind": "quantified",
      "multiplicity": 1.0,
      "p": 6.083e-08,
-     "share": 0.008266
+     "share": 0.008266,
+     "undeveloped": []
     }
    ],
    "drivers": [
@@ -73,6 +1167,9 @@
      "mode": "PT-002-FM1"
     }
    ],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-PIL-002",
    "mc": {
     "band_share": {
      "A": 0.0,
@@ -98,64 +1195,102 @@
     "valve-demand": 0.0005999,
     "valve-dormant": 1.2e-05
    },
+   "quantified": true,
    "reach_e": {
     "factor": 0.1186,
     "mode": "PT-002-FM2",
     "value": 1.186e-05
    },
+   "single_points": [],
    "tau_h": 4.0,
    "title": "Cockpit drop on loss of leg support, alternative A (centralised hydraulic)",
    "top": 7.359e-06,
-   "tree": "FT-001"
+   "tree": "FT-001",
+   "undeveloped": {}
   },
   {
    "alternative": "B-EHA",
    "band": "D",
    "cut_sets": [
     {
+     "defence_p": null,
      "events": [
       "drive-lost",
       "own-valve-demand"
      ],
+     "hardware": [
+      "drive-lost",
+      "own-valve-demand"
+     ],
+     "kind": "quantified",
      "multiplicity": 6.0,
      "p": 8.933e-06,
-     "share": 0.7329
+     "share": 0.7329,
+     "undeveloped": []
     },
     {
+     "defence_p": null,
      "events": [
       "bus-lost",
       "valve-demand"
      ],
+     "hardware": [
+      "bus-lost",
+      "valve-demand"
+     ],
+     "kind": "quantified",
      "multiplicity": 1.0,
      "p": 2.992e-06,
-     "share": 0.2455
+     "share": 0.2455,
+     "undeveloped": []
     },
     {
+     "defence_p": null,
      "events": [
       "drive-lost",
       "own-valve-dormant"
      ],
+     "hardware": [
+      "drive-lost",
+      "own-valve-dormant"
+     ],
+     "kind": "quantified",
      "multiplicity": 6.0,
      "p": 1.787e-07,
-     "share": 0.01466
+     "share": 0.01466,
+     "undeveloped": []
     },
     {
+     "defence_p": null,
      "events": [
       "bus-lost",
       "valve-dormant"
      ],
+     "hardware": [
+      "bus-lost",
+      "valve-dormant"
+     ],
+     "kind": "quantified",
      "multiplicity": 1.0,
      "p": 5.985e-08,
-     "share": 0.00491
+     "share": 0.00491,
+     "undeveloped": []
     },
     {
+     "defence_p": null,
      "events": [
       "bus-lost",
       "valve-common"
      ],
+     "hardware": [
+      "bus-lost",
+      "valve-common"
+     ],
+     "kind": "quantified",
      "multiplicity": 1.0,
      "p": 2.544e-08,
-     "share": 0.002087
+     "share": 0.002087,
+     "undeveloped": []
     }
    ],
    "drivers": [
@@ -176,6 +1311,9 @@
      "mode": "PT-002-FM1"
     }
    ],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-PIL-002",
    "mc": {
     "band_share": {
      "A": 0.0,
@@ -206,64 +1344,102 @@
     "valve-demand": 0.0005999,
     "valve-dormant": 1.2e-05
    },
+   "quantified": true,
    "reach_e": {
     "factor": 0.06368,
     "mode": "PT-002-FM2",
     "value": 6.368e-06
    },
+   "single_points": [],
    "tau_h": 4.0,
    "title": "Cockpit drop on loss of leg support, alternative B-EHA (series-hybrid, electrohydraulic joints)",
    "top": 1.219e-05,
-   "tree": "FT-002"
+   "tree": "FT-002",
+   "undeveloped": {}
   },
   {
    "alternative": "B-EMA",
    "band": "D",
    "cut_sets": [
     {
+     "defence_p": null,
      "events": [
       "drive-lost",
       "own-brake-demand"
      ],
+     "hardware": [
+      "drive-lost",
+      "own-brake-demand"
+     ],
+     "kind": "quantified",
      "multiplicity": 6.0,
      "p": 8.933e-06,
-     "share": 0.7188
+     "share": 0.7188,
+     "undeveloped": []
     },
     {
+     "defence_p": null,
      "events": [
       "brake-demand",
       "bus-lost"
      ],
+     "hardware": [
+      "brake-demand",
+      "bus-lost"
+     ],
+     "kind": "quantified",
      "multiplicity": 1.0,
      "p": 2.992e-06,
-     "share": 0.2407
+     "share": 0.2407,
+     "undeveloped": []
     },
     {
+     "defence_p": null,
      "events": [
       "drive-lost",
       "own-brake-dormant"
      ],
+     "hardware": [
+      "drive-lost",
+      "own-brake-dormant"
+     ],
+     "kind": "quantified",
      "multiplicity": 6.0,
      "p": 3.573e-07,
-     "share": 0.02875
+     "share": 0.02875,
+     "undeveloped": []
     },
     {
+     "defence_p": null,
      "events": [
       "brake-dormant",
       "bus-lost"
      ],
+     "hardware": [
+      "brake-dormant",
+      "bus-lost"
+     ],
+     "kind": "quantified",
      "multiplicity": 1.0,
      "p": 1.197e-07,
-     "share": 0.009632
+     "share": 0.009632,
+     "undeveloped": []
     },
     {
+     "defence_p": null,
      "events": [
       "brake-common",
       "bus-lost"
      ],
+     "hardware": [
+      "brake-common",
+      "bus-lost"
+     ],
+     "kind": "quantified",
      "multiplicity": 1.0,
      "p": 2.594e-08,
-     "share": 0.002087
+     "share": 0.002087,
+     "undeveloped": []
     }
    ],
    "drivers": [
@@ -284,6 +1460,9 @@
      "mode": "PT-006-FM1"
     }
    ],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-PIL-002",
    "mc": {
     "band_share": {
      "A": 0.0,
@@ -314,15 +1493,1025 @@
     "own-brake-dormant": 4e-06,
     "own-brake-fails": 0.000104
    },
+   "quantified": true,
    "reach_e": {
     "factor": 0.04368,
     "mode": "PT-006-FM2",
     "value": 4.368e-06
    },
+   "single_points": [],
    "tau_h": 4.0,
    "title": "Cockpit drop on loss of leg support, alternative B-EMA (series-hybrid, electromechanical joints)",
    "top": 1.243e-05,
-   "tree": "FT-003"
+   "tree": "FT-003",
+   "undeveloped": {}
+  },
+  {
+   "alternative": null,
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "emergency",
+      "hurried"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "emergency",
+      "hurried"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "emergency",
+      "slope-wet"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "emergency",
+      "slope-wet"
+     ]
+    },
+    {
+     "defence_p": 0.001,
+     "events": [
+      "aid-fails",
+      "emergency"
+     ],
+     "hardware": [
+      "aid-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "emergency"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-PIL-003",
+   "mc": null,
+   "no_test": null,
+   "no_test_band": null,
+   "nodes": {
+    "aid-fails": 0.001,
+    "egress-fails": 0.001,
+    "emergency": 0.0,
+    "fall": 0.0,
+    "hurried": 0.0,
+    "slope-wet": 0.0
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [],
+   "tau_h": 4.0,
+   "title": "Fall from height during emergency egress",
+   "top": 0.0,
+   "tree": "FT-014",
+   "undeveloped": {
+    "environment": 2,
+    "human": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": "D",
+   "cut_sets": [
+    {
+     "defence_p": 0.001,
+     "events": [
+      "lowering-inhibited",
+      "side-exit-fails"
+     ],
+     "hardware": [
+      "side-exit-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "lowering-inhibited"
+     ]
+    },
+    {
+     "defence_p": 0.001,
+     "events": [
+      "side-exit-fails",
+      "terrain"
+     ],
+     "hardware": [
+      "side-exit-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "terrain"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "side-exit-fails",
+      "supply-fault"
+     ],
+     "hardware": [
+      "side-exit-fails",
+      "supply-fault"
+     ],
+     "kind": "quantified",
+     "multiplicity": 1.0,
+     "p": 4.988e-06,
+     "share": 1.0,
+     "undeveloped": []
+    }
+   ],
+   "drivers": [
+    {
+     "factor": 10.0,
+     "mode": "PT-019-FM1"
+    },
+    {
+     "factor": 9.779,
+     "mode": "PT-028-FM1"
+    }
+   ],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-PIL-004",
+   "mc": {
+    "band_share": {
+     "A": 0.0,
+     "B": 0.0,
+     "C": 0.003,
+     "D": 0.7967,
+     "E": 0.2003
+    },
+    "n": 4000,
+    "p05": 1.869e-07,
+    "p50": 4.988e-06,
+    "p95": 0.0001244,
+    "seed": 1
+   },
+   "no_test": null,
+   "no_test_band": null,
+   "nodes": {
+    "blocked": 4.988e-06,
+    "cannot-lower": 0.004988,
+    "lowering-inhibited": 0.0,
+    "side-exit-fails": 0.001,
+    "supply-fault": 0.004988,
+    "terrain": 0.0
+   },
+   "quantified": true,
+   "reach_e": {
+    "factor": 0.2005,
+    "mode": "PT-019-FM1",
+    "value": 0.0002005
+   },
+   "single_points": [],
+   "tau_h": 4.0,
+   "title": "Normal egress blocked and the side exit fails",
+   "top": 4.988e-06,
+   "tree": "FT-015",
+   "undeveloped": {
+    "environment": 1,
+    "software": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "misstep"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "misstep"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "surface"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "surface"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "tread-design"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "tread-design"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-PIL-005",
+   "mc": null,
+   "no_test": null,
+   "no_test_band": null,
+   "nodes": {
+    "fall": 0.0,
+    "misstep": 0.0,
+    "surface": 0.0,
+    "tread-design": 0.0
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [
+    "misstep",
+    "surface",
+    "tread-design"
+   ],
+   "tau_h": 4.0,
+   "title": "Fall during normal ingress or egress",
+   "top": 0.0,
+   "tree": "FT-016",
+   "undeveloped": {
+    "environment": 1,
+    "human": 1,
+    "systematic": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "fire-smoke",
+      "incapacitated"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "fire-smoke",
+      "incapacitated"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "incapacitated",
+      "untrained"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "incapacitated",
+      "untrained"
+     ]
+    },
+    {
+     "defence_p": 0.001,
+     "events": [
+      "incapacitated",
+      "release-jams"
+     ],
+     "hardware": [
+      "release-jams"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "incapacitated"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-PIL-006",
+   "mc": null,
+   "no_test": null,
+   "no_test_band": null,
+   "nodes": {
+    "delayed": 0.0,
+    "extraction-fails": 0.001,
+    "fire-smoke": 0.0,
+    "incapacitated": 0.0,
+    "release-jams": 0.001,
+    "untrained": 0.0
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [],
+   "tau_h": 4.0,
+   "title": "Delayed or unsafe extraction of an incapacitated pilot",
+   "top": 0.0,
+   "tree": "FT-017",
+   "undeveloped": {
+    "environment": 2,
+    "human": 1
+   }
+  },
+  {
+   "alternative": "A",
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "not-verified",
+      "trapped-volume"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "not-verified",
+      "trapped-volume"
+     ]
+    },
+    {
+     "defence_p": 4e-06,
+     "events": [
+      "bleed-fails",
+      "not-verified"
+     ],
+     "hardware": [
+      "bleed-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "not-verified"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-PWR-001",
+   "mc": null,
+   "no_test": 0.0,
+   "no_test_band": null,
+   "nodes": {
+    "bleed-fails": 4e-06,
+    "not-verified": 0.0,
+    "pressure-trapped": 4e-06,
+    "residual": 0.0,
+    "trapped-volume": 0.0
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [],
+   "tau_h": 4.0,
+   "title": "Residual hydraulic pressure during maintenance",
+   "top": 0.0,
+   "tree": "FT-018",
+   "undeveloped": {
+    "human": 1,
+    "systematic": 1
+   }
+  },
+  {
+   "alternative": "B-EHA, B-EMA",
+   "band": "E",
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "charged-damaged"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "charged-damaged"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "damage"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "damage"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "cell-short",
+      "monitor-fails"
+     ],
+     "hardware": [
+      "cell-short",
+      "monitor-fails"
+     ],
+     "kind": "quantified",
+     "multiplicity": 1.0,
+     "p": 3.98e-08,
+     "share": 1.0,
+     "undeveloped": []
+    }
+   ],
+   "drivers": [
+    {
+     "factor": 10.0,
+     "mode": "PT-022-FM1"
+    },
+    {
+     "factor": 9.564,
+     "mode": "PT-021-FM1"
+    }
+   ],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-PWR-002",
+   "mc": {
+    "band_share": {
+     "A": 0.0,
+     "B": 0.0,
+     "C": 0.0,
+     "D": 0.04875,
+     "E": 0.9513
+    },
+    "n": 4000,
+    "p05": 1.495e-09,
+    "p50": 3.999e-08,
+    "p95": 9.771e-07,
+    "seed": 1
+   },
+   "no_test": 4.975e-06,
+   "no_test_band": "D",
+   "nodes": {
+    "cell-path": 3.98e-08,
+    "cell-short": 0.00995,
+    "charged-damaged": 0.0,
+    "damage": 0.0,
+    "monitor-fails": 4e-06,
+    "runaway": 3.98e-08
+   },
+   "quantified": true,
+   "reach_e": null,
+   "single_points": [
+    "charged-damaged",
+    "damage"
+   ],
+   "tau_h": 4.0,
+   "title": "Battery thermal runaway near the pilot station",
+   "top": 3.98e-08,
+   "tree": "FT-019",
+   "undeveloped": {
+    "environment": 1,
+    "human": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "ignition",
+      "refuel-hot"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "ignition",
+      "refuel-hot"
+     ]
+    },
+    {
+     "defence_p": 0.002497,
+     "events": [
+      "ignition",
+      "leak"
+     ],
+     "hardware": [
+      "leak"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "ignition"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-PWR-003",
+   "mc": null,
+   "no_test": null,
+   "no_test_band": null,
+   "nodes": {
+    "fire": 0.0,
+    "fuel-release": 0.002497,
+    "ignition": 0.0,
+    "leak": 0.002497,
+    "refuel-hot": 0.0
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [],
+   "tau_h": 4.0,
+   "title": "Fuel leak and fire at the engine",
+   "top": 0.0,
+   "tree": "FT-020",
+   "undeveloped": {
+    "human": 1,
+    "systematic": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": "D",
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "unsafe-command"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "unsafe-command"
+     ]
+    },
+    {
+     "defence_p": 9.754e-08,
+     "events": [
+      "hardwired-fails",
+      "link-lost",
+      "stop-needed"
+     ],
+     "hardware": [
+      "hardwired-fails",
+      "link-lost"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "stop-needed"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "hold-demand",
+      "supply-lost"
+     ],
+     "hardware": [
+      "hold-demand",
+      "supply-lost"
+     ],
+     "kind": "quantified",
+     "multiplicity": 1.0,
+     "p": 2.992e-06,
+     "share": 0.9709,
+     "undeveloped": []
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "hold-dormant",
+      "supply-lost"
+     ],
+     "hardware": [
+      "hold-dormant",
+      "supply-lost"
+     ],
+     "kind": "quantified",
+     "multiplicity": 1.0,
+     "p": 8.977e-08,
+     "share": 0.02913,
+     "undeveloped": []
+    }
+   ],
+   "drivers": [
+    {
+     "factor": 9.779,
+     "mode": "PT-028-FM1"
+    },
+    {
+     "factor": 9.716,
+     "mode": "PT-029-FM2"
+    },
+    {
+     "factor": 1.262,
+     "mode": "PT-029-FM1"
+    },
+    {
+     "factor": 1.0,
+     "mode": "PT-024-FM1"
+    },
+    {
+     "factor": 1.0,
+     "mode": "PT-030-FM1"
+    }
+   ],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-SAF-001",
+   "mc": {
+    "band_share": {
+     "A": 0.0,
+     "B": 0.0,
+     "C": 0.0015,
+     "D": 0.7408,
+     "E": 0.2577
+    },
+    "n": 4000,
+    "p05": 1.55e-07,
+    "p50": 3.322e-06,
+    "p95": 7.344e-05,
+    "seed": 1
+   },
+   "no_test": 1.42e-05,
+   "no_test_band": "D",
+   "nodes": {
+    "hardwired-fails": 2e-06,
+    "hold-demand": 0.0005999,
+    "hold-dormant": 1.8e-05,
+    "holding-fails": 0.0006178,
+    "link-lost": 0.04877,
+    "link-path": 0.0,
+    "power-path": 3.081e-06,
+    "stop-needed": 0.0,
+    "supply-lost": 0.004988,
+    "unsafe-command": 0.0,
+    "unsafe-stop": 3.081e-06
+   },
+   "quantified": true,
+   "reach_e": {
+    "factor": 0.324,
+    "mode": "PT-028-FM1",
+    "value": 3.24e-06
+   },
+   "single_points": [
+    "unsafe-command"
+   ],
+   "tau_h": 4.0,
+   "title": "Protective stop does not reach a safe state",
+   "top": 3.081e-06,
+   "tree": "FT-021",
+   "undeveloped": {
+    "environment": 1,
+    "software": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": "D",
+   "cut_sets": [
+    {
+     "defence_p": 0.02955,
+     "events": [
+      "acts-on-stale",
+      "sensor-fails"
+     ],
+     "hardware": [
+      "sensor-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "acts-on-stale"
+     ]
+    },
+    {
+     "defence_p": 0.02955,
+     "events": [
+      "monitor-misses",
+      "sensor-fails"
+     ],
+     "hardware": [
+      "sensor-fails"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "monitor-misses"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "both-sensors"
+     ],
+     "hardware": [
+      "both-sensors"
+     ],
+     "kind": "quantified",
+     "multiplicity": 1.0,
+     "p": 0.0002494,
+     "share": 1.0,
+     "undeveloped": []
+    }
+   ],
+   "drivers": [
+    {
+     "factor": 9.779,
+     "mode": "PT-025-FM1"
+    }
+   ],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-WLK-001",
+   "mc": {
+    "band_share": {
+     "A": 0.0,
+     "B": 0.00275,
+     "C": 0.1635,
+     "D": 0.8337,
+     "E": 0.0
+    },
+    "n": 4000,
+    "p05": 2.47e-05,
+    "p50": 0.0002473,
+    "p95": 0.002478,
+    "seed": 1
+   },
+   "no_test": null,
+   "no_test_band": null,
+   "nodes": {
+    "acts-on-stale": 0.0,
+    "both-sensors": 0.0002494,
+    "missed-fault": 0.0,
+    "monitor-misses": 0.0,
+    "not-caught": 0.0,
+    "runaway": 0.0002494,
+    "sensor-fails": 0.02955
+   },
+   "quantified": true,
+   "reach_e": {
+    "factor": 0.004,
+    "mode": "PT-025-FM1",
+    "value": 4e-08
+   },
+   "single_points": [],
+   "tau_h": 4.0,
+   "title": "Stale or lost feedback causes runaway motion",
+   "top": 0.0002494,
+   "tree": "FT-022",
+   "undeveloped": {
+    "software": 2
+   }
+  },
+  {
+   "alternative": null,
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "balance"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "balance"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "pilot"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "pilot"
+     ]
+    },
+    {
+     "defence_p": null,
+     "events": [
+      "terrain"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "terrain"
+     ]
+    },
+    {
+     "defence_p": 0.004988,
+     "events": [
+      "capacity-short",
+      "supply-decays"
+     ],
+     "hardware": [
+      "supply-decays"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "capacity-short"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-WLK-002",
+   "mc": null,
+   "no_test": null,
+   "no_test_band": null,
+   "nodes": {
+    "balance": 0.0,
+    "capacity-short": 0.0,
+    "pilot": 0.0,
+    "supply-decays": 0.004988,
+    "supply-path": 0.0,
+    "terrain": 0.0,
+    "tip": 0.0
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [
+    "balance",
+    "pilot",
+    "terrain"
+   ],
+   "tau_h": 4.0,
+   "title": "Walker tip-over or fall with the pilot aboard",
+   "top": 0.0,
+   "tree": "FT-023",
+   "undeveloped": {
+    "environment": 1,
+    "human": 1,
+    "software": 1,
+    "systematic": 1
+   }
+  },
+  {
+   "alternative": null,
+   "band": null,
+   "cut_sets": [
+    {
+     "defence_p": null,
+     "events": [
+      "kneel-uncleared",
+      "person-in-zone"
+     ],
+     "hardware": [],
+     "kind": "unquantified",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "kneel-uncleared",
+      "person-in-zone"
+     ]
+    },
+    {
+     "defence_p": 2.992e-06,
+     "events": [
+      "hold-demand",
+      "person-in-zone",
+      "supply-lost"
+     ],
+     "hardware": [
+      "hold-demand",
+      "supply-lost"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "person-in-zone"
+     ]
+    },
+    {
+     "defence_p": 8.977e-08,
+     "events": [
+      "hold-dormant",
+      "person-in-zone",
+      "supply-lost"
+     ],
+     "hardware": [
+      "hold-dormant",
+      "supply-lost"
+     ],
+     "kind": "mixed",
+     "multiplicity": 1.0,
+     "p": null,
+     "share": null,
+     "undeveloped": [
+      "person-in-zone"
+     ]
+    }
+   ],
+   "drivers": [],
+   "exposure": "walker_operating_hours",
+   "exposure_value": 500.0,
+   "hazard": "HAZ-WLK-003",
+   "mc": null,
+   "no_test": 0.0,
+   "no_test_band": null,
+   "nodes": {
+    "crush": 0.0,
+    "descent": 3.081e-06,
+    "hold-demand": 0.0005999,
+    "hold-dormant": 1.8e-05,
+    "holding-fails": 0.0006178,
+    "kneel-uncleared": 0.0,
+    "person-in-zone": 0.0,
+    "supply-lost": 0.004988,
+    "uncontrolled": 3.081e-06
+   },
+   "quantified": false,
+   "reach_e": null,
+   "single_points": [],
+   "tau_h": 4.0,
+   "title": "Crushing under the pod or legs while kneeling or rising",
+   "top": 0.0,
+   "tree": "FT-024",
+   "undeveloped": {
+    "human": 1,
+    "software": 1
+   }
   }
  ]
 }

@@ -1,0 +1,21 @@
+# Fault tree for HAZ-DCK-004 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-DCK-004
+exposure: docking_cycles
+trees:
+  - id: FT-007
+    title: Person touches energised charging contacts
+    top: shock
+    gates:
+      - {id: shock, type: or, title: Contact with energised charging contacts, inputs: [handled-live, released-live, damaged-live]}
+      - {id: released-live, type: and, title: Released while charging and isolation fails, inputs: [permit-ignores-charging, contactor-stuck]}
+      - {id: damaged-live, type: and, title: Exposed contacts left energised, inputs: [damaged-contacts, contactor-stuck-b]}
+    events:
+      - {id: handled-live, kind: undeveloped, nature: human, causal_factor: CF3, title: Maintainer handles the UAV without isolating charging}
+      - {id: permit-ignores-charging, kind: undeveloped, nature: interface, causal_factor: CF1, title: Launch or release permit does not require charging off}
+      - {id: contactor-stuck, mode: PT-012-FM1, causal_factor: CF2, title: Charge contactor already welded}
+      - {id: damaged-contacts, kind: undeveloped, nature: hardware, causal_factor: CF4, title: Exposed or damaged contacts}
+      - {id: contactor-stuck-b, mode: PT-012-FM1, causal_factor: CF2, title: Charge contactor already welded}

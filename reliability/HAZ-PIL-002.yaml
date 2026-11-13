@@ -1,27 +1,24 @@
-# Fault trees for the reliability pilot (tools/reliability): one per TS-001 actuation alternative, all for the same
-# top event, HAZ-PIL-002 CF1 (supply lost faster than load holding can engage, and load holding fails).
+# Fault trees for HAZ-PIL-002 (tools/reliability): one per TS-001 actuation alternative, all for CF1
+# (supply lost faster than load holding can engage, and load holding fails).
 # Drafted by an AI at independence I0. Parameters with status: assumed are placeholders, not design data.
 #
 # A basic event names a failure mode of reliability/parts.yaml. `count` repeats an event or a gate over identical,
 # independent copies (any one of them fails). A common_cause event is the beta-factor share of the named modes
 # failing together. Gates are and / or over their inputs, assuming independence.
 #
-# Not modelled, on purpose: CF2 (holding engages, but too slowly) is a design adequacy question for SYS-009 and
-# HAZ-PIL-002 M3 (engagement time tested against the free-fall time), not a random failure; slow supply decay
-# (engine stop with accumulators charged) leaves time for a protective stop and is not this top event.
 schema: susanoo/fault-tree/v0.1
 hazard: HAZ-PIL-002
-causal_factor: CF1
 exposure: walker_operating_hours        # key of standards/tailoring/mil-std-882e.yaml risk_definitions.probability.item_life
-parameters:
-  joints:          {value: 6,    status: assumed, note: "Load-bearing joints with a holding device: hip, knee and ankle on each leg of the CL-05 biped; one joint that fails to hold is taken to drop the cockpit (conservative)"}
-  hoses:           {value: 12,   status: assumed, note: "Pressure hoses or tubes on the common line, two per load-bearing joint"}
-  test_interval_h: {value: 4,    status: assumed, note: "Holding devices checked before every sortie (about 4 operating hours); the no-test case uses the whole item life"}
-  beta:            {value: 0.05, status: assumed, note: "Beta factor: share of holding-device failures that hit every joint at once (shared fluid, shared lot, shared maintenance)"}
+not_modelled:
+  CF2: >-
+    Holding that engages, but too slowly, is a design-adequacy question for SYS-009 and M3 (engagement time tested
+    against the free-fall time), not a random failure. Slow supply decay (an engine stop with charged accumulators)
+    leaves time for a protective stop and is not this top event.
 trees:
   - id: FT-001
     title: Cockpit drop on loss of leg support, alternative A (centralised hydraulic)
     alternative: A
+    causal_factors: [CF1]
     top: drop
     gates:
       - {id: drop,          type: and, title: Cockpit drops with the pilot aboard, inputs: [supply-lost, holding-fails]}
@@ -36,6 +33,7 @@ trees:
   - id: FT-002
     title: Cockpit drop on loss of leg support, alternative B-EHA (series-hybrid, electrohydraulic joints)
     alternative: B-EHA
+    causal_factors: [CF1]
     top: drop
     gates:
       - {id: drop,              type: or,  title: Cockpit drops with the pilot aboard, inputs: [bus-and-holding, joint-and-holding]}
@@ -55,6 +53,7 @@ trees:
   - id: FT-003
     title: Cockpit drop on loss of leg support, alternative B-EMA (series-hybrid, electromechanical joints)
     alternative: B-EMA
+    causal_factors: [CF1]
     top: drop
     gates:
       - {id: drop,              type: or,  title: Cockpit drops with the pilot aboard, inputs: [bus-and-holding, joint-and-holding]}

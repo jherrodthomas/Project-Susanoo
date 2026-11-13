@@ -1,0 +1,18 @@
+# Fault tree for HAZ-PWR-003 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-PWR-003
+exposure: walker_operating_hours
+trees:
+  - id: FT-020
+    title: Fuel leak and fire at the engine
+    top: fire
+    gates:
+      - {id: fire, type: and, title: Fuel fire, inputs: [fuel-release, ignition]}
+      - {id: fuel-release, type: or, title: Fuel released, inputs: [leak, refuel-hot]}
+    events:
+      - {id: leak, mode: PT-023-FM1, causal_factor: CF1, title: Fuel line, fitting or tank leaks}
+      - {id: refuel-hot, kind: undeveloped, nature: human, causal_factor: CF2, title: Refuelling hot, running or near ignition}
+      - {id: ignition, kind: undeveloped, nature: systematic, causal_factor: CF3, title: Surface above autoignition next to a leak path}

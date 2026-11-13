@@ -1,0 +1,20 @@
+# Fault tree for HAZ-PWR-002 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-PWR-002
+exposure: walker_operating_hours
+trees:
+  - id: FT-019
+    title: Battery thermal runaway near the pilot station
+    alternative: B-EHA, B-EMA
+    top: runaway
+    gates:
+      - {id: runaway, type: or, title: Pack thermal runaway, inputs: [cell-path, damage, charged-damaged]}
+      - {id: cell-path, type: and, title: Cell fault not isolated, inputs: [cell-short, monitor-fails]}
+    events:
+      - {id: cell-short, mode: PT-021-FM1, count: cells, causal_factor: CF1, title: A cell shorts internally}
+      - {id: monitor-fails, mode: PT-022-FM1, causal_factor: CF1, title: Independent monitor and contactors already failed}
+      - {id: damage, kind: undeveloped, nature: environment, causal_factor: CF2, title: Pack damaged in a fall or overturn}
+      - {id: charged-damaged, kind: undeveloped, nature: human, causal_factor: CF3, title: Damaged or wet pack charged without inspection}

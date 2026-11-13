@@ -296,14 +296,17 @@ folders:
   reliability:
     title: Reliability pilot records
     purpose: >-
-      Parts, failure modes and fault trees for the reliability pilot (`tools/reliability`). The pilot rates the
-      HAZ-PIL-002 cockpit drop for each TS-001 actuation alternative against the tailored probability bands. Every
-      value is still assumed, so every result is illustrative: not evidence and not a probability rating.
-    hero: {img: docs/wiki/images/rel-bands.svg, caption: "Cockpit drop probability by actuation alternative (illustrative)"}
+      Parts, failure modes, shared parameters and one fault-tree file per hazard for the reliability pilot
+      (`tools/reliability`). Hardware causes are quantified against the tailored probability bands; software, human
+      and environmental causes are undeveloped events, traced but not given a number. Every value is still assumed,
+      so every result is illustrative: not evidence and not a probability rating.
+    hero: {img: docs/wiki/images/rel-bands.svg, caption: "Quantified hardware paths against the bands (illustrative)"}
     gallery:
       - {img: docs/wiki/images/rel-ft-001.svg, caption: "FT-001: alternative A"}
       - {img: docs/wiki/images/rel-ft-002.svg, caption: "FT-002: alternative B-EHA"}
       - {img: docs/wiki/images/rel-ft-003.svg, caption: "FT-003: alternative B-EMA"}
+      - {img: docs/wiki/images/rel-ft-009.svg, caption: "FT-009: UAV launch or recovery outside the envelope"}
+      - {img: docs/wiki/images/rel-ft-021.svg, caption: "FT-021: protective stop not reaching a safe state"}
     links:
       - {text: Reliability Pilot (wiki page), href: docs/wiki/Reliability-Pilot.md}
       - {text: Engine and record format, href: tools/reliability/README.md}

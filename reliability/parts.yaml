@@ -118,3 +118,348 @@ parts:
         error_factor: 10
         status: assumed
         to_source: NSWC-11 brakes and clutches chapter, or supplier test data
+
+  - id: PT-007
+    title: Dock propulsion-power interlock (relay or contactor opened by the retention latch)
+    element: SUS-M1-DCK
+    failure_modes:
+      - id: PT-007-FM1
+        mode: Contacts welded or stuck closed, dormant until arming is attempted
+        effect: Propulsion power reaches the aircraft with the latch closed
+        kind: latent
+        value: 1.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (relays) or supplier data
+
+  - id: PT-008
+    title: UAV retention latch mechanism (fail-closed, powered to open)
+    element: SUS-M1-DCK
+    failure_modes:
+      - id: PT-008-FM1
+        mode: Unlatches or works loose without command (spring, pawl or pin failure)
+        effect: The aircraft is free on the dock while the walker moves
+        kind: rate
+        value: 5.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 (springs, mechanical couplings) or supplier data
+
+  - id: PT-009
+    title: Latch position sensor (one of two independent sensors)
+    element: SUS-M1-DCK
+    failure_modes:
+      - id: PT-009-FM1
+        mode: Stuck reporting latched, dormant until the latch actually opens
+        effect: The retained state reads latched when it is not
+        kind: latent
+        value: 2.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (switches, sensors) or supplier data
+
+  - id: PT-010
+    title: Dock charger power stage
+    element: SUS-M1-DCK
+    failure_modes:
+      - id: PT-010-FM1
+        mode: Over-voltage or over-current output during a charge
+        effect: The UAV battery is over-charged
+        kind: cycle
+        value: 1.0e-5
+        unit: per cycle
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (power conversion) or supplier data
+
+  - id: PT-011
+    title: Independent charge cut-off (over-voltage, over-current, over-temperature)
+    element: SUS-M1-DCK
+    failure_modes:
+      - id: PT-011-FM1
+        mode: Fails to trip, dormant until a charge fault
+        effect: Charging continues through the fault
+        kind: latent
+        value: 2.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (protection circuits) or supplier data
+
+  - id: PT-012
+    title: Dock charge contactor
+    element: SUS-M1-DCK
+    failure_modes:
+      - id: PT-012-FM1
+        mode: Welded or slow to open, dormant until isolation is needed
+        effect: The charging contacts stay energised
+        kind: latent
+        value: 1.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (relays, contactors) or supplier data
+
+  - id: PT-013
+    title: Independent hardware launch permit between the integration manager and the aircraft
+    element: SUS-I1-INT
+    failure_modes:
+      - id: PT-013-FM1
+        mode: Fails permissive, dormant until a wrong permit is requested
+        effect: Launch or recovery is not blocked
+        kind: latent
+        value: 1.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (relays, logic) or supplier data
+
+  - id: PT-014
+    title: Integration data link between the walker and the UAV
+    element: SUS-I1-INT
+    failure_modes:
+      - id: PT-014-FM1
+        mode: Link lost during a flight
+        effect: The aircraft falls back on its own failsafe behaviour
+        kind: rate
+        value: 1.0e-3
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: Link-budget analysis and flight-test data; no handbook value applies
+
+  - id: PT-015
+    title: Arm stow lock
+    element: SUS-M1-MAN
+    failure_modes:
+      - id: PT-015-FM1
+        mode: Fails to hold the arm stowed, or reads locked when it is not, dormant until walking
+        effect: An arm can swing into the walking envelope
+        kind: latent
+        value: 2.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 (locks, actuators) or supplier data
+
+  - id: PT-016
+    title: Claw grip and load securing
+    element: SUS-M1-MAN
+    failure_modes:
+      - id: PT-016-FM1
+        mode: Grip or securing slips or releases while walking loaded
+        effect: The load shifts, swings or drops
+        kind: rate
+        value: 1.0e-5
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 (actuators, clamps) or supplier data
+
+  - id: PT-017
+    title: Hardware enable chain in series with the software interlock
+    element: SUS-M1-SAF
+    failure_modes:
+      - id: PT-017-FM1
+        mode: Fails to remove the actuation enable (relay welded), dormant until demanded
+        effect: Actuation stays enabled
+        kind: latent
+        value: 1.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (relays) or supplier data
+
+  - id: PT-018
+    title: Joint control valve or drive (any alternative)
+    element: SUS-M1-WLK
+    failure_modes:
+      - id: PT-018-FM1
+        mode: Uncommanded motion with the enable removed (spool stuck open, drive fault)
+        effect: A leg moves without command
+        kind: rate
+        value: 1.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 (valves) or MIL-HDBK-217F (drives)
+
+  - id: PT-019
+    title: Side hatch emergency release
+    element: SUS-M1-PIL
+    failure_modes:
+      - id: PT-019-FM1
+        mode: Jams or cannot be operated when needed
+        effect: The pilot cannot leave by the side hatch
+        kind: demand
+        value: 1.0e-3
+        unit: per demand
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 (mechanical linkages) or test data
+
+  - id: PT-020
+    title: Accumulator automatic bleed valve
+    element: SUS-M1-PWR-HPU
+    failure_modes:
+      - id: PT-020-FM1
+        mode: Fails to vent on isolation, dormant until maintenance
+        effect: Stored hydraulic pressure stays in the circuit
+        kind: latent
+        value: 2.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 (valves) or supplier data
+
+  - id: PT-021
+    title: Traction battery cell
+    element: SUS-M1-PWR-BAT
+    failure_modes:
+      - id: PT-021-FM1
+        mode: Internal short circuit
+        effect: The cell heats and may go into thermal runaway
+        kind: rate
+        value: 1.0e-7
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: Cell supplier data for the selected chemistry
+
+  - id: PT-022
+    title: Independent battery monitor and pack contactors
+    element: SUS-M1-PWR-BAT
+    failure_modes:
+      - id: PT-022-FM1
+        mode: Fails to isolate the pack on a cell fault, dormant until demanded
+        effect: The fault propagates through the pack
+        kind: latent
+        value: 2.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (protection, contactors) or supplier data
+
+  - id: PT-023
+    title: Fuel line, fitting or tank of the engine-generator or HPU engine
+    element: SUS-M1-PWR
+    failure_modes:
+      - id: PT-023-FM1
+        mode: Leak
+        effect: Fuel near hot surfaces
+        kind: rate
+        value: 5.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 (fluid conductors, seals) or supplier data
+
+  - id: PT-024
+    title: Hardwired observer stop path
+    element: SUS-M1-SAF
+    failure_modes:
+      - id: PT-024-FM1
+        mode: Fails to stop the walker, dormant until demanded
+        effect: The observer cannot stop the walker
+        kind: latent
+        value: 1.0e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (relays, switches) or supplier data
+
+  - id: PT-025
+    title: Joint position or posture sensor (one of two per joint)
+    element: SUS-M1-WLK
+    failure_modes:
+      - id: PT-025-FM1
+        mode: Output frozen or lost
+        effect: The controller acts on stale state unless the fault is detected
+        kind: rate
+        value: 1.0e-5
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (sensors, connectors) or supplier data
+
+  - id: PT-026
+    title: Escape davit and ladder
+    element: SUS-M1-PIL
+    failure_modes:
+      - id: PT-026-FM1
+        mode: Fails to deploy or lock when needed
+        effect: The pilot has no descent aid
+        kind: demand
+        value: 1.0e-3
+        unit: per demand
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 (mechanical linkages) or test data
+
+  - id: PT-027
+    title: External hatch and restraint release
+    element: SUS-M1-PIL
+    failure_modes:
+      - id: PT-027-FM1
+        mode: Jams or cannot be reached when needed
+        effect: Rescuers cannot open the cockpit or free the pilot
+        kind: demand
+        value: 1.0e-3
+        unit: per demand
+        error_factor: 10
+        status: assumed
+        to_source: NSWC-11 (mechanical linkages) or test data
+
+  - id: PT-028
+    title: Leg actuator supply (any alternative)
+    element: SUS-M1-PWR
+    failure_modes:
+      - id: PT-028-FM1
+        mode: Supply to the leg actuators lost suddenly (hydraulic burst or bus loss)
+        effect: Leg support depends on the holding devices
+        kind: rate
+        value: 1.0e-5
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: The PT-001, PT-003 and PT-004 values once the actuation alternative is selected
+
+  - id: PT-029
+    title: Load-holding device (valve or brake, any alternative)
+    element: SUS-M1-WLK
+    failure_modes:
+      - id: PT-029-FM1
+        mode: Fails to hold, dormant until demanded
+        effect: The joint is not held
+        kind: latent
+        value: 1.5e-6
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: The PT-002 or PT-006 values once the actuation alternative is selected
+      - id: PT-029-FM2
+        mode: Fails to hold on the demand itself
+        effect: The joint is not held
+        kind: demand
+        value: 1.0e-4
+        unit: per demand
+        error_factor: 10
+        status: assumed
+        to_source: The PT-002 or PT-006 values once the actuation alternative is selected
+
+  - id: PT-030
+    title: Pilot and observer stop link
+    element: SUS-M1-SAF
+    failure_modes:
+      - id: PT-030-FM1
+        mode: Stop request lost or delayed
+        effect: The stop is not received over the link
+        kind: rate
+        value: 1.0e-4
+        unit: per hour
+        error_factor: 10
+        status: assumed
+        to_source: MIL-HDBK-217F (radio, connectors) and link test data

@@ -1,0 +1,9 @@
+# Parameters shared by the fault trees in reliability/HAZ-*.yaml (tools/reliability).
+# Drafted by an AI at independence I0; status: assumed marks a placeholder, not design data.
+schema: susanoo/reliability-parameters/v0.1
+parameters:
+  joints:          {value: 6,    status: assumed, note: "Load-bearing joints with a holding device: hip, knee and ankle on each leg of the CL-05 biped; one joint that fails to hold is taken to drop the cockpit (conservative)"}
+  hoses:           {value: 12,   status: assumed, note: "Pressure hoses or tubes on the common line, two per load-bearing joint"}
+  test_interval_h: {value: 4,    status: assumed, note: "Holding devices checked before every sortie (about 4 operating hours); the no-test case uses the whole item life"}
+  beta:            {value: 0.05, status: assumed, note: "Beta factor: share of holding-device failures that hit every joint at once (shared fluid, shared lot, shared maintenance)"}
+  cells:           {value: 200,  status: assumed, note: "Cells in the series-hybrid traction battery (alternative B); no chemistry or pack design selected"}

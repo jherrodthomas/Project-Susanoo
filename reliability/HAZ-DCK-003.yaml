@@ -1,0 +1,21 @@
+# Fault tree for HAZ-DCK-003 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-DCK-003
+exposure: docking_cycles
+trees:
+  - id: FT-006
+    title: UAV battery thermal event while charging
+    top: thermal
+    gates:
+      - {id: thermal, type: or, title: Battery thermal event on the dock, inputs: [charge-path, damaged]}
+      - {id: charge-path, type: and, title: Charge fault not cut off, inputs: [charge-fault, cutoff-fails]}
+      - {id: charge-fault, type: or, title: Charge fault, inputs: [charger-fails, bms-fault, wrong-profile]}
+    events:
+      - {id: charger-fails, mode: PT-010-FM1, causal_factor: CF1, title: Charger over-voltage or over-current}
+      - {id: bms-fault, kind: undeveloped, nature: hardware, causal_factor: CF1, title: UAV battery management fault (bought-in, no data)}
+      - {id: wrong-profile, kind: undeveloped, nature: interface, causal_factor: CF2, title: Wrong charge profile or cell data exchanged}
+      - {id: cutoff-fails, mode: PT-011-FM1, causal_factor: CF1, title: Independent cut-off already failed}
+      - {id: damaged, kind: undeveloped, nature: environment, causal_factor: CF3, title: Hot ambient or a battery damaged in a hard landing}

@@ -1,0 +1,19 @@
+# Fault tree for HAZ-PIL-003 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-PIL-003
+exposure: walker_operating_hours
+trees:
+  - id: FT-014
+    title: Fall from height during emergency egress
+    top: fall
+    gates:
+      - {id: fall, type: and, title: Pilot falls during emergency egress, inputs: [emergency, egress-fails]}
+      - {id: egress-fails, type: or, title: Descent fails, inputs: [hurried, aid-fails, slope-wet]}
+    events:
+      - {id: emergency, kind: undeveloped, nature: environment, causal_factor: CF1, title: Emergency egress needed}
+      - {id: hurried, kind: undeveloped, nature: human, causal_factor: CF1, title: Hurried descent, darkness, smoke or injury}
+      - {id: aid-fails, mode: PT-026-FM1, causal_factor: CF2, title: Davit or ladder fails to deploy}
+      - {id: slope-wet, kind: undeveloped, nature: environment, causal_factor: CF3, title: Walker leaning; wet or icy surfaces}

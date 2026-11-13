@@ -1,0 +1,20 @@
+# Fault tree for HAZ-MAN-002 (tools/reliability). Drafted by an AI at independence I0.
+# Hardware failure modes come from reliability/parts.yaml with assumed values. Software, human, environmental,
+# interface and systematic causes are undeveloped events: shown and traced to their causal factor, never given a
+# number. Software is handled by the level-of-rigour tasks of MIL-STD-882E section 4.4, not by a probability.
+schema: susanoo/fault-tree/v0.1
+hazard: HAZ-MAN-002
+exposure: walker_operating_hours
+note: >-
+  The grip rate is applied over the whole item life, not only the loaded share of it (conservative).
+trees:
+  - id: FT-012
+    title: Carried load swings, shifts or drops
+    top: load
+    gates:
+      - {id: load, type: or, title: Load swings, shifts or drops, inputs: [grip-slips, inertial, beyond-limits, enabled-unsecured]}
+    events:
+      - {id: grip-slips, mode: PT-016-FM1, causal_factor: CF2, title: Grip or securing slips}
+      - {id: inertial, kind: undeveloped, nature: environment, causal_factor: CF1, title: Gait, slope or ground loads on the load}
+      - {id: beyond-limits, kind: undeveloped, nature: human, causal_factor: CF3, title: Load or manoeuvre beyond the loaded limits}
+      - {id: enabled-unsecured, kind: undeveloped, nature: software, causal_factor: CF4, ssf: SSF-001, title: Loaded walking enabled without confirmed securing}
