@@ -12,6 +12,8 @@ package Toolchain {
         action recordFiguresAreCurrentDecisionsTraceabi { doc /* Record figures are current */ }
         action everyFolderHasAVisualPreviewDocsPreviews { doc /* Every folder has a visual preview */ }
         action previewTests { doc /* Preview tests */ }
+        action systemVCyclePageWikiPageAndStillAreCurre { doc /* System V cycle page, wiki page and still are current */ }
+        action systemVCycleTests { doc /* System V cycle tests */ }
         action wikiCopiesOfTheRepositoryPagesAreCurrent { doc /* Wiki copies of the repository pages are current */ }
         action everyPageAndFigureExplainsItsAbbreviatio { doc /* Every page and figure explains its abbreviations and codes */ }
         action termsTests { doc /* Terms tests */ }
@@ -21,7 +23,9 @@ package Toolchain {
         first frontPageReadmeFiguresAndNumbersMatchThe then recordFiguresAreCurrentDecisionsTraceabi;
         first recordFiguresAreCurrentDecisionsTraceabi then everyFolderHasAVisualPreviewDocsPreviews;
         first everyFolderHasAVisualPreviewDocsPreviews then previewTests;
-        first previewTests then wikiCopiesOfTheRepositoryPagesAreCurrent;
+        first previewTests then systemVCyclePageWikiPageAndStillAreCurre;
+        first systemVCyclePageWikiPageAndStillAreCurre then systemVCycleTests;
+        first systemVCycleTests then wikiCopiesOfTheRepositoryPagesAreCurrent;
         first wikiCopiesOfTheRepositoryPagesAreCurrent then everyPageAndFigureExplainsItsAbbreviatio;
         first everyPageAndFigureExplainsItsAbbreviatio then termsTests;
         first termsTests then done;
