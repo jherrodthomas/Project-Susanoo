@@ -1,0 +1,29 @@
+schema: susanoo/requirement/v0.1
+id: SYS-024
+title: External extraction of an incapacitated pilot
+statement: Trained crew shall be able to release the hatch and the pilot restraint from outside the walker without
+  platform power, and to remove an incapacitated pilot from a standing, kneeling or fallen walker within a defined
+  time, with fall protection for the rescuers.
+status: candidate
+source:
+  documents:
+  - safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.yaml
+  scenario_ids:
+  - SCN-104
+  hazard_ids:
+  - HAZ-PIL-006
+allocated_to:
+- SUS-M1-PIL
+- SUS-M1-SAF
+safety_significant: true
+verification:
+  method:
+  - analysis
+  - demonstration
+  evidence_ids: []
+  disposition: open
+tbd:
+- Extraction time
+- Extraction equipment and number of crew
+- Access to the cockpit of a fallen walker
+- Release force and location of the external releases

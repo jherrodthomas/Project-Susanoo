@@ -43,6 +43,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | [`HAZ-DCK-002.yaml`](HAZ-DCK-002.yaml) | False retained state releases UAV under motion |
 | [`HAZ-DCK-003.yaml`](HAZ-DCK-003.yaml) | UAV battery thermal event while charging on the dock |
 | [`HAZ-DCK-004.yaml`](HAZ-DCK-004.yaml) | Exposure to energised dock charging contacts |
+| [`HAZ-GSE-001.yaml`](HAZ-GSE-001.yaml) | Fall from height during maintenance on the walker |
 | [`HAZ-INT-001.yaml`](HAZ-INT-001.yaml) | UAV launch or recovery outside the safe envelope |
 | [`HAZ-INT-002.yaml`](HAZ-INT-002.yaml) | Pilot acts on misleading or stale UAV information |
 | [`HAZ-MAN-001.yaml`](HAZ-MAN-001.yaml) | Person struck or pinned by the arms or claws |
@@ -51,6 +52,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | [`HAZ-PIL-002.yaml`](HAZ-PIL-002.yaml) | Uncontrolled vertical drop of the cockpit on loss of leg support |
 | [`HAZ-PIL-003.yaml`](HAZ-PIL-003.yaml) | Fall from height during emergency egress |
 | [`HAZ-PIL-004.yaml`](HAZ-PIL-004.yaml) | Normal egress blocked when the walker cannot lower |
+| [`HAZ-PIL-005.yaml`](HAZ-PIL-005.yaml) | Fall during normal ingress or egress |
+| [`HAZ-PIL-006.yaml`](HAZ-PIL-006.yaml) | Delayed or unsafe extraction of an incapacitated pilot |
 | [`HAZ-PWR-001.yaml`](HAZ-PWR-001.yaml) | Residual hydraulic pressure during maintenance |
 | [`HAZ-PWR-002.yaml`](HAZ-PWR-002.yaml) | Battery thermal runaway near the pilot station |
 | [`HAZ-PWR-003.yaml`](HAZ-PWR-003.yaml) | Fuel leak and fire at the engine-generator |

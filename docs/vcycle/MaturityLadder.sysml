@@ -14,7 +14,7 @@ package VCycleMaturity {
         doc /* Rungs of record maturity on the System V cycle page; the trigger is who may move a record up. Computed from record status for orientation only (rule R13). */
         entry; then NotStarted;
         state NotStarted { doc /* No record yet. Now: 2 records. */ }
-        state Draft { doc /* open, draft, candidate, in-work. Now: 42 records. */ }
+        state Draft { doc /* open, draft, candidate, in-work. Now: 47 records. */ }
         state Reviewed { doc /* Review record by a named human. */ }
         state Baselined { doc /* Requirement baselined, task approved. */ }
         state Implemented { doc /* Built or configured item under control. */ }

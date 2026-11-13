@@ -1,406 +1,440 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1894.5" height="2477.6" viewBox="0 0 1894.5 2477.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="2128.5" height="2895.6" viewBox="0 0 2128.5 2895.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
 <title>Figure 2 · Traceability — hazard to requirement to element</title>
 <desc>Each requirement names the hazard it controls (source.hazard_ids) and the elements it is allocated to (allocated_to). Derived requirements point to their parent.</desc>
 <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="1894.5" height="2394" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="2128.5" height="2812" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 2 · Traceability — hazard to requirement to element</text>
 <text x="40" y="66" font-size="12.5" fill="#475569">Each requirement names the hazard it controls (source.hazard_ids) and the elements it is allocated to (allocated_to). Derived requirements point to their parent.</text>
-<text x="1854.5" y="44" font-size="11" fill="#475569" text-anchor="end">requirements/SYS-*.yaml</text>
-<line x1="40" y1="85" x2="1854.5" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<text x="2088.5" y="44" font-size="11" fill="#475569" text-anchor="end">requirements/SYS-*.yaml</text>
+<line x1="40" y1="85" x2="2088.5" y2="85" stroke="#E2E8F0" stroke-width="1"/>
 <g transform="translate(40 109)">
-<rect x="6" y="6" width="325.8" height="2192" rx="12" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="421.8" y="182" width="778.8" height="1976.3" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<rect x="1494.6" y="74" width="313.9" height="1200" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<path d="M253.8 789.3 L266.8 789.3 Q273.8 789.3 273.8 796.3 L273.8 985.7 Q273.8 992.7 280.8 992.7 L329.8 992.7 Q336.8 992.7 343.8 992.7 L351.8 992.7 Q358.8 992.7 358.8 999.7 L358.8 1036 Q358.8 1043 365.8 1043 L459.3 1043" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M639.5 1055.7 L832.3 1055.7 Q839.3 1055.7 839.3 1048.7 L839.3 592.7 Q839.3 585.7 846.3 585.7 L1198.6 585.7 Q1205.6 585.7 1212.6 585.7 L1268.6 585.7 Q1275.6 585.7 1275.6 592.7 L1275.6 995 Q1275.6 1002 1282.6 1002 L1545.6 1002 Q1552.6 1002 1552.6 1009 L1552.6 1009.7 Q1552.6 1016.7 1559.6 1016.7 L1572.6 1016.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M639.5 1030.3 L752.3 1030.3 Q759.3 1030.3 759.3 1023.3 L759.3 370 Q759.3 363 766.3 363 L1448.6 363 Q1455.6 363 1455.6 370 L1455.6 418 Q1455.6 425 1462.6 425 L1482.6 425 Q1489.6 425 1496.6 425 L1572.6 424.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 1558 L276.8 1558 Q283.8 1558 283.8 1565 L283.8 1775 Q283.8 1782 290.8 1782 L363.8 1782 Q370.8 1782 370.8 1775 L370.8 1754 Q370.8 1747 377.8 1747 L986.5 1747" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M1162.6 1747 L1256.6 1747 Q1263.6 1747 1263.6 1740 L1263.6 1089 Q1263.6 1082 1270.6 1082 L1545.6 1082 Q1552.6 1082 1552.6 1075 L1552.6 1074.3 Q1552.6 1067.3 1559.6 1067.3 L1572.6 1067.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 1808 L387.8 1808 Q394.8 1808 394.8 1815 L394.8 1854 Q394.8 1861 401.8 1861 L409.8 1861 Q416.8 1861 423.8 1861 L971.5 1861 Q976.5 1861 976.5 1866 L976.5 1866 Q976.5 1871 981.5 1871 L1001 1871" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M1148.1 1891 L1340.6 1891 Q1347.6 1891 1347.6 1884 L1347.6 1212 Q1347.6 1205 1354.6 1205 L1482.6 1205 Q1489.6 1205 1496.6 1205 L1572.6 1205.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M1148.1 1871 L1165.6 1871 Q1172.6 1871 1172.6 1864 L1172.6 1837 Q1172.6 1830 1179.6 1830 L1304.6 1830 Q1311.6 1830 1311.6 1823 L1311.6 1143 Q1311.6 1136 1318.6 1136 L1572.6 1136" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 102 L296.8 102 Q303.8 102 303.8 109 L303.8 329 Q303.8 336 310.8 336 L375.8 336 Q382.8 336 382.8 343 L382.8 500 Q382.8 507 389.8 507 L459.4 507" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M639.5 497 L662.3 497 Q669.3 497 669.3 490 L669.3 250 Q669.3 243 676.3 243 L1233.6 243 Q1239.6 243 1239.6 237 L1239.6 237 Q1239.6 231 1245.6 231 L1482.6 231 Q1489.6 231 1496.6 231 L1572.6 230.9" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M639.5 517 L1280.6 517 Q1287.6 517 1287.6 524 L1287.6 985 Q1287.6 992 1294.6 992 L1555.6 992 Q1562.6 992 1562.6 999 L1562.6 1005.3 Q1562.6 1010.3 1567.6 1010.3 L1572.6 1010.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 2134 L351.8 2134 Q358.8 2134 358.8 2127 L358.8 2109 Q358.8 2102 365.8 2102 L409.8 2102 Q416.8 2102 423.8 2102 L450.8 2102.3" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M638.4 2102.3 L1198.6 2102.3 Q1205.6 2102.3 1212.6 2102.3 L1376.6 2102.3 Q1383.6 2102.3 1383.6 2095.3 L1383.6 1250 Q1383.6 1243 1390.6 1243 L1482.6 1243 Q1489.6 1243 1496.6 1243 L1572.6 1243.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 1685.3 L258.8 1685.3 Q263.8 1685.3 263.8 1690.3 L263.8 1811 Q263.8 1818 270.8 1818 L375.8 1818 Q382.8 1818 382.8 1825 L382.8 1891 Q382.8 1898 389.8 1898 L409.8 1898 Q416.8 1898 423.8 1898 L466.8 1897.7" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M253.8 1894.7 L329.8 1894.7 Q336.8 1894.7 343.8 1894.7 L363.8 1894.7 Q370.8 1894.7 370.8 1901.7 L370.8 1916 Q370.8 1923 377.8 1923 L466.8 1923" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M622.4 1923 L1165.6 1923 Q1172.6 1923 1172.6 1916 L1172.6 1888 Q1172.6 1881 1179.6 1881 L1328.6 1881 Q1335.6 1881 1335.6 1874 L1335.6 1200 Q1335.6 1193 1342.6 1193 L1482.6 1193 Q1489.6 1193 1496.6 1193 L1572.6 1192.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M622.4 1897.7 L662.3 1897.7 Q669.3 1897.7 669.3 1890.7 L669.3 1827 Q669.3 1820 676.3 1820 L1292.6 1820 Q1299.6 1820 1299.6 1813 L1299.6 1131 Q1299.6 1124 1306.6 1124 L1572.6 1124" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 1334 L357.3 1334 Q358.8 1334 358.8 1332.5 L358.8 1332.5 Q358.8 1331 360.3 1331 L464.3 1331" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M637 1343.7 L862.3 1343.7 Q869.3 1343.7 869.3 1336.7 L869.3 513 Q869.3 506 876.3 506 L1292.6 506 Q1299.6 506 1299.6 513 L1299.6 952 Q1299.6 959 1306.6 959 L1482.6 959 Q1489.6 959 1496.6 959 L1572.6 958.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M637 1318.3 L822.3 1318.3 Q829.3 1318.3 829.3 1311.3 L829.3 491 Q829.3 484 836.3 484 L1316.6 484 Q1323.6 484 1323.6 491 L1323.6 835 Q1323.6 842 1330.6 842 L1572.6 842" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 326 L387.8 326 Q394.8 326 394.8 333 L394.8 357 Q394.8 364 401.8 364 L443.8 364" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M647.3 354 L653.3 354 Q659.3 354 659.3 348 L659.3 261 Q659.3 254 666.3 254 L1245.6 254 Q1251.6 254 1251.6 248 L1251.6 248 Q1251.6 242 1257.6 242 L1482.6 242 Q1489.6 242 1496.6 242 L1572.6 241.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M647.3 374 L1436.6 374 Q1443.6 374 1443.6 381 L1443.6 430 Q1443.6 437 1450.6 437 L1482.6 437 Q1489.6 437 1496.6 437 L1572.6 437.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 438 L351.8 438 Q358.8 438 358.8 445 L358.8 676 Q358.8 683 365.8 683 L473.1 683" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M632.7 673 L692.3 673 Q699.3 673 699.3 666 L699.3 337 Q699.3 330 706.3 330 L1292.6 330 Q1299.6 330 1299.6 323 L1299.6 292 Q1299.6 285 1306.6 285 L1482.6 285 Q1489.6 285 1496.6 285 L1572.6 285.1" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M632.7 693 L802.3 693 Q809.3 693 809.3 686 L809.3 502 Q809.3 495 816.3 495 L1304.6 495 Q1311.6 495 1311.6 502 L1311.6 926 Q1311.6 933 1318.6 933 L1482.6 933 Q1489.6 933 1496.6 933 L1572.6 933.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 1535 L286.8 1535 Q293.8 1535 293.8 1542 L293.8 1657.7 Q293.8 1664.7 300.8 1664.7 L329.8 1664.7 Q336.8 1664.7 343.8 1664.7 L363.8 1664.7 Q370.8 1664.7 370.8 1657.7 L370.8 1618 Q370.8 1611 377.8 1611 L439.8 1611" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M649.3 1601 L1244.6 1601 Q1251.6 1601 1251.6 1594 L1251.6 1079 Q1251.6 1072 1258.6 1072 L1537.1 1072 Q1542.6 1072 1542.6 1066.5 L1542.6 1066.5 Q1542.6 1061 1548.1 1061 L1572.6 1061" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M649.3 1621 L969.5 1621 Q976.5 1621 976.5 1628 L976.5 1727 Q976.5 1732 981.5 1732 L986.5 1732" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
-<path d="M253.8 1581 L266.8 1581 Q273.8 1581 273.8 1588 L273.8 1785 Q273.8 1792 280.8 1792 L356.8 1792 Q358.8 1792 358.8 1790 L358.8 1790 Q358.8 1788 360.8 1788 L442.7 1788" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M647.8 1798 L1268.6 1798 Q1275.6 1798 1275.6 1791 L1275.6 1099 Q1275.6 1092 1282.6 1092 L1555.6 1092 Q1562.6 1092 1562.6 1085 L1562.6 1078.7 Q1562.6 1073.7 1567.6 1073.7 L1572.6 1073.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M647.8 1778 L683.3 1778 Q689.3 1778 689.3 1772 L689.3 1772 Q689.3 1766 695.3 1766 L974.5 1766 Q976.5 1766 976.5 1764 L976.5 1764 Q976.5 1762 978.5 1762 L986.5 1762" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
-<path d="M253.8 1772 L351.8 1772 Q358.8 1772 358.8 1765 L358.8 1706 Q358.8 1699 365.8 1699 L478.8 1699" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M636.3 1718 L652.3 1718 Q659.3 1718 659.3 1725 L659.3 1927 Q659.3 1934 666.3 1934 L1352.6 1934 Q1359.6 1934 1359.6 1927 L1359.6 1225 Q1359.6 1218 1366.6 1218 L1572.6 1218" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M636.3 1680 L842.3 1680 Q849.3 1680 849.3 1673 L849.3 436 Q849.3 429 856.3 429 L1376.6 429 Q1383.6 429 1383.6 436 L1383.6 539 Q1383.6 546 1390.6 546 L1572.6 546" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M636.3 1699 L672.3 1699 Q679.3 1699 679.3 1706 L679.3 1884 Q679.3 1891 686.3 1891 L1001 1891" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
-<path d="M253.8 1654.7 L329.8 1654.7 Q336.8 1654.7 343.8 1654.7 L351.8 1654.7 Q358.8 1654.7 358.8 1647.7 L358.8 1530 Q358.8 1523 365.8 1523 L453.3 1523" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M642.6 1535.7 L852.3 1535.7 Q859.3 1535.7 859.3 1542.7 L859.3 1802 Q859.3 1809 866.3 1809 L1280.6 1809 Q1287.6 1809 1287.6 1802 L1287.6 1119 Q1287.6 1112 1294.6 1112 L1572.6 1112" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M642.6 1510.3 L812.3 1510.3 Q819.3 1510.3 819.3 1503.3 L819.3 425 Q819.3 418 826.3 418 L1388.6 418 Q1395.6 418 1395.6 425 L1395.6 520 Q1395.6 527 1402.6 527 L1572.6 527" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 214 L286.8 214 Q293.8 214 293.8 221 L293.8 339 Q293.8 346 300.8 346 L363.8 346 Q370.8 346 370.8 353 L370.8 588 Q370.8 595 377.8 595 L442.5 595" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M648 582.3 L672.3 582.3 Q679.3 582.3 679.3 575.3 L679.3 239 Q679.3 232 686.3 232 L1220.6 232 Q1227.6 232 1227.6 225 L1227.6 169 Q1227.6 162 1234.6 162 L1572.6 162" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M648 607.7 L1198.6 607.7 Q1205.6 607.7 1212.6 607.7 L1244.6 607.7 Q1251.6 607.7 1251.6 614.7 L1251.6 1015 Q1251.6 1022 1258.6 1022 L1528.9 1022 Q1532.6 1022 1532.6 1025.7 L1532.6 1025.7 Q1532.6 1029.3 1536.3 1029.3 L1572.6 1029.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 1446 L351.8 1446 Q358.8 1446 358.8 1439 L358.8 1434 Q358.8 1427 365.8 1427 L451.5 1427" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M643.5 1414.3 L852.3 1414.3 Q859.3 1414.3 859.3 1407.3 L859.3 458 Q859.3 451 866.3 451 L1352.6 451 Q1359.6 451 1359.6 458 L1359.6 635 Q1359.6 642 1366.6 642 L1572.6 642" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M643.5 1439.7 L1198.6 1439.7 Q1205.6 1439.7 1212.6 1439.7 L1232.6 1439.7 Q1239.6 1439.7 1239.6 1432.7 L1239.6 1069 Q1239.6 1062 1246.6 1062 L1528.9 1062 Q1532.6 1062 1532.6 1058.3 L1532.6 1058.3 Q1532.6 1054.7 1536.3 1054.7 L1572.6 1054.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 303 L351.8 303 Q358.8 303 358.8 296 L358.8 283 Q358.8 276 365.8 276 L458.4 276" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M630.7 276 L1269.1 276 Q1275.6 276 1275.6 269.5 L1275.6 269.5 Q1275.6 263 1282.1 263 L1482.6 263 Q1489.6 263 1496.6 263 L1572.6 263.4" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 1110 L363.8 1110 Q370.8 1110 370.8 1117 L370.8 1119 Q370.8 1126 377.8 1126 L409.8 1126 Q416.8 1126 423.8 1126 L468.4 1126.3" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M253.8 1013.3 L266.8 1013.3 Q273.8 1013.3 273.8 1020.3 L273.8 1113 Q273.8 1120 280.8 1120 L351.8 1120 Q358.8 1120 358.8 1127 L358.8 1145 Q358.8 1152 365.8 1152 L409.8 1152 Q416.8 1152 423.8 1152 L468.4 1151.7" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M630.2 1139 L782.3 1139 Q789.3 1139 789.3 1132 L789.3 469 Q789.3 462 796.3 462 L1340.6 462 Q1347.6 462 1347.6 469 L1347.6 718 Q1347.6 725 1354.6 725 L1482.6 725 Q1489.6 725 1496.6 725 L1572.6 725.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M630.2 1120 L742.3 1120 Q749.3 1120 749.3 1113 L749.3 348 Q749.3 341 756.3 341 L1482.6 341 Q1489.6 341 1496.6 341 L1572.6 341.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M630.2 1158 L872.3 1158 Q879.3 1158 879.3 1151 L879.3 603.7 Q879.3 596.7 886.3 596.7 L1198.6 596.7 Q1205.6 596.7 1212.6 596.7 L1256.6 596.7 Q1263.6 596.7 1263.6 603.7 L1263.6 1005 Q1263.6 1012 1270.6 1012 L1537.1 1012 Q1542.6 1012 1542.6 1017.5 L1542.6 1017.5 Q1542.6 1023 1548.1 1023 L1572.6 1023" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 550 L296.8 550 Q303.8 550 303.8 557 L303.8 761.7 Q303.8 768.7 310.8 768.7 L329.8 768.7 Q336.8 768.7 343.8 768.7 L357.6 768.7 Q358.8 768.7 358.8 769.8 L358.8 769.8 Q358.8 771 360 771 L449.2 771" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M253.8 758.7 L329.8 758.7 Q336.8 758.7 343.8 758.7 L355.5 758.7 Q358.8 758.7 358.8 755.3 L358.8 755.3 Q358.8 752 362.1 752 L449.2 752" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M253.8 870.7 L329.8 870.7 Q336.8 870.7 343.8 870.7 L351.8 870.7 Q358.8 870.7 358.8 863.7 L358.8 797 Q358.8 790 365.8 790 L449.2 790" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M639.9 752 L682.3 752 Q689.3 752 689.3 745 L689.3 272 Q689.3 265 696.3 265 L1257.6 265 Q1263.6 265 1263.6 259 L1263.6 259 Q1263.6 253 1269.6 253 L1482.6 253 Q1489.6 253 1496.6 253 L1572.6 252.6" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M639.9 771 L712.3 771 Q719.3 771 719.3 764 L719.3 392 Q719.3 385 726.3 385 L1424.6 385 Q1431.6 385 1431.6 392 L1431.6 443 Q1431.6 450 1438.6 450 L1572.6 450" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M639.9 790 L1232.6 790 Q1239.6 790 1239.6 797 L1239.6 1025 Q1239.6 1032 1246.6 1032 L1520.8 1032 Q1522.6 1032 1522.6 1033.8 L1522.6 1033.8 Q1522.6 1035.7 1524.4 1035.7 L1572.6 1035.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 982.7 L329.8 982.7 Q336.8 982.7 343.8 982.7 L351.8 982.7 Q358.8 982.7 358.8 975.7 L358.8 972 Q358.8 965 365.8 965 L473.6 965" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M253.8 349 L276.8 349 Q283.8 349 283.8 356 L283.8 883.7 Q283.8 890.7 290.8 890.7 L329.8 890.7 Q336.8 890.7 343.8 890.7 L351.8 890.7 Q358.8 890.7 358.8 897.7 L358.8 938 Q358.8 945 365.8 945 L473.6 945" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M632.4 961 L792.3 961 Q799.3 961 799.3 954 L799.3 480 Q799.3 473 806.3 473 L1328.6 473 Q1335.6 473 1335.6 480 L1335.6 744 Q1335.6 751 1342.6 751 L1482.6 751 Q1489.6 751 1496.6 751 L1572.6 750.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M632.4 937 L702.3 937 Q709.3 937 709.3 930 L709.3 326 Q709.3 319 716.3 319 L1280.6 319 Q1287.6 319 1287.6 312 L1287.6 281 Q1287.6 274 1294.6 274 L1482.6 274 Q1489.6 274 1496.6 274 L1572.6 274.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M632.4 949 L722.3 949 Q729.3 949 729.3 942 L729.3 359 Q729.3 352 736.3 352 L1460.6 352 Q1467.6 352 1467.6 359 L1467.6 360 Q1467.6 367 1474.6 367 L1482.6 367 Q1489.6 367 1496.6 367 L1572.6 366.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M632.4 973 L1220.6 973 Q1227.6 973 1227.6 980 L1227.6 1035 Q1227.6 1042 1234.6 1042 L1572.6 1042" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 1222 L409.8 1222 Q416.8 1222 423.8 1222 L450.7 1222.3" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M253.8 901.3 L258.8 901.3 Q263.8 901.3 263.8 906.3 L263.8 1225 Q263.8 1232 270.8 1232 L351.8 1232 Q358.8 1232 358.8 1239 L358.8 1241 Q358.8 1248 365.8 1248 L409.8 1248 Q416.8 1248 423.8 1248 L450.7 1247.7" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M638.4 1222.3 L772.3 1222.3 Q779.3 1222.3 779.3 1215.3 L779.3 414 Q779.3 407 786.3 407 L1400.6 407 Q1407.6 407 1407.6 414 L1407.6 468 Q1407.6 475 1414.6 475 L1482.6 475 Q1489.6 475 1496.6 475 L1572.6 475.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M638.4 1247.7 L1198.6 1247.7 Q1205.6 1247.7 1212.6 1247.7 L1220.6 1247.7 Q1227.6 1247.7 1227.6 1240.7 L1227.6 1059 Q1227.6 1052 1234.6 1052 L1520.8 1052 Q1522.6 1052 1522.6 1050.2 L1522.6 1050.2 Q1522.6 1048.3 1524.4 1048.3 L1572.6 1048.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 662 L286.8 662 Q293.8 662 293.8 669 L293.8 873.7 Q293.8 880.7 300.8 880.7 L329.8 880.7 Q336.8 880.7 343.8 880.7 L364 880.7 Q370.8 880.7 370.8 873.8 L370.8 873.8 Q370.8 867 377.6 867 L467.9 867" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M635.3 879.7 L762.3 879.7 Q769.3 879.7 769.3 872.7 L769.3 447 Q769.3 440 776.3 440 L1364.6 440 Q1371.6 440 1371.6 447 L1371.6 558 Q1371.6 565 1378.6 565 L1572.6 565" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M635.3 854.3 L732.3 854.3 Q739.3 854.3 739.3 847.3 L739.3 403 Q739.3 396 746.3 396 L1412.6 396 Q1419.6 396 1419.6 403 L1419.6 456 Q1419.6 463 1426.6 463 L1482.6 463 Q1489.6 463 1496.6 463 L1572.6 462.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M253.8 2022 L357.3 2022 Q358.8 2022 358.8 2020.5 L358.8 2020.5 Q358.8 2019 360.3 2019 L441.1 2019" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M253.8 1925.3 L329.8 1925.3 Q336.8 1925.3 343.8 1925.3 L351.8 1925.3 Q358.8 1925.3 358.8 1932.3 L358.8 1987 Q358.8 1994 365.8 1994 L409.8 1994 Q416.8 1994 423.8 1994 L441.1 1993.7" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
-<path d="M648 2019 L1364.6 2019 Q1371.6 2019 1371.6 2012 L1371.6 1238 Q1371.6 1231 1378.6 1231 L1482.6 1231 Q1489.6 1231 1496.6 1231 L1572.6 1230.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M648 1993.7 L682.3 1993.7 Q689.3 1993.7 689.3 1986.7 L689.3 1847 Q689.3 1840 696.3 1840 L1316.6 1840 Q1323.6 1840 1323.6 1833 L1323.6 1155 Q1323.6 1148 1330.6 1148 L1572.6 1148" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="6" y="6" width="265.8" height="2528" rx="12" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="481.8" y="563" width="768.8" height="2053" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="1568.6" y="926" width="473.9" height="1215.3" rx="12" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M253.8 646.7 L269.8 646.7 Q276.8 646.7 283.8 646.7 L339.8 646.7 Q346.8 646.7 346.8 653.7 L346.8 901 Q346.8 908 353.8 908 L739.3 908" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M919.5 895.3 L1248.6 895.3 Q1255.6 895.3 1262.6 895.3 L1474.6 895.3 Q1481.6 895.3 1481.6 902.3 L1481.6 1060 Q1481.6 1067 1488.6 1067 L1556.6 1067 Q1563.6 1067 1570.6 1067 L1729.6 1067 Q1736.6 1067 1736.6 1074 L1736.6 1286.2 Q1736.6 1293.2 1743.6 1293.2 L1806.6 1293.2" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M919.5 920.7 L1248.6 920.7 Q1255.6 920.7 1262.6 920.7 L1462.6 920.7 Q1469.6 920.7 1469.6 927.7 L1469.6 1070 Q1469.6 1077 1476.6 1077 L1556.6 1077 Q1563.6 1077 1570.6 1077 L1719.6 1077 Q1726.6 1077 1726.6 1084 L1726.6 1663.2 Q1726.6 1670.2 1733.6 1670.2 L1806.6 1670.2" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 415 L399.8 415 Q406.8 415 406.8 422 L406.8 692 Q406.8 699 413.8 699 L1039.5 699 Q1046.5 699 1046.5 706 L1046.5 763 Q1046.5 768 1051.5 768 L1056.5 768" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M1232.6 783 L1498.6 783 Q1505.6 783 1505.6 790 L1505.6 1040 Q1505.6 1047 1512.6 1047 L1556.6 1047 Q1563.6 1047 1570.6 1047 L1749.6 1047 Q1756.6 1047 1756.6 1054 L1756.6 1274.5 Q1756.6 1281.5 1763.6 1281.5 L1806.6 1281.5" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 2144 L387.8 2144 Q394.8 2144 394.8 2137 L394.8 1678 Q394.8 1671 401.8 1671 L469.8 1671 Q476.8 1671 483.8 1671 L532.8 1671 Q539.8 1671 539.8 1678 L539.8 2408 Q539.8 2415 546.8 2415 L1071 2415" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M1218.1 2395 L1474.6 2395 Q1481.6 2395 1481.6 2388 L1481.6 2018 Q1481.6 2011 1488.6 2011 L1556.6 2011 Q1563.6 2011 1570.6 2011 L1609.6 2011 Q1616.6 2011 1616.6 2004 L1616.6 1925 Q1616.6 1918 1623.6 1918 L1806.6 1918" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1218.1 2415 L1486.6 2415 Q1493.6 2415 1493.6 2408 L1493.6 2090 Q1493.6 2083 1500.6 2083 L1556.6 2083 Q1563.6 2083 1570.6 2083 L1806.6 2083.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 1334 L469.8 1334 Q476.8 1334 483.8 1334 L612.8 1334 Q619.8 1334 619.8 1341 L619.8 1789 Q619.8 1796 626.8 1796 L739.4 1796" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M919.5 1806 L1330.6 1806 Q1337.6 1806 1337.6 1799 L1337.6 1581 Q1337.6 1574 1344.6 1574 L1789.6 1574 Q1796.6 1574 1796.6 1567 L1796.6 1527.5 Q1796.6 1522.5 1801.6 1522.5 L1806.6 1522.5" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M919.5 1786 L1318.6 1786 Q1325.6 1786 1325.6 1779 L1325.6 1571 Q1325.6 1564 1332.6 1564 L1739.6 1564 Q1746.6 1564 1746.6 1557 L1746.6 1329.5 Q1746.6 1322.5 1753.6 1322.5 L1806.6 1322.5" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 1446 L291.8 1446 Q298.8 1446 298.8 1439 L298.8 1351 Q298.8 1344 305.8 1344 L469.8 1344 Q476.8 1344 483.8 1344 L602.8 1344 Q609.8 1344 609.8 1351 L609.8 1877 Q609.8 1884 616.8 1884 L730.8 1884" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M918.3 1884 L1342.6 1884 Q1349.6 1884 1349.6 1877 L1349.6 1591 Q1349.6 1584 1356.6 1584 L1619.6 1584 Q1626.6 1584 1626.6 1591 L1626.6 1885.7 Q1626.6 1892.7 1633.6 1892.7 L1806.6 1892.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 2230.7 L269.8 2230.7 Q276.8 2230.7 283.8 2230.7 L399.8 2230.7 Q406.8 2230.7 406.8 2223.7 L406.8 1688 Q406.8 1681 413.8 1681 L469.8 1681 Q476.8 1681 483.8 1681 L522.8 1681 Q529.8 1681 529.8 1688 L529.8 2540.3 Q529.8 2547.3 536.8 2547.3 L746.8 2547.3" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M253.8 2454.7 L269.8 2454.7 Q276.8 2454.7 283.8 2454.7 L435.8 2454.7 Q442.8 2454.7 442.8 2447.7 L442.8 1718 Q442.8 1711 449.8 1711 L469.8 1711 Q476.8 1711 483.8 1711 L502.8 1711 Q509.8 1711 509.8 1718 L509.8 2565.7 Q509.8 2572.7 516.8 2572.7 L746.8 2572.7" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M902.3 2547.3 L1248.6 2547.3 Q1255.6 2547.3 1262.6 2547.3 L1522.6 2547.3 Q1529.6 2547.3 1529.6 2540.3 L1529.6 2120 Q1529.6 2113 1536.6 2113 L1556.6 2113 Q1563.6 2113 1570.6 2113 L1619.6 2113 Q1626.6 2113 1626.6 2106 L1626.6 1937.7 Q1626.6 1930.7 1633.6 1930.7 L1806.6 1930.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M902.3 2572.7 L1248.6 2572.7 Q1255.6 2572.7 1262.6 2572.7 L1534.6 2572.7 Q1541.6 2572.7 1541.6 2565.7 L1541.6 2130 Q1541.6 2123 1548.6 2123 L1556.6 2123 Q1563.6 2123 1570.6 2123 L1639.6 2123 Q1646.6 2123 1646.6 2116 L1646.6 2114.3 Q1646.6 2107.3 1653.6 2107.3 L1806.6 2107.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 1894 L351.8 1894 Q358.8 1894 358.8 1887 L358.8 1648 Q358.8 1641 365.8 1641 L469.8 1641 Q476.8 1641 483.8 1641 L572.8 1641 Q579.8 1641 579.8 1648 L579.8 2069 Q579.8 2076 586.8 2076 L744.3 2076" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M917 2063.3 L1248.6 2063.3 Q1255.6 2063.3 1262.6 2063.3 L1378.6 2063.3 Q1385.6 2063.3 1385.6 2056.3 L1385.6 1621 Q1385.6 1614 1392.6 1614 L1806.6 1614" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M917 2088.7 L1248.6 2088.7 Q1255.6 2088.7 1262.6 2088.7 L1390.6 2088.7 Q1397.6 2088.7 1397.6 2081.7 L1397.6 1824 Q1397.6 1817 1404.6 1817 L1556.6 1817 Q1563.6 1817 1570.6 1817 L1806.6 1816.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 1222 L303.8 1222 Q310.8 1222 310.8 1229 L310.8 1307 Q310.8 1314 317.8 1314 L469.8 1314 Q476.8 1314 483.8 1314 L632.8 1314 Q639.8 1314 639.8 1321 L639.8 1517 Q639.8 1524 646.8 1524 L723.8 1524" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M927.3 1534 L1272.6 1534 Q1277.6 1534 1277.6 1529 L1277.6 1529 Q1277.6 1524 1282.6 1524 L1759.6 1524 Q1766.6 1524 1766.6 1517 L1766.6 1510.5 Q1766.6 1503.5 1773.6 1503.5 L1806.6 1503.5" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M927.3 1514 L1639.6 1514 Q1646.6 1514 1646.6 1521 L1646.6 1684.9 Q1646.6 1691.9 1653.6 1691.9 L1806.6 1691.9" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 774 L315.8 774 Q322.8 774 322.8 781 L322.8 990 Q322.8 997 329.8 997 L469.8 997 Q476.8 997 483.8 997 L682.8 997 Q689.8 997 689.8 1004 L689.8 1085 Q689.8 1092 696.8 1092 L753.1 1092" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M912.7 1102 L1402.6 1102 Q1409.6 1102 1409.6 1109 L1409.6 1288 Q1409.6 1295 1416.6 1295 L1556.6 1295 Q1563.6 1295 1570.6 1295 L1689.6 1295 Q1696.6 1295 1696.6 1302 L1696.6 1458.5 Q1696.6 1465.5 1703.6 1465.5 L1806.6 1465.5" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M912.7 1082 L1414.6 1082 Q1421.6 1082 1421.6 1089 L1421.6 1278 Q1421.6 1285 1428.6 1285 L1556.6 1285 Q1563.6 1285 1570.6 1285 L1699.6 1285 Q1706.6 1285 1706.6 1292 L1706.6 1581.7 Q1706.6 1588.7 1713.6 1588.7 L1806.6 1588.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 438 L387.8 438 Q394.8 438 394.8 445 L394.8 733 Q394.8 740 401.8 740 L719.8 740" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M929.3 730 L1510.6 730 Q1517.6 730 1517.6 737 L1517.6 1030 Q1517.6 1037 1524.6 1037 L1556.6 1037 Q1563.6 1037 1570.6 1037 L1759.6 1037 Q1766.6 1037 1766.6 1044 L1766.6 1268.7 Q1766.6 1275.7 1773.6 1275.7 L1806.6 1275.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M929.3 750 L1029.5 750 Q1036.5 750 1036.5 757 L1036.5 776 Q1036.5 783 1043.5 783 L1056.5 783" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
+<path d="M253.8 461 L375.8 461 Q382.8 461 382.8 468 L382.8 813 Q382.8 820 389.8 820 L722.7 820" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M927.8 830 L1486.6 830 Q1493.6 830 1493.6 837 L1493.6 1050 Q1493.6 1057 1500.6 1057 L1556.6 1057 Q1563.6 1057 1570.6 1057 L1739.6 1057 Q1746.6 1057 1746.6 1064 L1746.6 1280.4 Q1746.6 1287.4 1753.6 1287.4 L1806.6 1287.4" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M927.8 810 L933.6 810 Q939.3 810 939.3 804.3 L939.3 804 Q939.3 798 945.3 798 L1056.5 798" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
+<path d="M253.8 2108 L375.8 2108 Q382.8 2108 382.8 2101 L382.8 1668 Q382.8 1661 389.8 1661 L469.8 1661 Q476.8 1661 483.8 1661 L552.8 1661 Q559.8 1661 559.8 1668 L559.8 2357 Q559.8 2364 566.8 2364 L758.8 2364" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M916.3 2345 L1450.6 2345 Q1457.6 2345 1457.6 2338 L1457.6 1912 Q1457.6 1905 1464.6 1905 L1556.6 1905 Q1563.6 1905 1570.6 1905 L1806.6 1905.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M916.3 2364 L1462.6 2364 Q1469.6 2364 1469.6 2357 L1469.6 2008 Q1469.6 2001 1476.6 2001 L1556.6 2001 Q1563.6 2001 1570.6 2001 L1806.6 2001.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M916.3 2383 L1030.5 2383 Q1036.5 2383 1036.5 2389 L1036.5 2389 Q1036.5 2395 1042.5 2395 L1071 2395" stroke="#7C3AED" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-interface)"/>
+<path d="M253.8 2261.3 L269.8 2261.3 Q276.8 2261.3 283.8 2261.3 L411.8 2261.3 Q418.8 2261.3 418.8 2254.3 L418.8 1698 Q418.8 1691 425.8 1691 L469.8 1691 Q476.8 1691 483.8 1691 L512.8 1691 Q519.8 1691 519.8 1698 L519.8 2457 Q519.8 2464 526.8 2464 L733.3 2464" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M922.6 2476.7 L1248.6 2476.7 Q1255.6 2476.7 1262.6 2476.7 L1510.6 2476.7 Q1517.6 2476.7 1517.6 2469.7 L1517.6 2110 Q1517.6 2103 1524.6 2103 L1556.6 2103 Q1563.6 2103 1570.6 2103 L1632.8 2103 Q1636.6 2103 1636.6 2099.2 L1636.6 2099.2 Q1636.6 2095.3 1640.4 2095.3 L1806.6 2095.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M922.6 2451.3 L1248.6 2451.3 Q1255.6 2451.3 1262.6 2451.3 L1498.6 2451.3 Q1505.6 2451.3 1505.6 2444.3 L1505.6 2100 Q1505.6 2093 1512.6 2093 L1556.6 2093 Q1563.6 2093 1570.6 2093 L1599.6 2093 Q1606.6 2093 1606.6 2086 L1606.6 2027.3 Q1606.6 2020.3 1613.6 2020.3 L1806.6 2020.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 102 L435.8 102 Q442.8 102 442.8 109 L442.8 644 Q442.8 651 449.8 651 L722.5 651" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M928 663.7 L1248.6 663.7 Q1255.6 663.7 1262.6 663.7 L1522.6 663.7 Q1529.6 663.7 1529.6 670.7 L1529.6 1007 Q1529.6 1014 1536.6 1014 L1806.6 1014" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M928 638.3 L1248.6 638.3 Q1255.6 638.3 1262.6 638.3 L1534.6 638.3 Q1541.6 638.3 1541.6 645.3 L1541.6 997 Q1541.6 1004 1548.6 1004 L1769.6 1004 Q1776.6 1004 1776.6 1011 L1776.6 1262.8 Q1776.6 1269.8 1783.6 1269.8 L1806.6 1269.8" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 886 L303.8 886 Q310.8 886 310.8 893 L310.8 1000 Q310.8 1007 317.8 1007 L469.8 1007 Q476.8 1007 483.8 1007 L652.8 1007 Q659.8 1007 659.8 1014 L659.8 1253 Q659.8 1260 666.8 1260 L731.5 1260" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M923.5 1272.7 L1248.6 1272.7 Q1255.6 1272.7 1262.6 1272.7 L1330.6 1272.7 Q1337.6 1272.7 1337.6 1279.7 L1337.6 1391 Q1337.6 1398 1344.6 1398 L1806.6 1398" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M923.5 1247.3 L1248.6 1247.3 Q1255.6 1247.3 1262.6 1247.3 L1342.6 1247.3 Q1349.6 1247.3 1349.6 1254.3 L1349.6 1338 Q1349.6 1345 1356.6 1345 L1556.6 1345 Q1563.6 1345 1570.6 1345 L1709.6 1345 Q1716.6 1345 1716.6 1338 L1716.6 1317.8 Q1716.6 1310.8 1723.6 1310.8 L1806.6 1310.8" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 1245 L291.8 1245 Q298.8 1245 298.8 1252 L298.8 1317 Q298.8 1324 305.8 1324 L469.8 1324 Q476.8 1324 483.8 1324 L622.8 1324 Q629.8 1324 629.8 1331 L629.8 1605 Q629.8 1612 636.8 1612 L738.4 1612" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M910.7 1612 L1282.6 1612 Q1289.6 1612 1289.6 1605 L1289.6 1541 Q1289.6 1534 1296.6 1534 L1779.6 1534 Q1786.6 1534 1786.6 1527 L1786.6 1520 Q1786.6 1513 1793.6 1513 L1806.6 1513" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 998 L291.8 998 Q298.8 998 298.8 1005 L298.8 1010 Q298.8 1017 305.8 1017 L469.8 1017 Q476.8 1017 483.8 1017 L748.4 1016.7" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M253.8 534.7 L269.8 534.7 Q276.8 534.7 283.8 534.7 L363.8 534.7 Q370.8 534.7 370.8 541.7 L370.8 881 Q370.8 888 377.8 888 L682.8 888 Q689.8 888 689.8 895 L689.8 984.3 Q689.8 991.3 696.8 991.3 L748.4 991.3" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M910.2 1004 L1438.6 1004 Q1445.6 1004 1445.6 1011 L1445.6 1090 Q1445.6 1097 1452.6 1097 L1556.6 1097 Q1563.6 1097 1570.6 1097 L1806.6 1097.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M910.2 1023 L1426.6 1023 Q1433.6 1023 1433.6 1030 L1433.6 1186 Q1433.6 1193 1440.6 1193 L1556.6 1193 Q1563.6 1193 1570.6 1193 L1806.6 1193.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M910.2 985 L1450.6 985 Q1457.6 985 1457.6 992 L1457.6 1080 Q1457.6 1087 1464.6 1087 L1556.6 1087 Q1563.6 1087 1570.6 1087 L1709.6 1087 Q1716.6 1087 1716.6 1094 L1716.6 1292.1 Q1716.6 1299.1 1723.6 1299.1 L1806.6 1299.1" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 1670 L327.8 1670 Q334.8 1670 334.8 1663 L334.8 1386 Q334.8 1379 341.8 1379 L469.8 1379 Q476.8 1379 483.8 1379 L727.9 1378.8" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M253.8 677.3 L269.8 677.3 Q276.8 677.3 283.8 677.3 L327.8 677.3 Q334.8 677.3 334.8 684.3 L334.8 980 Q334.8 987 341.8 987 L469.8 987 Q476.8 987 483.8 987 L662.8 987 Q669.8 987 669.8 994 L669.8 1341.4 Q669.8 1348.4 676.8 1348.4 L727.9 1348.4" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M253.8 1573.3 L269.8 1573.3 Q276.8 1573.3 283.8 1573.3 L315.8 1573.3 Q322.8 1573.3 322.8 1566.3 L322.8 1371 Q322.8 1364 329.8 1364 L469.8 1364 Q476.8 1364 483.8 1364 L727.9 1363.6" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M253.8 326 L411.8 326 Q418.8 326 418.8 333 L418.8 682 Q418.8 689 425.8 689 L692.8 689 Q699.8 689 699.8 696 L699.8 1326.2 Q699.8 1333.2 706.8 1333.2 L727.9 1333.2" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M918.6 1375 L1294.6 1375 Q1301.6 1375 1301.6 1382 L1301.6 1477 Q1301.6 1484 1308.6 1484 L1786.6 1484 Q1786.6 1484 1786.6 1484 L1786.6 1484 Q1786.6 1484 1786.6 1484 L1806.6 1484.5" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M918.6 1356 L1306.6 1356 Q1313.6 1356 1313.6 1363 L1313.6 1467 Q1313.6 1474 1320.6 1474 L1659.6 1474 Q1666.6 1474 1666.6 1481 L1666.6 1674 Q1666.6 1681 1673.6 1681 L1806.6 1681" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M918.6 1337 L1318.6 1337 Q1325.6 1337 1325.6 1344 L1325.6 1401 Q1325.6 1408 1332.6 1408 L1729.6 1408 Q1736.6 1408 1736.6 1401 L1736.6 1323.6 Q1736.6 1316.6 1743.6 1316.6 L1806.6 1316.6" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 565.3 L269.8 565.3 Q276.8 565.3 283.8 565.3 L351.8 565.3 Q358.8 565.3 358.8 572.3 L358.8 891 Q358.8 898 365.8 898 L672.8 898 Q679.8 898 679.8 905 L679.8 1155 Q679.8 1162 686.8 1162 L753.6 1162" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M253.8 1199 L291.8 1199 Q298.8 1199 298.8 1192 L298.8 1189 Q298.8 1182 305.8 1182 L753.6 1182" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M912.4 1166 L1378.6 1166 Q1385.6 1166 1385.6 1173 L1385.6 1308 Q1385.6 1315 1392.6 1315 L1556.6 1315 Q1563.6 1315 1570.6 1315 L1589.6 1315 Q1596.6 1315 1596.6 1308 L1596.6 1129.7 Q1596.6 1122.7 1603.6 1122.7 L1806.6 1122.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M912.4 1178 L1366.6 1178 Q1373.6 1178 1373.6 1185 L1373.6 1318 Q1373.6 1325 1380.6 1325 L1556.6 1325 Q1563.6 1325 1570.6 1325 L1669.6 1325 Q1676.6 1325 1676.6 1332 L1676.6 1468 Q1676.6 1475 1683.6 1475 L1806.6 1475" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M912.4 1190 L1354.6 1190 Q1361.6 1190 1361.6 1197 L1361.6 1328 Q1361.6 1335 1368.6 1335 L1556.6 1335 Q1563.6 1335 1570.6 1335 L1679.6 1335 Q1686.6 1335 1686.6 1328 L1686.6 1225.7 Q1686.6 1218.7 1693.6 1218.7 L1806.6 1218.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M912.4 1154 L1390.6 1154 Q1397.6 1154 1397.6 1161 L1397.6 1298 Q1397.6 1305 1404.6 1305 L1556.6 1305 Q1563.6 1305 1570.6 1305 L1806.6 1304.9" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 2358 L423.8 2358 Q430.8 2358 430.8 2351 L430.8 1708 Q430.8 1701 437.8 1701 L469.8 1701 Q476.8 1701 483.8 1701 L542.8 1701 Q549.8 1701 549.8 1708 L549.8 2273.7 Q549.8 2280.7 556.8 2280.7 L730.7 2280.7" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M253.8 1542.7 L269.8 1542.7 Q276.8 1542.7 283.8 1542.7 L303.8 1542.7 Q310.8 1542.7 310.8 1535.7 L310.8 1361 Q310.8 1354 317.8 1354 L469.8 1354 Q476.8 1354 483.8 1354 L592.8 1354 Q599.8 1354 599.8 1361 L599.8 2248.3 Q599.8 2255.3 606.8 2255.3 L730.7 2255.3" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M918.4 2280.7 L1248.6 2280.7 Q1255.6 2280.7 1262.6 2280.7 L1438.6 2280.7 Q1445.6 2280.7 1445.6 2273.7 L1445.6 1864 Q1445.6 1857 1452.6 1857 L1556.6 1857 Q1563.6 1857 1570.6 1857 L1779.6 1857 Q1786.6 1857 1786.6 1850 L1786.6 1731.5 Q1786.6 1724.5 1793.6 1724.5 L1806.6 1724.5" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M918.4 2255.3 L1248.6 2255.3 Q1255.6 2255.3 1262.6 2255.3 L1426.6 2255.3 Q1433.6 2255.3 1433.6 2248.3 L1433.6 1854 Q1433.6 1847 1440.6 1847 L1556.6 1847 Q1563.6 1847 1570.6 1847 L1769.6 1847 Q1776.6 1847 1776.6 1840 L1776.6 1341.2 Q1776.6 1334.2 1783.6 1334.2 L1806.6 1334.2" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 2006 L363.8 2006 Q370.8 2006 370.8 1999 L370.8 1658 Q370.8 1651 377.8 1651 L469.8 1651 Q476.8 1651 483.8 1651 L562.8 1651 Q569.8 1651 569.8 1658 L569.8 2165 Q569.8 2172 576.8 2172 L747.9 2172" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M915.3 2159.3 L1248.6 2159.3 Q1255.6 2159.3 1262.6 2159.3 L1402.6 2159.3 Q1409.6 2159.3 1409.6 2152.3 L1409.6 1834 Q1409.6 1827 1416.6 1827 L1556.6 1827 Q1563.6 1827 1570.6 1827 L1599.6 1827 Q1606.6 1827 1606.6 1834 L1606.6 1975.3 Q1606.6 1982.3 1613.6 1982.3 L1806.6 1982.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M915.3 2184.7 L1248.6 2184.7 Q1255.6 2184.7 1262.6 2184.7 L1414.6 2184.7 Q1421.6 2184.7 1421.6 2177.7 L1421.6 1844 Q1421.6 1837 1428.6 1837 L1556.6 1837 Q1563.6 1837 1570.6 1837 L1609.6 1837 Q1616.6 1837 1616.6 1830 L1616.6 1720.6 Q1616.6 1713.6 1623.6 1713.6 L1806.6 1713.6" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 214 L423.8 214 Q430.8 214 430.8 221 L430.8 672 Q430.8 679 437.8 679 L702.8 679 Q709.8 679 709.8 686 L709.8 1689.7 Q709.8 1695.3 715.4 1695.3 L721 1695.3" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M253.8 2485.3 L269.8 2485.3 Q276.8 2485.3 283.8 2485.3 L447.8 2485.3 Q454.8 2485.3 454.8 2478.3 L454.8 1728 Q454.8 1721 461.8 1721 L469.8 1721 Q476.8 1721 483.8 1721 L721 1720.7" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M928 1695.3 L1248.6 1695.3 Q1255.6 1695.3 1262.6 1695.3 L1294.6 1695.3 Q1301.6 1695.3 1301.6 1688.3 L1301.6 1551 Q1301.6 1544 1308.6 1544 L1629.6 1544 Q1636.6 1544 1636.6 1551 L1636.6 1873 Q1636.6 1880 1643.6 1880 L1806.6 1880" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M928 1720.7 L1248.6 1720.7 Q1255.6 1720.7 1262.6 1720.7 L1306.6 1720.7 Q1313.6 1720.7 1313.6 1713.7 L1313.6 1561 Q1313.6 1554 1320.6 1554 L1589.6 1554 Q1596.6 1554 1596.6 1561 L1596.6 2064.3 Q1596.6 2071.3 1603.6 2071.3 L1806.6 2071.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 1110 L291.8 1110 Q298.8 1110 298.8 1117 L298.8 1165 Q298.8 1172 305.8 1172 L642.8 1172 Q649.8 1172 649.8 1179 L649.8 1437 Q649.8 1444 656.8 1444 L719.8 1444" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M929.3 1454 L1270.6 1454 Q1277.6 1454 1277.6 1461 L1277.6 1497 Q1277.6 1504 1284.6 1504 L1649.6 1504 Q1656.6 1504 1656.6 1511 L1656.6 1779 Q1656.6 1786 1663.6 1786 L1806.6 1786" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M929.3 1434 L1282.6 1434 Q1289.6 1434 1289.6 1441 L1289.6 1487 Q1289.6 1494 1296.6 1494 L1806.6 1494" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M253.8 1782 L339.8 1782 Q346.8 1782 346.8 1775 L346.8 1638 Q346.8 1631 353.8 1631 L469.8 1631 Q476.8 1631 483.8 1631 L582.8 1631 Q589.8 1631 589.8 1638 L589.8 1973 Q589.8 1980 596.8 1980 L739.6 1980" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M919.4 1992.7 L1248.6 1992.7 Q1255.6 1992.7 1262.6 1992.7 L1366.6 1992.7 Q1373.6 1992.7 1373.6 1985.7 L1373.6 1611 Q1373.6 1604 1380.6 1604 L1599.6 1604 Q1606.6 1604 1606.6 1611 L1606.6 1695.8 Q1606.6 1702.8 1613.6 1702.8 L1806.6 1702.8" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M919.4 1967.3 L1248.6 1967.3 Q1255.6 1967.3 1262.6 1967.3 L1354.6 1967.3 Q1361.6 1967.3 1361.6 1960.3 L1361.6 1601 Q1361.6 1594 1368.6 1594 L1749.6 1594 Q1756.6 1594 1756.6 1587 L1756.6 1335.3 Q1756.6 1328.3 1763.6 1328.3 L1806.6 1328.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
 <rect x="18" y="18" width="204.4" height="22" rx="11" fill="#C2410C" stroke="none" stroke-width="0"/>
 <text x="120.2" y="33" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZARDS · SAFETY/HAZARDS</text>
-<rect x="433.8" y="194" width="234.3" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
-<text x="551" y="209" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">REQUIREMENTS · REQUIREMENTS/</text>
-<rect x="1506.6" y="86" width="245.7" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
-<text x="1629.4" y="101" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">ALLOCATED TO · ITEM DEFINITION</text>
-<rect x="49.5" y="728" width="204.3" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
-<rect x="61.5" y="740" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="101" y="751.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PIL-001</text>
-<text x="61.5" y="774" font-size="12.5" fill="#0F172A" font-weight="700">Unintended leg motion during</text>
-<text x="61.5" y="790" font-size="12.5" fill="#0F172A" font-weight="700">pilot ingress or egress</text>
-<text x="61.5" y="807" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
-<rect x="24" y="1512" width="229.8" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
-<rect x="36" y="1524" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="75.5" y="1535.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-SAF-001</text>
-<text x="36" y="1558" font-size="12.5" fill="#0F172A" font-weight="700">Protective stop does not reach a</text>
-<text x="36" y="1574" font-size="12.5" fill="#0F172A" font-weight="700">safe state</text>
-<text x="36" y="1591" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
-<rect x="46.8" y="1736" width="207" height="108" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="58.8" y="1748" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="98.3" y="1759.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-DCK-001</text>
-<text x="58.8" y="1782" font-size="12.5" fill="#0F172A" font-weight="700">Rotor start while UAV is</text>
-<text x="58.8" y="1798" font-size="12.5" fill="#0F172A" font-weight="700">retained or a person is at the</text>
-<text x="58.8" y="1814" font-size="12.5" fill="#0F172A" font-weight="700">dock</text>
-<text x="58.8" y="1831" font-size="10.5" fill="#475569">initial risk 2C · Serious (preliminary)</text>
-<rect x="42" y="56" width="211.8" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
-<rect x="54" y="68" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="93.5" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-WLK-001</text>
-<text x="54" y="102" font-size="12.5" fill="#0F172A" font-weight="700">Stale or lost feedback causes</text>
-<text x="54" y="118" font-size="12.5" fill="#0F172A" font-weight="700">runaway motion</text>
-<text x="54" y="135" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
-<rect x="45.6" y="2088" width="208.2" height="92" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.3"/>
-<rect x="57.6" y="2100" width="79.1" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
-<text x="97.1" y="2111.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-DCK-002</text>
-<text x="57.6" y="2134" font-size="12.5" fill="#0F172A" font-weight="700">False retained state releases</text>
-<text x="57.6" y="2150" font-size="12.5" fill="#0F172A" font-weight="700">UAV under motion</text>
-<text x="57.6" y="2167" font-size="10.5" fill="#475569">initial risk 2D · Medium (preliminary)</text>
-<rect x="30.6" y="1624" width="223.2" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="42.6" y="1636" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="82.1" y="1647.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
-<text x="42.6" y="1670" font-size="12.5" fill="#0F172A" font-weight="700">UAV launch or recovery outside</text>
-<text x="42.6" y="1686" font-size="12.5" fill="#0F172A" font-weight="700">the safe envelope</text>
-<text x="42.6" y="1703" font-size="10.5" fill="#475569">initial risk 2C · Serious (preliminary)</text>
-<rect x="54.2" y="1864" width="199.6" height="92" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.3"/>
-<rect x="66.2" y="1876" width="79.1" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
-<text x="105.7" y="1887.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-DCK-004</text>
-<text x="66.2" y="1910" font-size="12.5" fill="#0F172A" font-weight="700">Exposure to energised dock</text>
-<text x="66.2" y="1926" font-size="12.5" fill="#0F172A" font-weight="700">charging contacts</text>
-<text x="66.2" y="1943" font-size="10.5" fill="#475569">initial risk 3C · Medium (preliminary)</text>
-<rect x="52" y="1288" width="201.8" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="64" y="1300" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="103.5" y="1311.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PWR-001</text>
-<text x="64" y="1334" font-size="12.5" fill="#0F172A" font-weight="700">Residual hydraulic pressure</text>
-<text x="64" y="1350" font-size="12.5" fill="#0F172A" font-weight="700">during maintenance</text>
-<text x="64" y="1367" font-size="10.5" fill="#475569">initial risk 1D · Serious (preliminary)</text>
-<rect x="34" y="280" width="219.8" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
-<rect x="46" y="292" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="85.5" y="303.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-WLK-002</text>
-<text x="46" y="326" font-size="12.5" fill="#0F172A" font-weight="700">Walker tip-over or fall with pilot</text>
-<text x="46" y="342" font-size="12.5" fill="#0F172A" font-weight="700">aboard</text>
-<text x="46" y="359" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
-<rect x="27.4" y="392" width="226.4" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="39.4" y="404" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="78.9" y="415.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PIL-002</text>
-<text x="39.4" y="438" font-size="12.5" fill="#0F172A" font-weight="700">Uncontrolled vertical drop of the</text>
-<text x="39.4" y="454" font-size="12.5" fill="#0F172A" font-weight="700">cockpit on loss of leg support</text>
-<text x="39.4" y="471" font-size="10.5" fill="#475569">initial risk 2C · Serious (preliminary)</text>
-<rect x="46.8" y="168" width="207" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="58.8" y="180" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="98.3" y="191.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PWR-002</text>
-<text x="58.8" y="214" font-size="12.5" fill="#0F172A" font-weight="700">Battery thermal runaway near</text>
-<text x="58.8" y="230" font-size="12.5" fill="#0F172A" font-weight="700">the pilot station</text>
-<text x="58.8" y="247" font-size="10.5" fill="#475569">initial risk 1D · Serious (preliminary)</text>
-<rect x="52" y="1400" width="201.8" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="64" y="1412" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="103.5" y="1423.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PWR-003</text>
-<text x="64" y="1446" font-size="12.5" fill="#0F172A" font-weight="700">Fuel leak and fire at the</text>
-<text x="64" y="1462" font-size="12.5" fill="#0F172A" font-weight="700">engine-generator</text>
-<text x="64" y="1479" font-size="10.5" fill="#475569">initial risk 1D · Serious (preliminary)</text>
-<rect x="36.1" y="1064" width="217.7" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
-<rect x="48.1" y="1076" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="87.6" y="1087.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-MAN-001</text>
-<text x="48.1" y="1110" font-size="12.5" fill="#0F172A" font-weight="700">Person struck or pinned by the</text>
-<text x="48.1" y="1126" font-size="12.5" fill="#0F172A" font-weight="700">arms or claws</text>
-<text x="48.1" y="1143" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
-<rect x="46" y="952" width="207.8" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
-<rect x="58" y="964" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="97.5" y="975.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-MAN-002</text>
-<text x="58" y="998" font-size="12.5" fill="#0F172A" font-weight="700">Carried load swings, shifts or</text>
-<text x="58" y="1014" font-size="12.5" fill="#0F172A" font-weight="700">drops while walking</text>
-<text x="58" y="1031" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
-<rect x="37.2" y="504" width="216.6" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
-<rect x="49.2" y="516" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
-<text x="88.7" y="527.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-WLK-003</text>
-<text x="49.2" y="550" font-size="12.5" fill="#0F172A" font-weight="700">Crushing under the pod or legs</text>
-<text x="49.2" y="566" font-size="12.5" fill="#0F172A" font-weight="700">while kneeling or rising</text>
-<text x="49.2" y="583" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
-<rect x="28.1" y="840" width="225.7" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="40.1" y="852" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="79.6" y="863.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PIL-004</text>
-<text x="40.1" y="886" font-size="12.5" fill="#0F172A" font-weight="700">Normal egress blocked when the</text>
-<text x="40.1" y="902" font-size="12.5" fill="#0F172A" font-weight="700">walker cannot lower</text>
-<text x="40.1" y="919" font-size="10.5" fill="#475569">initial risk 1D · Serious (preliminary)</text>
-<rect x="52" y="1176" width="201.8" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="64" y="1188" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="103.5" y="1199.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PIL-003</text>
-<text x="64" y="1222" font-size="12.5" fill="#0F172A" font-weight="700">Fall from height during</text>
-<text x="64" y="1238" font-size="12.5" fill="#0F172A" font-weight="700">emergency egress</text>
-<text x="64" y="1255" font-size="10.5" fill="#475569">initial risk 1D · Serious (preliminary)</text>
-<rect x="27.6" y="616" width="226.2" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="39.6" y="628" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="79.1" y="639.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-INT-002</text>
-<text x="39.6" y="662" font-size="12.5" fill="#0F172A" font-weight="700">Pilot acts on misleading or stale</text>
-<text x="39.6" y="678" font-size="12.5" fill="#0F172A" font-weight="700">UAV information</text>
-<text x="39.6" y="695" font-size="10.5" fill="#475569">initial risk 1D · Serious (preliminary)</text>
-<rect x="28" y="1976" width="225.8" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="40" y="1988" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="79.5" y="1999.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-DCK-003</text>
-<text x="40" y="2022" font-size="12.5" fill="#0F172A" font-weight="700">UAV battery thermal event while</text>
-<text x="40" y="2038" font-size="12.5" fill="#0F172A" font-weight="700">charging on the dock</text>
-<text x="40" y="2055" font-size="10.5" fill="#475569">initial risk 2C · Serious (preliminary)</text>
-<rect x="459.3" y="1005" width="180.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="471.3" y="1017" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="498.4" y="1028.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-001</text>
-<text x="471.3" y="1051" font-size="12.5" fill="#0F172A" font-weight="700">Pilot-readiness actuation</text>
-<text x="471.3" y="1067" font-size="12.5" fill="#0F172A" font-weight="700">interlock</text>
-<rect x="986.5" y="1717" width="176.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="998.5" y="1729" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1025.5" y="1740.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-002</text>
-<text x="998.5" y="1763" font-size="12.5" fill="#0F172A" font-weight="700">Operator protective stop</text>
-<rect x="1001" y="1851" width="147.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1013" y="1863" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1040" y="1874.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-003</text>
-<text x="1013" y="1897" font-size="12.5" fill="#0F172A" font-weight="700">Docked rotor inhibit</text>
-<rect x="459.4" y="477" width="180.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="471.4" y="489" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="498.4" y="500.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-004</text>
-<text x="471.4" y="523" font-size="12.5" fill="#0F172A" font-weight="700">Feedback fault detection</text>
-<rect x="450.8" y="2064.3" width="187.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="462.8" y="2076.3" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="489.8" y="2087.8" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-005</text>
-<text x="462.8" y="2110.3" font-size="12.5" fill="#0F172A" font-weight="700">Positive docking retention</text>
-<text x="462.8" y="2126.3" font-size="12.5" fill="#0F172A" font-weight="700">state</text>
-<rect x="466.8" y="1872.3" width="155.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="478.8" y="1884.3" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="505.8" y="1895.8" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-006</text>
-<text x="478.8" y="1918.3" font-size="12.5" fill="#0F172A" font-weight="700">Launch and recovery</text>
-<text x="478.8" y="1934.3" font-size="12.5" fill="#0F172A" font-weight="700">envelope inhibit</text>
-<rect x="464.3" y="1293" width="172.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="476.3" y="1305" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="503.4" y="1316.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-007</text>
-<text x="476.3" y="1339" font-size="12.5" fill="#0F172A" font-weight="700">Stored hydraulic energy</text>
-<text x="476.3" y="1355" font-size="12.5" fill="#0F172A" font-weight="700">isolation</text>
-<rect x="443.8" y="334" width="203.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="455.8" y="346" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="482.8" y="357.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-008</text>
-<text x="455.8" y="380" font-size="12.5" fill="#0F172A" font-weight="700">Stability envelope protection</text>
-<rect x="473.1" y="653" width="159.6" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="485.1" y="665" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="512.1" y="676.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-009</text>
-<text x="485.1" y="699" font-size="12.5" fill="#0F172A" font-weight="700">Fail-safe load holding</text>
-<rect x="439.8" y="1581" width="209.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="451.8" y="1593" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="478.8" y="1604.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-010</text>
-<text x="451.8" y="1627" font-size="12.5" fill="#0F172A" font-weight="700">Protective stop independence</text>
-<rect x="442.7" y="1758" width="205.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="454.7" y="1770" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="481.8" y="1781.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-011</text>
-<text x="454.7" y="1804" font-size="12.5" fill="#0F172A" font-weight="700">Protective stop reaction time</text>
-<rect x="478.8" y="1661" width="157.5" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="490.8" y="1673" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="517.8" y="1684.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-012</text>
-<text x="490.8" y="1707" font-size="12.5" fill="#0F172A" font-weight="700">Rotor arming requires</text>
-<text x="490.8" y="1723" font-size="12.5" fill="#0F172A" font-weight="700">confirmed release</text>
-<rect x="453.3" y="1485" width="189.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="465.3" y="1497" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="492.3" y="1508.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-013</text>
-<text x="465.3" y="1531" font-size="12.5" fill="#0F172A" font-weight="700">UAV link-loss contingency</text>
-<text x="465.3" y="1547" font-size="12.5" fill="#0F172A" font-weight="700">lands clear of the walker</text>
-<rect x="442.5" y="557" width="205.5" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="454.5" y="569" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="481.5" y="580.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-014</text>
-<text x="454.5" y="603" font-size="12.5" fill="#0F172A" font-weight="700">Independent traction battery</text>
-<text x="454.5" y="619" font-size="12.5" fill="#0F172A" font-weight="700">isolation</text>
-<rect x="451.5" y="1389" width="192" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="463.5" y="1401" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="490.5" y="1412.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-015</text>
-<text x="463.5" y="1435" font-size="12.5" fill="#0F172A" font-weight="700">Fuel shut-off on protective</text>
-<text x="463.5" y="1451" font-size="12.5" fill="#0F172A" font-weight="700">stop</text>
-<rect x="458.4" y="238" width="172.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="470.4" y="250" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="497.4" y="261.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-016</text>
-<text x="470.4" y="284" font-size="12.5" fill="#0F172A" font-weight="700">Actuator torque reserve</text>
-<text x="470.4" y="300" font-size="12.5" fill="#0F172A" font-weight="700">against supply loss</text>
-<rect x="468.4" y="1101" width="161.8" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="480.4" y="1113" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="507.5" y="1124.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-017</text>
-<text x="480.4" y="1147" font-size="12.5" fill="#0F172A" font-weight="700">Arm stow interlock for</text>
-<text x="480.4" y="1163" font-size="12.5" fill="#0F172A" font-weight="700">walking</text>
-<rect x="449.2" y="733" width="190.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="461.2" y="745" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="488.2" y="756.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-018</text>
-<text x="461.2" y="779" font-size="12.5" fill="#0F172A" font-weight="700">Controlled lowered posture</text>
-<text x="461.2" y="795" font-size="12.5" fill="#0F172A" font-weight="700">for ingress and egress</text>
-<rect x="473.6" y="925" width="158.8" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="485.6" y="937" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="512.6" y="948.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-019</text>
-<text x="485.6" y="971" font-size="12.5" fill="#0F172A" font-weight="700">Loaded walking limits</text>
-<rect x="450.7" y="1197" width="187.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="462.7" y="1209" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="489.7" y="1220.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-020</text>
-<text x="462.7" y="1243" font-size="12.5" fill="#0F172A" font-weight="700">Emergency egress without</text>
-<text x="462.7" y="1259" font-size="12.5" fill="#0F172A" font-weight="700">power or kneeling</text>
-<rect x="467.9" y="829" width="167.4" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="479.9" y="841" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="506.9" y="852.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-021</text>
-<text x="479.9" y="875" font-size="12.5" fill="#0F172A" font-weight="700">UAV data validity and</text>
-<text x="479.9" y="891" font-size="12.5" fill="#0F172A" font-weight="700">staleness annunciation</text>
-<rect x="441.1" y="1968.3" width="207" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="453.1" y="1980.3" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="480.1" y="1991.8" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-022</text>
-<text x="453.1" y="2014.3" font-size="12.5" fill="#0F172A" font-weight="700">Dock charging protection and</text>
-<text x="453.1" y="2030.3" font-size="12.5" fill="#0F172A" font-weight="700">isolation</text>
-<rect x="1572.6" y="1004" width="202.6" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="1584.6" y="1016" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="1622" y="1027.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
-<text x="1584.6" y="1050" font-size="12.5" fill="#0F172A" font-weight="700">Independent safety monitor,</text>
-<text x="1584.6" y="1066" font-size="12.5" fill="#0F172A" font-weight="700">protective stop and isolation</text>
-<rect x="1572.6" y="412" width="172.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1584.6" y="424" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1622" y="435.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
-<text x="1584.6" y="458" font-size="12.5" fill="#0F172A" font-weight="700">Pilot station, restraints,</text>
-<text x="1584.6" y="474" font-size="12.5" fill="#0F172A" font-weight="700">displays and controls</text>
-<rect x="1572.6" y="1180" width="211.1" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="1584.6" y="1192" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
-<text x="1622" y="1203.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
-<text x="1584.6" y="1226" font-size="12.5" fill="#0F172A" font-weight="700">UAV dock, retention, charging</text>
-<text x="1584.6" y="1242" font-size="12.5" fill="#0F172A" font-weight="700">and release</text>
-<rect x="1572.6" y="1100" width="191.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1584.6" y="1112" width="49.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1609.5" y="1123.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1</text>
-<text x="1584.6" y="1146" font-size="12.5" fill="#0F172A" font-weight="700">Dockable observation UAV</text>
-<rect x="1572.6" y="220" width="208.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1584.6" y="232" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1622" y="243.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
-<text x="1584.6" y="266" font-size="12.5" fill="#0F172A" font-weight="700">Chassis, legs, joint actuators</text>
-<text x="1584.6" y="282" font-size="12.5" fill="#0F172A" font-weight="700">and stability sensing</text>
-<rect x="1572.6" y="908" width="217.9" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1584.6" y="920" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1622" y="931.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR</text>
-<text x="1584.6" y="954" font-size="12.5" fill="#0F172A" font-weight="700">Power generation, storage,</text>
-<text x="1584.6" y="970" font-size="12.5" fill="#0F172A" font-weight="700">distribution and thermal control</text>
-<rect x="1572.6" y="796" width="204.2" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1584.6" y="808" width="58.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1613.8" y="819.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-GSE</text>
-<text x="1584.6" y="842" font-size="12.5" fill="#0F172A" font-weight="700">Ground support, maintenance</text>
-<text x="1584.6" y="858" font-size="12.5" fill="#0F172A" font-weight="700">supports, charging and test</text>
-<text x="1584.6" y="874" font-size="12.5" fill="#0F172A" font-weight="700">equipment</text>
-<rect x="1572.6" y="508" width="209.4" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
-<rect x="1584.6" y="520" width="74.8" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
-<text x="1622" y="531.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
-<text x="1584.6" y="554" font-size="12.5" fill="#0F172A" font-weight="700">Integration manager and PX4</text>
-<text x="1584.6" y="570" font-size="12.5" fill="#0F172A" font-weight="700">command adapter</text>
-<rect x="1572.6" y="124" width="184.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1584.6" y="136" width="99.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1634.5" y="147.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR-BAT</text>
-<text x="1584.6" y="170" font-size="12.5" fill="#0F172A" font-weight="700">Battery pack, BMS and</text>
-<text x="1584.6" y="186" font-size="12.5" fill="#0F172A" font-weight="700">contactors (alternative B)</text>
-<rect x="1572.6" y="604" width="215.4" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1584.6" y="616" width="99.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1634.5" y="627.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR-GEN</text>
-<text x="1584.6" y="650" font-size="12.5" fill="#0F172A" font-weight="700">Engine-generator and governor</text>
-<text x="1584.6" y="666" font-size="12.5" fill="#0F172A" font-weight="700">(alternative B)</text>
-<rect x="1572.6" y="700" width="188.4" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="1584.6" y="712" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
-<text x="1622" y="723.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-MAN</text>
-<text x="1584.6" y="746" font-size="12.5" fill="#0F172A" font-weight="700">Manipulation arms and end</text>
-<text x="1584.6" y="762" font-size="12.5" fill="#0F172A" font-weight="700">effectors</text>
-<rect x="1572.6" y="316" width="198.4" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
-<rect x="1584.6" y="328" width="74.8" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
-<text x="1622" y="339.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-CTL</text>
-<text x="1584.6" y="362" font-size="12.5" fill="#0F172A" font-weight="700">Mission, motion and balance</text>
-<text x="1584.6" y="378" font-size="12.5" fill="#0F172A" font-weight="700">control</text>
-<rect x="887.3" y="1624" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="892.3" y="1637" font-size="10.5" fill="#475569">«deriveReqt»</text>
-<rect x="887.3" y="1769" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="892.3" y="1782" font-size="10.5" fill="#475569">«deriveReqt»</text>
-<rect x="887.3" y="1894" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="892.3" y="1907" font-size="10.5" fill="#475569">«deriveReqt»</text>
+<rect x="493.8" y="575" width="234.3" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="611" y="590" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">REQUIREMENTS · REQUIREMENTS/</text>
+<rect x="1580.6" y="938" width="245.7" height="22" rx="11" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="1703.4" y="953" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">ALLOCATED TO · ITEM DEFINITION</text>
+<rect x="49.5" y="616" width="204.3" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
+<rect x="61.5" y="628" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="101" y="639.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PIL-001</text>
+<text x="61.5" y="662" font-size="12.5" fill="#0F172A" font-weight="700">Unintended leg motion during</text>
+<text x="61.5" y="678" font-size="12.5" fill="#0F172A" font-weight="700">pilot ingress or egress</text>
+<text x="61.5" y="695" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
+<rect x="24" y="392" width="229.8" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
+<rect x="36" y="404" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="75.5" y="415.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-SAF-001</text>
+<text x="36" y="438" font-size="12.5" fill="#0F172A" font-weight="700">Protective stop does not reach a</text>
+<text x="36" y="454" font-size="12.5" fill="#0F172A" font-weight="700">safe state</text>
+<text x="36" y="471" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
+<rect x="46.8" y="2072" width="207" height="108" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="58.8" y="2084" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="98.3" y="2095.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-DCK-001</text>
+<text x="58.8" y="2118" font-size="12.5" fill="#0F172A" font-weight="700">Rotor start while UAV is</text>
+<text x="58.8" y="2134" font-size="12.5" fill="#0F172A" font-weight="700">retained or a person is at the</text>
+<text x="58.8" y="2150" font-size="12.5" fill="#0F172A" font-weight="700">dock</text>
+<text x="58.8" y="2167" font-size="10.5" fill="#475569">initial risk 2C · Serious (preliminary)</text>
+<rect x="42" y="1288" width="211.8" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
+<rect x="54" y="1300" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="93.5" y="1311.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-WLK-001</text>
+<text x="54" y="1334" font-size="12.5" fill="#0F172A" font-weight="700">Stale or lost feedback causes</text>
+<text x="54" y="1350" font-size="12.5" fill="#0F172A" font-weight="700">runaway motion</text>
+<text x="54" y="1367" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
+<rect x="45.6" y="1400" width="208.2" height="92" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.3"/>
+<rect x="57.6" y="1412" width="79.1" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
+<text x="97.1" y="1423.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-DCK-002</text>
+<text x="57.6" y="1446" font-size="12.5" fill="#0F172A" font-weight="700">False retained state releases</text>
+<text x="57.6" y="1462" font-size="12.5" fill="#0F172A" font-weight="700">UAV under motion</text>
+<text x="57.6" y="1479" font-size="10.5" fill="#475569">initial risk 2D · Medium (preliminary)</text>
+<rect x="30.6" y="2200" width="223.2" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="42.6" y="2212" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="82.1" y="2223.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<text x="42.6" y="2246" font-size="12.5" fill="#0F172A" font-weight="700">UAV launch or recovery outside</text>
+<text x="42.6" y="2262" font-size="12.5" fill="#0F172A" font-weight="700">the safe envelope</text>
+<text x="42.6" y="2279" font-size="10.5" fill="#475569">initial risk 2C · Serious (preliminary)</text>
+<rect x="54.2" y="2424" width="199.6" height="92" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1.3"/>
+<rect x="66.2" y="2436" width="79.1" height="16" rx="8.0" fill="#D97706" stroke="none" stroke-width="1"/>
+<text x="105.7" y="2447.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-DCK-004</text>
+<text x="66.2" y="2470" font-size="12.5" fill="#0F172A" font-weight="700">Exposure to energised dock</text>
+<text x="66.2" y="2486" font-size="12.5" fill="#0F172A" font-weight="700">charging contacts</text>
+<text x="66.2" y="2503" font-size="10.5" fill="#475569">initial risk 3C · Medium (preliminary)</text>
+<rect x="52" y="1848" width="201.8" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="64" y="1860" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="103.5" y="1871.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PWR-001</text>
+<text x="64" y="1894" font-size="12.5" fill="#0F172A" font-weight="700">Residual hydraulic pressure</text>
+<text x="64" y="1910" font-size="12.5" fill="#0F172A" font-weight="700">during maintenance</text>
+<text x="64" y="1927" font-size="10.5" fill="#475569">initial risk 1D · Serious (preliminary)</text>
+<rect x="34" y="1176" width="219.8" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
+<rect x="46" y="1188" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="85.5" y="1199.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-WLK-002</text>
+<text x="46" y="1222" font-size="12.5" fill="#0F172A" font-weight="700">Walker tip-over or fall with pilot</text>
+<text x="46" y="1238" font-size="12.5" fill="#0F172A" font-weight="700">aboard</text>
+<text x="46" y="1255" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
+<rect x="27.4" y="728" width="226.4" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="39.4" y="740" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="78.9" y="751.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PIL-002</text>
+<text x="39.4" y="774" font-size="12.5" fill="#0F172A" font-weight="700">Uncontrolled vertical drop of the</text>
+<text x="39.4" y="790" font-size="12.5" fill="#0F172A" font-weight="700">cockpit on loss of leg support</text>
+<text x="39.4" y="807" font-size="10.5" fill="#475569">initial risk 2C · Serious (preliminary)</text>
+<rect x="46.8" y="56" width="207" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="58.8" y="68" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="98.3" y="79.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PWR-002</text>
+<text x="58.8" y="102" font-size="12.5" fill="#0F172A" font-weight="700">Battery thermal runaway near</text>
+<text x="58.8" y="118" font-size="12.5" fill="#0F172A" font-weight="700">the pilot station</text>
+<text x="58.8" y="135" font-size="10.5" fill="#475569">initial risk 1D · Serious (preliminary)</text>
+<rect x="52" y="840" width="201.8" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="64" y="852" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="103.5" y="863.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PWR-003</text>
+<text x="64" y="886" font-size="12.5" fill="#0F172A" font-weight="700">Fuel leak and fire at the</text>
+<text x="64" y="902" font-size="12.5" fill="#0F172A" font-weight="700">engine-generator</text>
+<text x="64" y="919" font-size="10.5" fill="#475569">initial risk 1D · Serious (preliminary)</text>
+<rect x="36.1" y="952" width="217.7" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
+<rect x="48.1" y="964" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="87.6" y="975.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-MAN-001</text>
+<text x="48.1" y="998" font-size="12.5" fill="#0F172A" font-weight="700">Person struck or pinned by the</text>
+<text x="48.1" y="1014" font-size="12.5" fill="#0F172A" font-weight="700">arms or claws</text>
+<text x="48.1" y="1031" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
+<rect x="46" y="504" width="207.8" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
+<rect x="58" y="516" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="97.5" y="527.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-MAN-002</text>
+<text x="58" y="550" font-size="12.5" fill="#0F172A" font-weight="700">Carried load swings, shifts or</text>
+<text x="58" y="566" font-size="12.5" fill="#0F172A" font-weight="700">drops while walking</text>
+<text x="58" y="583" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
+<rect x="37.2" y="1624" width="216.6" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
+<rect x="49.2" y="1636" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="88.7" y="1647.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-WLK-003</text>
+<text x="49.2" y="1670" font-size="12.5" fill="#0F172A" font-weight="700">Crushing under the pod or legs</text>
+<text x="49.2" y="1686" font-size="12.5" fill="#0F172A" font-weight="700">while kneeling or rising</text>
+<text x="49.2" y="1703" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
+<rect x="28.1" y="1512" width="225.7" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="40.1" y="1524" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="79.6" y="1535.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PIL-004</text>
+<text x="40.1" y="1558" font-size="12.5" fill="#0F172A" font-weight="700">Normal egress blocked when the</text>
+<text x="40.1" y="1574" font-size="12.5" fill="#0F172A" font-weight="700">walker cannot lower</text>
+<text x="40.1" y="1591" font-size="10.5" fill="#475569">initial risk 1D · Serious (preliminary)</text>
+<rect x="50.8" y="280" width="203" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="62.8" y="292" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="102.3" y="303.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PIL-005</text>
+<text x="62.8" y="326" font-size="12.5" fill="#0F172A" font-weight="700">Fall during normal ingress or</text>
+<text x="62.8" y="342" font-size="12.5" fill="#0F172A" font-weight="700">egress</text>
+<text x="62.8" y="359" font-size="10.5" fill="#475569">initial risk 2C · Serious (preliminary)</text>
+<rect x="52" y="2312" width="201.8" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="64" y="2324" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="103.5" y="2335.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PIL-003</text>
+<text x="64" y="2358" font-size="12.5" fill="#0F172A" font-weight="700">Fall from height during</text>
+<text x="64" y="2374" font-size="12.5" fill="#0F172A" font-weight="700">emergency egress</text>
+<text x="64" y="2391" font-size="10.5" fill="#475569">initial risk 1D · Serious (preliminary)</text>
+<rect x="27.6" y="1960" width="226.2" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="39.6" y="1972" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="79.1" y="1983.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-INT-002</text>
+<text x="39.6" y="2006" font-size="12.5" fill="#0F172A" font-weight="700">Pilot acts on misleading or stale</text>
+<text x="39.6" y="2022" font-size="12.5" fill="#0F172A" font-weight="700">UAV information</text>
+<text x="39.6" y="2039" font-size="10.5" fill="#475569">initial risk 1D · Serious (preliminary)</text>
+<rect x="28" y="168" width="225.8" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="40" y="180" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="79.5" y="191.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-DCK-003</text>
+<text x="40" y="214" font-size="12.5" fill="#0F172A" font-weight="700">UAV battery thermal event while</text>
+<text x="40" y="230" font-size="12.5" fill="#0F172A" font-weight="700">charging on the dock</text>
+<text x="40" y="247" font-size="10.5" fill="#475569">initial risk 2C · Serious (preliminary)</text>
+<rect x="64.4" y="1064" width="189.4" height="92" rx="8" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.3"/>
+<rect x="76.4" y="1076" width="79.1" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
+<text x="115.9" y="1087.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-GSE-001</text>
+<text x="76.4" y="1110" font-size="12.5" fill="#0F172A" font-weight="700">Fall from height during</text>
+<text x="76.4" y="1126" font-size="12.5" fill="#0F172A" font-weight="700">maintenance on the walker</text>
+<text x="76.4" y="1143" font-size="10.5" fill="#475569">initial risk 1C · High (preliminary)</text>
+<rect x="32.4" y="1736" width="221.4" height="92" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="44.4" y="1748" width="79.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="83.9" y="1759.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">HAZ-PIL-006</text>
+<text x="44.4" y="1782" font-size="12.5" fill="#0F172A" font-weight="700">Delayed or unsafe extraction of</text>
+<text x="44.4" y="1798" font-size="12.5" fill="#0F172A" font-weight="700">an incapacitated pilot</text>
+<text x="44.4" y="1815" font-size="10.5" fill="#475569">initial risk 1D · Serious (preliminary)</text>
+<rect x="739.3" y="870" width="180.2" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="751.3" y="882" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="778.4" y="893.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-001</text>
+<text x="751.3" y="916" font-size="12.5" fill="#0F172A" font-weight="700">Pilot-readiness actuation</text>
+<text x="751.3" y="932" font-size="12.5" fill="#0F172A" font-weight="700">interlock</text>
+<rect x="1056.5" y="753" width="176.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1068.5" y="765" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1095.5" y="776.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-002</text>
+<text x="1068.5" y="799" font-size="12.5" fill="#0F172A" font-weight="700">Operator protective stop</text>
+<rect x="1071" y="2375" width="147.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1083" y="2387" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1110" y="2398.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-003</text>
+<text x="1083" y="2421" font-size="12.5" fill="#0F172A" font-weight="700">Docked rotor inhibit</text>
+<rect x="739.4" y="1766" width="180.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="751.4" y="1778" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="778.4" y="1789.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-004</text>
+<text x="751.4" y="1812" font-size="12.5" fill="#0F172A" font-weight="700">Feedback fault detection</text>
+<rect x="730.8" y="1846" width="187.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="742.8" y="1858" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="769.8" y="1869.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-005</text>
+<text x="742.8" y="1892" font-size="12.5" fill="#0F172A" font-weight="700">Positive docking retention</text>
+<text x="742.8" y="1908" font-size="12.5" fill="#0F172A" font-weight="700">state</text>
+<rect x="746.8" y="2522" width="155.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="758.8" y="2534" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="785.8" y="2545.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-006</text>
+<text x="758.8" y="2568" font-size="12.5" fill="#0F172A" font-weight="700">Launch and recovery</text>
+<text x="758.8" y="2584" font-size="12.5" fill="#0F172A" font-weight="700">envelope inhibit</text>
+<rect x="744.3" y="2038" width="172.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="756.3" y="2050" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="783.4" y="2061.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-007</text>
+<text x="756.3" y="2084" font-size="12.5" fill="#0F172A" font-weight="700">Stored hydraulic energy</text>
+<text x="756.3" y="2100" font-size="12.5" fill="#0F172A" font-weight="700">isolation</text>
+<rect x="723.8" y="1494" width="203.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="735.8" y="1506" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="762.8" y="1517.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-008</text>
+<text x="735.8" y="1540" font-size="12.5" fill="#0F172A" font-weight="700">Stability envelope protection</text>
+<rect x="753.1" y="1062" width="159.6" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="765.1" y="1074" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="792.1" y="1085.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-009</text>
+<text x="765.1" y="1108" font-size="12.5" fill="#0F172A" font-weight="700">Fail-safe load holding</text>
+<rect x="719.8" y="710" width="209.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="731.8" y="722" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="758.8" y="733.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-010</text>
+<text x="731.8" y="756" font-size="12.5" fill="#0F172A" font-weight="700">Protective stop independence</text>
+<rect x="722.7" y="790" width="205.1" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="734.7" y="802" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="761.8" y="813.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-011</text>
+<text x="734.7" y="836" font-size="12.5" fill="#0F172A" font-weight="700">Protective stop reaction time</text>
+<rect x="758.8" y="2326" width="157.5" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="770.8" y="2338" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="797.8" y="2349.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-012</text>
+<text x="770.8" y="2372" font-size="12.5" fill="#0F172A" font-weight="700">Rotor arming requires</text>
+<text x="770.8" y="2388" font-size="12.5" fill="#0F172A" font-weight="700">confirmed release</text>
+<rect x="733.3" y="2426" width="189.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="745.3" y="2438" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="772.3" y="2449.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-013</text>
+<text x="745.3" y="2472" font-size="12.5" fill="#0F172A" font-weight="700">UAV link-loss contingency</text>
+<text x="745.3" y="2488" font-size="12.5" fill="#0F172A" font-weight="700">lands clear of the walker</text>
+<rect x="722.5" y="613" width="205.5" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="734.5" y="625" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="761.5" y="636.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-014</text>
+<text x="734.5" y="659" font-size="12.5" fill="#0F172A" font-weight="700">Independent traction battery</text>
+<text x="734.5" y="675" font-size="12.5" fill="#0F172A" font-weight="700">isolation</text>
+<rect x="731.5" y="1222" width="192" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="743.5" y="1234" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="770.5" y="1245.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-015</text>
+<text x="743.5" y="1268" font-size="12.5" fill="#0F172A" font-weight="700">Fuel shut-off on protective</text>
+<text x="743.5" y="1284" font-size="12.5" fill="#0F172A" font-weight="700">stop</text>
+<rect x="738.4" y="1574" width="172.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="750.4" y="1586" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="777.4" y="1597.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-016</text>
+<text x="750.4" y="1620" font-size="12.5" fill="#0F172A" font-weight="700">Actuator torque reserve</text>
+<text x="750.4" y="1636" font-size="12.5" fill="#0F172A" font-weight="700">against supply loss</text>
+<rect x="748.4" y="966" width="161.8" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="760.4" y="978" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="787.5" y="989.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-017</text>
+<text x="760.4" y="1012" font-size="12.5" fill="#0F172A" font-weight="700">Arm stow interlock for</text>
+<text x="760.4" y="1028" font-size="12.5" fill="#0F172A" font-weight="700">walking</text>
+<rect x="727.9" y="1318" width="190.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="739.9" y="1330" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="766.9" y="1341.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-018</text>
+<text x="739.9" y="1364" font-size="12.5" fill="#0F172A" font-weight="700">Controlled lowered posture</text>
+<text x="739.9" y="1380" font-size="12.5" fill="#0F172A" font-weight="700">for ingress and egress</text>
+<rect x="753.6" y="1142" width="158.8" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="765.6" y="1154" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="792.6" y="1165.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-019</text>
+<text x="765.6" y="1188" font-size="12.5" fill="#0F172A" font-weight="700">Loaded walking limits</text>
+<rect x="730.7" y="2230" width="187.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="742.7" y="2242" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="769.7" y="2253.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-020</text>
+<text x="742.7" y="2276" font-size="12.5" fill="#0F172A" font-weight="700">Emergency egress without</text>
+<text x="742.7" y="2292" font-size="12.5" fill="#0F172A" font-weight="700">power or kneeling</text>
+<rect x="747.9" y="2134" width="167.4" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="759.9" y="2146" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="786.9" y="2157.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-021</text>
+<text x="759.9" y="2180" font-size="12.5" fill="#0F172A" font-weight="700">UAV data validity and</text>
+<text x="759.9" y="2196" font-size="12.5" fill="#0F172A" font-weight="700">staleness annunciation</text>
+<rect x="721" y="1670" width="207" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="733" y="1682" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="760.1" y="1693.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-022</text>
+<text x="733" y="1716" font-size="12.5" fill="#0F172A" font-weight="700">Dock charging protection and</text>
+<text x="733" y="1732" font-size="12.5" fill="#0F172A" font-weight="700">isolation</text>
+<rect x="719.8" y="1414" width="209.5" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="731.8" y="1426" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="758.8" y="1437.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-023</text>
+<text x="731.8" y="1460" font-size="12.5" fill="#0F172A" font-weight="700">Maintenance access at height</text>
+<rect x="739.6" y="1942" width="179.8" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="751.6" y="1954" width="54.1" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="778.6" y="1965.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-024</text>
+<text x="751.6" y="1988" font-size="12.5" fill="#0F172A" font-weight="700">External extraction of an</text>
+<text x="751.6" y="2004" font-size="12.5" fill="#0F172A" font-weight="700">incapacitated pilot</text>
+<rect x="1806.6" y="1264" width="202.6" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="1818.6" y="1276" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="1856" y="1287.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<text x="1818.6" y="1310" font-size="12.5" fill="#0F172A" font-weight="700">Independent safety monitor,</text>
+<text x="1818.6" y="1326" font-size="12.5" fill="#0F172A" font-weight="700">protective stop and isolation</text>
+<rect x="1806.6" y="1659.3" width="172.7" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1818.6" y="1671.3" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1856" y="1682.8" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<text x="1818.6" y="1705.3" font-size="12.5" fill="#0F172A" font-weight="700">Pilot station, restraints,</text>
+<text x="1818.6" y="1721.3" font-size="12.5" fill="#0F172A" font-weight="700">displays and controls</text>
+<rect x="1806.6" y="1867.3" width="211.1" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="1818.6" y="1879.3" width="74.8" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="1856" y="1890.8" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<text x="1818.6" y="1913.3" font-size="12.5" fill="#0F172A" font-weight="700">UAV dock, retention, charging</text>
+<text x="1818.6" y="1929.3" font-size="12.5" fill="#0F172A" font-weight="700">and release</text>
+<rect x="1806.6" y="2059.3" width="191.2" height="60" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1818.6" y="2071.3" width="49.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1843.5" y="2082.8" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-A1</text>
+<text x="1818.6" y="2105.3" font-size="12.5" fill="#0F172A" font-weight="700">Dockable observation UAV</text>
+<rect x="1806.6" y="1456" width="208.3" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1818.6" y="1468" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1856" y="1479.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<text x="1818.6" y="1502" font-size="12.5" fill="#0F172A" font-weight="700">Chassis, legs, joint actuators</text>
+<text x="1818.6" y="1518" font-size="12.5" fill="#0F172A" font-weight="700">and stability sensing</text>
+<rect x="1806.6" y="1563.3" width="217.9" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1818.6" y="1575.3" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1856" y="1586.8" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR</text>
+<text x="1818.6" y="1609.3" font-size="12.5" fill="#0F172A" font-weight="700">Power generation, storage,</text>
+<text x="1818.6" y="1625.3" font-size="12.5" fill="#0F172A" font-weight="700">distribution and thermal control</text>
+<rect x="1806.6" y="1755.3" width="204.2" height="92" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1818.6" y="1767.3" width="58.4" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1847.8" y="1778.8" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-GSE</text>
+<text x="1818.6" y="1801.3" font-size="12.5" fill="#0F172A" font-weight="700">Ground support, maintenance</text>
+<text x="1818.6" y="1817.3" font-size="12.5" fill="#0F172A" font-weight="700">supports, charging and test</text>
+<text x="1818.6" y="1833.3" font-size="12.5" fill="#0F172A" font-weight="700">equipment</text>
+<rect x="1806.6" y="1963.3" width="209.4" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="1818.6" y="1975.3" width="74.8" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="1856" y="1986.8" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
+<text x="1818.6" y="2009.3" font-size="12.5" fill="#0F172A" font-weight="700">Integration manager and PX4</text>
+<text x="1818.6" y="2025.3" font-size="12.5" fill="#0F172A" font-weight="700">command adapter</text>
+<rect x="1806.6" y="976" width="184.6" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1818.6" y="988" width="99.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1868.5" y="999.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR-BAT</text>
+<text x="1818.6" y="1022" font-size="12.5" fill="#0F172A" font-weight="700">Battery pack, BMS and</text>
+<text x="1818.6" y="1038" font-size="12.5" fill="#0F172A" font-weight="700">contactors (alternative B)</text>
+<rect x="1806.6" y="1360" width="215.4" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1818.6" y="1372" width="99.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1868.5" y="1383.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-PWR-GEN</text>
+<text x="1818.6" y="1406" font-size="12.5" fill="#0F172A" font-weight="700">Engine-generator and governor</text>
+<text x="1818.6" y="1422" font-size="12.5" fill="#0F172A" font-weight="700">(alternative B)</text>
+<rect x="1806.6" y="1072" width="188.4" height="76" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="1818.6" y="1084" width="74.8" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
+<text x="1856" y="1095.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-MAN</text>
+<text x="1818.6" y="1118" font-size="12.5" fill="#0F172A" font-weight="700">Manipulation arms and end</text>
+<text x="1818.6" y="1134" font-size="12.5" fill="#0F172A" font-weight="700">effectors</text>
+<rect x="1806.6" y="1168" width="198.4" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="1818.6" y="1180" width="74.8" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="1856" y="1191.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SUS-M1-CTL</text>
+<text x="1818.6" y="1214" font-size="12.5" fill="#0F172A" font-weight="700">Mission, motion and balance</text>
+<text x="1818.6" y="1230" font-size="12.5" fill="#0F172A" font-weight="700">control</text>
+<rect x="947.3" y="753" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="952.3" y="766" font-size="10.5" fill="#475569">«deriveReqt»</text>
+<rect x="947.3" y="801" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="952.3" y="814" font-size="10.5" fill="#475569">«deriveReqt»</text>
+<rect x="947.3" y="2386" width="81.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="952.3" y="2399" font-size="10.5" fill="#475569">«deriveReqt»</text>
 </g>
-<rect x="40" y="2333" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2"/>
-<text x="62" y="2343" font-size="11" fill="#475569">Hazard, High initial risk</text>
-<rect x="195.2" y="2333" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
-<text x="217.2" y="2343" font-size="11" fill="#475569">Hazard, Serious initial risk</text>
-<rect x="366.5" y="2333" width="14" height="12" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
-<text x="388.5" y="2343" font-size="11" fill="#475569">Hazard, Medium initial risk</text>
-<rect x="535.5" y="2333" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
-<text x="557.5" y="2343" font-size="11" fill="#475569">System element</text>
-<rect x="649.9" y="2333" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
-<text x="671.9" y="2343" font-size="11" fill="#475569">Safety function</text>
-<rect x="762.9" y="2333" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
-<text x="784.9" y="2343" font-size="11" fill="#475569">Software-intensive element</text>
-<line x1="935.6" y1="2339" x2="951.6" y2="2339" stroke="#C2410C" stroke-width="1.8"/>
-<text x="957.6" y="2343" font-size="11" fill="#475569">Hazard controlled by requirement</text>
-<line x1="1138.8" y1="2339" x2="1154.8" y2="2339" stroke="#475569" stroke-width="1.8"/>
-<text x="1160.8" y="2343" font-size="11" fill="#475569">Allocated to element</text>
-<line x1="1277.7" y1="2339" x2="1293.7" y2="2339" stroke="#7C3AED" stroke-width="1.8" stroke-dasharray="3 2"/>
-<text x="1299.7" y="2343" font-size="11" fill="#475569">«deriveReqt»</text>
-<text x="40" y="2365" font-size="10.5" fill="#94A3B8">Generated by tools/figures/requirements_readme.py from requirements/SYS-*.yaml, safety/hazards/ and architecture/item-definition.yaml. Candidate requirements: not baselined, verified or accepted.</text>
-<g class="terms" data-base-h="2394">
-<rect x="0" y="2394" width="1894.5" height="83.6" fill="#FFFFFF"/>
-<line x1="40" y1="2398" x2="1854.5" y2="2398" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="2413.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: 1A–4F = risk assessment code, severity 1–4 plus probability A–F (e.g. 1C) · BMS = battery management system · F-nnn = system function in the item definition · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SUS-A1 = dockable</text>
-<text x="40" y="2428.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">observation UAV · SUS-GSE = ground support, maintenance supports, charging and test equipment · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK = UAV dock, retention, charging and release · SUS-M1-MAN = manipulation arms and end effectors · SUS-M1-PIL = pilot</text>
-<text x="40" y="2442.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">station, restraints, displays and controls · SUS-M1-PWR = power generation, storage, distribution and thermal control · SUS-M1-PWR-BAT = battery pack, BMS and contactors (alternative B) · SUS-M1-PWR-GEN = engine-generator and governor (alternative B) · SUS-M1-SAF = independent safety monitor, protective stop and isolation ·</text>
-<text x="40" y="2457.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SUS-M1-WLK = chassis, legs, joint actuators and stability sensing · SYS-nnn = system safety requirement record (requirements/SYS-nnn.yaml) · UAV = uncrewed aerial vehicle (drone)</text>
+<rect x="40" y="2751" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2"/>
+<text x="62" y="2761" font-size="11" fill="#475569">Hazard, High initial risk</text>
+<rect x="195.2" y="2751" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="217.2" y="2761" font-size="11" fill="#475569">Hazard, Serious initial risk</text>
+<rect x="366.5" y="2751" width="14" height="12" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="388.5" y="2761" font-size="11" fill="#475569">Hazard, Medium initial risk</text>
+<rect x="535.5" y="2751" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="557.5" y="2761" font-size="11" fill="#475569">System element</text>
+<rect x="649.9" y="2751" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="671.9" y="2761" font-size="11" fill="#475569">Safety function</text>
+<rect x="762.9" y="2751" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="784.9" y="2761" font-size="11" fill="#475569">Software-intensive element</text>
+<line x1="935.6" y1="2757" x2="951.6" y2="2757" stroke="#C2410C" stroke-width="1.8"/>
+<text x="957.6" y="2761" font-size="11" fill="#475569">Hazard controlled by requirement</text>
+<line x1="1138.8" y1="2757" x2="1154.8" y2="2757" stroke="#475569" stroke-width="1.8"/>
+<text x="1160.8" y="2761" font-size="11" fill="#475569">Allocated to element</text>
+<line x1="1277.7" y1="2757" x2="1293.7" y2="2757" stroke="#7C3AED" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="1299.7" y="2761" font-size="11" fill="#475569">«deriveReqt»</text>
+<text x="40" y="2783" font-size="10.5" fill="#94A3B8">Generated by tools/figures/requirements_readme.py from requirements/SYS-*.yaml, safety/hazards/ and architecture/item-definition.yaml. Candidate requirements: not baselined, verified or accepted.</text>
+<g class="terms" data-base-h="2812">
+<rect x="0" y="2812" width="2128.5" height="83.6" fill="#FFFFFF"/>
+<line x1="40" y1="2816" x2="2088.5" y2="2816" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="2831.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: 1A–4F = risk assessment code, severity 1–4 plus probability A–F (e.g. 1C) · BMS = battery management system · F-nnn = system function in the item definition · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SUS-A1 = dockable observation UAV · SUS-GSE = ground support,</text>
+<text x="40" y="2846.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">maintenance supports, charging and test equipment · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK = UAV dock, retention, charging and release · SUS-M1-MAN = manipulation arms and end effectors · SUS-M1-PIL = pilot station, restraints, displays and controls · SUS-M1-PWR = power generation, storage,</text>
+<text x="40" y="2860.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">distribution and thermal control · SUS-M1-PWR-BAT = battery pack, BMS and contactors (alternative B) · SUS-M1-PWR-GEN = engine-generator and governor (alternative B) · SUS-M1-SAF = independent safety monitor, protective stop and isolation · SUS-M1-WLK = chassis, legs, joint actuators and stability sensing · SYS-nnn = system safety requirement record</text>
+<text x="40" y="2875.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(requirements/SYS-nnn.yaml) · UAV = uncrewed aerial vehicle (drone)</text>
 </g>
 </svg>

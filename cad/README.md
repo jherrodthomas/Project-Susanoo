@@ -319,7 +319,7 @@ This folder holds the concept layouts of SUS-M1 (SUS-CAD-001): parameters, the m
 | Claws | HAZ-MAN-001, SYS-017 |
 | Carry pose | SYS-019, HAZ-MAN-002, SYS-008, DQ-011, HAZ-WLK-002 |
 
-Records that cite the CAD: 9 hazards (HAZ-DCK-001, HAZ-INT-001, HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-001, HAZ-PIL-003, HAZ-PIL-004, HAZ-WLK-002, HAZ-WLK-003), 4 requirements (SYS-017, SYS-018, SYS-019, SYS-020) and 3 decisions (DQ-013, DQ-014, DQ-015).
+Records that cite the CAD: 12 hazards (HAZ-DCK-001, HAZ-GSE-001, HAZ-INT-001, HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-001, HAZ-PIL-003, HAZ-PIL-004, HAZ-PIL-005, HAZ-PIL-006, HAZ-WLK-002, HAZ-WLK-003), 4 requirements (SYS-017, SYS-018, SYS-019, SYS-020) and 3 decisions (DQ-013, DQ-014, DQ-015).
 
 ## Block diagram
 

@@ -48,4 +48,8 @@ package SusanooSatisfaction {
     satisfy 'SYS-021' by context.system.walker.pilotStation;
     satisfy 'SYS-022' by context.system.walker.dock;
     satisfy 'SYS-022' by context.system.uav;
+    satisfy 'SYS-023' by context.system.groundSupport;
+    satisfy 'SYS-023' by context.system.walker.legs;
+    satisfy 'SYS-024' by context.system.walker.pilotStation;
+    satisfy 'SYS-024' by context.system.walker.safetyMonitor;
 }

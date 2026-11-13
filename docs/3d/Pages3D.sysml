@@ -49,7 +49,7 @@ package Pages3D {
         attribute :>> ciCheck = "sim/scenes3d/sheet_check.mjs";
         attribute :>> sheetNumber = "1 of 2";
         attribute :>> geometry = "assets/sus-m1.js";
-        attribute :>> hazardCount = 19;
+        attribute :>> hazardCount = 22;
         attribute :>> replays = "S3-01, S3-02, S3-03, S3-04";
     }
     part pS301 : ScenePage {

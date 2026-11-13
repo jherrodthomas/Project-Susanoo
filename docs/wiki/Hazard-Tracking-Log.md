@@ -43,21 +43,21 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 ## Summary
 | Risk level | Initial | Target |
 |---|---|---|
-| High | 7 | 0 |
-| Serious | 10 | 1 |
-| Medium | 2 | 18 |
+| High | 8 | 0 |
+| Serious | 12 | 1 |
+| Medium | 2 | 21 |
 | Low | 0 | 0 |
 | Eliminated | 0 | 0 |
 
-Status: open 19 · total 19
+Status: open 22 · total 22
 
 ## Initial risk on the Table III matrix
 | Probability \ Severity | Catastrophic (1) | Critical (2) | Marginal (3) | Negligible (4) |
 |---|---|---|---|---|
 | Frequent (A) |  |  |  |  |
 | Probable (B) |  |  |  |  |
-| Occasional (C) | **High**: HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-001, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002, HAZ-WLK-003 | **Serious**: HAZ-DCK-001, HAZ-DCK-003, HAZ-INT-001, HAZ-PIL-002 | **Medium**: HAZ-DCK-004 |  |
-| Remote (D) | **Serious**: HAZ-INT-002, HAZ-PIL-003, HAZ-PIL-004, HAZ-PWR-001, HAZ-PWR-002, HAZ-PWR-003 | **Medium**: HAZ-DCK-002 |  |  |
+| Occasional (C) | **High**: HAZ-GSE-001, HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-001, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002, HAZ-WLK-003 | **Serious**: HAZ-DCK-001, HAZ-DCK-003, HAZ-INT-001, HAZ-PIL-002, HAZ-PIL-005 | **Medium**: HAZ-DCK-004 |  |
+| Remote (D) | **Serious**: HAZ-INT-002, HAZ-PIL-003, HAZ-PIL-004, HAZ-PIL-006, HAZ-PWR-001, HAZ-PWR-002, HAZ-PWR-003 | **Medium**: HAZ-DCK-002 |  |  |
 | Improbable (E) |  |  |  |  |
 | Eliminated (F) |  |  |  |  |
 
@@ -67,8 +67,8 @@ Status: open 19 · total 19
 | Frequent (A) |  |  |  |  |
 | Probable (B) |  |  |  |  |
 | Occasional (C) |  |  |  |  |
-| Remote (D) | **Serious**: HAZ-MAN-002 | **Medium**: HAZ-DCK-003 | **Medium**: HAZ-DCK-004 |  |
-| Improbable (E) | **Medium**: HAZ-INT-002, HAZ-MAN-001, HAZ-PIL-001, HAZ-PIL-003, HAZ-PIL-004, HAZ-PWR-001, HAZ-PWR-002, HAZ-PWR-003, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002, HAZ-WLK-003 | **Medium**: HAZ-DCK-001, HAZ-DCK-002, HAZ-INT-001, HAZ-PIL-002 |  |  |
+| Remote (D) | **Serious**: HAZ-MAN-002 | **Medium**: HAZ-DCK-003, HAZ-PIL-005 | **Medium**: HAZ-DCK-004 |  |
+| Improbable (E) | **Medium**: HAZ-GSE-001, HAZ-INT-002, HAZ-MAN-001, HAZ-PIL-001, HAZ-PIL-003, HAZ-PIL-004, HAZ-PIL-006, HAZ-PWR-001, HAZ-PWR-002, HAZ-PWR-003, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002, HAZ-WLK-003 | **Medium**: HAZ-DCK-001, HAZ-DCK-002, HAZ-INT-001, HAZ-PIL-002 |  |  |
 | Eliminated (F) |  |  |  |  |
 
 ## Hazards
@@ -78,6 +78,7 @@ Status: open 19 · total 19
 | HAZ-DCK-002 | False retained state releases UAV under motion | MOD-03, MOD-04, MOD-06, MOD-08 | 2D Medium | 2E Medium | — | (b identified) | SSF-005 | Serious | open | ROLE-UAV |
 | HAZ-DCK-003 | UAV battery thermal event while charging on the dock | MOD-03, MOD-06 | 2C Serious | 2D Medium | — | (b identified) | — | — | open | ROLE-UAV |
 | HAZ-DCK-004 | Exposure to energised dock charging contacts | MOD-06, MOD-08, MOD-10 | 3C Medium | 3D Medium | — | (b identified) | — | — | open | ROLE-UAV |
+| HAZ-GSE-001 | Fall from height during maintenance on the walker | MOD-10 | 1C High | 1E Medium | — | (b identified) | — | — | open | ROLE-WLK |
 | HAZ-INT-001 | UAV launch or recovery outside the safe envelope | MOD-06, MOD-07, MOD-08 | 2C Serious | 2E Medium | — | (a identified) | SSF-006, SSF-008 | High | open | ROLE-UAV |
 | HAZ-INT-002 | Pilot acts on misleading or stale UAV information | MOD-04, MOD-07 | 1D Serious | 1E Medium | — | (c identified) | — | — | open | ROLE-UAV |
 | HAZ-MAN-001 | Person struck or pinned by the arms or claws | MOD-04, MOD-05 | 1C High | 1E Medium | — | (c identified) | SSF-001 | High | open | ROLE-WLK |
@@ -86,6 +87,8 @@ Status: open 19 · total 19
 | HAZ-PIL-002 | Uncontrolled vertical drop of the cockpit on loss of leg support | MOD-04, MOD-05, MOD-09 | 2C Serious | 2E Medium | EVT-BENCH-001: 2E Medium | (a identified) | — | — | open | ROLE-WLK |
 | HAZ-PIL-003 | Fall from height during emergency egress | MOD-09 | 1D Serious | 1E Medium | — | (b identified) | — | — | open | ROLE-WLK |
 | HAZ-PIL-004 | Normal egress blocked when the walker cannot lower | MOD-03, MOD-09 | 1D Serious | 1E Medium | — | (b identified) | SSF-002 | High | open | ROLE-WLK |
+| HAZ-PIL-005 | Fall during normal ingress or egress | MOD-03 | 2C Serious | 2D Medium | — | (b identified) | — | — | open | ROLE-WLK |
+| HAZ-PIL-006 | Delayed or unsafe extraction of an incapacitated pilot | MOD-09 | 1D Serious | 1E Medium | — | (c identified) | — | — | open | ROLE-WLK |
 | HAZ-PWR-001 | Residual hydraulic pressure during maintenance | MOD-01, MOD-10 | 1D Serious | 1E Medium | EVT-BENCH-001: 1D Serious | (a identified) | — | — | open | ROLE-WLK |
 | HAZ-PWR-002 | Battery thermal runaway near the pilot station | MOD-02, MOD-04, MOD-09, MOD-10 | 1D Serious | 1E Medium | — | (a identified) | — | — | open | ROLE-WLK |
 | HAZ-PWR-003 | Fuel leak and fire at the engine-generator | MOD-01, MOD-02, MOD-04, MOD-10 | 1D Serious | 1E Medium | — | (b identified) | — | — | open | ROLE-WLK |
@@ -111,7 +114,7 @@ Status: open 19 · total 19
 ## Test events and exposure (4.3.7, Task 303)
 | Event | Title | Status | Exposure | Applicable hazards | Event risk accepted |
 |---|---|---|---|---|---|
-| EVT-BENCH-001 | Supported single-leg hydraulic actuator bench rig | planned | people, equipment | 7 | 0/7 |
-| EVT-SIM-001 | Digital simulation and PX4 SITL campaign | planned | none | 18 | n/a |
+| EVT-BENCH-001 | Supported single-leg hydraulic actuator bench rig | planned | people, equipment | 8 | 0/8 |
+| EVT-SIM-001 | Digital simulation and PX4 SITL campaign | planned | none | 20 | n/a |
 
 Hazard management log (106.2r): the git history of `safety/hazards/`.

@@ -112,3 +112,6 @@ HAZ-INT-001, HAZ-DCK-002 · uav · source SU-02 · outcome **landed-at-stale-hom
 | HAZ-INT-002 | Misleading or stale UAV data needs a display and pilot model; SITL does not model the pilot |
 | HAZ-DCK-003 | Battery thermal behaviour on the dock is not modelled |
 | HAZ-DCK-004 | Dock charging and connector electrics are not modelled |
+| HAZ-PIL-005 | Climbing the ladder and sill is a human task; no person model in the 3D scenes |
+| HAZ-GSE-001 | Maintenance access equipment and maintainers are not modelled |
+| HAZ-PIL-006 | Crew extraction of a pilot is a human task; no person model in the 3D scenes |

@@ -1,0 +1,105 @@
+schema: susanoo/hazard/v0.2
+id: HAZ-PIL-006
+title: Delayed or unsafe extraction of an incapacitated pilot
+status: open
+system: SUS-I1
+subsystems:
+- SUS-M1-PIL
+- SUS-M1-SAF
+applicability:
+  configurations:
+  - SUS-I1-C001
+  hardware: []
+  software: []
+hazardous_condition: The pilot is injured or unconscious in the cockpit and cannot leave unaided, with the walker
+  standing, kneeling or fallen and possibly without power.
+modes:
+- MOD-09
+causal_factors:
+- id: CF1
+  type: hardware
+  description: Hatch or restraint cannot be released from outside; no access to the cockpit of a standing or fallen
+    walker
+- id: CF2
+  type: human
+  description: Crew untrained in extraction; rescuers climb the walker without fall protection
+- id: CF3
+  type: environment
+  description: Fire, smoke or stored energy near the cockpit; walker on its side or on a slope
+effects:
+- Medical care for the pilot is delayed
+- Pilot injured further by the extraction, or a rescuer falls or is struck
+mishap: Death or permanent disability of the pilot from delayed care; injury to a rescuer
+initial_risk:
+  severity: 1
+  probability: D
+  rac: 1D
+  risk_level: Serious
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); an incapacitated pilot needs an earlier mishap, so extraction is remote over the exposure basis (DQ-003),
+    but delay can be fatal
+  definitions: SUS-RISKDEF-001
+target_risk:
+  severity: 1
+  probability: E
+  rac: 1E
+  risk_level: Medium
+  rationale: Preliminary qualitative judgement at concept stage (no design; AI-drafted, I0, for the safety lead to
+    rate); external hatch and restraint release, extraction access to a standing or fallen walker without power,
+    and trained crew with equipment make an unsafe or late extraction improbable
+  definitions: SUS-RISKDEF-001
+event_risks: []
+mitigations:
+- id: M1
+  description: External release of the hatch and the pilot restraint, operable without platform power
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-024
+  verification:
+    method:
+    - inspection
+    - demonstration
+    evidence_ids: []
+- id: M2
+  description: Extraction access to the cockpit of a standing, kneeling or fallen walker, with rescuer fall protection
+  precedence: c
+  state: identified
+  requirement_ids:
+  - SYS-024
+  verification:
+    method:
+    - analysis
+    - demonstration
+    evidence_ids: []
+- id: M3
+  description: Extraction procedure, equipment and crew training, rehearsed before trials
+  precedence: e
+  state: identified
+  verification:
+    method:
+    - demonstration
+    evidence_ids: []
+requirement_ids:
+- SYS-024
+owner:
+  role: ROLE-WLK
+  person: null
+  org: Walker / mechanical
+reviewer: null
+acceptances: []
+reassessments: []
+source:
+  task: 206
+  scenario_ids:
+  - SCN-104
+  documents:
+  - safety/mil-std-882e/02-hazard-identification/task-206-operating-and-support-hazard-analysis/osha.yaml
+  - cad/README.md
+hazmat: not-applicable
+assumptions:
+- Concept configuration SUS-I1-C001; cockpit and hatch layout from the CL-05 reference layout (cad/README.md)
+- A pilot able to move leaves by emergency egress (HAZ-PIL-003, SYS-020)
+open_actions:
+- Confirm severity and probability in PHA (Task 202) at G2
+- Set the extraction time and equipment with the site's medical support (SYS-024 TBD)

@@ -37,7 +37,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | Records | 0 (`CR-nnn.yaml`, schema [`change-request.schema.json`](../pdac/schemas/change-request.schema.json)) |
-| Change surface | 22 requirements, 8 SSFs, 72 mitigations and 1 configuration linked to 19 hazards |
+| Change surface | 24 requirements, 8 SSFs, 81 mitigations and 1 configuration linked to 22 hazards |
 | MIL-STD-882E | element 8 · [Task 304 · Review of Changes, Deficiencies, Mishaps and Deviations](../safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/README.md) |
 | SysML model | [`Task304_ChangeReview.sysml`](../safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/Task304_ChangeReview.sysml) (generated from the 882E catalog) |
 | Rules | R10 (changes reopen affected hazards; increased risk re-accepted), R13 (only a named human review accepts) — `python -m tools.pdac.validate` |
@@ -58,23 +58,26 @@ _No change requests yet._ The table shows what each hazard is linked to, so the 
 | [HAZ-DCK-002](../safety/hazards/HAZ-DCK-002.yaml) | [SYS-005](../requirements/SYS-005.yaml) | SSF-005 | 3 | — | 0 | 0 |
 | [HAZ-DCK-003](../safety/hazards/HAZ-DCK-003.yaml) | [SYS-022](../requirements/SYS-022.yaml) | — | 3 | HAZ-DCK-004 | 0 | 0 |
 | [HAZ-DCK-004](../safety/hazards/HAZ-DCK-004.yaml) | [SYS-006](../requirements/SYS-006.yaml), [SYS-022](../requirements/SYS-022.yaml) | — | 4 | HAZ-DCK-003, HAZ-INT-001 | 0 | 0 |
+| [HAZ-GSE-001](../safety/hazards/HAZ-GSE-001.yaml) | [SYS-023](../requirements/SYS-023.yaml) | — | 3 | — | 0 | 0 |
 | [HAZ-INT-001](../safety/hazards/HAZ-INT-001.yaml) | [SYS-006](../requirements/SYS-006.yaml), [SYS-013](../requirements/SYS-013.yaml) | SSF-006, SSF-008 | 7 | HAZ-DCK-004 | 0 | 0 |
 | [HAZ-INT-002](../safety/hazards/HAZ-INT-002.yaml) | [SYS-021](../requirements/SYS-021.yaml) | — | 3 | — | 0 | 0 |
 | [HAZ-MAN-001](../safety/hazards/HAZ-MAN-001.yaml) | [SYS-017](../requirements/SYS-017.yaml) | SSF-001 | 3 | HAZ-MAN-002, HAZ-PIL-001, HAZ-WLK-003 | 0 | 0 |
 | [HAZ-MAN-002](../safety/hazards/HAZ-MAN-002.yaml) | [SYS-008](../requirements/SYS-008.yaml), [SYS-019](../requirements/SYS-019.yaml) | SSF-001 | 3 | HAZ-MAN-001, HAZ-PIL-001, HAZ-WLK-002, HAZ-WLK-003 | 0 | 0 |
-| [HAZ-PIL-001](../safety/hazards/HAZ-PIL-001.yaml) | [SYS-001](../requirements/SYS-001.yaml), [SYS-018](../requirements/SYS-018.yaml) | SSF-001 | 5 | HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-004, HAZ-WLK-003 | 0 | 0 |
+| [HAZ-PIL-001](../safety/hazards/HAZ-PIL-001.yaml) | [SYS-001](../requirements/SYS-001.yaml), [SYS-018](../requirements/SYS-018.yaml) | SSF-001 | 5 | HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-004, HAZ-PIL-005, HAZ-WLK-003 | 0 | 0 |
 | [HAZ-PIL-002](../safety/hazards/HAZ-PIL-002.yaml) | [SYS-009](../requirements/SYS-009.yaml) | — | 4 | HAZ-WLK-003 | 0 | 0 |
 | [HAZ-PIL-003](../safety/hazards/HAZ-PIL-003.yaml) | [SYS-020](../requirements/SYS-020.yaml) | — | 3 | HAZ-PIL-004 | 0 | 0 |
-| [HAZ-PIL-004](../safety/hazards/HAZ-PIL-004.yaml) | [SYS-018](../requirements/SYS-018.yaml), [SYS-020](../requirements/SYS-020.yaml) | SSF-002 | 3 | HAZ-PIL-001, HAZ-PIL-003, HAZ-SAF-001, HAZ-WLK-003 | 0 | 0 |
+| [HAZ-PIL-004](../safety/hazards/HAZ-PIL-004.yaml) | [SYS-018](../requirements/SYS-018.yaml), [SYS-020](../requirements/SYS-020.yaml) | SSF-002 | 3 | HAZ-PIL-001, HAZ-PIL-003, HAZ-PIL-005, HAZ-SAF-001, HAZ-WLK-003 | 0 | 0 |
+| [HAZ-PIL-005](../safety/hazards/HAZ-PIL-005.yaml) | [SYS-018](../requirements/SYS-018.yaml) | — | 3 | HAZ-PIL-001, HAZ-PIL-004, HAZ-WLK-003 | 0 | 0 |
+| [HAZ-PIL-006](../safety/hazards/HAZ-PIL-006.yaml) | [SYS-024](../requirements/SYS-024.yaml) | — | 3 | — | 0 | 0 |
 | [HAZ-PWR-001](../safety/hazards/HAZ-PWR-001.yaml) | [SYS-007](../requirements/SYS-007.yaml) | — | 4 | — | 0 | 0 |
 | [HAZ-PWR-002](../safety/hazards/HAZ-PWR-002.yaml) | [SYS-014](../requirements/SYS-014.yaml) | — | 4 | — | 0 | 0 |
 | [HAZ-PWR-003](../safety/hazards/HAZ-PWR-003.yaml) | [SYS-015](../requirements/SYS-015.yaml) | — | 3 | — | 0 | 0 |
 | [HAZ-SAF-001](../safety/hazards/HAZ-SAF-001.yaml) | [SYS-002](../requirements/SYS-002.yaml), [SYS-010](../requirements/SYS-010.yaml), [SYS-011](../requirements/SYS-011.yaml) | SSF-002 | 3 | HAZ-PIL-004 | 0 | 0 |
 | [HAZ-WLK-001](../safety/hazards/HAZ-WLK-001.yaml) | [SYS-004](../requirements/SYS-004.yaml) | SSF-004, SSF-007 | 3 | HAZ-WLK-002 | 0 | 0 |
 | [HAZ-WLK-002](../safety/hazards/HAZ-WLK-002.yaml) | [SYS-008](../requirements/SYS-008.yaml), [SYS-016](../requirements/SYS-016.yaml), [SYS-019](../requirements/SYS-019.yaml) | SSF-007 | 7 | HAZ-MAN-002, HAZ-WLK-001 | 0 | 0 |
-| [HAZ-WLK-003](../safety/hazards/HAZ-WLK-003.yaml) | [SYS-009](../requirements/SYS-009.yaml), [SYS-018](../requirements/SYS-018.yaml) | SSF-001 | 3 | HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-001, HAZ-PIL-002, HAZ-PIL-004 | 0 | 0 |
+| [HAZ-WLK-003](../safety/hazards/HAZ-WLK-003.yaml) | [SYS-009](../requirements/SYS-009.yaml), [SYS-018](../requirements/SYS-018.yaml) | SSF-001 | 3 | HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-001, HAZ-PIL-002, HAZ-PIL-004, HAZ-PIL-005 | 0 | 0 |
 
-A change naming configuration `SUS-I1-C001` reopens all 19 hazards that apply to it.
+A change naming configuration `SUS-I1-C001` reopens all 22 hazards that apply to it.
 
 ## Change control
 
