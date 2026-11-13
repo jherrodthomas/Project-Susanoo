@@ -102,6 +102,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   published
 - [Wiki images](Wiki-Images): every figure the wiki shows directly, what writes it and which pages show it
 - [3D page assets](3D-Page-Assets): the CL-05 geometry the general-arrangement sheets load, by part class and clip
+- [882E map sources](882E-Map-Sources): each process-map source against its export, and where each step's records live
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)

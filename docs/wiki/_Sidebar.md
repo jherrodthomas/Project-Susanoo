@@ -68,6 +68,7 @@
 - [Wiki source](README)
 - [Wiki images](Wiki-Images)
 - [3D page assets](3D-Page-Assets)
+- [882E map sources](882E-Map-Sources)
 - [882E workflow](Project-Overview#the-mil-std-882e-workflow)
 - [882E work products](882E-Work-Products)
   - [00 · System Definition and Analysis Baseline](882E-00-system-definition)

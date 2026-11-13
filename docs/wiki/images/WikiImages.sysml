@@ -92,13 +92,13 @@ package WikiImages {
     part imgAnalysisDependencies : HandExport {
         attribute :>> file = "analysis-dependencies.svg";
         attribute :>> kilobytes = 6;
-        attribute :>> shownOn = 7;
+        attribute :>> shownOn = 8;
         attribute :>> source = "docs/diagrams/mil-std-882e/analysis-dependencies.drawio";
     }
     part imgHazardManagement : HandExport {
         attribute :>> file = "hazard-management.svg";
         attribute :>> kilobytes = 5;
-        attribute :>> shownOn = 7;
+        attribute :>> shownOn = 8;
         attribute :>> source = "docs/diagrams/mil-std-882e/hazard-management.drawio";
     }
     part imgRecAcceptance : GeneratedFigure {
@@ -158,13 +158,13 @@ package WikiImages {
     part imgResponsibilitySwimlanes : HandExport {
         attribute :>> file = "responsibility-swimlanes.svg";
         attribute :>> kilobytes = 5;
-        attribute :>> shownOn = 7;
+        attribute :>> shownOn = 8;
         attribute :>> source = "docs/diagrams/mil-std-882e/responsibility-swimlanes.drawio";
     }
     part imgSafetyLifecycle : HandExport {
         attribute :>> file = "safety-lifecycle.svg";
         attribute :>> kilobytes = 7;
-        attribute :>> shownOn = 7;
+        attribute :>> shownOn = 8;
         attribute :>> source = "docs/diagrams/mil-std-882e/safety-lifecycle.drawio";
     }
     part imgSimSc01 : GeneratedFigure {
@@ -230,7 +230,7 @@ package WikiImages {
     part imgSoftwareSafety : HandExport {
         attribute :>> file = "software-safety.svg";
         attribute :>> kilobytes = 6;
-        attribute :>> shownOn = 7;
+        attribute :>> shownOn = 8;
         attribute :>> source = "docs/diagrams/mil-std-882e/software-safety.drawio";
     }
     part imgSusI1Boundary : GeneratedFigure {
@@ -272,12 +272,12 @@ package WikiImages {
     part imgVerificationChange : HandExport {
         attribute :>> file = "verification-change.svg";
         attribute :>> kilobytes = 5;
-        attribute :>> shownOn = 6;
+        attribute :>> shownOn = 7;
         attribute :>> source = "docs/diagrams/mil-std-882e/verification-change.drawio";
     }
     part imgWikiFig1Pages : GeneratedFigure {
         attribute :>> file = "wiki-fig-1-pages.svg";
-        attribute :>> kilobytes = 54;
+        attribute :>> kilobytes = 55;
         attribute :>> shownOn = 1;
         attribute :>> generator = "tools/figures/wiki_readme.py";
     }

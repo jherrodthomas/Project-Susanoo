@@ -113,6 +113,8 @@ def group_of(path: str) -> str:
         return "3D pages"
     if path.startswith("docs/vcycle/"):
         return "V cycle maturity"
+    if path.startswith("docs/diagrams/mil-std-882e/"):
+        return "Process-map activities"
     if path.startswith("docs/diagrams/"):
         return "Process maps"
     if path.startswith("docs/readme/"):

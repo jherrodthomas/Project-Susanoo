@@ -48,8 +48,8 @@ The figures the wiki shows directly: item-definition and SysML views, record fig
 | [`3d-sus-a1-air.png`](3d-sus-a1-air.png) | `sim/scenes3d/sheet_check.mjs` | 287 KB | 3 wiki pages, 2 repository pages |
 | [`3d-sus-a1.png`](3d-sus-a1.png) | `sim/scenes3d/sheet_check.mjs` | 465 KB | 3 wiki pages, 2 repository pages |
 | [`3d-sus-m1.png`](3d-sus-m1.png) | `sim/scenes3d/sheet_check.mjs` | 386 KB | 3 wiki pages, 2 repository pages |
-| [`analysis-dependencies.svg`](analysis-dependencies.svg) | `docs/diagrams/mil-std-882e/analysis-dependencies.drawio` | 6 KB | 3 wiki pages, 4 repository pages |
-| [`hazard-management.svg`](hazard-management.svg) | `docs/diagrams/mil-std-882e/hazard-management.drawio` | 5 KB | 3 wiki pages, 4 repository pages |
+| [`analysis-dependencies.svg`](analysis-dependencies.svg) | `docs/diagrams/mil-std-882e/analysis-dependencies.drawio` | 6 KB | 4 wiki pages, 4 repository pages |
+| [`hazard-management.svg`](hazard-management.svg) | `docs/diagrams/mil-std-882e/hazard-management.drawio` | 5 KB | 4 wiki pages, 4 repository pages |
 | [`rec-acceptance.svg`](rec-acceptance.svg) | `tools/previews/record_figures.py` | 18 KB | 1 repository page |
 | [`rec-decision-board.svg`](rec-decision-board.svg) | `tools/previews/record_figures.py` | 30 KB | **no page** |
 | [`rec-event-risk.svg`](rec-event-risk.svg) | `tools/previews/record_figures.py` | 19 KB | 1 repository page |
@@ -59,8 +59,8 @@ The figures the wiki shows directly: item-definition and SysML views, record fig
 | [`rec-ssf.svg`](rec-ssf.svg) | `tools/previews/record_figures.py` | 28 KB | 1 repository page |
 | [`rec-task-tailoring.svg`](rec-task-tailoring.svg) | `tools/previews/record_figures.py` | 25 KB | 1 repository page |
 | [`rec-traceability.svg`](rec-traceability.svg) | `tools/previews/record_figures.py` | 76 KB | **no page** |
-| [`responsibility-swimlanes.svg`](responsibility-swimlanes.svg) | `docs/diagrams/mil-std-882e/responsibility-swimlanes.drawio` | 5 KB | 3 wiki pages, 4 repository pages |
-| [`safety-lifecycle.svg`](safety-lifecycle.svg) | `docs/diagrams/mil-std-882e/safety-lifecycle.drawio` | 7 KB | 3 wiki pages, 4 repository pages |
+| [`responsibility-swimlanes.svg`](responsibility-swimlanes.svg) | `docs/diagrams/mil-std-882e/responsibility-swimlanes.drawio` | 5 KB | 4 wiki pages, 4 repository pages |
+| [`safety-lifecycle.svg`](safety-lifecycle.svg) | `docs/diagrams/mil-std-882e/safety-lifecycle.drawio` | 7 KB | 4 wiki pages, 4 repository pages |
 | [`sim-sc-01.svg`](sim-sc-01.svg) | `sim/figures/scenes.py` | 18 KB | 3 wiki pages, 1 repository page, 1 front page |
 | [`sim-sc-02.svg`](sim-sc-02.svg) | `sim/figures/scenes.py` | 17 KB | 2 wiki pages, 1 repository page |
 | [`sim-sc-03.svg`](sim-sc-03.svg) | `sim/figures/scenes.py` | 17 KB | 2 wiki pages, 1 repository page |
@@ -71,15 +71,15 @@ The figures the wiki shows directly: item-definition and SysML views, record fig
 | [`sim-su-04.svg`](sim-su-04.svg) | `sim/figures/uav_scenes.py` | 7 KB | 2 wiki pages, 2 repository pages |
 | [`sim-su-05.svg`](sim-su-05.svg) | `sim/figures/uav_scenes.py` | 12 KB | 2 wiki pages, 2 repository pages |
 | [`sim-su-06.svg`](sim-su-06.svg) | `sim/figures/uav_scenes.py` | 8 KB | 2 wiki pages, 2 repository pages |
-| [`software-safety.svg`](software-safety.svg) | `docs/diagrams/mil-std-882e/software-safety.drawio` | 6 KB | 3 wiki pages, 4 repository pages |
+| [`software-safety.svg`](software-safety.svg) | `docs/diagrams/mil-std-882e/software-safety.drawio` | 6 KB | 4 wiki pages, 4 repository pages |
 | [`sus-i1-boundary.svg`](sus-i1-boundary.svg) | `tools/figures/fig_item.py` | 28 KB | 3 wiki pages, 1 repository page |
 | [`sus-i1-context.svg`](sus-i1-context.svg) | `tools/figures/fig_item.py` | 17 KB | 4 wiki pages, 2 repository pages, 1 front page |
 | [`sysml-v02-hierarchy.svg`](sysml-v02-hierarchy.svg) | `tools/sysml/views.py` | 19 KB | 2 wiki pages, 3 repository pages |
 | [`sysml-v07-satisfy.svg`](sysml-v07-satisfy.svg) | `tools/sysml/views.py` | 16 KB | 2 wiki pages, 3 repository pages |
 | [`sysml-v08-n2.svg`](sysml-v08-n2.svg) | `tools/sysml/views.py` | 93 KB | 3 wiki pages, 4 repository pages |
 | [`vcycle-system.svg`](vcycle-system.svg) | `tools/vcycle/build_vcycle.py` | 9 KB | 2 wiki pages, 2 repository pages |
-| [`verification-change.svg`](verification-change.svg) | `docs/diagrams/mil-std-882e/verification-change.drawio` | 5 KB | 3 wiki pages, 3 repository pages |
-| [`wiki-fig-1-pages.svg`](wiki-fig-1-pages.svg) | `tools/figures/wiki_readme.py` | 54 KB | 1 wiki page |
+| [`verification-change.svg`](verification-change.svg) | `docs/diagrams/mil-std-882e/verification-change.drawio` | 5 KB | 4 wiki pages, 3 repository pages |
+| [`wiki-fig-1-pages.svg`](wiki-fig-1-pages.svg) | `tools/figures/wiki_readme.py` | 55 KB | 1 wiki page |
 | [`wiki-fig-2-links.svg`](wiki-fig-2-links.svg) | `tools/figures/wiki_readme.py` | 13 KB | 1 wiki page |
 | [`wiki-fig-3-block-diagram.svg`](wiki-fig-3-block-diagram.svg) | `tools/figures/wiki_readme.py` | 27 KB | 1 wiki page |
 | [`wiki-fig-4-boundary-diagram.svg`](wiki-fig-4-boundary-diagram.svg) | `tools/figures/wiki_readme.py` | 17 KB | 1 wiki page |

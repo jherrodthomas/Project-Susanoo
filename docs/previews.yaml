@@ -36,7 +36,8 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - docs/3d                # generated README (tools/figures/pages3d_readme.py)
   - docs/3d/assets         # generated README (tools/figures/assets3d_readme.py)
   - docs/vcycle            # generated README (tools/figures/vcycle_readme.py)
-  - docs/diagrams          # generated README (tools/figures/diagrams_readme.py); mil-std-882e/ keeps its preview
+  - docs/diagrams          # generated README (tools/figures/diagrams_readme.py)
+  - docs/diagrams/mil-std-882e   # generated README (tools/figures/maps882e_readme.py)
   - docs/readme            # generated README (tools/figures/frontpage_readme.py)
   - docs/wiki              # generated README top (tools/figures/wiki_readme.py)
   - docs/wiki/images       # generated README (tools/figures/wikiimages_readme.py)
@@ -129,21 +130,6 @@ folders:
 
 
 
-  docs/diagrams/mil-std-882e:
-    title: MIL-STD-882E process-map sources
-    purpose: >-
-      Draw.io sources of the illustrative MIL-STD-882E process maps. Edit a `.drawio` file, export it to SVG in
-      `docs/wiki/images/`, and the wiki page MIL-STD-882E Process Maps shows it. These maps are draft workflows,
-      not normative flowcharts.
-    hero: {img: docs/wiki/images/safety-lifecycle.svg, caption: "safety-lifecycle.drawio"}
-    gallery:
-      - {img: docs/wiki/images/hazard-management.svg, caption: "hazard-management.drawio"}
-      - {img: docs/wiki/images/analysis-dependencies.svg, caption: "analysis-dependencies.drawio"}
-      - {img: docs/wiki/images/responsibility-swimlanes.svg, caption: "responsibility-swimlanes.drawio"}
-      - {img: docs/wiki/images/software-safety.svg, caption: "software-safety.drawio"}
-      - {img: docs/wiki/images/verification-change.svg, caption: "verification-change.drawio"}
-    links:
-      - {text: MIL-STD-882E Process Maps (wiki page), href: docs/wiki/MIL-STD-882E-Process-Maps.md}
 
 
 
