@@ -17,7 +17,7 @@ package ResultSets {
         doc /* sim/results/l2-crosscheck.json */
         attribute :>> dataKind = "synthetic";
         attribute :>> evidenceCredit = false;
-        attribute :>> specDigest = "48e1754c83f1";
+        attribute :>> specDigest = "ce8f2beafd0f";
         attribute :>> writer = "sim.mujoco.crosscheck";
         attribute :>> ciCheck = "--compare";
     }
@@ -25,7 +25,7 @@ package ResultSets {
         doc /* sim/results/plant-results.json */
         attribute :>> dataKind = "synthetic";
         attribute :>> evidenceCredit = false;
-        attribute :>> specDigest = "48e1754c83f1";
+        attribute :>> specDigest = "ce8f2beafd0f";
         attribute :>> writer = "sim.plant.report";
         attribute :>> ciCheck = "--check";
     }
@@ -33,7 +33,7 @@ package ResultSets {
         doc /* sim/results/search-SF-01.json */
         attribute :>> dataKind = "synthetic";
         attribute :>> evidenceCredit = false;
-        attribute :>> specDigest = "48e1754c83f1";
+        attribute :>> specDigest = "ce8f2beafd0f";
         attribute :>> writer = "sim.search.search";
         attribute :>> ciCheck = "--check";
     }
@@ -41,7 +41,7 @@ package ResultSets {
         doc /* sim/results/sizing-cf4.json */
         attribute :>> dataKind = "synthetic";
         attribute :>> evidenceCredit = false;
-        attribute :>> specDigest = "48e1754c83f1";
+        attribute :>> specDigest = "ce8f2beafd0f";
         attribute :>> writer = "sim.mujoco.sizing";
         attribute :>> ciCheck = "--compare";
     }
@@ -49,7 +49,7 @@ package ResultSets {
         doc /* sim/results/ts001-fault-response.json */
         attribute :>> dataKind = "synthetic";
         attribute :>> evidenceCredit = false;
-        attribute :>> specDigest = "48e1754c83f1";
+        attribute :>> specDigest = "ce8f2beafd0f";
         attribute :>> writer = "sim.trades.fault_response";
         attribute :>> ciCheck = "--compare";
     }

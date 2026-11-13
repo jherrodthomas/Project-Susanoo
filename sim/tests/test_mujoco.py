@@ -69,15 +69,18 @@ class Model(unittest.TestCase):
         self.assertIn(f"{pr['knee_torque_max_nm'] / 1000:g} kN m", req)
 
     def test_ts001_evidence_matches_the_trade_record(self):
-        """TS-001-E01 claims a hydraulic loss and an isolated battery behave identically (torque to zero) and that
-        level 2 keeps every supply-loss mode safe while load holding works."""
+        """TS-001-E01 claims a hydraulic loss and an isolated battery behave identically (torque to zero), and that on
+        the 4,590 kg reference layout with the re-sized torques (DQ-024) level 2 keeps every mode safe while load
+        holding works."""
         res = json.loads((ROOT / "sim" / "results" / "ts001-fault-response.json").read_text())
         rows = {(r["mode"], r["load_holding"]): r for r in res["rows"]}
         self.assertEqual(rows[("A-LOSS", "fails")]["l2"]["outcomes"], rows[("B-ISOL", "fails")]["l2"]["outcomes"])
         for mode in ("A-LOSS", "B-SAG", "B-ISOL"):
             self.assertEqual(rows[(mode, "works")]["l2"]["counts"]["safe"], res["cases"], mode)
         trade = _read_yaml(ROOT / "architecture" / "trades" / "TS-001.yaml")
-        self.assertIn("sim/results/ts001-fault-response.md", [e.get("source") for e in trade["evidence"]])
+        e01 = next(e for e in trade["evidence"] if e["id"] == "TS-001-E01")
+        self.assertEqual(e01["source"], "sim/results/ts001-fault-response.md")
+        self.assertIn("every supply-loss mode is safe", " ".join(e01["summary"].split()))
 
     def test_locked_walker_holds_still_and_ignores_rounding(self):
         """Load holding is a solver constraint: once locked the walker stays put, so the outcome cannot hang on

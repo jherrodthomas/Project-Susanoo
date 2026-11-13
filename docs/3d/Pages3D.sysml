@@ -59,8 +59,8 @@ package Pages3D {
         attribute :>> syntheticLabel = true;
         attribute :>> ciCheck = "sim/scenes3d/build_sheet.py --check";
         attribute :>> sheetNumber = "3 of 3";
-        attribute :>> geometry = "assets/sus-m1.js, assets/sus-m1-terrain.js";
-        attribute :>> hazardCount = 1;
+        attribute :>> geometry = "assets/sus-m1.js, assets/sus-m1-terrain.js, assets/sus-m1-terrain-loaded.js";
+        attribute :>> hazardCount = 2;
         attribute :>> replays = "";
     }
     part pS301 : ScenePage {

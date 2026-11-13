@@ -1,7 +1,8 @@
 # SPDX-License-Identifier: Apache-2.0
 """Pose the CL-05 walk cycle on the terrains of sim/scenes3d/terrain.yaml for sheet 3 (docs/3d/SUS-M1-terrain.html).
 
-    /opt/b3d/bin/python tools/cad/b3d/cl05_terrain.py [--frames 12]
+    /opt/b3d/bin/python tools/cad/b3d/cl05_terrain.py [--frames 12]            # docs/3d/assets/sus-m1-terrain.js
+    /opt/b3d/bin/python tools/cad/b3d/cl05_terrain.py --loaded                 # docs/3d/assets/sus-m1-terrain-loaded.js
 
 Each terrain is periodic over one walk cycle, so one cycle posed on it loops. Every frame is the build123d model of
 tools/cad/b3d/cl05.py posed by the gait of cad/params/CL-05.yaml walk: (the same foot timing as the flat walk), with
@@ -12,7 +13,10 @@ each foot placed on the ground under it:
 - the hip keeps the walk's crouch and bob above the mean height of the ground under the two feet, and is lowered only
   when a leg cannot otherwise reach its foot (thigh + shank, 0.5 % short of straight); the knees are solved by the
   CAD's own fold_knee, as in the flat walk;
-- the pod stays level and the arms stay stowed (SYS-017): the layout has no body-pitch or balance model.
+- the pod stays level and the arms stay stowed (SYS-017): the layout has no body-pitch or balance model;
+- with --loaded: the loaded gait of walk: loaded: (shorter, lower steps) with the arms holding the placeholder load
+  in the carry pose of postures: carry, the load riding with the hip (SYS-019, load mass TBD). A terrain whose period
+  does not repeat with the loaded stride (the 1.0 m ledges) is listed as not posed.
 
 For each terrain the export records the largest hip drop, the lowest clearance of anything but the legs and feet above
 the ground (pod, arms, power pack, hoses), and any frame the leg geometry cannot solve. Matching re-uses the standing
@@ -40,6 +44,7 @@ from cl05_web import FIT_MM, Packer, Rigid, fit, moments, standing_hip, tessella
 
 ROOT = cl05.ROOT
 OUT = ROOT / "docs/3d/assets/sus-m1-terrain.js"
+OUT_LOADED = ROOT / "docs/3d/assets/sus-m1-terrain-loaded.js"
 GEOM = ROOT / "docs/3d/assets/sus-m1.js"
 REACH = 0.995  # a leg is used up to 99.5 % of thigh + shank
 
@@ -154,12 +159,16 @@ def main() -> int:
     ap.add_argument("--frames", type=int, default=12, help="frames per walk cycle (the page interpolates between them)")
     ap.add_argument("--tolerance", type=float, default=0.004, help="tessellation tolerance, metres (the one sus-m1.js was made with)")
     ap.add_argument("--only", nargs="*", help="terrain keys to export (default all)")
-    ap.add_argument("--out", type=Path, default=OUT)
+    ap.add_argument("--loaded", action="store_true", help="the loaded walk (walk: loaded:, arms in the carry pose holding the placeholder load)")
+    ap.add_argument("--out", type=Path, default=None)
     a = ap.parse_args()
     p = yaml.safe_load((ROOT / "cad/params/CL-05.yaml").read_text())
     common = yaml.safe_load((ROOT / "cad/params/common.yaml").read_text())
     course = yaml.safe_load((ROOT / "sim/scenes3d/terrain.yaml").read_text())
     W = dict(p["walk"])
+    if a.loaded:   # shorter, lower steps; the load rides with the hip as in cl05.walk_frames(loaded=True) (SYS-019)
+        W.update(W.get("loaded") or {})
+    out_path = a.out or (OUT_LOADED if a.loaded else OUT)
     S, hip0 = W["stride"], standing_hip(p)
     base, base_ids = load_base()
     rigid = Rigid(base)
@@ -169,13 +178,23 @@ def main() -> int:
     for t in course["terrains"]:
         if a.only and t["key"] not in a.only:
             continue
-        G = Ground(t, S)
+        try:
+            G = Ground(t, S)
+        except ValueError as e:                  # e.g. ledges whose run does not repeat with this stride
+            out.append({"key": t["key"], "skipped": f"not posed: {e} (stride {S} m)"})
+            print(f"{t['key']}: skipped ({e})", flush=True)
+            continue
         frames, worst_drop, low, unsolved = [], 0.0, math.inf, []
         for i in range(a.frames):
             phase = i / a.frames
             ps = pose(p, W, G, phase, hip0)
             try:
-                parts, _ = cl05.build(p, common, "standing", gait={"hip_z": ps["hip_z"], "legs": ps["legs"], "arms": W["arms"]})
+                arms = W["arms"]
+                if a.loaded:                     # carry pose, the hand target moving with the hip
+                    carry = dict(p["postures"]["carry"]["carry"])
+                    carry["hand_height"] += ps["hip_z"] - hip0
+                    arms = {"carry": carry}
+                parts, _ = cl05.build(p, common, "standing", gait={"hip_z": ps["hip_z"], "legs": ps["legs"], "arms": arms})
             except ValueError as e:              # the leg geometry cannot reach: record it, hold the previous frame
                 unsolved.append({"phase": round(phase, 3), "why": str(e)})
                 frames.append(frames[-1] if frames else None)
@@ -223,19 +242,26 @@ def main() -> int:
     idx += b"\0" * pad
     mat = np.array(mats, dtype="<f4").reshape(-1).tobytes()
     meta = {
-        "about": "CL-05 walk cycle posed on the terrains of sim/scenes3d/terrain.yaml (tools/cad/b3d/cl05_terrain.py): concept "
-                 "kinematics only, no dynamics, balance, foot slip or ground model; the pod stays level and the arms stowed.",
-        "generator": "tools/cad/b3d/cl05_terrain.py", "stride_m": S, "frames_per_cycle": a.frames,
+        "about": ("CL-05 " + ("loaded walk (arms in the carry pose holding the placeholder load, mass TBD)" if a.loaded else "walk")
+                  + " posed on the terrains of sim/scenes3d/terrain.yaml (tools/cad/b3d/cl05_terrain.py): concept kinematics only, "
+                  "no dynamics, balance, foot slip or ground model; the pod stays level"
+                  + ("." if a.loaded else " and the arms stowed.")),
+        "generator": "tools/cad/b3d/cl05_terrain.py", "mode": "loaded" if a.loaded else "unloaded", "stride_m": S,
+        "lift_m": W["lift"], "frames_per_cycle": a.frames,
         "sample_m": course["sample_m"], "width_m": course["width_m"], "quantum_m": 0.0003, "origin_m": [0.0, 0.0, 2.3],
         "layout": {"positions": [0, len(pos)], "indices": [len(pos), len(idx)], "matrices": [len(pos) + len(idx), len(mat)]},
         "meshes": pk.meshes, "terrains": out,
     }
     blob = pos + idx + mat
-    a.out.parent.mkdir(parents=True, exist_ok=True)
-    a.out.write_text("// GENERATED by tools/cad/b3d/cl05_terrain.py from cad/params/CL-05.yaml and sim/scenes3d/terrain.yaml; do not edit.\n"
-                     f"window.SUS_M1_TERRAIN = {{meta: {json.dumps(meta, separators=(',', ':'))},\nbin: \"{base64.b64encode(blob).decode()}\"}};\n")
-    print(f"wrote {a.out} ({len(blob) / 1e6:.2f} MB, {len(pk.meshes)} own meshes, {len(mats)} transforms)")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    var = "SUS_M1_TERRAIN_LOADED" if a.loaded else "SUS_M1_TERRAIN"
+    out_path.write_text("// GENERATED by tools/cad/b3d/cl05_terrain.py from cad/params/CL-05.yaml and sim/scenes3d/terrain.yaml; do not edit.\n"
+                     f"window.{var} = {{meta: {json.dumps(meta, separators=(',', ':'))},\nbin: \"{base64.b64encode(blob).decode()}\"}};\n")
+    print(f"wrote {out_path} ({len(blob) / 1e6:.2f} MB, {len(pk.meshes)} own meshes, {len(mats)} transforms)")
     for t in out:
+        if "skipped" in t:
+            print(f"  {t['key']:8s} {t['skipped']}")
+            continue
         f = t["findings"]
         print(f"  {t['key']:8s} rise {t['rise']:+.3f} m/cycle · hip drop {f['max_hip_drop_m']:.3f} m · body clearance "
               f"{f['min_body_clearance_m']} m · unsolved {len(f['unsolved_frames'])}")

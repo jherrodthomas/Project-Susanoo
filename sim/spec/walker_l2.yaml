@@ -4,15 +4,15 @@ schema: susanoo/sim-spec/v0.1
 id: SPEC-WLK-L2-001
 revision: 0.1-draft
 params:
-  torso_mass_kg:      {value: 2400, unit: kg,  range: [1000, 5000], status: assumed, source: "Cockpit, pelvis, power and manipulators lumped above the hips (80% of mass_kg)"}
-  leg_mass_kg:        {value: 300,  unit: kg,  range: [100, 1000],  status: assumed, source: "Each leg (thigh + shank + foot), split 50/40/10"}
-  hip_height_m:       {value: 2.9,  unit: m,   range: [1.5, 4.0],   status: derived, source: "Puts the whole-body CoM at com_height_m with the masses above"}
-  thigh_length_m:     {value: 1.45, unit: m,   range: [0.8, 2.5],   status: assumed, source: "Hip to knee"}
-  shank_length_m:     {value: 1.45, unit: m,   range: [0.8, 2.5],   status: assumed, source: "Knee to ankle"}
+  torso_mass_kg:      {value: 3672, unit: kg,  range: [1000, 5000], status: derived, source: "80% of mass_kg above the hips (assumed split; the CAD gives no mass per part), DQ-023"}
+  leg_mass_kg:        {value: 459, unit: kg,  range: [100, 1000], status: derived, source: "10% of mass_kg per leg (thigh + shank + foot, split 50/40/10), DQ-023"}
+  hip_height_m:       {value: 2.34, unit: m,   range: [1.5, 4.0], status: derived, source: "Reference layout CL-05 (cad/metrics.json, hip_height_m), decision DQ-023; placeholder geometry, not a design"}
+  thigh_length_m:     {value: 1.107, unit: m,   range: [0.8, 2.5], status: derived, source: "Hip to knee: puts the hip at hip_height_m in the stance pose (knee bent 0.3 rad), DQ-023"}
+  shank_length_m:     {value: 1.107, unit: m,   range: [0.8, 2.5], status: derived, source: "Knee to ankle: as thigh_length_m, DQ-023"}
   ankle_height_m:     {value: 0.15, unit: m,   range: [0.05, 0.4],  status: assumed, source: "Ankle joint above the sole"}
-  torso_com_above_hip_m: {value: 0.5, unit: m, range: [0.0, 1.5],   status: assumed, source: "Cockpit mass centre above the hip joint"}
-  knee_torque_max_nm: {value: 22500, unit: N m, range: [10000, 200000], status: derived, source: "Knee actuator peak torque at full supply, sized against HAZ-WLK-002 CF4 (SZ-01, sim/results/sizing-cf4.md; SYS-016); adopted by lead decision DQ-012"}
+  torso_com_above_hip_m: {value: 0.745, unit: m, range: [0.0, 1.5], status: derived, source: "Puts the whole-body CoM at com_height_m (CL-05, cad/metrics.json) with the masses above, DQ-023"}
+  knee_torque_max_nm: {value: 26500, unit: N m, range: [10000, 200000], status: derived, source: "Knee actuator peak torque at full supply, re-sized against HAZ-WLK-002 CF4 for the 4,590 kg reference layout (SZ-01, sim/results/sizing-cf4.md; SYS-016); adopted by lead decision DQ-024"}
   hip_torque_max_nm:  {value: 40000, unit: N m, range: [10000, 200000], status: assumed, source: "Hip actuator peak torque at full supply"}
-  ankle_torque_max_nm: {value: 26500, unit: N m, range: [5000, 100000], status: derived, source: "Ankle actuator peak torque at full supply, 1.5 m g L_foot, sized against HAZ-WLK-002 CF4 (SZ-01, sim/results/sizing-cf4.md; SYS-016); adopted by lead decision DQ-012"}
+  ankle_torque_max_nm: {value: 40500, unit: N m, range: [5000, 100000], status: derived, source: "Ankle actuator peak torque at full supply, 1.5 m g L_foot, re-sized against HAZ-WLK-002 CF4 for the 4,590 kg reference layout (SZ-01, sim/results/sizing-cf4.md; SYS-016); adopted by lead decision DQ-024"}
   timestep_s:         {value: 0.002, unit: s,  range: [0.0005, 0.005], status: assumed, source: "MuJoCo integration step (implicitfast)"}
   ground_friction:    {value: 1.0,  unit: "-", range: [0.3, 2.0],   status: assumed, source: "Foot-ground friction coefficient on firm ground"}

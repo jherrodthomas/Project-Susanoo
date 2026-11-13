@@ -90,6 +90,9 @@ def load() -> dict:
             "three": cfg.get("three", {}), "sheets": load_sheets()}
 
 
+STILL_ALT = {"3d-sus-a1-air.png": "in the air", "3d-sus-m1-terrain-loaded.png": "loaded carry walk"}
+
+
 def load_sheets() -> list[dict]:
     """The interactive general-arrangement sheets built by build_sheet.py, from sheet.yaml and sheet_uav.yaml."""
     out = []
@@ -111,7 +114,7 @@ def load_sheets() -> list[dict]:
                     "title": "CL-05 walk on the terrain course", "layout": "CL-05",
                     "postures": [f"walk on {len(cfg['terrains'])} terrains"], "callouts": callouts, "replay": [],
                     "built": (ROOT / "docs" / "3d" / "SUS-M1-terrain.html").exists(),
-                    "stills": [x for x in ["3d-sus-m1-terrain.png"] if (ROOT / "docs" / "wiki" / "images" / x).exists()]})
+                    "stills": [x for x in ["3d-sus-m1-terrain.png", "3d-sus-m1-terrain-loaded.png"] if (ROOT / "docs" / "wiki" / "images" / x).exists()]})
     return out
 
 
@@ -405,7 +408,7 @@ def readme(d: dict, specs: list[dict]) -> str:
         *[f"| {x['sheet']} | " + (f"[`{x['page']}.html`](../../docs/3d/{x['page']}.html)" if x["built"] else "—")
           + f" | {x['title']} | {', '.join(x['postures']) or '—'} | {len(x['callouts'])}: {', '.join(x['callouts'])} | "
           f"{', '.join(x['replay']) or '—'} | [`{x['file']}`]({x['file']}) |" for x in d["sheets"]], "",
-        *[f"![{x['page']} {'sheet' if i == 0 else 'in the air'}](../../docs/wiki/images/{st})\n"
+        *[f"![{x['page']} {'sheet' if i == 0 else STILL_ALT.get(st, 'view')}](../../docs/wiki/images/{st})\n"
           for x in d["sheets"] for i, st in enumerate(x["stills"])],
         "## Block diagram\n", img("fig-3-block-diagram.svg", "3", "Block diagram"),
         "## Boundary diagram\n", img("fig-4-boundary-diagram.svg", "4", "Boundary diagram"),

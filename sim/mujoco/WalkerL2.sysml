@@ -7,19 +7,19 @@ package WalkerL2 {
     doc /* The level-2 MuJoCo walker model (sim/mujoco/README.md). */
     part def Torso {
         doc /* Cockpit, pelvis, power and manipulators lumped above the hips; slide x, slide z and pitch. */
-        attribute torsoMassKg : Real = 2400.0;  // kg, assumed
-        attribute hipHeightM : Real = 2.9;  // m, derived
-        attribute torsoComAboveHipM : Real = 0.5;  // m, assumed
+        attribute torsoMassKg : Real = 3672.0;  // kg, derived
+        attribute hipHeightM : Real = 2.34;  // m, derived
+        attribute torsoComAboveHipM : Real = 0.745;  // m, derived
     }
     part def Leg {
         doc /* Hip, knee and ankle hinges about y and a box foot; each joint has a lock for load holding. */
-        attribute legMassKg : Real = 300.0;  // kg, assumed
-        attribute thighLengthM : Real = 1.45;  // m, assumed
-        attribute shankLengthM : Real = 1.45;  // m, assumed
+        attribute legMassKg : Real = 459.0;  // kg, derived
+        attribute thighLengthM : Real = 1.107;  // m, derived
+        attribute shankLengthM : Real = 1.107;  // m, derived
         attribute ankleHeightM : Real = 0.15;  // m, assumed
         attribute hipTorqueMaxNm : Real = 40000.0;  // N m, assumed
-        attribute kneeTorqueMaxNm : Real = 22500.0;  // N m, derived
-        attribute ankleTorqueMaxNm : Real = 26500.0;  // N m, derived
+        attribute kneeTorqueMaxNm : Real = 26500.0;  // N m, derived
+        attribute ankleTorqueMaxNm : Real = 40500.0;  // N m, derived
     }
     part def WalkerL2 {
         doc /* SPEC-WLK-L2-001 0.1-draft: the planar level-2 walker in MuJoCo. */

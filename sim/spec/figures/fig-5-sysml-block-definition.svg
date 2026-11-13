@@ -1,68 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1167.1" viewBox="0 0 760 1167.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="761.1" height="1167.1" viewBox="0 0 761.1 1167.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
 <title>Figure 5 · SysML block definition — PlantSpecs</title>
 <desc>What a parameter spec is, with the statuses spec.py accepts and the two specs, generated into PlantSpecs.sysml. The values themselves are in Figure 1.</desc>
 <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="760" height="1127" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="761.1" height="1127" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 5 · SysML block definition — PlantSpecs</text>
 <text x="40" y="66" font-size="12.5" fill="#475569">What a parameter spec is, with the statuses spec.py accepts and the two specs,</text>
 <text x="40" y="83" font-size="12.5" fill="#475569">generated into PlantSpecs.sysml. The values themselves are in Figure 1.</text>
-<text x="720" y="44" font-size="11" fill="#475569" text-anchor="end">sim/spec/PlantSpecs.sysml</text>
-<line x1="40" y1="102" x2="720" y2="102" stroke="#E2E8F0" stroke-width="1"/>
-<rect x="40" y="126" width="611.1" height="905" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<text x="721.1" y="44" font-size="11" fill="#475569" text-anchor="end">sim/spec/PlantSpecs.sysml</text>
+<line x1="40" y1="102" x2="721.1" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="126" width="681.1" height="905" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
 <path d="M40 126 L217.1 126 L217.1 140 L207.1 150 L40 150 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="50" y="143" font-size="11.5" fill="#0F172A" font-weight="700">bdd [package] PlantSpecs</text>
 <g transform="translate(56 166)">
-<path d="M187 561 L187 415" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
-<path d="M187 261 L187 115" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M146 734 L146 670" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M443 734 L443 699 Q443 692 436 692 L236 692 Q229 692 229 685 L229 670" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<rect x="112" y="6" width="150" height="109" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
-<rect x="112" y="6" width="150" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
-<line x1="112" y1="52" x2="262" y2="52" stroke="#7C3AED" stroke-width="1.1"/>
-<text x="187" y="23" font-size="10" fill="#475569" text-anchor="middle">«enum def»</text>
-<text x="187" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">ParamStatus</text>
-<text x="124" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">assumed</text>
-<text x="124" y="85" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">derived</text>
-<text x="124" y="100" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">published</text>
-<rect x="110" y="261" width="154" height="154" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="110" y="261" width="154" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
-<line x1="110" y1="307" x2="264" y2="307" stroke="#4F46E5" stroke-width="1.1"/>
-<text x="187" y="278" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
-<text x="187" y="295" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SpecParameter</text>
-<text x="122" y="325" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">value : Real</text>
-<text x="122" y="340" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">unit : String</text>
-<text x="122" y="355" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">rangeLow : Real</text>
-<text x="122" y="370" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">rangeHigh : Real</text>
-<text x="122" y="385" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">status : ParamStatus</text>
-<text x="122" y="400" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">source : String</text>
-<rect x="63" y="561" width="248.5" height="109" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
-<rect x="63" y="561" width="248.5" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
-<line x1="63" y1="607" x2="311.5" y2="607" stroke="#4F46E5" stroke-width="1.1"/>
-<text x="187.2" y="578" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
-<text x="187.2" y="595" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">ParameterSpec</text>
-<text x="75" y="625" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">specId : String</text>
-<text x="75" y="640" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">revision : String</text>
-<text x="75" y="655" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">part parameters : SpecParameter [*]</text>
-<rect x="6" y="734" width="280" height="109" rx="4" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="6" y="734" width="280" height="46" rx="4" fill="#FFF7ED" stroke="none" stroke-width="0"/>
-<line x1="6" y1="780" x2="286" y2="780" stroke="#C2410C" stroke-width="1.1"/>
-<text x="146" y="751" font-size="10" fill="#475569" text-anchor="middle">«part»</text>
-<text x="146" y="768" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">walkerSpec : ParameterSpec</text>
+<path d="M222 561 L222 415" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-start="url(#dia-ink)"/>
+<path d="M222 261 L222 115" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M181 734 L181 670" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M513 734 L513 699 Q513 692 506 692 L271 692 Q264 692 264 685 L264 670" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="147" y="6" width="150" height="109" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="147" y="6" width="150" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="147" y1="52" x2="297" y2="52" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="222" y="23" font-size="10" fill="#475569" text-anchor="middle">«enum def»</text>
+<text x="222" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">ParamStatus</text>
+<text x="159" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">assumed</text>
+<text x="159" y="85" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">derived</text>
+<text x="159" y="100" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">published</text>
+<rect x="145" y="261" width="154" height="154" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="145" y="261" width="154" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="145" y1="307" x2="299" y2="307" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="222" y="278" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="222" y="295" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SpecParameter</text>
+<text x="157" y="325" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">value : Real</text>
+<text x="157" y="340" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">unit : String</text>
+<text x="157" y="355" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">rangeLow : Real</text>
+<text x="157" y="370" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">rangeHigh : Real</text>
+<text x="157" y="385" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">status : ParamStatus</text>
+<text x="157" y="400" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">source : String</text>
+<rect x="98" y="561" width="248.5" height="109" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="98" y="561" width="248.5" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="98" y1="607" x2="346.5" y2="607" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="222.2" y="578" font-size="10" fill="#475569" text-anchor="middle">«part def»</text>
+<text x="222.2" y="595" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">ParameterSpec</text>
+<text x="110" y="625" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">specId : String</text>
+<text x="110" y="640" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">revision : String</text>
+<text x="110" y="655" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">part parameters : SpecParameter [*]</text>
+<rect x="6" y="734" width="349.3" height="109" rx="4" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="6" y="734" width="349.3" height="46" rx="4" fill="#FFF7ED" stroke="none" stroke-width="0"/>
+<line x1="6" y1="780" x2="355.3" y2="780" stroke="#C2410C" stroke-width="1.1"/>
+<text x="180.6" y="751" font-size="10" fill="#475569" text-anchor="middle">«part»</text>
+<text x="180.6" y="768" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">walkerSpec : ParameterSpec</text>
 <text x="18" y="798" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">specId = SPEC-WLK-001</text>
 <text x="18" y="813" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">revision = 0.1-draft</text>
-<text x="18" y="828" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">parameters: 24 (23 assumed, 1 published)</text>
-<rect x="312" y="734" width="261.1" height="109" rx="4" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.3"/>
-<rect x="312" y="734" width="261.1" height="46" rx="4" fill="#FFF7ED" stroke="none" stroke-width="0"/>
-<line x1="312" y1="780" x2="573.1" y2="780" stroke="#C2410C" stroke-width="1.1"/>
-<text x="442.6" y="751" font-size="10" fill="#475569" text-anchor="middle">«part»</text>
-<text x="442.6" y="768" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">walkerL2Spec : ParameterSpec</text>
-<text x="324" y="798" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">specId = SPEC-WLK-L2-001</text>
-<text x="324" y="813" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">revision = 0.1-draft</text>
-<text x="324" y="828" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">parameters: 12 (9 assumed, 3 derived)</text>
-<rect x="100" y="479" width="84.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="105" y="492" font-size="10.5" fill="#475569">parameters [*]</text>
-<rect x="140" y="179" width="44.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="145" y="192" font-size="10.5" fill="#475569">status</text>
+<text x="18" y="828" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">parameters: 24 (20 assumed, 3 derived, 1 published)</text>
+<rect x="382" y="734" width="261.1" height="109" rx="4" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="382" y="734" width="261.1" height="46" rx="4" fill="#FFF7ED" stroke="none" stroke-width="0"/>
+<line x1="382" y1="780" x2="643.1" y2="780" stroke="#C2410C" stroke-width="1.1"/>
+<text x="512.5" y="751" font-size="10" fill="#475569" text-anchor="middle">«part»</text>
+<text x="512.5" y="768" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">walkerL2Spec : ParameterSpec</text>
+<text x="394" y="798" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">specId = SPEC-WLK-L2-001</text>
+<text x="394" y="813" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">revision = 0.1-draft</text>
+<text x="394" y="828" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">parameters: 12 (8 derived, 4 assumed)</text>
+<rect x="135" y="479" width="84.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="140" y="492" font-size="10.5" fill="#475569">parameters [*]</text>
+<rect x="175" y="179" width="44.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="180" y="192" font-size="10.5" fill="#475569">status</text>
 </g>
 <line x1="40" y1="1057" x2="56" y2="1057" stroke="#475569" stroke-width="1.8"/>
 <text x="62" y="1061" font-size="11" fill="#475569">Composition (diamond at owner)</text>
@@ -77,8 +77,8 @@
 <text x="40" y="1083" font-size="10.5" fill="#94A3B8">Generated by tools/figures/spec_readme.py from sim/spec/*.yaml, sim/plant/spec.py and the code that loads the specs. Concept</text>
 <text x="40" y="1098" font-size="10.5" fill="#94A3B8">assumptions, not design values; the simulations they feed are synthetic (sim/README.md, evidence gate).</text>
 <g class="terms" data-base-h="1127">
-<rect x="0" y="1127" width="760" height="40.1" fill="#FFFFFF"/>
-<line x1="40" y1="1131" x2="720" y2="1131" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="0" y="1127" width="761.1" height="40.1" fill="#FFFFFF"/>
+<line x1="40" y1="1131" x2="721.1" y2="1131" stroke="#E2E8F0" stroke-width="1"/>
 <text x="40" y="1146.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: SPEC-nnn = simulation parameter spec record (sim/spec/) · SysML = Systems Modeling Language (SysML v2)</text>
 </g>
 </svg>

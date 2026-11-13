@@ -25,13 +25,13 @@ package WikiImages {
     }
     part img3DS301Dusk : RenderedStill {
         attribute :>> file = "3d-s3-01-dusk.png";
-        attribute :>> kilobytes = 108;
+        attribute :>> kilobytes = 111;
         attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/render.mjs";
     }
     part img3DS301 : RenderedStill {
         attribute :>> file = "3d-s3-01.png";
-        attribute :>> kilobytes = 118;
+        attribute :>> kilobytes = 123;
         attribute :>> shownOn = 3;
         attribute :>> page = "sim/scenes3d/render.mjs";
     }
@@ -43,13 +43,13 @@ package WikiImages {
     }
     part img3DS303 : RenderedStill {
         attribute :>> file = "3d-s3-03.png";
-        attribute :>> kilobytes = 82;
+        attribute :>> kilobytes = 77;
         attribute :>> shownOn = 3;
         attribute :>> page = "sim/scenes3d/render.mjs";
     }
     part img3DS304 : RenderedStill {
         attribute :>> file = "3d-s3-04.png";
-        attribute :>> kilobytes = 111;
+        attribute :>> kilobytes = 102;
         attribute :>> shownOn = 3;
         attribute :>> page = "sim/scenes3d/render.mjs";
     }
@@ -83,9 +83,15 @@ package WikiImages {
         attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/sheet_check.mjs";
     }
+    part img3DSusM1TerrainLoaded : RenderedStill {
+        attribute :>> file = "3d-sus-m1-terrain-loaded.png";
+        attribute :>> kilobytes = 307;
+        attribute :>> shownOn = 5;
+        attribute :>> page = "sim/scenes3d/sheet_check.mjs";
+    }
     part img3DSusM1Terrain : RenderedStill {
         attribute :>> file = "3d-sus-m1-terrain.png";
-        attribute :>> kilobytes = 307;
+        attribute :>> kilobytes = 309;
         attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/sheet_check.mjs";
     }
@@ -115,7 +121,7 @@ package WikiImages {
     }
     part imgRecDecisionBoard : GeneratedFigure {
         attribute :>> file = "rec-decision-board.svg";
-        attribute :>> kilobytes = 30;
+        attribute :>> kilobytes = 31;
         attribute :>> shownOn = 0;
         attribute :>> generator = "tools/previews/record_figures.py";
     }
@@ -325,19 +331,19 @@ package WikiImages {
     }
     part imgSimSc01 : GeneratedFigure {
         attribute :>> file = "sim-sc-01.svg";
-        attribute :>> kilobytes = 18;
+        attribute :>> kilobytes = 19;
         attribute :>> shownOn = 5;
         attribute :>> generator = "sim/figures/scenes.py";
     }
     part imgSimSc02 : GeneratedFigure {
         attribute :>> file = "sim-sc-02.svg";
-        attribute :>> kilobytes = 17;
+        attribute :>> kilobytes = 18;
         attribute :>> shownOn = 3;
         attribute :>> generator = "sim/figures/scenes.py";
     }
     part imgSimSc03 : GeneratedFigure {
         attribute :>> file = "sim-sc-03.svg";
-        attribute :>> kilobytes = 17;
+        attribute :>> kilobytes = 18;
         attribute :>> shownOn = 3;
         attribute :>> generator = "sim/figures/scenes.py";
     }

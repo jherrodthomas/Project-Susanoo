@@ -28,7 +28,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Field | Value |
 |---|---|
-| Current plant spec digest | `48e1754c83f1` ([`sim/spec/walker.yaml`](../spec/walker.yaml)) |
+| Current plant spec digest | `ce8f2beafd0f` ([`sim/spec/walker.yaml`](../spec/walker.yaml)) |
 | Evidence gate | [`sim/README.md`](../README.md#evidence-gate) |
 | SysML | [`ResultSets.sysml`](ResultSets.sysml) (generated) |
 
@@ -42,11 +42,11 @@ The committed output of the simulation track. Every file here is written by a si
 
 | Result set | Files | Written by | Re-run in CI | Spec digest | Hazards named |
 |---|---|---|---|---|---|
-| l2-crosscheck | [`l2-crosscheck.json`](l2-crosscheck.json), [`l2-crosscheck.md`](l2-crosscheck.md) | `sim.mujoco.crosscheck` | pdac-validate · mujoco `--compare` | 48e1754c83f1 (current) | HAZ-PIL-002, HAZ-WLK-002 |
-| plant-results | [`plant-results.json`](plant-results.json), [`plant-results.md`](plant-results.md) | `sim.plant.report` | pdac-validate · sim `--check` | 48e1754c83f1 (current) | HAZ-PIL-002, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002 |
-| search-SF-01 | [`search-SF-01.json`](search-SF-01.json), [`search-SF-01.md`](search-SF-01.md) | `sim.search.search` | pdac-validate · sim `--check` | 48e1754c83f1 (current) | HAZ-PIL-002, HAZ-WLK-002 |
-| sizing-cf4 | [`sizing-cf4.json`](sizing-cf4.json), [`sizing-cf4.md`](sizing-cf4.md) | `sim.mujoco.sizing` | pdac-validate · mujoco `--compare` | 48e1754c83f1 (current) | HAZ-WLK-002 |
-| ts001-fault-response | [`ts001-fault-response.json`](ts001-fault-response.json), [`ts001-fault-response.md`](ts001-fault-response.md) | `sim.trades.fault_response` | pdac-validate · mujoco `--compare` | 48e1754c83f1 (current) | — |
+| l2-crosscheck | [`l2-crosscheck.json`](l2-crosscheck.json), [`l2-crosscheck.md`](l2-crosscheck.md) | `sim.mujoco.crosscheck` | pdac-validate · mujoco `--compare` | ce8f2beafd0f (current) | HAZ-PIL-002 |
+| plant-results | [`plant-results.json`](plant-results.json), [`plant-results.md`](plant-results.md) | `sim.plant.report` | pdac-validate · sim `--check` | ce8f2beafd0f (current) | HAZ-PIL-002, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002 |
+| search-SF-01 | [`search-SF-01.json`](search-SF-01.json), [`search-SF-01.md`](search-SF-01.md) | `sim.search.search` | pdac-validate · sim `--check` | ce8f2beafd0f (current) | HAZ-PIL-002, HAZ-WLK-002 |
+| sizing-cf4 | [`sizing-cf4.json`](sizing-cf4.json), [`sizing-cf4.md`](sizing-cf4.md) | `sim.mujoco.sizing` | pdac-validate · mujoco `--compare` | ce8f2beafd0f (current) | HAZ-WLK-002 |
+| ts001-fault-response | [`ts001-fault-response.json`](ts001-fault-response.json), [`ts001-fault-response.md`](ts001-fault-response.md) | `sim.trades.fault_response` | pdac-validate · mujoco `--compare` | ce8f2beafd0f (current) | — |
 
 Also here: [`edge-cases.md`](edge-cases.md), written with the search results. The PX4 SITL runs and their summary are in [`uav/`](uav/README.md).
 

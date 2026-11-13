@@ -98,7 +98,7 @@ Built by [`build_sheet.py`](https://github.com/jherrodthomas/Project-Susanoo/blo
 |---|---|---|---|---|---|---|
 | 1 of 3 | [`SUS-M1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1.html) | General arrangement, interactive | Stand, Kneel, Carry, Egress, Walk | 19: HAZ-DCK-001, HAZ-DCK-002, HAZ-DCK-003, HAZ-DCK-004, HAZ-INT-001, HAZ-INT-002, HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-001, HAZ-PIL-002, HAZ-PIL-003, HAZ-PIL-004, HAZ-PWR-001, HAZ-PWR-002, HAZ-PWR-003, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002, HAZ-WLK-003 | S3-01, S3-02, S3-03, S3-04 | [`sheet.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet.yaml) |
 | 2 of 3 | [`SUS-A1.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-A1.html) | UAV on dock and in airspace, interactive | — | 6: HAZ-DCK-001, HAZ-DCK-002, HAZ-DCK-003, HAZ-DCK-004, HAZ-INT-001, HAZ-INT-002 | SU-01, SU-02, SU-03, SU-04, SU-05, SU-06 | [`sheet_uav.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/sheet_uav.yaml) |
-| 3 of 3 | [`SUS-M1-terrain.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1-terrain.html) | CL-05 walk on the terrain course | walk on 11 terrains | 2: HAZ-WLK-002, SYS-008 | — | [`terrain.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/terrain.yaml) |
+| 3 of 3 | [`SUS-M1-terrain.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/SUS-M1-terrain.html) | CL-05 walk on the terrain course | walk on 11 terrains | 4: HAZ-MAN-002, HAZ-WLK-002, SYS-008, SYS-019 | — | [`terrain.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/terrain.yaml) |
 
 ![SUS-M1 sheet](images/3d-sus-m1.png)
 
@@ -107,6 +107,8 @@ Built by [`build_sheet.py`](https://github.com/jherrodthomas/Project-Susanoo/blo
 ![SUS-A1 in the air](images/3d-sus-a1-air.png)
 
 ![SUS-M1-terrain sheet](images/3d-sus-m1-terrain.png)
+
+![SUS-M1-terrain loaded carry walk](images/3d-sus-m1-terrain-loaded.png)
 
 ## Block diagram
 

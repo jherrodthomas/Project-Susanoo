@@ -5,7 +5,7 @@
 <rect x="0" y="0" width="1240" height="1112" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · Every plant parameter inside its allowed range</text>
 <text x="40" y="66" font-size="12.5" fill="#475569">The 36 parameters of SPEC-WLK-001 and SPEC-WLK-L2-001: each value marked inside the range spec.py enforces (it refuses a value outside it or without a source), with its</text>
-<text x="40" y="83" font-size="12.5" fill="#475569">status — 32 assumed, 3 derived, 1 published. Nothing here is a design value.</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">status — 24 assumed, 11 derived, 1 published. Nothing here is a design value.</text>
 <text x="1200" y="44" font-size="11" fill="#475569" text-anchor="end">sim/spec/*.yaml</text>
 <line x1="40" y1="102" x2="1200" y2="102" stroke="#E2E8F0" stroke-width="1"/>
 <text x="40" y="150" font-size="11.5" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">walker.yaml · SPEC-WLK-001 · 0.1-draft</text>
@@ -15,33 +15,33 @@
 <text x="655" y="168" font-size="10" fill="#475569" font-weight="700">Status</text>
 <text x="740" y="168" font-size="10" fill="#475569" font-weight="700">Source</text>
 <text x="50" y="189" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">mass_kg</text>
-<text x="280" y="189" font-size="10" fill="#0F172A" font-weight="700">3000 kg</text>
+<text x="280" y="189" font-size="10" fill="#0F172A" font-weight="700">4590 kg</text>
 <rect x="390" y="183" width="190" height="6" rx="3" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
-<circle cx="453.3" cy="186.0" r="4.5" fill="#D97706"/>
+<circle cx="520.5" cy="186.0" r="4.5" fill="#7C3AED"/>
 <text x="386" y="190" font-size="8.5" fill="#94A3B8" text-anchor="end">1500</text>
 <text x="584" y="190" font-size="8.5" fill="#94A3B8">6000</text>
-<rect x="655" y="177" width="52.7" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
-<text x="681.3" y="188.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">assumed</text>
-<text x="740" y="189" font-size="9.5" fill="#475569">Concept scale: open-frame walker with protected operator station (README)</text>
+<rect x="655" y="177" width="46.5" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="678.2" y="188.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">derived</text>
+<text x="740" y="189" font-size="9.5" fill="#475569">Reference layout CL-05 (cad/metrics.json, placeholder_mass_kg), decision DQ-023; placeholder …</text>
 <rect x="40" y="197" width="1160" height="20" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="50" y="211" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">com_height_m</text>
-<text x="280" y="211" font-size="10" fill="#0F172A" font-weight="700">3 m</text>
+<text x="280" y="211" font-size="10" fill="#0F172A" font-weight="700">2.72 m</text>
 <rect x="390" y="205" width="190" height="6" rx="3" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
-<circle cx="466.0" cy="208.0" r="4.5" fill="#D97706"/>
+<circle cx="444.7" cy="208.0" r="4.5" fill="#7C3AED"/>
 <text x="386" y="212" font-size="8.5" fill="#94A3B8" text-anchor="end">2</text>
 <text x="584" y="212" font-size="8.5" fill="#94A3B8">4.5</text>
-<rect x="655" y="199" width="52.7" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
-<text x="681.3" y="210.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">assumed</text>
-<text x="740" y="211" font-size="9.5" fill="#475569">Concept scale; CoM roughly at hip height of a ~5 m walker</text>
+<rect x="655" y="199" width="46.5" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="678.2" y="210.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">derived</text>
+<text x="740" y="211" font-size="9.5" fill="#475569">Reference layout CL-05 (cad/metrics.json, cg_m height, standing), decision DQ-023; placeholder …</text>
 <text x="50" y="233" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">crouch_height_m</text>
-<text x="280" y="233" font-size="10" fill="#0F172A" font-weight="700">1.8 m</text>
+<text x="280" y="233" font-size="10" fill="#0F172A" font-weight="700">1.49 m</text>
 <rect x="390" y="227" width="190" height="6" rx="3" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
-<circle cx="491.3" cy="230.0" r="4.5" fill="#D97706"/>
+<circle cx="452.1" cy="230.0" r="4.5" fill="#7C3AED"/>
 <text x="386" y="234" font-size="8.5" fill="#94A3B8" text-anchor="end">1</text>
 <text x="584" y="234" font-size="8.5" fill="#94A3B8">2.5</text>
-<rect x="655" y="221" width="52.7" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
-<text x="681.3" y="232.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">assumed</text>
-<text x="740" y="233" font-size="9.5" fill="#475569">Kneeling/supported posture (CONOPS MOD-03 stable pose)</text>
+<rect x="655" y="221" width="46.5" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="678.2" y="232.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">derived</text>
+<text x="740" y="233" font-size="9.5" fill="#475569">Reference layout CL-05 (cad/metrics.json, postures.kneel.cg_m height), decision DQ-023; placeholder …</text>
 <rect x="40" y="241" width="1160" height="20" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="50" y="255" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">foot_half_length_m</text>
 <text x="280" y="255" font-size="10" fill="#0F172A" font-weight="700">0.6 m</text>
@@ -249,52 +249,52 @@
 <text x="655" y="742" font-size="10" fill="#475569" font-weight="700">Status</text>
 <text x="740" y="742" font-size="10" fill="#475569" font-weight="700">Source</text>
 <text x="50" y="763" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">torso_mass_kg</text>
-<text x="280" y="763" font-size="10" fill="#0F172A" font-weight="700">2400 kg</text>
+<text x="280" y="763" font-size="10" fill="#0F172A" font-weight="700">3672 kg</text>
 <rect x="390" y="757" width="190" height="6" rx="3" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
-<circle cx="456.5" cy="760.0" r="4.5" fill="#D97706"/>
+<circle cx="516.9" cy="760.0" r="4.5" fill="#7C3AED"/>
 <text x="386" y="764" font-size="8.5" fill="#94A3B8" text-anchor="end">1000</text>
 <text x="584" y="764" font-size="8.5" fill="#94A3B8">5000</text>
-<rect x="655" y="751" width="52.7" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
-<text x="681.3" y="762.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">assumed</text>
-<text x="740" y="763" font-size="9.5" fill="#475569">Cockpit, pelvis, power and manipulators lumped above the hips (80% of mass_kg)</text>
+<rect x="655" y="751" width="46.5" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="678.2" y="762.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">derived</text>
+<text x="740" y="763" font-size="9.5" fill="#475569">80% of mass_kg above the hips (assumed split; the CAD gives no mass per part), DQ-023</text>
 <rect x="40" y="771" width="1160" height="20" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="50" y="785" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">leg_mass_kg</text>
-<text x="280" y="785" font-size="10" fill="#0F172A" font-weight="700">300 kg</text>
+<text x="280" y="785" font-size="10" fill="#0F172A" font-weight="700">459 kg</text>
 <rect x="390" y="779" width="190" height="6" rx="3" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
-<circle cx="432.2" cy="782.0" r="4.5" fill="#D97706"/>
+<circle cx="465.8" cy="782.0" r="4.5" fill="#7C3AED"/>
 <text x="386" y="786" font-size="8.5" fill="#94A3B8" text-anchor="end">100</text>
 <text x="584" y="786" font-size="8.5" fill="#94A3B8">1000</text>
-<rect x="655" y="773" width="52.7" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
-<text x="681.3" y="784.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">assumed</text>
-<text x="740" y="785" font-size="9.5" fill="#475569">Each leg (thigh + shank + foot), split 50/40/10</text>
+<rect x="655" y="773" width="46.5" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="678.2" y="784.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">derived</text>
+<text x="740" y="785" font-size="9.5" fill="#475569">10% of mass_kg per leg (thigh + shank + foot, split 50/40/10), DQ-023</text>
 <text x="50" y="807" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">hip_height_m</text>
-<text x="280" y="807" font-size="10" fill="#0F172A" font-weight="700">2.9 m</text>
+<text x="280" y="807" font-size="10" fill="#0F172A" font-weight="700">2.34 m</text>
 <rect x="390" y="801" width="190" height="6" rx="3" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
-<circle cx="496.4" cy="804.0" r="4.5" fill="#7C3AED"/>
+<circle cx="453.8" cy="804.0" r="4.5" fill="#7C3AED"/>
 <text x="386" y="808" font-size="8.5" fill="#94A3B8" text-anchor="end">1.5</text>
 <text x="584" y="808" font-size="8.5" fill="#94A3B8">4</text>
 <rect x="655" y="795" width="46.5" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
 <text x="678.2" y="806.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">derived</text>
-<text x="740" y="807" font-size="9.5" fill="#475569">Puts the whole-body CoM at com_height_m with the masses above</text>
+<text x="740" y="807" font-size="9.5" fill="#475569">Reference layout CL-05 (cad/metrics.json, hip_height_m), decision DQ-023; placeholder geometry, not a …</text>
 <rect x="40" y="815" width="1160" height="20" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="50" y="829" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">thigh_length_m</text>
-<text x="280" y="829" font-size="10" fill="#0F172A" font-weight="700">1.45 m</text>
+<text x="280" y="829" font-size="10" fill="#0F172A" font-weight="700">1.107 m</text>
 <rect x="390" y="823" width="190" height="6" rx="3" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
-<circle cx="462.6" cy="826.0" r="4.5" fill="#D97706"/>
+<circle cx="424.3" cy="826.0" r="4.5" fill="#7C3AED"/>
 <text x="386" y="830" font-size="8.5" fill="#94A3B8" text-anchor="end">0.8</text>
 <text x="584" y="830" font-size="8.5" fill="#94A3B8">2.5</text>
-<rect x="655" y="817" width="52.7" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
-<text x="681.3" y="828.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">assumed</text>
-<text x="740" y="829" font-size="9.5" fill="#475569">Hip to knee</text>
+<rect x="655" y="817" width="46.5" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="678.2" y="828.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">derived</text>
+<text x="740" y="829" font-size="9.5" fill="#475569">Hip to knee: puts the hip at hip_height_m in the stance pose (knee bent 0.3 rad), DQ-023</text>
 <text x="50" y="851" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">shank_length_m</text>
-<text x="280" y="851" font-size="10" fill="#0F172A" font-weight="700">1.45 m</text>
+<text x="280" y="851" font-size="10" fill="#0F172A" font-weight="700">1.107 m</text>
 <rect x="390" y="845" width="190" height="6" rx="3" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
-<circle cx="462.6" cy="848.0" r="4.5" fill="#D97706"/>
+<circle cx="424.3" cy="848.0" r="4.5" fill="#7C3AED"/>
 <text x="386" y="852" font-size="8.5" fill="#94A3B8" text-anchor="end">0.8</text>
 <text x="584" y="852" font-size="8.5" fill="#94A3B8">2.5</text>
-<rect x="655" y="839" width="52.7" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
-<text x="681.3" y="850.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">assumed</text>
-<text x="740" y="851" font-size="9.5" fill="#475569">Knee to ankle</text>
+<rect x="655" y="839" width="46.5" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="678.2" y="850.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">derived</text>
+<text x="740" y="851" font-size="9.5" fill="#475569">Knee to ankle: as thigh_length_m, DQ-023</text>
 <rect x="40" y="859" width="1160" height="20" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="50" y="873" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">ankle_height_m</text>
 <text x="280" y="873" font-size="10" fill="#0F172A" font-weight="700">0.15 m</text>
@@ -306,24 +306,24 @@
 <text x="681.3" y="872.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">assumed</text>
 <text x="740" y="873" font-size="9.5" fill="#475569">Ankle joint above the sole</text>
 <text x="50" y="895" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">torso_com_above_hip_m</text>
-<text x="280" y="895" font-size="10" fill="#0F172A" font-weight="700">0.5 m</text>
+<text x="280" y="895" font-size="10" fill="#0F172A" font-weight="700">0.745 m</text>
 <rect x="390" y="889" width="190" height="6" rx="3" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
-<circle cx="453.3" cy="892.0" r="4.5" fill="#D97706"/>
+<circle cx="484.4" cy="892.0" r="4.5" fill="#7C3AED"/>
 <text x="386" y="896" font-size="8.5" fill="#94A3B8" text-anchor="end">0</text>
 <text x="584" y="896" font-size="8.5" fill="#94A3B8">1.5</text>
-<rect x="655" y="883" width="52.7" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
-<text x="681.3" y="894.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">assumed</text>
-<text x="740" y="895" font-size="9.5" fill="#475569">Cockpit mass centre above the hip joint</text>
+<rect x="655" y="883" width="46.5" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="678.2" y="894.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">derived</text>
+<text x="740" y="895" font-size="9.5" fill="#475569">Puts the whole-body CoM at com_height_m (CL-05, cad/metrics.json) with the masses above, DQ-023</text>
 <rect x="40" y="903" width="1160" height="20" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="50" y="917" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">knee_torque_max_nm</text>
-<text x="280" y="917" font-size="10" fill="#0F172A" font-weight="700">22500 N m</text>
+<text x="280" y="917" font-size="10" fill="#0F172A" font-weight="700">26500 N m</text>
 <rect x="390" y="911" width="190" height="6" rx="3" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
-<circle cx="402.5" cy="914.0" r="4.5" fill="#7C3AED"/>
+<circle cx="406.5" cy="914.0" r="4.5" fill="#7C3AED"/>
 <text x="386" y="918" font-size="8.5" fill="#94A3B8" text-anchor="end">10000</text>
 <text x="584" y="918" font-size="8.5" fill="#94A3B8">200000</text>
 <rect x="655" y="905" width="46.5" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
 <text x="678.2" y="916.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">derived</text>
-<text x="740" y="917" font-size="9.5" fill="#475569">Knee actuator peak torque at full supply, sized against HAZ-WLK-002 CF4 (SZ-01 …</text>
+<text x="740" y="917" font-size="9.5" fill="#475569">Knee actuator peak torque at full supply, re-sized against HAZ-WLK-002 CF4 for the 4,590 kg …</text>
 <text x="50" y="939" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">hip_torque_max_nm</text>
 <text x="280" y="939" font-size="10" fill="#0F172A" font-weight="700">40000 N m</text>
 <rect x="390" y="933" width="190" height="6" rx="3" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
@@ -335,14 +335,14 @@
 <text x="740" y="939" font-size="9.5" fill="#475569">Hip actuator peak torque at full supply</text>
 <rect x="40" y="947" width="1160" height="20" rx="4" fill="#F1F5F9" stroke="none" stroke-width="0"/>
 <text x="50" y="961" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">ankle_torque_max_nm</text>
-<text x="280" y="961" font-size="10" fill="#0F172A" font-weight="700">26500 N m</text>
+<text x="280" y="961" font-size="10" fill="#0F172A" font-weight="700">40500 N m</text>
 <rect x="390" y="955" width="190" height="6" rx="3" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
-<circle cx="433.0" cy="958.0" r="4.5" fill="#7C3AED"/>
+<circle cx="461.0" cy="958.0" r="4.5" fill="#7C3AED"/>
 <text x="386" y="962" font-size="8.5" fill="#94A3B8" text-anchor="end">5000</text>
 <text x="584" y="962" font-size="8.5" fill="#94A3B8">100000</text>
 <rect x="655" y="949" width="46.5" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
 <text x="678.2" y="960.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">derived</text>
-<text x="740" y="961" font-size="9.5" fill="#475569">Ankle actuator peak torque at full supply, 1.5 m g L_foot, sized against HAZ-WLK-002 CF4 (SZ-01 …</text>
+<text x="740" y="961" font-size="9.5" fill="#475569">Ankle actuator peak torque at full supply, 1.5 m g L_foot, re-sized against HAZ-WLK-002 CF4 for the …</text>
 <text x="50" y="983" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">timestep_s</text>
 <text x="280" y="983" font-size="10" fill="#0F172A" font-weight="700">0.002 s</text>
 <rect x="390" y="977" width="190" height="6" rx="3" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
@@ -374,9 +374,9 @@
 <g class="terms" data-base-h="1112">
 <rect x="0" y="1112" width="1240" height="83.6" fill="#FFFFFF"/>
 <line x1="40" y1="1116" x2="1200" y2="1116" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="1131.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CF1, CF2 … = causal factor in a hazard record (CF1, CF2 …) · CoM = centre of mass · CONOPS = concept of operations · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · M1, M2 … = mitigation in a</text>
-<text x="40" y="1146.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">hazard record (M1, M2 …), or a SysML model check rule in tools/sysml · MOD-nnn = operating mode from the CONOPS (MOD-01 to MOD-10) · MuJoCo = Multi-Joint dynamics with Contact, the physics engine for the level-2</text>
-<text x="40" y="1160.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">walker model · SPEC-nnn = simulation parameter spec record (sim/spec/) · SSF-nnn = safety-significant software function record (safety/software/) · SysML = Systems Modeling Language (SysML v2) · SZ-nnn = actuator</text>
-<text x="40" y="1175.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">sizing study at level 2 (sim/mujoco/sizing.yaml)</text>
+<text x="40" y="1131.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CAD = computer-aided design · CF1, CF2 … = causal factor in a hazard record (CF1, CF2 …) · CL-nnn = concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout) · CoM = centre of mass</text>
+<text x="40" y="1146.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">· DQ-nnn = decision question for the project lead (decisions/register.yaml) · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · M1, M2 … = mitigation in a hazard record (M1, M2 …), or a SysML model</text>
+<text x="40" y="1160.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">check rule in tools/sysml · MuJoCo = Multi-Joint dynamics with Contact, the physics engine for the level-2 walker model · SPEC-nnn = simulation parameter spec record (sim/spec/) · SSF-nnn = safety-significant</text>
+<text x="40" y="1175.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">software function record (safety/software/) · SysML = Systems Modeling Language (SysML v2)</text>
 </g>
 </svg>

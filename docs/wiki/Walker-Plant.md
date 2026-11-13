@@ -14,15 +14,15 @@
 | A01–A04 | item-definition validator rule (A01–A04) |
 | CF1, CF2 … | causal factor in a hazard record (CF1, CF2 …) |
 | CI | continuous integration (the automated checks GitHub runs on every change) |
+| CL-nnn | concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout) |
 | CoM | centre of mass |
-| CONOPS | concept of operations |
 | DoD | US Department of Defense |
+| DQ-nnn | decision question for the project lead (decisions/register.yaml) |
 | FLT-nnn | walker fault in sim/faults.yaml |
 | HAZ-nnn | hazard record (safety/hazards/HAZ-xxx-nnn.yaml) |
 | HHA | health hazard analysis (MIL-STD-882E Task 207) |
 | M1, M2 … | mitigation in a hazard record (M1, M2 …), or a SysML model check rule in tools/sysml |
 | MIL-STD-882E | US DoD Standard Practice for System Safety (11 May 2012, base edition) |
-| MOD-nnn | operating mode from the CONOPS (MOD-01 to MOD-10) |
 | MuJoCo | Multi-Joint dynamics with Contact, the physics engine for the level-2 walker model |
 | OMG | Object Management Group, publisher of SysML |
 | SPEC-nnn | simulation parameter spec record (sim/spec/) |
@@ -40,7 +40,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Field | Value |
 |---|---|
-| Spec | [`sim/spec/walker.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/spec/walker.yaml) (SPEC-WLK-001 0.1-draft: 23 assumed, 1 published) |
+| Spec | [`sim/spec/walker.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/spec/walker.yaml) (SPEC-WLK-001 0.1-draft: 3 derived, 20 assumed, 1 published) |
 | Run | `python -m sim.plant.report` ([`report.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/plant/report.py)); `--check` in CI |
 | Results | [`plant-results.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/plant-results.md) |
 | SysML | [`WalkerPlant.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/plant/WalkerPlant.sysml) (generated) |
@@ -55,10 +55,10 @@ A reduced-order model of SUS-M1 in the sagittal plane: a point mass on a force-c
 
 | Fault | mitigated 0° | mitigated 8° | no load holding 0° | no load holding 8° | no monitor 0° | no monitor 8° | no hold, slow pilot 0° | no hold, slow pilot 8° |
 |---|---|---|---|---|---|---|---|---|
-| FLT-01 Hydraulic supply pressure loss | safe (+0.13) | safe (-0.04) | hard-drop (-3.34) | hard-drop (-3.34) | safe (+0.13) | safe (-0.04) | hard-drop (-3.34) | hard-drop (-3.34) |
-| FLT-02 Posture feedback frozen (stale) | safe (+0.76) | safe (+0.57) | tip (-1.22) | tip (-1.64) | tip (-2.39) | tip (-2.21) | tip (-1.22) | tip (-1.64) |
-| FLT-03 Protective stop commands zero torque | hard-drop (-3.86) | hard-drop (-3.86) | hard-drop (-3.86) | hard-drop (-3.86) | hard-drop (-3.86) | hard-drop (-3.86) | hard-drop (-3.86) | hard-drop (-3.86) |
-| FLT-04 Electric bus undervoltage | safe (+0.16) | safe (-0.04) | hard-drop (-1.53) | hard-drop (-1.53) | safe (+0.16) | safe (-0.04) | hard-drop (-1.53) | hard-drop (-1.53) |
+| FLT-01 Hydraulic supply pressure loss | safe (+0.13) | safe (-0.03) | hard-drop (-3.38) | hard-drop (-3.38) | safe (+0.13) | safe (-0.03) | hard-drop (-3.38) | hard-drop (-3.38) |
+| FLT-02 Posture feedback frozen (stale) | safe (+0.75) | safe (+0.58) | tip (-1.21) | tip (-1.59) | tip (-2.37) | tip (-2.18) | tip (-1.21) | tip (-1.59) |
+| FLT-03 Protective stop commands zero torque | hard-drop (-3.90) | hard-drop (-3.90) | hard-drop (-3.90) | hard-drop (-3.90) | hard-drop (-3.90) | hard-drop (-3.90) | hard-drop (-3.90) | hard-drop (-3.90) |
+| FLT-04 Electric bus undervoltage | safe (+0.16) | safe (-0.03) | hard-drop (-1.57) | hard-drop (-1.57) | safe (+0.16) | safe (-0.03) | hard-drop (-1.57) | hard-drop (-1.57) |
 
 | Configuration | Load holding | Monitor | Pilot reaction (s) |
 |---|---|---|---|
@@ -123,9 +123,9 @@ Stated in [`walker.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/ma
 
 | Parameter | Value | Unit | Range | Status | Source |
 |---|---|---|---|---|---|
-| `mass_kg` | 3000 | kg | 1500 to 6000 | assumed | Concept scale: open-frame walker with protected operator station (README) |
-| `com_height_m` | 3.0 | m | 2.0 to 4.5 | assumed | Concept scale; CoM roughly at hip height of a ~5 m walker |
-| `crouch_height_m` | 1.8 | m | 1.0 to 2.5 | assumed | Kneeling/supported posture (CONOPS MOD-03 stable pose) |
+| `mass_kg` | 4590 | kg | 1500 to 6000 | derived | Reference layout CL-05 (cad/metrics.json, placeholder_mass_kg), decision DQ-023; placeholder geometry, not a design |
+| `com_height_m` | 2.72 | m | 2.0 to 4.5 | derived | Reference layout CL-05 (cad/metrics.json, cg_m height, standing), decision DQ-023; placeholder geometry, not a design |
+| `crouch_height_m` | 1.49 | m | 1.0 to 2.5 | derived | Reference layout CL-05 (cad/metrics.json, postures.kneel.cg_m height), decision DQ-023; placeholder geometry, not a design |
 | `foot_half_length_m` | 0.6 | m | 0.3 to 1.0 | assumed | Single-support foot, along the direction of travel |
 | `stance_half_length_m` | 1.4 | m | 0.8 to 2.5 | assumed | Double-support polygon after planting the swing foot |
 | `tip_offset_m` | 1.0 | m | 0.6 to 2.0 | assumed | CoM horizontal offset beyond which tipping is taken as irrecoverable (contact and rotation not modelled) |

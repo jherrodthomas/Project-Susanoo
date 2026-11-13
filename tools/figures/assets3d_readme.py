@@ -77,12 +77,16 @@ def read_terrain(a: dict, p: Path) -> dict:
     labels = {t["key"]: t for t in yaml.safe_load((ROOT / "sim/scenes3d/terrain.yaml").read_text())["terrains"]}
     rows = []
     for t in meta["terrains"]:
+        base = {"key": t["key"], "label": labels.get(t["key"], {}).get("label", t["key"]),
+                "note": labels.get(t["key"], {}).get("note", "")}
+        if "frames" not in t:
+            rows.append({**base, "skipped": t.get("skipped") or "not posed"})
+            continue
         f = t["findings"]
-        rows.append({"key": t["key"], "label": labels.get(t["key"], {}).get("label", t["key"]),
-                     "note": labels.get(t["key"], {}).get("note", ""), "rise": t["rise"], "frames": len(t["frames"]),
+        rows.append({**base, "skipped": None, "rise": t["rise"], "frames": len(t["frames"]),
                      "own": sum(len(fr["extras"]) for fr in t["frames"]), "drop": f["max_hip_drop_m"],
                      "clear": f["min_body_clearance_m"], "unsolved": len(f["unsolved_frames"])})
-    a.update(rows=rows, pages=sorted(h.name for h in PAGES.glob("*.html")
+    a.update(rows=rows, mode=meta.get("mode", "walk"), pages=sorted(h.name for h in PAGES.glob("*.html")
                                      if f"assets/{p.name}" in h.read_text(encoding="utf-8")),
              tris=sum(m["i"][1] // 3 for m in meta["meshes"]))
     return a
@@ -91,11 +95,11 @@ def read_terrain(a: dict, p: Path) -> dict:
 def load() -> dict:
     ctx, _, _ = load_reqs()
     assets = []
-    terrain = None
+    terrains = []
     for p in sorted(FOLDER.glob("*.js")):
         a = read_asset(p)
         if "terrains" in a["meta"]:
-            terrain = read_terrain(a, p)
+            terrains.append(read_terrain(a, p))
             continue
         meta = a["meta"]
         per = defaultdict(lambda: {"meshes": 0, "base": 0, "verts": 0, "tris": 0})
@@ -112,7 +116,8 @@ def load() -> dict:
                       for name, frames in meta["clips"].items()}
         a["pages"] = sorted(h.name for h in PAGES.glob("*.html") if f"assets/{p.name}" in h.read_text(encoding="utf-8"))
         assets.append(a)
-    return {"ctx": ctx, "assets": assets, "terrain": terrain, "colours": class_colours(),
+    terrains.sort(key=lambda t: (t["mode"] != "walk", t["file"]))
+    return {"ctx": ctx, "assets": assets, "terrains": terrains, "colours": class_colours(),
             "root": next(k for k, v in ctx.nodes.items() if not v.get("parent") and v.get("kind") != "external")}
 
 
@@ -312,7 +317,8 @@ def figure_specs(d: dict) -> tuple[list[dict], str]:
                     subtitle="The folder holds the exported geometry only; the CAD that writes it and the sheets that "
                              "load it are outside. Crossings are numbered as in the table.")
     sysml_spec, sysml = fig_sysml(d)
-    a, t = d["assets"][0], d["terrain"]
+    a, t = d["assets"][0], d["terrains"]
+    tpages = sorted({p for x in t for p in x["pages"]})
     io = {"file": "fig-6-inputs-and-outputs.svg", "number": "6", "title": "Inputs and outputs",
           "ref": "docs/3d/assets/README.md", "direction": "RIGHT",
           "subtitle": "What the geometry files are built from (left) and what loads them (right).",
@@ -321,15 +327,15 @@ def figure_specs(d: dict) -> tuple[list[dict], str]:
               {"id": "I2", "title": "build123d model", "sub": "tools/cad/b3d/cl05.py", "tone": "software"},
               *([{"id": "I3", "title": "Terrain course", "sub": "sim/scenes3d/terrain.yaml", "tone": "work"}] if t else []),
               {"id": "X", "code": "docs/3d/assets/", "title": "Geometry files" if t else "Geometry file",
-               "sub": f"{a['file']}, {a['kb']:,} KB" + (f"; {t['file']}, {t['kb']:,} KB" if t else ""),
+               "sub": "; ".join(f"{x['file']}, {x['kb']:,} KB" for x in [a] + t),
                "tone": "current"},
               *[{"id": f"O{i}", "title": pg, "sub": "general-arrangement sheet", "tone": "work"}
-                for i, pg in enumerate(sorted(set(a["pages"]) | set(t["pages"] if t else [])), 1)],
+                for i, pg in enumerate(sorted(set(a["pages"]) | set(tpages)), 1)],
               ],
           "edges": [{"src": "I1", "dst": "X", "label": "parameters"}, {"src": "I2", "dst": "X", "label": "cl05_web.py"},
                     *([{"src": "I3", "dst": "X", "label": "cl05_terrain.py"}] if t else []),
                     *[{"src": "X", "dst": f"O{i}", "label": "loads"}
-                      for i in range(1, len(set(a["pages"]) | set(t["pages"] if t else [])) + 1)]]}
+                      for i in range(1, len(set(a["pages"]) | set(tpages)) + 1)]]}
     specs = [block, boundary, sysml_spec, io]
     for sp in specs:
         sp.setdefault("footer", FOOTER)
@@ -340,23 +346,28 @@ def figure_specs(d: dict) -> tuple[list[dict], str]:
 
 # ================================================================ README
 def terrain_section(d: dict) -> list[str]:
-    t = d["terrain"]
-    if not t:
+    if not d["terrains"]:
         return []
-    m = t["meta"]
-    return [
-        "## Terrain poses\n",
-        f"`{t['file']}` ({t['kb']:,} KB, `window.{t['var']}`) holds the CL-05 walk cycle posed on every terrain of "
-        f"[`sim/scenes3d/terrain.yaml`](../../../sim/scenes3d/terrain.yaml), {m['frames_per_cycle']} frames a cycle over a "
-        f"{m['stride_m']:g} m stride, for sheet 3. Each frame reuses the standing meshes of `sus-m1.js` by transform or "
-        f"adds {plural(len(m['meshes']), 'mesh')} of its own ({fmt(t['tris'])} triangles); each terrain carries its "
-        f"ground height map ({m['sample_m']:g} m grid, {m['width_m']:g} m wide) and the exporter's kinematic findings. "
-        "Concept kinematics only: no dynamics, balance, foot slip or ground model.\n",
-        "| Terrain | Rise per cycle | Frames | Meshes of their own | Largest hip drop | Lowest body clearance | "
-        "Unsolved frames |", "|---|---|---|---|---|---|---|",
-        *[f"| {r['label']}{' (' + r['note'] + ')' if r['note'] else ''} | {round(r['rise'], 3) + 0.0:+.3f} m | {r['frames']} | {r['own']} | "
-          f"{r['drop']:.3f} m | {('%.3f m' % r['clear']) if r['clear'] is not None else '—'} | {r['unsolved']} |"
-          for r in t["rows"]], ""]
+    out = ["## Terrain poses\n",
+           "The CL-05 walk posed on every terrain of [`sim/scenes3d/terrain.yaml`](../../../sim/scenes3d/terrain.yaml) "
+           "for sheet 3, one file per gait. Each frame reuses the standing meshes of `sus-m1.js` by transform or adds "
+           "meshes of its own; each terrain carries its ground height map and the exporter's kinematic findings. "
+           "Concept kinematics only: no dynamics, balance, foot slip or ground model.\n"]
+    for t in d["terrains"]:
+        m = t["meta"]
+        out += [f"**`{t['file']}`** ({t['mode']}; {t['kb']:,} KB, `window.{t['var']}`): {m['frames_per_cycle']} frames "
+                f"a cycle over a {m['stride_m']:g} m stride, {plural(len(m['meshes']), 'mesh')} of its own "
+                f"({fmt(t['tris'])} triangles), ground on a {m['sample_m']:g} m grid {m['width_m']:g} m wide.\n",
+                "| Terrain | Rise per cycle | Frames | Meshes of their own | Largest hip drop | Lowest body clearance | "
+                "Unsolved frames |", "|---|---|---|---|---|---|---|",
+                *[(f"| {r['label']}{' (' + r['note'] + ')' if r['note'] else ''} | — | — | — | — | — | "
+                   f"{r['skipped'] if r['skipped'].startswith('not posed') else 'not posed: ' + r['skipped']} |"
+                   if r["skipped"] else
+                   f"| {r['label']}{' (' + r['note'] + ')' if r['note'] else ''} | {round(r['rise'], 3) + 0.0:+.3f} m | "
+                   f"{r['frames']} | {r['own']} | {r['drop']:.3f} m | "
+                   f"{('%.3f m' % r['clear']) if r['clear'] is not None else '—'} | {r['unsolved']} |")
+                  for r in t["rows"]], ""]
+    return out
 
 
 def img(file: str, number: str, title: str) -> str:
@@ -372,9 +383,9 @@ def readme(d: dict, specs: list[dict]) -> str:
         f"<!-- GENERATED by {GEN} from the mesh table in docs/3d/assets; re-export the geometry and regenerate. -->\n",
         "# 3D page assets\n",
         f"> **Status:** the CL-05 geometry, loaded by {', '.join(f'`{p}`' for p in a['pages'])}"
-        + (f", and its terrain poses ({len(d['terrain']['rows'])} terrains, "
-           f"{sum(r['unsolved'] for r in d['terrain']['rows'])} unsolved frames), loaded by "
-           f"{', '.join(f'`{p}`' for p in d['terrain']['pages'])}" if d["terrain"] else "") + ". "
+        + "".join(f", the {t['mode']} terrain poses ({sum(1 for r in t['rows'] if not r['skipped'])} of "
+                  f"{len(t['rows'])} terrains posed, {sum(r.get('unsolved', 0) for r in t['rows'])} unsolved frames), "
+                  f"loaded by {', '.join(f'`{p}`' for p in t['pages'])}" for t in d["terrains"]) + ". "
         "CL-05 **concept geometry for review, not a design**; the clips are concept kinematics with no dynamics, "
         "balance or load model.\n",
         "| Field | Value |", "|---|---|",
@@ -413,10 +424,10 @@ def readme(d: dict, specs: list[dict]) -> str:
         "| CL-05 parameters | [`cad/params/`](../../../cad/README.md) |",
         "| Model and export | `tools/cad/b3d/cl05.py`, `tools/cad/b3d/cl05_web.py` |",
         *(["| Terrain course and poses | `sim/scenes3d/terrain.yaml`, `tools/cad/b3d/cl05_terrain.py` |"]
-          if d["terrain"] else []), "",
+          if d["terrains"] else []), "",
         "| Output | Destination |", "|---|---|",
         *[f"| Geometry | [`{p}`](../{p}) |" for p in a["pages"]],
-        *([f"| Terrain poses | [`{p}`](../{p}) |" for p in d["terrain"]["pages"]] if d["terrain"] else []), "",
+        *[f"| Terrain poses ({t['mode']}) | [`{p}`](../{p}) |" for t in d["terrains"] for p in t["pages"]], "",
         "## Changing the geometry\n",
         "1. Change the layout in `cad/params/CL-05.yaml` (or the model in `tools/cad/b3d/cl05.py`), never the file here.",
         "2. Re-export with `/opt/b3d/bin/python tools/cad/b3d/cl05_web.py` (and, for the terrain poses, "
@@ -424,7 +435,7 @@ def readme(d: dict, specs: list[dict]) -> str:
         "3. Regenerate this page and run the full check list in [`CLAUDE.md`](../../../CLAUDE.md).", "",
         "## Folder contents\n",
         "| Item | Description | State |", "|---|---|---|",
-        *[f"| `{x['file']}` | {x['meta']['about']} | generated |" for x in d["assets"] + ([d["terrain"]] if d["terrain"] else [])],
+        *[f"| `{x['file']}` | {x['meta']['about']} | generated |" for x in d["assets"] + d["terrains"]],
         "| [`CL05Geometry.sysml`](CL05Geometry.sysml) | The geometry file's structure as SysML | generated |",
         "| [`figures/`](figures/) | Generated SVG figures (do not edit) | generated |",
         "| `README.md` | This page | generated |", "",

@@ -7,9 +7,9 @@ package WalkerPlant {
     doc /* The level-1 walker plant (sim/plant/README.md). */
     part def WalkerPlant {
         doc /* SPEC-WLK-001 revision 0.1-draft: reduced-order plant parameters; every value an assumption, not a design value. */
-        attribute massKg : Real = 3000.0;  // kg, assumed
-        attribute comHeightM : Real = 3.0;  // m, assumed
-        attribute crouchHeightM : Real = 1.8;  // m, assumed
+        attribute massKg : Real = 4590.0;  // kg, derived
+        attribute comHeightM : Real = 2.72;  // m, derived
+        attribute crouchHeightM : Real = 1.49;  // m, derived
         attribute footHalfLengthM : Real = 0.6;  // m, assumed
         attribute stanceHalfLengthM : Real = 1.4;  // m, assumed
         attribute tipOffsetM : Real = 1.0;  // m, assumed

@@ -43,14 +43,14 @@ Searches the level-1 walker plant for the failures the fault catalogue's fixed c
 
 | Case | Parameters | Outcome | Hazard | pilot reacts in 0.5 s | load holding works | flat ground | slow leak (tau 3 s) |
 |---|---|---|---|---|---|---|---|
-| EC-01 | load_holding fails, pilot_reaction_s 2.1, slope_deg 15.5, stride_offset_m 0.08, tau_leak_s 0.05 | hard-drop | HAZ-PIL-002 | hard-drop | safe | hard-drop | hard-drop |
-| EC-02 | load_holding fails, pilot_reaction_s 0.6, slope_deg 16, stride_offset_m 0.01, tau_leak_s 0.06 | hard-drop | HAZ-PIL-002 | hard-drop | safe | hard-drop | hard-drop |
-| EC-03 | load_holding fails, pilot_reaction_s 0.9, slope_deg 8.5, stride_offset_m 0.1, tau_leak_s 0.05 | hard-drop | HAZ-PIL-002 | hard-drop | safe | hard-drop | hard-drop |
-| EC-04 | load_holding fails, pilot_reaction_s 1.8, slope_deg 12, stride_offset_m 0.02, tau_leak_s 0.06 | hard-drop | HAZ-PIL-002 | hard-drop | safe | hard-drop | hard-drop |
+| EC-01 | load_holding fails, pilot_reaction_s 3, slope_deg 12, stride_offset_m 0.09, tau_leak_s 0.05 | hard-drop | HAZ-PIL-002 | hard-drop | safe | hard-drop | hard-drop |
+| EC-02 | load_holding fails, pilot_reaction_s 2, slope_deg 13.5, stride_offset_m 0.04, tau_leak_s 0.06 | hard-drop | HAZ-PIL-002 | hard-drop | safe | hard-drop | hard-drop |
+| EC-03 | load_holding fails, pilot_reaction_s 0.9, slope_deg 12, stride_offset_m 0.09, tau_leak_s 0.06 | hard-drop | HAZ-PIL-002 | hard-drop | safe | hard-drop | hard-drop |
+| EC-04 | load_holding fails, pilot_reaction_s 2.2, slope_deg 20, stride_offset_m 0.09, tau_leak_s 0.07 | hard-drop | HAZ-PIL-002 | hard-drop | safe | hard-drop | tip |
 | EC-05 | load_holding fails, pilot_reaction_s 3, slope_deg 0, stride_offset_m 0.05, tau_leak_s 0.05 | hard-drop | HAZ-PIL-002 | hard-drop | safe | hard-drop | hard-drop |
 | EC-06 | load_holding fails, pilot_reaction_s 1.3, slope_deg 1.5, stride_offset_m 0.04, tau_leak_s 0.06 | hard-drop | HAZ-PIL-002 | hard-drop | safe | hard-drop | hard-drop |
-| EC-07 | load_holding fails, pilot_reaction_s 2.3, slope_deg 18, stride_offset_m 0.1, tau_leak_s 1.49 | tip | HAZ-WLK-002 | hard-drop | tip | hard-drop | tip |
-| EC-08 | load_holding works, pilot_reaction_s 1.4, slope_deg 16.5, stride_offset_m 0.1, tau_leak_s 4.09 | tip | HAZ-WLK-002 | safe | tip | safe | safe |
+| EC-07 | load_holding fails, pilot_reaction_s 2.3, slope_deg 20, stride_offset_m 0.05, tau_leak_s 2.87 | tip | HAZ-WLK-002 | hard-drop | tip | hard-drop | tip |
+| EC-08 | load_holding works, pilot_reaction_s 2.4, slope_deg 19.5, stride_offset_m 0.09, tau_leak_s 1.94 | tip | HAZ-WLK-002 | safe | tip | safe | tip |
 
 New findings: none; every edge case maps to an existing hazard.
 
@@ -60,7 +60,7 @@ New findings: none; every edge case maps to an existing hazard.
 
 | Family | Fault | Space | Monte Carlo | Falsification | Rules |
 |---|---|---|---|---|---|
-| SF-01 Hydraulic supply loss in mid-stride on a slope | FLT-01 | slope_deg uniform 0–20; tau_leak_s loguniform 0.05–5.0; pilot_reaction_s uniform 0.5–3.0; stride_offset_m uniform 0.0–0.12; load_holding choice works/fails | 400 samples, seed 11: hard-drop 196, safe 194, tip 10 | 6 × 80, seed 12 | {'nofault_outcome': 'tip'} → new finding; {'outcome': 'tip'} → HAZ-WLK-002; {'outcome': 'hard-drop', 'stop_active': True} → HAZ-SAF-001; {'outcome': 'hard-drop'} → HAZ-PIL-002 |
+| SF-01 Hydraulic supply loss in mid-stride on a slope | FLT-01 | slope_deg uniform 0–20; tau_leak_s loguniform 0.05–5.0; pilot_reaction_s uniform 0.5–3.0; stride_offset_m uniform 0.0–0.12; load_holding choice works/fails | 400 samples, seed 11: hard-drop 198, safe 196, tip 6 | 6 × 80, seed 12 | {'nofault_outcome': 'tip'} → new finding; {'outcome': 'tip'} → HAZ-WLK-002; {'outcome': 'hard-drop', 'stop_active': True} → HAZ-SAF-001; {'outcome': 'hard-drop'} → HAZ-PIL-002 |
 
 ## Block diagram
 

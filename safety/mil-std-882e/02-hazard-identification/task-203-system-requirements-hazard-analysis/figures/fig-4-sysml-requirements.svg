@@ -302,11 +302,11 @@
 <text x="527.9" y="688" font-size="10.5" fill="#475569">g L_foot of torque at full actuator supply and</text>
 <text x="527.9" y="703" font-size="10.5" fill="#475569">at least 0.6 m g L_foot at the supply at which</text>
 <text x="527.9" y="718" font-size="10.5" fill="#475569">load holding engages, and each knee actuator</text>
-<text x="527.9" y="733" font-size="10.5" fill="#475569">at least 22.5 kN m at full supply</text>
-<text x="527.9" y="748" font-size="10.5" fill="#475569">(SPEC-WLK-001 mass and geometry), so that a</text>
-<text x="527.9" y="763" font-size="10.5" fill="#475569">loss of supply inside the operating envelope</text>
-<text x="527.9" y="778" font-size="10.5" fill="#475569">does not tip the walker before load holding</text>
-<text x="527.9" y="793" font-size="10.5" fill="#475569">engages.</text>
+<text x="527.9" y="733" font-size="10.5" fill="#475569">at least 26.5 kN m at full supply</text>
+<text x="527.9" y="748" font-size="10.5" fill="#475569">(SPEC-WLK-001 mass and geometry, the</text>
+<text x="527.9" y="763" font-size="10.5" fill="#475569">reference layout CL-05), so that a loss of</text>
+<text x="527.9" y="778" font-size="10.5" fill="#475569">supply inside the operating envelope does not</text>
+<text x="527.9" y="793" font-size="10.5" fill="#475569">tip the walker before load holding engages.</text>
 <rect x="527.9" y="810" width="94.7" height="16" rx="8.0" fill="#D2553F" stroke="none" stroke-width="1"/>
 <text x="575.3" y="821.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">safety-significant</text>
 <rect x="628.6" y="810" width="51.2" height="16" rx="8.0" fill="#4F46E5" stroke="none" stroke-width="1"/>
@@ -638,10 +638,10 @@
 <g class="terms" data-base-h="4944">
 <rect x="0" y="4944" width="1473.1" height="98.1" fill="#FFFFFF"/>
 <line x1="40" y1="4948" x2="1433.1" y2="4948" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="4963.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: BMS = battery management system · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SPEC-nnn = simulation parameter spec record (sim/spec/) · SUS-A1 = dockable observation UAV · SUS-GSE = ground support,</text>
-<text x="40" y="4978.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">maintenance supports, charging and test equipment · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK = UAV dock, retention, charging and release · SUS-M1-MAN = manipulation arms and</text>
-<text x="40" y="4992.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">end effectors · SUS-M1-PIL = pilot station, restraints, displays and controls · SUS-M1-PWR = power generation, storage, distribution and thermal control · SUS-M1-PWR-BAT = battery pack, BMS and contactors (alternative B) · SUS-M1-PWR-GEN =</text>
-<text x="40" y="5007.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">engine-generator and governor (alternative B) · SUS-M1-SAF = independent safety monitor, protective stop and isolation · SUS-M1-WLK = chassis, legs, joint actuators and stability sensing · SYS-nnn = system safety requirement record</text>
-<text x="40" y="5021.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(requirements/SYS-nnn.yaml) · SysML = Systems Modeling Language (SysML v2) · UAV = uncrewed aerial vehicle (drone)</text>
+<text x="40" y="4963.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: BMS = battery management system · CL-nnn = concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout) · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SPEC-nnn = simulation parameter spec</text>
+<text x="40" y="4978.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">record (sim/spec/) · SUS-A1 = dockable observation UAV · SUS-GSE = ground support, maintenance supports, charging and test equipment · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK</text>
+<text x="40" y="4992.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">= UAV dock, retention, charging and release · SUS-M1-MAN = manipulation arms and end effectors · SUS-M1-PIL = pilot station, restraints, displays and controls · SUS-M1-PWR = power generation, storage, distribution and thermal control · SUS-M1-PWR-BAT =</text>
+<text x="40" y="5007.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">battery pack, BMS and contactors (alternative B) · SUS-M1-PWR-GEN = engine-generator and governor (alternative B) · SUS-M1-SAF = independent safety monitor, protective stop and isolation · SUS-M1-WLK = chassis, legs, joint actuators and stability sensing</text>
+<text x="40" y="5021.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">· SYS-nnn = system safety requirement record (requirements/SYS-nnn.yaml) · SysML = Systems Modeling Language (SysML v2) · UAV = uncrewed aerial vehicle (drone)</text>
 </g>
 </svg>

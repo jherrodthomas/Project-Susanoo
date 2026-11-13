@@ -381,7 +381,7 @@ function drawReplay() {
   const f = at(P, R.t);
   $('rt').textContent = `t ${R.t.toFixed(2)} s`;
   $('rinfo').innerHTML = `<span style="color:${C.haz}">— performed</span> ${r.performed.outcome} · <span style="color:${C.sel}">- - intended</span> ${r.intended.outcome} · ` +
-    `CG ${f2(f[1])} m · height ${f2(f[2])} m · plant spec, not CL-05`;
+    `CG ${f2(f[1])} m · height ${f2(f[2])} m · point-mass plant on CL-05 mass and CG height`;
   R.tEnd = tEnd; R.x = x;
 }
 $('rplot').onclick = (e) => { const b = $('rplot').getBoundingClientRect(); const u = (e.clientX - b.left) / b.width * 1000; R.t = Math.max(0, (u - 40) / (1000 - 60) * R.tEnd); drawReplay(); };

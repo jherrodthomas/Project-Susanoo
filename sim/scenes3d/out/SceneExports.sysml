@@ -38,12 +38,12 @@ package SceneExports {
         attribute :>> hazards = ("HAZ-WLK-002");
         attribute :>> source = "edge";
         attribute :>> reference = "SF-01 EC-08";
-        attribute :>> slopeDeg = 16.5;
-        attribute :>> specDigest = "48e1754c83f1";
+        attribute :>> slopeDeg = 19.5;
+        attribute :>> specDigest = "ce8f2beafd0f";
         part :>> performed {
             attribute :>> outcome = "tip";
-            attribute :>> mishapTime = 4.9;
-            attribute :>> frameCount = 51;
+            attribute :>> mishapTime = 3.56;
+            attribute :>> frameCount = 37;
         }
         part :>> intended {
             attribute :>> outcome = "safe";
@@ -56,10 +56,10 @@ package SceneExports {
         attribute :>> source = "plant";
         attribute :>> reference = "fault FLT-03";
         attribute :>> slopeDeg = 0.0;
-        attribute :>> specDigest = "48e1754c83f1";
+        attribute :>> specDigest = "ce8f2beafd0f";
         part :>> performed {
             attribute :>> outcome = "hard-drop";
-            attribute :>> mishapTime = 1.49;
+            attribute :>> mishapTime = 1.495;
             attribute :>> frameCount = 16;
         }
         part :>> intended {
@@ -73,11 +73,11 @@ package SceneExports {
         attribute :>> source = "plant";
         attribute :>> reference = "fault FLT-02";
         attribute :>> slopeDeg = 0.0;
-        attribute :>> specDigest = "48e1754c83f1";
+        attribute :>> specDigest = "ce8f2beafd0f";
         part :>> performed {
             attribute :>> outcome = "tip";
-            attribute :>> mishapTime = 2.875;
-            attribute :>> frameCount = 30;
+            attribute :>> mishapTime = 2.77;
+            attribute :>> frameCount = 29;
         }
         part :>> intended {
             attribute :>> outcome = "safe";
@@ -89,11 +89,11 @@ package SceneExports {
         attribute :>> hazards = ("HAZ-PIL-002");
         attribute :>> source = "edge";
         attribute :>> reference = "SF-01 EC-01";
-        attribute :>> slopeDeg = 15.5;
-        attribute :>> specDigest = "48e1754c83f1";
+        attribute :>> slopeDeg = 12.0;
+        attribute :>> specDigest = "ce8f2beafd0f";
         part :>> performed {
             attribute :>> outcome = "hard-drop";
-            attribute :>> mishapTime = 1.575;
+            attribute :>> mishapTime = 1.58;
             attribute :>> frameCount = 17;
         }
         part :>> intended {
