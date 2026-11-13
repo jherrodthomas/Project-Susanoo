@@ -357,7 +357,7 @@ function drawProfile(x0) {
   const g0 = groundAt(x0, 0), r = Math.tan(THREE.MathUtils.degToRad(D.sys008.limit_deg));
   $('prof').innerHTML = line(0.55, C.sel) + line(-0.55, C.haz) +
     `<path d="M${X(x0)},${Z(g0)} L${X(b)},${Z(g0 + (b - x0) * r)}" stroke="${C.mute}" stroke-dasharray="5 4" fill="none"/>` +
-    `<text x="${X(b) - 120}" y="${Math.max(12, Z(g0 + (b - x0) * r) + 12)}" font-size="10" fill="${C.mute}">SYS-008 20° from here</text>` +
+    `<text x="${X(b) - 190}" y="${Math.max(24, Z(g0 + (b - x0) * r) + 14)}" font-size="10" fill="${C.mute}">SYS-008 20° from here</text>` +
     `<line x1="${X(x0)}" y1="4" x2="${X(x0)}" y2="${H}" stroke="${C.ink}" stroke-width="2"/><text x="${X(x0) + 4}" y="12" font-size="10" fill="${C.ink}">hip</text>` +
     `<text x="6" y="${H - 2}" font-size="10" fill="${C.mute}"><tspan fill="${C.sel}">— left foot track</tspan>  <tspan fill="${C.haz}">— right foot track</tspan>  · vertical exaggerated · 12 m window</text>`;
   $('ptitle').textContent = `${info().label} · ground at the hip ${f2(g0)} m`;
