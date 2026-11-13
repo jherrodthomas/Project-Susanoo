@@ -103,6 +103,8 @@ def group_of(path: str) -> str:
         return "Plant spec structure"
     if path.startswith("sim/results/"):
         return "Result sets"
+    if path.startswith("sim/scenes3d/"):
+        return "3D scenes"
     return {"concept": "Concept operations", "integrations": "PX4 integration", "decisions": "Decision register",
             "sim": "Simulation evidence gate", "framework": "Lifecycle gates", "tools": "Docs check (CI)", "docs": "Generated file states", "cad": "Concept layouts"}.get(path.split("/")[0], path.split("/")[0])
 

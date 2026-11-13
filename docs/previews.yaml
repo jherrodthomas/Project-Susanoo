@@ -31,6 +31,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - sim/trades             # generated README (tools/figures/trades_readme.py)
   - sim/spec               # generated README (tools/figures/spec_readme.py)
   - sim/results            # generated README (tools/figures/results_readme.py); uav/ keeps its preview
+  - sim/scenes3d           # generated README (tools/figures/scenes3d_readme.py); library/ and out/ keep previews
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -291,16 +292,6 @@ folders:
     links:
       - {text: UAV Simulation (wiki page), href: docs/wiki/UAV-Simulation.md}
 
-  sim/scenes3d:
-    title: 3D scene builder
-    purpose: >-
-      Builds the 3D scene pages in `docs/3d` from the simulation results (`export_scene.py`, `build_pages.py`) and
-      renders the stills (`render.mjs`).
-    hero: {img: docs/wiki/images/3d-s3-01.png, caption: "S3-01", link: docs/3d/S3-01.html}
-    gallery:
-      - {img: docs/wiki/images/3d-s3-03.png, caption: "S3-03", link: docs/3d/S3-03.html}
-      - {img: docs/wiki/images/3d-s3-05-fog.png, caption: "S3-05 in fog", link: docs/3d/S3-05-fog.html}
-      - {img: docs/wiki/images/3d-s3-06.png, caption: "S3-06", link: docs/3d/S3-06.html}
 
   sim/scenes3d/library:
     title: 3D scene library

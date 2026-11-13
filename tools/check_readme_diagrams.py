@@ -89,6 +89,9 @@ ENFORCED = {
     "sim/spec": {"skip_dirs": {"figures"}, "generator": ["tools/figures/spec_readme.py", "--check"]},
     # Committed results; uav/ keeps its folder preview.
     "sim/results": {"skip_dirs": {"figures", "uav"}, "generator": ["tools/figures/results_readme.py", "--check"]},
+    # 3D scene builder; library/ and out/ keep their folder previews.
+    "sim/scenes3d": {"skip_dirs": {"figures", "library", "out", "__pycache__"},
+                     "generator": ["tools/figures/scenes3d_readme.py", "--check"]},
 }
 
 H2 = re.compile(r"^## (.+?)\s*$", re.M)

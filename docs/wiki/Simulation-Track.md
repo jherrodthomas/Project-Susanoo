@@ -176,7 +176,7 @@ package SimulationEvidence {
 | [`mujoco/`](Level-2-MuJoCo) | Level-2 multibody simulation (MuJoCo) | folder |
 | [`plant/`](Walker-Plant) | Level-1 walker plant | folder |
 | [`results/`](Simulation-Results) | Simulation results | folder |
-| [`scenes3d/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/scenes3d/README.md) | 3D scene builder | folder |
+| [`scenes3d/`](3D-Scene-Builder) | 3D scene builder | folder |
 | [`search/`](Failure-Search) | Failure search | folder |
 | [`spec/`](Plant-Specs) | Simulation specifications | folder |
 | [`trades/`](Trade-Study-Evidence) | Trade-study evidence | folder |

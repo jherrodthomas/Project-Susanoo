@@ -82,6 +82,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   loads it
 - [Simulation results](Simulation-Results): every committed result, the code that writes and reads it, and how CI
   keeps it reproducible
+- [3D scene builder](3D-Scene-Builder): the 3D hazard scenes, what each replays, and which hazards have no scene
+  yet and why
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)
