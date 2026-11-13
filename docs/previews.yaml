@@ -36,6 +36,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - docs/3d                # generated README (tools/figures/pages3d_readme.py); assets/ keeps its preview
   - docs/vcycle            # generated README (tools/figures/vcycle_readme.py)
   - docs/diagrams          # generated README (tools/figures/diagrams_readme.py); mil-std-882e/ keeps its preview
+  - docs/readme            # generated README (tools/figures/frontpage_readme.py)
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
@@ -146,21 +147,6 @@ folders:
     links:
       - {text: MIL-STD-882E Process Maps (wiki page), href: docs/wiki/MIL-STD-882E-Process-Maps.md}
 
-  docs/readme:
-    title: Front-page figures
-    purpose: >-
-      Figures on the repository front page, built by `tools/readme/build_readme.py` from the records and the CAD
-      renders.
-    hero: {img: docs/readme/banner.svg, caption: "Banner"}
-    gallery:
-      - {img: docs/readme/at-a-glance.svg, caption: "At a glance"}
-      - {img: docs/readme/risk-matrix.svg, caption: "Risk matrix"}
-      - {img: docs/readme/simulation.svg, caption: "Simulation summary (synthetic)"}
-      - {img: docs/readme/roadmap.svg, caption: "MIL-STD-882E task roadmap"}
-      - {img: docs/readme/task-flow.svg, caption: "How the tasks feed each other"}
-      - {img: docs/readme/task-thread.svg, caption: "The main thread to risk acceptance"}
-      - {img: docs/readme/task-matrix.svg, caption: "Who feeds whom"}
-      - {img: docs/readme/task-hub.svg, caption: "The hazard tracking system as hub"}
 
   docs/wiki:
     hero: {img: docs/wiki/images/safety-lifecycle.svg, caption: "Safety lifecycle process map (illustrative)"}

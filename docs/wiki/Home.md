@@ -96,6 +96,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   maturity ladder
 - [Process-map sources](Process-Map-Sources): the hand-drawn MIL-STD-882E process maps, whether each export is in step
   with its source, and the tasks each map names
+- [Front-page figures](Front-Page-Figures): every figure and number block on the front page, and the records each one
+  reads
 
 ## Navigate
 - [Program and CONOPS](Program-and-CONOPS)
