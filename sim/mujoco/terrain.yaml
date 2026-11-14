@@ -1,0 +1,30 @@
+# Level-2 terrain walk (sim/mujoco/terrain.py): CL-05 as a 3D multibody in MuJoCo walking the terrain course of sheet 3
+# (sim/scenes3d/terrain.yaml), unloaded and carrying the CAD's margin-peak load. The model comes from the records
+# (cad/links.json, cad/params/CL-05.yaml, sim/spec/walker_l2.yaml); this file holds only the run settings and the
+# drafted controller. Controller, gains and foothold rule are AI drafts (I0), chosen so the flat walk is steady; a fall
+# is attributed by re-running with every torque limit raised: if that walks, the joint group whose limit alone makes it
+# walk is named; if not, the fall is the controller's, not a finding about CL-05. Synthetic, no evidence credit.
+schema: susanoo/sim-l2-terrain/v0.1
+id: L2-TERRAIN-001
+cycles: 4                    # walk cycles per run, after standing still and before stopping
+stand_s: 1.5                 # standing before the first step, s
+hold_s: 1.5                  # standing after the last step, s
+pattern_dt_s: 0.01           # walking-pattern and control-update step, s (the integrator runs at timestep_s)
+preview_s: 1.6               # ZMP preview horizon, s
+log_hz: 25                   # frames kept for the page
+foothold_shift_m: 0.35       # largest move of a footprint along the walk to find a flat foothold
+gains:                       # joint PD (N m/rad, N m s/rad), torso attitude on the stance hips, capture-point feedback
+  kp: 150000
+  kd: 15000
+  kt: 300000
+  kdt: 60000
+  kxi: 1.0
+fall:                        # a run ends 1 s after the first of these
+  tilt_deg: 30               # torso roll or pitch
+  drop_m: 0.8                # torso below its reference
+attribution:
+  boost: 10                  # torque-limit multiplier for the re-runs
+  groups: {hip: [hip_roll, hip_pitch], knee: [knee], ankle: [ankle_pitch, ankle_roll]}
+  search_tol: 0.05           # knee (or other single group) multiplier found to within this
+load:                        # the loaded runs carry the CAD's margin-peak load (cad/metrics.json carry_margin_peak)
+  source: carry_margin_peak

@@ -6,7 +6,8 @@
 //   not settle; on sheet 2, that every PX4 SITL run replays to its own outcome. Unless --check-only, writes
 //   docs/wiki/images/3d-sus-m1.png, 3d-sus-a1.png, 3d-sus-a1-air.png, 3d-sus-a1-lr.png and 3d-sus-m1-terrain.png (1600x900); --all also
 //   3d-sus-m1-<posture>.png, and 3d-sus-m1-terrain-loaded.png. On sheet 3, every terrain must advance one stride and rise its
-//   own rise per cycle, unloaded and loaded, and the page's load-mass margins must match the records' figures.
+//   own rise per cycle, unloaded and loaded, and the page's load-mass margins must match the records' figures; in its physics
+//   model every level-2 run must replay the asset's poses and show its outcome.
 import { createRequire } from 'node:module';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
@@ -160,6 +161,26 @@ for (const [terrain, field, want] of [['flat', 'level', ck.level_margin_m], ['up
 }
 if (!checkOnly) { await page.goto(url3(`?mode=loaded&terrain=up10&mass=${ck.mass_kg}&t=0.4&paused=1`)); await page.waitForFunction(() => window.__ready === true);
   await page.waitForTimeout(400); await page.screenshot({ path: join(out, '3d-sus-m1-terrain-loaded.png') }); }
+// physics model: every level-2 MuJoCo run (sim/mujoco/terrain.py) replays the asset's body poses, shows its outcome, and a
+// run the course does not pose cannot be selected
+const PHA = readFileSync(join(root, 'docs/3d/assets/sus-m1-terrain-physics.js'), 'utf8');
+const PMeta = JSON.parse(PHA.match(/meta: (\{.*?\}),\nbin:/s)[1]), PBin = new Int16Array(Buffer.from(PHA.match(/bin: "([^"]+)"/)[1], 'base64').buffer.slice(0));
+for (const r of PMeta.summary.rows) {
+  const qs = `?model=physics&mode=${r.mode}&terrain=${r.key}&paused=1`;
+  if (r.skipped) {
+    await page.goto(url3(qs)); await page.waitForFunction(() => window.__ready === true, null, { timeout: 60000 });
+    if (!(await page.locator(`#tlist button[data-k="${r.key}"]`).isDisabled())) problems.push(`physics ${r.mode}/${r.key}: not run but selectable`);
+    console.log(`ok   physics ${r.mode} ${r.key}: not run`); continue;
+  }
+  const R = PMeta.runs[`${r.mode}/${r.key}`], k = Math.floor(R.frames / 2), t = k / PMeta.log_hz, o = R.offset / 2 + k * R.stride;
+  await page.goto(url3(`${qs}&t=${t}`)); await page.waitForFunction(() => window.__ready === true, null, { timeout: 60000 }); await page.waitForTimeout(200);
+  const s = await page.evaluate(() => window.__state), want = [PBin[o] / 1000, PBin[o + 1] / 1000, PBin[o + 2] / 1000];
+  if (s.model !== 'physics' || s.terrain !== r.key || s.mode !== r.mode || s.phys.frames !== R.frames || s.phys.walked !== r.walked ||
+      s.phys.torso.some((v, i) => Math.abs(v - want[i]) > 2e-3)) problems.push(`physics ${r.mode}/${r.key}: page ${JSON.stringify(s.phys)}, asset frame ${k} torso ${want}`);
+  const outcome = await page.textContent('#phys');
+  if (!(r.walked ? /walked/ : /fell at/).test(outcome) || !/no evidence credit/i.test(await page.textContent('#banner'))) problems.push(`physics ${r.mode}/${r.key}: outcome or label missing`);
+  console.log(`ok   physics ${r.mode} ${r.key} (${r.walked ? 'walked' : 'fell at ' + r.fall.t + ' s, ' + r.attribution.limited_by})`);
+}
 await page.goto(url3('?terrain=rubble')); await page.waitForFunction(() => window.__ready === true);
 const r0 = await page.evaluate(() => window.__state.x);
 await page.waitForFunction((x) => window.__state.x > x + 0.2, r0, { timeout: 30000 }).catch(() => problems.push('terrain sheet: the walker does not walk on its own'));

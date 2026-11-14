@@ -120,6 +120,7 @@ kbd{border:1px solid var(--line);padding:0 4px;font:inherit;font-size:9px;color:
   <div id="tlist"></div>
   <div class="ph" style="border-top:1px solid var(--ink)">Walk <span>W-02</span></div>
   <div class="seg" id="mode"><button data-mode="unloaded">Unloaded</button><button data-mode="loaded">Loaded carry</button></div>
+  <div class="seg" id="model"><button data-model="kinematic">Kinematic</button><button data-model="physics">Physics · MuJoCo<kbd>K</kbd></button></div>
   <div class="seg" id="play"><button id="bplay">❚❚ Pause</button><button data-sp="0.5">½×</button><button data-sp="1">1×</button><button data-sp="2">2×</button></div>
   <div class="seg tog"><button data-t="plumb">CG plumb<kbd>G</kbd></button><button data-t="stripes">1 m bands<kbd>B</kbd></button><button data-t="person">Person<kbd>P</kbd></button></div>
   <div class="seg" id="render"><button data-r="shaded">Shaded</button><button data-r="line">Line</button><button data-r="xray">X-ray</button></div>
@@ -131,6 +132,12 @@ kbd{border:1px solid var(--line);padding:0 4px;font:inherit;font-size:9px;color:
   <div class="scroll">
     <div class="name" id="tname">—</div>
     <div class="sub" id="tsub"></div>
+    <div id="physwrap" style="display:none">
+      <div class="ph" style="border-top:1px solid var(--ink)">Level-2 physics <span>sim/mujoco/terrain.py</span></div>
+      <div id="phys"></div>
+      <div class="note" id="physnote"></div>
+    </div>
+    <div id="kinwrap">
     <div class="ph" style="border-top:1px solid var(--ink)">Leg kinematics · CAD <span>tools/cad/b3d</span></div>
     <div id="kin"></div>
     <div class="ph" style="border-top:1px solid var(--ink)">Static tip margin <span>cad/metrics.json</span></div>
@@ -140,9 +147,10 @@ kbd{border:1px solid var(--line);padding:0 4px;font:inherit;font-size:9px;color:
     </div>
     <div id="stat"></div>
     <div class="note" id="statnote"></div>
+    </div>
     <div class="ph" style="border-top:1px solid var(--ink)">Requirement · hazard <span>records</span></div>
     <div id="req"></div>
-    <div class="note">Concept kinematics only: each foot is placed on the ground and the knees solved by the CAD, with no dynamics, balance, foot slip or ground model. The pod stays level and the arms stowed. Nothing here is verification evidence.</div>
+    <div class="note" id="kinnote">Concept kinematics only: each foot is placed on the ground and the knees solved by the CAD, with no dynamics, balance, foot slip or ground model. The pod stays level and the arms stowed. Nothing here is verification evidence.</div>
   </div>
 </div>
 
@@ -152,7 +160,7 @@ kbd{border:1px solid var(--line);padding:0 4px;font:inherit;font-size:9px;color:
 </div>
 
 <div class="panel" id="bottom">
-  <div class="ph">Ground profile under the feet <span id="ptitle"></span></div>
+  <div class="ph"><span id="phead" style="color:inherit;font-weight:inherit;letter-spacing:inherit">Ground profile under the feet</span> <span id="ptitle"></span></div>
   <svg id="prof" viewBox="0 0 1000 110" preserveAspectRatio="none"></svg>
 </div>
 
@@ -168,17 +176,19 @@ kbd{border:1px solid var(--line);padding:0 4px;font:inherit;font-size:9px;color:
     <tr><td>Drag · wheel · right-drag</td><td>orbit · zoom · pan (the camera follows the walker)</td></tr>
     <tr><td>Click a terrain · ← →</td><td>walk the CL-05 gait over that ground</td></tr>
     <tr><td>Unloaded · Loaded carry · L</td><td>the walk with the arms stowed, or the loaded walk carrying the placeholder load (load mass slider: mass TBD, SYS-019)</td></tr>
+    <tr><td>Kinematic · Physics · K</td><td>the posed gait, or the level-2 MuJoCo run of it: the CL-05 links with their masses walking the same ground under a drafted controller, with contact, foot slip and torque limits (sim/mujoco/terrain.py; plays in real time)</td></tr>
     <tr><td>Space · ½× 1× 2×</td><td>pause or play · walking pace (a viewing pace, not a design speed)</td></tr>
     <tr><td>G · B · P</td><td>centre of gravity plumb line · 1 m bands on the ground · 1.75 m person</td></tr>
     <tr><td>V</td><td>shaded · line · X-ray</td></tr>
   </table>
   <div class="note">The gait is the CL-05 walk of cad/params/CL-05.yaml with each foot placed on the ground under it (tools/cad/b3d/cl05_terrain.py). The static tip margin is the standing walker's centre of gravity over its support polygon, as in cad/metrics.json: with the joints frozen, and with the share of the slope lean the simulation assumes the gait leaves uncompensated (sim/spec/walker.yaml slope_lean).</div>
 </div></div>
-<div id="terms">Terms: 1A–4F = risk assessment code, severity 1–4 plus probability A–F (e.g. 1C) · AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · CAD = computer-aided design · CG = centre of gravity · F-nnn = system function in the item definition · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · RAC = risk assessment code, severity category plus probability level (e.g. 1C) · SUS-A1 = dockable observation UAV · SUS-CAD-001 = the concept layouts document (cad/README.md); its drawing sheets are SUS-CAD-001-CL-nn · SUS-M1 = piloted walker · SYS-nnn = system safety requirement record (requirements/SYS-nnn.yaml) · TBD = to be determined · UAV = uncrewed aerial vehicle (drone)</div>
+<div id="terms">Terms: 1A–4F = risk assessment code, severity 1–4 plus probability A–F (e.g. 1C) · AI = artificial intelligence (here, an AI assistant drafting at independence level I0) · CAD = computer-aided design · CG = centre of gravity · F-nnn = system function in the item definition · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · I0–I3 = review independence level (I0 none, e.g. the author or an AI, to I3 independent organisation) · MuJoCo = Multi-Joint dynamics with Contact, the physics engine for the level-2 walker model · RAC = risk assessment code, severity category plus probability level (e.g. 1C) · SUS-A1 = dockable observation UAV · SUS-CAD-001 = the concept layouts document (cad/README.md); its drawing sheets are SUS-CAD-001-CL-nn · SUS-M1 = piloted walker · SYS-nnn = system safety requirement record (requirements/SYS-nnn.yaml) · TBD = to be determined · UAV = uncrewed aerial vehicle (drone)</div>
 <script>window.SHEET = {"about":"Synthetic simulation output; design aid only, no evidence credit (sim/README.md, evidence gate).","carry":{"cg_m":[-0.23,-0.001,2.715],"check":{"level_margin_m":0.5904,"mass_kg":890,"up20_lean_margin_m":0.3568},"flag_kg":2580,"flag_margin_m":0.3,"load_centre_m":[1.25,0.0,1.8],"load_envelope_m":[0.8,1.53,0.6],"mass_kg":4590,"peak":{"load_kg":890,"static_margin_m":0.591},"support_polygon_m":[[-0.58,-0.7],[-0.07,-0.75],[0.204,-0.76],[0.604,-0.76],[0.604,0.76],[0.204,0.76],[-0.07,0.75],[-0.58,0.7]],"tipover_kg":5910},"classes":{"access":["#e0b100",1.0],"actuator":["#c9a33a",1.0],"arm":["#7b8797",1.0],"armor":["#8d97a5",1.0],"cage":["#e2701f",1.0],"dock":["#7d55c7",1.0],"escape":["#d9480f",1.0],"hose":["#2e343d",1.0],"occupant":["#3a78d6",1.0],"payload":["#b08850",1.0],"power":["#2f8a5b",1.0],"reference":["#a3acb9",1.0],"rotor":["#1597c9",0.35],"safety":["#d42a2a",1.0],"seat":["#2b313b",1.0],"structure":["#5b6676",1.0],"uav":["#1597c9",1.0]},"hazard":{"id":"HAZ-WLK-002","level":"High","rac":"1C","status":"open","subsystems":["SUS-M1-WLK","SUS-M1-PIL"],"title":"Walker tip-over or fall with pilot aboard"},"hazard_load":{"id":"HAZ-MAN-002","level":"High","rac":"1C","status":"open","subsystems":["SUS-M1-MAN","SUS-M1-WLK","SUS-M1-CTL","SUS-M1-SAF"],"title":"Carried load swings, shifts or drops while walking"},"hazards":[{"id":"HAZ-WLK-002","level":"High","rac":"1C","status":"open","subsystems":["SUS-M1-WLK","SUS-M1-PIL"],"title":"Walker tip-over or fall with pilot aboard"},{"id":"HAZ-MAN-002","level":"High","rac":"1C","status":"open","subsystems":["SUS-M1-MAN","SUS-M1-WLK","SUS-M1-CTL","SUS-M1-SAF"],"title":"Carried load swings, shifts or drops while walking"}],"lean":{"source":"Fraction of the slope-induced CoM lean (z tan slope) the gait does not compensate","value":0.25},"replay":[],"sheet":{"document":"SUS-CAD-001-CL-05 \u00b7 TERRAIN-001","id":"TERRAIN-001","layout":"CL-05","revision":"0.21-draft","sheet":"3 of 3","title":"Terrain course, interactive"},"standing":{"arm_ground_clearance_m":0.93,"cg_m":[-0.202,-0.001,2.723],"cockpit_floor_m":2.41,"egress_sill_m":3.03,"envelope_m":[3.29,2.29,4.48],"height_m":4.48,"hip_height_m":2.34,"pilot_eye_m":3.62,"placeholder_mass_kg":4590,"rotor_to_pilot_m":1.09,"static_margin_m":0.378,"static_tip_angle_deg":7.9,"support_polygon_m":[[-0.58,-0.7],[-0.07,-0.75],[0.204,-0.76],[0.604,-0.76],[0.604,0.76],[0.204,0.76],[-0.07,0.75],[-0.58,0.7]]},"sys008":{"id":"SYS-008","limit_deg":20,"statement":"The walker shall limit commanded motion and payload to a verified static and dynamic stability envelope, including a terrain slope limit of 20 degrees with the centre of mass no more than 0.12 m ahead of the stance foot, and provide pilot protection in a fall or overturn.","status":"candidate","title":"Stability envelope protection"},"sys019":{"id":"SYS-019","statement":"The walker shall permit walking with a payload only while the payload is confirmed secured, both arms are locked in a defined carry pose and payload mass and centre of gravity are within defined limits, and shall then limit walking speed, step height and terrain slope to defined loaded values inside the stability envelope of SYS-008.","status":"candidate","tbd":["Carry pose and tolerance (concept CL-05: load clamped between the hands, centre 1.80 m up, 0.10 m ahead of the pod)","Maximum payload mass and centre-of-gravity envelope while walking, from the dynamic analysis against the 0.12 m CoM offset cap (DQ-011)","Loaded speed, step-height and slope limits","Payload securing and confirmation means"],"title":"Loaded walking limits"},"terrains":[{"frozen_margin_m":0.378,"frozen_tip_deg":7.9,"key":"flat","kind":"plane","label":"Flat","lean_margin_m":0.378,"lean_tip_deg":29.0,"pitch_deg":0,"slope_deg":0.0},{"frozen_margin_m":0.14,"frozen_tip_deg":7.9,"key":"up5","kind":"plane","label":"Uphill 5\u00b0","lean_margin_m":0.318,"lean_tip_deg":29.0,"pitch_deg":5,"slope_deg":5.0},{"frozen_margin_m":-0.102,"frozen_tip_deg":7.9,"key":"up10","kind":"plane","label":"Uphill 10\u00b0","lean_margin_m":0.258,"lean_tip_deg":29.0,"pitch_deg":10,"slope_deg":10.0},{"frozen_margin_m":-0.352,"frozen_tip_deg":7.9,"key":"up15","kind":"plane","label":"Uphill 15\u00b0","lean_margin_m":0.196,"lean_tip_deg":29.0,"pitch_deg":15,"slope_deg":15.0},{"frozen_margin_m":-0.613,"frozen_tip_deg":7.9,"key":"up20","kind":"plane","label":"Uphill 20\u00b0","lean_margin_m":0.13,"lean_tip_deg":29.0,"note":"SYS-008 terrain slope limit","pitch_deg":20,"slope_deg":20.0},{"frozen_margin_m":0.326,"frozen_tip_deg":16.5,"key":"down10","kind":"plane","label":"Downhill 10\u00b0","lean_margin_m":0.498,"lean_tip_deg":49.8,"pitch_deg":-10,"slope_deg":10.0},{"frozen_margin_m":-0.185,"frozen_tip_deg":16.5,"key":"down20","kind":"plane","label":"Downhill 20\u00b0","lean_margin_m":0.558,"lean_tip_deg":49.8,"note":"SYS-008 terrain slope limit","pitch_deg":-20,"slope_deg":20.0},{"frozen_margin_m":0.257,"frozen_tip_deg":15.2,"key":"cross10","kind":"plane","label":"Cross-slope 10\u00b0","lean_margin_m":0.378,"lean_tip_deg":47.3,"roll_deg":10,"slope_deg":10.0},{"frozen_margin_m":-0.252,"frozen_tip_deg":15.2,"key":"cross20","kind":"plane","label":"Cross-slope 20\u00b0","lean_margin_m":0.378,"lean_tip_deg":47.3,"note":"SYS-008 terrain slope limit, across the track","roll_deg":20,"slope_deg":20.0},{"key":"ledges","kind":"ledges","label":"Ledges 0.2 m","rise_m":0.2,"run_m":1.0,"slope_deg":11.3},{"amp_m":0.12,"key":"rubble","kind":"rubble","label":"Rubble \u00b10.12 m"}]};</script>
 <script src="assets/sus-m1.js"></script>
 <script src="assets/sus-m1-terrain.js"></script>
 <script src="assets/sus-m1-terrain-loaded.js"></script>
+<script src="assets/sus-m1-terrain-physics.js"></script>
 <script type="module">
 // Susanoo sheet 3: the CL-05 walk on the terrain course (three.js r170). Embedded in docs/3d/SUS-M1-terrain.html by build_sheet.py.
 // window.SHEET: terrains with the static figures computed from the records (cad/metrics.json, sim/spec/walker.yaml,
@@ -193,6 +203,7 @@ THREE.Object3D.DEFAULT_UP.set(0, 0, 1);
 const D = window.SHEET, G = window.SUS_M1_GEOMETRY.meta;
 // two posed courses: the walk (stowed arms) and the loaded walk (carry pose, placeholder load)
 const COURSE = { unloaded: window.SUS_M1_TERRAIN, loaded: window.SUS_M1_TERRAIN_LOADED };
+const PH = window.SUS_M1_TERRAIN_PHYSICS, PM = PH.meta;   // level-2 MuJoCo runs (sim/mujoco/terrain.py)
 const q = new URLSearchParams(location.search);
 const $ = (id) => document.getElementById(id);
 const C = { ink: '#1e293b', mute: '#64748b', line: '#c3ccd7', haz: '#ea580c', sel: '#4f46e5', ok: '#0d9488', warn: '#d97706', bad: '#dc2626', bg: '#e4e9ef' };
@@ -228,10 +239,12 @@ const fill = new THREE.DirectionalLight('#dfe7ff', 0.5); fill.position.set(-8, 6
 const walker = new THREE.Group(); scene.add(walker);
 
 // ------------------------------------------------------------------ state
-const S = { key: 'flat', mode: 'unloaded', mass: 0, u: 0, playing: !q.has('paused'), speed: 1, render: 'shaded', show: { plumb: true, stripes: true, person: true } };
+const S = { key: 'flat', mode: 'unloaded', model: 'kinematic', mass: 0, u: 0, playing: !q.has('paused'), speed: 1, render: 'shaded', show: { plumb: true, stripes: true, person: true } };
 const T = () => COURSE[S.mode].meta;
 const terr = () => T().terrains.find((t) => t.key === S.key), info = () => D.terrains.find((t) => t.key === S.key);
-const posed = (mode, key) => { const t = COURSE[mode].meta.terrains.find((x) => x.key === key); return t && !t.skipped ? t : null; };
+const physRow = (mode, key) => PM.summary.rows.find((r) => r.mode === mode && r.key === key);
+const posed = (mode, key) => { const t = COURSE[mode].meta.terrains.find((x) => x.key === key), r = physRow(mode, key);
+  return t && !t.skipped && (S.model !== 'physics' || (r && !r.skipped)) ? t : null; };
 const STRIDE = () => T().stride_m, N = () => T().frames_per_cycle, RATE = 0.55;   // walk cycles per second at 1x (viewing pace)
 
 // ------------------------------------------------------------------ materials and meshes
@@ -274,6 +287,78 @@ function pose(u) {
   const xb = A.xb + ((B.xb + wrap * st) - A.xb) * fr, gz = A.gref + ((B.gref + wrap * t.rise) - A.gref) * fr;
   walker.position.set(k * st + xb, 0, k * t.rise + gz);
   return { k, i, x: k * st + xb };
+}
+
+// ------------------------------------------------------------------ level-2 physics: body poses from the MuJoCo run, each standing mesh riding on its body
+const PB = new Int16Array(Uint8Array.from(atob(PH.bin), (c) => c.charCodeAt(0)).buffer);
+const NB = PM.bodies.length, meshBody = new Map(PM.meshes), bodyM = Array.from({ length: NB }, () => new THREE.Matrix4());
+const run = () => PM.runs[`${S.mode}/${S.key}`], dur = () => (run().frames - 1) / PM.log_hz;
+const frameAt = (i) => { const R = run(), k = Math.max(0, Math.min(R.frames - 1, i)), o = R.offset / 2 + k * R.stride; return PB.subarray(o, o + R.stride); };
+const loadBox = new THREE.Mesh(new THREE.BoxGeometry(...PM.load_box.envelope_m), new THREE.MeshStandardMaterial({ color: '#c08a2e', roughness: 0.7 }));
+loadBox.matrixAutoUpdate = false; loadBox.castShadow = true; loadBox.visible = false; walker.add(loadBox);
+const loadAt = new THREE.Matrix4().makeTranslation(...PM.load_box.centre_m);
+const _qa = new THREE.Quaternion(), _qb = new THREE.Quaternion(), _va = new THREE.Vector3(), _vb = new THREE.Vector3(), _one = new THREE.Vector3(1, 1, 1), _off = new THREE.Matrix4();
+function physPose(t) {
+  const f = Math.max(0, t) * PM.log_hz, i = Math.floor(f), fr = f - i, A = frameAt(i), B = frameAt(i + 1);
+  let torso = null;
+  for (let b = 0; b < NB; b++) {
+    const o = 7 * b, org = PM.origins_m[b];
+    _va.set(A[o], A[o + 1], A[o + 2]).lerp(_vb.set(B[o], B[o + 1], B[o + 2]), fr).multiplyScalar(0.001);
+    _qa.set(A[o + 4], A[o + 5], A[o + 6], A[o + 3]).normalize(); _qb.set(B[o + 4], B[o + 5], B[o + 6], B[o + 3]).normalize(); _qa.slerp(_qb, fr);   // MuJoCo quaternions are w, x, y, z
+    bodyM[b].compose(_va, _qa, _one).multiply(_off.makeTranslation(-org[0], -org[1], -org[2]));
+    if (b === 0) torso = _va.clone();
+  }
+  for (const [key, m] of objs) {
+    if (key[0] !== 'b') { m.visible = false; continue; }
+    m.matrix.copy(bodyM[meshBody.get(+key.slice(1)) ?? 0]); m.visible = true; m.matrixWorldNeedsUpdate = true;
+  }
+  walker.position.set(0, 0, 0);
+  loadBox.visible = S.mode === 'loaded'; loadBox.matrix.copy(bodyM[0]).multiply(loadAt); loadBox.matrixWorldNeedsUpdate = true;
+  const n = 7 * NB, lerp = (k) => (A[k] + (B[k] - A[k]) * fr);
+  return { x: torso.x, torso, k: Math.floor(torso.x / STRIDE()), i: Math.min(i, run().frames - 1), F: [lerp(n) / 10, lerp(n + 1) / 10], tilt: [lerp(n + 2) / 100, lerp(n + 3) / 100] };
+}
+let series = null;
+function physSeries() {   // the whole run, for the plot
+  const R = run(), n = 7 * NB, out = { t: [], fl: [], fr: [], roll: [], pitch: [] };
+  for (let i = 0; i < R.frames; i++) { const a = frameAt(i); out.t.push(i / PM.log_hz); out.fl.push(a[n] / 10); out.fr.push(a[n + 1] / 10); out.roll.push(a[n + 2] / 100); out.pitch.push(a[n + 3] / 100); }
+  return out;
+}
+function drawPhys(t) {
+  $('phead').textContent = 'Foot forces and torso tilt · MuJoCo';
+  const r = physRow(S.mode, S.key), s = series, W = 1000, H = 110, T0 = s.t[s.t.length - 1], X = (x) => 40 + x / T0 * (W - 50);
+  const upto = (arr) => arr.filter((v, i) => !r.fall || s.t[i] <= r.fall.t);   // scale on the run up to a fall
+  const fmax = Math.max(r.weight_kn * 2, ...upto(s.fl), ...upto(s.fr)), Yf = (v) => H - 14 - Math.min(v, fmax) / fmax * (H - 30);
+  const tmax = Math.max(10, ...upto(s.roll).map(Math.abs), ...upto(s.pitch).map(Math.abs)), Yt = (v) => (H - 14) / 2 + 2 - Math.max(-tmax, Math.min(tmax, v)) / tmax * ((H - 30) / 2);
+  const path = (arr, Y, col, dash) => `<path d="${arr.map((v, i) => `${i ? 'L' : 'M'}${X(s.t[i]).toFixed(1)},${Y(v).toFixed(1)}`).join('')}" fill="none" stroke="${col}" stroke-width="1.4"${dash ? ' stroke-dasharray="4 3"' : ''}/>`;
+  let svg = `<line x1="40" y1="${Yf(r.weight_kn)}" x2="${W - 10}" y2="${Yf(r.weight_kn)}" stroke="${C.line}" stroke-dasharray="3 3"/>` +
+    `<text x="${W - 12}" y="${Yf(r.weight_kn) - 3}" font-size="9" fill="${C.mute}" text-anchor="end">weight ${r.weight_kn} kN</text>` +
+    path(s.fl, Yf, C.sel) + path(s.fr, Yf, C.haz) + path(s.pitch, Yt, C.ink, true) + path(s.roll, Yt, C.ok, true);
+  if (r.fall) svg += `<line x1="${X(r.fall.t)}" y1="4" x2="${X(r.fall.t)}" y2="${H - 12}" stroke="${C.bad}" stroke-width="1.5"/><text x="${X(r.fall.t) + 4}" y="22" font-size="10" fill="${C.bad}">fell (${r.fall.why})</text>`;
+  svg += `<line x1="${X(Math.min(t, T0))}" y1="4" x2="${X(Math.min(t, T0))}" y2="${H}" stroke="${C.ink}" stroke-width="2"/>` +
+    `<text x="6" y="${H - 2}" font-size="10" fill="${C.mute}"><tspan fill="${C.sel}">— left foot force</tspan>  <tspan fill="${C.haz}">— right foot force</tspan> (to ${Math.round(fmax)} kN)  ·  <tspan fill="${C.ink}">- - torso pitch</tspan>  <tspan fill="${C.ok}">- - roll</tspan> (±${Math.round(tmax)}°)  ·  ${T0.toFixed(1)} s</text>`;
+  $('prof').innerHTML = svg;
+  $('ptitle').textContent = `${info().label}${S.mode === 'loaded' ? ' · loaded' : ''} · t ${t.toFixed(2)} s`;
+}
+function renderPhys() {
+  const r = physRow(S.mode, S.key), L = PM.summary.limits_knm, pct = (v) => Math.round(v * 100) + '%';
+  $('physwrap').style.display = 'block'; $('kinwrap').style.display = 'none'; $('kinnote').style.display = 'none';
+  $('tname').textContent = info().label.toUpperCase() + (S.mode === 'loaded' ? ' · LOADED' : '') + ' · PHYSICS';
+  $('tsub').textContent = `MuJoCo ${PM.summary.mujoco} · ${PM.summary.cycles} cycles of ${PM.summary.cycle_s} s` + (S.mode === 'loaded' ? ` · carrying ${PM.summary.load_kg} kg` : '') + ' · real time';
+  const a = r.attribution;
+  let html = row('Outcome', r.walked ? `${status(true)} walked ${PM.summary.cycles} cycles and stopped` : `${status(false)} <b style="color:${C.bad}">fell at ${r.fall.t} s</b> (${r.fall.why})`);
+  if (a) html += row('Why', a.limited_by === 'controller' ? `<span style="color:${C.warn}">controller</span>: falls with every limit ×${PM.summary.attribution_boost ?? 10}` :
+    a.needed_knm ? `<b style="color:${C.bad}">${a.limited_by} torque</b>: walks at ${a.needed_knm} kN m (limit ${a.limit_knm})` : a.note);
+  html += row('Max torso tilt', `${r.tilt_max_deg}°`) + row('Max foot slip', `${f2(r.slip_max_m)} m`) +
+    row('Peak foot force', `${r.foot_force_peak_kn} kN (weight ${r.weight_kn} kN)`) +
+    row('Torque limits hip · knee · ankle', `${L.hip} · ${L.knee} · ${L.ankle} kN m`) +
+    row('Most of the limit used', `${pct(r.torque_use.hip)} · ${pct(r.torque_use.knee)} · ${pct(r.torque_use.ankle)}`) +
+    row('Time held at the limit', `${r.at_limit_pct.hip}% · ${r.at_limit_pct.knee}% · ${r.at_limit_pct.ankle}%`);
+  $('phys').innerHTML = html;
+  $('physnote').textContent = 'CL-05 links with their CAD masses (cad/links.json) on a free torso, walking this ground in MuJoCo with contact, friction and the ' +
+    'torque limits of sim/spec/walker_l2.yaml. The walking pattern and controller are drafted (I0): a fall that more torque does not cure is the controller\'s, ' +
+    'not a finding about CL-05; a torque finding holds for this gait and controller only. Each CAD part rides rigidly on its body; the carry arms are drawn stowed. Synthetic, no evidence credit.';
+  tlist.querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.k === S.key));
+  series = physSeries();
 }
 
 // ------------------------------------------------------------------ ground: the exported height map of one period, tiled with the cycle's rise
@@ -353,6 +438,8 @@ function loadedCg(kg) { const c = D.carry, M = c.mass_kg; return c.cg_m.map((v, 
 const info2 = (k) => D.terrains.find((t) => t.key === k);
 let lastMargins = null;
 function renderPanels() {
+  if (S.model === 'physics') return renderPhys();
+  $('physwrap').style.display = 'none'; $('kinwrap').style.display = 'block'; $('kinnote').style.display = 'block'; series = null;
   if (S.mode === 'loaded') return renderLoaded();
   $('loadrow').style.display = 'none';
   const t = terr(), d = info(), fnd = t.findings, slope = d.slope_deg;
@@ -421,6 +508,7 @@ function renderLoaded() {
   lastMargins = out;
 }
 function drawProfile(x0) {
+  $('phead').textContent = 'Ground profile under the feet';
   const W = 1000, H = 110, a = x0 - 4, b = x0 + 8, X = (x) => (x - a) / (b - a) * W;
   const zs = [];
   for (let x = a; x <= b; x += 0.05) zs.push(groundAt(x, 0.55), groundAt(x, -0.55));
@@ -436,10 +524,17 @@ function drawProfile(x0) {
 }
 
 // ------------------------------------------------------------------ controls
-function setTerrain(k) { if (!posed(S.mode, k)) return; S.key = k; S.u = 0; groundKey = null; renderPanels(); }
+function setTerrain(k) { if (!posed(S.mode, k)) return; S.key = k; S.u = 0; groundKey = null; profT = 1; renderPanels(); }
+function setModel(m) {
+  S.model = m; S.u = 0; groundKey = null; profT = 1;
+  if (!posed(S.mode, S.key)) S.key = 'flat';
+  $('banner').textContent = m === 'physics' ? 'CONCEPT GEOMETRY & SYNTHETIC SIMULATION · DRAFTED CONTROLLER · NO EVIDENCE CREDIT' : 'CONCEPT GEOMETRY & KINEMATICS · DESIGN AID ONLY · NO EVIDENCE CREDIT';
+  renderPanels(); refresh();
+}
+document.querySelectorAll('#model button').forEach((b) => { b.onclick = () => setModel(b.dataset.model); });
 function setMode(m) {
   if (!COURSE[m]) return;
-  S.mode = m; S.u = 0; groundKey = null;
+  S.mode = m; S.u = 0; groundKey = null; profT = 1;
   if (!posed(m, S.key)) S.key = 'flat';
   renderPanels(); refresh();
 }
@@ -451,8 +546,11 @@ function refresh() {
   document.querySelectorAll('#render button').forEach((b) => b.classList.toggle('on', b.dataset.r === S.render));
   document.querySelectorAll('[data-sp]').forEach((b) => b.classList.toggle('on', +b.dataset.sp === S.speed));
   document.querySelectorAll('#mode button').forEach((b) => b.classList.toggle('on', b.dataset.mode === S.mode));
+  document.querySelectorAll('#model button').forEach((b) => b.classList.toggle('on', b.dataset.model === S.model));
+  $('loadrow').style.display = S.model === 'kinematic' && S.mode === 'loaded' ? 'block' : 'none';
   tlist.querySelectorAll('button').forEach((b) => { const ok = !!posed(S.mode, b.dataset.k); b.disabled = !ok;
-    const sk = COURSE[S.mode].meta.terrains.find((x) => x.key === b.dataset.k); b.title = ok ? (info2(b.dataset.k).note || info2(b.dataset.k).label) : (sk && sk.skipped) || 'not posed'; });
+    const sk = COURSE[S.mode].meta.terrains.find((x) => x.key === b.dataset.k); const pr = physRow(S.mode, b.dataset.k);
+    b.title = ok ? (info2(b.dataset.k).note || info2(b.dataset.k).label) : (sk && sk.skipped) || (pr && pr.skipped) || 'not posed'; });
   $('bplay').textContent = S.playing ? '❚❚ Pause' : '▶ Play'; $('bplay').classList.toggle('on', S.playing);
 }
 document.querySelectorAll('[data-t]').forEach((b) => { b.onclick = () => { S.show[b.dataset.t] = !S.show[b.dataset.t]; groundKey = null; refresh(); }; });
@@ -469,6 +567,7 @@ addEventListener('keydown', (e) => {
   const next = (dir) => { for (let n = 1; n <= keys.length; n++) { const kk = keys[(i + dir * n + keys.length * 2) % keys.length]; if (posed(S.mode, kk)) return setTerrain(kk); } };
   if (k === 'arrowright') next(1); if (k === 'arrowleft') next(-1);
   if (k === 'l') setMode(S.mode === 'loaded' ? 'unloaded' : 'loaded');
+  if (k === 'k') setModel(S.model === 'physics' ? 'kinematic' : 'physics');
   if (k === ' ') { e.preventDefault(); S.playing = !S.playing; refresh(); }
   const tg = { g: 'plumb', b: 'stripes', p: 'person' }[k]; if (tg) { S.show[tg] = !S.show[tg]; groundKey = null; refresh(); }
   if (k === 'v') { S.render = MODES[(MODES.indexOf(S.render) + 1) % 3]; applyMaterials(); refresh(); }
@@ -484,41 +583,49 @@ function layout() {
 addEventListener('resize', layout);
 
 // ------------------------------------------------------------------ frame
-let last = performance.now(), profT = 0;
+let last = performance.now(), profT = 1;   // > 0.1: draw the plot on the first frame
 function frame(now) {
   const dt = Math.min(0.1, (now - last) / 1000); last = now;
-  if (S.playing) S.u += dt * RATE * S.speed;
-  const p = pose(S.u), c0 = p.k - Math.ceil(4 / STRIDE());
+  const phys = S.model === 'physics';
+  if (S.playing) S.u += dt * (phys ? 1 : RATE) * S.speed;
+  if (phys && S.u > dur() + 1.5) S.u = 0;                       // replay from the start after a pause at the end
+  const p = phys ? physPose(Math.min(S.u, dur())) : pose(S.u), c0 = p.k - Math.ceil(4 / STRIDE());
   if (groundKey !== S.mode + S.key + S.show.stripes || c0 !== groundC) buildGround(c0);
   // CG of the standing layout, or of the carry posture with the slider's load, carried with the body (approximate while walking), and its plumb line
-  const cgw = walker.localToWorld(new THREE.Vector3(...(S.mode === 'loaded' ? loadedCg(S.mass) : D.standing.cg_m))), gz = groundAt(cgw.x, cgw.y);
+  const cg0 = new THREE.Vector3(...(S.mode === 'loaded' ? loadedCg(phys ? PM.summary.load_kg : S.mass) : D.standing.cg_m));
+  const cgw = phys ? cg0.applyMatrix4(bodyM[0]) : walker.localToWorld(cg0), gz = groundAt(cgw.x, cgw.y);
   cg.position.copy(cgw); plumb.geometry.setFromPoints([cgw, new THREE.Vector3(cgw.x, cgw.y, gz)]); plumb.computeLineDistances();
   hit.position.set(cgw.x, cgw.y, gz + 0.02); cg.visible = plumb.visible = hit.visible = S.show.plumb;
   person.visible = S.show.person; person.position.set(p.x - 1.2, -3.0, groundAt(p.x - 1.2, -3.0));
-  const tgt = new THREE.Vector3(p.x, 0, walker.position.z + 2.0), d = tgt.clone().sub(controls.target).multiplyScalar(Math.min(1, 4 * dt));
+  const tgt = new THREE.Vector3(p.x, 0, (phys ? p.torso.z - 0.3 : walker.position.z + 2.0)), d = tgt.clone().sub(controls.target).multiplyScalar(Math.min(1, 4 * dt));
   controls.target.add(d); cam.position.add(d);
   if (camTween) { camTween.t = Math.min(1, camTween.t + dt * 2.2); const e = 0.5 - 0.5 * Math.cos(Math.PI * camTween.t);
     cam.position.lerpVectors(camTween.from, camTween.to, e); if (camTween.t >= 1) camTween = null; }
   sun.target.position.copy(controls.target); sun.position.copy(controls.target).add(new THREE.Vector3(6, -9, 14));
   controls.update();
-  if ((profT += dt) > 0.1) { drawProfile(p.x); profT = 0; }
-  $('pnote').textContent = `${S.playing ? 'walking' : 'paused'} · ${S.speed}× viewing pace`; $('pframe').textContent = `cycle ${p.k + 1} · frame ${p.i + 1}/${N()}`;
+  if ((profT += dt) > 0.1) { if (phys) drawPhys(Math.min(S.u, dur())); else drawProfile(p.x); profT = 0; }
+  $('pnote').textContent = phys ? `${S.playing ? 'playing' : 'paused'} · ${S.speed}× real time` : `${S.playing ? 'walking' : 'paused'} · ${S.speed}× viewing pace`;
+  $('pframe').textContent = phys ? `t ${Math.min(S.u, dur()).toFixed(1)} / ${dur().toFixed(1)} s` : `cycle ${p.k + 1} · frame ${p.i + 1}/${N()}`;
   renderer.setClearColor(C.bg, 1); renderer.render(scene, cam);
   const az = (THREE.MathUtils.radToDeg(Math.atan2(cam.position.y - controls.target.y, cam.position.x - controls.target.x)) + 360) % 360;
   const dist = cam.position.distanceTo(controls.target), el = THREE.MathUtils.radToDeg(Math.asin((cam.position.z - controls.target.z) / dist));
-  $('cam').textContent = `AZ ${az.toFixed(0)}° · EL ${el.toFixed(0)}° · R ${dist.toFixed(1)} M · ${S.render.toUpperCase()} · CL-05 ${S.mode === 'loaded' ? 'LOADED ' : ''}ON ${info().label.toUpperCase()}`;
+  $('cam').textContent = `AZ ${az.toFixed(0)}° · EL ${el.toFixed(0)}° · R ${dist.toFixed(1)} M · ${S.render.toUpperCase()} · CL-05 ${S.mode === 'loaded' ? 'LOADED ' : ''}ON ${info().label.toUpperCase()}${phys ? ' · MUJOCO' : ''}`;
   window.__state = { terrain: S.key, mode: S.mode, mass: S.mass, u: +S.u.toFixed(3), x: +p.x.toFixed(3), z: +walker.position.z.toFixed(3), playing: S.playing,
-    margins: lastMargins };
+    margins: lastMargins, model: S.model,
+    phys: phys ? { t: +Math.min(S.u, dur()).toFixed(3), frame: p.i, torso: p.torso.toArray().map((v) => +v.toFixed(3)), tilt: p.tilt.map((v) => +v.toFixed(2)),
+      walked: physRow(S.mode, S.key).walked, frames: run().frames } : null };
   window.__ready = true;
   requestAnimationFrame(frame);
 }
 
 // ------------------------------------------------------------------ start
 if (q.get('mode') === 'loaded') S.mode = 'loaded';
+if (q.get('model') === 'physics') S.model = 'physics';
 if (q.get('mass')) { S.mass = +q.get('mass'); $('mass').value = S.mass; }
 if (q.get('terrain')) setTerrain(q.get('terrain'));
 if (q.get('t')) S.u = +q.get('t');
 if (MODES.includes(q.get('render'))) S.render = q.get('render');
+if (S.model === 'physics') { const t0 = S.u; setModel('physics'); S.u = t0; }
 refresh(); applyMaterials(); renderPanels(); layout();
 controls.target.set(0, 0, 2.0); setView(VIEWS[q.get('view')] ? q.get('view') : 'iso', true);
 $('load').remove();
