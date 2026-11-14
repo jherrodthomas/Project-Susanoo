@@ -135,5 +135,9 @@ jobs:
         run: python -m sim.mujoco.sizing --compare
       - name: TS-001 supply-loss evidence reproduces the committed outcomes
         run: python -m sim.trades.fault_response --compare
+      - name: Level-2 terrain walk report and sheet 3 physics asset match the committed results
+        run: python -m sim.mujoco.terrain --check
+      - name: Level-2 terrain walk reproduces the committed outcomes and attribution (numbers within tolerance)
+        run: python -m sim.mujoco.terrain --compare
       - name: MuJoCo tests
-        run: python -m unittest sim.tests.test_mujoco
+        run: python -m unittest sim.tests.test_mujoco sim.tests.test_terrain_l2

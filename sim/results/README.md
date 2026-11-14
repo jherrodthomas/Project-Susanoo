@@ -49,6 +49,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | [`edge-cases.md`](edge-cases.md) | Edge cases |
 | [`l2-crosscheck.json`](l2-crosscheck.json) |  |
 | [`l2-crosscheck.md`](l2-crosscheck.md) | Level-1 vs level-2 cross-check |
+| [`l2-terrain.json`](l2-terrain.json) |  |
+| [`l2-terrain.md`](l2-terrain.md) | Level-2 terrain walk |
 | [`plant-results.json`](plant-results.json) |  |
 | [`plant-results.md`](plant-results.md) | Plant results: fault catalogue |
 | [`search-SF-01.json`](search-SF-01.json) |  |
