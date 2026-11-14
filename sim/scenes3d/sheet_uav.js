@@ -51,7 +51,7 @@ const gridAir = new THREE.GridHelper(300, 30, '#b4bfcc', '#cfd7e0'); gridAir.rot
 scene.add(gridFine, gridAir);
 
 // ------------------------------------------------------------------ state
-const S = { mode: 'dock', show: { hazards: true, keepout: true, fence: true, trail: true, walker: true, dims: true }, render: 'shaded', hazard: null };
+const S = { seqT: 0, seqPlaying: true, mode: 'dock', show: { hazards: true, keepout: true, fence: true, trail: true, walker: true, dims: true }, render: 'shaded', hazard: null };
 const R = { i: 0, t: 0, playing: false };
 
 // ------------------------------------------------------------------ materials
@@ -145,6 +145,46 @@ const dimLab = css('dim', `rotor ↔ pilot ${f2(D.dock.rotor_to_pilot_m)} m`); d
     const p = b.clampPoint(head, new THREE.Vector3()); if (!best || p.distanceTo(head) < best.distanceTo(head)) best = p; }
   dimLine.geometry.setFromPoints([best, head]); dimLab.position.copy(best).lerp(head, 0.5).add(new THREE.Vector3(0, -0.15, 0.15)); }
 
+// ------------------------------------------------------------------ launch and recovery (mode 'lr'): the sequence of sheet_uav.yaml
+// States and gates come from the records (checked by build_sheet.py); the flight profile and the durations are drafted
+// for display, the PX4 interface contract leaving all thresholds and timings TBD. The quadrotor is drawn at true size.
+const SEQ = D.sequence, SEQ_T = SEQ.reduce((a, st) => a + st.s, 0), V3 = (x, y, z) => new THREE.Vector3(x, y, z);
+const dockTopZ = uavBox.min.z;                                   // skid bottom when docked = top of the dock platform
+const POSE = { docked: V3(uavC.x, uavC.y, dockTopZ), hover: V3(uavC.x, uavC.y, dockTopZ + 0.6),
+  keepalt: V3(uavC.x, uavC.y, dockTopZ + koH), away: V3(uavC.x - 7, uavC.y, dockTopZ + koH) };
+// pilot keep-out of SPEC-UAV-001, centred on the pilot station it gives relative to the dock, from the dock's level up
+const KO_LR = V3(dockC.x + D.spec.pilot_station_n_m.value, dockC.y - D.spec.pilot_station_e_m.value, dockTopZ);
+function seqAt(t) {   // step index, fraction through it
+  let a = 0; for (let i = 0; i < SEQ.length; i++) { if (t < a + SEQ[i].s) return [i, (t - a) / SEQ[i].s]; a += SEQ[i].s; }
+  return [SEQ.length - 1, 1];
+}
+function seqStart(i) { return SEQ.slice(0, i).reduce((a, st) => a + st.s, 0); }
+function seqPos(i, u) {   // straight up before sideways, sideways before straight down
+  const A = POSE[(SEQ[i - 1] || SEQ[i]).uav], B = POSE[SEQ[i].uav], e = 0.5 - 0.5 * Math.cos(Math.PI * Math.min(1, Math.max(0, u)));
+  const mid = B.z >= A.z ? V3(A.x, A.y, B.z) : V3(B.x, B.y, A.z);
+  const l1 = A.distanceTo(mid), l2 = mid.distanceTo(B), d = (l1 + l2) * e;
+  return l1 + l2 === 0 ? B.clone() : d <= l1 ? A.clone().lerp(mid, l1 ? d / l1 : 1) : mid.clone().lerp(B, l2 ? (d - l1) / l2 : 1);
+}
+const lrGroup = new THREE.Group(); scene.add(lrGroup);
+const stat = css('dim', ''); stat.element.style.lineHeight = '1.5'; stat.position.set(dockC.x - 0.4, dockC.y + 1.6, dockTopZ + 1.2); lrGroup.add(stat);
+const path = new THREE.Line(new THREE.BufferGeometry().setFromPoints([POSE.docked, POSE.keepalt, POSE.away]),
+  new THREE.LineDashedMaterial({ color: C.sel, dashSize: 0.25, gapSize: 0.18 })); path.computeLineDistances(); lrGroup.add(path);
+const altLab = css('dim', `keep-out altitude ${koH} m above the dock`); altLab.position.copy(POSE.keepalt).add(V3(-1.5, 0, 0.4)); lrGroup.add(altLab);
+const inhibitMat = new THREE.MeshBasicMaterial({ color: '#94a3b8', transparent: true, opacity: 0.25, depthWrite: false, side: THREE.DoubleSide });
+const flyerRotors = parts.filter((m) => m.parent === flyerInner && m.userData.cls === 'rotor');
+const chip = (on, txt, col) => `<span style="display:inline-block;min-width:150px;color:${on ? col : C.mute}">● ${txt}</span>`;
+function drawSeq() {
+  const [i] = seqAt(S.seqT), st = SEQ[i];
+  $('seqstrip').innerHTML = SEQ.map((x, k) => `<button data-st="${k}" class="${k === i ? 'on' : ''}" title="${x.title}" style="${x.phase === 'recovery' ? 'border-top:2px solid ' + C.ok : ''}">${k + 1}</button>`).join('');
+  $('seqstrip').querySelectorAll('button').forEach((b) => { b.onclick = () => { S.seqT = seqStart(+b.dataset.st) + 0.001; drawSeq(); }; });
+  $('seqtitle').innerHTML = `<b>${i + 1}. ${st.title}</b> <span class="k">· ${st.phase} · ${st.mode}</span>`;
+  $('seqgates').innerHTML = st.gates.map((g) => `<div>· ${g}</div>`).join('');
+  $('seqplay').textContent = S.seqPlaying ? '❚❚' : '▶';
+  stat.element.innerHTML = chip(st.latch === 'closed', `latch ${st.latch}`, C.ink) + '<br>' + chip(st.rotors === 'running', `rotors ${st.rotors}`, C.haz) + '<br>' +
+    chip(st.charging === 'on', `charging ${st.charging}`, C.warn) + '<br>' + chip(st.permit !== 'none', `permit: ${st.permit}`, C.sel) +
+    `<br><span id="kochip"></span>`;
+}
+
 // ------------------------------------------------------------------ hazard callouts (screen space, as on sheet 1)
 const coLayer = $('co'), coSvg = $('cosvg'), co = {};
 for (const h of D.hazards) { if (!D.anchors[h.id]) continue; const el = document.createElement('div'); el.className = 'co'; el.textContent = h.id; el.title = h.title;
@@ -154,7 +194,12 @@ function updateAnchors() {
     const a = D.anchors[id]; c.p = null;
     if (!S.show.hazards) continue;
     if (S.mode === 'air') { if (a.air === 'keepout' && S.show.keepout) c.p = keep.localToWorld(new THREE.Vector3(koR, 0, koH)); continue; }
-    const b = box3((m) => m.userData.cls === a.cls && m.parent === walker, walker); if (b.isEmpty()) continue;
+    if (S.mode === 'lr') {   // only the hazards the current step names; the flying UAV's parts are on the flyer
+      const st = SEQ[seqAt(S.seqT)[0]]; if (!st.gates.join(' ').includes(id)) continue;
+      if (a.air === 'keepout') { c.p = keep.localToWorld(new THREE.Vector3(koR, 0, koH)); continue; }
+    }
+    const onFlyer = S.mode === 'lr' && UAVC.has(a.cls);
+    const b = box3((m) => m.userData.cls === a.cls && m.parent === (onFlyer ? flyerInner : walker), onFlyer ? flyer : walker); if (b.isEmpty()) continue;
     const ce = b.getCenter(new THREE.Vector3());
     c.p = new THREE.Vector3(...(({ top: [ce.x, ce.y, b.max.z], rear: [b.min.x, ce.y, ce.z], front: [b.max.x, ce.y, ce.z] })[a.at] || ce.toArray()));
   }
@@ -188,11 +233,12 @@ const VIEWS = { iso: [315, 20], front: [0, 6], side: [270, 6], top: [270, 89], r
 const VIEWS_DOCK = { iso: [225, 26], front: [0, 8], side: [270, 8], top: [270, 89], rear: [180, 14] };
 const VIEWS_AIR = { ...VIEWS, top: [180, 89.5] };
 let camTween = null, curView = 'iso';
-const frameOf = () => S.mode === 'dock' ? { target: dockC.clone().add(new THREE.Vector3(0.35, 0, -0.35)), r: 6.2 } : { target: new THREE.Vector3(18, -14, 6), r: 170 };
+const frameOf = () => S.mode === 'dock' ? { target: dockC.clone().add(new THREE.Vector3(0.35, 0, -0.35)), r: 6.2 }
+  : S.mode === 'lr' ? { target: V3(dockC.x - 2.2, dockC.y, dockTopZ + 3.6), r: 34 } : { target: new THREE.Vector3(18, -14, 6), r: 170 };
 function sph(az, el, r) { const a = THREE.MathUtils.degToRad(az), e = THREE.MathUtils.degToRad(el);
   return new THREE.Vector3(Math.cos(e) * Math.cos(a) * r, Math.cos(e) * Math.sin(a) * r, Math.sin(e) * r); }
 function setView(v, instant) {
-  curView = v; const f = frameOf(), [az, el] = (S.mode === 'dock' ? VIEWS_DOCK : VIEWS_AIR)[v], to = sph(az, el, f.r).add(f.target);
+  curView = v; const f = frameOf(), [az, el] = (S.mode === 'air' ? VIEWS_AIR : VIEWS_DOCK)[v], to = sph(az, el, f.r).add(f.target);
   document.querySelectorAll('#view button').forEach((b) => b.classList.toggle('on', b.dataset.v === v));
   if (instant) { controls.target.copy(f.target); cam.position.copy(to); controls.update(); return; }
   camTween = { from: cam.position.clone(), to, tf: controls.target.clone(), tt: f.target, t: 0 };
@@ -253,9 +299,15 @@ function refresh() {
   document.querySelectorAll('#mode button').forEach((b) => b.classList.toggle('on', b.dataset.m === S.mode));
   document.querySelectorAll('[data-t]').forEach((b) => b.classList.toggle('on', !!S.show[b.dataset.t]));
   document.querySelectorAll('#render button').forEach((b) => b.classList.toggle('on', b.dataset.r === S.render));
-  $('mnote').textContent = S.mode === 'dock' ? 'docked on CL-05 · rear backpack dock' : `airspace · UAV drawn ×${D.uav_scale_air} · SITL ground = dock level`;
+  $('mnote').textContent = S.mode === 'dock' ? 'docked on CL-05 · rear backpack dock' : S.mode === 'lr' ? 'launch & recovery · true scale · profile and timing drafted (TBD)'
+    : `airspace · UAV drawn ×${D.uav_scale_air} · SITL ground = dock level`;
+  $('replayp').style.display = S.mode === 'lr' ? 'none' : ''; $('seqp').style.display = S.mode === 'lr' ? '' : 'none';
+  $('btitle').textContent = S.mode === 'lr' ? 'Launch & recovery // records' : 'Replay // PX4 SITL'; $('rtitle').style.display = S.mode === 'lr' ? 'none' : '';
 }
-function setMode(m) { if (S.mode === m) return; S.mode = m; refresh(); setView(curView); }
+function setMode(m) { if (S.mode === m) return; S.mode = m; if (m === 'lr') { S.seqT = 0; S.seqPlaying = true; drawSeq(); } refresh(); setView(curView); }
+$('seqplay').onclick = () => { S.seqPlaying = !S.seqPlaying; drawSeq(); };
+$('seqprev').onclick = () => { const [i] = seqAt(S.seqT); S.seqT = seqStart(Math.max(0, i - 1)) + 0.001; drawSeq(); };
+$('seqnext').onclick = () => { const [i] = seqAt(S.seqT); S.seqT = seqStart(Math.min(SEQ.length - 1, i + 1)) + 0.001; drawSeq(); };
 document.querySelectorAll('#mode button').forEach((b) => { b.onclick = () => setMode(b.dataset.m); });
 document.querySelectorAll('[data-t]').forEach((b) => { b.onclick = () => { S.show[b.dataset.t] = !S.show[b.dataset.t]; refresh(); }; });
 document.querySelectorAll('#render button').forEach((b) => { b.onclick = () => { S.render = b.dataset.r; applyMaterials(); refresh(); }; });
@@ -271,13 +323,13 @@ $('rplot').onclick = (e) => { const b = $('rplot').getBoundingClientRect(), u = 
 addEventListener('keydown', (e) => {
   if (e.target.tagName === 'INPUT') return;
   const k = e.key.toLowerCase();
-  if (k === '1') setMode('dock'); if (k === '2') setMode('air');
+  if (k === '1') setMode('dock'); if (k === '2') setMode('lr'); if (k === '3') setMode('air');
   const tg = { h: 'hazards', k: 'keepout', f: 'fence', t: 'trail', w: 'walker', m: 'dims' }[k];
   if (tg) { S.show[tg] = !S.show[tg]; refresh(); }
   if (k === 'v') { const RM = ['shaded', 'line', 'xray']; S.render = RM[(RM.indexOf(S.render) + 1) % 3]; applyMaterials(); refresh(); }
   if (k === '?' || (k === '/' && e.shiftKey)) $('help').classList.toggle('open');
   if (k === 'escape') $('help').classList.remove('open');
-  if (k === ' ') { e.preventDefault(); $('rplay').click(); }
+  if (k === ' ') { e.preventDefault(); (S.mode === 'lr' ? $('seqplay') : $('rplay')).click(); }
 });
 
 // ------------------------------------------------------------------ replay plot
@@ -320,9 +372,9 @@ addEventListener('resize', layout);
 
 function renderOrtho(el, oc, kind) {
   const r = el.getBoundingClientRect(); if (!r.width) return;
-  const h = canvas.clientHeight || innerHeight, f = frameOf(), span = S.mode === 'dock' ? 2.6 : 75, asp = r.width / r.height;
+  const h = canvas.clientHeight || innerHeight, f = frameOf(), span = S.mode === 'dock' ? 2.6 : S.mode === 'lr' ? 7 : 75, asp = r.width / r.height;
   Object.assign(oc, { left: -span * asp, right: span * asp, top: span, bottom: -span, near: 0.1, far: 1000 });
-  const c = S.mode === 'dock' ? f.target : new THREE.Vector3(20, -15, 0);
+  const c = S.mode === 'air' ? new THREE.Vector3(20, -15, 0) : f.target;
   if (kind === 'front') { oc.up.set(0, 0, 1); oc.position.copy(c).add(new THREE.Vector3(300, 0, 0)); }
   if (kind === 'side') { oc.up.set(0, 0, 1); oc.position.copy(c).add(new THREE.Vector3(0, -300, 0)); }
   if (kind === 'top') { oc.up.set(1, 0, 0); oc.position.copy(c).add(new THREE.Vector3(0, 0, 300)); }
@@ -336,20 +388,32 @@ let last = performance.now();
 function frame(now) {
   const dt = Math.min(0.1, (now - last) / 1000); last = now;
   if (R.playing) { R.t += dt * 2; if (R.t > tEnd()) R.t = 0; drawReplay(); }   // 2x real time
-  const isAir = S.mode === 'air', r = run();
-  air.visible = isAir; gridAir.visible = isAir; gridFine.visible = !isAir; dims.visible = !isAir && S.show.dims; dimLab.visible = dims.visible;
-  keep.visible = isAir && S.show.keepout; fence.visible = fenceLab.visible = S.show.fence; trail.visible = S.show.trail;
-  for (const o of [homeLab, obsLab, landLab, ghostLab, koLab]) o.visible = isAir;
+  const isAir = S.mode === 'air', isLR = S.mode === 'lr', r = run();
+  air.visible = isAir; gridAir.visible = isAir; gridFine.visible = !isAir; dims.visible = S.mode === 'dock' && S.show.dims; dimLab.visible = dims.visible;
+  keep.visible = (isAir || isLR) && S.show.keepout; fence.visible = fenceLab.visible = S.show.fence; trail.visible = S.show.trail;
+  if (isAir) keep.position.copy(ned(r.pilot_m[0], r.pilot_m[1], 0)); else keep.position.copy(KO_LR);
+  lrGroup.visible = isLR; stat.visible = altLab.visible = isLR; koLab.visible = isAir || isLR;
+  for (const o of [homeLab, obsLab, landLab, ghostLab]) o.visible = isAir;
   if (!isAir) { walker.position.set(0, 0, 0); }
   else { walker.position.set(r.dock_m[0] - dockC.x, -r.dock_m[1] - dockC.y, 0); }
   walker.visible = S.show.walker || !isAir;
-  for (const m of dockedUav) m.visible = !isAir;
-  flyer.visible = isAir;
+  for (const m of dockedUav) m.visible = S.mode === 'dock';
+  flyer.visible = isAir || isLR;
+  if (isLR) {
+    if (S.seqPlaying) { S.seqT += dt; if (S.seqT > SEQ_T + 2) S.seqT = 0; }
+    const [i, u] = seqAt(Math.min(S.seqT, SEQ_T - 1e-6)), st = SEQ[i];
+    flyer.position.copy(seqPos(i, u)); flyer.scale.setScalar(1);
+    for (const m of flyerRotors) m.material = st.rotors === 'running' ? matFor('rotor') : inhibitMat;
+    const inKO = Math.hypot(flyer.position.x - KO_LR.x, flyer.position.y - KO_LR.y) < koR && flyer.position.z - dockTopZ < koH - 1e-3;
+    const kc = document.getElementById('kochip'); if (kc) kc.innerHTML = chip(inKO, inKO ? 'inside the pilot keep-out' : 'outside the pilot keep-out', C.bad);
+    koMesh.material.opacity = 0.07;
+    if (i !== S.seqShown) { S.seqShown = i; drawSeq(); }
+  } else { for (const m of flyerRotors) m.material = matFor('rotor'); koMesh.material.opacity = 0.12; }
   if (isAir) { const f = at(R.t); flyer.position.copy(ned(f[1], f[2], Math.max(0, f[3]))); flyer.scale.setScalar(D.uav_scale_air);
     drop.geometry.setFromPoints([flyer.position.clone(), flyer.position.clone().setZ(0)]); drop.computeLineDistances(); }
   if (camTween) { camTween.t = Math.min(1, camTween.t + dt * 1.8); const e = 0.5 - 0.5 * Math.cos(Math.PI * camTween.t);
     cam.position.lerpVectors(camTween.from, camTween.to, e); controls.target.lerpVectors(camTween.tf, camTween.tt, e); if (camTween.t >= 1) camTween = null; }
-  const sc = isAir ? 90 : 8, st = controls.target;
+  const sc = isAir ? 90 : isLR ? 14 : 8, st = controls.target;
   Object.assign(sun.shadow.camera, { left: -sc, right: sc, top: sc, bottom: -sc, near: 1, far: isAir ? 600 : 60 }); sun.shadow.camera.updateProjectionMatrix();
   sun.target.position.copy(st); sun.position.copy(st).add(new THREE.Vector3(7, -9, 13).multiplyScalar(isAir ? 12 : 1));
   controls.update(); updateAnchors();
@@ -362,20 +426,25 @@ function frame(now) {
   const d = cam.position.distanceTo(controls.target);
   const az = (THREE.MathUtils.radToDeg(Math.atan2(cam.position.y - controls.target.y, cam.position.x - controls.target.x)) + 360) % 360;
   const el = THREE.MathUtils.radToDeg(Math.asin((cam.position.z - controls.target.z) / d));
-  $('cam').textContent = `AZ ${az.toFixed(0)}° · EL ${el.toFixed(0)}° · R ${d.toFixed(1)} M · ${S.render.toUpperCase()} · ${isAir ? 'X NORTH · SITL LOCAL NED FROM TAKE-OFF' : 'CL-05 PLACEHOLDER GEOMETRY'}`;
-  window.__state = { mode: S.mode, run: r.id, t: R.t, outcome: r.outcome, hazard: S.hazard, settled: !camTween };
+  $('cam').textContent = `AZ ${az.toFixed(0)}° · EL ${el.toFixed(0)}° · R ${d.toFixed(1)} M · ${S.render.toUpperCase()} · ${isAir ? 'X NORTH · SITL LOCAL NED FROM TAKE-OFF' : isLR ? 'LAUNCH & RECOVERY · ILLUSTRATIVE PROFILE' : 'CL-05 PLACEHOLDER GEOMETRY'}`;
+  const sq = SEQ[seqAt(Math.min(S.seqT, SEQ_T - 1e-6))[0]];
+  window.__state = { mode: S.mode, run: r.id, t: R.t, outcome: r.outcome, hazard: S.hazard, settled: !camTween,
+    seq: { step: SEQ.indexOf(sq) + 1, uav: sq.uav, latch: sq.latch, rotors: sq.rotors, charging: sq.charging, permit: sq.permit,
+      dz: +(flyer.position.z - dockTopZ).toFixed(3), dx: +(flyer.position.x - uavC.x).toFixed(3),
+      inKeepout: Math.hypot(flyer.position.x - KO_LR.x, flyer.position.y - KO_LR.y) < koR && flyer.position.z - dockTopZ < koH - 1e-3 } };
   window.__ready = true;
   requestAnimationFrame(frame);
 }
 
 // ------------------------------------------------------------------ start
 if (q.get('mode') === 'air') S.mode = 'air';
+if (q.get('mode') === 'lr') { S.mode = 'lr'; if (q.get('step')) { S.seqT = seqStart(Math.min(SEQ.length, +q.get('step')) - 1) + SEQ[Math.min(SEQ.length, +q.get('step')) - 1].s * 0.999; S.seqPlaying = false; } }
 if (['shaded', 'line', 'xray'].includes(q.get('render'))) S.render = q.get('render');
 for (const t of Object.keys(S.show)) if (q.has(t)) S.show[t] = q.get(t) !== '0';
 const ri = D.runs.findIndex((r) => r.id === q.get('run')); if (ri >= 0) R.i = ri;
 buildTrail();
 if (q.get('t')) R.t = q.get('t') === 'end' ? tEnd() - 2 : +q.get('t');
-refresh(); applyMaterials(); drawReplay();
+refresh(); applyMaterials(); drawReplay(); drawSeq();
 if (q.get('hazard')) selectHazard(q.get('hazard'));
 layout(); setView(VIEWS[q.get('view')] ? q.get('view') : 'iso', true);
 $('load').remove();

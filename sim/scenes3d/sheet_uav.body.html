@@ -6,7 +6,7 @@
 
 <div class="panel" id="left">
   <div class="ph">View <span>V-01</span></div>
-  <div class="seg" id="mode"><button data-m="dock">Dock<kbd>1</kbd></button><button data-m="air">Airspace<kbd>2</kbd></button></div>
+  <div class="seg" id="mode"><button data-m="dock">Dock<kbd>1</kbd></button><button data-m="lr">Launch &amp; recovery<kbd>2</kbd></button><button data-m="air">Airspace<kbd>3</kbd></button></div>
   <div class="row"><span class="k" id="mnote"></span></div>
   <div class="ph" style="border-top:1px solid var(--ink)">Show <span>S-02</span></div>
   <div class="seg tog">
@@ -43,7 +43,13 @@
 </div>
 
 <div class="panel" id="bottom">
-  <div class="ph">Replay // PX4 SITL <span id="rtitle"></span></div>
+  <div class="ph"><span id="btitle" style="color:inherit;font-weight:700;letter-spacing:.14em">Replay // PX4 SITL</span> <span id="rtitle"></span></div>
+  <div id="seqp" style="display:none">
+    <div style="display:flex;align-items:center;gap:8px;padding:5px 10px"><div class="seg" id="seqstrip" style="margin:0"></div><div class="seg" style="margin:0"><button id="seqprev">‹</button><button id="seqplay">❚❚</button><button id="seqnext">›</button></div></div>
+    <div id="seqtitle" style="padding:0 10px"></div>
+    <div id="seqgates" class="k" style="padding:2px 10px;font-size:10.5px;line-height:1.45"></div>
+  </div>
+  <div id="replayp">
   <div id="rp">
     <div class="seg" id="rtabs"></div>
     <div class="seg"><button id="rplay">Play</button></div>
@@ -51,6 +57,7 @@
   </div>
   <div class="k" id="rinfo"></div>
   <svg id="rplot" viewBox="0 0 1000 84" preserveAspectRatio="none"></svg>
+  </div>
 </div>
 
 <div id="tb">
@@ -63,7 +70,8 @@
   <div class="ph">Every control <span>? to close</span></div>
   <table>
     <tr><td>Drag · wheel · right-drag</td><td>orbit · zoom · pan</td></tr>
-    <tr><td>1 · 2</td><td>dock close-up · airspace</td></tr>
+    <tr><td>1 · 2 · 3</td><td>dock close-up · launch and recovery · airspace</td></tr>
+    <tr><td>Launch &amp; recovery</td><td>the order of states and permits the records call for; click a step, ‹ › or Space. Profile and timing are drafted for display (the PX4 interface contract leaves them TBD)</td></tr>
     <tr><td>H · K · F</td><td>hazard callouts · pilot keep-out · geofence</td></tr>
     <tr><td>T · W · M</td><td>flight track · walker · dimensions</td></tr>
     <tr><td>V</td><td>shaded · line · X-ray</td></tr>
