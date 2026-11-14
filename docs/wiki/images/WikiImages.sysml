@@ -193,25 +193,25 @@ package WikiImages {
     }
     part imgRelFt004 : GeneratedFigure {
         attribute :>> file = "rel-ft-004.svg";
-        attribute :>> kilobytes = 5;
+        attribute :>> kilobytes = 6;
         attribute :>> shownOn = 1;
         attribute :>> generator = "tools/reliability/build.py";
     }
     part imgRelFt005 : GeneratedFigure {
         attribute :>> file = "rel-ft-005.svg";
-        attribute :>> kilobytes = 7;
+        attribute :>> kilobytes = 8;
         attribute :>> shownOn = 1;
         attribute :>> generator = "tools/reliability/build.py";
     }
     part imgRelFt006 : GeneratedFigure {
         attribute :>> file = "rel-ft-006.svg";
-        attribute :>> kilobytes = 6;
+        attribute :>> kilobytes = 7;
         attribute :>> shownOn = 1;
         attribute :>> generator = "tools/reliability/build.py";
     }
     part imgRelFt007 : GeneratedFigure {
         attribute :>> file = "rel-ft-007.svg";
-        attribute :>> kilobytes = 6;
+        attribute :>> kilobytes = 7;
         attribute :>> shownOn = 1;
         attribute :>> generator = "tools/reliability/build.py";
     }
@@ -223,7 +223,7 @@ package WikiImages {
     }
     part imgRelFt009 : GeneratedFigure {
         attribute :>> file = "rel-ft-009.svg";
-        attribute :>> kilobytes = 9;
+        attribute :>> kilobytes = 10;
         attribute :>> shownOn = 2;
         attribute :>> generator = "tools/reliability/build.py";
     }
@@ -235,13 +235,13 @@ package WikiImages {
     }
     part imgRelFt011 : GeneratedFigure {
         attribute :>> file = "rel-ft-011.svg";
-        attribute :>> kilobytes = 4;
+        attribute :>> kilobytes = 5;
         attribute :>> shownOn = 1;
         attribute :>> generator = "tools/reliability/build.py";
     }
     part imgRelFt012 : GeneratedFigure {
         attribute :>> file = "rel-ft-012.svg";
-        attribute :>> kilobytes = 4;
+        attribute :>> kilobytes = 5;
         attribute :>> shownOn = 1;
         attribute :>> generator = "tools/reliability/build.py";
     }
@@ -283,13 +283,13 @@ package WikiImages {
     }
     part imgRelFt019 : GeneratedFigure {
         attribute :>> file = "rel-ft-019.svg";
-        attribute :>> kilobytes = 5;
+        attribute :>> kilobytes = 6;
         attribute :>> shownOn = 1;
         attribute :>> generator = "tools/reliability/build.py";
     }
     part imgRelFt020 : GeneratedFigure {
         attribute :>> file = "rel-ft-020.svg";
-        attribute :>> kilobytes = 4;
+        attribute :>> kilobytes = 5;
         attribute :>> shownOn = 1;
         attribute :>> generator = "tools/reliability/build.py";
     }

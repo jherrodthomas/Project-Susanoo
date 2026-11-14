@@ -33,6 +33,9 @@ PAGE = "docs/wiki/Reliability-Pilot.md"
 BANDS_SVG = "docs/wiki/images/rel-bands.svg"
 JSON_OUT = "safety/generated/reliability.json"
 INK, MUTED, LINE, ACCENT, WARN, GOOD = "#152033", "#566275", "#cfd7e2", "#2a55a8", "#b54708", "#2d7a4c"
+# Fault-tree shading (variant B): only the top event and the leaves are tinted; gates and intermediate events stay
+# white. Every tint repeats what the shape, border or label already says, so the figure reads without colour.
+TOP_FILL, TOP_LINE, MODE_FILL, UNDEV_FILL = "#fde7e2", "#b42318", "#eaf2fb", "#fff4e3"
 FONT = "Inter, 'Segoe UI', Helvetica, Arial, sans-serif"
 EXPOSURE_WORDS = {"walker_operating_hours": "walker operating hours", "docking_cycles": "docking cycles",
                   "uav_flight_hours": "UAV flight hours"}
@@ -80,7 +83,7 @@ def tree_svg(m: engine.Model, tree: dict, res: dict) -> str:
     place(tree["top"], 0)
     W = max(int(xs[0]) + 40, 820)
     depth = max(d for _, d in pos.values())
-    H = 96 + (depth + 1) * ROW
+    H = 126 + (depth + 1) * ROW
     e = html.escape
     alt = f" · alternative {tree['alternative']}" if tree.get("alternative") else ""
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" font-family="{FONT}">',
@@ -103,8 +106,16 @@ def tree_svg(m: engine.Model, tree: dict, res: dict) -> str:
         node = gates.get(nid) or events[nid]
         und = engine.is_undeveloped(node)
         dash = ' stroke-dasharray="4 3"' if und else ""
-        o.append(f'<rect x="{cx - BW / 2}" y="{cy}" width="{BW}" height="{BH}" rx="3" fill="#ffffff" '
-                 f'stroke="{WARN if und else INK}" stroke-width="1.2"{dash}/>')
+        if nid == tree["top"]:
+            fill, stroke, width = TOP_FILL, TOP_LINE, 2
+        elif nid in gates:
+            fill, stroke, width = "#ffffff", INK, 1.2
+        elif und:
+            fill, stroke, width = UNDEV_FILL, WARN, 1.2
+        else:
+            fill, stroke, width = MODE_FILL, INK, 1.2
+        o.append(f'<rect x="{cx - BW / 2}" y="{cy}" width="{BW}" height="{BH}" rx="3" fill="{fill}" '
+                 f'stroke="{stroke}" stroke-width="{width}"{dash}/>')
         for k, ln in enumerate(textwrap.wrap(node["title"], 30)[:2]):
             o.append(f'<text x="{cx}" y="{cy + 16 + k * 14}" font-size="11.5" fill="{INK}" text-anchor="middle">{e(ln)}</text>')
         if und:
@@ -130,6 +141,12 @@ def tree_svg(m: engine.Model, tree: dict, res: dict) -> str:
         n = node.get("count")
         if n is not None:
             o.append(f'<text x="{cx + 20}" y="{sy + 21}" font-size="12" font-weight="700" fill="{ACCENT}">×{int(m.param(n))}</text>')
+    ly = H - 52
+    for k, (label, f, s, d) in enumerate([("Top event", TOP_FILL, TOP_LINE, ""), ("Failure mode", MODE_FILL, INK, ""),
+                                          ("Undeveloped cause", UNDEV_FILL, WARN, ' stroke-dasharray="4 3"')]):
+        x = 20 + k * 170
+        o.append(f'<rect x="{x}" y="{ly - 10}" width="18" height="12" rx="2" fill="{f}" stroke="{s}"{d}/>'
+                 f'<text x="{x + 26}" y="{ly}" font-size="11.5" fill="{MUTED}">{label}</text>')
     o.append(f'<text x="20" y="{H - 22}" font-size="11.5" fill="{MUTED}">Dome: all inputs (and). Shield: any input (or). '
              'Circle: failure mode. Double circle: common-cause share. Diamond: undeveloped cause, not quantified. '
              '×n: n identical copies.</text>')

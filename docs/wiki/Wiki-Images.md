@@ -67,23 +67,23 @@ The figures the wiki shows directly: item-definition and SysML views, record fig
 | [`rel-ft-001.svg`](images/rel-ft-001.svg) | `tools/reliability/build.py` | 6 KB | 1 wiki page, 1 repository page |
 | [`rel-ft-002.svg`](images/rel-ft-002.svg) | `tools/reliability/build.py` | 9 KB | 1 wiki page, 1 repository page |
 | [`rel-ft-003.svg`](images/rel-ft-003.svg) | `tools/reliability/build.py` | 9 KB | 1 wiki page, 1 repository page |
-| [`rel-ft-004.svg`](images/rel-ft-004.svg) | `tools/reliability/build.py` | 5 KB | 1 wiki page |
-| [`rel-ft-005.svg`](images/rel-ft-005.svg) | `tools/reliability/build.py` | 7 KB | 1 wiki page |
-| [`rel-ft-006.svg`](images/rel-ft-006.svg) | `tools/reliability/build.py` | 6 KB | 1 wiki page |
-| [`rel-ft-007.svg`](images/rel-ft-007.svg) | `tools/reliability/build.py` | 6 KB | 1 wiki page |
+| [`rel-ft-004.svg`](images/rel-ft-004.svg) | `tools/reliability/build.py` | 6 KB | 1 wiki page |
+| [`rel-ft-005.svg`](images/rel-ft-005.svg) | `tools/reliability/build.py` | 8 KB | 1 wiki page |
+| [`rel-ft-006.svg`](images/rel-ft-006.svg) | `tools/reliability/build.py` | 7 KB | 1 wiki page |
+| [`rel-ft-007.svg`](images/rel-ft-007.svg) | `tools/reliability/build.py` | 7 KB | 1 wiki page |
 | [`rel-ft-008.svg`](images/rel-ft-008.svg) | `tools/reliability/build.py` | 4 KB | 1 wiki page |
-| [`rel-ft-009.svg`](images/rel-ft-009.svg) | `tools/reliability/build.py` | 9 KB | 1 wiki page, 1 repository page |
+| [`rel-ft-009.svg`](images/rel-ft-009.svg) | `tools/reliability/build.py` | 10 KB | 1 wiki page, 1 repository page |
 | [`rel-ft-010.svg`](images/rel-ft-010.svg) | `tools/reliability/build.py` | 6 KB | 1 wiki page |
-| [`rel-ft-011.svg`](images/rel-ft-011.svg) | `tools/reliability/build.py` | 4 KB | 1 wiki page |
-| [`rel-ft-012.svg`](images/rel-ft-012.svg) | `tools/reliability/build.py` | 4 KB | 1 wiki page |
+| [`rel-ft-011.svg`](images/rel-ft-011.svg) | `tools/reliability/build.py` | 5 KB | 1 wiki page |
+| [`rel-ft-012.svg`](images/rel-ft-012.svg) | `tools/reliability/build.py` | 5 KB | 1 wiki page |
 | [`rel-ft-013.svg`](images/rel-ft-013.svg) | `tools/reliability/build.py` | 8 KB | 1 wiki page |
 | [`rel-ft-014.svg`](images/rel-ft-014.svg) | `tools/reliability/build.py` | 5 KB | 1 wiki page |
 | [`rel-ft-015.svg`](images/rel-ft-015.svg) | `tools/reliability/build.py` | 5 KB | 1 wiki page |
 | [`rel-ft-016.svg`](images/rel-ft-016.svg) | `tools/reliability/build.py` | 4 KB | 1 wiki page |
 | [`rel-ft-017.svg`](images/rel-ft-017.svg) | `tools/reliability/build.py` | 5 KB | 1 wiki page |
 | [`rel-ft-018.svg`](images/rel-ft-018.svg) | `tools/reliability/build.py` | 5 KB | 1 wiki page |
-| [`rel-ft-019.svg`](images/rel-ft-019.svg) | `tools/reliability/build.py` | 5 KB | 1 wiki page |
-| [`rel-ft-020.svg`](images/rel-ft-020.svg) | `tools/reliability/build.py` | 4 KB | 1 wiki page |
+| [`rel-ft-019.svg`](images/rel-ft-019.svg) | `tools/reliability/build.py` | 6 KB | 1 wiki page |
+| [`rel-ft-020.svg`](images/rel-ft-020.svg) | `tools/reliability/build.py` | 5 KB | 1 wiki page |
 | [`rel-ft-021.svg`](images/rel-ft-021.svg) | `tools/reliability/build.py` | 8 KB | 1 wiki page, 1 repository page |
 | [`rel-ft-022.svg`](images/rel-ft-022.svg) | `tools/reliability/build.py` | 6 KB | 1 wiki page |
 | [`rel-ft-023.svg`](images/rel-ft-023.svg) | `tools/reliability/build.py` | 6 KB | 1 wiki page |
