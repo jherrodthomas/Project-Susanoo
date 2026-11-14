@@ -11,7 +11,8 @@ tools/cad/b3d/cl05_terrain.py, with that export's kinematic findings, the static
 slope (frozen posture, and with the gait's lean compensation of sim/spec/walker.yaml) and the SYS-008 slope limit. Its
 loaded mode walks the loaded gait carrying the placeholder load (cl05_terrain.py --loaded), with the carry posture's
 margin for a load mass the viewer sets (the CAD's margin-peak, 0.30 m flag and tip-over masses marked), SYS-019 and
-HAZ-MAN-002.
+HAZ-MAN-002. Its physics model replays the level-2 MuJoCo runs of the same walk (sim/mujoco/terrain.py,
+docs/3d/assets/sus-m1-terrain-physics.js) with their outcomes, attribution and torque use.
 
 Sheet 1:
 
@@ -42,6 +43,7 @@ OUT_UAV = "docs/3d/SUS-A1.html"
 OUT_TERRAIN = "docs/3d/SUS-M1-terrain.html"
 TERRAIN = ROOT / "docs/3d/assets/sus-m1-terrain.js"
 TERRAIN_LOADED = ROOT / "docs/3d/assets/sus-m1-terrain-loaded.js"
+TERRAIN_PHYSICS = ROOT / "docs/3d/assets/sus-m1-terrain-physics.js"
 GEOMETRY = ROOT / "docs/3d/assets/sus-m1.js"
 
 
@@ -261,11 +263,12 @@ def sheet3() -> dict:
                    "tbd": req19.get("tbd") or []},
         "hazard": haz, "hazard_load": haz_load, "carry": carry, "replay": [], "hazards": [haz, haz_load],
     }
-    extra = ["SYS-008 SYS-019 HAZ-WLK-002 HAZ-MAN-002 CG TBD", course["id"]]
+    extra = ["SYS-008 SYS-019 HAZ-WLK-002 HAZ-MAN-002 CG TBD MuJoCo", course["id"]]
     return {OUT_TERRAIN: page_html(data, "SUS-M1 terrain course", "sheet_terrain.body.html", "sheet_terrain.js",
                                    terms_line(data, extra)).replace('<script src="assets/sus-m1.js"></script>',
                                                                    '<script src="assets/sus-m1.js"></script>\n<script src="assets/sus-m1-terrain.js"></script>\n'
-                                                                   '<script src="assets/sus-m1-terrain-loaded.js"></script>')}
+                                                                   '<script src="assets/sus-m1-terrain-loaded.js"></script>\n'
+                                                                   '<script src="assets/sus-m1-terrain-physics.js"></script>')}
 
 
 def page_html(data: dict, title: str, body: str, viewer: str, terms: str) -> str:
@@ -367,9 +370,9 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--check", action="store_true")
     a = ap.parse_args(argv)
-    if not GEOMETRY.exists() or not TERRAIN.exists() or not TERRAIN_LOADED.exists():
-        print("missing docs/3d/assets/sus-m1.js or sus-m1-terrain[-loaded].js: run tools/cad/b3d/cl05_web.py and cl05_terrain.py [--loaded] "
-              "(build123d environment)", file=sys.stderr)
+    if not GEOMETRY.exists() or not TERRAIN.exists() or not TERRAIN_LOADED.exists() or not TERRAIN_PHYSICS.exists():
+        print("missing docs/3d/assets/sus-m1.js, sus-m1-terrain[-loaded].js or sus-m1-terrain-physics.js: run tools/cad/b3d/cl05_web.py and "
+              "cl05_terrain.py [--loaded] (build123d environment), and python -m sim.mujoco.terrain", file=sys.stderr)
         return 1
     return write_or_check(outputs(), a.check, "python -m sim.scenes3d.build_sheet")
 
