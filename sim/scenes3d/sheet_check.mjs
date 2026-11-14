@@ -4,7 +4,7 @@
 //   pinned jsDelivr URLs are served from it. Loads the page in Chromium, goes through every posture, a hazard selection,
 //   the render modes and the replay, and fails on a console error, a missing synthetic label or a posture that does
 //   not settle; on sheet 2, that every PX4 SITL run replays to its own outcome. Unless --check-only, writes
-//   docs/wiki/images/3d-sus-m1.png, 3d-sus-a1.png, 3d-sus-a1-air.png and 3d-sus-m1-terrain.png (1600x900); --all also
+//   docs/wiki/images/3d-sus-m1.png, 3d-sus-a1.png, 3d-sus-a1-air.png, 3d-sus-a1-lr.png and 3d-sus-m1-terrain.png (1600x900); --all also
 //   3d-sus-m1-<posture>.png, and 3d-sus-m1-terrain-loaded.png. On sheet 3, every terrain must advance one stride and rise its
 //   own rise per cycle, unloaded and loaded, and the page's load-mass margins must match the records' figures.
 import { createRequire } from 'node:module';
@@ -102,6 +102,20 @@ for (const r of runs) {
   }
   console.log(`ok   SUS-A1 ${r.id} (${r.outcome})`);
 }
+// sheet 2, launch and recovery: every step shows the states the records give it, the UAV is where the step puts it,
+// and the rotors never run while latched
+const SH2 = JSON.parse(readFileSync(join(root, 'docs/3d/SUS-A1.html'), 'utf8').match(/window\.SHEET = (.*);<\/script>/)[1]);
+const koH = SH2.spec.keepout_alt_m.value, WANT = { docked: [0, 0], hover: [0.6, 0], keepalt: [koH, 0], away: [koH, -7] };
+for (const [k, st] of SH2.sequence.entries()) {
+  await page.goto(url2(`?mode=lr&step=${k + 1}`));
+  await page.waitForFunction(() => window.__ready === true && window.__state.mode === 'lr', null, { timeout: 60000 });
+  const q = await page.evaluate(() => window.__state.seq), [dz, dx] = WANT[st.uav];
+  const bad = ['uav', 'latch', 'rotors', 'charging', 'permit'].filter((f) => q[f] !== st[f]);
+  if (q.step !== k + 1 || bad.length || Math.abs(q.dz - dz) > 0.02 || Math.abs(q.dx - dx) > 0.02 || (q.rotors === 'running' && q.latch !== 'open'))
+    problems.push(`launch/recovery step ${k + 1}: page ${JSON.stringify(q)}`);
+  if (!checkOnly && k === 6) await page.screenshot({ path: join(out, '3d-sus-a1-lr.png') });
+}
+console.log(`ok   SUS-A1 launch and recovery (${SH2.sequence.length} steps)`);
 await page.keyboard.press('1'); await page.keyboard.press(' '); await page.waitForTimeout(600);
 // sheet 3 (terrain): every terrain loads and walks forward, climbing by its own rise per cycle
 const T3 = JSON.parse(readFileSync(join(root, 'docs/3d/assets/sus-m1-terrain.js'), 'utf8').match(/meta: (\{.*?\}),\nbin:/s)[1]);
