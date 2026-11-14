@@ -48,6 +48,14 @@ class ReferenceLayout(unittest.TestCase):
         self.assertAlmostEqual(l2["torso_mass_kg"]["value"], torso["mass_kg"], delta=5)
         self.assertAlmostEqual(l2["torso_pitch_inertia_kgm2"]["value"], torso["inertia_kgm2"][1][1], delta=1)
         self.assertAlmostEqual(l2["torso_com_above_hip_m"]["value"], torso["com_m"][2] - hip, delta=0.002)
+        import math
+        j = cad["joints_m"]["left"]
+        (hx, _, hz), (kx, _, kz), (ax, _, az) = j["hip"], j["knee"], j["ankle"]
+        self.assertAlmostEqual(l2["thigh_length_m"]["value"], math.hypot(kx - hx, kz - hz), delta=0.002)
+        self.assertAlmostEqual(l2["shank_length_m"]["value"], math.hypot(ax - kx, az - kz), delta=0.002)
+        self.assertAlmostEqual(l2["ankle_height_m"]["value"], az, delta=0.002)
+        knee = math.atan2(-(ax - kx), -(az - kz)) - math.atan2(-(kx - hx), -(kz - hz))   # shank relative to thigh
+        self.assertAlmostEqual(l2["knee_stance_rad"]["value"], knee, delta=0.002)
         m = json.loads((ROOT / "cad" / "metrics.json").read_text())["concepts"]["CL-05"]
         self.assertAlmostEqual(cad["total"]["mass_kg"], m["placeholder_mass_kg"], delta=5)
         self.assertEqual(cad["total"]["com_m"][2], m["cg_m"][2])

@@ -69,18 +69,23 @@ class Model(unittest.TestCase):
         self.assertIn(f"{pr['knee_torque_max_nm'] / 1000:g} kN m", req)
 
     def test_ts001_evidence_matches_the_trade_record(self):
-        """TS-001-E01 claims a hydraulic loss and an isolated battery behave identically (torque to zero), and that on
-        the 4,590 kg reference layout with the re-sized torques (DQ-024) level 2 keeps every mode safe while load
-        holding works."""
+        """TS-001-E01 claims a hydraulic loss and an isolated battery behave identically (torque to zero), and states
+        what level 2 shows with load holding working: either that every mode is safe, or how many cases each loses."""
         res = json.loads((ROOT / "sim" / "results" / "ts001-fault-response.json").read_text())
         rows = {(r["mode"], r["load_holding"]): r for r in res["rows"]}
         self.assertEqual(rows[("A-LOSS", "fails")]["l2"]["outcomes"], rows[("B-ISOL", "fails")]["l2"]["outcomes"])
-        for mode in ("A-LOSS", "B-SAG", "B-ISOL"):
-            self.assertEqual(rows[(mode, "works")]["l2"]["counts"]["safe"], res["cases"], mode)
+        self.assertEqual(rows[("A-LOSS", "works")]["l2"]["outcomes"], rows[("B-ISOL", "works")]["l2"]["outcomes"])
         trade = _read_yaml(ROOT / "architecture" / "trades" / "TS-001.yaml")
         e01 = next(e for e in trade["evidence"] if e["id"] == "TS-001-E01")
         self.assertEqual(e01["source"], "sim/results/ts001-fault-response.md")
-        self.assertIn("every supply-loss mode is safe", " ".join(e01["summary"].split()))
+        summary = " ".join(e01["summary"].split())
+        lost = {m: res["cases"] - rows[(m, "works")]["l2"]["counts"]["safe"] for m in ("A-LOSS", "B-SAG", "B-ISOL")}
+        if not any(lost.values()):
+            self.assertIn("every supply-loss mode is safe", summary)
+        else:
+            self.assertNotIn("every supply-loss mode is safe", summary)
+            for m in ("A-LOSS", "B-SAG"):
+                self.assertIn(f"lose{'s' if m == 'B-SAG' else ''} {lost[m]}", summary, m)
 
     def test_locked_walker_holds_still_and_ignores_rounding(self):
         """Load holding is a solver constraint: once locked the walker stays put, so the outcome cannot hang on

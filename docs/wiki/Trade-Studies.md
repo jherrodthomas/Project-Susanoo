@@ -9,11 +9,11 @@ Architecture trade studies from `architecture/trades/`. The decision process is 
 
 | Term | Meaning |
 |---|---|
-| A01–A04 | item-definition validator rule (A01–A04) |
 | AI | artificial intelligence (here, an AI assistant drafting at independence level I0) |
 | B-EHA | TS-001 alternative B with electrohydraulic joint actuators (series-hybrid power) |
 | B-EMA | TS-001 alternative B with electromechanical joint actuators (series-hybrid power) |
 | BMS | battery management system |
+| CL-nnn | concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout) |
 | DC | direct current |
 | DoD | US Department of Defense |
 | DQ-nnn | decision question for the project lead (decisions/register.yaml) |
@@ -80,16 +80,16 @@ Joint actuation of the walker and the power source that goes with it. Two power 
 
 | Alternative | Criterion | Score | Basis | Note |
 |---|---|---|---|---|
-| A | C09 | 2 | TS-001-E01 | Every supply loss takes torque to zero on all joints at once; with load holding failed the cockpit drops at up to 4.2 m/s. |
-| B-EHA | C09 | 3 | TS-001-E01 | A bus undervoltage keeps residual torque (assumed 35%): 50 of 180 lost (41 drops, 9 tips) at up to 2.9 m/s, against 129 drops at up to 4.2 m/s; battery isolation is as bad as A. Local actuator leaks pending TS-001-E06. |
+| A | C09 | 2 | TS-001-E01 | Every supply loss takes torque to zero on all joints at once. Held at the forward-knee score: on the reverse-knee model the undersized knee loses cases in every mode (TS-001-E01), so C09 is re-scored once the knee or posture is settled (DQ-027). |
+| B-EHA | C09 | 3 | TS-001-E01 | A bus undervoltage keeps residual torque (assumed 35%); battery isolation is as bad as A. Held at the forward-knee score: on the reverse-knee model the bus undervoltage loses more cases than A with load holding working (112 against 75 of 180), because 35% torque keeps the walker out of load holding while its knee gives way; re-scored once the knee or posture is settled (DQ-027). Local actuator leaks pending TS-001-E06. |
 | B-EMA | C09 | 3 | TS-001-E01 | As B-EHA at simulation fidelity; spring-applied brakes against check valves pending TS-001-E06. |
 
 ### Evidence
 
 | ID | Criteria | Kind | Status | Source or need | Summary |
 |---|---|---|---|---|---|
-| TS-001-E01 | C09 | simulation | done | `sim/results/ts001-fault-response.md` | On the 4,590 kg reference layout (DQ-023, link masses and inertias from cad/links.json) with the re-sized torques (ankle 40.5, knee 26.5 kN m, DQ-024), every supply-loss mode is safe across the envelope at level 2 while load holding works (level 1 tips 9-13 of 180 through its unsized centre-of-pressure limit, A3). With load holding failed, a hydraulic supply loss (A) and an isolated battery (B, SYS-014) are identical: torque goes to zero and the cockpit drops in 129 of 180 cases at up to 4.2 m/s (level 2). A bus undervoltage that keeps 35% of torque (B, assumed floor) drops it in 41 and tips it in 9 at up to 2.9 m/s, still above the 1.0 m/s safe drop speed. The alternatives differ by the torque left after the fault, not by the technology. |
-| TS-001-E02 | C01, C06, C09 | analysis | done | `sim/results/sizing-cf4.md` | Every alternative must deliver ankle 40.5 kN m and knee 26.5 kN m at full supply on the 4,590 kg reference layout (SYS-016, re-sized after DQ-023), and at least 0.6 m g L_foot at the ankle when load holding engages (SYS-016); this sets the actuator class for C01 and C06 and the torque-supply curve each alternative must show for C09. |
+| TS-001-E01 | C09 | simulation | done | `sim/results/ts001-fault-response.md` | On the reverse-kneed 4,590 kg reference layout (CL-05 link masses, inertias and leg geometry, DQ-023, DQ-025) with ankle 40.5 and knee 26.5 kN m (DQ-024, DQ-026), level 2 loses cases in every supply-loss mode even with load holding working: CL-05 stands with its knee bent about 58 degrees, so one leg needs about 25 kN m at the knee and the knee gives way before load holding engages at 0.4 of supply. A hydraulic loss (A) and an isolated battery (B, SYS-014) lose 75 of 180 (60 drops at up to 2.2 m/s, 15 tips); a bus undervoltage that keeps 35% of torque (B, assumed floor) loses 112 (65 drops, 47 tips). With load holding failed, A and an isolated battery lose all 180 (168 drops at up to 3.9 m/s), and the bus undervoltage all 180 (137 drops at up to 2.9 m/s). The knee, not the power architecture, decides C09 until the knee torque or the standing posture is settled (DQ-027; sim/results/sizing-cf4.md). |
+| TS-001-E02 | C01, C06, C09 | analysis | done | `sim/results/sizing-cf4.md` | Every alternative must deliver ankle 40.5 kN m and knee 26.5 kN m at full supply (SYS-016, DQ-024, DQ-026), and at least 0.6 m g L_foot at the ankle when load holding engages. On the reverse-knee level-2 model the knee is the binding joint - in CL-05's standing posture it needs 62.5 kN m to clear the envelope, while a stance with the knee bent 0.4 rad clears it at 26.5 kN m (DQ-027); this sets the actuator class for C01 and C06 and the torque-supply curve each alternative must show for C09. |
 | TS-001-E03 | C01, C06, C10, C12 | vendor-data | planned | Catalogue data for one hydraulic cylinder and valve set, one electrohydraulic actuator and one electromechanical actuator per joint, an HPU, an engine-generator and a battery pack. | Mass, peak power, price and lead time of actuators and power sources in the SYS-016 torque class. |
 | TS-001-E04 | C02, C11 | simulation | planned | Actuator models from TS-001-E03 data; a level-2 actuator layer between the controller and the joint torques. | Level-2 walker with actuator dynamics (bandwidth, backlash, compliance) per alternative. |
 | TS-001-E05 | C03, C04 | analysis | planned | Component sizes from TS-001-E03; the HPU, battery and fuel-system layout. | Inventory of fluid, fuel and battery energy, ignition sources and isolation times per alternative, worked through HAZ-PWR-001 to HAZ-PWR-003. |
@@ -99,7 +99,7 @@ Joint actuation of the walker and the power source that goes with it. Two power 
 ### Assumptions
 
 - Concept stage; no hardware is selected and no vendor data has been obtained.
-- Joint torques as adopted in the level-2 spec (ankle 26.5 kN m, knee 22.5 kN m; DQ-012) apply to every alternative: the actuators are sized to the walker, not the walker to the actuators.
+- Joint torques as adopted in the level-2 spec (ankle 40.5 kN m, knee 26.5 kN m; DQ-024, DQ-026) apply to every alternative: the actuators are sized to the walker, not the walker to the actuators.
 - At simulation fidelity the alternatives differ only in how joint torque falls when supply is lost (the capacity curve in sim/plant/walker.py); actuator dynamics and faults local to one joint are not modelled.
 
 Requirements waiting on this study: SYS-007, SYS-009, SYS-014, SYS-015, SYS-016.
@@ -108,6 +108,7 @@ Requirements waiting on this study: SYS-007, SYS-009, SYS-014, SYS-015, SYS-016.
 
 - Obtain the vendor data for TS-001-E03; it unblocks TS-001-E04 and TS-001-E05
 - Test whether the residual bus floor (assumed 35% in sim/spec/walker.yaml) is credible for the series-hybrid bus; the C09 difference between A and B rests on it
+- Re-score C09 once the knee torque or the CL-05 standing posture is settled (DQ-027)
 - Score the remaining criteria from evidence, then set the study to ready-for-decision for the lead
 
 Drafted by Claude (AI, independence I0); no review recorded.
