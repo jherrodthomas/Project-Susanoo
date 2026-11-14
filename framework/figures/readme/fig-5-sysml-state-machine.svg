@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1984.1" viewBox="0 0 760 1984.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 5 · SysML state machine — GateLifecycle</title>
+<desc>The gates in order, generated into Lifecycle.sysml from the tailoring. The project is at G0; no gate has passed.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="760" height="1886" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 5 · SysML state machine — GateLifecycle</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The gates in order, generated into Lifecycle.sysml from the tailoring. The project is at</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">G0; no gate has passed.</text>
+<text x="720" y="44" font-size="11" fill="#475569" text-anchor="end">framework/Lifecycle.sysml</text>
+<line x1="40" y1="102" x2="720" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="126" width="369.9" height="1664" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<path d="M40 126 L235.4 126 L235.4 140 L225.4 150 L40 150 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="143" font-size="11.5" fill="#0F172A" font-weight="700">stm [state def] GateLifecycle</text>
+<g transform="translate(56 166)">
+<path d="M157 24 L157 88" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M157 146 L157 292" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M157 350 L157 496" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M157 554 L157 700" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M157 758 L157 904" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M157 976 L157 1122" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M157 1194 L157 1340" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M136 1398 L136 1544" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M204 1544 L204 1509 Q204 1502 197 1502 L185 1502 Q178 1502 178 1495 L178 1398" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<circle cx="157" cy="15" r="8" fill="#0F172A" stroke="#0F172A" stroke-width="1.4"/>
+<rect x="55" y="88" width="203.9" height="58" rx="14" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<text x="67" y="112" font-size="12.5" fill="#0F172A" font-weight="700">G0</text>
+<text x="67" y="129" font-size="10.5" fill="#475569">Concept (phase MSA) · current gate</text>
+<rect x="77" y="292" width="159.7" height="58" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<text x="89" y="316" font-size="12.5" fill="#0F172A" font-weight="700">G1</text>
+<text x="89" y="333" font-size="10.5" fill="#475569">Requirements (phase MSA)</text>
+<rect x="55" y="496" width="203.1" height="58" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<text x="67" y="520" font-size="12.5" fill="#0F172A" font-weight="700">G2</text>
+<text x="67" y="537" font-size="10.5" fill="#475569">Preliminary architecture (phase TD)</text>
+<rect x="72" y="700" width="169.8" height="58" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<text x="84" y="724" font-size="12.5" fill="#0F172A" font-weight="700">G3</text>
+<text x="84" y="741" font-size="10.5" fill="#475569">Detailed design (phase EMD)</text>
+<rect x="65" y="904" width="183.1" height="72" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<text x="77" y="928" font-size="12.5" fill="#0F172A" font-weight="700">G4</text>
+<text x="77" y="945" font-size="10.5" fill="#475569">Bench and simulation readiness</text>
+<text x="77" y="959" font-size="10.5" fill="#475569">(phase EMD)</text>
+<rect x="55" y="1122" width="203" height="72" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<text x="67" y="1146" font-size="12.5" fill="#0F172A" font-weight="700">G5</text>
+<text x="67" y="1163" font-size="10.5" fill="#475569">Verification and assessment (phase</text>
+<text x="67" y="1177" font-size="10.5" fill="#475569">EMD)</text>
+<rect x="93" y="1340" width="128" height="58" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<text x="105" y="1364" font-size="12.5" fill="#0F172A" font-weight="700">G6</text>
+<text x="105" y="1381" font-size="10.5" fill="#475569">Release (phase PD)</text>
+<rect x="67" y="1544" width="206.1" height="58" rx="14" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.3"/>
+<text x="79" y="1568" font-size="12.5" fill="#0F172A" font-weight="700">G7</text>
+<text x="79" y="1585" font-size="10.5" fill="#475569">Change and sustainment (phase OS)</text>
+<rect x="4" y="210" width="150.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="9" y="223" font-size="10.5" fill="#475569">gate passed (named review)</text>
+<rect x="4" y="414" width="150.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="9" y="427" font-size="10.5" fill="#475569">gate passed (named review)</text>
+<rect x="4" y="618" width="150.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="9" y="631" font-size="10.5" fill="#475569">gate passed (named review)</text>
+<rect x="4" y="822" width="150.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="9" y="835" font-size="10.5" fill="#475569">gate passed (named review)</text>
+<rect x="4" y="1040" width="150.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="9" y="1053" font-size="10.5" fill="#475569">gate passed (named review)</text>
+<rect x="4" y="1258" width="150.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="9" y="1271" font-size="10.5" fill="#475569">gate passed (named review)</text>
+<rect x="79" y="1462" width="55.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="84" y="1475" font-size="10.5" fill="#475569">released</text>
+<rect x="181" y="1462" width="152.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="186" y="1475" font-size="10.5" fill="#475569">change needs a new release</text>
+</g>
+<line x1="40" y1="1816" x2="56" y2="1816" stroke="#475569" stroke-width="1.8"/>
+<text x="62" y="1820" font-size="11" fill="#475569">Transition (trigger)</text>
+<rect x="171" y="1810" width="14" height="12" rx="3" fill="#0F172A" stroke="#0F172A" stroke-width="1.2"/>
+<text x="193" y="1820" font-size="11" fill="#475569">Initial / final</text>
+<rect x="272.1" y="1810" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="294.1" y="1820" font-size="11" fill="#475569">Current gate</text>
+<text x="40" y="1842" font-size="10.5" fill="#94A3B8">Generated by tools/figures/framework_readme.py from the framework pages, the MIL-STD-882E tailoring and task records.</text>
+<text x="40" y="1857" font-size="10.5" fill="#94A3B8">Project-defined framework; no gate has passed and no compliance is claimed.</text>
+<g class="terms" data-base-h="1886">
+<rect x="0" y="1886" width="760" height="98.1" fill="#FFFFFF"/>
+<line x1="40" y1="1890" x2="720" y2="1890" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1905.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: DoD = US Department of Defense · EMD = engineering and manufacturing development (acquisition phase) · G0–G7 =</text>
+<text x="40" y="1920.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">lifecycle gate (G0 concept to G7 change and sustainment) · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May</text>
+<text x="40" y="1934.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">2012, base edition) · MSA = materiel solution analysis (acquisition phase) · OS = operations and support (acquisition phase)</text>
+<text x="40" y="1949.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">· PD = production and deployment (acquisition phase) · SysML = Systems Modeling Language (SysML v2) · TD = technology</text>
+<text x="40" y="1963.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">development (acquisition phase) · US = United States</text>
+</g>
+</svg>

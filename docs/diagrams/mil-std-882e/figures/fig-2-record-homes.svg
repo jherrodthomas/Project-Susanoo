@@ -1,0 +1,663 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1513.6" viewBox="0 0 1280 1513.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 2 · Where each step's records live</title>
+<desc>Every step of every process map and the repository folder that holds its records</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1280" height="1401" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 2 · Where each step's records live</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Every step of every map (50), matched by its words to the repository folder that holds what it works on, with how many records that folder holds today.</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">49 steps have a home; 1 name work the repository keeps no record of yet.</text>
+<text x="1240" y="44" font-size="11" fill="#475569" text-anchor="end">RECORD_HOMES in tools/figures/maps882e_readme.py</text>
+<line x1="40" y1="102" x2="1240" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="438.2" y="126" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">Hazard records</text>
+<text x="438.2" y="152" font-size="8.5" fill="#2E9E6A" text-anchor="middle">22 now</text>
+<text x="514.5" y="126" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">Requirements</text>
+<text x="514.5" y="152" font-size="8.5" fill="#2E9E6A" text-anchor="middle">24 now</text>
+<text x="590.9" y="126" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">Software</text>
+<text x="590.9" y="137" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">safety …</text>
+<text x="590.9" y="152" font-size="8.5" fill="#2E9E6A" text-anchor="middle">8 now</text>
+<text x="667.3" y="126" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">Verification</text>
+<text x="667.3" y="137" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">records</text>
+<text x="667.3" y="152" font-size="8.5" fill="#2E9E6A" text-anchor="middle">6 now</text>
+<text x="743.6" y="126" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">Review records</text>
+<text x="743.6" y="152" font-size="8.5" fill="#D97706" text-anchor="middle">0 now</text>
+<text x="820" y="126" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">Change</text>
+<text x="820" y="137" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">requests</text>
+<text x="820" y="152" font-size="8.5" fill="#D97706" text-anchor="middle">0 now</text>
+<text x="896.4" y="126" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">Tailoring and</text>
+<text x="896.4" y="137" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">plan</text>
+<text x="896.4" y="152" font-size="8.5" fill="#2E9E6A" text-anchor="middle">1 now</text>
+<text x="972.7" y="126" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">Concept and</text>
+<text x="972.7" y="137" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">CONOPS</text>
+<text x="972.7" y="152" font-size="8.5" fill="#2E9E6A" text-anchor="middle">1 now</text>
+<text x="1049.1" y="126" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">Mitigations (in</text>
+<text x="1049.1" y="137" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">hazard records)</text>
+<text x="1049.1" y="152" font-size="8.5" fill="#2E9E6A" text-anchor="middle">22 now</text>
+<text x="1125.5" y="126" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">Events</text>
+<text x="1125.5" y="152" font-size="8.5" fill="#2E9E6A" text-anchor="middle">2 now</text>
+<text x="1201.8" y="126" font-size="9" fill="#0F172A" font-weight="700" text-anchor="middle">PX4 integration</text>
+<text x="1201.8" y="152" font-size="8.5" fill="#2E9E6A" text-anchor="middle">1 now</text>
+<line x1="40" y1="162" x2="1240" y2="162" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="181" font-size="10.5" fill="#0F172A" font-weight="700">Hazard analysis relationships</text>
+<text x="52" y="201" font-size="9.5" fill="#0F172A">Concept · CONOPS / PHL</text>
+<circle cx="438.2" cy="197.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="197.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="197.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="197.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="197.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="197.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="197.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="197.0" r="5.5" fill="#7C3AED"/>
+<circle cx="1049.1" cy="197.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="197.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="197.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="221" font-size="9.5" fill="#0F172A">Concept · PHA</text>
+<circle cx="438.2" cy="217.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="217.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="217.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="217.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="217.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="217.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="217.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="217.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="217.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="217.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="217.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="241" font-size="9.5" fill="#0F172A">Requirements · SRHA</text>
+<circle cx="438.2" cy="237.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="237.0" r="5.5" fill="#7C3AED"/>
+<circle cx="590.9" cy="237.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="237.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="237.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="237.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="237.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="237.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="237.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="237.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="237.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="261" font-size="9.5" fill="#0F172A">Requirements · FHA</text>
+<circle cx="438.2" cy="257.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="257.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="257.0" r="5.5" fill="#7C3AED"/>
+<circle cx="667.3" cy="257.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="257.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="257.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="257.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="257.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="257.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="257.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="257.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="281" font-size="9.5" fill="#0F172A">Subsystems · SSHA</text>
+<circle cx="438.2" cy="277.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="277.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="277.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="277.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="277.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="277.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="277.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="277.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="277.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="277.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="277.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="301" font-size="9.5" fill="#0F172A">Subsystems · Interface hazards</text>
+<circle cx="438.2" cy="297.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="297.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="297.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="297.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="297.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="297.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="297.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="297.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="297.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="297.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="297.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="321" font-size="9.5" fill="#0F172A">Integration · SHA</text>
+<circle cx="438.2" cy="317.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="317.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="317.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="317.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="317.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="317.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="317.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="317.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="317.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="317.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="317.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="341" font-size="9.5" fill="#0F172A">Integration · O&amp;SHA / HHA / EHA</text>
+<circle cx="438.2" cy="337.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="337.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="337.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="337.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="337.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="337.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="337.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="337.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="337.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="337.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="337.0" r="1.6" fill="#CBD5E1"/>
+<text x="40" y="367" font-size="10.5" fill="#0F172A" font-weight="700">Hazard management and risk acceptance</text>
+<text x="52" y="387" font-size="9.5" fill="#0F172A">Safety analyst · Identify hazard</text>
+<circle cx="438.2" cy="383.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="383.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="383.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="383.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="383.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="383.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="383.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="383.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="383.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="383.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="383.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="407" font-size="9.5" fill="#0F172A">Safety analyst · Assess initial risk</text>
+<circle cx="438.2" cy="403.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="403.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="403.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="403.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="403.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="403.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="403.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="403.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="403.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="403.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="403.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="427" font-size="9.5" fill="#0F172A">Systems &amp; design · Select design mitigation</text>
+<circle cx="438.2" cy="423.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="423.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="423.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="423.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="423.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="423.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="423.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="423.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="423.0" r="5.5" fill="#7C3AED"/>
+<circle cx="1125.5" cy="423.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="423.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="447" font-size="9.5" fill="#0F172A">Systems &amp; design · Implement control</text>
+<circle cx="438.2" cy="443.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="443.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="443.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="443.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="443.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="443.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="443.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="443.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="443.0" r="5.5" fill="#7C3AED"/>
+<circle cx="1125.5" cy="443.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="443.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="467" font-size="9.5" fill="#0F172A">Verification · Verify implementation</text>
+<circle cx="438.2" cy="463.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="463.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="463.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="463.0" r="5.5" fill="#7C3AED"/>
+<circle cx="743.6" cy="463.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="463.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="463.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="463.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="463.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="463.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="463.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="487" font-size="9.5" fill="#D97706">Verification · Validate risk reduction</text>
+<circle cx="438.2" cy="483.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="483.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="483.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="483.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="483.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="483.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="483.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="483.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="483.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="483.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="483.0" r="1.6" fill="#CBD5E1"/>
+<text x="1240" y="487" font-size="9" fill="#D97706" text-anchor="end">no record folder</text>
+<text x="52" y="507" font-size="9.5" fill="#0F172A">Risk authority · Review residual risk</text>
+<circle cx="438.2" cy="503.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="503.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="503.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="503.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="503.0" r="5.5" fill="#7C3AED"/>
+<circle cx="820.0" cy="503.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="503.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="503.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="503.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="503.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="503.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="527" font-size="9.5" fill="#0F172A">Risk authority · Accept / reject / return</text>
+<circle cx="438.2" cy="523.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="523.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="523.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="523.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="523.0" r="5.5" fill="#7C3AED"/>
+<circle cx="820.0" cy="523.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="523.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="523.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="523.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="523.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="523.0" r="1.6" fill="#CBD5E1"/>
+<text x="40" y="553" font-size="10.5" fill="#0F172A" font-weight="700">Safety responsibility swimlanes</text>
+<text x="52" y="573" font-size="9.5" fill="#0F172A">Safety lead · Register hazard</text>
+<circle cx="438.2" cy="569.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="569.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="569.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="569.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="569.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="569.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="569.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="569.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="569.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="569.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="569.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="593" font-size="9.5" fill="#0F172A">Safety lead · Propose risk rating</text>
+<circle cx="438.2" cy="589.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="589.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="589.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="589.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="589.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="589.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="589.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="589.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="589.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="589.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="589.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="613" font-size="9.5" fill="#0F172A">Systems / design · Allocate safety requirement</text>
+<circle cx="438.2" cy="609.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="609.0" r="5.5" fill="#7C3AED"/>
+<circle cx="590.9" cy="609.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="609.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="609.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="609.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="609.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="609.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="609.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="609.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="609.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="633" font-size="9.5" fill="#0F172A">Systems / design · Implement mitigation</text>
+<circle cx="438.2" cy="629.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="629.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="629.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="629.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="629.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="629.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="629.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="629.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="629.0" r="5.5" fill="#7C3AED"/>
+<circle cx="1125.5" cy="629.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="629.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="653" font-size="9.5" fill="#0F172A">Test lead · Plan verification</text>
+<circle cx="438.2" cy="649.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="649.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="649.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="649.0" r="5.5" fill="#7C3AED"/>
+<circle cx="743.6" cy="649.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="649.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="649.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="649.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="649.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="649.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="649.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="673" font-size="9.5" fill="#0F172A">Test lead · Capture objective evidence</text>
+<circle cx="438.2" cy="669.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="669.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="669.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="669.0" r="5.5" fill="#7C3AED"/>
+<circle cx="743.6" cy="669.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="669.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="669.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="669.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="669.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="669.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="669.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="693" font-size="9.5" fill="#0F172A">Risk authority · Review residual risk</text>
+<circle cx="438.2" cy="689.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="689.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="689.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="689.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="689.0" r="5.5" fill="#7C3AED"/>
+<circle cx="820.0" cy="689.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="689.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="689.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="689.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="689.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="689.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="713" font-size="9.5" fill="#0F172A">Risk authority · Record acceptance decision</text>
+<circle cx="438.2" cy="709.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="709.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="709.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="709.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="709.0" r="5.5" fill="#7C3AED"/>
+<circle cx="820.0" cy="709.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="709.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="709.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="709.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="709.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="709.0" r="1.6" fill="#CBD5E1"/>
+<text x="40" y="739" font-size="10.5" fill="#0F172A" font-weight="700">System safety lifecycle</text>
+<text x="52" y="759" font-size="9.5" fill="#0F172A">Concept &amp; scope · CONOPS + boundaries</text>
+<circle cx="438.2" cy="755.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="755.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="755.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="755.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="755.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="755.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="755.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="755.0" r="5.5" fill="#7C3AED"/>
+<circle cx="1049.1" cy="755.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="755.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="755.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="779" font-size="9.5" fill="#0F172A">Concept &amp; scope · Tailor tasks / SSPP</text>
+<circle cx="438.2" cy="775.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="775.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="775.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="775.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="775.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="775.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="775.0" r="5.5" fill="#7C3AED"/>
+<circle cx="972.7" cy="775.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="775.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="775.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="775.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="799" font-size="9.5" fill="#0F172A">Analysis · PHL / PHA</text>
+<circle cx="438.2" cy="795.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="795.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="795.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="795.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="795.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="795.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="795.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="795.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="795.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="795.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="795.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="819" font-size="9.5" fill="#0F172A">Analysis · SRHA / FHA</text>
+<circle cx="438.2" cy="815.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="815.0" r="5.5" fill="#7C3AED"/>
+<circle cx="590.9" cy="815.0" r="5.5" fill="#7C3AED"/>
+<circle cx="667.3" cy="815.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="815.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="815.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="815.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="815.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="815.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="815.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="815.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="839" font-size="9.5" fill="#0F172A">Design &amp; controls · SSHA / SHA / O&amp;SHA</text>
+<circle cx="438.2" cy="835.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="835.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="835.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="835.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="835.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="835.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="835.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="835.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="835.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="835.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="835.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="859" font-size="9.5" fill="#0F172A">Design &amp; controls · Mitigation allocation</text>
+<circle cx="438.2" cy="855.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="855.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="855.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="855.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="855.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="855.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="855.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="855.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="855.0" r="5.5" fill="#7C3AED"/>
+<circle cx="1125.5" cy="855.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="855.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="879" font-size="9.5" fill="#0F172A">Evidence &amp; release · Verify controls</text>
+<circle cx="438.2" cy="875.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="875.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="875.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="875.0" r="5.5" fill="#7C3AED"/>
+<circle cx="743.6" cy="875.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="875.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="875.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="875.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="875.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="875.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="875.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="899" font-size="9.5" fill="#0F172A">Evidence &amp; release · Risk disposition</text>
+<circle cx="438.2" cy="895.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="895.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="895.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="895.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="895.0" r="5.5" fill="#7C3AED"/>
+<circle cx="820.0" cy="895.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="895.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="895.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="895.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="895.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="895.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="919" font-size="9.5" fill="#0F172A">Sustainment · Monitor incidents</text>
+<circle cx="438.2" cy="915.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="915.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="915.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="915.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="915.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="915.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="915.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="915.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="915.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="915.0" r="5.5" fill="#7C3AED"/>
+<circle cx="1201.8" cy="915.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="939" font-size="9.5" fill="#0F172A">Sustainment · Reassess changes</text>
+<circle cx="438.2" cy="935.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="935.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="935.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="935.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="935.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="935.0" r="5.5" fill="#7C3AED"/>
+<circle cx="896.4" cy="935.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="935.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="935.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="935.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="935.0" r="1.6" fill="#CBD5E1"/>
+<text x="40" y="965" font-size="10.5" fill="#0F172A" font-weight="700">Software contribution to system risk</text>
+<text x="52" y="985" font-size="9.5" fill="#0F172A">System safety · Identify software hazard contribution</text>
+<circle cx="438.2" cy="981.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="981.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="981.0" r="5.5" fill="#7C3AED"/>
+<circle cx="667.3" cy="981.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="981.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="981.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="981.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="981.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="981.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="981.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="981.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="1005" font-size="9.5" fill="#0F172A">System safety · Assess criticality</text>
+<circle cx="438.2" cy="1001.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1001.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1001.0" r="5.5" fill="#7C3AED"/>
+<circle cx="667.3" cy="1001.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="1001.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="1001.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="1001.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1001.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1001.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1001.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1001.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="1025" font-size="9.5" fill="#0F172A">Software engineering · Allocate software safety requirements</text>
+<circle cx="438.2" cy="1021.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1021.0" r="5.5" fill="#7C3AED"/>
+<circle cx="590.9" cy="1021.0" r="5.5" fill="#7C3AED"/>
+<circle cx="667.3" cy="1021.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="1021.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="1021.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="1021.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1021.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1021.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1021.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1021.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="1045" font-size="9.5" fill="#0F172A">Software engineering · Analyze control authority</text>
+<circle cx="438.2" cy="1041.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1041.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1041.0" r="5.5" fill="#7C3AED"/>
+<circle cx="667.3" cy="1041.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="1041.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="1041.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="1041.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1041.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1041.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1041.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1041.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="1065" font-size="9.5" fill="#0F172A">Integration &amp; test · Test failure responses</text>
+<circle cx="438.2" cy="1061.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1061.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1061.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="1061.0" r="5.5" fill="#7C3AED"/>
+<circle cx="743.6" cy="1061.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="1061.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="1061.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1061.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1061.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1061.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1061.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="1085" font-size="9.5" fill="#0F172A">Integration &amp; test · Fault injection / evidence</text>
+<circle cx="438.2" cy="1081.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1081.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1081.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="1081.0" r="5.5" fill="#7C3AED"/>
+<circle cx="743.6" cy="1081.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="1081.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="1081.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1081.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1081.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1081.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1081.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="1105" font-size="9.5" fill="#0F172A">Configuration · Pin versions + parameters</text>
+<circle cx="438.2" cy="1101.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1101.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1101.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="1101.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="1101.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="1101.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="1101.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1101.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1101.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1101.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1101.0" r="5.5" fill="#7C3AED"/>
+<text x="52" y="1125" font-size="9.5" fill="#0F172A">Configuration · Reassess after change</text>
+<circle cx="438.2" cy="1121.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1121.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1121.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="1121.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="1121.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="1121.0" r="5.5" fill="#7C3AED"/>
+<circle cx="896.4" cy="1121.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1121.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1121.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1121.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1121.0" r="1.6" fill="#CBD5E1"/>
+<text x="40" y="1151" font-size="10.5" fill="#0F172A" font-weight="700">Safety verification and change control</text>
+<text x="52" y="1171" font-size="9.5" fill="#0F172A">Requirement &amp; hazard · Mitigation + test criteria</text>
+<circle cx="438.2" cy="1167.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1167.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1167.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="1167.0" r="5.5" fill="#7C3AED"/>
+<circle cx="743.6" cy="1167.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="1167.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="1167.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1167.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1167.0" r="5.5" fill="#7C3AED"/>
+<circle cx="1125.5" cy="1167.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1167.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="1191" font-size="9.5" fill="#0F172A">Requirement &amp; hazard · Trace to hazard</text>
+<circle cx="438.2" cy="1187.0" r="5.5" fill="#7C3AED"/>
+<circle cx="514.5" cy="1187.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1187.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="1187.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="1187.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="1187.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="1187.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1187.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1187.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1187.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1187.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="1211" font-size="9.5" fill="#0F172A">Verification · Execute / record test</text>
+<circle cx="438.2" cy="1207.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1207.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1207.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="1207.0" r="5.5" fill="#7C3AED"/>
+<circle cx="743.6" cy="1207.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="1207.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="1207.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1207.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1207.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1207.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1207.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="1231" font-size="9.5" fill="#0F172A">Verification · Investigate anomalies</text>
+<circle cx="438.2" cy="1227.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1227.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1227.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="1227.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="1227.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="1227.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="1227.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1227.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1227.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1227.0" r="5.5" fill="#7C3AED"/>
+<circle cx="1201.8" cy="1227.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="1251" font-size="9.5" fill="#0F172A">Review · Review effectiveness</text>
+<circle cx="438.2" cy="1247.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1247.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1247.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="1247.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="1247.0" r="5.5" fill="#7C3AED"/>
+<circle cx="820.0" cy="1247.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="1247.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1247.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1247.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1247.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1247.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="1271" font-size="9.5" fill="#0F172A">Review · Update residual risk</text>
+<circle cx="438.2" cy="1267.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1267.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1267.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="1267.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="1267.0" r="5.5" fill="#7C3AED"/>
+<circle cx="820.0" cy="1267.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="1267.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1267.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1267.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1267.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1267.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="1291" font-size="9.5" fill="#0F172A">Change control · Approve disposition</text>
+<circle cx="438.2" cy="1287.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1287.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1287.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="1287.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="1287.0" r="5.5" fill="#7C3AED"/>
+<circle cx="820.0" cy="1287.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="896.4" cy="1287.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1287.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1287.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1287.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1287.0" r="1.6" fill="#CBD5E1"/>
+<text x="52" y="1311" font-size="9.5" fill="#0F172A">Change control · Reopen on changes</text>
+<circle cx="438.2" cy="1307.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="514.5" cy="1307.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="590.9" cy="1307.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="667.3" cy="1307.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="743.6" cy="1307.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="820.0" cy="1307.0" r="5.5" fill="#7C3AED"/>
+<circle cx="896.4" cy="1307.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="972.7" cy="1307.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1049.1" cy="1307.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1125.5" cy="1307.0" r="1.6" fill="#CBD5E1"/>
+<circle cx="1201.8" cy="1307.0" r="1.6" fill="#CBD5E1"/>
+<line x1="40" y1="1326" x2="1240" y2="1326" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="1340" width="14" height="12" rx="3" fill="#7C3AED" stroke="#7C3AED" stroke-width="1.2"/>
+<text x="62" y="1350" font-size="11" fill="#475569">The step works on records kept here</text>
+<rect x="264" y="1340" width="14" height="12" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="286" y="1350" font-size="11" fill="#475569">No record folder for the step, or a folder with no records yet</text>
+<text x="40" y="1372" font-size="10.5" fill="#94A3B8">Generated by tools/figures/maps882e_readme.py from the draw.io sources, their exports and the repository's record folders. The maps are illustrative draft workflows, not normative flowcharts or evidence of completed tasks.</text>
+<g class="terms" data-base-h="1401">
+<rect x="0" y="1401" width="1280" height="112.6" fill="#FFFFFF"/>
+<line x1="40" y1="1405" x2="1240" y2="1405" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1420.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: ARP4754B = SAE guidelines for development of civil aircraft and systems · ARP4761A = SAE guidelines for the safety assessment process on civil aircraft · CONOPS = concept of operations · DoD = US Department of</text>
+<text x="40" y="1435.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Defense · EHA = environmental hazard analysis (MIL-STD-882E Task 210) · FHA = functional hazard analysis (MIL-STD-882E Task 208; also ARP4761A aircraft FHA) · HHA = health hazard analysis (MIL-STD-882E Task 207) ·</text>
+<text x="40" y="1449.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base edition) · PHA = preliminary hazard analysis (MIL-STD-882E Task 202) · PHL = preliminary hazard list (MIL-STD-882E Task 201) · PX4 = PX4</text>
+<text x="40" y="1464.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Autopilot, the open-source flight-control software candidate for SUS-A1 · SAE = SAE International, publisher of ARP4754B and ARP4761A · SHA = system hazard analysis (MIL-STD-882E Task 205) · SRHA = system requirements</text>
+<text x="40" y="1478.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">hazard analysis (MIL-STD-882E Task 203) · SSHA = subsystem hazard analysis (MIL-STD-882E Task 204) · SSPP = system safety program plan (MIL-STD-882E Task 102) · SUS-A1 = dockable observation UAV · UAV = uncrewed aerial</text>
+<text x="40" y="1493.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">vehicle (drone) · US = United States</text>
+</g>
+</svg>

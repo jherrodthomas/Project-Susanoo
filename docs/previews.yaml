@@ -20,13 +20,53 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - .
   - concept
   - integrations/px4
+  - integrations           # generated README (tools/figures/integrations_readme.py)
+  - framework              # generated README top (tools/figures/framework_readme.py)
+  - tools                  # generated README (tools/figures/tools_readme.py)
+  - docs                   # generated README (tools/figures/docs_readme.py); subfolders keep their previews
+  - sim/uav                # generated README (tools/figures/uav_readme.py)
+  - sim/plant              # generated README (tools/figures/plant_readme.py)
+  - sim/search             # generated README (tools/figures/search_readme.py)
+  - sim/mujoco             # generated README (tools/figures/mujoco_readme.py)
+  - sim/trades             # generated README (tools/figures/trades_readme.py)
+  - sim/spec               # generated README (tools/figures/spec_readme.py)
+  - sim/results            # generated README (tools/figures/results_readme.py)
+  - sim/results/uav        # generated README (tools/figures/uavresults_readme.py)
+  - sim/scenes3d           # generated README (tools/figures/scenes3d_readme.py)
+  - sim/scenes3d/library   # generated README (tools/figures/lookslib_readme.py)
+  - sim/scenes3d/out       # generated README (tools/figures/sceneout_readme.py)
+  - cad/params             # generated README (tools/figures/params_readme.py)
+  - cad/drawings           # generated README (tools/figures/drawings_readme.py)
+  - cad/renders            # generated README (tools/figures/renders_readme.py)
+  - cad/renders/blender    # generated README (tools/figures/blender_readme.py)
+  - sim/figures            # generated README (tools/figures/simfigs_readme.py)
+  - docs/3d                # generated README (tools/figures/pages3d_readme.py)
+  - docs/3d/assets         # generated README (tools/figures/assets3d_readme.py)
+  - docs/vcycle            # generated README (tools/figures/vcycle_readme.py)
+  - docs/diagrams          # generated README (tools/figures/diagrams_readme.py)
+  - docs/diagrams/mil-std-882e   # generated README (tools/figures/maps882e_readme.py)
+  - docs/readme            # generated README (tools/figures/frontpage_readme.py)
+  - docs/wiki              # generated README top (tools/figures/wiki_readme.py)
+  - docs/wiki/images       # generated README (tools/figures/wikiimages_readme.py)
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
-  - cad/concept-art
+  - cad/concept-art      # hand-written page with a generated section (tools/figures/art_readme.py)
+  - requirements           # generated READMEs with block, boundary, SysML and I/O figures (tools/figures/*_readme.py)
+  - verification
+  - changes
+  - reviews
+  - decisions
+  - architecture
+  - safety
+  - sim
+  - standards
+  - models
 
 exempt:                  # tests, tooling internals, figure stores shown by the README above them
   - "**/figures"
+  - "**/figures/**"          # e.g. concept/figures/records (record-driven figures, tools/figures/concept_readme.py)
+  - docs/wiki/images/readme  # figures of docs/wiki/images/README.md (tools/figures/wikiimages_readme.py)
   - "**/tests"
   - "**/__pycache__"
   - "**/node_modules"
@@ -35,23 +75,9 @@ exempt:                  # tests, tooling internals, figure stores shown by the 
   - ".github/**"
   - ".claude"
   - ".claude/**"
-  - "tools"
   - "tools/**"
 
 folders:
-  architecture:
-    title: Architecture records
-    purpose: >-
-      The SUS-I1 item definition, the single source for every element, external element and interface, and the
-      hand-placed layout used to draw it. Figures, SysML checks and the wiki item-definition page are built from here.
-    hero: {img: docs/wiki/images/sus-i1-boundary.svg, caption: "SUS-I1 boundary and interfaces, drawn from item-definition.yaml"}
-    gallery:
-      - {img: docs/wiki/images/sus-i1-context.svg, caption: "System context: SUS-I1 and its external elements"}
-      - {img: docs/wiki/images/sysml-v02-hierarchy.svg, caption: "SysML part hierarchy checked against this record"}
-      - {img: docs/wiki/images/sysml-v08-n2.svg, caption: "N2 interface chart"}
-    links:
-      - {text: SUS-I1 item definition (wiki page), href: docs/wiki/SUS-I1-Item-Definition.md}
-
   architecture/trades:
     title: Architecture trade studies
     purpose: >-
@@ -62,208 +88,13 @@ folders:
       - {text: Trade Studies (wiki page), href: docs/wiki/Trade-Studies.md}
       - {text: Trade-study decision process, href: concept/trade-studies.md}
 
-  cad/drawings:
-    title: Concept layout drawing sheets
-    purpose: >-
-      One drawing sheet per concept layout (SUS-CAD-001-CL-nn), built from the FreeCAD models, plus all sheets in one
-      PDF (`concept-layouts.pdf`). Concept layouts, not a design.
-    hero: {img: cad/drawings/CL-05.svg, caption: "CL-05, the reference layout"}
-    gallery_glob: cad/drawings/*.svg
-    links:
-      - {text: All sheets (PDF), href: cad/drawings/concept-layouts.pdf}
-      - {text: Concept layouts review, href: cad/README.md}
 
-  cad/params:
-    title: Concept layout parameters
-    purpose: >-
-      The parameters of each concept layout (`CL-nn.yaml`) and those they share (`common.yaml`). The FreeCAD models,
-      metrics, drawing sheets and renders are all built from these files.
-    hero: {img: cad/renders/lineup.png, caption: "All concept layouts side by side"}
-    gallery:
-      - {img: cad/renders/CL-05-hero.png, caption: "CL-05"}
-      - {img: cad/renders/CL-05-kneel-hero.png, caption: "CL-05 kneeling"}
-      - {img: cad/drawings/CL-05.svg, caption: "CL-05 drawing sheet"}
-    links:
-      - {text: Concept layouts review, href: cad/README.md}
 
-  cad/renders:
-    title: Concept layout renders
-    purpose: >-
-      Review renders of every concept layout from five views (hero, iso, side, top, dock), rendered locally from the
-      FreeCAD models (`tools/cad/make.sh`). Concept layouts, not a design.
-    hero: {img: cad/renders/lineup.png, caption: "All concept layouts side by side"}
-    gallery_glob: cad/renders/*-hero.png
-    links:
-      - {text: Blender renders, href: cad/renders/blender/README.md}
-      - {text: Concept layouts review, href: cad/README.md}
 
-  cad/renders/blender:
-    title: Blender renders of CL-05
-    purpose: >-
-      Lit Blender renders and a walk cycle of the CL-05 reference layout, in plain and unarmed military livery.
-      Rendered from the CAD; for communication, not engineering.
-    hero: {img: cad/renders/blender/CL-05-hero.jpg, caption: "CL-05"}
-    gallery_glob: cad/renders/blender/*.{jpg,gif}
-    links:
-      - {text: Walk cycle video, href: cad/renders/blender/CL-05-walk-military.mp4}
 
-  changes:
-    hero: {img: docs/wiki/images/verification-change.svg, caption: "Verification and change process map (illustrative)"}
-    gallery:
-      - {img: safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/figures/fig-4-sysml-activity.svg, caption: "Task 304: reviewing changes, deficiencies and mishaps", link: safety/mil-std-882e/08-lifecycle-risk-management/task-304-review-changes-deficiencies-mishaps-deviations/README.md}
 
-  decisions:
-    title: Decision register
-    purpose: >-
-      Every question for the project lead, with options, a recommendation, what it blocks and how it was answered.
-      The Decision Inbox wiki page is generated from `register.yaml`.
-    hero: {img: docs/wiki/images/rec-decision-board.svg, caption: "Decision board: every decision by gate and status"}
-    links:
-      - {text: Decision Inbox (wiki page), href: docs/wiki/Decision-Inbox.md}
 
-  docs:
-    title: Documentation sources
-    purpose: >-
-      The abbreviations list, the front-page figures, the 3D scene pages, the editable process-map sources and the
-      wiki source. Open a subfolder for its gallery.
-    hero: {img: docs/readme/at-a-glance.svg, caption: "Project at a glance (front-page figure)"}
-    gallery:
-      - {img: docs/readme/risk-matrix.svg, caption: "Current hazard risk on the MIL-STD-882E matrix"}
-      - {img: docs/readme/simulation.svg, caption: "Simulation results summary (synthetic)"}
-      - {img: docs/wiki/images/3d-s3-01.png, caption: "3D scene still", link: docs/3d/README.md}
-    links:
-      - {text: Abbreviations and codes, href: docs/terms.md}
-      - {text: Front-page figures, href: docs/readme/README.md}
-      - {text: 3D scene pages, href: docs/3d/README.md}
-      - {text: System V cycle page, href: docs/vcycle/README.md}
-      - {text: Process-map sources, href: docs/diagrams/mil-std-882e/README.md}
-      - {text: Wiki images, href: docs/wiki/images/README.md}
 
-  docs/3d:
-    title: 3D scene pages
-    purpose: >-
-      Interactive 3D replays of the simulation scenarios, built by `sim/scenes3d`, and the interactive general
-      arrangement: sheet 1 `SUS-M1.html` (the CL-05 concept geometry animated through its postures and walk, with
-      hazard callouts and the static tip check) and sheet 2 `SUS-A1.html` (the UAV on its dock, and the PX4 SITL
-      flights replayed with the geofence and the pilot keep-out, and the launch and recovery sequence the records call for) and sheet 3 `SUS-M1-terrain.html` (the CL-05 walk
-      posed on slopes, cross-slopes, ledges and rubble, unloaded or carrying the placeholder load, with the leg
-      kinematics and static tip margin on each). Open a page in a browser; each still below links to its page.
-      Concept geometry and simulation results are design aids, not verification evidence.
-    hero: {img: docs/wiki/images/3d-sus-m1.png, caption: "SUS-M1 general arrangement", link: docs/3d/SUS-M1.html}
-    gallery:
-      - {img: docs/wiki/images/3d-sus-a1.png, caption: "SUS-A1 on the dock (sheet 2)", link: docs/3d/SUS-A1.html}
-      - {img: docs/wiki/images/3d-sus-a1-lr.png, caption: "SUS-A1 launch and recovery sequence (sheet 2)", link: docs/3d/SUS-A1.html}
-      - {img: docs/wiki/images/3d-sus-m1-terrain.png, caption: "CL-05 on the terrain course, 20° uphill (sheet 3)", link: docs/3d/SUS-M1-terrain.html}
-      - {img: docs/wiki/images/3d-sus-m1-terrain-loaded.png, caption: "Loaded carry walk, 10° uphill (sheet 3)", link: docs/3d/SUS-M1-terrain.html}
-      - {img: docs/wiki/images/3d-sus-a1-air.png, caption: "SUS-A1 PX4 SITL replay, SU-01 (sheet 2)", link: docs/3d/SUS-A1.html}
-      - {img: docs/wiki/images/3d-s3-01.png, caption: "S3-01", link: docs/3d/S3-01.html}
-      - {img: docs/wiki/images/3d-s3-01-dusk.png, caption: "S3-01 at dusk", link: docs/3d/S3-01-dusk.html}
-      - {img: docs/wiki/images/3d-s3-02.png, caption: "S3-02", link: docs/3d/S3-02.html}
-      - {img: docs/wiki/images/3d-s3-03.png, caption: "S3-03", link: docs/3d/S3-03.html}
-      - {img: docs/wiki/images/3d-s3-04.png, caption: "S3-04", link: docs/3d/S3-04.html}
-      - {img: docs/wiki/images/3d-s3-05.png, caption: "S3-05", link: docs/3d/S3-05.html}
-      - {img: docs/wiki/images/3d-s3-05-fog.png, caption: "S3-05 in fog", link: docs/3d/S3-05-fog.html}
-      - {img: docs/wiki/images/3d-s3-06.png, caption: "S3-06", link: docs/3d/S3-06.html}
-    links:
-      - {text: Scene index page, href: docs/3d/index.html}
-      - {text: 3D scenes (wiki page), href: docs/wiki/3D-Scenes.md}
-
-  docs/vcycle:
-    title: System V cycle page
-    purpose: >-
-      The interactive System V cycle of SUS-I1, generated from the records by `tools/vcycle/build_vcycle.py`. Open
-      `index.html` from a local checkout in a browser. Maturity colours come from record status and are not review,
-      verification or acceptance.
-    hero: {img: docs/wiki/images/vcycle-system.svg, caption: "System V cycle of SUS-I1", link: docs/vcycle/index.html}
-    links:
-      - {text: Interactive page, href: docs/vcycle/index.html}
-      - {text: System V cycle (wiki page), href: docs/wiki/System-V-Cycle.md}
-      - {text: Generator, href: tools/vcycle/build_vcycle.py}
-
-  docs/3d/assets:
-    title: 3D page assets
-    purpose: >-
-      Geometry loaded by the sheets in `docs/3d`: `sus-m1.js`, the CL-05 concept meshes and their pose clips
-      (`tools/cad/b3d/cl05_web.py`), and `sus-m1-terrain.js` and `sus-m1-terrain-loaded.js`, the walk and the loaded
-      carry walk posed on each terrain of the course (`tools/cad/b3d/cl05_terrain.py`), all from the build123d CAD. Generated; concept geometry, not a design.
-    hero: {img: docs/wiki/images/3d-sus-m1.png, caption: "SUS-M1 general arrangement", link: docs/3d/SUS-M1.html}
-
-  docs/diagrams:
-    title: Diagram sources
-    purpose: Editable sources for the hand-drawn process maps.
-    hero: {img: docs/wiki/images/safety-lifecycle.svg, caption: "Safety lifecycle process map (illustrative)", link: docs/diagrams/mil-std-882e/README.md}
-
-  docs/diagrams/mil-std-882e:
-    title: MIL-STD-882E process-map sources
-    purpose: >-
-      Draw.io sources of the illustrative MIL-STD-882E process maps. Edit a `.drawio` file, export it to SVG in
-      `docs/wiki/images/`, and the wiki page MIL-STD-882E Process Maps shows it. These maps are draft workflows,
-      not normative flowcharts.
-    hero: {img: docs/wiki/images/safety-lifecycle.svg, caption: "safety-lifecycle.drawio"}
-    gallery:
-      - {img: docs/wiki/images/hazard-management.svg, caption: "hazard-management.drawio"}
-      - {img: docs/wiki/images/analysis-dependencies.svg, caption: "analysis-dependencies.drawio"}
-      - {img: docs/wiki/images/responsibility-swimlanes.svg, caption: "responsibility-swimlanes.drawio"}
-      - {img: docs/wiki/images/software-safety.svg, caption: "software-safety.drawio"}
-      - {img: docs/wiki/images/verification-change.svg, caption: "verification-change.drawio"}
-    links:
-      - {text: MIL-STD-882E Process Maps (wiki page), href: docs/wiki/MIL-STD-882E-Process-Maps.md}
-
-  docs/readme:
-    title: Front-page figures
-    purpose: >-
-      Figures on the repository front page, built by `tools/readme/build_readme.py` from the records and the CAD
-      renders.
-    hero: {img: docs/readme/banner.svg, caption: "Banner"}
-    gallery:
-      - {img: docs/readme/at-a-glance.svg, caption: "At a glance"}
-      - {img: docs/readme/risk-matrix.svg, caption: "Risk matrix"}
-      - {img: docs/readme/simulation.svg, caption: "Simulation summary (synthetic)"}
-      - {img: docs/readme/roadmap.svg, caption: "MIL-STD-882E task roadmap"}
-      - {img: docs/readme/task-flow.svg, caption: "How the tasks feed each other"}
-      - {img: docs/readme/task-thread.svg, caption: "The main thread to risk acceptance"}
-      - {img: docs/readme/task-matrix.svg, caption: "Who feeds whom"}
-      - {img: docs/readme/task-hub.svg, caption: "The hazard tracking system as hub"}
-
-  docs/wiki:
-    hero: {img: docs/wiki/images/safety-lifecycle.svg, caption: "Safety lifecycle process map (illustrative)"}
-    gallery:
-      - {img: docs/wiki/images/sus-i1-boundary.svg, caption: "SUS-I1 boundary and interfaces"}
-      - {img: docs/wiki/images/sim-su-01.svg, caption: "UAV simulation SU-01 (synthetic)"}
-      - {img: docs/wiki/images/3d-s3-01.png, caption: "3D scene S3-01"}
-    links:
-      - {text: Wiki home page source, href: docs/wiki/Home.md}
-
-  docs/wiki/images:
-    title: Wiki images
-    purpose: >-
-      Every figure the wiki shows directly. Files named `sus-i1-*`, `sysml-*`, `sim-*` and `3d-*` are generated from
-      the records; the process maps are exported from `docs/diagrams/mil-std-882e`. Never edit a generated file.
-    hero: {img: docs/wiki/images/sus-i1-boundary.svg, caption: "sus-i1-boundary.svg"}
-    gallery_glob: docs/wiki/images/*.{svg,png}
-
-  framework:
-    hero: {img: framework/figures/fig-1-documentation-pipeline.svg, caption: "How folder documentation is produced and enforced", link: framework/documentation-standard.md}
-    gallery:
-      - {img: docs/wiki/images/safety-lifecycle.svg, caption: "Safety lifecycle process map (illustrative)"}
-      - {img: docs/wiki/images/responsibility-swimlanes.svg, caption: "Responsibility swimlanes (illustrative)"}
-      - {img: docs/wiki/images/analysis-dependencies.svg, caption: "Analysis dependencies (illustrative)"}
-
-  integrations:
-    title: Integrations
-    purpose: Integration of third-party software into SUS-I1. Today this is the PX4 flight stack for SUS-A1.
-    hero: {img: integrations/px4/figures/fig-2-boundary-diagram.svg, caption: "PX4 integration boundary", link: integrations/px4/README.md}
-    gallery:
-      - {img: integrations/px4/figures/fig-3-sysml-internal-block.svg, caption: "PX4 interfaces (SysML internal block)", link: integrations/px4/README.md}
-      - {img: integrations/px4/figures/fig-4-sysml-state-machine.svg, caption: "UAV states (SysML state machine)", link: integrations/px4/README.md}
-
-  models:
-    title: Models
-    purpose: System models of record. Today this is the SysML v2 model in `sysml/`.
-    hero: {img: docs/wiki/images/sysml-v02-hierarchy.svg, caption: "SysML part hierarchy", link: models/sysml/README.md}
-    gallery:
-      - {img: docs/wiki/images/sysml-v07-satisfy.svg, caption: "Requirement satisfaction", link: models/sysml/README.md}
-      - {img: docs/wiki/images/sysml-v08-n2.svg, caption: "N2 interface chart", link: models/sysml/README.md}
 
   models/sysml:
     hero: {img: docs/wiki/images/sysml-v02-hierarchy.svg, caption: "Part hierarchy (view V-02)"}
@@ -314,37 +145,6 @@ folders:
       - {text: Reliability Pilot (wiki page), href: docs/wiki/Reliability-Pilot.md}
       - {text: Engine and record format, href: tools/reliability/README.md}
 
-  requirements:
-    title: System safety requirements
-    purpose: >-
-      One `SYS-nnn.yaml` per system safety requirement, traced to hazards, allocated to elements and satisfied in the
-      SysML model. AI-drafted requirements stay `candidate` until the lead baselines them.
-    hero: {img: docs/wiki/images/rec-traceability.svg, caption: "Requirement traceability: hazards traced and elements allocated"}
-    gallery:
-      - {img: docs/wiki/images/sysml-v07-satisfy.svg, caption: "Which element satisfies each requirement (SysML view V-07)"}
-      - {img: safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/figures/fig-4-sysml-requirements.svg, caption: "Task 203: requirements with derive, satisfy and verify", link: safety/mil-std-882e/02-hazard-identification/task-203-system-requirements-hazard-analysis/README.md}
-      - {img: docs/wiki/images/analysis-dependencies.svg, caption: "Analysis dependencies (illustrative)"}
-
-  reviews:
-    hero: {img: docs/wiki/images/rec-acceptance.svg, caption: "How risk is accepted: only a named human in the right role (rule R13)"}
-    gallery:
-      - {img: safety/mil-std-882e/07-risk-acceptance/figures/fig-4-sysml-state-machine.svg, caption: "Risk acceptance states (element 7)", link: safety/mil-std-882e/07-risk-acceptance/README.md}
-      - {img: safety/mil-std-882e/07-risk-acceptance/acceptance-records/figures/fig-4-sysml-block-definition.svg, caption: "Acceptance record structure", link: safety/mil-std-882e/07-risk-acceptance/acceptance-records/README.md}
-      - {img: docs/wiki/images/hazard-management.svg, caption: "Hazard management process map (illustrative)"}
-
-  safety:
-    title: Safety records
-    purpose: >-
-      The hazard tracking system (`hazards/`), safety-significant software functions (`software/`), test-event risk
-      (`events/`), generated exports (`generated/`) and the MIL-STD-882E work-product tree (`mil-std-882e/`).
-    hero: {img: docs/readme/risk-matrix.svg, caption: "Current hazard risk on the MIL-STD-882E matrix"}
-    gallery:
-      - {img: safety/mil-std-882e/figures/fig-1-position-in-the-mil-std-882e-flow.svg, caption: "The eight-element MIL-STD-882E process", link: safety/mil-std-882e/README.md}
-      - {img: docs/wiki/images/hazard-management.svg, caption: "Hazard management process map (illustrative)"}
-      - {img: docs/wiki/images/software-safety.svg, caption: "Software safety process map (illustrative)"}
-    links:
-      - {text: Hazard Tracking Log (wiki page), href: docs/wiki/Hazard-Tracking-Log.md}
-
   safety/events:
     title: Test and simulation events
     purpose: >-
@@ -386,142 +186,16 @@ folders:
       - {img: docs/wiki/images/software-safety.svg, caption: "Software safety process map (illustrative)"}
       - {img: safety/mil-std-882e/software-safety/figures/fig-4-sysml-block-definition.svg, caption: "SSF record structure", link: safety/mil-std-882e/software-safety/README.md}
 
-  sim:
-    hero: {img: docs/readme/simulation.svg, caption: "Simulation results summary (synthetic)"}
-    gallery:
-      - {img: docs/wiki/images/sim-sc-01.svg, caption: "Walker scenario SC-01 (synthetic)"}
-      - {img: docs/wiki/images/sim-su-01.svg, caption: "UAV scenario SU-01 (synthetic)"}
-      - {img: docs/wiki/images/3d-s3-01.png, caption: "3D scene S3-01", link: docs/3d/README.md}
 
-  sim/mujoco:
-    title: Level-2 multibody simulation (MuJoCo)
-    purpose: >-
-      The level-2 walker model in MuJoCo and the cross-check that compares it case by case with the level-1 plant.
-      Results are synthetic.
-    hero: {img: docs/wiki/images/rec-l1-l2.svg, caption: "Level 1 against level 2, case by case (synthetic)"}
-    links:
-      - {text: Cross-check results, href: sim/results/l2-crosscheck.md}
 
-  sim/trades:
-    title: Trade-study evidence
-    purpose: >-
-      Simulations run as evidence for the architecture trade studies (`fault_response.yaml`, `fault_response.py` for
-      TS-001). Results are synthetic and carry no evidence credit.
-    planned: "Supply-loss outcome for each TS-001 alternative with load holding working and failed, drawn from sim/results/ts001-fault-response.json."
-    links:
-      - {text: TS-001 supply-loss evidence, href: sim/results/ts001-fault-response.md}
-      - {text: Trade Studies (wiki page), href: docs/wiki/Trade-Studies.md}
 
-  sim/plant:
-    title: Level-1 walker plant
-    purpose: The level-1 walker plant model and the scenario report it writes. Results are synthetic.
-    hero: {img: docs/wiki/images/sim-sc-01.svg, caption: "SC-01 (synthetic)"}
-    gallery:
-      - {img: docs/wiki/images/sim-sc-02.svg, caption: "SC-02 (synthetic)"}
-      - {img: docs/wiki/images/sim-sc-03.svg, caption: "SC-03 (synthetic)"}
-      - {img: docs/wiki/images/sim-sc-04.svg, caption: "SC-04 (synthetic)"}
-    links:
-      - {text: Plant results, href: sim/results/plant-results.md}
 
-  sim/results:
-    title: Simulation results
-    purpose: >-
-      Results written by the simulation track and checked in CI. They are synthetic: they inform the hazard analysis
-      and are never verification evidence.
-    hero: {img: docs/readme/simulation.svg, caption: "Simulation results summary (synthetic)"}
-    gallery:
-      - {img: docs/wiki/images/rec-l1-l2.svg, caption: "Level 1 against level 2", link: sim/mujoco/README.md}
-      - {img: docs/wiki/images/sim-sc-01.svg, caption: "SC-01"}
-      - {img: docs/wiki/images/sim-sc-02.svg, caption: "SC-02"}
-      - {img: docs/wiki/images/sim-sc-03.svg, caption: "SC-03"}
-      - {img: docs/wiki/images/sim-sc-04.svg, caption: "SC-04"}
-    links:
-      - {text: UAV results, href: sim/results/uav/README.md}
 
-  sim/results/uav:
-    title: UAV simulation results (PX4 SITL)
-    purpose: >-
-      PX4 SITL failsafe runs written by `sim/uav/harness.py`, one JSON per scenario plus the summary. Synthetic; never
-      verification evidence.
-    hero: {img: docs/wiki/images/sim-su-01.svg, caption: "SU-01"}
-    gallery:
-      - {img: docs/wiki/images/sim-su-02.svg, caption: "SU-02"}
-      - {img: docs/wiki/images/sim-su-03.svg, caption: "SU-03"}
-      - {img: docs/wiki/images/sim-su-04.svg, caption: "SU-04"}
-      - {img: docs/wiki/images/sim-su-05.svg, caption: "SU-05"}
-      - {img: docs/wiki/images/sim-su-06.svg, caption: "SU-06"}
-    links:
-      - {text: UAV Simulation (wiki page), href: docs/wiki/UAV-Simulation.md}
 
-  sim/scenes3d:
-    title: 3D scene builder
-    purpose: >-
-      Builds the 3D scene pages in `docs/3d` from the simulation results (`export_scene.py`, `build_pages.py`) and
-      renders the stills (`render.mjs`). Also builds the interactive general-arrangement sheets (`build_sheet.py`):
-      SUS-M1 from `sheet.yaml` (viewer `sheet.js`) and SUS-A1 from `sheet_uav.yaml` (viewer `sheet_uav.js`), on the
-      CL-05 geometry exported by `tools/cad/b3d/cl05_web.py`; and the terrain course from `terrain.yaml` (viewer
-      `sheet_terrain.js`) on the walk posed by `tools/cad/b3d/cl05_terrain.py`. `sheet_check.mjs` checks all three
-      and renders their stills.
-    hero: {img: docs/wiki/images/3d-sus-m1.png, caption: "SUS-M1 general arrangement", link: docs/3d/SUS-M1.html}
-    gallery:
-      - {img: docs/wiki/images/3d-s3-01.png, caption: "S3-01", link: docs/3d/S3-01.html}
-      - {img: docs/wiki/images/3d-s3-03.png, caption: "S3-03", link: docs/3d/S3-03.html}
-      - {img: docs/wiki/images/3d-s3-05-fog.png, caption: "S3-05 in fog", link: docs/3d/S3-05-fog.html}
-      - {img: docs/wiki/images/3d-s3-06.png, caption: "S3-06", link: docs/3d/S3-06.html}
 
-  sim/scenes3d/library:
-    title: 3D scene library
-    purpose: Environments and conditions (lighting, weather) that the 3D scenes are composed from.
-    hero: {img: docs/wiki/images/3d-s3-01-dusk.png, caption: "S3-01 at dusk", link: docs/3d/S3-01-dusk.html}
-    gallery:
-      - {img: docs/wiki/images/3d-s3-05-fog.png, caption: "S3-05 in fog", link: docs/3d/S3-05-fog.html}
 
-  sim/scenes3d/out:
-    title: Exported 3D scene data
-    purpose: Scene data exported by `export_scene.py`, one JSON per scene, read by the pages in `docs/3d`. Generated.
-    hero: {img: docs/wiki/images/3d-s3-02.png, caption: "S3-02", link: docs/3d/S3-02.html}
-    gallery:
-      - {img: docs/wiki/images/3d-s3-04.png, caption: "S3-04", link: docs/3d/S3-04.html}
 
-  sim/search:
-    title: Failure search
-    purpose: >-
-      The fault families and the search that samples them for edge cases (`families.yaml`, `search.py`). Results are
-      synthetic.
-    hero: {img: docs/wiki/images/sim-sc-01.svg, caption: "SC-01, a case the search covers (synthetic)"}
-    gallery:
-      - {img: docs/wiki/images/sim-sc-02.svg, caption: "SC-02 (synthetic)"}
-    links:
-      - {text: Search results for SF-01, href: sim/results/search-SF-01.md}
-      - {text: Edge cases, href: sim/results/edge-cases.md}
 
-  sim/spec:
-    title: Simulation specifications
-    purpose: >-
-      Walker parameters for the level-1 and level-2 models, each with a unit, range, status and source. Assumed values
-      are marked as assumed.
-    hero: {img: docs/wiki/images/sim-sc-01.svg, caption: "SC-01, run with these parameters (synthetic)"}
-    gallery:
-      - {img: docs/readme/simulation.svg, caption: "Simulation results summary (synthetic)"}
-
-  sim/uav:
-    title: UAV simulation harness (PX4 SITL)
-    purpose: >-
-      Runs the PX4 SITL failsafe scenarios in `scenarios.yaml` and writes `sim/results/uav`. Re-running needs a PX4
-      build; see `sim/README.md`.
-    hero: {img: docs/wiki/images/sim-su-01.svg, caption: "SU-01 (synthetic)"}
-    gallery:
-      - {img: docs/wiki/images/sim-su-02.svg, caption: "SU-02 (synthetic)"}
-      - {img: docs/wiki/images/sim-su-03.svg, caption: "SU-03 (synthetic)"}
-
-  standards:
-    title: Standards and tailoring
-    purpose: >-
-      The machine-readable MIL-STD-882E model (`mil-std-882e/`) and the project's tailoring of it (`tailoring/`).
-    hero: {img: docs/wiki/images/safety-lifecycle.svg, caption: "Safety lifecycle process map (illustrative)"}
-    gallery:
-      - {img: safety/mil-std-882e/figures/fig-1-position-in-the-mil-std-882e-flow.svg, caption: "The eight-element MIL-STD-882E process", link: safety/mil-std-882e/README.md}
-      - {img: docs/wiki/images/analysis-dependencies.svg, caption: "Analysis dependencies (illustrative)"}
 
   standards/mil-std-882e:
     title: MIL-STD-882E model
@@ -549,7 +223,3 @@ folders:
     links:
       - {text: Task Applicability (wiki page), href: docs/wiki/MIL-STD-882E-Applicability.md}
 
-  verification:
-    hero: {img: docs/wiki/images/verification-change.svg, caption: "Verification and change process map (illustrative)"}
-    gallery:
-      - {img: safety/mil-std-882e/06-verification/figures/fig-4-sysml-activity.svg, caption: "Element 6: verification activity", link: safety/mil-std-882e/06-verification/README.md}

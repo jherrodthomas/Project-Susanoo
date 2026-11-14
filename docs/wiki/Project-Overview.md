@@ -18,7 +18,7 @@
   <a href="882E-Work-Products.md"><b>882E work products</b></a> ·
   <a href="Hazard-Tracking-Log.md"><b>Hazard log</b></a> ·
   <a href="https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/README.md"><b>SysML model</b></a> ·
-  <a href="https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/README.md"><b>Simulation</b></a> ·
+  <a href="Simulation-Track.md"><b>Simulation</b></a> ·
   <a href="Decision-Inbox.md"><b>Decision inbox</b></a>
 </p>
 
@@ -117,7 +117,7 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 | Diagrams go stale | Hand-drawn, out of date by the next review | Every figure is generated from records; CI regenerates and diffs it | [882E tree](882E-Work-Products.md) · [standard](Documentation-Standard.md) |
 | Hazard log nobody trusts | A spreadsheet with free-text risk | One YAML record per hazard, validated against MIL-STD-882E modelled as data (20 rules) | [`safety/hazards/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/hazards) · [`tools/pdac`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/pdac/README.md) |
 | Models and documents disagree | Element names and IDs drift between tools | One item definition; the SysML v2 model is checked against it and passes the OMG pilot | [`architecture/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml) · [`models/sysml/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/README.md) |
-| Simulation quietly becomes "evidence" | Plots pasted into reports | Every result is stamped *synthetic, no evidence credit* until a fidelity case is approved | [`sim/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/README.md) |
+| Simulation quietly becomes "evidence" | Plots pasted into reports | Every result is stamped *synthetic, no evidence credit* until a fidelity case is approved | [`sim/`](Simulation-Track.md) |
 | Automation "approves" things | Green CI read as sign-off | AI drafts at independence level I0; only a recorded human review accepts anything (rule R13) | [`CLAUDE.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/CLAUDE.md) |
 | Questions for the lead get lost | Buried in chat threads | A decision register with options, a recommendation and a generated inbox | [`decisions/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) · [inbox](Decision-Inbox.md) |
 | The standard is quoted, not applied | Copied clauses, vague tailoring | 882E (2012) encoded as data, tailored per task with rationale, no copied text | [`standards/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/mil-std-882e/model.yaml) |
@@ -155,14 +155,14 @@ without a clause mapping, traceable evidence and a named human who accepted the 
 |---|---|---|
 | Hazards tracked (Task 106) | **22** (22 open) · initial 8 High, 12 Serious, 2 Medium → target 1 Serious, 21 Medium | [`safety/hazards/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/hazards) |
 | Mitigations planned | **81** | hazard records |
-| Safety requirements | **24** (24 candidate, 24 with verification open) | [`requirements/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/requirements) |
+| Safety requirements | **24** (24 candidate, 24 with verification open) | [`requirements/`](Requirements-Register.md) |
 | Safety-significant software functions | **8** | [`safety/software/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/safety/software) |
 | Architecture | **19** elements, **8** externals, **31** interfaces, **9** functions | [`architecture/item-definition.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml) |
 | MIL-STD-882E tasks | **25** tailored: 19 selected, 2 conditional, 2 not selected, 2 n/a · gate **G0** | [`standards/tailoring/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/tailoring/mil-std-882e.yaml) |
 | SysML v2 files passing the OMG pilot | **45** | [`models/sysml/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/models/sysml/model) |
 | Work-product folders with generated figures | **39** | [`safety/mil-std-882e/`](882E-Work-Products.md) |
 | Decisions for the lead | **1** open of 29 | [`decisions/register.yaml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) |
-| Simulation runs (synthetic) | **400** walker Monte Carlo + **6** PX4 SITL · **3** findings | [`sim/results/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/sim/results) |
+| Simulation runs (synthetic) | **400** walker Monte Carlo + **6** PX4 SITL · **3** findings | [`sim/results/`](Simulation-Results.md) |
 <!-- readme:numbers:end -->
 
 ## Where the risk is
@@ -367,14 +367,14 @@ system. Each folder README carries a generated flow position, block, boundary, S
 | [`concept/`](Concept-Model.md) | CONOPS, modes MOD-01..10, scenarios, preliminary architecture, trade studies |
 | [`architecture/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/architecture/item-definition.yaml) | Item definition: elements, externals, interfaces IF-nnn, functions |
 | [`models/sysml/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/models/sysml/README.md) | SysML v2 model, checked against the records and the OMG pilot |
-| [`requirements/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/requirements) | System safety requirements SYS-nnn with allocation and verification |
+| [`requirements/`](Requirements-Register.md) | System safety requirements SYS-nnn with allocation and verification |
 | [`safety/`](882E-Work-Products.md) | Hazard records, software safety functions, events, and the 882E work-product tree |
 | [`standards/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/standards/mil-std-882e/model.yaml) | MIL-STD-882E (2012) as data, plus project tailoring |
-| [`sim/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/README.md) | Walker plant model, failure search, PX4 SITL scenarios, 2D and 3D scenes |
+| [`sim/`](Simulation-Track.md) | Walker plant model, failure search, PX4 SITL scenarios, 2D and 3D scenes |
 | [`integrations/px4/`](PX4-Integration-Model.md) | PX4 baseline, interface contract, fail-closed launch permit |
-| [`decisions/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) · [`reviews/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/reviews/README.md) | Questions for the lead; human review records |
-| [`framework/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/README.md) | Lifecycle, process contracts, traceability, documentation standard |
-| [`tools/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools) | Validators, generators and the figure kit |
+| [`decisions/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/decisions/register.yaml) · [`reviews/`](Review-Records.md) | Questions for the lead; human review records |
+| [`framework/`](Framework.md) | Lifecycle, process contracts, traceability, documentation standard |
+| [`tools/`](Tools.md) | Validators, generators and the figure kit |
 
 ## Run it
 
@@ -420,7 +420,7 @@ operation, and authorized human-occupied testing (which requires separate review
 <summary><b>All documentation</b></summary>
 
 - [Concept and CONOPS](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/CONOPS.md) · [System architecture](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/architecture.md) · [Trade studies](https://github.com/jherrodthomas/Project-Susanoo/blob/main/concept/trade-studies.md)
-- [Integrated standards framework](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/README.md) · [Standards applicability](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/standards-applicability.md)
+- [Integrated standards framework](Framework.md) · [Standards applicability](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/standards-applicability.md)
 - [Lifecycle and review gates](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/lifecycle.md) · [Process contracts](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/process-contracts.md) · [PDaC traceability](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/traceability.md)
 - [Execution plan](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/execution-plan.md) · [MIL-STD-882E conformance review and build plan](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/882e-conformance-review.md)
 - [LionDriver port plan](https://github.com/jherrodthomas/Project-Susanoo/blob/main/framework/liondriver-port-plan.md) · [Documentation standard](Documentation-Standard.md)

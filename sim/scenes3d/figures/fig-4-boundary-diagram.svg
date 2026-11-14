@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1355" height="959.6" viewBox="0 0 1355 959.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 4 · Boundary diagram</title>
+<desc>The builder owns the scene definitions, the analysis export, the page builder, the still renderer and the sheet builder; the results it replays and the pages it writes live elsewhere. Crossings are numbered as in the table.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1355" height="905" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 4 · Boundary diagram</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The builder owns the scene definitions, the analysis export, the page builder, the still renderer and the sheet builder; the results it replays and the pages it writes live elsewhere. Crossings</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">are numbered as in the table.</text>
+<text x="1315" y="44" font-size="11" fill="#475569" text-anchor="end">sim/scenes3d/README.md</text>
+<line x1="40" y1="102" x2="1315" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 126)">
+<rect x="208" y="195" width="586.9" height="308" rx="12" fill="none" stroke="#C2410C" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M313 44 L313 59 Q313 66 320 66 L336 66 Q343 66 343 73 L343 141 Q343 148 350 148 L365 148 Q372 148 372 155 L372 341" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M475 44 L475 141 Q475 148 482 148 L518 148 Q525 148 525 155 L525 183 Q525 190 525 197 L524.7 245" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M502 283 L502 324 Q502 331 495 331 L431.4 331 Q426.4 331 426.4 336 L426.4 341" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M547.3 283 L547.3 288 Q547.3 293 552.3 293 L611.9 293 Q618.9 293 618.9 300 L618.9 420 Q618.9 427 611.9 427 L440.2 427 Q433.2 427 433.2 434 L433.2 447" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M399.2 379 L399.2 447" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M433.2 485 L433.2 501 Q433.2 508 433.2 515 L433 654" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M637 44 L637 62.5 Q637 66 633.5 66 L633.5 66 Q630 66 630 69.5 L630 183 Q630 190 630 197 L630 430 Q630 437 623 437 L472.2 437 Q467.2 437 467.2 442 L467.2 447" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M399 654 L399 619 Q399 612 392 612 L187 612 Q180 612 180 605 L180 167 Q180 160 187 160 L287 160 Q294 160 294 167 L294 245" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1201 44 L1201 153 Q1201 160 1194 160 L716 160 Q709 160 709 167 L709 183 Q709 190 709 197 L708.9 245" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M708.9 283 L708.9 501 Q708.9 508 708.9 515 L708.9 523 Q708.9 530 701.9 530 L475 530 Q468 530 468 537 L468 654" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M959 44 L959 141 Q959 148 952 148 L647 148 Q640 148 640 155 L640 195" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="220" y="207" width="221.7" height="22" rx="11" fill="#C2410C" stroke="none" stroke-width="0"/>
+<text x="330.8" y="222" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">BOUNDARY · 3D SCENE BUILDER</text>
+<rect x="245" y="6" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="257" y="30" font-size="12.5" fill="#0F172A" font-weight="700">Simulation results</text>
+<rect x="407" y="6" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="419" y="30" font-size="12.5" fill="#0F172A" font-weight="700">Hazard records</text>
+<rect x="1133" y="6" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="1145" y="30" font-size="12.5" fill="#0F172A" font-weight="700">CAD geometry</text>
+<rect x="569" y="6" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="581" y="30" font-size="12.5" fill="#0F172A" font-weight="700">three.js (pinned)</text>
+<rect x="891" y="6" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="903" y="30" font-size="12.5" fill="#0F172A" font-weight="700">CI</text>
+<rect x="456.7" y="245" width="136" height="38" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="468.7" y="269" font-size="12.5" fill="#0F172A" font-weight="700">Scene definitions</text>
+<rect x="317.6" y="341" width="163.1" height="38" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="329.6" y="365" font-size="12.5" fill="#0F172A" font-weight="700">Scene analysis export</text>
+<rect x="365.2" y="447" width="136" height="38" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="377.2" y="471" font-size="12.5" fill="#0F172A" font-weight="700">Page builder</text>
+<rect x="226" y="245" width="136" height="38" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="238" y="269" font-size="12.5" fill="#0F172A" font-weight="700">Still renderer</text>
+<rect x="640.9" y="245" width="136" height="38" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="652.9" y="269" font-size="12.5" fill="#0F172A" font-weight="700">Sheet builder</text>
+<rect x="364" y="654" width="138.4" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="376" y="678" font-size="12.5" fill="#0F172A" font-weight="700">3D pages and wiki</text>
+<rect x="133" y="108" width="208.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="136" y="109" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="144.8" y="120.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="157.7" y="121" font-size="10.5" fill="#475569">plant runs, edge cases, SITL runs</text>
+<rect x="357" y="108" width="115.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="360" y="109" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="368.8" y="120.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="381.7" y="121" font-size="10.5" fill="#475569">hazards to show</text>
+<rect x="381" y="303" width="121" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="384" y="304" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="392.8" y="315.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3</text>
+<text x="405.7" y="316" font-size="10.5" fill="#475569">motion block only</text>
+<rect x="498.7" y="351" width="120.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="501.7" y="352" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="510.6" y="363.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">4</text>
+<text x="523.4" y="364" font-size="10.5" fill="#475569">look and variants</text>
+<rect x="300.1" y="399" width="99.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="303.1" y="400" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="311.9" y="411.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">5</text>
+<text x="324.8" y="412" font-size="10.5" fill="#475569">out/&lt;id&gt;.json</text>
+<rect x="238" y="572" width="193.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="241" y="573" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="249.8" y="584.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">6</text>
+<text x="262.7" y="585" font-size="10.5" fill="#475569">docs/3d/*.html, 3D-Scenes page</text>
+<rect x="488" y="108" width="139.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="491" y="109" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="499.8" y="120.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">7</text>
+<text x="512.7" y="121" font-size="10.5" fill="#475569">version and SHA-256</text>
+<rect x="4" y="340" width="174.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="7" y="341" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="15.8" y="352.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">8</text>
+<text x="28.7" y="353" font-size="10.5" fill="#475569">pages in headless Chromium</text>
+<rect x="972" y="108" width="226.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="975" y="109" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="983.8" y="120.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">9</text>
+<text x="996.7" y="121" font-size="10.5" fill="#475569">CL-05 model docs/3d/assets/sus-m1.js</text>
+<rect x="471" y="572" width="214.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="474" y="573" width="23.4" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="485.7" y="584.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">10</text>
+<text x="501.4" y="585" font-size="10.5" fill="#475569">docs/3d/SUS-M1.html, SUS-A1.html</text>
+<rect x="643" y="108" width="313.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="646" y="109" width="23.4" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="657.7" y="120.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">11</text>
+<text x="673.4" y="121" font-size="10.5" fill="#475569">--check, pages and sheets load with the synthetic label</text>
+</g>
+<rect x="40" y="844" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="62" y="854" font-size="11" fill="#475569">External entity</text>
+<rect x="150" y="844" width="14" height="12" rx="3" fill="none" stroke="#C2410C" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="172" y="854" font-size="11" fill="#475569">Analysis boundary</text>
+<rect x="278.4" y="844" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="300.4" y="854" font-size="11" fill="#475569">Work product</text>
+<rect x="378.3" y="844" width="14" height="12" rx="3" fill="#475569" stroke="none" stroke-width="1.2"/>
+<text x="400.3" y="854" font-size="11" fill="#475569">1 · numbered crossing (see table)</text>
+<text x="40" y="876" font-size="10.5" fill="#94A3B8">Generated by tools/figures/scenes3d_readme.py from scenes.yaml, the library and the exported scene analysis. The scenes replay synthetic results: a picture of a simulation, not evidence (sim/README.md, evidence gate).</text>
+<g class="terms" data-base-h="905">
+<rect x="0" y="905" width="1355" height="54.6" fill="#FFFFFF"/>
+<line x1="40" y1="909" x2="1315" y2="909" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="924.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: 3D = three-dimensional · CAD = computer-aided design · CI = continuous integration (the automated checks GitHub runs on every change) · CL-nnn = concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference</text>
+<text x="40" y="939.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">layout) · SHA-256 = a cryptographic hash used to pin a downloaded file · SITL = software-in-the-loop simulation · SUS-A1 = dockable observation UAV · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

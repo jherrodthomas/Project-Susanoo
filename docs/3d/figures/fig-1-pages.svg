@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="958.6" viewBox="0 0 1280 958.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · The 3D pages</title>
+<desc>Every page in docs/3d with what it shows and what checks it</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1280" height="875" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · The 3D pages</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">Every page in docs/3d, read from the page itself: what it shows, the hazards it carries, its outcome or contents, its size, its still and the CI check that opens it. Pages pin three.js</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">0.170.0; every 3D page shows the synthetic label.</text>
+<text x="1240" y="44" font-size="11" fill="#475569" text-anchor="end">docs/3d/*.html</text>
+<line x1="40" y1="102" x2="1240" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="132" font-size="10.5" fill="#475569" font-weight="700">Page</text>
+<text x="180" y="132" font-size="10.5" fill="#475569" font-weight="700">Kind</text>
+<text x="370" y="132" font-size="10.5" fill="#475569" font-weight="700">What it shows · hazards</text>
+<text x="840" y="132" font-size="10.5" fill="#475569" font-weight="700">Outcome</text>
+<text x="1000" y="132" font-size="10.5" fill="#475569" font-weight="700">Size</text>
+<text x="1070" y="132" font-size="10.5" fill="#475569" font-weight="700">Still · CI check</text>
+<line x1="40" y1="144" x2="1240" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="175" font-size="10.5" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1.html</text>
+<rect x="180" y="163" width="137" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="248.5" y="174.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">general-arrangement sheet</text>
+<text x="370" y="163" font-size="10.5" fill="#0F172A" font-weight="700">UAV on dock and in airspace, interactive (sheet 2 of 3, CL-05)</text>
+<text x="370" y="177" font-size="9.5" fill="#475569">6 hazard callouts · replays SU-01, SU-02, SU-03, SU-04, SU-05, SU-06</text>
+<text x="370" y="193" font-size="9.5" fill="#0F172A">6 hazards listed, with callouts on the model</text>
+<text x="840" y="175" font-size="10.5" fill="#475569">—</text>
+<text x="1000" y="175" font-size="10" fill="#0F172A">89 KB</text>
+<text x="1070" y="169" font-size="9.5" fill="#2E9E6A">3d-sus-a1, 3d-sus-a1-lr, 3d-sus-a1-air</text>
+<text x="1070" y="184" font-size="9.5" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">build_sheet.py --check</text>
+<rect x="40" y="199" width="1200" height="52" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="229" font-size="10.5" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1.html</text>
+<rect x="180" y="217" width="137" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="248.5" y="228.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">general-arrangement sheet</text>
+<text x="370" y="217" font-size="10.5" fill="#0F172A" font-weight="700">General arrangement, interactive (sheet 1 of 3, CL-05)</text>
+<text x="370" y="231" font-size="9.5" fill="#475569">5 postures · 19 hazard callouts · replays S3-01, S3-02, S3-03, S3-04</text>
+<text x="370" y="247" font-size="9.5" fill="#0F172A">22 hazards listed, with callouts on the model</text>
+<text x="840" y="229" font-size="10.5" fill="#475569">—</text>
+<text x="1000" y="229" font-size="10" fill="#0F172A">77 KB</text>
+<text x="1070" y="223" font-size="9.5" fill="#2E9E6A">3d-sus-m1, 3d-sus-m1-terrain …</text>
+<text x="1070" y="238" font-size="9.5" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">sheet_check.mjs</text>
+<text x="40" y="283" font-size="10.5" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-terrain.html</text>
+<rect x="180" y="271" width="137" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="248.5" y="282.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">general-arrangement sheet</text>
+<text x="370" y="271" font-size="10.5" fill="#0F172A" font-weight="700">Terrain course, interactive (sheet 3 of 3, CL-05)</text>
+<text x="370" y="285" font-size="9.5" fill="#475569">0 hazard callouts</text>
+<rect x="370" y="291" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="409.5" y="302.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-WLK-002</text>
+<rect x="453.1" y="291" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="492.6" y="302.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-MAN-002</text>
+<text x="840" y="283" font-size="10.5" fill="#475569">—</text>
+<text x="1000" y="283" font-size="10" fill="#0F172A">59 KB</text>
+<text x="1070" y="277" font-size="9.5" fill="#2E9E6A">3d-sus-m1-terrain, 3d-sus-m1-terrain-loaded</text>
+<text x="1070" y="292" font-size="9.5" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">build_sheet.py --check</text>
+<rect x="40" y="307" width="1200" height="52" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="337" font-size="10.5" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">S3-01.html</text>
+<rect x="180" y="325" width="72.5" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="216.2" y="336.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">scene replay</text>
+<text x="370" y="325" font-size="10.5" fill="#0F172A" font-weight="700">Slow supply leak on a slope; balance lost before the hold engages</text>
+<text x="370" y="339" font-size="9.5" fill="#475569">edge SF-01 EC-08 · hillside · clear · camera side</text>
+<rect x="370" y="345" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="409.5" y="356.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-WLK-002</text>
+<rect x="840" y="325" width="24.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="852" y="336.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip</text>
+<text x="1000" y="337" font-size="10" fill="#0F172A">19 KB</text>
+<text x="1070" y="331" font-size="9.5" fill="#2E9E6A">3d-s3-01</text>
+<text x="1070" y="346" font-size="9.5" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">render.mjs</text>
+<text x="40" y="391" font-size="10.5" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">S3-02.html</text>
+<rect x="180" y="379" width="72.5" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="216.2" y="390.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">scene replay</text>
+<text x="370" y="379" font-size="10.5" fill="#0F172A" font-weight="700">Protective stop removes leg force instead of crouching</text>
+<text x="370" y="393" font-size="9.5" fill="#475569">plant fault FLT-03 · yard · clear · camera three-quarter</text>
+<rect x="370" y="399" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="409.5" y="410.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-SAF-001</text>
+<rect x="840" y="379" width="56.5" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="868.3" y="390.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<text x="1000" y="391" font-size="10" fill="#0F172A">18 KB</text>
+<text x="1070" y="385" font-size="9.5" fill="#2E9E6A">3d-s3-02</text>
+<text x="1070" y="400" font-size="9.5" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">render.mjs</text>
+<rect x="40" y="415" width="1200" height="52" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="445" font-size="10.5" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">S3-03.html</text>
+<rect x="180" y="433" width="72.5" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="216.2" y="444.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">scene replay</text>
+<text x="370" y="433" font-size="10.5" fill="#0F172A" font-weight="700">Frozen posture feedback with no staleness monitor</text>
+<text x="370" y="447" font-size="9.5" fill="#475569">plant fault FLT-02 · yard · overcast · camera three-quarter</text>
+<rect x="370" y="453" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="409.5" y="464.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-WLK-001</text>
+<rect x="840" y="433" width="24.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="852" y="444.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip</text>
+<text x="1000" y="445" font-size="10" fill="#0F172A">19 KB</text>
+<text x="1070" y="439" font-size="9.5" fill="#2E9E6A">3d-s3-03</text>
+<text x="1070" y="454" font-size="9.5" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">render.mjs</text>
+<text x="40" y="499" font-size="10.5" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">S3-04.html</text>
+<rect x="180" y="487" width="72.5" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="216.2" y="498.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">scene replay</text>
+<text x="370" y="487" font-size="10.5" fill="#0F172A" font-weight="700">Burst supply loss with failed load holding; the cockpit drops</text>
+<text x="370" y="501" font-size="9.5" fill="#475569">edge SF-01 EC-01 · hillside · clear · camera side</text>
+<rect x="370" y="507" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="409.5" y="518.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PIL-002</text>
+<rect x="840" y="487" width="56.5" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="868.3" y="498.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<text x="1000" y="499" font-size="10" fill="#0F172A">18 KB</text>
+<text x="1070" y="493" font-size="9.5" fill="#2E9E6A">3d-s3-04</text>
+<text x="1070" y="508" font-size="9.5" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">render.mjs</text>
+<rect x="40" y="523" width="1200" height="52" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="553" font-size="10.5" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">S3-05.html</text>
+<rect x="180" y="541" width="72.5" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="216.2" y="552.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">scene replay</text>
+<text x="370" y="541" font-size="10.5" fill="#0F172A" font-weight="700">Link loss with return-to-launch; the UAV descends into the pilot keep-out</text>
+<text x="370" y="555" font-size="9.5" fill="#475569">sitl SU-01 · field · clear · camera overview</text>
+<rect x="370" y="561" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="409.5" y="572.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<rect x="840" y="541" width="84.5" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="882.2" y="552.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">keepout-breach</text>
+<text x="1000" y="553" font-size="10" fill="#0F172A">18 KB</text>
+<text x="1070" y="547" font-size="9.5" fill="#2E9E6A">3d-s3-05</text>
+<text x="1070" y="562" font-size="9.5" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">render.mjs</text>
+<text x="40" y="607" font-size="10.5" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">S3-06.html</text>
+<rect x="180" y="595" width="72.5" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="216.2" y="606.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">scene replay</text>
+<text x="370" y="595" font-size="10.5" fill="#0F172A" font-weight="700">Link loss after the walker moved; the UAV lands at the stale home</text>
+<text x="370" y="609" font-size="9.5" fill="#475569">sitl SU-02 · field · clear · camera overview</text>
+<rect x="370" y="615" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="409.5" y="626.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<rect x="453.1" y="615" width="79.1" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="492.6" y="626.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">HAZ-DCK-002</text>
+<rect x="840" y="595" width="110.2" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="895.1" y="606.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">landed-at-stale-home</text>
+<text x="1000" y="607" font-size="10" fill="#0F172A">18 KB</text>
+<text x="1070" y="601" font-size="9.5" fill="#2E9E6A">3d-s3-06</text>
+<text x="1070" y="616" font-size="9.5" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">render.mjs</text>
+<rect x="40" y="631" width="1200" height="52" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="661" font-size="10.5" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">S3-01-dusk.html</text>
+<rect x="180" y="649" width="67.8" height="16" rx="8.0" fill="#F1F5F9" stroke="#64748B" stroke-width="1"/>
+<text x="213.9" y="660.4" font-size="9.5" fill="#64748B" font-weight="700" text-anchor="middle">look variant</text>
+<text x="370" y="649" font-size="10.5" fill="#0F172A" font-weight="700">Slow supply leak on a slope; balance lost before the hold engages</text>
+<text x="370" y="663" font-size="9.5" fill="#475569">edge SF-01 EC-08 · hillside · dusk · camera side</text>
+<rect x="370" y="669" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="409.5" y="680.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-WLK-002</text>
+<rect x="840" y="649" width="24.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="852" y="660.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip</text>
+<text x="1000" y="661" font-size="10" fill="#0F172A">19 KB</text>
+<text x="1070" y="655" font-size="9.5" fill="#2E9E6A">3d-s3-01-dusk</text>
+<text x="1070" y="670" font-size="9.5" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">render.mjs</text>
+<text x="40" y="715" font-size="10.5" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">S3-05-fog.html</text>
+<rect x="180" y="703" width="67.8" height="16" rx="8.0" fill="#F1F5F9" stroke="#64748B" stroke-width="1"/>
+<text x="213.9" y="714.4" font-size="9.5" fill="#64748B" font-weight="700" text-anchor="middle">look variant</text>
+<text x="370" y="703" font-size="10.5" fill="#0F172A" font-weight="700">Link loss with return-to-launch; the UAV descends into the pilot keep-out</text>
+<text x="370" y="717" font-size="9.5" fill="#475569">sitl SU-01 · field · fog · camera overview</text>
+<rect x="370" y="723" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="409.5" y="734.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<rect x="840" y="703" width="84.5" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="882.2" y="714.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">keepout-breach</text>
+<text x="1000" y="715" font-size="10" fill="#0F172A">18 KB</text>
+<text x="1070" y="709" font-size="9.5" fill="#2E9E6A">3d-s3-05-fog</text>
+<text x="1070" y="724" font-size="9.5" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">render.mjs</text>
+<rect x="40" y="739" width="1200" height="52" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="769" font-size="10.5" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">index.html</text>
+<rect x="180" y="757" width="37.2" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="198.6" y="768.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">index</text>
+<text x="370" y="757" font-size="10.5" fill="#0F172A" font-weight="700">links to 11 pages</text>
+<text x="370" y="771" font-size="9.5" fill="#475569">plain HTML, no 3D</text>
+<text x="840" y="769" font-size="10.5" fill="#475569">—</text>
+<text x="1000" y="769" font-size="10" fill="#0F172A">2 KB</text>
+<text x="1070" y="763" font-size="9.5" fill="#2E9E6A">no still</text>
+<text x="1070" y="778" font-size="9.5" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">build_pages.py --check</text>
+<line x1="40" y1="800" x2="1240" y2="800" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="814" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="62" y="824" font-size="11" fill="#475569">Scene replay</text>
+<rect x="141.1" y="814" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="163.1" y="824" font-size="11" fill="#475569">Look variant</text>
+<rect x="240.1" y="814" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
+<text x="262.1" y="824" font-size="11" fill="#475569">General-arrangement sheet</text>
+<rect x="411.1" y="814" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="433.1" y="824" font-size="11" fill="#475569">Index</text>
+<rect x="477" y="814" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2"/>
+<text x="499" y="824" font-size="11" fill="#475569">Mishap or unsafe outcome</text>
+<rect x="644" y="814" width="14" height="12" rx="3" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.2"/>
+<text x="666" y="824" font-size="11" fill="#475569">Clear</text>
+<text x="40" y="846" font-size="10.5" fill="#94A3B8">Generated by tools/figures/pages3d_readme.py from the pages in docs/3d and the checks that open them. The pages show concept geometry and synthetic results: design aids with no evidence credit (sim/README.md, evidence gate).</text>
+<g class="terms" data-base-h="875">
+<rect x="0" y="875" width="1280" height="83.6" fill="#FFFFFF"/>
+<line x1="40" y1="879" x2="1240" y2="879" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="894.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: 3D = three-dimensional · CI = continuous integration (the automated checks GitHub runs on every change) · CL-nnn = concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout) · EC-nnn =</text>
+<text x="40" y="909.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">edge case found by a failure search · FLT-nnn = walker fault in sim/faults.yaml · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · HTML = HyperText Markup Language (web page) · KB = kilobyte, a file size of</text>
+<text x="40" y="923.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">1,024 bytes · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · S3-nnn = 3D hazard scene (sim/scenes3d) · SF-nnn = walker failure-search family (sim/search) · SITL =</text>
+<text x="40" y="938.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">software-in-the-loop simulation · SU-nnn = UAV PX4 SITL scenario · SUS-A1 = dockable observation UAV · SUS-M1 = piloted walker · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

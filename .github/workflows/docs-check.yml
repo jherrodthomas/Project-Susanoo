@@ -29,7 +29,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r tools/pdac/requirements.txt   # PyYAML and jsonschema: record figures load the records
+          pip install -r tools/pdac/requirements.txt   # PyYAML and jsonschema: record figures and the R10/R13 logic the folder generators reuse
           npm ci --prefix tools/figures
 
       - name: Check READMEs, regenerate every figure and SysML view, and diff

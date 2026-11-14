@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="700.1" viewBox="0 0 1120 700.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · PX4 interface register</title>
+<desc>Every IF-PX4 interface with its ends, exchange and hazards</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1120" height="602" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · PX4 interface register</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The 9 IF-PX4 interfaces of the item definition: who sends what to whom, and which hazards each carries, and whether PX4Integration.sysml</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">models it as a connection. PX4 v1.16.2 is pinned; every interface is proposed.</text>
+<text x="1080" y="44" font-size="11" fill="#475569" text-anchor="end">architecture/item-definition.yaml</text>
+<line x1="40" y1="102" x2="1080" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="132" font-size="10.5" fill="#475569" font-weight="700">Interface</text>
+<text x="140" y="132" font-size="10.5" fill="#475569" font-weight="700">Name / exchange</text>
+<text x="420" y="132" font-size="10.5" fill="#475569" font-weight="700">From</text>
+<text x="560" y="132" font-size="10.5" fill="#475569" font-weight="700">To</text>
+<text x="700" y="132" font-size="10.5" fill="#475569" font-weight="700">Kind</text>
+<text x="810" y="132" font-size="10.5" fill="#475569" font-weight="700">Hazards</text>
+<text x="990" y="132" font-size="10.5" fill="#475569" font-weight="700">In SysML</text>
+<line x1="40" y1="144" x2="1080" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="156" width="70.6" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="75.3" y="167.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">IF-PX4-001</text>
+<text x="140" y="162" font-size="11" fill="#0F172A" font-weight="700">Flight state, position and status</text>
+<text x="140" y="176" font-size="9.5" fill="#475569">flight state, position, status; freshness and source validity</text>
+<text x="420" y="168" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1-FC</text>
+<text x="538" y="168" font-size="12" fill="#475569">→</text>
+<text x="560" y="168" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-I1-INT</text>
+<text x="700" y="168" font-size="10.5" fill="#475569">data</text>
+<rect x="810" y="156" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="849.5" y="167.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<text x="990" y="168" font-size="10.5" fill="#2E9E6A">connection</text>
+<rect x="40" y="185" width="1040" height="38" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="196" width="70.6" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="75.3" y="207.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">IF-PX4-002</text>
+<text x="140" y="202" font-size="11" fill="#0F172A" font-weight="700">UAV health and arming state</text>
+<text x="140" y="216" font-size="9.5" fill="#475569">health, arming state; disagreement handling</text>
+<text x="420" y="208" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1-FC</text>
+<text x="538" y="208" font-size="12" fill="#475569">→</text>
+<text x="560" y="208" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-I1-INT</text>
+<text x="700" y="208" font-size="10.5" fill="#475569">data</text>
+<rect x="810" y="196" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="849.5" y="207.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-DCK-001</text>
+<text x="990" y="208" font-size="10.5" fill="#2E9E6A">connection</text>
+<rect x="40" y="236" width="70.6" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="75.3" y="247.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">IF-PX4-003</text>
+<text x="140" y="242" font-size="11" fill="#0F172A" font-weight="700">Dock occupied and retained</text>
+<text x="140" y="256" font-size="9.5" fill="#475569">occupied/retained state with independent plausibility</text>
+<text x="420" y="248" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-DCK</text>
+<text x="538" y="248" font-size="12" fill="#475569">→</text>
+<text x="560" y="248" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-I1-INT</text>
+<text x="700" y="248" font-size="10.5" fill="#475569">data</text>
+<rect x="810" y="236" width="79.1" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="849.5" y="247.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">HAZ-DCK-002</text>
+<text x="990" y="248" font-size="10.5" fill="#2E9E6A">connection</text>
+<rect x="40" y="265" width="1040" height="38" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="276" width="70.6" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="75.3" y="287.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">IF-PX4-004</text>
+<text x="140" y="282" font-size="11" fill="#0F172A" font-weight="700">Walker posture and stationary state</text>
+<text x="140" y="296" font-size="9.5" fill="#475569">posture, stationary flag for the launch/recovery envelope</text>
+<text x="420" y="288" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-CTL</text>
+<text x="538" y="288" font-size="12" fill="#475569">→</text>
+<text x="560" y="288" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-I1-INT</text>
+<text x="700" y="288" font-size="10.5" fill="#475569">data</text>
+<rect x="810" y="276" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="849.5" y="287.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<text x="990" y="288" font-size="10.5" fill="#2E9E6A">connection</text>
+<rect x="40" y="316" width="70.6" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="75.3" y="327.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">IF-PX4-005</text>
+<text x="140" y="322" font-size="11" fill="#0F172A" font-weight="700">Launch permit and revoke</text>
+<text x="140" y="336" font-size="9.5" fill="#475569">explicit, fail-closed launch authorization</text>
+<text x="420" y="328" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-I1-INT</text>
+<text x="538" y="328" font-size="12" fill="#475569">→</text>
+<text x="560" y="328" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1-FC</text>
+<text x="700" y="328" font-size="10.5" fill="#475569">data</text>
+<rect x="810" y="316" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="849.5" y="327.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<text x="990" y="328" font-size="10.5" fill="#2E9E6A">connection</text>
+<rect x="40" y="345" width="1040" height="38" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="356" width="70.6" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="75.3" y="367.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">IF-PX4-006</text>
+<text x="140" y="362" font-size="11" fill="#0F172A" font-weight="700">Recovery and abort intent</text>
+<text x="140" y="376" font-size="9.5" fill="#475569">recovery request, abort; contingency on lost link</text>
+<text x="420" y="368" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-I1-INT</text>
+<text x="538" y="368" font-size="12" fill="#475569">→</text>
+<text x="560" y="368" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1-FC</text>
+<text x="700" y="368" font-size="10.5" fill="#475569">data</text>
+<rect x="810" y="356" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="849.5" y="367.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<text x="990" y="368" font-size="10.5" fill="#2E9E6A">connection</text>
+<rect x="40" y="396" width="70.6" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="75.3" y="407.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">IF-PX4-007</text>
+<text x="140" y="402" font-size="11" fill="#0F172A" font-weight="700">UAV video and mission cues</text>
+<text x="140" y="416" font-size="9.5" fill="#475569">video, mission cues; latency, distraction</text>
+<text x="420" y="408" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1-NAV</text>
+<text x="538" y="408" font-size="12" fill="#475569">→</text>
+<text x="560" y="408" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-PIL</text>
+<text x="700" y="408" font-size="10.5" fill="#475569">data</text>
+<text x="990" y="408" font-size="10.5" fill="#D97706">not modelled</text>
+<rect x="40" y="425" width="1040" height="38" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="436" width="70.6" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="75.3" y="447.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">IF-PX4-008</text>
+<text x="140" y="442" font-size="11" fill="#0F172A" font-weight="700">Fault and contingency notification</text>
+<text x="140" y="456" font-size="9.5" fill="#475569">time-stamped, prioritised fault notifications</text>
+<text x="420" y="448" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-I1-INT</text>
+<text x="538" y="448" font-size="12" fill="#475569">↔</text>
+<text x="560" y="448" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1-FC</text>
+<text x="700" y="448" font-size="10.5" fill="#475569">data</text>
+<rect x="810" y="436" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="849.5" y="447.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<text x="990" y="448" font-size="10.5" fill="#D97706">not modelled</text>
+<rect x="40" y="476" width="70.6" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="75.3" y="487.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">IF-PX4-009</text>
+<text x="140" y="482" font-size="11" fill="#0F172A" font-weight="700">Power and charging handshake</text>
+<text x="140" y="496" font-size="9.5" fill="#475569">charging handshake, rotor inhibit, energy isolation</text>
+<text x="420" y="488" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-M1-DCK</text>
+<text x="538" y="488" font-size="12" fill="#475569">↔</text>
+<text x="560" y="488" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SUS-A1-PWR</text>
+<text x="700" y="488" font-size="10.5" fill="#475569">energy, data</text>
+<rect x="810" y="476" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="849.5" y="487.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-DCK-001</text>
+<text x="990" y="488" font-size="10.5" fill="#2E9E6A">connection</text>
+<line x1="40" y1="512" x2="1080" y2="512" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="526" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
+<text x="62" y="536" font-size="11" fill="#475569">IF-PX4 interface</text>
+<rect x="164.1" y="526" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="186.1" y="536" font-size="11" fill="#475569">Hazard, Serious initial risk (preliminary)</text>
+<rect x="402.4" y="526" width="14" height="12" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="424.4" y="536" font-size="11" fill="#475569">Hazard, Medium initial risk (preliminary)</text>
+<text x="40" y="558" font-size="10.5" fill="#94A3B8">Generated by tools/figures/integrations_readme.py from the item definition, PX4Integration.sysml, SSFs and SITL results. Proposed integration: not implemented, integrated or verified; SITL is</text>
+<text x="40" y="573" font-size="10.5" fill="#94A3B8">synthetic with no evidence credit. ↔ two-way, → one-way.</text>
+<g class="terms" data-base-h="602">
+<rect x="0" y="602" width="1120" height="98.1" fill="#FFFFFF"/>
+<line x1="40" y1="606" x2="1080" y2="606" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="621.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · IF-nnn = interface in the item definition (architecture/item-definition.yaml) · IF-PX4-nnn = PX4 integration interface</text>
+<text x="40" y="636.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(integrations/px4/interface-contract.md) · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SITL = software-in-the-loop simulation · SSF-nnn =</text>
+<text x="40" y="650.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">safety-significant software function record (safety/software/) · SUS-A1 = dockable observation UAV · SUS-A1-FC = PX4-based flight controller · SUS-A1-NAV = navigation sensors, camera and</text>
+<text x="40" y="665.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">telemetry · SUS-A1-PWR = UAV battery and power management · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK = UAV</text>
+<text x="40" y="679.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">dock, retention, charging and release · SUS-M1-PIL = pilot station, restraints, displays and controls · SysML = Systems Modeling Language (SysML v2) · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

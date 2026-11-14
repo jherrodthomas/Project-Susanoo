@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="605.1" viewBox="0 0 1240 605.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · Edge cases and what would have saved them</title>
+<desc>Every edge case with its parameters and probe outcomes</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1240" height="565" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · Edge cases and what would have saved them</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The 8 worst distinct failures the search found, each with its parameters, outcome and mapped hazard, re-run under every assumption probe: a green probe means that</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">change alone avoids the mishap.</text>
+<text x="1200" y="44" font-size="11" fill="#475569" text-anchor="end">sim/results/search-*.json</text>
+<line x1="40" y1="102" x2="1200" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="132" font-size="10.5" fill="#475569" font-weight="700">Case</text>
+<text x="110" y="132" font-size="10.5" fill="#475569" font-weight="700">Parameters</text>
+<text x="440" y="132" font-size="10.5" fill="#475569" font-weight="700">Outcome / hazard</text>
+<text x="604" y="120" font-size="10" fill="#0F172A" font-weight="700">pilot reacts in 0.5 s</text>
+<text x="754" y="120" font-size="10" fill="#0F172A" font-weight="700">load holding works</text>
+<text x="904" y="120" font-size="10" fill="#0F172A" font-weight="700">flat ground</text>
+<text x="1054" y="120" font-size="10" fill="#0F172A" font-weight="700">slow leak (tau 3 s)</text>
+<line x1="40" y1="146" x2="1200" y2="146" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="171" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">EC-01</text>
+<text x="110" y="165" font-size="10" fill="#0F172A">slope 12° · leak τ 0.05 s · offset 0.09 m</text>
+<text x="110" y="180" font-size="10" fill="#475569">pilot 3 s · load holding fails</text>
+<rect x="440" y="151" width="56.5" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="468.3" y="162.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="440" y="170" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="479.5" y="181.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PIL-002</text>
+<rect x="604" y="151" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="675" y="171" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="754" y="151" width="142" height="32" rx="6" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="825" y="171" font-size="10" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="904" y="151" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="975" y="171" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="1054" y="151" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="1125" y="171" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="40" y="189" width="1160" height="40" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="213" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">EC-02</text>
+<text x="110" y="207" font-size="10" fill="#0F172A">slope 13.5° · leak τ 0.06 s · offset 0.04 m</text>
+<text x="110" y="222" font-size="10" fill="#475569">pilot 2 s · load holding fails</text>
+<rect x="440" y="193" width="56.5" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="468.3" y="204.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="440" y="212" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="479.5" y="223.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PIL-002</text>
+<rect x="604" y="193" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="675" y="213" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="754" y="193" width="142" height="32" rx="6" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="825" y="213" font-size="10" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="904" y="193" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="975" y="213" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="1054" y="193" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="1125" y="213" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<text x="40" y="255" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">EC-03</text>
+<text x="110" y="249" font-size="10" fill="#0F172A">slope 12° · leak τ 0.06 s · offset 0.09 m</text>
+<text x="110" y="264" font-size="10" fill="#475569">pilot 0.9 s · load holding fails</text>
+<rect x="440" y="235" width="56.5" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="468.3" y="246.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="440" y="254" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="479.5" y="265.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PIL-002</text>
+<rect x="604" y="235" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="675" y="255" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="754" y="235" width="142" height="32" rx="6" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="825" y="255" font-size="10" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="904" y="235" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="975" y="255" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="1054" y="235" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="1125" y="255" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="40" y="273" width="1160" height="40" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="297" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">EC-04</text>
+<text x="110" y="291" font-size="10" fill="#0F172A">slope 20° · leak τ 0.07 s · offset 0.09 m</text>
+<text x="110" y="306" font-size="10" fill="#475569">pilot 2.2 s · load holding fails</text>
+<rect x="440" y="277" width="56.5" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="468.3" y="288.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="440" y="296" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="479.5" y="307.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PIL-002</text>
+<rect x="604" y="277" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="675" y="297" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="754" y="277" width="142" height="32" rx="6" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="825" y="297" font-size="10" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="904" y="277" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="975" y="297" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="1054" y="277" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="1125" y="297" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">tip</text>
+<text x="40" y="339" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">EC-05</text>
+<text x="110" y="333" font-size="10" fill="#0F172A">slope 0° · leak τ 0.05 s · offset 0.05 m</text>
+<text x="110" y="348" font-size="10" fill="#475569">pilot 3 s · load holding fails</text>
+<rect x="440" y="319" width="56.5" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="468.3" y="330.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="440" y="338" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="479.5" y="349.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PIL-002</text>
+<rect x="604" y="319" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="675" y="339" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="754" y="319" width="142" height="32" rx="6" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="825" y="339" font-size="10" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="904" y="319" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="975" y="339" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="1054" y="319" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="1125" y="339" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="40" y="357" width="1160" height="40" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="381" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">EC-06</text>
+<text x="110" y="375" font-size="10" fill="#0F172A">slope 1.5° · leak τ 0.06 s · offset 0.04 m</text>
+<text x="110" y="390" font-size="10" fill="#475569">pilot 1.3 s · load holding fails</text>
+<rect x="440" y="361" width="56.5" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="468.3" y="372.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="440" y="380" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="479.5" y="391.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PIL-002</text>
+<rect x="604" y="361" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="675" y="381" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="754" y="361" width="142" height="32" rx="6" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="825" y="381" font-size="10" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="904" y="361" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="975" y="381" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="1054" y="361" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="1125" y="381" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<text x="40" y="423" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">EC-07</text>
+<text x="110" y="417" font-size="10" fill="#0F172A">slope 20° · leak τ 2.87 s · offset 0.05 m</text>
+<text x="110" y="432" font-size="10" fill="#475569">pilot 2.3 s · load holding fails</text>
+<rect x="440" y="403" width="24.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="452" y="414.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip</text>
+<rect x="440" y="422" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="479.5" y="433.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-WLK-002</text>
+<rect x="604" y="403" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="675" y="423" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="754" y="403" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="825" y="423" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">tip</text>
+<rect x="904" y="403" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="975" y="423" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">hard-drop</text>
+<rect x="1054" y="403" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="1125" y="423" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">tip</text>
+<rect x="40" y="441" width="1160" height="40" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="465" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">EC-08</text>
+<text x="110" y="459" font-size="10" fill="#0F172A">slope 19.5° · leak τ 1.94 s · offset 0.09 m</text>
+<text x="110" y="474" font-size="10" fill="#475569">pilot 2.4 s · load holding works</text>
+<rect x="440" y="445" width="24.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="452" y="456.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">tip</text>
+<rect x="440" y="464" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="479.5" y="475.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-WLK-002</text>
+<rect x="604" y="445" width="142" height="32" rx="6" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="675" y="465" font-size="10" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="754" y="445" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="825" y="465" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">tip</text>
+<rect x="904" y="445" width="142" height="32" rx="6" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="975" y="465" font-size="10" fill="#2E9E6A" font-weight="700" text-anchor="middle">safe</text>
+<rect x="1054" y="445" width="142" height="32" rx="6" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="1125" y="465" font-size="10" fill="#D2553F" font-weight="700" text-anchor="middle">tip</text>
+<line x1="40" y1="490" x2="1200" y2="490" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="504" width="14" height="12" rx="3" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.2"/>
+<text x="62" y="514" font-size="11" fill="#475569">Safe under the probe</text>
+<rect x="182" y="504" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2"/>
+<text x="204" y="514" font-size="11" fill="#475569">Mishap: tip or hard drop</text>
+<text x="40" y="536" font-size="10.5" fill="#94A3B8">Generated by tools/figures/search_readme.py from families.yaml, search.py and the committed search results. Synthetic: findings for the safety lead with no evidence credit (sim/README.md, evidence gate).</text>
+<g class="terms" data-base-h="565">
+<rect x="0" y="565" width="1240" height="40.1" fill="#FFFFFF"/>
+<line x1="40" y1="569" x2="1200" y2="569" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="584.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: EC-nnn = edge case found by a failure search · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml)</text>
+</g>
+</svg>

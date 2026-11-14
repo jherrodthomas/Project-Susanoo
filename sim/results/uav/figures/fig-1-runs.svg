@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="596.1" viewBox="0 0 1280 596.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · The result files</title>
+<desc>Every PX4 SITL result file with what it records</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1280" height="527" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · The result files</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">6 PX4 SITL runs (PX4 SITL SIH sihsim_quadx (headless, lockstep), PX4 v1.16.2, 4.0× speed), one JSON each, with summary.md naming 3 findings. Times are seconds after</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">the injection.</text>
+<text x="1240" y="44" font-size="11" fill="#475569" text-anchor="end">sim/results/uav/SU-*.json</text>
+<line x1="40" y1="102" x2="1240" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="132" font-size="10.5" fill="#475569" font-weight="700">Run</text>
+<text x="110" y="132" font-size="10.5" fill="#475569" font-weight="700">Scenario · hazards</text>
+<text x="460" y="132" font-size="10.5" fill="#475569" font-weight="700">Injection</text>
+<text x="690" y="132" font-size="10.5" fill="#475569" font-weight="700">Params set</text>
+<text x="800" y="132" font-size="10.5" fill="#475569" font-weight="700">First failsafe</text>
+<text x="940" y="132" font-size="10.5" fill="#475569" font-weight="700">Outcome</text>
+<text x="1100" y="132" font-size="10.5" fill="#475569" font-weight="700">Samples</text>
+<text x="1170" y="132" font-size="10.5" fill="#475569" font-weight="700">Findings</text>
+<line x1="40" y1="144" x2="1240" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="173" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SU-01</text>
+<text x="110" y="166" font-size="10.5" fill="#0F172A">GCS link lost during observation, return-to-launch configured</text>
+<text x="110" y="181" font-size="9.5" fill="#475569">HAZ-INT-001</text>
+<text x="460" y="173" font-size="10" fill="#0F172A">link lost at 10 s</text>
+<text x="690" y="173" font-size="10.5" fill="#0F172A">6</text>
+<text x="800" y="173" font-size="10" fill="#0F172A">AUTO.RTL at 12.7 s</text>
+<rect x="940" y="161" width="84.5" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="982.2" y="172.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">keepout-breach</text>
+<text x="1100" y="166" font-size="10.5" fill="#0F172A">83</text>
+<text x="1100" y="181" font-size="9" fill="#475569">7.1 KB</text>
+<text x="1170" y="173" font-size="9.5" fill="#0F172A">FND-UAV-01</text>
+<rect x="40" y="195" width="1200" height="48" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="223" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SU-02</text>
+<text x="110" y="216" font-size="10.5" fill="#0F172A">GCS link lost, return-to-launch, walker has moved since take-off</text>
+<text x="110" y="231" font-size="9.5" fill="#475569">HAZ-INT-001, HAZ-DCK-002</text>
+<text x="460" y="223" font-size="10" fill="#0F172A">link lost at 10 s</text>
+<text x="690" y="223" font-size="10.5" fill="#0F172A">6</text>
+<text x="800" y="223" font-size="10" fill="#0F172A">AUTO.RTL at 13.4 s</text>
+<rect x="940" y="211" width="110.2" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="995.1" y="222.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">landed-at-stale-home</text>
+<text x="1100" y="216" font-size="10.5" fill="#0F172A">84</text>
+<text x="1100" y="231" font-size="9" fill="#475569">7.1 KB</text>
+<text x="1170" y="223" font-size="9.5" fill="#0F172A">FND-UAV-02</text>
+<text x="40" y="273" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SU-03</text>
+<text x="110" y="266" font-size="10.5" fill="#0F172A">GCS link lost during observation, land in place configured</text>
+<text x="110" y="281" font-size="9.5" fill="#475569">HAZ-INT-001</text>
+<text x="460" y="273" font-size="10" fill="#0F172A">link lost at 10 s</text>
+<text x="690" y="273" font-size="10.5" fill="#0F172A">6</text>
+<text x="800" y="273" font-size="10" fill="#0F172A">AUTO.LAND at 13.5 s</text>
+<rect x="940" y="261" width="69.7" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="974.9" y="272.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">landed-clear</text>
+<text x="1100" y="266" font-size="10.5" fill="#0F172A">55</text>
+<text x="1100" y="281" font-size="9" fill="#475569">5.2 KB</text>
+<text x="1170" y="273" font-size="9.5" fill="#475569">—</text>
+<rect x="40" y="295" width="1200" height="48" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="323" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SU-04</text>
+<text x="110" y="316" font-size="10.5" fill="#0F172A">Battery failure during observation</text>
+<text x="110" y="331" font-size="9.5" fill="#475569">HAZ-INT-001</text>
+<text x="460" y="323" font-size="10" fill="#0F172A">battery off at 10 s</text>
+<text x="690" y="323" font-size="10.5" fill="#0F172A">6</text>
+<text x="800" y="323" font-size="10" fill="#0F172A">AUTO.LAND at 7.3 s</text>
+<rect x="940" y="311" width="69.7" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="974.9" y="322.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">landed-clear</text>
+<text x="1100" y="316" font-size="10.5" fill="#0F172A">49</text>
+<text x="1100" y="331" font-size="9" fill="#475569">5.2 KB</text>
+<text x="1170" y="323" font-size="9.5" fill="#475569">—</text>
+<text x="40" y="373" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SU-05</text>
+<text x="110" y="366" font-size="10.5" fill="#0F172A">Commanded beyond the geofence</text>
+<text x="110" y="381" font-size="9.5" fill="#475569">HAZ-INT-001</text>
+<text x="460" y="373" font-size="10" fill="#0F172A">reposition beyond the fence at 10 s</text>
+<text x="690" y="373" font-size="10.5" fill="#0F172A">6</text>
+<text x="800" y="373" font-size="10" fill="#475569">none</text>
+<rect x="940" y="361" width="57.6" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="968.8" y="372.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">contained</text>
+<text x="1100" y="366" font-size="10.5" fill="#0F172A">195</text>
+<text x="1100" y="381" font-size="9" fill="#475569">15.4 KB</text>
+<text x="1170" y="373" font-size="9.5" fill="#475569">—</text>
+<rect x="40" y="395" width="1200" height="48" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="423" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SU-06</text>
+<text x="110" y="416" font-size="10.5" fill="#0F172A">GPS lost during observation (emulated)</text>
+<text x="110" y="431" font-size="9.5" fill="#475569">HAZ-INT-001</text>
+<text x="460" y="423" font-size="10" fill="#0F172A">EKF2_GPS_CTRL=0 at 10 s</text>
+<text x="690" y="423" font-size="10.5" fill="#0F172A">5</text>
+<text x="800" y="423" font-size="10" fill="#0F172A">AUTO.LAND at 4.9 s</text>
+<rect x="940" y="411" width="69.7" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="974.9" y="422.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">landed-clear</text>
+<text x="1100" y="416" font-size="10.5" fill="#0F172A">62</text>
+<text x="1100" y="431" font-size="9" fill="#475569">6.1 KB</text>
+<text x="1170" y="423" font-size="9.5" fill="#0F172A">FND-UAV-03</text>
+<line x1="40" y1="452" x2="1240" y2="452" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="466" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2"/>
+<text x="62" y="476" font-size="11" fill="#475569">Unsafe outcome</text>
+<rect x="155.7" y="466" width="14" height="12" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="177.7" y="476" font-size="11" fill="#475569">Questionable</text>
+<rect x="255.9" y="466" width="14" height="12" rx="3" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.2"/>
+<text x="277.9" y="476" font-size="11" fill="#475569">Clear or contained</text>
+<text x="40" y="498" font-size="10.5" fill="#94A3B8">Generated by tools/figures/uavresults_readme.py from the PX4 SITL result files, their summary and the harness that writes them. Synthetic simulation output; design aid only, no evidence credit (sim/README.md, evidence gate).</text>
+<g class="terms" data-base-h="527">
+<rect x="0" y="527" width="1280" height="69.1" fill="#FFFFFF"/>
+<line x1="40" y1="531" x2="1240" y2="531" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="546.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: FND-UAV-nnn = finding from the UAV simulations, for the safety lead · GCS = ground control station · GPS = Global Positioning System · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · JSON = JavaScript</text>
+<text x="40" y="561.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Object Notation, a data file format · KB = kilobyte, a file size of 1,024 bytes · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SIH = simulation-in-hardware, PX4's built-in headless</text>
+<text x="40" y="575.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">simulator · SITL = software-in-the-loop simulation · SU-nnn = UAV PX4 SITL scenario · SUS-A1 = dockable observation UAV · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

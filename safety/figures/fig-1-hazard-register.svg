@@ -1,0 +1,390 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1044.6" viewBox="0 0 1120 1044.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · Hazard register</title>
+<desc>Every hazard with its preliminary risk and the records that control it</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1120" height="990" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · Hazard register</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">22 hazards (22 open). Initial risk: 8 High, 2 Medium, 12 Serious; target risk after planned mitigation: 21 Medium, 1 Serious. Preliminary; none</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">accepted.</text>
+<text x="1080" y="44" font-size="11" fill="#475569" text-anchor="end">safety/hazards/HAZ-*.yaml</text>
+<line x1="40" y1="102" x2="1080" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="132" font-size="10.5" fill="#475569" font-weight="700">Hazard</text>
+<text x="158" y="132" font-size="10.5" fill="#475569" font-weight="700">Title</text>
+<text x="460" y="132" font-size="10.5" fill="#475569" font-weight="700">Status</text>
+<text x="530" y="132" font-size="10.5" fill="#475569" font-weight="700">Initial risk</text>
+<text x="640" y="132" font-size="10.5" fill="#475569" font-weight="700">Target risk</text>
+<text x="750" y="132" font-size="10.5" fill="#475569" font-weight="700">Mitigations</text>
+<text x="830" y="132" font-size="10.5" fill="#475569" font-weight="700">Reqs</text>
+<text x="890" y="132" font-size="10.5" fill="#475569" font-weight="700">SSFs</text>
+<text x="950" y="132" font-size="10.5" fill="#475569" font-weight="700">Event risk</text>
+<text x="1030" y="132" font-size="10.5" fill="#475569" font-weight="700">Accepted</text>
+<line x1="40" y1="144" x2="1080" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="153" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="79.5" y="164.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-DCK-001</text>
+<text x="158" y="159" font-size="11" fill="#0F172A">Rotor start while UAV is retained or a person is at the</text>
+<text x="158" y="172" font-size="11" fill="#0F172A">dock</text>
+<text x="460" y="165" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="153" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="542.4" y="164.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">2C</text>
+<text x="560.8" y="165" font-size="10" fill="#C2410C">Serious</text>
+<rect x="640" y="153" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="164.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">2E</text>
+<text x="670.8" y="165" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="165" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">4</text>
+<text x="842" y="165" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<text x="902" y="165" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="950" y="165" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="165" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="179" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="187" width="79.1" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="79.5" y="198.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">HAZ-DCK-002</text>
+<text x="158" y="199" font-size="11" fill="#0F172A">False retained state releases UAV under motion</text>
+<text x="460" y="199" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="187" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="542.4" y="198.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">2D</text>
+<text x="560.8" y="199" font-size="10" fill="#D97706">Medium</text>
+<rect x="640" y="187" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="198.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">2E</text>
+<text x="670.8" y="199" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="199" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="199" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="902" y="199" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="950" y="199" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="199" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="221" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="79.5" y="232.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-DCK-003</text>
+<text x="158" y="233" font-size="11" fill="#0F172A">UAV battery thermal event while charging on the dock</text>
+<text x="460" y="233" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="221" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="542.4" y="232.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">2C</text>
+<text x="560.8" y="233" font-size="10" fill="#C2410C">Serious</text>
+<rect x="640" y="221" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="232.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">2D</text>
+<text x="670.8" y="233" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="233" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="233" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="902" y="233" font-size="11" fill="#94A3B8" font-weight="400" text-anchor="middle">–</text>
+<text x="950" y="233" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="233" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="247" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="255" width="79.1" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="79.5" y="266.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">HAZ-DCK-004</text>
+<text x="158" y="267" font-size="11" fill="#0F172A">Exposure to energised dock charging contacts</text>
+<text x="460" y="267" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="255" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="542.4" y="266.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">3C</text>
+<text x="560.8" y="267" font-size="10" fill="#D97706">Medium</text>
+<rect x="640" y="255" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="266.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">3D</text>
+<text x="670.8" y="267" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="267" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">4</text>
+<text x="842" y="267" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<text x="902" y="267" font-size="11" fill="#94A3B8" font-weight="400" text-anchor="middle">–</text>
+<text x="950" y="267" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="267" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="289" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="79.5" y="300.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-GSE-001</text>
+<text x="158" y="301" font-size="11" fill="#0F172A">Fall from height during maintenance on the walker</text>
+<text x="460" y="301" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="289" width="24.8" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="542.4" y="300.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">1C</text>
+<text x="560.8" y="301" font-size="10" fill="#D2553F">High</text>
+<rect x="640" y="289" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="300.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="301" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="301" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="301" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="902" y="301" font-size="11" fill="#94A3B8" font-weight="400" text-anchor="middle">–</text>
+<rect x="950" y="289" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="962.4" y="300.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="1030" y="301" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="315" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="323" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="79.5" y="334.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<text x="158" y="335" font-size="11" fill="#0F172A">UAV launch or recovery outside the safe envelope</text>
+<text x="460" y="335" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="323" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="542.4" y="334.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">2C</text>
+<text x="560.8" y="335" font-size="10" fill="#C2410C">Serious</text>
+<rect x="640" y="323" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="334.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">2E</text>
+<text x="670.8" y="335" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="335" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">7</text>
+<text x="842" y="335" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<text x="902" y="335" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<text x="950" y="335" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="335" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="357" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="79.5" y="368.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-002</text>
+<text x="158" y="369" font-size="11" fill="#0F172A">Pilot acts on misleading or stale UAV information</text>
+<text x="460" y="369" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="357" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="542.4" y="368.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="560.8" y="369" font-size="10" fill="#C2410C">Serious</text>
+<rect x="640" y="357" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="368.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="369" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="369" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="369" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="902" y="369" font-size="11" fill="#94A3B8" font-weight="400" text-anchor="middle">–</text>
+<text x="950" y="369" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="369" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="383" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="391" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="79.5" y="402.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-MAN-001</text>
+<text x="158" y="403" font-size="11" fill="#0F172A">Person struck or pinned by the arms or claws</text>
+<text x="460" y="403" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="391" width="24.8" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="542.4" y="402.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">1C</text>
+<text x="560.8" y="403" font-size="10" fill="#D2553F">High</text>
+<rect x="640" y="391" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="402.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="403" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="403" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="403" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="902" y="403" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="950" y="403" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="403" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="425" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="79.5" y="436.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-MAN-002</text>
+<text x="158" y="437" font-size="11" fill="#0F172A">Carried load swings, shifts or drops while walking</text>
+<text x="460" y="437" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="425" width="24.8" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="542.4" y="436.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">1C</text>
+<text x="560.8" y="437" font-size="10" fill="#D2553F">High</text>
+<rect x="640" y="425" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="652.4" y="436.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="670.8" y="437" font-size="10" fill="#C2410C">Serious</text>
+<text x="770" y="437" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="437" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<text x="902" y="437" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="950" y="437" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="437" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="451" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="459" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="79.5" y="470.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-PIL-001</text>
+<text x="158" y="471" font-size="11" fill="#0F172A">Unintended leg motion during pilot ingress or egress</text>
+<text x="460" y="471" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="459" width="24.8" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="542.4" y="470.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">1C</text>
+<text x="560.8" y="471" font-size="10" fill="#D2553F">High</text>
+<rect x="640" y="459" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="470.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="471" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="471" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">5</text>
+<text x="842" y="471" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<text x="902" y="471" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<rect x="950" y="459" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="962.4" y="470.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="1030" y="471" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="493" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="79.5" y="504.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PIL-002</text>
+<text x="158" y="499" font-size="11" fill="#0F172A">Uncontrolled vertical drop of the cockpit on loss of leg</text>
+<text x="158" y="512" font-size="11" fill="#0F172A">support</text>
+<text x="460" y="505" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="493" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="542.4" y="504.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">2C</text>
+<text x="560.8" y="505" font-size="10" fill="#C2410C">Serious</text>
+<rect x="640" y="493" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="504.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">2E</text>
+<text x="670.8" y="505" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="505" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">4</text>
+<text x="842" y="505" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="902" y="505" font-size="11" fill="#94A3B8" font-weight="400" text-anchor="middle">–</text>
+<rect x="950" y="493" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="962.4" y="504.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">2E</text>
+<text x="1030" y="505" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="519" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="527" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="79.5" y="538.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PIL-003</text>
+<text x="158" y="539" font-size="11" fill="#0F172A">Fall from height during emergency egress</text>
+<text x="460" y="539" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="527" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="542.4" y="538.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="560.8" y="539" font-size="10" fill="#C2410C">Serious</text>
+<rect x="640" y="527" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="538.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="539" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="539" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="539" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="902" y="539" font-size="11" fill="#94A3B8" font-weight="400" text-anchor="middle">–</text>
+<text x="950" y="539" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="539" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="561" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="79.5" y="572.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PIL-004</text>
+<text x="158" y="573" font-size="11" fill="#0F172A">Normal egress blocked when the walker cannot lower</text>
+<text x="460" y="573" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="561" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="542.4" y="572.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="560.8" y="573" font-size="10" fill="#C2410C">Serious</text>
+<rect x="640" y="561" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="572.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="573" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="573" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="573" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<text x="902" y="573" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="950" y="573" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="573" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="587" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="595" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="79.5" y="606.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PIL-005</text>
+<text x="158" y="607" font-size="11" fill="#0F172A">Fall during normal ingress or egress</text>
+<text x="460" y="607" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="595" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="542.4" y="606.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">2C</text>
+<text x="560.8" y="607" font-size="10" fill="#C2410C">Serious</text>
+<rect x="640" y="595" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="606.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">2D</text>
+<text x="670.8" y="607" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="607" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="607" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="902" y="607" font-size="11" fill="#94A3B8" font-weight="400" text-anchor="middle">–</text>
+<text x="950" y="607" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="607" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="629" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="79.5" y="640.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PIL-006</text>
+<text x="158" y="641" font-size="11" fill="#0F172A">Delayed or unsafe extraction of an incapacitated pilot</text>
+<text x="460" y="641" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="629" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="542.4" y="640.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="560.8" y="641" font-size="10" fill="#C2410C">Serious</text>
+<rect x="640" y="629" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="640.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="641" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="641" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="641" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="902" y="641" font-size="11" fill="#94A3B8" font-weight="400" text-anchor="middle">–</text>
+<text x="950" y="641" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="641" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="655" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="663" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="79.5" y="674.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PWR-001</text>
+<text x="158" y="675" font-size="11" fill="#0F172A">Residual hydraulic pressure during maintenance</text>
+<text x="460" y="675" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="663" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="542.4" y="674.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="560.8" y="675" font-size="10" fill="#C2410C">Serious</text>
+<rect x="640" y="663" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="674.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="675" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="675" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">4</text>
+<text x="842" y="675" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="902" y="675" font-size="11" fill="#94A3B8" font-weight="400" text-anchor="middle">–</text>
+<rect x="950" y="663" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="962.4" y="674.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="1030" y="675" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="697" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="79.5" y="708.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PWR-002</text>
+<text x="158" y="709" font-size="11" fill="#0F172A">Battery thermal runaway near the pilot station</text>
+<text x="460" y="709" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="697" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="542.4" y="708.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="560.8" y="709" font-size="10" fill="#C2410C">Serious</text>
+<rect x="640" y="697" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="708.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="709" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="709" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">4</text>
+<text x="842" y="709" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="902" y="709" font-size="11" fill="#94A3B8" font-weight="400" text-anchor="middle">–</text>
+<text x="950" y="709" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="709" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="723" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="731" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="79.5" y="742.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-PWR-003</text>
+<text x="158" y="743" font-size="11" fill="#0F172A">Fuel leak and fire at the engine-generator</text>
+<text x="460" y="743" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="731" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="542.4" y="742.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="560.8" y="743" font-size="10" fill="#C2410C">Serious</text>
+<rect x="640" y="731" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="742.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="743" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="743" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="743" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="902" y="743" font-size="11" fill="#94A3B8" font-weight="400" text-anchor="middle">–</text>
+<text x="950" y="743" font-size="11" fill="#94A3B8">–</text>
+<text x="1030" y="743" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="765" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="79.5" y="776.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-SAF-001</text>
+<text x="158" y="777" font-size="11" fill="#0F172A">Protective stop does not reach a safe state</text>
+<text x="460" y="777" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="765" width="24.8" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="542.4" y="776.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">1C</text>
+<text x="560.8" y="777" font-size="10" fill="#D2553F">High</text>
+<rect x="640" y="765" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="776.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="777" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="777" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="777" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="902" y="777" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<rect x="950" y="765" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="962.4" y="776.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="1030" y="777" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="791" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="799" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="79.5" y="810.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-WLK-001</text>
+<text x="158" y="811" font-size="11" fill="#0F172A">Stale or lost feedback causes runaway motion</text>
+<text x="460" y="811" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="799" width="24.8" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="542.4" y="810.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">1C</text>
+<text x="560.8" y="811" font-size="10" fill="#D2553F">High</text>
+<rect x="640" y="799" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="810.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="811" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="811" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="811" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<text x="902" y="811" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<rect x="950" y="799" width="24.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="962.4" y="810.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">1D</text>
+<text x="1030" y="811" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="833" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="79.5" y="844.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-WLK-002</text>
+<text x="158" y="845" font-size="11" fill="#0F172A">Walker tip-over or fall with pilot aboard</text>
+<text x="460" y="845" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="833" width="24.8" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="542.4" y="844.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">1C</text>
+<text x="560.8" y="845" font-size="10" fill="#D2553F">High</text>
+<rect x="640" y="833" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="844.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="845" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="845" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">7</text>
+<text x="842" y="845" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="902" y="845" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<rect x="950" y="833" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="962.4" y="844.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="1030" y="845" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<rect x="40" y="859" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="867" width="79.1" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="79.5" y="878.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">HAZ-WLK-003</text>
+<text x="158" y="879" font-size="11" fill="#0F172A">Crushing under the pod or legs while kneeling or rising</text>
+<text x="460" y="879" font-size="10.5" fill="#475569">open</text>
+<rect x="530" y="867" width="24.8" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="542.4" y="878.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">1C</text>
+<text x="560.8" y="879" font-size="10" fill="#D2553F">High</text>
+<rect x="640" y="867" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="652.4" y="878.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="670.8" y="879" font-size="10" fill="#D97706">Medium</text>
+<text x="770" y="879" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<text x="842" y="879" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<text x="902" y="879" font-size="11" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<rect x="950" y="867" width="24.8" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="962.4" y="878.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">1E</text>
+<text x="1030" y="879" font-size="10.5" fill="#D97706" font-weight="700">no</text>
+<line x1="40" y1="900" x2="1080" y2="900" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="914" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2"/>
+<text x="62" y="924" font-size="11" fill="#475569">High</text>
+<rect x="96.9" y="914" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="118.9" y="924" font-size="11" fill="#475569">Serious</text>
+<rect x="169.8" y="914" width="14" height="12" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="191.8" y="924" font-size="11" fill="#475569">Medium</text>
+<rect x="240.4" y="914" width="14" height="12" rx="3" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.2"/>
+<text x="262.4" y="924" font-size="11" fill="#475569">Low</text>
+<text x="40" y="946" font-size="10.5" fill="#94A3B8">Generated by tools/figures/safety_readme.py from safety/hazards/, safety/software/, safety/events/ and the 882E catalog. Risk levels are preliminary qualitative judgements; nothing is verified or accepted. Pills</text>
+<text x="40" y="961" font-size="10.5" fill="#94A3B8">are risk assessment codes (severity 1–4, probability A–F); event risk is for the first event the hazard applies to.</text>
+<g class="terms" data-base-h="990">
+<rect x="0" y="990" width="1120" height="54.6" fill="#FFFFFF"/>
+<line x1="40" y1="994" x2="1080" y2="994" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1009.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: 1A–4F = risk assessment code, severity 1–4 plus probability A–F (e.g. 1C) · 3D = three-dimensional · F-nnn = system function in the item definition · HAZ-nnn = hazard record</text>
+<text x="40" y="1024.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(safety/hazards/HAZ-xxx-nnn.yaml) · SSF-nnn = safety-significant software function record (safety/software/) · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

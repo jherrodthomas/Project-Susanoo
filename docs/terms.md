@@ -99,13 +99,16 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | IPPD | integrated product and process development |
 | IPT | integrated product team |
 | JDK | Java Development Kit |
+| JPEG | Joint Photographic Experts Group, the compressed image format of the renders and photographs |
 | JSON | JavaScript Object Notation, a data file format |
+| KB | kilobyte, a file size of 1,024 bytes |
 | LOR | level of rigor (software safety tasks, MIL-STD-882E 4.4) |
 | MAVLink | Micro Air Vehicle Link, the PX4 telemetry and command protocol |
 | MAVSDK | MAVLink software development kit |
 | MBSE | model-based systems engineering |
 | MCP | Model Context Protocol, how the AI assistant connects to external tools |
 | MGT | management (MIL-STD-882E task type) |
+| MJCF | the MuJoCo model file format, a text file MuJoCo loads a model from |
 | MSA | materiel solution analysis (acquisition phase) |
 | MuJoCo | Multi-Joint dynamics with Contact, the physics engine for the level-2 walker model |
 | NA | not applicable (MIL-STD-882E Table A-I) |
@@ -141,6 +144,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | SHA-256 | a cryptographic hash used to pin a downloaded file |
 | SIH | simulation-in-hardware, PX4's built-in headless simulator |
 | SITL | software-in-the-loop simulation |
+| SMIL | Synchronized Multimedia Integration Language, the SVG animation markup the 2D scenes loop with |
 | SoS | system of systems |
 | SoSHA | system-of-systems hazard analysis (MIL-STD-882E Task 209) |
 | SP | Special Publication (NIST) |

@@ -1,0 +1,436 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="953.1" viewBox="0 0 1240 953.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · Every parameter block</title>
+<desc>Every block of every parameter file with its value count, the readers that name it and unread values</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1240" height="913" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · Every parameter block</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">6 files, 208 values. Each cell: values set and the readers that name them; a red count is values no reader names (4: CL-01: safety.beacon, CL-02: safety.beacon, CL-03:</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">safety.beacon, common: pilot.seated).</text>
+<text x="1200" y="44" font-size="11" fill="#475569" text-anchor="end">cad/params</text>
+<line x1="40" y1="102" x2="1200" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="274.2" y="124" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">CL-01</text>
+<text x="274.2" y="138" font-size="9" fill="#475569" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">open-frame → build_biped</text>
+<text x="442.5" y="124" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">CL-02</text>
+<text x="442.5" y="138" font-size="9" fill="#475569" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">open-frame → build_biped</text>
+<text x="610.8" y="124" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">CL-03</text>
+<text x="610.8" y="138" font-size="9" fill="#475569" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">open-frame → build_biped</text>
+<text x="779.2" y="124" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">CL-04</text>
+<text x="779.2" y="138" font-size="9" fill="#475569" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">armored-pod → build_pod</text>
+<text x="947.5" y="124" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">CL-05</text>
+<text x="947.5" y="138" font-size="9" fill="#475569" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">build123d → build_from_b3d</text>
+<text x="1115.8" y="124" font-size="11.5" fill="#0F172A" font-weight="700" text-anchor="middle">common</text>
+<text x="1115.8" y="138" font-size="9" fill="#475569" text-anchor="middle">shared by every layout</text>
+<line x1="40" y1="150" x2="1200" y2="150" stroke="#E2E8F0" stroke-width="1"/>
+<text x="44" y="171" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">(top level)</text>
+<rect x="198" y="159" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="206.8" y="170.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<rect x="221.7" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="230.9" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="243.1" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="252.2" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="264.4" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="273.6" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">D</text>
+<rect x="285.8" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="295" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">R</text>
+<rect x="366.3" y="159" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="375.2" y="170.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<rect x="390" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="399.2" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="411.4" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="420.6" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="432.8" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="441.9" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">D</text>
+<rect x="454.1" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="463.3" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">R</text>
+<rect x="534.7" y="159" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="543.5" y="170.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<rect x="558.4" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="567.5" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="579.7" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="588.9" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="601.1" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="610.3" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">D</text>
+<rect x="622.5" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="631.6" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">R</text>
+<rect x="703" y="159" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="711.8" y="170.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">4</text>
+<rect x="726.7" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="735.9" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="748.1" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="757.2" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="769.4" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="778.6" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">D</text>
+<rect x="790.8" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="800" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">R</text>
+<rect x="871.3" y="159" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="880.2" y="170.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">4</text>
+<rect x="895" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="904.2" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="916.4" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="925.6" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="937.8" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="946.9" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">D</text>
+<rect x="959.1" y="159" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="968.3" y="170.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">R</text>
+<rect x="40" y="185" width="1160" height="34" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="205" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">leg</text>
+<rect x="198" y="193" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="206.8" y="204.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">8</text>
+<rect x="221.7" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="230.9" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="243.1" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="252.2" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="264.4" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="273.6" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">W</text>
+<rect x="285.8" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="295" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">T</text>
+<rect x="307.2" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="316.3" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">L</text>
+<rect x="366.3" y="193" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="375.2" y="204.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">8</text>
+<rect x="390" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="399.2" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="411.4" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="420.6" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="432.8" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="441.9" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">W</text>
+<rect x="454.1" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="463.3" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">T</text>
+<rect x="475.5" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="484.7" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">L</text>
+<rect x="534.7" y="193" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="543.5" y="204.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">8</text>
+<rect x="558.4" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="567.5" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="579.7" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="588.9" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="601.1" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="610.3" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">W</text>
+<rect x="622.5" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="631.6" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">T</text>
+<rect x="643.8" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="653" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">L</text>
+<rect x="703" y="193" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="711.8" y="204.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">9</text>
+<rect x="726.7" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="735.9" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="748.1" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="757.2" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="769.4" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="778.6" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">W</text>
+<rect x="790.8" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="800" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">T</text>
+<rect x="812.2" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="821.3" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">L</text>
+<rect x="871.3" y="193" width="23.4" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="883" y="204.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">10</text>
+<rect x="900.7" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="909.9" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="922.1" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="931.3" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="943.5" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="952.6" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">W</text>
+<rect x="964.8" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="974" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">T</text>
+<rect x="986.2" y="193" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="995.4" y="204.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">L</text>
+<text x="44" y="239" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">torso</text>
+<rect x="198" y="227" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="206.8" y="238.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<rect x="221.7" y="227" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="230.9" y="238.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="243.1" y="227" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="252.2" y="238.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="366.3" y="227" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="375.2" y="238.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<rect x="390" y="227" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="399.2" y="238.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="411.4" y="227" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="420.6" y="238.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="534.7" y="227" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="543.5" y="238.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<rect x="558.4" y="227" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="567.5" y="238.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="579.7" y="227" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="588.9" y="238.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="40" y="253" width="1160" height="34" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="273" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">cockpit</text>
+<rect x="198" y="261" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="206.8" y="272.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<rect x="221.7" y="261" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="230.9" y="272.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="243.1" y="261" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="252.2" y="272.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="264.4" y="261" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="273.6" y="272.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">D</text>
+<rect x="366.3" y="261" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="375.2" y="272.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<rect x="390" y="261" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="399.2" y="272.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="411.4" y="261" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="420.6" y="272.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="432.8" y="261" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="441.9" y="272.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">D</text>
+<rect x="534.7" y="261" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="543.5" y="272.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<rect x="558.4" y="261" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="567.5" y="272.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="579.7" y="261" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="588.9" y="272.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="601.1" y="261" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="610.3" y="272.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">D</text>
+<text x="44" y="307" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">arm</text>
+<rect x="198" y="295" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="206.8" y="306.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">5</text>
+<rect x="221.7" y="295" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="230.9" y="306.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="243.1" y="295" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="252.2" y="306.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="366.3" y="295" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="375.2" y="306.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">5</text>
+<rect x="390" y="295" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="399.2" y="306.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="411.4" y="295" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="420.6" y="306.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="534.7" y="295" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="543.5" y="306.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">5</text>
+<rect x="558.4" y="295" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="567.5" y="306.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="579.7" y="295" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="588.9" y="306.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="703" y="295" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="711.8" y="306.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">4</text>
+<rect x="726.7" y="295" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="735.9" y="306.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="748.1" y="295" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="757.2" y="306.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="769.4" y="295" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="778.6" y="306.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">W</text>
+<rect x="871.3" y="295" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="880.2" y="306.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">6</text>
+<rect x="895" y="295" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="904.2" y="306.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="916.4" y="295" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="925.6" y="306.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="937.8" y="295" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="946.9" y="306.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">W</text>
+<rect x="40" y="321" width="1160" height="34" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="341" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">power</text>
+<rect x="198" y="329" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="206.8" y="340.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<rect x="221.7" y="329" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="230.9" y="340.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="243.1" y="329" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="252.2" y="340.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="366.3" y="329" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="375.2" y="340.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<rect x="390" y="329" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="399.2" y="340.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="411.4" y="329" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="420.6" y="340.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="534.7" y="329" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="543.5" y="340.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<rect x="558.4" y="329" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="567.5" y="340.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="579.7" y="329" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="588.9" y="340.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="703" y="329" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="711.8" y="340.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<rect x="726.7" y="329" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="735.9" y="340.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="748.1" y="329" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="757.2" y="340.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="871.3" y="329" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="880.2" y="340.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<rect x="895" y="329" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="904.2" y="340.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="916.4" y="329" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="925.6" y="340.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<text x="44" y="375" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">safety</text>
+<rect x="198" y="363" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="206.8" y="374.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<rect x="225.7" y="363" width="48.7" height="16" rx="8.0" fill="#FEE2E2" stroke="none" stroke-width="1"/>
+<text x="250" y="374.1" font-size="8.5" fill="#991B1B" font-weight="700" text-anchor="middle">1 unread</text>
+<rect x="366.3" y="363" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="375.2" y="374.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<rect x="394" y="363" width="48.7" height="16" rx="8.0" fill="#FEE2E2" stroke="none" stroke-width="1"/>
+<text x="418.4" y="374.1" font-size="8.5" fill="#991B1B" font-weight="700" text-anchor="middle">1 unread</text>
+<rect x="534.7" y="363" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="543.5" y="374.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<rect x="562.4" y="363" width="48.7" height="16" rx="8.0" fill="#FEE2E2" stroke="none" stroke-width="1"/>
+<text x="586.7" y="374.1" font-size="8.5" fill="#991B1B" font-weight="700" text-anchor="middle">1 unread</text>
+<rect x="40" y="389" width="1160" height="34" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="409" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">dock</text>
+<rect x="198" y="397" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="206.8" y="408.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<rect x="221.7" y="397" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="230.9" y="408.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="243.1" y="397" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="252.2" y="408.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="366.3" y="397" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="375.2" y="408.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<rect x="390" y="397" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="399.2" y="408.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="411.4" y="397" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="420.6" y="408.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="534.7" y="397" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="543.5" y="408.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<rect x="558.4" y="397" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="567.5" y="408.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="703" y="397" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="711.8" y="408.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<rect x="726.7" y="397" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="735.9" y="408.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="748.1" y="397" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="757.2" y="408.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="871.3" y="397" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="880.2" y="408.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">3</text>
+<rect x="895" y="397" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="904.2" y="408.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="916.4" y="397" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="925.6" y="408.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<text x="44" y="443" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">pod</text>
+<rect x="703" y="431" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="711.8" y="442.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">8</text>
+<rect x="726.7" y="431" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="735.9" y="442.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="748.1" y="431" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="757.2" y="442.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="871.3" y="431" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="880.2" y="442.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">9</text>
+<rect x="895" y="431" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="904.2" y="442.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="916.4" y="431" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="925.6" y="442.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="40" y="457" width="1160" height="34" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="477" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">shoulder</text>
+<rect x="703" y="465" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="711.8" y="476.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<rect x="726.7" y="465" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="735.9" y="476.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="748.1" y="465" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="757.2" y="476.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="769.4" y="465" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="778.6" y="476.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">T</text>
+<rect x="871.3" y="465" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="880.2" y="476.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">7</text>
+<rect x="895" y="465" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="904.2" y="476.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="916.4" y="465" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="925.6" y="476.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="937.8" y="465" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="946.9" y="476.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">T</text>
+<text x="44" y="511" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">rollbar</text>
+<rect x="703" y="499" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="711.8" y="510.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<rect x="726.7" y="499" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="735.9" y="510.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="748.1" y="499" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="757.2" y="510.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="769.4" y="499" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="778.6" y="510.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">T</text>
+<rect x="871.3" y="499" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="880.2" y="510.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<rect x="895" y="499" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="904.2" y="510.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="916.4" y="499" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="925.6" y="510.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="937.8" y="499" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="946.9" y="510.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">T</text>
+<rect x="40" y="525" width="1160" height="34" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="545" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">detail</text>
+<rect x="871.3" y="533" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="880.2" y="544.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">6</text>
+<rect x="895" y="533" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="904.2" y="544.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<text x="44" y="579" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">postures</text>
+<rect x="871.3" y="567" width="23.4" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="883" y="578.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">12</text>
+<rect x="900.7" y="567" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="909.9" y="578.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="922.1" y="567" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="931.3" y="578.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="943.5" y="567" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="952.6" y="578.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">W</text>
+<rect x="964.8" y="567" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="974" y="578.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">T</text>
+<rect x="986.2" y="567" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="995.4" y="578.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">L</text>
+<rect x="1007.6" y="567" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="1016.7" y="578.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">D</text>
+<rect x="1028.9" y="567" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="1038.1" y="578.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">R</text>
+<rect x="40" y="593" width="1160" height="34" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="613" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">access</text>
+<rect x="871.3" y="601" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="880.2" y="612.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">5</text>
+<rect x="895" y="601" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="904.2" y="612.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="916.4" y="601" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="925.6" y="612.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<text x="44" y="647" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">emergency_exit</text>
+<rect x="871.3" y="635" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="880.2" y="646.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">5</text>
+<rect x="895" y="635" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="904.2" y="646.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="916.4" y="635" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="925.6" y="646.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">D</text>
+<rect x="40" y="661" width="1160" height="34" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="681" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">walk</text>
+<rect x="871.3" y="669" width="23.4" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="883" y="680.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">10</text>
+<rect x="900.7" y="669" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="909.9" y="680.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="922.1" y="669" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="931.3" y="680.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="943.5" y="669" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="952.6" y="680.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">W</text>
+<rect x="964.8" y="669" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="974" y="680.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">T</text>
+<text x="44" y="715" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">effective_density</text>
+<rect x="1039.7" y="703" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="1048.5" y="714.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">9</text>
+<rect x="1063.4" y="703" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="1072.5" y="714.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="1084.7" y="703" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="1093.9" y="714.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<rect x="1106.1" y="703" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="1115.3" y="714.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">T</text>
+<rect x="1127.5" y="703" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="1136.6" y="714.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">L</text>
+<rect x="1148.8" y="703" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="1158" y="714.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">K</text>
+<rect x="1170.2" y="703" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="1179.4" y="714.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">D</text>
+<rect x="1191.6" y="703" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="1200.7" y="714.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">R</text>
+<rect x="40" y="729" width="1160" height="34" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="749" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">reference_human</text>
+<rect x="1039.7" y="737" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="1048.5" y="748.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<rect x="1063.4" y="737" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="1072.5" y="748.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="1084.7" y="737" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="1093.9" y="748.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<text x="44" y="783" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">pilot</text>
+<rect x="1039.7" y="771" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="1048.5" y="782.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">1</text>
+<rect x="1067.4" y="771" width="48.7" height="16" rx="8.0" fill="#FEE2E2" stroke="none" stroke-width="1"/>
+<text x="1091.7" y="782.1" font-size="8.5" fill="#991B1B" font-weight="700" text-anchor="middle">1 unread</text>
+<rect x="40" y="797" width="1160" height="34" rx="0" fill="#F8FAFC" stroke="none" stroke-width="0"/>
+<text x="44" y="817" font-size="11" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">uav</text>
+<rect x="1039.7" y="805" width="17.7" height="16" rx="8.0" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+<text x="1048.5" y="816.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">4</text>
+<rect x="1063.4" y="805" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="1072.5" y="816.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">B</text>
+<rect x="1084.7" y="805" width="18.4" height="16" rx="8.0" fill="#E0E7FF" stroke="none" stroke-width="1"/>
+<text x="1093.9" y="816.1" font-size="8.5" fill="#3730A3" font-weight="700" text-anchor="middle">C</text>
+<line x1="40" y1="840" x2="1200" y2="840" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="862" font-size="10.5" fill="#475569">Readers: B = build_concepts.py · C = cl05.py · W = cl05_web.py · T = cl05_terrain.py · L = cl05_links.py · K = blender_walk.py · D = drawings.py · R = readme.py. A key named in a reader is likely read; a key named in none is certainly unread.</text>
+<text x="40" y="884" font-size="10.5" fill="#94A3B8">Generated by tools/figures/params_readme.py from cad/params and the code that reads it. Every value is a placeholder for review and alignment, not design data.</text>
+<g class="terms" data-base-h="913">
+<rect x="0" y="913" width="1240" height="40.1" fill="#FFFFFF"/>
+<line x1="40" y1="917" x2="1200" y2="917" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="932.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CL-nnn = concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout)</text>
+</g>
+</svg>

@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="951.4" height="1608.6" viewBox="0 0 951.4 1608.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 5 · SysML block definition — the 882E vocabulary</title>
+<desc>The MIL-STD-882E vocabulary as modelled in SusanooLibrary: enumerations for the tables and the record items the work-product views use. Read from the .sysml file.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="951.4" height="1554" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 5 · SysML block definition — the 882E vocabulary</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The MIL-STD-882E vocabulary as modelled in SusanooLibrary: enumerations for the tables and the record</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">items the work-product views use. Read from the .sysml file.</text>
+<text x="911.4" y="44" font-size="11" fill="#475569" text-anchor="end">models/sysml/model/SusanooLibrary.sysml</text>
+<line x1="40" y1="102" x2="911.4" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="126" width="871.4" height="1332" rx="2" fill="none" stroke="#0F172A" stroke-width="1.2"/>
+<path d="M40 126 L241.8 126 L241.8 140 L231.8 150 L40 150 Z" stroke="#0F172A" stroke-width="1.2" fill="#F8FAFC" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="50" y="143" font-size="11.5" fill="#0F172A" font-weight="700">bdd [package] SusanooLibrary</text>
+<g transform="translate(56 166)">
+<path d="M501 324 L501 271 Q501 264 494 264 L481 264 Q474 264 474 257 L474 160" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M555 324 L555 189 Q555 182 562 182 L643 182 Q650 182 650 175 L650 160" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M446 324 L446 271 Q446 264 439 264 L330 264 Q323 264 323 257 L323 160" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M369 621 L369 586 Q369 579 362 579 L298 579 Q291 579 291 572 L291 475" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M447 621 L447 504 Q447 497 454 497 L457 497 Q464 497 464 490 L464 448" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M525 621 L525 503 Q525 497 531 497 L531 497 Q537 497 537 491 L537 448" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M525 790 L525 887 Q525 894 532 894 L627 894 Q634 894 634 901 L634 936" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M447 790 L447 805 Q447 812 440 812 L435 812 Q428 812 428 819 L428 936" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M369 790 L369 805 Q369 812 362 812 L293 812 Q286 812 286 819 L286 887 Q286 894 279 894 L265 894 Q258 894 258 901 L258 936" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M731 936 L731 790" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M682 1045 L682 1191" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M195 936 L195 189 Q195 182 202 182 L266 182 Q273 182 273 175 L273 160" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="399" y="36" width="150" height="124" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="399" y="36" width="150" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="399" y1="82" x2="549" y2="82" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="474" y="53" font-size="10" fill="#475569" text-anchor="middle">«enumeration»</text>
+<text x="474" y="70" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SeverityCategory</text>
+<text x="411" y="100" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Catastrophic</text>
+<text x="411" y="115" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Critical</text>
+<text x="411" y="130" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Marginal</text>
+<text x="411" y="145" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Negligible</text>
+<rect x="575" y="6" width="150" height="154" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="575" y="6" width="150" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="575" y1="52" x2="725" y2="52" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="650" y="23" font-size="10" fill="#475569" text-anchor="middle">«enumeration»</text>
+<text x="650" y="40" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">ProbabilityLevel</text>
+<text x="587" y="70" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Frequent</text>
+<text x="587" y="85" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Probable</text>
+<text x="587" y="100" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Occasional</text>
+<text x="587" y="115" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Remote</text>
+<text x="587" y="130" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Improbable</text>
+<text x="587" y="145" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Eliminated</text>
+<rect x="223" y="21" width="150" height="139" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="223" y="21" width="150" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="223" y1="67" x2="373" y2="67" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="298" y="38" font-size="10" fill="#475569" text-anchor="middle">«enumeration»</text>
+<text x="298" y="55" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">RiskLevel</text>
+<text x="235" y="85" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">High</text>
+<text x="235" y="100" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Serious</text>
+<text x="235" y="115" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Medium</text>
+<text x="235" y="130" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Low</text>
+<text x="235" y="145" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">Eliminated</text>
+<rect x="6" y="13.5" width="190.1" height="139" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="6" y="13.5" width="190.1" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="6" y1="59.5" x2="196.1" y2="59.5" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="101" y="30.5" font-size="10" fill="#475569" text-anchor="middle">«enumeration»</text>
+<text x="101" y="47.5" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SoftwareControlCategory</text>
+<text x="18" y="77.5" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">autonomous</text>
+<text x="18" y="92.5" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">semiAutonomous</text>
+<text x="18" y="107.5" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">redundantFaultTolerant</text>
+<text x="18" y="122.5" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">influential</text>
+<text x="18" y="137.5" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">noSafetyImpact</text>
+<rect x="216" y="306" width="150" height="169" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="216" y="306" width="150" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="216" y1="352" x2="366" y2="352" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="291" y="323" font-size="10" fill="#475569" text-anchor="middle">«enumeration»</text>
+<text x="291" y="340" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">HazardStatus</text>
+<text x="228" y="370" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">open</text>
+<text x="228" y="385" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">monitor</text>
+<text x="228" y="400" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">mitigated</text>
+<text x="228" y="415" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">verified</text>
+<text x="228" y="430" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">pendingAcceptance</text>
+<text x="228" y="445" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">accepted</text>
+<text x="228" y="460" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">closed</text>
+<rect x="629" y="651" width="204.4" height="139" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.3"/>
+<rect x="629" y="651" width="204.4" height="46" rx="4" fill="#F5F3FF" stroke="none" stroke-width="0"/>
+<line x1="629" y1="697" x2="833.4" y2="697" stroke="#7C3AED" stroke-width="1.1"/>
+<text x="731.2" y="668" font-size="10" fill="#475569" text-anchor="middle">«enumeration»</text>
+<text x="731.2" y="685" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">MitigationPrecedence</text>
+<text x="641" y="715" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">eliminateByDesign</text>
+<text x="641" y="730" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">reduceByDesignAlteration</text>
+<text x="641" y="745" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">engineeredFeatures</text>
+<text x="641" y="760" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">warningDevices</text>
+<text x="641" y="775" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">signageProceduresTrainingPpe</text>
+<rect x="392" y="324" width="217" height="124" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="392" y="324" width="217" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="392" y1="370" x2="609" y2="370" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="500.5" y="341" font-size="10" fill="#475569" text-anchor="middle">«attribute def»</text>
+<text x="500.5" y="358" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">RiskAssessment</text>
+<text x="404" y="388" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">severity : SeverityCategory</text>
+<text x="404" y="403" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">probability : ProbabilityLevel</text>
+<text x="404" y="418" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">level : RiskLevel</text>
+<text x="404" y="433" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">rationale : String</text>
+<rect x="291" y="621" width="311.5" height="169" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="291" y="621" width="311.5" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="291" y1="667" x2="602.5" y2="667" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="446.8" y="638" font-size="10" fill="#475569" text-anchor="middle">«item def»</text>
+<text x="446.8" y="655" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">Hazard</text>
+<text x="303" y="685" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id : String</text>
+<text x="303" y="700" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">status : HazardStatus</text>
+<text x="303" y="715" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">initialRisk : RiskAssessment</text>
+<text x="303" y="730" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">targetRisk : RiskAssessment</text>
+<text x="303" y="745" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">ref mitigations : Mitigation[0..*]</text>
+<text x="303" y="760" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">ref evidence : VerificationEvidence[0..*]</text>
+<text x="303" y="775" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">ref acceptance : RiskAcceptanceDecision[0..1]</text>
+<rect x="536" y="936" width="292.6" height="109" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="536" y="936" width="292.6" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="536" y1="982" x2="828.6" y2="982" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="682.3" y="953" font-size="10" fill="#475569" text-anchor="middle">«item def»</text>
+<text x="682.3" y="970" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">Mitigation</text>
+<text x="548" y="1000" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id : String</text>
+<text x="548" y="1015" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">precedence : MitigationPrecedence</text>
+<text x="548" y="1030" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">ref requirements : SafetyRequirement[0..*]</text>
+<rect x="607" y="1191" width="150" height="79" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="607" y="1191" width="150" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="607" y1="1237" x2="757" y2="1237" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="682" y="1208" font-size="10" fill="#475569" text-anchor="middle">«item def»</text>
+<text x="682" y="1225" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">SafetyRequirement</text>
+<text x="619" y="1255" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id : String</text>
+<rect x="347" y="936" width="162.2" height="94" rx="4" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.3"/>
+<rect x="347" y="936" width="162.2" height="46" rx="4" fill="#EEF2FF" stroke="none" stroke-width="0"/>
+<line x1="347" y1="982" x2="509.2" y2="982" stroke="#4F46E5" stroke-width="1.1"/>
+<text x="428.1" y="953" font-size="10" fill="#475569" text-anchor="middle">«item def»</text>
+<text x="428.1" y="970" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">VerificationEvidence</text>
+<text x="359" y="1000" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">id : String</text>
+<text x="359" y="1015" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">simulated : Boolean</text>
+<rect x="132" y="936" width="188.7" height="94" rx="4" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="132" y="936" width="188.7" height="46" rx="4" fill="#FFF7ED" stroke="none" stroke-width="0"/>
+<line x1="132" y1="982" x2="320.7" y2="982" stroke="#C2410C" stroke-width="1.1"/>
+<text x="226.3" y="953" font-size="10" fill="#475569" text-anchor="middle">«item def»</text>
+<text x="226.3" y="970" font-size="13" fill="#0F172A" font-weight="700" text-anchor="middle">RiskAcceptanceDecision</text>
+<text x="144" y="1000" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">authority : String</text>
+<text x="144" y="1015" font-size="10.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">acceptedLevel : RiskLevel</text>
+<rect x="419" y="224" width="53.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="424" y="237" font-size="10.5" fill="#475569">severity</text>
+<rect x="488" y="224" width="65" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="493" y="237" font-size="10.5" fill="#475569">probability</text>
+<rect x="284" y="224" width="37.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="289" y="237" font-size="10.5" fill="#475569">level</text>
+<rect x="244" y="539" width="44.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="249" y="552" font-size="10.5" fill="#475569">status</text>
+<rect x="382" y="539" width="62.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="387" y="552" font-size="10.5" fill="#475569">initialRisk</text>
+<rect x="528" y="539" width="64.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="533" y="552" font-size="10.5" fill="#475569">targetRisk</text>
+<rect x="456" y="854" width="66.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="461" y="867" font-size="10.5" fill="#475569">mitigations</text>
+<rect x="369" y="854" width="57.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="374" y="867" font-size="10.5" fill="#475569">evidence</text>
+<rect x="214" y="854" width="69.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="219" y="867" font-size="10.5" fill="#475569">acceptance</text>
+<rect x="659" y="854" width="69.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="664" y="867" font-size="10.5" fill="#475569">precedence</text>
+<rect x="604" y="1109" width="76.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="609" y="1122" font-size="10.5" fill="#475569">requirements</text>
+<rect x="107" y="539" width="85.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="112" y="552" font-size="10.5" fill="#475569">acceptedLevel</text>
+</g>
+<line x1="40" y1="1484" x2="56" y2="1484" stroke="#475569" stroke-width="1.8"/>
+<text x="62" y="1488" font-size="11" fill="#475569">ref item (record link)</text>
+<line x1="178.9" y1="1484" x2="194.9" y2="1484" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="200.9" y="1488" font-size="11" fill="#475569">attribute typed by</text>
+<rect x="304.2" y="1478" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
+<text x="326.2" y="1488" font-size="11" fill="#475569">Enumeration (882E table)</text>
+<rect x="468.1" y="1478" width="14" height="12" rx="3" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="490.1" y="1488" font-size="11" fill="#475569">Item definition</text>
+<rect x="578.9" y="1478" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="600.9" y="1488" font-size="11" fill="#475569">Acceptance (human authority)</text>
+<text x="40" y="1510" font-size="10.5" fill="#94A3B8">Generated by tools/figures/standards_readme.py from standards/mil-std-882e/model.yaml, standards/tailoring/mil-std-882e.yaml and models/sysml/model/SusanooLibrary.sysml.</text>
+<text x="40" y="1525" font-size="10.5" fill="#94A3B8">The standard is encoded as data for checking; no standard text is copied. Tailoring status: proposed, not approved.</text>
+<g class="terms" data-base-h="1554">
+<rect x="0" y="1554" width="951.4" height="54.6" fill="#FFFFFF"/>
+<line x1="40" y1="1558" x2="911.4" y2="1558" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1573.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: DoD = US Department of Defense · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base edition) · SysML = Systems Modeling</text>
+<text x="40" y="1588.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Language (SysML v2) · US = United States</text>
+</g>
+</svg>

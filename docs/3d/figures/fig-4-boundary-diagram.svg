@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1562.8" height="553.1" viewBox="0 0 1562.8 553.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 4 · Boundary diagram</title>
+<desc>The folder holds the built pages and the geometry they load; the builders, the CAD export, the pinned library and the checks live elsewhere. Crossings are numbered as in the table.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1562.8" height="513" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 4 · Boundary diagram</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The folder holds the built pages and the geometry they load; the builders, the CAD export, the pinned library and the checks live elsewhere. Crossings are numbered as in the table.</text>
+<text x="1522.8" y="44" font-size="11" fill="#475569" text-anchor="end">docs/3d/README.md</text>
+<line x1="40" y1="85" x2="1522.8" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 109)">
+<rect x="561.9" y="35" width="463" height="226" rx="12" fill="none" stroke="#C2410C" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M142 153 L510.4 153 Q514.9 153 514.9 157.5 L514.9 157.5 Q514.9 162 519.4 162 L579.9 162" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M142 163 L157 163 Q164 163 164 170 L164 184 Q164 191 171 191 L870.9 191" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M142 293 L519.9 293 Q526.9 293 526.9 286 L526.9 228 Q526.9 221 533.9 221 L579.9 221" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M715.9 221 L853.9 221 Q860.9 221 860.9 214 L860.9 208.7 Q860.9 203.7 865.9 203.7 L870.9 203.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M142 229 L507.9 229 Q514.9 229 514.9 222 L514.9 208 Q514.9 201 521.9 201 L561.9 201" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M142 144 L157 144 Q164 144 164 137 L164 122 Q164 115 171 115 L512.4 115 Q514.9 115 514.9 112.5 L514.9 112.5 Q514.9 110 517.4 110 L549.9 110 Q556.9 110 563.9 110 L579.9 110.3" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M142 25 L519.9 25 Q526.9 25 526.9 32 L526.9 81 Q526.9 88 533.9 88 L561.9 88" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M1024.9 88 L1340.8 88" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M142 89 L158 89 Q164 89 164 83 L164 83 Q164 77 170 77 L507.9 77 Q514.9 77 514.9 84 L514.9 91 Q514.9 98 521.9 98 L549.9 98 Q556.9 98 563.9 98 L579.9 97.7" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="573.9" y="47" width="165.4" height="22" rx="11" fill="#C2410C" stroke="none" stroke-width="0"/>
+<text x="656.6" y="62" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">BOUNDARY · 3D PAGES</text>
+<rect x="6" y="134" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="18" y="158" font-size="12.5" fill="#0F172A" font-weight="700">3D scene builder</text>
+<rect x="6" y="274" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="18" y="298" font-size="12.5" fill="#0F172A" font-weight="700">CAD geometry</text>
+<rect x="6" y="210" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="18" y="234" font-size="12.5" fill="#0F172A" font-weight="700">three.js (pinned)</text>
+<rect x="6" y="6" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="18" y="30" font-size="12.5" fill="#0F172A" font-weight="700">CI</text>
+<rect x="6" y="70" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="18" y="94" font-size="12.5" fill="#0F172A" font-weight="700">Reader</text>
+<rect x="579.9" y="143" width="136" height="38" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="591.9" y="167" font-size="12.5" fill="#0F172A" font-weight="700">Scene pages</text>
+<rect x="870.9" y="178.3" width="136" height="38" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="882.9" y="202.3" font-size="12.5" fill="#0F172A" font-weight="700">Sheet pages</text>
+<rect x="579.9" y="85" width="136" height="38" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="591.9" y="109" font-size="12.5" fill="#0F172A" font-weight="700">Index page</text>
+<rect x="579.9" y="202" width="136" height="38" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="591.9" y="226" font-size="12.5" fill="#0F172A" font-weight="700">Geometry asset</text>
+<rect x="1340.8" y="69" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="1352.8" y="93" font-size="12.5" fill="#0F172A" font-weight="700">Wiki</text>
+<rect x="250" y="158" width="198.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="253" y="159" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="261.9" y="170.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="274.7" y="171" font-size="10.5" fill="#475569">out/&lt;id&gt;.json and look, embedded</text>
+<rect x="241.4" y="196" width="216.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="244.4" y="197" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="253.2" y="208.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="266.1" y="209" font-size="10.5" fill="#475569">sheet data embedded; build_sheet.py</text>
+<rect x="264.2" y="298" width="170.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="267.2" y="299" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="276.1" y="310.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3</text>
+<text x="288.9" y="311" font-size="10.5" fill="#475569">sus-m1.js from cl05_web.py</text>
+<rect x="733.9" y="224" width="119" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="736.9" y="225" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="745.7" y="236.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">4</text>
+<text x="758.6" y="237" font-size="10.5" fill="#475569">assets/sus-m1.js</text>
+<rect x="252.8" y="234" width="193.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="255.8" y="235" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="264.7" y="246.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">5</text>
+<text x="277.5" y="247" font-size="10.5" fill="#475569">import map, loaded when opened</text>
+<rect x="300.9" y="120" width="97.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="303.9" y="121" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="312.7" y="132.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">6</text>
+<text x="325.6" y="133" font-size="10.5" fill="#475569">list of pages</text>
+<rect x="204" y="30" width="290.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="207" y="31" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="215.8" y="42.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">7</text>
+<text x="228.7" y="43" font-size="10.5" fill="#475569">pages opened in Chromium, synthetic label, outcome</text>
+<rect x="1086.9" y="93" width="191.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="1089.9" y="94" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="1098.7" y="105.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">8</text>
+<text x="1111.6" y="106" font-size="10.5" fill="#475569">stills 3d-*.png, 3D-Scenes page</text>
+<rect x="267" y="82" width="164.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="270" y="83" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="278.9" y="94.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">9</text>
+<text x="291.7" y="95" font-size="10.5" fill="#475569">opens a page in a browser</text>
+</g>
+<rect x="40" y="452" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="62" y="462" font-size="11" fill="#475569">External entity</text>
+<rect x="150" y="452" width="14" height="12" rx="3" fill="none" stroke="#C2410C" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="172" y="462" font-size="11" fill="#475569">Analysis boundary</text>
+<rect x="278.4" y="452" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="300.4" y="462" font-size="11" fill="#475569">Work product</text>
+<rect x="378.3" y="452" width="14" height="12" rx="3" fill="#475569" stroke="none" stroke-width="1.2"/>
+<text x="400.3" y="462" font-size="11" fill="#475569">1 · numbered crossing (see table)</text>
+<text x="40" y="484" font-size="10.5" fill="#94A3B8">Generated by tools/figures/pages3d_readme.py from the pages in docs/3d and the checks that open them. The pages show concept geometry and synthetic results: design aids with no evidence credit (sim/README.md, evidence gate).</text>
+<g class="terms" data-base-h="513">
+<rect x="0" y="513" width="1562.8" height="40.1" fill="#FFFFFF"/>
+<line x1="40" y1="517" x2="1522.8" y2="517" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="532.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: 3D = three-dimensional · CAD = computer-aided design · CI = continuous integration (the automated checks GitHub runs on every change)</text>
+</g>
+</svg>

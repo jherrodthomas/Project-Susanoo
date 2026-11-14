@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1323.6" viewBox="0 0 1240 1323.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · The process maps</title>
+<desc>Every draw.io process map with its lanes, steps and export</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1240" height="1211" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · The process maps</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">6 draw.io maps, read from the sources: each map's lanes left to right with the steps under each, whether its SVG export still carries every label of its source (6 of 6 do),</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">and the pages that show it.</text>
+<text x="1200" y="44" font-size="11" fill="#475569" text-anchor="end">docs/diagrams/**/*.drawio</text>
+<line x1="40" y1="102" x2="1200" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="128" width="1160" height="30" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="50" y="148" font-size="12.5" fill="#0F172A" font-weight="700">Hazard analysis relationships</text>
+<text x="460" y="148" font-size="10" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">analysis-dependencies.drawio</text>
+<rect x="740" y="135" width="77.9" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="778.9" y="146.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">export in step</text>
+<text x="1190" y="148" font-size="10" fill="#475569" text-anchor="end">shown on 7 pages</text>
+<rect x="40" y="168" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="181.2" y="184" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Concept</text>
+<rect x="46" y="198" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="181.2" y="214" font-size="10" fill="#0F172A" text-anchor="middle">CONOPS / PHL</text>
+<rect x="46" y="228" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="181.2" y="244" font-size="10" fill="#0F172A" text-anchor="middle">PHA</text>
+<text x="327.5" y="184" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="332.5" y="168" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="473.8" y="184" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Requirements</text>
+<rect x="338.5" y="198" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="473.8" y="214" font-size="10" fill="#0F172A" text-anchor="middle">SRHA</text>
+<rect x="338.5" y="228" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="473.8" y="244" font-size="10" fill="#0F172A" text-anchor="middle">FHA</text>
+<text x="620" y="184" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="625" y="168" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="766.2" y="184" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Subsystems</text>
+<rect x="631" y="198" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="766.2" y="214" font-size="10" fill="#0F172A" text-anchor="middle">SSHA</text>
+<rect x="631" y="228" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="766.2" y="244" font-size="10" fill="#0F172A" text-anchor="middle">Interface hazards</text>
+<text x="912.5" y="184" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="917.5" y="168" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="1058.8" y="184" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Integration</text>
+<rect x="923.5" y="198" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="1058.8" y="214" font-size="10" fill="#0F172A" text-anchor="middle">SHA</text>
+<rect x="923.5" y="228" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="1058.8" y="244" font-size="10" fill="#0F172A" text-anchor="middle">O&amp;SHA / HHA / EHA</text>
+<text x="44" y="272" font-size="10" fill="#475569" font-style="font-style:italic">Analyses inform each other; the arrows are information flow, not mandatory sequencing.</text>
+<rect x="40" y="296" width="1160" height="30" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="50" y="316" font-size="12.5" fill="#0F172A" font-weight="700">Hazard management and risk acceptance</text>
+<text x="460" y="316" font-size="10" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">hazard-management.drawio</text>
+<rect x="740" y="303" width="77.9" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="778.9" y="314.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">export in step</text>
+<text x="1190" y="316" font-size="10" fill="#475569" text-anchor="end">shown on 7 pages</text>
+<rect x="40" y="336" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="181.2" y="352" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Safety analyst</text>
+<rect x="46" y="366" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="181.2" y="382" font-size="10" fill="#0F172A" text-anchor="middle">Identify hazard</text>
+<rect x="46" y="396" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="181.2" y="412" font-size="10" fill="#0F172A" text-anchor="middle">Assess initial risk</text>
+<text x="327.5" y="352" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="332.5" y="336" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="473.8" y="352" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Systems &amp; design</text>
+<rect x="338.5" y="366" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="473.8" y="382" font-size="10" fill="#0F172A" text-anchor="middle">Select design mitigation</text>
+<rect x="338.5" y="396" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="473.8" y="412" font-size="10" fill="#0F172A" text-anchor="middle">Implement control</text>
+<text x="620" y="352" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="625" y="336" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="766.2" y="352" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Verification</text>
+<rect x="631" y="366" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="766.2" y="382" font-size="10" fill="#0F172A" text-anchor="middle">Verify implementation</text>
+<rect x="631" y="396" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="766.2" y="412" font-size="10" fill="#0F172A" text-anchor="middle">Validate risk reduction</text>
+<text x="912.5" y="352" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="917.5" y="336" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="1058.8" y="352" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Risk authority</text>
+<rect x="923.5" y="366" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="1058.8" y="382" font-size="10" fill="#0F172A" text-anchor="middle">Review residual risk</text>
+<rect x="923.5" y="396" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="1058.8" y="412" font-size="10" fill="#0F172A" text-anchor="middle">Accept / reject / return</text>
+<text x="44" y="440" font-size="10" fill="#475569" font-style="font-style:italic">Residual risk acceptance is a separate authorized decision, never automatic closure.</text>
+<rect x="40" y="464" width="1160" height="30" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="50" y="484" font-size="12.5" fill="#0F172A" font-weight="700">Safety responsibility swimlanes</text>
+<text x="460" y="484" font-size="10" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">responsibility-swimlanes.drawio</text>
+<rect x="740" y="471" width="77.9" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="778.9" y="482.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">export in step</text>
+<text x="1190" y="484" font-size="10" fill="#475569" text-anchor="end">shown on 7 pages</text>
+<rect x="40" y="504" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="181.2" y="520" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Safety lead</text>
+<rect x="46" y="534" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="181.2" y="550" font-size="10" fill="#0F172A" text-anchor="middle">Register hazard</text>
+<rect x="46" y="564" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="181.2" y="580" font-size="10" fill="#0F172A" text-anchor="middle">Propose risk rating</text>
+<text x="327.5" y="520" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="332.5" y="504" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="473.8" y="520" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Systems / design</text>
+<rect x="338.5" y="534" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="473.8" y="550" font-size="10" fill="#0F172A" text-anchor="middle">Allocate safety requirement</text>
+<rect x="338.5" y="564" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="473.8" y="580" font-size="10" fill="#0F172A" text-anchor="middle">Implement mitigation</text>
+<text x="620" y="520" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="625" y="504" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="766.2" y="520" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Test lead</text>
+<rect x="631" y="534" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="766.2" y="550" font-size="10" fill="#0F172A" text-anchor="middle">Plan verification</text>
+<rect x="631" y="564" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="766.2" y="580" font-size="10" fill="#0F172A" text-anchor="middle">Capture objective evidence</text>
+<text x="912.5" y="520" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="917.5" y="504" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="1058.8" y="520" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Risk authority</text>
+<rect x="923.5" y="534" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="1058.8" y="550" font-size="10" fill="#0F172A" text-anchor="middle">Review residual risk</text>
+<rect x="923.5" y="564" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="1058.8" y="580" font-size="10" fill="#0F172A" text-anchor="middle">Record acceptance decision</text>
+<text x="44" y="608" font-size="10" fill="#475569" font-style="font-style:italic">Every handoff requires an owner, configuration ID and evidence links.</text>
+<rect x="40" y="632" width="1160" height="30" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="50" y="652" font-size="12.5" fill="#0F172A" font-weight="700">System safety lifecycle</text>
+<text x="460" y="652" font-size="10" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">safety-lifecycle.drawio</text>
+<rect x="740" y="639" width="77.9" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="778.9" y="650.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">export in step</text>
+<text x="1190" y="652" font-size="10" fill="#475569" text-anchor="end">shown on 7 pages</text>
+<rect x="40" y="672" width="224" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="152" y="688" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Concept &amp; scope</text>
+<rect x="46" y="702" width="212" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="152" y="718" font-size="10" fill="#0F172A" text-anchor="middle">CONOPS + boundaries</text>
+<rect x="46" y="732" width="212" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="152" y="748" font-size="10" fill="#0F172A" text-anchor="middle">Tailor tasks / SSPP</text>
+<text x="269" y="688" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="274" y="672" width="224" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="386" y="688" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Analysis</text>
+<rect x="280" y="702" width="212" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="386" y="718" font-size="10" fill="#0F172A" text-anchor="middle">PHL / PHA</text>
+<rect x="280" y="732" width="212" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="386" y="748" font-size="10" fill="#0F172A" text-anchor="middle">SRHA / FHA</text>
+<text x="503" y="688" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="508" y="672" width="224" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="620" y="688" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Design &amp; controls</text>
+<rect x="514" y="702" width="212" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="620" y="718" font-size="10" fill="#0F172A" text-anchor="middle">SSHA / SHA / O&amp;SHA</text>
+<rect x="514" y="732" width="212" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="620" y="748" font-size="10" fill="#0F172A" text-anchor="middle">Mitigation allocation</text>
+<text x="737" y="688" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="742" y="672" width="224" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="854" y="688" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Evidence &amp; release</text>
+<rect x="748" y="702" width="212" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="854" y="718" font-size="10" fill="#0F172A" text-anchor="middle">Verify controls</text>
+<rect x="748" y="732" width="212" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="854" y="748" font-size="10" fill="#0F172A" text-anchor="middle">Risk disposition</text>
+<text x="971" y="688" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="976" y="672" width="224" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="1088" y="688" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Sustainment</text>
+<rect x="982" y="702" width="212" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="1088" y="718" font-size="10" fill="#0F172A" text-anchor="middle">Monitor incidents</text>
+<rect x="982" y="732" width="212" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="1088" y="748" font-size="10" fill="#0F172A" text-anchor="middle">Reassess changes</text>
+<text x="44" y="776" font-size="10" fill="#475569" font-style="font-style:italic">Iterative lifecycle: every configuration change can reopen hazard analysis.</text>
+<rect x="40" y="800" width="1160" height="30" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="50" y="820" font-size="12.5" fill="#0F172A" font-weight="700">Software contribution to system risk</text>
+<text x="460" y="820" font-size="10" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">software-safety.drawio</text>
+<rect x="740" y="807" width="77.9" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="778.9" y="818.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">export in step</text>
+<text x="1190" y="820" font-size="10" fill="#475569" text-anchor="end">shown on 7 pages</text>
+<rect x="40" y="840" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="181.2" y="856" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">System safety</text>
+<rect x="46" y="870" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="181.2" y="886" font-size="10" fill="#0F172A" text-anchor="middle">Identify software hazard contribution</text>
+<rect x="46" y="900" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="181.2" y="916" font-size="10" fill="#0F172A" text-anchor="middle">Assess criticality</text>
+<text x="327.5" y="856" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="332.5" y="840" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="473.8" y="856" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Software engineering</text>
+<rect x="338.5" y="870" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="473.8" y="886" font-size="10" fill="#0F172A" text-anchor="middle">Allocate software safety requirements</text>
+<rect x="338.5" y="900" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="473.8" y="916" font-size="10" fill="#0F172A" text-anchor="middle">Analyze control authority</text>
+<text x="620" y="856" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="625" y="840" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="766.2" y="856" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Integration &amp; test</text>
+<rect x="631" y="870" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="766.2" y="886" font-size="10" fill="#0F172A" text-anchor="middle">Test failure responses</text>
+<rect x="631" y="900" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="766.2" y="916" font-size="10" fill="#0F172A" text-anchor="middle">Fault injection / evidence</text>
+<text x="912.5" y="856" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="917.5" y="840" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="1058.8" y="856" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Configuration</text>
+<rect x="923.5" y="870" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="1058.8" y="886" font-size="10" fill="#0F172A" text-anchor="middle">Pin versions + parameters</text>
+<rect x="923.5" y="900" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="1058.8" y="916" font-size="10" fill="#0F172A" text-anchor="middle">Reassess after change</text>
+<text x="44" y="944" font-size="10" fill="#475569" font-style="font-style:italic">PX4 flight-control software and walker control software remain distinct assurance boundaries.</text>
+<rect x="40" y="968" width="1160" height="30" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="50" y="988" font-size="12.5" fill="#0F172A" font-weight="700">Safety verification and change control</text>
+<text x="460" y="988" font-size="10" fill="#475569" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">verification-change.drawio</text>
+<rect x="740" y="975" width="77.9" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="778.9" y="986.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">export in step</text>
+<text x="1190" y="988" font-size="10" fill="#475569" text-anchor="end">shown on 6 pages</text>
+<rect x="40" y="1008" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="181.2" y="1024" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Requirement &amp; hazard</text>
+<rect x="46" y="1038" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="181.2" y="1054" font-size="10" fill="#0F172A" text-anchor="middle">Mitigation + test criteria</text>
+<rect x="46" y="1068" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="181.2" y="1084" font-size="10" fill="#0F172A" text-anchor="middle">Trace to hazard</text>
+<text x="327.5" y="1024" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="332.5" y="1008" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="473.8" y="1024" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Verification</text>
+<rect x="338.5" y="1038" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="473.8" y="1054" font-size="10" fill="#0F172A" text-anchor="middle">Execute / record test</text>
+<rect x="338.5" y="1068" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="473.8" y="1084" font-size="10" fill="#0F172A" text-anchor="middle">Investigate anomalies</text>
+<text x="620" y="1024" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="625" y="1008" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="766.2" y="1024" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Review</text>
+<rect x="631" y="1038" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="766.2" y="1054" font-size="10" fill="#0F172A" text-anchor="middle">Review effectiveness</text>
+<rect x="631" y="1068" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="766.2" y="1084" font-size="10" fill="#0F172A" text-anchor="middle">Update residual risk</text>
+<text x="912.5" y="1024" font-size="13" fill="#475569" text-anchor="middle">›</text>
+<rect x="917.5" y="1008" width="282.5" height="24" rx="5" fill="#204B70" stroke="none" stroke-width="0"/>
+<text x="1058.8" y="1024" font-size="10.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">Change control</text>
+<rect x="923.5" y="1038" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="1058.8" y="1054" font-size="10" fill="#0F172A" text-anchor="middle">Approve disposition</text>
+<rect x="923.5" y="1068" width="270.5" height="24" rx="5" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1"/>
+<text x="1058.8" y="1084" font-size="10" fill="#0F172A" text-anchor="middle">Reopen on changes</text>
+<text x="44" y="1112" font-size="10" fill="#475569" font-style="font-style:italic">Failed tests or changed configurations trigger reanalysis and re-verification.</text>
+<line x1="40" y1="1136" x2="1200" y2="1136" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="1150" width="14" height="12" rx="3" fill="#204B70" stroke="#204B70" stroke-width="1.2"/>
+<text x="62" y="1160" font-size="11" fill="#475569">Lane (header cell)</text>
+<rect x="168.2" y="1150" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#87A3BD" stroke-width="1.2"/>
+<text x="190.2" y="1160" font-size="11" fill="#475569">Step</text>
+<rect x="225.9" y="1150" width="14" height="12" rx="3" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.2"/>
+<text x="247.9" y="1160" font-size="11" fill="#475569">SVG export carries every source label</text>
+<rect x="456.8" y="1150" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2"/>
+<text x="478.8" y="1160" font-size="11" fill="#475569">Export out of step with its source</text>
+<text x="40" y="1182" font-size="10.5" fill="#94A3B8">Generated by tools/figures/diagrams_readme.py from the draw.io sources, their SVG exports and the MIL-STD-882E tailoring. The maps are illustrative draft workflows, not normative flowcharts or evidence of completed tasks.</text>
+<g class="terms" data-base-h="1211">
+<rect x="0" y="1211" width="1240" height="112.6" fill="#FFFFFF"/>
+<line x1="40" y1="1215" x2="1200" y2="1215" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1230.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: ARP4754B = SAE guidelines for development of civil aircraft and systems · ARP4761A = SAE guidelines for the safety assessment process on civil aircraft · CONOPS = concept of operations · DoD = US</text>
+<text x="40" y="1245.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Department of Defense · EHA = environmental hazard analysis (MIL-STD-882E Task 210) · FHA = functional hazard analysis (MIL-STD-882E Task 208; also ARP4761A aircraft FHA) · HHA = health hazard analysis</text>
+<text x="40" y="1259.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(MIL-STD-882E Task 207) · ID = identifier · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base edition) · PHA = preliminary hazard analysis (MIL-STD-882E Task 202) · PHL = preliminary</text>
+<text x="40" y="1274.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">hazard list (MIL-STD-882E Task 201) · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SAE = SAE International, publisher of ARP4754B and ARP4761A · SHA = system hazard analysis</text>
+<text x="40" y="1288.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(MIL-STD-882E Task 205) · SRHA = system requirements hazard analysis (MIL-STD-882E Task 203) · SSHA = subsystem hazard analysis (MIL-STD-882E Task 204) · SSPP = system safety program plan (MIL-STD-882E Task 102)</text>
+<text x="40" y="1303.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">· SUS-A1 = dockable observation UAV · SVG = Scalable Vector Graphics, the figure file format · UAV = uncrewed aerial vehicle (drone) · US = United States</text>
+</g>
+</svg>
