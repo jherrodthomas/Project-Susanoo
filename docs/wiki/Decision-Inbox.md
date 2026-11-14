@@ -40,7 +40,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 </details>
 <!-- terms:end -->
 
-Status: open 0, queued 0, answered 2, applied 22, withdrawn 0
+Status: open 0, queued 0, answered 2, applied 24, withdrawn 0
 
 ## Decided
 
@@ -70,3 +70,5 @@ Status: open 0, queued 0, answered 2, applied 22, withdrawn 0
 | DQ-022 | How should work at height on the single-leg bench rig (EVT-BENCH-001) be controlled? | Add a work-at-height event condition | lead | 2026-11-13 | applied | `safety/events/EVT-BENCH-001.yaml`, `safety/hazards/HAZ-GSE-001.yaml` |
 | DQ-023 | Which source should set the simulated walker's mass, centre of mass and heights? | Take them from the CL-05 CAD metrics | claude | 2026-11-13 | applied | `sim/spec/walker.yaml`, `sim/spec/walker_l2.yaml`, `sim/tests/test_sim.py`, `sim/results/sizing-cf4.md`, `sim/results/l2-crosscheck.md`, `sim/results/ts001-fault-response.md` |
 | DQ-024 | Should the level-2 walker spec adopt the ankle and knee torques re-sized for the 4,590 kg reference layout? | Adopt ankle 40.5 and knee 26.5 kN m in the spec | lead | 2026-11-13 | applied | `sim/spec/walker_l2.yaml`, `requirements/SYS-016.yaml`, `safety/hazards/HAZ-WLK-002.yaml`, `architecture/trades/TS-001.yaml` |
+| DQ-025 | Which source should set the level-2 walker's per-link masses, centres of mass and pitch inertias? | Take them from the CL-05 link mass properties | claude | 2026-11-13 | applied | `cad/links.json`, `tools/cad/b3d/cl05_links.py`, `sim/spec/walker_l2.yaml`, `sim/mujoco/model.py`, `sim/tests/test_sim.py`, `sim/results/sizing-cf4.md`, `sim/results/l2-crosscheck.md`, `sim/results/ts001-fault-response.md`, `architecture/trades/TS-001.yaml`, `safety/hazards/HAZ-WLK-002.yaml` |
+| DQ-026 | Should the knee torque be raised to keep a 1.5 times reserve now that level 2 uses the CL-05 link inertias? | Keep knee 26.5 kN m until the actuation trade has vendor data | lead | 2026-11-14 | applied | `sim/mujoco/sizing.yaml`, `sim/results/sizing-cf4.md`, `safety/hazards/HAZ-WLK-002.yaml`, `requirements/SYS-016.yaml` |

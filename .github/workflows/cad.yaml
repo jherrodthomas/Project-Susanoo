@@ -35,6 +35,8 @@ jobs:
       run: |
         micromamba create -y -n b3d -f tools/cad/b3d/environment.yml
         for script in tools/cad/b3d/cl??.py; do micromamba run -n b3d python "$script"; done
+    - name: CL-05 link mass properties are current (cad/links.json, read by sim/spec/walker_l2.yaml)
+      run: micromamba run -n b3d python tools/cad/b3d/cl05_links.py --check
     - name: Build geometry and metrics
       run: python tools/cad/build_concepts.py
     - name: Drawing sheets
