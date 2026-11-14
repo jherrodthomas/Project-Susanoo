@@ -335,8 +335,14 @@ def simulation(d: dict, s: dict) -> str:
     leg, _ = fk.legend(x, yl, [(TONES["ok"][0], TONES["ok"][0], "safe stop"), (TONES["amber"][0], TONES["amber"][0], "tip"),
                                (TONES["red"][0], TONES["red"][0], "hard drop / failure")], x + colw)
     out += leg
-    out.append(fk.text(x, yl + 26, "Every sample with failed load holding ends in a failure: drives HAZ-WLK-002 CF4.",
-                       size=11.5, fill=INK))
+    nf = next((v for k, v in s["mc_split"].items() if k.endswith("fails")), None)
+    if nf and nf["failures"] == nf["n"]:
+        note = "Every sample with failed load holding ends in a failure: drives HAZ-WLK-002 CF4."
+    elif nf:
+        note = f"{nf['failures']} of {nf['n']} samples with failed load holding end in a failure: drives HAZ-WLK-002 CF4."
+    else:
+        note = ""
+    out.append(fk.text(x, yl + 26, note, size=11.5, fill=INK))
     # right: UAV SITL
     rx = M + colw + 40
     out.append(fk.text(rx, y, "UAV · PX4 SITL FAILSAFE SCENARIOS", size=11, fill=MUTED, weight=700))
