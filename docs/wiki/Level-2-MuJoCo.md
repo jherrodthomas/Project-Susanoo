@@ -66,7 +66,7 @@ Unchanged from level 1, so outcomes are comparable: the case dictionary, the fau
 |---|---|---|---|
 | CAT-04-NOBRAKE | hard-drop | safe | A bus undervoltage to 35% capacity with no brakes. Level 1 scales leg force with capacity (A4), so its legs cannot carry the 4,590 kg walker and it drops at 2.6 s. Level 2's nearly straight legs carry it and, with the torques adopted in DQ-024 (ankle 40.5, knee 26.5 kN m), it holds through the protective stop; with the earlier 26.5 and 22.5 kN m it tipped at 5.8 s, and with only the ankle re-sized it dropped at 5.6 s. A4 is pessimistic for straight-legged stance. |
 | CAP-16 | tip | safe | A slow leak at 16 degrees with a 0.16 m CoM offset (above the 0.12 m limit, DQ-011) and load holding working. Level 1 loses balance as its centre-of-pressure limit (L cos(slope) x capacity, A3) shrinks and its legs sink (A4), and tips after the hold engages. Level 2 holds it with the ankle at 26 kN m or more and tips at 20 kN m and below: the actuator-capacity boundary lies below the adopted ankle torque (40.5 kN m, DQ-024; sim/results/sizing-cf4.md). |
-| SF-01/EC-07 | tip | hard-drop | Load holding fails during a slow leak at 20 degrees, so the walker is lost either way; the models differ in which actuator gives out first. Level 1 ties leg force and centre-of-pressure authority to the same capacity (A3, A4) and tips. Level 2 tips with ankle 20 and knee 60 kN m, holds through the run with ankle 26.5 and knee 60 kN m, and drops the cockpit at 2.7 m/s with the adopted torques (ankle 40.5, knee 26.5 kN m, DQ-024): weaker knees turn the tip into a drop (HAZ-PIL-002). |
+| SF-01/EC-07 | tip | hard-drop | Load holding fails during a slow leak at 20 degrees, so the walker is lost either way; the models differ in which actuator gives out first. Level 1 ties leg force and centre-of-pressure authority to the same capacity (A3, A4) and tips. Level 2 tips with ankle 20 and knee 60 kN m, holds through the run with ankle 26.5 and knee 60 kN m, and drops the cockpit at 2.8 m/s with the adopted torques (ankle 40.5, knee 26.5 kN m, DQ-024): weaker knees turn the tip into a drop (HAZ-PIL-002). |
 | SF-01/EC-08 | tip | safe | A slow leak at 19.5 degrees with load holding working; both levels lock at about 2.9 s. Before the lock, level 1's centre-of-pressure limit (A3) and leg sag (A4, 0.12 m) let its CoM drift to the foot edge, so the locked body tips (A5) at 3.6 s. Level 2 keeps its CoM 0.32 m ahead of the foot until the lock and holds, with the ankle at any torque from 15 kN m up: here level 1's assumptions, not the actuators, decide. |
 
 The 22 agreeing cases are listed in [`l2-crosscheck.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/l2-crosscheck.md).
@@ -83,14 +83,14 @@ The 22 agreeing cases are listed in [`l2-crosscheck.md`](https://github.com/jher
 | ankle | 34,000 N m | 0 |
 | ankle | 37,000 N m | 0 |
 | ankle | 40,500 N m | 0 |
-| knee | 15,000 N m | 21 |
-| knee | 17,500 N m | 0 |
+| knee | 15,000 N m | 22 |
+| knee | 17,500 N m | 3 |
 | knee | 20,000 N m | 0 |
 | knee | 22,500 N m | 0 |
 | knee | 30,000 N m | 0 |
 | knee | 40,000 N m | 0 |
 
-Proposal rationale: Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), a third above the lowest value that clears the grid; knee 1.5 times the lowest value that clears it with that ankle. Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).
+Proposal rationale: Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), a third above the lowest value that clears the grid; knee 1.5 times the lowest value that cleared it with that ankle when it was sized (17.5 kN m, DQ-024); with the CL-05 link masses and inertias (cad/links.json) the lowest clear knee is 20 kN m, so 26.5 kN m is 1.33 times it; the lead kept 26.5 kN m (DQ-026). Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).
 
 ## Block diagram
 
@@ -122,13 +122,22 @@ Proposal rationale: Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_
 
 | Parameter | Value | Unit | Status | Source |
 |---|---|---|---|---|
-| `torso_mass_kg` | 3672 | kg | derived | 80% of mass_kg above the hips (assumed split; the CAD gives no mass per part), DQ-023 |
-| `leg_mass_kg` | 459 | kg | derived | 10% of mass_kg per leg (thigh + shank + foot, split 50/40/10), DQ-023 |
+| `torso_mass_kg` | 3473.8 | kg | derived | mass_kg less both legs; CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) gives 3,470 kg (the 3 kg difference is the rounding of cad/metrics.json) |
+| `torso_pitch_inertia_kgm2` | 2452 | kg m^2 | derived | Torso pitch inertia about its centre of mass, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) |
+| `thigh_mass_kg` | 339.3 | kg | derived | CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) |
+| `shank_mass_kg` | 167.8 | kg | derived | CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) |
+| `foot_mass_kg` | 51.0 | kg | derived | CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) |
+| `thigh_com_fraction` | 0.175 | - | derived | Thigh centre of mass along hip-knee, from the hip; CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) |
+| `shank_com_fraction` | 0.424 | - | derived | Shank centre of mass along knee-ankle, from the knee; CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) |
+| `thigh_pitch_inertia_kgm2` | 153 | kg m^2 | derived | About the thigh centre of mass, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) |
+| `shank_pitch_inertia_kgm2` | 39 | kg m^2 | derived | About the shank centre of mass, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) |
+| `foot_pitch_inertia_kgm2` | 5 | kg m^2 | derived | About the foot centre of mass, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) |
+| `foot_com_above_sole_m` | 0.067 | m | derived | CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) |
 | `hip_height_m` | 2.34 | m | derived | Reference layout CL-05 (cad/metrics.json, hip_height_m), decision DQ-023; placeholder geometry, not a design |
 | `thigh_length_m` | 1.107 | m | derived | Hip to knee: puts the hip at hip_height_m in the stance pose (knee bent 0.3 rad), DQ-023 |
 | `shank_length_m` | 1.107 | m | derived | Knee to ankle: as thigh_length_m, DQ-023 |
 | `ankle_height_m` | 0.15 | m | assumed | Ankle joint above the sole |
-| `torso_com_above_hip_m` | 0.745 | m | derived | Puts the whole-body CoM at com_height_m (CL-05, cad/metrics.json) with the masses above, DQ-023 |
+| `torso_com_above_hip_m` | 0.748 | m | derived | Torso centre of mass above the hip joint, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py); placed over the hip (the CAD has it 0.265 m behind, not modelled) |
 | `knee_torque_max_nm` | 26500 | N m | derived | Knee actuator peak torque at full supply, re-sized against HAZ-WLK-002 CF4 for the 4,590 kg reference layout (SZ-01, sim/results/sizing-cf4.md; SYS-016); adopted by lead decision DQ-024 |
 | `hip_torque_max_nm` | 40000 | N m | assumed | Hip actuator peak torque at full supply |
 | `ankle_torque_max_nm` | 40500 | N m | derived | Ankle actuator peak torque at full supply, 1.5 m g L_foot, re-sized against HAZ-WLK-002 CF4 for the 4,590 kg reference layout (SZ-01, sim/results/sizing-cf4.md; SYS-016); adopted by lead decision DQ-024 |

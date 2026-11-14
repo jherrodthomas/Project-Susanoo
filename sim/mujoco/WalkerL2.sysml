@@ -7,13 +7,12 @@ package WalkerL2 {
     doc /* The level-2 MuJoCo walker model (sim/mujoco/README.md). */
     part def Torso {
         doc /* Cockpit, pelvis, power and manipulators lumped above the hips; slide x, slide z and pitch. */
-        attribute torsoMassKg : Real = 3672.0;  // kg, derived
+        attribute torsoMassKg : Real = 3473.8;  // kg, derived
         attribute hipHeightM : Real = 2.34;  // m, derived
-        attribute torsoComAboveHipM : Real = 0.745;  // m, derived
+        attribute torsoComAboveHipM : Real = 0.748;  // m, derived
     }
     part def Leg {
         doc /* Hip, knee and ankle hinges about y and a box foot; each joint has a lock for load holding. */
-        attribute legMassKg : Real = 459.0;  // kg, derived
         attribute thighLengthM : Real = 1.107;  // m, derived
         attribute shankLengthM : Real = 1.107;  // m, derived
         attribute ankleHeightM : Real = 0.15;  // m, assumed

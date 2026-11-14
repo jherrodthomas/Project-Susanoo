@@ -73,19 +73,19 @@ package WikiImages {
     }
     part img3DSusA1Air : RenderedStill {
         attribute :>> file = "3d-sus-a1-air.png";
-        attribute :>> kilobytes = 289;
+        attribute :>> kilobytes = 291;
         attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/sheet_check.mjs";
     }
     part img3DSusA1Lr : RenderedStill {
         attribute :>> file = "3d-sus-a1-lr.png";
-        attribute :>> kilobytes = 336;
+        attribute :>> kilobytes = 335;
         attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/sheet_check.mjs";
     }
     part img3DSusA1 : RenderedStill {
         attribute :>> file = "3d-sus-a1.png";
-        attribute :>> kilobytes = 467;
+        attribute :>> kilobytes = 468;
         attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/sheet_check.mjs";
     }
@@ -103,7 +103,7 @@ package WikiImages {
     }
     part img3DSusM1 : RenderedStill {
         attribute :>> file = "3d-sus-m1.png";
-        attribute :>> kilobytes = 386;
+        attribute :>> kilobytes = 388;
         attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/sheet_check.mjs";
     }
@@ -127,7 +127,7 @@ package WikiImages {
     }
     part imgRecDecisionBoard : GeneratedFigure {
         attribute :>> file = "rec-decision-board.svg";
-        attribute :>> kilobytes = 31;
+        attribute :>> kilobytes = 33;
         attribute :>> shownOn = 0;
         attribute :>> generator = "tools/previews/record_figures.py";
     }

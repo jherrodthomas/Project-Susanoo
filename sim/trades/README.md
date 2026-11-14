@@ -48,13 +48,13 @@ Runs the simulations the architecture trade studies need. For TS-001 (actuation 
 | Mode | Alternatives | Load holding | Level 1 (safe / tip / drop) | Level 2 (safe / tip / drop) | Worst impact L2 | Agree |
 |---|---|---|---|---|---|---|
 | A-LOSS | A | works | 171 / 9 / 0 | 180 / 0 / 0 | 0.0 m/s | 171/180 |
-| A-LOSS | A | fails | 20 / 11 / 149 | 53 / 0 / 127 | 4.2 m/s | 140/180 |
+| A-LOSS | A | fails | 20 / 11 / 149 | 51 / 0 / 129 | 4.2 m/s | 142/180 |
 | B-SAG | B-EHA, B-EMA | works | 167 / 13 / 0 | 180 / 0 / 0 | 0.0 m/s | 167/180 |
-| B-SAG | B-EHA, B-EMA | fails | 66 / 13 / 101 | 129 / 10 / 41 | 2.7 m/s | 108/180 |
+| B-SAG | B-EHA, B-EMA | fails | 66 / 13 / 101 | 130 / 9 / 41 | 3.0 m/s | 109/180 |
 | B-ISOL | B-EHA, B-EMA | works | 171 / 9 / 0 | 180 / 0 / 0 | 0.0 m/s | 171/180 |
-| B-ISOL | B-EHA, B-EMA | fails | 20 / 11 / 149 | 53 / 0 / 127 | 4.2 m/s | 140/180 |
+| B-ISOL | B-EHA, B-EMA | fails | 20 / 11 / 149 | 51 / 0 / 129 | 4.2 m/s | 142/180 |
 
-Summary recorded in TS-001: On the 4,590 kg reference layout (DQ-023) with the re-sized torques (ankle 40.5, knee 26.5 kN m, DQ-024), every supply-loss mode is safe across the envelope at level 2 while load holding works (level 1 tips 9-13 of 180 through its unsized centre-of-pressure limit, A3). With load holding failed, a hydraulic supply loss (A) and an isolated battery (B, SYS-014) are identical: torque goes to zero and the cockpit drops in 127 of 180 cases at up to 4.2 m/s (level 2). A bus undervoltage that keeps 35% of torque (B, assumed floor) drops it in 41 and tips it in 10 at up to 2.7 m/s, still above the 1.0 m/s safe drop speed. The alternatives differ by the torque left after the fault, not by the technology.
+Summary recorded in TS-001: On the 4,590 kg reference layout (DQ-023, link masses and inertias from cad/links.json) with the re-sized torques (ankle 40.5, knee 26.5 kN m, DQ-024), every supply-loss mode is safe across the envelope at level 2 while load holding works (level 1 tips 9-13 of 180 through its unsized centre-of-pressure limit, A3). With load holding failed, a hydraulic supply loss (A) and an isolated battery (B, SYS-014) are identical: torque goes to zero and the cockpit drops in 129 of 180 cases at up to 4.2 m/s (level 2). A bus undervoltage that keeps 35% of torque (B, assumed floor) drops it in 41 and tips it in 9 at up to 2.9 m/s, still above the 1.0 m/s safe drop speed. The alternatives differ by the torque left after the fault, not by the technology.
 
 ## Where the evidence goes
 
@@ -63,7 +63,7 @@ Summary recorded in TS-001: On the 4,590 kg reference layout (DQ-023) with the r
 | Alternative | Criterion | Score | Note |
 |---|---|---|---|
 | A | C09 | 2 (preliminary) | Every supply loss takes torque to zero on all joints at once; with load holding failed the cockpit drops at up to 4.2 m/s. |
-| B-EHA | C09 | 3 (preliminary) | A bus undervoltage keeps residual torque (assumed 35%): 51 of 180 lost (41 drops, 10 tips) at up to 2.7 m/s, against 127 drops at up to 4.2 m/s; battery isolation is as bad as A. Local actuator leaks pending TS-001-E06. |
+| B-EHA | C09 | 3 (preliminary) | A bus undervoltage keeps residual torque (assumed 35%): 50 of 180 lost (41 drops, 9 tips) at up to 2.9 m/s, against 129 drops at up to 4.2 m/s; battery isolation is as bad as A. Local actuator leaks pending TS-001-E06. |
 | B-EMA | C09 | 3 (preliminary) | As B-EHA at simulation fidelity; spring-applied brakes against check valves pending TS-001-E06. |
 
 ## Block diagram

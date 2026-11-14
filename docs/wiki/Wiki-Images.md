@@ -47,16 +47,16 @@ The figures the wiki shows directly: item-definition and SysML views, record fig
 | [`3d-s3-05-fog.png`](images/3d-s3-05-fog.png) | `sim/scenes3d/render.mjs` | 57 KB | 2 wiki pages, 1 repository page |
 | [`3d-s3-05.png`](images/3d-s3-05.png) | `sim/scenes3d/render.mjs` | 61 KB | 2 wiki pages, 1 repository page |
 | [`3d-s3-06.png`](images/3d-s3-06.png) | `sim/scenes3d/render.mjs` | 70 KB | 2 wiki pages, 1 repository page |
-| [`3d-sus-a1-air.png`](images/3d-sus-a1-air.png) | `sim/scenes3d/sheet_check.mjs` | 289 KB | 3 wiki pages, 2 repository pages |
-| [`3d-sus-a1-lr.png`](images/3d-sus-a1-lr.png) | `sim/scenes3d/sheet_check.mjs` | 336 KB | 3 wiki pages, 2 repository pages |
-| [`3d-sus-a1.png`](images/3d-sus-a1.png) | `sim/scenes3d/sheet_check.mjs` | 467 KB | 3 wiki pages, 2 repository pages |
+| [`3d-sus-a1-air.png`](images/3d-sus-a1-air.png) | `sim/scenes3d/sheet_check.mjs` | 291 KB | 3 wiki pages, 2 repository pages |
+| [`3d-sus-a1-lr.png`](images/3d-sus-a1-lr.png) | `sim/scenes3d/sheet_check.mjs` | 335 KB | 3 wiki pages, 2 repository pages |
+| [`3d-sus-a1.png`](images/3d-sus-a1.png) | `sim/scenes3d/sheet_check.mjs` | 468 KB | 3 wiki pages, 2 repository pages |
 | [`3d-sus-m1-terrain-loaded.png`](images/3d-sus-m1-terrain-loaded.png) | `sim/scenes3d/sheet_check.mjs` | 307 KB | 3 wiki pages, 2 repository pages |
 | [`3d-sus-m1-terrain.png`](images/3d-sus-m1-terrain.png) | `sim/scenes3d/sheet_check.mjs` | 309 KB | 3 wiki pages, 2 repository pages |
-| [`3d-sus-m1.png`](images/3d-sus-m1.png) | `sim/scenes3d/sheet_check.mjs` | 386 KB | 3 wiki pages, 2 repository pages |
+| [`3d-sus-m1.png`](images/3d-sus-m1.png) | `sim/scenes3d/sheet_check.mjs` | 388 KB | 3 wiki pages, 2 repository pages |
 | [`analysis-dependencies.svg`](images/analysis-dependencies.svg) | `docs/diagrams/mil-std-882e/analysis-dependencies.drawio` | 6 KB | 4 wiki pages, 4 repository pages |
 | [`hazard-management.svg`](images/hazard-management.svg) | `docs/diagrams/mil-std-882e/hazard-management.drawio` | 5 KB | 4 wiki pages, 4 repository pages |
 | [`rec-acceptance.svg`](images/rec-acceptance.svg) | `tools/previews/record_figures.py` | 18 KB | 1 repository page |
-| [`rec-decision-board.svg`](images/rec-decision-board.svg) | `tools/previews/record_figures.py` | 31 KB | **no page** |
+| [`rec-decision-board.svg`](images/rec-decision-board.svg) | `tools/previews/record_figures.py` | 33 KB | **no page** |
 | [`rec-event-risk.svg`](images/rec-event-risk.svg) | `tools/previews/record_figures.py` | 19 KB | 1 repository page |
 | [`rec-l1-l2.svg`](images/rec-l1-l2.svg) | `tools/previews/record_figures.py` | 32 KB | **no page** |
 | [`rec-mitigations.svg`](images/rec-mitigations.svg) | `tools/previews/record_figures.py` | 42 KB | 1 repository page |

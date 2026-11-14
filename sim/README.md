@@ -64,7 +64,7 @@ Simulation for SUS-I1, following LionDriver's architecture (`assurance/sim`). Ea
 | [search-SF-01](results/search-SF-01.md) | 1 · search | failure search, 8 edge cases, 0 findings | 400 | hard-drop 198, safe 196, tip 6 | HAZ-PIL-002, HAZ-WLK-002 |
 | [l2-crosscheck](results/l2-crosscheck.md) | 1 vs 2 | level 1 against MuJoCo 3.3.5, 0 unexplained | 26 | agree 22/26 | — |
 | [sizing-cf4](results/sizing-cf4.md) | 2 · sizing | ankle 40500 N m, knee 26500 N m proposed (preliminary) | 882 | failures at proposal 0 | HAZ-WLK-002 |
-| [ts001-fault-response](results/ts001-fault-response.md) | 1 + 2 · trade | TS-001 supply-loss response per alternative | 1,080 | agree 897/1080 | — |
+| [ts001-fault-response](results/ts001-fault-response.md) | 1 + 2 · trade | TS-001 supply-loss response per alternative | 1,080 | agree 902/1080 | — |
 | [SU-01](results/uav/summary.md) | PX4 SITL | GCS link lost during observation, return-to-launch configured | 1 | keepout-breach 1 | HAZ-INT-001 |
 | [SU-02](results/uav/summary.md) | PX4 SITL | GCS link lost, return-to-launch, walker has moved since take-off | 1 | landed-at-stale-home 1 | HAZ-INT-001, HAZ-DCK-002 |
 | [SU-03](results/uav/summary.md) | PX4 SITL | GCS link lost during observation, land in place configured | 1 | landed-clear 1 | HAZ-INT-001 |

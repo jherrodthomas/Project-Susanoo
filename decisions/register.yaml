@@ -510,3 +510,45 @@ decisions:
     answer: {choice: adopt, by: lead, at: 2026-11-13, via: chat, note: "adopt the re-sized torques"}
     applied_in: [sim/spec/walker_l2.yaml, requirements/SYS-016.yaml, safety/hazards/HAZ-WLK-002.yaml, architecture/trades/TS-001.yaml]
     sources: [sim/results/sizing-cf4.md, requirements/SYS-016.yaml, decisions/register.yaml]
+
+  - id: DQ-025
+    question: Which source should set the level-2 walker's per-link masses, centres of mass and pitch inertias?
+    context: >-
+      Level 2 split the 4,590 kg as 80% torso and 10% per leg (50/40/10 thigh, shank, foot) and took the torso's pitch
+      inertia from a 1.3 x 1.0 m box (about 820 kg m^2). **The CL-05 CAD, weighed solid by solid as cad/metrics.json
+      is, gives a 3,470 kg torso with a pitch inertia of 2,452 kg m^2 and 558 kg per leg** (cad/links.json, from
+      tools/cad/b3d/cl05_links.py). A text-to-cad spike found the same values.
+    options:
+      - {key: cad, title: Take them from the CL-05 link mass properties, detail: "Level 2 pitches like the reference layout; a test fails when the spec and cad/links.json drift apart, and the CAD workflow fails when cad/links.json is stale. The cross-check, sizing and TS-001 results are re-run."}
+      - {key: keep, title: Keep the assumed split and box inertia, detail: "No re-run; the torso stays about three times easier to pitch than the layout."}
+    recommendation: cad
+    reversibility: easy
+    blocks: [actuator sizing SZ-01, TS-001 evidence]
+    gate: G2
+    decider: claude
+    status: applied
+    asked: null
+    answer: {choice: cad, by: claude, at: 2026-11-13, via: chat, note: "lead asked to feed the CAD values into walker_l2.yaml"}
+    applied_in: [cad/links.json, tools/cad/b3d/cl05_links.py, sim/spec/walker_l2.yaml, sim/mujoco/model.py, sim/tests/test_sim.py, sim/results/sizing-cf4.md, sim/results/l2-crosscheck.md, sim/results/ts001-fault-response.md, architecture/trades/TS-001.yaml, safety/hazards/HAZ-WLK-002.yaml]
+    sources: [cad/links.json, cad/metrics.json, sim/spec/walker_l2.yaml]
+
+  - id: DQ-026
+    question: Should the knee torque be raised to keep a 1.5 times reserve now that level 2 uses the CL-05 link inertias?
+    context: >-
+      DQ-024 adopted knee 26.5 kN m as 1.5 times the lowest knee torque that cleared the envelope (17.5 kN m). **With
+      the CL-05 link masses and inertias (DQ-025) the lowest clearing knee torque is 20 kN m, so 26.5 kN m still clears
+      the envelope with no failures but is 1.33 times it.** The ankle is unchanged (30.5 kN m clears; 40.5 kN m is in
+      the spec). Level 2 still has forward-bending knees, unlike CL-05, so the knee figure may move again.
+    options:
+      - {key: keep, title: Keep knee 26.5 kN m until the actuation trade has vendor data, detail: "No change; the envelope still clears with a 1.33 times reserve. The knee is revisited with the reverse-knee model and TS-001-E03."}
+      - {key: raise, title: Raise the knee to 30 kN m in the spec and SYS-016, detail: "Restores 1.5 times the lowest clearing value; the knee actuator class grows about 13%, and sizing, cross-check and TS-001 are re-run."}
+    recommendation: keep
+    reversibility: easy
+    blocks: [SYS-016 knee value, TS-001 C01 and C06]
+    gate: G2
+    decider: lead
+    status: applied
+    asked: 2026-11-13
+    answer: {choice: keep, by: lead, at: 2026-11-14, via: chat, note: "keep the knee at 26.5 kN·m"}
+    applied_in: [sim/mujoco/sizing.yaml, sim/results/sizing-cf4.md, safety/hazards/HAZ-WLK-002.yaml, requirements/SYS-016.yaml]
+    sources: [sim/results/sizing-cf4.md, sim/spec/walker_l2.yaml, requirements/SYS-016.yaml]

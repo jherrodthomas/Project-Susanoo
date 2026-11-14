@@ -29,7 +29,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Field | Value |
 |---|---|
 | Files | [`CL-01.yaml`](CL-01.yaml), [`CL-02.yaml`](CL-02.yaml), [`CL-03.yaml`](CL-03.yaml), [`CL-04.yaml`](CL-04.yaml), [`CL-05.yaml`](CL-05.yaml), [`common.yaml`](common.yaml) |
-| Read by | [`build_concepts.py`](../../tools/cad/build_concepts.py), [`cl05.py`](../../tools/cad/b3d/cl05.py), [`cl05_web.py`](../../tools/cad/b3d/cl05_web.py), [`cl05_terrain.py`](../../tools/cad/b3d/cl05_terrain.py), [`blender_walk.py`](../../tools/cad/blender_walk.py), [`drawings.py`](../../tools/cad/drawings.py), [`readme.py`](../../tools/cad/readme.py) |
+| Read by | [`build_concepts.py`](../../tools/cad/build_concepts.py), [`cl05.py`](../../tools/cad/b3d/cl05.py), [`cl05_web.py`](../../tools/cad/b3d/cl05_web.py), [`cl05_terrain.py`](../../tools/cad/b3d/cl05_terrain.py), [`cl05_links.py`](../../tools/cad/b3d/cl05_links.py), [`blender_walk.py`](../../tools/cad/blender_walk.py), [`drawings.py`](../../tools/cad/drawings.py), [`readme.py`](../../tools/cad/readme.py) |
 | Review | [`cad/README.md`](../README.md) (concept layouts review) |
 | SysML | [`LayoutParameters.sysml`](LayoutParameters.sysml) (generated) |
 

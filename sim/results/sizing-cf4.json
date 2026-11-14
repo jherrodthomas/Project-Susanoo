@@ -86,7 +86,7 @@
   "cases": [],
   "failures": 0,
   "knee_torque_max_nm": 26500,
-  "rationale": "Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), a third above the lowest value that clears the grid; knee 1.5 times the lowest value that clears it with that ankle. Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1)."
+  "rationale": "Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), a third above the lowest value that clears the grid; knee 1.5 times the lowest value that cleared it with that ankle when it was sized (17.5 kN m, DQ-024); with the CL-05 link masses and inertias (cad/links.json) the lowest clear knee is 20 kN m, so 26.5 kN m is 1.33 times it; the lead kept 26.5 kN m (DQ-026). Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1)."
  },
  "spec_digest": "ce8f2beafd0f",
  "sweeps": [
@@ -237,7 +237,7 @@
   },
   {
    "id": "knee",
-   "lowest_clear": 17500,
+   "lowest_clear": 20000,
    "param": "knee_torque_max_nm",
    "rows": [
     {
@@ -282,6 +282,13 @@
        "pilot_reaction_s": 0.5,
        "slope_deg": 0,
        "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
        "tau_leak_s": 5.0
       },
       {
@@ -390,12 +397,34 @@
        "tau_leak_s": 5.0
       }
      ],
-     "failures": 21,
+     "failures": 22,
      "value": 15000
     },
     {
-     "cases": [],
-     "failures": 0,
+     "cases": [
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      }
+     ],
+     "failures": 3,
      "value": 17500
     },
     {
