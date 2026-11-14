@@ -328,8 +328,42 @@ def img(file: str, number: str, title: str) -> str:
     return f"![Figure {number} · {title}](figures/{file})\n"
 
 
+def terrain_walk() -> dict | None:
+    """The level-2 terrain walk (sim/mujoco/terrain.py), if its committed result exists."""
+    import json
+    p = ROOT / "sim" / "results" / "l2-terrain.json"
+    return json.loads(p.read_text()) if p.exists() else None
+
+
+def terrain_section(t: dict | None) -> list[str]:
+    if not t:
+        return []
+    lim = t["limits_knm"]
+    rows = []
+    for r in t["rows"]:
+        if r.get("skipped"):
+            rows.append(f"| {r['label']} | {r['mode']} | not run: {r['skipped']} | — | — | — |")
+            continue
+        out = "walked" if r["walked"] else f"**fell** ({r['fall']['why']} at {r['fall']['t']:g} s)"
+        tu = r["torque_use"]
+        rows.append(f"| {r['label']} | {r['mode']} | {out} | {r['tilt_max_deg']:g} | {r['slip_max_m']:g} | "
+                    f"{tu['hip']:g} / {tu['knee']:g} / {tu['ankle']:g} |")
+    ran = [r for r in t["rows"] if not r.get("skipped")]
+    return [
+        "## Terrain walk\n",
+        f"[`terrain.py`](terrain.py) walks CL-05 as a 3D multibody over the sheet 3 terrain course under a drafted "
+        f"controller ([`terrain.yaml`](terrain.yaml)), unloaded and carrying {t['load_kg']:,} kg, {t['cycles']} cycles "
+        f"of {t['cycle_s']:g} s each, with the level-2 torque limits (hip {lim['hip']:g}, knee {lim['knee']:g}, ankle "
+        f"{lim['ankle']:g} kN m). {sum(1 for r in ran if r['walked'])} of {len(ran)} runs walk the course; each fall "
+        f"is attributed to the controller or a joint torque limit in [`l2-terrain.md`](../results/l2-terrain.md). "
+        "A drafted controller on concept geometry: not validation of the walk.\n",
+        "| Terrain | Load | Outcome | Max tilt (°) | Max slip (m) | Torque use hip / knee / ankle |",
+        "|---|---|---|---|---|---|", *rows, ""]
+
+
 def readme(d: dict, specs: list[dict]) -> str:
     by = {sp["file"]: sp for sp in specs}
+    tw = terrain_walk()
     cc, sz = d["cc"], d["sz"]
     rows = cc["rows"]
     agree = sum(1 for r in rows if r["agree"])
@@ -340,12 +374,17 @@ def readme(d: dict, specs: list[dict]) -> str:
         "# Level-2 multibody simulation (MuJoCo)\n",
         f"> **Status:** MuJoCo {cc['mujoco']}; {agree} of {len(rows)} cross-check outcomes agree with level 1, every "
         f"disagreement explained; {sz['id']} proposes ankle {sz['proposal']['ankle_torque_max_nm']:,} N m and knee "
-        f"{sz['proposal']['knee_torque_max_nm']:,} N m (preliminary). Synthetic, **no evidence credit**.\n",
+        f"{sz['proposal']['knee_torque_max_nm']:,} N m (preliminary)"
+        + (f"; the terrain walk completes {sum(1 for r in tw['rows'] if r.get('walked'))} of "
+           f"{sum(1 for r in tw['rows'] if not r.get('skipped'))} terrain runs" if tw else "")
+        + ". Synthetic, **no evidence credit**.\n",
         "| Field | Value |", "|---|---|",
         f"| Spec | [`sim/spec/walker_l2.yaml`](../spec/walker_l2.yaml) ({d['l2']['id']} {d['l2']['revision']}) on top of "
         "[`walker.yaml`](../spec/walker.yaml) |",
-        "| Run | `python -m sim.mujoco.crosscheck`, `python -m sim.mujoco.sizing` (about 4 minutes); `--compare` in CI |",
-        "| Results | [`l2-crosscheck.md`](../results/l2-crosscheck.md), [`sizing-cf4.md`](../results/sizing-cf4.md) |",
+        "| Run | `python -m sim.mujoco.crosscheck`, `python -m sim.mujoco.sizing` (about 4 minutes)"
+        + (", `python -m sim.mujoco.terrain`" if tw else "") + "; `--compare` in CI |",
+        "| Results | [`l2-crosscheck.md`](../results/l2-crosscheck.md), [`sizing-cf4.md`](../results/sizing-cf4.md)"
+        + (", [`l2-terrain.md`](../results/l2-terrain.md)" if tw else "") + " |",
         "| SysML | [`WalkerL2.sysml`](WalkerL2.sysml) (generated) |", "",
         "## Purpose\n",
         "A planar two-legged walker in MuJoCo, built from the same specs as the level-1 plant, so the assumptions "
@@ -363,6 +402,7 @@ def readme(d: dict, specs: list[dict]) -> str:
         "| Sweep | Value | Failures on the grid |", "|---|---|---|",
         *[f"| {sw['id']} | {r['value']:,} N m | {r['failures']} |" for sw in sz["sweeps"] for r in sw["rows"]], "",
         f"Proposal rationale: {sz['proposal']['rationale']}\n",
+        *terrain_section(tw),
         "## Block diagram\n", img("fig-3-block-diagram.svg", "3", "Block diagram"),
         "## Boundary diagram\n", img("fig-4-boundary-diagram.svg", "4", "Boundary diagram"),
         "| # | From | To | Crossing / interaction |", "|---|---|---|---|",
@@ -392,6 +432,8 @@ def readme(d: dict, specs: list[dict]) -> str:
         "| [`l2.py`](l2.py) | Runs a case on the level-2 model | code |",
         "| [`crosscheck.py`](crosscheck.py), [`crosscheck.yaml`](crosscheck.yaml) | Level 1 against level 2 | code, hand-written |",
         "| [`sizing.py`](sizing.py), [`sizing.yaml`](sizing.yaml) | Joint torque sizing (SZ-01) | code, hand-written |",
+        *(["| [`terrain.py`](terrain.py), [`terrain.yaml`](terrain.yaml) | CL-05 as a 3D multibody walking the sheet 3 "
+           "terrain course | code, hand-written |"] if tw else []),
         "| [`requirements.txt`](requirements.txt) | Pinned MuJoCo | hand-written |",
         "| [`WalkerL2.sysml`](WalkerL2.sysml) | The level-2 walker as SysML | generated |",
         "| [`figures/`](figures/) | Generated SVG figures (do not edit) | generated |",

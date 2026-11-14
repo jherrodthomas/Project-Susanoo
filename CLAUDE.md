@@ -59,6 +59,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
   python -m sim.mujoco.crosscheck      # level 1 vs level 2; needs sim/mujoco/requirements.txt
   python -m sim.mujoco.sizing          # actuator sizing against CF4 at level 2 (about 4 minutes)
   python -m sim.trades.fault_response  # TS-001 supply-loss evidence on both levels (about 1 minute)
+  python -m sim.mujoco.terrain         # level-2 terrain walk for sheet 3, unloaded and loaded (about 2 minutes)
   python -m unittest discover -s sim/tests -t .
   python3 tools/gen_safety_docs.py && python3 tools/figures/build_figures.py   # 882E tree, concept, PX4 figures (npm ci --prefix tools/figures once)
   python3 tools/figures/requirements_readme.py   # requirements/README.md and figures from the SYS records

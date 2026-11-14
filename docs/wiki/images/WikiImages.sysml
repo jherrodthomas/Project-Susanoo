@@ -91,13 +91,13 @@ package WikiImages {
     }
     part img3DSusM1TerrainLoaded : RenderedStill {
         attribute :>> file = "3d-sus-m1-terrain-loaded.png";
-        attribute :>> kilobytes = 307;
+        attribute :>> kilobytes = 310;
         attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/sheet_check.mjs";
     }
     part img3DSusM1Terrain : RenderedStill {
         attribute :>> file = "3d-sus-m1-terrain.png";
-        attribute :>> kilobytes = 309;
+        attribute :>> kilobytes = 312;
         attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/sheet_check.mjs";
     }
@@ -127,7 +127,7 @@ package WikiImages {
     }
     part imgRecDecisionBoard : GeneratedFigure {
         attribute :>> file = "rec-decision-board.svg";
-        attribute :>> kilobytes = 34;
+        attribute :>> kilobytes = 36;
         attribute :>> shownOn = 0;
         attribute :>> generator = "tools/previews/record_figures.py";
     }

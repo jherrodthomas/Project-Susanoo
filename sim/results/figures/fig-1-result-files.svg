@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="546.6" viewBox="0 0 1240 546.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="596.6" viewBox="0 0 1240 596.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
 <title>Figure 1 · Every committed result and how it is kept honest</title>
 <desc>Every result set with its writer, CI check, label and spec digest</desc>
 <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="1240" height="492" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1240" height="542" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · Every committed result and how it is kept honest</text>
-<text x="40" y="66" font-size="12.5" fill="#475569">The 5 result sets in sim/results: the module that writes each, the CI job that re-runs it, its synthetic label and whether it was built from the current plant spec (digest ce8f2beafd0f); 0</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The 6 result sets in sim/results: the module that writes each, the CI job that re-runs it, its synthetic label and whether it was built from the current plant spec (digest ce8f2beafd0f); 0</text>
 <text x="40" y="83" font-size="12.5" fill="#475569">sets stale. PX4 SITL runs are in uav/.</text>
 <text x="1200" y="44" font-size="11" fill="#475569" text-anchor="end">sim/results/</text>
 <line x1="40" y1="102" x2="1200" y2="102" stroke="#E2E8F0" stroke-width="1"/>
@@ -26,59 +26,69 @@
 <text x="920.4" y="172.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">ce8f2b current</text>
 <text x="995" y="173" font-size="9.5" fill="#0F172A">—</text>
 <rect x="40" y="195" width="1160" height="48" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<text x="40" y="217" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">plant-results</text>
-<text x="40" y="232" font-size="9.5" fill="#475569">plant-results.json + plant-results.md · 10 KB</text>
-<text x="340" y="223" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">sim.plant.report</text>
-<text x="550" y="217" font-size="10" fill="#0F172A">pdac-validate · sim</text>
+<text x="40" y="217" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">l2-terrain</text>
+<text x="40" y="232" font-size="9.5" fill="#475569">l2-terrain.json + l2-terrain.md · 9 KB</text>
+<text x="340" y="223" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">sim.mujoco.terrain</text>
+<text x="550" y="217" font-size="10" fill="#0F172A">pdac-validate · mujoco</text>
 <text x="550" y="232" font-size="9.5" fill="#475569">--check (reproduce exactly)</text>
 <rect x="800" y="211" width="55.7" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="827.9" y="222.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">synthetic</text>
-<rect x="880" y="211" width="80.8" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
-<text x="920.4" y="222.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">ce8f2b current</text>
-<text x="995" y="217" font-size="9.5" fill="#0F172A">HAZ-PIL-002, HAZ-SAF-001, HAZ-WLK-001,</text>
-<text x="995" y="229" font-size="9.5" fill="#0F172A">HAZ-WLK-002</text>
-<text x="40" y="267" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">search-SF-01</text>
-<text x="40" y="282" font-size="9.5" fill="#475569">search-SF-01.json + search-SF-01.md · 23 KB</text>
-<text x="340" y="273" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">sim.search.search</text>
+<text x="880" y="223" font-size="10" fill="#94A3B8">—</text>
+<text x="995" y="223" font-size="9.5" fill="#0F172A">—</text>
+<text x="40" y="267" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">plant-results</text>
+<text x="40" y="282" font-size="9.5" fill="#475569">plant-results.json + plant-results.md · 10 KB</text>
+<text x="340" y="273" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">sim.plant.report</text>
 <text x="550" y="267" font-size="10" fill="#0F172A">pdac-validate · sim</text>
 <text x="550" y="282" font-size="9.5" fill="#475569">--check (reproduce exactly)</text>
 <rect x="800" y="261" width="55.7" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="827.9" y="272.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">synthetic</text>
 <rect x="880" y="261" width="80.8" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="920.4" y="272.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">ce8f2b current</text>
-<text x="995" y="273" font-size="9.5" fill="#0F172A">HAZ-PIL-002, HAZ-WLK-002</text>
+<text x="995" y="267" font-size="9.5" fill="#0F172A">HAZ-PIL-002, HAZ-SAF-001, HAZ-WLK-001,</text>
+<text x="995" y="279" font-size="9.5" fill="#0F172A">HAZ-WLK-002</text>
 <rect x="40" y="295" width="1160" height="48" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
-<text x="40" y="317" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">sizing-cf4</text>
-<text x="40" y="332" font-size="9.5" fill="#475569">sizing-cf4.json + sizing-cf4.md · 120 KB</text>
-<text x="340" y="323" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">sim.mujoco.sizing</text>
-<text x="550" y="317" font-size="10" fill="#0F172A">pdac-validate · mujoco</text>
-<text x="550" y="332" font-size="9.5" fill="#475569">--compare (outcomes exact, numbers in tolerance)</text>
+<text x="40" y="317" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">search-SF-01</text>
+<text x="40" y="332" font-size="9.5" fill="#475569">search-SF-01.json + search-SF-01.md · 23 KB</text>
+<text x="340" y="323" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">sim.search.search</text>
+<text x="550" y="317" font-size="10" fill="#0F172A">pdac-validate · sim</text>
+<text x="550" y="332" font-size="9.5" fill="#475569">--check (reproduce exactly)</text>
 <rect x="800" y="311" width="55.7" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="827.9" y="322.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">synthetic</text>
 <rect x="880" y="311" width="80.8" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="920.4" y="322.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">ce8f2b current</text>
-<text x="995" y="323" font-size="9.5" fill="#0F172A">HAZ-WLK-002</text>
-<text x="40" y="367" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">ts001-fault-response</text>
-<text x="40" y="382" font-size="9.5" fill="#475569">ts001-fault-response.json + ts001-fault-response.md · 54 KB</text>
-<text x="340" y="373" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">sim.trades.fault_response</text>
+<text x="995" y="323" font-size="9.5" fill="#0F172A">HAZ-PIL-002, HAZ-WLK-002</text>
+<text x="40" y="367" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">sizing-cf4</text>
+<text x="40" y="382" font-size="9.5" fill="#475569">sizing-cf4.json + sizing-cf4.md · 120 KB</text>
+<text x="340" y="373" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">sim.mujoco.sizing</text>
 <text x="550" y="367" font-size="10" fill="#0F172A">pdac-validate · mujoco</text>
 <text x="550" y="382" font-size="9.5" fill="#475569">--compare (outcomes exact, numbers in tolerance)</text>
 <rect x="800" y="361" width="55.7" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="827.9" y="372.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">synthetic</text>
 <rect x="880" y="361" width="80.8" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
 <text x="920.4" y="372.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">ce8f2b current</text>
-<text x="995" y="373" font-size="9.5" fill="#0F172A">—</text>
-<line x1="40" y1="402" x2="1200" y2="402" stroke="#E2E8F0" stroke-width="1"/>
-<rect x="40" y="416" width="14" height="12" rx="3" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.2"/>
-<text x="62" y="426" font-size="11" fill="#475569">Labelled synthetic / built from the current spec</text>
-<rect x="317.3" y="416" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2"/>
-<text x="339.3" y="426" font-size="11" fill="#475569">Missing label or stale spec digest</text>
-<text x="40" y="448" font-size="10.5" fill="#94A3B8">Generated by tools/figures/results_readme.py from the committed results, the code that writes and reads them and the CI workflows. Synthetic: no result here is verification evidence (sim/README.md, evidence gate). Also here:</text>
-<text x="40" y="463" font-size="10.5" fill="#94A3B8">edge-cases.md (written with the search results). Hazards named: the hazard IDs in each result file.</text>
-<g class="terms" data-base-h="492">
-<rect x="0" y="492" width="1240" height="54.6" fill="#FFFFFF"/>
-<line x1="40" y1="496" x2="1200" y2="496" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="511.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CI = continuous integration (the automated checks GitHub runs on every change) · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · ID = identifier · KB = kilobyte, a file size of 1,024 bytes ·</text>
-<text x="40" y="526.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SITL = software-in-the-loop simulation · SUS-A1 = dockable observation UAV · UAV = uncrewed aerial vehicle (drone)</text>
+<text x="995" y="373" font-size="9.5" fill="#0F172A">HAZ-WLK-002</text>
+<rect x="40" y="395" width="1160" height="48" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="417" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">ts001-fault-response</text>
+<text x="40" y="432" font-size="9.5" fill="#475569">ts001-fault-response.json + ts001-fault-response.md · 54 KB</text>
+<text x="340" y="423" font-size="10" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">sim.trades.fault_response</text>
+<text x="550" y="417" font-size="10" fill="#0F172A">pdac-validate · mujoco</text>
+<text x="550" y="432" font-size="9.5" fill="#475569">--compare (outcomes exact, numbers in tolerance)</text>
+<rect x="800" y="411" width="55.7" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="827.9" y="422.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">synthetic</text>
+<rect x="880" y="411" width="80.8" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="920.4" y="422.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">ce8f2b current</text>
+<text x="995" y="423" font-size="9.5" fill="#0F172A">—</text>
+<line x1="40" y1="452" x2="1200" y2="452" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="466" width="14" height="12" rx="3" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.2"/>
+<text x="62" y="476" font-size="11" fill="#475569">Labelled synthetic / built from the current spec</text>
+<rect x="317.3" y="466" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2"/>
+<text x="339.3" y="476" font-size="11" fill="#475569">Missing label or stale spec digest</text>
+<text x="40" y="498" font-size="10.5" fill="#94A3B8">Generated by tools/figures/results_readme.py from the committed results, the code that writes and reads them and the CI workflows. Synthetic: no result here is verification evidence (sim/README.md, evidence gate). Also here:</text>
+<text x="40" y="513" font-size="10.5" fill="#94A3B8">edge-cases.md (written with the search results). Hazards named: the hazard IDs in each result file.</text>
+<g class="terms" data-base-h="542">
+<rect x="0" y="542" width="1240" height="54.6" fill="#FFFFFF"/>
+<line x1="40" y1="546" x2="1200" y2="546" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="561.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CI = continuous integration (the automated checks GitHub runs on every change) · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · ID = identifier · KB = kilobyte, a file size of 1,024 bytes ·</text>
+<text x="40" y="576.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SITL = software-in-the-loop simulation · SUS-A1 = dockable observation UAV · UAV = uncrewed aerial vehicle (drone)</text>
 </g>
 </svg>

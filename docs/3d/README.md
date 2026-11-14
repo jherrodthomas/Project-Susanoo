@@ -53,7 +53,7 @@ The pages a reader opens to see the simulation results and the concept geometry 
 |---|---|---|---|---|---|---|---|
 | [`SUS-A1.html`](SUS-A1.html) | general-arrangement sheet | UAV on dock and in airspace, interactive (sheet 2 of 3, CL-05) | 6 hazards | 6 hazard callouts · replays SU-01, SU-02, SU-03, SU-04, SU-05, SU-06 | 89 KB | [`3d-sus-a1.png`](../wiki/images/3d-sus-a1.png), [`3d-sus-a1-lr.png`](../wiki/images/3d-sus-a1-lr.png), [`3d-sus-a1-air.png`](../wiki/images/3d-sus-a1-air.png) | `sim/scenes3d/build_sheet.py --check` |
 | [`SUS-M1.html`](SUS-M1.html) | general-arrangement sheet | General arrangement, interactive (sheet 1 of 3, CL-05) | 22 hazards | 5 postures · 19 hazard callouts · replays S3-01, S3-02, S3-03, S3-04 | 77 KB | [`3d-sus-m1.png`](../wiki/images/3d-sus-m1.png), [`3d-sus-m1-terrain.png`](../wiki/images/3d-sus-m1-terrain.png), [`3d-sus-m1-terrain-loaded.png`](../wiki/images/3d-sus-m1-terrain-loaded.png) | `sim/scenes3d/sheet_check.mjs` |
-| [`SUS-M1-terrain.html`](SUS-M1-terrain.html) | general-arrangement sheet | Terrain course, interactive (sheet 3 of 3, CL-05) | HAZ-WLK-002, HAZ-MAN-002 | 0 hazard callouts | 48 KB | [`3d-sus-m1-terrain.png`](../wiki/images/3d-sus-m1-terrain.png), [`3d-sus-m1-terrain-loaded.png`](../wiki/images/3d-sus-m1-terrain-loaded.png) | `sim/scenes3d/build_sheet.py --check` |
+| [`SUS-M1-terrain.html`](SUS-M1-terrain.html) | general-arrangement sheet | Terrain course, interactive (sheet 3 of 3, CL-05) | HAZ-WLK-002, HAZ-MAN-002 | 0 hazard callouts | 59 KB | [`3d-sus-m1-terrain.png`](../wiki/images/3d-sus-m1-terrain.png), [`3d-sus-m1-terrain-loaded.png`](../wiki/images/3d-sus-m1-terrain-loaded.png) | `sim/scenes3d/build_sheet.py --check` |
 | [`S3-01.html`](S3-01.html) | scene replay | Slow supply leak on a slope; balance lost before the hold engages | HAZ-WLK-002 | tip | 19 KB | [`3d-s3-01.png`](../wiki/images/3d-s3-01.png) | `sim/scenes3d/render.mjs` |
 | [`S3-02.html`](S3-02.html) | scene replay | Protective stop removes leg force instead of crouching | HAZ-SAF-001 | hard-drop | 18 KB | [`3d-s3-02.png`](../wiki/images/3d-s3-02.png) | `sim/scenes3d/render.mjs` |
 | [`S3-03.html`](S3-03.html) | scene replay | Frozen posture feedback with no staleness monitor | HAZ-WLK-001 | tip | 19 KB | [`3d-s3-03.png`](../wiki/images/3d-s3-03.png) | `sim/scenes3d/render.mjs` |
@@ -86,6 +86,7 @@ The pages a reader opens to see the simulation results and the concept geometry 
 | Asset | Size | Loaded by |
 |---|---|---|
 | [`assets/sus-m1-terrain-loaded.js`](assets/sus-m1-terrain-loaded.js) | 6707 KB | SUS-M1-terrain.html |
+| [`assets/sus-m1-terrain-physics.js`](assets/sus-m1-terrain-physics.js) | 525 KB | SUS-M1-terrain.html |
 | [`assets/sus-m1-terrain.js`](assets/sus-m1-terrain.js) | 7619 KB | SUS-M1-terrain.html |
 | [`assets/sus-m1.js`](assets/sus-m1.js) | 4017 KB | SUS-A1.html, SUS-M1.html, SUS-M1-terrain.html |
 

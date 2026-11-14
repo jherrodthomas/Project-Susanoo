@@ -76,6 +76,7 @@ PRODUCERS = [
     ("docs/readme/*.svg", "tools/readme/build_readme.py"),
     ("docs/3d/SUS-*.html", "sim/scenes3d/build_sheet.py"),
     ("docs/3d/*.html", "sim/scenes3d/build_pages.py"),
+    ("docs/3d/assets/sus-m1-terrain-physics.js", "sim/mujoco/terrain.py"),
     ("docs/3d/assets/sus-m1-terrain*.js", "tools/cad/b3d/cl05_terrain.py"),
     ("docs/3d/assets/*.js", "tools/cad/b3d/cl05_web.py"),
     ("docs/3d/assets/README.md", "tools/figures/assets3d_readme.py"),

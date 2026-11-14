@@ -95,11 +95,15 @@ def read_terrain(a: dict, p: Path) -> dict:
 def load() -> dict:
     ctx, _, _ = load_reqs()
     assets = []
-    terrains = []
+    terrains, physics = [], []
     for p in sorted(FOLDER.glob("*.js")):
         a = read_asset(p)
         if "terrains" in a["meta"]:
             terrains.append(read_terrain(a, p))
+            continue
+        if "runs" in a["meta"]:                  # sim/mujoco/terrain.py: the level-2 terrain walk for sheet 3
+            a["pages"] = sorted(h.name for h in PAGES.glob("*.html") if f"assets/{p.name}" in h.read_text(encoding="utf-8"))
+            physics.append(a)
             continue
         meta = a["meta"]
         per = defaultdict(lambda: {"meshes": 0, "base": 0, "verts": 0, "tris": 0})
@@ -117,7 +121,7 @@ def load() -> dict:
         a["pages"] = sorted(h.name for h in PAGES.glob("*.html") if f"assets/{p.name}" in h.read_text(encoding="utf-8"))
         assets.append(a)
     terrains.sort(key=lambda t: (t["mode"] != "walk", t["file"]))
-    return {"ctx": ctx, "assets": assets, "terrains": terrains, "colours": class_colours(),
+    return {"ctx": ctx, "assets": assets, "terrains": terrains, "physics": physics, "colours": class_colours(),
             "root": next(k for k, v in ctx.nodes.items() if not v.get("parent") and v.get("kind") != "external")}
 
 
@@ -327,7 +331,7 @@ def figure_specs(d: dict) -> tuple[list[dict], str]:
               {"id": "I2", "title": "build123d model", "sub": "tools/cad/b3d/cl05.py", "tone": "software"},
               *([{"id": "I3", "title": "Terrain course", "sub": "sim/scenes3d/terrain.yaml", "tone": "work"}] if t else []),
               {"id": "X", "code": "docs/3d/assets/", "title": "Geometry files" if t else "Geometry file",
-               "sub": "; ".join(f"{x['file']}, {x['kb']:,} KB" for x in [a] + t),
+               "sub": "; ".join(f"{x['file']}, {x['kb']:,} KB" for x in [a] + t + d["physics"]),
                "tone": "current"},
               *[{"id": f"O{i}", "title": pg, "sub": "general-arrangement sheet", "tone": "work"}
                 for i, pg in enumerate(sorted(set(a["pages"]) | set(tpages)), 1)],
@@ -370,6 +374,21 @@ def terrain_section(d: dict) -> list[str]:
     return out
 
 
+def physics_section(d: dict) -> list[str]:
+    out = []
+    for a in d["physics"]:
+        m, sm = a["meta"], a["meta"]["summary"]
+        rows = [r for r in sm["rows"] if not r.get("skipped")]
+        out += ["## Terrain walk physics\n",
+                f"`{a['file']}` ({a['kb']:,} KB, `window.{a['var']}`, written by `{m['generator']}`) holds the level-2 "
+                f"MuJoCo terrain walk for sheet 3: {len(m['runs'])} runs, body poses at {m['log_hz']} Hz for "
+                f"{len(m['bodies'])} bodies, with the CL-05 standing meshes riding rigidly on them. "
+                f"{sum(1 for r in rows if r['walked'])} of {len(rows)} runs walk the course; the results are in "
+                "[`sim/results/l2-terrain.md`](../../../sim/results/l2-terrain.md). Synthetic, drafted controller, "
+                "no evidence credit.\n"]
+    return out
+
+
 def img(file: str, number: str, title: str) -> str:
     return f"![Figure {number} · {title}](figures/{file})\n"
 
@@ -409,6 +428,7 @@ def readme(d: dict, specs: list[dict]) -> str:
         *[f"| {n} | {len(fr)} | {fr[0]['label']} | {fr[-1]['label']} | {sum(f['own'] for f in fr)} |"
           for n, fr in a["clips"].items()], "",
         *terrain_section(d),
+        *physics_section(d),
         "## Block diagram\n", img("fig-3-block-diagram.svg", "3", "Block diagram"),
         "## Boundary diagram\n", img("fig-4-boundary-diagram.svg", "4", "Boundary diagram"),
         "| # | From | To | Crossing / interaction |", "|---|---|---|---|",
@@ -435,7 +455,7 @@ def readme(d: dict, specs: list[dict]) -> str:
         "3. Regenerate this page and run the full check list in [`CLAUDE.md`](../../../CLAUDE.md).", "",
         "## Folder contents\n",
         "| Item | Description | State |", "|---|---|---|",
-        *[f"| `{x['file']}` | {x['meta']['about']} | generated |" for x in d["assets"] + d["terrains"]],
+        *[f"| `{x['file']}` | {x['meta']['about']} | generated |" for x in d["assets"] + d["terrains"] + d["physics"]],
         "| [`CL05Geometry.sysml`](CL05Geometry.sysml) | The geometry file's structure as SysML | generated |",
         "| [`figures/`](figures/) | Generated SVG figures (do not edit) | generated |",
         "| `README.md` | This page | generated |", "",

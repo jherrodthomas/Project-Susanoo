@@ -21,6 +21,14 @@ package ResultSets {
         attribute :>> writer = "sim.mujoco.crosscheck";
         attribute :>> ciCheck = "--compare";
     }
+    part l2Terrain : ResultSet {
+        doc /* sim/results/l2-terrain.json */
+        attribute :>> dataKind = "synthetic";
+        attribute :>> evidenceCredit = false;
+        attribute :>> specDigest = "";
+        attribute :>> writer = "sim.mujoco.terrain";
+        attribute :>> ciCheck = "--check";
+    }
     part plantResults : ResultSet {
         doc /* sim/results/plant-results.json */
         attribute :>> dataKind = "synthetic";

@@ -98,6 +98,7 @@ Simulation result sets (synthetic, for finding problems early; none is verificat
 - [`sim/results/README.md`](Simulation-Results.md)
 - [`sim/results/edge-cases.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/edge-cases.md)
 - [`sim/results/l2-crosscheck.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/l2-crosscheck.md)
+- [`sim/results/l2-terrain.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/l2-terrain.md)
 - [`sim/results/plant-results.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/plant-results.md)
 - [`sim/results/search-SF-01.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/search-SF-01.md)
 - [`sim/results/sizing-cf4.md`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/sim/results/sizing-cf4.md)

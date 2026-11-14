@@ -577,3 +577,46 @@ decisions:
     answer: null
     applied_in: []
     sources: [sim/results/sizing-cf4.md, sim/results/l2-crosscheck.md, sim/spec/walker_l2.yaml, cad/params/CL-05.yaml]
+
+  - id: DQ-028
+    question: Level 2 cannot walk the loaded carry up a 10° slope within the knee torque. What should be done about it now?
+    context: >-
+      Carrying the CAD's margin-peak load (890 kg), the 3D level-2 terrain walk falls on 10°, 15° and 20° uphill with
+      the knee clipped at its limit for over a third of the time. **Each walks with the knee limit alone raised to 28.4,
+      29.3 and 31.2 kN m against the 26.5 kN m kept in DQ-026**; flat, 5° uphill, downhill and cross-slopes walk loaded.
+      The walking pattern and controller are AI drafts (I0), and the needed torque depends on them. SYS-019's loaded
+      slope limit is TBD. Synthetic, no evidence credit.
+    options:
+      - {key: provisional, title: Keep the knee at 26.5 kN m and treat the result as provisional, detail: "No change now; the loaded slope limit stays TBD and the case is re-run when the walk controller is reviewed and level 2 has the reverse knee (TS-001-E03). Costs nothing; the knee may later need more torque."}
+      - {key: limit, title: Set SYS-019's loaded slope limit to 5° uphill for now, detail: "Restricts the loaded carry in the CONOPS to what level 2 walks; no hardware change. Revisited with the controller; operations are narrower until then."}
+      - {key: raise, title: Raise the knee torque to cover the loaded 20° climb with a reserve, detail: "About 31 kN m needed, so roughly 47 kN m at the 1.5 times reserve of DQ-024; the knee actuator class grows about 75%, and sizing, cross-check and TS-001 are re-run."}
+    recommendation: provisional
+    reversibility: easy
+    blocks: [SYS-019 loaded slope limit]
+    gate: G2
+    decider: lead
+    status: applied
+    asked: 2026-11-14
+    answer: {choice: provisional, by: lead, at: 2026-11-14, via: chat, note: "go with provisional for DQ-028"}
+    applied_in: [sim/mujoco/terrain.py, sim/results/l2-terrain.md]
+    sources: [sim/results/l2-terrain.md, requirements/SYS-019.yaml, sim/spec/walker_l2.yaml]
+
+  - id: DQ-029
+    question: How should level 2 walk the sheet 3 terrain course, so the sheet can show the walk with dynamics?
+    context: >-
+      Sheet 3 poses the CL-05 gait on each terrain with no dynamics, balance, slip or torque limits. **The CL-05 link
+      mass properties (cad/links.json, DQ-025) are enough for a 3D multibody model of the whole walker**, so the same
+      walk can be run in MuJoCo with contact and the walker_l2.yaml torque limits.
+    options:
+      - {key: mujoco3d, title: A 3D MuJoCo model of the CL-05 links walking the course under a drafted controller, detail: "Free torso, five joints per leg, feet on a height field of terrain.yaml; ZMP preview pattern, position servos with weight feed-forward, torso attitude and capture-point feedback, footholds moved to bear on the ground. A fall is re-run with raised torque limits to say whether the controller or a joint limit is the cause. Results and a physics view on sheet 3; about 2 minutes in the MuJoCo CI job."}
+      - {key: planar, title: Extend the planar level-2 model with a tilted-gravity slope per terrain, detail: "Reuses sim/mujoco/l2.py; no cross-slopes, ledges or rubble, and no 3D view."}
+    recommendation: mujoco3d
+    reversibility: easy
+    blocks: [sheet 3 physics view]
+    gate: G2
+    decider: claude
+    status: applied
+    asked: null
+    answer: {choice: mujoco3d, by: claude, at: 2026-11-14, via: chat, note: "lead asked for physics libraries to make the terrain walk more realistic, starting after the layout fix merged"}
+    applied_in: [sim/mujoco/terrain.py, sim/mujoco/terrain.yaml, sim/results/l2-terrain.md, docs/3d/assets/sus-m1-terrain-physics.js, sim/scenes3d/sheet_terrain.js, sim/tests/test_terrain_l2.py]
+    sources: [cad/links.json, sim/spec/walker_l2.yaml, sim/scenes3d/terrain.yaml, sim/results/l2-terrain.md]

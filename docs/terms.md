@@ -167,6 +167,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | US | United States |
 | VCRM | verification cross-reference matrix |
 | YAML | a plain-text data format used for the records |
+| ZMP | zero-moment point, the point on the ground where the walker's ground reaction has no tipping moment |
 
 ## Standards
 
