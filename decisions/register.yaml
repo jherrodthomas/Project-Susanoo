@@ -554,24 +554,29 @@ decisions:
     sources: [sim/results/sizing-cf4.md, sim/spec/walker_l2.yaml, requirements/SYS-016.yaml]
 
   - id: DQ-027
-    question: How should level 2 walk the sheet 3 terrain course, so the sheet can show the walk with dynamics?
+    question: Should SUS-M1 stand with a straighter knee so the 26.5 kN m knee clears the envelope, or should the knee torque grow instead?
     context: >-
-      Sheet 3 poses the CL-05 gait on each terrain with no dynamics, balance, slip or torque limits. **The CL-05 link
-      mass properties (cad/links.json, DQ-025) are enough for a 3D multibody model of the whole walker**, so the same
-      walk can be run in MuJoCo with contact and the walker_l2.yaml torque limits.
+      The level-2 model now has CL-05's reverse-jointed legs. **CL-05 stands with its knee bent about 58 degrees
+      (1.018 rad), 0.46 m behind the line of the ground force, so standing on one leg takes about 25 kN m at the
+      knee; with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages, and
+      212 of 378 envelope cases fail with load holding working.** In that stance the knee needs 62.5 kN m to clear the
+      envelope. Standing with the knee bent 0.25 to 0.35 rad clears both sizing grids at 26.5 kN m; 0.2 rad fails
+      again. The straighter stance raises the hips about 0.23 m (sim/results/sizing-cf4.md). While this was being
+      run the lead said in chat: "keep the knee at 26.5 kN·m".
     options:
-      - {key: mujoco3d, title: A 3D MuJoCo model of the CL-05 links walking the course under a drafted controller, detail: "Free torso, five joints per leg, feet on a height field of terrain.yaml; ZMP preview pattern, position servos with weight feed-forward, torso attitude and capture-point feedback, footholds moved to bear on the ground. A fall is re-run with raised torque limits to say whether the controller or a joint limit is the cause. Results and a physics view on sheet 3; about 2 minutes in the MuJoCo CI job."}
-      - {key: planar, title: Extend the planar level-2 model with a tilted-gravity slope per terrain, detail: "Reuses sim/mujoco/l2.py; no cross-slopes, ledges or rubble, and no 3D view."}
-    recommendation: mujoco3d
-    reversibility: easy
-    blocks: [sheet 3 physics view]
+      - {key: posture, title: Keep knee 26.5 kN m and stand with the knee bent about 0.3 rad, detail: "The actuator class stays; CL-05's legs, standing posture and metrics are redrawn (hips about 0.23 m higher, CoM higher), and every simulation is re-run on the new layout."}
+      - {key: torque, title: Keep CL-05's posture and raise the knee to 94 kN m, detail: "1.5 times the lowest clearing 62.5 kN m; the knee actuator class grows about 3.5 times, with its mass and power (TS-001 C01, C06)."}
+      - {key: accept, title: Keep both as they are, detail: "No change; level 2 loses most of the envelope with load holding working, so HAZ-WLK-002 CF4 stays unmitigated in simulation."}
+    recommendation: posture
+    reversibility: revisit
+    blocks: [SYS-016, CL-05 standing posture, TS-001 C09 scores]
     gate: G2
-    decider: claude
-    status: applied
-    asked: null
-    answer: {choice: mujoco3d, by: claude, at: 2026-11-14, via: chat, note: "lead asked for physics libraries to make the terrain walk more realistic, starting after the layout fix merged"}
-    applied_in: [sim/mujoco/terrain.py, sim/mujoco/terrain.yaml, sim/results/l2-terrain.md, docs/3d/assets/sus-m1-terrain-physics.js, sim/scenes3d/sheet_terrain.js, sim/tests/test_terrain_l2.py]
-    sources: [cad/links.json, sim/spec/walker_l2.yaml, sim/scenes3d/terrain.yaml, sim/results/l2-terrain.md]
+    decider: lead
+    status: open
+    asked: 2026-11-14
+    answer: null
+    applied_in: []
+    sources: [sim/results/sizing-cf4.md, sim/results/l2-crosscheck.md, sim/spec/walker_l2.yaml, cad/params/CL-05.yaml]
 
   - id: DQ-028
     question: Level 2 cannot walk the loaded carry up a 10° slope within the knee torque. What should be done about it now?
@@ -595,3 +600,23 @@ decisions:
     answer: {choice: provisional, by: lead, at: 2026-11-14, via: chat, note: "go with provisional for DQ-028"}
     applied_in: [sim/mujoco/terrain.py, sim/results/l2-terrain.md]
     sources: [sim/results/l2-terrain.md, requirements/SYS-019.yaml, sim/spec/walker_l2.yaml]
+
+  - id: DQ-029
+    question: How should level 2 walk the sheet 3 terrain course, so the sheet can show the walk with dynamics?
+    context: >-
+      Sheet 3 poses the CL-05 gait on each terrain with no dynamics, balance, slip or torque limits. **The CL-05 link
+      mass properties (cad/links.json, DQ-025) are enough for a 3D multibody model of the whole walker**, so the same
+      walk can be run in MuJoCo with contact and the walker_l2.yaml torque limits.
+    options:
+      - {key: mujoco3d, title: A 3D MuJoCo model of the CL-05 links walking the course under a drafted controller, detail: "Free torso, five joints per leg, feet on a height field of terrain.yaml; ZMP preview pattern, position servos with weight feed-forward, torso attitude and capture-point feedback, footholds moved to bear on the ground. A fall is re-run with raised torque limits to say whether the controller or a joint limit is the cause. Results and a physics view on sheet 3; about 2 minutes in the MuJoCo CI job."}
+      - {key: planar, title: Extend the planar level-2 model with a tilted-gravity slope per terrain, detail: "Reuses sim/mujoco/l2.py; no cross-slopes, ledges or rubble, and no 3D view."}
+    recommendation: mujoco3d
+    reversibility: easy
+    blocks: [sheet 3 physics view]
+    gate: G2
+    decider: claude
+    status: applied
+    asked: null
+    answer: {choice: mujoco3d, by: claude, at: 2026-11-14, via: chat, note: "lead asked for physics libraries to make the terrain walk more realistic, starting after the layout fix merged"}
+    applied_in: [sim/mujoco/terrain.py, sim/mujoco/terrain.yaml, sim/results/l2-terrain.md, docs/3d/assets/sus-m1-terrain-physics.js, sim/scenes3d/sheet_terrain.js, sim/tests/test_terrain_l2.py]
+    sources: [cad/links.json, sim/spec/walker_l2.yaml, sim/scenes3d/terrain.yaml, sim/results/l2-terrain.md]

@@ -5,7 +5,7 @@ What is physics here and an assumption in level 1:
   - leg support, balance and torso pitch come from joint torques limited by actuator capacity;
   - load holding locks the joints mechanically (a solver-enforced joint constraint at the current angle);
   - the protective stop really steps the swing foot to the ground, towards the horizontal capture point, before
-    crouching.
+    crouching; the foot follows a lifted arc (step_lift_m) to the step target over step_time_s.
 What is unchanged from level 1 (so outcomes are comparable): the case dictionary, the faults and capacity curve,
 alarm, pilot reaction, monitor and lock logic, and the outcome definitions (tip beyond tip_offset from the support
 centre; hard drop when the CoM reaches crouch height faster than safe_drop_speed). Contact after a mishap is not
@@ -27,9 +27,24 @@ from sim.mujoco.model import JOINTS, load_params, mjcf
 from sim.plant.walker import capacity, default_case, initial_state
 
 LIMIT = {"hip": "hip_torque_max_nm", "knee": "knee_torque_max_nm", "ankle": "ankle_torque_max_nm"}
-STANCE0 = {"hip_s": -0.15, "knee_s": 0.3, "ankle_s": -0.15}
-SWING0 = {"hip_w": -0.6, "knee_w": 1.2, "ankle_w": -0.6}
-STOP_STEP_M = 1.2          # protective-stop step length along the ground
+SWING_BEND = 0.6           # extra knee bend of the lifted swing leg over the stance knee (rad)
+
+
+def poses(p: dict) -> tuple[dict, dict]:
+    """Stance and swing joint angles for the leg geometry in the spec, with the foot flat and the torso upright.
+
+    Stance: the spec's knee angle (knee_stance_rad; negative for CL-05's backward-bending knee), with the hip angle
+    that puts the ankle under the hip. Swing: the knee bent SWING_BEND further the same way and the thigh swung to
+    keep the lifted foot under the hip."""
+    lt, ls = p["thigh_length_m"], p["shank_length_m"]
+
+    def hip_over_ankle(knee):          # thigh angle a with lt sin a + ls sin(a + knee) = 0 (ankle under the hip)
+        return math.atan2(-ls * math.sin(knee), lt + ls * math.cos(knee))
+    k0 = p["knee_stance_rad"]
+    k1 = k0 + math.copysign(SWING_BEND, k0)
+    h0, h1 = hip_over_ankle(k0), hip_over_ankle(k1)
+    return ({"hip_s": h0, "knee_s": k0, "ankle_s": -(h0 + k0)},
+            {"hip_w": h1, "knee_w": k1, "ankle_w": -(h1 + k1)})
 
 
 class L2:
@@ -48,6 +63,7 @@ class L2:
         self.sole = {s: mujoco.mj_name2id(m, mujoco.mjtObj.mjOBJ_SITE, f"sole_{s}") for s in ("s", "w")}
         self.foot_body = {s: mujoco.mj_name2id(m, mujoco.mjtObj.mjOBJ_BODY, f"foot_{s}") for s in ("s", "w")}
         self.mass = float(sum(m.body_mass))
+        self.stance0, self.swing0 = poses(self.p)
         self._initial_pose()
 
     # ------------------------------------------------------------ helpers
@@ -67,11 +83,11 @@ class L2:
         downhill of the foot)."""
         d, m = self.d, self.m
         d.qpos[:] = 0.0
-        for n, v in {**STANCE0, **SWING0}.items():
+        for n, v in {**self.stance0, **self.swing0}.items():
             d.qpos[self.qadr[n]] = v
         d.qpos[self.qadr["hip_s"]] += lean
         d.qpos[self.qadr["root_pitch"]] = self.pitch_ref
-        d.qpos[self.qadr["ankle_s"]] = -(self.pitch_ref + d.qpos[self.qadr["hip_s"]] + STANCE0["knee_s"])
+        d.qpos[self.qadr["ankle_s"]] = -(self.pitch_ref + d.qpos[self.qadr["hip_s"]] + self.stance0["knee_s"])
         mujoco.mj_kinematics(m, d)
         d.qpos[self.qadr["root_z"]] -= self.sole_pos("s")[2]
         mujoco.mj_forward(m, d)
@@ -145,15 +161,16 @@ class L2:
             self.m.eq_data[e, 0] = self.d.qpos[self.qadr[n]]
             self.d.eq_active[e] = 1
 
-    def swing_target(self, foot_x):
-        """Joint angles that put the swing sole flat on the ground at foot_x (2-link IK in the leg plane)."""
+    def swing_target(self, foot_x, lift=0.0):
+        """Joint angles that put the swing sole flat at foot_x, lift above the ground (2-link IK in the leg plane)."""
         p, d = self.p, self.d
         hip = d.xpos[mujoco.mj_name2id(self.m, mujoco.mjtObj.mjOBJ_BODY, "thigh_w")]
         pitch = d.qpos[self.qadr["root_pitch"]]
-        dx, dz = foot_x - hip[0], (p["ankle_height_m"]) - hip[2]
+        dx, dz = foot_x - hip[0], (p["ankle_height_m"] + lift) - hip[2]
         lt, ls = p["thigh_length_m"], p["shank_length_m"]
         r = min(math.hypot(dx, dz), lt + ls - 1e-3)
-        knee = math.pi - math.acos(max(-1.0, min(1.0, (lt * lt + ls * ls - r * r) / (2 * lt * ls))))
+        bend = math.copysign(1.0, p["knee_stance_rad"])     # -1: the knee bends backwards (CL-05)
+        knee = bend * (math.pi - math.acos(max(-1.0, min(1.0, (lt * lt + ls * ls - r * r) / (2 * lt * ls)))))
         # absolute thigh angle from vertical-down, positive = tip backwards (-x)
         to_target = math.atan2(-dx, -dz)          # direction hip->ankle, measured like the joints
         inner = math.asin(max(-1.0, min(1.0, ls * math.sin(knee) / r)))
@@ -178,7 +195,7 @@ class L2:
         phase, stop_t, stop_reason, lock_t, alarm_t, low_since, frozen = "single", None, None, None, None, None, None
         ev = {"alarm_t": None, "stop_t": None, "lock_t": None, "mishap_t": None, "impact_speed": 0.0}
         outcome, rho_tip, trace, nxt = "safe", float("inf"), [], 0.0
-        swing_goal, double_t = None, None
+        swing_goal, swing_from, double_t = None, None, None
         steps = int(round(p["horizon_s"] / m.opt.timestep))
         for _ in range(steps + 1):
             t = d.time
@@ -205,7 +222,8 @@ class L2:
                         # (horizontal capture point: along the slope a vertical torso reads as uphill of the foot)
                         ss = self.sole_pos("s")
                         (xh0, zh0), (vh0, _) = hv(com - ss), hv(vel)
-                        swing_goal = ss[0] + math.copysign(STOP_STEP_M, xh0 + vh0 / math.sqrt(g / max(zh0, 0.1)))
+                        swing_goal = ss[0] + math.copysign(p["stop_step_m"], xh0 + vh0 / math.sqrt(g / max(zh0, 0.1)))
+                        swing_from = self.sole_pos("w")[0]
             if lock_t is None and c["load_holding"] == "works":
                 if cap < p["lock_threshold"]:
                     low_since = t if low_since is None else low_since
@@ -262,7 +280,12 @@ class L2:
                 for s in legs:
                     tau[self.dof[f"hip_{s}"]] += (8e4 * (pitch - self.pitch_ref) + 2e4 * wp) / len(legs)
                 if phase != "double":
-                    goal = SWING0 if swing_goal is None else self.swing_target(swing_goal)
+                    if swing_goal is None:
+                        goal = self.swing0
+                    else:       # the foot follows a lifted arc from where it was to the step target over step_time_s
+                        u = min(1.0, (t - stop_t) / p["step_time_s"])
+                        goal = self.swing_target(swing_from + (swing_goal - swing_from) * u,
+                                                 p["step_lift_m"] * math.sin(math.pi * u))
                     for n, q in goal.items():
                         k = self.dof[n]
                         tau[k] += d.qfrc_bias[k] + 2e4 * (q - d.qpos[self.qadr[n]]) - 4e3 * d.qvel[k]

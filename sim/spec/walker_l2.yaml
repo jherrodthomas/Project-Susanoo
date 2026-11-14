@@ -16,9 +16,12 @@ params:
   foot_pitch_inertia_kgm2:  {value: 5, unit: kg m^2, range: [0.5, 500], status: derived, source: "About the foot centre of mass, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py)"}
   foot_com_above_sole_m: {value: 0.067, unit: m, range: [0.0, 0.4], status: derived, source: "CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py)"}
   hip_height_m:       {value: 2.34, unit: m,   range: [1.5, 4.0], status: derived, source: "Reference layout CL-05 (cad/metrics.json, hip_height_m), decision DQ-023; placeholder geometry, not a design"}
-  thigh_length_m:     {value: 1.107, unit: m,   range: [0.8, 2.5], status: derived, source: "Hip to knee: puts the hip at hip_height_m in the stance pose (knee bent 0.3 rad), DQ-023"}
-  shank_length_m:     {value: 1.107, unit: m,   range: [0.8, 2.5], status: derived, source: "Knee to ankle: as thigh_length_m, DQ-023"}
-  ankle_height_m:     {value: 0.15, unit: m,   range: [0.05, 0.4],  status: assumed, source: "Ankle joint above the sole"}
+  thigh_length_m:     {value: 1.000, unit: m,   range: [0.8, 2.5], status: derived, source: "Hip to knee, CL-05 joint positions (cad/links.json joints_m, tools/cad/b3d/cl05_links.py)"}
+  shank_length_m:     {value: 1.050, unit: m,   range: [0.8, 2.5], status: derived, source: "Knee to ankle, CL-05 joint positions (cad/links.json joints_m, tools/cad/b3d/cl05_links.py)"}
+  knee_stance_rad:    {value: -1.018, unit: rad, range: [-2.0, 1.0], status: derived, source: "Knee angle standing (shank relative to thigh; negative bends the knee backwards, reverse-jointed), CL-05 joint positions (cad/links.json joints_m, tools/cad/b3d/cl05_links.py)"}
+  ankle_height_m:     {value: 0.55, unit: m,   range: [0.05, 0.8],  status: derived, source: "Ankle joint above the sole (raised ankle on a long link to the foot), CL-05 joint positions (cad/links.json joints_m, tools/cad/b3d/cl05_links.py)"}
+  step_lift_m:        {value: 0.22, unit: m,   range: [0.05, 0.6],  status: derived, source: "Peak swing-foot lift of the protective-stop step, from the CL-05 gait (cad/params/CL-05.yaml gait.lift)"}
+  stop_step_m:        {value: 0.8, unit: m,   range: [0.3, 1.5],  status: assumed, source: "Protective-stop step length along the ground, inside the CL-05 leg's reach (about 1.0 m ahead of the hip at full extension); the CL-05 walk steps 0.5 m (cad/params/CL-05.yaml walk.stride)"}
   torso_com_above_hip_m: {value: 0.748, unit: m, range: [0.0, 1.5], status: derived, source: "Torso centre of mass above the hip joint, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py); placed over the hip (the CAD has it 0.265 m behind, not modelled)"}
   knee_torque_max_nm: {value: 26500, unit: N m, range: [10000, 200000], status: derived, source: "Knee actuator peak torque at full supply, re-sized against HAZ-WLK-002 CF4 for the 4,590 kg reference layout (SZ-01, sim/results/sizing-cf4.md; SYS-016); adopted by lead decision DQ-024"}
   hip_torque_max_nm:  {value: 40000, unit: N m, range: [10000, 200000], status: assumed, source: "Hip actuator peak torque at full supply"}

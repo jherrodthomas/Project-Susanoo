@@ -33,37 +33,53 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 Envelope grid: 378 cases (`pilot_reaction_s` [0.5, 1.5, 3.0], `slope_deg` [0, 10, 14, 16, 18, 20], `stride_offset_m` [0.0, 0.06, 0.12], `tau_leak_s` [0.05, 0.5, 1.0, 1.5, 2.0, 3.0, 5.0]). Corner grid: 504 cases. A failure is any outcome other than safe. m g L_foot = 27017 N m. In `sim/spec/walker_l2.yaml`: ankle 40500, knee 26500, hip 40000 N m.
 
-## Sweep: ankle_torque_max_nm (other joints as in the spec)
+## Sweep: ankle_torque_max_nm (knee_stance_rad -0.3, knee_torque_max_nm 26500)
 
 | Value (N m) | Ratio to m g L_foot | Failures | Failing cases (first 3) |
 |---|---|---|---|
-| 23000 | 0.85 | 14 | 14°, offset 0.12 m, leak τ 5.0 s, pilot 3.0 s → hard-drop; 16°, offset 0.12 m, leak τ 5.0 s, pilot 3.0 s → hard-drop; 18°, offset 0.06 m, leak τ 5.0 s, pilot 3.0 s → hard-drop |
-| 26500 | 0.98 | 1 | 20°, offset 0.12 m, leak τ 3.0 s, pilot 3.0 s → tip |
+| 23000 | 0.85 | 0 | — |
+| 26500 | 0.98 | 0 | — |
 | 30500 | 1.13 | 0 | — |
 | 34000 | 1.26 | 0 | — |
 | 37000 | 1.37 | 0 | — |
 | 40500 | 1.50 | 0 | — |
 
-Lowest value that clears the grid: 30500.
+Lowest value that clears the grid: 23000.
 
 ## Sweep: knee_torque_max_nm (ankle_torque_max_nm 40500)
 
 | Value (N m) | Failures | Failing cases (first 3) |
 |---|---|---|
-| 15000 | 22 | 0°, offset 0.0 m, leak τ 3.0 s, pilot 1.5 s → hard-drop; 0°, offset 0.0 m, leak τ 3.0 s, pilot 3.0 s → hard-drop; 0°, offset 0.0 m, leak τ 5.0 s, pilot 0.5 s → hard-drop |
-| 17500 | 3 | 16°, offset 0.12 m, leak τ 5.0 s, pilot 0.5 s → hard-drop; 18°, offset 0.12 m, leak τ 5.0 s, pilot 0.5 s → hard-drop; 20°, offset 0.12 m, leak τ 5.0 s, pilot 0.5 s → hard-drop |
-| 20000 | 0 | — |
-| 22500 | 0 | — |
-| 30000 | 0 | — |
-| 40000 | 0 | — |
+| 26500 | 212 | 0°, offset 0.0 m, leak τ 2.0 s, pilot 0.5 s → hard-drop; 0°, offset 0.0 m, leak τ 2.0 s, pilot 1.5 s → hard-drop; 0°, offset 0.0 m, leak τ 2.0 s, pilot 3.0 s → hard-drop |
+| 40000 | 36 | 0°, offset 0.0 m, leak τ 5.0 s, pilot 3.0 s → hard-drop; 0°, offset 0.06 m, leak τ 5.0 s, pilot 3.0 s → hard-drop; 0°, offset 0.12 m, leak τ 5.0 s, pilot 1.5 s → hard-drop |
+| 50000 | 11 | 10°, offset 0.06 m, leak τ 1.0 s, pilot 0.5 s → tip; 10°, offset 0.12 m, leak τ 1.0 s, pilot 0.5 s → tip; 14°, offset 0.06 m, leak τ 1.0 s, pilot 0.5 s → tip |
+| 60000 | 6 | 14°, offset 0.06 m, leak τ 1.0 s, pilot 0.5 s → tip; 14°, offset 0.12 m, leak τ 1.0 s, pilot 0.5 s → tip; 18°, offset 0.12 m, leak τ 1.5 s, pilot 0.5 s → tip |
+| 62500 | 0 | — |
+| 80000 | 0 | — |
 
-Lowest value that clears the grid: 20000.
+Lowest value that clears the grid: 62500.
+
+## Sweep: knee_stance_rad (other joints as in the spec)
+
+| Value (rad) | Failures | Failing cases (first 3) |
+|---|---|---|
+| -1.018 | 212 | 0°, offset 0.0 m, leak τ 2.0 s, pilot 0.5 s → hard-drop; 0°, offset 0.0 m, leak τ 2.0 s, pilot 1.5 s → hard-drop; 0°, offset 0.0 m, leak τ 2.0 s, pilot 3.0 s → hard-drop |
+| -0.8 | 179 | 0°, offset 0.0 m, leak τ 2.0 s, pilot 0.5 s → hard-drop; 0°, offset 0.0 m, leak τ 3.0 s, pilot 0.5 s → tip; 0°, offset 0.0 m, leak τ 3.0 s, pilot 1.5 s → hard-drop |
+| -0.6 | 68 | 0°, offset 0.0 m, leak τ 5.0 s, pilot 3.0 s → hard-drop; 0°, offset 0.06 m, leak τ 5.0 s, pilot 1.5 s → hard-drop; 0°, offset 0.06 m, leak τ 5.0 s, pilot 3.0 s → hard-drop |
+| -0.5 | 18 | 0°, offset 0.06 m, leak τ 5.0 s, pilot 3.0 s → hard-drop; 0°, offset 0.12 m, leak τ 5.0 s, pilot 1.5 s → hard-drop; 0°, offset 0.12 m, leak τ 5.0 s, pilot 3.0 s → hard-drop |
+| -0.4 | 0 | — |
+| -0.35 | 0 | — |
+| -0.3 | 0 | — |
+| -0.25 | 0 | — |
+| -0.2 | 3 | 18°, offset 0.12 m, leak τ 1.5 s, pilot 0.5 s → tip; 20°, offset 0.06 m, leak τ 1.5 s, pilot 0.5 s → tip; 20°, offset 0.12 m, leak τ 1.5 s, pilot 0.5 s → tip |
+
+Values that clear the grid: -0.4, -0.35, -0.3, -0.25.
 
 ## Proposal (draft, I0)
 
-Ankle 40500 N m (1.499 m g L_foot), knee 26500 N m. Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), a third above the lowest value that clears the grid; knee 1.5 times the lowest value that cleared it with that ankle when it was sized (17.5 kN m, DQ-024); with the CL-05 link masses and inertias (cad/links.json) the lowest clear knee is 20 kN m, so 26.5 kN m is 1.33 times it; the lead kept 26.5 kN m (DQ-026). Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).
+Ankle 40500 N m (1.499 m g L_foot), knee 26500 N m. Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold) and knee 26.5 kN m, as adopted (DQ-024, DQ-026), with the walker standing on a knee bent 0.3 rad instead of CL-05's 1.018 rad. CL-05's deep stance puts the knee 0.46 m behind the line of the ground force, so one leg needs about 25 kN m at the knee and the knee must still give it at the 0.4 load-holding threshold: in that stance the knee needs 62.5 kN m to clear the grid (knee sweep). Straightening the stance shortens that moment arm: the adopted knee clears the grid from 0.4 rad and both grids from 0.35 to 0.25 rad, and fails again at 0.2 rad, where the nearly straight knee has no travel left to absorb the load (posture sweep); 0.3 rad is the middle of that band, and there every ankle value in the sweep clears (ankle sweep). The straighter stance raises the hips by about 0.23 m and is not a CL-05 posture yet (DQ-027). Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).
 
 Failures with the proposal on the envelope and corner grids: 0.
-Failures on the corner grid at the lowest clear ankle value: 0.
+Failures on the corner grid at the lowest clear ankle value: 2.
 
 Level 2 only: level 1 has no joint torques. Supply loss with failed load holding drops the cockpit at any torque (HAZ-PIL-002); sizing does not address it.

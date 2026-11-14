@@ -33,12 +33,12 @@ Each row runs 180 cases over the operating envelope (`pilot_reaction_s` [0.5, 1.
 
 | Mode | Alternatives | Load holding | Level 1: safe / tip / drop | Level 2: safe / tip / drop | Worst impact L1 / L2 (m/s) | Same outcome |
 |---|---|---|---|---|---|---|
-| A-LOSS | A | works | 171 / 9 / 0 | 180 / 0 / 0 | 0.0 / 0.0 | 171 of 180 |
-| A-LOSS | A | fails | 20 / 11 / 149 | 51 / 0 / 129 | 4.884 / 4.219 | 142 of 180 |
-| B-SAG | B-EHA, B-EMA | works | 167 / 13 / 0 | 180 / 0 / 0 | 0.0 / 0.0 | 167 of 180 |
-| B-SAG | B-EHA, B-EMA | fails | 66 / 13 / 101 | 130 / 9 / 41 | 2.69 / 2.95 | 109 of 180 |
-| B-ISOL | B-EHA, B-EMA | works | 171 / 9 / 0 | 180 / 0 / 0 | 0.0 / 0.0 | 171 of 180 |
-| B-ISOL | B-EHA, B-EMA | fails | 20 / 11 / 149 | 51 / 0 / 129 | 4.884 / 4.219 | 142 of 180 |
+| A-LOSS | A | works | 171 / 9 / 0 | 105 / 15 / 60 | 0.0 / 2.173 | 110 of 180 |
+| A-LOSS | A | fails | 20 / 11 / 149 | 0 / 12 / 168 | 4.884 / 3.904 | 153 of 180 |
+| B-SAG | B-EHA, B-EMA | works | 167 / 13 / 0 | 68 / 47 / 65 | 0.0 / 2.459 | 74 of 180 |
+| B-SAG | B-EHA, B-EMA | fails | 66 / 13 / 101 | 0 / 43 / 137 | 2.69 / 2.855 | 107 of 180 |
+| B-ISOL | B-EHA, B-EMA | works | 171 / 9 / 0 | 105 / 15 / 60 | 0.0 / 2.173 | 110 of 180 |
+| B-ISOL | B-EHA, B-EMA | fails | 20 / 11 / 149 | 0 / 12 / 168 | 4.884 / 3.904 | 153 of 180 |
 
 ## Modes
 
