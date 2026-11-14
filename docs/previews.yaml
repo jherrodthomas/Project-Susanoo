@@ -37,6 +37,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - sim/scenes3d/out       # generated README (tools/figures/sceneout_readme.py)
   - cad/params             # generated README (tools/figures/params_readme.py)
   - cad/drawings           # generated README (tools/figures/drawings_readme.py)
+  - cad/renders            # generated README (tools/figures/renders_readme.py); blender/ keeps its preview
   - sim/figures            # generated README (tools/figures/simfigs_readme.py)
   - docs/3d                # generated README (tools/figures/pages3d_readme.py)
   - docs/3d/assets         # generated README (tools/figures/assets3d_readme.py)
@@ -85,17 +86,6 @@ folders:
     links:
       - {text: Trade Studies (wiki page), href: docs/wiki/Trade-Studies.md}
       - {text: Trade-study decision process, href: concept/trade-studies.md}
-
-  cad/renders:
-    title: Concept layout renders
-    purpose: >-
-      Review renders of every concept layout from five views (hero, iso, side, top, dock), rendered locally from the
-      FreeCAD models (`tools/cad/make.sh`). Concept layouts, not a design.
-    hero: {img: cad/renders/lineup.png, caption: "All concept layouts side by side"}
-    gallery_glob: cad/renders/*-hero.png
-    links:
-      - {text: Blender renders, href: cad/renders/blender/README.md}
-      - {text: Concept layouts review, href: cad/README.md}
 
   cad/renders/blender:
     title: Blender renders of CL-05

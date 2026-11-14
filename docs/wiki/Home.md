@@ -73,6 +73,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 - [Concept layouts (CAD)](Concept-Layouts): the walker layouts against the review flags, the CL-05 reference
 - [Layout parameters](Layout-Parameters): the parameter blocks of every concept layout, the values no tool reads, and the records they cite
 - [Drawing sheets](Drawing-Sheets): every concept-layout sheet against the layout metrics and the review flags, and where each number comes from
+- [Concept renders](Concept-Renders): every review render and Blender still, which pages show each, and the ones no page shows
   layout and where its findings went in the records
 - [UAV SITL harness](UAV-SITL-Harness): the PX4 failsafe scenarios, their outcomes and ground tracks, and the
   findings they raise for the safety lead

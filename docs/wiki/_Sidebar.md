@@ -55,6 +55,7 @@
 - [Concept layouts (CAD)](Concept-Layouts)
 - [Layout parameters](Layout-Parameters)
 - [Drawing sheets](Drawing-Sheets)
+- [Concept renders](Concept-Renders)
 - [UAV SITL harness](UAV-SITL-Harness)
 - [Walker plant (level 1)](Walker-Plant)
 - [Failure search](Failure-Search)

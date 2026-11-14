@@ -83,7 +83,9 @@ def load() -> dict:
              "decisions": sorted(d["id"] for d in reg if cites(d))}
     subs = sorted({s for h in cited["hazards"] for s in hazards[h].get("subsystems") or []})
     params = {p.stem: yaml.safe_load(p.read_text()) for p in sorted((FOLDER / "params").glob("CL-*.yaml"))}
-    files = {k: len([p for p in (FOLDER / k).rglob("*") if p.is_file()]) for k in ("renders", "concept-art")}
+    files = {k: len([p for p in (FOLDER / k).rglob("*") if p.is_file()]) for k in ("concept-art",)}
+    files["renders"] = len([p for p in (FOLDER / "renders").rglob("*")
+                            if p.suffix in (".png", ".jpg", ".gif", ".mp4") and "figures" not in p.parts])
     files["drawings"] = len(list((FOLDER / "drawings").glob("CL-*.svg")))
     files["params"] = len(list((FOLDER / "params").glob("*.yaml")))
     return {"ctx": ctx, "reqs": reqs, "hazards": hazards, "rows": rows, "concepts": m["concepts"], "meta": m,
@@ -371,7 +373,8 @@ def section(d: dict, specs: list[dict]) -> str:
            "generated |",
            f"| [`drawings/`](drawings/README.md) | Drawing sheets ({d['files']['drawings']} sheets and their PDF) | generated "
            "(CAD); README generated |",
-           f"| [`renders/`](renders/) | Review images and Blender renders ({d['files']['renders']} files) | generated (CAD) |",
+           f"| [`renders/`](renders/README.md) | Review images and Blender renders ({d['files']['renders']} images and clips) | "
+           "generated (CAD); README generated |",
            f"| [`concept-art/`](concept-art/README.md) | AI concept art from the renders ({d['files']['concept-art']} files) "
            "| AI-made, labelled |",
            f"| [`metrics.json`](metrics.json) | Metrics of the placeholder geometry ({d['meta']['generator']}, FreeCAD "

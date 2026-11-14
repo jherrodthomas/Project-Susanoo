@@ -79,6 +79,7 @@ ENFORCED = {
     # and the cad-records section with the documentation-standard figures.
     "cad/params": {"skip_dirs": {"figures"}, "generator": ["tools/figures/params_readme.py", "--check"]},
     "cad/drawings": {"skip_dirs": {"figures"}, "generator": ["tools/figures/drawings_readme.py", "--check"]},
+    "cad/renders": {"skip_dirs": {"blender", "figures"}, "generator": ["tools/figures/renders_readme.py", "--check"]},
     "cad": {"skip_dirs": {"concept-art", "drawings", "figures", "params", "renders"},
             "generator": ["tools/figures/cad_readme.py", "--check"],
             "extra_generators": [["tools/cad/readme.py", "--check"]]},

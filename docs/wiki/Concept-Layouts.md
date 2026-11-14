@@ -277,7 +277,7 @@ Drawing sheet: [SUS-CAD-001-CL-05-kneel](../../cad/drawings/CL-05-kneel.svg).
 | Geometry and metrics | [`tools/cad/build_concepts.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/build_concepts.py) under FreeCAD 1.1 | `build/cad/CL-nn/`: `.FCStd`, `.step`, STL per part class; [`metrics.json`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/metrics.json) (committed) |
 | Drawing sheets | [`tools/cad/drawings.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/drawings.py) (FreeCAD TechDraw hidden-line projection) | [`drawings/`](Drawing-Sheets.md) SVG and [`concept-layouts.pdf`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/drawings/concept-layouts.pdf) (committed): 420 × 297 mm 1:50, third-angle side, plan and front views; the revision in the title block is read from this page's header |
 | Photoreal renders and walk clip (CL-05) | [`tools/cad/blender_render.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/blender_render.py), [`tools/cad/blender_walk.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/blender_walk.py); Blender 5.3 `bpy` module, Cycles | [`renders/blender/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/cad/renders/blender) (committed; not run in CI) |
-| Review images | [`tools/cad/render.cjs`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/render.cjs) and [`viewer.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/viewer.html) (three.js in headless Chromium) | [`renders/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/cad/renders) (committed) |
+| Review images | [`tools/cad/render.cjs`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/render.cjs) and [`viewer.html`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/viewer.html) (three.js in headless Chromium) | [`renders/`](Concept-Renders.md) (committed) |
 | This page | [`tools/cad/readme.py`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/tools/cad/readme.py) | §3, from `metrics.json` and the layout parameters |
 | Front-page banner | `tools/readme/build_readme.py` | `docs/readme/banner.svg`, composed from the CL-05 renders |
 
@@ -374,7 +374,7 @@ Records that cite the CAD: 12 hazards (HAZ-DCK-001, HAZ-GSE-001, HAZ-INT-001, HA
 |---|---|---|
 | [`params/`](Layout-Parameters.md) | Layout parameters (6 YAML files) | hand-written; README generated |
 | [`drawings/`](Drawing-Sheets.md) | Drawing sheets (8 sheets and their PDF) | generated (CAD); README generated |
-| [`renders/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/cad/renders) | Review images and Blender renders (57 files) | generated (CAD) |
+| [`renders/`](Concept-Renders.md) | Review images and Blender renders (55 images and clips) | generated (CAD); README generated |
 | [`concept-art/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/concept-art/README.md) | AI concept art from the renders (15 files) | AI-made, labelled |
 | [`metrics.json`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/metrics.json) | Metrics of the placeholder geometry (tools/cad/build_concepts.py, FreeCAD 1.1.3) | generated (CAD) |
 | [`ConceptLayouts.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/ConceptLayouts.sysml) | The layouts as SysML parts | generated |
