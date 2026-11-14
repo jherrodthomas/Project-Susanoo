@@ -4,12 +4,11 @@ import math
 import re
 import unittest
 
-import numpy as np
-
 from sim.common import ROOT
 
 try:
     import mujoco
+    import numpy as np
     from sim.mujoco import terrain as T
     HAVE = True
 except ImportError:          # runs in the CI job that installs sim/mujoco/requirements.txt
