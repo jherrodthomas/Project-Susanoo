@@ -371,7 +371,7 @@ Records that cite the CAD: 12 hazards (HAZ-DCK-001, HAZ-GSE-001, HAZ-INT-001, HA
 | [`params/`](params/README.md) | Layout parameters (6 YAML files) | hand-written; README generated |
 | [`drawings/`](drawings/README.md) | Drawing sheets (8 sheets and their PDF) | generated (CAD); README generated |
 | [`renders/`](renders/README.md) | Review images and Blender renders (55 images and clips) | generated (CAD); README generated |
-| [`concept-art/`](concept-art/README.md) | AI concept art from the renders (15 files) | AI-made, labelled |
+| [`concept-art/`](concept-art/README.md) | AI concept art from the renders (14 images and clips) | AI-made, labelled |
 | [`metrics.json`](metrics.json) | Metrics of the placeholder geometry (tools/cad/build_concepts.py, FreeCAD 1.1.3) | generated (CAD) |
 | [`ConceptLayouts.sysml`](ConceptLayouts.sysml) | The layouts as SysML parts | generated |
 | [`figures/`](figures/) | Generated SVG figures for this section (do not edit) | generated |

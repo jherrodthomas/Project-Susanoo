@@ -87,7 +87,7 @@ Walk clips: [`CL-05-walk-loaded-military.gif`](../../cad/renders/blender/CL-05-w
 | 5 | Concept renders | Front page | build_readme.py composes the banner from three stills |
 | 6 | Concept renders | Wiki | the wiki copies of those pages |
 
-**Explicitly excluded:** the meshes and metrics (built in `build/cad/`, not committed), the drawing sheets ([`drawings/`](Drawing-Sheets.md)) and the AI concept art made from the Blender stills ([`concept-art/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/concept-art/README.md)).
+**Explicitly excluded:** the meshes and metrics (built in `build/cad/`, not committed), the drawing sheets ([`drawings/`](Drawing-Sheets.md)) and the AI concept art made from the Blender stills ([`concept-art/`](Concept-Art.md)).
 
 ## SysML model
 

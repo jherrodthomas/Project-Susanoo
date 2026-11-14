@@ -97,7 +97,7 @@ Every frame is the build123d model re-posed by the gait in [`params/CL-05.yaml`]
 
 The same gait with the arms locked in the carry pose and shorter, lower steps (`walk: loaded:` stride 0.70 m instead of 1.0 m, foot lift 0.16 m instead of 0.22 m): concept values standing in for the loaded speed and step-height limits of SYS-019, which are TBD. The load rides with the body's crouch and bob, keeps at least 0.89 m from the legs through the cycle and never drops below 1.42 m. As with the unloaded clip there is no dynamics, balance or load model behind it: it shows the pose and the motion, not that the walker can carry a load this way (HAZ-MAN-002, HAZ-WLK-002).
 
-**AI concept art** made from these renders (Higgsfield, image-to-image) is kept apart in [`concept-art/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/concept-art/README.md), each image labelled with its source render and where it departs from the CAD. It is for communication, never for dimensions.
+**AI concept art** made from these renders (Higgsfield, image-to-image) is kept apart in [`concept-art/`](Concept-Art.md), each image labelled with its source render and where it departs from the CAD. It is for communication, never for dimensions.
 
 ### CL-05 findings
 
@@ -366,7 +366,7 @@ Records that cite the CAD: 12 hazards (HAZ-DCK-001, HAZ-GSE-001, HAZ-INT-001, HA
 | Output | Destination |
 |---|---|
 | Findings | [Safety records](Safety-Records.md), [requirement register](Requirements-Register.md) |
-| Renders | front-page banner, [`concept-art/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/concept-art/README.md) |
+| Renders | front-page banner, [`concept-art/`](Concept-Art.md) |
 
 ## Folder contents
 
@@ -375,7 +375,7 @@ Records that cite the CAD: 12 hazards (HAZ-DCK-001, HAZ-GSE-001, HAZ-INT-001, HA
 | [`params/`](Layout-Parameters.md) | Layout parameters (6 YAML files) | hand-written; README generated |
 | [`drawings/`](Drawing-Sheets.md) | Drawing sheets (8 sheets and their PDF) | generated (CAD); README generated |
 | [`renders/`](Concept-Renders.md) | Review images and Blender renders (55 images and clips) | generated (CAD); README generated |
-| [`concept-art/`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/concept-art/README.md) | AI concept art from the renders (15 files) | AI-made, labelled |
+| [`concept-art/`](Concept-Art.md) | AI concept art from the renders (14 images and clips) | AI-made, labelled |
 | [`metrics.json`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/metrics.json) | Metrics of the placeholder geometry (tools/cad/build_concepts.py, FreeCAD 1.1.3) | generated (CAD) |
 | [`ConceptLayouts.sysml`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/cad/ConceptLayouts.sysml) | The layouts as SysML parts | generated |
 | [`figures/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/cad/figures) | Generated SVG figures for this section (do not edit) | generated |

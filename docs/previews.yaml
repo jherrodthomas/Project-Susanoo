@@ -50,7 +50,7 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - safety/mil-std-882e
   - "safety/mil-std-882e/**"
   - cad                  # SUS-CAD-001: renders, drawings and layout tables (partly built by tools/cad/readme.py)
-  - cad/concept-art
+  - cad/concept-art      # hand-written page with a generated section (tools/figures/art_readme.py)
   - requirements           # generated READMEs with block, boundary, SysML and I/O figures (tools/figures/*_readme.py)
   - verification
   - changes

@@ -56,6 +56,7 @@
 - [Layout parameters](Layout-Parameters)
 - [Drawing sheets](Drawing-Sheets)
 - [Concept renders](Concept-Renders)
+- [Concept art (AI)](Concept-Art)
 - [UAV SITL harness](UAV-SITL-Harness)
 - [Walker plant (level 1)](Walker-Plant)
 - [Failure search](Failure-Search)

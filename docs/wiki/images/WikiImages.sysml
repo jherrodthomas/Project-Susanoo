@@ -439,7 +439,7 @@ package WikiImages {
     }
     part imgWikiFig1Pages : GeneratedFigure {
         attribute :>> file = "wiki-fig-1-pages.svg";
-        attribute :>> kilobytes = 57;
+        attribute :>> kilobytes = 58;
         attribute :>> shownOn = 1;
         attribute :>> generator = "tools/figures/wiki_readme.py";
     }

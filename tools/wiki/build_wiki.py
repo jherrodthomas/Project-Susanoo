@@ -92,7 +92,8 @@ def sources() -> dict[Path, str]:
              ROOT / "sim/scenes3d/out/README.md": "3D-Scene-Exports",
              ROOT / "cad/params/README.md": "Layout-Parameters",
              ROOT / "cad/drawings/README.md": "Drawing-Sheets",
-             ROOT / "cad/renders/README.md": "Concept-Renders"}
+             ROOT / "cad/renders/README.md": "Concept-Renders",
+             ROOT / "cad/concept-art/README.md": "Concept-Art"}
     for r in sorted(TREE_DIR.rglob("README.md")):
         if "figures" not in r.parts:
             pages[r] = tree_page(r)
@@ -179,6 +180,7 @@ def sidebar(current: str) -> str:
              "- [Layout parameters](Layout-Parameters)",
              "- [Drawing sheets](Drawing-Sheets)",
              "- [Concept renders](Concept-Renders)",
+             "- [Concept art (AI)](Concept-Art)",
              "- [UAV SITL harness](UAV-SITL-Harness)",
              "- [Walker plant (level 1)](Walker-Plant)",
              "- [Failure search](Failure-Search)",

@@ -106,7 +106,7 @@ The figures the wiki shows directly: item-definition and SysML views, record fig
 | [`sysml-v08-n2.svg`](sysml-v08-n2.svg) | `tools/sysml/views.py` | 93 KB | 3 wiki pages, 4 repository pages |
 | [`vcycle-system.svg`](vcycle-system.svg) | `tools/vcycle/build_vcycle.py` | 9 KB | 2 wiki pages, 2 repository pages |
 | [`verification-change.svg`](verification-change.svg) | `docs/diagrams/mil-std-882e/verification-change.drawio` | 5 KB | 4 wiki pages, 3 repository pages |
-| [`wiki-fig-1-pages.svg`](wiki-fig-1-pages.svg) | `tools/figures/wiki_readme.py` | 57 KB | 1 wiki page |
+| [`wiki-fig-1-pages.svg`](wiki-fig-1-pages.svg) | `tools/figures/wiki_readme.py` | 58 KB | 1 wiki page |
 | [`wiki-fig-2-links.svg`](wiki-fig-2-links.svg) | `tools/figures/wiki_readme.py` | 13 KB | 1 wiki page |
 | [`wiki-fig-3-block-diagram.svg`](wiki-fig-3-block-diagram.svg) | `tools/figures/wiki_readme.py` | 27 KB | 1 wiki page |
 | [`wiki-fig-4-boundary-diagram.svg`](wiki-fig-4-boundary-diagram.svg) | `tools/figures/wiki_readme.py` | 17 KB | 1 wiki page |
