@@ -590,8 +590,8 @@ decisions:
     blocks: [SYS-019 loaded slope limit]
     gate: G2
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-14
-    answer: null
-    applied_in: []
+    answer: {choice: provisional, by: lead, at: 2026-11-14, via: chat, note: "go with provisional for DQ-028"}
+    applied_in: [sim/mujoco/terrain.py, sim/results/l2-terrain.md]
     sources: [sim/results/l2-terrain.md, requirements/SYS-019.yaml, sim/spec/walker_l2.yaml]

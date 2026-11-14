@@ -630,6 +630,10 @@ def page(res: dict) -> str:
         out.append(f"- {r['label']}, {r['mode']}: {r['attribution']['note']}.\n")
     if not lim and not ctl:
         out.append("Every run walked.\n")
+    if lim:
+        out.append("\nThe lead's answer to DQ-028 (2026-11-14): keep the knee at 26.5 kN m and treat these torque findings as provisional; "
+                   "the loaded slope limit of SYS-019 stays TBD, and the cases are re-run when the walk controller is reviewed and level 2 "
+                   "has the reverse knee.\n")
     out.append("\nThe controller, its gains and the foothold rule are AI drafts (I0); masses and inertias are the CAD's placeholder "
                "values. A torque finding holds for this gait and controller only: a different gait or controller can need more or "
                "less. Findings are for the lead to weigh; nothing here changes a requirement or a hazard.\n")
