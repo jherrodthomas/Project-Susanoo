@@ -1,8 +1,8 @@
 # Actuator sizing against HAZ-WLK-002 CF4 (supply loss shrinks the balance capacity before load holding engages).
 # Runs on level 2 (sim/mujoco/l2.py): level 1 has no joint torques (its centre-of-pressure limit A3 and leg force A4
 # stand in for them). Every value in a sweep is run on the whole envelope grid with load holding working; a failure
-# is any outcome other than safe. The proposal is an AI draft (I0). The lead adopted it in the level-2 spec (DQ-012);
-# it becomes a design value only through the actuation trade (TS-001, DQ-006) and a reviewed requirement (SYS-016).
+# is any outcome other than safe. The proposal is an AI draft (I0); the level-2 spec holds what the lead adopted
+# (DQ-024, DQ-026), and the knee is open again (DQ-027). It becomes a design value only through the actuation trade (TS-001, DQ-006) and a reviewed requirement (SYS-016).
 schema: susanoo/sim-sizing/v0.1
 id: SZ-01
 title: Ankle and knee torque against supply loss on a slope
@@ -23,12 +23,22 @@ corner_grid:
   tau_leak_s: [1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 5.0]
   pilot_reaction_s: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
 sweeps:
-  - {id: ankle, param: ankle_torque_max_nm, values: [23000, 26500, 30500, 34000, 37000, 40500], with: {}}
-  - {id: knee, param: knee_torque_max_nm, values: [15000, 17500, 20000, 22500, 30000, 40000], with: {ankle_torque_max_nm: 40500}}
+  - {id: ankle, param: ankle_torque_max_nm, values: [23000, 26500, 30500, 34000, 37000, 40500], with: {knee_torque_max_nm: 26500, knee_stance_rad: -0.3}}
+  - {id: knee, param: knee_torque_max_nm, values: [26500, 40000, 50000, 60000, 62500, 80000], with: {ankle_torque_max_nm: 40500}}
+  # Standing knee bend at the adopted torques (knee 26.5 kN m, DQ-026): a straighter stance shortens the knee's moment
+  # arm. CL-05 stands at -1.018 rad; a straighter stance raises the hips (not a CL-05 posture yet, DQ-027).
+  - {id: posture, param: knee_stance_rad, values: [-1.018, -0.8, -0.6, -0.5, -0.4, -0.35, -0.3, -0.25, -0.2], with: {}}
 proposal:
   ankle_torque_max_nm: 40500
   knee_torque_max_nm: 26500
+  knee_stance_rad: -0.3
   rationale: >-
-    Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), a third
-    above the lowest value that clears the grid; knee 1.5 times the lowest value that cleared it with that ankle when it was sized (17.5 kN m, DQ-024); with the CL-05 link masses and inertias (cad/links.json) the lowest clear knee is 20 kN m, so 26.5 kN m is 1.33 times it; the lead kept 26.5 kN m (DQ-026).
-    Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).
+    Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold) and knee
+    26.5 kN m, as adopted (DQ-024, DQ-026), with the walker standing on a knee bent 0.3 rad instead of CL-05's
+    1.018 rad. CL-05's deep stance puts the knee 0.46 m behind the line of the ground force, so one leg needs about
+    25 kN m at the knee and the knee must still give it at the 0.4 load-holding threshold: in that stance the knee
+    needs 62.5 kN m to clear the grid (knee sweep). Straightening the stance shortens that moment arm: the adopted knee
+    clears the grid from 0.4 rad and both grids from 0.35 to 0.25 rad, and fails again at 0.2 rad, where the nearly
+    straight knee has no travel left to absorb the load (posture sweep); 0.3 rad is the middle of that band, and there
+    every ankle value in the sweep clears (ankle sweep). The straighter stance raises the hips by about 0.23 m and is not a CL-05 posture yet (DQ-027). Joint torque is taken
+    to fall in proportion to supply (level-2 assumption, as A4 at level 1).

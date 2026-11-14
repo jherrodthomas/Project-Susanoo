@@ -216,15 +216,15 @@
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 3.976,
+    "impact_speed": 3.883,
     "lock_t": null,
-    "mishap_t": 1.758,
+    "mishap_t": 1.618,
     "outcome": "hard-drop"
    },
    "note": null
   },
   {
-   "agree": true,
+   "agree": false,
    "case": {
     "fault": "FLT-01",
     "load_holding": "works",
@@ -240,12 +240,12 @@
     "outcome": "safe"
    },
    "l2": {
-    "impact_speed": 0.0,
-    "lock_t": 2.936,
-    "mishap_t": null,
-    "outcome": "safe"
+    "impact_speed": 1.837,
+    "lock_t": null,
+    "mishap_t": 2.574,
+    "outcome": "hard-drop"
    },
-   "note": null
+   "note": "A slow leak at 8 degrees with load holding working. Level 1 sags (A4) but stays balanced until the lock. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks (hard drop at 1.8 m/s). With the knee at 62.5 kN m or more (sim/results/sizing-cf4.md) level 2 locks at 2.9 s and holds, as level 1 does."
   },
   {
    "agree": true,
@@ -286,7 +286,7 @@
    "l2": {
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 4.23,
+    "mishap_t": 3.636,
     "outcome": "tip"
    },
    "note": null
@@ -305,9 +305,9 @@
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 3.931,
+    "impact_speed": 4.035,
     "lock_t": null,
-    "mishap_t": 1.624,
+    "mishap_t": 1.568,
     "outcome": "hard-drop"
    },
    "note": null
@@ -336,7 +336,7 @@
    "note": null
   },
   {
-   "agree": false,
+   "agree": true,
    "case": {
     "fault": "FLT-04",
     "load_holding": "fails",
@@ -351,12 +351,12 @@
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 0.0,
+    "impact_speed": 2.658,
     "lock_t": null,
-    "mishap_t": null,
-    "outcome": "safe"
+    "mishap_t": 2.088,
+    "outcome": "hard-drop"
    },
-   "note": "A bus undervoltage to 35% capacity with no brakes. Level 1 scales leg force with capacity (A4), so its legs cannot carry the 4,590 kg walker and it drops at 2.6 s. Level 2's nearly straight legs carry it and, with the torques adopted in DQ-024 (ankle 40.5, knee 26.5 kN m), it holds through the protective stop; with the earlier 26.5 and 22.5 kN m it tipped at 5.8 s, and with only the ankle re-sized it dropped at 5.6 s. A4 is pessimistic for straight-legged stance."
+   "note": null
   },
   {
    "agree": true,
@@ -423,12 +423,12 @@
     "outcome": "tip"
    },
    "l2": {
-    "impact_speed": 0.0,
-    "lock_t": 3.448,
-    "mishap_t": null,
-    "outcome": "safe"
+    "impact_speed": 1.002,
+    "lock_t": null,
+    "mishap_t": 2.7,
+    "outcome": "hard-drop"
    },
-   "note": "A slow leak at 16 degrees with a 0.16 m CoM offset (above the 0.12 m limit, DQ-011) and load holding working. Level 1 loses balance as its centre-of-pressure limit (L cos(slope) x capacity, A3) shrinks and its legs sink (A4), and tips after the hold engages. Level 2 holds it with the ankle at 26 kN m or more and tips at 20 kN m and below: the actuator-capacity boundary lies below the adopted ankle torque (40.5 kN m, DQ-024; sim/results/sizing-cf4.md)."
+   "note": "A slow leak at 16 degrees with a 0.16 m CoM offset (above the 0.12 m limit, DQ-011) and load holding working. Level 1 loses balance as its centre-of-pressure limit (L cos(slope) x capacity, A3) shrinks and tips after the hold engages. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks, crossing the rest height at 1.0 m/s, just above the safe drop speed. With the knee at 62.5 kN m or more level 2 locks at 3.4 s and holds."
   },
   {
    "agree": true,
@@ -452,9 +452,9 @@
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.206,
+    "impact_speed": 3.771,
     "lock_t": null,
-    "mishap_t": 1.76,
+    "mishap_t": 1.618,
     "outcome": "hard-drop"
    },
    "note": null
@@ -481,9 +481,9 @@
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.208,
+    "impact_speed": 3.729,
     "lock_t": null,
-    "mishap_t": 1.79,
+    "mishap_t": 1.638,
     "outcome": "hard-drop"
    },
    "note": null
@@ -510,9 +510,9 @@
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.214,
+    "impact_speed": 3.767,
     "lock_t": null,
-    "mishap_t": 1.788,
+    "mishap_t": 1.628,
     "outcome": "hard-drop"
    },
    "note": null
@@ -539,9 +539,9 @@
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.199,
+    "impact_speed": 3.731,
     "lock_t": null,
-    "mishap_t": 1.786,
+    "mishap_t": 1.632,
     "outcome": "hard-drop"
    },
    "note": null
@@ -568,9 +568,9 @@
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.141,
+    "impact_speed": 3.826,
     "lock_t": null,
-    "mishap_t": 1.744,
+    "mishap_t": 1.622,
     "outcome": "hard-drop"
    },
    "note": null
@@ -597,9 +597,9 @@
     "outcome": "hard-drop"
    },
    "l2": {
-    "impact_speed": 4.196,
+    "impact_speed": 3.814,
     "lock_t": null,
-    "mishap_t": 1.76,
+    "mishap_t": 1.636,
     "outcome": "hard-drop"
    },
    "note": null
@@ -626,12 +626,12 @@
     "outcome": "tip"
    },
    "l2": {
-    "impact_speed": 2.8,
+    "impact_speed": 1.006,
     "lock_t": null,
-    "mishap_t": 5.628,
+    "mishap_t": 3.146,
     "outcome": "hard-drop"
    },
-   "note": "Load holding fails during a slow leak at 20 degrees, so the walker is lost either way; the models differ in which actuator gives out first. Level 1 ties leg force and centre-of-pressure authority to the same capacity (A3, A4) and tips. Level 2 tips with ankle 20 and knee 60 kN m, holds through the run with ankle 26.5 and knee 60 kN m, and drops the cockpit at 2.8 m/s with the adopted torques (ankle 40.5, knee 26.5 kN m, DQ-024): weaker knees turn the tip into a drop (HAZ-PIL-002)."
+   "note": "Load holding fails during a slow leak at 20 degrees, so the walker is lost either way unless the joints outlast the leak; the models differ in which actuator gives out first. Level 1 ties leg force and centre-of-pressure authority to the same capacity (A3, A4) and tips. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks, at 1.0 m/s; it still drops with the knee at 62.5 kN m and holds through the run at 94 kN m."
   },
   {
    "agree": false,
@@ -655,12 +655,12 @@
     "outcome": "tip"
    },
    "l2": {
-    "impact_speed": 0.0,
-    "lock_t": 2.88,
-    "mishap_t": null,
-    "outcome": "safe"
+    "impact_speed": 1.638,
+    "lock_t": null,
+    "mishap_t": 2.616,
+    "outcome": "hard-drop"
    },
-   "note": "A slow leak at 19.5 degrees with load holding working; both levels lock at about 2.9 s. Before the lock, level 1's centre-of-pressure limit (A3) and leg sag (A4, 0.12 m) let its CoM drift to the foot edge, so the locked body tips (A5) at 3.6 s. Level 2 keeps its CoM 0.32 m ahead of the foot until the lock and holds, with the ankle at any torque from 15 kN m up: here level 1's assumptions, not the actuators, decide."
+   "note": "A slow leak at 19.5 degrees with load holding working; level 1 locks at about 2.9 s, but its centre-of-pressure limit (A3) and leg sag (A4) have let its CoM drift to the foot edge, so the locked body tips (A5) at 3.6 s. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks (hard drop at 1.6 m/s). With the knee at 62.5 kN m or more level 2 locks at 2.9 s and holds: there level 1's assumptions, not the actuators, decide."
   }
  ],
  "spec_digest": "ce8f2beafd0f",

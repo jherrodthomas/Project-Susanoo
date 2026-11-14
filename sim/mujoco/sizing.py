@@ -66,7 +66,8 @@ def run() -> dict:
     ankle = next(s for s in sweeps if s["param"] == "ankle_torque_max_nm")
     checks = {"proposal": failures(prop, cfg["base"], pts + corner)}
     if ankle["lowest_clear"] is not None:
-        checks["lowest_clear_ankle"] = failures({"ankle_torque_max_nm": ankle["lowest_clear"]}, cfg["base"], corner)
+        checks["lowest_clear_ankle"] = failures({**ankle["with"], "ankle_torque_max_nm": ankle["lowest_clear"]},
+                                                cfg["base"], corner)
     return {"about": ABOUT, "mujoco": mujoco.__version__, "spec_digest": spec.digest(),
             "l2_spec": L2_SPEC.relative_to(ROOT).as_posix(), "id": cfg["id"], "title": cfg["title"],
             "hazard": cfg["hazard"], "causal_factor": cfg["causal_factor"], "base": cfg["base"],
@@ -98,12 +99,17 @@ def page(res: dict) -> str:
     for s in res["sweeps"]:
         w = ", ".join(f"{k} {v}" for k, v in s["with"].items()) or "other joints as in the spec"
         ankle = s["param"] == "ankle_torque_max_nm"
-        out.append(f"## Sweep: {s['param']} ({w})\n\n| Value (N m) |" + (" Ratio to m g L_foot |" if ankle else "")
+        unit = "rad" if s["param"].endswith("_rad") else "N m"
+        out.append(f"## Sweep: {s['param']} ({w})\n\n| Value ({unit}) |" + (" Ratio to m g L_foot |" if ankle else "")
                    + " Failures | Failing cases (first 3) |\n|---|" + ("---|" if ankle else "") + "---|---|\n")
         for r in s["rows"]:
             ex = "; ".join(_fmt(c) for c in r["cases"][:3]) or "—"
             out.append(f"| {r['value']} |" + (f" {r['value'] / mgl:.2f} |" if ankle else "") + f" {r['failures']} | {ex} |\n")
-        out.append(f"\nLowest value that clears the grid: {s['lowest_clear'] if s['lowest_clear'] is not None else 'none in the sweep'}.\n\n")
+        if unit == "N m":
+            out.append(f"\nLowest value that clears the grid: {s['lowest_clear'] if s['lowest_clear'] is not None else 'none in the sweep'}.\n\n")
+        else:
+            ok = [r["value"] for r in s["rows"] if r["failures"] == 0]
+            out.append(f"\nValues that clear the grid: {', '.join(map(str, ok)) or 'none in the sweep'}.\n\n")
     pr = res["proposal"]
     out.append("## Proposal (draft, I0)\n\n"
                f"Ankle {pr['ankle_torque_max_nm']} N m ({pr['ankle_ratio']} m g L_foot), knee {pr['knee_torque_max_nm']} N m. "
