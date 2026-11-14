@@ -2,7 +2,9 @@
 
 The model is generated, never hand-edited: sim/spec/walker.yaml + sim/spec/walker_l2.yaml -> MJCF string.
 Planar: the torso has slide-x, slide-z and pitch joints; each leg has hip, knee and ankle hinges about y and a box
-foot in contact with the ground. Each leg joint has an inactive joint-equality
+foot in contact with the ground. Every body's mass, centre of mass and pitch inertia are set explicitly (an inertial
+element, from the CL-05 link mass properties in the spec); the geoms give shape and contact only. The model is planar,
+so only the pitch inertia acts; the other two axes are given the same value. Each leg joint has an inactive joint-equality
 constraint; load holding activates it at the current angle, so the solver holds the joint (a mechanical lock). Positive joint angles rotate a leg's tip backwards (-x), so a positive knee angle is
 flexion. The slope is applied by tilting gravity, so +x is downhill, as in the level-1 plant.
 """
@@ -31,19 +33,24 @@ def mjcf(p: dict, slope_deg: float) -> str:
     gx, gz = g * math.sin(th), -g * math.cos(th)
     lt, ls, ha = p["thigh_length_m"], p["shank_length_m"], p["ankle_height_m"]
     foot = p["foot_half_length_m"]
-    lm = p["leg_mass_kg"]
+
+    def inertial(mass: float, iyy: float, z: float) -> str:
+        return f'<inertial pos="0 0 {z:.4f}" mass="{mass}" diaginertia="{iyy} {iyy} {iyy}"/>'
 
     def leg(side: str, y: float) -> str:
         return f"""
       <body name="thigh_{side}" pos="0 {y} 0">
         <joint name="hip_{side}" range="-2.0 2.0"/>
-        <geom type="capsule" fromto="0 0 0 0 0 -{lt}" size="0.12" mass="{0.5 * lm}" contype="0" conaffinity="0"/>
+        {inertial(p["thigh_mass_kg"], p["thigh_pitch_inertia_kgm2"], -p["thigh_com_fraction"] * lt)}
+        <geom type="capsule" fromto="0 0 0 0 0 -{lt}" size="0.12" contype="0" conaffinity="0"/>
         <body name="shank_{side}" pos="0 0 -{lt}">
           <joint name="knee_{side}" range="-0.05 2.6"/>
-          <geom type="capsule" fromto="0 0 0 0 0 -{ls}" size="0.1" mass="{0.4 * lm}" contype="0" conaffinity="0"/>
+          {inertial(p["shank_mass_kg"], p["shank_pitch_inertia_kgm2"], -p["shank_com_fraction"] * ls)}
+          <geom type="capsule" fromto="0 0 0 0 0 -{ls}" size="0.1" contype="0" conaffinity="0"/>
           <body name="foot_{side}" pos="0 0 -{ls}">
             <joint name="ankle_{side}" range="-1.2 1.2"/>
-            <geom name="sole_{side}" type="box" size="{foot} 0.25 {ha / 2}" pos="0 0 -{ha / 2}" mass="{0.1 * lm}"/>
+            {inertial(p["foot_mass_kg"], p["foot_pitch_inertia_kgm2"], min(p["foot_com_above_sole_m"], ha) - ha)}
+            <geom name="sole_{side}" type="box" size="{foot} 0.25 {ha / 2}" pos="0 0 -{ha / 2}"/>
             <site name="sole_{side}" pos="0 0 -{ha}"/>
           </body>
         </body>
@@ -62,8 +69,8 @@ def mjcf(p: dict, slope_deg: float) -> str:
       <joint name="root_x" type="slide" axis="1 0 0" damping="0" armature="0"/>
       <joint name="root_z" type="slide" axis="0 0 1" damping="0" armature="0"/>
       <joint name="root_pitch" type="hinge" axis="0 1 0" damping="0" armature="0"/>
-      <geom name="cockpit" type="box" size="0.65 0.6 0.5" pos="0 0 {p['torso_com_above_hip_m']}" mass="{p['torso_mass_kg']}"
-            contype="0" conaffinity="0"/>{leg('s', 0.35)}{leg('w', -0.35)}
+      {inertial(p['torso_mass_kg'], p['torso_pitch_inertia_kgm2'], p['torso_com_above_hip_m'])}
+      <geom name="cockpit" type="box" size="0.65 0.6 0.5" pos="0 0 {p['torso_com_above_hip_m']}" contype="0" conaffinity="0"/>{leg('s', 0.35)}{leg('w', -0.35)}
     </body>
   </worldbody>
   <equality>

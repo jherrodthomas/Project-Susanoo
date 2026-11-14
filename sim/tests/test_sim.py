@@ -27,7 +27,40 @@ class ReferenceLayout(unittest.TestCase):
         self.assertAlmostEqual(p["com_height_m"], m["cg_m"][2], delta=0.01)
         self.assertAlmostEqual(p["crouch_height_m"], m["postures"]["kneel"]["cg_m"][2], delta=0.01)
         self.assertAlmostEqual(l2["hip_height_m"]["value"], m["hip_height_m"], delta=0.01)
-        self.assertAlmostEqual(l2["torso_mass_kg"]["value"] + 2 * l2["leg_mass_kg"]["value"], p["mass_kg"], delta=1)
+        legs = sum(l2[f"{s}_mass_kg"]["value"] for s in ("thigh", "shank", "foot"))
+        self.assertAlmostEqual(l2["torso_mass_kg"]["value"] + 2 * legs, p["mass_kg"], delta=1)
+
+    def test_l2_spec_matches_cl05_links(self):
+        """The level-2 masses, centres of mass and pitch inertias are the CL-05 link mass properties."""
+        import json
+        from sim.mujoco.model import L2_SPEC
+        cad = json.loads((ROOT / "cad" / "links.json").read_text())
+        links, l2 = cad["links"], _read_yaml(L2_SPEC)["params"]
+        for seg in ("thigh", "shank", "foot"):
+            for side in ("left", "right"):
+                link = links[f"{seg}_{side}"]
+                self.assertAlmostEqual(l2[f"{seg}_mass_kg"]["value"], link["mass_kg"], delta=0.1, msg=f"{seg}_{side}")
+                self.assertAlmostEqual(l2[f"{seg}_pitch_inertia_kgm2"]["value"], link["inertia_kgm2"][1][1], delta=1)
+                if seg != "foot":
+                    self.assertAlmostEqual(l2[f"{seg}_com_fraction"]["value"], link["along_segment"], delta=0.002)
+        self.assertAlmostEqual(l2["foot_com_above_sole_m"]["value"], links["foot_left"]["com_m"][2], delta=0.002)
+        torso, hip = links["torso"], cad["joints_m"]["left"]["hip"][2]
+        self.assertAlmostEqual(l2["torso_mass_kg"]["value"], torso["mass_kg"], delta=5)
+        self.assertAlmostEqual(l2["torso_pitch_inertia_kgm2"]["value"], torso["inertia_kgm2"][1][1], delta=1)
+        self.assertAlmostEqual(l2["torso_com_above_hip_m"]["value"], torso["com_m"][2] - hip, delta=0.002)
+        m = json.loads((ROOT / "cad" / "metrics.json").read_text())["concepts"]["CL-05"]
+        self.assertAlmostEqual(cad["total"]["mass_kg"], m["placeholder_mass_kg"], delta=5)
+        self.assertEqual(cad["total"]["com_m"][2], m["cg_m"][2])
+
+    def test_link_densities_match_build_concepts(self):
+        """tools/cad/b3d/cl05_links.py weighs each part class as tools/cad/build_concepts.py does."""
+        import ast
+
+        def density_class(path):
+            for node in ast.walk(ast.parse((ROOT / path).read_text())):
+                if isinstance(node, ast.Assign) and any(getattr(t, "id", "") == "DENSITY_CLASS" for t in node.targets):
+                    return ast.literal_eval(node.value)
+        self.assertEqual(density_class("tools/cad/b3d/cl05_links.py"), density_class("tools/cad/build_concepts.py"))
 
 
 class Spec(unittest.TestCase):
