@@ -37,7 +37,8 @@ own_standard:            # folders whose READMEs follow framework/documentation-
   - sim/scenes3d/out       # generated README (tools/figures/sceneout_readme.py)
   - cad/params             # generated README (tools/figures/params_readme.py)
   - cad/drawings           # generated README (tools/figures/drawings_readme.py)
-  - cad/renders            # generated README (tools/figures/renders_readme.py); blender/ keeps its preview
+  - cad/renders            # generated README (tools/figures/renders_readme.py)
+  - cad/renders/blender    # generated README (tools/figures/blender_readme.py)
   - sim/figures            # generated README (tools/figures/simfigs_readme.py)
   - docs/3d                # generated README (tools/figures/pages3d_readme.py)
   - docs/3d/assets         # generated README (tools/figures/assets3d_readme.py)
@@ -86,16 +87,6 @@ folders:
     links:
       - {text: Trade Studies (wiki page), href: docs/wiki/Trade-Studies.md}
       - {text: Trade-study decision process, href: concept/trade-studies.md}
-
-  cad/renders/blender:
-    title: Blender renders of CL-05
-    purpose: >-
-      Lit Blender renders and a walk cycle of the CL-05 reference layout, in plain and unarmed military livery.
-      Rendered from the CAD; for communication, not engineering.
-    hero: {img: cad/renders/blender/CL-05-hero.jpg, caption: "CL-05"}
-    gallery_glob: cad/renders/blender/*.{jpg,gif}
-    links:
-      - {text: Walk cycle video, href: cad/renders/blender/CL-05-walk-military.mp4}
 
 
 

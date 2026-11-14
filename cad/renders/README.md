@@ -30,7 +30,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | Review renders | [`render.cjs`](../../tools/cad/render.cjs) screenshots `tools/cad/viewer.html` per layout and view |
 | Blender | [`blender_render.py`](../../tools/cad/blender_render.py) (stills), [`blender_walk.py`](../../tools/cad/blender_walk.py) (walk clips), optional: needs `bpy` |
 | Run by | `tools/cad/make.sh` (locally; renders are committed, not re-rendered in CI) |
-| Subfolder | [`blender/`](blender/README.md) keeps its own gallery |
+| Subfolder | [`blender/`](blender/README.md) has its own generated page (shots, finishes, clips) |
 | SysML | [`ReviewRenders.sysml`](ReviewRenders.sysml) (generated) |
 
 ## Purpose

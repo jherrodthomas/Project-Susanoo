@@ -77,6 +77,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 - [Drawing sheets](Drawing-Sheets): every concept-layout sheet against the layout metrics and the review flags, and where each number comes from
 - [Concept renders](Concept-Renders): every review render and Blender still, which pages show each, and the ones no page shows
 - [Concept art (AI)](Concept-Art): AI concept art of CL-05, how each image differs from the CAD, and the ideas carried back to the records
+- [Blender renders](Blender-Renders): every lit still and walk clip of CL-05, its camera, the finishes of every part class, and where each is shown
   layout and where its findings went in the records
 - [UAV SITL harness](UAV-SITL-Harness): the PX4 failsafe scenarios, their outcomes and ground tracks, and the
   findings they raise for the safety lead

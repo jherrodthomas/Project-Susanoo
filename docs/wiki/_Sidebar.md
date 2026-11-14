@@ -57,6 +57,7 @@
 - [Drawing sheets](Drawing-Sheets)
 - [Concept renders](Concept-Renders)
 - [Concept art (AI)](Concept-Art)
+- [Blender renders](Blender-Renders)
 - [UAV SITL harness](UAV-SITL-Harness)
 - [Walker plant (level 1)](Walker-Plant)
 - [Failure search](Failure-Search)

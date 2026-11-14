@@ -107,6 +107,8 @@ def group_of(path: str) -> str:
         return "Result sets"
     if path.startswith("cad/concept-art/"):
         return "Concept art"
+    if path.startswith("cad/renders/blender/"):
+        return "Blender renders"
     if path.startswith("cad/renders/"):
         return "Concept renders"
     if path.startswith("cad/drawings/"):

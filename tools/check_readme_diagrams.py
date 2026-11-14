@@ -81,6 +81,7 @@ ENFORCED = {
     "cad/drawings": {"skip_dirs": {"figures"}, "generator": ["tools/figures/drawings_readme.py", "--check"]},
     "cad/renders": {"skip_dirs": {"blender", "figures"}, "generator": ["tools/figures/renders_readme.py", "--check"]},
     "cad/concept-art": {"skip_dirs": {"figures"}, "generator": ["tools/figures/art_readme.py", "--check"]},
+    "cad/renders/blender": {"skip_dirs": {"figures"}, "generator": ["tools/figures/blender_readme.py", "--check"]},
     "cad": {"skip_dirs": {"concept-art", "drawings", "figures", "params", "renders"},
             "generator": ["tools/figures/cad_readme.py", "--check"],
             "extra_generators": [["tools/cad/readme.py", "--check"]]},

@@ -420,7 +420,7 @@ def readme(d: dict, specs: list[dict]) -> str:
         f"| Blender | [`blender_render.py`](../../{WRITERS['blender']}) (stills), [`blender_walk.py`](../../{WRITERS['walk']}) "
         "(walk clips), optional: needs `bpy` |",
         "| Run by | `tools/cad/make.sh` (locally; renders are committed, not re-rendered in CI) |",
-        "| Subfolder | [`blender/`](blender/README.md) keeps its own gallery |",
+        "| Subfolder | [`blender/`](blender/README.md) has its own generated page (shots, finishes, clips) |",
         "| SysML | [`ReviewRenders.sysml`](ReviewRenders.sysml) (generated) |", "",
         "## Purpose\n",
         "The images the concept layouts are reviewed by: every layout and CL-05 posture from the same five views, so "

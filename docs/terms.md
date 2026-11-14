@@ -99,6 +99,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | IPPD | integrated product and process development |
 | IPT | integrated product team |
 | JDK | Java Development Kit |
+| JPEG | Joint Photographic Experts Group, the compressed image format of the renders and photographs |
 | JSON | JavaScript Object Notation, a data file format |
 | KB | kilobyte, a file size of 1,024 bytes |
 | LOR | level of rigor (software safety tasks, MIL-STD-882E 4.4) |
