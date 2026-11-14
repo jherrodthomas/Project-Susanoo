@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 615.1" width="820" height="615.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
-<rect width="820" height="546" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 645.1" width="820" height="645.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+<rect width="820" height="576" fill="#ffffff"/>
 <text x="20" y="26" font-size="16" font-weight="700" fill="#152033">FT-020 · HAZ-PWR-003</text>
 <text x="20" y="46" font-size="12" fill="#566275">Fuel leak and fire at the engine. Probability over 500 walker operating hours; dormant failures checked every 4 h. Illustrative: inputs assumed.</text>
 <path d="M370.0 154 V170 H220.0 V220" fill="none" stroke="#cfd7e2" stroke-width="1.5"/>
 <path d="M370.0 154 V170 H520.0 V220" fill="none" stroke="#cfd7e2" stroke-width="1.5"/>
 <path d="M220.0 304 V320 H120.0 V370" fill="none" stroke="#cfd7e2" stroke-width="1.5"/>
 <path d="M220.0 304 V320 H320.0 V370" fill="none" stroke="#cfd7e2" stroke-width="1.5"/>
-<rect x="28.0" y="370" width="184" height="50" rx="3" fill="#ffffff" stroke="#152033" stroke-width="1.2"/>
+<rect x="28.0" y="370" width="184" height="50" rx="3" fill="#eaf2fb" stroke="#152033" stroke-width="1.2"/>
 <text x="120.0" y="386" font-size="11.5" fill="#152033" text-anchor="middle">Fuel line, fitting or tank</text>
 <text x="120.0" y="400" font-size="11.5" fill="#152033" text-anchor="middle">leaks</text>
 <text x="120.0" y="414" font-size="10.5" fill="#566275" text-anchor="middle">PT-023-FM1 · p 2.5e-3</text>
 <circle cx="120.0" cy="438" r="13" fill="#ffffff" stroke="#152033" stroke-width="1.4"/>
-<rect x="228.0" y="370" width="184" height="50" rx="3" fill="#ffffff" stroke="#b54708" stroke-width="1.2" stroke-dasharray="4 3"/>
+<rect x="228.0" y="370" width="184" height="50" rx="3" fill="#fff4e3" stroke="#b54708" stroke-width="1.2" stroke-dasharray="4 3"/>
 <text x="320.0" y="386" font-size="11.5" fill="#152033" text-anchor="middle">Refuelling hot, running or</text>
 <text x="320.0" y="400" font-size="11.5" fill="#152033" text-anchor="middle">near ignition</text>
 <text x="320.0" y="414" font-size="10.5" fill="#566275" text-anchor="middle">human · not quantified</text>
@@ -20,21 +20,24 @@
 <text x="220.0" y="236" font-size="11.5" fill="#152033" text-anchor="middle">Fuel released</text>
 <text x="220.0" y="264" font-size="10.5" fill="#566275" text-anchor="middle">or · p 2.5e-3</text>
 <path d="M206.0 302 Q206.0 280 220.0 272 Q234.0 280 234.0 302 Q220.0 294 206.0 302 Z" fill="#ffffff" stroke="#2a55a8" stroke-width="1.6"/>
-<rect x="428.0" y="220" width="184" height="50" rx="3" fill="#ffffff" stroke="#b54708" stroke-width="1.2" stroke-dasharray="4 3"/>
+<rect x="428.0" y="220" width="184" height="50" rx="3" fill="#fff4e3" stroke="#b54708" stroke-width="1.2" stroke-dasharray="4 3"/>
 <text x="520.0" y="236" font-size="11.5" fill="#152033" text-anchor="middle">Surface above autoignition</text>
 <text x="520.0" y="250" font-size="11.5" fill="#152033" text-anchor="middle">next to a leak path</text>
 <text x="520.0" y="264" font-size="10.5" fill="#566275" text-anchor="middle">systematic · not quantified</text>
 <path d="M520.0 274 L534.0 288 L520.0 302 L506.0 288 Z" fill="#ffffff" stroke="#b54708" stroke-width="1.6"/>
-<rect x="278.0" y="70" width="184" height="50" rx="3" fill="#ffffff" stroke="#152033" stroke-width="1.2"/>
+<rect x="278.0" y="70" width="184" height="50" rx="3" fill="#fde7e2" stroke="#b42318" stroke-width="2"/>
 <text x="370.0" y="86" font-size="11.5" fill="#152033" text-anchor="middle">Fuel fire</text>
 <text x="370.0" y="114" font-size="10.5" fill="#566275" text-anchor="middle">and · not quantified</text>
 <path d="M357.0 152 V134 A13 13 0 0 1 383.0 134 V152 Z" fill="#ffffff" stroke="#2a55a8" stroke-width="1.6"/>
-<text x="20" y="524" font-size="11.5" fill="#566275">Dome: all inputs (and). Shield: any input (or). Circle: failure mode. Double circle: common-cause share. Diamond: undeveloped cause, not quantified. ×n: n identical copies.</text>
-<g class="terms" data-base-h="546">
-<rect x="0" y="546" width="820" height="69.1" fill="#FFFFFF"/>
-<line x1="40" y1="550" x2="780" y2="550" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="565.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: FT-nnn = fault tree in the reliability pilot (reliability/HAZ-*.yaml, one file per hazard) · HAZ-nnn = hazard record</text>
-<text x="40" y="580.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(safety/hazards/HAZ-xxx-nnn.yaml) · PT-nnn = part with its failure modes in the reliability pilot (reliability/parts.yaml; PT-nnn-FMn</text>
-<text x="40" y="594.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">is a failure mode)</text>
+<rect x="20" y="514" width="18" height="12" rx="2" fill="#fde7e2" stroke="#b42318"/><text x="46" y="524" font-size="11.5" fill="#566275">Top event</text>
+<rect x="190" y="514" width="18" height="12" rx="2" fill="#eaf2fb" stroke="#152033"/><text x="216" y="524" font-size="11.5" fill="#566275">Failure mode</text>
+<rect x="360" y="514" width="18" height="12" rx="2" fill="#fff4e3" stroke="#b54708" stroke-dasharray="4 3"/><text x="386" y="524" font-size="11.5" fill="#566275">Undeveloped cause</text>
+<text x="20" y="554" font-size="11.5" fill="#566275">Dome: all inputs (and). Shield: any input (or). Circle: failure mode. Double circle: common-cause share. Diamond: undeveloped cause, not quantified. ×n: n identical copies.</text>
+<g class="terms" data-base-h="576">
+<rect x="0" y="576" width="820" height="69.1" fill="#FFFFFF"/>
+<line x1="40" y1="580" x2="780" y2="580" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="595.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: FT-nnn = fault tree in the reliability pilot (reliability/HAZ-*.yaml, one file per hazard) · HAZ-nnn = hazard record</text>
+<text x="40" y="610.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(safety/hazards/HAZ-xxx-nnn.yaml) · PT-nnn = part with its failure modes in the reliability pilot (reliability/parts.yaml; PT-nnn-FMn</text>
+<text x="40" y="624.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">is a failure mode)</text>
 </g>
 </svg>
