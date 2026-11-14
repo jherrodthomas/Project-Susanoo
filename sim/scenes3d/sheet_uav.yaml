@@ -25,3 +25,56 @@ replay: [SU-01, SU-02, SU-03, SU-04, SU-05, SU-06]
 
 # The quadrotor is under a metre across in an airspace of 120 m: it is drawn enlarged in that view (labelled on the page).
 uav_scale_air: 6
+
+# Launch and recovery view: the order of states and permits the records call for, shown on the CL-05 dock. Each step
+# names the records that gate it (interfaces IF-, requirements SYS-, hazard mitigations HAZ-x Mn, scenarios SCN-,
+# modes MOD-). The flight profile (straight up to the keep-out altitude of SPEC-UAV-001 before moving sideways, and
+# straight down onto the dock) and every duration are drafted for display (I0): the PX4 interface contract leaves all
+# thresholds, timings and safe states TBD. build_sheet.py fails if the states break the interlocks the mitigations name
+# (rotors never running while latched, charging only while latched with rotors inhibited, release only under a permit).
+# uav: where the quadrotor is: docked (on the dock), hover (0.6 m above it), keepalt (at the keep-out altitude above
+# the dock), away (at that altitude, clear of the keep-out behind the walker).
+sequence:
+  - {phase: launch, mode: MOD-06, title: "Docked: latched, charging, rotors inhibited", uav: docked, s: 3,
+     latch: closed, rotors: inhibited, charging: "on", permit: none,
+     gates: ["IF-PX4-003 retained state from independent sensing (SYS-005, HAZ-DCK-002 M2)",
+             "IF-PX4-009 rotor inhibit while retained (SYS-003, HAZ-DCK-001 M1)"]}
+  - {phase: launch, mode: MOD-06, title: "Walker stationary in a permitted posture", uav: docked, s: 3,
+     latch: closed, rotors: inhibited, charging: "on", permit: none,
+     gates: ["IF-PX4-004 posture and stationary flag (SYS-006, HAZ-INT-001 M2)", "SCN-004: launch only from a permitted stationary state"]}
+  - {phase: launch, mode: MOD-06, title: "Charging isolated and confirmed off", uav: docked, s: 3,
+     latch: closed, rotors: inhibited, charging: "off", permit: none,
+     gates: ["IF-PX4-009 charging handshake (HAZ-DCK-004 M1: permits need charging de-energised and confirmed off)"]}
+  - {phase: launch, mode: MOD-06, title: "Launch permit granted", uav: docked, s: 3,
+     latch: closed, rotors: inhibited, charging: "off", permit: launch,
+     gates: ["IF-PX4-005 explicit, fail-closed launch permit (HAZ-INT-001 M3)", "Stale or inconsistent dock state prevents the permit (PX4 interface contract)"]}
+  - {phase: launch, mode: MOD-06, title: "Latch released, retention confirmed open", uav: docked, s: 3,
+     latch: open, rotors: inhibited, charging: "off", permit: launch,
+     gates: ["IF-PX4-003 released state (SYS-005)", "HAZ-DCK-002 M3: walker motion inhibited while the retention state is unknown"]}
+  - {phase: launch, mode: MOD-06, title: "Arm and lift off clear of the dock", uav: hover, s: 4,
+     latch: open, rotors: running, charging: "off", permit: launch,
+     gates: ["HAZ-DCK-001 M2: PX4 arming check requires the dock-released state", "Rotors 1.09 m from the pilot's head, 0.29 m from the roll bar (cad/metrics.json)"]}
+  - {phase: launch, mode: MOD-07, title: "Climb straight up to the keep-out altitude, then away", uav: away, s: 7,
+     latch: open, rotors: running, charging: "off", permit: launch,
+     gates: ["Pilot keep-out 3 m below 8 m (SPEC-UAV-001, HAZ-INT-001)", "Profile drafted for display: the contract leaves it TBD"]}
+  - {phase: recovery, mode: MOD-08, title: "Recovery requested; dock ready, walker stationary", uav: away, s: 3,
+     latch: open, rotors: running, charging: "off", permit: recovery,
+     gates: ["IF-PX4-006 recovery intent (HAZ-INT-001 M4)", "SCN-005: approach only with the dock ready (IF-PX4-003, IF-PX4-004, SYS-006)",
+             "HAZ-INT-001 M6: PX4 home kept at the current dock position"]}
+  - {phase: recovery, mode: MOD-08, title: "Approach above the keep-out, over the dock", uav: keepalt, s: 6,
+     latch: open, rotors: running, charging: "off", permit: recovery,
+     gates: ["Inside the keep-out only under the recovery permit (SU-01: return-to-launch without a permit breached it)",
+             "Lost link: hold, then land in place, never return to the dock without a permit (HAZ-INT-001 M5)"]}
+  - {phase: recovery, mode: MOD-08, title: "Descend straight down and touch down", uav: docked, s: 6,
+     latch: open, rotors: running, charging: "off", permit: recovery,
+     gates: ["Lost link during docking aborts and does not command walker movement (PX4 interface contract)"]}
+  - {phase: recovery, mode: MOD-08, title: "Captured: the latch closes and cuts propulsion power", uav: docked, s: 3,
+     latch: closed, rotors: inhibited, charging: "off", permit: recovery,
+     gates: ["HAZ-DCK-001 M1: the hardware interlock removes propulsion power while the latch is closed (SYS-003)",
+             "SCN-005 puts capture and positive retention before the rotor-inhibit change; M1 makes them the same instant"]}
+  - {phase: recovery, mode: MOD-08, title: "Positive retention confirmed; recovery permit closed", uav: docked, s: 3,
+     latch: closed, rotors: inhibited, charging: "off", permit: none,
+     gates: ["IF-PX4-003 retained state from independent sensing (SYS-005, HAZ-DCK-002 M1, M2)"]}
+  - {phase: recovery, mode: MOD-06, title: "Charging", uav: docked, s: 3,
+     latch: closed, rotors: inhibited, charging: "on", permit: none,
+     gates: ["IF-PX4-009 charging handshake (HAZ-DCK-004 M3: contacts live only with a UAV seated and confirmed)", "HAZ-DCK-003 M1: charger cut-offs"]}

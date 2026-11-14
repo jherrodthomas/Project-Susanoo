@@ -277,6 +277,55 @@ def page_html(data: dict, title: str, body: str, viewer: str, terms: str) -> str
                        viewer=(d / viewer).read_text(encoding="utf-8").rstrip())
 
 
+SEQ_UAV = {"docked", "hover", "keepalt", "away"}
+
+
+def sequence(steps: list[dict], data: dict) -> tuple[list[dict], dict]:
+    """The launch and recovery sequence of sheet_uav.yaml, checked: every record it cites exists, and the states keep the
+    interlocks the dock mitigations name. Returns the steps and the titles of the requirements they cite."""
+    item = _read_yaml(ROOT / "architecture/item-definition.yaml")
+    ifs = {f["id"] for f in item["interfaces"]}
+    haz = {h["id"] for h in hazards()}
+    reqs = {}
+    for path in sorted((ROOT / "requirements").glob("SYS-*.yaml")):
+        r = _read_yaml(path)
+        reqs[r["id"]] = r["title"]
+    conops = (ROOT / "concept/CONOPS.md").read_text(encoding="utf-8")
+    cited = {}
+    prev = None
+    for i, st in enumerate(steps, 1):
+        where = f"sheet_uav.yaml sequence step {i} ({st['title']})"
+        if st["uav"] not in SEQ_UAV:
+            raise ValueError(f"{where}: uav must be one of {sorted(SEQ_UAV)}")
+        text = " ".join(st["gates"]) + " " + st["mode"]
+        for tok in re.findall(r"\b(IF-PX4-\d{3}|IF-\d{3})\b", text):
+            if tok not in ifs:
+                raise ValueError(f"{where}: unknown interface {tok}")
+        for tok in re.findall(r"\b(HAZ-[A-Z]{3}-\d{3})\b", text):
+            if tok not in haz:
+                raise ValueError(f"{where}: unknown hazard {tok}")
+        for tok in re.findall(r"\b(SYS-\d{3})\b", text):
+            if tok not in reqs:
+                raise ValueError(f"{where}: unknown requirement {tok}")
+            cited[tok] = reqs[tok]
+        for tok in re.findall(r"\b((?:SCN|MOD)-\d{2,3})\b", text):
+            if tok not in conops:
+                raise ValueError(f"{where}: {tok} is not in concept/CONOPS.md")
+        # interlocks named by the mitigations (HAZ-DCK-001 M1/M2, HAZ-DCK-004 M1/M3, IF-PX4-005)
+        if st["rotors"] == "running" and st["latch"] != "open":
+            raise ValueError(f"{where}: rotors running while latched (HAZ-DCK-001 M1, SYS-003)")
+        if st["charging"] == "on" and (st["latch"] != "closed" or st["rotors"] != "inhibited"):
+            raise ValueError(f"{where}: charging while not latched with rotors inhibited (HAZ-DCK-004 M3)")
+        if st["uav"] != "docked" and (st["latch"] != "open" or st["rotors"] != "running"):
+            raise ValueError(f"{where}: off the dock without the latch open and rotors running")
+        if prev and prev["latch"] == "closed" and st["latch"] == "open" and (st["permit"] != "launch" or st["charging"] != "off"):
+            raise ValueError(f"{where}: latch released without a launch permit and charging off (IF-PX4-005, HAZ-DCK-004 M1)")
+        if prev and prev["rotors"] == "inhibited" and st["rotors"] == "running" and st["latch"] != "open":
+            raise ValueError(f"{where}: rotors started while latched (HAZ-DCK-001 M2)")
+        prev = st
+    return steps, cited
+
+
 def sheet2() -> dict:
     cfg = _read_yaml(SIM / "scenes3d" / "sheet_uav.yaml")
     allh = hazards()
@@ -289,8 +338,9 @@ def sheet2() -> dict:
         "classes": class_colours(), "hazards": hz, **uav_data(cfg, cfg["layout"]),
     }
     data["replay"] = [{"id": r["id"]} for r in data["runs"]]
+    data["sequence"], data["seq_requirements"] = sequence(cfg.get("sequence") or [], data)
     modes = sorted({m.replace("AUTO.", "") for r in data["runs"] for _, m in r["mode_changes"]})
-    extra = ["PX4 SITL SIH NED GNSS RF ESC", data["spec_id"], *modes, *(e["id"] for e in data["elements"]),
+    extra = ["PX4 SITL SIH NED GNSS RF ESC SCN-004 SCN-005 MOD-06 MOD-07 MOD-08", *data["seq_requirements"], data["spec_id"], *modes, *(e["id"] for e in data["elements"]),
              *(f["id"] for f in data["interfaces"]), *(f["from"] + " " + f["to"] for f in data["interfaces"])]
     return {OUT_UAV: page_html(data, "SUS-A1 on dock and in airspace", "sheet_uav.body.html", "sheet_uav.js", terms_line(data, extra))}
 
