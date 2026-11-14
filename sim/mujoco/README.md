@@ -52,7 +52,7 @@ What is physics here and an assumption at level 1 (from [`l2.py`](l2.py)):
 - the centre of pressure is limited by the foot's contact with the ground, not by an assumed +/- L * c;
 - leg support, balance and torso pitch come from joint torques limited by actuator capacity;
 - load holding locks the joints mechanically (a solver-enforced joint constraint at the current angle);
-- the protective stop really steps the swing foot to the ground, towards the horizontal capture point, before crouching.
+- the protective stop really steps the swing foot to the ground, towards the horizontal capture point, before crouching; the foot follows a lifted arc (step_lift_m) to the step target over step_time_s.
 
 Unchanged from level 1, so outcomes are comparable: the case dictionary, the faults and capacity curve, alarm, pilot reaction, monitor and lock logic, and the outcome definitions (tip beyond tip_offset from the support centre; hard drop when the CoM reaches crouch height faster than safe_drop_speed). Contact after a mishap is not analysed; the run stops at the first mishap, as in level 1. Deterministic for a given MuJoCo version.
 
@@ -62,10 +62,10 @@ Unchanged from level 1, so outcomes are comparable: the case dictionary, the fau
 
 | Case | Level 1 | Level 2 | Note |
 |---|---|---|---|
-| CAT-04-NOBRAKE | hard-drop | safe | A bus undervoltage to 35% capacity with no brakes. Level 1 scales leg force with capacity (A4), so its legs cannot carry the 4,590 kg walker and it drops at 2.6 s. Level 2's nearly straight legs carry it and, with the torques adopted in DQ-024 (ankle 40.5, knee 26.5 kN m), it holds through the protective stop; with the earlier 26.5 and 22.5 kN m it tipped at 5.8 s, and with only the ankle re-sized it dropped at 5.6 s. A4 is pessimistic for straight-legged stance. |
-| CAP-16 | tip | safe | A slow leak at 16 degrees with a 0.16 m CoM offset (above the 0.12 m limit, DQ-011) and load holding working. Level 1 loses balance as its centre-of-pressure limit (L cos(slope) x capacity, A3) shrinks and its legs sink (A4), and tips after the hold engages. Level 2 holds it with the ankle at 26 kN m or more and tips at 20 kN m and below: the actuator-capacity boundary lies below the adopted ankle torque (40.5 kN m, DQ-024; sim/results/sizing-cf4.md). |
-| SF-01/EC-07 | tip | hard-drop | Load holding fails during a slow leak at 20 degrees, so the walker is lost either way; the models differ in which actuator gives out first. Level 1 ties leg force and centre-of-pressure authority to the same capacity (A3, A4) and tips. Level 2 tips with ankle 20 and knee 60 kN m, holds through the run with ankle 26.5 and knee 60 kN m, and drops the cockpit at 2.8 m/s with the adopted torques (ankle 40.5, knee 26.5 kN m, DQ-024): weaker knees turn the tip into a drop (HAZ-PIL-002). |
-| SF-01/EC-08 | tip | safe | A slow leak at 19.5 degrees with load holding working; both levels lock at about 2.9 s. Before the lock, level 1's centre-of-pressure limit (A3) and leg sag (A4, 0.12 m) let its CoM drift to the foot edge, so the locked body tips (A5) at 3.6 s. Level 2 keeps its CoM 0.32 m ahead of the foot until the lock and holds, with the ankle at any torque from 15 kN m up: here level 1's assumptions, not the actuators, decide. |
+| CAT-01-SLOW-8 | safe | hard-drop | A slow leak at 8 degrees with load holding working. Level 1 sags (A4) but stays balanced until the lock. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks (hard drop at 1.8 m/s). With the knee at 62.5 kN m or more (sim/results/sizing-cf4.md) level 2 locks at 2.9 s and holds, as level 1 does. |
+| CAP-16 | tip | hard-drop | A slow leak at 16 degrees with a 0.16 m CoM offset (above the 0.12 m limit, DQ-011) and load holding working. Level 1 loses balance as its centre-of-pressure limit (L cos(slope) x capacity, A3) shrinks and tips after the hold engages. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks, crossing the rest height at 1.0 m/s, just above the safe drop speed. With the knee at 62.5 kN m or more level 2 locks at 3.4 s and holds. |
+| SF-01/EC-07 | tip | hard-drop | Load holding fails during a slow leak at 20 degrees, so the walker is lost either way unless the joints outlast the leak; the models differ in which actuator gives out first. Level 1 ties leg force and centre-of-pressure authority to the same capacity (A3, A4) and tips. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks, at 1.0 m/s; it still drops with the knee at 62.5 kN m and holds through the run at 94 kN m. |
+| SF-01/EC-08 | tip | hard-drop | A slow leak at 19.5 degrees with load holding working; level 1 locks at about 2.9 s, but its centre-of-pressure limit (A3) and leg sag (A4) have let its CoM drift to the foot edge, so the locked body tips (A5) at 3.6 s. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks (hard drop at 1.6 m/s). With the knee at 62.5 kN m or more level 2 locks at 2.9 s and holds: there level 1's assumptions, not the actuators, decide. |
 
 The 22 agreeing cases are listed in [`l2-crosscheck.md`](../results/l2-crosscheck.md).
 
@@ -75,20 +75,29 @@ The 22 agreeing cases are listed in [`l2-crosscheck.md`](../results/l2-crosschec
 
 | Sweep | Value | Failures on the grid |
 |---|---|---|
-| ankle | 23,000 N m | 14 |
-| ankle | 26,500 N m | 1 |
+| ankle | 23,000 N m | 0 |
+| ankle | 26,500 N m | 0 |
 | ankle | 30,500 N m | 0 |
 | ankle | 34,000 N m | 0 |
 | ankle | 37,000 N m | 0 |
 | ankle | 40,500 N m | 0 |
-| knee | 15,000 N m | 22 |
-| knee | 17,500 N m | 3 |
-| knee | 20,000 N m | 0 |
-| knee | 22,500 N m | 0 |
-| knee | 30,000 N m | 0 |
-| knee | 40,000 N m | 0 |
+| knee | 26,500 N m | 212 |
+| knee | 40,000 N m | 36 |
+| knee | 50,000 N m | 11 |
+| knee | 60,000 N m | 6 |
+| knee | 62,500 N m | 0 |
+| knee | 80,000 N m | 0 |
+| posture | -1.018 N m | 212 |
+| posture | -0.8 N m | 179 |
+| posture | -0.6 N m | 68 |
+| posture | -0.5 N m | 18 |
+| posture | -0.4 N m | 0 |
+| posture | -0.35 N m | 0 |
+| posture | -0.3 N m | 0 |
+| posture | -0.25 N m | 0 |
+| posture | -0.2 N m | 3 |
 
-Proposal rationale: Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), a third above the lowest value that clears the grid; knee 1.5 times the lowest value that cleared it with that ankle when it was sized (17.5 kN m, DQ-024); with the CL-05 link masses and inertias (cad/links.json) the lowest clear knee is 20 kN m, so 26.5 kN m is 1.33 times it; the lead kept 26.5 kN m (DQ-026). Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).
+Proposal rationale: Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold) and knee 26.5 kN m, as adopted (DQ-024, DQ-026), with the walker standing on a knee bent 0.3 rad instead of CL-05's 1.018 rad. CL-05's deep stance puts the knee 0.46 m behind the line of the ground force, so one leg needs about 25 kN m at the knee and the knee must still give it at the 0.4 load-holding threshold: in that stance the knee needs 62.5 kN m to clear the grid (knee sweep). Straightening the stance shortens that moment arm: the adopted knee clears the grid from 0.4 rad and both grids from 0.35 to 0.25 rad, and fails again at 0.2 rad, where the nearly straight knee has no travel left to absorb the load (posture sweep); 0.3 rad is the middle of that band, and there every ankle value in the sweep clears (ankle sweep). The straighter stance raises the hips by about 0.23 m and is not a CL-05 posture yet (DQ-027). Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).
 
 ## Block diagram
 
@@ -132,9 +141,12 @@ Proposal rationale: Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_
 | `foot_pitch_inertia_kgm2` | 5 | kg m^2 | derived | About the foot centre of mass, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) |
 | `foot_com_above_sole_m` | 0.067 | m | derived | CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py) |
 | `hip_height_m` | 2.34 | m | derived | Reference layout CL-05 (cad/metrics.json, hip_height_m), decision DQ-023; placeholder geometry, not a design |
-| `thigh_length_m` | 1.107 | m | derived | Hip to knee: puts the hip at hip_height_m in the stance pose (knee bent 0.3 rad), DQ-023 |
-| `shank_length_m` | 1.107 | m | derived | Knee to ankle: as thigh_length_m, DQ-023 |
-| `ankle_height_m` | 0.15 | m | assumed | Ankle joint above the sole |
+| `thigh_length_m` | 1.0 | m | derived | Hip to knee, CL-05 joint positions (cad/links.json joints_m, tools/cad/b3d/cl05_links.py) |
+| `shank_length_m` | 1.05 | m | derived | Knee to ankle, CL-05 joint positions (cad/links.json joints_m, tools/cad/b3d/cl05_links.py) |
+| `knee_stance_rad` | -1.018 | rad | derived | Knee angle standing (shank relative to thigh; negative bends the knee backwards, reverse-jointed), CL-05 joint positions (cad/links.json joints_m, tools/cad/b3d/cl05_links.py) |
+| `ankle_height_m` | 0.55 | m | derived | Ankle joint above the sole (raised ankle on a long link to the foot), CL-05 joint positions (cad/links.json joints_m, tools/cad/b3d/cl05_links.py) |
+| `step_lift_m` | 0.22 | m | derived | Peak swing-foot lift of the protective-stop step, from the CL-05 gait (cad/params/CL-05.yaml gait.lift) |
+| `stop_step_m` | 0.8 | m | assumed | Protective-stop step length along the ground, inside the CL-05 leg's reach (about 1.0 m ahead of the hip at full extension); the CL-05 walk steps 0.5 m (cad/params/CL-05.yaml walk.stride) |
 | `torso_com_above_hip_m` | 0.748 | m | derived | Torso centre of mass above the hip joint, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py); placed over the hip (the CAD has it 0.265 m behind, not modelled) |
 | `knee_torque_max_nm` | 26500 | N m | derived | Knee actuator peak torque at full supply, re-sized against HAZ-WLK-002 CF4 for the 4,590 kg reference layout (SZ-01, sim/results/sizing-cf4.md; SYS-016); adopted by lead decision DQ-024 |
 | `hip_torque_max_nm` | 40000 | N m | assumed | Hip actuator peak torque at full supply |

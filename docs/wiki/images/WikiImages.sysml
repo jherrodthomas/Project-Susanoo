@@ -127,7 +127,7 @@ package WikiImages {
     }
     part imgRecDecisionBoard : GeneratedFigure {
         attribute :>> file = "rec-decision-board.svg";
-        attribute :>> kilobytes = 33;
+        attribute :>> kilobytes = 34;
         attribute :>> shownOn = 0;
         attribute :>> generator = "tools/previews/record_figures.py";
     }

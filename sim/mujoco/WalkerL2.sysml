@@ -13,9 +13,9 @@ package WalkerL2 {
     }
     part def Leg {
         doc /* Hip, knee and ankle hinges about y and a box foot; each joint has a lock for load holding. */
-        attribute thighLengthM : Real = 1.107;  // m, derived
-        attribute shankLengthM : Real = 1.107;  // m, derived
-        attribute ankleHeightM : Real = 0.15;  // m, assumed
+        attribute thighLengthM : Real = 1.0;  // m, derived
+        attribute shankLengthM : Real = 1.05;  // m, derived
+        attribute ankleHeightM : Real = 0.55;  // m, derived
         attribute hipTorqueMaxNm : Real = 40000.0;  // N m, assumed
         attribute kneeTorqueMaxNm : Real = 26500.0;  // N m, derived
         attribute ankleTorqueMaxNm : Real = 40500.0;  // N m, derived

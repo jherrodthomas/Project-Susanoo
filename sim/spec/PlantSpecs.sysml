@@ -31,7 +31,7 @@ package PlantSpecs {
         attribute :>> revision = "0.1-draft";
     }
     part walkerL2Spec : ParameterSpec {
-        doc /* sim/spec/walker_l2.yaml: 21 parameters */
+        doc /* sim/spec/walker_l2.yaml: 24 parameters */
         attribute :>> specId = "SPEC-WLK-L2-001";
         attribute :>> revision = "0.1-draft";
     }

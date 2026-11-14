@@ -324,7 +324,7 @@ This folder holds the concept layouts of SUS-M1 (SUS-CAD-001): parameters, the m
 | Claws | HAZ-MAN-001, SYS-017 |
 | Carry pose | SYS-019, HAZ-MAN-002, SYS-008, DQ-011, HAZ-WLK-002 |
 
-Records that cite the CAD: 12 hazards (HAZ-DCK-001, HAZ-GSE-001, HAZ-INT-001, HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-001, HAZ-PIL-003, HAZ-PIL-004, HAZ-PIL-005, HAZ-PIL-006, HAZ-WLK-002, HAZ-WLK-003), 5 requirements (SYS-016, SYS-017, SYS-018, SYS-019, SYS-020) and 8 decisions (DQ-013, DQ-014, DQ-015, DQ-022, DQ-023, DQ-024, DQ-025, DQ-026).
+Records that cite the CAD: 12 hazards (HAZ-DCK-001, HAZ-GSE-001, HAZ-INT-001, HAZ-MAN-001, HAZ-MAN-002, HAZ-PIL-001, HAZ-PIL-003, HAZ-PIL-004, HAZ-PIL-005, HAZ-PIL-006, HAZ-WLK-002, HAZ-WLK-003), 5 requirements (SYS-016, SYS-017, SYS-018, SYS-019, SYS-020) and 9 decisions (DQ-013, DQ-014, DQ-015, DQ-022, DQ-023, DQ-024, DQ-025, DQ-026, DQ-027).
 
 ## Block diagram
 
@@ -359,7 +359,7 @@ Records that cite the CAD: 12 hazards (HAZ-DCK-001, HAZ-GSE-001, HAZ-INT-001, HA
 
 | Input | Source |
 |---|---|
-| Lead's decisions (DQ-013, DQ-014, DQ-015, DQ-022, DQ-023, DQ-024, DQ-025, DQ-026) | [Decision register](Decision-Register.md) |
+| Lead's decisions (DQ-013, DQ-014, DQ-015, DQ-022, DQ-023, DQ-024, DQ-025, DQ-026, DQ-027) | [Decision register](Decision-Register.md) |
 | Layout parameters | [`params/`](Layout-Parameters.md) |
 | CAD and render tools | FreeCAD, build123d, Blender ([`tools/cad/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/tools/cad)) |
 

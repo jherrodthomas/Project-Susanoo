@@ -1,75 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1010" height="595.1" viewBox="0 0 1010 595.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1010" height="609.1" viewBox="0 0 1010 609.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
 <title>Figure 6 · Inputs and outputs</title>
 <desc>What the layouts are built from (left) and what reads them (right).</desc>
 <defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
-<rect x="0" y="0" width="1010" height="526" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="0" y="0" width="1010" height="540" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
 <text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 6 · Inputs and outputs</text>
 <text x="40" y="66" font-size="12.5" fill="#475569">What the layouts are built from (left) and what reads them (right).</text>
 <text x="970" y="44" font-size="11" fill="#475569" text-anchor="end">cad/README.md</text>
 <line x1="40" y1="85" x2="970" y2="85" stroke="#E2E8F0" stroke-width="1"/>
 <g transform="translate(40 109)">
-<path d="M210.8 40 L360.4 40 Q367.4 40 367.4 47 L367.4 105 Q367.4 112 374.4 112 L409.4 112" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M210.8 127 L409.4 127" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M210.8 207 L360.4 207 Q367.4 207 367.4 200 L367.4 149 Q367.4 142 374.4 142 L409.4 142" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M545.4 109 L560.4 109 Q567.4 109 567.4 102 L567.4 41 Q567.4 34 574.4 34 L753.2 34" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M545.4 121 L753.2 121" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M545.4 133 L572.4 133 Q579.4 133 579.4 140 L579.4 201 Q579.4 208 586.4 208 L753.2 208" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<path d="M545.4 145 L560.4 145 Q567.4 145 567.4 152 L567.4 281 Q567.4 288 574.4 288 L753.2 288" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
-<rect x="19.2" y="6" width="191.6" height="68" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<path d="M210.8 47 L360.4 47 Q367.4 47 367.4 54 L367.4 119 Q367.4 126 374.4 126 L409.4 126" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M210.8 141 L409.4 141" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M210.8 221 L360.4 221 Q367.4 221 367.4 214 L367.4 163 Q367.4 156 374.4 156 L409.4 156" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M545.4 123 L560.4 123 Q567.4 123 567.4 116 L567.4 55 Q567.4 48 574.4 48 L753.2 48" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M545.4 135 L753.2 135" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M545.4 147 L572.4 147 Q579.4 147 579.4 154 L579.4 215 Q579.4 222 586.4 222 L753.2 222" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M545.4 159 L560.4 159 Q567.4 159 567.4 166 L567.4 295 Q567.4 302 574.4 302 L753.2 302" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="19.2" y="6" width="191.6" height="82" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
 <text x="31.2" y="30" font-size="12.5" fill="#0F172A" font-weight="700">Lead's decisions</text>
 <text x="31.2" y="47" font-size="10.5" fill="#475569">DQ-013, DQ-014, DQ-015, DQ-022,</text>
-<text x="31.2" y="61" font-size="10.5" fill="#475569">DQ-023, DQ-024, DQ-025, DQ-026</text>
-<rect x="65.6" y="100" width="145.2" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<text x="77.6" y="124" font-size="12.5" fill="#0F172A" font-weight="700">Layout parameters</text>
-<text x="77.6" y="141" font-size="10.5" fill="#475569">5 layouts + common.yaml</text>
-<rect x="6" y="180" width="204.8" height="54" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
-<text x="18" y="204" font-size="12.5" fill="#0F172A" font-weight="700">FreeCAD, build123d, Blender</text>
-<text x="18" y="221" font-size="10.5" fill="#475569">pinned tool versions</text>
-<rect x="409.4" y="97" width="136" height="60" rx="8" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
-<rect x="421.4" y="109" width="32.4" height="16" rx="8.0" fill="#FFFFFF" stroke="none" stroke-width="1"/>
-<text x="437.6" y="120.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">cad/</text>
-<text x="421.4" y="143" font-size="12.5" fill="#FFFFFF" font-weight="700">Concept layouts</text>
-<rect x="753.2" y="7" width="136" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<text x="765.2" y="31" font-size="12.5" fill="#0F172A" font-weight="700">Hazard records</text>
-<text x="765.2" y="48" font-size="10.5" fill="#475569">12 hazards cite CL-05</text>
-<rect x="753.2" y="87" width="170.8" height="68" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<text x="765.2" y="111" font-size="12.5" fill="#0F172A" font-weight="700">Requirements</text>
-<text x="765.2" y="128" font-size="10.5" fill="#475569">SYS-016, SYS-017, SYS-018,</text>
-<text x="765.2" y="142" font-size="10.5" fill="#475569">SYS-019, SYS-020</text>
-<rect x="753.2" y="181" width="136" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<text x="765.2" y="205" font-size="12.5" fill="#0F172A" font-weight="700">Front page</text>
-<text x="765.2" y="222" font-size="10.5" fill="#475569">banner</text>
-<rect x="753.2" y="261" width="136" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
-<text x="765.2" y="285" font-size="12.5" fill="#0F172A" font-weight="700">Concept art</text>
-<text x="765.2" y="302" font-size="10.5" fill="#475569">communication only</text>
-<rect x="284.3" y="45" width="51.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="289.3" y="58" font-size="10.5" fill="#475569">choices</text>
-<rect x="276.2" y="132" width="67.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="281.2" y="145" font-size="10.5" fill="#475569">dimensions</text>
-<rect x="272.8" y="212" width="74.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="277.8" y="225" font-size="10.5" fill="#475569">build, render</text>
-<rect x="623" y="39" width="52.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="628" y="52" font-size="10.5" fill="#475569">findings</text>
-<rect x="626.4" y="126" width="45.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="631.4" y="139" font-size="10.5" fill="#475569">values</text>
-<rect x="624.1" y="213" width="50.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="629.1" y="226" font-size="10.5" fill="#475569">renders</text>
-<rect x="607.4" y="293" width="83.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
-<text x="612.4" y="306" font-size="10.5" fill="#475569">source images</text>
+<text x="31.2" y="61" font-size="10.5" fill="#475569">DQ-023, DQ-024, DQ-025, DQ-026,</text>
+<text x="31.2" y="75" font-size="10.5" fill="#475569">DQ-027</text>
+<rect x="65.6" y="114" width="145.2" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="77.6" y="138" font-size="12.5" fill="#0F172A" font-weight="700">Layout parameters</text>
+<text x="77.6" y="155" font-size="10.5" fill="#475569">5 layouts + common.yaml</text>
+<rect x="6" y="194" width="204.8" height="54" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="18" y="218" font-size="12.5" fill="#0F172A" font-weight="700">FreeCAD, build123d, Blender</text>
+<text x="18" y="235" font-size="10.5" fill="#475569">pinned tool versions</text>
+<rect x="409.4" y="111" width="136" height="60" rx="8" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
+<rect x="421.4" y="123" width="32.4" height="16" rx="8.0" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<text x="437.6" y="134.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">cad/</text>
+<text x="421.4" y="157" font-size="12.5" fill="#FFFFFF" font-weight="700">Concept layouts</text>
+<rect x="753.2" y="21" width="136" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="765.2" y="45" font-size="12.5" fill="#0F172A" font-weight="700">Hazard records</text>
+<text x="765.2" y="62" font-size="10.5" fill="#475569">12 hazards cite CL-05</text>
+<rect x="753.2" y="101" width="170.8" height="68" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="765.2" y="125" font-size="12.5" fill="#0F172A" font-weight="700">Requirements</text>
+<text x="765.2" y="142" font-size="10.5" fill="#475569">SYS-016, SYS-017, SYS-018,</text>
+<text x="765.2" y="156" font-size="10.5" fill="#475569">SYS-019, SYS-020</text>
+<rect x="753.2" y="195" width="136" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="765.2" y="219" font-size="12.5" fill="#0F172A" font-weight="700">Front page</text>
+<text x="765.2" y="236" font-size="10.5" fill="#475569">banner</text>
+<rect x="753.2" y="275" width="136" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="765.2" y="299" font-size="12.5" fill="#0F172A" font-weight="700">Concept art</text>
+<text x="765.2" y="316" font-size="10.5" fill="#475569">communication only</text>
+<rect x="284.3" y="52" width="51.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="289.3" y="65" font-size="10.5" fill="#475569">choices</text>
+<rect x="276.2" y="146" width="67.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="281.2" y="159" font-size="10.5" fill="#475569">dimensions</text>
+<rect x="272.8" y="226" width="74.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="277.8" y="239" font-size="10.5" fill="#475569">build, render</text>
+<rect x="623" y="53" width="52.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="628" y="66" font-size="10.5" fill="#475569">findings</text>
+<rect x="626.4" y="140" width="45.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="631.4" y="153" font-size="10.5" fill="#475569">values</text>
+<rect x="624.1" y="227" width="50.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="629.1" y="240" font-size="10.5" fill="#475569">renders</text>
+<rect x="607.4" y="307" width="83.8" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="612.4" y="320" font-size="10.5" fill="#475569">source images</text>
 </g>
-<rect x="40" y="450" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
-<text x="62" y="460" font-size="11" fill="#475569">Work product</text>
-<rect x="139.9" y="450" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
-<text x="161.9" y="460" font-size="11" fill="#475569">External entity</text>
-<rect x="249.9" y="450" width="14" height="12" rx="3" fill="#0F172A" stroke="#0F172A" stroke-width="1.2"/>
-<text x="271.9" y="460" font-size="11" fill="#475569">This folder</text>
-<text x="40" y="482" font-size="10.5" fill="#94A3B8">Generated by tools/figures/cad_readme.py from cad/metrics.json, the layout parameters, the CL-05 findings and the records. Placeholder concept geometry: values are not design data, and</text>
-<text x="40" y="497" font-size="10.5" fill="#94A3B8">flags are not requirements.</text>
-<g class="terms" data-base-h="526">
-<rect x="0" y="526" width="1010" height="69.1" fill="#FFFFFF"/>
-<line x1="40" y1="530" x2="970" y2="530" stroke="#E2E8F0" stroke-width="1"/>
-<text x="40" y="545.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CAD = computer-aided design · CL-nnn = concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout) · DQ-nnn = decision question for the</text>
-<text x="40" y="560.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">project lead (decisions/register.yaml) · FreeCAD = open-source parametric CAD program used for the concept layouts · SYS-nnn = system safety requirement record</text>
-<text x="40" y="574.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(requirements/SYS-nnn.yaml)</text>
+<rect x="40" y="464" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="62" y="474" font-size="11" fill="#475569">Work product</text>
+<rect x="139.9" y="464" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="161.9" y="474" font-size="11" fill="#475569">External entity</text>
+<rect x="249.9" y="464" width="14" height="12" rx="3" fill="#0F172A" stroke="#0F172A" stroke-width="1.2"/>
+<text x="271.9" y="474" font-size="11" fill="#475569">This folder</text>
+<text x="40" y="496" font-size="10.5" fill="#94A3B8">Generated by tools/figures/cad_readme.py from cad/metrics.json, the layout parameters, the CL-05 findings and the records. Placeholder concept geometry: values are not design data, and</text>
+<text x="40" y="511" font-size="10.5" fill="#94A3B8">flags are not requirements.</text>
+<g class="terms" data-base-h="540">
+<rect x="0" y="540" width="1010" height="69.1" fill="#FFFFFF"/>
+<line x1="40" y1="544" x2="970" y2="544" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="559.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CAD = computer-aided design · CL-nnn = concept layout (cad/params/CL-nn.yaml; CL-01 to CL-05, CL-05 the reference layout) · DQ-nnn = decision question for the</text>
+<text x="40" y="574.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">project lead (decisions/register.yaml) · FreeCAD = open-source parametric CAD program used for the concept layouts · SYS-nnn = system safety requirement record</text>
+<text x="40" y="588.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(requirements/SYS-nnn.yaml)</text>
 </g>
 </svg>

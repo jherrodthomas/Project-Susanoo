@@ -552,3 +552,28 @@ decisions:
     answer: {choice: keep, by: lead, at: 2026-11-14, via: chat, note: "keep the knee at 26.5 kN·m"}
     applied_in: [sim/mujoco/sizing.yaml, sim/results/sizing-cf4.md, safety/hazards/HAZ-WLK-002.yaml, requirements/SYS-016.yaml]
     sources: [sim/results/sizing-cf4.md, sim/spec/walker_l2.yaml, requirements/SYS-016.yaml]
+
+  - id: DQ-027
+    question: Should SUS-M1 stand with a straighter knee so the 26.5 kN m knee clears the envelope, or should the knee torque grow instead?
+    context: >-
+      The level-2 model now has CL-05's reverse-jointed legs. **CL-05 stands with its knee bent about 58 degrees
+      (1.018 rad), 0.46 m behind the line of the ground force, so standing on one leg takes about 25 kN m at the
+      knee; with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages, and
+      212 of 378 envelope cases fail with load holding working.** In that stance the knee needs 62.5 kN m to clear the
+      envelope. Standing with the knee bent 0.25 to 0.35 rad clears both sizing grids at 26.5 kN m; 0.2 rad fails
+      again. The straighter stance raises the hips about 0.23 m (sim/results/sizing-cf4.md). While this was being
+      run the lead said in chat: "keep the knee at 26.5 kN·m".
+    options:
+      - {key: posture, title: Keep knee 26.5 kN m and stand with the knee bent about 0.3 rad, detail: "The actuator class stays; CL-05's legs, standing posture and metrics are redrawn (hips about 0.23 m higher, CoM higher), and every simulation is re-run on the new layout."}
+      - {key: torque, title: Keep CL-05's posture and raise the knee to 94 kN m, detail: "1.5 times the lowest clearing 62.5 kN m; the knee actuator class grows about 3.5 times, with its mass and power (TS-001 C01, C06)."}
+      - {key: accept, title: Keep both as they are, detail: "No change; level 2 loses most of the envelope with load holding working, so HAZ-WLK-002 CF4 stays unmitigated in simulation."}
+    recommendation: posture
+    reversibility: revisit
+    blocks: [SYS-016, CL-05 standing posture, TS-001 C09 scores]
+    gate: G2
+    decider: lead
+    status: open
+    asked: 2026-11-14
+    answer: null
+    applied_in: []
+    sources: [sim/results/sizing-cf4.md, sim/results/l2-crosscheck.md, sim/spec/walker_l2.yaml, cad/params/CL-05.yaml]

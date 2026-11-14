@@ -6,7 +6,8 @@ foot in contact with the ground. Every body's mass, centre of mass and pitch ine
 element, from the CL-05 link mass properties in the spec); the geoms give shape and contact only. The model is planar,
 so only the pitch inertia acts; the other two axes are given the same value. Each leg joint has an inactive joint-equality
 constraint; load holding activates it at the current angle, so the solver holds the joint (a mechanical lock). Positive joint angles rotate a leg's tip backwards (-x), so a positive knee angle is
-flexion. The slope is applied by tilting gravity, so +x is downhill, as in the level-1 plant.
+flexion of a forward-bending knee; CL-05's knees bend backwards (reverse-jointed), so its knee angles are negative
+(knee_stance_rad in the spec sets the direction). The slope is applied by tilting gravity, so +x is downhill, as in the level-1 plant.
 """
 from __future__ import annotations
 
@@ -32,6 +33,9 @@ def mjcf(p: dict, slope_deg: float) -> str:
     g = p["gravity_mps2"]
     gx, gz = g * math.sin(th), -g * math.cos(th)
     lt, ls, ha = p["thigh_length_m"], p["shank_length_m"], p["ankle_height_m"]
+    # reverse- or forward-bending knee; CL-05 kneels (hips at 0.95 m, cad/params/CL-05.yaml) with the knee folded to
+    # about -2.75 rad, so its stop lies beyond that and the cockpit can come down to its rest height
+    knee_range = "-3.0 0.05" if p["knee_stance_rad"] < 0 else "-0.05 2.6"
     foot = p["foot_half_length_m"]
 
     def inertial(mass: float, iyy: float, z: float) -> str:
@@ -44,7 +48,7 @@ def mjcf(p: dict, slope_deg: float) -> str:
         {inertial(p["thigh_mass_kg"], p["thigh_pitch_inertia_kgm2"], -p["thigh_com_fraction"] * lt)}
         <geom type="capsule" fromto="0 0 0 0 0 -{lt}" size="0.12" contype="0" conaffinity="0"/>
         <body name="shank_{side}" pos="0 0 -{lt}">
-          <joint name="knee_{side}" range="-0.05 2.6"/>
+          <joint name="knee_{side}" range="{knee_range}"/>
           {inertial(p["shank_mass_kg"], p["shank_pitch_inertia_kgm2"], -p["shank_com_fraction"] * ls)}
           <geom type="capsule" fromto="0 0 0 0 0 -{ls}" size="0.1" contype="0" conaffinity="0"/>
           <body name="foot_{side}" pos="0 0 -{ls}">

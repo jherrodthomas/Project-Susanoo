@@ -42,7 +42,7 @@ The committed output of the simulation track. Every file here is written by a si
 
 | Result set | Files | Written by | Re-run in CI | Spec digest | Hazards named |
 |---|---|---|---|---|---|
-| l2-crosscheck | [`l2-crosscheck.json`](l2-crosscheck.json), [`l2-crosscheck.md`](l2-crosscheck.md) | `sim.mujoco.crosscheck` | pdac-validate · mujoco `--compare` | ce8f2beafd0f (current) | HAZ-PIL-002 |
+| l2-crosscheck | [`l2-crosscheck.json`](l2-crosscheck.json), [`l2-crosscheck.md`](l2-crosscheck.md) | `sim.mujoco.crosscheck` | pdac-validate · mujoco `--compare` | ce8f2beafd0f (current) | — |
 | plant-results | [`plant-results.json`](plant-results.json), [`plant-results.md`](plant-results.md) | `sim.plant.report` | pdac-validate · sim `--check` | ce8f2beafd0f (current) | HAZ-PIL-002, HAZ-SAF-001, HAZ-WLK-001, HAZ-WLK-002 |
 | search-SF-01 | [`search-SF-01.json`](search-SF-01.json), [`search-SF-01.md`](search-SF-01.md) | `sim.search.search` | pdac-validate · sim `--check` | ce8f2beafd0f (current) | HAZ-PIL-002, HAZ-WLK-002 |
 | sizing-cf4 | [`sizing-cf4.json`](sizing-cf4.json), [`sizing-cf4.md`](sizing-cf4.md) | `sim.mujoco.sizing` | pdac-validate · mujoco `--compare` | ce8f2beafd0f (current) | HAZ-WLK-002 |
