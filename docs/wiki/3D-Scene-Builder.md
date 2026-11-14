@@ -106,6 +106,8 @@ Built by [`build_sheet.py`](https://github.com/jherrodthomas/Project-Susanoo/blo
 
 ![SUS-A1 in the air](images/3d-sus-a1-air.png)
 
+![SUS-A1 launch and recovery](images/3d-sus-a1-lr.png)
+
 ![SUS-M1-terrain sheet](images/3d-sus-m1-terrain.png)
 
 ![SUS-M1-terrain loaded carry walk](images/3d-sus-m1-terrain-loaded.png)

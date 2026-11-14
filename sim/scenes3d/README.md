@@ -104,6 +104,8 @@ Built by [`build_sheet.py`](build_sheet.py) from the sheet files below; the geom
 
 ![SUS-A1 in the air](../../docs/wiki/images/3d-sus-a1-air.png)
 
+![SUS-A1 launch and recovery](../../docs/wiki/images/3d-sus-a1-lr.png)
+
 ![SUS-M1-terrain sheet](../../docs/wiki/images/3d-sus-m1-terrain.png)
 
 ![SUS-M1-terrain loaded carry walk](../../docs/wiki/images/3d-sus-m1-terrain-loaded.png)

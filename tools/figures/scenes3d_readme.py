@@ -90,14 +90,14 @@ def load() -> dict:
             "three": cfg.get("three", {}), "sheets": load_sheets()}
 
 
-STILL_ALT = {"3d-sus-a1-air.png": "in the air", "3d-sus-m1-terrain-loaded.png": "loaded carry walk"}
+STILL_ALT = {"3d-sus-a1-air.png": "in the air", "3d-sus-a1-lr.png": "launch and recovery", "3d-sus-m1-terrain-loaded.png": "loaded carry walk"}
 
 
 def load_sheets() -> list[dict]:
     """The interactive general-arrangement sheets built by build_sheet.py, from sheet.yaml and sheet_uav.yaml."""
     out = []
     for name, page, stills in [("sheet.yaml", "SUS-M1", ["3d-sus-m1.png"]),
-                               ("sheet_uav.yaml", "SUS-A1", ["3d-sus-a1.png", "3d-sus-a1-air.png"])]:
+                               ("sheet_uav.yaml", "SUS-A1", ["3d-sus-a1.png", "3d-sus-a1-air.png", "3d-sus-a1-lr.png"])]:
         cfg = yaml.safe_load((FOLDER / name).read_text())
         out.append({"file": name, "page": page, "id": cfg["id"], "sheet": cfg.get("sheet", ""),
                     "title": cfg["title"], "layout": cfg.get("layout", ""),

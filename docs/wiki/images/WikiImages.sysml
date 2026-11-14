@@ -73,13 +73,19 @@ package WikiImages {
     }
     part img3DSusA1Air : RenderedStill {
         attribute :>> file = "3d-sus-a1-air.png";
-        attribute :>> kilobytes = 286;
+        attribute :>> kilobytes = 289;
+        attribute :>> shownOn = 5;
+        attribute :>> page = "sim/scenes3d/sheet_check.mjs";
+    }
+    part img3DSusA1Lr : RenderedStill {
+        attribute :>> file = "3d-sus-a1-lr.png";
+        attribute :>> kilobytes = 336;
         attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/sheet_check.mjs";
     }
     part img3DSusA1 : RenderedStill {
         attribute :>> file = "3d-sus-a1.png";
-        attribute :>> kilobytes = 465;
+        attribute :>> kilobytes = 467;
         attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/sheet_check.mjs";
     }
