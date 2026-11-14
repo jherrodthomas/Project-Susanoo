@@ -61,7 +61,7 @@ Lowest value that clears the grid: 20000.
 
 ## Proposal (draft, I0)
 
-Ankle 40500 N m (1.499 m g L_foot), knee 26500 N m. Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), a third above the lowest value that clears the grid; knee 1.5 times the lowest value that cleared it with that ankle when it was sized (17.5 kN m, DQ-024); with the CL-05 link masses and inertias (cad/links.json) the lowest clear knee is 20 kN m, so 26.5 kN m is 1.33 times it. Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).
+Ankle 40500 N m (1.499 m g L_foot), knee 26500 N m. Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), a third above the lowest value that clears the grid; knee 1.5 times the lowest value that cleared it with that ankle when it was sized (17.5 kN m, DQ-024); with the CL-05 link masses and inertias (cad/links.json) the lowest clear knee is 20 kN m, so 26.5 kN m is 1.33 times it; the lead kept 26.5 kN m (DQ-026). Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).
 
 Failures with the proposal on the envelope and corner grids: 0.
 Failures on the corner grid at the lowest clear ankle value: 0.

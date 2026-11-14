@@ -547,8 +547,8 @@ decisions:
     blocks: [SYS-016 knee value, TS-001 C01 and C06]
     gate: G2
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-13
-    answer: null
-    applied_in: []
+    answer: {choice: keep, by: lead, at: 2026-11-14, via: chat, note: "keep the knee at 26.5 kN·m"}
+    applied_in: [sim/mujoco/sizing.yaml, sim/results/sizing-cf4.md, safety/hazards/HAZ-WLK-002.yaml, requirements/SYS-016.yaml]
     sources: [sim/results/sizing-cf4.md, sim/spec/walker_l2.yaml, requirements/SYS-016.yaml]
