@@ -174,15 +174,15 @@ assumptions:
   state they agree on the SF-01 edge cases inside the envelope except EC-07 and EC-08, each explained in
   sim/results/l2-crosscheck.md'
 - 'Simulated mass and geometry are the reference layout''s (CL-05, cad/metrics.json, decision DQ-023): 4,590 kg,
-  centre of mass 2.72 m, hips 2.34 m, 1.49 m kneeling; placeholder geometry, not a design. Level 2 takes each
-  link''s mass, centre of mass and pitch inertia from CL-05 (cad/links.json): torso 3,474 kg and 2,452 kg m^2, each
-  leg 558 kg; its legs are reverse-jointed with CL-05''s joint positions (thigh 1.00 m, shank 1.05 m, ankle 0.55 m,
-  knee bent 1.018 rad standing); the torso centre of mass is still taken over the hips'
+  centre of mass 2.94 m, hips 2.57 m, 1.49 m kneeling (standing on a knee bent 0.3 rad, DQ-027); placeholder geometry, not a design. Level 2 takes each
+  link''s mass, centre of mass and pitch inertia from CL-05 (cad/links.json): torso 3,468 kg and 2,452 kg m^2, each
+  leg 561 kg; its legs are reverse-jointed with CL-05''s joint positions (thigh 1.00 m, shank 1.05 m, ankle 0.55 m,
+  knee bent 0.3 rad standing, DQ-027); the torso centre of mass is still taken over the hips'
 - 'Envelope: slope limit 20 degrees with the CoM no more than 0.12 m ahead of the stance foot (CONOPS section 4,
   lead decisions DQ-010 and DQ-011); the failure search covers this envelope and finds no tip without a fault'
 - 'Reference layout CL-05 (cad/README.md, decision DQ-014): reverse-jointed legs with the knees behind the hips and
-  the centre of gravity 0.33 m behind the ankles, so a backward fall puts the knees first; heel spurs give a standstill
-  static margin of 0.38 m standing and 0.35 m kneeling on placeholder mass'
+  the centre of gravity about 0.28 m behind the ankles, so a backward fall puts the knees first; heel spurs give a standstill
+  static margin of 0.41 m standing and 0.35 m kneeling on placeholder mass'
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
 - 'Confirm the SYS-016 torque reserve in the actuation trade (TS-001, DQ-006): the level-2 spec holds ankle 40.5 and

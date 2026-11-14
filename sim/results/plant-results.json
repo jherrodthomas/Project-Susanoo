@@ -54,47 +54,47 @@
  "nominal": [
   {
    "outcome": "safe",
-   "rho": 0.7526,
+   "rho": 0.755,
    "slope_deg": 0
   },
   {
    "outcome": "safe",
-   "rho": 0.6709,
+   "rho": 0.6669,
    "slope_deg": 4
   },
   {
    "outcome": "safe",
-   "rho": 0.5836,
+   "rho": 0.5731,
    "slope_deg": 8
   },
   {
    "outcome": "safe",
-   "rho": 0.5376,
+   "rho": 0.5238,
    "slope_deg": 10
   },
   {
    "outcome": "safe",
-   "rho": 0.4899,
+   "rho": 0.4728,
    "slope_deg": 12
   },
   {
    "outcome": "safe",
-   "rho": 0.4149,
+   "rho": 0.3927,
    "slope_deg": 15
   },
   {
    "outcome": "safe",
-   "rho": 0.2798,
+   "rho": 0.2488,
    "slope_deg": 20
   },
   {
    "outcome": "safe",
-   "rho": 0.1301,
+   "rho": 0.0851,
    "slope_deg": 25
   },
   {
    "outcome": "tip",
-   "rho": -1.5949,
+   "rho": -1.5926,
    "slope_deg": 30
   }
  ],
@@ -110,7 +110,7 @@
    },
    "fault": "FLT-01",
    "outcome": "safe",
-   "rho": 0.1326,
+   "rho": 0.1335,
    "slope_deg": 0.0,
    "stop_reason": "pilot"
   },
@@ -118,14 +118,14 @@
    "config": "no load holding",
    "events": {
     "alarm_t": 1.11,
-    "impact_speed": 4.383,
+    "impact_speed": 4.833,
     "lock_t": null,
-    "mishap_t": 1.925,
+    "mishap_t": 1.975,
     "stop_t": null
    },
    "fault": "FLT-01",
    "outcome": "hard-drop",
-   "rho": -3.383,
+   "rho": -3.833,
    "slope_deg": 0.0,
    "stop_reason": null
   },
@@ -140,7 +140,7 @@
    },
    "fault": "FLT-01",
    "outcome": "safe",
-   "rho": 0.1326,
+   "rho": 0.1335,
    "slope_deg": 0.0,
    "stop_reason": "pilot"
   },
@@ -148,14 +148,14 @@
    "config": "no hold, slow pilot",
    "events": {
     "alarm_t": 1.11,
-    "impact_speed": 4.383,
+    "impact_speed": 4.833,
     "lock_t": null,
-    "mishap_t": 1.925,
+    "mishap_t": 1.975,
     "stop_t": null
    },
    "fault": "FLT-01",
    "outcome": "hard-drop",
-   "rho": -3.383,
+   "rho": -3.833,
    "slope_deg": 0.0,
    "stop_reason": null
   },
@@ -170,7 +170,7 @@
    },
    "fault": "FLT-01",
    "outcome": "safe",
-   "rho": -0.0293,
+   "rho": -0.0413,
    "slope_deg": 8.0,
    "stop_reason": "pilot"
   },
@@ -178,14 +178,14 @@
    "config": "no load holding",
    "events": {
     "alarm_t": 1.11,
-    "impact_speed": 4.383,
+    "impact_speed": 4.833,
     "lock_t": null,
-    "mishap_t": 1.925,
+    "mishap_t": 1.975,
     "stop_t": null
    },
    "fault": "FLT-01",
    "outcome": "hard-drop",
-   "rho": -3.383,
+   "rho": -3.833,
    "slope_deg": 8.0,
    "stop_reason": null
   },
@@ -200,7 +200,7 @@
    },
    "fault": "FLT-01",
    "outcome": "safe",
-   "rho": -0.0293,
+   "rho": -0.0413,
    "slope_deg": 8.0,
    "stop_reason": "pilot"
   },
@@ -208,14 +208,14 @@
    "config": "no hold, slow pilot",
    "events": {
     "alarm_t": 1.11,
-    "impact_speed": 4.383,
+    "impact_speed": 4.833,
     "lock_t": null,
-    "mishap_t": 1.925,
+    "mishap_t": 1.975,
     "stop_t": null
    },
    "fault": "FLT-01",
    "outcome": "hard-drop",
-   "rho": -3.383,
+   "rho": -3.833,
    "slope_deg": 8.0,
    "stop_reason": null
   },
@@ -230,7 +230,7 @@
    },
    "fault": "FLT-02",
    "outcome": "safe",
-   "rho": 0.7526,
+   "rho": 0.755,
    "slope_deg": 0.0,
    "stop_reason": "monitor"
   },
@@ -240,12 +240,12 @@
     "alarm_t": null,
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 2.8,
+    "mishap_t": 2.85,
     "stop_t": 1.155
    },
    "fault": "FLT-02",
    "outcome": "tip",
-   "rho": -1.2133,
+   "rho": -1.209,
    "slope_deg": 0.0,
    "stop_reason": "monitor"
   },
@@ -255,12 +255,12 @@
     "alarm_t": null,
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 2.77,
+    "mishap_t": 2.85,
     "stop_t": null
    },
    "fault": "FLT-02",
    "outcome": "tip",
-   "rho": -2.3723,
+   "rho": -2.3681,
    "slope_deg": 0.0,
    "stop_reason": null
   },
@@ -270,12 +270,12 @@
     "alarm_t": null,
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 2.8,
+    "mishap_t": 2.85,
     "stop_t": 1.155
    },
    "fault": "FLT-02",
    "outcome": "tip",
-   "rho": -1.2133,
+   "rho": -1.209,
    "slope_deg": 0.0,
    "stop_reason": "monitor"
   },
@@ -290,7 +290,7 @@
    },
    "fault": "FLT-02",
    "outcome": "safe",
-   "rho": 0.5836,
+   "rho": 0.5731,
    "slope_deg": 8.0,
    "stop_reason": "monitor"
   },
@@ -300,12 +300,12 @@
     "alarm_t": null,
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 2.43,
+    "mishap_t": 2.455,
     "stop_t": 1.155
    },
    "fault": "FLT-02",
    "outcome": "tip",
-   "rho": -1.5939,
+   "rho": -1.606,
    "slope_deg": 8.0,
    "stop_reason": "monitor"
   },
@@ -315,12 +315,12 @@
     "alarm_t": null,
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 2.715,
+    "mishap_t": 2.795,
     "stop_t": null
    },
    "fault": "FLT-02",
    "outcome": "tip",
-   "rho": -2.1821,
+   "rho": -2.2089,
    "slope_deg": 8.0,
    "stop_reason": null
   },
@@ -330,12 +330,12 @@
     "alarm_t": null,
     "impact_speed": 0.0,
     "lock_t": null,
-    "mishap_t": 2.43,
+    "mishap_t": 2.455,
     "stop_t": 1.155
    },
    "fault": "FLT-02",
    "outcome": "tip",
-   "rho": -1.5939,
+   "rho": -1.606,
    "slope_deg": 8.0,
    "stop_reason": "monitor"
   },
@@ -343,14 +343,14 @@
    "config": "mitigated",
    "events": {
     "alarm_t": null,
-    "impact_speed": 4.905,
+    "impact_speed": 5.346,
     "lock_t": null,
-    "mishap_t": 1.495,
+    "mishap_t": 1.54,
     "stop_t": 1.0
    },
    "fault": "FLT-03",
    "outcome": "hard-drop",
-   "rho": -3.905,
+   "rho": -4.346,
    "slope_deg": 0.0,
    "stop_reason": "faulty"
   },
@@ -358,14 +358,14 @@
    "config": "no load holding",
    "events": {
     "alarm_t": null,
-    "impact_speed": 4.905,
+    "impact_speed": 5.346,
     "lock_t": null,
-    "mishap_t": 1.495,
+    "mishap_t": 1.54,
     "stop_t": 1.0
    },
    "fault": "FLT-03",
    "outcome": "hard-drop",
-   "rho": -3.905,
+   "rho": -4.346,
    "slope_deg": 0.0,
    "stop_reason": "faulty"
   },
@@ -373,14 +373,14 @@
    "config": "no monitor",
    "events": {
     "alarm_t": null,
-    "impact_speed": 4.905,
+    "impact_speed": 5.346,
     "lock_t": null,
-    "mishap_t": 1.495,
+    "mishap_t": 1.54,
     "stop_t": 1.0
    },
    "fault": "FLT-03",
    "outcome": "hard-drop",
-   "rho": -3.905,
+   "rho": -4.346,
    "slope_deg": 0.0,
    "stop_reason": "faulty"
   },
@@ -388,14 +388,14 @@
    "config": "no hold, slow pilot",
    "events": {
     "alarm_t": null,
-    "impact_speed": 4.905,
+    "impact_speed": 5.346,
     "lock_t": null,
-    "mishap_t": 1.495,
+    "mishap_t": 1.54,
     "stop_t": 1.0
    },
    "fault": "FLT-03",
    "outcome": "hard-drop",
-   "rho": -3.905,
+   "rho": -4.346,
    "slope_deg": 0.0,
    "stop_reason": "faulty"
   },
@@ -403,14 +403,14 @@
    "config": "mitigated",
    "events": {
     "alarm_t": null,
-    "impact_speed": 4.905,
+    "impact_speed": 5.346,
     "lock_t": null,
-    "mishap_t": 1.495,
+    "mishap_t": 1.54,
     "stop_t": 1.0
    },
    "fault": "FLT-03",
    "outcome": "hard-drop",
-   "rho": -3.905,
+   "rho": -4.346,
    "slope_deg": 8.0,
    "stop_reason": "faulty"
   },
@@ -418,14 +418,14 @@
    "config": "no load holding",
    "events": {
     "alarm_t": null,
-    "impact_speed": 4.905,
+    "impact_speed": 5.346,
     "lock_t": null,
-    "mishap_t": 1.495,
+    "mishap_t": 1.54,
     "stop_t": 1.0
    },
    "fault": "FLT-03",
    "outcome": "hard-drop",
-   "rho": -3.905,
+   "rho": -4.346,
    "slope_deg": 8.0,
    "stop_reason": "faulty"
   },
@@ -433,14 +433,14 @@
    "config": "no monitor",
    "events": {
     "alarm_t": null,
-    "impact_speed": 4.905,
+    "impact_speed": 5.346,
     "lock_t": null,
-    "mishap_t": 1.495,
+    "mishap_t": 1.54,
     "stop_t": 1.0
    },
    "fault": "FLT-03",
    "outcome": "hard-drop",
-   "rho": -3.905,
+   "rho": -4.346,
    "slope_deg": 8.0,
    "stop_reason": "faulty"
   },
@@ -448,14 +448,14 @@
    "config": "no hold, slow pilot",
    "events": {
     "alarm_t": null,
-    "impact_speed": 4.905,
+    "impact_speed": 5.346,
     "lock_t": null,
-    "mishap_t": 1.495,
+    "mishap_t": 1.54,
     "stop_t": 1.0
    },
    "fault": "FLT-03",
    "outcome": "hard-drop",
-   "rho": -3.905,
+   "rho": -4.346,
    "slope_deg": 8.0,
    "stop_reason": "faulty"
   },
@@ -470,7 +470,7 @@
    },
    "fault": "FLT-04",
    "outcome": "safe",
-   "rho": 0.1576,
+   "rho": 0.1593,
    "slope_deg": 0.0,
    "stop_reason": "pilot"
   },
@@ -478,14 +478,14 @@
    "config": "no load holding",
    "events": {
     "alarm_t": 1.19,
-    "impact_speed": 2.571,
+    "impact_speed": 2.803,
     "lock_t": null,
-    "mishap_t": 2.605,
+    "mishap_t": 2.685,
     "stop_t": null
    },
    "fault": "FLT-04",
    "outcome": "hard-drop",
-   "rho": -1.571,
+   "rho": -1.803,
    "slope_deg": 0.0,
    "stop_reason": null
   },
@@ -500,7 +500,7 @@
    },
    "fault": "FLT-04",
    "outcome": "safe",
-   "rho": 0.1576,
+   "rho": 0.1593,
    "slope_deg": 0.0,
    "stop_reason": "pilot"
   },
@@ -508,14 +508,14 @@
    "config": "no hold, slow pilot",
    "events": {
     "alarm_t": 1.19,
-    "impact_speed": 2.571,
+    "impact_speed": 2.803,
     "lock_t": null,
-    "mishap_t": 2.605,
+    "mishap_t": 2.685,
     "stop_t": null
    },
    "fault": "FLT-04",
    "outcome": "hard-drop",
-   "rho": -1.571,
+   "rho": -1.803,
    "slope_deg": 0.0,
    "stop_reason": null
   },
@@ -530,7 +530,7 @@
    },
    "fault": "FLT-04",
    "outcome": "safe",
-   "rho": -0.027,
+   "rho": -0.0411,
    "slope_deg": 8.0,
    "stop_reason": "pilot"
   },
@@ -538,14 +538,14 @@
    "config": "no load holding",
    "events": {
     "alarm_t": 1.19,
-    "impact_speed": 2.571,
+    "impact_speed": 2.803,
     "lock_t": null,
-    "mishap_t": 2.605,
+    "mishap_t": 2.685,
     "stop_t": null
    },
    "fault": "FLT-04",
    "outcome": "hard-drop",
-   "rho": -1.571,
+   "rho": -1.803,
    "slope_deg": 8.0,
    "stop_reason": null
   },
@@ -560,7 +560,7 @@
    },
    "fault": "FLT-04",
    "outcome": "safe",
-   "rho": -0.027,
+   "rho": -0.0411,
    "slope_deg": 8.0,
    "stop_reason": "pilot"
   },
@@ -568,17 +568,17 @@
    "config": "no hold, slow pilot",
    "events": {
     "alarm_t": 1.19,
-    "impact_speed": 2.571,
+    "impact_speed": 2.803,
     "lock_t": null,
-    "mishap_t": 2.605,
+    "mishap_t": 2.685,
     "stop_t": null
    },
    "fault": "FLT-04",
    "outcome": "hard-drop",
-   "rho": -1.571,
+   "rho": -1.803,
    "slope_deg": 8.0,
    "stop_reason": null
   }
  ],
- "spec_digest": "ce8f2beafd0f"
+ "spec_digest": "20873ce83512"
 }

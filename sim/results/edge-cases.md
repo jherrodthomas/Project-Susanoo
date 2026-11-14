@@ -19,11 +19,11 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | ID | Family | Outcome | Hazard / finding | Mishap (s) | Stop | Load holding |
 |---|---|---|---|---|---|---|
-| EC-01 | SF-01 | hard-drop | HAZ-PIL-002 | 1.58 | no | fails |
-| EC-02 | SF-01 | hard-drop | HAZ-PIL-002 | 1.595 | no | fails |
-| EC-03 | SF-01 | hard-drop | HAZ-PIL-002 | 1.595 | no | fails |
-| EC-04 | SF-01 | hard-drop | HAZ-PIL-002 | 1.61 | no | fails |
-| EC-05 | SF-01 | hard-drop | HAZ-PIL-002 | 1.58 | no | fails |
-| EC-06 | SF-01 | hard-drop | HAZ-PIL-002 | 1.595 | no | fails |
-| EC-07 | SF-01 | tip | HAZ-WLK-002 | 4.295 | no | fails |
-| EC-08 | SF-01 | tip | HAZ-WLK-002 | 3.56 | no | works |
+| EC-01 | SF-01 | hard-drop | HAZ-PIL-002 | 1.625 | no | fails |
+| EC-02 | SF-01 | hard-drop | HAZ-PIL-002 | 1.625 | no | fails |
+| EC-03 | SF-01 | hard-drop | HAZ-PIL-002 | 1.625 | no | fails |
+| EC-04 | SF-01 | hard-drop | HAZ-PIL-002 | 1.64 | no | fails |
+| EC-05 | SF-01 | hard-drop | HAZ-PIL-002 | 1.625 | no | fails |
+| EC-06 | SF-01 | hard-drop | HAZ-PIL-002 | 1.625 | no | fails |
+| EC-07 | SF-01 | tip | HAZ-WLK-002 | 3.095 | no | fails |
+| EC-08 | SF-01 | tip | HAZ-WLK-002 | 3.395 | no | works |

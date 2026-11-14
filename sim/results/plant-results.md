@@ -20,7 +20,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | data_kind | synthetic |
 | evidence credit | none (no approved fidelity case) |
 | simulator | sim/plant/walker.py (reduced-order, stdlib) |
-| plant spec | sim/spec/walker.yaml digest `ce8f2beafd0f` |
+| plant spec | sim/spec/walker.yaml digest `20873ce83512` |
 | scenario | Fault catalogue sim/faults.yaml on flat ground and an 8 degree slope |
 
 Outcome per fault and configuration. `rho` is the robustness margin (negative = margin exhausted). A mishap ends the run (contact not modelled).
@@ -29,15 +29,15 @@ Outcome per fault and configuration. `rho` is the robustness margin (negative = 
 
 | Slope (deg) | Outcome | rho |
 |---|---|---|
-| 0 | safe | 0.7526 |
-| 4 | safe | 0.6709 |
-| 8 | safe | 0.5836 |
-| 10 | safe | 0.5376 |
-| 12 | safe | 0.4899 |
-| 15 | safe | 0.4149 |
-| 20 | safe | 0.2798 |
-| 25 | safe | 0.1301 |
-| 30 | tip | -1.5949 |
+| 0 | safe | 0.755 |
+| 4 | safe | 0.6669 |
+| 8 | safe | 0.5731 |
+| 10 | safe | 0.5238 |
+| 12 | safe | 0.4728 |
+| 15 | safe | 0.3927 |
+| 20 | safe | 0.2488 |
+| 25 | safe | 0.0851 |
+| 30 | tip | -1.5926 |
 
 ## Faults
 
@@ -47,14 +47,14 @@ Causes: HAZ-SAF-001:CF2, HAZ-WLK-002:CF4, HAZ-PIL-002:CF1. Injection: supply fra
 
 | Slope | Configuration | Outcome | rho | Alarm (s) | Stop (s, by) | Hold (s) | Mishap (s) | Impact (m/s) |
 |---|---|---|---|---|---|---|---|---|
-| 0 | mitigated | **safe** | 0.1326 | 1.11 | 2.615 (pilot) | 1.38 | — | 0.0 |
-| 0 | no load holding | **hard-drop** | -3.383 | 1.11 | — | — | 1.925 | 4.383 |
-| 0 | no monitor | **safe** | 0.1326 | 1.11 | 2.615 (pilot) | 1.38 | — | 0.0 |
-| 0 | no hold, slow pilot | **hard-drop** | -3.383 | 1.11 | — | — | 1.925 | 4.383 |
-| 8 | mitigated | **safe** | -0.0293 | 1.11 | 2.615 (pilot) | 1.38 | — | 0.0 |
-| 8 | no load holding | **hard-drop** | -3.383 | 1.11 | — | — | 1.925 | 4.383 |
-| 8 | no monitor | **safe** | -0.0293 | 1.11 | 2.615 (pilot) | 1.38 | — | 0.0 |
-| 8 | no hold, slow pilot | **hard-drop** | -3.383 | 1.11 | — | — | 1.925 | 4.383 |
+| 0 | mitigated | **safe** | 0.1335 | 1.11 | 2.615 (pilot) | 1.38 | — | 0.0 |
+| 0 | no load holding | **hard-drop** | -3.833 | 1.11 | — | — | 1.975 | 4.833 |
+| 0 | no monitor | **safe** | 0.1335 | 1.11 | 2.615 (pilot) | 1.38 | — | 0.0 |
+| 0 | no hold, slow pilot | **hard-drop** | -3.833 | 1.11 | — | — | 1.975 | 4.833 |
+| 8 | mitigated | **safe** | -0.0413 | 1.11 | 2.615 (pilot) | 1.38 | — | 0.0 |
+| 8 | no load holding | **hard-drop** | -3.833 | 1.11 | — | — | 1.975 | 4.833 |
+| 8 | no monitor | **safe** | -0.0413 | 1.11 | 2.615 (pilot) | 1.38 | — | 0.0 |
+| 8 | no hold, slow pilot | **hard-drop** | -3.833 | 1.11 | — | — | 1.975 | 4.833 |
 
 ### FLT-02 · Posture feedback frozen (stale)
 
@@ -62,14 +62,14 @@ Causes: HAZ-WLK-001:CF1, HAZ-WLK-001:CF3. Injection: controller reads the CoM st
 
 | Slope | Configuration | Outcome | rho | Alarm (s) | Stop (s, by) | Hold (s) | Mishap (s) | Impact (m/s) |
 |---|---|---|---|---|---|---|---|---|
-| 0 | mitigated | **safe** | 0.7526 | — | 1.155 (monitor) | 1.155 | — | 0.0 |
-| 0 | no load holding | **tip** | -1.2133 | — | 1.155 (monitor) | — | 2.8 | 0.0 |
-| 0 | no monitor | **tip** | -2.3723 | — | — | — | 2.77 | 0.0 |
-| 0 | no hold, slow pilot | **tip** | -1.2133 | — | 1.155 (monitor) | — | 2.8 | 0.0 |
-| 8 | mitigated | **safe** | 0.5836 | — | 1.155 (monitor) | 1.155 | — | 0.0 |
-| 8 | no load holding | **tip** | -1.5939 | — | 1.155 (monitor) | — | 2.43 | 0.0 |
-| 8 | no monitor | **tip** | -2.1821 | — | — | — | 2.715 | 0.0 |
-| 8 | no hold, slow pilot | **tip** | -1.5939 | — | 1.155 (monitor) | — | 2.43 | 0.0 |
+| 0 | mitigated | **safe** | 0.755 | — | 1.155 (monitor) | 1.155 | — | 0.0 |
+| 0 | no load holding | **tip** | -1.209 | — | 1.155 (monitor) | — | 2.85 | 0.0 |
+| 0 | no monitor | **tip** | -2.3681 | — | — | — | 2.85 | 0.0 |
+| 0 | no hold, slow pilot | **tip** | -1.209 | — | 1.155 (monitor) | — | 2.85 | 0.0 |
+| 8 | mitigated | **safe** | 0.5731 | — | 1.155 (monitor) | 1.155 | — | 0.0 |
+| 8 | no load holding | **tip** | -1.606 | — | 1.155 (monitor) | — | 2.455 | 0.0 |
+| 8 | no monitor | **tip** | -2.2089 | — | — | — | 2.795 | 0.0 |
+| 8 | no hold, slow pilot | **tip** | -1.606 | — | 1.155 (monitor) | — | 2.455 | 0.0 |
 
 ### FLT-03 · Protective stop commands zero torque
 
@@ -77,14 +77,14 @@ Causes: HAZ-SAF-001:CF1. Injection: a protective stop requested at onset removes
 
 | Slope | Configuration | Outcome | rho | Alarm (s) | Stop (s, by) | Hold (s) | Mishap (s) | Impact (m/s) |
 |---|---|---|---|---|---|---|---|---|
-| 0 | mitigated | **hard-drop** | -3.905 | — | 1.0 (faulty) | — | 1.495 | 4.905 |
-| 0 | no load holding | **hard-drop** | -3.905 | — | 1.0 (faulty) | — | 1.495 | 4.905 |
-| 0 | no monitor | **hard-drop** | -3.905 | — | 1.0 (faulty) | — | 1.495 | 4.905 |
-| 0 | no hold, slow pilot | **hard-drop** | -3.905 | — | 1.0 (faulty) | — | 1.495 | 4.905 |
-| 8 | mitigated | **hard-drop** | -3.905 | — | 1.0 (faulty) | — | 1.495 | 4.905 |
-| 8 | no load holding | **hard-drop** | -3.905 | — | 1.0 (faulty) | — | 1.495 | 4.905 |
-| 8 | no monitor | **hard-drop** | -3.905 | — | 1.0 (faulty) | — | 1.495 | 4.905 |
-| 8 | no hold, slow pilot | **hard-drop** | -3.905 | — | 1.0 (faulty) | — | 1.495 | 4.905 |
+| 0 | mitigated | **hard-drop** | -4.346 | — | 1.0 (faulty) | — | 1.54 | 5.346 |
+| 0 | no load holding | **hard-drop** | -4.346 | — | 1.0 (faulty) | — | 1.54 | 5.346 |
+| 0 | no monitor | **hard-drop** | -4.346 | — | 1.0 (faulty) | — | 1.54 | 5.346 |
+| 0 | no hold, slow pilot | **hard-drop** | -4.346 | — | 1.0 (faulty) | — | 1.54 | 5.346 |
+| 8 | mitigated | **hard-drop** | -4.346 | — | 1.0 (faulty) | — | 1.54 | 5.346 |
+| 8 | no load holding | **hard-drop** | -4.346 | — | 1.0 (faulty) | — | 1.54 | 5.346 |
+| 8 | no monitor | **hard-drop** | -4.346 | — | 1.0 (faulty) | — | 1.54 | 5.346 |
+| 8 | no hold, slow pilot | **hard-drop** | -4.346 | — | 1.0 (faulty) | — | 1.54 | 5.346 |
 
 ### FLT-04 · Electric bus undervoltage
 
@@ -92,12 +92,12 @@ Causes: HAZ-SAF-001:CF2, HAZ-WLK-002:CF4, HAZ-PIL-002:CF1. Injection: torque cap
 
 | Slope | Configuration | Outcome | rho | Alarm (s) | Stop (s, by) | Hold (s) | Mishap (s) | Impact (m/s) |
 |---|---|---|---|---|---|---|---|---|
-| 0 | mitigated | **safe** | 0.1576 | 1.19 | 2.695 (pilot) | 1.875 | — | 0.0 |
-| 0 | no load holding | **hard-drop** | -1.571 | 1.19 | — | — | 2.605 | 2.571 |
-| 0 | no monitor | **safe** | 0.1576 | 1.19 | 2.695 (pilot) | 1.875 | — | 0.0 |
-| 0 | no hold, slow pilot | **hard-drop** | -1.571 | 1.19 | — | — | 2.605 | 2.571 |
-| 8 | mitigated | **safe** | -0.027 | 1.19 | 2.695 (pilot) | 1.875 | — | 0.0 |
-| 8 | no load holding | **hard-drop** | -1.571 | 1.19 | — | — | 2.605 | 2.571 |
-| 8 | no monitor | **safe** | -0.027 | 1.19 | 2.695 (pilot) | 1.875 | — | 0.0 |
-| 8 | no hold, slow pilot | **hard-drop** | -1.571 | 1.19 | — | — | 2.605 | 2.571 |
+| 0 | mitigated | **safe** | 0.1593 | 1.19 | 2.695 (pilot) | 1.875 | — | 0.0 |
+| 0 | no load holding | **hard-drop** | -1.803 | 1.19 | — | — | 2.685 | 2.803 |
+| 0 | no monitor | **safe** | 0.1593 | 1.19 | 2.695 (pilot) | 1.875 | — | 0.0 |
+| 0 | no hold, slow pilot | **hard-drop** | -1.803 | 1.19 | — | — | 2.685 | 2.803 |
+| 8 | mitigated | **safe** | -0.0411 | 1.19 | 2.695 (pilot) | 1.875 | — | 0.0 |
+| 8 | no load holding | **hard-drop** | -1.803 | 1.19 | — | — | 2.685 | 2.803 |
+| 8 | no monitor | **safe** | -0.0411 | 1.19 | 2.695 (pilot) | 1.875 | — | 0.0 |
+| 8 | no hold, slow pilot | **hard-drop** | -1.803 | 1.19 | — | — | 2.685 | 2.803 |
 

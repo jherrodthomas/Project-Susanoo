@@ -29,7 +29,7 @@ causal_factors:
   description: Load holding engages, but slower than the cockpit falls from operating height (engagement delay longer
     than the free-fall time)
 effects:
-- Cockpit strikes its rest stops at about 4.9 m/s after a 1.2 m fall (simulation SF-01 EC-01, synthetic)
+- Cockpit strikes its rest stops at about 5.3 m/s after a 1.45 m fall (simulation SF-01 EC-01, synthetic; CL-05 standing on a knee bent 0.3 rad, DQ-027)
 mishap: Spinal compression, head or neck injury to the restrained pilot
 initial_risk:
   severity: 2
@@ -124,7 +124,7 @@ hazmat: not-applicable
 assumptions:
 - Concept configuration SUS-I1-C001; no hardware design selected
 - Drop height and speed come from the reduced-order plant (sim/plant/walker.py); they rank the risk, they are not evidence
-- The level-2 MuJoCo model reproduces the drop in every cross-checked case (about 4.1 m/s against 4.9 m/s at level 1;
+- The level-2 MuJoCo model reproduces the drop in every cross-checked case (about 4.0 to 4.2 m/s against 5.3 m/s at level 1;
   sim/results/l2-crosscheck.md); still synthetic
 open_actions:
 - Set the engagement time and holding load in SYS-009 once the actuation trade closes (Task 203)

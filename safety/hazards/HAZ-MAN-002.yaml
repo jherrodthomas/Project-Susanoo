@@ -71,7 +71,7 @@ mitigations:
     evidence_ids: []
 - id: M2
   description: 'Carry pose keeps the load low and close to the body and below the pilot''s sight line (CL-05: load
-    centre 1.80 m up, 0.10 m ahead of the pod; nearest ground seen ahead unchanged at 3.98 m)'
+    centre 1.80 m up, 0.10 m ahead of the pod; nearest ground seen ahead unchanged at 4.24 m)'
   precedence: b
   state: identified
   requirement_ids:
@@ -110,7 +110,7 @@ hazmat: not-applicable
 assumptions:
 - Concept configuration SUS-I1-C001; carry pose from the CL-05 reference layout (cad/README.md); load mass TBD
 - 'CL-05 standstill figures on placeholder mass are indicative, not limits: the 0.30 m static-margin review flag
-  is reached at about 2,580 kg and tip-over at about 5,910 kg'
+  is reached at about 2,440 kg and tip-over at about 5,710 kg (straighter stance, DQ-027)'
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
 - Derive the payload limits for walking from the dynamic analysis against the CoM offset cap of SYS-008 (DQ-011),

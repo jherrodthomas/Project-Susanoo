@@ -6,7 +6,8 @@ Usage (build123d environment, tools/cad/b3d/environment.yml):
 
 Builds CL-05 standing with tools/cad/b3d/cl05.py and puts every solid on a link: a solid of a leg class (structure,
 actuator, armour, hose) below the hips belongs to the nearer leg; below 0.6 x the ankle height it is that leg's
-foot, otherwise its thigh or shank, whichever segment (hip-knee or knee-ankle) is nearer. Everything else is the
+foot, otherwise its thigh or shank as it lies above or below the knee along the hip-ankle line (parts centred on
+the knee go to the thigh). Everything else is the
 torso. Each solid is weighed as tools/cad/build_concepts.py weighs it (volume x the effective density of its class,
 payload left out), so the link masses add up to cad/metrics.json placeholder_mass_kg. Inertia is about each link's
 centre of mass, in the layout frame (x forward, y left, z up), in the standing posture.
@@ -39,12 +40,6 @@ LEG_CLASSES = ("structure", "actuator", "armor", "hose")
 SIDES = (("left", 1.0), ("right", -1.0))
 
 
-def seg_dist(p, a, b):
-    d = [b[i] - a[i] for i in range(3)]
-    t = max(0.0, min(1.0, sum((p[i] - a[i]) * d[i] for i in range(3)) / (sum(c * c for c in d) or 1e-12)))
-    return math.dist(p, [a[i] + t * d[i] for i in range(3)])
-
-
 def seg_fraction(p, a, b):
     """Position of p's projection along a->b (0 at a, 1 at b)."""
     d = [b[i] - a[i] for i in range(3)]
@@ -64,8 +59,11 @@ def link_of(cls, c, legs, hip_z, ankle_h):
             if abs(c[1] - leg["hip"][1]) < 0.45:
                 if c[2] < ankle_h * 0.6:
                     return f"foot_{side}"
-                near_thigh = seg_dist(c, leg["hip"], leg["knee"]) <= seg_dist(c, leg["knee"], leg["ankle"])
-                return f"{'thigh' if near_thigh else 'shank'}_{side}"
+                # above or below the knee along the hip-ankle line, however far the knee is bent; parts centred on the
+                # knee (its drive and joint block) go to the thigh, so rounding cannot put them on either side
+                above_knee = (math.dist(c, leg["knee"]) < 0.02 or
+                              seg_fraction(c, leg["hip"], leg["ankle"]) < seg_fraction(leg["knee"], leg["hip"], leg["ankle"]))
+                return f"{'thigh' if above_knee else 'shank'}_{side}"
     return "torso"
 
 

@@ -34,7 +34,7 @@ Results: [plant results](https://github.com/jherrodthomas/Project-Susanoo/blob/m
 
 ### SC-01 · Slow supply leak on a slope: balance lost before the hold engages
 
-HAZ-WLK-002 · edge case EC-08 (search SF-01) · performed **tip** at 3.56 s, intended safe.
+HAZ-WLK-002 · edge case EC-08 (search SF-01) · performed **tip** at 3.395 s, intended safe.
 
 ![SC-01 Slow supply leak on a slope: balance lost before the hold engages](images/sim-sc-01.svg)
 
@@ -42,7 +42,7 @@ Case: `variant=hydraulic, fault=FLT-01, slope_deg=19.5, tau_leak_s=1.94, pilot_r
 
 ### SC-02 · Protective stop removes leg force instead of crouching
 
-HAZ-SAF-001 · fault FLT-03 · performed **hard-drop** at 1.495 s, intended safe.
+HAZ-SAF-001 · fault FLT-03 · performed **hard-drop** at 1.54 s, intended safe.
 
 ![SC-02 Protective stop removes leg force instead of crouching](images/sim-sc-02.svg)
 
@@ -50,7 +50,7 @@ Case: `variant=hydraulic, fault=FLT-03, slope_deg=0.0, tau_leak_s=0.3, pilot_rea
 
 ### SC-03 · Frozen posture feedback with no staleness monitor
 
-HAZ-WLK-001 · fault FLT-02 · performed **tip** at 2.77 s, intended safe.
+HAZ-WLK-001 · fault FLT-02 · performed **tip** at 2.85 s, intended safe.
 
 ![SC-03 Frozen posture feedback with no staleness monitor](images/sim-sc-03.svg)
 
@@ -58,9 +58,9 @@ Case: `variant=hydraulic, fault=FLT-02, slope_deg=0.0, tau_leak_s=0.3, pilot_rea
 
 ### SC-04 · Burst supply loss with failed load holding: cockpit drops
 
-HAZ-PIL-002 · edge case EC-01 (search SF-01) · performed **hard-drop** at 1.58 s, intended safe.
+HAZ-PIL-002 · edge case EC-01 (search SF-01) · performed **hard-drop** at 1.625 s, intended safe.
 
 ![SC-04 Burst supply loss with failed load holding: cockpit drops](images/sim-sc-04.svg)
 
-Case: `variant=hydraulic, fault=FLT-01, slope_deg=12.0, tau_leak_s=0.05, pilot_reaction_s=3.0, stride_offset_m=0.09, load_holding=fails, monitor=True`
+Case: `variant=hydraulic, fault=FLT-01, slope_deg=13.0, tau_leak_s=0.05, pilot_reaction_s=1.1, stride_offset_m=0.03, load_holding=fails, monitor=True`
 
