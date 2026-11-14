@@ -332,9 +332,9 @@ function drawProfile(x0) {
 }
 
 // ------------------------------------------------------------------ controls
-function setTerrain(k) { if (!posed(S.mode, k)) return; S.key = k; S.u = 0; groundKey = null; renderPanels(); }
+function setTerrain(k) { if (!posed(S.mode, k)) return; S.key = k; S.u = 0; groundKey = null; profT = 1; renderPanels(); }
 function setModel(m) {
-  S.model = m; S.u = 0; groundKey = null;
+  S.model = m; S.u = 0; groundKey = null; profT = 1;
   if (!posed(S.mode, S.key)) S.key = 'flat';
   $('banner').textContent = m === 'physics' ? 'CONCEPT GEOMETRY & SYNTHETIC SIMULATION · DRAFTED CONTROLLER · NO EVIDENCE CREDIT' : 'CONCEPT GEOMETRY & KINEMATICS · DESIGN AID ONLY · NO EVIDENCE CREDIT';
   renderPanels(); refresh();
@@ -342,7 +342,7 @@ function setModel(m) {
 document.querySelectorAll('#model button').forEach((b) => { b.onclick = () => setModel(b.dataset.model); });
 function setMode(m) {
   if (!COURSE[m]) return;
-  S.mode = m; S.u = 0; groundKey = null;
+  S.mode = m; S.u = 0; groundKey = null; profT = 1;
   if (!posed(m, S.key)) S.key = 'flat';
   renderPanels(); refresh();
 }
@@ -391,7 +391,7 @@ function layout() {
 addEventListener('resize', layout);
 
 // ------------------------------------------------------------------ frame
-let last = performance.now(), profT = 0;
+let last = performance.now(), profT = 1;   // > 0.1: draw the plot on the first frame
 function frame(now) {
   const dt = Math.min(0.1, (now - last) / 1000); last = now;
   const phys = S.model === 'physics';
