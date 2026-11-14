@@ -92,9 +92,998 @@
  "sweeps": [
   {
    "id": "ankle",
-   "lowest_clear": 23000,
+   "lowest_clear": 21000,
    "param": "ankle_torque_max_nm",
    "rows": [
+    {
+     "cases": [
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      }
+     ],
+     "failures": 84,
+     "value": 12000
+    },
+    {
+     "cases": [
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      }
+     ],
+     "failures": 43,
+     "value": 15000
+    },
+    {
+     "cases": [
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      }
+     ],
+     "failures": 11,
+     "value": 18000
+    },
+    {
+     "cases": [],
+     "failures": 0,
+     "value": 21000
+    },
     {
      "cases": [],
      "failures": 0,
@@ -113,16 +1102,6 @@
     {
      "cases": [],
      "failures": 0,
-     "value": 34000
-    },
-    {
-     "cases": [],
-     "failures": 0,
-     "value": 37000
-    },
-    {
-     "cases": [],
-     "failures": 0,
      "value": 40500
     }
    ],
@@ -130,38 +1109,2772 @@
   },
   {
    "id": "knee",
-   "lowest_clear": 26500,
+   "lowest_clear": 22500,
    "param": "knee_torque_max_nm",
    "rows": [
+    {
+     "cases": [
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.5
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      }
+     ],
+     "failures": 174,
+     "value": 12500
+    },
+    {
+     "cases": [
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      }
+     ],
+     "failures": 134,
+     "value": 15000
+    },
+    {
+     "cases": [
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.0,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 2.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 3.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      }
+     ],
+     "failures": 67,
+     "value": 17500
+    },
+    {
+     "cases": [
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 0,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.06,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 10,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 14,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 16,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 18,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "tip",
+       "pilot_reaction_s": 0.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 1.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 1.5,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      },
+      {
+       "outcome": "hard-drop",
+       "pilot_reaction_s": 3.0,
+       "slope_deg": 20,
+       "stride_offset_m": 0.12,
+       "tau_leak_s": 5.0
+      }
+     ],
+     "failures": 15,
+     "value": 20000
+    },
+    {
+     "cases": [],
+     "failures": 0,
+     "value": 22500
+    },
     {
      "cases": [],
      "failures": 0,
      "value": 26500
-    },
-    {
-     "cases": [],
-     "failures": 0,
-     "value": 40000
-    },
-    {
-     "cases": [],
-     "failures": 0,
-     "value": 50000
-    },
-    {
-     "cases": [],
-     "failures": 0,
-     "value": 60000
-    },
-    {
-     "cases": [],
-     "failures": 0,
-     "value": 62500
-    },
-    {
-     "cases": [],
-     "failures": 0,
-     "value": 80000
     }
    ],
    "with": {

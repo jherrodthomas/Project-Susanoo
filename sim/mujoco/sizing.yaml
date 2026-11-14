@@ -34,10 +34,9 @@ proposal:
   rationale: >-
     Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold) and knee
     26.5 kN m, as adopted (DQ-024, DQ-026), with CL-05 standing on a knee bent 0.3 rad (DQ-027) instead of the
-    1.018 rad it was drawn with. That deep stance puts the knee 0.46 m behind the line of the ground force, so one leg needs about
-    25 kN m at the knee and the knee must still give it at the 0.4 load-holding threshold: in that stance the knee
-    needs 62.5 kN m to clear the grid (knee sweep). Straightening the stance shortens that moment arm: the adopted knee
-    clears the grid from 0.4 rad and both grids from 0.35 to 0.25 rad, and fails again at 0.2 rad, where the nearly
-    straight knee has no travel left to absorb the load (posture sweep); 0.3 rad is the middle of that band, and there
-    every ankle value in the sweep clears (ankle sweep). The straighter stance raised the hips by 0.23 m (CL-05 redrawn, cad/metrics.json). Joint torque is taken
-    to fall in proportion to supply (level-2 assumption, as A4 at level 1).
+    1.018 rad it was first drawn with. The deep stance put the knee 0.46 m behind the line of the ground force, so
+    one leg needed about 25 kN m at the knee, and the knee must still give it at the 0.4 load-holding threshold: the
+    posture sweep shows the adopted knee clearing the grid only from 0.4 rad straighter. At 0.3 rad the lowest
+    clearing knee is 22.5 kN m, so 26.5 kN m is 1.18 times it, and the lowest clearing ankle is 21 kN m, so 40.5 kN m
+    is 1.9 times it (one corner-grid case fails at 21 kN m). Joint torque is taken to fall in proportion to supply
+    (level-2 assumption, as A4 at level 1).

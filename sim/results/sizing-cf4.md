@@ -37,27 +37,29 @@ Envelope grid: 378 cases (`pilot_reaction_s` [0.5, 1.5, 3.0], `slope_deg` [0, 10
 
 | Value (N m) | Ratio to m g L_foot | Failures | Failing cases (first 3) |
 |---|---|---|---|
+| 12000 | 0.44 | 84 | 0°, offset 0.12 m, leak τ 5.0 s, pilot 3.0 s → tip; 10°, offset 0.12 m, leak τ 2.0 s, pilot 0.5 s → tip; 10°, offset 0.12 m, leak τ 2.0 s, pilot 1.5 s → tip |
+| 15000 | 0.56 | 43 | 10°, offset 0.12 m, leak τ 5.0 s, pilot 3.0 s → tip; 14°, offset 0.12 m, leak τ 2.0 s, pilot 0.5 s → tip; 14°, offset 0.12 m, leak τ 3.0 s, pilot 0.5 s → tip |
+| 18000 | 0.67 | 11 | 16°, offset 0.12 m, leak τ 5.0 s, pilot 1.5 s → tip; 18°, offset 0.12 m, leak τ 3.0 s, pilot 1.5 s → tip; 18°, offset 0.12 m, leak τ 3.0 s, pilot 3.0 s → tip |
+| 21000 | 0.78 | 0 | — |
 | 23000 | 0.85 | 0 | — |
 | 26500 | 0.98 | 0 | — |
 | 30500 | 1.13 | 0 | — |
-| 34000 | 1.26 | 0 | — |
-| 37000 | 1.37 | 0 | — |
 | 40500 | 1.50 | 0 | — |
 
-Lowest value that clears the grid: 23000.
+Lowest value that clears the grid: 21000.
 
 ## Sweep: knee_torque_max_nm (ankle_torque_max_nm 40500)
 
 | Value (N m) | Failures | Failing cases (first 3) |
 |---|---|---|
+| 12500 | 174 | 0°, offset 0.0 m, leak τ 5.0 s, pilot 0.5 s → hard-drop; 0°, offset 0.0 m, leak τ 5.0 s, pilot 1.5 s → hard-drop; 0°, offset 0.0 m, leak τ 5.0 s, pilot 3.0 s → hard-drop |
+| 15000 | 134 | 0°, offset 0.0 m, leak τ 5.0 s, pilot 3.0 s → hard-drop; 0°, offset 0.06 m, leak τ 5.0 s, pilot 0.5 s → hard-drop; 0°, offset 0.06 m, leak τ 5.0 s, pilot 1.5 s → hard-drop |
+| 17500 | 67 | 0°, offset 0.06 m, leak τ 5.0 s, pilot 1.5 s → hard-drop; 0°, offset 0.06 m, leak τ 5.0 s, pilot 3.0 s → hard-drop; 0°, offset 0.12 m, leak τ 2.0 s, pilot 0.5 s → tip |
+| 20000 | 15 | 0°, offset 0.12 m, leak τ 5.0 s, pilot 1.5 s → hard-drop; 0°, offset 0.12 m, leak τ 5.0 s, pilot 3.0 s → hard-drop; 10°, offset 0.06 m, leak τ 5.0 s, pilot 1.5 s → hard-drop |
+| 22500 | 0 | — |
 | 26500 | 0 | — |
-| 40000 | 0 | — |
-| 50000 | 0 | — |
-| 60000 | 0 | — |
-| 62500 | 0 | — |
-| 80000 | 0 | — |
 
-Lowest value that clears the grid: 26500.
+Lowest value that clears the grid: 22500.
 
 ## Sweep: knee_stance_rad (other joints as in the spec)
 

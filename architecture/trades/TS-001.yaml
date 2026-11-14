@@ -57,25 +57,23 @@ evidence:
   kind: simulation
   status: done
   source: sim/results/ts001-fault-response.md
-  summary: 'On the reverse-kneed 4,590 kg reference layout (CL-05 link masses, inertias and leg geometry, DQ-023,
-    DQ-025) with ankle 40.5 and knee 26.5 kN m (DQ-024, DQ-026), level 2 loses cases in every supply-loss mode even
-    with load holding working: CL-05 stands with its knee bent about 58 degrees, so one leg needs about 25 kN m at the
-    knee and the knee gives way before load holding engages at 0.4 of supply. A hydraulic loss (A) and an isolated
-    battery (B, SYS-014) lose 75 of 180 (60 drops at up to 2.2 m/s, 15 tips); a bus undervoltage that keeps 35% of
-    torque (B, assumed floor) loses 112 (65 drops, 47 tips). With load holding failed, A and an isolated battery
-    lose all 180 (168 drops at up to 3.9 m/s), and the bus undervoltage all 180 (137 drops at up to 2.9 m/s). The
-    knee, not the power architecture, decides C09 until the knee torque or the standing posture is settled (DQ-027;
-    sim/results/sizing-cf4.md).'
+  summary: 'On the reverse-kneed 4,590 kg reference layout standing on a knee bent 0.3 rad (CL-05 link masses,
+    inertias and leg geometry; DQ-023, DQ-025, DQ-027) with ankle 40.5 and knee 26.5 kN m (DQ-024, DQ-026), level 2
+    keeps the walker safe while load holding works: a hydraulic loss (A) and an isolated battery (B, SYS-014) lose 0
+    of 180, and a bus undervoltage that keeps 35% of torque (B, assumed floor) loses 1 (a tip). With load holding
+    failed, A and an isolated battery are identical: torque goes to zero and the cockpit drops in 130 of 180 cases at
+    up to 4.2 m/s. The bus undervoltage drops it in 87 at up to 3.0 m/s, still above the 1.0 m/s safe drop speed.
+    The alternatives differ by the torque left after the fault, not by the technology.'
 - id: TS-001-E02
   criteria: [C01, C06, C09]
   kind: analysis
   status: done
   source: sim/results/sizing-cf4.md
   summary: Every alternative must deliver ankle 40.5 kN m and knee 26.5 kN m at full supply (SYS-016, DQ-024,
-    DQ-026), and at least 0.6 m g L_foot at the ankle when load holding engages. On the reverse-knee level-2 model the
-    knee is the binding joint - in CL-05's standing posture it needs 62.5 kN m to clear the envelope, while a stance
-    with the knee bent 0.4 rad clears it at 26.5 kN m (DQ-027); this sets the actuator class for C01 and C06 and the
-    torque-supply curve each alternative must show for C09.
+    DQ-026), and at least 0.6 m g L_foot at the ankle when load holding engages, on CL-05 standing on a knee bent
+    0.3 rad (DQ-027). There the lowest clearing knee is 22.5 kN m and ankle 21 kN m; in the deeper stance first
+    drawn the knee needed 62.5 kN m. This sets the actuator class for C01 and C06 and the torque-supply curve each
+    alternative must show for C09.
 - id: TS-001-E03
   criteria: [C01, C06, C10, C12]
   kind: vendor-data
@@ -111,8 +109,8 @@ evidence:
   summary: Maintenance tasks, noise and heat rejection of comparable legged and construction machines.
   needed: Sources for each alternative; the pilot-station noise limit from the HHA (Task 207).
 scores:
-- {alternative: A, criterion: C09, score: 2, basis: [TS-001-E01], preliminary: true, note: "Every supply loss takes torque to zero on all joints at once. Held at the forward-knee score: on the reverse-knee model the undersized knee loses cases in every mode (TS-001-E01), so C09 is re-scored once the knee or posture is settled (DQ-027)."}
-- {alternative: B-EHA, criterion: C09, score: 3, basis: [TS-001-E01], preliminary: true, note: "A bus undervoltage keeps residual torque (assumed 35%); battery isolation is as bad as A. Held at the forward-knee score: on the reverse-knee model the bus undervoltage loses more cases than A with load holding working (112 against 75 of 180), because 35% torque keeps the walker out of load holding while its knee gives way; re-scored once the knee or posture is settled (DQ-027). Local actuator leaks pending TS-001-E06."}
+- {alternative: A, criterion: C09, score: 2, basis: [TS-001-E01], preliminary: true, note: "Every supply loss takes torque to zero on all joints at once; safe while load holding works, and with it failed the cockpit drops in 130 of 180 cases at up to 4.2 m/s."}
+- {alternative: B-EHA, criterion: C09, score: 3, basis: [TS-001-E01], preliminary: true, note: "A bus undervoltage keeps residual torque (assumed 35%): with load holding failed 87 of 180 drops at up to 3.0 m/s, against 130 at up to 4.2 m/s; with it working one tip (A none). Battery isolation is as bad as A. Local actuator leaks pending TS-001-E06."}
 - {alternative: B-EMA, criterion: C09, score: 3, basis: [TS-001-E01], preliminary: true, note: "As B-EHA at simulation fidelity; spring-applied brakes against check valves pending TS-001-E06."}
 requirement_ids: [SYS-007, SYS-009, SYS-014, SYS-015, SYS-016]
 selection: null
@@ -121,5 +119,4 @@ author: {name: Claude, human: false, independence: I0}
 open_actions:
 - Obtain the vendor data for TS-001-E03; it unblocks TS-001-E04 and TS-001-E05
 - Test whether the residual bus floor (assumed 35% in sim/spec/walker.yaml) is credible for the series-hybrid bus; the C09 difference between A and B rests on it
-- Re-score C09 once the knee torque or the CL-05 standing posture is settled (DQ-027)
 - Score the remaining criteria from evidence, then set the study to ready-for-decision for the lead

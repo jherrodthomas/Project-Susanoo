@@ -186,7 +186,7 @@ assumptions:
 open_actions:
 - Confirm severity and probability in PHA (Task 202) at G2
 - 'Confirm the SYS-016 torque reserve in the actuation trade (TS-001, DQ-006): the level-2 spec holds ankle 40.5 and
-  knee 26.5 kN m, re-sized for the 4,590 kg reference layout (DQ-023) and adopted by the lead (DQ-024). The lead kept the knee at 26.5 kN m (DQ-026). On the reverse-knee level-2 model CL-05''s deep stance needs about 25 kN m at the knee on one leg, so 26.5 kN m loses 212 of 378 envelope cases with load holding working; the knee needs 62.5 kN m in that stance, or the walker must stand with the knee bent 0.25 to 0.35 rad (DQ-027). A real actuator must show that torque falls no faster than supply down
+  knee 26.5 kN m, re-sized for the 4,590 kg reference layout (DQ-023) and adopted by the lead (DQ-024). The lead kept the knee at 26.5 kN m (DQ-026). On the reverse-knee level-2 model CL-05''s first, deep stance needed about 25 kN m at the knee on one leg, so 26.5 kN m lost 212 of 378 envelope cases; the lead chose a stance with the knee bent 0.3 rad instead (DQ-027), where the envelope clears with the lowest clearing knee at 22.5 kN m (1.18 times reserve). A real actuator must show that torque falls no faster than supply down
   to the load-holding threshold (sim/results/sizing-cf4.md)'
 - Derive a safety requirement for margin-based load holding (M5) (Task 203)
 - 'Check carried loads against the 0.12 m CoM offset cap: on placeholder CL-05 mass (4,590 kg) and flat ground, a

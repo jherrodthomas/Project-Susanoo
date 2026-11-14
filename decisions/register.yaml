@@ -572,8 +572,8 @@ decisions:
     blocks: [SYS-016, CL-05 standing posture, TS-001 C09 scores]
     gate: G2
     decider: lead
-    status: open
+    status: applied
     asked: 2026-11-14
-    answer: null
-    applied_in: []
+    answer: {choice: posture, by: lead, at: 2026-11-14, via: chat, note: "stand with the knee bent 0.3 rad"}
+    applied_in: [cad/params/CL-05.yaml, cad/metrics.json, cad/links.json, cad/drawings, cad/renders, docs/3d, sim/spec/walker.yaml, sim/spec/walker_l2.yaml, sim/results, requirements/SYS-016.yaml, requirements/SYS-020.yaml, safety/hazards/HAZ-WLK-002.yaml, safety/hazards/HAZ-PIL-001.yaml, safety/hazards/HAZ-PIL-002.yaml, safety/hazards/HAZ-PIL-003.yaml, safety/hazards/HAZ-WLK-003.yaml, safety/hazards/HAZ-MAN-002.yaml, safety/hazards/HAZ-GSE-001.yaml, architecture/trades/TS-001.yaml]
     sources: [sim/results/sizing-cf4.md, sim/results/l2-crosscheck.md, sim/spec/walker_l2.yaml, cad/params/CL-05.yaml]

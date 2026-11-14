@@ -110,13 +110,13 @@ The same gait with the arms locked in the carry pose and shorter, lower steps (`
 |---|---|---|---|---|---|
 | Locomotion | biped | biped | biped | biped | biped |
 | UAV dock | rear-backpack | shoulder | ground-station | rear-backpack | rear-backpack |
-| Envelope L × W × H | 3.4 × 2.4 × 4.1 m | 3.4 × 2.4 × 4.2 m | 3.4 × 2.4 × 3.9 m | 3.4 × 2.5 × 3.9 m | 3.3 × 2.3 × 4.5 m |
-| Overall height | 4.08 m | 4.20 m | 3.85 m | 3.94 m | 4.48 m |
-| Pilot eye height | 3.54 m | 3.54 m | 3.54 m | 3.15 m | 3.62 m |
-| Cockpit floor (egress drop) | 2.33 m | 2.33 m | 2.33 m | 1.94 m | 2.41 m |
-| CG height | 2.63 m | 2.63 m | 2.63 m | 2.24 m | 2.72 m |
-| Static margin | 0.14 m ⚠ | 0.14 m ⚠ | 0.14 m ⚠ | 0.23 m ⚠ | 0.38 m |
-| Static tip angle | 3.1° | 3.2° | 3.1° | 5.7° | 7.9° |
+| Envelope L × W × H | 3.4 × 2.4 × 4.1 m | 3.4 × 2.4 × 4.2 m | 3.4 × 2.4 × 3.9 m | 3.4 × 2.5 × 3.9 m | 3.3 × 2.3 × 4.7 m |
+| Overall height | 4.08 m | 4.20 m | 3.85 m | 3.94 m | 4.72 m |
+| Pilot eye height | 3.54 m | 3.54 m | 3.54 m | 3.15 m | 3.85 m |
+| Cockpit floor (egress drop) | 2.33 m | 2.33 m | 2.33 m | 1.94 m | 2.64 m |
+| CG height | 2.63 m | 2.63 m | 2.63 m | 2.24 m | 2.94 m |
+| Static margin | 0.14 m ⚠ | 0.14 m ⚠ | 0.14 m ⚠ | 0.23 m ⚠ | 0.41 m |
+| Static tip angle | 3.1° | 3.2° | 3.1° | 5.7° | 7.8° |
 | Rotor ↔ pilot (docked) | 0.79 m ⚠ | 0.63 m ⚠ | 3.14 m | 0.92 m ⚠ | 1.09 m |
 | Rotor ↔ own structure (docked) | 0.22 m | 0.41 m | off-board | 0.26 m | 0.29 m |
 | Placeholder mass | ~5.0 t | ~5.0 t | ~5.0 t | ~6.3 t | ~4.6 t |
@@ -173,27 +173,27 @@ Drawing sheet: [SUS-CAD-001-CL-05](drawings/CL-05.svg) (420 × 297 mm, 1:50, dim
 
 | | Standing | Carry |
 |---|---|---|
-| Cockpit floor (egress drop) | 2.41 m | 2.41 m |
-| Hip height | 2.34 m | 2.34 m |
-| Overall height | 4.48 m | 4.48 m |
-| CG height | 2.72 m | 2.71 m |
-| Static margin | 0.38 m | 0.35 m |
-| Static tip angle | 7.9° | 7.4° |
-| Claws above ground | 0.93 m | 1.13 m |
-| Front-opening sill (actual climb height) | 3.03 m | 3.03 m |
+| Cockpit floor (egress drop) | 2.64 m | 2.64 m |
+| Hip height | 2.57 m | 2.57 m |
+| Overall height | 4.72 m | 4.72 m |
+| CG height | 2.94 m | 2.93 m |
+| Static margin | 0.41 m | 0.38 m |
+| Static tip angle | 7.8° | 7.4° |
+| Claws above ground | 1.17 m | 1.13 m |
+| Front-opening sill (actual climb height) | 3.26 m | 3.26 m |
 | Ladder treads | 0 | 0 |
-| Largest step rise | 3.03 m | 3.03 m |
-| Emergency hatch sill | 3.21 m | 3.21 m |
+| Largest step rise | 3.26 m | 3.26 m |
+| Emergency hatch sill | 3.44 m | 3.44 m |
 | Emergency hatch clear opening | 0.62 × 0.72 m | 0.62 × 0.72 m |
-| Shoulder step height (flush with the hatch sill) | 3.21 m | 3.21 m |
+| Shoulder step height (flush with the hatch sill) | 3.44 m | 3.44 m |
 | Gap from shoulder step to escape ladder | 0.18 m | 0.18 m |
 | Carried load envelope (placeholder) | — | 0.80 × 1.53 × 0.60 m |
 | Load bottom above ground | — | 1.50 m |
-| Arm angles (upper arm below horizontal / forearm) | — | 90° / -13° |
-| Nearest ground seen straight ahead | 3.98 m | 3.98 m |
-| Load mass giving the largest static margin | — | 890 kg (0.59 m) |
-| Load mass at the 0.30 m margin flag | — | 2580 kg |
-| Load mass at standstill tip-over | — | 5910 kg |
+| Arm angles (upper arm below horizontal / forearm) | — | 84° / -30° |
+| Nearest ground seen straight ahead | 4.24 m | 4.24 m |
+| Load mass giving the largest static margin | — | 790 kg (0.59 m) |
+| Load mass at the 0.30 m margin flag | — | 2440 kg |
+| Load mass at standstill tip-over | — | 5710 kg |
 
 | | |
 |---|---|
@@ -205,20 +205,20 @@ Drawing sheet: [SUS-CAD-001-CL-05-carry](drawings/CL-05-carry.svg).
 
 | | Standing | Emergency |
 |---|---|---|
-| Cockpit floor (egress drop) | 2.41 m | 2.41 m |
-| Hip height | 2.34 m | 2.34 m |
-| Overall height | 4.48 m | 4.48 m |
-| CG height | 2.72 m | 2.73 m |
-| Static margin | 0.38 m | 0.38 m |
-| Static tip angle | 7.9° | 7.9° |
-| Claws above ground | 0.93 m | 0.93 m |
-| Front-opening sill (actual climb height) | 3.03 m | 3.03 m |
+| Cockpit floor (egress drop) | 2.64 m | 2.64 m |
+| Hip height | 2.57 m | 2.57 m |
+| Overall height | 4.72 m | 4.72 m |
+| CG height | 2.94 m | 2.94 m |
+| Static margin | 0.41 m | 0.41 m |
+| Static tip angle | 7.8° | 7.8° |
+| Claws above ground | 1.17 m | 1.17 m |
+| Front-opening sill (actual climb height) | 3.26 m | 3.26 m |
 | Ladder treads | 0 | 0 |
-| Largest step rise | 3.03 m | 3.03 m |
-| Emergency hatch sill | 3.21 m | 3.21 m |
+| Largest step rise | 3.26 m | 3.26 m |
+| Emergency hatch sill | 3.44 m | 3.44 m |
 | Emergency hatch clear opening | 0.62 × 0.72 m | 0.62 × 0.72 m |
 | Escape ladder clearance to the walker | — | 0.16 m |
-| Shoulder step height (flush with the hatch sill) | 3.21 m | 3.21 m |
+| Shoulder step height (flush with the hatch sill) | 3.44 m | 3.44 m |
 | Gap from shoulder step to escape ladder | 0.18 m | 0.18 m |
 
 | | |
@@ -231,19 +231,19 @@ Drawing sheet: [SUS-CAD-001-CL-05-emergency](drawings/CL-05-emergency.svg).
 
 | | Standing | Kneel |
 |---|---|---|
-| Cockpit floor (egress drop) | 2.41 m | 1.02 m |
-| Hip height | 2.34 m | 0.95 m |
-| Overall height | 4.48 m | 3.10 m |
-| CG height | 2.72 m | 1.49 m |
-| Static margin | 0.38 m | 0.35 m |
-| Static tip angle | 7.9° | 13.1° |
-| Claws above ground | 0.93 m | 1.14 m |
-| Front-opening sill (actual climb height) | 3.03 m | 1.64 m |
+| Cockpit floor (egress drop) | 2.64 m | 1.02 m |
+| Hip height | 2.57 m | 0.95 m |
+| Overall height | 4.72 m | 3.10 m |
+| CG height | 2.94 m | 1.49 m |
+| Static margin | 0.41 m | 0.35 m |
+| Static tip angle | 7.8° | 13.1° |
+| Claws above ground | 1.17 m | 1.14 m |
+| Front-opening sill (actual climb height) | 3.26 m | 1.64 m |
 | Ladder treads | 0 | 4 |
-| Largest step rise | 3.03 m | 0.33 m |
-| Emergency hatch sill | 3.21 m | 1.82 m |
+| Largest step rise | 3.26 m | 0.33 m |
+| Emergency hatch sill | 3.44 m | 1.82 m |
 | Emergency hatch clear opening | 0.62 × 0.72 m | 0.62 × 0.72 m |
-| Shoulder step height (flush with the hatch sill) | 3.21 m | 1.82 m |
+| Shoulder step height (flush with the hatch sill) | 3.44 m | 1.82 m |
 | Gap from shoulder step to escape ladder | 0.18 m | 0.18 m |
 
 | | |
