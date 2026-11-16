@@ -77,6 +77,34 @@ id_patterns:
   review: "^REV-[0-9]{4}-[0-9]{3}$"
 
 # 5.2 task selection. disposition: selected | conditional | not-selected | not-applicable.
+# 4.4.2 and Table V: the level of rigor (LOR) for each software criticality index (SwCI), and the guide that defines the
+# tasks behind it. Lead decision DQ-030 (2026-11-16): JSSSEH-IG is the applicable guide. The Table V text below is
+# paraphrased; confirm it against the controlled standard. The JSSSEH-IG activity for each task is left to be filled
+# from the edition held: none is invented here.
+software_lor_guide:
+  guide: JSSSEH-IG
+  title: Joint Software Systems Safety Engineering Handbook Implementation Guide
+  edition: null            # to be confirmed by the lead
+  status: proposed
+  decision: DQ-030
+  owner: ROLE-SWL
+  # The five LOR task keys used by every SSF record (safety/software/SSF-*.yaml, lor:).
+  tasks: [requirements_analysis, architecture_analysis, design_analysis, code_analysis, safety_specific_testing]
+  # Tasks MIL-STD-882E Table V requires at each SwCI (SwCI 5: no safety-specific analysis or testing).
+  required_by_swci:
+    1: [requirements_analysis, architecture_analysis, design_analysis, code_analysis, safety_specific_testing]
+    2: [requirements_analysis, architecture_analysis, design_analysis, safety_specific_testing]
+    3: [requirements_analysis, architecture_analysis, safety_specific_testing]
+    4: [safety_specific_testing]
+    5: []
+  # JSSSEH-IG activity and reference for each task; null until the edition is confirmed.
+  jssseh_ig_activity:
+    requirements_analysis: null
+    architecture_analysis: null
+    design_analysis: null
+    code_analysis: null
+    safety_specific_testing: null
+
 tasks:
   101: {disposition: selected, gate: G0, owner: ROLE-SL, rationale: "Section 4 effort integrated with SE"}
   102: {disposition: selected, gate: G0, owner: ROLE-SL, did: DI-SAFT-81626, artifact: safety/mil-std-882e/templates/sspp-outline.md, rationale: "SSPP chosen as the single safety plan"}

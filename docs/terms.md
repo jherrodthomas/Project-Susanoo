@@ -101,6 +101,8 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | JDK | Java Development Kit |
 | JPEG | Joint Photographic Experts Group, the compressed image format of the renders and photographs |
 | JSON | JavaScript Object Notation, a data file format |
+| JSSSEH | Joint Software Systems Safety Engineering Handbook (DoD software safety handbook) |
+| JSSSEH-IG | Joint Software Systems Safety Engineering Handbook Implementation Guide, the guide for the software safety tasks behind each level of rigor (DQ-030) |
 | KB | kilobyte, a file size of 1,024 bytes |
 | LOR | level of rigor (software safety tasks, MIL-STD-882E 4.4) |
 | MAVLink | Micro Air Vehicle Link, the PX4 telemetry and command protocol |
