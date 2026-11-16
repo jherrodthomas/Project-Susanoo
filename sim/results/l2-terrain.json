@@ -8,67 +8,25 @@
   "hip": 40.0,
   "knee": 26.5
  },
- "load_kg": 890,
+ "load_kg": 790,
  "log_hz": 25,
  "mujoco": "3.3.5",
  "rows": [
   {
    "at_limit_pct": {
-    "ankle": 0.0,
+    "ankle": 0.1,
     "hip": 0.0,
-    "knee": 0.0
+    "knee": 0.3
    },
    "fall": null,
-   "foot_force_peak_kn": 92.6,
+   "foot_force_peak_kn": 722.0,
    "key": "flat",
    "label": "Flat",
    "mode": "unloaded",
-   "slip_max_m": 0.029,
-   "tilt_max_deg": 2.3,
+   "slip_max_m": 0.277,
+   "tilt_max_deg": 6.2,
    "torque_use": {
-    "ankle": 0.65,
-    "hip": 0.89,
-    "knee": 0.81
-   },
-   "walked": true,
-   "weight_kn": 45.0
-  },
-  {
-   "at_limit_pct": {
-    "ankle": 0.0,
-    "hip": 0.0,
-    "knee": 0.4
-   },
-   "fall": null,
-   "foot_force_peak_kn": 616.4,
-   "key": "up5",
-   "label": "Uphill 5\u00b0",
-   "mode": "unloaded",
-   "slip_max_m": 0.021,
-   "tilt_max_deg": 2.5,
-   "torque_use": {
-    "ankle": 0.59,
-    "hip": 0.89,
-    "knee": 1.0
-   },
-   "walked": true,
-   "weight_kn": 45.0
-  },
-  {
-   "at_limit_pct": {
-    "ankle": 0.0,
-    "hip": 0.2,
-    "knee": 1.4
-   },
-   "fall": null,
-   "foot_force_peak_kn": 120.6,
-   "key": "up10",
-   "label": "Uphill 10\u00b0",
-   "mode": "unloaded",
-   "slip_max_m": 0.02,
-   "tilt_max_deg": 2.9,
-   "torque_use": {
-    "ankle": 0.96,
+    "ankle": 1.0,
     "hip": 1.0,
     "knee": 1.0
    },
@@ -78,16 +36,58 @@
   {
    "at_limit_pct": {
     "ankle": 0.2,
-    "hip": 1.3,
-    "knee": 1.9
+    "hip": 0.4,
+    "knee": 1.4
    },
    "fall": null,
-   "foot_force_peak_kn": 290.7,
+   "foot_force_peak_kn": 218.6,
+   "key": "up5",
+   "label": "Uphill 5\u00b0",
+   "mode": "unloaded",
+   "slip_max_m": 0.02,
+   "tilt_max_deg": 2.8,
+   "torque_use": {
+    "ankle": 1.0,
+    "hip": 1.0,
+    "knee": 1.0
+   },
+   "walked": true,
+   "weight_kn": 45.0
+  },
+  {
+   "at_limit_pct": {
+    "ankle": 0.7,
+    "hip": 2.0,
+    "knee": 2.7
+   },
+   "fall": null,
+   "foot_force_peak_kn": 1257.1,
+   "key": "up10",
+   "label": "Uphill 10\u00b0",
+   "mode": "unloaded",
+   "slip_max_m": 0.069,
+   "tilt_max_deg": 3.7,
+   "torque_use": {
+    "ankle": 1.0,
+    "hip": 1.0,
+    "knee": 1.0
+   },
+   "walked": true,
+   "weight_kn": 45.0
+  },
+  {
+   "at_limit_pct": {
+    "ankle": 0.5,
+    "hip": 1.6,
+    "knee": 2.1
+   },
+   "fall": null,
+   "foot_force_peak_kn": 618.0,
    "key": "up15",
    "label": "Uphill 15\u00b0",
    "mode": "unloaded",
-   "slip_max_m": 0.019,
-   "tilt_max_deg": 3.3,
+   "slip_max_m": 0.071,
+   "tilt_max_deg": 4.2,
    "torque_use": {
     "ankle": 1.0,
     "hip": 1.0,
@@ -98,17 +98,17 @@
   },
   {
    "at_limit_pct": {
-    "ankle": 0.4,
-    "hip": 1.4,
-    "knee": 1.9
+    "ankle": 0.3,
+    "hip": 6.7,
+    "knee": 5.4
    },
    "fall": null,
-   "foot_force_peak_kn": 277.0,
+   "foot_force_peak_kn": 2298.2,
    "key": "up20",
    "label": "Uphill 20\u00b0",
    "mode": "unloaded",
-   "slip_max_m": 0.027,
-   "tilt_max_deg": 3.4,
+   "slip_max_m": 0.156,
+   "tilt_max_deg": 12.2,
    "torque_use": {
     "ankle": 1.0,
     "hip": 1.0,
@@ -119,129 +119,164 @@
   },
   {
    "at_limit_pct": {
-    "ankle": 0.6,
-    "hip": 1.2,
-    "knee": 1.5
-   },
-   "fall": null,
-   "foot_force_peak_kn": 639.2,
-   "key": "down10",
-   "label": "Downhill 10\u00b0",
-   "mode": "unloaded",
-   "slip_max_m": 0.077,
-   "tilt_max_deg": 4.9,
-   "torque_use": {
-    "ankle": 1.0,
-    "hip": 1.0,
-    "knee": 1.0
-   },
-   "walked": true,
-   "weight_kn": 45.0
-  },
-  {
-   "at_limit_pct": {
-    "ankle": 1.6,
-    "hip": 1.0,
-    "knee": 3.5
-   },
-   "fall": null,
-   "foot_force_peak_kn": 529.8,
-   "key": "down20",
-   "label": "Downhill 20\u00b0",
-   "mode": "unloaded",
-   "slip_max_m": 0.102,
-   "tilt_max_deg": 5.6,
-   "torque_use": {
-    "ankle": 1.0,
-    "hip": 1.0,
-    "knee": 1.0
-   },
-   "walked": true,
-   "weight_kn": 45.0
-  },
-  {
-   "at_limit_pct": {
-    "ankle": 0.0,
-    "hip": 0.0,
-    "knee": 0.0
-   },
-   "fall": null,
-   "foot_force_peak_kn": 132.9,
-   "key": "cross10",
-   "label": "Cross-slope 10\u00b0",
-   "mode": "unloaded",
-   "slip_max_m": 0.029,
-   "tilt_max_deg": 2.0,
-   "torque_use": {
-    "ankle": 0.62,
-    "hip": 0.93,
-    "knee": 0.91
-   },
-   "walked": true,
-   "weight_kn": 45.0
-  },
-  {
-   "at_limit_pct": {
-    "ankle": 0.0,
-    "hip": 0.0,
-    "knee": 0.4
-   },
-   "fall": null,
-   "foot_force_peak_kn": 355.6,
-   "key": "cross20",
-   "label": "Cross-slope 20\u00b0",
-   "mode": "unloaded",
-   "slip_max_m": 0.035,
-   "tilt_max_deg": 2.6,
-   "torque_use": {
-    "ankle": 0.78,
-    "hip": 0.97,
-    "knee": 1.0
-   },
-   "walked": true,
-   "weight_kn": 45.0
-  },
-  {
-   "at_limit_pct": {
-    "ankle": 1.4,
-    "hip": 3.3,
-    "knee": 6.7
-   },
-   "fall": null,
-   "foot_force_peak_kn": 418.6,
-   "key": "ledges",
-   "label": "Ledges 0.2 m",
-   "mode": "unloaded",
-   "slip_max_m": 0.119,
-   "tilt_max_deg": 4.7,
-   "torque_use": {
-    "ankle": 1.0,
-    "hip": 1.0,
-    "knee": 1.0
-   },
-   "walked": true,
-   "weight_kn": 45.0
-  },
-  {
-   "at_limit_pct": {
-    "ankle": 5.2,
-    "hip": 1.7,
-    "knee": 6.6
+    "ankle": 4.0,
+    "hip": 2.9,
+    "knee": 3.1
    },
    "attribution": {
     "limited_by": "controller",
     "note": "falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05"
    },
    "fall": {
-    "t": 3.99,
+    "t": 5.78,
     "why": "tilt"
    },
-   "foot_force_peak_kn": 257.7,
+   "foot_force_peak_kn": 13298.9,
+   "key": "down10",
+   "label": "Downhill 10\u00b0",
+   "mode": "unloaded",
+   "slip_max_m": 0.287,
+   "tilt_max_deg": 30.5,
+   "torque_use": {
+    "ankle": 1.0,
+    "hip": 1.0,
+    "knee": 1.0
+   },
+   "walked": false,
+   "weight_kn": 45.0
+  },
+  {
+   "at_limit_pct": {
+    "ankle": 11.2,
+    "hip": 5.1,
+    "knee": 6.4
+   },
+   "attribution": {
+    "limited_by": "controller",
+    "note": "falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05"
+   },
+   "fall": {
+    "t": 5.0,
+    "why": "tilt"
+   },
+   "foot_force_peak_kn": 3545.4,
+   "key": "down20",
+   "label": "Downhill 20\u00b0",
+   "mode": "unloaded",
+   "slip_max_m": 0.206,
+   "tilt_max_deg": 30.3,
+   "torque_use": {
+    "ankle": 1.0,
+    "hip": 1.0,
+    "knee": 1.0
+   },
+   "walked": false,
+   "weight_kn": 45.0
+  },
+  {
+   "at_limit_pct": {
+    "ankle": 0.7,
+    "hip": 3.5,
+    "knee": 4.9
+   },
+   "attribution": {
+    "limited_by": "controller",
+    "note": "falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05"
+   },
+   "fall": {
+    "t": 4.41,
+    "why": "tilt"
+   },
+   "foot_force_peak_kn": 225.6,
+   "key": "cross10",
+   "label": "Cross-slope 10\u00b0",
+   "mode": "unloaded",
+   "slip_max_m": 0.064,
+   "tilt_max_deg": 30.8,
+   "torque_use": {
+    "ankle": 1.0,
+    "hip": 1.0,
+    "knee": 1.0
+   },
+   "walked": false,
+   "weight_kn": 45.0
+  },
+  {
+   "at_limit_pct": {
+    "ankle": 1.9,
+    "hip": 4.5,
+    "knee": 5.3
+   },
+   "attribution": {
+    "limited_by": "controller",
+    "note": "falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05"
+   },
+   "fall": {
+    "t": 6.63,
+    "why": "drop"
+   },
+   "foot_force_peak_kn": 715.8,
+   "key": "cross20",
+   "label": "Cross-slope 20\u00b0",
+   "mode": "unloaded",
+   "slip_max_m": 0.357,
+   "tilt_max_deg": 28.7,
+   "torque_use": {
+    "ankle": 1.0,
+    "hip": 1.0,
+    "knee": 1.0
+   },
+   "walked": false,
+   "weight_kn": 45.0
+  },
+  {
+   "at_limit_pct": {
+    "ankle": 2.1,
+    "hip": 4.0,
+    "knee": 19.2
+   },
+   "attribution": {
+    "limited_by": "controller",
+    "note": "falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05"
+   },
+   "fall": {
+    "t": 3.57,
+    "why": "drop"
+   },
+   "foot_force_peak_kn": 1270.6,
+   "key": "ledges",
+   "label": "Ledges 0.2 m",
+   "mode": "unloaded",
+   "slip_max_m": 0.262,
+   "tilt_max_deg": 28.0,
+   "torque_use": {
+    "ankle": 1.0,
+    "hip": 1.0,
+    "knee": 1.0
+   },
+   "walked": false,
+   "weight_kn": 45.0
+  },
+  {
+   "at_limit_pct": {
+    "ankle": 7.2,
+    "hip": 5.3,
+    "knee": 3.8
+   },
+   "attribution": {
+    "limited_by": "controller",
+    "note": "falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05"
+   },
+   "fall": {
+    "t": 4.06,
+    "why": "drop"
+   },
+   "foot_force_peak_kn": 474.9,
    "key": "rubble",
    "label": "Rubble \u00b10.12 m",
    "mode": "unloaded",
-   "slip_max_m": 0.12,
-   "tilt_max_deg": 30.2,
+   "slip_max_m": 0.315,
+   "tilt_max_deg": 28.7,
    "torque_use": {
     "ankle": 1.0,
     "hip": 1.0,
@@ -253,180 +288,99 @@
   {
    "at_limit_pct": {
     "ankle": 0.0,
-    "hip": 0.0,
-    "knee": 9.9
+    "hip": 0.1,
+    "knee": 0.0
    },
    "fall": null,
-   "foot_force_peak_kn": 186.4,
+   "foot_force_peak_kn": 146.8,
    "key": "flat",
    "label": "Flat",
    "mode": "loaded",
-   "slip_max_m": 0.017,
-   "tilt_max_deg": 2.0,
+   "slip_max_m": 0.05,
+   "tilt_max_deg": 2.9,
    "torque_use": {
-    "ankle": 0.42,
+    "ankle": 0.53,
     "hip": 1.0,
     "knee": 1.0
    },
    "walked": true,
-   "weight_kn": 53.7
+   "weight_kn": 52.8
   },
   {
    "at_limit_pct": {
     "ankle": 0.0,
-    "hip": 0.0,
-    "knee": 16.3
+    "hip": 0.1,
+    "knee": 0.6
    },
    "fall": null,
-   "foot_force_peak_kn": 276.7,
+   "foot_force_peak_kn": 167.6,
    "key": "up5",
    "label": "Uphill 5\u00b0",
    "mode": "loaded",
-   "slip_max_m": 0.02,
-   "tilt_max_deg": 2.3,
+   "slip_max_m": 0.019,
+   "tilt_max_deg": 2.6,
    "torque_use": {
-    "ankle": 0.41,
+    "ankle": 0.66,
     "hip": 1.0,
     "knee": 1.0
    },
    "walked": true,
-   "weight_kn": 53.7
+   "weight_kn": 52.8
   },
   {
    "at_limit_pct": {
-    "ankle": 0.1,
+    "ankle": 0.2,
     "hip": 0.6,
-    "knee": 37.0
+    "knee": 1.6
    },
-   "attribution": {
-    "alone": [
-     "knee"
-    ],
-    "limit_knm": 26.5,
-    "limited_by": "knee",
-    "multiplier": 1.07,
-    "needed_knm": 28.4,
-    "note": "walks with the knee limit alone raised to x1.07"
-   },
-   "fall": {
-    "t": 4.13,
-    "why": "drop"
-   },
-   "foot_force_peak_kn": 368.0,
+   "fall": null,
+   "foot_force_peak_kn": 305.7,
    "key": "up10",
    "label": "Uphill 10\u00b0",
    "mode": "loaded",
-   "slip_max_m": 0.071,
-   "tilt_max_deg": 24.6,
-   "torque_use": {
-    "ankle": 1.0,
-    "hip": 1.0,
-    "knee": 1.0
-   },
-   "walked": false,
-   "weight_kn": 53.7
-  },
-  {
-   "at_limit_pct": {
-    "ankle": 0.3,
-    "hip": 1.0,
-    "knee": 37.7
-   },
-   "attribution": {
-    "alone": [
-     "knee"
-    ],
-    "limit_knm": 26.5,
-    "limited_by": "knee",
-    "multiplier": 1.11,
-    "needed_knm": 29.3,
-    "note": "walks with the knee limit alone raised to x1.11"
-   },
-   "fall": {
-    "t": 3.52,
-    "why": "drop"
-   },
-   "foot_force_peak_kn": 308.3,
-   "key": "up15",
-   "label": "Uphill 15\u00b0",
-   "mode": "loaded",
-   "slip_max_m": 0.066,
-   "tilt_max_deg": 22.5,
-   "torque_use": {
-    "ankle": 1.0,
-    "hip": 1.0,
-    "knee": 1.0
-   },
-   "walked": false,
-   "weight_kn": 53.7
-  },
-  {
-   "at_limit_pct": {
-    "ankle": 0.3,
-    "hip": 2.1,
-    "knee": 35.2
-   },
-   "attribution": {
-    "alone": [
-     "knee"
-    ],
-    "limit_knm": 26.5,
-    "limited_by": "knee",
-    "multiplier": 1.18,
-    "needed_knm": 31.2,
-    "note": "walks with the knee limit alone raised to x1.18"
-   },
-   "fall": {
-    "t": 3.18,
-    "why": "drop"
-   },
-   "foot_force_peak_kn": 627.3,
-   "key": "up20",
-   "label": "Uphill 20\u00b0",
-   "mode": "loaded",
-   "slip_max_m": 0.029,
-   "tilt_max_deg": 17.7,
-   "torque_use": {
-    "ankle": 1.0,
-    "hip": 1.0,
-    "knee": 1.0
-   },
-   "walked": false,
-   "weight_kn": 53.7
-  },
-  {
-   "at_limit_pct": {
-    "ankle": 0.4,
-    "hip": 1.1,
-    "knee": 9.0
-   },
-   "fall": null,
-   "foot_force_peak_kn": 301.5,
-   "key": "down10",
-   "label": "Downhill 10\u00b0",
-   "mode": "loaded",
-   "slip_max_m": 0.054,
-   "tilt_max_deg": 3.2,
+   "slip_max_m": 0.025,
+   "tilt_max_deg": 2.7,
    "torque_use": {
     "ankle": 1.0,
     "hip": 1.0,
     "knee": 1.0
    },
    "walked": true,
-   "weight_kn": 53.7
+   "weight_kn": 52.8
+  },
+  {
+   "at_limit_pct": {
+    "ankle": 0.8,
+    "hip": 1.6,
+    "knee": 1.9
+   },
+   "fall": null,
+   "foot_force_peak_kn": 792.8,
+   "key": "up15",
+   "label": "Uphill 15\u00b0",
+   "mode": "loaded",
+   "slip_max_m": 0.015,
+   "tilt_max_deg": 2.3,
+   "torque_use": {
+    "ankle": 1.0,
+    "hip": 1.0,
+    "knee": 1.0
+   },
+   "walked": true,
+   "weight_kn": 52.8
   },
   {
    "at_limit_pct": {
     "ankle": 1.2,
-    "hip": 1.0,
-    "knee": 7.9
+    "hip": 1.8,
+    "knee": 2.0
    },
    "fall": null,
-   "foot_force_peak_kn": 471.4,
-   "key": "down20",
-   "label": "Downhill 20\u00b0",
+   "foot_force_peak_kn": 514.2,
+   "key": "up20",
+   "label": "Uphill 20\u00b0",
    "mode": "loaded",
-   "slip_max_m": 0.09,
+   "slip_max_m": 0.031,
    "tilt_max_deg": 2.9,
    "torque_use": {
     "ankle": 1.0,
@@ -434,49 +388,105 @@
     "knee": 1.0
    },
    "walked": true,
-   "weight_kn": 53.7
+   "weight_kn": 52.8
   },
   {
    "at_limit_pct": {
-    "ankle": 0.0,
-    "hip": 0.1,
-    "knee": 19.4
+    "ankle": 0.8,
+    "hip": 2.0,
+    "knee": 2.3
    },
    "fall": null,
-   "foot_force_peak_kn": 87.9,
+   "foot_force_peak_kn": 12433.6,
+   "key": "down10",
+   "label": "Downhill 10\u00b0",
+   "mode": "loaded",
+   "slip_max_m": 0.139,
+   "tilt_max_deg": 20.5,
+   "torque_use": {
+    "ankle": 1.0,
+    "hip": 1.0,
+    "knee": 1.0
+   },
+   "walked": true,
+   "weight_kn": 52.8
+  },
+  {
+   "at_limit_pct": {
+    "ankle": 2.8,
+    "hip": 3.7,
+    "knee": 2.9
+   },
+   "attribution": {
+    "limited_by": "controller",
+    "note": "falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05"
+   },
+   "fall": {
+    "t": 3.61,
+    "why": "drop"
+   },
+   "foot_force_peak_kn": 981.7,
+   "key": "down20",
+   "label": "Downhill 20\u00b0",
+   "mode": "loaded",
+   "slip_max_m": 0.265,
+   "tilt_max_deg": 27.8,
+   "torque_use": {
+    "ankle": 1.0,
+    "hip": 1.0,
+    "knee": 1.0
+   },
+   "walked": false,
+   "weight_kn": 52.8
+  },
+  {
+   "at_limit_pct": {
+    "ankle": 0.2,
+    "hip": 0.4,
+    "knee": 1.8
+   },
+   "fall": null,
+   "foot_force_peak_kn": 1378.4,
    "key": "cross10",
    "label": "Cross-slope 10\u00b0",
    "mode": "loaded",
-   "slip_max_m": 0.021,
-   "tilt_max_deg": 1.7,
+   "slip_max_m": 0.059,
+   "tilt_max_deg": 4.5,
    "torque_use": {
-    "ankle": 0.49,
+    "ankle": 1.0,
     "hip": 1.0,
     "knee": 1.0
    },
    "walked": true,
-   "weight_kn": 53.7
+   "weight_kn": 52.8
   },
   {
    "at_limit_pct": {
-    "ankle": 0.0,
-    "hip": 0.2,
-    "knee": 35.9
+    "ankle": 1.6,
+    "hip": 5.1,
+    "knee": 6.2
    },
-   "fall": null,
-   "foot_force_peak_kn": 258.0,
+   "attribution": {
+    "limited_by": "controller",
+    "note": "falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05"
+   },
+   "fall": {
+    "t": 3.96,
+    "why": "drop"
+   },
+   "foot_force_peak_kn": 3415.2,
    "key": "cross20",
    "label": "Cross-slope 20\u00b0",
    "mode": "loaded",
-   "slip_max_m": 0.045,
-   "tilt_max_deg": 5.3,
+   "slip_max_m": 0.253,
+   "tilt_max_deg": 24.3,
    "torque_use": {
-    "ankle": 0.93,
+    "ankle": 1.0,
     "hip": 1.0,
     "knee": 1.0
    },
-   "walked": true,
-   "weight_kn": 53.7
+   "walked": false,
+   "weight_kn": 52.8
   },
   {
    "key": "ledges",
@@ -486,31 +496,31 @@
   },
   {
    "at_limit_pct": {
-    "ankle": 0.3,
-    "hip": 3.0,
-    "knee": 39.5
+    "ankle": 2.3,
+    "hip": 4.0,
+    "knee": 17.5
    },
    "attribution": {
     "limited_by": "controller",
     "note": "falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05"
    },
    "fall": {
-    "t": 4.35,
-    "why": "tilt"
+    "t": 4.85,
+    "why": "drop"
    },
-   "foot_force_peak_kn": 166.9,
+   "foot_force_peak_kn": 408.4,
    "key": "rubble",
    "label": "Rubble \u00b10.12 m",
    "mode": "loaded",
-   "slip_max_m": 0.182,
-   "tilt_max_deg": 31.2,
+   "slip_max_m": 0.284,
+   "tilt_max_deg": 29.7,
    "torque_use": {
     "ankle": 1.0,
     "hip": 1.0,
     "knee": 1.0
    },
    "walked": false,
-   "weight_kn": 53.7
+   "weight_kn": 52.8
   }
  ],
  "settings": "sim/mujoco/terrain.yaml"
