@@ -56,30 +56,32 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | NOM-25 | safe | safe | — / — | 0.0 / 0.0 | yes |
 | CAT-STOP | safe | safe | — / — | 0.0 / 0.0 | yes |
 | CAT-01-HOLD | safe | safe | — / — | 0.0 / 0.0 | yes |
-| CAT-01-NOHOLD | hard-drop | hard-drop | 1.58 / 1.618 | 4.884 / 3.883 | yes |
-| CAT-01-SLOW-8 | safe | hard-drop | — / 2.574 | 0.0 / 1.837 | **no** |
+| CAT-01-NOHOLD | hard-drop | hard-drop | 1.58 / 1.688 | 4.884 / 3.939 | yes |
+| CAT-01-SLOW-8 | safe | safe | — / — | 0.0 / 0.0 | yes |
 | CAT-02-MON | safe | safe | — / — | 0.0 / 0.0 | yes |
-| CAT-02-NOMON | tip | tip | 2.77 / 3.636 | 0.0 / 0.0 | yes |
+| CAT-02-NOMON | tip | tip | 2.77 / 3.626 | 0.0 / 0.0 | yes |
 | CAT-03 | hard-drop | hard-drop | 1.495 / 1.568 | 4.905 / 4.035 | yes |
 | CAT-04-BRAKE | safe | safe | — / — | 0.0 / 0.0 | yes |
-| CAT-04-NOBRAKE | hard-drop | hard-drop | 2.605 / 2.088 | 2.571 / 2.658 | yes |
+| CAT-04-NOBRAKE | hard-drop | safe | 2.605 / — | 2.571 / 0.0 | **no** |
 | STOP-16 | safe | safe | — / — | 0.0 / 0.0 | yes |
 | STOP-20 | safe | safe | — / — | 0.0 / 0.0 | yes |
-| CAP-16 | tip | hard-drop | 3.63 / 2.7 | 0.0 / 1.002 | **no** |
-| SF-01/EC-01 | hard-drop | hard-drop | 1.58 / 1.618 | 4.884 / 3.771 | yes |
-| SF-01/EC-02 | hard-drop | hard-drop | 1.595 / 1.638 | 4.865 / 3.729 | yes |
-| SF-01/EC-03 | hard-drop | hard-drop | 1.595 / 1.628 | 4.865 / 3.767 | yes |
-| SF-01/EC-04 | hard-drop | hard-drop | 1.61 / 1.632 | 4.846 / 3.731 | yes |
-| SF-01/EC-05 | hard-drop | hard-drop | 1.58 / 1.622 | 4.884 / 3.826 | yes |
-| SF-01/EC-06 | hard-drop | hard-drop | 1.595 / 1.636 | 4.865 / 3.814 | yes |
-| SF-01/EC-07 | tip | hard-drop | 4.295 / 3.146 | 0.0 / 1.006 | **no** |
-| SF-01/EC-08 | tip | hard-drop | 3.56 / 2.616 | 0.0 / 1.638 | **no** |
+| CAP-16 | tip | safe | 3.63 / — | 0.0 / 0.0 | **no** |
+| SF-01/EC-01 | hard-drop | hard-drop | 1.58 / 1.692 | 4.884 / 3.801 | yes |
+| SF-01/EC-02 | hard-drop | hard-drop | 1.595 / 1.72 | 4.865 / 3.744 | yes |
+| SF-01/EC-03 | hard-drop | hard-drop | 1.595 / 1.716 | 4.865 / 3.795 | yes |
+| SF-01/EC-04 | hard-drop | hard-drop | 1.61 / 1.738 | 4.846 / 3.761 | yes |
+| SF-01/EC-05 | hard-drop | hard-drop | 1.58 / 1.688 | 4.884 / 3.841 | yes |
+| SF-01/EC-06 | hard-drop | hard-drop | 1.595 / 1.714 | 4.865 / 3.823 | yes |
+| SF-01/EC-07 | tip | safe | 4.295 / — | 0.0 / 0.0 | **no** |
+| SF-01/EC-08 | tip | safe | 3.56 / — | 0.0 / 0.0 | **no** |
 
 ## Disagreements
 
-- **CAT-01-SLOW-8** (L1 safe, L2 hard-drop): A slow leak at 8 degrees with load holding working. Level 1 sags (A4) but stays balanced until the lock. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks (hard drop at 1.8 m/s). With the knee at 62.5 kN m or more (sim/results/sizing-cf4.md) level 2 locks at 2.9 s and holds, as level 1 does.
-- **CAP-16** (L1 tip, L2 hard-drop): A slow leak at 16 degrees with a 0.16 m CoM offset (above the 0.12 m limit, DQ-011) and load holding working. Level 1 loses balance as its centre-of-pressure limit (L cos(slope) x capacity, A3) shrinks and tips after the hold engages. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks, crossing the rest height at 1.0 m/s, just above the safe drop speed. With the knee at 62.5 kN m or more level 2 locks at 3.4 s and holds.
-- **SF-01/EC-07** (L1 tip, L2 hard-drop): Load holding fails during a slow leak at 20 degrees, so the walker is lost either way unless the joints outlast the leak; the models differ in which actuator gives out first. Level 1 ties leg force and centre-of-pressure authority to the same capacity (A3, A4) and tips. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks, at 1.0 m/s; it still drops with the knee at 62.5 kN m and holds through the run at 94 kN m.
-- **SF-01/EC-08** (L1 tip, L2 hard-drop): A slow leak at 19.5 degrees with load holding working; level 1 locks at about 2.9 s, but its centre-of-pressure limit (A3) and leg sag (A4) have let its CoM drift to the foot edge, so the locked body tips (A5) at 3.6 s. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks (hard drop at 1.6 m/s). With the knee at 62.5 kN m or more level 2 locks at 2.9 s and holds: there level 1's assumptions, not the actuators, decide.
+- **CAT-04-NOBRAKE** (L1 hard-drop, L2 safe): not yet explained
+- **CAP-16** (L1 tip, L2 safe): A slow leak at 16 degrees with a 0.16 m CoM offset (above the 0.12 m limit, DQ-011) and load holding working. Level 1 loses balance as its centre-of-pressure limit (L cos(slope) x capacity, A3) shrinks and tips after the hold engages. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks, crossing the rest height at 1.0 m/s, just above the safe drop speed. With the knee at 62.5 kN m or more level 2 locks at 3.4 s and holds.
+- **SF-01/EC-07** (L1 tip, L2 safe): Load holding fails during a slow leak at 20 degrees, so the walker is lost either way unless the joints outlast the leak; the models differ in which actuator gives out first. Level 1 ties leg force and centre-of-pressure authority to the same capacity (A3, A4) and tips. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks, at 1.0 m/s; it still drops with the knee at 62.5 kN m and holds through the run at 94 kN m.
+- **SF-01/EC-08** (L1 tip, L2 safe): A slow leak at 19.5 degrees with load holding working; level 1 locks at about 2.9 s, but its centre-of-pressure limit (A3) and leg sag (A4) have let its CoM drift to the foot edge, so the locked body tips (A5) at 3.6 s. Level 2 is reverse-kneed (CL-05): standing on one leg takes about 25 kN m at the knee, so with the adopted 26.5 kN m (DQ-026) the knee gives way as supply falls, before load holding engages at 0.4, and the cockpit sinks (hard drop at 1.6 m/s). With the knee at 62.5 kN m or more level 2 locks at 2.9 s and holds: there level 1's assumptions, not the actuators, decide.
+
+Unexplained disagreements: CAT-04-NOBRAKE.
 
 Notes are AI drafts (I0). A disagreement is a finding about the models: the level that is closer to the real machine is unknown until hardware data exists.
