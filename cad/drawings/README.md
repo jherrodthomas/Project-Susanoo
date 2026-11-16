@@ -40,20 +40,12 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 
 | Item | Title |
 |---|---|
-| [`CL-01.png`](CL-01.png) |  |
 | [`CL-01.svg`](CL-01.svg) | CL-01 concept layout drawing |
-| [`CL-02.png`](CL-02.png) |  |
 | [`CL-02.svg`](CL-02.svg) | CL-02 concept layout drawing |
-| [`CL-03.png`](CL-03.png) |  |
 | [`CL-03.svg`](CL-03.svg) | CL-03 concept layout drawing |
-| [`CL-04.png`](CL-04.png) |  |
 | [`CL-04.svg`](CL-04.svg) | CL-04 concept layout drawing |
-| [`CL-05-carry.png`](CL-05-carry.png) |  |
 | [`CL-05-carry.svg`](CL-05-carry.svg) | CL-05-carry concept layout drawing |
-| [`CL-05-emergency.png`](CL-05-emergency.png) |  |
 | [`CL-05-emergency.svg`](CL-05-emergency.svg) | CL-05-emergency concept layout drawing |
-| [`CL-05-kneel.png`](CL-05-kneel.png) |  |
 | [`CL-05-kneel.svg`](CL-05-kneel.svg) | CL-05-kneel concept layout drawing |
-| [`CL-05.png`](CL-05.png) |  |
 | [`CL-05.svg`](CL-05.svg) | CL-05 concept layout drawing |
 | [`concept-layouts.pdf`](concept-layouts.pdf) |  |
