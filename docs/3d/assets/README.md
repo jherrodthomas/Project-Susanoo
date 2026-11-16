@@ -112,7 +112,7 @@ The CL-05 walk posed on every terrain of [`sim/scenes3d/terrain.yaml`](../../../
 
 ## Terrain walk physics
 
-`sus-m1-terrain-physics.js` (525 KB, `window.SUS_M1_TERRAIN_PHYSICS`, written by `sim/mujoco/terrain.py`) holds the level-2 MuJoCo terrain walk for sheet 3: 21 runs, body poses at 25 Hz for 7 bodies, with the CL-05 standing meshes riding rigidly on them. 16 of 21 runs walk the course; the results are in [`sim/results/l2-terrain.md`](../../../sim/results/l2-terrain.md). Synthetic, drafted controller, no evidence credit.
+`sus-m1-terrain-physics.js` (560 KB, `window.SUS_M1_TERRAIN_PHYSICS`, written by `sim/mujoco/terrain.py`) holds the level-2 MuJoCo terrain walk for sheet 3: 21 runs, body poses at 25 Hz for 7 bodies, with the CL-05 standing meshes riding rigidly on them. 18 of 21 runs walk the course; the results are in [`sim/results/l2-terrain.md`](../../../sim/results/l2-terrain.md). Synthetic, drafted controller, no evidence credit.
 
 ## Block diagram
 

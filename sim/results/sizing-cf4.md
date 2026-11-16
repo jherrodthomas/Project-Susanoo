@@ -31,9 +31,9 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 | scenario | HAZ-WLK-002 CF4: FLT-01 supply loss with load holding working |
 | purpose | draft sizing input to the actuation trade (TS-001, DQ-006); not a design value |
 
-Envelope grid: 378 cases (`pilot_reaction_s` [0.5, 1.5, 3.0], `slope_deg` [0, 10, 14, 16, 18, 20], `stride_offset_m` [0.0, 0.06, 0.12], `tau_leak_s` [0.05, 0.5, 1.0, 1.5, 2.0, 3.0, 5.0]). Corner grid: 504 cases. A failure is any outcome other than safe. m g L_foot = 27017 N m. In `sim/spec/walker_l2.yaml`: ankle 40500, knee 26500, hip 40000 N m.
+Envelope grid: 378 cases (`pilot_reaction_s` [0.5, 1.5, 3.0], `slope_deg` [0, 10, 14, 16, 18, 20], `stride_offset_m` [0.0, 0.06, 0.12], `tau_leak_s` [0.05, 0.5, 1.0, 1.5, 2.0, 3.0, 5.0]). Corner grid: 504 cases. A failure is any outcome other than safe. m g L_foot = 27017 N m. In `sim/spec/walker_l2.yaml`: ankle 40500, knee 94000, hip 40000 N m.
 
-## Sweep: ankle_torque_max_nm (knee_stance_rad -0.3, knee_torque_max_nm 26500)
+## Sweep: ankle_torque_max_nm (other joints as in the spec)
 
 | Value (N m) | Ratio to m g L_foot | Failures | Failing cases (first 3) |
 |---|---|---|---|
@@ -59,7 +59,7 @@ Lowest value that clears the grid: 23000.
 
 Lowest value that clears the grid: 62500.
 
-## Sweep: knee_stance_rad (other joints as in the spec)
+## Sweep: knee_stance_rad (knee_torque_max_nm 26500)
 
 | Value (rad) | Failures | Failing cases (first 3) |
 |---|---|---|
@@ -77,9 +77,9 @@ Values that clear the grid: -0.4, -0.35, -0.3, -0.25.
 
 ## Proposal (draft, I0)
 
-Ankle 40500 N m (1.499 m g L_foot), knee 26500 N m. Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold) and knee 26.5 kN m, as adopted (DQ-024, DQ-026), with the walker standing on a knee bent 0.3 rad instead of CL-05's 1.018 rad. CL-05's deep stance puts the knee 0.46 m behind the line of the ground force, so one leg needs about 25 kN m at the knee and the knee must still give it at the 0.4 load-holding threshold: in that stance the knee needs 62.5 kN m to clear the grid (knee sweep). Straightening the stance shortens that moment arm: the adopted knee clears the grid from 0.4 rad and both grids from 0.35 to 0.25 rad, and fails again at 0.2 rad, where the nearly straight knee has no travel left to absorb the load (posture sweep); 0.3 rad is the middle of that band, and there every ankle value in the sweep clears (ankle sweep). The straighter stance raises the hips by about 0.23 m and is not a CL-05 posture yet (DQ-027). Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).
+Ankle 40500 N m (1.499 m g L_foot), knee 94000 N m. Preliminary. Ankle 1.5 m g L_foot at full supply (0.6 m g L_foot at the 0.4 load-holding threshold), as adopted (DQ-024). Knee 1.5 times the lowest value that clears the grid (62.5 kN m), adopted by the lead (DQ-027). CL-05 stands and walks with its knee bent about 0.6 to 1.0 rad, 0.46 m behind the line of the ground force when standing, so one leg needs about 25 kN m at the knee and the knee must still give it at the 0.4 load-holding threshold. A straighter stance clears the grid at 26.5 kN m only while the knee stays within about 0.4 rad (posture sweep), which the walk does not. Joint torque is taken to fall in proportion to supply (level-2 assumption, as A4 at level 1).
 
 Failures with the proposal on the envelope and corner grids: 0.
-Failures on the corner grid at the lowest clear ankle value: 2.
+Failures on the corner grid at the lowest clear ankle value: 0.
 
 Level 2 only: level 1 has no joint torques. Supply loss with failed load holding drops the cockpit at any torque (HAZ-PIL-002); sizing does not address it.

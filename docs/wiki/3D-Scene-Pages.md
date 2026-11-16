@@ -88,7 +88,7 @@ The pages a reader opens to see the simulation results and the concept geometry 
 | Asset | Size | Loaded by |
 |---|---|---|
 | [`assets/sus-m1-terrain-loaded.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/assets/sus-m1-terrain-loaded.js) | 6707 KB | SUS-M1-terrain.html |
-| [`assets/sus-m1-terrain-physics.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/assets/sus-m1-terrain-physics.js) | 525 KB | SUS-M1-terrain.html |
+| [`assets/sus-m1-terrain-physics.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/assets/sus-m1-terrain-physics.js) | 560 KB | SUS-M1-terrain.html |
 | [`assets/sus-m1-terrain.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/assets/sus-m1-terrain.js) | 7619 KB | SUS-M1-terrain.html |
 | [`assets/sus-m1.js`](https://github.com/jherrodthomas/Project-Susanoo/blob/main/docs/3d/assets/sus-m1.js) | 4017 KB | SUS-A1.html, SUS-M1.html, SUS-M1-terrain.html |
 

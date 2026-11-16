@@ -97,7 +97,7 @@ package WikiImages {
     }
     part img3DSusM1Terrain : RenderedStill {
         attribute :>> file = "3d-sus-m1-terrain.png";
-        attribute :>> kilobytes = 312;
+        attribute :>> kilobytes = 311;
         attribute :>> shownOn = 5;
         attribute :>> page = "sim/scenes3d/sheet_check.mjs";
     }

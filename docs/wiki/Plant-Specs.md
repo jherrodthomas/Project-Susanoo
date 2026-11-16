@@ -107,7 +107,7 @@ The one place the walker models take their numbers from. Every parameter carries
 | `step_lift_m` | 0.22 | m | 0.05 to 0.6 | derived | Peak swing-foot lift of the protective-stop step, from the CL-05 gait (cad/params/CL-05.yaml gait.lift) |
 | `stop_step_m` | 0.8 | m | 0.3 to 1.5 | assumed | Protective-stop step length along the ground, inside the CL-05 leg's reach (about 1.0 m ahead of the hip at full extension); the CL-05 walk steps 0.5 m (cad/params/CL-05.yaml walk.stride) |
 | `torso_com_above_hip_m` | 0.748 | m | 0.0 to 1.5 | derived | Torso centre of mass above the hip joint, CL-05 link mass properties (cad/links.json, tools/cad/b3d/cl05_links.py); placed over the hip (the CAD has it 0.265 m behind, not modelled) |
-| `knee_torque_max_nm` | 26500 | N m | 10000 to 200000 | derived | Knee actuator peak torque at full supply, re-sized against HAZ-WLK-002 CF4 for the 4,590 kg reference layout (SZ-01, sim/results/sizing-cf4.md; SYS-016); adopted by lead decision DQ-024 |
+| `knee_torque_max_nm` | 94000 | N m | 10000 to 200000 | derived | Knee actuator peak torque at full supply, 1.5 times the lowest value that clears HAZ-WLK-002 CF4 in CL-05's reverse-knee stance (62.5 kN m; SZ-01, sim/results/sizing-cf4.md; SYS-016); adopted by lead decision DQ-027 |
 | `hip_torque_max_nm` | 40000 | N m | 10000 to 200000 | assumed | Hip actuator peak torque at full supply |
 | `ankle_torque_max_nm` | 40500 | N m | 5000 to 100000 | derived | Ankle actuator peak torque at full supply, 1.5 m g L_foot, re-sized against HAZ-WLK-002 CF4 for the 4,590 kg reference layout (SZ-01, sim/results/sizing-cf4.md; SYS-016); adopted by lead decision DQ-024 |
 | `timestep_s` | 0.002 | s | 0.0005 to 0.005 | assumed | MuJoCo integration step (implicitfast) |
@@ -122,7 +122,7 @@ The one place the walker models take their numbers from. Every parameter carries
 | `walker.yaml` | `sim/common.py`, `sim/figures`, `sim/mujoco`, `sim/plant`, `sim/scenes3d`, `sim/search`, `sim/trades` |
 | `walker_l2.yaml` | `sim/mujoco` |
 
-Cited in parameter sources: DQ-023 (walker.yaml, walker_l2.yaml), DQ-024 (walker_l2.yaml), HAZ-SAF-001 (walker.yaml), HAZ-WLK-002 (walker_l2.yaml), SSF-004 (walker.yaml), SYS-016 (walker_l2.yaml), SZ-01 (walker_l2.yaml).
+Cited in parameter sources: DQ-023 (walker.yaml, walker_l2.yaml), DQ-024 (walker_l2.yaml), DQ-027 (walker_l2.yaml), HAZ-SAF-001 (walker.yaml), HAZ-WLK-002 (walker_l2.yaml), SSF-004 (walker.yaml), SYS-016 (walker_l2.yaml), SZ-01 (walker_l2.yaml).
 
 ## Block diagram
 

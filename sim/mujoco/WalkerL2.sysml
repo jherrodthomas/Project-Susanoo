@@ -17,7 +17,7 @@ package WalkerL2 {
         attribute shankLengthM : Real = 1.05;  // m, derived
         attribute ankleHeightM : Real = 0.55;  // m, derived
         attribute hipTorqueMaxNm : Real = 40000.0;  // N m, assumed
-        attribute kneeTorqueMaxNm : Real = 26500.0;  // N m, derived
+        attribute kneeTorqueMaxNm : Real = 94000.0;  // N m, derived
         attribute ankleTorqueMaxNm : Real = 40500.0;  // N m, derived
     }
     part def WalkerL2 {
