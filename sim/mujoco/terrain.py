@@ -4,7 +4,9 @@ Usage: python -m sim.mujoco.terrain [--compare | --check]
   (no flag)   run every terrain unloaded and loaded; write sim/results/l2-terrain.{json,md} and the page asset
               docs/3d/assets/sus-m1-terrain-physics.js (the frames the sheet replays)
   --compare   re-run and compare with the committed results (outcomes and attribution exactly, numbers within
-              tolerance: MuJoCo results can differ in the last digits across CPUs)
+              tolerance)
+  A run (with or without --compare) pins its floating-point code paths first (sim/mujoco/numerics.py), so it gives
+  the same numbers on every x86-64 CPU.
   --check     check that the report and the page asset match the committed JSON (no simulation)
 
 Model (generated from the records, never hand-edited):
@@ -39,6 +41,7 @@ import mujoco
 import numpy as np
 
 from sim.common import ABOUT, ROOT, SIM, dumps, label_table
+from sim.mujoco.numerics import run_pinned
 from tools.pdac.load import _read_yaml
 from tools.terms.terms import decorate
 
@@ -747,6 +750,9 @@ def main(argv=None) -> int:
         for b in bad:
             print(b)
         return 1 if bad else 0
+    code = run_pinned("sim.mujoco.terrain", sys.argv[1:] if argv is None else list(argv))
+    if code is not None:
+        return code
     res, frames = run()
     if a.compare:
         bad = compare(res, json.loads(OUT_JSON.read_text()))

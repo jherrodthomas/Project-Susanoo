@@ -100,5 +100,26 @@ class Terrain(unittest.TestCase):
         self.assertEqual(T.main(["--check"]), 0)
 
 
+class Pin(unittest.TestCase):
+    """A level-2 run pins OpenBLAS and NumPy's CPU code paths, or the numbers depend on the runner's CPU."""
+
+    def test_an_unpinned_run_starts_itself_again_pinned(self):
+        from unittest import mock
+        from sim.mujoco import numerics as N
+        with mock.patch.dict("os.environ", {k: "" for k in N.PIN}), \
+                mock.patch("subprocess.run", return_value=mock.Mock(returncode=3)) as run:
+            self.assertEqual(N.run_pinned("sim.mujoco.terrain", ["--compare"]), 3)
+        cmd, env = run.call_args.args[0], run.call_args.kwargs["env"]
+        self.assertEqual(cmd[1:], ["-m", "sim.mujoco.terrain", "--compare"])
+        self.assertTrue(all(env[k] == v for k, v in N.PIN.items()))
+
+    def test_a_pinned_run_carries_on(self):
+        from unittest import mock
+        from sim.mujoco import numerics as N
+        with mock.patch.dict("os.environ", N.PIN), mock.patch("subprocess.run") as run:
+            self.assertIsNone(N.run_pinned("sim.mujoco.terrain", []))
+        run.assert_not_called()
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -31,28 +31,28 @@ Torque limits: hip 40, knee 94, ankle 40.5 kN m (sim/spec/walker_l2.yaml). Torqu
 
 | Terrain | Load | Outcome | Max tilt (°) | Max slip (m) | Peak contact force, instantaneous (kN) | Torque use hip / knee / ankle | At limit hip / knee / ankle (%) |
 |---|---|---|---|---|---|---|---|
-| Flat | unloaded | walked | 2.3 | 0.029 | 92.6 (weight 45.0) | 0.89 / 0.23 / 0.65 | 0.0 / 0.0 / 0.0 |
-| Uphill 5° | unloaded | walked | 2.6 | 0.02 | 1413.4 (weight 45.0) | 0.89 / 0.5 / 0.6 | 0.0 / 0.0 / 0.0 |
-| Uphill 10° | unloaded | walked | 2.8 | 0.02 | 453.4 (weight 45.0) | 1.0 / 1.0 / 0.92 | 0.2 / 0.1 / 0.0 |
-| Uphill 15° | unloaded | walked | 3.1 | 0.025 | 241.6 (weight 45.0) | 1.0 / 1.0 / 1.0 | 0.7 / 0.4 / 0.2 |
-| Uphill 20° | unloaded | walked | 3.2 | 0.032 | 256.9 (weight 45.0) | 1.0 / 1.0 / 1.0 | 1.5 / 0.9 / 0.3 |
-| Downhill 10° | unloaded | walked | 2.9 | 0.037 | 857.6 (weight 45.0) | 1.0 / 1.0 / 1.0 | 1.3 / 1.0 / 0.6 |
-| Downhill 20° | unloaded | walked | 5.2 | 0.072 | 798.6 (weight 45.0) | 1.0 / 1.0 / 1.0 | 1.5 / 1.5 / 1.5 |
-| Cross-slope 10° | unloaded | walked | 2.0 | 0.029 | 132.9 (weight 45.0) | 0.93 / 0.26 / 0.62 | 0.0 / 0.0 / 0.0 |
-| Cross-slope 20° | unloaded | walked | 2.6 | 0.035 | 240.8 (weight 45.0) | 0.97 / 0.49 / 0.75 | 0.0 / 0.0 / 0.0 |
-| Ledges 0.2 m | unloaded | **fell** at 5.01 s (drop); falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05 | 24.8 | 0.13 | 865.2 (weight 45.0) | 1.0 / 1.0 / 1.0 | 6.7 / 3.0 / 3.9 |
-| Rubble ±0.12 m | unloaded | **fell** at 4.01 s (tilt); falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05 | 30.3 | 0.13 | 640.9 (weight 45.0) | 1.0 / 1.0 / 1.0 | 1.3 / 0.0 / 5.5 |
-| Flat | loaded | walked | 2.3 | 0.044 | 110.9 (weight 53.7) | 1.0 / 0.32 / 0.44 | 0.0 / 0.0 / 0.0 |
-| Uphill 5° | loaded | walked | 2.5 | 0.02 | 195.8 (weight 53.7) | 1.0 / 0.33 / 0.41 | 0.0 / 0.0 / 0.0 |
-| Uphill 10° | loaded | walked | 2.7 | 0.016 | 162.3 (weight 53.7) | 1.0 / 0.66 / 0.65 | 0.1 / 0.0 / 0.0 |
-| Uphill 15° | loaded | walked | 2.9 | 0.017 | 169.2 (weight 53.7) | 1.0 / 1.0 / 1.0 | 0.2 / 0.1 / 0.1 |
-| Uphill 20° | loaded | walked | 3.2 | 0.017 | 219.5 (weight 53.7) | 1.0 / 1.0 / 1.0 | 0.5 / 0.4 / 0.2 |
-| Downhill 10° | loaded | walked | 3.3 | 0.035 | 749.9 (weight 53.7) | 1.0 / 1.0 / 1.0 | 0.6 / 0.6 / 0.5 |
-| Downhill 20° | loaded | walked | 8.8 | 0.148 | 9258.1 (weight 53.7) | 1.0 / 1.0 / 1.0 | 1.6 / 1.6 / 1.0 |
-| Cross-slope 10° | loaded | walked | 2.0 | 0.022 | 255.8 (weight 53.7) | 1.0 / 0.35 / 0.49 | 0.1 / 0.0 / 0.0 |
-| Cross-slope 20° | loaded | walked | 2.0 | 0.039 | 619.9 (weight 53.7) | 1.0 / 0.67 / 1.0 | 0.1 / 0.0 / 0.1 |
+| Flat | unloaded | walked | 2.4 | 0.028 | 92.6 (weight 45.0) | 0.89 / 0.24 / 0.63 | 0.0 / 0.0 / 0.0 |
+| Uphill 5° | unloaded | walked | 2.5 | 0.019 | 1276.0 (weight 45.0) | 0.89 / 0.5 / 0.6 | 0.0 / 0.0 / 0.0 |
+| Uphill 10° | unloaded | walked | 2.9 | 0.023 | 148.4 (weight 45.0) | 1.0 / 1.0 / 0.92 | 0.2 / 0.1 / 0.0 |
+| Uphill 15° | unloaded | walked | 3.4 | 0.024 | 488.8 (weight 45.0) | 1.0 / 1.0 / 1.0 | 0.7 / 0.4 / 0.2 |
+| Uphill 20° | unloaded | walked | 3.2 | 0.029 | 380.7 (weight 45.0) | 1.0 / 1.0 / 1.0 | 1.5 / 0.9 / 0.3 |
+| Downhill 10° | unloaded | walked | 3.1 | 0.048 | 1036.7 (weight 45.0) | 1.0 / 1.0 / 1.0 | 1.3 / 1.0 / 0.5 |
+| Downhill 20° | unloaded | walked | 5.7 | 0.081 | 535.7 (weight 45.0) | 1.0 / 1.0 / 1.0 | 1.5 / 1.5 / 1.5 |
+| Cross-slope 10° | unloaded | walked | 2.0 | 0.019 | 62.1 (weight 45.0) | 0.93 / 0.26 / 0.62 | 0.0 / 0.0 / 0.0 |
+| Cross-slope 20° | unloaded | walked | 2.6 | 0.037 | 395.0 (weight 45.0) | 0.97 / 0.54 / 0.95 | 0.0 / 0.0 / 0.0 |
+| Ledges 0.2 m | unloaded | **fell** at 5.0 s (drop); falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05 | 26.0 | 0.121 | 2219.1 (weight 45.0) | 1.0 / 1.0 / 1.0 | 6.8 / 3.0 / 4.5 |
+| Rubble ±0.12 m | unloaded | **fell** at 4.03 s (tilt); falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05 | 30.1 | 0.128 | 154.0 (weight 45.0) | 1.0 / 1.0 / 1.0 | 1.5 / 0.2 / 5.2 |
+| Flat | loaded | walked | 2.3 | 0.02 | 130.6 (weight 53.7) | 1.0 / 0.33 / 0.4 | 0.0 / 0.0 / 0.0 |
+| Uphill 5° | loaded | walked | 2.5 | 0.019 | 195.9 (weight 53.7) | 1.0 / 0.33 / 0.41 | 0.0 / 0.0 / 0.0 |
+| Uphill 10° | loaded | walked | 2.7 | 0.016 | 461.8 (weight 53.7) | 1.0 / 0.66 / 0.65 | 0.1 / 0.0 / 0.0 |
+| Uphill 15° | loaded | walked | 2.9 | 0.019 | 195.8 (weight 53.7) | 1.0 / 1.0 / 1.0 | 0.2 / 0.2 / 0.1 |
+| Uphill 20° | loaded | walked | 3.2 | 0.018 | 206.8 (weight 53.7) | 1.0 / 1.0 / 1.0 | 0.5 / 0.3 / 0.2 |
+| Downhill 10° | loaded | walked | 2.7 | 0.028 | 1068.6 (weight 53.7) | 1.0 / 1.0 / 1.0 | 0.6 / 0.6 / 0.5 |
+| Downhill 20° | loaded | walked | 5.0 | 0.049 | 4416.0 (weight 53.7) | 1.0 / 1.0 / 1.0 | 1.7 / 1.6 / 1.2 |
+| Cross-slope 10° | loaded | walked | 2.0 | 0.022 | 261.1 (weight 53.7) | 1.0 / 0.35 / 0.49 | 0.1 / 0.0 / 0.0 |
+| Cross-slope 20° | loaded | walked | 2.2 | 0.058 | 217.1 (weight 53.7) | 1.0 / 0.73 / 0.74 | 0.1 / 0.0 / 0.0 |
 | Ledges 0.2 m | loaded | not run: the 1.0 m ledge run does not divide the 0.7 m stride (not posed on the kinematic course either) | | | | | |
-| Rubble ±0.12 m | loaded | **fell** at 6.79 s (tilt); falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05 | 30.5 | 0.408 | 370.5 (weight 53.7) | 1.0 / 1.0 / 1.0 | 5.9 / 0.0 / 0.0 |
+| Rubble ±0.12 m | loaded | **fell** at 6.73 s (tilt); falls with every torque limit x10: a limit of the drafted controller, not a finding about CL-05 | 30.1 | 0.413 | 296.8 (weight 53.7) | 1.0 / 1.0 / 1.0 | 5.9 / 0.1 / 0.1 |
 
 ## Findings
 
