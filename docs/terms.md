@@ -19,7 +19,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | A-LOSS | TS-001 supply-loss mode, hydraulic supply lost and torque to zero (sim/trades) |
 | AI | artificial intelligence (here, an AI assistant drafting at independence level I0) |
 | ASAM | Association for Standardization of Automation and Measuring Systems |
-| ASIL | Automotive Safety Integrity Level (ISO 26262 term in the LionDriver port plan) |
+| ASIL | Automotive Safety Integrity Level, QM and ASIL A–D (ISO 26262) |
 | ASPICE | Automotive SPICE process assessment model (LionDriver port plan) |
 | AUTOSAR | AUTomotive Open System ARchitecture (LionDriver port plan) |
 | B-EHA | TS-001 alternative B with electrohydraulic joint actuators (series-hybrid power) |
@@ -32,6 +32,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | CAN | Controller Area Network, a vehicle data bus |
 | CC | Creative Commons; CC BY 4.0 is the Creative Commons Attribution 4.0 licence used for the documentation |
 | CCA | common cause analysis |
+| CCF | common cause failure |
 | CE | Chief Engineer (simulated role ROLE-CE) |
 | CG | centre of gravity |
 | CI | continuous integration (the automated checks GitHub runs on every change) |
@@ -82,6 +83,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | HARA | hazard analysis and risk assessment (ISO 26262 term in the LionDriver port plan) |
 | HAZMAT | hazardous materials |
 | HE | hazardous event (ISO 26262 term in the LionDriver port plan) |
+| HFT | hardware fault tolerance (IEC 61508-2) |
 | HHA | health hazard analysis (MIL-STD-882E Task 207) |
 | HIL | hardware-in-the-loop testing |
 | HMAR | hazard management assessment report (MIL-STD-882E Task 302) |
@@ -100,10 +102,12 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | IPT | integrated product team |
 | JDK | Java Development Kit |
 | JSON | JavaScript Object Notation, a data file format |
+| LFM | latent fault metric (ISO 26262-5) |
 | LOR | level of rigor (software safety tasks, MIL-STD-882E 4.4) |
 | MAVLink | Micro Air Vehicle Link, the PX4 telemetry and command protocol |
 | MAVSDK | MAVLink software development kit |
 | MBSE | model-based systems engineering |
+| MC | modified condition, as in MC/DC: modified condition/decision coverage (DO-178C structural coverage at DAL A) |
 | MCP | Model Context Protocol, how the AI assistant connects to external tools |
 | MGT | management (MIL-STD-882E task type) |
 | MSA | materiel solution analysis (acquisition phase) |
@@ -118,15 +122,20 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | PDaC | Product Development as Code |
 | PDF | Portable Document Format |
 | PE | Program Executive (simulated role ROLE-PE) |
+| PFH | average frequency of a dangerous failure per hour (IEC 61508; PFH_D in ISO 13849-1) |
 | PHA | preliminary hazard analysis (MIL-STD-882E Task 202) |
 | PHL | preliminary hazard list (MIL-STD-882E Task 201) |
-| PL | Program Lead (simulated role ROLE-PL) |
+| PL | Program Lead (simulated role ROLE-PL); in ISO 13849-1, performance level PL a–e |
+| PLC | programmable logic controller |
 | PLr | required performance level (ISO 13849) |
 | PM | program manager |
+| PMHF | probabilistic metric for random hardware failures, per hour (ISO 26262-5) |
 | PPE | personal protective equipment |
 | PR | pull request (a proposed change on GitHub) |
+| PSAC | Plan for Software Aspects of Certification (DO-178C) |
 | PSSA | preliminary system safety assessment (ARP4761A) |
 | PX4 | PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 |
+| QM | quality managed: no ASIL needed, normal quality management suffices (ISO 26262) |
 | RAC | risk assessment code, severity category plus probability level (e.g. 1C) |
 | RF | radio frequency |
 | ROS | Robot Operating System (ROS 2) |
@@ -137,14 +146,20 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | SCC | software control category (MIL-STD-882E Table IV) |
 | SDS | safety data sheet |
 | SE | systems engineering |
+| SEooC | safety element out of context: a part developed to ISO 26262 against assumed conditions of use |
+| SFF | safe failure fraction (IEC 61508-2) |
 | SHA | system hazard analysis (MIL-STD-882E Task 205) |
 | SHA-256 | a cryptographic hash used to pin a downloaded file |
 | SIH | simulation-in-hardware, PX4's built-in headless simulator |
+| SIL | safety integrity level, SIL 1–4 (IEC 61508) |
 | SITL | software-in-the-loop simulation |
 | SoS | system of systems |
 | SoSHA | system-of-systems hazard analysis (MIL-STD-882E Task 209) |
 | SP | Special Publication (NIST) |
+| SPFM | single-point fault metric (ISO 26262-5) |
 | SPICE | Software Process Improvement and Capability dEtermination (ISO/IEC 33000 series) |
+| SRASW | safety-related application software (ISO 13849-1) |
+| SRESW | safety-related embedded software (ISO 13849-1) |
 | SRHA | system requirements hazard analysis (MIL-STD-882E Task 203) |
 | SSA | system safety assessment (ARP4761A) |
 | SSCM | software safety criticality matrix (MIL-STD-882E Table V) |
@@ -228,6 +243,7 @@ A record code is a prefix and a number, for example `HAZ-WLK-002` or `SYS-010`.
 | SUS-CONOPS-001 | the SUS-I1 concept of operations document ID |
 | SUS-I1-C001 | configuration 001 of SUS-I1, the baseline every record applies to |
 | SUS-RISKDEF-001 | the project's tailored risk definitions (standards/tailoring) |
+| SUS-XWALK-001 | the standards comparison record (standards/crosswalk.yaml) |
 | SYS-nnn | system safety requirement record (requirements/SYS-nnn.yaml) |
 | SZ-nnn | actuator sizing study at level 2 (sim/mujoco/sizing.yaml) |
 | TS-nnn | architecture trade study |

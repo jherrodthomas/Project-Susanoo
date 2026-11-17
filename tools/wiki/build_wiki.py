@@ -55,7 +55,8 @@ def sources() -> dict[Path, str]:
              ROOT / "docs/terms.md": "Abbreviations-and-Codes",
              ROOT / "framework/documentation-standard.md": "Documentation-Standard",
              ROOT / "concept/README.md": "Concept-Model",
-             ROOT / "integrations/px4/README.md": "PX4-Integration-Model"}
+             ROOT / "integrations/px4/README.md": "PX4-Integration-Model",
+             ROOT / "standards/crosswalk.md": "Standards-Crosswalk"}
     for r in sorted(TREE_DIR.rglob("README.md")):
         if "figures" not in r.parts:
             pages[r] = tree_page(r)
@@ -124,6 +125,7 @@ def sidebar(current: str) -> str:
              "- [Documentation standard](Documentation-Standard)",
              "- [Concept model & figures](Concept-Model)",
              "- [PX4 integration model](PX4-Integration-Model)",
+             "- [Standards comparison (crosswalk)](Standards-Crosswalk)",
              "- [882E workflow](Project-Overview#the-mil-std-882e-workflow)",
              "- [882E work products](882E-Work-Products)"]
     for p, n in tree:

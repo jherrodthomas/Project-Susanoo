@@ -1,0 +1,369 @@
+# Standards comparison (crosswalk): integrity levels side by side, each as its own standard defines it.
+# Rendered by tools/crosswalk/build.py to standards/crosswalk.md. Columns are NOT aligned across standards.
+# span: how many consecutive levels of that standard one cell covers (they must add up to the level count).
+schema: susanoo/standards-crosswalk/v0.1
+id: SUS-XWALK-001
+title: 'Standards comparison: integrity levels side by side'
+status: draft
+purpose: Show each standard's integrity levels as that standard defines them, side by side, so a part rated to another standard
+  (ASIL, SIL, PL, DAL) can be read in its own terms and judged against Susanoo's own requirement. Columns are not aligned
+  across standards and no level is equivalent to another.
+verification:
+  status: unverified
+  note: Drafted at independence level I0 from the structure of each standard. Every cell must be checked against the controlled
+    text of its standard and marked verified (with who and against which edition) before it is relied on.
+standards:
+- id: 882E
+  title: MIL-STD-882E
+  levels:
+  - High
+  - Serious
+  - Medium
+  - Low
+- id: '26262'
+  title: ISO 26262 (road vehicles)
+  levels:
+  - QM
+  - ASIL A
+  - ASIL B
+  - ASIL C
+  - ASIL D
+- id: '61508'
+  title: IEC 61508 (E/E/PE, generic)
+  levels:
+  - SIL 1
+  - SIL 2
+  - SIL 3
+  - SIL 4
+- id: '13849'
+  title: ISO 13849-1 (machinery control)
+  levels:
+  - PL a
+  - PL b
+  - PL c
+  - PL d
+  - PL e
+- id: '178'
+  title: DO-178C / DO-254 (airborne)
+  levels:
+  - DAL E
+  - DAL D
+  - DAL C
+  - DAL B
+  - DAL A
+parameters:
+- id: what-sets-the-level
+  title: What sets the level
+  cells:
+    882E:
+    - span: 4
+      text: Risk assessment code from severity (Table I) × probability (Table II), mapped to a risk level by Table III
+      source: 882E §4.3.3, Tables I–III
+    '26262':
+    - span: 5
+      text: Severity S0–S3 × exposure E0–E4 × controllability C0–C3 of the hazardous event
+      source: 26262-3 §6.4.3, Table 4
+    '61508':
+    - span: 4
+      text: Risk reduction needed to reach the tolerable risk; risk graph or hazardous-event matrix (informative methods)
+      source: 61508-5 Annexes C–E
+    '13849':
+    - span: 5
+      text: Required PL from severity S1–S2, frequency/exposure F1–F2, possibility of avoidance P1–P2 (risk graph)
+      source: 13849-1 §4.3, Annex A
+    '178':
+    - span: 5
+      text: Failure condition classification of the function (Catastrophic → No effect), from the system safety assessment
+      source: DO-178C §2.3; ARP4754B / ARP4761A
+- id: quantitative-failure-target
+  title: Quantitative failure target
+  cells:
+    882E:
+    - span: 4
+      text: Probability levels A–F (qualitative, with project-defined quantitative bands); no hardware failure-rate target
+      source: 882E Table II, Appendix A
+    '26262':
+    - span: 1
+      text: No target
+      source: 26262-5 §9
+    - span: 1
+      text: No target
+      source: 26262-5 §9
+    - span: 1
+      text: PMHF < 10⁻⁷ /h (recommended)
+      source: 26262-5 Table 6
+    - span: 1
+      text: PMHF < 10⁻⁷ /h (recommended)
+      source: 26262-5 Table 6
+    - span: 1
+      text: PMHF < 10⁻⁸ /h (recommended)
+      source: 26262-5 Table 6
+    '61508':
+    - span: 1
+      text: PFH 10⁻⁶ to < 10⁻⁵ /h
+      source: 61508-1 Table 3
+    - span: 1
+      text: PFH 10⁻⁷ to < 10⁻⁶ /h
+      source: 61508-1 Table 3
+    - span: 1
+      text: PFH 10⁻⁸ to < 10⁻⁷ /h
+      source: 61508-1 Table 3
+    - span: 1
+      text: PFH 10⁻⁹ to < 10⁻⁸ /h
+      source: 61508-1 Table 3
+    '13849':
+    - span: 1
+      text: PFH_D 10⁻⁵ to < 10⁻⁴ /h
+      source: 13849-1 Table 2
+    - span: 1
+      text: 3×10⁻⁶ to < 10⁻⁵
+    - span: 1
+      text: 10⁻⁶ to < 3×10⁻⁶
+    - span: 1
+      text: 10⁻⁷ to < 10⁻⁶
+    - span: 1
+      text: 10⁻⁸ to < 10⁻⁷
+    '178':
+    - span: 5
+      text: Not defined in DO-178C or DO-254 (process assurance only); probability targets live in the system safety assessment
+      source: DO-178C §2.3
+- id: architecture-and-fault-tolerance
+  title: Architecture and fault tolerance
+  cells:
+    882E:
+    - span: 4
+      text: Not defined; design order of precedence (eliminate → engineer → warn → procedures)
+      source: 882E §4.3.4
+    '26262':
+    - span: 1
+      text: —
+    - span: 1
+      text: No hardware metric
+    - span: 1
+      text: SPFM ≥ 90 % · LFM ≥ 60 %
+      source: 26262-5 Tables 4–5
+    - span: 1
+      text: SPFM ≥ 97 % · LFM ≥ 80 %
+    - span: 1
+      text: SPFM ≥ 99 % · LFM ≥ 90 %
+    '61508':
+    - span: 4
+      text: Hardware fault tolerance and safe failure fraction per Route 1H (Tables 2–3), or Route 2H from field data
+      source: 61508-2 §7.4.4
+    '13849':
+    - span: 5
+      text: Designated architecture Category B, 1, 2, 3 or 4, combined with MTTF_D, DC_avg and CCF to reach the PL
+      source: 13849-1 §6, Figure 12
+    '178':
+    - span: 5
+      text: Not graded by DAL; architecture handled at system level (ARP4754B)
+      source: ARP4754B §5
+- id: diagnostic-coverage
+  title: Diagnostic coverage
+  cells:
+    882E:
+    - span: 4
+      text: Not defined
+    '26262':
+    - span: 5
+      text: Through the SPFM and LFM metrics above
+      source: 26262-5 Annex D
+    '61508':
+    - span: 4
+      text: Through safe failure fraction; diagnostic coverage tables for techniques
+      source: 61508-2 Annex A
+    '13849':
+    - span: 5
+      text: 'DC_avg: none < 60 % · low 60–90 % · medium 90–99 % · high ≥ 99 %'
+      source: 13849-1 Table 6
+    '178':
+    - span: 5
+      text: Not defined
+- id: software-and-development-rigour
+  title: Software and development rigour
+  cells:
+    882E:
+    - span: 4
+      text: Level of rigor from the software criticality index SwCI 1–5 (SCC × severity), not from the risk level
+      source: 882E Tables IV–V, §4.4
+    '26262':
+    - span: 5
+      text: 'Methods recommended (+) or highly recommended (++) per ASIL in Part 6 tables; QM: normal quality management'
+      source: 26262-6 Tables 1–17
+    '61508':
+    - span: 4
+      text: Techniques and measures per SIL (Annex A/B tables)
+      source: 61508-3 Annexes A–B
+    '13849':
+    - span: 5
+      text: SRESW / SRASW measures, increasing from PL a–c to PL d–e
+      source: 13849-1 §4.6
+    '178':
+    - span: 1
+      text: No objectives
+    - span: 1
+      text: 26 objectives
+      source: DO-178C Annex A
+    - span: 1
+      text: 62 objectives · statement coverage
+    - span: 1
+      text: 69 objectives · decision coverage
+    - span: 1
+      text: 71 objectives · MC/DC
+- id: independence-of-review
+  title: Independence of review
+  cells:
+    882E:
+    - span: 4
+      text: Not graded by risk level; acceptance authority rises with risk level (High → senior authority)
+      source: 882E §4.3.7
+    '26262':
+    - span: 1
+      text: —
+    - span: 1
+      text: 'Assessment: not required'
+      source: 26262-2 Table 1
+    - span: 1
+      text: I1
+    - span: 1
+      text: I2
+    - span: 1
+      text: I3
+    '61508':
+    - span: 1
+      text: Independent person
+      source: 61508-1 Table 5
+    - span: 1
+      text: Independent person
+    - span: 1
+      text: Independent department
+    - span: 1
+      text: Independent organisation
+    '13849':
+    - span: 5
+      text: Validation by persons independent of the design (not graded by PL)
+      source: 13849-2 §4
+    '178':
+    - span: 1
+      text: —
+    - span: 1
+      text: 2 objectives with independence
+      source: DO-178C Annex A
+    - span: 1
+      text: 5 with independence
+    - span: 1
+      text: 18 with independence
+    - span: 1
+      text: 30 with independence
+- id: what-a-supplier-gives-you
+  title: What a supplier gives you
+  cells:
+    882E:
+    - span: 4
+      text: No part certification scheme; hazard and risk data feed the HTS
+    '26262':
+    - span: 5
+      text: Safety manual, ASIL capability, development interface agreement; SEooC assumptions
+      source: 26262-8 §5; 26262-10 §9
+    '61508':
+    - span: 4
+      text: Certificate with SIL capability, safety manual (Annex D), failure rates / SFF
+      source: 61508-2 Annex D
+    '13849':
+    - span: 5
+      text: PL, category, PFH_D, MTTF_D, DC, mission time, conditions of use
+      source: 13849-1 §11
+    '178':
+    - span: 5
+      text: Accomplishment summary (PSAC/SAS) for the software level; DO-254 equivalent for hardware
+      source: DO-178C §11
+examples:
+- title: Protective stop supervisor on a certified safety PLC
+  need:
+  - ref: SSF-002 Protective stop supervisor
+    what: 'SCC 1, SwCI 1: all five level-of-rigor activities on the software (882E Table V)'
+  - ref: HAZ-SAF-001
+    what: 'Protective stop does not reach a safe state: 1C → target 1E'
+  - ref: SYS-002, SYS-010
+    what: Defined stop behaviour per mode; stop path independent of the motion control software
+  part: Safety PLC with an IEC 61508 SIL 3 certificate
+  read_column: IEC 61508 · SIL 3
+  reads:
+  - PFH 10⁻⁸ to < 10⁻⁷ /h for the platform
+  - HFT and safe failure fraction per Route 1H
+  - Annex A/B techniques at SIL 3 for the vendor's firmware and tools
+  - Assessed by an independent department
+  - Certificate and safety manual with conditions of use
+  covers: The PLC hardware, its firmware and its programming tool, used as the safety manual says.
+  leaves_to_us:
+  - 'Our stop logic is application software: the SwCI 1 level-of-rigor activities still apply to it (882E §4.4).'
+  - The safety manual's conditions of use (proof-test interval, response time) become inputs to SYS-011 (stop reaction time).
+  - The platform failure rate is one input to the probability of HAZ-SAF-001, not the hazard's probability.
+  decided_by: Whether the certificate counts toward the level-of-rigor evidence is a lead decision.
+- title: Readiness interlock built from a PL d safety relay
+  need:
+  - ref: HAZ-PIL-001
+    what: 'Unintended leg motion during ingress or egress: 1C → target 1E'
+  - ref: SYS-001
+    what: Inhibit leg actuation until restraint, hatch, neutral controls and clear zone are confirmed
+  - ref: SUS-RISKDEF-001
+    what: Probability E means < 10⁻⁶ over the item life of 500 walker hours (decision DQ-003)
+  part: Safety relay and interlock switches rated PL d, Category 3
+  read_column: ISO 13849-1 · PL d
+  reads:
+  - PFH_D 10⁻⁷ to < 10⁻⁶ /h
+  - 'Category 3: a single fault does not lose the safety function'
+  - DC_avg medium or better
+  - Validated by persons independent of the design
+  - PL, category, PFH_D, MTTF_D, DC, mission time and conditions of use
+  covers: The interlock channel's dangerous-failure rate and its fault tolerance.
+  leaves_to_us:
+  - 'Our own arithmetic, with our own definitions: PFH_D just under 10⁻⁶ /h over 500 h gives up to 5 × 10⁻⁴, which is probability
+    D, not E, if the relay alone stood between a fault and the mishap. PL e (< 10⁻⁷ /h) gives up to 5 × 10⁻⁵: still D.'
+  - 'So the 1E target rests on the other mitigations as well: mechanical supports (M1), the hardware enable chain (M3) and
+    the ingress procedure (M4). The PHA should show that combination.'
+  - This is not a PL-to-882E mapping; it is the part's own figure run through the project's own probability definitions.
+  decided_by: The severity and probability basis is the lead's; the PHA (Task 202) records the analysis.
+- title: UAV failsafe on an autopilot sold with DAL C evidence
+  need:
+  - ref: SSF-008 PX4 failsafe contingency
+    what: SCC 1, SwCI 1
+  - ref: HAZ-INT-001
+    what: 'UAV launch or recovery outside the safe envelope: 2C → target 2E'
+  - ref: SYS-013
+    what: On link loss, hold then land in place; never return to the dock without a permit (DQ-008)
+  part: Commercial autopilot with DO-178C DAL C accomplishment summary
+  read_column: DO-178C · DAL C
+  reads:
+  - 62 objectives, 5 of them with independence
+  - Statement coverage (no decision or MC/DC coverage)
+  - 'No failure-rate target: process assurance only'
+  - Accomplishment summary (PSAC/SAS)
+  covers: How the vendor's software was developed and verified, for the failure classification the vendor assumed.
+  leaves_to_us:
+  - 'The vendor''s failure classification came from an aircraft safety assessment, not from HAZ-INT-001: check that the
+    assumed function and effects match ours.'
+  - 'Our failsafe configuration (link-loss action, keep-out, permit) is ours: SYS-013 needs our own verification on top.'
+  - Whether DAL C evidence satisfies the SwCI 1 level-of-rigor activities is our judgement, activity by activity.
+  decided_by: Accepting supplier evidence as level-of-rigor evidence is a lead decision.
+- title: Battery isolation from an automotive BMS with ASIL C capability
+  need:
+  - ref: HAZ-PWR-002
+    what: 'Battery thermal runaway near the pilot station: 1D → target 1E (power alternative B only)'
+  - ref: SYS-014
+    what: Isolate the traction battery on over-temperature, over-voltage or over-current, independently of the motion controller
+  part: Battery management system developed as an ISO 26262 SEooC, ASIL C
+  read_column: ISO 26262 · ASIL C
+  reads:
+  - SPFM ≥ 97 %, LFM ≥ 80 %
+  - PMHF < 10⁻⁷ /h (recommended)
+  - Part 6 methods at ASIL C; confirmation measures at I2
+  - Safety manual with SEooC assumptions
+  covers: The BMS's random hardware failure metrics and its development process, under the vendor's assumptions.
+  leaves_to_us:
+  - 'SEooC assumptions are about a road vehicle: check drive cycle, thermal environment, vibration and falls against walker
+    use.'
+  - 'SYS-014 asks for isolation independent of the motion controller: confirm the BMS contactor path is independent in our
+    architecture.'
+  - The ASIL was set for a car's hazards; HAZ-PWR-002's severity and exposure are ours.
+  decided_by: Retaining power alternative B at all is open in trade study TS-001.

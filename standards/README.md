@@ -28,6 +28,8 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 <tr><td width="33%" valign="top"><a href="../safety/mil-std-882e/README.md"><img src="../safety/mil-std-882e/figures/fig-1-position-in-the-mil-std-882e-flow.svg" alt="The eight-element MIL-STD-882E process" width="300"></a><br><sub>The eight-element MIL-STD-882E process</sub></td><td width="33%" valign="top"><a href="../docs/wiki/images/analysis-dependencies.svg"><img src="../docs/wiki/images/analysis-dependencies.svg" alt="Analysis dependencies (illustrative)" width="300"></a><br><sub>Analysis dependencies (illustrative)</sub></td></tr>
 </table>
 
+**Open:** [Standards comparison (crosswalk)](crosswalk.md)
+
 <!-- preview:end -->
 
 ## Folder contents
@@ -36,3 +38,5 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 |---|---|
 | [`mil-std-882e/`](mil-std-882e/) | MIL-STD-882E model |
 | [`tailoring/`](tailoring/) | Project tailoring |
+| [`crosswalk.md`](crosswalk.md) | Standards comparison |
+| [`crosswalk.yaml`](crosswalk.yaml) | Standards comparison: integrity levels side by side |
