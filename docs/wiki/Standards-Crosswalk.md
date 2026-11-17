@@ -20,7 +20,7 @@
 | BMS | battery management system |
 | CCF | common cause failure |
 | DAL | development assurance level (DO-178C / DO-254) |
-| DC | direct current |
+| DC | direct current; in ISO 13849-1, diagnostic coverage (DC_avg) |
 | DO-178C | RTCA software considerations in airborne systems |
 | DO-254 | RTCA design assurance for airborne electronic hardware |
 | DoD | US Department of Defense |
@@ -82,6 +82,12 @@ Show each standard's integrity levels as that standard defines them, side by sid
 - **Columns** are the levels of each standard, grouped under the standard. Their order follows each standard's own scale, lowest to highest integrity; nothing is implied between standards.
 - **Rows** are the parameters that set or qualify a level. A cell spanning several levels means the parameter is the same for all of them. *Not defined* means that standard has no such parameter: nothing is borrowed from another standard.
 - **Sources** under each cell name the clause or table. ✓ marks a cell checked against the standard's text.
+
+## Where each standard sets its level
+
+Each lane is one standard's own process, step by step. The phase columns show where in that process a step happens, not that steps or levels are equal. A part's evidence (safety manual, certificate, information for use, accomplishment summary) comes into Susanoo only through the sourcing review.
+
+![Figure 1 · Where each standard sets its level and produces its evidence](../../standards/crosswalk-swimlane.svg)
 
 ## The matrix
 

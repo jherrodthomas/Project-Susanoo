@@ -4,6 +4,8 @@
 # architecture/item-definition.yaml. Keep meanings short and plain; a reader should not need another page.
 
 abbreviations:
+  DIA: development interface agreement between customer and supplier (ISO 26262-8)
+  SAS: Software Accomplishment Summary (DO-178C)
   SIL: safety integrity level, SIL 1–4 (IEC 61508)
   QM: "quality managed: no ASIL needed, normal quality management suffices (ISO 26262)"
   PFH: average frequency of a dangerous failure per hour (IEC 61508; PFH_D in ISO 13849-1)
@@ -36,7 +38,7 @@ abbreviations:
   A-LOSS: TS-001 supply-loss mode, hydraulic supply lost and torque to zero (sim/trades)
   B-SAG: TS-001 supply-loss mode, bus undervoltage with residual torque (sim/trades)
   B-ISOL: TS-001 supply-loss mode, battery isolated and torque to zero (sim/trades)
-  DC: direct current
+  DC: "direct current; in ISO 13849-1, diagnostic coverage (DC_avg)"
   FMECA: failure modes, effects and criticality analysis
   FASTER: Failure Analysis, Simulation, Testing, and Evaluation Report, an open-source reliability tool for LTspice circuits (github.com/Gueni/FASTER)
   HPU: hydraulic power unit

@@ -43,8 +43,9 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | CSCI | computer software configuration item |
 | CSV | comma-separated values, a plain-text table format any spreadsheet program opens |
 | DAL | development assurance level (DO-178C / DO-254) |
-| DC | direct current |
+| DC | direct current; in ISO 13849-1, diagnostic coverage (DC_avg) |
 | DDS | Data Distribution Service, the middleware ROS 2 uses |
+| DIA | development interface agreement between customer and supplier (ISO 26262-8) |
 | DID | data item description (a deliverable format referenced by MIL-STD-882E tasks) |
 | DoD | US Department of Defense |
 | DoDI | Department of Defense Instruction |
@@ -143,6 +144,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | RTL | return to launch (a PX4 flight mode) |
 | SAE | SAE International, publisher of ARP4754B and ARP4761A |
 | SAR | safety assessment report (MIL-STD-882E Task 301) |
+| SAS | Software Accomplishment Summary (DO-178C) |
 | SCC | software control category (MIL-STD-882E Table IV) |
 | SDS | safety data sheet |
 | SE | systems engineering |

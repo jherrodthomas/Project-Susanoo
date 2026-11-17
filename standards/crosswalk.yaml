@@ -1,6 +1,8 @@
 # Standards comparison (crosswalk): integrity levels side by side, each as its own standard defines it.
 # Rendered by tools/crosswalk/build.py to standards/crosswalk.md. Columns are NOT aligned across standards.
 # span: how many consecutive levels of that standard one cell covers (they must add up to the level count).
+# phases / process: each standard's own steps in order (the swimlane figure); a shared phase is where a step
+# happens in that standard's process, not a claim that steps or levels are equal.
 schema: susanoo/standards-crosswalk/v0.1
 id: SUS-XWALK-001
 title: 'Standards comparison: integrity levels side by side'
@@ -12,6 +14,21 @@ verification:
   status: unverified
   note: Drafted at independence level I0 from the structure of each standard. Every cell must be checked against the controlled
     text of its standard and marked verified (with who and against which edition) before it is relied on.
+phases:
+- id: analyse-hazards
+  title: Analyse hazards
+- id: set-the-level
+  title: Set the level
+- id: specify-requirements
+  title: Specify requirements
+- id: hardware-measures
+  title: Hardware measures
+- id: software-and-development
+  title: Software and development
+- id: verify-and-review
+  title: Verify and review
+- id: evidence-produced
+  title: Evidence produced
 standards:
 - id: 882E
   title: MIL-STD-882E
@@ -20,6 +37,28 @@ standards:
   - Serious
   - Medium
   - Low
+  process:
+  - phase: analyse-hazards
+    step: Hazard analyses
+    source: Tasks 201–210
+  - phase: set-the-level
+    step: Risk level from RAC
+    source: Tables I–III
+  - phase: specify-requirements
+    step: Safety requirements
+    source: Task 203
+  - phase: hardware-measures
+    step: Order of precedence
+    source: §4.3.4
+  - phase: software-and-development
+    step: SCC → SwCI → level of rigor
+    source: §4.4, Tables IV–VI
+  - phase: verify-and-review
+    step: Verification; acceptance by authority
+    source: Task 401; §4.3.7
+  - phase: evidence-produced
+    step: Hazard tracking system; SAR
+    source: Tasks 106, 301
 - id: '26262'
   title: ISO 26262 (road vehicles)
   levels:
@@ -28,6 +67,28 @@ standards:
   - ASIL B
   - ASIL C
   - ASIL D
+  process:
+  - phase: analyse-hazards
+    step: Hazard analysis and risk assessment
+    source: Part 3 §6
+  - phase: set-the-level
+    step: ASIL from S × E × C
+    source: Part 3 Table 4
+  - phase: specify-requirements
+    step: Safety goals, functional and technical requirements
+    source: Parts 3–4
+  - phase: hardware-measures
+    step: SPFM, LFM, PMHF
+    source: Part 5
+  - phase: software-and-development
+    step: Methods per ASIL
+    source: Part 6
+  - phase: verify-and-review
+    step: Confirmation measures I0–I3
+    source: Part 2
+  - phase: evidence-produced
+    step: Safety manual; SEooC; DIA
+    source: Parts 8, 10
 - id: '61508'
   title: IEC 61508 (E/E/PE, generic)
   levels:
@@ -35,6 +96,28 @@ standards:
   - SIL 2
   - SIL 3
   - SIL 4
+  process:
+  - phase: analyse-hazards
+    step: Hazard and risk analysis
+    source: Part 1 §7.4
+  - phase: set-the-level
+    step: SIL from required risk reduction
+    source: Part 1 §7.6; Part 5
+  - phase: specify-requirements
+    step: Safety requirements specification
+    source: Part 1 §7.10
+  - phase: hardware-measures
+    step: HFT and SFF (Route 1H / 2H); PFH
+    source: Part 2
+  - phase: software-and-development
+    step: Techniques per SIL
+    source: Part 3
+  - phase: verify-and-review
+    step: Functional safety assessment
+    source: Part 1 §8, Table 5
+  - phase: evidence-produced
+    step: Certificate; safety manual
+    source: Part 2 Annex D
 - id: '13849'
   title: ISO 13849-1 (machinery control)
   levels:
@@ -43,6 +126,28 @@ standards:
   - PL c
   - PL d
   - PL e
+  process:
+  - phase: analyse-hazards
+    step: Risk assessment
+    source: ISO 12100
+  - phase: set-the-level
+    step: Required PL from risk graph
+    source: Annex A
+  - phase: specify-requirements
+    step: Safety function specification
+    source: §5
+  - phase: hardware-measures
+    step: Category, MTTF_D, DC, CCF → PL
+    source: §6
+  - phase: software-and-development
+    step: SRESW / SRASW
+    source: §4.6
+  - phase: verify-and-review
+    step: Validation
+    source: ISO 13849-2
+  - phase: evidence-produced
+    step: Information for use
+    source: §11
 - id: '178'
   title: DO-178C / DO-254 (airborne)
   levels:
@@ -51,6 +156,28 @@ standards:
   - DAL C
   - DAL B
   - DAL A
+  process:
+  - phase: analyse-hazards
+    step: FHA and PSSA
+    source: ARP4761A
+  - phase: set-the-level
+    step: DAL from failure condition
+    source: ARP4754B
+  - phase: specify-requirements
+    step: High- and low-level requirements
+    source: DO-178C §5
+  - phase: hardware-measures
+    step: Hardware design assurance
+    source: DO-254
+  - phase: software-and-development
+    step: Annex A objectives per DAL
+    source: DO-178C
+  - phase: verify-and-review
+    step: Verification with independence
+    source: DO-178C §6
+  - phase: evidence-produced
+    step: PSAC and SAS
+    source: DO-178C §11
 parameters:
 - id: what-sets-the-level
   title: What sets the level

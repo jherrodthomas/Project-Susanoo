@@ -10,6 +10,8 @@ class Crosswalk(unittest.TestCase):
         self.assertEqual(b.validate(d), [])
         text = b.decorate(b.PAGE.relative_to(b.ROOT).as_posix(), b.page(d))
         self.assertEqual(b.PAGE.read_text(encoding="utf-8"), text, "run: python -m tools.crosswalk.build")
+        svg = b.decorate(b.SWIM.relative_to(b.ROOT).as_posix(), b.swimlane(d))
+        self.assertEqual(b.SWIM.read_text(encoding="utf-8"), svg, "run: python -m tools.crosswalk.build")
 
     def test_spans_must_cover_every_level(self):
         d = copy.deepcopy(b.load())
@@ -20,6 +22,11 @@ class Crosswalk(unittest.TestCase):
         d = copy.deepcopy(b.load())
         d["parameters"][0]["cells"]["882E"][0]["verified"] = True
         self.assertTrue(any("verified_by" in e for e in b.validate(d)))
+
+    def test_process_follows_the_phases(self):
+        d = copy.deepcopy(b.load())
+        d["standards"][2]["process"].pop()
+        self.assertTrue(any("process steps must follow the phases" in e for e in b.validate(d)))
 
     def test_page_says_it_is_not_an_equivalence_table(self):
         self.assertIn("Not an equivalence table", b.page(b.load()))
