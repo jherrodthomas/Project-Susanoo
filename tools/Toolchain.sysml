@@ -10,6 +10,7 @@ package Toolchain {
         action analysisWorksheetsImagesCsvExcelWorkbook { doc /* Analysis worksheets match the records */ }
         action frontPageReadmeFiguresAndNumbersMatchThe { doc /* Front-page README figures and numbers match the records */ }
         action recordFiguresAreCurrentDecisionsTraceabi { doc /* Record figures are current */ }
+        action standardsComparisonIsWellFormedAndCurren { doc /* Standards comparison is well formed and current */ }
         action everyFolderHasAVisualPreviewDocsPreviews { doc /* Every folder has a visual preview */ }
         action previewTests { doc /* Preview tests */ }
         action systemVCyclePageWikiPageAndStillAreCurre { doc /* System V cycle page, wiki page and still are current */ }
@@ -23,7 +24,8 @@ package Toolchain {
         first checkReadmesRegenerateEveryFigureAndSysm then analysisWorksheetsImagesCsvExcelWorkbook;
         first analysisWorksheetsImagesCsvExcelWorkbook then frontPageReadmeFiguresAndNumbersMatchThe;
         first frontPageReadmeFiguresAndNumbersMatchThe then recordFiguresAreCurrentDecisionsTraceabi;
-        first recordFiguresAreCurrentDecisionsTraceabi then everyFolderHasAVisualPreviewDocsPreviews;
+        first recordFiguresAreCurrentDecisionsTraceabi then standardsComparisonIsWellFormedAndCurren;
+        first standardsComparisonIsWellFormedAndCurren then everyFolderHasAVisualPreviewDocsPreviews;
         first everyFolderHasAVisualPreviewDocsPreviews then previewTests;
         first previewTests then systemVCyclePageWikiPageAndStillAreCurre;
         first systemVCyclePageWikiPageAndStillAreCurre then systemVCycleTests;

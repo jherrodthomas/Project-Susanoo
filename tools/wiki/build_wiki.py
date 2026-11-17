@@ -94,7 +94,8 @@ def sources() -> dict[Path, str]:
              ROOT / "cad/drawings/README.md": "Drawing-Sheets",
              ROOT / "cad/renders/README.md": "Concept-Renders",
              ROOT / "cad/concept-art/README.md": "Concept-Art",
-             ROOT / "cad/renders/blender/README.md": "Blender-Renders"}
+             ROOT / "cad/renders/blender/README.md": "Blender-Renders",
+             ROOT / "standards/crosswalk.md": "Standards-Crosswalk"}
     for r in sorted(TREE_DIR.rglob("README.md")):
         if "figures" not in r.parts:
             pages[r] = tree_page(r)
@@ -203,6 +204,7 @@ def sidebar(current: str) -> str:
              "- [Wiki images](Wiki-Images)",
              "- [3D page assets](3D-Page-Assets)",
              "- [882E map sources](882E-Map-Sources)",
+             "- [Standards comparison (crosswalk)](Standards-Crosswalk)",
              "- [882E workflow](Project-Overview#the-mil-std-882e-workflow)",
              "- [882E work products](882E-Work-Products)"]
     for p, n in tree:

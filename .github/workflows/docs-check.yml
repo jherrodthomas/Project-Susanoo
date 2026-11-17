@@ -44,6 +44,11 @@ jobs:
       - name: Record figures are current (decisions, traceability, mitigations, SSFs, events, tailoring, record model, L1/L2, acceptance)
         run: python -m tools.previews.record_figures --check
 
+      - name: Standards comparison is well formed and current (standards/crosswalk.yaml)
+        run: |
+          python -m tools.crosswalk.build --check
+          python -m unittest discover -s tools/crosswalk/tests -t .
+
       - name: Every folder has a visual preview (docs/previews.yaml)
         run: python -m tools.previews.build_previews --check
 

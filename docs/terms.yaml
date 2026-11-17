@@ -4,6 +4,23 @@
 # architecture/item-definition.yaml. Keep meanings short and plain; a reader should not need another page.
 
 abbreviations:
+  DIA: development interface agreement between customer and supplier (ISO 26262-8)
+  SAS: Software Accomplishment Summary (DO-178C)
+  SIL: safety integrity level, SIL 1–4 (IEC 61508)
+  QM: "quality managed: no ASIL needed, normal quality management suffices (ISO 26262)"
+  PFH: average frequency of a dangerous failure per hour (IEC 61508; PFH_D in ISO 13849-1)
+  PMHF: probabilistic metric for random hardware failures, per hour (ISO 26262-5)
+  SPFM: single-point fault metric (ISO 26262-5)
+  LFM: latent fault metric (ISO 26262-5)
+  HFT: hardware fault tolerance (IEC 61508-2)
+  SFF: safe failure fraction (IEC 61508-2)
+  CCF: common cause failure
+  SRESW: safety-related embedded software (ISO 13849-1)
+  SRASW: safety-related application software (ISO 13849-1)
+  SEooC: "safety element out of context: a part developed to ISO 26262 against assumed conditions of use"
+  PSAC: Plan for Software Aspects of Certification (DO-178C)
+  PLC: programmable logic controller
+  MC: "modified condition, as in MC/DC: modified condition/decision coverage (DO-178C structural coverage at DAL A)"
   3D: three-dimensional
   US: United States
   NASA: US National Aeronautics and Space Administration
@@ -21,7 +38,7 @@ abbreviations:
   A-LOSS: TS-001 supply-loss mode, hydraulic supply lost and torque to zero (sim/trades)
   B-SAG: TS-001 supply-loss mode, bus undervoltage with residual torque (sim/trades)
   B-ISOL: TS-001 supply-loss mode, battery isolated and torque to zero (sim/trades)
-  DC: direct current
+  DC: "direct current; in ISO 13849-1, diagnostic coverage (DC_avg)"
   FMECA: failure modes, effects and criticality analysis
   FASTER: Failure Analysis, Simulation, Testing, and Evaluation Report, an open-source reliability tool for LTspice circuits (github.com/Gueni/FASTER)
   HPU: hydraulic power unit
@@ -135,7 +152,7 @@ abbreviations:
   UAV: uncrewed aerial vehicle (drone)
   VCRM: verification cross-reference matrix
   YAML: a plain-text data format used for the records
-  ASIL: Automotive Safety Integrity Level (ISO 26262 term in the LionDriver port plan)
+  ASIL: Automotive Safety Integrity Level, QM and ASIL A–D (ISO 26262)
   ASPICE: Automotive SPICE process assessment model (LionDriver port plan)
   AUTOSAR: AUTomotive Open System ARchitecture (LionDriver port plan)
   OpenSCENARIO: ASAM standard format for driving scenarios (LionDriver port plan)
@@ -144,7 +161,7 @@ abbreviations:
   GC: generally applicable to design change (MIL-STD-882E Table A-I)
   NA: not applicable (MIL-STD-882E Table A-I)
   PE: Program Executive (simulated role ROLE-PE)
-  PL: Program Lead (simulated role ROLE-PL)
+  PL: Program Lead (simulated role ROLE-PL); in ISO 13849-1, performance level PL a–e
   CE: Chief Engineer (simulated role ROLE-CE)
   HTML: HyperText Markup Language (web page)
   CAD: computer-aided design
@@ -180,6 +197,7 @@ standards:
   AS9100: aerospace quality management standard
 
 codes:
+  SUS-XWALK-001: the standards comparison record (standards/crosswalk.yaml)
   HAZ-: hazard record (safety/hazards/HAZ-xxx-nnn.yaml)
   SYS-: system safety requirement record (requirements/SYS-nnn.yaml)
   IF-: interface in the item definition (architecture/item-definition.yaml)
