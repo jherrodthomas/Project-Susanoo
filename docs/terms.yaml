@@ -15,6 +15,8 @@ abbreviations:
   HFT: hardware fault tolerance (IEC 61508-2)
   SFF: safe failure fraction (IEC 61508-2)
   CCF: common cause failure
+  AVX-512: Advanced Vector Extensions 512, wide floating-point instructions on some x86-64 CPUs, not on every CI runner
+  OpenBLAS: open-source linear-algebra library NumPy uses for matrix products; it picks a code path for the CPU it runs on
   SRESW: safety-related embedded software (ISO 13849-1)
   SRASW: safety-related application software (ISO 13849-1)
   SEooC: "safety element out of context: a part developed to ISO 26262 against assumed conditions of use"
