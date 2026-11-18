@@ -434,6 +434,9 @@ def readme(d: dict, specs: list[dict]) -> str:
         "| [`sizing.py`](sizing.py), [`sizing.yaml`](sizing.yaml) | Joint torque sizing (SZ-01) | code, hand-written |",
         *(["| [`terrain.py`](terrain.py), [`terrain.yaml`](terrain.yaml) | CL-05 as a 3D multibody walking the sheet 3 "
            "terrain course | code, hand-written |"] if tw else []),
+        *(["| [`numerics.py`](numerics.py) | Pins the floating-point code paths (one OpenBLAS kernel and thread, no "
+           "AVX-512 loops in NumPy) so a terrain run gives the same numbers on every x86-64 CPU | code |"]
+          if (FOLDER / "numerics.py").exists() else []),
         "| [`requirements.txt`](requirements.txt) | Pinned MuJoCo | hand-written |",
         "| [`WalkerL2.sysml`](WalkerL2.sysml) | The level-2 walker as SysML | generated |",
         "| [`figures/`](figures/) | Generated SVG figures (do not edit) | generated |",

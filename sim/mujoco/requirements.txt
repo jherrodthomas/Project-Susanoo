@@ -1,2 +1,4 @@
-# Level-2 legged dynamics (sim/mujoco). Pinned: results differ across MuJoCo versions.
+# Level-2 legged dynamics (sim/mujoco). Pinned: results differ across MuJoCo and NumPy versions (NumPy also names the
+# CPU code paths sim/mujoco/numerics.py turns off).
 mujoco==3.3.5
+numpy==2.5.3

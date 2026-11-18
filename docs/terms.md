@@ -22,6 +22,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | ASIL | Automotive Safety Integrity Level, QM and ASIL A–D (ISO 26262) |
 | ASPICE | Automotive SPICE process assessment model (LionDriver port plan) |
 | AUTOSAR | AUTomotive Open System ARchitecture (LionDriver port plan) |
+| AVX-512 | Advanced Vector Extensions 512, wide floating-point instructions on some x86-64 CPUs, not on every CI runner |
 | B-EHA | TS-001 alternative B with electrohydraulic joint actuators (series-hybrid power) |
 | B-EMA | TS-001 alternative B with electromechanical joint actuators (series-hybrid power) |
 | B-ISOL | TS-001 supply-loss mode, battery isolated and torque to zero (sim/trades) |
@@ -122,6 +123,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | NASA | US National Aeronautics and Space Administration |
 | NIST | US National Institute of Standards and Technology |
 | OMG | Object Management Group, publisher of SysML |
+| OpenBLAS | open-source linear-algebra library NumPy uses for matrix products; it picks a code path for the CPU it runs on |
 | OpenSCENARIO | ASAM standard format for driving scenarios (LionDriver port plan) |
 | OS | operations and support (acquisition phase) |
 | PD | production and deployment (acquisition phase) |
