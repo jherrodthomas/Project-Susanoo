@@ -103,7 +103,11 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | IPPD | integrated product and process development |
 | IPT | integrated product team |
 | JDK | Java Development Kit |
+| JPEG | Joint Photographic Experts Group, the compressed image format of the renders and photographs |
 | JSON | JavaScript Object Notation, a data file format |
+| JSSSEH | Joint Software Systems Safety Engineering Handbook (DoD software safety handbook) |
+| JSSSEH-IG | Joint Software Systems Safety Engineering Handbook Implementation Guide, the guide for the software safety tasks behind each level of rigor (DQ-030) |
+| KB | kilobyte, a file size of 1,024 bytes |
 | LFM | latent fault metric (ISO 26262-5) |
 | LOR | level of rigor (software safety tasks, MIL-STD-882E 4.4) |
 | MAVLink | Micro Air Vehicle Link, the PX4 telemetry and command protocol |
@@ -112,6 +116,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | MC | modified condition, as in MC/DC: modified condition/decision coverage (DO-178C structural coverage at DAL A) |
 | MCP | Model Context Protocol, how the AI assistant connects to external tools |
 | MGT | management (MIL-STD-882E task type) |
+| MJCF | the MuJoCo model file format, a text file MuJoCo loads a model from |
 | MSA | materiel solution analysis (acquisition phase) |
 | MuJoCo | Multi-Joint dynamics with Contact, the physics engine for the level-2 walker model |
 | NA | not applicable (MIL-STD-882E Table A-I) |
@@ -157,6 +162,7 @@ Every abbreviation, acronym and record code used on the Susanoo pages and figure
 | SIH | simulation-in-hardware, PX4's built-in headless simulator |
 | SIL | safety integrity level, SIL 1–4 (IEC 61508) |
 | SITL | software-in-the-loop simulation |
+| SMIL | Synchronized Multimedia Integration Language, the SVG animation markup the 2D scenes loop with |
 | SoS | system of systems |
 | SoSHA | system-of-systems hazard analysis (MIL-STD-882E Task 209) |
 | SP | Special Publication (NIST) |

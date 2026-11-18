@@ -623,3 +623,24 @@ decisions:
     answer: {choice: mujoco3d, by: claude, at: 2026-11-14, via: chat, note: "lead asked for physics libraries to make the terrain walk more realistic, starting after the layout fix merged"}
     applied_in: [sim/mujoco/terrain.py, sim/mujoco/terrain.yaml, sim/results/l2-terrain.md, docs/3d/assets/sus-m1-terrain-physics.js, sim/scenes3d/sheet_terrain.js, sim/tests/test_terrain_l2.py]
     sources: [cad/links.json, sim/spec/walker_l2.yaml, sim/scenes3d/terrain.yaml, sim/results/l2-terrain.md]
+
+  - id: DQ-030
+    question: Should the Joint Software Systems Safety Engineering Handbook Implementation Guide (JSSSEH-IG) be adopted as the guide for the software safety tasks?
+    context: >-
+      MIL-STD-882E 4.4 and Table V assign each safety-significant software function a level of rigor from its software
+      criticality index, but do not spell out the tasks behind each level. **No file in the repository cited JSSSEH or
+      JSSSEH-IG, and the five level-of-rigor tasks on SSF-001 to SSF-008 (all not started) had no defined method.**
+    options:
+      - {key: applicable, title: Add JSSSEH-IG as an applicable guide, detail: "Listed in the standards applicability; the tailoring maps each SwCI to the Table V tasks, with the JSSSEH-IG activities for each task to be filled in from the edition held. Draft, for the lead's review."}
+      - {key: reference, title: List it as reference only, detail: "Named in the standards applicability as guidance; no mapping to the records yet."}
+      - {key: none, title: Leave it out, detail: "The level-of-rigor tasks stay generic."}
+    recommendation: applicable
+    reversibility: easy
+    blocks: [level-of-rigor tasks on SSF-001 to SSF-008]
+    gate: G1
+    decider: lead
+    status: applied
+    asked: 2026-11-16
+    answer: {choice: applicable, by: lead, at: 2026-11-16, via: chat, note: "add it as an applicable guide"}
+    applied_in: [framework/standards-applicability.md, standards/tailoring/mil-std-882e.yaml, docs/wiki/MIL-STD-882E-Software-Safety.md, docs/terms.yaml]
+    sources: [standards/mil-std-882e/model.yaml, safety/software/, safety/mil-std-882e/software-safety/README.md]

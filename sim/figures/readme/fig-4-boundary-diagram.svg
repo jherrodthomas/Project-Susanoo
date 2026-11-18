@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="934" height="900.3" viewBox="0 0 934 900.3" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 4 · Boundary diagram</title>
+<desc>The folder owns the two scene generators; the runs they draw and the images they write live elsewhere. Crossings are numbered as in the table.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="934" height="831.2" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 4 · Boundary diagram</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The folder owns the two scene generators; the runs they draw and the images they write live elsewhere. Crossings are</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">numbered as in the table.</text>
+<text x="894" y="44" font-size="11" fill="#475569" text-anchor="end">sim/figures/README.md</text>
+<line x1="40" y1="102" x2="894" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 126)">
+<rect x="246" y="195" width="328" height="106" rx="12" fill="none" stroke="#C2410C" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M180 44 L180 141 Q180 148 187 148 L302 148 Q309 148 309 155 L309 183 Q309 190 309 197 L309.3 245" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M355 44 L355 183 Q355 190 355 197 L354.7 245" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M532 44 L532 59 Q532 66 525 66 L495 66 Q488 66 488 73 L488 245" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M332 283 L332 565.2" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M465.3 283 L465.3 412.2 Q465.3 419.2 465.3 426.2 L465.3 434.2 Q465.3 441.2 458.3 441.2 L393 441.2 Q386 441.2 386 448.2 L386 565.2" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M510.7 283 L510.7 412.2 Q510.7 419.2 510.7 426.2 L510.7 434.2 Q510.7 441.2 517.7 441.2 L773 441.2 Q780 441.2 780 448.2 L780 565.2" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M748 44 L748 141 Q748 148 741 148 L505 148 Q498 148 498 155 L498 195" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="258" y="207" width="199.2" height="22" rx="11" fill="#C2410C" stroke="none" stroke-width="0"/>
+<text x="357.6" y="222" font-size="10" fill="#FFFFFF" font-weight="700" text-anchor="middle">BOUNDARY · 2D SCENE CODE</text>
+<rect x="112" y="6" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="124" y="30" font-size="12.5" fill="#0F172A" font-weight="700">Walker plant</text>
+<rect x="274" y="6" width="161.8" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="286" y="30" font-size="12.5" fill="#0F172A" font-weight="700">Failure search results</text>
+<rect x="462" y="6" width="140.1" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="474" y="30" font-size="12.5" fill="#0F172A" font-weight="700">PX4 SITL results</text>
+<rect x="680" y="6" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="692" y="30" font-size="12.5" fill="#0F172A" font-weight="700">CI</text>
+<rect x="264" y="245" width="136" height="38" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="276" y="269" font-size="12.5" fill="#0F172A" font-weight="700">Side-view scenes</text>
+<rect x="420" y="245" width="136" height="38" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="432" y="269" font-size="12.5" fill="#0F172A" font-weight="700">Top-down scenes</text>
+<rect x="277" y="565.2" width="164" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="289" y="589.2" font-size="12.5" fill="#0F172A" font-weight="700">Wiki images and pages</text>
+<rect x="712" y="565.2" width="136" height="38" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="724" y="589.2" font-size="12.5" fill="#0F172A" font-weight="700">UAV summary</text>
+<rect x="4" y="108" width="174.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="7" y="109" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="15.8" y="120.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">1</text>
+<text x="28.7" y="121" font-size="10.5" fill="#475569">performed and intended runs</text>
+<rect x="262" y="108" width="91.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="265" y="109" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="273.8" y="120.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">2</text>
+<text x="286.7" y="121" font-size="10.5" fill="#475569">edge cases</text>
+<rect x="411" y="108" width="75.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="414" y="109" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="422.8" y="120.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">3</text>
+<text x="435.7" y="121" font-size="10.5" fill="#475569">SU runs</text>
+<rect x="149" y="483.2" width="180.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="152" y="484.2" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="160.8" y="495.6" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">4</text>
+<text x="173.7" y="496.2" font-size="10.5" fill="#475569">sim-sc-*.svg, Simulation page</text>
+<rect x="389" y="483.2" width="206.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="392" y="484.2" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="400.8" y="495.6" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">5</text>
+<text x="413.7" y="496.2" font-size="10.5" fill="#475569">sim-su-*.svg, UAV-Simulation page</text>
+<rect x="606" y="483.2" width="171.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="609" y="484.2" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="617.8" y="495.6" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">6</text>
+<text x="630.7" y="496.2" font-size="10.5" fill="#475569">sim/results/uav/summary.md</text>
+<rect x="502" y="108" width="244.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<rect x="505" y="109" width="17.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="513.8" y="120.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">7</text>
+<text x="526.7" y="121" font-size="10.5" fill="#475569">--check: images and pages must reproduce</text>
+</g>
+<rect x="40" y="755.2" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="62" y="765.2" font-size="11" fill="#475569">External entity</text>
+<rect x="150" y="755.2" width="14" height="12" rx="3" fill="none" stroke="#C2410C" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="172" y="765.2" font-size="11" fill="#475569">Analysis boundary</text>
+<rect x="278.4" y="755.2" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="300.4" y="765.2" font-size="11" fill="#475569">Work product</text>
+<rect x="378.3" y="755.2" width="14" height="12" rx="3" fill="#475569" stroke="none" stroke-width="1.2"/>
+<text x="400.3" y="765.2" font-size="11" fill="#475569">1 · numbered crossing (see table)</text>
+<text x="40" y="787.2" font-size="10.5" fill="#94A3B8">Generated by tools/figures/simfigs_readme.py from sim/figures/scenes.py, uav_scenes.py, the plant model and the committed SITL results. The scenes draw synthetic runs:</text>
+<text x="40" y="802.2" font-size="10.5" fill="#94A3B8">pictures, not evidence (sim/README.md, evidence gate).</text>
+<g class="terms" data-base-h="831.2">
+<rect x="0" y="831.2" width="934" height="69.1" fill="#FFFFFF"/>
+<line x1="40" y1="835.2" x2="894" y2="835.2" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="850.9" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: 1A–4F = risk assessment code, severity 1–4 plus probability A–F (e.g. 1C) · CI = continuous integration (the automated checks GitHub runs on every</text>
+<text x="40" y="865.4" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">change) · F-nnn = system function in the item definition · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SITL =</text>
+<text x="40" y="879.9" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">software-in-the-loop simulation · SU-nnn = UAV PX4 SITL scenario · SUS-A1 = dockable observation UAV · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

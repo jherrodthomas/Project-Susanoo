@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="587.1" viewBox="0 0 1240 587.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · PX4 SITL failsafe scenarios</title>
+<desc>Every SITL scenario with its outcome and closest approach to the pilot</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1240" height="518" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · PX4 SITL failsafe scenarios</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The 6 scenarios run on PX4 v1.16.2 (SIH quadrotor): what each sets and injects, the outcome class the harness scored, and the closest approach to the pilot below the</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">keep-out altitude (keep-out 3 m). Synthetic findings for the safety lead, not verification evidence.</text>
+<text x="1200" y="44" font-size="11" fill="#475569" text-anchor="end">sim/uav/scenarios.yaml</text>
+<line x1="40" y1="102" x2="1200" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="132" font-size="10.5" fill="#475569" font-weight="700">Run</text>
+<text x="110" y="132" font-size="10.5" fill="#475569" font-weight="700">Scenario / injection</text>
+<text x="470" y="132" font-size="10.5" fill="#475569" font-weight="700">PX4 parameters set</text>
+<text x="740" y="132" font-size="10.5" fill="#475569" font-weight="700">Outcome</text>
+<text x="920" y="132" font-size="10.5" fill="#475569" font-weight="700">To pilot (low)</text>
+<text x="1030" y="132" font-size="10.5" fill="#475569" font-weight="700">Nav error</text>
+<text x="1130" y="132" font-size="10.5" fill="#475569" font-weight="700">Hazards</text>
+<line x1="40" y1="144" x2="1200" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="171" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SU-01</text>
+<text x="110" y="164" font-size="11" fill="#0F172A" font-weight="700">GCS link lost during observation, return-to-launch configured</text>
+<text x="110" y="180" font-size="9.5" fill="#475569">link loss at 10 s</text>
+<text x="470" y="171" font-size="9.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">NAV_DLL_ACT=2</text>
+<rect x="740" y="159" width="84.5" height="16" rx="8.0" fill="#FEF2F2" stroke="#D2553F" stroke-width="1"/>
+<text x="782.2" y="170.4" font-size="9.5" fill="#D2553F" font-weight="700" text-anchor="middle">keepout-breach</text>
+<text x="920" y="171" font-size="10.5" fill="#D2553F" font-weight="700">1.9 m</text>
+<text x="1030" y="171" font-size="10.5" fill="#0F172A">0.5 m</text>
+<rect x="1130" y="151" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="1169.5" y="162.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<rect x="40" y="191" width="1160" height="44" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="217" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SU-02</text>
+<text x="110" y="210" font-size="11" fill="#0F172A" font-weight="700">GCS link lost, return-to-launch, walker has moved since …</text>
+<text x="110" y="226" font-size="9.5" fill="#475569">link loss at 10 s · walker moved</text>
+<text x="470" y="217" font-size="9.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">NAV_DLL_ACT=2</text>
+<rect x="740" y="205" width="110.2" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="795.1" y="216.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">landed-at-stale-home</text>
+<text x="920" y="217" font-size="10.5" fill="#0F172A">21.9 m</text>
+<text x="1030" y="217" font-size="10.5" fill="#0F172A">0.5 m</text>
+<rect x="1130" y="197" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="1169.5" y="208.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<rect x="1130" y="215" width="79.1" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="1169.5" y="226.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">HAZ-DCK-002</text>
+<text x="40" y="263" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SU-03</text>
+<text x="110" y="256" font-size="11" fill="#0F172A" font-weight="700">GCS link lost during observation, land in place configured</text>
+<text x="110" y="272" font-size="9.5" fill="#475569">link loss at 10 s</text>
+<text x="470" y="263" font-size="9.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">NAV_DLL_ACT=3</text>
+<rect x="740" y="251" width="69.7" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="774.9" y="262.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">landed-clear</text>
+<text x="920" y="263" font-size="10.5" fill="#0F172A">48.4 m</text>
+<text x="1030" y="263" font-size="10.5" fill="#0F172A">0.5 m</text>
+<rect x="1130" y="243" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="1169.5" y="254.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<rect x="40" y="283" width="1160" height="44" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="309" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SU-04</text>
+<text x="110" y="302" font-size="11" fill="#0F172A" font-weight="700">Battery failure during observation</text>
+<text x="110" y="318" font-size="9.5" fill="#475569">battery off at 10 s</text>
+<text x="470" y="309" font-size="9.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">COM_LOW_BAT_ACT=3</text>
+<rect x="740" y="297" width="69.7" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="774.9" y="308.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">landed-clear</text>
+<text x="920" y="309" font-size="10.5" fill="#0F172A">48.4 m</text>
+<text x="1030" y="309" font-size="10.5" fill="#0F172A">0.5 m</text>
+<rect x="1130" y="289" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="1169.5" y="300.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<text x="40" y="355" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SU-05</text>
+<text x="110" y="348" font-size="11" fill="#0F172A" font-weight="700">Commanded beyond the geofence</text>
+<text x="110" y="364" font-size="9.5" fill="#475569">reposition beyond fence at 10 s</text>
+<text x="470" y="355" font-size="9.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">GF_ACTION=2, GF_MAX_HOR_DIST=60</text>
+<rect x="740" y="343" width="57.6" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="768.8" y="354.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">contained</text>
+<text x="920" y="355" font-size="10.5" fill="#0F172A">—</text>
+<text x="1030" y="355" font-size="10.5" fill="#0F172A">0.6 m</text>
+<rect x="1130" y="335" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="1169.5" y="346.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<rect x="40" y="375" width="1160" height="44" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="401" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">SU-06</text>
+<text x="110" y="394" font-size="11" fill="#0F172A" font-weight="700">GPS lost during observation (emulated)</text>
+<text x="110" y="410" font-size="9.5" fill="#475569">parameter change at 10 s</text>
+<text x="470" y="401" font-size="9.5" fill="#0F172A" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">EKF2_GPS_CTRL=0</text>
+<rect x="740" y="389" width="69.7" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="774.9" y="400.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">landed-clear</text>
+<text x="920" y="401" font-size="10.5" fill="#0F172A">47.1 m</text>
+<text x="1030" y="401" font-size="10.5" fill="#D2553F" font-weight="700">170.0 m</text>
+<rect x="1130" y="381" width="79.1" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="1169.5" y="392.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">HAZ-INT-001</text>
+<line x1="40" y1="428" x2="1200" y2="428" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="442" width="14" height="12" rx="3" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1.2"/>
+<text x="62" y="452" font-size="11" fill="#475569">Outcome clear</text>
+<rect x="146.7" y="442" width="14" height="12" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="168.7" y="452" font-size="11" fill="#475569">Needs review</text>
+<rect x="249.5" y="442" width="14" height="12" rx="3" fill="#FEF2F2" stroke="#D2553F" stroke-width="1.2"/>
+<text x="271.5" y="452" font-size="11" fill="#475569">Unsafe outcome, or a value past its rule (red figure)</text>
+<text x="40" y="474" font-size="10.5" fill="#94A3B8">Generated by tools/figures/uav_readme.py from scenarios.yaml, spec.yaml and the committed PX4 SITL results. Synthetic: a design aid with no evidence credit (sim/README.md, evidence gate). To pilot (low): closest approach</text>
+<text x="40" y="489" font-size="10.5" fill="#94A3B8">below the keep-out altitude; nav error: largest error of PX4's reported position.</text>
+<g class="terms" data-base-h="518">
+<rect x="0" y="518" width="1240" height="69.1" fill="#FFFFFF"/>
+<line x1="40" y1="522" x2="1200" y2="522" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="537.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: GCS = ground control station · GPS = Global Positioning System · HAZ-nnn = hazard record (safety/hazards/HAZ-xxx-nnn.yaml) · PX4 = PX4 Autopilot, the open-source flight-control software candidate for</text>
+<text x="40" y="552.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">SUS-A1 · SIH = simulation-in-hardware, PX4's built-in headless simulator · SITL = software-in-the-loop simulation · SU-nnn = UAV PX4 SITL scenario · SUS-A1 = dockable observation UAV · UAV = uncrewed aerial</text>
+<text x="40" y="566.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">vehicle (drone)</text>
+</g>
+</svg>

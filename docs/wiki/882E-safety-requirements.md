@@ -45,7 +45,7 @@ All terms: [abbreviations and record codes](https://github.com/jherrodthomas/Pro
 ## Purpose
 
 Safety requirements derived from SRHA, SHA, O&SHA, HHA and EHA, each allocated to a system element and
-assigned a verification method. The records live in [`requirements/`](https://github.com/jherrodthomas/Project-Susanoo/tree/main/requirements); derived
+assigned a verification method. The records live in [`requirements/`](Requirements-Register.md); derived
 requirements name their parent in `derived_from`. Released requirements need a verification
 disposition (traceability rule 2).
 

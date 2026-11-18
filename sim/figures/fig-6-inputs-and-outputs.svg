@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1042.4" height="565.1" viewBox="0 0 1042.4 565.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 6 · Inputs and outputs</title>
+<desc>What the simulation track consumes (left) and what reads its results (right).</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1042.4" height="496" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 6 · Inputs and outputs</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">What the simulation track consumes (left) and what reads its results (right).</text>
+<text x="1002.4" y="44" font-size="11" fill="#475569" text-anchor="end">sim/README.md</text>
+<line x1="40" y1="85" x2="1002.4" y2="85" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 109)">
+<path d="M205.6 33 L374.7 33 Q381.7 33 381.7 40 L381.7 94 Q381.7 101 388.7 101 L423.7 101" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M205.6 113 L423.7 113" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M205.6 193 L374.7 193 Q381.7 193 381.7 186 L381.7 132 Q381.7 125 388.7 125 L423.7 125" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M205.6 273 L386.7 273 Q393.7 273 393.7 266 L393.7 144 Q393.7 137 400.7 137 L423.7 137" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M559.7 101 L574.7 101 Q581.7 101 581.7 94 L581.7 40 Q581.7 33 588.7 33 L797.6 33" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M559.7 113 L797.6 113" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M559.7 125 L586.7 125 Q593.7 125 593.7 132 L593.7 186 Q593.7 193 600.7 193 L797.6 193" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M559.7 137 L574.7 137 Q581.7 137 581.7 144 L581.7 266 Q581.7 273 588.7 273 L797.6 273" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="69.6" y="6" width="136" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="81.6" y="30" font-size="12.5" fill="#0F172A" font-weight="700">Hazard records</text>
+<text x="81.6" y="47" font-size="10.5" fill="#475569">causal factors</text>
+<rect x="6" y="86" width="199.6" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="18" y="110" font-size="12.5" fill="#0F172A" font-weight="700">CONOPS and item definition</text>
+<text x="18" y="127" font-size="10.5" fill="#475569">modes, elements</text>
+<rect x="69.6" y="166" width="136" height="54" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="1.3"/>
+<text x="81.6" y="190" font-size="12.5" fill="#0F172A" font-weight="700">PX4 v1.16.2</text>
+<text x="81.6" y="207" font-size="10.5" fill="#475569">upstream autopilot</text>
+<rect x="69.6" y="246" width="136" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="81.6" y="270" font-size="12.5" fill="#0F172A" font-weight="700">Decision register</text>
+<text x="81.6" y="287" font-size="10.5" fill="#475569">slope, CoM, torques</text>
+<rect x="423.7" y="89" width="136" height="60" rx="8" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
+<rect x="435.7" y="101" width="31.2" height="16" rx="8.0" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<text x="451.3" y="112.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">sim/</text>
+<text x="435.7" y="135" font-size="12.5" fill="#FFFFFF" font-weight="700">Simulation track</text>
+<rect x="797.6" y="6" width="136" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="809.6" y="30" font-size="12.5" fill="#0F172A" font-weight="700">Trade studies</text>
+<text x="809.6" y="47" font-size="10.5" fill="#475569">TS-001 evidence</text>
+<rect x="797.6" y="86" width="136" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="809.6" y="110" font-size="12.5" fill="#0F172A" font-weight="700">Requirements</text>
+<text x="809.6" y="127" font-size="10.5" fill="#475569">SYS-016 draft sizing</text>
+<rect x="797.6" y="166" width="158.8" height="54" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<text x="809.6" y="190" font-size="12.5" fill="#0F172A" font-weight="700">Simulation wiki pages</text>
+<text x="809.6" y="207" font-size="10.5" fill="#475569">2D and 3D scenes</text>
+<rect x="797.6" y="246" width="136" height="54" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<text x="809.6" y="270" font-size="12.5" fill="#0F172A" font-weight="700">Safety lead</text>
+<text x="809.6" y="287" font-size="10.5" fill="#475569">findings for review</text>
+<rect x="268.8" y="38" width="91.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="273.8" y="51" font-size="10.5" fill="#475569">faults to realise</text>
+<rect x="267.6" y="118" width="94.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="272.6" y="131" font-size="10.5" fill="#475569">modes, elements</text>
+<rect x="293" y="198" width="43.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="298" y="211" font-size="10.5" fill="#475569">SITL</text>
+<rect x="281" y="278" width="67.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="286" y="291" font-size="10.5" fill="#475569">parameters</text>
+<rect x="621.7" y="38" width="113.9" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="626.7" y="51" font-size="10.5" fill="#475569">evidence (synthetic)</text>
+<rect x="642.4" y="118" width="72.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="647.4" y="131" font-size="10.5" fill="#475569">draft values</text>
+<rect x="654.4" y="198" width="48.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="659.4" y="211" font-size="10.5" fill="#475569">scenes</text>
+<rect x="652.4" y="278" width="52.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="657.4" y="291" font-size="10.5" fill="#475569">findings</text>
+</g>
+<rect x="40" y="435" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="62" y="445" font-size="11" fill="#475569">Work product</text>
+<rect x="139.9" y="435" width="14" height="12" rx="3" fill="#F1F5F9" stroke="#64748B" stroke-width="1.2"/>
+<text x="161.9" y="445" font-size="11" fill="#475569">External entity</text>
+<rect x="249.9" y="435" width="14" height="12" rx="3" fill="#0F172A" stroke="#0F172A" stroke-width="1.2"/>
+<text x="271.9" y="445" font-size="11" fill="#475569">This folder</text>
+<rect x="339.9" y="435" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="361.9" y="445" font-size="11" fill="#475569">Human review</text>
+<text x="40" y="467" font-size="10.5" fill="#94A3B8">Generated by tools/figures/sim_readme.py from sim/ inputs and committed results. Synthetic simulation output: a design aid with no evidence credit (evidence gate below).</text>
+<g class="terms" data-base-h="496">
+<rect x="0" y="496" width="1042.4" height="69.1" fill="#FFFFFF"/>
+<line x1="40" y1="500" x2="1002.4" y2="500" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="515.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: 1A–4F = risk assessment code, severity 1–4 plus probability A–F (e.g. 1C) · 3D = three-dimensional · CoM = centre of mass · CONOPS = concept of operations · F-nnn =</text>
+<text x="40" y="530.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">system function in the item definition · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SITL = software-in-the-loop simulation · SUS-A1 =</text>
+<text x="40" y="544.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">dockable observation UAV · SYS-nnn = system safety requirement record (requirements/SYS-nnn.yaml) · TS-nnn = architecture trade study · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

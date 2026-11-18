@@ -1,0 +1,420 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1155.6" viewBox="0 0 1120 1155.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · Requirement register</title>
+<desc>Status, allocation, verification methods and disposition of every requirement record</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1120" height="1043" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · Requirement register</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">24 system safety requirements, 24 candidate. A filled dot is a planned verification method; the disposition says whether evidence has closed it (24</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">open).</text>
+<text x="1080" y="44" font-size="11" fill="#475569" text-anchor="end">requirements/SYS-*.yaml</text>
+<line x1="40" y1="102" x2="1080" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="132" font-size="10.5" fill="#475569" font-weight="700">ID</text>
+<text x="118" y="132" font-size="10.5" fill="#475569" font-weight="700">Title</text>
+<text x="376" y="132" font-size="10.5" fill="#475569" font-weight="700">Allocated to</text>
+<text x="616" y="132" font-size="10.5" fill="#475569" font-weight="700" text-anchor="middle">Test</text>
+<text x="708" y="132" font-size="10.5" fill="#475569" font-weight="700" text-anchor="middle">Analysis</text>
+<text x="800" y="132" font-size="10.5" fill="#475569" font-weight="700" text-anchor="middle">Inspection</text>
+<text x="892" y="132" font-size="10.5" fill="#475569" font-weight="700" text-anchor="middle">Demonstration</text>
+<text x="946" y="132" font-size="10.5" fill="#475569" font-weight="700">Disposition</text>
+<text x="1030" y="132" font-size="10.5" fill="#475569" font-weight="700">Status</text>
+<line x1="40" y1="144" x2="1080" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="153" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="164.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-001</text>
+<text x="118" y="165" font-size="12" fill="#0F172A" font-weight="700">Pilot-readiness actuation interlock</text>
+<rect x="376" y="153" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="413.4" y="164.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<rect x="456.8" y="153" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="494.2" y="164.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<circle cx="616" cy="161" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="161" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="800" cy="161" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="161" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<rect x="946" y="153" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="164.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="153" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="164.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="179" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="187" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="198.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-002</text>
+<text x="118" y="199" font-size="12" fill="#0F172A" font-weight="700">Operator protective stop</text>
+<rect x="376" y="187" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="413.4" y="198.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<circle cx="616" cy="195" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="195" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="195" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="195" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="187" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="198.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="187" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="198.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="221" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="232.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-003</text>
+<text x="118" y="233" font-size="12" fill="#0F172A" font-weight="700">Docked rotor inhibit</text>
+<rect x="376" y="221" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="413.4" y="232.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<rect x="456.8" y="221" width="49.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="481.7" y="232.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-A1</text>
+<circle cx="616" cy="229" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="229" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="800" cy="229" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="892" cy="229" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="221" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="232.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="221" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="232.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="247" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="255" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="266.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-004</text>
+<text x="118" y="267" font-size="12" fill="#0F172A" font-weight="700">Feedback fault detection</text>
+<rect x="376" y="255" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="413.4" y="266.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<rect x="456.8" y="255" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="494.2" y="266.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<circle cx="616" cy="263" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="263" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="263" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="263" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="255" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="266.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="255" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="266.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="289" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="300.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-005</text>
+<text x="118" y="301" font-size="12" fill="#0F172A" font-weight="700">Positive docking retention state</text>
+<rect x="376" y="289" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="413.4" y="300.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<circle cx="616" cy="297" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="297" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="800" cy="297" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="892" cy="297" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="289" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="300.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="289" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="300.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="315" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="323" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="334.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-006</text>
+<text x="118" y="335" font-size="12" fill="#0F172A" font-weight="700">Launch and recovery envelope inhibit</text>
+<rect x="376" y="323" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="413.4" y="334.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<rect x="456.8" y="323" width="49.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="481.7" y="334.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-A1</text>
+<circle cx="616" cy="331" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="331" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="331" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="331" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="323" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="334.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="323" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="334.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="357" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="368.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-007</text>
+<text x="118" y="369" font-size="12" fill="#0F172A" font-weight="700">Stored hydraulic energy isolation</text>
+<rect x="376" y="357" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="413.4" y="368.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PWR</text>
+<rect x="456.8" y="357" width="58.4" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="486" y="368.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-GSE</text>
+<circle cx="616" cy="365" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="708" cy="365" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="800" cy="365" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="892" cy="365" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<rect x="946" y="357" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="368.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="357" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="368.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="383" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="391" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="402.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-008</text>
+<text x="118" y="403" font-size="12" fill="#0F172A" font-weight="700">Stability envelope protection</text>
+<rect x="376" y="391" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="413.4" y="402.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<rect x="456.8" y="391" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="494.2" y="402.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<circle cx="616" cy="399" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="399" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="399" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="399" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="391" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="402.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="391" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="402.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="425" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="436.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-009</text>
+<text x="118" y="437" font-size="12" fill="#0F172A" font-weight="700">Fail-safe load holding</text>
+<rect x="376" y="425" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="413.4" y="436.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<rect x="456.8" y="425" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="494.2" y="436.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PWR</text>
+<circle cx="616" cy="433" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="433" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="433" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="433" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="425" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="436.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="425" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="436.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="451" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="459" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="470.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-010</text>
+<text x="118" y="466" font-size="12" fill="#0F172A" font-weight="700">Protective stop independence</text>
+<text x="118" y="480" font-size="10" fill="#7C3AED">derived from SYS-002</text>
+<rect x="376" y="459" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="413.4" y="470.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<circle cx="616" cy="467" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="467" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="467" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="467" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="459" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="470.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="459" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="470.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="493" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="504.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-011</text>
+<text x="118" y="500" font-size="12" fill="#0F172A" font-weight="700">Protective stop reaction time</text>
+<text x="118" y="514" font-size="10" fill="#7C3AED">derived from SYS-002</text>
+<rect x="376" y="493" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="413.4" y="504.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<circle cx="616" cy="501" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="501" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="800" cy="501" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="501" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="493" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="504.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="493" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="504.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="519" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="527" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="538.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-012</text>
+<text x="118" y="534" font-size="12" fill="#0F172A" font-weight="700">Rotor arming requires confirmed release</text>
+<text x="118" y="548" font-size="10" fill="#7C3AED">derived from SYS-003</text>
+<rect x="376" y="527" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="413.4" y="538.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<rect x="456.8" y="527" width="74.8" height="16" rx="8.0" fill="#F0FDFA" stroke="#0F766E" stroke-width="1"/>
+<text x="494.2" y="538.4" font-size="9.5" fill="#0F766E" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
+<circle cx="616" cy="535" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="535" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="800" cy="535" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="535" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="527" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="538.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="527" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="538.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="561" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="572.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-013</text>
+<text x="118" y="568" font-size="11.5" fill="#0F172A" font-weight="700">UAV link-loss contingency lands clear of</text>
+<text x="118" y="582" font-size="11.5" fill="#0F172A" font-weight="700">the walker</text>
+<rect x="376" y="561" width="49.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="400.9" y="572.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-A1</text>
+<rect x="431.8" y="561" width="74.8" height="16" rx="8.0" fill="#F0FDFA" stroke="#0F766E" stroke-width="1"/>
+<text x="469.2" y="572.4" font-size="9.5" fill="#0F766E" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
+<circle cx="616" cy="569" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="569" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="569" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="569" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="561" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="572.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="561" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="572.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="587" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="595" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="606.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-014</text>
+<text x="118" y="607" font-size="12" fill="#0F172A" font-weight="700">Independent traction battery isolation</text>
+<rect x="376" y="595" width="99.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="425.9" y="606.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PWR-BAT</text>
+<rect x="481.8" y="595" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="519.2" y="606.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<circle cx="616" cy="603" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="603" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="603" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="603" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="595" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="606.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="595" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="606.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="629" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="640.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-015</text>
+<text x="118" y="641" font-size="12" fill="#0F172A" font-weight="700">Fuel shut-off on protective stop</text>
+<rect x="376" y="629" width="99.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="425.9" y="640.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PWR-GEN</text>
+<rect x="481.8" y="629" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="519.2" y="640.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<circle cx="616" cy="637" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="637" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="800" cy="637" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="637" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="629" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="640.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="629" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="640.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="655" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="663" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="674.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-016</text>
+<text x="118" y="670" font-size="11.5" fill="#0F172A" font-weight="700">Actuator torque reserve against supply</text>
+<text x="118" y="684" font-size="11.5" fill="#0F172A" font-weight="700">loss</text>
+<rect x="376" y="663" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="413.4" y="674.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<circle cx="616" cy="671" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="671" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="671" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="671" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="663" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="674.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="663" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="674.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="697" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="708.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-017</text>
+<text x="118" y="709" font-size="12" fill="#0F172A" font-weight="700">Arm stow interlock for walking</text>
+<rect x="376" y="688.5" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="413.4" y="699.9" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-MAN</text>
+<rect x="456.8" y="688.5" width="74.8" height="16" rx="8.0" fill="#F0FDFA" stroke="#0F766E" stroke-width="1"/>
+<text x="494.2" y="699.9" font-size="9.5" fill="#0F766E" font-weight="700" text-anchor="middle">SUS-M1-CTL</text>
+<rect x="376" y="705.5" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="413.4" y="716.9" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<circle cx="616" cy="705" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="705" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="705" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="705" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="697" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="708.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="697" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="708.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="723" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="731" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="742.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-018</text>
+<text x="118" y="738" font-size="11.5" fill="#0F172A" font-weight="700">Controlled lowered posture for ingress</text>
+<text x="118" y="752" font-size="11.5" fill="#0F172A" font-weight="700">and egress</text>
+<rect x="376" y="722.5" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="413.4" y="733.9" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<rect x="456.8" y="722.5" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="494.2" y="733.9" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<rect x="376" y="739.5" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="413.4" y="750.9" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<circle cx="616" cy="739" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="739" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="739" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="739" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<rect x="946" y="731" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="742.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="731" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="742.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="765" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="776.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-019</text>
+<text x="118" y="777" font-size="12" fill="#0F172A" font-weight="700">Loaded walking limits</text>
+<rect x="376" y="756.5" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="413.4" y="767.9" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-MAN</text>
+<rect x="456.8" y="756.5" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="494.2" y="767.9" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<rect x="376" y="773.5" width="74.8" height="16" rx="8.0" fill="#F0FDFA" stroke="#0F766E" stroke-width="1"/>
+<text x="413.4" y="784.9" font-size="9.5" fill="#0F766E" font-weight="700" text-anchor="middle">SUS-M1-CTL</text>
+<rect x="456.8" y="773.5" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="494.2" y="784.9" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<circle cx="616" cy="773" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="773" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="773" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="773" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="765" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="776.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="765" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="776.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="791" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="799" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="810.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-020</text>
+<text x="118" y="806" font-size="11.5" fill="#0F172A" font-weight="700">Emergency egress without power or</text>
+<text x="118" y="820" font-size="11.5" fill="#0F172A" font-weight="700">kneeling</text>
+<rect x="376" y="799" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="413.4" y="810.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<rect x="456.8" y="799" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="494.2" y="810.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<circle cx="616" cy="807" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="708" cy="807" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="807" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="807" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<rect x="946" y="799" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="810.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="799" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="810.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="833" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="844.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-021</text>
+<text x="118" y="840" font-size="11.5" fill="#0F172A" font-weight="700">UAV data validity and staleness</text>
+<text x="118" y="854" font-size="11.5" fill="#0F172A" font-weight="700">annunciation</text>
+<rect x="376" y="833" width="74.8" height="16" rx="8.0" fill="#F0FDFA" stroke="#0F766E" stroke-width="1"/>
+<text x="413.4" y="844.4" font-size="9.5" fill="#0F766E" font-weight="700" text-anchor="middle">SUS-I1-INT</text>
+<rect x="456.8" y="833" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="494.2" y="844.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<circle cx="616" cy="841" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="841" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="841" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="841" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="833" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="844.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="833" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="844.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="859" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="867" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="878.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-022</text>
+<text x="118" y="879" font-size="12" fill="#0F172A" font-weight="700">Dock charging protection and isolation</text>
+<rect x="376" y="867" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="413.4" y="878.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-DCK</text>
+<rect x="456.8" y="867" width="49.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="481.7" y="878.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-A1</text>
+<circle cx="616" cy="875" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="708" cy="875" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="800" cy="875" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="892" cy="875" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<rect x="946" y="867" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="878.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="867" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="878.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="901" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="912.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-023</text>
+<text x="118" y="913" font-size="12" fill="#0F172A" font-weight="700">Maintenance access at height</text>
+<rect x="376" y="901" width="58.4" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="405.2" y="912.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-GSE</text>
+<rect x="440.4" y="901" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="477.8" y="912.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-WLK</text>
+<circle cx="616" cy="909" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="708" cy="909" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="909" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="892" cy="909" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<rect x="946" y="901" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="912.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="901" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="912.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<rect x="40" y="927" width="1040" height="32" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<rect x="40" y="935" width="54.1" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="67" y="946.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">SYS-024</text>
+<text x="118" y="942" font-size="11.5" fill="#0F172A" font-weight="700">External extraction of an incapacitated</text>
+<text x="118" y="956" font-size="11.5" fill="#0F172A" font-weight="700">pilot</text>
+<rect x="376" y="935" width="74.8" height="16" rx="8.0" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1"/>
+<text x="413.4" y="946.4" font-size="9.5" fill="#4F46E5" font-weight="700" text-anchor="middle">SUS-M1-PIL</text>
+<rect x="456.8" y="935" width="74.8" height="16" rx="8.0" fill="#FFF7ED" stroke="#C2410C" stroke-width="1"/>
+<text x="494.2" y="946.4" font-size="9.5" fill="#C2410C" font-weight="700" text-anchor="middle">SUS-M1-SAF</text>
+<circle cx="616" cy="943" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="708" cy="943" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<circle cx="800" cy="943" r="6.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.4"/>
+<circle cx="892" cy="943" r="6.5" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.4"/>
+<rect x="946" y="935" width="34.4" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="963.2" y="946.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">open</text>
+<rect x="1030" y="935" width="57.6" height="16" rx="8.0" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1058.8" y="946.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">candidate</text>
+<line x1="40" y1="968" x2="1080" y2="968" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="982" width="14" height="12" rx="3" fill="#C2410C" stroke="none" stroke-width="1.2"/>
+<text x="62" y="992" font-size="11" fill="#475569">Safety-significant requirement</text>
+<rect x="228.1" y="982" width="14" height="12" rx="3" fill="#4F46E5" stroke="#4F46E5" stroke-width="1.2"/>
+<text x="250.1" y="992" font-size="11" fill="#475569">Planned verification method</text>
+<rect x="404.3" y="982" width="14" height="12" rx="3" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2"/>
+<text x="426.3" y="992" font-size="11" fill="#475569">Verification open (no evidence)</text>
+<rect x="598.9" y="982" width="14" height="12" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2"/>
+<text x="620.9" y="992" font-size="11" fill="#475569">Derived requirement (text)</text>
+<text x="40" y="1014" font-size="10.5" fill="#94A3B8">Generated by tools/figures/requirements_readme.py from requirements/SYS-*.yaml, safety/hazards/ and architecture/item-definition.yaml. Candidate requirements: not baselined, verified or accepted.</text>
+<g class="terms" data-base-h="1043">
+<rect x="0" y="1043" width="1120" height="112.6" fill="#FFFFFF"/>
+<line x1="40" y1="1047" x2="1080" y2="1047" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="1062.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: BMS = battery management system · ID = identifier · PX4 = PX4 Autopilot, the open-source flight-control software candidate for SUS-A1 · SUS-A1 = dockable observation UAV · SUS-GSE =</text>
+<text x="40" y="1077.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">ground support, maintenance supports, charging and test equipment · SUS-I1-INT = integration manager and PX4 command adapter · SUS-M1-CTL = mission, motion and balance control · SUS-M1-DCK =</text>
+<text x="40" y="1091.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">UAV dock, retention, charging and release · SUS-M1-MAN = manipulation arms and end effectors · SUS-M1-PIL = pilot station, restraints, displays and controls · SUS-M1-PWR = power generation,</text>
+<text x="40" y="1106.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">storage, distribution and thermal control · SUS-M1-PWR-BAT = battery pack, BMS and contactors (alternative B) · SUS-M1-PWR-GEN = engine-generator and governor (alternative B) · SUS-M1-SAF =</text>
+<text x="40" y="1120.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">independent safety monitor, protective stop and isolation · SUS-M1-WLK = chassis, legs, joint actuators and stability sensing · SYS-nnn = system safety requirement record</text>
+<text x="40" y="1135.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">(requirements/SYS-nnn.yaml) · UAV = uncrewed aerial vehicle (drone)</text>
+</g>
+</svg>

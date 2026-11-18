@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="817.1" viewBox="0 0 1240 817.1" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 1 · The system-level V, block by block</title>
+<desc>Every block of the system-level V with its records and their maturity</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1240" height="748" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 1 · The system-level V, block by block</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The 11 blocks of the SUS-I1 V as the page computes them: the side, the gate each block is due by, the records in it and how mature they are. A block takes the colour</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">of its least mature record.</text>
+<text x="1200" y="44" font-size="11" fill="#475569" text-anchor="end">tools/vcycle/build_vcycle.py</text>
+<line x1="40" y1="102" x2="1200" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="132" font-size="10.5" fill="#475569" font-weight="700">Block</text>
+<text x="290" y="132" font-size="10.5" fill="#475569" font-weight="700">Side</text>
+<text x="420" y="132" font-size="10.5" fill="#475569" font-weight="700">Due by</text>
+<text x="490" y="132" font-size="10.5" fill="#475569" font-weight="700">Records</text>
+<text x="680" y="132" font-size="10.5" fill="#475569" font-weight="700">Maturity of its records</text>
+<text x="1040" y="132" font-size="10.5" fill="#475569" font-weight="700">Lowest rung</text>
+<line x1="40" y1="144" x2="1200" y2="144" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="164" font-size="11" fill="#0F172A" font-weight="700">Stakeholder needs &amp; hazards</text>
+<text x="40" y="179" font-size="9.5" fill="#475569">What must not go wrong</text>
+<rect x="290" y="159" width="40.9" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="310.4" y="170.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">define</text>
+<text x="420" y="171" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">G0</text>
+<text x="490" y="164" font-size="11" fill="#0F172A" font-weight="700">22</text>
+<text x="490" y="179" font-size="9" fill="#475569">hazards</text>
+<rect x="680" y="159" width="340" height="16" rx="2" fill="#ffffff" stroke="#94A3B8" stroke-width="0.6"/>
+<text x="850" y="171" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">22</text>
+<rect x="1040" y="159" width="14" height="14" rx="3" fill="#ffffff" stroke="#94A3B8" stroke-width="0.8"/>
+<text x="1062" y="170" font-size="10.5" fill="#0F172A">Draft</text>
+<rect x="40" y="191" width="1160" height="44" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="210" font-size="11" fill="#0F172A" font-weight="700">System requirements</text>
+<text x="40" y="225" font-size="9.5" fill="#475569">What the system shall do</text>
+<rect x="290" y="205" width="40.9" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="310.4" y="216.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">define</text>
+<text x="420" y="217" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">G1</text>
+<text x="490" y="210" font-size="11" fill="#0F172A" font-weight="700">24</text>
+<text x="490" y="225" font-size="9" fill="#475569">requirements</text>
+<rect x="680" y="205" width="340" height="16" rx="2" fill="#ffffff" stroke="#94A3B8" stroke-width="0.6"/>
+<text x="850" y="217" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">24</text>
+<rect x="1040" y="205" width="14" height="14" rx="3" fill="#ffffff" stroke="#94A3B8" stroke-width="0.8"/>
+<text x="1062" y="216" font-size="10.5" fill="#0F172A">Draft</text>
+<text x="40" y="256" font-size="11" fill="#0F172A" font-weight="700">Architecture</text>
+<text x="40" y="271" font-size="9.5" fill="#475569">Item definition and trade studies</text>
+<rect x="290" y="251" width="40.9" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="310.4" y="262.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">define</text>
+<text x="420" y="263" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">G2</text>
+<text x="490" y="256" font-size="11" fill="#0F172A" font-weight="700">5</text>
+<text x="490" y="271" font-size="9" fill="#475569">trade studies and top-level elements</text>
+<rect x="680" y="251" width="340" height="16" rx="2" fill="#ffffff" stroke="#94A3B8" stroke-width="0.6"/>
+<text x="850" y="263" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">5</text>
+<rect x="1040" y="251" width="14" height="14" rx="3" fill="#ffffff" stroke="#94A3B8" stroke-width="0.8"/>
+<text x="1062" y="262" font-size="10.5" fill="#0F172A">Draft</text>
+<rect x="40" y="283" width="1160" height="44" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="302" font-size="11" fill="#0F172A" font-weight="700">Subsystem requirements</text>
+<text x="40" y="317" font-size="9.5" fill="#475569">Derived at the next level</text>
+<rect x="290" y="297" width="40.9" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="310.4" y="308.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">define</text>
+<text x="420" y="309" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">G2</text>
+<text x="490" y="302" font-size="11" fill="#0F172A" font-weight="700">4</text>
+<text x="490" y="317" font-size="9" fill="#475569">top-level elements, SUS-M1 23, SUS-A1 …</text>
+<rect x="680" y="297" width="340" height="16" rx="2" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.6"/>
+<text x="850" y="309" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">4</text>
+<rect x="1040" y="297" width="14" height="14" rx="3" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.8"/>
+<text x="1062" y="308" font-size="10.5" fill="#0F172A">Not started</text>
+<text x="40" y="348" font-size="11" fill="#0F172A" font-weight="700">Detailed design</text>
+<text x="40" y="363" font-size="9.5" fill="#475569">Component and software design</text>
+<rect x="290" y="343" width="40.9" height="16" rx="8.0" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1"/>
+<text x="310.4" y="354.4" font-size="9.5" fill="#7C3AED" font-weight="700" text-anchor="middle">define</text>
+<text x="420" y="355" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">G3</text>
+<text x="490" y="348" font-size="11" fill="#0F172A" font-weight="700">8</text>
+<text x="490" y="363" font-size="9" fill="#475569">SSF design analyses</text>
+<rect x="680" y="343" width="340" height="16" rx="2" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.6"/>
+<text x="850" y="355" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">8</text>
+<rect x="1040" y="343" width="14" height="14" rx="3" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.8"/>
+<text x="1062" y="354" font-size="10.5" fill="#0F172A">Not started</text>
+<rect x="40" y="375" width="1160" height="44" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="394" font-size="11" fill="#0F172A" font-weight="700">Implementation</text>
+<text x="40" y="409" font-size="9.5" fill="#475569">Build, code, configure</text>
+<rect x="290" y="389" width="34.5" height="16" rx="8.0" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+<text x="307.2" y="400.4" font-size="9.5" fill="#D97706" font-weight="700" text-anchor="middle">build</text>
+<text x="420" y="401" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">G4</text>
+<text x="490" y="394" font-size="11" fill="#0F172A" font-weight="700">11</text>
+<text x="490" y="409" font-size="9" fill="#475569">SSF software items</text>
+<rect x="680" y="389" width="278.2" height="16" rx="2" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.6"/>
+<text x="819.1" y="401" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">9</text>
+<rect x="958.2" y="389" width="61.8" height="16" rx="2" fill="#ffffff" stroke="#94A3B8" stroke-width="0.6"/>
+<text x="989.1" y="401" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<rect x="1040" y="389" width="14" height="14" rx="3" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.8"/>
+<text x="1062" y="400" font-size="10.5" fill="#0F172A">Not started</text>
+<text x="40" y="440" font-size="11" fill="#0F172A" font-weight="700">Unit test</text>
+<text x="40" y="455" font-size="9.5" fill="#475569">Software code analysis</text>
+<rect x="290" y="435" width="38" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="309" y="446.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">prove</text>
+<text x="420" y="447" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">G4</text>
+<text x="490" y="440" font-size="11" fill="#0F172A" font-weight="700">8</text>
+<text x="490" y="455" font-size="9" fill="#475569">SSF code analyses</text>
+<rect x="680" y="435" width="340" height="16" rx="2" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.6"/>
+<text x="850" y="447" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">8</text>
+<rect x="1040" y="435" width="14" height="14" rx="3" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.8"/>
+<text x="1062" y="446" font-size="10.5" fill="#0F172A">Not started</text>
+<rect x="40" y="467" width="1160" height="44" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="486" font-size="11" fill="#0F172A" font-weight="700">Subsystem verification</text>
+<text x="40" y="501" font-size="9.5" fill="#475569">Safety-specific testing</text>
+<rect x="290" y="481" width="38" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="309" y="492.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">prove</text>
+<text x="420" y="493" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">G5</text>
+<text x="490" y="486" font-size="11" fill="#0F172A" font-weight="700">8</text>
+<text x="490" y="501" font-size="9" fill="#475569">SSF safety-specific testing</text>
+<rect x="680" y="481" width="340" height="16" rx="2" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.6"/>
+<text x="850" y="493" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">8</text>
+<rect x="1040" y="481" width="14" height="14" rx="3" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.8"/>
+<text x="1062" y="492" font-size="10.5" fill="#0F172A">Not started</text>
+<text x="40" y="532" font-size="11" fill="#0F172A" font-weight="700">Integration test</text>
+<text x="40" y="547" font-size="9.5" fill="#475569">Interfaces and integrated events</text>
+<rect x="290" y="527" width="38" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="309" y="538.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">prove</text>
+<text x="420" y="539" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">G5</text>
+<text x="490" y="532" font-size="11" fill="#0F172A" font-weight="700">2</text>
+<text x="490" y="547" font-size="9" fill="#475569">events</text>
+<rect x="680" y="527" width="340" height="16" rx="2" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.6"/>
+<text x="850" y="539" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<rect x="1040" y="527" width="14" height="14" rx="3" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.8"/>
+<text x="1062" y="538" font-size="10.5" fill="#0F172A">Not started</text>
+<rect x="40" y="559" width="1160" height="44" rx="6" fill="#F1F5F9" stroke="none" stroke-width="0"/>
+<text x="40" y="578" font-size="11" fill="#0F172A" font-weight="700">System verification</text>
+<text x="40" y="593" font-size="9.5" fill="#475569">Requirement met, with evidence</text>
+<rect x="290" y="573" width="38" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="309" y="584.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">prove</text>
+<text x="420" y="585" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">G5</text>
+<text x="490" y="578" font-size="11" fill="#0F172A" font-weight="700">24</text>
+<text x="490" y="593" font-size="9" fill="#475569">requirements, 2 with evidence</text>
+<rect x="680" y="573" width="311.7" height="16" rx="2" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.6"/>
+<text x="835.8" y="585" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">22</text>
+<rect x="991.7" y="573" width="28.3" height="16" rx="2" fill="#86b6ea" stroke="#94A3B8" stroke-width="0.6"/>
+<text x="1005.8" y="585" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">2</text>
+<rect x="1040" y="573" width="14" height="14" rx="3" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.8"/>
+<text x="1062" y="584" font-size="10.5" fill="#0F172A">Not started</text>
+<text x="40" y="624" font-size="11" fill="#0F172A" font-weight="700">Operational validation</text>
+<text x="40" y="639" font-size="9.5" fill="#475569">Right system for the CONOPS</text>
+<rect x="290" y="619" width="38" height="16" rx="8.0" fill="#ECFDF5" stroke="#2E9E6A" stroke-width="1"/>
+<text x="309" y="630.4" font-size="9.5" fill="#2E9E6A" font-weight="700" text-anchor="middle">prove</text>
+<text x="420" y="631" font-size="11" fill="#0F172A" font-weight="700" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">G6</text>
+<text x="490" y="624" font-size="11" fill="#0F172A" font-weight="700">14</text>
+<text x="490" y="639" font-size="9" fill="#475569">CONOPS scenarios</text>
+<rect x="680" y="619" width="340" height="16" rx="2" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.6"/>
+<text x="850" y="631" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">14</text>
+<rect x="1040" y="619" width="14" height="14" rx="3" fill="#eef1f5" stroke="#94A3B8" stroke-width="0.8"/>
+<text x="1062" y="630" font-size="10.5" fill="#0F172A">Not started</text>
+<line x1="40" y1="658" x2="1200" y2="658" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="40" y="672" width="14" height="12" rx="3" fill="#eef1f5" stroke="#94A3B8" stroke-width="1.2"/>
+<text x="62" y="682" font-size="11" fill="#475569">Not started</text>
+<rect x="131.8" y="672" width="14" height="12" rx="3" fill="#ffffff" stroke="#94A3B8" stroke-width="1.2"/>
+<text x="153.8" y="682" font-size="11" fill="#475569">Draft</text>
+<rect x="191.4" y="672" width="14" height="12" rx="3" fill="#86b6ea" stroke="#94A3B8" stroke-width="1.2"/>
+<text x="213.4" y="682" font-size="11" fill="#475569">Reviewed</text>
+<rect x="274.1" y="672" width="14" height="12" rx="3" fill="#2a55a8" stroke="#94A3B8" stroke-width="1.2"/>
+<text x="296.1" y="682" font-size="11" fill="#475569">Baselined</text>
+<rect x="358.3" y="672" width="14" height="12" rx="3" fill="#8a5cd1" stroke="#94A3B8" stroke-width="1.2"/>
+<text x="380.3" y="682" font-size="11" fill="#475569">Implemented</text>
+<rect x="458.7" y="672" width="14" height="12" rx="3" fill="#e8833a" stroke="#94A3B8" stroke-width="1.2"/>
+<text x="480.7" y="682" font-size="11" fill="#475569">Verified</text>
+<rect x="532.6" y="672" width="14" height="12" rx="3" fill="#47a866" stroke="#94A3B8" stroke-width="1.2"/>
+<text x="554.6" y="682" font-size="11" fill="#475569">Validated</text>
+<text x="40" y="704" font-size="10.5" fill="#94A3B8">Generated by tools/figures/vcycle_readme.py from the records through tools/vcycle/build_vcycle.py and the rules in page.html. Maturity is computed from record status for orientation only; nothing here is reviewed, verified or</text>
+<text x="40" y="719" font-size="10.5" fill="#94A3B8">accepted (rule R13).</text>
+<g class="terms" data-base-h="748">
+<rect x="0" y="748" width="1240" height="69.1" fill="#FFFFFF"/>
+<line x1="40" y1="752" x2="1200" y2="752" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="767.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: CONOPS = concept of operations · G0–G7 = lifecycle gate (G0 concept to G7 change and sustainment) · R01 … = validator rule in tools/pdac (R13 = only a named human review accepts anything) · SSF-nnn =</text>
+<text x="40" y="782.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">safety-significant software function record (safety/software/) · SUS-A1 = dockable observation UAV · SUS-I1 = integrated mechanized walker and observation UAV · SUS-M1 = piloted walker · UAV = uncrewed aerial</text>
+<text x="40" y="796.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">vehicle (drone)</text>
+</g>
+</svg>

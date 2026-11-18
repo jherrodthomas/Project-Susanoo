@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1065.4" height="888.6" viewBox="0 0 1065.4 888.6" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" role="img">
+<title>Figure 2 · How the safety records fit together</title>
+<desc>The hazard record is the hub: causes link to software functions, mitigations to requirements, events add event risk, and only a review accepts. Today's counts.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" stroke-width="2"/></pattern><marker id="arr-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-ink" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-ink" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-system" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker><marker id="dia-system" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#4F46E5"/></marker><marker id="tri-system" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.2"/></marker><marker id="arr-software" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker><marker id="dia-software" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F766E"/></marker><marker id="tri-software" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.2"/></marker><marker id="arr-safety" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker><marker id="dia-safety" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#C2410C"/></marker><marker id="tri-safety" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.2"/></marker><marker id="arr-interface" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7C3AED"/></marker><marker id="dia-interface" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#7C3AED"/></marker><marker id="tri-interface" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/></marker><marker id="arr-external" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker><marker id="dia-external" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#64748B"/></marker><marker id="tri-external" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2"/></marker><marker id="arr-work" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker><marker id="dia-work" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#475569"/></marker><marker id="tri-work" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/></marker><marker id="arr-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94A3B8"/></marker><marker id="dia-muted" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#94A3B8"/></marker><marker id="tri-muted" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/></marker><marker id="arr-current" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker><marker id="dia-current" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#0F172A"/></marker><marker id="tri-current" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/></marker><marker id="arr-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2E9E6A"/></marker><marker id="dia-ok" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#2E9E6A"/></marker><marker id="tri-ok" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#2E9E6A" stroke-width="1.2"/></marker><marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D97706"/></marker><marker id="dia-amber" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D97706"/></marker><marker id="tri-amber" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#D2553F"/></marker><marker id="dia-red" viewBox="0 0 16 10" refX="15" refY="5" markerWidth="12" markerHeight="8" orient="auto-start-reverse"><path d="M1 5 L8 1 L15 5 L8 9 z" fill="#D2553F"/></marker><marker id="tri-red" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#FFFFFF" stroke="#D2553F" stroke-width="1.2"/></marker></defs>
+<rect x="0" y="0" width="1065.4" height="834" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="40" y="44" font-size="20" fill="#0F172A" font-weight="700">Figure 2 · How the safety records fit together</text>
+<text x="40" y="66" font-size="12.5" fill="#475569">The hazard record is the hub: causes link to software functions, mitigations to requirements, events add event risk, and only a review accepts. Today's</text>
+<text x="40" y="83" font-size="12.5" fill="#475569">counts.</text>
+<text x="1025.4" y="44" font-size="11" fill="#475569" text-anchor="end">safety/</text>
+<line x1="40" y1="102" x2="1025.4" y2="102" stroke="#E2E8F0" stroke-width="1"/>
+<g transform="translate(40 126)">
+<path d="M142 149 L157 149 Q164 149 164 142 L164 58 Q164 51 171 51 L413.2 51" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M595.5 51 L810 51" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M142 160 L436.4 160" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M572.4 160 L810 160" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M413.2 262 L207 262 Q200 262 200 255 L200 178 Q200 171 193 171 L142 171" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M142 181 L181 181 Q188 181 188 188 L188 357 Q188 364 195 364 L413.2 364" stroke="#475569" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<path d="M413.2 466 L183 466 Q176 466 176 459 L176 199 Q176 192 169 192 L142 192" stroke="#C2410C" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-safety)"/>
+<path d="M413.2 568 L171 568 Q164 568 164 561 L164 210 Q164 203 157 203 L142 203" stroke="#475569" stroke-width="1.5" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arr-ink)"/>
+<rect x="6" y="138" width="136" height="76" rx="8" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
+<rect x="18" y="150" width="52.9" height="16" rx="8.0" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<text x="44.4" y="161.4" font-size="9.5" fill="#0F172A" font-weight="700" text-anchor="middle">hazards/</text>
+<text x="18" y="184" font-size="12.5" fill="#FFFFFF" font-weight="700">22 hazards</text>
+<text x="18" y="201" font-size="10.5" fill="#CBD5E1">22 open</text>
+<rect x="413.2" y="6" width="182.3" height="90" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="425.2" y="18" width="89.1" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="469.7" y="29.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">causal_factors[]</text>
+<text x="425.2" y="52" font-size="12.5" fill="#0F172A" font-weight="700">72 causal factors</text>
+<text x="425.2" y="69" font-size="10.5" fill="#475569">12 environment, 22 hardware, 16</text>
+<text x="425.2" y="83" font-size="10.5" fill="#475569">human, 8 interface, 14 software</text>
+<rect x="436.4" y="122" width="136" height="76" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="448.4" y="134" width="70.2" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="483.5" y="145.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">mitigations[]</text>
+<text x="448.4" y="168" font-size="12.5" fill="#0F172A" font-weight="700">81 mitigations</text>
+<text x="448.4" y="185" font-size="10.5" fill="#475569">81 identified</text>
+<rect x="810" y="13" width="169.4" height="76" rx="8" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.3"/>
+<rect x="822" y="25" width="56.1" height="16" rx="8.0" fill="#0F766E" stroke="none" stroke-width="1"/>
+<text x="850.1" y="36.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">software/</text>
+<text x="822" y="59" font-size="12.5" fill="#0F172A" font-weight="700">8 software functions</text>
+<text x="822" y="76" font-size="10.5" fill="#475569">SCC, SwCI and level of rigor</text>
+<rect x="413.2" y="224" width="136" height="76" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="425.2" y="236" width="47.3" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="448.8" y="247.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">events/</text>
+<text x="425.2" y="270" font-size="12.5" fill="#0F172A" font-weight="700">2 test events</text>
+<text x="425.2" y="287" font-size="10.5" fill="#475569">8 event risks drafted</text>
+<rect x="810" y="130" width="136" height="60" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="822" y="142" width="75.7" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="859.9" y="153.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">requirements/</text>
+<text x="822" y="176" font-size="12.5" fill="#0F172A" font-weight="700">24 requirements</text>
+<rect x="413.2" y="326" width="136" height="76" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="425.2" y="338" width="62.1" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="456.3" y="349.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">generated/</text>
+<text x="425.2" y="372" font-size="12.5" fill="#0F172A" font-weight="700">Hazard log export</text>
+<text x="425.2" y="389" font-size="10.5" fill="#475569">hts.csv</text>
+<rect x="413.2" y="428" width="157.5" height="76" rx="8" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.3"/>
+<rect x="425.2" y="440" width="51.6" height="16" rx="8.0" fill="#C2410C" stroke="none" stroke-width="1"/>
+<text x="451" y="451.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">reviews/</text>
+<text x="425.2" y="474" font-size="12.5" fill="#0F172A" font-weight="700">0 acceptances</text>
+<text x="425.2" y="491" font-size="10.5" fill="#475569">only a named human review</text>
+<rect x="413.2" y="530" width="169.9" height="76" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="1.3"/>
+<rect x="425.2" y="542" width="73.3" height="16" rx="8.0" fill="#475569" stroke="none" stroke-width="1"/>
+<text x="461.8" y="553.4" font-size="9.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">mil-std-882e/</text>
+<text x="425.2" y="576" font-size="12.5" fill="#0F172A" font-weight="700">882E work-product tree</text>
+<text x="425.2" y="593" font-size="10.5" fill="#475569">tasks, analyses, views</text>
+<rect x="261.3" y="56" width="48.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="266.3" y="69" font-size="10.5" fill="#475569">causes</text>
+<rect x="678" y="28" width="49.6" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="683" y="41" font-size="10.5" fill="#475569">ssf_ids</text>
+<rect x="258.9" y="165" width="53.4" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="263.9" y="178" font-size="10.5" fill="#475569">controls</text>
+<rect x="657.5" y="165" width="90.5" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="662.5" y="178" font-size="10.5" fill="#475569">requirement_ids</text>
+<rect x="246.4" y="267" width="78.3" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="251.4" y="280" font-size="10.5" fill="#475569">event_risks[]</text>
+<rect x="263.2" y="369" width="44.7" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="268.2" y="382" font-size="10.5" fill="#475569">export</text>
+<rect x="244.1" y="471" width="83.1" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="249.1" y="484" font-size="10.5" fill="#475569">acceptances[]</text>
+<rect x="220" y="573" width="131.2" height="18" rx="4" fill="#FFFFFF" stroke="none" stroke-width="0" opacity="0.92"/>
+<text x="225" y="586" font-size="10.5" fill="#475569">analyses add and refine</text>
+</g>
+<rect x="40" y="758" width="14" height="12" rx="3" fill="#0F172A" stroke="#0F172A" stroke-width="1.2"/>
+<text x="62" y="768" font-size="11" fill="#475569">This folder's records</text>
+<rect x="181.2" y="758" width="14" height="12" rx="3" fill="#FFFFFF" stroke="#475569" stroke-width="1.2"/>
+<text x="203.2" y="768" font-size="11" fill="#475569">Work product</text>
+<rect x="281.1" y="758" width="14" height="12" rx="3" fill="#F0FDFA" stroke="#0F766E" stroke-width="1.2"/>
+<text x="303.1" y="768" font-size="11" fill="#475569">Software-intensive element</text>
+<rect x="453.9" y="758" width="14" height="12" rx="3" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.2"/>
+<text x="475.9" y="768" font-size="11" fill="#475569">Human authority</text>
+<line x1="570.6" y1="764" x2="586.6" y2="764" stroke="#475569" stroke-width="1.8"/>
+<text x="592.6" y="768" font-size="11" fill="#475569">Link field in the record</text>
+<line x1="722.8" y1="764" x2="738.8" y2="764" stroke="#C2410C" stroke-width="1.8"/>
+<text x="744.8" y="768" font-size="11" fill="#475569">Acceptance (R13)</text>
+<line x1="848.8" y1="764" x2="864.8" y2="764" stroke="#475569" stroke-width="1.8" stroke-dasharray="3 2"/>
+<text x="870.8" y="768" font-size="11" fill="#475569">Analysis feeds the record</text>
+<text x="40" y="790" font-size="10.5" fill="#94A3B8">Generated by tools/figures/safety_readme.py from safety/hazards/, safety/software/, safety/events/ and the 882E catalog. Risk levels are preliminary qualitative judgements; nothing is verified or</text>
+<text x="40" y="805" font-size="10.5" fill="#94A3B8">accepted.</text>
+<g class="terms" data-base-h="834">
+<rect x="0" y="834" width="1065.4" height="54.6" fill="#FFFFFF"/>
+<line x1="40" y1="838" x2="1025.4" y2="838" stroke="#E2E8F0" stroke-width="1"/>
+<text x="40" y="853.7" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">Terms: DoD = US Department of Defense · MIL-STD-882E = US DoD Standard Practice for System Safety (11 May 2012, base edition) · R01 … = validator rule in tools/pdac (R13 = only a</text>
+<text x="40" y="868.2" font-size="10.5" fill="#475569" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">named human review accepts anything) · SCC = software control category (MIL-STD-882E Table IV) · SwCI = software criticality index (MIL-STD-882E Table V) · US = United States</text>
+</g>
+</svg>
